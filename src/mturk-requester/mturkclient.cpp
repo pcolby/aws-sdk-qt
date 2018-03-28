@@ -629,9 +629,8 @@ ListQualificationRequestsResponse * MTurkClient::listQualificationRequests(const
 }
 
 /**
- * The <code>ListQualificationRequests</code> operation retrieves requests for Qualifications of a particular Qualification
- * type. The owner of the Qualification type calls this operation to poll for pending requests, and accepts them using the
- * AcceptQualification operation.
+ * The <code>ListQualificationTypes</code> operation returns a list of Qualification types, filtered by an optional search
+ * term.
  *
  * @param  request Request to send to Amazon Mechanical Turk.
  *

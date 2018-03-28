@@ -76,6 +76,10 @@ HEADERS += \
     updateprojectrequest_p.h \
     updateprojectresponse.h \
     updateprojectresponse_p.h \
+    updatewebhookrequest.h \
+    updatewebhookrequest_p.h \
+    updatewebhookresponse.h \
+    updatewebhookresponse_p.h \
 
 SOURCES += \
     batchdeletebuildsrequest.cpp \
@@ -111,5 +115,7 @@ SOURCES += \
     stopbuildresponse.cpp \
     updateprojectrequest.cpp \
     updateprojectresponse.cpp \
+    updatewebhookrequest.cpp \
+    updatewebhookresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

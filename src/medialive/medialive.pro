@@ -76,6 +76,14 @@ HEADERS += \
     updatechannelrequest_p.h \
     updatechannelresponse.h \
     updatechannelresponse_p.h \
+    updateinputrequest.h \
+    updateinputrequest_p.h \
+    updateinputresponse.h \
+    updateinputresponse_p.h \
+    updateinputsecuritygrouprequest.h \
+    updateinputsecuritygrouprequest_p.h \
+    updateinputsecuritygroupresponse.h \
+    updateinputsecuritygroupresponse_p.h \
 
 SOURCES += \
     createchannelrequest.cpp \
@@ -111,5 +119,9 @@ SOURCES += \
     stopchannelresponse.cpp \
     updatechannelrequest.cpp \
     updatechannelresponse.cpp \
+    updateinputrequest.cpp \
+    updateinputresponse.cpp \
+    updateinputsecuritygrouprequest.cpp \
+    updateinputsecuritygroupresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

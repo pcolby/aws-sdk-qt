@@ -56,6 +56,10 @@ HEADERS += \
     resendvalidationemailrequest_p.h \
     resendvalidationemailresponse.h \
     resendvalidationemailresponse_p.h \
+    updatecertificateoptionsrequest.h \
+    updatecertificateoptionsrequest_p.h \
+    updatecertificateoptionsresponse.h \
+    updatecertificateoptionsresponse_p.h \
 
 SOURCES += \
     acmclient.cpp \
@@ -81,5 +85,7 @@ SOURCES += \
     requestcertificateresponse.cpp \
     resendvalidationemailrequest.cpp \
     resendvalidationemailresponse.cpp \
+    updatecertificateoptionsrequest.cpp \
+    updatecertificateoptionsresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

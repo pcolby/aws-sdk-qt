@@ -265,6 +265,10 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
  *
  * </p </li> <li>
  *
+ * Your request contains at least two items with identical hash and range keys (which essentially is two put operations).
+ *
+ * </p </li> <li>
+ *
  * There are more than 25 requests in the
  *
  * batch> </li> <li>
@@ -513,10 +517,21 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
 }
 
 /**
- * Checks the status of the backup restore settings on the specified table. If backups are enabled,
- * <code>ContinuousBackupsStatus</code> will bet set to
+ * Checks the status of continuous backups and point in time recovery on the specified table. Continuous backups are
+ * <code>ENABLED</code> on all tables at table creation. If point in time recovery is enabled,
+ * <code>PointInTimeRecoveryStatus</code> will be set to
  *
  * ENABLED>
+ *
+ * Once continuous backups and point in time recovery are enabled, you can restore to any point in time within
+ * <code>EarliestRestorableDateTime</code> and <code>LatestRestorableDateTime</code>.
+ *
+ * </p
+ *
+ * <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time. You can restore your table to any
+ * point in time during the last 35 days with a 1-minute granularity.
+ *
+ * </p
  *
  * You can call <code>DescribeContinuousBackups</code> at a maximum rate of 10 times per
  *
@@ -926,8 +941,8 @@ QueryResponse * DynamoDBClient::query(const QueryRequest &request)
 }
 
 /**
- * Creates a new table from an existing backup. Any number of users can execute up to 10 concurrent restores in a given
- * account.
+ * Creates a new table from an existing backup. Any number of users can execute up to 4 concurrent restores (any type of
+ * restore) in a given account.
  *
  * </p
  *
@@ -968,6 +983,53 @@ QueryResponse * DynamoDBClient::query(const QueryRequest &request)
 RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const RestoreTableFromBackupRequest &request)
 {
     return qobject_cast<RestoreTableFromBackupResponse *>(send(request));
+}
+
+/**
+ * Restores the specified table to the specified point in time within <code>EarliestRestorableDateTime</code> and
+ * <code>LatestRestorableDateTime</code>. You can restore your table to any point in time during the last 35 days with a
+ * 1-minute granularity. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given
+ * account.
+ *
+ * </p
+ *
+ * You must manually set up the following on the restored
+ *
+ * table> <ul> <li>
+ *
+ * Auto scaling
+ *
+ * policie> </li> <li>
+ *
+ * IAM
+ *
+ * policie> </li> <li>
+ *
+ * Cloudwatch metrics and
+ *
+ * alarm> </li> <li>
+ *
+ * Tag> </li> <li>
+ *
+ * Stream
+ *
+ * setting> </li> <li>
+ *
+ * Time to Live (TTL)
+ *
+ * setting> </li> <li>
+ *
+ * Point in time recovery
+ *
+ * @param  request Request to send to Amazon DynamoDB.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+RestoreTableToPointInTimeResponse * DynamoDBClient::restoreTableToPointInTime(const RestoreTableToPointInTimeRequest &request)
+{
+    return qobject_cast<RestoreTableToPointInTimeResponse *>(send(request));
 }
 
 /**
@@ -1059,11 +1121,38 @@ UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest
 }
 
 /**
+ * <code>UpdateContinuousBackups</code> enables or disables point in time recovery for the specified table. A successful
+ * <code>UpdateContinuousBackups</code> call returns the current <code>ContinuousBackupsDescription</code>. Continuous
+ * backups are <code>ENABLED</code> on all tables at table creation. If point in time recovery is enabled,
+ * <code>PointInTimeRecoveryStatus</code> will be set to
+ *
+ * ENABLED>
+ *
+ * Once continuous backups and point in time recovery are enabled, you can restore to any point in time within
+ * <code>EarliestRestorableDateTime</code> and <code>LatestRestorableDateTime</code>.
+ *
+ * </p
+ *
+ * <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time. You can restore your table to any
+ * point in time during the last 35 days with a 1-minute granularity.
+ *
+ * @param  request Request to send to Amazon DynamoDB.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const UpdateContinuousBackupsRequest &request)
+{
+    return qobject_cast<UpdateContinuousBackupsResponse *>(send(request));
+}
+
+/**
  * Adds or removes replicas in the specified global table. The global table must already exist to be able to use this
  * operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key
- * schema, must have DynamoDB Streams enabled, and cannot have any local secondary indexes
+ * schema, and must have DynamoDB Streams
  *
- * (LSIs)> <note>
+ * enabled> <note>
  *
  * Although you can use <code>UpdateGlobalTable</code> to add replicas and remove replicas in a single request, for
  * simplicity we recommend that you issue separate requests for adding or removing

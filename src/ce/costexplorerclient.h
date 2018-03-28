@@ -38,6 +38,8 @@ class GetDimensionValuesRequest;
 class GetDimensionValuesResponse;
 class GetReservationCoverageRequest;
 class GetReservationCoverageResponse;
+class GetReservationPurchaseRecommendationRequest;
+class GetReservationPurchaseRecommendationResponse;
 class GetReservationUtilizationRequest;
 class GetReservationUtilizationResponse;
 class GetTagsRequest;
@@ -62,6 +64,7 @@ public slots:
     GetCostAndUsageResponse * getCostAndUsage(const GetCostAndUsageRequest &request);
     GetDimensionValuesResponse * getDimensionValues(const GetDimensionValuesRequest &request);
     GetReservationCoverageResponse * getReservationCoverage(const GetReservationCoverageRequest &request);
+    GetReservationPurchaseRecommendationResponse * getReservationPurchaseRecommendation(const GetReservationPurchaseRecommendationRequest &request);
     GetReservationUtilizationResponse * getReservationUtilization(const GetReservationUtilizationRequest &request);
     GetTagsResponse * getTags(const GetTagsRequest &request);
 

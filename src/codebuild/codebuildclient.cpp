@@ -70,6 +70,10 @@ namespace CodeBuild {
  *
  * repository> </li> <li>
  *
+ * <code>UpdateWebhook</code>: Changes the settings of an existing
+ *
+ * webhook> </li> <li>
+ *
  * <code>DeleteProject</code>: Deletes a build
  *
  * project> </li> <li>
@@ -389,6 +393,20 @@ StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectRequest &request)
 {
     return qobject_cast<UpdateProjectResponse *>(send(request));
+}
+
+/**
+ * Updates the webhook associated with an AWS CodeBuild build project.
+ *
+ * @param  request Request to send to AWS CodeBuild.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookRequest &request)
+{
+    return qobject_cast<UpdateWebhookResponse *>(send(request));
 }
 
 /**

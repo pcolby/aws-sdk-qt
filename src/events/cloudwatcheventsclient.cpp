@@ -384,7 +384,7 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  *
  * topic> </li> <li>
  *
- * Amazon SQS
+ * Amazon SQS queues, including FIFO
  *
  * queue> </li> <li>
  *

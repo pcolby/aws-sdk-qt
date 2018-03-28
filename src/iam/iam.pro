@@ -458,6 +458,10 @@ HEADERS += \
     updateroledescriptionrequest_p.h \
     updateroledescriptionresponse.h \
     updateroledescriptionresponse_p.h \
+    updaterolerequest.h \
+    updaterolerequest_p.h \
+    updateroleresponse.h \
+    updateroleresponse_p.h \
     updatesamlproviderrequest.h \
     updatesamlproviderrequest_p.h \
     updatesamlproviderresponse.h \
@@ -720,6 +724,8 @@ SOURCES += \
     updateopenidconnectproviderthumbprintresponse.cpp \
     updateroledescriptionrequest.cpp \
     updateroledescriptionresponse.cpp \
+    updaterolerequest.cpp \
+    updateroleresponse.cpp \
     updatesamlproviderrequest.cpp \
     updatesamlproviderresponse.cpp \
     updateservercertificaterequest.cpp \

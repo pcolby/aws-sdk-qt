@@ -32,6 +32,8 @@ namespace AWS {
 namespace ConfigService {
 
 class ConfigServiceClientPrivate;
+class BatchGetResourceConfigRequest;
+class BatchGetResourceConfigResponse;
 class DeleteConfigRuleRequest;
 class DeleteConfigRuleResponse;
 class DeleteConfigurationRecorderRequest;
@@ -102,6 +104,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    BatchGetResourceConfigResponse * batchGetResourceConfig(const BatchGetResourceConfigRequest &request);
     DeleteConfigRuleResponse * deleteConfigRule(const DeleteConfigRuleRequest &request);
     DeleteConfigurationRecorderResponse * deleteConfigurationRecorder(const DeleteConfigurationRecorderRequest &request);
     DeleteDeliveryChannelResponse * deleteDeliveryChannel(const DeleteDeliveryChannelRequest &request);

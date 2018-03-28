@@ -251,6 +251,8 @@ class UpdateLoginProfileRequest;
 class UpdateLoginProfileResponse;
 class UpdateOpenIDConnectProviderThumbprintRequest;
 class UpdateOpenIDConnectProviderThumbprintResponse;
+class UpdateRoleRequest;
+class UpdateRoleResponse;
 class UpdateRoleDescriptionRequest;
 class UpdateRoleDescriptionResponse;
 class UpdateSAMLProviderRequest;
@@ -400,6 +402,7 @@ public slots:
     UpdateGroupResponse * updateGroup(const UpdateGroupRequest &request);
     UpdateLoginProfileResponse * updateLoginProfile(const UpdateLoginProfileRequest &request);
     UpdateOpenIDConnectProviderThumbprintResponse * updateOpenIDConnectProviderThumbprint(const UpdateOpenIDConnectProviderThumbprintRequest &request);
+    UpdateRoleResponse * updateRole(const UpdateRoleRequest &request);
     UpdateRoleDescriptionResponse * updateRoleDescription(const UpdateRoleDescriptionRequest &request);
     UpdateSAMLProviderResponse * updateSAMLProvider(const UpdateSAMLProviderRequest &request);
     UpdateSSHPublicKeyResponse * updateSSHPublicKey(const UpdateSSHPublicKeyRequest &request);

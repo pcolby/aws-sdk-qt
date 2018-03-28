@@ -289,6 +289,32 @@ UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelReques
 }
 
 /**
+ *
+ * @param  request Request to send to AWS Elemental MediaLive.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &request)
+{
+    return qobject_cast<UpdateInputResponse *>(send(request));
+}
+
+/**
+ *
+ * @param  request Request to send to AWS Elemental MediaLive.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(const UpdateInputSecurityGroupRequest &request)
+{
+    return qobject_cast<UpdateInputSecurityGroupResponse *>(send(request));
+}
+
+/**
  * @internal
  *
  * @class  MediaLiveClientPrivate

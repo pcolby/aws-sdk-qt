@@ -28,6 +28,10 @@ HEADERS += \
     getreservationcoveragerequest_p.h \
     getreservationcoverageresponse.h \
     getreservationcoverageresponse_p.h \
+    getreservationpurchaserecommendationrequest.h \
+    getreservationpurchaserecommendationrequest_p.h \
+    getreservationpurchaserecommendationresponse.h \
+    getreservationpurchaserecommendationresponse_p.h \
     getreservationutilizationrequest.h \
     getreservationutilizationrequest_p.h \
     getreservationutilizationresponse.h \
@@ -47,6 +51,8 @@ SOURCES += \
     getdimensionvaluesresponse.cpp \
     getreservationcoveragerequest.cpp \
     getreservationcoverageresponse.cpp \
+    getreservationpurchaserecommendationrequest.cpp \
+    getreservationpurchaserecommendationresponse.cpp \
     getreservationutilizationrequest.cpp \
     getreservationutilizationresponse.cpp \
     gettagsrequest.cpp \

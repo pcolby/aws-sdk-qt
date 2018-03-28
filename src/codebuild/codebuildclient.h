@@ -62,6 +62,8 @@ class StopBuildRequest;
 class StopBuildResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
+class UpdateWebhookRequest;
+class UpdateWebhookResponse;
 
 class QTAWS_EXPORT CodeBuildClient : public AwsAbstractClient {
     Q_OBJECT
@@ -94,6 +96,7 @@ public slots:
     StartBuildResponse * startBuild(const StartBuildRequest &request);
     StopBuildResponse * stopBuild(const StopBuildRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
+    UpdateWebhookResponse * updateWebhook(const UpdateWebhookRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CodeBuildClient)

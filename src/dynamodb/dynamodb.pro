@@ -104,6 +104,10 @@ HEADERS += \
     restoretablefrombackuprequest_p.h \
     restoretablefrombackupresponse.h \
     restoretablefrombackupresponse_p.h \
+    restoretabletopointintimerequest.h \
+    restoretabletopointintimerequest_p.h \
+    restoretabletopointintimeresponse.h \
+    restoretabletopointintimeresponse_p.h \
     scanrequest.h \
     scanrequest_p.h \
     scanresponse.h \
@@ -116,6 +120,10 @@ HEADERS += \
     untagresourcerequest_p.h \
     untagresourceresponse.h \
     untagresourceresponse_p.h \
+    updatecontinuousbackupsrequest.h \
+    updatecontinuousbackupsrequest_p.h \
+    updatecontinuousbackupsresponse.h \
+    updatecontinuousbackupsresponse_p.h \
     updateglobaltablerequest.h \
     updateglobaltablerequest_p.h \
     updateglobaltableresponse.h \
@@ -181,12 +189,16 @@ SOURCES += \
     queryresponse.cpp \
     restoretablefrombackuprequest.cpp \
     restoretablefrombackupresponse.cpp \
+    restoretabletopointintimerequest.cpp \
+    restoretabletopointintimeresponse.cpp \
     scanrequest.cpp \
     scanresponse.cpp \
     tagresourcerequest.cpp \
     tagresourceresponse.cpp \
     untagresourcerequest.cpp \
     untagresourceresponse.cpp \
+    updatecontinuousbackupsrequest.cpp \
+    updatecontinuousbackupsresponse.cpp \
     updateglobaltablerequest.cpp \
     updateglobaltableresponse.cpp \
     updateitemrequest.cpp \

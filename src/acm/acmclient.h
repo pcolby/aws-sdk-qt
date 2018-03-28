@@ -52,6 +52,8 @@ class RequestCertificateRequest;
 class RequestCertificateResponse;
 class ResendValidationEmailRequest;
 class ResendValidationEmailResponse;
+class UpdateCertificateOptionsRequest;
+class UpdateCertificateOptionsResponse;
 
 class QTAWS_EXPORT AcmClient : public AwsAbstractClient {
     Q_OBJECT
@@ -79,6 +81,7 @@ public slots:
     RemoveTagsFromCertificateResponse * removeTagsFromCertificate(const RemoveTagsFromCertificateRequest &request);
     RequestCertificateResponse * requestCertificate(const RequestCertificateRequest &request);
     ResendValidationEmailResponse * resendValidationEmail(const ResendValidationEmailRequest &request);
+    UpdateCertificateOptionsResponse * updateCertificateOptions(const UpdateCertificateOptionsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(AcmClient)

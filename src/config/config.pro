@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    batchgetresourceconfigrequest.h \
+    batchgetresourceconfigrequest_p.h \
+    batchgetresourceconfigresponse.h \
+    batchgetresourceconfigresponse_p.h \
     configserviceclient.h \
     configserviceclient_p.h \
     configserviceclientrequest.h \
@@ -124,6 +128,8 @@ HEADERS += \
     stopconfigurationrecorderresponse_p.h \
 
 SOURCES += \
+    batchgetresourceconfigrequest.cpp \
+    batchgetresourceconfigresponse.cpp \
     configserviceclient.cpp \
     configserviceclientrequest.cpp \
     configserviceclientresponse.cpp \

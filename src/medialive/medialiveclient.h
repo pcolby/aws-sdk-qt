@@ -62,6 +62,10 @@ class StopChannelRequest;
 class StopChannelResponse;
 class UpdateChannelRequest;
 class UpdateChannelResponse;
+class UpdateInputRequest;
+class UpdateInputResponse;
+class UpdateInputSecurityGroupRequest;
+class UpdateInputSecurityGroupResponse;
 
 class QTAWS_EXPORT MediaLiveClient : public AwsAbstractClient {
     Q_OBJECT
@@ -94,6 +98,8 @@ public slots:
     StartChannelResponse * startChannel(const StartChannelRequest &request);
     StopChannelResponse * stopChannel(const StopChannelRequest &request);
     UpdateChannelResponse * updateChannel(const UpdateChannelRequest &request);
+    UpdateInputResponse * updateInput(const UpdateInputRequest &request);
+    UpdateInputSecurityGroupResponse * updateInputSecurityGroup(const UpdateInputSecurityGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaLiveClient)

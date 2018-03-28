@@ -125,6 +125,31 @@ ConfigServiceClient::ConfigServiceClient(
 }
 
 /**
+ * Returns the current configuration for one or more requested resources. The operation also returns a list of resources
+ * that are not processed in the current request. If there are no unprocessed resources, the operation returns an empty
+ * unprocessedResourceKeys list.
+ *
+ * </p <note> <ul> <li>
+ *
+ * The API does not return results for deleted
+ *
+ * resources> </li> <li>
+ *
+ * The API does not return any tags for the requested resources. This information is filtered out of the
+ * supplementaryConfiguration section of the API
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+BatchGetResourceConfigResponse * ConfigServiceClient::batchGetResourceConfig(const BatchGetResourceConfigRequest &request)
+{
+    return qobject_cast<BatchGetResourceConfigResponse *>(send(request));
+}
+
+/**
  * Deletes the specified AWS Config rule and all of its evaluation
  *
  * results>

@@ -395,6 +395,11 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
 }
 
 /**
+ * Returns attributes related to AWS Elastic Beanstalk that are associated with the calling AWS
+ *
+ * account>
+ *
+ * The result currently has one set of attributes—resource
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
  *
