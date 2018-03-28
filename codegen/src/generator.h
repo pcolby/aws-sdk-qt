@@ -33,7 +33,7 @@ public:
 protected:
     static QStringList formatHtmlDocumentation(const QString &html);
 
-    bool generateModelClasses(const QString &projectDir, const QString &serviceName,
+    bool generateModelClasses(Grantlee::Context &context, const QString &projectDir,
                               const QString &operationName, const QJsonObject &description);
 
     static QString getClassNamePrefix(const QJsonObject &metaData);

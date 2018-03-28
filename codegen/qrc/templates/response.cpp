@@ -7,10 +7,10 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace {{ServiceName}} {
+namespace {{NameSpaceName}} {
 
 /**
- * @class  {{OperationName}}Response
+ * @class  {{ClassName}}
  *
  * @brief  Handles {{ServiceName}} {{OperationName}} responses.
  *
@@ -18,25 +18,25 @@ namespace {{ServiceName}} {
  */
 
 /**
- * @brief  Constructs a new {{OperationName}}Response object.
+ * @brief  Constructs a new {{ClassName}} object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-{{OperationName}}Response::{{OperationName}}Response(
+{{ClassName}}::{{ClassName}}(
         const {{OperationName}}Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : {{ServiceName}}Response(new {{OperationName}}ResponsePrivate(this), parent)
+    : {{ServiceName}}Response(new {{ClassName}}Private(this), parent)
 {
     setRequest(new {{OperationName}}Request(request));
     setReply(reply);
 }
 
-const {{OperationName}}Request * {{OperationName}}Response::request() const
+const {{OperationName}}Request * {{ClassName}}::request() const
 {
-    Q_D(const {{OperationName}}Response);
+    Q_D(const {{ClassName}});
     return static_cast<const {{OperationName}}Request *>(d->request);
 }
 
@@ -45,7 +45,7 @@ const {{OperationName}}Request * {{OperationName}}Response::request() const
  *
  * @param  response  Response to parse.
  */
-void {{OperationName}}Response::parseSuccess(QIODevice &response)
+void {{ClassName}}::parseSuccess(QIODevice &response)
 {
     Q_D({{Operation}}Response);
     QXmlStreamReader xml(&response);
@@ -55,34 +55,34 @@ void {{OperationName}}Response::parseSuccess(QIODevice &response)
 /**
  * @internal
  *
- * @class  {{OperationName}}ResponsePrivate
+ * @class  {{ClassName}}Private
  *
- * @brief  Private implementation for {{OperationName}}Response.
+ * @brief  Private implementation for {{ClassName}}.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new {{OperationName}}ResponsePrivate object.
+ * @brief  Constructs a new {{ClassName}}Private object.
  *
- * @param  q  Pointer to this object's public {{OperationName}}Response instance.
+ * @param  q  Pointer to this object's public {{ClassName}} instance.
  */
-{{OperationName}}ResponsePrivate::{{OperationName}}ResponsePrivate(
+{{ClassName}}Private::{{ClassName}}Private(
     {{OperationName}}QueueResponse * const q) : {{OperationName}}Private(q)
 {
 
 }
 
 /**
- * @brief  Parse an {{ServiceName}} {{OperationName}}Response element.
+ * @brief  Parse an {{ServiceName}} {{ClassName}} element.
  *
  * @param  xml  XML stream to parse.
  */
-void {{OperationName}}ResponsePrivate::{{OperationName}}Response(QXmlStreamReader &xml)
+void {{ClassName}}Private::{{ClassName}}(QXmlStreamReader &xml)
 {
-    Q_ASSERT(xml.name() == QLatin1String("{{OperationName}}Response"));
+    Q_ASSERT(xml.name() == QLatin1String("{{ClassName}}"));
     /// @todo
 }
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS

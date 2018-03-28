@@ -96,8 +96,9 @@ bool Generator::generate(const QString &serviceFileName,
     context.push();
     renderClassFiles(QSL("requestbase"),  context, projectDir, className + QSL("Request"));
     renderClassFiles(QSL("responsebase"), context, projectDir, className + QSL("Response"));
+    context.insert(QSL("ServiceName"), classNamePrefix); /// @todo Move this up.
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
-        generateModelClasses(projectDir, classNamePrefix, operationName, description);
+        generateModelClasses(context, projectDir, operationName, description);
     }
     context.pop();
 
@@ -179,15 +180,14 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
     return lines;
 }
 
-bool Generator::generateModelClasses(const QString &projectDir, const QString &serviceName,
+bool Generator::generateModelClasses(Grantlee::Context &context, const QString &projectDir,
                                      const QString &operationName, const QJsonObject &description)
 {
-    qDebug() << "generating model for operation" << operationName;
+    qDebug() << "generating model for" << operationName;
     const QJsonObject operation = description.value(QLatin1String("operations"))
             .toObject().value(operationName).toObject();
-    Grantlee::Context context(operation.toVariantHash());
-    context.insert(QLatin1String("OperationName"), operationName);
-    context.insert(QLatin1String("ServiceName"), serviceName);
+    context.insert(QLatin1String("operation"), operation.toVariantHash());
+    context.insert(QLatin1String("OperationName"), operationName); /// @todo Drop this?
 
     /// @todo Generate request class.
     if (operation.contains(QLatin1String("input"))) {
@@ -258,9 +258,11 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
 void Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
                                  const QString &outputPathName, const QString className)
 {
-    /// @todo Explicit set class name in context?
+    context.push();
+    context.insert(QSL("ClassName"), className);
     foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL(".h") << QSL("_p.h")) {
         render(templateBaseName + extension, context, outputPathName, className.toLower() + extension);
         ((extension == QSL(".cpp")) ? sources : headers).append(className.toLower() + extension);
     }
+    context.pop();
 }

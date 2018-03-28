@@ -7,15 +7,15 @@
 
 namespace AWS {
 
-namespace {{ServiceName}} {
+namespace {{NameSpaceName}} {
 
-class {{OperationName}}ResponsePrivate;
+class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{OperationName}}Response : public {{ServiceName}}Response {
+class QTAWS_EXPORT {{ClassName}} : public {{ServiceName}}Response {
     Q_OBJECT
 
 public:
-    {{OperationName}}Response(const {{OperationName}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
+    {{ClassName}}(const {{OperationName}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual const {{OperationName}}Request * request() const;
 
@@ -23,12 +23,12 @@ protected slots:
     virtual void parseSuccess(QIODevice &response);
 
 private:
-    Q_DECLARE_PRIVATE({{OperationName}}Response)
-    Q_DISABLE_COPY({{OperationName}}Response)
+    Q_DECLARE_PRIVATE({{ClassName}})
+    Q_DISABLE_COPY({{ClassName}})
 
 };
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
 
 #endif

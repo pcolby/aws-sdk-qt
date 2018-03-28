@@ -5,33 +5,33 @@
 #include "{{ServiceName|lower}}request_p.h"
 
 namespace AWS {
-namespace {{ServiceName}} {
+namespace {{ServiceNameX}} {
 
 /**
- * @class  {{ClassName}}Request
+ * @class  {{ClassName}}
  *
  * @brief  Interface class for providing {{ServiceName}} requests
  */
 
 
 /**
- * @brief  Constructs a new {{ClassName}}Request object.
+ * @brief  Constructs a new {{ClassName}} object.
  *
  * @param  action  The {{ServiceName}} action to request.
  */
-{{ClassName}}Request::{{ClassName}}Request(const Action action)
-    : AwsAbstractRequest(new {{ClassName}}RequestPrivate(action, this))
+{{ClassName}}::{{ClassName}}(const Action action)
+    : AwsAbstractRequest(new {{ClassName}}Private(action, this))
 {
 
 }
 
 /**
- * @brief  Constructs a new {{ClassName}}Request object by copying another.
+ * @brief  Constructs a new {{ClassName}} object by copying another.
  *
  * @param  other  Instance to copy.
  */
-{{ClassName}}Request::{{ClassName}}Request(const {{ClassName}}Request &other)
-    : AwsAbstractRequest(new {{ClassName}}RequestPrivate(*other.d_func(), this))
+{{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
+    : AwsAbstractRequest(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
@@ -45,9 +45,9 @@ namespace {{ServiceName}} {
  *
  * @return  A reference to \c this.
  */
-{{ClassName}}Request& {{ClassName}}Request::operator=(const {{ClassName}}Request &other)
+{{ClassName}}& {{ClassName}}::operator=(const {{ClassName}} &other)
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -57,14 +57,14 @@ namespace {{ServiceName}} {
 /**
  * @internal
  *
- * @brief  Constructs a new {{ClassName}}Request object.
+ * @brief  Constructs a new {{ClassName}} object.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from {{ClassName}}RequestPrivate.
+ * implementation that inherits from {{ClassName}}Private.
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-{{ClassName}}Request::{{ClassName}}Request({{ClassName}}RequestPrivate * const d) : AwsAbstractRequest(d)
+{{ClassName}}::{{ClassName}}({{ClassName}}Private * const d) : AwsAbstractRequest(d)
 {
 
 }
@@ -74,9 +74,9 @@ namespace {{ServiceName}} {
  *
  * @return The {{ServiceName}} action to be performed by this request.
  */
-{{ClassName}}Request::Action {{ClassName}}Request::action() const
+{{ClassName}}::Action {{ClassName}}::action() const
 {
-    Q_D(const {{ClassName}}Request);
+    Q_D(const {{ClassName}});
     return d->action;
 }
 
@@ -85,9 +85,9 @@ namespace {{ServiceName}} {
  *
  * @return The name of the {{ServiceName}} action to be performed by this request.
  */
-QString {{ClassName}}Request::actionString() const
+QString {{ClassName}}::actionString() const
 {
-    return {{ClassName}}RequestPrivate::toString(action());
+    return {{ClassName}}Private::toString(action());
 }
 
 /**
@@ -95,9 +95,9 @@ QString {{ClassName}}Request::actionString() const
  *
  * @return The {{ServiceName}} API version implmented by this request.
  */
-QString {{ClassName}}Request::apiVersion() const
+QString {{ClassName}}::apiVersion() const
 {
-    Q_D(const {{ClassName}}Request);
+    Q_D(const {{ClassName}});
     return d->apiVersion;
 }
 
@@ -106,9 +106,9 @@ QString {{ClassName}}Request::apiVersion() const
  *
  * @param  action  The action to be performed by this request.
  */
-void {{ClassName}}Request::setAction(const Action action)
+void {{ClassName}}::setAction(const Action action)
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     d->action = action;
 }
 
@@ -117,9 +117,9 @@ void {{ClassName}}Request::setAction(const Action action)
  *
  * @param  version  The {{ServiceName}} API version to include in this request.
  */
-void {{ClassName}}Request::setApiVersion(const QString &version)
+void {{ClassName}}::setApiVersion(const QString &version)
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     d->apiVersion = version;
 }
 
@@ -135,7 +135,7 @@ void {{ClassName}}Request::setApiVersion(const QString &version)
  *
  * @return \c true if \c this and \a other are considered equal.
  */
-bool {{ClassName}}Request::operator==(const {{ClassName}}Request &other) const
+bool {{ClassName}}::operator==(const {{ClassName}} &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -156,7 +156,7 @@ bool {{ClassName}}Request::operator==(const {{ClassName}}Request &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-bool {{ClassName}}Request::isValidQueueName(const QString &queueName)
+bool {{ClassName}}::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -169,18 +169,18 @@ bool {{ClassName}}Request::isValidQueueName(const QString &queueName)
  *
  * @return Count of parameters removed (should be 0 or 1).
  */
-int {{ClassName}}Request::clearParameter(const QString &name)
+int {{ClassName}}::clearParameter(const QString &name)
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     return d->parameters.remove(name);
 }
 
 /**
  * @brief  Clear all parameters that were to be included with this request.
  */
-void {{ClassName}}Request::clearParameters()
+void {{ClassName}}::clearParameters()
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     d->parameters.clear();
 }
 
@@ -192,9 +192,9 @@ void {{ClassName}}Request::clearParameters()
  *
  * @return The value of the specified parameter, or \a defaultValue of not set.
  */
-QVariant {{ClassName}}Request::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant {{ClassName}}::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const {{ClassName}}Request);
+    Q_D(const {{ClassName}});
     return d->parameters.value(name, defaultValue);
 }
 
@@ -203,9 +203,9 @@ QVariant {{ClassName}}Request::parameter(const QString &name, const QVariant &de
  *
  * @return A map of parameters included with this request.
  */
-const QVariantMap &{{ClassName}}Request::parameters() const
+const QVariantMap &{{ClassName}}::parameters() const
 {
-    Q_D(const {{ClassName}}Request);
+    Q_D(const {{ClassName}});
     return d->parameters;
 }
 
@@ -215,9 +215,9 @@ const QVariantMap &{{ClassName}}Request::parameters() const
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
  */
-void {{ClassName}}Request::setParameter(const QString &name, const QVariant &value)
+void {{ClassName}}::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     d->parameters.insert(name, value);
 }
 
@@ -228,9 +228,9 @@ void {{ClassName}}Request::setParameter(const QString &name, const QVariant &val
  *
  * @param  parameters  New request parameters to inclued with this request.
  */
-void {{ClassName}}Request::setParameters(const QVariantMap &parameters)
+void {{ClassName}}::setParameters(const QVariantMap &parameters)
 {
-    Q_D({{ClassName}}Request);
+    Q_D({{ClassName}});
     d->parameters = parameters;
 }
 
@@ -245,9 +245,9 @@ void {{ClassName}}Request::setParameters(const QVariantMap &parameters)
  *
  * @return A network request for this {{ServiceName}} request using the given \a endpoint.
  */
-QNetworkRequest {{ClassName}}Request::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const {{ClassName}}Request);
+    Q_D(const {{ClassName}});
     QUrl url(endpoint);
     url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
@@ -256,20 +256,20 @@ QNetworkRequest {{ClassName}}Request::unsignedRequest(const QUrl &endpoint) cons
 /**
  * @internal
  *
- * @class  {{ClassName}}RequestPrivate
+ * @class  {{ClassName}}Private
  *
- * @brief  Private implementation for {{ClassName}}Request.
+ * @brief  Private implementation for {{ClassName}}.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new {{ClassName}}RequestPrivate object.
+ * @brief  Constructs a new {{ClassName}}Private object.
  *
  * @param  action  {{ServiceName}} action being performed by the \a q request.
- * @param  q       Pointer to this object's public {{ClassName}}Request instance.
+ * @param  q       Pointer to this object's public {{ClassName}} instance.
  */
-{{ClassName}}RequestPrivate::{{ClassName}}RequestPrivate(const {{ClassName}}Request::Action action, {{ClassName}}Request * const q)
+{{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q)
     : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -278,18 +278,18 @@ QNetworkRequest {{ClassName}}Request::unsignedRequest(const QUrl &endpoint) cons
 /**
  * @internal
  *
- * @brief  Constructs a new {{ClassName}}RequestPrivate object from an existing one.
+ * @brief  Constructs a new {{ClassName}}Private object from an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the {{ClassName}}Request class's copy constructor.
+ * This is required to support the {{ClassName}} class's copy constructor.
  *
  * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public {{ClassName}}Request instance.
+ * @param  q      Pointer to this object's public {{ClassName}} instance.
  */
-{{ClassName}}RequestPrivate::{{ClassName}}RequestPrivate(const {{ClassName}}RequestPrivate &other,
-                                     {{ClassName}}Request * const q)
+{{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}Private &other,
+                                     {{ClassName}} * const q)
     : AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -299,7 +299,7 @@ QNetworkRequest {{ClassName}}Request::unsignedRequest(const QUrl &endpoint) cons
 /**
  * @brief  Convert and {{ServiceName}} action to a string.
  *
- * This function converts {{ClassName}}Request::Action enumerator values to their respective
+ * This function converts {{ClassName}}::Action enumerator values to their respective
  * string representations, appropriate for use with the {{ServiceName}} service's Action
  * query parameters.
  *
@@ -307,10 +307,10 @@ QNetworkRequest {{ClassName}}Request::unsignedRequest(const QUrl &endpoint) cons
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */
-QString {{ClassName}}RequestPrivate::toString(const {{ClassName}}Request::Action &action)
+QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
 {
     #define ActionToString(action) \
-        case {{ClassName}}Request::action##Action: return QStringLiteral(#action)
+        case {{ClassName}}::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(/*todo*/);
         default:
@@ -320,5 +320,5 @@ QString {{ClassName}}RequestPrivate::toString(const {{ClassName}}Request::Action
     return QString();
 }
 
-} // namespace {{ServiceName}}
+} // namespace {{ServiceNameX}}
 } // namespace AWS

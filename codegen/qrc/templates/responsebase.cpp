@@ -1,28 +1,28 @@
 {% include "license.txt" %}
-#include "{{ClassName|lower}}response.h"
-#include "{{ClassName|lower}}response_p.h"
+#include "{{ClassName|lower}}.h"
+#include "{{ClassName|lower}}_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace {{ServiceName}} {
+namespace {{NameSpaceNameX}} {
 
 /**
- * @class  {{ClassName}}Response
+ * @class  {{ClassName}}
  *
- * @brief  Handles {{ServiceName}} {{ClassName}} responses.
+ * @brief  Handles {{ServiceName}} {{ClassName|cut:"Response"}} responses.
  *
- * @see    {{ServiceName}}Client::{{ClassName|slice:"0:1"|lower}}{{ClassName|slice:"01:-1"}}
+ * @see    {{ServiceName}}Client::{{ClassName|slice:"0:1"|lower}}{{ClassName|slice:"01:-1"|cut:"Response"}}
  */
 
 /**
- * @brief  Constructs a new {{ClassName}}Response object.
+ * @brief  Constructs a new {{ClassName}} object.
  *
  * @param  parent   This object's parent.
  */
-{{ClassName}}Response::{{ClassName}}Response(QObject * const parent)
-    : AwsAbstractResponse(new {{ClassName}}ResponsePrivate(this), parent)
+{{ClassName}}::{{ClassName}}(QObject * const parent)
+    : AwsAbstractResponse(new {{ClassName}}Private(this), parent)
 {
 
 }
@@ -30,23 +30,23 @@ namespace {{ServiceName}} {
 /**
  * @internal
  *
- * @class  {{ClassName}}ResponsePrivate
+ * @class  {{ClassName}}Private
  *
- * @brief  Private implementation for {{ClassName}}Response.
+ * @brief  Private implementation for {{ClassName}}.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new {{ClassName}}ResponsePrivate object.
+ * @brief  Constructs a new {{ClassName}}Private object.
  *
- * @param  q  Pointer to this object's public {{ClassName}}Response instance.
+ * @param  q  Pointer to this object's public {{ClassName}} instance.
  */
-{{ClassName}}ResponsePrivate::{{ClassName}}ResponsePrivate(
-    {{ClassName}}QueueResponse * const q) : {{ClassName}}Private(q)
+{{ClassName}}Private::{{ClassName}}Private(
+    {{ClassName|cut:"Response"}}QueueResponse * const q) : {{ClassName|cut:"Response"}}Private(q)
 {
 
 }
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceNameX}}
 } // namespace AWS

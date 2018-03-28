@@ -1,30 +1,30 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{OperationName|upper}}REQUEST_P_H
-#define QTAWS_{{OperationName|upper}}REQUEST_P_H
+#ifndef QTAWS_{{ClassName|upper}}_P_H
+#define QTAWS_{{ClassName|upper}}_P_H
 
 #include "{{ServiceName|lower}}_p.h"
-#include "{{OperationName|lower}}request.h"
+#include "{{ClassName|lower}}.h"
 
 namespace AWS {
 
-namespace {{ServiceName}} {
+namespace {{NameSpaceName}} {
 
-class {{OperationName}}Request;
+class {{ClassName}};
 
-class QTAWS_EXPORT {{OperationName}}RequestPrivate : public {{ServiceName}}Private {
+class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceName}}Private {
 
 public:
-    {{OperationName}}RequestPrivate(const {{ServiceName}}::Action action,
-                                   {{OperationName}}Request * const q);
-    {{OperationName}}RequestPrivate(const {{OperationName}}RequestPrivate &other,
-                                   {{OperationName}}Request * const q);
+    {{ClassName}}Private(const {{ServiceName}}::Action action,
+                                   {{ClassName}} * const q);
+    {{ClassName}}Private(const {{ClassName}}Private &other,
+                                   {{ClassName}} * const q);
 
 private:
-    Q_DECLARE_PUBLIC({{OperationName}}Request)
+    Q_DECLARE_PUBLIC({{ClassName}})
 
 };
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
 
 #endif

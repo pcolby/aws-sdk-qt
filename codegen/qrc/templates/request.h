@@ -1,20 +1,20 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{OperationName|upper}}REQUEST_H
-#define QTAWS_{{OperationName|upper}}REQUEST_H
+#ifndef QTAWS_{{ClassName|upper}}_H
+#define QTAWS_{{ClassName|upper}}_H
 
 #include "{{ServiceName|lower}}request.h"
 
 namespace AWS {
 
-namespace {{ServiceName}} {
+namespace {{NameSpaceName}} {
 
-class {{OperationName}}RequestPrivate;
+class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{OperationName}}Request : public {{ServiceName}}Request {
+class QTAWS_EXPORT {{ClassName}} : public {{ServiceName}}Request {
 
 public:
-    {{OperationName}}Request(const {{OperationName}}Request &other);
-    {{OperationName}}Request();
+    {{ClassName}}(const {{ClassName}} &other);
+    {{ClassName}}();
 
     virtual bool isValid() const;
 
@@ -24,11 +24,11 @@ protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
 private:
-    Q_DECLARE_PRIVATE({{OperationName}}Request)
+    Q_DECLARE_PRIVATE({{ClassName}})
 
 }
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
 
 #endif

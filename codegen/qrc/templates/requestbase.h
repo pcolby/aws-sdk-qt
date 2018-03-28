@@ -1,6 +1,6 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{ClassName|upper}}REQUEST_H
-#define QTAWS_{{ClassName|upper}}REQUEST_H
+#ifndef QTAWS_{{ClassName|upper}}_H
+#define QTAWS_{{ClassName|upper}}_H
 
 #include "core/awsabstractrequest.h"
 
@@ -11,12 +11,12 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace {{ClassName}} {
+namespace {{ClassName|cut:"Request"}} {
 
 class AwsAbstractClient;
-class {{ClassName}}RequestPrivate;
+class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{ClassName}}Request : public AwsAbstractRequest {
+class QTAWS_EXPORT {{ClassName}} : public AwsAbstractRequest {
 
 public:
     /// Actions supported by {{ServiceName}}.
@@ -25,9 +25,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    {{ClassName}}Request(const Action action);
-    {{ClassName}}Request(const {{ClassName}}Request &other);
-    {{ClassName}}Request &operator=(const {{ClassName}}Request &other);
+    {{ClassName}}(const Action action);
+    {{ClassName}}(const {{ClassName}} &other);
+    {{ClassName}} &operator=(const {{ClassName}} &other);
 
     Action action() const;
     QString actionString() const;
@@ -36,13 +36,13 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const {{ClassName}}Request &other) const;
+    virtual bool operator==(const {{ClassName}} &other) const;
 
     {# @todo Things like: static bool isValidQueueName(const QString &queueName); #}
 
 protected:
     /// @cond internal
-    {{ClassName}}Request({{ClassName}}RequestPrivate * const d);
+    {{ClassName}}({{ClassName}}Private * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -55,11 +55,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const;
 
 private:
-    Q_DECLARE_PRIVATE({{ClassName}}Request)
+    Q_DECLARE_PRIVATE({{ClassName}})
 
 }
 
-} // namespace {{ClassName}}
+} // namespace {{ClassName|cut:"Request"}}
 } // namespace AWS
 
 #endif

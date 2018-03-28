@@ -1,34 +1,34 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{OperationName|upper}}RESPONSE_P_H
-#define QTAWS_{{OperationName|upper}}RESPONSE_P_H
+#ifndef QTAWS_{{ClassName|upper}}_P_H
+#define QTAWS_{{ClassName|upper}}_P_H
 
 #include "{{ServiceName|lower}}response.h"
-#include "{{OperationName|lower}}request.h"
+#include "{{ClassName|lower|slice:"00:-8"}}request.h"
 
 namespace AWS {
 
-namespace {{ServiceName}} {
+namespace {{NameSpaceName}} {
 
-class {{OperationName}}Response;
+class {{ClassName}};
 
-class QTAWS_EXPORT {{OperationName}}ResponsePrivate : public {{ServiceName}}ResponsePrivate {
+class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceName}}ResponsePrivate {
     Q_OBJECT
 
 public:
     {# @todo data members go here #}
 
-    {{OperationName}}ResponsePrivate({{OperationName}}Response * const q);
+    {{ClassName}}Private({{ClassName}} * const q);
 
     {# @todo change parse type XML vs JSON #}
     void parse{{perationName}}Response(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC({{OperationName}}Response)
-    Q_DISABLE_COPY({{OperationName}}ResponsePrivate)
+    Q_DECLARE_PUBLIC({{ClassName}})
+    Q_DISABLE_COPY({{ClassName}}Private)
 
 };
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
 
 #endif

@@ -1,14 +1,14 @@
 {% include "license.txt" %}
-#include "{{OperationName|lower}}request.h"
-#include "{{OperationName|lower}}request_p.h"
+#include "{{ClassName|lower}}.h"
+#include "{{ClassName|lower}}_p.h"
 #include "{{OperationName|lower}}response.h"
 #include "{{ServiceName|lower}}request_p.h"
 
 namespace AWS {
-namespace {{ServiceName}} {
+namespace {{NameSpaceName}} {
 
 /**
- * @class  {{OperationName}}Request
+ * @class  {{ClassName}}
  *
  * @brief  Implements {{ServiceName}} {{OperationName}} requests.
  *
@@ -16,26 +16,26 @@ namespace {{ServiceName}} {
  */
 
 /**
- * @brief  Constructs a new {{OperationName}}Request object by copying another.
+ * @brief  Constructs a new {{ClassName}} object by copying another.
  *
  * @param  other  Instance to copy.
  */
-{{OperationName}}Request::{{OperationName}}Request(const {{OperationName}}Request &other)
-    : {{ServiceName}}Request(new {{OperationName}}RequestPrivate(*other.d_func(), this))
+{{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
+    : {{ServiceName}}Request(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
 
 /**
- * @brief  Constructs a new {{OperationName}}Request object.
+ * @brief  Constructs a new {{ClassName}} object.
  */
-{{OperationName}}Request::{{OperationName}}Request()
-    : {{ServiceName}}Request(new {{OperationName}}RequestPrivate({{ServiceName}}Request::{{OperationName}}Action, this))
+{{ClassName}}::{{ClassName}}()
+    : {{ServiceName}}Request(new {{ClassName}}Private({{ServiceName}}Request::{{OperationName}}Action, this))
 {
 
 }
 
-bool {{OperationName}}Request::isValid() const
+bool {{ClassName}}::isValid() const
 {
     return false;{# @todo #}
 }
@@ -52,7 +52,7 @@ bool {{OperationName}}Request::isValid() const
  * @see  AwsAbstractClient::send
  * @see  {{ServiceName}}Client::send
  */
-AwsAbstractResponse * {{OperationName}}Request::response(QNetworkReply * const reply) const
+AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const reply) const
 {
     return new {{OperationName}}Response(*this, reply);
 }
@@ -60,21 +60,21 @@ AwsAbstractResponse * {{OperationName}}Request::response(QNetworkReply * const r
 /**
  * @internal
  *
- * @class  {{OperationName}}RequestPrivate
+ * @class  {{ClassName}}Private
  *
- * @brief  Private implementation for {{OperationName}}Request.
+ * @brief  Private implementation for {{ClassName}}.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new {{OperationName}}RequestPrivate object.
+ * @brief  Constructs a new {{ClassName}}Private object.
  *
  * @param  action  {{ServiceName}} action being performed.
- * @param  q       Pointer to this object's public {{OperationName}}Request instance.
+ * @param  q       Pointer to this object's public {{ClassName}} instance.
  */
-{{OperationName}}RequestPrivate::{{OperationName}}RequestPrivate(
-    const {{ServiceName}}Request::Action action, {{OperationName}}Request * const q)
+{{ClassName}}Private::{{ClassName}}Private(
+    const {{ServiceName}}Request::Action action, {{ClassName}} * const q)
     : {{OperationName}}Private(action, q)
 {
 
@@ -83,20 +83,20 @@ AwsAbstractResponse * {{OperationName}}Request::response(QNetworkReply * const r
 /**
  * @internal
  *
- * @brief  Constructs a new {{OperationName}}RequestPrivate object, copying another.
+ * @brief  Constructs a new {{ClassName}}Private object, copying another.
  *
- * This copy-like constructor exists for the benefit of the {{OperationName}}Request
+ * This copy-like constructor exists for the benefit of the {{ClassName}}
  * class' copy constructor.
  *
  * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public {{OperationName}}Request instance.
+ * @param  q      Pointer to this object's public {{ClassName}} instance.
  */
-{{OperationName}}RequestPrivate::{{OperationName}}RequestPrivate(
-    const {{OperationName}}RequestPrivate &other, {{OperationName}}Request * const q)
+{{ClassName}}Private::{{ClassName}}Private(
+    const {{ClassName}}Private &other, {{ClassName}} * const q)
     : {{OperationName}}Private(other, q)
 {
 
 }
 
-} // namespace {{ServiceName}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
