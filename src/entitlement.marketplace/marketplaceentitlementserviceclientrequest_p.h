@@ -21,7 +21,7 @@
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENTREQUEST_P_H
 
 #include "marketplaceentitlementservice_p.h"
-#include "request.h"
+#include "marketplaceentitlementserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MarketplaceEntitlementService request (query string) parameters. @todo?
 
     MarketplaceEntitlementServiceClientRequestPrivate(const MarketplaceEntitlementServiceClientRequest::Action action, MarketplaceEntitlementServiceClientRequest * const q);
-    MarketplaceEntitlementServiceClientRequestPrivate(const RequestPrivate &other, MarketplaceEntitlementServiceClientRequest * const q);
+    MarketplaceEntitlementServiceClientRequestPrivate(const MarketplaceEntitlementServiceClientRequestPrivate &other, MarketplaceEntitlementServiceClientRequest * const q);
 
     static QString toString(const MarketplaceEntitlementServiceClientRequest::Action &action);
 

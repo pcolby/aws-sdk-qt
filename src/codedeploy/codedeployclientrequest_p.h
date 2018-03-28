@@ -21,7 +21,7 @@
 #define QTAWS_CODEDEPLOYCLIENTREQUEST_P_H
 
 #include "codedeploy_p.h"
-#include "request.h"
+#include "codedeployclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CodeDeploy request (query string) parameters. @todo?
 
     CodeDeployClientRequestPrivate(const CodeDeployClientRequest::Action action, CodeDeployClientRequest * const q);
-    CodeDeployClientRequestPrivate(const RequestPrivate &other, CodeDeployClientRequest * const q);
+    CodeDeployClientRequestPrivate(const CodeDeployClientRequestPrivate &other, CodeDeployClientRequest * const q);
 
     static QString toString(const CodeDeployClientRequest::Action &action);
 

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "snsrequest_p.h"
+#include "snsclientrequest.h"
+#include "snsclientrequest_p.h"
 
 namespace AWS {
 namespace SNS {

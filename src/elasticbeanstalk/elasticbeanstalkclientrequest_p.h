@@ -21,7 +21,7 @@
 #define QTAWS_ELASTICBEANSTALKCLIENTREQUEST_P_H
 
 #include "elasticbeanstalk_p.h"
-#include "request.h"
+#include "elasticbeanstalkclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ElasticBeanstalk request (query string) parameters. @todo?
 
     ElasticBeanstalkClientRequestPrivate(const ElasticBeanstalkClientRequest::Action action, ElasticBeanstalkClientRequest * const q);
-    ElasticBeanstalkClientRequestPrivate(const RequestPrivate &other, ElasticBeanstalkClientRequest * const q);
+    ElasticBeanstalkClientRequestPrivate(const ElasticBeanstalkClientRequestPrivate &other, ElasticBeanstalkClientRequest * const q);
 
     static QString toString(const ElasticBeanstalkClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDWATCHCLIENTREQUEST_P_H
 
 #include "cloudwatch_p.h"
-#include "request.h"
+#include "cloudwatchclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudWatch request (query string) parameters. @todo?
 
     CloudWatchClientRequestPrivate(const CloudWatchClientRequest::Action action, CloudWatchClientRequest * const q);
-    CloudWatchClientRequestPrivate(const RequestPrivate &other, CloudWatchClientRequest * const q);
+    CloudWatchClientRequestPrivate(const CloudWatchClientRequestPrivate &other, CloudWatchClientRequest * const q);
 
     static QString toString(const CloudWatchClientRequest::Action &action);
 

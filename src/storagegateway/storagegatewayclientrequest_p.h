@@ -21,7 +21,7 @@
 #define QTAWS_STORAGEGATEWAYCLIENTREQUEST_P_H
 
 #include "storagegateway_p.h"
-#include "request.h"
+#include "storagegatewayclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< StorageGateway request (query string) parameters. @todo?
 
     StorageGatewayClientRequestPrivate(const StorageGatewayClientRequest::Action action, StorageGatewayClientRequest * const q);
-    StorageGatewayClientRequestPrivate(const RequestPrivate &other, StorageGatewayClientRequest * const q);
+    StorageGatewayClientRequestPrivate(const StorageGatewayClientRequestPrivate &other, StorageGatewayClientRequest * const q);
 
     static QString toString(const StorageGatewayClientRequest::Action &action);
 

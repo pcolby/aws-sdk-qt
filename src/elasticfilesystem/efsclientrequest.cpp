@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "efsrequest_p.h"
+#include "efsclientrequest.h"
+#include "efsclientrequest_p.h"
 
 namespace AWS {
 namespace EFS {

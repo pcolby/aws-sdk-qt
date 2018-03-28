@@ -21,7 +21,7 @@
 #define QTAWS_DYNAMODBCLIENTREQUEST_P_H
 
 #include "dynamodb_p.h"
-#include "request.h"
+#include "dynamodbclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DynamoDB request (query string) parameters. @todo?
 
     DynamoDBClientRequestPrivate(const DynamoDBClientRequest::Action action, DynamoDBClientRequest * const q);
-    DynamoDBClientRequestPrivate(const RequestPrivate &other, DynamoDBClientRequest * const q);
+    DynamoDBClientRequestPrivate(const DynamoDBClientRequestPrivate &other, DynamoDBClientRequest * const q);
 
     static QString toString(const DynamoDBClientRequest::Action &action);
 

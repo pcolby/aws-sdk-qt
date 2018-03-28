@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "ecrrequest_p.h"
+#include "ecrclientrequest.h"
+#include "ecrclientrequest_p.h"
 
 namespace AWS {
 namespace ECR {

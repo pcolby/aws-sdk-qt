@@ -21,7 +21,7 @@
 #define QTAWS_EC2CLIENTREQUEST_P_H
 
 #include "ec2_p.h"
-#include "request.h"
+#include "ec2clientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< EC2 request (query string) parameters. @todo?
 
     Ec2ClientRequestPrivate(const Ec2ClientRequest::Action action, Ec2ClientRequest * const q);
-    Ec2ClientRequestPrivate(const RequestPrivate &other, Ec2ClientRequest * const q);
+    Ec2ClientRequestPrivate(const Ec2ClientRequestPrivate &other, Ec2ClientRequest * const q);
 
     static QString toString(const Ec2ClientRequest::Action &action);
 

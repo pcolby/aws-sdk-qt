@@ -21,7 +21,7 @@
 #define QTAWS_ECRCLIENTREQUEST_P_H
 
 #include "ecr_p.h"
-#include "request.h"
+#include "ecrclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ECR request (query string) parameters. @todo?
 
     EcrClientRequestPrivate(const EcrClientRequest::Action action, EcrClientRequest * const q);
-    EcrClientRequestPrivate(const RequestPrivate &other, EcrClientRequest * const q);
+    EcrClientRequestPrivate(const EcrClientRequestPrivate &other, EcrClientRequest * const q);
 
     static QString toString(const EcrClientRequest::Action &action);
 

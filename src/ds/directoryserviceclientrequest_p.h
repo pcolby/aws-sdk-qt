@@ -21,7 +21,7 @@
 #define QTAWS_DIRECTORYSERVICECLIENTREQUEST_P_H
 
 #include "directoryservice_p.h"
-#include "request.h"
+#include "directoryserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DirectoryService request (query string) parameters. @todo?
 
     DirectoryServiceClientRequestPrivate(const DirectoryServiceClientRequest::Action action, DirectoryServiceClientRequest * const q);
-    DirectoryServiceClientRequestPrivate(const RequestPrivate &other, DirectoryServiceClientRequest * const q);
+    DirectoryServiceClientRequestPrivate(const DirectoryServiceClientRequestPrivate &other, DirectoryServiceClientRequest * const q);
 
     static QString toString(const DirectoryServiceClientRequest::Action &action);
 

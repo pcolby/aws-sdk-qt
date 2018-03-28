@@ -21,7 +21,7 @@
 #define QTAWS_DAXCLIENTREQUEST_P_H
 
 #include "dax_p.h"
-#include "request.h"
+#include "daxclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DAX request (query string) parameters. @todo?
 
     DaxClientRequestPrivate(const DaxClientRequest::Action action, DaxClientRequest * const q);
-    DaxClientRequestPrivate(const RequestPrivate &other, DaxClientRequest * const q);
+    DaxClientRequestPrivate(const DaxClientRequestPrivate &other, DaxClientRequest * const q);
 
     static QString toString(const DaxClientRequest::Action &action);
 

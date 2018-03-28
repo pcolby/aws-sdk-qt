@@ -21,7 +21,7 @@
 #define QTAWS_MEDIALIVECLIENTREQUEST_P_H
 
 #include "medialive_p.h"
-#include "request.h"
+#include "medialiveclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MediaLive request (query string) parameters. @todo?
 
     MediaLiveClientRequestPrivate(const MediaLiveClientRequest::Action action, MediaLiveClientRequest * const q);
-    MediaLiveClientRequestPrivate(const RequestPrivate &other, MediaLiveClientRequest * const q);
+    MediaLiveClientRequestPrivate(const MediaLiveClientRequestPrivate &other, MediaLiveClientRequest * const q);
 
     static QString toString(const MediaLiveClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_MQCLIENTREQUEST_P_H
 
 #include "mq_p.h"
-#include "request.h"
+#include "mqclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MQ request (query string) parameters. @todo?
 
     MqClientRequestPrivate(const MqClientRequest::Action action, MqClientRequest * const q);
-    MqClientRequestPrivate(const RequestPrivate &other, MqClientRequest * const q);
+    MqClientRequestPrivate(const MqClientRequestPrivate &other, MqClientRequest * const q);
 
     static QString toString(const MqClientRequest::Action &action);
 

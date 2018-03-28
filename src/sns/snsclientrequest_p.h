@@ -21,7 +21,7 @@
 #define QTAWS_SNSCLIENTREQUEST_P_H
 
 #include "sns_p.h"
-#include "request.h"
+#include "snsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SNS request (query string) parameters. @todo?
 
     SnsClientRequestPrivate(const SnsClientRequest::Action action, SnsClientRequest * const q);
-    SnsClientRequestPrivate(const RequestPrivate &other, SnsClientRequest * const q);
+    SnsClientRequestPrivate(const SnsClientRequestPrivate &other, SnsClientRequest * const q);
 
     static QString toString(const SnsClientRequest::Action &action);
 

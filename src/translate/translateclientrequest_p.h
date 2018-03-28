@@ -21,7 +21,7 @@
 #define QTAWS_TRANSLATECLIENTREQUEST_P_H
 
 #include "translate_p.h"
-#include "request.h"
+#include "translateclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Translate request (query string) parameters. @todo?
 
     TranslateClientRequestPrivate(const TranslateClientRequest::Action action, TranslateClientRequest * const q);
-    TranslateClientRequestPrivate(const RequestPrivate &other, TranslateClientRequest * const q);
+    TranslateClientRequestPrivate(const TranslateClientRequestPrivate &other, TranslateClientRequest * const q);
 
     static QString toString(const TranslateClientRequest::Action &action);
 

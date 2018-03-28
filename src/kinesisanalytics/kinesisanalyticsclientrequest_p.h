@@ -21,7 +21,7 @@
 #define QTAWS_KINESISANALYTICSCLIENTREQUEST_P_H
 
 #include "kinesisanalytics_p.h"
-#include "request.h"
+#include "kinesisanalyticsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< KinesisAnalytics request (query string) parameters. @todo?
 
     KinesisAnalyticsClientRequestPrivate(const KinesisAnalyticsClientRequest::Action action, KinesisAnalyticsClientRequest * const q);
-    KinesisAnalyticsClientRequestPrivate(const RequestPrivate &other, KinesisAnalyticsClientRequest * const q);
+    KinesisAnalyticsClientRequestPrivate(const KinesisAnalyticsClientRequestPrivate &other, KinesisAnalyticsClientRequest * const q);
 
     static QString toString(const KinesisAnalyticsClientRequest::Action &action);
 

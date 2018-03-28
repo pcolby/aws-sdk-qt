@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "migrationhubrequest_p.h"
+#include "migrationhubclientrequest.h"
+#include "migrationhubclientrequest_p.h"
 
 namespace AWS {
 namespace MigrationHub {

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "resourcegroupsrequest_p.h"
+#include "resourcegroupsclientrequest.h"
+#include "resourcegroupsclientrequest_p.h"
 
 namespace AWS {
 namespace ResourceGroups {

@@ -21,7 +21,7 @@
 #define QTAWS_GAMELIFTCLIENTREQUEST_P_H
 
 #include "gamelift_p.h"
-#include "request.h"
+#include "gameliftclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< GameLift request (query string) parameters. @todo?
 
     GameLiftClientRequestPrivate(const GameLiftClientRequest::Action action, GameLiftClientRequest * const q);
-    GameLiftClientRequestPrivate(const RequestPrivate &other, GameLiftClientRequest * const q);
+    GameLiftClientRequestPrivate(const GameLiftClientRequestPrivate &other, GameLiftClientRequest * const q);
 
     static QString toString(const GameLiftClientRequest::Action &action);
 

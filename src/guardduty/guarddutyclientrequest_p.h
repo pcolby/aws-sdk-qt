@@ -21,7 +21,7 @@
 #define QTAWS_GUARDDUTYCLIENTREQUEST_P_H
 
 #include "guardduty_p.h"
-#include "request.h"
+#include "guarddutyclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< GuardDuty request (query string) parameters. @todo?
 
     GuardDutyClientRequestPrivate(const GuardDutyClientRequest::Action action, GuardDutyClientRequest * const q);
-    GuardDutyClientRequestPrivate(const RequestPrivate &other, GuardDutyClientRequest * const q);
+    GuardDutyClientRequestPrivate(const GuardDutyClientRequestPrivate &other, GuardDutyClientRequest * const q);
 
     static QString toString(const GuardDutyClientRequest::Action &action);
 

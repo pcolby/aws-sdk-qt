@@ -21,7 +21,7 @@
 #define QTAWS_INSPECTORCLIENTREQUEST_P_H
 
 #include "inspector_p.h"
-#include "request.h"
+#include "inspectorclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Inspector request (query string) parameters. @todo?
 
     InspectorClientRequestPrivate(const InspectorClientRequest::Action action, InspectorClientRequest * const q);
-    InspectorClientRequestPrivate(const RequestPrivate &other, InspectorClientRequest * const q);
+    InspectorClientRequestPrivate(const InspectorClientRequestPrivate &other, InspectorClientRequest * const q);
 
     static QString toString(const InspectorClientRequest::Action &action);
 

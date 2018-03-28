@@ -21,7 +21,7 @@
 #define QTAWS_GLACIERCLIENTREQUEST_P_H
 
 #include "glacier_p.h"
-#include "request.h"
+#include "glacierclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Glacier request (query string) parameters. @todo?
 
     GlacierClientRequestPrivate(const GlacierClientRequest::Action action, GlacierClientRequest * const q);
-    GlacierClientRequestPrivate(const RequestPrivate &other, GlacierClientRequest * const q);
+    GlacierClientRequestPrivate(const GlacierClientRequestPrivate &other, GlacierClientRequest * const q);
 
     static QString toString(const GlacierClientRequest::Action &action);
 

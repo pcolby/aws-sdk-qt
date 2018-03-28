@@ -21,7 +21,7 @@
 #define QTAWS_LAMBDACLIENTREQUEST_P_H
 
 #include "lambda_p.h"
-#include "request.h"
+#include "lambdaclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Lambda request (query string) parameters. @todo?
 
     LambdaClientRequestPrivate(const LambdaClientRequest::Action action, LambdaClientRequest * const q);
-    LambdaClientRequestPrivate(const RequestPrivate &other, LambdaClientRequest * const q);
+    LambdaClientRequestPrivate(const LambdaClientRequestPrivate &other, LambdaClientRequest * const q);
 
     static QString toString(const LambdaClientRequest::Action &action);
 

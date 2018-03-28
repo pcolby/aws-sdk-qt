@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "cognitoidentityproviderrequest_p.h"
+#include "cognitoidentityproviderclientrequest.h"
+#include "cognitoidentityproviderclientrequest_p.h"
 
 namespace AWS {
 namespace CognitoIdentityProvider {

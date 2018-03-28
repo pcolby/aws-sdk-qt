@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "alexaforbusinessrequest_p.h"
+#include "alexaforbusinessclientrequest.h"
+#include "alexaforbusinessclientrequest_p.h"
 
 namespace AWS {
 namespace AlexaForBusiness {

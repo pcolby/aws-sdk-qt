@@ -21,7 +21,7 @@
 #define QTAWS_IOTDATAPLANECLIENTREQUEST_P_H
 
 #include "iotdataplane_p.h"
-#include "request.h"
+#include "iotdataplaneclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< IoTDataPlane request (query string) parameters. @todo?
 
     IoTDataPlaneClientRequestPrivate(const IoTDataPlaneClientRequest::Action action, IoTDataPlaneClientRequest * const q);
-    IoTDataPlaneClientRequestPrivate(const RequestPrivate &other, IoTDataPlaneClientRequest * const q);
+    IoTDataPlaneClientRequestPrivate(const IoTDataPlaneClientRequestPrivate &other, IoTDataPlaneClientRequest * const q);
 
     static QString toString(const IoTDataPlaneClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_GREENGRASSCLIENTREQUEST_P_H
 
 #include "greengrass_p.h"
-#include "request.h"
+#include "greengrassclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Greengrass request (query string) parameters. @todo?
 
     GreengrassClientRequestPrivate(const GreengrassClientRequest::Action action, GreengrassClientRequest * const q);
-    GreengrassClientRequestPrivate(const RequestPrivate &other, GreengrassClientRequest * const q);
+    GreengrassClientRequestPrivate(const GreengrassClientRequestPrivate &other, GreengrassClientRequest * const q);
 
     static QString toString(const GreengrassClientRequest::Action &action);
 

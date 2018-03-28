@@ -21,7 +21,7 @@
 #define QTAWS_MACHINELEARNINGCLIENTREQUEST_P_H
 
 #include "machinelearning_p.h"
-#include "request.h"
+#include "machinelearningclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MachineLearning request (query string) parameters. @todo?
 
     MachineLearningClientRequestPrivate(const MachineLearningClientRequest::Action action, MachineLearningClientRequest * const q);
-    MachineLearningClientRequestPrivate(const RequestPrivate &other, MachineLearningClientRequest * const q);
+    MachineLearningClientRequestPrivate(const MachineLearningClientRequestPrivate &other, MachineLearningClientRequest * const q);
 
     static QString toString(const MachineLearningClientRequest::Action &action);
 

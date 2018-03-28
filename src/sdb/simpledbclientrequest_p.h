@@ -21,7 +21,7 @@
 #define QTAWS_SIMPLEDBCLIENTREQUEST_P_H
 
 #include "simpledb_p.h"
-#include "request.h"
+#include "simpledbclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SimpleDB request (query string) parameters. @todo?
 
     SimpleDBClientRequestPrivate(const SimpleDBClientRequest::Action action, SimpleDBClientRequest * const q);
-    SimpleDBClientRequestPrivate(const RequestPrivate &other, SimpleDBClientRequest * const q);
+    SimpleDBClientRequestPrivate(const SimpleDBClientRequestPrivate &other, SimpleDBClientRequest * const q);
 
     static QString toString(const SimpleDBClientRequest::Action &action);
 

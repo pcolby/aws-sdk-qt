@@ -21,7 +21,7 @@
 #define QTAWS_CLOUD9CLIENTREQUEST_P_H
 
 #include "cloud9_p.h"
-#include "request.h"
+#include "cloud9clientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Cloud9 request (query string) parameters. @todo?
 
     Cloud9ClientRequestPrivate(const Cloud9ClientRequest::Action action, Cloud9ClientRequest * const q);
-    Cloud9ClientRequestPrivate(const RequestPrivate &other, Cloud9ClientRequest * const q);
+    Cloud9ClientRequestPrivate(const Cloud9ClientRequestPrivate &other, Cloud9ClientRequest * const q);
 
     static QString toString(const Cloud9ClientRequest::Action &action);
 

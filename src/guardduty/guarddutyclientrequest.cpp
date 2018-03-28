@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "guarddutyrequest_p.h"
+#include "guarddutyclientrequest.h"
+#include "guarddutyclientrequest_p.h"
 
 namespace AWS {
 namespace GuardDuty {

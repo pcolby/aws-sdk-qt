@@ -21,7 +21,7 @@
 #define QTAWS_SNOWBALLCLIENTREQUEST_P_H
 
 #include "snowball_p.h"
-#include "request.h"
+#include "snowballclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Snowball request (query string) parameters. @todo?
 
     SnowballClientRequestPrivate(const SnowballClientRequest::Action action, SnowballClientRequest * const q);
-    SnowballClientRequestPrivate(const RequestPrivate &other, SnowballClientRequest * const q);
+    SnowballClientRequestPrivate(const SnowballClientRequestPrivate &other, SnowballClientRequest * const q);
 
     static QString toString(const SnowballClientRequest::Action &action);
 

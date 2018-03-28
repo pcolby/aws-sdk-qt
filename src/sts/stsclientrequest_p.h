@@ -21,7 +21,7 @@
 #define QTAWS_STSCLIENTREQUEST_P_H
 
 #include "sts_p.h"
-#include "request.h"
+#include "stsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< STS request (query string) parameters. @todo?
 
     StsClientRequestPrivate(const StsClientRequest::Action action, StsClientRequest * const q);
-    StsClientRequestPrivate(const RequestPrivate &other, StsClientRequest * const q);
+    StsClientRequestPrivate(const StsClientRequestPrivate &other, StsClientRequest * const q);
 
     static QString toString(const StsClientRequest::Action &action);
 

@@ -3,7 +3,7 @@
 #define QTAWS_{{ClassName|upper}}_P_H
 
 #include "{{ServiceName|lower}}_p.h"
-#include "{{OperationName|lower}}request.h"
+#include "{{ClassName|lower}}.h"
 
 namespace AWS {
 
@@ -19,7 +19,7 @@ public:
     QVariantMap parameters;    ///< {{ServiceName}} request (query string) parameters. @todo?
 
     {{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q);
-    {{ClassName}}Private(const {{OperationName}}RequestPrivate &other, {{ClassName}} * const q);
+    {{ClassName}}Private(const {{ClassName}}Private &other, {{ClassName}} * const q);
 
     static QString toString(const {{ClassName}}::Action &action);
 

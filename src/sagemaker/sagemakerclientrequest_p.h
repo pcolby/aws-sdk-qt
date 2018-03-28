@@ -21,7 +21,7 @@
 #define QTAWS_SAGEMAKERCLIENTREQUEST_P_H
 
 #include "sagemaker_p.h"
-#include "request.h"
+#include "sagemakerclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SageMaker request (query string) parameters. @todo?
 
     SageMakerClientRequestPrivate(const SageMakerClientRequest::Action action, SageMakerClientRequest * const q);
-    SageMakerClientRequestPrivate(const RequestPrivate &other, SageMakerClientRequest * const q);
+    SageMakerClientRequestPrivate(const SageMakerClientRequestPrivate &other, SageMakerClientRequest * const q);
 
     static QString toString(const SageMakerClientRequest::Action &action);
 

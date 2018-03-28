@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "storagegatewayrequest_p.h"
+#include "storagegatewayclientrequest.h"
+#include "storagegatewayclientrequest_p.h"
 
 namespace AWS {
 namespace StorageGateway {

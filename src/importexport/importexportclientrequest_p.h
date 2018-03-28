@@ -21,7 +21,7 @@
 #define QTAWS_IMPORTEXPORTCLIENTREQUEST_P_H
 
 #include "importexport_p.h"
-#include "request.h"
+#include "importexportclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ImportExport request (query string) parameters. @todo?
 
     ImportExportClientRequestPrivate(const ImportExportClientRequest::Action action, ImportExportClientRequest * const q);
-    ImportExportClientRequestPrivate(const RequestPrivate &other, ImportExportClientRequest * const q);
+    ImportExportClientRequestPrivate(const ImportExportClientRequestPrivate &other, ImportExportClientRequest * const q);
 
     static QString toString(const ImportExportClientRequest::Action &action);
 

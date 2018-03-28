@@ -21,7 +21,7 @@
 #define QTAWS_SERVICEDISCOVERYCLIENTREQUEST_P_H
 
 #include "servicediscovery_p.h"
-#include "request.h"
+#include "servicediscoveryclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ServiceDiscovery request (query string) parameters. @todo?
 
     ServiceDiscoveryClientRequestPrivate(const ServiceDiscoveryClientRequest::Action action, ServiceDiscoveryClientRequest * const q);
-    ServiceDiscoveryClientRequestPrivate(const RequestPrivate &other, ServiceDiscoveryClientRequest * const q);
+    ServiceDiscoveryClientRequestPrivate(const ServiceDiscoveryClientRequestPrivate &other, ServiceDiscoveryClientRequest * const q);
 
     static QString toString(const ServiceDiscoveryClientRequest::Action &action);
 

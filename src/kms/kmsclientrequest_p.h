@@ -21,7 +21,7 @@
 #define QTAWS_KMSCLIENTREQUEST_P_H
 
 #include "kms_p.h"
-#include "request.h"
+#include "kmsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< KMS request (query string) parameters. @todo?
 
     KmsClientRequestPrivate(const KmsClientRequest::Action action, KmsClientRequest * const q);
-    KmsClientRequestPrivate(const RequestPrivate &other, KmsClientRequest * const q);
+    KmsClientRequestPrivate(const KmsClientRequestPrivate &other, KmsClientRequest * const q);
 
     static QString toString(const KmsClientRequest::Action &action);
 

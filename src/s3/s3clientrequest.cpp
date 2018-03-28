@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "s3request_p.h"
+#include "s3clientrequest.h"
+#include "s3clientrequest_p.h"
 
 namespace AWS {
 namespace S3 {

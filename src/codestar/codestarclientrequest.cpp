@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "codestarrequest_p.h"
+#include "codestarclientrequest.h"
+#include "codestarclientrequest_p.h"
 
 namespace AWS {
 namespace CodeStar {

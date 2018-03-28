@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "marketplacecommerceanalyticsrequest_p.h"
+#include "marketplacecommerceanalyticsclientrequest.h"
+#include "marketplacecommerceanalyticsclientrequest_p.h"
 
 namespace AWS {
 namespace MarketplaceCommerceAnalytics {

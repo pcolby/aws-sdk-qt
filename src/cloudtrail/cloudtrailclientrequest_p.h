@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDTRAILCLIENTREQUEST_P_H
 
 #include "cloudtrail_p.h"
-#include "request.h"
+#include "cloudtrailclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudTrail request (query string) parameters. @todo?
 
     CloudTrailClientRequestPrivate(const CloudTrailClientRequest::Action action, CloudTrailClientRequest * const q);
-    CloudTrailClientRequestPrivate(const RequestPrivate &other, CloudTrailClientRequest * const q);
+    CloudTrailClientRequestPrivate(const CloudTrailClientRequestPrivate &other, CloudTrailClientRequest * const q);
 
     static QString toString(const CloudTrailClientRequest::Action &action);
 

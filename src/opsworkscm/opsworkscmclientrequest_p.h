@@ -21,7 +21,7 @@
 #define QTAWS_OPSWORKSCMCLIENTREQUEST_P_H
 
 #include "opsworkscm_p.h"
-#include "request.h"
+#include "opsworkscmclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< OpsWorksCM request (query string) parameters. @todo?
 
     OpsWorksCMClientRequestPrivate(const OpsWorksCMClientRequest::Action action, OpsWorksCMClientRequest * const q);
-    OpsWorksCMClientRequestPrivate(const RequestPrivate &other, OpsWorksCMClientRequest * const q);
+    OpsWorksCMClientRequestPrivate(const OpsWorksCMClientRequestPrivate &other, OpsWorksCMClientRequest * const q);
 
     static QString toString(const OpsWorksCMClientRequest::Action &action);
 

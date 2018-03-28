@@ -21,7 +21,7 @@
 #define QTAWS_KINESISVIDEOARCHIVEDMEDIACLIENTREQUEST_P_H
 
 #include "kinesisvideoarchivedmedia_p.h"
-#include "request.h"
+#include "kinesisvideoarchivedmediaclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< KinesisVideoArchivedMedia request (query string) parameters. @todo?
 
     KinesisVideoArchivedMediaClientRequestPrivate(const KinesisVideoArchivedMediaClientRequest::Action action, KinesisVideoArchivedMediaClientRequest * const q);
-    KinesisVideoArchivedMediaClientRequestPrivate(const RequestPrivate &other, KinesisVideoArchivedMediaClientRequest * const q);
+    KinesisVideoArchivedMediaClientRequestPrivate(const KinesisVideoArchivedMediaClientRequestPrivate &other, KinesisVideoArchivedMediaClientRequest * const q);
 
     static QString toString(const KinesisVideoArchivedMediaClientRequest::Action &action);
 

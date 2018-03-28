@@ -21,7 +21,7 @@
 #define QTAWS_PRICINGCLIENTREQUEST_P_H
 
 #include "pricing_p.h"
-#include "request.h"
+#include "pricingclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Pricing request (query string) parameters. @todo?
 
     PricingClientRequestPrivate(const PricingClientRequest::Action action, PricingClientRequest * const q);
-    PricingClientRequestPrivate(const RequestPrivate &other, PricingClientRequest * const q);
+    PricingClientRequestPrivate(const PricingClientRequestPrivate &other, PricingClientRequest * const q);
 
     static QString toString(const PricingClientRequest::Action &action);
 

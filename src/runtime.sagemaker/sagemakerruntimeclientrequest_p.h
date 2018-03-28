@@ -21,7 +21,7 @@
 #define QTAWS_SAGEMAKERRUNTIMECLIENTREQUEST_P_H
 
 #include "sagemakerruntime_p.h"
-#include "request.h"
+#include "sagemakerruntimeclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SageMakerRuntime request (query string) parameters. @todo?
 
     SageMakerRuntimeClientRequestPrivate(const SageMakerRuntimeClientRequest::Action action, SageMakerRuntimeClientRequest * const q);
-    SageMakerRuntimeClientRequestPrivate(const RequestPrivate &other, SageMakerRuntimeClientRequest * const q);
+    SageMakerRuntimeClientRequestPrivate(const SageMakerRuntimeClientRequestPrivate &other, SageMakerRuntimeClientRequest * const q);
 
     static QString toString(const SageMakerRuntimeClientRequest::Action &action);
 

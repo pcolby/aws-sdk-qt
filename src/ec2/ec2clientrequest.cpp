@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "ec2request_p.h"
+#include "ec2clientrequest.h"
+#include "ec2clientrequest_p.h"
 
 namespace AWS {
 namespace EC2 {

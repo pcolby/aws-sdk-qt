@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "sqsrequest_p.h"
+#include "sqsclientrequest.h"
+#include "sqsclientrequest_p.h"
 
 namespace AWS {
 namespace SQS {

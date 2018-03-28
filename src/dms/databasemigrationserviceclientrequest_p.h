@@ -21,7 +21,7 @@
 #define QTAWS_DATABASEMIGRATIONSERVICECLIENTREQUEST_P_H
 
 #include "databasemigrationservice_p.h"
-#include "request.h"
+#include "databasemigrationserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DatabaseMigrationService request (query string) parameters. @todo?
 
     DatabaseMigrationServiceClientRequestPrivate(const DatabaseMigrationServiceClientRequest::Action action, DatabaseMigrationServiceClientRequest * const q);
-    DatabaseMigrationServiceClientRequestPrivate(const RequestPrivate &other, DatabaseMigrationServiceClientRequest * const q);
+    DatabaseMigrationServiceClientRequestPrivate(const DatabaseMigrationServiceClientRequestPrivate &other, DatabaseMigrationServiceClientRequest * const q);
 
     static QString toString(const DatabaseMigrationServiceClientRequest::Action &action);
 

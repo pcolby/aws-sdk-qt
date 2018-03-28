@@ -21,7 +21,7 @@
 #define QTAWS_ELASTICLOADBALANCINGCLIENTREQUEST_P_H
 
 #include "elasticloadbalancing_p.h"
-#include "request.h"
+#include "elasticloadbalancingclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ElasticLoadBalancing request (query string) parameters. @todo?
 
     ElasticLoadBalancingClientRequestPrivate(const ElasticLoadBalancingClientRequest::Action action, ElasticLoadBalancingClientRequest * const q);
-    ElasticLoadBalancingClientRequestPrivate(const RequestPrivate &other, ElasticLoadBalancingClientRequest * const q);
+    ElasticLoadBalancingClientRequestPrivate(const ElasticLoadBalancingClientRequestPrivate &other, ElasticLoadBalancingClientRequest * const q);
 
     static QString toString(const ElasticLoadBalancingClientRequest::Action &action);
 

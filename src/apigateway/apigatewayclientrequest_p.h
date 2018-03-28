@@ -21,7 +21,7 @@
 #define QTAWS_APIGATEWAYCLIENTREQUEST_P_H
 
 #include "apigateway_p.h"
-#include "request.h"
+#include "apigatewayclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< APIGateway request (query string) parameters. @todo?
 
     APIGatewayClientRequestPrivate(const APIGatewayClientRequest::Action action, APIGatewayClientRequest * const q);
-    APIGatewayClientRequestPrivate(const RequestPrivate &other, APIGatewayClientRequest * const q);
+    APIGatewayClientRequestPrivate(const APIGatewayClientRequestPrivate &other, APIGatewayClientRequest * const q);
 
     static QString toString(const APIGatewayClientRequest::Action &action);
 

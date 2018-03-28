@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "elasticloadbalancingv2request_p.h"
+#include "elasticloadbalancingv2clientrequest.h"
+#include "elasticloadbalancingv2clientrequest_p.h"
 
 namespace AWS {
 namespace ElasticLoadBalancingv2 {

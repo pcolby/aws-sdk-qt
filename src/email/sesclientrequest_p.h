@@ -21,7 +21,7 @@
 #define QTAWS_SESCLIENTREQUEST_P_H
 
 #include "ses_p.h"
-#include "request.h"
+#include "sesclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SES request (query string) parameters. @todo?
 
     SesClientRequestPrivate(const SesClientRequest::Action action, SesClientRequest * const q);
-    SesClientRequestPrivate(const RequestPrivate &other, SesClientRequest * const q);
+    SesClientRequestPrivate(const SesClientRequestPrivate &other, SesClientRequest * const q);
 
     static QString toString(const SesClientRequest::Action &action);
 

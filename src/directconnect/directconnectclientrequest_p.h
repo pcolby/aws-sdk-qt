@@ -21,7 +21,7 @@
 #define QTAWS_DIRECTCONNECTCLIENTREQUEST_P_H
 
 #include "directconnect_p.h"
-#include "request.h"
+#include "directconnectclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DirectConnect request (query string) parameters. @todo?
 
     DirectConnectClientRequestPrivate(const DirectConnectClientRequest::Action action, DirectConnectClientRequest * const q);
-    DirectConnectClientRequestPrivate(const RequestPrivate &other, DirectConnectClientRequest * const q);
+    DirectConnectClientRequestPrivate(const DirectConnectClientRequestPrivate &other, DirectConnectClientRequest * const q);
 
     static QString toString(const DirectConnectClientRequest::Action &action);
 

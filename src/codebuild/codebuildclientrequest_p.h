@@ -21,7 +21,7 @@
 #define QTAWS_CODEBUILDCLIENTREQUEST_P_H
 
 #include "codebuild_p.h"
-#include "request.h"
+#include "codebuildclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CodeBuild request (query string) parameters. @todo?
 
     CodeBuildClientRequestPrivate(const CodeBuildClientRequest::Action action, CodeBuildClientRequest * const q);
-    CodeBuildClientRequestPrivate(const RequestPrivate &other, CodeBuildClientRequest * const q);
+    CodeBuildClientRequestPrivate(const CodeBuildClientRequestPrivate &other, CodeBuildClientRequest * const q);
 
     static QString toString(const CodeBuildClientRequest::Action &action);
 

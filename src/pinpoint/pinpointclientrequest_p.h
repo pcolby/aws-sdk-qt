@@ -21,7 +21,7 @@
 #define QTAWS_PINPOINTCLIENTREQUEST_P_H
 
 #include "pinpoint_p.h"
-#include "request.h"
+#include "pinpointclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Pinpoint request (query string) parameters. @todo?
 
     PinpointClientRequestPrivate(const PinpointClientRequest::Action action, PinpointClientRequest * const q);
-    PinpointClientRequestPrivate(const RequestPrivate &other, PinpointClientRequest * const q);
+    PinpointClientRequestPrivate(const PinpointClientRequestPrivate &other, PinpointClientRequest * const q);
 
     static QString toString(const PinpointClientRequest::Action &action);
 

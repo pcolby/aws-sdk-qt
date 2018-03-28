@@ -21,7 +21,7 @@
 #define QTAWS_DEVICEFARMCLIENTREQUEST_P_H
 
 #include "devicefarm_p.h"
-#include "request.h"
+#include "devicefarmclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DeviceFarm request (query string) parameters. @todo?
 
     DeviceFarmClientRequestPrivate(const DeviceFarmClientRequest::Action action, DeviceFarmClientRequest * const q);
-    DeviceFarmClientRequestPrivate(const RequestPrivate &other, DeviceFarmClientRequest * const q);
+    DeviceFarmClientRequestPrivate(const DeviceFarmClientRequestPrivate &other, DeviceFarmClientRequest * const q);
 
     static QString toString(const DeviceFarmClientRequest::Action &action);
 

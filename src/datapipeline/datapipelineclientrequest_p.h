@@ -21,7 +21,7 @@
 #define QTAWS_DATAPIPELINECLIENTREQUEST_P_H
 
 #include "datapipeline_p.h"
-#include "request.h"
+#include "datapipelineclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< DataPipeline request (query string) parameters. @todo?
 
     DataPipelineClientRequestPrivate(const DataPipelineClientRequest::Action action, DataPipelineClientRequest * const q);
-    DataPipelineClientRequestPrivate(const RequestPrivate &other, DataPipelineClientRequest * const q);
+    DataPipelineClientRequestPrivate(const DataPipelineClientRequestPrivate &other, DataPipelineClientRequest * const q);
 
     static QString toString(const DataPipelineClientRequest::Action &action);
 

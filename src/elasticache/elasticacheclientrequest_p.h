@@ -21,7 +21,7 @@
 #define QTAWS_ELASTICACHECLIENTREQUEST_P_H
 
 #include "elasticache_p.h"
-#include "request.h"
+#include "elasticacheclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ElastiCache request (query string) parameters. @todo?
 
     ElastiCacheClientRequestPrivate(const ElastiCacheClientRequest::Action action, ElastiCacheClientRequest * const q);
-    ElastiCacheClientRequestPrivate(const RequestPrivate &other, ElastiCacheClientRequest * const q);
+    ElastiCacheClientRequestPrivate(const ElastiCacheClientRequestPrivate &other, ElastiCacheClientRequest * const q);
 
     static QString toString(const ElastiCacheClientRequest::Action &action);
 

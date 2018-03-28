@@ -21,7 +21,7 @@
 #define QTAWS_IOTCLIENTREQUEST_P_H
 
 #include "iot_p.h"
-#include "request.h"
+#include "iotclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< IoT request (query string) parameters. @todo?
 
     IoTClientRequestPrivate(const IoTClientRequest::Action action, IoTClientRequest * const q);
-    IoTClientRequestPrivate(const RequestPrivate &other, IoTClientRequest * const q);
+    IoTClientRequestPrivate(const IoTClientRequestPrivate &other, IoTClientRequest * const q);
 
     static QString toString(const IoTClientRequest::Action &action);
 

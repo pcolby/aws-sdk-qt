@@ -21,7 +21,7 @@
 #define QTAWS_GLUECLIENTREQUEST_P_H
 
 #include "glue_p.h"
-#include "request.h"
+#include "glueclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Glue request (query string) parameters. @todo?
 
     GlueClientRequestPrivate(const GlueClientRequest::Action action, GlueClientRequest * const q);
-    GlueClientRequestPrivate(const RequestPrivate &other, GlueClientRequest * const q);
+    GlueClientRequestPrivate(const GlueClientRequestPrivate &other, GlueClientRequest * const q);
 
     static QString toString(const GlueClientRequest::Action &action);
 

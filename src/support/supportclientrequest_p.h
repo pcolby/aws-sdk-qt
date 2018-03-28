@@ -21,7 +21,7 @@
 #define QTAWS_SUPPORTCLIENTREQUEST_P_H
 
 #include "support_p.h"
-#include "request.h"
+#include "supportclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Support request (query string) parameters. @todo?
 
     SupportClientRequestPrivate(const SupportClientRequest::Action action, SupportClientRequest * const q);
-    SupportClientRequestPrivate(const RequestPrivate &other, SupportClientRequest * const q);
+    SupportClientRequestPrivate(const SupportClientRequestPrivate &other, SupportClientRequest * const q);
 
     static QString toString(const SupportClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_IAMCLIENTREQUEST_P_H
 
 #include "iam_p.h"
-#include "request.h"
+#include "iamclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< IAM request (query string) parameters. @todo?
 
     IamClientRequestPrivate(const IamClientRequest::Action action, IamClientRequest * const q);
-    IamClientRequestPrivate(const RequestPrivate &other, IamClientRequest * const q);
+    IamClientRequestPrivate(const IamClientRequestPrivate &other, IamClientRequest * const q);
 
     static QString toString(const IamClientRequest::Action &action);
 

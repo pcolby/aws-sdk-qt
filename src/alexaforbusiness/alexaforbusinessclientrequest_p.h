@@ -21,7 +21,7 @@
 #define QTAWS_ALEXAFORBUSINESSCLIENTREQUEST_P_H
 
 #include "alexaforbusiness_p.h"
-#include "request.h"
+#include "alexaforbusinessclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< AlexaForBusiness request (query string) parameters. @todo?
 
     AlexaForBusinessClientRequestPrivate(const AlexaForBusinessClientRequest::Action action, AlexaForBusinessClientRequest * const q);
-    AlexaForBusinessClientRequestPrivate(const RequestPrivate &other, AlexaForBusinessClientRequest * const q);
+    AlexaForBusinessClientRequestPrivate(const AlexaForBusinessClientRequestPrivate &other, AlexaForBusinessClientRequest * const q);
 
     static QString toString(const AlexaForBusinessClientRequest::Action &action);
 

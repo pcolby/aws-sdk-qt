@@ -21,7 +21,7 @@
 #define QTAWS_CONFIGSERVICECLIENTREQUEST_P_H
 
 #include "configservice_p.h"
-#include "request.h"
+#include "configserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ConfigService request (query string) parameters. @todo?
 
     ConfigServiceClientRequestPrivate(const ConfigServiceClientRequest::Action action, ConfigServiceClientRequest * const q);
-    ConfigServiceClientRequestPrivate(const RequestPrivate &other, ConfigServiceClientRequest * const q);
+    ConfigServiceClientRequestPrivate(const ConfigServiceClientRequestPrivate &other, ConfigServiceClientRequest * const q);
 
     static QString toString(const ConfigServiceClientRequest::Action &action);
 

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "autoscalingrequest_p.h"
+#include "autoscalingclientrequest.h"
+#include "autoscalingclientrequest_p.h"
 
 namespace AWS {
 namespace AutoScaling {

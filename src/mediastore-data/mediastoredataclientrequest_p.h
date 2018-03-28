@@ -21,7 +21,7 @@
 #define QTAWS_MEDIASTOREDATACLIENTREQUEST_P_H
 
 #include "mediastoredata_p.h"
-#include "request.h"
+#include "mediastoredataclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MediaStoreData request (query string) parameters. @todo?
 
     MediaStoreDataClientRequestPrivate(const MediaStoreDataClientRequest::Action action, MediaStoreDataClientRequest * const q);
-    MediaStoreDataClientRequestPrivate(const RequestPrivate &other, MediaStoreDataClientRequest * const q);
+    MediaStoreDataClientRequestPrivate(const MediaStoreDataClientRequestPrivate &other, MediaStoreDataClientRequest * const q);
 
     static QString toString(const MediaStoreDataClientRequest::Action &action);
 

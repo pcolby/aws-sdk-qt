@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDHSMV2CLIENTREQUEST_P_H
 
 #include "cloudhsmv2_p.h"
-#include "request.h"
+#include "cloudhsmv2clientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudHSMV2 request (query string) parameters. @todo?
 
     CloudHSMV2ClientRequestPrivate(const CloudHSMV2ClientRequest::Action action, CloudHSMV2ClientRequest * const q);
-    CloudHSMV2ClientRequestPrivate(const RequestPrivate &other, CloudHSMV2ClientRequest * const q);
+    CloudHSMV2ClientRequestPrivate(const CloudHSMV2ClientRequestPrivate &other, CloudHSMV2ClientRequest * const q);
 
     static QString toString(const CloudHSMV2ClientRequest::Action &action);
 

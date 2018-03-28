@@ -21,7 +21,7 @@
 #define QTAWS_LEXRUNTIMESERVICECLIENTREQUEST_P_H
 
 #include "lexruntimeservice_p.h"
-#include "request.h"
+#include "lexruntimeserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< LexRuntimeService request (query string) parameters. @todo?
 
     LexRuntimeServiceClientRequestPrivate(const LexRuntimeServiceClientRequest::Action action, LexRuntimeServiceClientRequest * const q);
-    LexRuntimeServiceClientRequestPrivate(const RequestPrivate &other, LexRuntimeServiceClientRequest * const q);
+    LexRuntimeServiceClientRequestPrivate(const LexRuntimeServiceClientRequestPrivate &other, LexRuntimeServiceClientRequest * const q);
 
     static QString toString(const LexRuntimeServiceClientRequest::Action &action);
 

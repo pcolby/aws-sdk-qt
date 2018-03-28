@@ -21,7 +21,7 @@
 #define QTAWS_BATCHCLIENTREQUEST_P_H
 
 #include "batch_p.h"
-#include "request.h"
+#include "batchclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Batch request (query string) parameters. @todo?
 
     BatchClientRequestPrivate(const BatchClientRequest::Action action, BatchClientRequest * const q);
-    BatchClientRequestPrivate(const RequestPrivate &other, BatchClientRequest * const q);
+    BatchClientRequestPrivate(const BatchClientRequestPrivate &other, BatchClientRequest * const q);
 
     static QString toString(const BatchClientRequest::Action &action);
 

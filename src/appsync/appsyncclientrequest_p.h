@@ -21,7 +21,7 @@
 #define QTAWS_APPSYNCCLIENTREQUEST_P_H
 
 #include "appsync_p.h"
-#include "request.h"
+#include "appsyncclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< AppSync request (query string) parameters. @todo?
 
     AppSyncClientRequestPrivate(const AppSyncClientRequest::Action action, AppSyncClientRequest * const q);
-    AppSyncClientRequestPrivate(const RequestPrivate &other, AppSyncClientRequest * const q);
+    AppSyncClientRequestPrivate(const AppSyncClientRequestPrivate &other, AppSyncClientRequest * const q);
 
     static QString toString(const AppSyncClientRequest::Action &action);
 

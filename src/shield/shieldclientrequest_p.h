@@ -21,7 +21,7 @@
 #define QTAWS_SHIELDCLIENTREQUEST_P_H
 
 #include "shield_p.h"
-#include "request.h"
+#include "shieldclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Shield request (query string) parameters. @todo?
 
     ShieldClientRequestPrivate(const ShieldClientRequest::Action action, ShieldClientRequest * const q);
-    ShieldClientRequestPrivate(const RequestPrivate &other, ShieldClientRequest * const q);
+    ShieldClientRequestPrivate(const ShieldClientRequestPrivate &other, ShieldClientRequest * const q);
 
     static QString toString(const ShieldClientRequest::Action &action);
 

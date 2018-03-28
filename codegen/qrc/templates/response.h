@@ -1,6 +1,6 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{OperationName|upper}}RESPONSE_H
-#define QTAWS_{{OperationName|upper}}RESPONSE_H
+#ifndef QTAWS_{{ClassName|upper}}_H
+#define QTAWS_{{ClassName|upper}}_H
 
 #include "{{ServiceName|lower}}response.h"
 #include "{{OperationName|lower}}request.h"

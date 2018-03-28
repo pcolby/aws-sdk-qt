@@ -21,7 +21,7 @@
 #define QTAWS_EMRCLIENTREQUEST_P_H
 
 #include "emr_p.h"
-#include "request.h"
+#include "emrclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< EMR request (query string) parameters. @todo?
 
     EmrClientRequestPrivate(const EmrClientRequest::Action action, EmrClientRequest * const q);
-    EmrClientRequestPrivate(const RequestPrivate &other, EmrClientRequest * const q);
+    EmrClientRequestPrivate(const EmrClientRequestPrivate &other, EmrClientRequest * const q);
 
     static QString toString(const EmrClientRequest::Action &action);
 

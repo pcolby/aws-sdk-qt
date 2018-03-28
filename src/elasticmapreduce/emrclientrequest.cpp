@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "emrrequest_p.h"
+#include "emrclientrequest.h"
+#include "emrclientrequest_p.h"
 
 namespace AWS {
 namespace EMR {

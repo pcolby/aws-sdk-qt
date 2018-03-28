@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "workmailrequest_p.h"
+#include "workmailclientrequest.h"
+#include "workmailclientrequest_p.h"
 
 namespace AWS {
 namespace WorkMail {

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "workspacesrequest_p.h"
+#include "workspacesclientrequest.h"
+#include "workspacesclientrequest_p.h"
 
 namespace AWS {
 namespace WorkSpaces {

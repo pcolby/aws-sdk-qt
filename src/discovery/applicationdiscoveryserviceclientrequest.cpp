@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryserviceclientrequest.h"
+#include "applicationdiscoveryserviceclientrequest_p.h"
 
 namespace AWS {
 namespace ApplicationDiscoveryService {

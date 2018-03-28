@@ -21,7 +21,7 @@
 #define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENTREQUEST_P_H
 
 #include "resourcegroupstaggingapi_p.h"
-#include "request.h"
+#include "resourcegroupstaggingapiclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ResourceGroupsTaggingAPI request (query string) parameters. @todo?
 
     ResourceGroupsTaggingAPIClientRequestPrivate(const ResourceGroupsTaggingAPIClientRequest::Action action, ResourceGroupsTaggingAPIClientRequest * const q);
-    ResourceGroupsTaggingAPIClientRequestPrivate(const RequestPrivate &other, ResourceGroupsTaggingAPIClientRequest * const q);
+    ResourceGroupsTaggingAPIClientRequestPrivate(const ResourceGroupsTaggingAPIClientRequestPrivate &other, ResourceGroupsTaggingAPIClientRequest * const q);
 
     static QString toString(const ResourceGroupsTaggingAPIClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_LIGHTSAILCLIENTREQUEST_P_H
 
 #include "lightsail_p.h"
-#include "request.h"
+#include "lightsailclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Lightsail request (query string) parameters. @todo?
 
     LightsailClientRequestPrivate(const LightsailClientRequest::Action action, LightsailClientRequest * const q);
-    LightsailClientRequestPrivate(const RequestPrivate &other, LightsailClientRequest * const q);
+    LightsailClientRequestPrivate(const LightsailClientRequestPrivate &other, LightsailClientRequest * const q);
 
     static QString toString(const LightsailClientRequest::Action &action);
 

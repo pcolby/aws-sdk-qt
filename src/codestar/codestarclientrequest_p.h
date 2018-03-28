@@ -21,7 +21,7 @@
 #define QTAWS_CODESTARCLIENTREQUEST_P_H
 
 #include "codestar_p.h"
-#include "request.h"
+#include "codestarclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CodeStar request (query string) parameters. @todo?
 
     CodeStarClientRequestPrivate(const CodeStarClientRequest::Action action, CodeStarClientRequest * const q);
-    CodeStarClientRequestPrivate(const RequestPrivate &other, CodeStarClientRequest * const q);
+    CodeStarClientRequestPrivate(const CodeStarClientRequestPrivate &other, CodeStarClientRequest * const q);
 
     static QString toString(const CodeStarClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENTREQUEST_P_H
 
 #include "serverlessapplicationrepository_p.h"
-#include "request.h"
+#include "serverlessapplicationrepositoryclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ServerlessApplicationRepository request (query string) parameters. @todo?
 
     ServerlessApplicationRepositoryClientRequestPrivate(const ServerlessApplicationRepositoryClientRequest::Action action, ServerlessApplicationRepositoryClientRequest * const q);
-    ServerlessApplicationRepositoryClientRequestPrivate(const RequestPrivate &other, ServerlessApplicationRepositoryClientRequest * const q);
+    ServerlessApplicationRepositoryClientRequestPrivate(const ServerlessApplicationRepositoryClientRequestPrivate &other, ServerlessApplicationRepositoryClientRequest * const q);
 
     static QString toString(const ServerlessApplicationRepositoryClientRequest::Action &action);
 

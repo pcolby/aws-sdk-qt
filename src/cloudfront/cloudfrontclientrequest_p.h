@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDFRONTCLIENTREQUEST_P_H
 
 #include "cloudfront_p.h"
-#include "request.h"
+#include "cloudfrontclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudFront request (query string) parameters. @todo?
 
     CloudFrontClientRequestPrivate(const CloudFrontClientRequest::Action action, CloudFrontClientRequest * const q);
-    CloudFrontClientRequestPrivate(const RequestPrivate &other, CloudFrontClientRequest * const q);
+    CloudFrontClientRequestPrivate(const CloudFrontClientRequestPrivate &other, CloudFrontClientRequest * const q);
 
     static QString toString(const CloudFrontClientRequest::Action &action);
 

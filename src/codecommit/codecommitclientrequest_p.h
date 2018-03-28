@@ -21,7 +21,7 @@
 #define QTAWS_CODECOMMITCLIENTREQUEST_P_H
 
 #include "codecommit_p.h"
-#include "request.h"
+#include "codecommitclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CodeCommit request (query string) parameters. @todo?
 
     CodeCommitClientRequestPrivate(const CodeCommitClientRequest::Action action, CodeCommitClientRequest * const q);
-    CodeCommitClientRequestPrivate(const RequestPrivate &other, CodeCommitClientRequest * const q);
+    CodeCommitClientRequestPrivate(const CodeCommitClientRequestPrivate &other, CodeCommitClientRequest * const q);
 
     static QString toString(const CodeCommitClientRequest::Action &action);
 

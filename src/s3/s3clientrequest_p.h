@@ -21,7 +21,7 @@
 #define QTAWS_S3CLIENTREQUEST_P_H
 
 #include "s3_p.h"
-#include "request.h"
+#include "s3clientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< S3 request (query string) parameters. @todo?
 
     S3ClientRequestPrivate(const S3ClientRequest::Action action, S3ClientRequest * const q);
-    S3ClientRequestPrivate(const RequestPrivate &other, S3ClientRequest * const q);
+    S3ClientRequestPrivate(const S3ClientRequestPrivate &other, S3ClientRequest * const q);
 
     static QString toString(const S3ClientRequest::Action &action);
 

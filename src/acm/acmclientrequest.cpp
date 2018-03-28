@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "acmrequest_p.h"
+#include "acmclientrequest.h"
+#include "acmclientrequest_p.h"
 
 namespace AWS {
 namespace ACM {

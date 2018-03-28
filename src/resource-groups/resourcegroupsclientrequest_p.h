@@ -21,7 +21,7 @@
 #define QTAWS_RESOURCEGROUPSCLIENTREQUEST_P_H
 
 #include "resourcegroups_p.h"
-#include "request.h"
+#include "resourcegroupsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ResourceGroups request (query string) parameters. @todo?
 
     ResourceGroupsClientRequestPrivate(const ResourceGroupsClientRequest::Action action, ResourceGroupsClientRequest * const q);
-    ResourceGroupsClientRequestPrivate(const RequestPrivate &other, ResourceGroupsClientRequest * const q);
+    ResourceGroupsClientRequestPrivate(const ResourceGroupsClientRequestPrivate &other, ResourceGroupsClientRequest * const q);
 
     static QString toString(const ResourceGroupsClientRequest::Action &action);
 

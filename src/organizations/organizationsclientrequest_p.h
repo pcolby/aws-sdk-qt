@@ -21,7 +21,7 @@
 #define QTAWS_ORGANIZATIONSCLIENTREQUEST_P_H
 
 #include "organizations_p.h"
-#include "request.h"
+#include "organizationsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Organizations request (query string) parameters. @todo?
 
     OrganizationsClientRequestPrivate(const OrganizationsClientRequest::Action action, OrganizationsClientRequest * const q);
-    OrganizationsClientRequestPrivate(const RequestPrivate &other, OrganizationsClientRequest * const q);
+    OrganizationsClientRequestPrivate(const OrganizationsClientRequestPrivate &other, OrganizationsClientRequest * const q);
 
     static QString toString(const OrganizationsClientRequest::Action &action);
 

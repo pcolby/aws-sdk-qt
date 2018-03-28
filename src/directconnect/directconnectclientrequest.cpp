@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "directconnectrequest_p.h"
+#include "directconnectclientrequest.h"
+#include "directconnectclientrequest_p.h"
 
 namespace AWS {
 namespace DirectConnect {

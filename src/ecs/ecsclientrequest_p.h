@@ -21,7 +21,7 @@
 #define QTAWS_ECSCLIENTREQUEST_P_H
 
 #include "ecs_p.h"
-#include "request.h"
+#include "ecsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ECS request (query string) parameters. @todo?
 
     EcsClientRequestPrivate(const EcsClientRequest::Action action, EcsClientRequest * const q);
-    EcsClientRequestPrivate(const RequestPrivate &other, EcsClientRequest * const q);
+    EcsClientRequestPrivate(const EcsClientRequestPrivate &other, EcsClientRequest * const q);
 
     static QString toString(const EcsClientRequest::Action &action);
 

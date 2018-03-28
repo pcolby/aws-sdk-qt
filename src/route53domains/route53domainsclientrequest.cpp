@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "route53domainsrequest_p.h"
+#include "route53domainsclientrequest.h"
+#include "route53domainsclientrequest_p.h"
 
 namespace AWS {
 namespace Route53Domains {

@@ -21,7 +21,7 @@
 #define QTAWS_XRAYCLIENTREQUEST_P_H
 
 #include "xray_p.h"
-#include "request.h"
+#include "xrayclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< XRay request (query string) parameters. @todo?
 
     XRayClientRequestPrivate(const XRayClientRequest::Action action, XRayClientRequest * const q);
-    XRayClientRequestPrivate(const RequestPrivate &other, XRayClientRequest * const q);
+    XRayClientRequestPrivate(const XRayClientRequestPrivate &other, XRayClientRequest * const q);
 
     static QString toString(const XRayClientRequest::Action &action);
 

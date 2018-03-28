@@ -21,7 +21,7 @@
 #define QTAWS_COSTANDUSAGEREPORTSERVICECLIENTREQUEST_P_H
 
 #include "costandusagereportservice_p.h"
-#include "request.h"
+#include "costandusagereportserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CostandUsageReportService request (query string) parameters. @todo?
 
     CostandUsageReportServiceClientRequestPrivate(const CostandUsageReportServiceClientRequest::Action action, CostandUsageReportServiceClientRequest * const q);
-    CostandUsageReportServiceClientRequestPrivate(const RequestPrivate &other, CostandUsageReportServiceClientRequest * const q);
+    CostandUsageReportServiceClientRequestPrivate(const CostandUsageReportServiceClientRequestPrivate &other, CostandUsageReportServiceClientRequest * const q);
 
     static QString toString(const CostandUsageReportServiceClientRequest::Action &action);
 

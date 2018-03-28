@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "iamrequest_p.h"
+#include "iamclientrequest.h"
+#include "iamclientrequest_p.h"
 
 namespace AWS {
 namespace IAM {

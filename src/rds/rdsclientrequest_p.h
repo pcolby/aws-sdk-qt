@@ -21,7 +21,7 @@
 #define QTAWS_RDSCLIENTREQUEST_P_H
 
 #include "rds_p.h"
-#include "request.h"
+#include "rdsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< RDS request (query string) parameters. @todo?
 
     RdsClientRequestPrivate(const RdsClientRequest::Action action, RdsClientRequest * const q);
-    RdsClientRequestPrivate(const RequestPrivate &other, RdsClientRequest * const q);
+    RdsClientRequestPrivate(const RdsClientRequestPrivate &other, RdsClientRequest * const q);
 
     static QString toString(const RdsClientRequest::Action &action);
 

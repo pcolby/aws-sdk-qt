@@ -21,7 +21,7 @@
 #define QTAWS_MEDIAPACKAGECLIENTREQUEST_P_H
 
 #include "mediapackage_p.h"
-#include "request.h"
+#include "mediapackageclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MediaPackage request (query string) parameters. @todo?
 
     MediaPackageClientRequestPrivate(const MediaPackageClientRequest::Action action, MediaPackageClientRequest * const q);
-    MediaPackageClientRequestPrivate(const RequestPrivate &other, MediaPackageClientRequest * const q);
+    MediaPackageClientRequestPrivate(const MediaPackageClientRequestPrivate &other, MediaPackageClientRequest * const q);
 
     static QString toString(const MediaPackageClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_ELASTICSEARCHSERVICECLIENTREQUEST_P_H
 
 #include "elasticsearchservice_p.h"
-#include "request.h"
+#include "elasticsearchserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ElasticsearchService request (query string) parameters. @todo?
 
     ElasticsearchServiceClientRequestPrivate(const ElasticsearchServiceClientRequest::Action action, ElasticsearchServiceClientRequest * const q);
-    ElasticsearchServiceClientRequestPrivate(const RequestPrivate &other, ElasticsearchServiceClientRequest * const q);
+    ElasticsearchServiceClientRequestPrivate(const ElasticsearchServiceClientRequestPrivate &other, ElasticsearchServiceClientRequest * const q);
 
     static QString toString(const ElasticsearchServiceClientRequest::Action &action);
 

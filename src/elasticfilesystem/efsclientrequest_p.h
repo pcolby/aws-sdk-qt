@@ -21,7 +21,7 @@
 #define QTAWS_EFSCLIENTREQUEST_P_H
 
 #include "efs_p.h"
-#include "request.h"
+#include "efsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< EFS request (query string) parameters. @todo?
 
     EfsClientRequestPrivate(const EfsClientRequest::Action action, EfsClientRequest * const q);
-    EfsClientRequestPrivate(const RequestPrivate &other, EfsClientRequest * const q);
+    EfsClientRequestPrivate(const EfsClientRequestPrivate &other, EfsClientRequest * const q);
 
     static QString toString(const EfsClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_SERVICECATALOGCLIENTREQUEST_P_H
 
 #include "servicecatalog_p.h"
-#include "request.h"
+#include "servicecatalogclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ServiceCatalog request (query string) parameters. @todo?
 
     ServiceCatalogClientRequestPrivate(const ServiceCatalogClientRequest::Action action, ServiceCatalogClientRequest * const q);
-    ServiceCatalogClientRequestPrivate(const RequestPrivate &other, ServiceCatalogClientRequest * const q);
+    ServiceCatalogClientRequestPrivate(const ServiceCatalogClientRequestPrivate &other, ServiceCatalogClientRequest * const q);
 
     static QString toString(const ServiceCatalogClientRequest::Action &action);
 

@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDSEARCHDOMAINCLIENTREQUEST_P_H
 
 #include "cloudsearchdomain_p.h"
-#include "request.h"
+#include "cloudsearchdomainclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudSearchDomain request (query string) parameters. @todo?
 
     CloudSearchDomainClientRequestPrivate(const CloudSearchDomainClientRequest::Action action, CloudSearchDomainClientRequest * const q);
-    CloudSearchDomainClientRequestPrivate(const RequestPrivate &other, CloudSearchDomainClientRequest * const q);
+    CloudSearchDomainClientRequestPrivate(const CloudSearchDomainClientRequestPrivate &other, CloudSearchDomainClientRequest * const q);
 
     static QString toString(const CloudSearchDomainClientRequest::Action &action);
 

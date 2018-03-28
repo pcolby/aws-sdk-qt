@@ -21,7 +21,7 @@
 #define QTAWS_REDSHIFTCLIENTREQUEST_P_H
 
 #include "redshift_p.h"
-#include "request.h"
+#include "redshiftclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Redshift request (query string) parameters. @todo?
 
     RedshiftClientRequestPrivate(const RedshiftClientRequest::Action action, RedshiftClientRequest * const q);
-    RedshiftClientRequestPrivate(const RequestPrivate &other, RedshiftClientRequest * const q);
+    RedshiftClientRequestPrivate(const RedshiftClientRequestPrivate &other, RedshiftClientRequest * const q);
 
     static QString toString(const RedshiftClientRequest::Action &action);
 

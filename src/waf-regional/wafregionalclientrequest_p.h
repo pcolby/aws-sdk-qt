@@ -21,7 +21,7 @@
 #define QTAWS_WAFREGIONALCLIENTREQUEST_P_H
 
 #include "wafregional_p.h"
-#include "request.h"
+#include "wafregionalclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< WAFRegional request (query string) parameters. @todo?
 
     WAFRegionalClientRequestPrivate(const WAFRegionalClientRequest::Action action, WAFRegionalClientRequest * const q);
-    WAFRegionalClientRequestPrivate(const RequestPrivate &other, WAFRegionalClientRequest * const q);
+    WAFRegionalClientRequestPrivate(const WAFRegionalClientRequestPrivate &other, WAFRegionalClientRequest * const q);
 
     static QString toString(const WAFRegionalClientRequest::Action &action);
 

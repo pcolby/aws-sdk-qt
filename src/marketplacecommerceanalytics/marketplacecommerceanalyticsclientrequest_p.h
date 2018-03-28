@@ -21,7 +21,7 @@
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENTREQUEST_P_H
 
 #include "marketplacecommerceanalytics_p.h"
-#include "request.h"
+#include "marketplacecommerceanalyticsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MarketplaceCommerceAnalytics request (query string) parameters. @todo?
 
     MarketplaceCommerceAnalyticsClientRequestPrivate(const MarketplaceCommerceAnalyticsClientRequest::Action action, MarketplaceCommerceAnalyticsClientRequest * const q);
-    MarketplaceCommerceAnalyticsClientRequestPrivate(const RequestPrivate &other, MarketplaceCommerceAnalyticsClientRequest * const q);
+    MarketplaceCommerceAnalyticsClientRequestPrivate(const MarketplaceCommerceAnalyticsClientRequestPrivate &other, MarketplaceCommerceAnalyticsClientRequest * const q);
 
     static QString toString(const MarketplaceCommerceAnalyticsClientRequest::Action &action);
 

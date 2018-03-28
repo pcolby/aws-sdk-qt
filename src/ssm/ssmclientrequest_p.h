@@ -21,7 +21,7 @@
 #define QTAWS_SSMCLIENTREQUEST_P_H
 
 #include "ssm_p.h"
-#include "request.h"
+#include "ssmclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SSM request (query string) parameters. @todo?
 
     SsmClientRequestPrivate(const SsmClientRequest::Action action, SsmClientRequest * const q);
-    SsmClientRequestPrivate(const RequestPrivate &other, SsmClientRequest * const q);
+    SsmClientRequestPrivate(const SsmClientRequestPrivate &other, SsmClientRequest * const q);
 
     static QString toString(const SsmClientRequest::Action &action);
 

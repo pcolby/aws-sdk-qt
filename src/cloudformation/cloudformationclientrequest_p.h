@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDFORMATIONCLIENTREQUEST_P_H
 
 #include "cloudformation_p.h"
-#include "request.h"
+#include "cloudformationclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudFormation request (query string) parameters. @todo?
 
     CloudFormationClientRequestPrivate(const CloudFormationClientRequest::Action action, CloudFormationClientRequest * const q);
-    CloudFormationClientRequestPrivate(const RequestPrivate &other, CloudFormationClientRequest * const q);
+    CloudFormationClientRequestPrivate(const CloudFormationClientRequestPrivate &other, CloudFormationClientRequest * const q);
 
     static QString toString(const CloudFormationClientRequest::Action &action);
 

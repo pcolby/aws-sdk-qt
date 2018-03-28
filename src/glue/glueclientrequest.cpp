@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "gluerequest_p.h"
+#include "glueclientrequest.h"
+#include "glueclientrequest_p.h"
 
 namespace AWS {
 namespace Glue {

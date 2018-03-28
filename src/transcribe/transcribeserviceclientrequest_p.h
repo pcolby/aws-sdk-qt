@@ -21,7 +21,7 @@
 #define QTAWS_TRANSCRIBESERVICECLIENTREQUEST_P_H
 
 #include "transcribeservice_p.h"
-#include "request.h"
+#include "transcribeserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< TranscribeService request (query string) parameters. @todo?
 
     TranscribeServiceClientRequestPrivate(const TranscribeServiceClientRequest::Action action, TranscribeServiceClientRequest * const q);
-    TranscribeServiceClientRequestPrivate(const RequestPrivate &other, TranscribeServiceClientRequest * const q);
+    TranscribeServiceClientRequestPrivate(const TranscribeServiceClientRequestPrivate &other, TranscribeServiceClientRequest * const q);
 
     static QString toString(const TranscribeServiceClientRequest::Action &action);
 

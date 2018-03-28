@@ -21,7 +21,7 @@
 #define QTAWS_APPSTREAMCLIENTREQUEST_P_H
 
 #include "appstream_p.h"
-#include "request.h"
+#include "appstreamclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< AppStream request (query string) parameters. @todo?
 
     AppStreamClientRequestPrivate(const AppStreamClientRequest::Action action, AppStreamClientRequest * const q);
-    AppStreamClientRequestPrivate(const RequestPrivate &other, AppStreamClientRequest * const q);
+    AppStreamClientRequestPrivate(const AppStreamClientRequestPrivate &other, AppStreamClientRequest * const q);
 
     static QString toString(const AppStreamClientRequest::Action &action);
 

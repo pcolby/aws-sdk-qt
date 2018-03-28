@@ -21,7 +21,7 @@
 #define QTAWS_APPLICATIONDISCOVERYSERVICECLIENTREQUEST_P_H
 
 #include "applicationdiscoveryservice_p.h"
-#include "request.h"
+#include "applicationdiscoveryserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ApplicationDiscoveryService request (query string) parameters. @todo?
 
     ApplicationDiscoveryServiceClientRequestPrivate(const ApplicationDiscoveryServiceClientRequest::Action action, ApplicationDiscoveryServiceClientRequest * const q);
-    ApplicationDiscoveryServiceClientRequestPrivate(const RequestPrivate &other, ApplicationDiscoveryServiceClientRequest * const q);
+    ApplicationDiscoveryServiceClientRequestPrivate(const ApplicationDiscoveryServiceClientRequestPrivate &other, ApplicationDiscoveryServiceClientRequest * const q);
 
     static QString toString(const ApplicationDiscoveryServiceClientRequest::Action &action);
 

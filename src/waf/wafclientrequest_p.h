@@ -21,7 +21,7 @@
 #define QTAWS_WAFCLIENTREQUEST_P_H
 
 #include "waf_p.h"
-#include "request.h"
+#include "wafclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< WAF request (query string) parameters. @todo?
 
     WafClientRequestPrivate(const WafClientRequest::Action action, WafClientRequest * const q);
-    WafClientRequestPrivate(const RequestPrivate &other, WafClientRequest * const q);
+    WafClientRequestPrivate(const WafClientRequestPrivate &other, WafClientRequest * const q);
 
     static QString toString(const WafClientRequest::Action &action);
 

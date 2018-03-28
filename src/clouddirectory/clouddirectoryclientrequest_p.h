@@ -21,7 +21,7 @@
 #define QTAWS_CLOUDDIRECTORYCLIENTREQUEST_P_H
 
 #include "clouddirectory_p.h"
-#include "request.h"
+#include "clouddirectoryclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CloudDirectory request (query string) parameters. @todo?
 
     CloudDirectoryClientRequestPrivate(const CloudDirectoryClientRequest::Action action, CloudDirectoryClientRequest * const q);
-    CloudDirectoryClientRequestPrivate(const RequestPrivate &other, CloudDirectoryClientRequest * const q);
+    CloudDirectoryClientRequestPrivate(const CloudDirectoryClientRequestPrivate &other, CloudDirectoryClientRequest * const q);
 
     static QString toString(const CloudDirectoryClientRequest::Action &action);
 

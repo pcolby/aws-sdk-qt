@@ -21,7 +21,7 @@
 #define QTAWS_AUTOSCALINGPLANSCLIENTREQUEST_P_H
 
 #include "autoscalingplans_p.h"
-#include "request.h"
+#include "autoscalingplansclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< AutoScalingPlans request (query string) parameters. @todo?
 
     AutoScalingPlansClientRequestPrivate(const AutoScalingPlansClientRequest::Action action, AutoScalingPlansClientRequest * const q);
-    AutoScalingPlansClientRequestPrivate(const RequestPrivate &other, AutoScalingPlansClientRequest * const q);
+    AutoScalingPlansClientRequestPrivate(const AutoScalingPlansClientRequestPrivate &other, AutoScalingPlansClientRequest * const q);
 
     static QString toString(const AutoScalingPlansClientRequest::Action &action);
 

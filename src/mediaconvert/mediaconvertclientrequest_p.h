@@ -21,7 +21,7 @@
 #define QTAWS_MEDIACONVERTCLIENTREQUEST_P_H
 
 #include "mediaconvert_p.h"
-#include "request.h"
+#include "mediaconvertclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MediaConvert request (query string) parameters. @todo?
 
     MediaConvertClientRequestPrivate(const MediaConvertClientRequest::Action action, MediaConvertClientRequest * const q);
-    MediaConvertClientRequestPrivate(const RequestPrivate &other, MediaConvertClientRequest * const q);
+    MediaConvertClientRequestPrivate(const MediaConvertClientRequestPrivate &other, MediaConvertClientRequest * const q);
 
     static QString toString(const MediaConvertClientRequest::Action &action);
 

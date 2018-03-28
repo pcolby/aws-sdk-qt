@@ -1,6 +1,6 @@
 {% include "license.txt" %}
-#include "{{OperationName|lower}}response.h"
-#include "{{OperationName|lower}}response_p.h"
+#include "{{ClassName|lower}}.h"
+#include "{{ClassName|lower}}_p.h"
 
 #include <QDebug>
 #include <QNetworkReply>

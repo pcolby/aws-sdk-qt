@@ -21,7 +21,7 @@
 #define QTAWS_REKOGNITIONCLIENTREQUEST_P_H
 
 #include "rekognition_p.h"
-#include "request.h"
+#include "rekognitionclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Rekognition request (query string) parameters. @todo?
 
     RekognitionClientRequestPrivate(const RekognitionClientRequest::Action action, RekognitionClientRequest * const q);
-    RekognitionClientRequestPrivate(const RequestPrivate &other, RekognitionClientRequest * const q);
+    RekognitionClientRequestPrivate(const RekognitionClientRequestPrivate &other, RekognitionClientRequest * const q);
 
     static QString toString(const RekognitionClientRequest::Action &action);
 

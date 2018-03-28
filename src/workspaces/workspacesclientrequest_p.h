@@ -21,7 +21,7 @@
 #define QTAWS_WORKSPACESCLIENTREQUEST_P_H
 
 #include "workspaces_p.h"
-#include "request.h"
+#include "workspacesclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< WorkSpaces request (query string) parameters. @todo?
 
     WorkSpacesClientRequestPrivate(const WorkSpacesClientRequest::Action action, WorkSpacesClientRequest * const q);
-    WorkSpacesClientRequestPrivate(const RequestPrivate &other, WorkSpacesClientRequest * const q);
+    WorkSpacesClientRequestPrivate(const WorkSpacesClientRequestPrivate &other, WorkSpacesClientRequest * const q);
 
     static QString toString(const WorkSpacesClientRequest::Action &action);
 

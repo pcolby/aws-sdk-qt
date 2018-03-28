@@ -21,7 +21,7 @@
 #define QTAWS_ACMCLIENTREQUEST_P_H
 
 #include "acm_p.h"
-#include "request.h"
+#include "acmclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ACM request (query string) parameters. @todo?
 
     AcmClientRequestPrivate(const AcmClientRequest::Action action, AcmClientRequest * const q);
-    AcmClientRequestPrivate(const RequestPrivate &other, AcmClientRequest * const q);
+    AcmClientRequestPrivate(const AcmClientRequestPrivate &other, AcmClientRequest * const q);
 
     static QString toString(const AcmClientRequest::Action &action);
 

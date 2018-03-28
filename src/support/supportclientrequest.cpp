@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "supportrequest_p.h"
+#include "supportclientrequest.h"
+#include "supportclientrequest_p.h"
 
 namespace AWS {
 namespace Support {

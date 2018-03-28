@@ -21,7 +21,7 @@
 #define QTAWS_MTURKCLIENTREQUEST_P_H
 
 #include "mturk_p.h"
-#include "request.h"
+#include "mturkclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MTurk request (query string) parameters. @todo?
 
     MTurkClientRequestPrivate(const MTurkClientRequest::Action action, MTurkClientRequest * const q);
-    MTurkClientRequestPrivate(const RequestPrivate &other, MTurkClientRequest * const q);
+    MTurkClientRequestPrivate(const MTurkClientRequestPrivate &other, MTurkClientRequest * const q);
 
     static QString toString(const MTurkClientRequest::Action &action);
 

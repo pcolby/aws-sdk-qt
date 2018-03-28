@@ -21,7 +21,7 @@
 #define QTAWS_LEXMODELBUILDINGSERVICECLIENTREQUEST_P_H
 
 #include "lexmodelbuildingservice_p.h"
-#include "request.h"
+#include "lexmodelbuildingserviceclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< LexModelBuildingService request (query string) parameters. @todo?
 
     LexModelBuildingServiceClientRequestPrivate(const LexModelBuildingServiceClientRequest::Action action, LexModelBuildingServiceClientRequest * const q);
-    LexModelBuildingServiceClientRequestPrivate(const RequestPrivate &other, LexModelBuildingServiceClientRequest * const q);
+    LexModelBuildingServiceClientRequestPrivate(const LexModelBuildingServiceClientRequestPrivate &other, LexModelBuildingServiceClientRequest * const q);
 
     static QString toString(const LexModelBuildingServiceClientRequest::Action &action);
 

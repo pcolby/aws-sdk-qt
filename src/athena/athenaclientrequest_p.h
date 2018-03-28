@@ -21,7 +21,7 @@
 #define QTAWS_ATHENACLIENTREQUEST_P_H
 
 #include "athena_p.h"
-#include "request.h"
+#include "athenaclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Athena request (query string) parameters. @todo?
 
     AthenaClientRequestPrivate(const AthenaClientRequest::Action action, AthenaClientRequest * const q);
-    AthenaClientRequestPrivate(const RequestPrivate &other, AthenaClientRequest * const q);
+    AthenaClientRequestPrivate(const AthenaClientRequestPrivate &other, AthenaClientRequest * const q);
 
     static QString toString(const AthenaClientRequest::Action &action);
 

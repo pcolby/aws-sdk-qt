@@ -1,8 +1,6 @@
 {% include "license.txt" %}
-#include "{{OperationName|lower}}request.h"
-#include "{{OperationName|lower}}request_p.h"
-#include "{{OperationName|lower}}response.h"
-#include "{{ServiceName|lower}}request_p.h"
+#include "{{ClassName|lower}}.h"
+#include "{{ClassName|lower}}_p.h"
 
 namespace AWS {
 namespace {{NameSpaceName}} {

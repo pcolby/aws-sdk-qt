@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "machinelearningrequest_p.h"
+#include "machinelearningclientrequest.h"
+#include "machinelearningclientrequest_p.h"
 
 namespace AWS {
 namespace MachineLearning {

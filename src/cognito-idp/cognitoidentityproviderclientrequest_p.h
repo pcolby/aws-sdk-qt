@@ -21,7 +21,7 @@
 #define QTAWS_COGNITOIDENTITYPROVIDERCLIENTREQUEST_P_H
 
 #include "cognitoidentityprovider_p.h"
-#include "request.h"
+#include "cognitoidentityproviderclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CognitoIdentityProvider request (query string) parameters. @todo?
 
     CognitoIdentityProviderClientRequestPrivate(const CognitoIdentityProviderClientRequest::Action action, CognitoIdentityProviderClientRequest * const q);
-    CognitoIdentityProviderClientRequestPrivate(const RequestPrivate &other, CognitoIdentityProviderClientRequest * const q);
+    CognitoIdentityProviderClientRequestPrivate(const CognitoIdentityProviderClientRequestPrivate &other, CognitoIdentityProviderClientRequest * const q);
 
     static QString toString(const CognitoIdentityProviderClientRequest::Action &action);
 

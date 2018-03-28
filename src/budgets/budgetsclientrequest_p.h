@@ -21,7 +21,7 @@
 #define QTAWS_BUDGETSCLIENTREQUEST_P_H
 
 #include "budgets_p.h"
-#include "request.h"
+#include "budgetsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Budgets request (query string) parameters. @todo?
 
     BudgetsClientRequestPrivate(const BudgetsClientRequest::Action action, BudgetsClientRequest * const q);
-    BudgetsClientRequestPrivate(const RequestPrivate &other, BudgetsClientRequest * const q);
+    BudgetsClientRequestPrivate(const BudgetsClientRequestPrivate &other, BudgetsClientRequest * const q);
 
     static QString toString(const BudgetsClientRequest::Action &action);
 

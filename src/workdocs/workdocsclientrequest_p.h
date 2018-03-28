@@ -21,7 +21,7 @@
 #define QTAWS_WORKDOCSCLIENTREQUEST_P_H
 
 #include "workdocs_p.h"
-#include "request.h"
+#include "workdocsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< WorkDocs request (query string) parameters. @todo?
 
     WorkDocsClientRequestPrivate(const WorkDocsClientRequest::Action action, WorkDocsClientRequest * const q);
-    WorkDocsClientRequestPrivate(const RequestPrivate &other, WorkDocsClientRequest * const q);
+    WorkDocsClientRequestPrivate(const WorkDocsClientRequestPrivate &other, WorkDocsClientRequest * const q);
 
     static QString toString(const WorkDocsClientRequest::Action &action);
 

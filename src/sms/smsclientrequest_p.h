@@ -21,7 +21,7 @@
 #define QTAWS_SMSCLIENTREQUEST_P_H
 
 #include "sms_p.h"
-#include "request.h"
+#include "smsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SMS request (query string) parameters. @todo?
 
     SmsClientRequestPrivate(const SmsClientRequest::Action action, SmsClientRequest * const q);
-    SmsClientRequestPrivate(const RequestPrivate &other, SmsClientRequest * const q);
+    SmsClientRequestPrivate(const SmsClientRequestPrivate &other, SmsClientRequest * const q);
 
     static QString toString(const SmsClientRequest::Action &action);
 

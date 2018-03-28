@@ -21,7 +21,7 @@
 #define QTAWS_WORKMAILCLIENTREQUEST_P_H
 
 #include "workmail_p.h"
-#include "request.h"
+#include "workmailclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< WorkMail request (query string) parameters. @todo?
 
     WorkMailClientRequestPrivate(const WorkMailClientRequest::Action action, WorkMailClientRequest * const q);
-    WorkMailClientRequestPrivate(const RequestPrivate &other, WorkMailClientRequest * const q);
+    WorkMailClientRequestPrivate(const WorkMailClientRequestPrivate &other, WorkMailClientRequest * const q);
 
     static QString toString(const WorkMailClientRequest::Action &action);
 

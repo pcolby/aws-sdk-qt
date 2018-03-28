@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "batchrequest_p.h"
+#include "batchclientrequest.h"
+#include "batchclientrequest_p.h"
 
 namespace AWS {
 namespace Batch {

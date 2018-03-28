@@ -21,7 +21,7 @@
 #define QTAWS_COSTEXPLORERCLIENTREQUEST_P_H
 
 #include "costexplorer_p.h"
-#include "request.h"
+#include "costexplorerclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CostExplorer request (query string) parameters. @todo?
 
     CostExplorerClientRequestPrivate(const CostExplorerClientRequest::Action action, CostExplorerClientRequest * const q);
-    CostExplorerClientRequestPrivate(const RequestPrivate &other, CostExplorerClientRequest * const q);
+    CostExplorerClientRequestPrivate(const CostExplorerClientRequestPrivate &other, CostExplorerClientRequest * const q);
 
     static QString toString(const CostExplorerClientRequest::Action &action);
 

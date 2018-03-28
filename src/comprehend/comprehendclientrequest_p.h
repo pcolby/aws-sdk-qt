@@ -21,7 +21,7 @@
 #define QTAWS_COMPREHENDCLIENTREQUEST_P_H
 
 #include "comprehend_p.h"
-#include "request.h"
+#include "comprehendclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Comprehend request (query string) parameters. @todo?
 
     ComprehendClientRequestPrivate(const ComprehendClientRequest::Action action, ComprehendClientRequest * const q);
-    ComprehendClientRequestPrivate(const RequestPrivate &other, ComprehendClientRequest * const q);
+    ComprehendClientRequestPrivate(const ComprehendClientRequestPrivate &other, ComprehendClientRequest * const q);
 
     static QString toString(const ComprehendClientRequest::Action &action);
 

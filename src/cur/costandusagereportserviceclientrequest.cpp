@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "costandusagereportservicerequest_p.h"
+#include "costandusagereportserviceclientrequest.h"
+#include "costandusagereportserviceclientrequest_p.h"
 
 namespace AWS {
 namespace CostandUsageReportService {

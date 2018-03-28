@@ -21,7 +21,7 @@
 #define QTAWS_IOTJOBSDATAPLANECLIENTREQUEST_P_H
 
 #include "iotjobsdataplane_p.h"
-#include "request.h"
+#include "iotjobsdataplaneclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< IoTJobsDataPlane request (query string) parameters. @todo?
 
     IoTJobsDataPlaneClientRequestPrivate(const IoTJobsDataPlaneClientRequest::Action action, IoTJobsDataPlaneClientRequest * const q);
-    IoTJobsDataPlaneClientRequestPrivate(const RequestPrivate &other, IoTJobsDataPlaneClientRequest * const q);
+    IoTJobsDataPlaneClientRequestPrivate(const IoTJobsDataPlaneClientRequestPrivate &other, IoTJobsDataPlaneClientRequest * const q);
 
     static QString toString(const IoTJobsDataPlaneClientRequest::Action &action);
 

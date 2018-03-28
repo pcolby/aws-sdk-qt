@@ -93,7 +93,7 @@ bool Generator::generate(const QString &serviceFileName,
     context.insert(QSL("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
-    /// @todo Generate model classes.
+    // Generate model classes.
     context.push();
     renderClassFiles(QSL("requestbase"),  context, projectDir, className + QSL("Request"));
     renderClassFiles(QSL("responsebase"), context, projectDir, className + QSL("Response"));
@@ -102,7 +102,7 @@ bool Generator::generate(const QString &serviceFileName,
     }
     context.pop();
 
-    /// @todo Generate service client.
+    // Generate service client.
     context.push();
     QVariantMap operations = context.lookup(QSL("operations")).toMap();
     for (auto iter = operations.begin(); iter != operations.end(); ++iter) {
@@ -117,7 +117,7 @@ bool Generator::generate(const QString &serviceFileName,
     renderClassFiles(QSL("client"), context, projectDir, className);
     context.pop();
 
-    /// @todo Generate ancillary project files.
+    // Generate ancillary project files.
     context.push();
     headers.sort();
     sources.sort();
@@ -187,17 +187,16 @@ bool Generator::generateModelClasses(Grantlee::Context &context, const QString &
     const QJsonObject operation = description.value(QLatin1String("operations"))
             .toObject().value(operationName).toObject();
     context.insert(QLatin1String("operation"), operation.toVariantHash());
-    context.insert(QLatin1String("OperationName"), operationName); /// @todo Drop this?
+    context.insert(QLatin1String("OperationName"), operationName);
 
-    /// @todo Generate request class.
+    // Generate request class.
     if (operation.contains(QLatin1String("input"))) {
         context.push();
         renderClassFiles(QSL("request"), context, projectDir, operationName + QSL("Request"));
         context.pop();
     }
 
-    /// @todo Generate response class.
-    /// @todo Generate the base response class.
+    // Generate response class.
     context.push();
     renderClassFiles(QSL("response"), context, projectDir, operationName + QSL("Response"));
     context.pop();

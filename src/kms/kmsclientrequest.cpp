@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "kmsrequest_p.h"
+#include "kmsclientrequest.h"
+#include "kmsclientrequest_p.h"
 
 namespace AWS {
 namespace KMS {

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "healthrequest_p.h"
+#include "healthclientrequest.h"
+#include "healthclientrequest_p.h"
 
 namespace AWS {
 namespace Health {

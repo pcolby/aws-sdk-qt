@@ -21,7 +21,7 @@
 #define QTAWS_CODEPIPELINECLIENTREQUEST_P_H
 
 #include "codepipeline_p.h"
-#include "request.h"
+#include "codepipelineclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CodePipeline request (query string) parameters. @todo?
 
     CodePipelineClientRequestPrivate(const CodePipelineClientRequest::Action action, CodePipelineClientRequest * const q);
-    CodePipelineClientRequestPrivate(const RequestPrivate &other, CodePipelineClientRequest * const q);
+    CodePipelineClientRequestPrivate(const CodePipelineClientRequestPrivate &other, CodePipelineClientRequest * const q);
 
     static QString toString(const CodePipelineClientRequest::Action &action);
 

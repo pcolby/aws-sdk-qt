@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "sagemakerruntimerequest_p.h"
+#include "sagemakerruntimeclientrequest.h"
+#include "sagemakerruntimeclientrequest_p.h"
 
 namespace AWS {
 namespace SageMakerRuntime {

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "cloudhsmrequest_p.h"
+#include "cloudhsmclientrequest.h"
+#include "cloudhsmclientrequest_p.h"
 
 namespace AWS {
 namespace CloudHSM {

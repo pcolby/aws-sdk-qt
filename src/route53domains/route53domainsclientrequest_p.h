@@ -21,7 +21,7 @@
 #define QTAWS_ROUTE53DOMAINSCLIENTREQUEST_P_H
 
 #include "route53domains_p.h"
-#include "request.h"
+#include "route53domainsclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Route53Domains request (query string) parameters. @todo?
 
     Route53DomainsClientRequestPrivate(const Route53DomainsClientRequest::Action action, Route53DomainsClientRequest * const q);
-    Route53DomainsClientRequestPrivate(const RequestPrivate &other, Route53DomainsClientRequest * const q);
+    Route53DomainsClientRequestPrivate(const Route53DomainsClientRequestPrivate &other, Route53DomainsClientRequest * const q);
 
     static QString toString(const Route53DomainsClientRequest::Action &action);
 

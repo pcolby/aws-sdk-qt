@@ -21,7 +21,7 @@
 #define QTAWS_COGNITOSYNCCLIENTREQUEST_P_H
 
 #include "cognitosync_p.h"
-#include "request.h"
+#include "cognitosyncclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< CognitoSync request (query string) parameters. @todo?
 
     CognitoSyncClientRequestPrivate(const CognitoSyncClientRequest::Action action, CognitoSyncClientRequest * const q);
-    CognitoSyncClientRequestPrivate(const RequestPrivate &other, CognitoSyncClientRequest * const q);
+    CognitoSyncClientRequestPrivate(const CognitoSyncClientRequestPrivate &other, CognitoSyncClientRequest * const q);
 
     static QString toString(const CognitoSyncClientRequest::Action &action);
 

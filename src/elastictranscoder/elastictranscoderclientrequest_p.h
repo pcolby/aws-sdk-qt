@@ -21,7 +21,7 @@
 #define QTAWS_ELASTICTRANSCODERCLIENTREQUEST_P_H
 
 #include "elastictranscoder_p.h"
-#include "request.h"
+#include "elastictranscoderclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< ElasticTranscoder request (query string) parameters. @todo?
 
     ElasticTranscoderClientRequestPrivate(const ElasticTranscoderClientRequest::Action action, ElasticTranscoderClientRequest * const q);
-    ElasticTranscoderClientRequestPrivate(const RequestPrivate &other, ElasticTranscoderClientRequest * const q);
+    ElasticTranscoderClientRequestPrivate(const ElasticTranscoderClientRequestPrivate &other, ElasticTranscoderClientRequest * const q);
 
     static QString toString(const ElasticTranscoderClientRequest::Action &action);
 

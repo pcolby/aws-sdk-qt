@@ -21,7 +21,7 @@
 #define QTAWS_MARKETPLACEMETERINGCLIENTREQUEST_P_H
 
 #include "marketplacemetering_p.h"
-#include "request.h"
+#include "marketplacemeteringclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MarketplaceMetering request (query string) parameters. @todo?
 
     MarketplaceMeteringClientRequestPrivate(const MarketplaceMeteringClientRequest::Action action, MarketplaceMeteringClientRequest * const q);
-    MarketplaceMeteringClientRequestPrivate(const RequestPrivate &other, MarketplaceMeteringClientRequest * const q);
+    MarketplaceMeteringClientRequestPrivate(const MarketplaceMeteringClientRequestPrivate &other, MarketplaceMeteringClientRequest * const q);
 
     static QString toString(const MarketplaceMeteringClientRequest::Action &action);
 

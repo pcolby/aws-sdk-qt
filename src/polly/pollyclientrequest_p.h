@@ -21,7 +21,7 @@
 #define QTAWS_POLLYCLIENTREQUEST_P_H
 
 #include "polly_p.h"
-#include "request.h"
+#include "pollyclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Polly request (query string) parameters. @todo?
 
     PollyClientRequestPrivate(const PollyClientRequest::Action action, PollyClientRequest * const q);
-    PollyClientRequestPrivate(const RequestPrivate &other, PollyClientRequest * const q);
+    PollyClientRequestPrivate(const PollyClientRequestPrivate &other, PollyClientRequest * const q);
 
     static QString toString(const PollyClientRequest::Action &action);
 

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "pinpointrequest_p.h"
+#include "pinpointclientrequest.h"
+#include "pinpointclientrequest_p.h"
 
 namespace AWS {
 namespace Pinpoint {

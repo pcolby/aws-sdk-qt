@@ -21,7 +21,7 @@
 #define QTAWS_MIGRATIONHUBCLIENTREQUEST_P_H
 
 #include "migrationhub_p.h"
-#include "request.h"
+#include "migrationhubclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< MigrationHub request (query string) parameters. @todo?
 
     MigrationHubClientRequestPrivate(const MigrationHubClientRequest::Action action, MigrationHubClientRequest * const q);
-    MigrationHubClientRequestPrivate(const RequestPrivate &other, MigrationHubClientRequest * const q);
+    MigrationHubClientRequestPrivate(const MigrationHubClientRequestPrivate &other, MigrationHubClientRequest * const q);
 
     static QString toString(const MigrationHubClientRequest::Action &action);
 

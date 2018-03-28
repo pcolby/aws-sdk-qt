@@ -21,7 +21,7 @@
 #define QTAWS_SFNCLIENTREQUEST_P_H
 
 #include "sfn_p.h"
-#include "request.h"
+#include "sfnclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SFN request (query string) parameters. @todo?
 
     SfnClientRequestPrivate(const SfnClientRequest::Action action, SfnClientRequest * const q);
-    SfnClientRequestPrivate(const RequestPrivate &other, SfnClientRequest * const q);
+    SfnClientRequestPrivate(const SfnClientRequestPrivate &other, SfnClientRequest * const q);
 
     static QString toString(const SfnClientRequest::Action &action);
 

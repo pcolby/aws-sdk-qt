@@ -21,7 +21,7 @@
 #define QTAWS_SWFCLIENTREQUEST_P_H
 
 #include "swf_p.h"
-#include "request.h"
+#include "swfclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< SWF request (query string) parameters. @todo?
 
     SwfClientRequestPrivate(const SwfClientRequest::Action action, SwfClientRequest * const q);
-    SwfClientRequestPrivate(const RequestPrivate &other, SwfClientRequest * const q);
+    SwfClientRequestPrivate(const SwfClientRequestPrivate &other, SwfClientRequest * const q);
 
     static QString toString(const SwfClientRequest::Action &action);
 

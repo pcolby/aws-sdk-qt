@@ -21,7 +21,7 @@
 #define QTAWS_FIREHOSECLIENTREQUEST_P_H
 
 #include "firehose_p.h"
-#include "request.h"
+#include "firehoseclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Firehose request (query string) parameters. @todo?
 
     FirehoseClientRequestPrivate(const FirehoseClientRequest::Action action, FirehoseClientRequest * const q);
-    FirehoseClientRequestPrivate(const RequestPrivate &other, FirehoseClientRequest * const q);
+    FirehoseClientRequestPrivate(const FirehoseClientRequestPrivate &other, FirehoseClientRequest * const q);
 
     static QString toString(const FirehoseClientRequest::Action &action);
 

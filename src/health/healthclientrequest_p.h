@@ -21,7 +21,7 @@
 #define QTAWS_HEALTHCLIENTREQUEST_P_H
 
 #include "health_p.h"
-#include "request.h"
+#include "healthclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Health request (query string) parameters. @todo?
 
     HealthClientRequestPrivate(const HealthClientRequest::Action action, HealthClientRequest * const q);
-    HealthClientRequestPrivate(const RequestPrivate &other, HealthClientRequest * const q);
+    HealthClientRequestPrivate(const HealthClientRequestPrivate &other, HealthClientRequest * const q);
 
     static QString toString(const HealthClientRequest::Action &action);
 

@@ -17,10 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "request.h"
-#include "request_p.h"
-#include "response.h"
-#include "opsworksrequest_p.h"
+#include "opsworksclientrequest.h"
+#include "opsworksclientrequest_p.h"
 
 namespace AWS {
 namespace OpsWorks {

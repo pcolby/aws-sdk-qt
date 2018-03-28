@@ -21,7 +21,7 @@
 #define QTAWS_MOBILECLIENTREQUEST_P_H
 
 #include "mobile_p.h"
-#include "request.h"
+#include "mobileclientrequest.h"
 
 namespace AWS {
 
@@ -37,7 +37,7 @@ public:
     QVariantMap parameters;    ///< Mobile request (query string) parameters. @todo?
 
     MobileClientRequestPrivate(const MobileClientRequest::Action action, MobileClientRequest * const q);
-    MobileClientRequestPrivate(const RequestPrivate &other, MobileClientRequest * const q);
+    MobileClientRequestPrivate(const MobileClientRequestPrivate &other, MobileClientRequest * const q);
 
     static QString toString(const MobileClientRequest::Action &action);
 
