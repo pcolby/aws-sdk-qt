@@ -37,7 +37,7 @@ class WorkSpacesClientRequestPrivate;
 class QTAWS_EXPORT WorkSpacesClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by WorkSpaces.
     enum Action {
         // todo
     };

@@ -37,7 +37,7 @@ class MqClientRequestPrivate;
 class QTAWS_EXPORT MqClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MQ.
     enum Action {
         // todo
     };

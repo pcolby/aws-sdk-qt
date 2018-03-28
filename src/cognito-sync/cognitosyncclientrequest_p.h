@@ -20,7 +20,7 @@
 #ifndef QTAWS_COGNITOSYNCCLIENTREQUEST_P_H
 #define QTAWS_COGNITOSYNCCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cognitosync_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CognitoSyncClientRequest;
 class QTAWS_EXPORT CognitoSyncClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CognitoSyncClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CognitoSyncClientRequest::Action action; ///< CognitoSync action to be performed.
+    QString apiVersion;        ///< CognitoSync API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CognitoSync request (query string) parameters. @todo?
 
     CognitoSyncClientRequestPrivate(const CognitoSyncClientRequest::Action action, CognitoSyncClientRequest * const q);
     CognitoSyncClientRequestPrivate(const RequestPrivate &other, CognitoSyncClientRequest * const q);

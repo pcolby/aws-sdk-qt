@@ -20,7 +20,7 @@
 #ifndef QTAWS_IAMCLIENTREQUEST_P_H
 #define QTAWS_IAMCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "iam_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class IamClientRequest;
 class QTAWS_EXPORT IamClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    IamClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    IamClientRequest::Action action; ///< IAM action to be performed.
+    QString apiVersion;        ///< IAM API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< IAM request (query string) parameters. @todo?
 
     IamClientRequestPrivate(const IamClientRequest::Action action, IamClientRequest * const q);
     IamClientRequestPrivate(const RequestPrivate &other, IamClientRequest * const q);

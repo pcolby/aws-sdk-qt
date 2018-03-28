@@ -20,7 +20,7 @@
 #ifndef QTAWS_COSTEXPLORERCLIENTRESPONSE_P_H
 #define QTAWS_COSTEXPLORERCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "costexplorerresponse.h"
 #include "costexplorerclientrequest.h"
 
 namespace AWS {

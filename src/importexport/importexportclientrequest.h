@@ -37,7 +37,7 @@ class ImportExportClientRequestPrivate;
 class QTAWS_EXPORT ImportExportClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ImportExport.
     enum Action {
         // todo
     };

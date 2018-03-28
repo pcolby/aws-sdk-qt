@@ -20,7 +20,7 @@
 #ifndef QTAWS_KMSCLIENTRESPONSE_P_H
 #define QTAWS_KMSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "kmsresponse.h"
 #include "kmsclientrequest.h"
 
 namespace AWS {

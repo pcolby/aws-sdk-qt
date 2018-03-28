@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATHENACLIENTREQUEST_P_H
 #define QTAWS_ATHENACLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "athena_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class AthenaClientRequest;
 class QTAWS_EXPORT AthenaClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    AthenaClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    AthenaClientRequest::Action action; ///< Athena action to be performed.
+    QString apiVersion;        ///< Athena API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Athena request (query string) parameters. @todo?
 
     AthenaClientRequestPrivate(const AthenaClientRequest::Action action, AthenaClientRequest * const q);
     AthenaClientRequestPrivate(const RequestPrivate &other, AthenaClientRequest * const q);

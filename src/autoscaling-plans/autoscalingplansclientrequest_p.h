@@ -20,7 +20,7 @@
 #ifndef QTAWS_AUTOSCALINGPLANSCLIENTREQUEST_P_H
 #define QTAWS_AUTOSCALINGPLANSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "autoscalingplans_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class AutoScalingPlansClientRequest;
 class QTAWS_EXPORT AutoScalingPlansClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    AutoScalingPlansClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    AutoScalingPlansClientRequest::Action action; ///< AutoScalingPlans action to be performed.
+    QString apiVersion;        ///< AutoScalingPlans API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< AutoScalingPlans request (query string) parameters. @todo?
 
     AutoScalingPlansClientRequestPrivate(const AutoScalingPlansClientRequest::Action action, AutoScalingPlansClientRequest * const q);
     AutoScalingPlansClientRequestPrivate(const RequestPrivate &other, AutoScalingPlansClientRequest * const q);

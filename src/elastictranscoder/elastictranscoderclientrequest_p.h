@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICTRANSCODERCLIENTREQUEST_P_H
 #define QTAWS_ELASTICTRANSCODERCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "elastictranscoder_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ElasticTranscoderClientRequest;
 class QTAWS_EXPORT ElasticTranscoderClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ElasticTranscoderClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ElasticTranscoderClientRequest::Action action; ///< ElasticTranscoder action to be performed.
+    QString apiVersion;        ///< ElasticTranscoder API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ElasticTranscoder request (query string) parameters. @todo?
 
     ElasticTranscoderClientRequestPrivate(const ElasticTranscoderClientRequest::Action action, ElasticTranscoderClientRequest * const q);
     ElasticTranscoderClientRequestPrivate(const RequestPrivate &other, ElasticTranscoderClientRequest * const q);

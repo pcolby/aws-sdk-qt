@@ -20,7 +20,7 @@
 #ifndef QTAWS_WAFCLIENTRESPONSE_P_H
 #define QTAWS_WAFCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "wafresponse.h"
 #include "wafclientrequest.h"
 
 namespace AWS {

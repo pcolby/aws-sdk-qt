@@ -37,7 +37,7 @@ class SwfClientRequestPrivate;
 class QTAWS_EXPORT SwfClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SWF.
     enum Action {
         // todo
     };

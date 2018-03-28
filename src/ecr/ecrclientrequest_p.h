@@ -20,7 +20,7 @@
 #ifndef QTAWS_ECRCLIENTREQUEST_P_H
 #define QTAWS_ECRCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "ecr_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class EcrClientRequest;
 class QTAWS_EXPORT EcrClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    EcrClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    EcrClientRequest::Action action; ///< ECR action to be performed.
+    QString apiVersion;        ///< ECR API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ECR request (query string) parameters. @todo?
 
     EcrClientRequestPrivate(const EcrClientRequest::Action action, EcrClientRequest * const q);
     EcrClientRequestPrivate(const RequestPrivate &other, EcrClientRequest * const q);

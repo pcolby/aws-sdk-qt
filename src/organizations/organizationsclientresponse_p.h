@@ -20,7 +20,7 @@
 #ifndef QTAWS_ORGANIZATIONSCLIENTRESPONSE_P_H
 #define QTAWS_ORGANIZATIONSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "organizationsresponse.h"
 #include "organizationsclientrequest.h"
 
 namespace AWS {

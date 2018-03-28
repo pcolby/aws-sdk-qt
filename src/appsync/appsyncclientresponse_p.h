@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPSYNCCLIENTRESPONSE_P_H
 #define QTAWS_APPSYNCCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "appsyncresponse.h"
 #include "appsyncclientrequest.h"
 
 namespace AWS {

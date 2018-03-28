@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSLATECLIENTRESPONSE_P_H
 #define QTAWS_TRANSLATECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "translateresponse.h"
 #include "translateclientrequest.h"
 
 namespace AWS {

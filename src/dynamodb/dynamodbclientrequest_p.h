@@ -20,7 +20,7 @@
 #ifndef QTAWS_DYNAMODBCLIENTREQUEST_P_H
 #define QTAWS_DYNAMODBCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "dynamodb_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DynamoDBClientRequest;
 class QTAWS_EXPORT DynamoDBClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DynamoDBClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DynamoDBClientRequest::Action action; ///< DynamoDB action to be performed.
+    QString apiVersion;        ///< DynamoDB API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DynamoDB request (query string) parameters. @todo?
 
     DynamoDBClientRequestPrivate(const DynamoDBClientRequest::Action action, DynamoDBClientRequest * const q);
     DynamoDBClientRequestPrivate(const RequestPrivate &other, DynamoDBClientRequest * const q);

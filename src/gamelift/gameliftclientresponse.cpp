@@ -29,9 +29,9 @@ namespace GameLift {
 /**
  * @class  GameLiftClientResponse
  *
- * @brief  Handles  GameLiftClient responses.
+ * @brief  Handles GameLift GameLiftClient responses.
  *
- * @see    Client::gameLiftClient
+ * @see    GameLiftClient::gameLiftClient
  */
 
 /**

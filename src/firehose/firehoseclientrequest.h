@@ -37,7 +37,7 @@ class FirehoseClientRequestPrivate;
 class QTAWS_EXPORT FirehoseClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Firehose.
     enum Action {
         // todo
     };

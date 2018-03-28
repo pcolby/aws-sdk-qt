@@ -29,9 +29,9 @@ namespace ServerlessApplicationRepository {
 /**
  * @class  ServerlessApplicationRepositoryClientResponse
  *
- * @brief  Handles  ServerlessApplicationRepositoryClient responses.
+ * @brief  Handles ServerlessApplicationRepository ServerlessApplicationRepositoryClient responses.
  *
- * @see    Client::serverlessApplicationRepositoryClient
+ * @see    ServerlessApplicationRepositoryClient::serverlessApplicationRepositoryClient
  */
 
 /**

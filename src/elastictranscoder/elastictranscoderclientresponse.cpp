@@ -29,9 +29,9 @@ namespace ElasticTranscoder {
 /**
  * @class  ElasticTranscoderClientResponse
  *
- * @brief  Handles  ElasticTranscoderClient responses.
+ * @brief  Handles ElasticTranscoder ElasticTranscoderClient responses.
  *
- * @see    Client::elasticTranscoderClient
+ * @see    ElasticTranscoderClient::elasticTranscoderClient
  */
 
 /**

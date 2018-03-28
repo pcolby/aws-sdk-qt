@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEVICEFARMCLIENTREQUEST_P_H
 #define QTAWS_DEVICEFARMCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "devicefarm_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DeviceFarmClientRequest;
 class QTAWS_EXPORT DeviceFarmClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DeviceFarmClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DeviceFarmClientRequest::Action action; ///< DeviceFarm action to be performed.
+    QString apiVersion;        ///< DeviceFarm API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DeviceFarm request (query string) parameters. @todo?
 
     DeviceFarmClientRequestPrivate(const DeviceFarmClientRequest::Action action, DeviceFarmClientRequest * const q);
     DeviceFarmClientRequestPrivate(const RequestPrivate &other, DeviceFarmClientRequest * const q);

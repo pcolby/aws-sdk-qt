@@ -29,9 +29,9 @@ namespace Inspector {
 /**
  * @class  InspectorClientResponse
  *
- * @brief  Handles  InspectorClient responses.
+ * @brief  Handles Inspector InspectorClient responses.
  *
- * @see    Client::inspectorClient
+ * @see    InspectorClient::inspectorClient
  */
 
 /**

@@ -29,9 +29,9 @@ namespace SageMakerRuntime {
 /**
  * @class  SageMakerRuntimeClientResponse
  *
- * @brief  Handles  SageMakerRuntimeClient responses.
+ * @brief  Handles SageMakerRuntime SageMakerRuntimeClient responses.
  *
- * @see    Client::sageMakerRuntimeClient
+ * @see    SageMakerRuntimeClient::sageMakerRuntimeClient
  */
 
 /**

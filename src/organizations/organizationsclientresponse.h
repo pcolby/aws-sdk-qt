@@ -29,7 +29,7 @@ namespace Organizations {
 
 class OrganizationsClientResponsePrivate;
 
-class QTAWS_EXPORT OrganizationsClientResponse : public Response {
+class QTAWS_EXPORT OrganizationsClientResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

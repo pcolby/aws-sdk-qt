@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIAPACKAGECLIENTREQUEST_P_H
 #define QTAWS_MEDIAPACKAGECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "mediapackage_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MediaPackageClientRequest;
 class QTAWS_EXPORT MediaPackageClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MediaPackageClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MediaPackageClientRequest::Action action; ///< MediaPackage action to be performed.
+    QString apiVersion;        ///< MediaPackage API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MediaPackage request (query string) parameters. @todo?
 
     MediaPackageClientRequestPrivate(const MediaPackageClientRequest::Action action, MediaPackageClientRequest * const q);
     MediaPackageClientRequestPrivate(const RequestPrivate &other, MediaPackageClientRequest * const q);

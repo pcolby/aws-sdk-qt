@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class CloudFormationClientResponsePrivate;
 
-class QTAWS_EXPORT CloudFormationClientResponse : public Response {
+class QTAWS_EXPORT CloudFormationClientResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

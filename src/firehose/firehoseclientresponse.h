@@ -29,7 +29,7 @@ namespace Firehose {
 
 class FirehoseClientResponsePrivate;
 
-class QTAWS_EXPORT FirehoseClientResponse : public Response {
+class QTAWS_EXPORT FirehoseClientResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

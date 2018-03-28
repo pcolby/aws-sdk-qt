@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "rekognitionrequest_p.h"
 
 namespace AWS {
 namespace Rekognition {
@@ -28,14 +28,14 @@ namespace Rekognition {
 /**
  * @class  RekognitionClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Rekognition requests
  */
 
 
 /**
  * @brief  Constructs a new RekognitionClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Rekognition action to request.
  */
 RekognitionClientRequest::RekognitionClientRequest(const Action action)
     : AwsAbstractRequest(new RekognitionClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ RekognitionClientRequest::RekognitionClientRequest(RekognitionClientRequestPriva
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Rekognition action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Rekognition action to be performed by this request.
  */
 RekognitionClientRequest::Action RekognitionClientRequest::action() const
 {
@@ -99,9 +99,9 @@ RekognitionClientRequest::Action RekognitionClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Rekognition action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Rekognition action to be performed by this request.
  */
 QString RekognitionClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString RekognitionClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Rekognition API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Rekognition API version implmented by this request.
  */
 QString RekognitionClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString RekognitionClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Rekognition action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void RekognitionClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Rekognition API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Rekognition API version to include in this request.
  */
 void RekognitionClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool RekognitionClientRequest::operator==(const RekognitionClientRequest &other)
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Rekognition queue name.
  *
- * @par From  FAQs:
+ * @par From Rekognition FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Rekognition queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void RekognitionClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Rekognition request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant RekognitionClientRequest::parameter(const QString &name, const QVariant
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Rekognition request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &RekognitionClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Rekognition request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void RekognitionClientRequest::setParameter(const QString &name, const QVariant 
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Rekognition request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void RekognitionClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Rekognition request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Rekognition implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Rekognition request using the given \a endpoint.
  */
 QNetworkRequest RekognitionClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest RekognitionClientRequest::unsignedRequest(const QUrl &endpoint) 
  *
  * @brief  Constructs a new RekognitionClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Rekognition action being performed by the \a q request.
  * @param  q       Pointer to this object's public RekognitionClientRequest instance.
  */
 RekognitionClientRequestPrivate::RekognitionClientRequestPrivate(const RekognitionClientRequest::Action action, RekognitionClientRequest * const q)
@@ -315,13 +315,13 @@ RekognitionClientRequestPrivate::RekognitionClientRequestPrivate(const Rekogniti
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Rekognition action to a string.
  *
  * This function converts RekognitionClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Rekognition service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Rekognition action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

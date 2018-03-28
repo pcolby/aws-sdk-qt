@@ -20,7 +20,7 @@
 #ifndef QTAWS_OPSWORKSCMCLIENTRESPONSE_P_H
 #define QTAWS_OPSWORKSCMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "opsworkscmresponse.h"
 #include "opsworkscmclientrequest.h"
 
 namespace AWS {

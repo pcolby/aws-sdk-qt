@@ -20,7 +20,7 @@
 #ifndef QTAWS_EMRCLIENTRESPONSE_P_H
 #define QTAWS_EMRCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "emrresponse.h"
 #include "emrclientrequest.h"
 
 namespace AWS {

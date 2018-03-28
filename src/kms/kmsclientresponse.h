@@ -29,7 +29,7 @@ namespace KMS {
 
 class KmsClientResponsePrivate;
 
-class QTAWS_EXPORT KmsClientResponse : public Response {
+class QTAWS_EXPORT KmsClientResponse : public KMSResponse {
     Q_OBJECT
 
 public:

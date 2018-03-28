@@ -37,7 +37,7 @@ class MediaStoreDataClientRequestPrivate;
 class QTAWS_EXPORT MediaStoreDataClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MediaStoreData.
     enum Action {
         // todo
     };

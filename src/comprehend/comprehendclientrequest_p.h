@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPREHENDCLIENTREQUEST_P_H
 #define QTAWS_COMPREHENDCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "comprehend_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ComprehendClientRequest;
 class QTAWS_EXPORT ComprehendClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ComprehendClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ComprehendClientRequest::Action action; ///< Comprehend action to be performed.
+    QString apiVersion;        ///< Comprehend API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Comprehend request (query string) parameters. @todo?
 
     ComprehendClientRequestPrivate(const ComprehendClientRequest::Action action, ComprehendClientRequest * const q);
     ComprehendClientRequestPrivate(const RequestPrivate &other, ComprehendClientRequest * const q);

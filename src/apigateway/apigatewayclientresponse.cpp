@@ -29,9 +29,9 @@ namespace APIGateway {
 /**
  * @class  APIGatewayClientResponse
  *
- * @brief  Handles  APIGatewayClient responses.
+ * @brief  Handles APIGateway APIGatewayClient responses.
  *
- * @see    Client::aPIGatewayClient
+ * @see    APIGatewayClient::aPIGatewayClient
  */
 
 /**

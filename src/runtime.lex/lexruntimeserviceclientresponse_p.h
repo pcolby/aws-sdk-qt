@@ -20,7 +20,7 @@
 #ifndef QTAWS_LEXRUNTIMESERVICECLIENTRESPONSE_P_H
 #define QTAWS_LEXRUNTIMESERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "lexruntimeserviceresponse.h"
 #include "lexruntimeserviceclientrequest.h"
 
 namespace AWS {

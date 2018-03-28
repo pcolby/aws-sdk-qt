@@ -29,9 +29,9 @@ namespace Glacier {
 /**
  * @class  GlacierClientResponse
  *
- * @brief  Handles  GlacierClient responses.
+ * @brief  Handles Glacier GlacierClient responses.
  *
- * @see    Client::glacierClient
+ * @see    GlacierClient::glacierClient
  */
 
 /**

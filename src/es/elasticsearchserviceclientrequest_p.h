@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICSEARCHSERVICECLIENTREQUEST_P_H
 #define QTAWS_ELASTICSEARCHSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "elasticsearchservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ElasticsearchServiceClientRequest;
 class QTAWS_EXPORT ElasticsearchServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ElasticsearchServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ElasticsearchServiceClientRequest::Action action; ///< ElasticsearchService action to be performed.
+    QString apiVersion;        ///< ElasticsearchService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ElasticsearchService request (query string) parameters. @todo?
 
     ElasticsearchServiceClientRequestPrivate(const ElasticsearchServiceClientRequest::Action action, ElasticsearchServiceClientRequest * const q);
     ElasticsearchServiceClientRequestPrivate(const RequestPrivate &other, ElasticsearchServiceClientRequest * const q);

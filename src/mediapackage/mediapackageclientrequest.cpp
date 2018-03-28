@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "mediapackagerequest_p.h"
 
 namespace AWS {
 namespace MediaPackage {
@@ -28,14 +28,14 @@ namespace MediaPackage {
 /**
  * @class  MediaPackageClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing MediaPackage requests
  */
 
 
 /**
  * @brief  Constructs a new MediaPackageClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The MediaPackage action to request.
  */
 MediaPackageClientRequest::MediaPackageClientRequest(const Action action)
     : AwsAbstractRequest(new MediaPackageClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ MediaPackageClientRequest::MediaPackageClientRequest(MediaPackageClientRequestPr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the MediaPackage action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The MediaPackage action to be performed by this request.
  */
 MediaPackageClientRequest::Action MediaPackageClientRequest::action() const
 {
@@ -99,9 +99,9 @@ MediaPackageClientRequest::Action MediaPackageClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the MediaPackage action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the MediaPackage action to be performed by this request.
  */
 QString MediaPackageClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString MediaPackageClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the MediaPackage API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The MediaPackage API version implmented by this request.
  */
 QString MediaPackageClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString MediaPackageClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the MediaPackage action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void MediaPackageClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the MediaPackage API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The MediaPackage API version to include in this request.
  */
 void MediaPackageClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool MediaPackageClientRequest::operator==(const MediaPackageClientRequest &othe
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid MediaPackage queue name.
  *
- * @par From  FAQs:
+ * @par From MediaPackage FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid MediaPackage queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void MediaPackageClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this MediaPackage request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant MediaPackageClientRequest::parameter(const QString &name, const QVarian
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this MediaPackage request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &MediaPackageClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this MediaPackage request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void MediaPackageClientRequest::setParameter(const QString &name, const QVariant
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this MediaPackage request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void MediaPackageClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this MediaPackage request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This MediaPackage implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this MediaPackage request using the given \a endpoint.
  */
 QNetworkRequest MediaPackageClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest MediaPackageClientRequest::unsignedRequest(const QUrl &endpoint)
  *
  * @brief  Constructs a new MediaPackageClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  MediaPackage action being performed by the \a q request.
  * @param  q       Pointer to this object's public MediaPackageClientRequest instance.
  */
 MediaPackageClientRequestPrivate::MediaPackageClientRequestPrivate(const MediaPackageClientRequest::Action action, MediaPackageClientRequest * const q)
@@ -315,13 +315,13 @@ MediaPackageClientRequestPrivate::MediaPackageClientRequestPrivate(const MediaPa
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and MediaPackage action to a string.
  *
  * This function converts MediaPackageClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the MediaPackage service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  MediaPackage action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

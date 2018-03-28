@@ -29,9 +29,9 @@ namespace TranscribeService {
 /**
  * @class  TranscribeServiceClientResponse
  *
- * @brief  Handles  TranscribeServiceClient responses.
+ * @brief  Handles TranscribeService TranscribeServiceClient responses.
  *
- * @see    Client::transcribeServiceClient
+ * @see    TranscribeServiceClient::transcribeServiceClient
  */
 
 /**

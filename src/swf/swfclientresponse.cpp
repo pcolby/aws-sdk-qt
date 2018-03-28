@@ -29,9 +29,9 @@ namespace SWF {
 /**
  * @class  SwfClientResponse
  *
- * @brief  Handles  SwfClient responses.
+ * @brief  Handles SWF SwfClient responses.
  *
- * @see    Client::swfClient
+ * @see    SWFClient::swfClient
  */
 
 /**

@@ -37,7 +37,7 @@ class PollyClientRequestPrivate;
 class QTAWS_EXPORT PollyClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Polly.
     enum Action {
         // todo
     };

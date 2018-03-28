@@ -20,7 +20,7 @@
 #ifndef QTAWS_REKOGNITIONCLIENTREQUEST_P_H
 #define QTAWS_REKOGNITIONCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "rekognition_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class RekognitionClientRequest;
 class QTAWS_EXPORT RekognitionClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    RekognitionClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    RekognitionClientRequest::Action action; ///< Rekognition action to be performed.
+    QString apiVersion;        ///< Rekognition API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Rekognition request (query string) parameters. @todo?
 
     RekognitionClientRequestPrivate(const RekognitionClientRequest::Action action, RekognitionClientRequest * const q);
     RekognitionClientRequestPrivate(const RequestPrivate &other, RekognitionClientRequest * const q);

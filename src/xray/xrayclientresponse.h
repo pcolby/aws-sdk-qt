@@ -29,7 +29,7 @@ namespace XRay {
 
 class XRayClientResponsePrivate;
 
-class QTAWS_EXPORT XRayClientResponse : public Response {
+class QTAWS_EXPORT XRayClientResponse : public XRayResponse {
     Q_OBJECT
 
 public:

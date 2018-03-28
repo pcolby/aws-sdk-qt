@@ -20,7 +20,7 @@
 #ifndef QTAWS_SSMCLIENTREQUEST_P_H
 #define QTAWS_SSMCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "ssm_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SsmClientRequest;
 class QTAWS_EXPORT SsmClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SsmClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SsmClientRequest::Action action; ///< SSM action to be performed.
+    QString apiVersion;        ///< SSM API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SSM request (query string) parameters. @todo?
 
     SsmClientRequestPrivate(const SsmClientRequest::Action action, SsmClientRequest * const q);
     SsmClientRequestPrivate(const RequestPrivate &other, SsmClientRequest * const q);

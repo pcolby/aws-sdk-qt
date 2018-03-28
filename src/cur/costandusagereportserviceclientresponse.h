@@ -29,7 +29,7 @@ namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientResponsePrivate;
 
-class QTAWS_EXPORT CostandUsageReportServiceClientResponse : public Response {
+class QTAWS_EXPORT CostandUsageReportServiceClientResponse : public CostandUsageReportServiceResponse {
     Q_OBJECT
 
 public:

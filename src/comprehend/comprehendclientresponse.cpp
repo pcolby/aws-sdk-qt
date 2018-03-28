@@ -29,9 +29,9 @@ namespace Comprehend {
 /**
  * @class  ComprehendClientResponse
  *
- * @brief  Handles  ComprehendClient responses.
+ * @brief  Handles Comprehend ComprehendClient responses.
  *
- * @see    Client::comprehendClient
+ * @see    ComprehendClient::comprehendClient
  */
 
 /**

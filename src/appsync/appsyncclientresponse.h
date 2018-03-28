@@ -29,7 +29,7 @@ namespace AppSync {
 
 class AppSyncClientResponsePrivate;
 
-class QTAWS_EXPORT AppSyncClientResponse : public Response {
+class QTAWS_EXPORT AppSyncClientResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

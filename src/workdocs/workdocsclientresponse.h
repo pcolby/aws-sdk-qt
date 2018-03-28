@@ -29,7 +29,7 @@ namespace WorkDocs {
 
 class WorkDocsClientResponsePrivate;
 
-class QTAWS_EXPORT WorkDocsClientResponse : public Response {
+class QTAWS_EXPORT WorkDocsClientResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MOBILECLIENTRESPONSE_P_H
 #define QTAWS_MOBILECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "mobileresponse.h"
 #include "mobileclientrequest.h"
 
 namespace AWS {

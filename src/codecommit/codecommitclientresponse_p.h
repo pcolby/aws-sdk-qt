@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODECOMMITCLIENTRESPONSE_P_H
 #define QTAWS_CODECOMMITCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "codecommitresponse.h"
 #include "codecommitclientrequest.h"
 
 namespace AWS {

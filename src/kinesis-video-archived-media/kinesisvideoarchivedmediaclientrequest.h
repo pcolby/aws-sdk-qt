@@ -37,7 +37,7 @@ class KinesisVideoArchivedMediaClientRequestPrivate;
 class QTAWS_EXPORT KinesisVideoArchivedMediaClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by KinesisVideoArchivedMedia.
     enum Action {
         // todo
     };

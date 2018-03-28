@@ -37,7 +37,7 @@ class DataPipelineClientRequestPrivate;
 class QTAWS_EXPORT DataPipelineClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DataPipeline.
     enum Action {
         // todo
     };

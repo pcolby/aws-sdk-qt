@@ -29,7 +29,7 @@ namespace Lambda {
 
 class LambdaClientResponsePrivate;
 
-class QTAWS_EXPORT LambdaClientResponse : public Response {
+class QTAWS_EXPORT LambdaClientResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

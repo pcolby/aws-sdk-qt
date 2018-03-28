@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSLATECLIENTREQUEST_P_H
 #define QTAWS_TRANSLATECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "translate_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class TranslateClientRequest;
 class QTAWS_EXPORT TranslateClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    TranslateClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    TranslateClientRequest::Action action; ///< Translate action to be performed.
+    QString apiVersion;        ///< Translate API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Translate request (query string) parameters. @todo?
 
     TranslateClientRequestPrivate(const TranslateClientRequest::Action action, TranslateClientRequest * const q);
     TranslateClientRequestPrivate(const RequestPrivate &other, TranslateClientRequest * const q);

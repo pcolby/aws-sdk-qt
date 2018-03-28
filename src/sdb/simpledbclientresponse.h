@@ -29,7 +29,7 @@ namespace SimpleDB {
 
 class SimpleDBClientResponsePrivate;
 
-class QTAWS_EXPORT SimpleDBClientResponse : public Response {
+class QTAWS_EXPORT SimpleDBClientResponse : public SimpleDBResponse {
     Q_OBJECT
 
 public:

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GREENGRASSCLIENTREQUEST_P_H
 #define QTAWS_GREENGRASSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "greengrass_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class GreengrassClientRequest;
 class QTAWS_EXPORT GreengrassClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    GreengrassClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    GreengrassClientRequest::Action action; ///< Greengrass action to be performed.
+    QString apiVersion;        ///< Greengrass API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Greengrass request (query string) parameters. @todo?
 
     GreengrassClientRequestPrivate(const GreengrassClientRequest::Action action, GreengrassClientRequest * const q);
     GreengrassClientRequestPrivate(const RequestPrivate &other, GreengrassClientRequest * const q);

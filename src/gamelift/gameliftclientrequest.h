@@ -37,7 +37,7 @@ class GameLiftClientRequestPrivate;
 class QTAWS_EXPORT GameLiftClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by GameLift.
     enum Action {
         // todo
     };

@@ -29,9 +29,9 @@ namespace Route53 {
 /**
  * @class  Route53ClientResponse
  *
- * @brief  Handles  Route53Client responses.
+ * @brief  Handles Route53 Route53Client responses.
  *
- * @see    Client::route53Client
+ * @see    Route53Client::route53Client
  */
 
 /**

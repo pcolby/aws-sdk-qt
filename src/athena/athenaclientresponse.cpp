@@ -29,9 +29,9 @@ namespace Athena {
 /**
  * @class  AthenaClientResponse
  *
- * @brief  Handles  AthenaClient responses.
+ * @brief  Handles Athena AthenaClient responses.
  *
- * @see    Client::athenaClient
+ * @see    AthenaClient::athenaClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICTRANSCODERCLIENTRESPONSE_P_H
 #define QTAWS_ELASTICTRANSCODERCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "elastictranscoderresponse.h"
 #include "elastictranscoderclientrequest.h"
 
 namespace AWS {

@@ -29,9 +29,9 @@ namespace StorageGateway {
 /**
  * @class  StorageGatewayClientResponse
  *
- * @brief  Handles  StorageGatewayClient responses.
+ * @brief  Handles StorageGateway StorageGatewayClient responses.
  *
- * @see    Client::storageGatewayClient
+ * @see    StorageGatewayClient::storageGatewayClient
  */
 
 /**

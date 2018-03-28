@@ -29,7 +29,7 @@ namespace MobileAnalytics {
 
 class MobileAnalyticsClientResponsePrivate;
 
-class QTAWS_EXPORT MobileAnalyticsClientResponse : public Response {
+class QTAWS_EXPORT MobileAnalyticsClientResponse : public MobileAnalyticsResponse {
     Q_OBJECT
 
 public:

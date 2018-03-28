@@ -37,7 +37,7 @@ class EmrClientRequestPrivate;
 class QTAWS_EXPORT EmrClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by EMR.
     enum Action {
         // todo
     };

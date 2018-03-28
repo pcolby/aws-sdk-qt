@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDHSMCLIENTREQUEST_P_H
 #define QTAWS_CLOUDHSMCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloudhsm_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudHSMClientRequest;
 class QTAWS_EXPORT CloudHSMClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudHSMClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudHSMClientRequest::Action action; ///< CloudHSM action to be performed.
+    QString apiVersion;        ///< CloudHSM API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudHSM request (query string) parameters. @todo?
 
     CloudHSMClientRequestPrivate(const CloudHSMClientRequest::Action action, CloudHSMClientRequest * const q);
     CloudHSMClientRequestPrivate(const RequestPrivate &other, CloudHSMClientRequest * const q);

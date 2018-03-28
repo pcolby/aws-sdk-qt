@@ -20,7 +20,7 @@
 #ifndef QTAWS_GLACIERCLIENTREQUEST_P_H
 #define QTAWS_GLACIERCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "glacier_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class GlacierClientRequest;
 class QTAWS_EXPORT GlacierClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    GlacierClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    GlacierClientRequest::Action action; ///< Glacier action to be performed.
+    QString apiVersion;        ///< Glacier API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Glacier request (query string) parameters. @todo?
 
     GlacierClientRequestPrivate(const GlacierClientRequest::Action action, GlacierClientRequest * const q);
     GlacierClientRequestPrivate(const RequestPrivate &other, GlacierClientRequest * const q);

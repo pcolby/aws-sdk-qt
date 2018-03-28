@@ -20,7 +20,7 @@
 #ifndef QTAWS_HEALTHCLIENTREQUEST_P_H
 #define QTAWS_HEALTHCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "health_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class HealthClientRequest;
 class QTAWS_EXPORT HealthClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    HealthClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    HealthClientRequest::Action action; ///< Health action to be performed.
+    QString apiVersion;        ///< Health API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Health request (query string) parameters. @todo?
 
     HealthClientRequestPrivate(const HealthClientRequest::Action action, HealthClientRequest * const q);
     HealthClientRequestPrivate(const RequestPrivate &other, HealthClientRequest * const q);

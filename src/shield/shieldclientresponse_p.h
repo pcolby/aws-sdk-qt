@@ -20,7 +20,7 @@
 #ifndef QTAWS_SHIELDCLIENTRESPONSE_P_H
 #define QTAWS_SHIELDCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "shieldresponse.h"
 #include "shieldclientrequest.h"
 
 namespace AWS {

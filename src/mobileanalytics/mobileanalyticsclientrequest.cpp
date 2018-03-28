@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "mobileanalyticsrequest_p.h"
 
 namespace AWS {
 namespace MobileAnalytics {
@@ -28,14 +28,14 @@ namespace MobileAnalytics {
 /**
  * @class  MobileAnalyticsClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing MobileAnalytics requests
  */
 
 
 /**
  * @brief  Constructs a new MobileAnalyticsClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The MobileAnalytics action to request.
  */
 MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(const Action action)
     : AwsAbstractRequest(new MobileAnalyticsClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(MobileAnalyticsClient
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the MobileAnalytics action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The MobileAnalytics action to be performed by this request.
  */
 MobileAnalyticsClientRequest::Action MobileAnalyticsClientRequest::action() const
 {
@@ -99,9 +99,9 @@ MobileAnalyticsClientRequest::Action MobileAnalyticsClientRequest::action() cons
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the MobileAnalytics action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the MobileAnalytics action to be performed by this request.
  */
 QString MobileAnalyticsClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString MobileAnalyticsClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the MobileAnalytics API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The MobileAnalytics API version implmented by this request.
  */
 QString MobileAnalyticsClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString MobileAnalyticsClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the MobileAnalytics action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void MobileAnalyticsClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the MobileAnalytics API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The MobileAnalytics API version to include in this request.
  */
 void MobileAnalyticsClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool MobileAnalyticsClientRequest::operator==(const MobileAnalyticsClientRequest
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid MobileAnalytics queue name.
  *
- * @par From  FAQs:
+ * @par From MobileAnalytics FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid MobileAnalytics queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void MobileAnalyticsClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this MobileAnalytics request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant MobileAnalyticsClientRequest::parameter(const QString &name, const QVar
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this MobileAnalytics request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &MobileAnalyticsClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this MobileAnalytics request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void MobileAnalyticsClientRequest::setParameter(const QString &name, const QVari
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this MobileAnalytics request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void MobileAnalyticsClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this MobileAnalytics request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This MobileAnalytics implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this MobileAnalytics request using the given \a endpoint.
  */
 QNetworkRequest MobileAnalyticsClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest MobileAnalyticsClientRequest::unsignedRequest(const QUrl &endpoi
  *
  * @brief  Constructs a new MobileAnalyticsClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  MobileAnalytics action being performed by the \a q request.
  * @param  q       Pointer to this object's public MobileAnalyticsClientRequest instance.
  */
 MobileAnalyticsClientRequestPrivate::MobileAnalyticsClientRequestPrivate(const MobileAnalyticsClientRequest::Action action, MobileAnalyticsClientRequest * const q)
@@ -315,13 +315,13 @@ MobileAnalyticsClientRequestPrivate::MobileAnalyticsClientRequestPrivate(const M
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and MobileAnalytics action to a string.
  *
  * This function converts MobileAnalyticsClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the MobileAnalytics service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  MobileAnalytics action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

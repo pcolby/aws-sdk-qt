@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "athenarequest_p.h"
 
 namespace AWS {
 namespace Athena {
@@ -28,14 +28,14 @@ namespace Athena {
 /**
  * @class  AthenaClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Athena requests
  */
 
 
 /**
  * @brief  Constructs a new AthenaClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Athena action to request.
  */
 AthenaClientRequest::AthenaClientRequest(const Action action)
     : AwsAbstractRequest(new AthenaClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ AthenaClientRequest::AthenaClientRequest(AthenaClientRequestPrivate * const d) :
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Athena action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Athena action to be performed by this request.
  */
 AthenaClientRequest::Action AthenaClientRequest::action() const
 {
@@ -99,9 +99,9 @@ AthenaClientRequest::Action AthenaClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Athena action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Athena action to be performed by this request.
  */
 QString AthenaClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString AthenaClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Athena API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Athena API version implmented by this request.
  */
 QString AthenaClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString AthenaClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Athena action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void AthenaClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Athena API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Athena API version to include in this request.
  */
 void AthenaClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool AthenaClientRequest::operator==(const AthenaClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Athena queue name.
  *
- * @par From  FAQs:
+ * @par From Athena FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Athena queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void AthenaClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Athena request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant AthenaClientRequest::parameter(const QString &name, const QVariant &def
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Athena request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &AthenaClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Athena request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void AthenaClientRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Athena request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void AthenaClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Athena request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Athena implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Athena request using the given \a endpoint.
  */
 QNetworkRequest AthenaClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest AthenaClientRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new AthenaClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Athena action being performed by the \a q request.
  * @param  q       Pointer to this object's public AthenaClientRequest instance.
  */
 AthenaClientRequestPrivate::AthenaClientRequestPrivate(const AthenaClientRequest::Action action, AthenaClientRequest * const q)
@@ -315,13 +315,13 @@ AthenaClientRequestPrivate::AthenaClientRequestPrivate(const AthenaClientRequest
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Athena action to a string.
  *
  * This function converts AthenaClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Athena service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Athena action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

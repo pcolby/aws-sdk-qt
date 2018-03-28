@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPREHENDCLIENTRESPONSE_P_H
 #define QTAWS_COMPREHENDCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "comprehendresponse.h"
 #include "comprehendclientrequest.h"
 
 namespace AWS {

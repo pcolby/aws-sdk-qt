@@ -20,7 +20,7 @@
 #ifndef QTAWS_FIREHOSECLIENTRESPONSE_P_H
 #define QTAWS_FIREHOSECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "firehoseresponse.h"
 #include "firehoseclientrequest.h"
 
 namespace AWS {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ECSCLIENTREQUEST_P_H
 #define QTAWS_ECSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "ecs_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class EcsClientRequest;
 class QTAWS_EXPORT EcsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    EcsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    EcsClientRequest::Action action; ///< ECS action to be performed.
+    QString apiVersion;        ///< ECS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ECS request (query string) parameters. @todo?
 
     EcsClientRequestPrivate(const EcsClientRequest::Action action, EcsClientRequest * const q);
     EcsClientRequestPrivate(const RequestPrivate &other, EcsClientRequest * const q);

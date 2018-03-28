@@ -29,9 +29,9 @@ namespace EMR {
 /**
  * @class  EmrClientResponse
  *
- * @brief  Handles  EmrClient responses.
+ * @brief  Handles EMR EmrClient responses.
  *
- * @see    Client::emrClient
+ * @see    EMRClient::emrClient
  */
 
 /**

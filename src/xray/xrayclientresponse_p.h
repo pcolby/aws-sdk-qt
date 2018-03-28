@@ -20,7 +20,7 @@
 #ifndef QTAWS_XRAYCLIENTRESPONSE_P_H
 #define QTAWS_XRAYCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "xrayresponse.h"
 #include "xrayclientrequest.h"
 
 namespace AWS {

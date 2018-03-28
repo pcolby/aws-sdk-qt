@@ -37,7 +37,7 @@ class ServerlessApplicationRepositoryClientRequestPrivate;
 class QTAWS_EXPORT ServerlessApplicationRepositoryClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ServerlessApplicationRepository.
     enum Action {
         // todo
     };

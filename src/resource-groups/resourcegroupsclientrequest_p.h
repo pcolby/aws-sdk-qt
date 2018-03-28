@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOURCEGROUPSCLIENTREQUEST_P_H
 #define QTAWS_RESOURCEGROUPSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "resourcegroups_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ResourceGroupsClientRequest;
 class QTAWS_EXPORT ResourceGroupsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ResourceGroupsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ResourceGroupsClientRequest::Action action; ///< ResourceGroups action to be performed.
+    QString apiVersion;        ///< ResourceGroups API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ResourceGroups request (query string) parameters. @todo?
 
     ResourceGroupsClientRequestPrivate(const ResourceGroupsClientRequest::Action action, ResourceGroupsClientRequest * const q);
     ResourceGroupsClientRequestPrivate(const RequestPrivate &other, ResourceGroupsClientRequest * const q);

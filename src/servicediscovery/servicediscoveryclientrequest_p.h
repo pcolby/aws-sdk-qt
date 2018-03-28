@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVICEDISCOVERYCLIENTREQUEST_P_H
 #define QTAWS_SERVICEDISCOVERYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "servicediscovery_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ServiceDiscoveryClientRequest;
 class QTAWS_EXPORT ServiceDiscoveryClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ServiceDiscoveryClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ServiceDiscoveryClientRequest::Action action; ///< ServiceDiscovery action to be performed.
+    QString apiVersion;        ///< ServiceDiscovery API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ServiceDiscovery request (query string) parameters. @todo?
 
     ServiceDiscoveryClientRequestPrivate(const ServiceDiscoveryClientRequest::Action action, ServiceDiscoveryClientRequest * const q);
     ServiceDiscoveryClientRequestPrivate(const RequestPrivate &other, ServiceDiscoveryClientRequest * const q);

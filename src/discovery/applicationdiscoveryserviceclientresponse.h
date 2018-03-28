@@ -29,7 +29,7 @@ namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClientResponsePrivate;
 
-class QTAWS_EXPORT ApplicationDiscoveryServiceClientResponse : public Response {
+class QTAWS_EXPORT ApplicationDiscoveryServiceClientResponse : public ApplicationDiscoveryServiceResponse {
     Q_OBJECT
 
 public:

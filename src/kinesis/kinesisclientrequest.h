@@ -37,7 +37,7 @@ class KinesisClientRequestPrivate;
 class QTAWS_EXPORT KinesisClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Kinesis.
     enum Action {
         // todo
     };

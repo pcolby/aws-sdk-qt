@@ -29,9 +29,9 @@ namespace WorkSpaces {
 /**
  * @class  WorkSpacesClientResponse
  *
- * @brief  Handles  WorkSpacesClient responses.
+ * @brief  Handles WorkSpaces WorkSpacesClient responses.
  *
- * @see    Client::workSpacesClient
+ * @see    WorkSpacesClient::workSpacesClient
  */
 
 /**

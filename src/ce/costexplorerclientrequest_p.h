@@ -20,7 +20,7 @@
 #ifndef QTAWS_COSTEXPLORERCLIENTREQUEST_P_H
 #define QTAWS_COSTEXPLORERCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "costexplorer_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CostExplorerClientRequest;
 class QTAWS_EXPORT CostExplorerClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CostExplorerClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CostExplorerClientRequest::Action action; ///< CostExplorer action to be performed.
+    QString apiVersion;        ///< CostExplorer API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CostExplorer request (query string) parameters. @todo?
 
     CostExplorerClientRequestPrivate(const CostExplorerClientRequest::Action action, CostExplorerClientRequest * const q);
     CostExplorerClientRequestPrivate(const RequestPrivate &other, CostExplorerClientRequest * const q);

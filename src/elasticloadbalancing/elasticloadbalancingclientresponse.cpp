@@ -29,9 +29,9 @@ namespace ElasticLoadBalancing {
 /**
  * @class  ElasticLoadBalancingClientResponse
  *
- * @brief  Handles  ElasticLoadBalancingClient responses.
+ * @brief  Handles ElasticLoadBalancing ElasticLoadBalancingClient responses.
  *
- * @see    Client::elasticLoadBalancingClient
+ * @see    ElasticLoadBalancingClient::elasticLoadBalancingClient
  */
 
 /**

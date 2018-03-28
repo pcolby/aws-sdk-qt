@@ -20,7 +20,7 @@
 #ifndef QTAWS_BUDGETSCLIENTREQUEST_P_H
 #define QTAWS_BUDGETSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "budgets_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class BudgetsClientRequest;
 class QTAWS_EXPORT BudgetsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    BudgetsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    BudgetsClientRequest::Action action; ///< Budgets action to be performed.
+    QString apiVersion;        ///< Budgets API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Budgets request (query string) parameters. @todo?
 
     BudgetsClientRequestPrivate(const BudgetsClientRequest::Action action, BudgetsClientRequest * const q);
     BudgetsClientRequestPrivate(const RequestPrivate &other, BudgetsClientRequest * const q);

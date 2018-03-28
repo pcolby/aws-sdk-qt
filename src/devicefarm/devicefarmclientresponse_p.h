@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEVICEFARMCLIENTRESPONSE_P_H
 #define QTAWS_DEVICEFARMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "devicefarmresponse.h"
 #include "devicefarmclientrequest.h"
 
 namespace AWS {

@@ -37,7 +37,7 @@ class RedshiftClientRequestPrivate;
 class QTAWS_EXPORT RedshiftClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Redshift.
     enum Action {
         // todo
     };

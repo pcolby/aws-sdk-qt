@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIASTORECLIENTREQUEST_P_H
 #define QTAWS_MEDIASTORECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "mediastore_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MediaStoreClientRequest;
 class QTAWS_EXPORT MediaStoreClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MediaStoreClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MediaStoreClientRequest::Action action; ///< MediaStore action to be performed.
+    QString apiVersion;        ///< MediaStore API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MediaStore request (query string) parameters. @todo?
 
     MediaStoreClientRequestPrivate(const MediaStoreClientRequest::Action action, MediaStoreClientRequest * const q);
     MediaStoreClientRequestPrivate(const RequestPrivate &other, MediaStoreClientRequest * const q);

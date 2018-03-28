@@ -37,7 +37,7 @@ class WorkMailClientRequestPrivate;
 class QTAWS_EXPORT WorkMailClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by WorkMail.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "emrrequest_p.h"
 
 namespace AWS {
 namespace EMR {
@@ -28,14 +28,14 @@ namespace EMR {
 /**
  * @class  EmrClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing EMR requests
  */
 
 
 /**
  * @brief  Constructs a new EmrClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The EMR action to request.
  */
 EmrClientRequest::EmrClientRequest(const Action action)
     : AwsAbstractRequest(new EmrClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ EmrClientRequest::EmrClientRequest(EmrClientRequestPrivate * const d) : AwsAbstr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the EMR action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The EMR action to be performed by this request.
  */
 EmrClientRequest::Action EmrClientRequest::action() const
 {
@@ -99,9 +99,9 @@ EmrClientRequest::Action EmrClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the EMR action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the EMR action to be performed by this request.
  */
 QString EmrClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString EmrClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the EMR API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The EMR API version implmented by this request.
  */
 QString EmrClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString EmrClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the EMR action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void EmrClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the EMR API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The EMR API version to include in this request.
  */
 void EmrClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool EmrClientRequest::operator==(const EmrClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid EMR queue name.
  *
- * @par From  FAQs:
+ * @par From EMR FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid EMR queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void EmrClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this EMR request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant EmrClientRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this EMR request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &EmrClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this EMR request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void EmrClientRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this EMR request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void EmrClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this EMR request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This EMR implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this EMR request using the given \a endpoint.
  */
 QNetworkRequest EmrClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest EmrClientRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new EmrClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  EMR action being performed by the \a q request.
  * @param  q       Pointer to this object's public EmrClientRequest instance.
  */
 EmrClientRequestPrivate::EmrClientRequestPrivate(const EmrClientRequest::Action action, EmrClientRequest * const q)
@@ -315,13 +315,13 @@ EmrClientRequestPrivate::EmrClientRequestPrivate(const EmrClientRequestPrivate &
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and EMR action to a string.
  *
  * This function converts EmrClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the EMR service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  EMR action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

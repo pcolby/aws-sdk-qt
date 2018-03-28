@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPSTREAMCLIENTRESPONSE_P_H
 #define QTAWS_APPSTREAMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "appstreamresponse.h"
 #include "appstreamclientrequest.h"
 
 namespace AWS {

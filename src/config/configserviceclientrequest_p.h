@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIGSERVICECLIENTREQUEST_P_H
 #define QTAWS_CONFIGSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "configservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ConfigServiceClientRequest;
 class QTAWS_EXPORT ConfigServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ConfigServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ConfigServiceClientRequest::Action action; ///< ConfigService action to be performed.
+    QString apiVersion;        ///< ConfigService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ConfigService request (query string) parameters. @todo?
 
     ConfigServiceClientRequestPrivate(const ConfigServiceClientRequest::Action action, ConfigServiceClientRequest * const q);
     ConfigServiceClientRequestPrivate(const RequestPrivate &other, ConfigServiceClientRequest * const q);

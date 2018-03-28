@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKDOCSCLIENTRESPONSE_P_H
 #define QTAWS_WORKDOCSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "workdocsresponse.h"
 #include "workdocsclientrequest.h"
 
 namespace AWS {

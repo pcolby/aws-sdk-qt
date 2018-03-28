@@ -29,9 +29,9 @@ namespace S3 {
 /**
  * @class  S3ClientResponse
  *
- * @brief  Handles  S3Client responses.
+ * @brief  Handles S3 S3Client responses.
  *
- * @see    Client::s3Client
+ * @see    S3Client::s3Client
  */
 
 /**

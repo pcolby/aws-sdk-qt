@@ -20,7 +20,7 @@
 #ifndef QTAWS_MQCLIENTREQUEST_P_H
 #define QTAWS_MQCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "mq_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MqClientRequest;
 class QTAWS_EXPORT MqClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MqClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MqClientRequest::Action action; ///< MQ action to be performed.
+    QString apiVersion;        ///< MQ API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MQ request (query string) parameters. @todo?
 
     MqClientRequestPrivate(const MqClientRequest::Action action, MqClientRequest * const q);
     MqClientRequestPrivate(const RequestPrivate &other, MqClientRequest * const q);

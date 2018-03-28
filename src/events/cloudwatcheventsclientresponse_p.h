@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDWATCHEVENTSCLIENTRESPONSE_P_H
 #define QTAWS_CLOUDWATCHEVENTSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cloudwatcheventsresponse.h"
 #include "cloudwatcheventsclientrequest.h"
 
 namespace AWS {

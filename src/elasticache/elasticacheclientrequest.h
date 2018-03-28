@@ -37,7 +37,7 @@ class ElastiCacheClientRequestPrivate;
 class QTAWS_EXPORT ElastiCacheClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ElastiCache.
     enum Action {
         // todo
     };

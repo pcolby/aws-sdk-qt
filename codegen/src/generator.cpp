@@ -86,6 +86,7 @@ bool Generator::generate(const QString &serviceFileName,
         + QSL("Client");
 
     Grantlee::Context context(description.toVariantHash());
+    context.insert(QSL("ServiceName"), classNamePrefix);
     context.insert(QSL("TargetLibName"), serviceFileName);
     context.insert(QSL("NameSpaceName"), classNamePrefix);
     context.insert(QSL("ClassName"), className);
@@ -96,7 +97,6 @@ bool Generator::generate(const QString &serviceFileName,
     context.push();
     renderClassFiles(QSL("requestbase"),  context, projectDir, className + QSL("Request"));
     renderClassFiles(QSL("responsebase"), context, projectDir, className + QSL("Response"));
-    context.insert(QSL("ServiceName"), classNamePrefix); /// @todo Move this up.
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
         generateModelClasses(context, projectDir, operationName, description);
     }

@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHCLIENTREQUEST_P_H
 #define QTAWS_BATCHCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "batch_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class BatchClientRequest;
 class QTAWS_EXPORT BatchClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    BatchClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    BatchClientRequest::Action action; ///< Batch action to be performed.
+    QString apiVersion;        ///< Batch API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Batch request (query string) parameters. @todo?
 
     BatchClientRequestPrivate(const BatchClientRequest::Action action, BatchClientRequest * const q);
     BatchClientRequestPrivate(const RequestPrivate &other, BatchClientRequest * const q);

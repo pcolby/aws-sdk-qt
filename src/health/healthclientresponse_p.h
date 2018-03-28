@@ -20,7 +20,7 @@
 #ifndef QTAWS_HEALTHCLIENTRESPONSE_P_H
 #define QTAWS_HEALTHCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "healthresponse.h"
 #include "healthclientrequest.h"
 
 namespace AWS {

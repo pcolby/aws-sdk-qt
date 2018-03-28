@@ -29,9 +29,9 @@ namespace MachineLearning {
 /**
  * @class  MachineLearningClientResponse
  *
- * @brief  Handles  MachineLearningClient responses.
+ * @brief  Handles MachineLearning MachineLearningClient responses.
  *
- * @see    Client::machineLearningClient
+ * @see    MachineLearningClient::machineLearningClient
  */
 
 /**

@@ -29,9 +29,9 @@ namespace LexModelBuildingService {
 /**
  * @class  LexModelBuildingServiceClientResponse
  *
- * @brief  Handles  LexModelBuildingServiceClient responses.
+ * @brief  Handles LexModelBuildingService LexModelBuildingServiceClient responses.
  *
- * @see    Client::lexModelBuildingServiceClient
+ * @see    LexModelBuildingServiceClient::lexModelBuildingServiceClient
  */
 
 /**

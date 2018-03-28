@@ -29,9 +29,9 @@ namespace CloudWatchLogs {
 /**
  * @class  CloudWatchLogsClientResponse
  *
- * @brief  Handles  CloudWatchLogsClient responses.
+ * @brief  Handles CloudWatchLogs CloudWatchLogsClient responses.
  *
- * @see    Client::cloudWatchLogsClient
+ * @see    CloudWatchLogsClient::cloudWatchLogsClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GUARDDUTYCLIENTREQUEST_P_H
 #define QTAWS_GUARDDUTYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "guardduty_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class GuardDutyClientRequest;
 class QTAWS_EXPORT GuardDutyClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    GuardDutyClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    GuardDutyClientRequest::Action action; ///< GuardDuty action to be performed.
+    QString apiVersion;        ///< GuardDuty API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< GuardDuty request (query string) parameters. @todo?
 
     GuardDutyClientRequestPrivate(const GuardDutyClientRequest::Action action, GuardDutyClientRequest * const q);
     GuardDutyClientRequestPrivate(const RequestPrivate &other, GuardDutyClientRequest * const q);

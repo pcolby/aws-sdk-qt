@@ -29,9 +29,9 @@ namespace Polly {
 /**
  * @class  PollyClientResponse
  *
- * @brief  Handles  PollyClient responses.
+ * @brief  Handles Polly PollyClient responses.
  *
- * @see    Client::pollyClient
+ * @see    PollyClient::pollyClient
  */
 
 /**

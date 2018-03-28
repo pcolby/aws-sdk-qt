@@ -29,7 +29,7 @@ namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientResponsePrivate;
 
-class QTAWS_EXPORT MarketplaceMeteringClientResponse : public Response {
+class QTAWS_EXPORT MarketplaceMeteringClientResponse : public MarketplaceMeteringResponse {
     Q_OBJECT
 
 public:

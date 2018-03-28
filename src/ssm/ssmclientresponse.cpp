@@ -29,9 +29,9 @@ namespace SSM {
 /**
  * @class  SsmClientResponse
  *
- * @brief  Handles  SsmClient responses.
+ * @brief  Handles SSM SsmClient responses.
  *
- * @see    Client::ssmClient
+ * @see    SSMClient::ssmClient
  */
 
 /**

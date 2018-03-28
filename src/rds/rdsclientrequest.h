@@ -37,7 +37,7 @@ class RdsClientRequestPrivate;
 class QTAWS_EXPORT RdsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by RDS.
     enum Action {
         // todo
     };

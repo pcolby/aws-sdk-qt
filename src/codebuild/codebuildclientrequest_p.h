@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODEBUILDCLIENTREQUEST_P_H
 #define QTAWS_CODEBUILDCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "codebuild_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CodeBuildClientRequest;
 class QTAWS_EXPORT CodeBuildClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CodeBuildClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CodeBuildClientRequest::Action action; ///< CodeBuild action to be performed.
+    QString apiVersion;        ///< CodeBuild API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CodeBuild request (query string) parameters. @todo?
 
     CodeBuildClientRequestPrivate(const CodeBuildClientRequest::Action action, CodeBuildClientRequest * const q);
     CodeBuildClientRequestPrivate(const RequestPrivate &other, CodeBuildClientRequest * const q);

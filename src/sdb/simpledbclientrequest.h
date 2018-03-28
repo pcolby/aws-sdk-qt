@@ -37,7 +37,7 @@ class SimpleDBClientRequestPrivate;
 class QTAWS_EXPORT SimpleDBClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SimpleDB.
     enum Action {
         // todo
     };

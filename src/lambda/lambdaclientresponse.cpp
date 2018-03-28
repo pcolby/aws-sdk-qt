@@ -29,9 +29,9 @@ namespace Lambda {
 /**
  * @class  LambdaClientResponse
  *
- * @brief  Handles  LambdaClient responses.
+ * @brief  Handles Lambda LambdaClient responses.
  *
- * @see    Client::lambdaClient
+ * @see    LambdaClient::lambdaClient
  */
 
 /**

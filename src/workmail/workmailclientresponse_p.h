@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKMAILCLIENTRESPONSE_P_H
 #define QTAWS_WORKMAILCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "workmailresponse.h"
 #include "workmailclientrequest.h"
 
 namespace AWS {

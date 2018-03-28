@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDHSMCLIENTRESPONSE_P_H
 #define QTAWS_CLOUDHSMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cloudhsmresponse.h"
 #include "cloudhsmclientrequest.h"
 
 namespace AWS {

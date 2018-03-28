@@ -20,7 +20,7 @@
 #ifndef QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENTREQUEST_P_H
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "marketplacecommerceanalytics_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MarketplaceCommerceAnalyticsClientRequest;
 class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MarketplaceCommerceAnalyticsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MarketplaceCommerceAnalyticsClientRequest::Action action; ///< MarketplaceCommerceAnalytics action to be performed.
+    QString apiVersion;        ///< MarketplaceCommerceAnalytics API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MarketplaceCommerceAnalytics request (query string) parameters. @todo?
 
     MarketplaceCommerceAnalyticsClientRequestPrivate(const MarketplaceCommerceAnalyticsClientRequest::Action action, MarketplaceCommerceAnalyticsClientRequest * const q);
     MarketplaceCommerceAnalyticsClientRequestPrivate(const RequestPrivate &other, MarketplaceCommerceAnalyticsClientRequest * const q);

@@ -29,9 +29,9 @@ namespace CostandUsageReportService {
 /**
  * @class  CostandUsageReportServiceClientResponse
  *
- * @brief  Handles  CostandUsageReportServiceClient responses.
+ * @brief  Handles CostandUsageReportService CostandUsageReportServiceClient responses.
  *
- * @see    Client::costandUsageReportServiceClient
+ * @see    CostandUsageReportServiceClient::costandUsageReportServiceClient
  */
 
 /**

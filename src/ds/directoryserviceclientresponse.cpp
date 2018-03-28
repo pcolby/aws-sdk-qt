@@ -29,9 +29,9 @@ namespace DirectoryService {
 /**
  * @class  DirectoryServiceClientResponse
  *
- * @brief  Handles  DirectoryServiceClient responses.
+ * @brief  Handles DirectoryService DirectoryServiceClient responses.
  *
- * @see    Client::directoryServiceClient
+ * @see    DirectoryServiceClient::directoryServiceClient
  */
 
 /**

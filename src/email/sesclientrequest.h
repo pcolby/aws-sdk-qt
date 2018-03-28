@@ -37,7 +37,7 @@ class SesClientRequestPrivate;
 class QTAWS_EXPORT SesClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SES.
     enum Action {
         // todo
     };

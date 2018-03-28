@@ -29,7 +29,7 @@ namespace RDS {
 
 class RdsClientResponsePrivate;
 
-class QTAWS_EXPORT RdsClientResponse : public Response {
+class QTAWS_EXPORT RdsClientResponse : public RDSResponse {
     Q_OBJECT
 
 public:

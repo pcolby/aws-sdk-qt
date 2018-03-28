@@ -29,9 +29,9 @@ namespace DatabaseMigrationService {
 /**
  * @class  DatabaseMigrationServiceClientResponse
  *
- * @brief  Handles  DatabaseMigrationServiceClient responses.
+ * @brief  Handles DatabaseMigrationService DatabaseMigrationServiceClient responses.
  *
- * @see    Client::databaseMigrationServiceClient
+ * @see    DatabaseMigrationServiceClient::databaseMigrationServiceClient
  */
 
 /**

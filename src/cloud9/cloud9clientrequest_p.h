@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUD9CLIENTREQUEST_P_H
 #define QTAWS_CLOUD9CLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloud9_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class Cloud9ClientRequest;
 class QTAWS_EXPORT Cloud9ClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    Cloud9ClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    Cloud9ClientRequest::Action action; ///< Cloud9 action to be performed.
+    QString apiVersion;        ///< Cloud9 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Cloud9 request (query string) parameters. @todo?
 
     Cloud9ClientRequestPrivate(const Cloud9ClientRequest::Action action, Cloud9ClientRequest * const q);
     Cloud9ClientRequestPrivate(const RequestPrivate &other, Cloud9ClientRequest * const q);

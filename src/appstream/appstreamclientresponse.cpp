@@ -29,9 +29,9 @@ namespace AppStream {
 /**
  * @class  AppStreamClientResponse
  *
- * @brief  Handles  AppStreamClient responses.
+ * @brief  Handles AppStream AppStreamClient responses.
  *
- * @see    Client::appStreamClient
+ * @see    AppStreamClient::appStreamClient
  */
 
 /**

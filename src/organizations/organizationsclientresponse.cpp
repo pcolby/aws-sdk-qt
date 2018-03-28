@@ -29,9 +29,9 @@ namespace Organizations {
 /**
  * @class  OrganizationsClientResponse
  *
- * @brief  Handles  OrganizationsClient responses.
+ * @brief  Handles Organizations OrganizationsClient responses.
  *
- * @see    Client::organizationsClient
+ * @see    OrganizationsClient::organizationsClient
  */
 
 /**

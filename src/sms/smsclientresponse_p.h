@@ -20,7 +20,7 @@
 #ifndef QTAWS_SMSCLIENTRESPONSE_P_H
 #define QTAWS_SMSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "smsresponse.h"
 #include "smsclientrequest.h"
 
 namespace AWS {

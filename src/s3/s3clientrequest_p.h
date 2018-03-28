@@ -20,7 +20,7 @@
 #ifndef QTAWS_S3CLIENTREQUEST_P_H
 #define QTAWS_S3CLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "s3_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class S3ClientRequest;
 class QTAWS_EXPORT S3ClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    S3ClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    S3ClientRequest::Action action; ///< S3 action to be performed.
+    QString apiVersion;        ///< S3 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< S3 request (query string) parameters. @todo?
 
     S3ClientRequestPrivate(const S3ClientRequest::Action action, S3ClientRequest * const q);
     S3ClientRequestPrivate(const RequestPrivate &other, S3ClientRequest * const q);

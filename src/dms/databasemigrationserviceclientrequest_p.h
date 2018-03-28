@@ -20,7 +20,7 @@
 #ifndef QTAWS_DATABASEMIGRATIONSERVICECLIENTREQUEST_P_H
 #define QTAWS_DATABASEMIGRATIONSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "databasemigrationservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DatabaseMigrationServiceClientRequest;
 class QTAWS_EXPORT DatabaseMigrationServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DatabaseMigrationServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DatabaseMigrationServiceClientRequest::Action action; ///< DatabaseMigrationService action to be performed.
+    QString apiVersion;        ///< DatabaseMigrationService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DatabaseMigrationService request (query string) parameters. @todo?
 
     DatabaseMigrationServiceClientRequestPrivate(const DatabaseMigrationServiceClientRequest::Action action, DatabaseMigrationServiceClientRequest * const q);
     DatabaseMigrationServiceClientRequestPrivate(const RequestPrivate &other, DatabaseMigrationServiceClientRequest * const q);

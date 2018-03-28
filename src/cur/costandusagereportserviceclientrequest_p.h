@@ -20,7 +20,7 @@
 #ifndef QTAWS_COSTANDUSAGEREPORTSERVICECLIENTREQUEST_P_H
 #define QTAWS_COSTANDUSAGEREPORTSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "costandusagereportservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CostandUsageReportServiceClientRequest;
 class QTAWS_EXPORT CostandUsageReportServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CostandUsageReportServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CostandUsageReportServiceClientRequest::Action action; ///< CostandUsageReportService action to be performed.
+    QString apiVersion;        ///< CostandUsageReportService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CostandUsageReportService request (query string) parameters. @todo?
 
     CostandUsageReportServiceClientRequestPrivate(const CostandUsageReportServiceClientRequest::Action action, CostandUsageReportServiceClientRequest * const q);
     CostandUsageReportServiceClientRequestPrivate(const RequestPrivate &other, CostandUsageReportServiceClientRequest * const q);

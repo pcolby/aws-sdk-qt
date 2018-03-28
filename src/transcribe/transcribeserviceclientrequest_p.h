@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSCRIBESERVICECLIENTREQUEST_P_H
 #define QTAWS_TRANSCRIBESERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "transcribeservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class TranscribeServiceClientRequest;
 class QTAWS_EXPORT TranscribeServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    TranscribeServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    TranscribeServiceClientRequest::Action action; ///< TranscribeService action to be performed.
+    QString apiVersion;        ///< TranscribeService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< TranscribeService request (query string) parameters. @todo?
 
     TranscribeServiceClientRequestPrivate(const TranscribeServiceClientRequest::Action action, TranscribeServiceClientRequest * const q);
     TranscribeServiceClientRequestPrivate(const RequestPrivate &other, TranscribeServiceClientRequest * const q);

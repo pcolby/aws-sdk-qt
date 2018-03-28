@@ -37,7 +37,7 @@ class XRayClientRequestPrivate;
 class QTAWS_EXPORT XRayClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by XRay.
     enum Action {
         // todo
     };

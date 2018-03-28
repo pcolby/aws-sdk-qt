@@ -37,7 +37,7 @@ class Route53ClientRequestPrivate;
 class QTAWS_EXPORT Route53ClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Route53.
     enum Action {
         // todo
     };

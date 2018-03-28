@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDHSMV2CLIENTREQUEST_P_H
 #define QTAWS_CLOUDHSMV2CLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloudhsmv2_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudHSMV2ClientRequest;
 class QTAWS_EXPORT CloudHSMV2ClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudHSMV2ClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudHSMV2ClientRequest::Action action; ///< CloudHSMV2 action to be performed.
+    QString apiVersion;        ///< CloudHSMV2 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudHSMV2 request (query string) parameters. @todo?
 
     CloudHSMV2ClientRequestPrivate(const CloudHSMV2ClientRequest::Action action, CloudHSMV2ClientRequest * const q);
     CloudHSMV2ClientRequestPrivate(const RequestPrivate &other, CloudHSMV2ClientRequest * const q);

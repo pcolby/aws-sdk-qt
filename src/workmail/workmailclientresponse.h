@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class WorkMailClientResponsePrivate;
 
-class QTAWS_EXPORT WorkMailClientResponse : public Response {
+class QTAWS_EXPORT WorkMailClientResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

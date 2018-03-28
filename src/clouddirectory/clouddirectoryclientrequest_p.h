@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDDIRECTORYCLIENTREQUEST_P_H
 #define QTAWS_CLOUDDIRECTORYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "clouddirectory_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudDirectoryClientRequest;
 class QTAWS_EXPORT CloudDirectoryClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudDirectoryClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudDirectoryClientRequest::Action action; ///< CloudDirectory action to be performed.
+    QString apiVersion;        ///< CloudDirectory API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudDirectory request (query string) parameters. @todo?
 
     CloudDirectoryClientRequestPrivate(const CloudDirectoryClientRequest::Action action, CloudDirectoryClientRequest * const q);
     CloudDirectoryClientRequestPrivate(const RequestPrivate &other, CloudDirectoryClientRequest * const q);

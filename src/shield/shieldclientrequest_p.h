@@ -20,7 +20,7 @@
 #ifndef QTAWS_SHIELDCLIENTREQUEST_P_H
 #define QTAWS_SHIELDCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "shield_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ShieldClientRequest;
 class QTAWS_EXPORT ShieldClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ShieldClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ShieldClientRequest::Action action; ///< Shield action to be performed.
+    QString apiVersion;        ///< Shield API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Shield request (query string) parameters. @todo?
 
     ShieldClientRequestPrivate(const ShieldClientRequest::Action action, ShieldClientRequest * const q);
     ShieldClientRequestPrivate(const RequestPrivate &other, ShieldClientRequest * const q);

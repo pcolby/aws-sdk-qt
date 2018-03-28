@@ -37,7 +37,7 @@ class ServiceCatalogClientRequestPrivate;
 class QTAWS_EXPORT ServiceCatalogClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ServiceCatalog.
     enum Action {
         // todo
     };

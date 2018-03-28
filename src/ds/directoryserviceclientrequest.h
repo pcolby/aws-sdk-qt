@@ -37,7 +37,7 @@ class DirectoryServiceClientRequestPrivate;
 class QTAWS_EXPORT DirectoryServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DirectoryService.
     enum Action {
         // todo
     };

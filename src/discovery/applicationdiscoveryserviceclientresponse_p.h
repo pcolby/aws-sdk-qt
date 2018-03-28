@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPLICATIONDISCOVERYSERVICECLIENTRESPONSE_P_H
 #define QTAWS_APPLICATIONDISCOVERYSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "applicationdiscoveryserviceclientrequest.h"
 
 namespace AWS {

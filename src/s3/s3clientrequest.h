@@ -37,7 +37,7 @@ class S3ClientRequestPrivate;
 class QTAWS_EXPORT S3ClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by S3.
     enum Action {
         // todo
     };

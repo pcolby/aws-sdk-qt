@@ -20,7 +20,7 @@
 #ifndef QTAWS_ROUTE53DOMAINSCLIENTREQUEST_P_H
 #define QTAWS_ROUTE53DOMAINSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "route53domains_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class Route53DomainsClientRequest;
 class QTAWS_EXPORT Route53DomainsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    Route53DomainsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    Route53DomainsClientRequest::Action action; ///< Route53Domains action to be performed.
+    QString apiVersion;        ///< Route53Domains API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Route53Domains request (query string) parameters. @todo?
 
     Route53DomainsClientRequestPrivate(const Route53DomainsClientRequest::Action action, Route53DomainsClientRequest * const q);
     Route53DomainsClientRequestPrivate(const RequestPrivate &other, Route53DomainsClientRequest * const q);

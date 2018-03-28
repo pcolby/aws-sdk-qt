@@ -29,9 +29,9 @@ namespace Redshift {
 /**
  * @class  RedshiftClientResponse
  *
- * @brief  Handles  RedshiftClient responses.
+ * @brief  Handles Redshift RedshiftClient responses.
  *
- * @see    Client::redshiftClient
+ * @see    RedshiftClient::redshiftClient
  */
 
 /**

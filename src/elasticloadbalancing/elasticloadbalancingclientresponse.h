@@ -29,7 +29,7 @@ namespace ElasticLoadBalancing {
 
 class ElasticLoadBalancingClientResponsePrivate;
 
-class QTAWS_EXPORT ElasticLoadBalancingClientResponse : public Response {
+class QTAWS_EXPORT ElasticLoadBalancingClientResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

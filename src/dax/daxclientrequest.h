@@ -37,7 +37,7 @@ class DaxClientRequestPrivate;
 class QTAWS_EXPORT DaxClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DAX.
     enum Action {
         // todo
     };

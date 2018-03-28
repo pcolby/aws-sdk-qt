@@ -37,7 +37,7 @@ class SfnClientRequestPrivate;
 class QTAWS_EXPORT SfnClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SFN.
     enum Action {
         // todo
     };

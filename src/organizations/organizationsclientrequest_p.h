@@ -20,7 +20,7 @@
 #ifndef QTAWS_ORGANIZATIONSCLIENTREQUEST_P_H
 #define QTAWS_ORGANIZATIONSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "organizations_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class OrganizationsClientRequest;
 class QTAWS_EXPORT OrganizationsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    OrganizationsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    OrganizationsClientRequest::Action action; ///< Organizations action to be performed.
+    QString apiVersion;        ///< Organizations API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Organizations request (query string) parameters. @todo?
 
     OrganizationsClientRequestPrivate(const OrganizationsClientRequest::Action action, OrganizationsClientRequest * const q);
     OrganizationsClientRequestPrivate(const RequestPrivate &other, OrganizationsClientRequest * const q);

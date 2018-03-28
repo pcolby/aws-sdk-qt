@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDTRAILCLIENTREQUEST_P_H
 #define QTAWS_CLOUDTRAILCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloudtrail_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudTrailClientRequest;
 class QTAWS_EXPORT CloudTrailClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudTrailClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudTrailClientRequest::Action action; ///< CloudTrail action to be performed.
+    QString apiVersion;        ///< CloudTrail API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudTrail request (query string) parameters. @todo?
 
     CloudTrailClientRequestPrivate(const CloudTrailClientRequest::Action action, CloudTrailClientRequest * const q);
     CloudTrailClientRequestPrivate(const RequestPrivate &other, CloudTrailClientRequest * const q);

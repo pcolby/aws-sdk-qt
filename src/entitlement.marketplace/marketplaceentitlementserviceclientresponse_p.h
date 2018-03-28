@@ -20,7 +20,7 @@
 #ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENTRESPONSE_P_H
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "marketplaceentitlementserviceresponse.h"
 #include "marketplaceentitlementserviceclientrequest.h"
 
 namespace AWS {

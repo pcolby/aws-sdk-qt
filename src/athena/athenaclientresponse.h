@@ -29,7 +29,7 @@ namespace Athena {
 
 class AthenaClientResponsePrivate;
 
-class QTAWS_EXPORT AthenaClientResponse : public Response {
+class QTAWS_EXPORT AthenaClientResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

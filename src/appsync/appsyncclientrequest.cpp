@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "appsyncrequest_p.h"
 
 namespace AWS {
 namespace AppSync {
@@ -28,14 +28,14 @@ namespace AppSync {
 /**
  * @class  AppSyncClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing AppSync requests
  */
 
 
 /**
  * @brief  Constructs a new AppSyncClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The AppSync action to request.
  */
 AppSyncClientRequest::AppSyncClientRequest(const Action action)
     : AwsAbstractRequest(new AppSyncClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ AppSyncClientRequest::AppSyncClientRequest(AppSyncClientRequestPrivate * const d
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the AppSync action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The AppSync action to be performed by this request.
  */
 AppSyncClientRequest::Action AppSyncClientRequest::action() const
 {
@@ -99,9 +99,9 @@ AppSyncClientRequest::Action AppSyncClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the AppSync action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the AppSync action to be performed by this request.
  */
 QString AppSyncClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString AppSyncClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the AppSync API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The AppSync API version implmented by this request.
  */
 QString AppSyncClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString AppSyncClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the AppSync action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void AppSyncClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the AppSync API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The AppSync API version to include in this request.
  */
 void AppSyncClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool AppSyncClientRequest::operator==(const AppSyncClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid AppSync queue name.
  *
- * @par From  FAQs:
+ * @par From AppSync FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid AppSync queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void AppSyncClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this AppSync request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant AppSyncClientRequest::parameter(const QString &name, const QVariant &de
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this AppSync request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &AppSyncClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this AppSync request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void AppSyncClientRequest::setParameter(const QString &name, const QVariant &val
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this AppSync request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void AppSyncClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this AppSync request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This AppSync implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this AppSync request using the given \a endpoint.
  */
 QNetworkRequest AppSyncClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest AppSyncClientRequest::unsignedRequest(const QUrl &endpoint) cons
  *
  * @brief  Constructs a new AppSyncClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  AppSync action being performed by the \a q request.
  * @param  q       Pointer to this object's public AppSyncClientRequest instance.
  */
 AppSyncClientRequestPrivate::AppSyncClientRequestPrivate(const AppSyncClientRequest::Action action, AppSyncClientRequest * const q)
@@ -315,13 +315,13 @@ AppSyncClientRequestPrivate::AppSyncClientRequestPrivate(const AppSyncClientRequ
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and AppSync action to a string.
  *
  * This function converts AppSyncClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the AppSync service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  AppSync action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

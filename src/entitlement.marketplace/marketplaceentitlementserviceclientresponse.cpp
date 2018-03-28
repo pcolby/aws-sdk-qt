@@ -29,9 +29,9 @@ namespace MarketplaceEntitlementService {
 /**
  * @class  MarketplaceEntitlementServiceClientResponse
  *
- * @brief  Handles  MarketplaceEntitlementServiceClient responses.
+ * @brief  Handles MarketplaceEntitlementService MarketplaceEntitlementServiceClient responses.
  *
- * @see    Client::marketplaceEntitlementServiceClient
+ * @see    MarketplaceEntitlementServiceClient::marketplaceEntitlementServiceClient
  */
 
 /**

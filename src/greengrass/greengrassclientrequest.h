@@ -37,7 +37,7 @@ class GreengrassClientRequestPrivate;
 class QTAWS_EXPORT GreengrassClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Greengrass.
     enum Action {
         // todo
     };

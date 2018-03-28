@@ -29,9 +29,9 @@ namespace CodeCommit {
 /**
  * @class  CodeCommitClientResponse
  *
- * @brief  Handles  CodeCommitClient responses.
+ * @brief  Handles CodeCommit CodeCommitClient responses.
  *
- * @see    Client::codeCommitClient
+ * @see    CodeCommitClient::codeCommitClient
  */
 
 /**

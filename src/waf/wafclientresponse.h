@@ -29,7 +29,7 @@ namespace WAF {
 
 class WafClientResponsePrivate;
 
-class QTAWS_EXPORT WafClientResponse : public Response {
+class QTAWS_EXPORT WafClientResponse : public WAFResponse {
     Q_OBJECT
 
 public:

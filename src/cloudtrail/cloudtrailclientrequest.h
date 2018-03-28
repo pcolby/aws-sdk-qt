@@ -37,7 +37,7 @@ class CloudTrailClientRequestPrivate;
 class QTAWS_EXPORT CloudTrailClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudTrail.
     enum Action {
         // todo
     };

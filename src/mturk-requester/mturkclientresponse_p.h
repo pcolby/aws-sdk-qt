@@ -20,7 +20,7 @@
 #ifndef QTAWS_MTURKCLIENTRESPONSE_P_H
 #define QTAWS_MTURKCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "mturkresponse.h"
 #include "mturkclientrequest.h"
 
 namespace AWS {

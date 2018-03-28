@@ -29,9 +29,9 @@ namespace IAM {
 /**
  * @class  IamClientResponse
  *
- * @brief  Handles  IamClient responses.
+ * @brief  Handles IAM IamClient responses.
  *
- * @see    Client::iamClient
+ * @see    IAMClient::iamClient
  */
 
 /**

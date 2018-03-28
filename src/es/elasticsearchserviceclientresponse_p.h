@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICSEARCHSERVICECLIENTRESPONSE_P_H
 #define QTAWS_ELASTICSEARCHSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "elasticsearchserviceresponse.h"
 #include "elasticsearchserviceclientrequest.h"
 
 namespace AWS {

@@ -37,7 +37,7 @@ class DatabaseMigrationServiceClientRequestPrivate;
 class QTAWS_EXPORT DatabaseMigrationServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DatabaseMigrationService.
     enum Action {
         // todo
     };

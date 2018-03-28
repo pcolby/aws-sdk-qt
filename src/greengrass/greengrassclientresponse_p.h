@@ -20,7 +20,7 @@
 #ifndef QTAWS_GREENGRASSCLIENTRESPONSE_P_H
 #define QTAWS_GREENGRASSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "greengrassresponse.h"
 #include "greengrassclientrequest.h"
 
 namespace AWS {

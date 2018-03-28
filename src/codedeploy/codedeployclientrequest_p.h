@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODEDEPLOYCLIENTREQUEST_P_H
 #define QTAWS_CODEDEPLOYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "codedeploy_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CodeDeployClientRequest;
 class QTAWS_EXPORT CodeDeployClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CodeDeployClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CodeDeployClientRequest::Action action; ///< CodeDeploy action to be performed.
+    QString apiVersion;        ///< CodeDeploy API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CodeDeploy request (query string) parameters. @todo?
 
     CodeDeployClientRequestPrivate(const CodeDeployClientRequest::Action action, CodeDeployClientRequest * const q);
     CodeDeployClientRequestPrivate(const RequestPrivate &other, CodeDeployClientRequest * const q);

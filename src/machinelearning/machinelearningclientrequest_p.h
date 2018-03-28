@@ -20,7 +20,7 @@
 #ifndef QTAWS_MACHINELEARNINGCLIENTREQUEST_P_H
 #define QTAWS_MACHINELEARNINGCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "machinelearning_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MachineLearningClientRequest;
 class QTAWS_EXPORT MachineLearningClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MachineLearningClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MachineLearningClientRequest::Action action; ///< MachineLearning action to be performed.
+    QString apiVersion;        ///< MachineLearning API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MachineLearning request (query string) parameters. @todo?
 
     MachineLearningClientRequestPrivate(const MachineLearningClientRequest::Action action, MachineLearningClientRequest * const q);
     MachineLearningClientRequestPrivate(const RequestPrivate &other, MachineLearningClientRequest * const q);

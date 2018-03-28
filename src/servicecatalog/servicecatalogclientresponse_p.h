@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVICECATALOGCLIENTRESPONSE_P_H
 #define QTAWS_SERVICECATALOGCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "servicecatalogresponse.h"
 #include "servicecatalogclientrequest.h"
 
 namespace AWS {

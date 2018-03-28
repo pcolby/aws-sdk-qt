@@ -20,7 +20,7 @@
 #ifndef QTAWS_STORAGEGATEWAYCLIENTRESPONSE_P_H
 #define QTAWS_STORAGEGATEWAYCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "storagegatewayresponse.h"
 #include "storagegatewayclientrequest.h"
 
 namespace AWS {

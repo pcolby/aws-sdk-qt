@@ -37,7 +37,7 @@ class SnsClientRequestPrivate;
 class QTAWS_EXPORT SnsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SNS.
     enum Action {
         // todo
     };

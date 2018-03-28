@@ -37,7 +37,7 @@ class PricingClientRequestPrivate;
 class QTAWS_EXPORT PricingClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Pricing.
     enum Action {
         // todo
     };

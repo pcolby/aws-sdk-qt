@@ -20,7 +20,7 @@
 #ifndef QTAWS_INSPECTORCLIENTREQUEST_P_H
 #define QTAWS_INSPECTORCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "inspector_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class InspectorClientRequest;
 class QTAWS_EXPORT InspectorClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    InspectorClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    InspectorClientRequest::Action action; ///< Inspector action to be performed.
+    QString apiVersion;        ///< Inspector API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Inspector request (query string) parameters. @todo?
 
     InspectorClientRequestPrivate(const InspectorClientRequest::Action action, InspectorClientRequest * const q);
     InspectorClientRequestPrivate(const RequestPrivate &other, InspectorClientRequest * const q);

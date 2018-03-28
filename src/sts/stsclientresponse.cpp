@@ -29,9 +29,9 @@ namespace STS {
 /**
  * @class  StsClientResponse
  *
- * @brief  Handles  StsClient responses.
+ * @brief  Handles STS StsClient responses.
  *
- * @see    Client::stsClient
+ * @see    STSClient::stsClient
  */
 
 /**

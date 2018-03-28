@@ -29,9 +29,9 @@ namespace ResourceGroups {
 /**
  * @class  ResourceGroupsClientResponse
  *
- * @brief  Handles  ResourceGroupsClient responses.
+ * @brief  Handles ResourceGroups ResourceGroupsClient responses.
  *
- * @see    Client::resourceGroupsClient
+ * @see    ResourceGroupsClient::resourceGroupsClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_KINESISVIDEOCLIENTRESPONSE_P_H
 #define QTAWS_KINESISVIDEOCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "kinesisvideoresponse.h"
 #include "kinesisvideoclientrequest.h"
 
 namespace AWS {

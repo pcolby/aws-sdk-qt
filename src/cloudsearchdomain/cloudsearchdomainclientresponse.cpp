@@ -29,9 +29,9 @@ namespace CloudSearchDomain {
 /**
  * @class  CloudSearchDomainClientResponse
  *
- * @brief  Handles  CloudSearchDomainClient responses.
+ * @brief  Handles CloudSearchDomain CloudSearchDomainClient responses.
  *
- * @see    Client::cloudSearchDomainClient
+ * @see    CloudSearchDomainClient::cloudSearchDomainClient
  */
 
 /**

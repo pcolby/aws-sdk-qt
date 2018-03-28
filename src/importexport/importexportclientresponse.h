@@ -29,7 +29,7 @@ namespace ImportExport {
 
 class ImportExportClientResponsePrivate;
 
-class QTAWS_EXPORT ImportExportClientResponse : public Response {
+class QTAWS_EXPORT ImportExportClientResponse : public ImportExportResponse {
     Q_OBJECT
 
 public:

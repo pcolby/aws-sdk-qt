@@ -37,7 +37,7 @@ class ComprehendClientRequestPrivate;
 class QTAWS_EXPORT ComprehendClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Comprehend.
     enum Action {
         // todo
     };

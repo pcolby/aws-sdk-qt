@@ -29,9 +29,9 @@ namespace Health {
 /**
  * @class  HealthClientResponse
  *
- * @brief  Handles  HealthClient responses.
+ * @brief  Handles Health HealthClient responses.
  *
- * @see    Client::healthClient
+ * @see    HealthClient::healthClient
  */
 
 /**

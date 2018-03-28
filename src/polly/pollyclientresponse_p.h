@@ -20,7 +20,7 @@
 #ifndef QTAWS_POLLYCLIENTRESPONSE_P_H
 #define QTAWS_POLLYCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "pollyresponse.h"
 #include "pollyclientrequest.h"
 
 namespace AWS {

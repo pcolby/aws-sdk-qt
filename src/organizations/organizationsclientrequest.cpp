@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "organizationsrequest_p.h"
 
 namespace AWS {
 namespace Organizations {
@@ -28,14 +28,14 @@ namespace Organizations {
 /**
  * @class  OrganizationsClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Organizations requests
  */
 
 
 /**
  * @brief  Constructs a new OrganizationsClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Organizations action to request.
  */
 OrganizationsClientRequest::OrganizationsClientRequest(const Action action)
     : AwsAbstractRequest(new OrganizationsClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ OrganizationsClientRequest::OrganizationsClientRequest(OrganizationsClientReques
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Organizations action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Organizations action to be performed by this request.
  */
 OrganizationsClientRequest::Action OrganizationsClientRequest::action() const
 {
@@ -99,9 +99,9 @@ OrganizationsClientRequest::Action OrganizationsClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Organizations action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Organizations action to be performed by this request.
  */
 QString OrganizationsClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString OrganizationsClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Organizations API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Organizations API version implmented by this request.
  */
 QString OrganizationsClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString OrganizationsClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Organizations action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void OrganizationsClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Organizations API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Organizations API version to include in this request.
  */
 void OrganizationsClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool OrganizationsClientRequest::operator==(const OrganizationsClientRequest &ot
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Organizations queue name.
  *
- * @par From  FAQs:
+ * @par From Organizations FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Organizations queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void OrganizationsClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Organizations request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant OrganizationsClientRequest::parameter(const QString &name, const QVaria
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Organizations request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &OrganizationsClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Organizations request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void OrganizationsClientRequest::setParameter(const QString &name, const QVarian
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Organizations request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void OrganizationsClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Organizations request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Organizations implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Organizations request using the given \a endpoint.
  */
 QNetworkRequest OrganizationsClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest OrganizationsClientRequest::unsignedRequest(const QUrl &endpoint
  *
  * @brief  Constructs a new OrganizationsClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Organizations action being performed by the \a q request.
  * @param  q       Pointer to this object's public OrganizationsClientRequest instance.
  */
 OrganizationsClientRequestPrivate::OrganizationsClientRequestPrivate(const OrganizationsClientRequest::Action action, OrganizationsClientRequest * const q)
@@ -315,13 +315,13 @@ OrganizationsClientRequestPrivate::OrganizationsClientRequestPrivate(const Organ
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Organizations action to a string.
  *
  * This function converts OrganizationsClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Organizations service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Organizations action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

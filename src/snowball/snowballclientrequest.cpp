@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "snowballrequest_p.h"
 
 namespace AWS {
 namespace Snowball {
@@ -28,14 +28,14 @@ namespace Snowball {
 /**
  * @class  SnowballClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Snowball requests
  */
 
 
 /**
  * @brief  Constructs a new SnowballClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Snowball action to request.
  */
 SnowballClientRequest::SnowballClientRequest(const Action action)
     : AwsAbstractRequest(new SnowballClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ SnowballClientRequest::SnowballClientRequest(SnowballClientRequestPrivate * cons
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Snowball action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Snowball action to be performed by this request.
  */
 SnowballClientRequest::Action SnowballClientRequest::action() const
 {
@@ -99,9 +99,9 @@ SnowballClientRequest::Action SnowballClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Snowball action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Snowball action to be performed by this request.
  */
 QString SnowballClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString SnowballClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Snowball API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Snowball API version implmented by this request.
  */
 QString SnowballClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString SnowballClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Snowball action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void SnowballClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Snowball API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Snowball API version to include in this request.
  */
 void SnowballClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool SnowballClientRequest::operator==(const SnowballClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Snowball queue name.
  *
- * @par From  FAQs:
+ * @par From Snowball FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Snowball queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void SnowballClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Snowball request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant SnowballClientRequest::parameter(const QString &name, const QVariant &d
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Snowball request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &SnowballClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Snowball request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void SnowballClientRequest::setParameter(const QString &name, const QVariant &va
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Snowball request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void SnowballClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Snowball request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Snowball implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Snowball request using the given \a endpoint.
  */
 QNetworkRequest SnowballClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest SnowballClientRequest::unsignedRequest(const QUrl &endpoint) con
  *
  * @brief  Constructs a new SnowballClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Snowball action being performed by the \a q request.
  * @param  q       Pointer to this object's public SnowballClientRequest instance.
  */
 SnowballClientRequestPrivate::SnowballClientRequestPrivate(const SnowballClientRequest::Action action, SnowballClientRequest * const q)
@@ -315,13 +315,13 @@ SnowballClientRequestPrivate::SnowballClientRequestPrivate(const SnowballClientR
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Snowball action to a string.
  *
  * This function converts SnowballClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Snowball service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Snowball action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

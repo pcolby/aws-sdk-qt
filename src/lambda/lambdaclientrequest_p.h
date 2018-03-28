@@ -20,7 +20,7 @@
 #ifndef QTAWS_LAMBDACLIENTREQUEST_P_H
 #define QTAWS_LAMBDACLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "lambda_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class LambdaClientRequest;
 class QTAWS_EXPORT LambdaClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    LambdaClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    LambdaClientRequest::Action action; ///< Lambda action to be performed.
+    QString apiVersion;        ///< Lambda API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Lambda request (query string) parameters. @todo?
 
     LambdaClientRequestPrivate(const LambdaClientRequest::Action action, LambdaClientRequest * const q);
     LambdaClientRequestPrivate(const RequestPrivate &other, LambdaClientRequest * const q);

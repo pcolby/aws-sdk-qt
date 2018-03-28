@@ -29,9 +29,9 @@ namespace CodeBuild {
 /**
  * @class  CodeBuildClientResponse
  *
- * @brief  Handles  CodeBuildClient responses.
+ * @brief  Handles CodeBuild CodeBuildClient responses.
  *
- * @see    Client::codeBuildClient
+ * @see    CodeBuildClient::codeBuildClient
  */
 
 /**

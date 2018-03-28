@@ -37,7 +37,7 @@ class RekognitionClientRequestPrivate;
 class QTAWS_EXPORT RekognitionClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Rekognition.
     enum Action {
         // todo
     };

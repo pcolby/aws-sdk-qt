@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "efsrequest_p.h"
 
 namespace AWS {
 namespace EFS {
@@ -28,14 +28,14 @@ namespace EFS {
 /**
  * @class  EfsClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing EFS requests
  */
 
 
 /**
  * @brief  Constructs a new EfsClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The EFS action to request.
  */
 EfsClientRequest::EfsClientRequest(const Action action)
     : AwsAbstractRequest(new EfsClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ EfsClientRequest::EfsClientRequest(EfsClientRequestPrivate * const d) : AwsAbstr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the EFS action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The EFS action to be performed by this request.
  */
 EfsClientRequest::Action EfsClientRequest::action() const
 {
@@ -99,9 +99,9 @@ EfsClientRequest::Action EfsClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the EFS action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the EFS action to be performed by this request.
  */
 QString EfsClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString EfsClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the EFS API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The EFS API version implmented by this request.
  */
 QString EfsClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString EfsClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the EFS action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void EfsClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the EFS API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The EFS API version to include in this request.
  */
 void EfsClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool EfsClientRequest::operator==(const EfsClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid EFS queue name.
  *
- * @par From  FAQs:
+ * @par From EFS FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid EFS queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void EfsClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this EFS request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant EfsClientRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this EFS request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &EfsClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this EFS request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void EfsClientRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this EFS request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void EfsClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this EFS request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This EFS implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this EFS request using the given \a endpoint.
  */
 QNetworkRequest EfsClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest EfsClientRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new EfsClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  EFS action being performed by the \a q request.
  * @param  q       Pointer to this object's public EfsClientRequest instance.
  */
 EfsClientRequestPrivate::EfsClientRequestPrivate(const EfsClientRequest::Action action, EfsClientRequest * const q)
@@ -315,13 +315,13 @@ EfsClientRequestPrivate::EfsClientRequestPrivate(const EfsClientRequestPrivate &
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and EFS action to a string.
  *
  * This function converts EfsClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the EFS service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  EFS action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

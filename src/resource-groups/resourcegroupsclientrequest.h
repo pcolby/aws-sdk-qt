@@ -37,7 +37,7 @@ class ResourceGroupsClientRequestPrivate;
 class QTAWS_EXPORT ResourceGroupsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ResourceGroups.
     enum Action {
         // todo
     };

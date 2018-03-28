@@ -20,7 +20,7 @@
 #ifndef QTAWS_DIRECTORYSERVICECLIENTREQUEST_P_H
 #define QTAWS_DIRECTORYSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "directoryservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DirectoryServiceClientRequest;
 class QTAWS_EXPORT DirectoryServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DirectoryServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DirectoryServiceClientRequest::Action action; ///< DirectoryService action to be performed.
+    QString apiVersion;        ///< DirectoryService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DirectoryService request (query string) parameters. @todo?
 
     DirectoryServiceClientRequestPrivate(const DirectoryServiceClientRequest::Action action, DirectoryServiceClientRequest * const q);
     DirectoryServiceClientRequestPrivate(const RequestPrivate &other, DirectoryServiceClientRequest * const q);

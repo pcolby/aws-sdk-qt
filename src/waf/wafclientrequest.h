@@ -37,7 +37,7 @@ class WafClientRequestPrivate;
 class QTAWS_EXPORT WafClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by WAF.
     enum Action {
         // todo
     };

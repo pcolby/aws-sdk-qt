@@ -29,9 +29,9 @@ namespace EC2 {
 /**
  * @class  Ec2ClientResponse
  *
- * @brief  Handles  Ec2Client responses.
+ * @brief  Handles EC2 Ec2Client responses.
  *
- * @see    Client::ec2Client
+ * @see    EC2Client::ec2Client
  */
 
 /**

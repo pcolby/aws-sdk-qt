@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHCLIENTRESPONSE_P_H
 #define QTAWS_BATCHCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "batchresponse.h"
 #include "batchclientrequest.h"
 
 namespace AWS {

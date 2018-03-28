@@ -20,7 +20,7 @@
 #ifndef QTAWS_PINPOINTCLIENTRESPONSE_P_H
 #define QTAWS_PINPOINTCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "pinpointresponse.h"
 #include "pinpointclientrequest.h"
 
 namespace AWS {

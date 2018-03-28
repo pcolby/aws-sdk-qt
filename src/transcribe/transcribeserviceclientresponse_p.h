@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSCRIBESERVICECLIENTRESPONSE_P_H
 #define QTAWS_TRANSCRIBESERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "transcribeserviceresponse.h"
 #include "transcribeserviceclientrequest.h"
 
 namespace AWS {

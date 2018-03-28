@@ -29,7 +29,7 @@ namespace Cloud9 {
 
 class Cloud9ClientResponsePrivate;
 
-class QTAWS_EXPORT Cloud9ClientResponse : public Response {
+class QTAWS_EXPORT Cloud9ClientResponse : public Cloud9Response {
     Q_OBJECT
 
 public:

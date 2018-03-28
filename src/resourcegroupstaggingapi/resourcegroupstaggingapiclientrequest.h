@@ -37,7 +37,7 @@ class ResourceGroupsTaggingAPIClientRequestPrivate;
 class QTAWS_EXPORT ResourceGroupsTaggingAPIClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ResourceGroupsTaggingAPI.
     enum Action {
         // todo
     };

@@ -29,9 +29,9 @@ namespace SNS {
 /**
  * @class  SnsClientResponse
  *
- * @brief  Handles  SnsClient responses.
+ * @brief  Handles SNS SnsClient responses.
  *
- * @see    Client::snsClient
+ * @see    SNSClient::snsClient
  */
 
 /**

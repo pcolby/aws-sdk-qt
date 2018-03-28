@@ -37,7 +37,7 @@ class APIGatewayClientRequestPrivate;
 class QTAWS_EXPORT APIGatewayClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by APIGateway.
     enum Action {
         // todo
     };

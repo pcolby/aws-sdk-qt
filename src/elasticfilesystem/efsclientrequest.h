@@ -37,7 +37,7 @@ class EfsClientRequestPrivate;
 class QTAWS_EXPORT EfsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by EFS.
     enum Action {
         // todo
     };

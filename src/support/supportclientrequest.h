@@ -37,7 +37,7 @@ class SupportClientRequestPrivate;
 class QTAWS_EXPORT SupportClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Support.
     enum Action {
         // todo
     };

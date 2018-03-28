@@ -20,7 +20,7 @@
 #ifndef QTAWS_WAFREGIONALCLIENTRESPONSE_P_H
 #define QTAWS_WAFREGIONALCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "wafregionalresponse.h"
 #include "wafregionalclientrequest.h"
 
 namespace AWS {

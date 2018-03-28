@@ -29,9 +29,9 @@ namespace CognitoSync {
 /**
  * @class  CognitoSyncClientResponse
  *
- * @brief  Handles  CognitoSyncClient responses.
+ * @brief  Handles CognitoSync CognitoSyncClient responses.
  *
- * @see    Client::cognitoSyncClient
+ * @see    CognitoSyncClient::cognitoSyncClient
  */
 
 /**

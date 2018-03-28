@@ -29,9 +29,9 @@ namespace KMS {
 /**
  * @class  KmsClientResponse
  *
- * @brief  Handles  KmsClient responses.
+ * @brief  Handles KMS KmsClient responses.
  *
- * @see    Client::kmsClient
+ * @see    KMSClient::kmsClient
  */
 
 /**

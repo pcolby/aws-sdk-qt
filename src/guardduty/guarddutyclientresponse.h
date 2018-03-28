@@ -29,7 +29,7 @@ namespace GuardDuty {
 
 class GuardDutyClientResponsePrivate;
 
-class QTAWS_EXPORT GuardDutyClientResponse : public Response {
+class QTAWS_EXPORT GuardDutyClientResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

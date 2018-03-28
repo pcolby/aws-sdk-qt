@@ -29,7 +29,7 @@ namespace MTurk {
 
 class MTurkClientResponsePrivate;
 
-class QTAWS_EXPORT MTurkClientResponse : public Response {
+class QTAWS_EXPORT MTurkClientResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

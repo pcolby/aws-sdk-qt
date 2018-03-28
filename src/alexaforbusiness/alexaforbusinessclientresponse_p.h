@@ -20,7 +20,7 @@
 #ifndef QTAWS_ALEXAFORBUSINESSCLIENTRESPONSE_P_H
 #define QTAWS_ALEXAFORBUSINESSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "alexaforbusinessresponse.h"
 #include "alexaforbusinessclientrequest.h"
 
 namespace AWS {

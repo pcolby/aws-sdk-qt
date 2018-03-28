@@ -37,7 +37,7 @@ class IamClientRequestPrivate;
 class QTAWS_EXPORT IamClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by IAM.
     enum Action {
         // todo
     };

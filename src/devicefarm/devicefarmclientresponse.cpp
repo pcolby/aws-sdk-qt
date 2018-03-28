@@ -29,9 +29,9 @@ namespace DeviceFarm {
 /**
  * @class  DeviceFarmClientResponse
  *
- * @brief  Handles  DeviceFarmClient responses.
+ * @brief  Handles DeviceFarm DeviceFarmClient responses.
  *
- * @see    Client::deviceFarmClient
+ * @see    DeviceFarmClient::deviceFarmClient
  */
 
 /**

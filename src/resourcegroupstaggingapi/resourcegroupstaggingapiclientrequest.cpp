@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "resourcegroupstaggingapirequest_p.h"
 
 namespace AWS {
 namespace ResourceGroupsTaggingAPI {
@@ -28,14 +28,14 @@ namespace ResourceGroupsTaggingAPI {
 /**
  * @class  ResourceGroupsTaggingAPIClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing ResourceGroupsTaggingAPI requests
  */
 
 
 /**
  * @brief  Constructs a new ResourceGroupsTaggingAPIClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The ResourceGroupsTaggingAPI action to request.
  */
 ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(const Action action)
     : AwsAbstractRequest(new ResourceGroupsTaggingAPIClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(Res
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the ResourceGroupsTaggingAPI action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The ResourceGroupsTaggingAPI action to be performed by this request.
  */
 ResourceGroupsTaggingAPIClientRequest::Action ResourceGroupsTaggingAPIClientRequest::action() const
 {
@@ -99,9 +99,9 @@ ResourceGroupsTaggingAPIClientRequest::Action ResourceGroupsTaggingAPIClientRequ
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the ResourceGroupsTaggingAPI action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the ResourceGroupsTaggingAPI action to be performed by this request.
  */
 QString ResourceGroupsTaggingAPIClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString ResourceGroupsTaggingAPIClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the ResourceGroupsTaggingAPI API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The ResourceGroupsTaggingAPI API version implmented by this request.
  */
 QString ResourceGroupsTaggingAPIClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString ResourceGroupsTaggingAPIClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the ResourceGroupsTaggingAPI action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void ResourceGroupsTaggingAPIClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the ResourceGroupsTaggingAPI API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The ResourceGroupsTaggingAPI API version to include in this request.
  */
 void ResourceGroupsTaggingAPIClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool ResourceGroupsTaggingAPIClientRequest::operator==(const ResourceGroupsTaggi
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid ResourceGroupsTaggingAPI queue name.
  *
- * @par From  FAQs:
+ * @par From ResourceGroupsTaggingAPI FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid ResourceGroupsTaggingAPI queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void ResourceGroupsTaggingAPIClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this ResourceGroupsTaggingAPI request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant ResourceGroupsTaggingAPIClientRequest::parameter(const QString &name, c
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this ResourceGroupsTaggingAPI request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &ResourceGroupsTaggingAPIClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this ResourceGroupsTaggingAPI request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void ResourceGroupsTaggingAPIClientRequest::setParameter(const QString &name, co
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this ResourceGroupsTaggingAPI request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void ResourceGroupsTaggingAPIClientRequest::setParameters(const QVariantMap &par
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this ResourceGroupsTaggingAPI request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This ResourceGroupsTaggingAPI implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this ResourceGroupsTaggingAPI request using the given \a endpoint.
  */
 QNetworkRequest ResourceGroupsTaggingAPIClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest ResourceGroupsTaggingAPIClientRequest::unsignedRequest(const QUr
  *
  * @brief  Constructs a new ResourceGroupsTaggingAPIClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  ResourceGroupsTaggingAPI action being performed by the \a q request.
  * @param  q       Pointer to this object's public ResourceGroupsTaggingAPIClientRequest instance.
  */
 ResourceGroupsTaggingAPIClientRequestPrivate::ResourceGroupsTaggingAPIClientRequestPrivate(const ResourceGroupsTaggingAPIClientRequest::Action action, ResourceGroupsTaggingAPIClientRequest * const q)
@@ -315,13 +315,13 @@ ResourceGroupsTaggingAPIClientRequestPrivate::ResourceGroupsTaggingAPIClientRequ
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and ResourceGroupsTaggingAPI action to a string.
  *
  * This function converts ResourceGroupsTaggingAPIClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the ResourceGroupsTaggingAPI service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  ResourceGroupsTaggingAPI action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

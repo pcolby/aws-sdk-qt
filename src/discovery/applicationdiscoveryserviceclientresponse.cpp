@@ -29,9 +29,9 @@ namespace ApplicationDiscoveryService {
 /**
  * @class  ApplicationDiscoveryServiceClientResponse
  *
- * @brief  Handles  ApplicationDiscoveryServiceClient responses.
+ * @brief  Handles ApplicationDiscoveryService ApplicationDiscoveryServiceClient responses.
  *
- * @see    Client::applicationDiscoveryServiceClient
+ * @see    ApplicationDiscoveryServiceClient::applicationDiscoveryServiceClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SNSCLIENTREQUEST_P_H
 #define QTAWS_SNSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "sns_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SnsClientRequest;
 class QTAWS_EXPORT SnsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SnsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SnsClientRequest::Action action; ///< SNS action to be performed.
+    QString apiVersion;        ///< SNS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SNS request (query string) parameters. @todo?
 
     SnsClientRequestPrivate(const SnsClientRequest::Action action, SnsClientRequest * const q);
     SnsClientRequestPrivate(const RequestPrivate &other, SnsClientRequest * const q);

@@ -29,9 +29,9 @@ namespace SQS {
 /**
  * @class  SqsClientResponse
  *
- * @brief  Handles  SqsClient responses.
+ * @brief  Handles SQS SqsClient responses.
  *
- * @see    Client::sqsClient
+ * @see    SQSClient::sqsClient
  */
 
 /**

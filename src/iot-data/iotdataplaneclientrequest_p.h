@@ -20,7 +20,7 @@
 #ifndef QTAWS_IOTDATAPLANECLIENTREQUEST_P_H
 #define QTAWS_IOTDATAPLANECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "iotdataplane_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class IoTDataPlaneClientRequest;
 class QTAWS_EXPORT IoTDataPlaneClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    IoTDataPlaneClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    IoTDataPlaneClientRequest::Action action; ///< IoTDataPlane action to be performed.
+    QString apiVersion;        ///< IoTDataPlane API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< IoTDataPlane request (query string) parameters. @todo?
 
     IoTDataPlaneClientRequestPrivate(const IoTDataPlaneClientRequest::Action action, IoTDataPlaneClientRequest * const q);
     IoTDataPlaneClientRequestPrivate(const RequestPrivate &other, IoTDataPlaneClientRequest * const q);

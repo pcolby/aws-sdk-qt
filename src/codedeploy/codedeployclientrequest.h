@@ -37,7 +37,7 @@ class CodeDeployClientRequestPrivate;
 class QTAWS_EXPORT CodeDeployClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CodeDeploy.
     enum Action {
         // todo
     };

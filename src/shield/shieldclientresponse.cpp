@@ -29,9 +29,9 @@ namespace Shield {
 /**
  * @class  ShieldClientResponse
  *
- * @brief  Handles  ShieldClient responses.
+ * @brief  Handles Shield ShieldClient responses.
  *
- * @see    Client::shieldClient
+ * @see    ShieldClient::shieldClient
  */
 
 /**

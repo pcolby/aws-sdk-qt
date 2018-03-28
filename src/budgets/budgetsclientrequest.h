@@ -37,7 +37,7 @@ class BudgetsClientRequestPrivate;
 class QTAWS_EXPORT BudgetsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Budgets.
     enum Action {
         // todo
     };

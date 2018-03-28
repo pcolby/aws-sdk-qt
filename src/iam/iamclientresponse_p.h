@@ -20,7 +20,7 @@
 #ifndef QTAWS_IAMCLIENTRESPONSE_P_H
 #define QTAWS_IAMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "iamresponse.h"
 #include "iamclientrequest.h"
 
 namespace AWS {

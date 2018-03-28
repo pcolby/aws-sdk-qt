@@ -29,9 +29,9 @@ namespace ImportExport {
 /**
  * @class  ImportExportClientResponse
  *
- * @brief  Handles  ImportExportClient responses.
+ * @brief  Handles ImportExport ImportExportClient responses.
  *
- * @see    Client::importExportClient
+ * @see    ImportExportClient::importExportClient
  */
 
 /**

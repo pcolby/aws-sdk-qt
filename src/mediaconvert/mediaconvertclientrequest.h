@@ -37,7 +37,7 @@ class MediaConvertClientRequestPrivate;
 class QTAWS_EXPORT MediaConvertClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MediaConvert.
     enum Action {
         // todo
     };

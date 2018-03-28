@@ -37,7 +37,7 @@ class LexRuntimeServiceClientRequestPrivate;
 class QTAWS_EXPORT LexRuntimeServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by LexRuntimeService.
     enum Action {
         // todo
     };

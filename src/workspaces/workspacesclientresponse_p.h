@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKSPACESCLIENTRESPONSE_P_H
 #define QTAWS_WORKSPACESCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "workspacesresponse.h"
 #include "workspacesclientrequest.h"
 
 namespace AWS {

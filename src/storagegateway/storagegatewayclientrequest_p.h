@@ -20,7 +20,7 @@
 #ifndef QTAWS_STORAGEGATEWAYCLIENTREQUEST_P_H
 #define QTAWS_STORAGEGATEWAYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "storagegateway_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class StorageGatewayClientRequest;
 class QTAWS_EXPORT StorageGatewayClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    StorageGatewayClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    StorageGatewayClientRequest::Action action; ///< StorageGateway action to be performed.
+    QString apiVersion;        ///< StorageGateway API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< StorageGateway request (query string) parameters. @todo?
 
     StorageGatewayClientRequestPrivate(const StorageGatewayClientRequest::Action action, StorageGatewayClientRequest * const q);
     StorageGatewayClientRequestPrivate(const RequestPrivate &other, StorageGatewayClientRequest * const q);

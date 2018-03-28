@@ -29,9 +29,9 @@ namespace ACM {
 /**
  * @class  AcmClientResponse
  *
- * @brief  Handles  AcmClient responses.
+ * @brief  Handles ACM AcmClient responses.
  *
- * @see    Client::acmClient
+ * @see    ACMClient::acmClient
  */
 
 /**

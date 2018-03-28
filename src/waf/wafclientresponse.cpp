@@ -29,9 +29,9 @@ namespace WAF {
 /**
  * @class  WafClientResponse
  *
- * @brief  Handles  WafClient responses.
+ * @brief  Handles WAF WafClient responses.
  *
- * @see    Client::wafClient
+ * @see    WAFClient::wafClient
  */
 
 /**

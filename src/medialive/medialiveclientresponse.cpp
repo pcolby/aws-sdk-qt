@@ -29,9 +29,9 @@ namespace MediaLive {
 /**
  * @class  MediaLiveClientResponse
  *
- * @brief  Handles  MediaLiveClient responses.
+ * @brief  Handles MediaLive MediaLiveClient responses.
  *
- * @see    Client::mediaLiveClient
+ * @see    MediaLiveClient::mediaLiveClient
  */
 
 /**

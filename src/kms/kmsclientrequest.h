@@ -37,7 +37,7 @@ class KmsClientRequestPrivate;
 class QTAWS_EXPORT KmsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by KMS.
     enum Action {
         // todo
     };

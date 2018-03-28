@@ -37,7 +37,7 @@ class InspectorClientRequestPrivate;
 class QTAWS_EXPORT InspectorClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Inspector.
     enum Action {
         // todo
     };

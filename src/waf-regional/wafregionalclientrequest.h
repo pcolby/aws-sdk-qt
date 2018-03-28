@@ -37,7 +37,7 @@ class WAFRegionalClientRequestPrivate;
 class QTAWS_EXPORT WAFRegionalClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by WAFRegional.
     enum Action {
         // todo
     };

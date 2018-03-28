@@ -20,7 +20,7 @@
 #ifndef QTAWS_MIGRATIONHUBCLIENTREQUEST_P_H
 #define QTAWS_MIGRATIONHUBCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "migrationhub_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MigrationHubClientRequest;
 class QTAWS_EXPORT MigrationHubClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MigrationHubClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MigrationHubClientRequest::Action action; ///< MigrationHub action to be performed.
+    QString apiVersion;        ///< MigrationHub API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MigrationHub request (query string) parameters. @todo?
 
     MigrationHubClientRequestPrivate(const MigrationHubClientRequest::Action action, MigrationHubClientRequest * const q);
     MigrationHubClientRequestPrivate(const RequestPrivate &other, MigrationHubClientRequest * const q);

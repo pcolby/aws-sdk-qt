@@ -29,9 +29,9 @@ namespace WorkDocs {
 /**
  * @class  WorkDocsClientResponse
  *
- * @brief  Handles  WorkDocsClient responses.
+ * @brief  Handles WorkDocs WorkDocsClient responses.
  *
- * @see    Client::workDocsClient
+ * @see    WorkDocsClient::workDocsClient
  */
 
 /**

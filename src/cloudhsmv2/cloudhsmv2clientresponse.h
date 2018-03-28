@@ -29,7 +29,7 @@ namespace CloudHSMV2 {
 
 class CloudHSMV2ClientResponsePrivate;
 
-class QTAWS_EXPORT CloudHSMV2ClientResponse : public Response {
+class QTAWS_EXPORT CloudHSMV2ClientResponse : public CloudHSMV2Response {
     Q_OBJECT
 
 public:

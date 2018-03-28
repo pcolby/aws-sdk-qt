@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGV2CLIENTRESPONSE_P_H
 #define QTAWS_ELASTICLOADBALANCINGV2CLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "elasticloadbalancingv2response.h"
 #include "elasticloadbalancingv2clientrequest.h"
 
 namespace AWS {

@@ -29,9 +29,9 @@ namespace ResourceGroupsTaggingAPI {
 /**
  * @class  ResourceGroupsTaggingAPIClientResponse
  *
- * @brief  Handles  ResourceGroupsTaggingAPIClient responses.
+ * @brief  Handles ResourceGroupsTaggingAPI ResourceGroupsTaggingAPIClient responses.
  *
- * @see    Client::resourceGroupsTaggingAPIClient
+ * @see    ResourceGroupsTaggingAPIClient::resourceGroupsTaggingAPIClient
  */
 
 /**

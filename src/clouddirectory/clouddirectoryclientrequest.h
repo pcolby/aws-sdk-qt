@@ -37,7 +37,7 @@ class CloudDirectoryClientRequestPrivate;
 class QTAWS_EXPORT CloudDirectoryClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudDirectory.
     enum Action {
         // todo
     };

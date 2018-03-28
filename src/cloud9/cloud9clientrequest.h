@@ -37,7 +37,7 @@ class Cloud9ClientRequestPrivate;
 class QTAWS_EXPORT Cloud9ClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Cloud9.
     enum Action {
         // todo
     };

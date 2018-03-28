@@ -29,9 +29,9 @@ namespace Pinpoint {
 /**
  * @class  PinpointClientResponse
  *
- * @brief  Handles  PinpointClient responses.
+ * @brief  Handles Pinpoint PinpointClient responses.
  *
- * @see    Client::pinpointClient
+ * @see    PinpointClient::pinpointClient
  */
 
 /**

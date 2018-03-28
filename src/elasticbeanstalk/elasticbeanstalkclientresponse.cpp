@@ -29,9 +29,9 @@ namespace ElasticBeanstalk {
 /**
  * @class  ElasticBeanstalkClientResponse
  *
- * @brief  Handles  ElasticBeanstalkClient responses.
+ * @brief  Handles ElasticBeanstalk ElasticBeanstalkClient responses.
  *
- * @see    Client::elasticBeanstalkClient
+ * @see    ElasticBeanstalkClient::elasticBeanstalkClient
  */
 
 /**

@@ -37,7 +37,7 @@ class ConfigServiceClientRequestPrivate;
 class QTAWS_EXPORT ConfigServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ConfigService.
     enum Action {
         // todo
     };

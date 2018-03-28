@@ -20,7 +20,7 @@
 #ifndef QTAWS_SSMCLIENTRESPONSE_P_H
 #define QTAWS_SSMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "ssmresponse.h"
 #include "ssmclientrequest.h"
 
 namespace AWS {

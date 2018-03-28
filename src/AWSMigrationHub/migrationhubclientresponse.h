@@ -29,7 +29,7 @@ namespace MigrationHub {
 
 class MigrationHubClientResponsePrivate;
 
-class QTAWS_EXPORT MigrationHubClientResponse : public Response {
+class QTAWS_EXPORT MigrationHubClientResponse : public MigrationHubResponse {
     Q_OBJECT
 
 public:

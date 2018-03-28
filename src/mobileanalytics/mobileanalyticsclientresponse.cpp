@@ -29,9 +29,9 @@ namespace MobileAnalytics {
 /**
  * @class  MobileAnalyticsClientResponse
  *
- * @brief  Handles  MobileAnalyticsClient responses.
+ * @brief  Handles MobileAnalytics MobileAnalyticsClient responses.
  *
- * @see    Client::mobileAnalyticsClient
+ * @see    MobileAnalyticsClient::mobileAnalyticsClient
  */
 
 /**

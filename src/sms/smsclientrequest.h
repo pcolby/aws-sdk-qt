@@ -37,7 +37,7 @@ class SmsClientRequestPrivate;
 class QTAWS_EXPORT SmsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SMS.
     enum Action {
         // todo
     };

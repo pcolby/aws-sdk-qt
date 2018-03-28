@@ -29,7 +29,7 @@ namespace CodeStar {
 
 class CodeStarClientResponsePrivate;
 
-class QTAWS_EXPORT CodeStarClientResponse : public Response {
+class QTAWS_EXPORT CodeStarClientResponse : public CodeStarResponse {
     Q_OBJECT
 
 public:

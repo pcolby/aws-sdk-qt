@@ -37,7 +37,7 @@ class SsmClientRequestPrivate;
 class QTAWS_EXPORT SsmClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SSM.
     enum Action {
         // todo
     };

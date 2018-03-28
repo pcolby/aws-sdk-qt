@@ -20,7 +20,7 @@
 #ifndef QTAWS_EFSCLIENTRESPONSE_P_H
 #define QTAWS_EFSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "efsresponse.h"
 #include "efsclientrequest.h"
 
 namespace AWS {

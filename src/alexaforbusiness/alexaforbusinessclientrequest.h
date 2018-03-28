@@ -37,7 +37,7 @@ class AlexaForBusinessClientRequestPrivate;
 class QTAWS_EXPORT AlexaForBusinessClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by AlexaForBusiness.
     enum Action {
         // todo
     };

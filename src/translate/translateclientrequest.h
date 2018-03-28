@@ -37,7 +37,7 @@ class TranslateClientRequestPrivate;
 class QTAWS_EXPORT TranslateClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Translate.
     enum Action {
         // todo
     };

@@ -37,7 +37,7 @@ class CloudFormationClientRequestPrivate;
 class QTAWS_EXPORT CloudFormationClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudFormation.
     enum Action {
         // todo
     };

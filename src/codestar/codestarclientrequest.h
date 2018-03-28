@@ -37,7 +37,7 @@ class CodeStarClientRequestPrivate;
 class QTAWS_EXPORT CodeStarClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CodeStar.
     enum Action {
         // todo
     };

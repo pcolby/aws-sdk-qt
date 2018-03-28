@@ -37,7 +37,7 @@ class AppSyncClientRequestPrivate;
 class QTAWS_EXPORT AppSyncClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by AppSync.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENTRESPONSE_P_H
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "marketplacecommerceanalyticsresponse.h"
 #include "marketplacecommerceanalyticsclientrequest.h"
 
 namespace AWS {

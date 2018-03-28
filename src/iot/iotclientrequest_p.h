@@ -20,7 +20,7 @@
 #ifndef QTAWS_IOTCLIENTREQUEST_P_H
 #define QTAWS_IOTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "iot_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class IoTClientRequest;
 class QTAWS_EXPORT IoTClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    IoTClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    IoTClientRequest::Action action; ///< IoT action to be performed.
+    QString apiVersion;        ///< IoT API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< IoT request (query string) parameters. @todo?
 
     IoTClientRequestPrivate(const IoTClientRequest::Action action, IoTClientRequest * const q);
     IoTClientRequestPrivate(const RequestPrivate &other, IoTClientRequest * const q);

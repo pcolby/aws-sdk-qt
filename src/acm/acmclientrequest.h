@@ -37,7 +37,7 @@ class AcmClientRequestPrivate;
 class QTAWS_EXPORT AcmClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ACM.
     enum Action {
         // todo
     };

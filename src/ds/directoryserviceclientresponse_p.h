@@ -20,7 +20,7 @@
 #ifndef QTAWS_DIRECTORYSERVICECLIENTRESPONSE_P_H
 #define QTAWS_DIRECTORYSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "directoryserviceresponse.h"
 #include "directoryserviceclientrequest.h"
 
 namespace AWS {

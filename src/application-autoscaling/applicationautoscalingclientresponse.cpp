@@ -29,9 +29,9 @@ namespace ApplicationAutoScaling {
 /**
  * @class  ApplicationAutoScalingClientResponse
  *
- * @brief  Handles  ApplicationAutoScalingClient responses.
+ * @brief  Handles ApplicationAutoScaling ApplicationAutoScalingClient responses.
  *
- * @see    Client::applicationAutoScalingClient
+ * @see    ApplicationAutoScalingClient::applicationAutoScalingClient
  */
 
 /**

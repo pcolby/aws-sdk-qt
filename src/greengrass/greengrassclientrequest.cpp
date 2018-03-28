@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "greengrassrequest_p.h"
 
 namespace AWS {
 namespace Greengrass {
@@ -28,14 +28,14 @@ namespace Greengrass {
 /**
  * @class  GreengrassClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Greengrass requests
  */
 
 
 /**
  * @brief  Constructs a new GreengrassClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Greengrass action to request.
  */
 GreengrassClientRequest::GreengrassClientRequest(const Action action)
     : AwsAbstractRequest(new GreengrassClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ GreengrassClientRequest::GreengrassClientRequest(GreengrassClientRequestPrivate 
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Greengrass action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Greengrass action to be performed by this request.
  */
 GreengrassClientRequest::Action GreengrassClientRequest::action() const
 {
@@ -99,9 +99,9 @@ GreengrassClientRequest::Action GreengrassClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Greengrass action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Greengrass action to be performed by this request.
  */
 QString GreengrassClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString GreengrassClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Greengrass API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Greengrass API version implmented by this request.
  */
 QString GreengrassClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString GreengrassClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Greengrass action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void GreengrassClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Greengrass API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Greengrass API version to include in this request.
  */
 void GreengrassClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool GreengrassClientRequest::operator==(const GreengrassClientRequest &other) c
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Greengrass queue name.
  *
- * @par From  FAQs:
+ * @par From Greengrass FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Greengrass queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void GreengrassClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Greengrass request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant GreengrassClientRequest::parameter(const QString &name, const QVariant 
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Greengrass request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &GreengrassClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Greengrass request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void GreengrassClientRequest::setParameter(const QString &name, const QVariant &
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Greengrass request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void GreengrassClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Greengrass request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Greengrass implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Greengrass request using the given \a endpoint.
  */
 QNetworkRequest GreengrassClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest GreengrassClientRequest::unsignedRequest(const QUrl &endpoint) c
  *
  * @brief  Constructs a new GreengrassClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Greengrass action being performed by the \a q request.
  * @param  q       Pointer to this object's public GreengrassClientRequest instance.
  */
 GreengrassClientRequestPrivate::GreengrassClientRequestPrivate(const GreengrassClientRequest::Action action, GreengrassClientRequest * const q)
@@ -315,13 +315,13 @@ GreengrassClientRequestPrivate::GreengrassClientRequestPrivate(const GreengrassC
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Greengrass action to a string.
  *
  * This function converts GreengrassClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Greengrass service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Greengrass action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

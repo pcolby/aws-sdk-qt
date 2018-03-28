@@ -37,7 +37,7 @@ class ElasticsearchServiceClientRequestPrivate;
 class QTAWS_EXPORT ElasticsearchServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ElasticsearchService.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGCLIENTREQUEST_P_H
 #define QTAWS_ELASTICLOADBALANCINGCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "elasticloadbalancing_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ElasticLoadBalancingClientRequest;
 class QTAWS_EXPORT ElasticLoadBalancingClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ElasticLoadBalancingClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ElasticLoadBalancingClientRequest::Action action; ///< ElasticLoadBalancing action to be performed.
+    QString apiVersion;        ///< ElasticLoadBalancing API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ElasticLoadBalancing request (query string) parameters. @todo?
 
     ElasticLoadBalancingClientRequestPrivate(const ElasticLoadBalancingClientRequest::Action action, ElasticLoadBalancingClientRequest * const q);
     ElasticLoadBalancingClientRequestPrivate(const RequestPrivate &other, ElasticLoadBalancingClientRequest * const q);

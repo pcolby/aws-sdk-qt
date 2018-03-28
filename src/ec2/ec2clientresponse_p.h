@@ -20,7 +20,7 @@
 #ifndef QTAWS_EC2CLIENTRESPONSE_P_H
 #define QTAWS_EC2CLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "ec2response.h"
 #include "ec2clientrequest.h"
 
 namespace AWS {

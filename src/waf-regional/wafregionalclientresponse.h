@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class WAFRegionalClientResponsePrivate;
 
-class QTAWS_EXPORT WAFRegionalClientResponse : public Response {
+class QTAWS_EXPORT WAFRegionalClientResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

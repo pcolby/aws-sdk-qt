@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDFRONTCLIENTREQUEST_P_H
 #define QTAWS_CLOUDFRONTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloudfront_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudFrontClientRequest;
 class QTAWS_EXPORT CloudFrontClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudFrontClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudFrontClientRequest::Action action; ///< CloudFront action to be performed.
+    QString apiVersion;        ///< CloudFront API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudFront request (query string) parameters. @todo?
 
     CloudFrontClientRequestPrivate(const CloudFrontClientRequest::Action action, CloudFrontClientRequest * const q);
     CloudFrontClientRequestPrivate(const RequestPrivate &other, CloudFrontClientRequest * const q);

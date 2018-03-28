@@ -29,9 +29,9 @@ namespace MarketplaceMetering {
 /**
  * @class  MarketplaceMeteringClientResponse
  *
- * @brief  Handles  MarketplaceMeteringClient responses.
+ * @brief  Handles MarketplaceMetering MarketplaceMeteringClient responses.
  *
- * @see    Client::marketplaceMeteringClient
+ * @see    MarketplaceMeteringClient::marketplaceMeteringClient
  */
 
 /**

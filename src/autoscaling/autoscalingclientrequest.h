@@ -37,7 +37,7 @@ class AutoScalingClientRequestPrivate;
 class QTAWS_EXPORT AutoScalingClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by AutoScaling.
     enum Action {
         // todo
     };

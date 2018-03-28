@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 
 namespace AWS {
 namespace CognitoIdentityProvider {
@@ -28,14 +28,14 @@ namespace CognitoIdentityProvider {
 /**
  * @class  CognitoIdentityProviderClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing CognitoIdentityProvider requests
  */
 
 
 /**
  * @brief  Constructs a new CognitoIdentityProviderClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The CognitoIdentityProvider action to request.
  */
 CognitoIdentityProviderClientRequest::CognitoIdentityProviderClientRequest(const Action action)
     : AwsAbstractRequest(new CognitoIdentityProviderClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ CognitoIdentityProviderClientRequest::CognitoIdentityProviderClientRequest(Cogni
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the CognitoIdentityProvider action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The CognitoIdentityProvider action to be performed by this request.
  */
 CognitoIdentityProviderClientRequest::Action CognitoIdentityProviderClientRequest::action() const
 {
@@ -99,9 +99,9 @@ CognitoIdentityProviderClientRequest::Action CognitoIdentityProviderClientReques
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the CognitoIdentityProvider action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the CognitoIdentityProvider action to be performed by this request.
  */
 QString CognitoIdentityProviderClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString CognitoIdentityProviderClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the CognitoIdentityProvider API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The CognitoIdentityProvider API version implmented by this request.
  */
 QString CognitoIdentityProviderClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString CognitoIdentityProviderClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the CognitoIdentityProvider action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void CognitoIdentityProviderClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the CognitoIdentityProvider API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The CognitoIdentityProvider API version to include in this request.
  */
 void CognitoIdentityProviderClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool CognitoIdentityProviderClientRequest::operator==(const CognitoIdentityProvi
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid CognitoIdentityProvider queue name.
  *
- * @par From  FAQs:
+ * @par From CognitoIdentityProvider FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid CognitoIdentityProvider queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void CognitoIdentityProviderClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this CognitoIdentityProvider request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant CognitoIdentityProviderClientRequest::parameter(const QString &name, co
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this CognitoIdentityProvider request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &CognitoIdentityProviderClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this CognitoIdentityProvider request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void CognitoIdentityProviderClientRequest::setParameter(const QString &name, con
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this CognitoIdentityProvider request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void CognitoIdentityProviderClientRequest::setParameters(const QVariantMap &para
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this CognitoIdentityProvider request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This CognitoIdentityProvider implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this CognitoIdentityProvider request using the given \a endpoint.
  */
 QNetworkRequest CognitoIdentityProviderClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest CognitoIdentityProviderClientRequest::unsignedRequest(const QUrl
  *
  * @brief  Constructs a new CognitoIdentityProviderClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  CognitoIdentityProvider action being performed by the \a q request.
  * @param  q       Pointer to this object's public CognitoIdentityProviderClientRequest instance.
  */
 CognitoIdentityProviderClientRequestPrivate::CognitoIdentityProviderClientRequestPrivate(const CognitoIdentityProviderClientRequest::Action action, CognitoIdentityProviderClientRequest * const q)
@@ -315,13 +315,13 @@ CognitoIdentityProviderClientRequestPrivate::CognitoIdentityProviderClientReques
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and CognitoIdentityProvider action to a string.
  *
  * This function converts CognitoIdentityProviderClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the CognitoIdentityProvider service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  CognitoIdentityProvider action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

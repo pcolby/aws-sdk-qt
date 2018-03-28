@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKSPACESCLIENTREQUEST_P_H
 #define QTAWS_WORKSPACESCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "workspaces_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class WorkSpacesClientRequest;
 class QTAWS_EXPORT WorkSpacesClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    WorkSpacesClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    WorkSpacesClientRequest::Action action; ///< WorkSpaces action to be performed.
+    QString apiVersion;        ///< WorkSpaces API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< WorkSpaces request (query string) parameters. @todo?
 
     WorkSpacesClientRequestPrivate(const WorkSpacesClientRequest::Action action, WorkSpacesClientRequest * const q);
     WorkSpacesClientRequestPrivate(const RequestPrivate &other, WorkSpacesClientRequest * const q);

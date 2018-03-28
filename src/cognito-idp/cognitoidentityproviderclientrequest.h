@@ -37,7 +37,7 @@ class CognitoIdentityProviderClientRequestPrivate;
 class QTAWS_EXPORT CognitoIdentityProviderClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CognitoIdentityProvider.
     enum Action {
         // todo
     };

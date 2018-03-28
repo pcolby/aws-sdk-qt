@@ -29,9 +29,9 @@ namespace CloudFormation {
 /**
  * @class  CloudFormationClientResponse
  *
- * @brief  Handles  CloudFormationClient responses.
+ * @brief  Handles CloudFormation CloudFormationClient responses.
  *
- * @see    Client::cloudFormationClient
+ * @see    CloudFormationClient::cloudFormationClient
  */
 
 /**

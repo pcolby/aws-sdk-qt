@@ -29,9 +29,9 @@ namespace WorkMail {
 /**
  * @class  WorkMailClientResponse
  *
- * @brief  Handles  WorkMailClient responses.
+ * @brief  Handles WorkMail WorkMailClient responses.
  *
- * @see    Client::workMailClient
+ * @see    WorkMailClient::workMailClient
  */
 
 /**

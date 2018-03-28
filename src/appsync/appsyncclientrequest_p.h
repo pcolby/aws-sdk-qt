@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPSYNCCLIENTREQUEST_P_H
 #define QTAWS_APPSYNCCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "appsync_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class AppSyncClientRequest;
 class QTAWS_EXPORT AppSyncClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    AppSyncClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    AppSyncClientRequest::Action action; ///< AppSync action to be performed.
+    QString apiVersion;        ///< AppSync API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< AppSync request (query string) parameters. @todo?
 
     AppSyncClientRequestPrivate(const AppSyncClientRequest::Action action, AppSyncClientRequest * const q);
     AppSyncClientRequestPrivate(const RequestPrivate &other, AppSyncClientRequest * const q);

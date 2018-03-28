@@ -29,9 +29,9 @@ namespace KinesisVideoMedia {
 /**
  * @class  KinesisVideoMediaClientResponse
  *
- * @brief  Handles  KinesisVideoMediaClient responses.
+ * @brief  Handles KinesisVideoMedia KinesisVideoMediaClient responses.
  *
- * @see    Client::kinesisVideoMediaClient
+ * @see    KinesisVideoMediaClient::kinesisVideoMediaClient
  */
 
 /**

@@ -29,9 +29,9 @@ namespace WAFRegional {
 /**
  * @class  WAFRegionalClientResponse
  *
- * @brief  Handles  WAFRegionalClient responses.
+ * @brief  Handles WAFRegional WAFRegionalClient responses.
  *
- * @see    Client::wAFRegionalClient
+ * @see    WAFRegionalClient::wAFRegionalClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ECSCLIENTRESPONSE_P_H
 #define QTAWS_ECSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "ecsresponse.h"
 #include "ecsclientrequest.h"
 
 namespace AWS {

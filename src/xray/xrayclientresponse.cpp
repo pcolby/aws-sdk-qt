@@ -29,9 +29,9 @@ namespace XRay {
 /**
  * @class  XRayClientResponse
  *
- * @brief  Handles  XRayClient responses.
+ * @brief  Handles XRay XRayClient responses.
  *
- * @see    Client::xRayClient
+ * @see    XRayClient::xRayClient
  */
 
 /**

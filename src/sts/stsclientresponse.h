@@ -29,7 +29,7 @@ namespace STS {
 
 class StsClientResponsePrivate;
 
-class QTAWS_EXPORT StsClientResponse : public Response {
+class QTAWS_EXPORT StsClientResponse : public STSResponse {
     Q_OBJECT
 
 public:

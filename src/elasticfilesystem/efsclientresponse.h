@@ -29,7 +29,7 @@ namespace EFS {
 
 class EfsClientResponsePrivate;
 
-class QTAWS_EXPORT EfsClientResponse : public Response {
+class QTAWS_EXPORT EfsClientResponse : public EFSResponse {
     Q_OBJECT
 
 public:

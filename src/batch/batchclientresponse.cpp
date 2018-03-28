@@ -29,9 +29,9 @@ namespace Batch {
 /**
  * @class  BatchClientResponse
  *
- * @brief  Handles  BatchClient responses.
+ * @brief  Handles Batch BatchClient responses.
  *
- * @see    Client::batchClient
+ * @see    BatchClient::batchClient
  */
 
 /**

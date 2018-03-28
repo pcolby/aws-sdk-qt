@@ -20,7 +20,7 @@
 #ifndef QTAWS_SAGEMAKERCLIENTRESPONSE_P_H
 #define QTAWS_SAGEMAKERCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "sagemakerresponse.h"
 #include "sagemakerclientrequest.h"
 
 namespace AWS {

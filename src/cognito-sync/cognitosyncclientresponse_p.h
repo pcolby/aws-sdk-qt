@@ -20,7 +20,7 @@
 #ifndef QTAWS_COGNITOSYNCCLIENTRESPONSE_P_H
 #define QTAWS_COGNITOSYNCCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cognitosyncresponse.h"
 #include "cognitosyncclientrequest.h"
 
 namespace AWS {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_WAFREGIONALCLIENTREQUEST_P_H
 #define QTAWS_WAFREGIONALCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "wafregional_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class WAFRegionalClientRequest;
 class QTAWS_EXPORT WAFRegionalClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    WAFRegionalClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    WAFRegionalClientRequest::Action action; ///< WAFRegional action to be performed.
+    QString apiVersion;        ///< WAFRegional API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< WAFRegional request (query string) parameters. @todo?
 
     WAFRegionalClientRequestPrivate(const WAFRegionalClientRequest::Action action, WAFRegionalClientRequest * const q);
     WAFRegionalClientRequestPrivate(const RequestPrivate &other, WAFRegionalClientRequest * const q);

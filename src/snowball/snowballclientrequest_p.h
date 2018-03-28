@@ -20,7 +20,7 @@
 #ifndef QTAWS_SNOWBALLCLIENTREQUEST_P_H
 #define QTAWS_SNOWBALLCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "snowball_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SnowballClientRequest;
 class QTAWS_EXPORT SnowballClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SnowballClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SnowballClientRequest::Action action; ///< Snowball action to be performed.
+    QString apiVersion;        ///< Snowball API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Snowball request (query string) parameters. @todo?
 
     SnowballClientRequestPrivate(const SnowballClientRequest::Action action, SnowballClientRequest * const q);
     SnowballClientRequestPrivate(const RequestPrivate &other, SnowballClientRequest * const q);

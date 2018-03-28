@@ -29,7 +29,7 @@ namespace CostExplorer {
 
 class CostExplorerClientResponsePrivate;
 
-class QTAWS_EXPORT CostExplorerClientResponse : public Response {
+class QTAWS_EXPORT CostExplorerClientResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "mediastoredatarequest_p.h"
 
 namespace AWS {
 namespace MediaStoreData {
@@ -28,14 +28,14 @@ namespace MediaStoreData {
 /**
  * @class  MediaStoreDataClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing MediaStoreData requests
  */
 
 
 /**
  * @brief  Constructs a new MediaStoreDataClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The MediaStoreData action to request.
  */
 MediaStoreDataClientRequest::MediaStoreDataClientRequest(const Action action)
     : AwsAbstractRequest(new MediaStoreDataClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ MediaStoreDataClientRequest::MediaStoreDataClientRequest(MediaStoreDataClientReq
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the MediaStoreData action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The MediaStoreData action to be performed by this request.
  */
 MediaStoreDataClientRequest::Action MediaStoreDataClientRequest::action() const
 {
@@ -99,9 +99,9 @@ MediaStoreDataClientRequest::Action MediaStoreDataClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the MediaStoreData action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the MediaStoreData action to be performed by this request.
  */
 QString MediaStoreDataClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString MediaStoreDataClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the MediaStoreData API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The MediaStoreData API version implmented by this request.
  */
 QString MediaStoreDataClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString MediaStoreDataClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the MediaStoreData action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void MediaStoreDataClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the MediaStoreData API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The MediaStoreData API version to include in this request.
  */
 void MediaStoreDataClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool MediaStoreDataClientRequest::operator==(const MediaStoreDataClientRequest &
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid MediaStoreData queue name.
  *
- * @par From  FAQs:
+ * @par From MediaStoreData FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid MediaStoreData queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void MediaStoreDataClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this MediaStoreData request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant MediaStoreDataClientRequest::parameter(const QString &name, const QVari
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this MediaStoreData request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &MediaStoreDataClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this MediaStoreData request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void MediaStoreDataClientRequest::setParameter(const QString &name, const QVaria
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this MediaStoreData request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void MediaStoreDataClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this MediaStoreData request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This MediaStoreData implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this MediaStoreData request using the given \a endpoint.
  */
 QNetworkRequest MediaStoreDataClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest MediaStoreDataClientRequest::unsignedRequest(const QUrl &endpoin
  *
  * @brief  Constructs a new MediaStoreDataClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  MediaStoreData action being performed by the \a q request.
  * @param  q       Pointer to this object's public MediaStoreDataClientRequest instance.
  */
 MediaStoreDataClientRequestPrivate::MediaStoreDataClientRequestPrivate(const MediaStoreDataClientRequest::Action action, MediaStoreDataClientRequest * const q)
@@ -315,13 +315,13 @@ MediaStoreDataClientRequestPrivate::MediaStoreDataClientRequestPrivate(const Med
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and MediaStoreData action to a string.
  *
  * This function converts MediaStoreDataClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the MediaStoreData service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  MediaStoreData action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

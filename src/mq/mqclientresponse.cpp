@@ -29,9 +29,9 @@ namespace MQ {
 /**
  * @class  MqClientResponse
  *
- * @brief  Handles  MqClient responses.
+ * @brief  Handles MQ MqClient responses.
  *
- * @see    Client::mqClient
+ * @see    MQClient::mqClient
  */
 
 /**

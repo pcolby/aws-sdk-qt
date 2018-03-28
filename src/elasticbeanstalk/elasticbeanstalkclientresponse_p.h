@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICBEANSTALKCLIENTRESPONSE_P_H
 #define QTAWS_ELASTICBEANSTALKCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "elasticbeanstalkresponse.h"
 #include "elasticbeanstalkclientrequest.h"
 
 namespace AWS {

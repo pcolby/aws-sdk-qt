@@ -37,7 +37,7 @@ class MediaLiveClientRequestPrivate;
 class QTAWS_EXPORT MediaLiveClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MediaLive.
     enum Action {
         // todo
     };

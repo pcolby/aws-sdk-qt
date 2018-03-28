@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPSTREAMCLIENTREQUEST_P_H
 #define QTAWS_APPSTREAMCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "appstream_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class AppStreamClientRequest;
 class QTAWS_EXPORT AppStreamClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    AppStreamClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    AppStreamClientRequest::Action action; ///< AppStream action to be performed.
+    QString apiVersion;        ///< AppStream API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< AppStream request (query string) parameters. @todo?
 
     AppStreamClientRequestPrivate(const AppStreamClientRequest::Action action, AppStreamClientRequest * const q);
     AppStreamClientRequestPrivate(const RequestPrivate &other, AppStreamClientRequest * const q);

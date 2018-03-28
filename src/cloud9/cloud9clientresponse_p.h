@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUD9CLIENTRESPONSE_P_H
 #define QTAWS_CLOUD9CLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cloud9response.h"
 #include "cloud9clientrequest.h"
 
 namespace AWS {

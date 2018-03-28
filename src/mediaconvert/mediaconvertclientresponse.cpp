@@ -29,9 +29,9 @@ namespace MediaConvert {
 /**
  * @class  MediaConvertClientResponse
  *
- * @brief  Handles  MediaConvertClient responses.
+ * @brief  Handles MediaConvert MediaConvertClient responses.
  *
- * @see    Client::mediaConvertClient
+ * @see    MediaConvertClient::mediaConvertClient
  */
 
 /**

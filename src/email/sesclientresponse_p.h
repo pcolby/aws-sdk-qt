@@ -20,7 +20,7 @@
 #ifndef QTAWS_SESCLIENTRESPONSE_P_H
 #define QTAWS_SESCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "sesresponse.h"
 #include "sesclientrequest.h"
 
 namespace AWS {

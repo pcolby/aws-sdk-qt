@@ -20,7 +20,7 @@
 #ifndef QTAWS_MARKETPLACEMETERINGCLIENTREQUEST_P_H
 #define QTAWS_MARKETPLACEMETERINGCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "marketplacemetering_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MarketplaceMeteringClientRequest;
 class QTAWS_EXPORT MarketplaceMeteringClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MarketplaceMeteringClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MarketplaceMeteringClientRequest::Action action; ///< MarketplaceMetering action to be performed.
+    QString apiVersion;        ///< MarketplaceMetering API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MarketplaceMetering request (query string) parameters. @todo?
 
     MarketplaceMeteringClientRequestPrivate(const MarketplaceMeteringClientRequest::Action action, MarketplaceMeteringClientRequest * const q);
     MarketplaceMeteringClientRequestPrivate(const RequestPrivate &other, MarketplaceMeteringClientRequest * const q);

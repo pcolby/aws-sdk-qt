@@ -20,7 +20,7 @@
 #ifndef QTAWS_ALEXAFORBUSINESSCLIENTREQUEST_P_H
 #define QTAWS_ALEXAFORBUSINESSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "alexaforbusiness_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class AlexaForBusinessClientRequest;
 class QTAWS_EXPORT AlexaForBusinessClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    AlexaForBusinessClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    AlexaForBusinessClientRequest::Action action; ///< AlexaForBusiness action to be performed.
+    QString apiVersion;        ///< AlexaForBusiness API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< AlexaForBusiness request (query string) parameters. @todo?
 
     AlexaForBusinessClientRequestPrivate(const AlexaForBusinessClientRequest::Action action, AlexaForBusinessClientRequest * const q);
     AlexaForBusinessClientRequestPrivate(const RequestPrivate &other, AlexaForBusinessClientRequest * const q);

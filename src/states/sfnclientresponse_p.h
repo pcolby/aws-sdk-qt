@@ -20,7 +20,7 @@
 #ifndef QTAWS_SFNCLIENTRESPONSE_P_H
 #define QTAWS_SFNCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "sfnresponse.h"
 #include "sfnclientrequest.h"
 
 namespace AWS {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_KINESISCLIENTREQUEST_P_H
 #define QTAWS_KINESISCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "kinesis_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class KinesisClientRequest;
 class QTAWS_EXPORT KinesisClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    KinesisClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    KinesisClientRequest::Action action; ///< Kinesis action to be performed.
+    QString apiVersion;        ///< Kinesis API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Kinesis request (query string) parameters. @todo?
 
     KinesisClientRequestPrivate(const KinesisClientRequest::Action action, KinesisClientRequest * const q);
     KinesisClientRequestPrivate(const RequestPrivate &other, KinesisClientRequest * const q);

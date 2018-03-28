@@ -37,7 +37,7 @@ class EcrClientRequestPrivate;
 class QTAWS_EXPORT EcrClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ECR.
     enum Action {
         // todo
     };

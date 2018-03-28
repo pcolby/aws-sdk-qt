@@ -29,9 +29,9 @@ namespace CloudHSMV2 {
 /**
  * @class  CloudHSMV2ClientResponse
  *
- * @brief  Handles  CloudHSMV2Client responses.
+ * @brief  Handles CloudHSMV2 CloudHSMV2Client responses.
  *
- * @see    Client::cloudHSMV2Client
+ * @see    CloudHSMV2Client::cloudHSMV2Client
  */
 
 /**

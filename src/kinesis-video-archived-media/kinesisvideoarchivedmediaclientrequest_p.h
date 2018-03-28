@@ -20,7 +20,7 @@
 #ifndef QTAWS_KINESISVIDEOARCHIVEDMEDIACLIENTREQUEST_P_H
 #define QTAWS_KINESISVIDEOARCHIVEDMEDIACLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "kinesisvideoarchivedmedia_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class KinesisVideoArchivedMediaClientRequest;
 class QTAWS_EXPORT KinesisVideoArchivedMediaClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    KinesisVideoArchivedMediaClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    KinesisVideoArchivedMediaClientRequest::Action action; ///< KinesisVideoArchivedMedia action to be performed.
+    QString apiVersion;        ///< KinesisVideoArchivedMedia API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< KinesisVideoArchivedMedia request (query string) parameters. @todo?
 
     KinesisVideoArchivedMediaClientRequestPrivate(const KinesisVideoArchivedMediaClientRequest::Action action, KinesisVideoArchivedMediaClientRequest * const q);
     KinesisVideoArchivedMediaClientRequestPrivate(const RequestPrivate &other, KinesisVideoArchivedMediaClientRequest * const q);

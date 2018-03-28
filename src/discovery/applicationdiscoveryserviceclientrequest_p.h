@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPLICATIONDISCOVERYSERVICECLIENTREQUEST_P_H
 #define QTAWS_APPLICATIONDISCOVERYSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "applicationdiscoveryservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ApplicationDiscoveryServiceClientRequest;
 class QTAWS_EXPORT ApplicationDiscoveryServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ApplicationDiscoveryServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ApplicationDiscoveryServiceClientRequest::Action action; ///< ApplicationDiscoveryService action to be performed.
+    QString apiVersion;        ///< ApplicationDiscoveryService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ApplicationDiscoveryService request (query string) parameters. @todo?
 
     ApplicationDiscoveryServiceClientRequestPrivate(const ApplicationDiscoveryServiceClientRequest::Action action, ApplicationDiscoveryServiceClientRequest * const q);
     ApplicationDiscoveryServiceClientRequestPrivate(const RequestPrivate &other, ApplicationDiscoveryServiceClientRequest * const q);

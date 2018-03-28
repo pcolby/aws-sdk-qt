@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKMAILCLIENTREQUEST_P_H
 #define QTAWS_WORKMAILCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "workmail_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class WorkMailClientRequest;
 class QTAWS_EXPORT WorkMailClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    WorkMailClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    WorkMailClientRequest::Action action; ///< WorkMail action to be performed.
+    QString apiVersion;        ///< WorkMail API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< WorkMail request (query string) parameters. @todo?
 
     WorkMailClientRequestPrivate(const WorkMailClientRequest::Action action, WorkMailClientRequest * const q);
     WorkMailClientRequestPrivate(const RequestPrivate &other, WorkMailClientRequest * const q);

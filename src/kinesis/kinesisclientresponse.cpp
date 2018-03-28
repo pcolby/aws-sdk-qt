@@ -29,9 +29,9 @@ namespace Kinesis {
 /**
  * @class  KinesisClientResponse
  *
- * @brief  Handles  KinesisClient responses.
+ * @brief  Handles Kinesis KinesisClient responses.
  *
- * @see    Client::kinesisClient
+ * @see    KinesisClient::kinesisClient
  */
 
 /**

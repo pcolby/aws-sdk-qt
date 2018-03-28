@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVICECATALOGCLIENTREQUEST_P_H
 #define QTAWS_SERVICECATALOGCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "servicecatalog_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ServiceCatalogClientRequest;
 class QTAWS_EXPORT ServiceCatalogClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ServiceCatalogClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ServiceCatalogClientRequest::Action action; ///< ServiceCatalog action to be performed.
+    QString apiVersion;        ///< ServiceCatalog API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ServiceCatalog request (query string) parameters. @todo?
 
     ServiceCatalogClientRequestPrivate(const ServiceCatalogClientRequest::Action action, ServiceCatalogClientRequest * const q);
     ServiceCatalogClientRequestPrivate(const RequestPrivate &other, ServiceCatalogClientRequest * const q);

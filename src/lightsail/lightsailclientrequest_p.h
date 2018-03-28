@@ -20,7 +20,7 @@
 #ifndef QTAWS_LIGHTSAILCLIENTREQUEST_P_H
 #define QTAWS_LIGHTSAILCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "lightsail_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class LightsailClientRequest;
 class QTAWS_EXPORT LightsailClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    LightsailClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    LightsailClientRequest::Action action; ///< Lightsail action to be performed.
+    QString apiVersion;        ///< Lightsail API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Lightsail request (query string) parameters. @todo?
 
     LightsailClientRequestPrivate(const LightsailClientRequest::Action action, LightsailClientRequest * const q);
     LightsailClientRequestPrivate(const RequestPrivate &other, LightsailClientRequest * const q);

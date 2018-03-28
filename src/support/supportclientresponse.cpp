@@ -29,9 +29,9 @@ namespace Support {
 /**
  * @class  SupportClientResponse
  *
- * @brief  Handles  SupportClient responses.
+ * @brief  Handles Support SupportClient responses.
  *
- * @see    Client::supportClient
+ * @see    SupportClient::supportClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_APIGATEWAYCLIENTREQUEST_P_H
 #define QTAWS_APIGATEWAYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "apigateway_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class APIGatewayClientRequest;
 class QTAWS_EXPORT APIGatewayClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    APIGatewayClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    APIGatewayClientRequest::Action action; ///< APIGateway action to be performed.
+    QString apiVersion;        ///< APIGateway API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< APIGateway request (query string) parameters. @todo?
 
     APIGatewayClientRequestPrivate(const APIGatewayClientRequest::Action action, APIGatewayClientRequest * const q);
     APIGatewayClientRequestPrivate(const RequestPrivate &other, APIGatewayClientRequest * const q);

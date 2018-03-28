@@ -37,7 +37,7 @@ class CloudSearchDomainClientRequestPrivate;
 class QTAWS_EXPORT CloudSearchDomainClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudSearchDomain.
     enum Action {
         // todo
     };

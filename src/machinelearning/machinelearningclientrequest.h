@@ -37,7 +37,7 @@ class MachineLearningClientRequestPrivate;
 class QTAWS_EXPORT MachineLearningClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MachineLearning.
     enum Action {
         // todo
     };

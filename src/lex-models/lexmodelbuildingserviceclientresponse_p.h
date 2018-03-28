@@ -20,7 +20,7 @@
 #ifndef QTAWS_LEXMODELBUILDINGSERVICECLIENTRESPONSE_P_H
 #define QTAWS_LEXMODELBUILDINGSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "lexmodelbuildingserviceclientrequest.h"
 
 namespace AWS {

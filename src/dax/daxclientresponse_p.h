@@ -20,7 +20,7 @@
 #ifndef QTAWS_DAXCLIENTRESPONSE_P_H
 #define QTAWS_DAXCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "daxresponse.h"
 #include "daxclientrequest.h"
 
 namespace AWS {

@@ -37,7 +37,7 @@ class StorageGatewayClientRequestPrivate;
 class QTAWS_EXPORT StorageGatewayClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by StorageGateway.
     enum Action {
         // todo
     };

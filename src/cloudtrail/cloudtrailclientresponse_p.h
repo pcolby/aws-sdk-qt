@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDTRAILCLIENTRESPONSE_P_H
 #define QTAWS_CLOUDTRAILCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cloudtrailresponse.h"
 #include "cloudtrailclientrequest.h"
 
 namespace AWS {

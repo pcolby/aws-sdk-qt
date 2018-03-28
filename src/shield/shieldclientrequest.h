@@ -37,7 +37,7 @@ class ShieldClientRequestPrivate;
 class QTAWS_EXPORT ShieldClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Shield.
     enum Action {
         // todo
     };

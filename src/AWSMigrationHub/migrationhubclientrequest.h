@@ -37,7 +37,7 @@ class MigrationHubClientRequestPrivate;
 class QTAWS_EXPORT MigrationHubClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MigrationHub.
     enum Action {
         // todo
     };

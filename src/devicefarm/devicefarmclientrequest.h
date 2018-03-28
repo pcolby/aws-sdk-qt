@@ -37,7 +37,7 @@ class DeviceFarmClientRequestPrivate;
 class QTAWS_EXPORT DeviceFarmClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DeviceFarm.
     enum Action {
         // todo
     };

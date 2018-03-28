@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 
 class LexModelBuildingServiceClientResponsePrivate;
 
-class QTAWS_EXPORT LexModelBuildingServiceClientResponse : public Response {
+class QTAWS_EXPORT LexModelBuildingServiceClientResponse : public LexModelBuildingServiceResponse {
     Q_OBJECT
 
 public:

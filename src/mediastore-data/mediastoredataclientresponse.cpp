@@ -29,9 +29,9 @@ namespace MediaStoreData {
 /**
  * @class  MediaStoreDataClientResponse
  *
- * @brief  Handles  MediaStoreDataClient responses.
+ * @brief  Handles MediaStoreData MediaStoreDataClient responses.
  *
- * @see    Client::mediaStoreDataClient
+ * @see    MediaStoreDataClient::mediaStoreDataClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_EMRCLIENTREQUEST_P_H
 #define QTAWS_EMRCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "emr_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class EmrClientRequest;
 class QTAWS_EXPORT EmrClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    EmrClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    EmrClientRequest::Action action; ///< EMR action to be performed.
+    QString apiVersion;        ///< EMR API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< EMR request (query string) parameters. @todo?
 
     EmrClientRequestPrivate(const EmrClientRequest::Action action, EmrClientRequest * const q);
     EmrClientRequestPrivate(const RequestPrivate &other, EmrClientRequest * const q);

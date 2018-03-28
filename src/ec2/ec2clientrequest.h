@@ -37,7 +37,7 @@ class Ec2ClientRequestPrivate;
 class QTAWS_EXPORT Ec2ClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by EC2.
     enum Action {
         // todo
     };

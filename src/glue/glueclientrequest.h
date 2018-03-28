@@ -37,7 +37,7 @@ class GlueClientRequestPrivate;
 class QTAWS_EXPORT GlueClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Glue.
     enum Action {
         // todo
     };

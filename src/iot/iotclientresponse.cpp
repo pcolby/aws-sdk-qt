@@ -29,9 +29,9 @@ namespace IoT {
 /**
  * @class  IoTClientResponse
  *
- * @brief  Handles  IoTClient responses.
+ * @brief  Handles IoT IoTClient responses.
  *
- * @see    Client::ioTClient
+ * @see    IoTClient::ioTClient
  */
 
 /**

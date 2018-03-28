@@ -29,9 +29,9 @@ namespace AppSync {
 /**
  * @class  AppSyncClientResponse
  *
- * @brief  Handles  AppSyncClient responses.
+ * @brief  Handles AppSync AppSyncClient responses.
  *
- * @see    Client::appSyncClient
+ * @see    AppSyncClient::appSyncClient
  */
 
 /**

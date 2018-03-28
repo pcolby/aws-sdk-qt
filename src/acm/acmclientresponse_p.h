@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACMCLIENTRESPONSE_P_H
 #define QTAWS_ACMCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "acmresponse.h"
 #include "acmclientrequest.h"
 
 namespace AWS {

@@ -29,9 +29,9 @@ namespace MarketplaceCommerceAnalytics {
 /**
  * @class  MarketplaceCommerceAnalyticsClientResponse
  *
- * @brief  Handles  MarketplaceCommerceAnalyticsClient responses.
+ * @brief  Handles MarketplaceCommerceAnalytics MarketplaceCommerceAnalyticsClient responses.
  *
- * @see    Client::marketplaceCommerceAnalyticsClient
+ * @see    MarketplaceCommerceAnalyticsClient::marketplaceCommerceAnalyticsClient
  */
 
 /**

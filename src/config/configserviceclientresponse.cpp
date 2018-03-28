@@ -29,9 +29,9 @@ namespace ConfigService {
 /**
  * @class  ConfigServiceClientResponse
  *
- * @brief  Handles  ConfigServiceClient responses.
+ * @brief  Handles ConfigService ConfigServiceClient responses.
  *
- * @see    Client::configServiceClient
+ * @see    ConfigServiceClient::configServiceClient
  */
 
 /**

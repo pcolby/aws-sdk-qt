@@ -20,7 +20,7 @@
 #ifndef QTAWS_SIMPLEDBCLIENTRESPONSE_P_H
 #define QTAWS_SIMPLEDBCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "simpledbresponse.h"
 #include "simpledbclientrequest.h"
 
 namespace AWS {

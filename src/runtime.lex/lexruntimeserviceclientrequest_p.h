@@ -20,7 +20,7 @@
 #ifndef QTAWS_LEXRUNTIMESERVICECLIENTREQUEST_P_H
 #define QTAWS_LEXRUNTIMESERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "lexruntimeservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class LexRuntimeServiceClientRequest;
 class QTAWS_EXPORT LexRuntimeServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    LexRuntimeServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    LexRuntimeServiceClientRequest::Action action; ///< LexRuntimeService action to be performed.
+    QString apiVersion;        ///< LexRuntimeService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< LexRuntimeService request (query string) parameters. @todo?
 
     LexRuntimeServiceClientRequestPrivate(const LexRuntimeServiceClientRequest::Action action, LexRuntimeServiceClientRequest * const q);
     LexRuntimeServiceClientRequestPrivate(const RequestPrivate &other, LexRuntimeServiceClientRequest * const q);

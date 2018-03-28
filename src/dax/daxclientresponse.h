@@ -29,7 +29,7 @@ namespace DAX {
 
 class DaxClientResponsePrivate;
 
-class QTAWS_EXPORT DaxClientResponse : public Response {
+class QTAWS_EXPORT DaxClientResponse : public DAXResponse {
     Q_OBJECT
 
 public:

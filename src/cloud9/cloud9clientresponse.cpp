@@ -29,9 +29,9 @@ namespace Cloud9 {
 /**
  * @class  Cloud9ClientResponse
  *
- * @brief  Handles  Cloud9Client responses.
+ * @brief  Handles Cloud9 Cloud9Client responses.
  *
- * @see    Client::cloud9Client
+ * @see    Cloud9Client::cloud9Client
  */
 
 /**

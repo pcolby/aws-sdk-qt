@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDFRONTCLIENTRESPONSE_P_H
 #define QTAWS_CLOUDFRONTCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cloudfrontresponse.h"
 #include "cloudfrontclientrequest.h"
 
 namespace AWS {

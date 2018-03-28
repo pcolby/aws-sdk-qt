@@ -29,9 +29,9 @@ namespace CodePipeline {
 /**
  * @class  CodePipelineClientResponse
  *
- * @brief  Handles  CodePipelineClient responses.
+ * @brief  Handles CodePipeline CodePipelineClient responses.
  *
- * @see    Client::codePipelineClient
+ * @see    CodePipelineClient::codePipelineClient
  */
 
 /**

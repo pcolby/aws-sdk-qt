@@ -29,9 +29,9 @@ namespace DirectConnect {
 /**
  * @class  DirectConnectClientResponse
  *
- * @brief  Handles  DirectConnectClient responses.
+ * @brief  Handles DirectConnect DirectConnectClient responses.
  *
- * @see    Client::directConnectClient
+ * @see    DirectConnectClient::directConnectClient
  */
 
 /**

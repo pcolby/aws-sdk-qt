@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENTREQUEST_P_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "serverlessapplicationrepository_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ServerlessApplicationRepositoryClientRequest;
 class QTAWS_EXPORT ServerlessApplicationRepositoryClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ServerlessApplicationRepositoryClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ServerlessApplicationRepositoryClientRequest::Action action; ///< ServerlessApplicationRepository action to be performed.
+    QString apiVersion;        ///< ServerlessApplicationRepository API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ServerlessApplicationRepository request (query string) parameters. @todo?
 
     ServerlessApplicationRepositoryClientRequestPrivate(const ServerlessApplicationRepositoryClientRequest::Action action, ServerlessApplicationRepositoryClientRequest * const q);
     ServerlessApplicationRepositoryClientRequestPrivate(const RequestPrivate &other, ServerlessApplicationRepositoryClientRequest * const q);

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MTURKCLIENTREQUEST_P_H
 #define QTAWS_MTURKCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "mturk_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MTurkClientRequest;
 class QTAWS_EXPORT MTurkClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MTurkClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MTurkClientRequest::Action action; ///< MTurk action to be performed.
+    QString apiVersion;        ///< MTurk API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MTurk request (query string) parameters. @todo?
 
     MTurkClientRequestPrivate(const MTurkClientRequest::Action action, MTurkClientRequest * const q);
     MTurkClientRequestPrivate(const RequestPrivate &other, MTurkClientRequest * const q);

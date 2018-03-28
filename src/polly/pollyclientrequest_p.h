@@ -20,7 +20,7 @@
 #ifndef QTAWS_POLLYCLIENTREQUEST_P_H
 #define QTAWS_POLLYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "polly_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class PollyClientRequest;
 class QTAWS_EXPORT PollyClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    PollyClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    PollyClientRequest::Action action; ///< Polly action to be performed.
+    QString apiVersion;        ///< Polly API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Polly request (query string) parameters. @todo?
 
     PollyClientRequestPrivate(const PollyClientRequest::Action action, PollyClientRequest * const q);
     PollyClientRequestPrivate(const RequestPrivate &other, PollyClientRequest * const q);

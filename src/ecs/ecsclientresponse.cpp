@@ -29,9 +29,9 @@ namespace ECS {
 /**
  * @class  EcsClientResponse
  *
- * @brief  Handles  EcsClient responses.
+ * @brief  Handles ECS EcsClient responses.
  *
- * @see    Client::ecsClient
+ * @see    ECSClient::ecsClient
  */
 
 /**

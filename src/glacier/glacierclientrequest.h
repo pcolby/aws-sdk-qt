@@ -37,7 +37,7 @@ class GlacierClientRequestPrivate;
 class QTAWS_EXPORT GlacierClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Glacier.
     enum Action {
         // todo
     };

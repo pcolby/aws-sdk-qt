@@ -37,7 +37,7 @@ class OrganizationsClientRequestPrivate;
 class QTAWS_EXPORT OrganizationsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Organizations.
     enum Action {
         // todo
     };

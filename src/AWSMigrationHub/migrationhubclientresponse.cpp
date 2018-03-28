@@ -29,9 +29,9 @@ namespace MigrationHub {
 /**
  * @class  MigrationHubClientResponse
  *
- * @brief  Handles  MigrationHubClient responses.
+ * @brief  Handles MigrationHub MigrationHubClient responses.
  *
- * @see    Client::migrationHubClient
+ * @see    MigrationHubClient::migrationHubClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPICLIENTREQUEST_P_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "resourcegroupstaggingapi_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ResourceGroupsTaggingAPIClientRequest;
 class QTAWS_EXPORT ResourceGroupsTaggingAPIClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ResourceGroupsTaggingAPIClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ResourceGroupsTaggingAPIClientRequest::Action action; ///< ResourceGroupsTaggingAPI action to be performed.
+    QString apiVersion;        ///< ResourceGroupsTaggingAPI API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ResourceGroupsTaggingAPI request (query string) parameters. @todo?
 
     ResourceGroupsTaggingAPIClientRequestPrivate(const ResourceGroupsTaggingAPIClientRequest::Action action, ResourceGroupsTaggingAPIClientRequest * const q);
     ResourceGroupsTaggingAPIClientRequestPrivate(const RequestPrivate &other, ResourceGroupsTaggingAPIClientRequest * const q);

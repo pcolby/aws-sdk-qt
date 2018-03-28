@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "kinesisrequest_p.h"
 
 namespace AWS {
 namespace Kinesis {
@@ -28,14 +28,14 @@ namespace Kinesis {
 /**
  * @class  KinesisClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Kinesis requests
  */
 
 
 /**
  * @brief  Constructs a new KinesisClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Kinesis action to request.
  */
 KinesisClientRequest::KinesisClientRequest(const Action action)
     : AwsAbstractRequest(new KinesisClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ KinesisClientRequest::KinesisClientRequest(KinesisClientRequestPrivate * const d
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Kinesis action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Kinesis action to be performed by this request.
  */
 KinesisClientRequest::Action KinesisClientRequest::action() const
 {
@@ -99,9 +99,9 @@ KinesisClientRequest::Action KinesisClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Kinesis action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Kinesis action to be performed by this request.
  */
 QString KinesisClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString KinesisClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Kinesis API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Kinesis API version implmented by this request.
  */
 QString KinesisClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString KinesisClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Kinesis action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void KinesisClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Kinesis API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Kinesis API version to include in this request.
  */
 void KinesisClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool KinesisClientRequest::operator==(const KinesisClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Kinesis queue name.
  *
- * @par From  FAQs:
+ * @par From Kinesis FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Kinesis queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void KinesisClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Kinesis request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant KinesisClientRequest::parameter(const QString &name, const QVariant &de
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Kinesis request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &KinesisClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Kinesis request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void KinesisClientRequest::setParameter(const QString &name, const QVariant &val
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Kinesis request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void KinesisClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Kinesis request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Kinesis implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Kinesis request using the given \a endpoint.
  */
 QNetworkRequest KinesisClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest KinesisClientRequest::unsignedRequest(const QUrl &endpoint) cons
  *
  * @brief  Constructs a new KinesisClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Kinesis action being performed by the \a q request.
  * @param  q       Pointer to this object's public KinesisClientRequest instance.
  */
 KinesisClientRequestPrivate::KinesisClientRequestPrivate(const KinesisClientRequest::Action action, KinesisClientRequest * const q)
@@ -315,13 +315,13 @@ KinesisClientRequestPrivate::KinesisClientRequestPrivate(const KinesisClientRequ
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Kinesis action to a string.
  *
  * This function converts KinesisClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Kinesis service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Kinesis action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

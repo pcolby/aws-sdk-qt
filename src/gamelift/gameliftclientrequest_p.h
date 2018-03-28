@@ -20,7 +20,7 @@
 #ifndef QTAWS_GAMELIFTCLIENTREQUEST_P_H
 #define QTAWS_GAMELIFTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "gamelift_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class GameLiftClientRequest;
 class QTAWS_EXPORT GameLiftClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    GameLiftClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    GameLiftClientRequest::Action action; ///< GameLift action to be performed.
+    QString apiVersion;        ///< GameLift API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< GameLift request (query string) parameters. @todo?
 
     GameLiftClientRequestPrivate(const GameLiftClientRequest::Action action, GameLiftClientRequest * const q);
     GameLiftClientRequestPrivate(const RequestPrivate &other, GameLiftClientRequest * const q);

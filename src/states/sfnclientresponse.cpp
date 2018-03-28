@@ -29,9 +29,9 @@ namespace SFN {
 /**
  * @class  SfnClientResponse
  *
- * @brief  Handles  SfnClient responses.
+ * @brief  Handles SFN SfnClient responses.
  *
- * @see    Client::sfnClient
+ * @see    SFNClient::sfnClient
  */
 
 /**

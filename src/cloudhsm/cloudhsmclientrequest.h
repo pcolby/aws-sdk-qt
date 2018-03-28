@@ -37,7 +37,7 @@ class CloudHSMClientRequestPrivate;
 class QTAWS_EXPORT CloudHSMClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudHSM.
     enum Action {
         // todo
     };

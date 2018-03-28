@@ -20,7 +20,7 @@
 #ifndef QTAWS_MIGRATIONHUBCLIENTRESPONSE_P_H
 #define QTAWS_MIGRATIONHUBCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "migrationhubresponse.h"
 #include "migrationhubclientrequest.h"
 
 namespace AWS {

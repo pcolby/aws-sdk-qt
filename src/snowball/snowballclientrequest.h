@@ -37,7 +37,7 @@ class SnowballClientRequestPrivate;
 class QTAWS_EXPORT SnowballClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Snowball.
     enum Action {
         // todo
     };

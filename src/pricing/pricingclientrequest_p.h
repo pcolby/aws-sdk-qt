@@ -20,7 +20,7 @@
 #ifndef QTAWS_PRICINGCLIENTREQUEST_P_H
 #define QTAWS_PRICINGCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "pricing_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class PricingClientRequest;
 class QTAWS_EXPORT PricingClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    PricingClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    PricingClientRequest::Action action; ///< Pricing action to be performed.
+    QString apiVersion;        ///< Pricing API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Pricing request (query string) parameters. @todo?
 
     PricingClientRequestPrivate(const PricingClientRequest::Action action, PricingClientRequest * const q);
     PricingClientRequestPrivate(const RequestPrivate &other, PricingClientRequest * const q);

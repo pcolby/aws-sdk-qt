@@ -29,9 +29,9 @@ namespace MTurk {
 /**
  * @class  MTurkClientResponse
  *
- * @brief  Handles  MTurkClient responses.
+ * @brief  Handles MTurk MTurkClient responses.
  *
- * @see    Client::mTurkClient
+ * @see    MTurkClient::mTurkClient
  */
 
 /**

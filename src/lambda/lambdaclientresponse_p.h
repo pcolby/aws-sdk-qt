@@ -20,7 +20,7 @@
 #ifndef QTAWS_LAMBDACLIENTRESPONSE_P_H
 #define QTAWS_LAMBDACLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "lambdaresponse.h"
 #include "lambdaclientrequest.h"
 
 namespace AWS {

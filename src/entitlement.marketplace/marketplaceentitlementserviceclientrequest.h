@@ -37,7 +37,7 @@ class MarketplaceEntitlementServiceClientRequestPrivate;
 class QTAWS_EXPORT MarketplaceEntitlementServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MarketplaceEntitlementService.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SMSCLIENTREQUEST_P_H
 #define QTAWS_SMSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "sms_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SmsClientRequest;
 class QTAWS_EXPORT SmsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SmsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SmsClientRequest::Action action; ///< SMS action to be performed.
+    QString apiVersion;        ///< SMS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SMS request (query string) parameters. @todo?
 
     SmsClientRequestPrivate(const SmsClientRequest::Action action, SmsClientRequest * const q);
     SmsClientRequestPrivate(const RequestPrivate &other, SmsClientRequest * const q);

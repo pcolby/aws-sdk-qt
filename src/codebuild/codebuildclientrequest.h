@@ -37,7 +37,7 @@ class CodeBuildClientRequestPrivate;
 class QTAWS_EXPORT CodeBuildClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CodeBuild.
     enum Action {
         // todo
     };

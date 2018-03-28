@@ -37,7 +37,7 @@ class MarketplaceCommerceAnalyticsClientRequestPrivate;
 class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MarketplaceCommerceAnalytics.
     enum Action {
         // todo
     };

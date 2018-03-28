@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIALIVECLIENTRESPONSE_P_H
 #define QTAWS_MEDIALIVECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "medialiveresponse.h"
 #include "medialiveclientrequest.h"
 
 namespace AWS {

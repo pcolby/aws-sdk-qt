@@ -37,7 +37,7 @@ class TranscribeServiceClientRequestPrivate;
 class QTAWS_EXPORT TranscribeServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by TranscribeService.
     enum Action {
         // todo
     };

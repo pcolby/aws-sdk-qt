@@ -20,7 +20,7 @@
 #ifndef QTAWS_MACHINELEARNINGCLIENTRESPONSE_P_H
 #define QTAWS_MACHINELEARNINGCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "machinelearningresponse.h"
 #include "machinelearningclientrequest.h"
 
 namespace AWS {

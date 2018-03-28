@@ -20,7 +20,7 @@
 #ifndef QTAWS_KINESISCLIENTRESPONSE_P_H
 #define QTAWS_KINESISCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "kinesisresponse.h"
 #include "kinesisclientrequest.h"
 
 namespace AWS {

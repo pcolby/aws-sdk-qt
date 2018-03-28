@@ -37,7 +37,7 @@ class LambdaClientRequestPrivate;
 class QTAWS_EXPORT LambdaClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Lambda.
     enum Action {
         // todo
     };

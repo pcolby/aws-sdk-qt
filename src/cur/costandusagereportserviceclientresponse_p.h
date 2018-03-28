@@ -20,7 +20,7 @@
 #ifndef QTAWS_COSTANDUSAGEREPORTSERVICECLIENTRESPONSE_P_H
 #define QTAWS_COSTANDUSAGEREPORTSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "costandusagereportserviceresponse.h"
 #include "costandusagereportserviceclientrequest.h"
 
 namespace AWS {

@@ -37,7 +37,7 @@ class DirectConnectClientRequestPrivate;
 class QTAWS_EXPORT DirectConnectClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DirectConnect.
     enum Action {
         // todo
     };

@@ -37,7 +37,7 @@ class OpsWorksCMClientRequestPrivate;
 class QTAWS_EXPORT OpsWorksCMClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by OpsWorksCM.
     enum Action {
         // todo
     };

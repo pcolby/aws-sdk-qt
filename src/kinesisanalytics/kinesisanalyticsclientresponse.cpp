@@ -29,9 +29,9 @@ namespace KinesisAnalytics {
 /**
  * @class  KinesisAnalyticsClientResponse
  *
- * @brief  Handles  KinesisAnalyticsClient responses.
+ * @brief  Handles KinesisAnalytics KinesisAnalyticsClient responses.
  *
- * @see    Client::kinesisAnalyticsClient
+ * @see    KinesisAnalyticsClient::kinesisAnalyticsClient
  */
 
 /**

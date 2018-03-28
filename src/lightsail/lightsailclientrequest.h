@@ -37,7 +37,7 @@ class LightsailClientRequestPrivate;
 class QTAWS_EXPORT LightsailClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Lightsail.
     enum Action {
         // todo
     };

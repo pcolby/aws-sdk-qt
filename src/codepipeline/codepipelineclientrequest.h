@@ -37,7 +37,7 @@ class CodePipelineClientRequestPrivate;
 class QTAWS_EXPORT CodePipelineClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CodePipeline.
     enum Action {
         // todo
     };

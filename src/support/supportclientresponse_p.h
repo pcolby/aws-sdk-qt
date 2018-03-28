@@ -20,7 +20,7 @@
 #ifndef QTAWS_SUPPORTCLIENTRESPONSE_P_H
 #define QTAWS_SUPPORTCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "supportresponse.h"
 #include "supportclientrequest.h"
 
 namespace AWS {

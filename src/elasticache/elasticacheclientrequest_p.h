@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICACHECLIENTREQUEST_P_H
 #define QTAWS_ELASTICACHECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "elasticache_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ElastiCacheClientRequest;
 class QTAWS_EXPORT ElastiCacheClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ElastiCacheClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ElastiCacheClientRequest::Action action; ///< ElastiCache action to be performed.
+    QString apiVersion;        ///< ElastiCache API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ElastiCache request (query string) parameters. @todo?
 
     ElastiCacheClientRequestPrivate(const ElastiCacheClientRequest::Action action, ElastiCacheClientRequest * const q);
     ElastiCacheClientRequestPrivate(const RequestPrivate &other, ElastiCacheClientRequest * const q);

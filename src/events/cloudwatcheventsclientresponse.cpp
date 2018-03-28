@@ -29,9 +29,9 @@ namespace CloudWatchEvents {
 /**
  * @class  CloudWatchEventsClientResponse
  *
- * @brief  Handles  CloudWatchEventsClient responses.
+ * @brief  Handles CloudWatchEvents CloudWatchEventsClient responses.
  *
- * @see    Client::cloudWatchEventsClient
+ * @see    CloudWatchEventsClient::cloudWatchEventsClient
  */
 
 /**

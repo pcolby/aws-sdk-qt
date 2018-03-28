@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class AutoScalingClientResponsePrivate;
 
-class QTAWS_EXPORT AutoScalingClientResponse : public Response {
+class QTAWS_EXPORT AutoScalingClientResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

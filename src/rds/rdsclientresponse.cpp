@@ -29,9 +29,9 @@ namespace RDS {
 /**
  * @class  RdsClientResponse
  *
- * @brief  Handles  RdsClient responses.
+ * @brief  Handles RDS RdsClient responses.
  *
- * @see    Client::rdsClient
+ * @see    RDSClient::rdsClient
  */
 
 /**

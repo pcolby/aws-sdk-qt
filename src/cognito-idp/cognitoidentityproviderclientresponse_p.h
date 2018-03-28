@@ -20,7 +20,7 @@
 #ifndef QTAWS_COGNITOIDENTITYPROVIDERCLIENTRESPONSE_P_H
 #define QTAWS_COGNITOIDENTITYPROVIDERCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cognitoidentityproviderresponse.h"
 #include "cognitoidentityproviderclientrequest.h"
 
 namespace AWS {

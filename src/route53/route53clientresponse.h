@@ -29,7 +29,7 @@ namespace Route53 {
 
 class Route53ClientResponsePrivate;
 
-class QTAWS_EXPORT Route53ClientResponse : public Response {
+class QTAWS_EXPORT Route53ClientResponse : public Route53Response {
     Q_OBJECT
 
 public:

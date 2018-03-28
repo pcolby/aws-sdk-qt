@@ -29,9 +29,9 @@ namespace ElasticsearchService {
 /**
  * @class  ElasticsearchServiceClientResponse
  *
- * @brief  Handles  ElasticsearchServiceClient responses.
+ * @brief  Handles ElasticsearchService ElasticsearchServiceClient responses.
  *
- * @see    Client::elasticsearchServiceClient
+ * @see    ElasticsearchServiceClient::elasticsearchServiceClient
  */
 
 /**

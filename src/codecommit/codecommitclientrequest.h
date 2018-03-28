@@ -37,7 +37,7 @@ class CodeCommitClientRequestPrivate;
 class QTAWS_EXPORT CodeCommitClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CodeCommit.
     enum Action {
         // todo
     };

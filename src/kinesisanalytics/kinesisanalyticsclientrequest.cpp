@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "kinesisanalyticsrequest_p.h"
 
 namespace AWS {
 namespace KinesisAnalytics {
@@ -28,14 +28,14 @@ namespace KinesisAnalytics {
 /**
  * @class  KinesisAnalyticsClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing KinesisAnalytics requests
  */
 
 
 /**
  * @brief  Constructs a new KinesisAnalyticsClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The KinesisAnalytics action to request.
  */
 KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(const Action action)
     : AwsAbstractRequest(new KinesisAnalyticsClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(KinesisAnalyticsCli
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the KinesisAnalytics action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The KinesisAnalytics action to be performed by this request.
  */
 KinesisAnalyticsClientRequest::Action KinesisAnalyticsClientRequest::action() const
 {
@@ -99,9 +99,9 @@ KinesisAnalyticsClientRequest::Action KinesisAnalyticsClientRequest::action() co
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the KinesisAnalytics action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the KinesisAnalytics action to be performed by this request.
  */
 QString KinesisAnalyticsClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString KinesisAnalyticsClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the KinesisAnalytics API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The KinesisAnalytics API version implmented by this request.
  */
 QString KinesisAnalyticsClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString KinesisAnalyticsClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the KinesisAnalytics action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void KinesisAnalyticsClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the KinesisAnalytics API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The KinesisAnalytics API version to include in this request.
  */
 void KinesisAnalyticsClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool KinesisAnalyticsClientRequest::operator==(const KinesisAnalyticsClientReque
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid KinesisAnalytics queue name.
  *
- * @par From  FAQs:
+ * @par From KinesisAnalytics FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid KinesisAnalytics queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void KinesisAnalyticsClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this KinesisAnalytics request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant KinesisAnalyticsClientRequest::parameter(const QString &name, const QVa
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this KinesisAnalytics request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &KinesisAnalyticsClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this KinesisAnalytics request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void KinesisAnalyticsClientRequest::setParameter(const QString &name, const QVar
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this KinesisAnalytics request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void KinesisAnalyticsClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this KinesisAnalytics request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This KinesisAnalytics implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this KinesisAnalytics request using the given \a endpoint.
  */
 QNetworkRequest KinesisAnalyticsClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest KinesisAnalyticsClientRequest::unsignedRequest(const QUrl &endpo
  *
  * @brief  Constructs a new KinesisAnalyticsClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  KinesisAnalytics action being performed by the \a q request.
  * @param  q       Pointer to this object's public KinesisAnalyticsClientRequest instance.
  */
 KinesisAnalyticsClientRequestPrivate::KinesisAnalyticsClientRequestPrivate(const KinesisAnalyticsClientRequest::Action action, KinesisAnalyticsClientRequest * const q)
@@ -315,13 +315,13 @@ KinesisAnalyticsClientRequestPrivate::KinesisAnalyticsClientRequestPrivate(const
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and KinesisAnalytics action to a string.
  *
  * This function converts KinesisAnalyticsClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the KinesisAnalytics service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  KinesisAnalytics action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

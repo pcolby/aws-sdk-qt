@@ -20,7 +20,7 @@
 #ifndef QTAWS_GAMELIFTCLIENTRESPONSE_P_H
 #define QTAWS_GAMELIFTCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "gameliftresponse.h"
 #include "gameliftclientrequest.h"
 
 namespace AWS {

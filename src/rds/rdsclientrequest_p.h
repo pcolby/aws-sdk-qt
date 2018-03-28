@@ -20,7 +20,7 @@
 #ifndef QTAWS_RDSCLIENTREQUEST_P_H
 #define QTAWS_RDSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "rds_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class RdsClientRequest;
 class QTAWS_EXPORT RdsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    RdsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    RdsClientRequest::Action action; ///< RDS action to be performed.
+    QString apiVersion;        ///< RDS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< RDS request (query string) parameters. @todo?
 
     RdsClientRequestPrivate(const RdsClientRequest::Action action, RdsClientRequest * const q);
     RdsClientRequestPrivate(const RequestPrivate &other, RdsClientRequest * const q);

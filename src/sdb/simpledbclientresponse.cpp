@@ -29,9 +29,9 @@ namespace SimpleDB {
 /**
  * @class  SimpleDBClientResponse
  *
- * @brief  Handles  SimpleDBClient responses.
+ * @brief  Handles SimpleDB SimpleDBClient responses.
  *
- * @see    Client::simpleDBClient
+ * @see    SimpleDBClient::simpleDBClient
  */
 
 /**

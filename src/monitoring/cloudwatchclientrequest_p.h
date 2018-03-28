@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDWATCHCLIENTREQUEST_P_H
 #define QTAWS_CLOUDWATCHCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloudwatch_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudWatchClientRequest;
 class QTAWS_EXPORT CloudWatchClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudWatchClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudWatchClientRequest::Action action; ///< CloudWatch action to be performed.
+    QString apiVersion;        ///< CloudWatch API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudWatch request (query string) parameters. @todo?
 
     CloudWatchClientRequestPrivate(const CloudWatchClientRequest::Action action, CloudWatchClientRequest * const q);
     CloudWatchClientRequestPrivate(const RequestPrivate &other, CloudWatchClientRequest * const q);

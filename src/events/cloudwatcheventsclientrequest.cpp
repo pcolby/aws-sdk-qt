@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "cloudwatcheventsrequest_p.h"
 
 namespace AWS {
 namespace CloudWatchEvents {
@@ -28,14 +28,14 @@ namespace CloudWatchEvents {
 /**
  * @class  CloudWatchEventsClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing CloudWatchEvents requests
  */
 
 
 /**
  * @brief  Constructs a new CloudWatchEventsClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The CloudWatchEvents action to request.
  */
 CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(const Action action)
     : AwsAbstractRequest(new CloudWatchEventsClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(CloudWatchEventsCli
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the CloudWatchEvents action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The CloudWatchEvents action to be performed by this request.
  */
 CloudWatchEventsClientRequest::Action CloudWatchEventsClientRequest::action() const
 {
@@ -99,9 +99,9 @@ CloudWatchEventsClientRequest::Action CloudWatchEventsClientRequest::action() co
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the CloudWatchEvents action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the CloudWatchEvents action to be performed by this request.
  */
 QString CloudWatchEventsClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString CloudWatchEventsClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the CloudWatchEvents API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The CloudWatchEvents API version implmented by this request.
  */
 QString CloudWatchEventsClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString CloudWatchEventsClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the CloudWatchEvents action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void CloudWatchEventsClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the CloudWatchEvents API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The CloudWatchEvents API version to include in this request.
  */
 void CloudWatchEventsClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool CloudWatchEventsClientRequest::operator==(const CloudWatchEventsClientReque
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid CloudWatchEvents queue name.
  *
- * @par From  FAQs:
+ * @par From CloudWatchEvents FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid CloudWatchEvents queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void CloudWatchEventsClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this CloudWatchEvents request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant CloudWatchEventsClientRequest::parameter(const QString &name, const QVa
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this CloudWatchEvents request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &CloudWatchEventsClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this CloudWatchEvents request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void CloudWatchEventsClientRequest::setParameter(const QString &name, const QVar
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this CloudWatchEvents request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void CloudWatchEventsClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this CloudWatchEvents request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This CloudWatchEvents implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this CloudWatchEvents request using the given \a endpoint.
  */
 QNetworkRequest CloudWatchEventsClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest CloudWatchEventsClientRequest::unsignedRequest(const QUrl &endpo
  *
  * @brief  Constructs a new CloudWatchEventsClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  CloudWatchEvents action being performed by the \a q request.
  * @param  q       Pointer to this object's public CloudWatchEventsClientRequest instance.
  */
 CloudWatchEventsClientRequestPrivate::CloudWatchEventsClientRequestPrivate(const CloudWatchEventsClientRequest::Action action, CloudWatchEventsClientRequest * const q)
@@ -315,13 +315,13 @@ CloudWatchEventsClientRequestPrivate::CloudWatchEventsClientRequestPrivate(const
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and CloudWatchEvents action to a string.
  *
  * This function converts CloudWatchEventsClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the CloudWatchEvents service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  CloudWatchEvents action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

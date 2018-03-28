@@ -20,7 +20,7 @@
 #ifndef QTAWS_GUARDDUTYCLIENTRESPONSE_P_H
 #define QTAWS_GUARDDUTYCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "guarddutyresponse.h"
 #include "guarddutyclientrequest.h"
 
 namespace AWS {

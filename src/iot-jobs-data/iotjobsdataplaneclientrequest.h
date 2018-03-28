@@ -37,7 +37,7 @@ class IoTJobsDataPlaneClientRequestPrivate;
 class QTAWS_EXPORT IoTJobsDataPlaneClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by IoTJobsDataPlane.
     enum Action {
         // todo
     };

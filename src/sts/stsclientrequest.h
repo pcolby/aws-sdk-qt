@@ -37,7 +37,7 @@ class StsClientRequestPrivate;
 class QTAWS_EXPORT StsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by STS.
     enum Action {
         // todo
     };

@@ -29,9 +29,9 @@ namespace ElastiCache {
 /**
  * @class  ElastiCacheClientResponse
  *
- * @brief  Handles  ElastiCacheClient responses.
+ * @brief  Handles ElastiCache ElastiCacheClient responses.
  *
- * @see    Client::elastiCacheClient
+ * @see    ElastiCacheClient::elastiCacheClient
  */
 
 /**

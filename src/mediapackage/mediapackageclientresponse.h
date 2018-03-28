@@ -29,7 +29,7 @@ namespace MediaPackage {
 
 class MediaPackageClientResponsePrivate;
 
-class QTAWS_EXPORT MediaPackageClientResponse : public Response {
+class QTAWS_EXPORT MediaPackageClientResponse : public MediaPackageResponse {
     Q_OBJECT
 
 public:

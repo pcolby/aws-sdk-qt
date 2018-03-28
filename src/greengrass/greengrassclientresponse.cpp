@@ -29,9 +29,9 @@ namespace Greengrass {
 /**
  * @class  GreengrassClientResponse
  *
- * @brief  Handles  GreengrassClient responses.
+ * @brief  Handles Greengrass GreengrassClient responses.
  *
- * @see    Client::greengrassClient
+ * @see    GreengrassClient::greengrassClient
  */
 
 /**

@@ -37,7 +37,7 @@ class SageMakerRuntimeClientRequestPrivate;
 class QTAWS_EXPORT SageMakerRuntimeClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SageMakerRuntime.
     enum Action {
         // todo
     };

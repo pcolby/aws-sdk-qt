@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTEXPORTCLIENTRESPONSE_P_H
 #define QTAWS_IMPORTEXPORTCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "importexportresponse.h"
 #include "importexportclientrequest.h"
 
 namespace AWS {

@@ -37,7 +37,7 @@ class CloudFrontClientRequestPrivate;
 class QTAWS_EXPORT CloudFrontClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudFront.
     enum Action {
         // todo
     };

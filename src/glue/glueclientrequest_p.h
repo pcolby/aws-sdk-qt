@@ -20,7 +20,7 @@
 #ifndef QTAWS_GLUECLIENTREQUEST_P_H
 #define QTAWS_GLUECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "glue_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class GlueClientRequest;
 class QTAWS_EXPORT GlueClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    GlueClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    GlueClientRequest::Action action; ///< Glue action to be performed.
+    QString apiVersion;        ///< Glue API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Glue request (query string) parameters. @todo?
 
     GlueClientRequestPrivate(const GlueClientRequest::Action action, GlueClientRequest * const q);
     GlueClientRequestPrivate(const RequestPrivate &other, GlueClientRequest * const q);

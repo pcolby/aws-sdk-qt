@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODESTARCLIENTREQUEST_P_H
 #define QTAWS_CODESTARCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "codestar_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CodeStarClientRequest;
 class QTAWS_EXPORT CodeStarClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CodeStarClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CodeStarClientRequest::Action action; ///< CodeStar action to be performed.
+    QString apiVersion;        ///< CodeStar API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CodeStar request (query string) parameters. @todo?
 
     CodeStarClientRequestPrivate(const CodeStarClientRequest::Action action, CodeStarClientRequest * const q);
     CodeStarClientRequestPrivate(const RequestPrivate &other, CodeStarClientRequest * const q);

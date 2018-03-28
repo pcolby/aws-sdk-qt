@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIASTOREDATACLIENTRESPONSE_P_H
 #define QTAWS_MEDIASTOREDATACLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "mediastoredataresponse.h"
 #include "mediastoredataclientrequest.h"
 
 namespace AWS {

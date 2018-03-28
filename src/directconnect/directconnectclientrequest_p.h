@@ -20,7 +20,7 @@
 #ifndef QTAWS_DIRECTCONNECTCLIENTREQUEST_P_H
 #define QTAWS_DIRECTCONNECTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "directconnect_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DirectConnectClientRequest;
 class QTAWS_EXPORT DirectConnectClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DirectConnectClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DirectConnectClientRequest::Action action; ///< DirectConnect action to be performed.
+    QString apiVersion;        ///< DirectConnect API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DirectConnect request (query string) parameters. @todo?
 
     DirectConnectClientRequestPrivate(const DirectConnectClientRequest::Action action, DirectConnectClientRequest * const q);
     DirectConnectClientRequestPrivate(const RequestPrivate &other, DirectConnectClientRequest * const q);

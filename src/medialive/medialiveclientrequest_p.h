@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIALIVECLIENTREQUEST_P_H
 #define QTAWS_MEDIALIVECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "medialive_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MediaLiveClientRequest;
 class QTAWS_EXPORT MediaLiveClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MediaLiveClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MediaLiveClientRequest::Action action; ///< MediaLive action to be performed.
+    QString apiVersion;        ///< MediaLive API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MediaLive request (query string) parameters. @todo?
 
     MediaLiveClientRequestPrivate(const MediaLiveClientRequest::Action action, MediaLiveClientRequest * const q);
     MediaLiveClientRequestPrivate(const RequestPrivate &other, MediaLiveClientRequest * const q);

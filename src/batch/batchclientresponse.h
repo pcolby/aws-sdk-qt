@@ -29,7 +29,7 @@ namespace Batch {
 
 class BatchClientResponsePrivate;
 
-class QTAWS_EXPORT BatchClientResponse : public Response {
+class QTAWS_EXPORT BatchClientResponse : public BatchResponse {
     Q_OBJECT
 
 public:

@@ -37,7 +37,7 @@ class MobileClientRequestPrivate;
 class QTAWS_EXPORT MobileClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Mobile.
     enum Action {
         // todo
     };

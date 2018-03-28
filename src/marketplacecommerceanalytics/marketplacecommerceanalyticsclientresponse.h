@@ -29,7 +29,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClientResponsePrivate;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientResponse : public Response {
+class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientResponse : public MarketplaceCommerceAnalyticsResponse {
     Q_OBJECT
 
 public:

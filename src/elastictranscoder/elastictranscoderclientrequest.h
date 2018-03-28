@@ -37,7 +37,7 @@ class ElasticTranscoderClientRequestPrivate;
 class QTAWS_EXPORT ElasticTranscoderClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ElasticTranscoder.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #ifndef QTAWS_XRAYCLIENTREQUEST_P_H
 #define QTAWS_XRAYCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "xray_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class XRayClientRequest;
 class QTAWS_EXPORT XRayClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    XRayClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    XRayClientRequest::Action action; ///< XRay action to be performed.
+    QString apiVersion;        ///< XRay API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< XRay request (query string) parameters. @todo?
 
     XRayClientRequestPrivate(const XRayClientRequest::Action action, XRayClientRequest * const q);
     XRayClientRequestPrivate(const RequestPrivate &other, XRayClientRequest * const q);

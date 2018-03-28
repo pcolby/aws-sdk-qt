@@ -37,7 +37,7 @@ class CostExplorerClientRequestPrivate;
 class QTAWS_EXPORT CostExplorerClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CostExplorer.
     enum Action {
         // todo
     };

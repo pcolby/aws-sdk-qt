@@ -20,7 +20,7 @@
 #ifndef QTAWS_DAXCLIENTREQUEST_P_H
 #define QTAWS_DAXCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "dax_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DaxClientRequest;
 class QTAWS_EXPORT DaxClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DaxClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DaxClientRequest::Action action; ///< DAX action to be performed.
+    QString apiVersion;        ///< DAX API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DAX request (query string) parameters. @todo?
 
     DaxClientRequestPrivate(const DaxClientRequest::Action action, DaxClientRequest * const q);
     DaxClientRequestPrivate(const RequestPrivate &other, DaxClientRequest * const q);

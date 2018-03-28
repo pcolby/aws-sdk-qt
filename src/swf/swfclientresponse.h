@@ -29,7 +29,7 @@ namespace SWF {
 
 class SwfClientResponsePrivate;
 
-class QTAWS_EXPORT SwfClientResponse : public Response {
+class QTAWS_EXPORT SwfClientResponse : public SWFResponse {
     Q_OBJECT
 
 public:

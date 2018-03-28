@@ -29,7 +29,7 @@ namespace ACM {
 
 class AcmClientResponsePrivate;
 
-class QTAWS_EXPORT AcmClientResponse : public Response {
+class QTAWS_EXPORT AcmClientResponse : public ACMResponse {
     Q_OBJECT
 
 public:

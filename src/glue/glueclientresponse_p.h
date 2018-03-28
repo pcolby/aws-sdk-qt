@@ -20,7 +20,7 @@
 #ifndef QTAWS_GLUECLIENTRESPONSE_P_H
 #define QTAWS_GLUECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "glueresponse.h"
 #include "glueclientrequest.h"
 
 namespace AWS {

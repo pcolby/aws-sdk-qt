@@ -37,7 +37,7 @@ class DynamoDBClientRequestPrivate;
 class QTAWS_EXPORT DynamoDBClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by DynamoDB.
     enum Action {
         // todo
     };

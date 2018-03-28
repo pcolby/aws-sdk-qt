@@ -29,9 +29,9 @@ namespace SageMaker {
 /**
  * @class  SageMakerClientResponse
  *
- * @brief  Handles  SageMakerClient responses.
+ * @brief  Handles SageMaker SageMakerClient responses.
  *
- * @see    Client::sageMakerClient
+ * @see    SageMakerClient::sageMakerClient
  */
 
 /**

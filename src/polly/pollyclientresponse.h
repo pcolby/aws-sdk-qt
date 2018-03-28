@@ -29,7 +29,7 @@ namespace Polly {
 
 class PollyClientResponsePrivate;
 
-class QTAWS_EXPORT PollyClientResponse : public Response {
+class QTAWS_EXPORT PollyClientResponse : public PollyResponse {
     Q_OBJECT
 
 public:

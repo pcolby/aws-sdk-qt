@@ -29,7 +29,7 @@ namespace Mobile {
 
 class MobileClientResponsePrivate;
 
-class QTAWS_EXPORT MobileClientResponse : public Response {
+class QTAWS_EXPORT MobileClientResponse : public MobileResponse {
     Q_OBJECT
 
 public:

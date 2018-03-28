@@ -20,7 +20,7 @@
 #ifndef QTAWS_PRICINGCLIENTRESPONSE_P_H
 #define QTAWS_PRICINGCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "pricingresponse.h"
 #include "pricingclientrequest.h"
 
 namespace AWS {

@@ -37,7 +37,7 @@ class BatchClientRequestPrivate;
 class QTAWS_EXPORT BatchClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Batch.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDSEARCHCLIENTREQUEST_P_H
 #define QTAWS_CLOUDSEARCHCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cloudsearch_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CloudSearchClientRequest;
 class QTAWS_EXPORT CloudSearchClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CloudSearchClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CloudSearchClientRequest::Action action; ///< CloudSearch action to be performed.
+    QString apiVersion;        ///< CloudSearch API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudSearch request (query string) parameters. @todo?
 
     CloudSearchClientRequestPrivate(const CloudSearchClientRequest::Action action, CloudSearchClientRequest * const q);
     CloudSearchClientRequestPrivate(const RequestPrivate &other, CloudSearchClientRequest * const q);

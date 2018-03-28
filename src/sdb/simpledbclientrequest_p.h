@@ -20,7 +20,7 @@
 #ifndef QTAWS_SIMPLEDBCLIENTREQUEST_P_H
 #define QTAWS_SIMPLEDBCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "simpledb_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SimpleDBClientRequest;
 class QTAWS_EXPORT SimpleDBClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SimpleDBClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SimpleDBClientRequest::Action action; ///< SimpleDB action to be performed.
+    QString apiVersion;        ///< SimpleDB API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SimpleDB request (query string) parameters. @todo?
 
     SimpleDBClientRequestPrivate(const SimpleDBClientRequest::Action action, SimpleDBClientRequest * const q);
     SimpleDBClientRequestPrivate(const RequestPrivate &other, SimpleDBClientRequest * const q);

@@ -29,7 +29,7 @@ namespace Redshift {
 
 class RedshiftClientResponsePrivate;
 
-class QTAWS_EXPORT RedshiftClientResponse : public Response {
+class QTAWS_EXPORT RedshiftClientResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

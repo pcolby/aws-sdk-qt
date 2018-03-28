@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "applicationautoscalingrequest_p.h"
 
 namespace AWS {
 namespace ApplicationAutoScaling {
@@ -28,14 +28,14 @@ namespace ApplicationAutoScaling {
 /**
  * @class  ApplicationAutoScalingClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing ApplicationAutoScaling requests
  */
 
 
 /**
  * @brief  Constructs a new ApplicationAutoScalingClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The ApplicationAutoScaling action to request.
  */
 ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(const Action action)
     : AwsAbstractRequest(new ApplicationAutoScalingClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(Applica
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the ApplicationAutoScaling action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The ApplicationAutoScaling action to be performed by this request.
  */
 ApplicationAutoScalingClientRequest::Action ApplicationAutoScalingClientRequest::action() const
 {
@@ -99,9 +99,9 @@ ApplicationAutoScalingClientRequest::Action ApplicationAutoScalingClientRequest:
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the ApplicationAutoScaling action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the ApplicationAutoScaling action to be performed by this request.
  */
 QString ApplicationAutoScalingClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString ApplicationAutoScalingClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the ApplicationAutoScaling API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The ApplicationAutoScaling API version implmented by this request.
  */
 QString ApplicationAutoScalingClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString ApplicationAutoScalingClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the ApplicationAutoScaling action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void ApplicationAutoScalingClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the ApplicationAutoScaling API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The ApplicationAutoScaling API version to include in this request.
  */
 void ApplicationAutoScalingClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool ApplicationAutoScalingClientRequest::operator==(const ApplicationAutoScalin
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid ApplicationAutoScaling queue name.
  *
- * @par From  FAQs:
+ * @par From ApplicationAutoScaling FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid ApplicationAutoScaling queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void ApplicationAutoScalingClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this ApplicationAutoScaling request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant ApplicationAutoScalingClientRequest::parameter(const QString &name, con
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this ApplicationAutoScaling request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &ApplicationAutoScalingClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this ApplicationAutoScaling request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void ApplicationAutoScalingClientRequest::setParameter(const QString &name, cons
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this ApplicationAutoScaling request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void ApplicationAutoScalingClientRequest::setParameters(const QVariantMap &param
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this ApplicationAutoScaling request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This ApplicationAutoScaling implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this ApplicationAutoScaling request using the given \a endpoint.
  */
 QNetworkRequest ApplicationAutoScalingClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest ApplicationAutoScalingClientRequest::unsignedRequest(const QUrl 
  *
  * @brief  Constructs a new ApplicationAutoScalingClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  ApplicationAutoScaling action being performed by the \a q request.
  * @param  q       Pointer to this object's public ApplicationAutoScalingClientRequest instance.
  */
 ApplicationAutoScalingClientRequestPrivate::ApplicationAutoScalingClientRequestPrivate(const ApplicationAutoScalingClientRequest::Action action, ApplicationAutoScalingClientRequest * const q)
@@ -315,13 +315,13 @@ ApplicationAutoScalingClientRequestPrivate::ApplicationAutoScalingClientRequestP
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and ApplicationAutoScaling action to a string.
  *
  * This function converts ApplicationAutoScalingClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the ApplicationAutoScaling service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  ApplicationAutoScaling action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

@@ -20,7 +20,7 @@
 #ifndef QTAWS_EC2CLIENTREQUEST_P_H
 #define QTAWS_EC2CLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "ec2_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class Ec2ClientRequest;
 class QTAWS_EXPORT Ec2ClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    Ec2ClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    Ec2ClientRequest::Action action; ///< EC2 action to be performed.
+    QString apiVersion;        ///< EC2 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< EC2 request (query string) parameters. @todo?
 
     Ec2ClientRequestPrivate(const Ec2ClientRequest::Action action, Ec2ClientRequest * const q);
     Ec2ClientRequestPrivate(const RequestPrivate &other, Ec2ClientRequest * const q);

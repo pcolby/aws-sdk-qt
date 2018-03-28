@@ -20,7 +20,7 @@
 #ifndef QTAWS_DATAPIPELINECLIENTREQUEST_P_H
 #define QTAWS_DATAPIPELINECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "datapipeline_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class DataPipelineClientRequest;
 class QTAWS_EXPORT DataPipelineClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    DataPipelineClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    DataPipelineClientRequest::Action action; ///< DataPipeline action to be performed.
+    QString apiVersion;        ///< DataPipeline API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DataPipeline request (query string) parameters. @todo?
 
     DataPipelineClientRequestPrivate(const DataPipelineClientRequest::Action action, DataPipelineClientRequest * const q);
     DataPipelineClientRequestPrivate(const RequestPrivate &other, DataPipelineClientRequest * const q);

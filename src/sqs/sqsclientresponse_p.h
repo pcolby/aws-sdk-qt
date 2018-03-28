@@ -20,7 +20,7 @@
 #ifndef QTAWS_SQSCLIENTRESPONSE_P_H
 #define QTAWS_SQSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "sqsresponse.h"
 #include "sqsclientrequest.h"
 
 namespace AWS {

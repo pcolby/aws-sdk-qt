@@ -29,9 +29,9 @@ namespace CognitoIdentity {
 /**
  * @class  CognitoIdentityClientResponse
  *
- * @brief  Handles  CognitoIdentityClient responses.
+ * @brief  Handles CognitoIdentity CognitoIdentityClient responses.
  *
- * @see    Client::cognitoIdentityClient
+ * @see    CognitoIdentityClient::cognitoIdentityClient
  */
 
 /**

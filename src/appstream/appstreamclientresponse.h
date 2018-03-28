@@ -29,7 +29,7 @@ namespace AppStream {
 
 class AppStreamClientResponsePrivate;
 
-class QTAWS_EXPORT AppStreamClientResponse : public Response {
+class QTAWS_EXPORT AppStreamClientResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

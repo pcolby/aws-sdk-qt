@@ -37,7 +37,7 @@ class CloudHSMV2ClientRequestPrivate;
 class QTAWS_EXPORT CloudHSMV2ClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudHSMV2.
     enum Action {
         // todo
     };

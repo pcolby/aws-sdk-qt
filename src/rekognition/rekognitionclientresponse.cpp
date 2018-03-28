@@ -29,9 +29,9 @@ namespace Rekognition {
 /**
  * @class  RekognitionClientResponse
  *
- * @brief  Handles  RekognitionClient responses.
+ * @brief  Handles Rekognition RekognitionClient responses.
  *
- * @see    Client::rekognitionClient
+ * @see    RekognitionClient::rekognitionClient
  */
 
 /**

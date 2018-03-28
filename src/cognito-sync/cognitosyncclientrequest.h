@@ -37,7 +37,7 @@ class CognitoSyncClientRequestPrivate;
 class QTAWS_EXPORT CognitoSyncClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CognitoSync.
     enum Action {
         // todo
     };

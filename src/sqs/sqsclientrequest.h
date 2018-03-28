@@ -37,7 +37,7 @@ class SqsClientRequestPrivate;
 class QTAWS_EXPORT SqsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by SQS.
     enum Action {
         // todo
     };

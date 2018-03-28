@@ -37,7 +37,7 @@ class MediaPackageClientRequestPrivate;
 class QTAWS_EXPORT MediaPackageClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MediaPackage.
     enum Action {
         // todo
     };

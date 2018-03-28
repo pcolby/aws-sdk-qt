@@ -29,9 +29,9 @@ namespace Mobile {
 /**
  * @class  MobileClientResponse
  *
- * @brief  Handles  MobileClient responses.
+ * @brief  Handles Mobile MobileClient responses.
  *
- * @see    Client::mobileClient
+ * @see    MobileClient::mobileClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "pricingrequest_p.h"
 
 namespace AWS {
 namespace Pricing {
@@ -28,14 +28,14 @@ namespace Pricing {
 /**
  * @class  PricingClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Pricing requests
  */
 
 
 /**
  * @brief  Constructs a new PricingClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Pricing action to request.
  */
 PricingClientRequest::PricingClientRequest(const Action action)
     : AwsAbstractRequest(new PricingClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ PricingClientRequest::PricingClientRequest(PricingClientRequestPrivate * const d
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Pricing action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Pricing action to be performed by this request.
  */
 PricingClientRequest::Action PricingClientRequest::action() const
 {
@@ -99,9 +99,9 @@ PricingClientRequest::Action PricingClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Pricing action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Pricing action to be performed by this request.
  */
 QString PricingClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString PricingClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Pricing API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Pricing API version implmented by this request.
  */
 QString PricingClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString PricingClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Pricing action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void PricingClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Pricing API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Pricing API version to include in this request.
  */
 void PricingClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool PricingClientRequest::operator==(const PricingClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Pricing queue name.
  *
- * @par From  FAQs:
+ * @par From Pricing FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Pricing queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void PricingClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Pricing request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant PricingClientRequest::parameter(const QString &name, const QVariant &de
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Pricing request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &PricingClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Pricing request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void PricingClientRequest::setParameter(const QString &name, const QVariant &val
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Pricing request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void PricingClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Pricing request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Pricing implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Pricing request using the given \a endpoint.
  */
 QNetworkRequest PricingClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest PricingClientRequest::unsignedRequest(const QUrl &endpoint) cons
  *
  * @brief  Constructs a new PricingClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Pricing action being performed by the \a q request.
  * @param  q       Pointer to this object's public PricingClientRequest instance.
  */
 PricingClientRequestPrivate::PricingClientRequestPrivate(const PricingClientRequest::Action action, PricingClientRequest * const q)
@@ -315,13 +315,13 @@ PricingClientRequestPrivate::PricingClientRequestPrivate(const PricingClientRequ
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Pricing action to a string.
  *
  * This function converts PricingClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Pricing service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Pricing action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

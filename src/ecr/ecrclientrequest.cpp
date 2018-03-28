@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "ecrrequest_p.h"
 
 namespace AWS {
 namespace ECR {
@@ -28,14 +28,14 @@ namespace ECR {
 /**
  * @class  EcrClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing ECR requests
  */
 
 
 /**
  * @brief  Constructs a new EcrClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The ECR action to request.
  */
 EcrClientRequest::EcrClientRequest(const Action action)
     : AwsAbstractRequest(new EcrClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ EcrClientRequest::EcrClientRequest(EcrClientRequestPrivate * const d) : AwsAbstr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the ECR action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The ECR action to be performed by this request.
  */
 EcrClientRequest::Action EcrClientRequest::action() const
 {
@@ -99,9 +99,9 @@ EcrClientRequest::Action EcrClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the ECR action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the ECR action to be performed by this request.
  */
 QString EcrClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString EcrClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the ECR API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The ECR API version implmented by this request.
  */
 QString EcrClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString EcrClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the ECR action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void EcrClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the ECR API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The ECR API version to include in this request.
  */
 void EcrClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool EcrClientRequest::operator==(const EcrClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid ECR queue name.
  *
- * @par From  FAQs:
+ * @par From ECR FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid ECR queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void EcrClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this ECR request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant EcrClientRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this ECR request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &EcrClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this ECR request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void EcrClientRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this ECR request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void EcrClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this ECR request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This ECR implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this ECR request using the given \a endpoint.
  */
 QNetworkRequest EcrClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest EcrClientRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new EcrClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  ECR action being performed by the \a q request.
  * @param  q       Pointer to this object's public EcrClientRequest instance.
  */
 EcrClientRequestPrivate::EcrClientRequestPrivate(const EcrClientRequest::Action action, EcrClientRequest * const q)
@@ -315,13 +315,13 @@ EcrClientRequestPrivate::EcrClientRequestPrivate(const EcrClientRequestPrivate &
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and ECR action to a string.
  *
  * This function converts EcrClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the ECR service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  ECR action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

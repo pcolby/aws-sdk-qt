@@ -37,7 +37,7 @@ class ElasticLoadBalancingv2ClientRequestPrivate;
 class QTAWS_EXPORT ElasticLoadBalancingv2ClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ElasticLoadBalancingv2.
     enum Action {
         // todo
     };

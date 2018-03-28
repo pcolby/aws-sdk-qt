@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDSEARCHDOMAINCLIENTRESPONSE_P_H
 #define QTAWS_CLOUDSEARCHDOMAINCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "cloudsearchdomainresponse.h"
 #include "cloudsearchdomainclientrequest.h"
 
 namespace AWS {

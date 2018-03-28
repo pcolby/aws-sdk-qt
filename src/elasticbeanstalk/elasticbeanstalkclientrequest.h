@@ -37,7 +37,7 @@ class ElasticBeanstalkClientRequestPrivate;
 class QTAWS_EXPORT ElasticBeanstalkClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ElasticBeanstalk.
     enum Action {
         // todo
     };

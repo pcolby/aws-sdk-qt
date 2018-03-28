@@ -29,9 +29,9 @@ namespace LexRuntimeService {
 /**
  * @class  LexRuntimeServiceClientResponse
  *
- * @brief  Handles  LexRuntimeServiceClient responses.
+ * @brief  Handles LexRuntimeService LexRuntimeServiceClient responses.
  *
- * @see    Client::lexRuntimeServiceClient
+ * @see    LexRuntimeServiceClient::lexRuntimeServiceClient
  */
 
 /**

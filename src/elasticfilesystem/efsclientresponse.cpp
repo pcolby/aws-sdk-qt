@@ -29,9 +29,9 @@ namespace EFS {
 /**
  * @class  EfsClientResponse
  *
- * @brief  Handles  EfsClient responses.
+ * @brief  Handles EFS EfsClient responses.
  *
- * @see    Client::efsClient
+ * @see    EFSClient::efsClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODEPIPELINECLIENTRESPONSE_P_H
 #define QTAWS_CODEPIPELINECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "codepipelineresponse.h"
 #include "codepipelineclientrequest.h"
 
 namespace AWS {

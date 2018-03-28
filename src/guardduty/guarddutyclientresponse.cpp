@@ -29,9 +29,9 @@ namespace GuardDuty {
 /**
  * @class  GuardDutyClientResponse
  *
- * @brief  Handles  GuardDutyClient responses.
+ * @brief  Handles GuardDuty GuardDutyClient responses.
  *
- * @see    Client::guardDutyClient
+ * @see    GuardDutyClient::guardDutyClient
  */
 
 /**

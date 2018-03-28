@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODEBUILDCLIENTRESPONSE_P_H
 #define QTAWS_CODEBUILDCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "codebuildresponse.h"
 #include "codebuildclientrequest.h"
 
 namespace AWS {

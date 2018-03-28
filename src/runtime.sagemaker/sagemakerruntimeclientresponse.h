@@ -29,7 +29,7 @@ namespace SageMakerRuntime {
 
 class SageMakerRuntimeClientResponsePrivate;
 
-class QTAWS_EXPORT SageMakerRuntimeClientResponse : public Response {
+class QTAWS_EXPORT SageMakerRuntimeClientResponse : public SageMakerRuntimeResponse {
     Q_OBJECT
 
 public:

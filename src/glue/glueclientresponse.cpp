@@ -29,9 +29,9 @@ namespace Glue {
 /**
  * @class  GlueClientResponse
  *
- * @brief  Handles  GlueClient responses.
+ * @brief  Handles Glue GlueClient responses.
  *
- * @see    Client::glueClient
+ * @see    GlueClient::glueClient
  */
 
 /**

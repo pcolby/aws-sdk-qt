@@ -37,7 +37,7 @@ class LexModelBuildingServiceClientRequestPrivate;
 class QTAWS_EXPORT LexModelBuildingServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by LexModelBuildingService.
     enum Action {
         // todo
     };

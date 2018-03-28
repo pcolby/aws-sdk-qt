@@ -37,7 +37,7 @@ class MTurkClientRequestPrivate;
 class QTAWS_EXPORT MTurkClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MTurk.
     enum Action {
         // todo
     };

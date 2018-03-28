@@ -20,7 +20,7 @@
 #ifndef QTAWS_LIGHTSAILCLIENTRESPONSE_P_H
 #define QTAWS_LIGHTSAILCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "lightsailresponse.h"
 #include "lightsailclientrequest.h"
 
 namespace AWS {

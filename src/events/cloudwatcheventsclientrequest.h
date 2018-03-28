@@ -37,7 +37,7 @@ class CloudWatchEventsClientRequestPrivate;
 class QTAWS_EXPORT CloudWatchEventsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CloudWatchEvents.
     enum Action {
         // todo
     };

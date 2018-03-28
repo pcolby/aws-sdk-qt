@@ -29,9 +29,9 @@ namespace Lightsail {
 /**
  * @class  LightsailClientResponse
  *
- * @brief  Handles  LightsailClient responses.
+ * @brief  Handles Lightsail LightsailClient responses.
  *
- * @see    Client::lightsailClient
+ * @see    LightsailClient::lightsailClient
  */
 
 /**

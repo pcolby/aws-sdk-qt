@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIACONVERTCLIENTREQUEST_P_H
 #define QTAWS_MEDIACONVERTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "mediaconvert_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MediaConvertClientRequest;
 class QTAWS_EXPORT MediaConvertClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MediaConvertClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MediaConvertClientRequest::Action action; ///< MediaConvert action to be performed.
+    QString apiVersion;        ///< MediaConvert API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MediaConvert request (query string) parameters. @todo?
 
     MediaConvertClientRequestPrivate(const MediaConvertClientRequest::Action action, MediaConvertClientRequest * const q);
     MediaConvertClientRequestPrivate(const RequestPrivate &other, MediaConvertClientRequest * const q);

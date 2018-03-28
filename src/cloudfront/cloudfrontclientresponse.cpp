@@ -29,9 +29,9 @@ namespace CloudFront {
 /**
  * @class  CloudFrontClientResponse
  *
- * @brief  Handles  CloudFrontClient responses.
+ * @brief  Handles CloudFront CloudFrontClient responses.
  *
- * @see    Client::cloudFrontClient
+ * @see    CloudFrontClient::cloudFrontClient
  */
 
 /**

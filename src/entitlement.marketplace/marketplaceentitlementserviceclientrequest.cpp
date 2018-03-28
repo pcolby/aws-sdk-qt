@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "marketplaceentitlementservicerequest_p.h"
 
 namespace AWS {
 namespace MarketplaceEntitlementService {
@@ -28,14 +28,14 @@ namespace MarketplaceEntitlementService {
 /**
  * @class  MarketplaceEntitlementServiceClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing MarketplaceEntitlementService requests
  */
 
 
 /**
  * @brief  Constructs a new MarketplaceEntitlementServiceClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The MarketplaceEntitlementService action to request.
  */
 MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientRequest(const Action action)
     : AwsAbstractRequest(new MarketplaceEntitlementServiceClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientR
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the MarketplaceEntitlementService action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The MarketplaceEntitlementService action to be performed by this request.
  */
 MarketplaceEntitlementServiceClientRequest::Action MarketplaceEntitlementServiceClientRequest::action() const
 {
@@ -99,9 +99,9 @@ MarketplaceEntitlementServiceClientRequest::Action MarketplaceEntitlementService
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the MarketplaceEntitlementService action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the MarketplaceEntitlementService action to be performed by this request.
  */
 QString MarketplaceEntitlementServiceClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString MarketplaceEntitlementServiceClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the MarketplaceEntitlementService API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The MarketplaceEntitlementService API version implmented by this request.
  */
 QString MarketplaceEntitlementServiceClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString MarketplaceEntitlementServiceClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the MarketplaceEntitlementService action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void MarketplaceEntitlementServiceClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the MarketplaceEntitlementService API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The MarketplaceEntitlementService API version to include in this request.
  */
 void MarketplaceEntitlementServiceClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool MarketplaceEntitlementServiceClientRequest::operator==(const MarketplaceEnt
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid MarketplaceEntitlementService queue name.
  *
- * @par From  FAQs:
+ * @par From MarketplaceEntitlementService FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid MarketplaceEntitlementService queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void MarketplaceEntitlementServiceClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this MarketplaceEntitlementService request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant MarketplaceEntitlementServiceClientRequest::parameter(const QString &na
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this MarketplaceEntitlementService request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &MarketplaceEntitlementServiceClientRequest::parameters() cons
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this MarketplaceEntitlementService request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void MarketplaceEntitlementServiceClientRequest::setParameter(const QString &nam
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this MarketplaceEntitlementService request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void MarketplaceEntitlementServiceClientRequest::setParameters(const QVariantMap
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this MarketplaceEntitlementService request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This MarketplaceEntitlementService implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this MarketplaceEntitlementService request using the given \a endpoint.
  */
 QNetworkRequest MarketplaceEntitlementServiceClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest MarketplaceEntitlementServiceClientRequest::unsignedRequest(cons
  *
  * @brief  Constructs a new MarketplaceEntitlementServiceClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  MarketplaceEntitlementService action being performed by the \a q request.
  * @param  q       Pointer to this object's public MarketplaceEntitlementServiceClientRequest instance.
  */
 MarketplaceEntitlementServiceClientRequestPrivate::MarketplaceEntitlementServiceClientRequestPrivate(const MarketplaceEntitlementServiceClientRequest::Action action, MarketplaceEntitlementServiceClientRequest * const q)
@@ -315,13 +315,13 @@ MarketplaceEntitlementServiceClientRequestPrivate::MarketplaceEntitlementService
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and MarketplaceEntitlementService action to a string.
  *
  * This function converts MarketplaceEntitlementServiceClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the MarketplaceEntitlementService service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  MarketplaceEntitlementService action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

@@ -29,9 +29,9 @@ namespace SMS {
 /**
  * @class  SmsClientResponse
  *
- * @brief  Handles  SmsClient responses.
+ * @brief  Handles SMS SmsClient responses.
  *
- * @see    Client::smsClient
+ * @see    SMSClient::smsClient
  */
 
 /**

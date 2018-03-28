@@ -20,7 +20,7 @@
 #ifndef QTAWS_LEXMODELBUILDINGSERVICECLIENTREQUEST_P_H
 #define QTAWS_LEXMODELBUILDINGSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "lexmodelbuildingservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class LexModelBuildingServiceClientRequest;
 class QTAWS_EXPORT LexModelBuildingServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    LexModelBuildingServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    LexModelBuildingServiceClientRequest::Action action; ///< LexModelBuildingService action to be performed.
+    QString apiVersion;        ///< LexModelBuildingService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< LexModelBuildingService request (query string) parameters. @todo?
 
     LexModelBuildingServiceClientRequestPrivate(const LexModelBuildingServiceClientRequest::Action action, LexModelBuildingServiceClientRequest * const q);
     LexModelBuildingServiceClientRequestPrivate(const RequestPrivate &other, LexModelBuildingServiceClientRequest * const q);

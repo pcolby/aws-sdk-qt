@@ -20,7 +20,7 @@
 #ifndef QTAWS_S3CLIENTRESPONSE_P_H
 #define QTAWS_S3CLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "s3response.h"
 #include "s3clientrequest.h"
 
 namespace AWS {

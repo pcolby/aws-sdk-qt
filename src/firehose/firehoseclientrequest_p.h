@@ -20,7 +20,7 @@
 #ifndef QTAWS_FIREHOSECLIENTREQUEST_P_H
 #define QTAWS_FIREHOSECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "firehose_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class FirehoseClientRequest;
 class QTAWS_EXPORT FirehoseClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    FirehoseClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    FirehoseClientRequest::Action action; ///< Firehose action to be performed.
+    QString apiVersion;        ///< Firehose API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Firehose request (query string) parameters. @todo?
 
     FirehoseClientRequestPrivate(const FirehoseClientRequest::Action action, FirehoseClientRequest * const q);
     FirehoseClientRequestPrivate(const RequestPrivate &other, FirehoseClientRequest * const q);

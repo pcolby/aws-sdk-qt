@@ -20,7 +20,7 @@
 #ifndef QTAWS_SAGEMAKERRUNTIMECLIENTREQUEST_P_H
 #define QTAWS_SAGEMAKERRUNTIMECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "sagemakerruntime_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SageMakerRuntimeClientRequest;
 class QTAWS_EXPORT SageMakerRuntimeClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SageMakerRuntimeClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SageMakerRuntimeClientRequest::Action action; ///< SageMakerRuntime action to be performed.
+    QString apiVersion;        ///< SageMakerRuntime API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SageMakerRuntime request (query string) parameters. @todo?
 
     SageMakerRuntimeClientRequestPrivate(const SageMakerRuntimeClientRequest::Action action, SageMakerRuntimeClientRequest * const q);
     SageMakerRuntimeClientRequestPrivate(const RequestPrivate &other, SageMakerRuntimeClientRequest * const q);

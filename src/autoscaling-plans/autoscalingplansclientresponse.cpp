@@ -29,9 +29,9 @@ namespace AutoScalingPlans {
 /**
  * @class  AutoScalingPlansClientResponse
  *
- * @brief  Handles  AutoScalingPlansClient responses.
+ * @brief  Handles AutoScalingPlans AutoScalingPlansClient responses.
  *
- * @see    Client::autoScalingPlansClient
+ * @see    AutoScalingPlansClient::autoScalingPlansClient
  */
 
 /**

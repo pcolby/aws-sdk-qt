@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "workspacesrequest_p.h"
 
 namespace AWS {
 namespace WorkSpaces {
@@ -28,14 +28,14 @@ namespace WorkSpaces {
 /**
  * @class  WorkSpacesClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing WorkSpaces requests
  */
 
 
 /**
  * @brief  Constructs a new WorkSpacesClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The WorkSpaces action to request.
  */
 WorkSpacesClientRequest::WorkSpacesClientRequest(const Action action)
     : AwsAbstractRequest(new WorkSpacesClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ WorkSpacesClientRequest::WorkSpacesClientRequest(WorkSpacesClientRequestPrivate 
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the WorkSpaces action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The WorkSpaces action to be performed by this request.
  */
 WorkSpacesClientRequest::Action WorkSpacesClientRequest::action() const
 {
@@ -99,9 +99,9 @@ WorkSpacesClientRequest::Action WorkSpacesClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the WorkSpaces action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the WorkSpaces action to be performed by this request.
  */
 QString WorkSpacesClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString WorkSpacesClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the WorkSpaces API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The WorkSpaces API version implmented by this request.
  */
 QString WorkSpacesClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString WorkSpacesClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the WorkSpaces action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void WorkSpacesClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the WorkSpaces API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The WorkSpaces API version to include in this request.
  */
 void WorkSpacesClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool WorkSpacesClientRequest::operator==(const WorkSpacesClientRequest &other) c
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid WorkSpaces queue name.
  *
- * @par From  FAQs:
+ * @par From WorkSpaces FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid WorkSpaces queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void WorkSpacesClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this WorkSpaces request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant WorkSpacesClientRequest::parameter(const QString &name, const QVariant 
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this WorkSpaces request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &WorkSpacesClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this WorkSpaces request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void WorkSpacesClientRequest::setParameter(const QString &name, const QVariant &
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this WorkSpaces request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void WorkSpacesClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this WorkSpaces request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This WorkSpaces implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this WorkSpaces request using the given \a endpoint.
  */
 QNetworkRequest WorkSpacesClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest WorkSpacesClientRequest::unsignedRequest(const QUrl &endpoint) c
  *
  * @brief  Constructs a new WorkSpacesClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  WorkSpaces action being performed by the \a q request.
  * @param  q       Pointer to this object's public WorkSpacesClientRequest instance.
  */
 WorkSpacesClientRequestPrivate::WorkSpacesClientRequestPrivate(const WorkSpacesClientRequest::Action action, WorkSpacesClientRequest * const q)
@@ -315,13 +315,13 @@ WorkSpacesClientRequestPrivate::WorkSpacesClientRequestPrivate(const WorkSpacesC
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and WorkSpaces action to a string.
  *
  * This function converts WorkSpacesClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the WorkSpaces service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  WorkSpaces action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

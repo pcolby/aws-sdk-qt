@@ -29,9 +29,9 @@ namespace ServiceDiscovery {
 /**
  * @class  ServiceDiscoveryClientResponse
  *
- * @brief  Handles  ServiceDiscoveryClient responses.
+ * @brief  Handles ServiceDiscovery ServiceDiscoveryClient responses.
  *
- * @see    Client::serviceDiscoveryClient
+ * @see    ServiceDiscoveryClient::serviceDiscoveryClient
  */
 
 /**

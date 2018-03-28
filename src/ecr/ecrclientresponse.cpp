@@ -29,9 +29,9 @@ namespace ECR {
 /**
  * @class  EcrClientResponse
  *
- * @brief  Handles  EcrClient responses.
+ * @brief  Handles ECR EcrClient responses.
  *
- * @see    Client::ecrClient
+ * @see    ECRClient::ecrClient
  */
 
 /**

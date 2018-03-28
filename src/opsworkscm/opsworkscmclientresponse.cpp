@@ -29,9 +29,9 @@ namespace OpsWorksCM {
 /**
  * @class  OpsWorksCMClientResponse
  *
- * @brief  Handles  OpsWorksCMClient responses.
+ * @brief  Handles OpsWorksCM OpsWorksCMClient responses.
  *
- * @see    Client::opsWorksCMClient
+ * @see    OpsWorksCMClient::opsWorksCMClient
  */
 
 /**

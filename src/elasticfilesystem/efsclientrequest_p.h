@@ -20,7 +20,7 @@
 #ifndef QTAWS_EFSCLIENTREQUEST_P_H
 #define QTAWS_EFSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "efs_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class EfsClientRequest;
 class QTAWS_EXPORT EfsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    EfsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    EfsClientRequest::Action action; ///< EFS action to be performed.
+    QString apiVersion;        ///< EFS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< EFS request (query string) parameters. @todo?
 
     EfsClientRequestPrivate(const EfsClientRequest::Action action, EfsClientRequest * const q);
     EfsClientRequestPrivate(const RequestPrivate &other, EfsClientRequest * const q);

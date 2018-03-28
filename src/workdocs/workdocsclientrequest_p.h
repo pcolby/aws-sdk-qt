@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKDOCSCLIENTREQUEST_P_H
 #define QTAWS_WORKDOCSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "workdocs_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class WorkDocsClientRequest;
 class QTAWS_EXPORT WorkDocsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    WorkDocsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    WorkDocsClientRequest::Action action; ///< WorkDocs action to be performed.
+    QString apiVersion;        ///< WorkDocs API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< WorkDocs request (query string) parameters. @todo?
 
     WorkDocsClientRequestPrivate(const WorkDocsClientRequest::Action action, WorkDocsClientRequest * const q);
     WorkDocsClientRequestPrivate(const RequestPrivate &other, WorkDocsClientRequest * const q);

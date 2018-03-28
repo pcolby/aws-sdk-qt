@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "storagegatewayrequest_p.h"
 
 namespace AWS {
 namespace StorageGateway {
@@ -28,14 +28,14 @@ namespace StorageGateway {
 /**
  * @class  StorageGatewayClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing StorageGateway requests
  */
 
 
 /**
  * @brief  Constructs a new StorageGatewayClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The StorageGateway action to request.
  */
 StorageGatewayClientRequest::StorageGatewayClientRequest(const Action action)
     : AwsAbstractRequest(new StorageGatewayClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ StorageGatewayClientRequest::StorageGatewayClientRequest(StorageGatewayClientReq
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the StorageGateway action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The StorageGateway action to be performed by this request.
  */
 StorageGatewayClientRequest::Action StorageGatewayClientRequest::action() const
 {
@@ -99,9 +99,9 @@ StorageGatewayClientRequest::Action StorageGatewayClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the StorageGateway action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the StorageGateway action to be performed by this request.
  */
 QString StorageGatewayClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString StorageGatewayClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the StorageGateway API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The StorageGateway API version implmented by this request.
  */
 QString StorageGatewayClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString StorageGatewayClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the StorageGateway action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void StorageGatewayClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the StorageGateway API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The StorageGateway API version to include in this request.
  */
 void StorageGatewayClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool StorageGatewayClientRequest::operator==(const StorageGatewayClientRequest &
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid StorageGateway queue name.
  *
- * @par From  FAQs:
+ * @par From StorageGateway FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid StorageGateway queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void StorageGatewayClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this StorageGateway request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant StorageGatewayClientRequest::parameter(const QString &name, const QVari
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this StorageGateway request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &StorageGatewayClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this StorageGateway request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void StorageGatewayClientRequest::setParameter(const QString &name, const QVaria
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this StorageGateway request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void StorageGatewayClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this StorageGateway request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This StorageGateway implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this StorageGateway request using the given \a endpoint.
  */
 QNetworkRequest StorageGatewayClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest StorageGatewayClientRequest::unsignedRequest(const QUrl &endpoin
  *
  * @brief  Constructs a new StorageGatewayClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  StorageGateway action being performed by the \a q request.
  * @param  q       Pointer to this object's public StorageGatewayClientRequest instance.
  */
 StorageGatewayClientRequestPrivate::StorageGatewayClientRequestPrivate(const StorageGatewayClientRequest::Action action, StorageGatewayClientRequest * const q)
@@ -315,13 +315,13 @@ StorageGatewayClientRequestPrivate::StorageGatewayClientRequestPrivate(const Sto
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and StorageGateway action to a string.
  *
  * This function converts StorageGatewayClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the StorageGateway service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  StorageGateway action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

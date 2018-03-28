@@ -29,7 +29,7 @@ namespace MediaStoreData {
 
 class MediaStoreDataClientResponsePrivate;
 
-class QTAWS_EXPORT MediaStoreDataClientResponse : public Response {
+class QTAWS_EXPORT MediaStoreDataClientResponse : public MediaStoreDataResponse {
     Q_OBJECT
 
 public:

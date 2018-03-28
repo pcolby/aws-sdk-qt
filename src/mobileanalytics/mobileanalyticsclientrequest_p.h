@@ -20,7 +20,7 @@
 #ifndef QTAWS_MOBILEANALYTICSCLIENTREQUEST_P_H
 #define QTAWS_MOBILEANALYTICSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "mobileanalytics_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MobileAnalyticsClientRequest;
 class QTAWS_EXPORT MobileAnalyticsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MobileAnalyticsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MobileAnalyticsClientRequest::Action action; ///< MobileAnalytics action to be performed.
+    QString apiVersion;        ///< MobileAnalytics API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MobileAnalytics request (query string) parameters. @todo?
 
     MobileAnalyticsClientRequestPrivate(const MobileAnalyticsClientRequest::Action action, MobileAnalyticsClientRequest * const q);
     MobileAnalyticsClientRequestPrivate(const RequestPrivate &other, MobileAnalyticsClientRequest * const q);

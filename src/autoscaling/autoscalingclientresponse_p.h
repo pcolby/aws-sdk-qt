@@ -20,7 +20,7 @@
 #ifndef QTAWS_AUTOSCALINGCLIENTRESPONSE_P_H
 #define QTAWS_AUTOSCALINGCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "autoscalingresponse.h"
 #include "autoscalingclientrequest.h"
 
 namespace AWS {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_WAFCLIENTREQUEST_P_H
 #define QTAWS_WAFCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "waf_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class WafClientRequest;
 class QTAWS_EXPORT WafClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    WafClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    WafClientRequest::Action action; ///< WAF action to be performed.
+    QString apiVersion;        ///< WAF API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< WAF request (query string) parameters. @todo?
 
     WafClientRequestPrivate(const WafClientRequest::Action action, WafClientRequest * const q);
     WafClientRequestPrivate(const RequestPrivate &other, WafClientRequest * const q);

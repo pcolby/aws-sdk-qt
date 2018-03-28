@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "iamrequest_p.h"
 
 namespace AWS {
 namespace IAM {
@@ -28,14 +28,14 @@ namespace IAM {
 /**
  * @class  IamClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing IAM requests
  */
 
 
 /**
  * @brief  Constructs a new IamClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The IAM action to request.
  */
 IamClientRequest::IamClientRequest(const Action action)
     : AwsAbstractRequest(new IamClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ IamClientRequest::IamClientRequest(IamClientRequestPrivate * const d) : AwsAbstr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the IAM action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The IAM action to be performed by this request.
  */
 IamClientRequest::Action IamClientRequest::action() const
 {
@@ -99,9 +99,9 @@ IamClientRequest::Action IamClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the IAM action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the IAM action to be performed by this request.
  */
 QString IamClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString IamClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the IAM API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The IAM API version implmented by this request.
  */
 QString IamClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString IamClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the IAM action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void IamClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the IAM API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The IAM API version to include in this request.
  */
 void IamClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool IamClientRequest::operator==(const IamClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid IAM queue name.
  *
- * @par From  FAQs:
+ * @par From IAM FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid IAM queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void IamClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this IAM request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant IamClientRequest::parameter(const QString &name, const QVariant &defaul
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this IAM request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &IamClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this IAM request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void IamClientRequest::setParameter(const QString &name, const QVariant &value)
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this IAM request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void IamClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this IAM request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This IAM implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this IAM request using the given \a endpoint.
  */
 QNetworkRequest IamClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest IamClientRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new IamClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  IAM action being performed by the \a q request.
  * @param  q       Pointer to this object's public IamClientRequest instance.
  */
 IamClientRequestPrivate::IamClientRequestPrivate(const IamClientRequest::Action action, IamClientRequest * const q)
@@ -315,13 +315,13 @@ IamClientRequestPrivate::IamClientRequestPrivate(const IamClientRequestPrivate &
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and IAM action to a string.
  *
  * This function converts IamClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the IAM service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  IAM action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

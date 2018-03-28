@@ -29,9 +29,9 @@ namespace CloudDirectory {
 /**
  * @class  CloudDirectoryClientResponse
  *
- * @brief  Handles  CloudDirectoryClient responses.
+ * @brief  Handles CloudDirectory CloudDirectoryClient responses.
  *
- * @see    Client::cloudDirectoryClient
+ * @see    CloudDirectoryClient::cloudDirectoryClient
  */
 
 /**

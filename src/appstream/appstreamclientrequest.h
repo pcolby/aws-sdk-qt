@@ -37,7 +37,7 @@ class AppStreamClientRequestPrivate;
 class QTAWS_EXPORT AppStreamClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by AppStream.
     enum Action {
         // todo
     };

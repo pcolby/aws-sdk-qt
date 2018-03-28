@@ -37,7 +37,7 @@ class MarketplaceMeteringClientRequestPrivate;
 class QTAWS_EXPORT MarketplaceMeteringClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by MarketplaceMetering.
     enum Action {
         // todo
     };

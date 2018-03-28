@@ -37,7 +37,7 @@ class PinpointClientRequestPrivate;
 class QTAWS_EXPORT PinpointClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Pinpoint.
     enum Action {
         // todo
     };

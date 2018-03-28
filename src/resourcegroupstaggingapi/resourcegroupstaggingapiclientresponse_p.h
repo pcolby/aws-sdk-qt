@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPICLIENTRESPONSE_P_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "resourcegroupstaggingapiresponse.h"
 #include "resourcegroupstaggingapiclientrequest.h"
 
 namespace AWS {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_STSCLIENTREQUEST_P_H
 #define QTAWS_STSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "sts_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class StsClientRequest;
 class QTAWS_EXPORT StsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    StsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    StsClientRequest::Action action; ///< STS action to be performed.
+    QString apiVersion;        ///< STS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< STS request (query string) parameters. @todo?
 
     StsClientRequestPrivate(const StsClientRequest::Action action, StsClientRequest * const q);
     StsClientRequestPrivate(const RequestPrivate &other, StsClientRequest * const q);

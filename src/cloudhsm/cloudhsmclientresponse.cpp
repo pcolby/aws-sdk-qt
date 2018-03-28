@@ -29,9 +29,9 @@ namespace CloudHSM {
 /**
  * @class  CloudHSMClientResponse
  *
- * @brief  Handles  CloudHSMClient responses.
+ * @brief  Handles CloudHSM CloudHSMClient responses.
  *
- * @see    Client::cloudHSMClient
+ * @see    CloudHSMClient::cloudHSMClient
  */
 
 /**

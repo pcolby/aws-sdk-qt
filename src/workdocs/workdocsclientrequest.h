@@ -37,7 +37,7 @@ class WorkDocsClientRequestPrivate;
 class QTAWS_EXPORT WorkDocsClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by WorkDocs.
     enum Action {
         // todo
     };

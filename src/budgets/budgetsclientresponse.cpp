@@ -29,9 +29,9 @@ namespace Budgets {
 /**
  * @class  BudgetsClientResponse
  *
- * @brief  Handles  BudgetsClient responses.
+ * @brief  Handles Budgets BudgetsClient responses.
  *
- * @see    Client::budgetsClient
+ * @see    BudgetsClient::budgetsClient
  */
 
 /**

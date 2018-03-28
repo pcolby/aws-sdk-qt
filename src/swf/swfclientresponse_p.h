@@ -20,7 +20,7 @@
 #ifndef QTAWS_SWFCLIENTRESPONSE_P_H
 #define QTAWS_SWFCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "swfresponse.h"
 #include "swfclientrequest.h"
 
 namespace AWS {

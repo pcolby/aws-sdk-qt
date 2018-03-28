@@ -20,7 +20,7 @@
 #ifndef QTAWS_SESCLIENTREQUEST_P_H
 #define QTAWS_SESCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "ses_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SesClientRequest;
 class QTAWS_EXPORT SesClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SesClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SesClientRequest::Action action; ///< SES action to be performed.
+    QString apiVersion;        ///< SES API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SES request (query string) parameters. @todo?
 
     SesClientRequestPrivate(const SesClientRequest::Action action, SesClientRequest * const q);
     SesClientRequestPrivate(const RequestPrivate &other, SesClientRequest * const q);

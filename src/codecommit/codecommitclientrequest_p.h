@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODECOMMITCLIENTREQUEST_P_H
 #define QTAWS_CODECOMMITCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "codecommit_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CodeCommitClientRequest;
 class QTAWS_EXPORT CodeCommitClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CodeCommitClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CodeCommitClientRequest::Action action; ///< CodeCommit action to be performed.
+    QString apiVersion;        ///< CodeCommit API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CodeCommit request (query string) parameters. @todo?
 
     CodeCommitClientRequestPrivate(const CodeCommitClientRequest::Action action, CodeCommitClientRequest * const q);
     CodeCommitClientRequestPrivate(const RequestPrivate &other, CodeCommitClientRequest * const q);

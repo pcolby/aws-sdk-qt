@@ -20,7 +20,7 @@
 #ifndef QTAWS_KMSCLIENTREQUEST_P_H
 #define QTAWS_KMSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "kms_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class KmsClientRequest;
 class QTAWS_EXPORT KmsClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    KmsClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    KmsClientRequest::Action action; ///< KMS action to be performed.
+    QString apiVersion;        ///< KMS API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< KMS request (query string) parameters. @todo?
 
     KmsClientRequestPrivate(const KmsClientRequest::Action action, KmsClientRequest * const q);
     KmsClientRequestPrivate(const RequestPrivate &other, KmsClientRequest * const q);

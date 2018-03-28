@@ -29,9 +29,9 @@ namespace DynamoDB {
 /**
  * @class  DynamoDBClientResponse
  *
- * @brief  Handles  DynamoDBClient responses.
+ * @brief  Handles DynamoDB DynamoDBClient responses.
  *
- * @see    Client::dynamoDBClient
+ * @see    DynamoDBClient::dynamoDBClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIGSERVICECLIENTRESPONSE_P_H
 #define QTAWS_CONFIGSERVICECLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "configserviceresponse.h"
 #include "configserviceclientrequest.h"
 
 namespace AWS {

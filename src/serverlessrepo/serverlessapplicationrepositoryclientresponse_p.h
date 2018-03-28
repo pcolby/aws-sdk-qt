@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENTRESPONSE_P_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "serverlessapplicationrepositoryclientrequest.h"
 
 namespace AWS {

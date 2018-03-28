@@ -20,7 +20,7 @@
 #ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENTREQUEST_P_H
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "marketplaceentitlementservice_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class MarketplaceEntitlementServiceClientRequest;
 class QTAWS_EXPORT MarketplaceEntitlementServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    MarketplaceEntitlementServiceClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    MarketplaceEntitlementServiceClientRequest::Action action; ///< MarketplaceEntitlementService action to be performed.
+    QString apiVersion;        ///< MarketplaceEntitlementService API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MarketplaceEntitlementService request (query string) parameters. @todo?
 
     MarketplaceEntitlementServiceClientRequestPrivate(const MarketplaceEntitlementServiceClientRequest::Action action, MarketplaceEntitlementServiceClientRequest * const q);
     MarketplaceEntitlementServiceClientRequestPrivate(const RequestPrivate &other, MarketplaceEntitlementServiceClientRequest * const q);

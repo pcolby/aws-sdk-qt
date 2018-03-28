@@ -29,9 +29,9 @@ namespace DataPipeline {
 /**
  * @class  DataPipelineClientResponse
  *
- * @brief  Handles  DataPipelineClient responses.
+ * @brief  Handles DataPipeline DataPipelineClient responses.
  *
- * @see    Client::dataPipelineClient
+ * @see    DataPipelineClient::dataPipelineClient
  */
 
 /**

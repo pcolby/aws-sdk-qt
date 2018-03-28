@@ -29,9 +29,9 @@ namespace Firehose {
 /**
  * @class  FirehoseClientResponse
  *
- * @brief  Handles  FirehoseClient responses.
+ * @brief  Handles Firehose FirehoseClient responses.
  *
- * @see    Client::firehoseClient
+ * @see    FirehoseClient::firehoseClient
  */
 
 /**

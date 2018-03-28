@@ -29,9 +29,9 @@ namespace Pricing {
 /**
  * @class  PricingClientResponse
  *
- * @brief  Handles  PricingClient responses.
+ * @brief  Handles Pricing PricingClient responses.
  *
- * @see    Client::pricingClient
+ * @see    PricingClient::pricingClient
  */
 
 /**

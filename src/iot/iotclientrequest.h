@@ -37,7 +37,7 @@ class IoTClientRequestPrivate;
 class QTAWS_EXPORT IoTClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by IoT.
     enum Action {
         // todo
     };

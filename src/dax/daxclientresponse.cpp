@@ -29,9 +29,9 @@ namespace DAX {
 /**
  * @class  DaxClientResponse
  *
- * @brief  Handles  DaxClient responses.
+ * @brief  Handles DAX DaxClient responses.
  *
- * @see    Client::daxClient
+ * @see    DAXClient::daxClient
  */
 
 /**

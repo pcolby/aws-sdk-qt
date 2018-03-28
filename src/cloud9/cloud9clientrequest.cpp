@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "cloud9request_p.h"
 
 namespace AWS {
 namespace Cloud9 {
@@ -28,14 +28,14 @@ namespace Cloud9 {
 /**
  * @class  Cloud9ClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing Cloud9 requests
  */
 
 
 /**
  * @brief  Constructs a new Cloud9ClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The Cloud9 action to request.
  */
 Cloud9ClientRequest::Cloud9ClientRequest(const Action action)
     : AwsAbstractRequest(new Cloud9ClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ Cloud9ClientRequest::Cloud9ClientRequest(Cloud9ClientRequestPrivate * const d) :
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the Cloud9 action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The Cloud9 action to be performed by this request.
  */
 Cloud9ClientRequest::Action Cloud9ClientRequest::action() const
 {
@@ -99,9 +99,9 @@ Cloud9ClientRequest::Action Cloud9ClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the Cloud9 action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the Cloud9 action to be performed by this request.
  */
 QString Cloud9ClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString Cloud9ClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the Cloud9 API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The Cloud9 API version implmented by this request.
  */
 QString Cloud9ClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString Cloud9ClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the Cloud9 action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void Cloud9ClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the Cloud9 API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The Cloud9 API version to include in this request.
  */
 void Cloud9ClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool Cloud9ClientRequest::operator==(const Cloud9ClientRequest &other) const
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid Cloud9 queue name.
  *
- * @par From  FAQs:
+ * @par From Cloud9 FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Cloud9 queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void Cloud9ClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this Cloud9 request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant Cloud9ClientRequest::parameter(const QString &name, const QVariant &def
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this Cloud9 request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &Cloud9ClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this Cloud9 request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void Cloud9ClientRequest::setParameter(const QString &name, const QVariant &valu
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this Cloud9 request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void Cloud9ClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this Cloud9 request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This Cloud9 implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this Cloud9 request using the given \a endpoint.
  */
 QNetworkRequest Cloud9ClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest Cloud9ClientRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new Cloud9ClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  Cloud9 action being performed by the \a q request.
  * @param  q       Pointer to this object's public Cloud9ClientRequest instance.
  */
 Cloud9ClientRequestPrivate::Cloud9ClientRequestPrivate(const Cloud9ClientRequest::Action action, Cloud9ClientRequest * const q)
@@ -315,13 +315,13 @@ Cloud9ClientRequestPrivate::Cloud9ClientRequestPrivate(const Cloud9ClientRequest
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and Cloud9 action to a string.
  *
  * This function converts Cloud9ClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the Cloud9 service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  Cloud9 action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

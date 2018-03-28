@@ -20,7 +20,7 @@
 #ifndef QTAWS_REDSHIFTCLIENTREQUEST_P_H
 #define QTAWS_REDSHIFTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "redshift_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class RedshiftClientRequest;
 class QTAWS_EXPORT RedshiftClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    RedshiftClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    RedshiftClientRequest::Action action; ///< Redshift action to be performed.
+    QString apiVersion;        ///< Redshift API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Redshift request (query string) parameters. @todo?
 
     RedshiftClientRequestPrivate(const RedshiftClientRequest::Action action, RedshiftClientRequest * const q);
     RedshiftClientRequestPrivate(const RequestPrivate &other, RedshiftClientRequest * const q);

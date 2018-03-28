@@ -29,9 +29,9 @@ namespace DynamoDBStreams {
 /**
  * @class  DynamoDBStreamsClientResponse
  *
- * @brief  Handles  DynamoDBStreamsClient responses.
+ * @brief  Handles DynamoDBStreams DynamoDBStreamsClient responses.
  *
- * @see    Client::dynamoDBStreamsClient
+ * @see    DynamoDBStreamsClient::dynamoDBStreamsClient
  */
 
 /**

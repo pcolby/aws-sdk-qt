@@ -37,7 +37,7 @@ class CostandUsageReportServiceClientRequestPrivate;
 class QTAWS_EXPORT CostandUsageReportServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by CostandUsageReportService.
     enum Action {
         // todo
     };

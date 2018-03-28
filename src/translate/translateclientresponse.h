@@ -29,7 +29,7 @@ namespace Translate {
 
 class TranslateClientResponsePrivate;
 
-class QTAWS_EXPORT TranslateClientResponse : public Response {
+class QTAWS_EXPORT TranslateClientResponse : public TranslateResponse {
     Q_OBJECT
 
 public:

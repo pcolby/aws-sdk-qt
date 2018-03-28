@@ -20,7 +20,7 @@
 #ifndef QTAWS_OPSWORKSCLIENTREQUEST_P_H
 #define QTAWS_OPSWORKSCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "opsworks_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class OpsWorksClientRequest;
 class QTAWS_EXPORT OpsWorksClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    OpsWorksClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    OpsWorksClientRequest::Action action; ///< OpsWorks action to be performed.
+    QString apiVersion;        ///< OpsWorks API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< OpsWorks request (query string) parameters. @todo?
 
     OpsWorksClientRequestPrivate(const OpsWorksClientRequest::Action action, OpsWorksClientRequest * const q);
     OpsWorksClientRequestPrivate(const RequestPrivate &other, OpsWorksClientRequest * const q);

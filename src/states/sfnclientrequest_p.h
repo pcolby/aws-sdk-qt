@@ -20,7 +20,7 @@
 #ifndef QTAWS_SFNCLIENTREQUEST_P_H
 #define QTAWS_SFNCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "sfn_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SfnClientRequest;
 class QTAWS_EXPORT SfnClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SfnClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SfnClientRequest::Action action; ///< SFN action to be performed.
+    QString apiVersion;        ///< SFN API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SFN request (query string) parameters. @todo?
 
     SfnClientRequestPrivate(const SfnClientRequest::Action action, SfnClientRequest * const q);
     SfnClientRequestPrivate(const RequestPrivate &other, SfnClientRequest * const q);

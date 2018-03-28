@@ -29,9 +29,9 @@ namespace CodeStar {
 /**
  * @class  CodeStarClientResponse
  *
- * @brief  Handles  CodeStarClient responses.
+ * @brief  Handles CodeStar CodeStarClient responses.
  *
- * @see    Client::codeStarClient
+ * @see    CodeStarClient::codeStarClient
  */
 
 /**

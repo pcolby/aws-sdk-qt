@@ -37,7 +37,7 @@ class GuardDutyClientRequestPrivate;
 class QTAWS_EXPORT GuardDutyClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by GuardDuty.
     enum Action {
         // todo
     };

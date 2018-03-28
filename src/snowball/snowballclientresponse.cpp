@@ -29,9 +29,9 @@ namespace Snowball {
 /**
  * @class  SnowballClientResponse
  *
- * @brief  Handles  SnowballClient responses.
+ * @brief  Handles Snowball SnowballClient responses.
  *
- * @see    Client::snowballClient
+ * @see    SnowballClient::snowballClient
  */
 
 /**

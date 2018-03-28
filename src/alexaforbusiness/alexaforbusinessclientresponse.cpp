@@ -29,9 +29,9 @@ namespace AlexaForBusiness {
 /**
  * @class  AlexaForBusinessClientResponse
  *
- * @brief  Handles  AlexaForBusinessClient responses.
+ * @brief  Handles AlexaForBusiness AlexaForBusinessClient responses.
  *
- * @see    Client::alexaForBusinessClient
+ * @see    AlexaForBusinessClient::alexaForBusinessClient
  */
 
 /**

@@ -29,7 +29,7 @@ namespace CodeBuild {
 
 class CodeBuildClientResponsePrivate;
 
-class QTAWS_EXPORT CodeBuildClientResponse : public Response {
+class QTAWS_EXPORT CodeBuildClientResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

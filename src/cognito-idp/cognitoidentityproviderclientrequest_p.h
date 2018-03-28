@@ -20,7 +20,7 @@
 #ifndef QTAWS_COGNITOIDENTITYPROVIDERCLIENTREQUEST_P_H
 #define QTAWS_COGNITOIDENTITYPROVIDERCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "cognitoidentityprovider_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class CognitoIdentityProviderClientRequest;
 class QTAWS_EXPORT CognitoIdentityProviderClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    CognitoIdentityProviderClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    CognitoIdentityProviderClientRequest::Action action; ///< CognitoIdentityProvider action to be performed.
+    QString apiVersion;        ///< CognitoIdentityProvider API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CognitoIdentityProvider request (query string) parameters. @todo?
 
     CognitoIdentityProviderClientRequestPrivate(const CognitoIdentityProviderClientRequest::Action action, CognitoIdentityProviderClientRequest * const q);
     CognitoIdentityProviderClientRequestPrivate(const RequestPrivate &other, CognitoIdentityProviderClientRequest * const q);

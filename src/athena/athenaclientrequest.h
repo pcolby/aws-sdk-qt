@@ -37,7 +37,7 @@ class AthenaClientRequestPrivate;
 class QTAWS_EXPORT AthenaClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Athena.
     enum Action {
         // todo
     };

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PINPOINTCLIENTREQUEST_P_H
 #define QTAWS_PINPOINTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "pinpoint_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class PinpointClientRequest;
 class QTAWS_EXPORT PinpointClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    PinpointClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    PinpointClientRequest::Action action; ///< Pinpoint action to be performed.
+    QString apiVersion;        ///< Pinpoint API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Pinpoint request (query string) parameters. @todo?
 
     PinpointClientRequestPrivate(const PinpointClientRequest::Action action, PinpointClientRequest * const q);
     PinpointClientRequestPrivate(const RequestPrivate &other, PinpointClientRequest * const q);

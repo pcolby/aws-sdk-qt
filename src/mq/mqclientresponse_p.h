@@ -20,7 +20,7 @@
 #ifndef QTAWS_MQCLIENTRESPONSE_P_H
 #define QTAWS_MQCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "mqresponse.h"
 #include "mqclientrequest.h"
 
 namespace AWS {

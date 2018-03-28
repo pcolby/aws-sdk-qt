@@ -20,7 +20,7 @@
 #ifndef QTAWS_SWFCLIENTREQUEST_P_H
 #define QTAWS_SWFCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "swf_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SwfClientRequest;
 class QTAWS_EXPORT SwfClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SwfClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SwfClientRequest::Action action; ///< SWF action to be performed.
+    QString apiVersion;        ///< SWF API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SWF request (query string) parameters. @todo?
 
     SwfClientRequestPrivate(const SwfClientRequest::Action action, SwfClientRequest * const q);
     SwfClientRequestPrivate(const RequestPrivate &other, SwfClientRequest * const q);

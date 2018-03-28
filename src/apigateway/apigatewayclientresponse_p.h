@@ -20,7 +20,7 @@
 #ifndef QTAWS_APIGATEWAYCLIENTRESPONSE_P_H
 #define QTAWS_APIGATEWAYCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "apigatewayresponse.h"
 #include "apigatewayclientrequest.h"
 
 namespace AWS {

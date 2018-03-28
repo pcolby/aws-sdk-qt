@@ -29,9 +29,9 @@ namespace IoTJobsDataPlane {
 /**
  * @class  IoTJobsDataPlaneClientResponse
  *
- * @brief  Handles  IoTJobsDataPlaneClient responses.
+ * @brief  Handles IoTJobsDataPlane IoTJobsDataPlaneClient responses.
  *
- * @see    Client::ioTJobsDataPlaneClient
+ * @see    IoTJobsDataPlaneClient::ioTJobsDataPlaneClient
  */
 
 /**

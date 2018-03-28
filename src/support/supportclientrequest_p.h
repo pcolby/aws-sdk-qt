@@ -20,7 +20,7 @@
 #ifndef QTAWS_SUPPORTCLIENTREQUEST_P_H
 #define QTAWS_SUPPORTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "support_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class SupportClientRequest;
 class QTAWS_EXPORT SupportClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SupportClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    SupportClientRequest::Action action; ///< Support action to be performed.
+    QString apiVersion;        ///< Support API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Support request (query string) parameters. @todo?
 
     SupportClientRequestPrivate(const SupportClientRequest::Action action, SupportClientRequest * const q);
     SupportClientRequestPrivate(const RequestPrivate &other, SupportClientRequest * const q);

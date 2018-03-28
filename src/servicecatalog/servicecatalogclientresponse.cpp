@@ -29,9 +29,9 @@ namespace ServiceCatalog {
 /**
  * @class  ServiceCatalogClientResponse
  *
- * @brief  Handles  ServiceCatalogClient responses.
+ * @brief  Handles ServiceCatalog ServiceCatalogClient responses.
  *
- * @see    Client::serviceCatalogClient
+ * @see    ServiceCatalogClient::serviceCatalogClient
  */
 
 /**

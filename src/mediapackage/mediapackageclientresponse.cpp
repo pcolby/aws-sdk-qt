@@ -29,9 +29,9 @@ namespace MediaPackage {
 /**
  * @class  MediaPackageClientResponse
  *
- * @brief  Handles  MediaPackageClient responses.
+ * @brief  Handles MediaPackage MediaPackageClient responses.
  *
- * @see    Client::mediaPackageClient
+ * @see    MediaPackageClient::mediaPackageClient
  */
 
 /**

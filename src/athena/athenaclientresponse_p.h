@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATHENACLIENTRESPONSE_P_H
 #define QTAWS_ATHENACLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "athenaresponse.h"
 #include "athenaclientrequest.h"
 
 namespace AWS {

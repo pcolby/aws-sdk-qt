@@ -20,7 +20,7 @@
 #ifndef QTAWS_REKOGNITIONCLIENTRESPONSE_P_H
 #define QTAWS_REKOGNITIONCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "rekognitionresponse.h"
 #include "rekognitionclientrequest.h"
 
 namespace AWS {

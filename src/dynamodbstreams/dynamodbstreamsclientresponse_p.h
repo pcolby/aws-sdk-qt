@@ -20,7 +20,7 @@
 #ifndef QTAWS_DYNAMODBSTREAMSCLIENTRESPONSE_P_H
 #define QTAWS_DYNAMODBSTREAMSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "dynamodbstreamsresponse.h"
 #include "dynamodbstreamsclientrequest.h"
 
 namespace AWS {

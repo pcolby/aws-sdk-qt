@@ -29,9 +29,9 @@ namespace CostExplorer {
 /**
  * @class  CostExplorerClientResponse
  *
- * @brief  Handles  CostExplorerClient responses.
+ * @brief  Handles CostExplorer CostExplorerClient responses.
  *
- * @see    Client::costExplorerClient
+ * @see    CostExplorerClient::costExplorerClient
  */
 
 /**

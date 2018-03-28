@@ -29,7 +29,7 @@ namespace ECR {
 
 class EcrClientResponsePrivate;
 
-class QTAWS_EXPORT EcrClientResponse : public Response {
+class QTAWS_EXPORT EcrClientResponse : public ECRResponse {
     Q_OBJECT
 
 public:

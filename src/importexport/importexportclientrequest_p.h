@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTEXPORTCLIENTREQUEST_P_H
 #define QTAWS_IMPORTEXPORTCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "importexport_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ImportExportClientRequest;
 class QTAWS_EXPORT ImportExportClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ImportExportClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ImportExportClientRequest::Action action; ///< ImportExport action to be performed.
+    QString apiVersion;        ///< ImportExport API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ImportExport request (query string) parameters. @todo?
 
     ImportExportClientRequestPrivate(const ImportExportClientRequest::Action action, ImportExportClientRequest * const q);
     ImportExportClientRequestPrivate(const RequestPrivate &other, ImportExportClientRequest * const q);

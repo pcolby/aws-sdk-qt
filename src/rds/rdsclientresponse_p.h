@@ -20,7 +20,7 @@
 #ifndef QTAWS_RDSCLIENTRESPONSE_P_H
 #define QTAWS_RDSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "rdsresponse.h"
 #include "rdsclientrequest.h"
 
 namespace AWS {

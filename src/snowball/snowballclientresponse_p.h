@@ -20,7 +20,7 @@
 #ifndef QTAWS_SNOWBALLCLIENTRESPONSE_P_H
 #define QTAWS_SNOWBALLCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "snowballresponse.h"
 #include "snowballclientrequest.h"
 
 namespace AWS {

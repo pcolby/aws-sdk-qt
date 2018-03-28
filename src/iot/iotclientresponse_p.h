@@ -20,7 +20,7 @@
 #ifndef QTAWS_IOTCLIENTRESPONSE_P_H
 #define QTAWS_IOTCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "iotresponse.h"
 #include "iotclientrequest.h"
 
 namespace AWS {

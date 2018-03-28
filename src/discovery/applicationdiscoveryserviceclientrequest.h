@@ -37,7 +37,7 @@ class ApplicationDiscoveryServiceClientRequestPrivate;
 class QTAWS_EXPORT ApplicationDiscoveryServiceClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by ApplicationDiscoveryService.
     enum Action {
         // todo
     };

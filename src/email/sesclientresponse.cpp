@@ -29,9 +29,9 @@ namespace SES {
 /**
  * @class  SesClientResponse
  *
- * @brief  Handles  SesClient responses.
+ * @brief  Handles SES SesClient responses.
  *
- * @see    Client::sesClient
+ * @see    SESClient::sesClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICBEANSTALKCLIENTREQUEST_P_H
 #define QTAWS_ELASTICBEANSTALKCLIENTREQUEST_P_H
 
-#include "_p.h"
+#include "elasticbeanstalk_p.h"
 #include "request.h"
 
 namespace AWS {
@@ -32,9 +32,9 @@ class ElasticBeanstalkClientRequest;
 class QTAWS_EXPORT ElasticBeanstalkClientRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    ElasticBeanstalkClientRequest::Action action; ///<  action to be performed.
-    QString apiVersion;        ///<  API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///<  request (query string) parameters. @todo?
+    ElasticBeanstalkClientRequest::Action action; ///< ElasticBeanstalk action to be performed.
+    QString apiVersion;        ///< ElasticBeanstalk API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ElasticBeanstalk request (query string) parameters. @todo?
 
     ElasticBeanstalkClientRequestPrivate(const ElasticBeanstalkClientRequest::Action action, ElasticBeanstalkClientRequest * const q);
     ElasticBeanstalkClientRequestPrivate(const RequestPrivate &other, ElasticBeanstalkClientRequest * const q);

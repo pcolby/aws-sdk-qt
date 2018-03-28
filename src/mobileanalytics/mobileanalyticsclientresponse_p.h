@@ -20,7 +20,7 @@
 #ifndef QTAWS_MOBILEANALYTICSCLIENTRESPONSE_P_H
 #define QTAWS_MOBILEANALYTICSCLIENTRESPONSE_P_H
 
-#include "response.h"
+#include "mobileanalyticsresponse.h"
 #include "mobileanalyticsclientrequest.h"
 
 namespace AWS {

@@ -29,9 +29,9 @@ namespace CodeDeploy {
 /**
  * @class  CodeDeployClientResponse
  *
- * @brief  Handles  CodeDeployClient responses.
+ * @brief  Handles CodeDeploy CodeDeployClient responses.
  *
- * @see    Client::codeDeployClient
+ * @see    CodeDeployClient::codeDeployClient
  */
 
 /**

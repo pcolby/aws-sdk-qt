@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "datapipelinerequest_p.h"
 
 namespace AWS {
 namespace DataPipeline {
@@ -28,14 +28,14 @@ namespace DataPipeline {
 /**
  * @class  DataPipelineClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing DataPipeline requests
  */
 
 
 /**
  * @brief  Constructs a new DataPipelineClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The DataPipeline action to request.
  */
 DataPipelineClientRequest::DataPipelineClientRequest(const Action action)
     : AwsAbstractRequest(new DataPipelineClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ DataPipelineClientRequest::DataPipelineClientRequest(DataPipelineClientRequestPr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the DataPipeline action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The DataPipeline action to be performed by this request.
  */
 DataPipelineClientRequest::Action DataPipelineClientRequest::action() const
 {
@@ -99,9 +99,9 @@ DataPipelineClientRequest::Action DataPipelineClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the DataPipeline action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the DataPipeline action to be performed by this request.
  */
 QString DataPipelineClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString DataPipelineClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the DataPipeline API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The DataPipeline API version implmented by this request.
  */
 QString DataPipelineClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString DataPipelineClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the DataPipeline action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void DataPipelineClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the DataPipeline API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The DataPipeline API version to include in this request.
  */
 void DataPipelineClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool DataPipelineClientRequest::operator==(const DataPipelineClientRequest &othe
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid DataPipeline queue name.
  *
- * @par From  FAQs:
+ * @par From DataPipeline FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid DataPipeline queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void DataPipelineClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this DataPipeline request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant DataPipelineClientRequest::parameter(const QString &name, const QVarian
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this DataPipeline request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &DataPipelineClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this DataPipeline request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void DataPipelineClientRequest::setParameter(const QString &name, const QVariant
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this DataPipeline request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void DataPipelineClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this DataPipeline request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This DataPipeline implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this DataPipeline request using the given \a endpoint.
  */
 QNetworkRequest DataPipelineClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest DataPipelineClientRequest::unsignedRequest(const QUrl &endpoint)
  *
  * @brief  Constructs a new DataPipelineClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  DataPipeline action being performed by the \a q request.
  * @param  q       Pointer to this object's public DataPipelineClientRequest instance.
  */
 DataPipelineClientRequestPrivate::DataPipelineClientRequestPrivate(const DataPipelineClientRequest::Action action, DataPipelineClientRequest * const q)
@@ -315,13 +315,13 @@ DataPipelineClientRequestPrivate::DataPipelineClientRequestPrivate(const DataPip
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and DataPipeline action to a string.
  *
  * This function converts DataPipelineClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the DataPipeline service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  DataPipeline action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

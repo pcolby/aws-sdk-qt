@@ -29,7 +29,7 @@ namespace Health {
 
 class HealthClientResponsePrivate;
 
-class QTAWS_EXPORT HealthClientResponse : public Response {
+class QTAWS_EXPORT HealthClientResponse : public HealthResponse {
     Q_OBJECT
 
 public:

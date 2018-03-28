@@ -29,9 +29,9 @@ namespace Translate {
 /**
  * @class  TranslateClientResponse
  *
- * @brief  Handles  TranslateClient responses.
+ * @brief  Handles Translate TranslateClient responses.
  *
- * @see    Client::translateClient
+ * @see    TranslateClient::translateClient
  */
 
 /**

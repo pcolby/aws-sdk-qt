@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class ElasticBeanstalkClientResponsePrivate;
 
-class QTAWS_EXPORT ElasticBeanstalkClientResponse : public Response {
+class QTAWS_EXPORT ElasticBeanstalkClientResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

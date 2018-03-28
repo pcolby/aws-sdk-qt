@@ -37,7 +37,7 @@ class HealthClientRequestPrivate;
 class QTAWS_EXPORT HealthClientRequest : public AwsAbstractRequest {
 
 public:
-    /// Actions supported by .
+    /// Actions supported by Health.
     enum Action {
         // todo
     };

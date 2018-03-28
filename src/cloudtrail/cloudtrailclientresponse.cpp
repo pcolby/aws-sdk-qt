@@ -29,9 +29,9 @@ namespace CloudTrail {
 /**
  * @class  CloudTrailClientResponse
  *
- * @brief  Handles  CloudTrailClient responses.
+ * @brief  Handles CloudTrail CloudTrailClient responses.
  *
- * @see    Client::cloudTrailClient
+ * @see    CloudTrailClient::cloudTrailClient
  */
 
 /**

@@ -20,7 +20,7 @@
 #include "request.h"
 #include "request_p.h"
 #include "response.h"
-#include "request_p.h"
+#include "migrationhubrequest_p.h"
 
 namespace AWS {
 namespace MigrationHub {
@@ -28,14 +28,14 @@ namespace MigrationHub {
 /**
  * @class  MigrationHubClientRequest
  *
- * @brief  Interface class for providing  requests
+ * @brief  Interface class for providing MigrationHub requests
  */
 
 
 /**
  * @brief  Constructs a new MigrationHubClientRequest object.
  *
- * @param  action  The  action to request.
+ * @param  action  The MigrationHub action to request.
  */
 MigrationHubClientRequest::MigrationHubClientRequest(const Action action)
     : AwsAbstractRequest(new MigrationHubClientRequestPrivate(action, this))
@@ -88,9 +88,9 @@ MigrationHubClientRequest::MigrationHubClientRequest(MigrationHubClientRequestPr
 }
 
 /**
- * @brief  Get the  action to be performed by this request.
+ * @brief  Get the MigrationHub action to be performed by this request.
  *
- * @return The  action to be performed by this request.
+ * @return The MigrationHub action to be performed by this request.
  */
 MigrationHubClientRequest::Action MigrationHubClientRequest::action() const
 {
@@ -99,9 +99,9 @@ MigrationHubClientRequest::Action MigrationHubClientRequest::action() const
 }
 
 /**
- * @brief Get the name of the  action to be performed by this request.
+ * @brief Get the name of the MigrationHub action to be performed by this request.
  *
- * @return The name of the  action to be performed by this request.
+ * @return The name of the MigrationHub action to be performed by this request.
  */
 QString MigrationHubClientRequest::actionString() const
 {
@@ -109,9 +109,9 @@ QString MigrationHubClientRequest::actionString() const
 }
 
 /**
- * @brief  Get the  API version implemented by this request.
+ * @brief  Get the MigrationHub API version implemented by this request.
  *
- * @return The  API version implmented by this request.
+ * @return The MigrationHub API version implmented by this request.
  */
 QString MigrationHubClientRequest::apiVersion() const
 {
@@ -120,7 +120,7 @@ QString MigrationHubClientRequest::apiVersion() const
 }
 
 /**
- * @brief  Set the  action to be performed by this request.
+ * @brief  Set the MigrationHub action to be performed by this request.
  *
  * @param  action  The action to be performed by this request.
  */
@@ -131,9 +131,9 @@ void MigrationHubClientRequest::setAction(const Action action)
 }
 
 /**
- * @brief  Set the  API version to include in this request.
+ * @brief  Set the MigrationHub API version to include in this request.
  *
- * @param  version  The  API version to include in this request.
+ * @param  version  The MigrationHub API version to include in this request.
  */
 void MigrationHubClientRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool MigrationHubClientRequest::operator==(const MigrationHubClientRequest &othe
 }
 
 /**
- * @brief  Check if \a queueName is a valid  queue name.
+ * @brief  Check if \a queueName is a valid MigrationHub queue name.
  *
- * @par From  FAQs:
+ * @par From MigrationHub FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid  queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid MigrationHub queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -203,7 +203,7 @@ void MigrationHubClientRequest::clearParameters()
 }
 
 /**
- * @brief  Get the value of a parameter included with this  request.
+ * @brief  Get the value of a parameter included with this MigrationHub request.
  *
  * @param name          Name of the parameter to get the value of.
  * @param defaultValue  Default value to return if no such parameter has been set.
@@ -217,7 +217,7 @@ QVariant MigrationHubClientRequest::parameter(const QString &name, const QVarian
 }
 
 /**
- * @brief  Get all parameters included with this  request.
+ * @brief  Get all parameters included with this MigrationHub request.
  *
  * @return A map of parameters included with this request.
  */
@@ -228,7 +228,7 @@ const QVariantMap &MigrationHubClientRequest::parameters() const
 }
 
 /**
- * @brief  Set a parameter to include with this  request.
+ * @brief  Set a parameter to include with this MigrationHub request.
  *
  * @param  name   Name of the parameter to include.
  * @param  value  Value of the parameter to include.
@@ -240,7 +240,7 @@ void MigrationHubClientRequest::setParameter(const QString &name, const QVariant
 }
 
 /**
- * @brief  Set all parameters to include with this  request.
+ * @brief  Set all parameters to include with this MigrationHub request.
  *
  * Any request parameters set previously will be discarded.
  *
@@ -253,15 +253,15 @@ void MigrationHubClientRequest::setParameters(const QVariantMap &parameters)
 }
 
 /**
- * @brief  Build a network request object for this  request.
+ * @brief  Build a network request object for this MigrationHub request.
  *
- * This  implementation builds request URLs by combining the common query
+ * This MigrationHub implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
  *
  * @param  endpoint  AWS endpoint to build this request for.
  *
- * @return A network request for this  request using the given \a endpoint.
+ * @return A network request for this MigrationHub request using the given \a endpoint.
  */
 QNetworkRequest MigrationHubClientRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -284,7 +284,7 @@ QNetworkRequest MigrationHubClientRequest::unsignedRequest(const QUrl &endpoint)
  *
  * @brief  Constructs a new MigrationHubClientRequestPrivate object.
  *
- * @param  action   action being performed by the \a q request.
+ * @param  action  MigrationHub action being performed by the \a q request.
  * @param  q       Pointer to this object's public MigrationHubClientRequest instance.
  */
 MigrationHubClientRequestPrivate::MigrationHubClientRequestPrivate(const MigrationHubClientRequest::Action action, MigrationHubClientRequest * const q)
@@ -315,13 +315,13 @@ MigrationHubClientRequestPrivate::MigrationHubClientRequestPrivate(const Migrati
 }
 
 /**
- * @brief  Convert and  action to a string.
+ * @brief  Convert and MigrationHub action to a string.
  *
  * This function converts MigrationHubClientRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the  service's Action
+ * string representations, appropriate for use with the MigrationHub service's Action
  * query parameters.
  *
- * @param  action   action to convert.
+ * @param  action  MigrationHub action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

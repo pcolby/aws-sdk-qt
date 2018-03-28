@@ -29,9 +29,9 @@ namespace IoTDataPlane {
 /**
  * @class  IoTDataPlaneClientResponse
  *
- * @brief  Handles  IoTDataPlaneClient responses.
+ * @brief  Handles IoTDataPlane IoTDataPlaneClient responses.
  *
- * @see    Client::ioTDataPlaneClient
+ * @see    IoTDataPlaneClient::ioTDataPlaneClient
  */
 
 /**
