@@ -66,10 +66,10 @@ bool ResetPasswordRequest::isValid() const
  *
  * @return An ResetPasswordResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply * const reply) const
 {
     return new ResetPasswordResponse(*this, reply);
 }

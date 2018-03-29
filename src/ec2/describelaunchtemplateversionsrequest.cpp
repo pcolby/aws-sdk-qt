@@ -66,10 +66,10 @@ bool DescribeLaunchTemplateVersionsRequest::isValid() const
  *
  * @return An DescribeLaunchTemplateVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLaunchTemplateVersionsResponse(*this, reply);
 }

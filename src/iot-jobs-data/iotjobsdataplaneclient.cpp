@@ -59,10 +59,10 @@ namespace IoTJobsDataPlane {
  */
 IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTJobsDataPlaneClient);
     d->apiVersion = QStringLiteral("2017-09-29");
@@ -92,10 +92,10 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
  */
 IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTJobsDataPlaneClient);
     d->apiVersion = QStringLiteral("2017-09-29");
@@ -179,9 +179,9 @@ UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const Up
  * @param  q  Pointer to this object's public IoTJobsDataPlaneClient instance.
  */
 IoTJobsDataPlaneClientPrivate::IoTJobsDataPlaneClientPrivate(IoTJobsDataPlaneClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoTJobsDataPlane

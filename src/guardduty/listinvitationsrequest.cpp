@@ -66,10 +66,10 @@ bool ListInvitationsRequest::isValid() const
  *
  * @return An ListInvitationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * ListInvitationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListInvitationsResponse(*this, reply);
 }

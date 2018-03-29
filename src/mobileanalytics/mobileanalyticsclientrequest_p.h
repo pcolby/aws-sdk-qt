@@ -28,7 +28,7 @@ namespace MobileAnalytics {
 
 class MobileAnalyticsClientRequest;
 
-class QTAWS_EXPORT MobileAnalyticsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MobileAnalyticsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MobileAnalyticsClientRequest::Action action; ///< MobileAnalytics action to be performed.

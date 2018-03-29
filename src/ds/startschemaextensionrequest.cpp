@@ -66,10 +66,10 @@ bool StartSchemaExtensionRequest::isValid() const
  *
  * @return An StartSchemaExtensionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * StartSchemaExtensionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartSchemaExtensionRequest::response(QNetworkReply * const reply) const
 {
     return new StartSchemaExtensionResponse(*this, reply);
 }

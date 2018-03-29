@@ -66,10 +66,10 @@ bool ListAssociationVersionsRequest::isValid() const
  *
  * @return An ListAssociationVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListAssociationVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAssociationVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListAssociationVersionsResponse(*this, reply);
 }

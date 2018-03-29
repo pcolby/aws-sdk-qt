@@ -48,10 +48,10 @@ namespace ImportExport {
  */
 ImportExportClient::ImportExportClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ImportExportClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ImportExportClientPrivate(this), parent)
 {
     Q_D(ImportExportClient);
     d->apiVersion = QStringLiteral("2010-06-01");
@@ -81,10 +81,10 @@ ImportExportClient::ImportExportClient(
  */
 ImportExportClient::ImportExportClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ImportExportClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ImportExportClientPrivate(this), parent)
 {
     Q_D(ImportExportClient);
     d->apiVersion = QStringLiteral("2010-06-01");
@@ -199,9 +199,9 @@ UpdateJobResponse * ImportExportClient::updateJob(const UpdateJobRequest &reques
  * @param  q  Pointer to this object's public ImportExportClient instance.
  */
 ImportExportClientPrivate::ImportExportClientPrivate(ImportExportClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV2();
+    signature = new QtAws::Core::AwsSignatureV2();
 }
 
 } // namespace ImportExport

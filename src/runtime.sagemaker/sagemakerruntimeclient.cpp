@@ -46,10 +46,10 @@ namespace SageMakerRuntime {
  */
 SageMakerRuntimeClient::SageMakerRuntimeClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
 {
     Q_D(SageMakerRuntimeClient);
     d->apiVersion = QStringLiteral("2017-05-13");
@@ -79,10 +79,10 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  */
 SageMakerRuntimeClient::SageMakerRuntimeClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
 {
     Q_D(SageMakerRuntimeClient);
     d->apiVersion = QStringLiteral("2017-05-13");
@@ -135,9 +135,9 @@ InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndp
  * @param  q  Pointer to this object's public SageMakerRuntimeClient instance.
  */
 SageMakerRuntimeClientPrivate::SageMakerRuntimeClientPrivate(SageMakerRuntimeClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SageMakerRuntime

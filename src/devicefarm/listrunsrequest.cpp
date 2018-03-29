@@ -66,10 +66,10 @@ bool ListRunsRequest::isValid() const
  *
  * @return An ListRunsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * const reply) const
 {
     return new ListRunsResponse(*this, reply);
 }

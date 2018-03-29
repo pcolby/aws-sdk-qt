@@ -66,10 +66,10 @@ bool DescribeEnvironmentStatusRequest::isValid() const
  *
  * @return An DescribeEnvironmentStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Cloud9Client::send
  */
-AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEnvironmentStatusResponse(*this, reply);
 }

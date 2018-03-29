@@ -61,10 +61,10 @@ namespace SWF {
  */
 SwfClient::SwfClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SwfClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SwfClientPrivate(this), parent)
 {
     Q_D(SwfClient);
     d->apiVersion = QStringLiteral("2012-01-25");
@@ -94,10 +94,10 @@ SwfClient::SwfClient(
  */
 SwfClient::SwfClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SwfClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SwfClientPrivate(this), parent)
 {
     Q_D(SwfClient);
     d->apiVersion = QStringLiteral("2012-01-25");
@@ -1782,9 +1782,9 @@ TerminateWorkflowExecutionResponse * SwfClient::terminateWorkflowExecution(const
  * @param  q  Pointer to this object's public SwfClient instance.
  */
 SwfClientPrivate::SwfClientPrivate(SwfClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SWF

@@ -66,10 +66,10 @@ bool GetTemplateRequest::isValid() const
  *
  * @return An GetTemplateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * const reply) const
 {
     return new GetTemplateResponse(*this, reply);
 }

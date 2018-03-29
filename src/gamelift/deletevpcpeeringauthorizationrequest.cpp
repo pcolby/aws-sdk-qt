@@ -66,10 +66,10 @@ bool DeleteVpcPeeringAuthorizationRequest::isValid() const
  *
  * @return An DeleteVpcPeeringAuthorizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DeleteVpcPeeringAuthorizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringAuthorizationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVpcPeeringAuthorizationResponse(*this, reply);
 }

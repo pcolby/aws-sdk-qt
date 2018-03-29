@@ -66,10 +66,10 @@ bool DeleteAlarmsRequest::isValid() const
  *
  * @return An DeleteAlarmsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * DeleteAlarmsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAlarmsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAlarmsResponse(*this, reply);
 }

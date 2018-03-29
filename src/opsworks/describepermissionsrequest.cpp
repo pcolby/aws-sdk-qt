@@ -66,10 +66,10 @@ bool DescribePermissionsRequest::isValid() const
  *
  * @return An DescribePermissionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DescribePermissionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePermissionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePermissionsResponse(*this, reply);
 }

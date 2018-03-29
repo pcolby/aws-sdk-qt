@@ -36,7 +36,7 @@ namespace SSM {
  * @param  action  The SSM action to request.
  */
 SsmClientRequest::SsmClientRequest(const Action action)
-    : AwsAbstractRequest(new SsmClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SsmClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SsmClientRequest::SsmClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SsmClientRequest::SsmClientRequest(const SsmClientRequest &other)
-    : AwsAbstractRequest(new SsmClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SsmClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SsmClientRequest& SsmClientRequest::operator=(const SsmClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SsmClientRequest::SsmClientRequest(SsmClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SsmClientRequest::SsmClientRequest(SsmClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SsmClientRequest::operator==(const SsmClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SsmClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SsmClientRequest instance.
  */
 SsmClientRequestPrivate::SsmClientRequestPrivate(const SsmClientRequest::Action action, SsmClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SsmClientRequestPrivate::SsmClientRequestPrivate(const SsmClientRequest::Action 
  */
 SsmClientRequestPrivate::SsmClientRequestPrivate(const SsmClientRequestPrivate &other,
                                      SsmClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

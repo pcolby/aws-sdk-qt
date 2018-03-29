@@ -66,10 +66,10 @@ bool ListKeyPoliciesRequest::isValid() const
  *
  * @return An ListKeyPoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * ListKeyPoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListKeyPoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new ListKeyPoliciesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateEnvironmentMembershipRequest::isValid() const
  *
  * @return An UpdateEnvironmentMembershipResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Cloud9Client::send
  */
-AwsAbstractResponse * UpdateEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateEnvironmentMembershipResponse(*this, reply);
 }

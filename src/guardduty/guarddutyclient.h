@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace GuardDuty {
@@ -106,18 +106,18 @@ class UpdateIPSetResponse;
 class UpdateThreatIntelSetRequest;
 class UpdateThreatIntelSetResponse;
 
-class QTAWS_EXPORT GuardDutyClient : public AwsAbstractClient {
+class QTAWS_EXPORT GuardDutyClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     GuardDutyClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     GuardDutyClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

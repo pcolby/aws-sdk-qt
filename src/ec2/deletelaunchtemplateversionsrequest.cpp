@@ -66,10 +66,10 @@ bool DeleteLaunchTemplateVersionsRequest::isValid() const
  *
  * @return An DeleteLaunchTemplateVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteLaunchTemplateVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLaunchTemplateVersionsResponse(*this, reply);
 }

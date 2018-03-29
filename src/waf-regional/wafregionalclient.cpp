@@ -52,10 +52,10 @@ namespace WAFRegional {
  */
 WAFRegionalClient::WAFRegionalClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
 {
     Q_D(WAFRegionalClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -85,10 +85,10 @@ WAFRegionalClient::WAFRegionalClient(
  */
 WAFRegionalClient::WAFRegionalClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
 {
     Q_D(WAFRegionalClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -2543,9 +2543,9 @@ UpdateXssMatchSetResponse * WAFRegionalClient::updateXssMatchSet(const UpdateXss
  * @param  q  Pointer to this object's public WAFRegionalClient instance.
  */
 WAFRegionalClientPrivate::WAFRegionalClientPrivate(WAFRegionalClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WAFRegional

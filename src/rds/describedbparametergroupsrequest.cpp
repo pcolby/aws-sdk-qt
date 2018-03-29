@@ -66,10 +66,10 @@ bool DescribeDBParameterGroupsRequest::isValid() const
  *
  * @return An DescribeDBParameterGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBParameterGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBParameterGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBParameterGroupsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool AssociateSubnetCidrBlockRequest::isValid() const
  *
  * @return An AssociateSubnetCidrBlockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateSubnetCidrBlockResponse(*this, reply);
 }

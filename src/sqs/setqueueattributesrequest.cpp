@@ -66,10 +66,10 @@ bool SetQueueAttributesRequest::isValid() const
  *
  * @return An SetQueueAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * SetQueueAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetQueueAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new SetQueueAttributesResponse(*this, reply);
 }

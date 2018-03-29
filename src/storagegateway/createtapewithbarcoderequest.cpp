@@ -66,10 +66,10 @@ bool CreateTapeWithBarcodeRequest::isValid() const
  *
  * @return An CreateTapeWithBarcodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTapeWithBarcodeResponse(*this, reply);
 }

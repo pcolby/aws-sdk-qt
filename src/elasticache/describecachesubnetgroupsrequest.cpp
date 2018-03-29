@@ -66,10 +66,10 @@ bool DescribeCacheSubnetGroupsRequest::isValid() const
  *
  * @return An DescribeCacheSubnetGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeCacheSubnetGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCacheSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCacheSubnetGroupsResponse(*this, reply);
 }

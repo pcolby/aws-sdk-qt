@@ -66,10 +66,10 @@ bool ListFunctionDefinitionVersionsRequest::isValid() const
  *
  * @return An ListFunctionDefinitionVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ListFunctionDefinitionVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListFunctionDefinitionVersionsResponse(*this, reply);
 }

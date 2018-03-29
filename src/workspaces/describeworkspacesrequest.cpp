@@ -66,10 +66,10 @@ bool DescribeWorkspacesRequest::isValid() const
  *
  * @return An DescribeWorkspacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkSpacesClient::send
  */
-AwsAbstractResponse * DescribeWorkspacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeWorkspacesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeWorkspacesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteGameSessionQueueRequest::isValid() const
  *
  * @return An DeleteGameSessionQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DeleteGameSessionQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteGameSessionQueueRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteGameSessionQueueResponse(*this, reply);
 }

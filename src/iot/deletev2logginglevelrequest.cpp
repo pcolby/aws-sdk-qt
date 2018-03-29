@@ -66,10 +66,10 @@ bool DeleteV2LoggingLevelRequest::isValid() const
  *
  * @return An DeleteV2LoggingLevelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DeleteV2LoggingLevelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteV2LoggingLevelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteV2LoggingLevelResponse(*this, reply);
 }

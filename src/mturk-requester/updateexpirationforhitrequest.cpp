@@ -66,10 +66,10 @@ bool UpdateExpirationForHITRequest::isValid() const
  *
  * @return An UpdateExpirationForHITResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateExpirationForHITResponse(*this, reply);
 }

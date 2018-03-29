@@ -40,7 +40,7 @@ namespace ACM {
  * @param  parent   This object's parent.
  */
 AcmClientResponse::AcmClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new AcmClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new AcmClientResponsePrivate(this), parent)
 {
 
 }

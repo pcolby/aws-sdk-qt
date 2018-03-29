@@ -66,10 +66,10 @@ bool DeleteWebACLRequest::isValid() const
  *
  * @return An DeleteWebACLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteWebACLResponse(*this, reply);
 }

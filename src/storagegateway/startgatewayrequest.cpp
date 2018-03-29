@@ -66,10 +66,10 @@ bool StartGatewayRequest::isValid() const
  *
  * @return An StartGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * StartGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new StartGatewayResponse(*this, reply);
 }

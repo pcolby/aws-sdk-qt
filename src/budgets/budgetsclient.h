@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Budgets {
@@ -58,18 +58,18 @@ class UpdateNotificationResponse;
 class UpdateSubscriberRequest;
 class UpdateSubscriberResponse;
 
-class QTAWS_EXPORT BudgetsClient : public AwsAbstractClient {
+class QTAWS_EXPORT BudgetsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     BudgetsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     BudgetsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

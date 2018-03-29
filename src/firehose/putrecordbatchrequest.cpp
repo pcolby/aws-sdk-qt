@@ -66,10 +66,10 @@ bool PutRecordBatchRequest::isValid() const
  *
  * @return An PutRecordBatchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  FirehoseClient::send
  */
-AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply * const reply) const
 {
     return new PutRecordBatchResponse(*this, reply);
 }

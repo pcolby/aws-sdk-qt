@@ -66,10 +66,10 @@ bool ListVolumeInitiatorsRequest::isValid() const
  *
  * @return An ListVolumeInitiatorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * ListVolumeInitiatorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListVolumeInitiatorsRequest::response(QNetworkReply * const reply) const
 {
     return new ListVolumeInitiatorsResponse(*this, reply);
 }

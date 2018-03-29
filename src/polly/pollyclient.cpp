@@ -52,10 +52,10 @@ namespace Polly {
  */
 PollyClient::PollyClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new PollyClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new PollyClientPrivate(this), parent)
 {
     Q_D(PollyClient);
     d->apiVersion = QStringLiteral("2016-06-10");
@@ -85,10 +85,10 @@ PollyClient::PollyClient(
  */
 PollyClient::PollyClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new PollyClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new PollyClientPrivate(this), parent)
 {
     Q_D(PollyClient);
     d->apiVersion = QStringLiteral("2016-06-10");
@@ -238,9 +238,9 @@ SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechR
  * @param  q  Pointer to this object's public PollyClient instance.
  */
 PollyClientPrivate::PollyClientPrivate(PollyClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Polly

@@ -66,10 +66,10 @@ bool StartSupportDataExportRequest::isValid() const
  *
  * @return An StartSupportDataExportResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MarketplaceCommerceAnalyticsClient::send
  */
-AwsAbstractResponse * StartSupportDataExportRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetworkReply * const reply) const
 {
     return new StartSupportDataExportResponse(*this, reply);
 }

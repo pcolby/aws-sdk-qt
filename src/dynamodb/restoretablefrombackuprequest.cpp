@@ -66,10 +66,10 @@ bool RestoreTableFromBackupRequest::isValid() const
  *
  * @return An RestoreTableFromBackupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreTableFromBackupResponse(*this, reply);
 }

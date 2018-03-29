@@ -66,10 +66,10 @@ bool UpdateCACertificateRequest::isValid() const
  *
  * @return An UpdateCACertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * UpdateCACertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateCACertificateRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateCACertificateResponse(*this, reply);
 }

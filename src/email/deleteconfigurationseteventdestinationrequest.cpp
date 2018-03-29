@@ -66,10 +66,10 @@ bool DeleteConfigurationSetEventDestinationRequest::isValid() const
  *
  * @return An DeleteConfigurationSetEventDestinationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConfigurationSetEventDestinationResponse(*this, reply);
 }

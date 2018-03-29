@@ -66,10 +66,10 @@ bool DeleteCustomActionTypeRequest::isValid() const
  *
  * @return An DeleteCustomActionTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * DeleteCustomActionTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCustomActionTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCustomActionTypeResponse(*this, reply);
 }

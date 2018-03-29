@@ -66,10 +66,10 @@ bool RequestSpotInstancesRequest::isValid() const
  *
  * @return An RequestSpotInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new RequestSpotInstancesResponse(*this, reply);
 }

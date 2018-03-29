@@ -66,10 +66,10 @@ bool ListSSHPublicKeysRequest::isValid() const
  *
  * @return An ListSSHPublicKeysResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListSSHPublicKeysRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSSHPublicKeysRequest::response(QNetworkReply * const reply) const
 {
     return new ListSSHPublicKeysResponse(*this, reply);
 }

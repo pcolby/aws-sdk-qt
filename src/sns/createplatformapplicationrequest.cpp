@@ -66,10 +66,10 @@ bool CreatePlatformApplicationRequest::isValid() const
  *
  * @return An CreatePlatformApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * CreatePlatformApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePlatformApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePlatformApplicationResponse(*this, reply);
 }

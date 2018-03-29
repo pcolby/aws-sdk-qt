@@ -66,10 +66,10 @@ bool SetLoggingOptionsRequest::isValid() const
  *
  * @return An SetLoggingOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new SetLoggingOptionsResponse(*this, reply);
 }

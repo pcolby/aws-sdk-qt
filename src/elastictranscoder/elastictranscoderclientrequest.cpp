@@ -36,7 +36,7 @@ namespace ElasticTranscoder {
  * @param  action  The ElasticTranscoder action to request.
  */
 ElasticTranscoderClientRequest::ElasticTranscoderClientRequest(const Action action)
-    : AwsAbstractRequest(new ElasticTranscoderClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticTranscoderClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ElasticTranscoderClientRequest::ElasticTranscoderClientRequest(const Action acti
  * @param  other  Instance to copy.
  */
 ElasticTranscoderClientRequest::ElasticTranscoderClientRequest(const ElasticTranscoderClientRequest &other)
-    : AwsAbstractRequest(new ElasticTranscoderClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticTranscoderClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ElasticTranscoderClientRequest& ElasticTranscoderClientRequest::operator=(const 
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ElasticTranscoderClientRequest::ElasticTranscoderClientRequest(ElasticTranscoderClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ElasticTranscoderClientRequest::ElasticTranscoderClientRequest(ElasticTranscoderClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ElasticTranscoderClientRequest::operator==(const ElasticTranscoderClientReq
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ElasticTranscoderClientRequest::unsignedRequest(const QUrl &endp
  * @param  q       Pointer to this object's public ElasticTranscoderClientRequest instance.
  */
 ElasticTranscoderClientRequestPrivate::ElasticTranscoderClientRequestPrivate(const ElasticTranscoderClientRequest::Action action, ElasticTranscoderClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ElasticTranscoderClientRequestPrivate::ElasticTranscoderClientRequestPrivate(con
  */
 ElasticTranscoderClientRequestPrivate::ElasticTranscoderClientRequestPrivate(const ElasticTranscoderClientRequestPrivate &other,
                                      ElasticTranscoderClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

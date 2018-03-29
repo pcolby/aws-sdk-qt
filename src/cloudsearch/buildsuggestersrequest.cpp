@@ -66,10 +66,10 @@ bool BuildSuggestersRequest::isValid() const
  *
  * @return An BuildSuggestersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkReply * const reply) const
 {
     return new BuildSuggestersResponse(*this, reply);
 }

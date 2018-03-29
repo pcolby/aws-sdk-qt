@@ -66,10 +66,10 @@ bool DescribeMetricFiltersRequest::isValid() const
  *
  * @return An DescribeMetricFiltersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DescribeMetricFiltersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMetricFiltersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMetricFiltersResponse(*this, reply);
 }

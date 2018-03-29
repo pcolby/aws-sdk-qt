@@ -40,7 +40,7 @@ namespace OpsWorks {
  * @param  parent   This object's parent.
  */
 OpsWorksClientResponse::OpsWorksClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new OpsWorksClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new OpsWorksClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool DeleteTrafficPolicyInstanceRequest::isValid() const
  *
  * @return An DeleteTrafficPolicyInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DeleteTrafficPolicyInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTrafficPolicyInstanceResponse(*this, reply);
 }

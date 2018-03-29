@@ -66,10 +66,10 @@ bool DeleteServerRequest::isValid() const
  *
  * @return An DeleteServerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteServerResponse(*this, reply);
 }

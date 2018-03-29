@@ -66,10 +66,10 @@ bool DescribeElasticsearchDomainsRequest::isValid() const
  *
  * @return An DescribeElasticsearchDomainsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticsearchServiceClient::send
  */
-AwsAbstractResponse * DescribeElasticsearchDomainsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeElasticsearchDomainsResponse(*this, reply);
 }

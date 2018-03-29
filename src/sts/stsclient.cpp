@@ -103,10 +103,10 @@ namespace STS {
  */
 StsClient::StsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new StsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new StsClientPrivate(this), parent)
 {
     Q_D(StsClient);
     d->apiVersion = QStringLiteral("2011-06-15");
@@ -136,10 +136,10 @@ StsClient::StsClient(
  */
 StsClient::StsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new StsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new StsClientPrivate(this), parent)
 {
     Q_D(StsClient);
     d->apiVersion = QStringLiteral("2011-06-15");
@@ -764,9 +764,9 @@ GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenReques
  * @param  q  Pointer to this object's public StsClient instance.
  */
 StsClientPrivate::StsClientPrivate(StsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace STS

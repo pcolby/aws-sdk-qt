@@ -66,10 +66,10 @@ bool SendMessageBatchRequest::isValid() const
  *
  * @return An SendMessageBatchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkReply * const reply) const
 {
     return new SendMessageBatchResponse(*this, reply);
 }

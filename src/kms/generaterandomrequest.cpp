@@ -66,10 +66,10 @@ bool GenerateRandomRequest::isValid() const
  *
  * @return An GenerateRandomResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply * const reply) const
 {
     return new GenerateRandomResponse(*this, reply);
 }

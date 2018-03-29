@@ -66,10 +66,10 @@ bool GetChangeTokenStatusRequest::isValid() const
  *
  * @return An GetChangeTokenStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetChangeTokenStatusResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PutIdentityPolicyRequest::isValid() const
  *
  * @return An PutIdentityPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutIdentityPolicyResponse(*this, reply);
 }

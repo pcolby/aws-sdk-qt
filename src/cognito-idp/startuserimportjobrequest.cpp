@@ -66,10 +66,10 @@ bool StartUserImportJobRequest::isValid() const
  *
  * @return An StartUserImportJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkReply * const reply) const
 {
     return new StartUserImportJobResponse(*this, reply);
 }

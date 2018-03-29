@@ -66,10 +66,10 @@ bool CreateFlowLogsRequest::isValid() const
  *
  * @return An CreateFlowLogsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateFlowLogsResponse(*this, reply);
 }

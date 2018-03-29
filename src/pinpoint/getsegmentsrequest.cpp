@@ -66,10 +66,10 @@ bool GetSegmentsRequest::isValid() const
  *
  * @return An GetSegmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetSegmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSegmentsRequest::response(QNetworkReply * const reply) const
 {
     return new GetSegmentsResponse(*this, reply);
 }

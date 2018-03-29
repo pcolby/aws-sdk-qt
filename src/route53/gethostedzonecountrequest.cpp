@@ -66,10 +66,10 @@ bool GetHostedZoneCountRequest::isValid() const
  *
  * @return An GetHostedZoneCountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkReply * const reply) const
 {
     return new GetHostedZoneCountResponse(*this, reply);
 }

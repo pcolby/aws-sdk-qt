@@ -66,10 +66,10 @@ bool DeleteChannelRequest::isValid() const
  *
  * @return An DeleteChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaPackageClient::send
  */
-AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteChannelResponse(*this, reply);
 }

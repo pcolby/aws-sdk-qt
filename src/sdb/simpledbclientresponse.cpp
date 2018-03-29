@@ -40,7 +40,7 @@ namespace SimpleDB {
  * @param  parent   This object's parent.
  */
 SimpleDBClientResponse::SimpleDBClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SimpleDBClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SimpleDBClientResponsePrivate(this), parent)
 {
 
 }

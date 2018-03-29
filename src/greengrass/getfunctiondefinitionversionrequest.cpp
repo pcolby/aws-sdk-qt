@@ -66,10 +66,10 @@ bool GetFunctionDefinitionVersionRequest::isValid() const
  *
  * @return An GetFunctionDefinitionVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
     return new GetFunctionDefinitionVersionResponse(*this, reply);
 }

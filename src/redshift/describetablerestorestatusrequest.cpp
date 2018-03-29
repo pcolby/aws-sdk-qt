@@ -66,10 +66,10 @@ bool DescribeTableRestoreStatusRequest::isValid() const
  *
  * @return An DescribeTableRestoreStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTableRestoreStatusResponse(*this, reply);
 }

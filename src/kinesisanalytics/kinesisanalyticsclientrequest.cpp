@@ -36,7 +36,7 @@ namespace KinesisAnalytics {
  * @param  action  The KinesisAnalytics action to request.
  */
 KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(const Action action)
-    : AwsAbstractRequest(new KinesisAnalyticsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisAnalyticsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(const KinesisAnalyticsClientRequest &other)
-    : AwsAbstractRequest(new KinesisAnalyticsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisAnalyticsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ KinesisAnalyticsClientRequest& KinesisAnalyticsClientRequest::operator=(const Ki
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(KinesisAnalyticsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+KinesisAnalyticsClientRequest::KinesisAnalyticsClientRequest(KinesisAnalyticsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool KinesisAnalyticsClientRequest::operator==(const KinesisAnalyticsClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest KinesisAnalyticsClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public KinesisAnalyticsClientRequest instance.
  */
 KinesisAnalyticsClientRequestPrivate::KinesisAnalyticsClientRequestPrivate(const KinesisAnalyticsClientRequest::Action action, KinesisAnalyticsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ KinesisAnalyticsClientRequestPrivate::KinesisAnalyticsClientRequestPrivate(const
  */
 KinesisAnalyticsClientRequestPrivate::KinesisAnalyticsClientRequestPrivate(const KinesisAnalyticsClientRequestPrivate &other,
                                      KinesisAnalyticsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace ResourceGroups {
@@ -56,18 +56,18 @@ class UpdateGroupResponse;
 class UpdateGroupQueryRequest;
 class UpdateGroupQueryResponse;
 
-class QTAWS_EXPORT ResourceGroupsClient : public AwsAbstractClient {
+class QTAWS_EXPORT ResourceGroupsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     ResourceGroupsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     ResourceGroupsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

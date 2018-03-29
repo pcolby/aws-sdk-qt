@@ -66,10 +66,10 @@ bool GetHealthCheckStatusRequest::isValid() const
  *
  * @return An GetHealthCheckStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetHealthCheckStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetHealthCheckStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetHealthCheckStatusResponse(*this, reply);
 }

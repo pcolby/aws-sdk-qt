@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class Route53DomainsClient;
 
-class QTAWS_EXPORT Route53DomainsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT Route53DomainsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     Route53DomainsClientPrivate(Route53DomainsClient * const q);

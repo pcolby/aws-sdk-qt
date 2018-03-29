@@ -66,10 +66,10 @@ bool DecodeAuthorizationMessageRequest::isValid() const
  *
  * @return An DecodeAuthorizationMessageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(QNetworkReply * const reply) const
 {
     return new DecodeAuthorizationMessageResponse(*this, reply);
 }

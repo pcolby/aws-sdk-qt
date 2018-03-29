@@ -36,7 +36,7 @@ namespace Pricing {
  * @param  action  The Pricing action to request.
  */
 PricingClientRequest::PricingClientRequest(const Action action)
-    : AwsAbstractRequest(new PricingClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new PricingClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ PricingClientRequest::PricingClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 PricingClientRequest::PricingClientRequest(const PricingClientRequest &other)
-    : AwsAbstractRequest(new PricingClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new PricingClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ PricingClientRequest& PricingClientRequest::operator=(const PricingClientRequest
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-PricingClientRequest::PricingClientRequest(PricingClientRequestPrivate * const d) : AwsAbstractRequest(d)
+PricingClientRequest::PricingClientRequest(PricingClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool PricingClientRequest::operator==(const PricingClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest PricingClientRequest::unsignedRequest(const QUrl &endpoint) cons
  * @param  q       Pointer to this object's public PricingClientRequest instance.
  */
 PricingClientRequestPrivate::PricingClientRequestPrivate(const PricingClientRequest::Action action, PricingClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ PricingClientRequestPrivate::PricingClientRequestPrivate(const PricingClientRequ
  */
 PricingClientRequestPrivate::PricingClientRequestPrivate(const PricingClientRequestPrivate &other,
                                      PricingClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

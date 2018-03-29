@@ -66,10 +66,10 @@ bool PutEvaluationsRequest::isValid() const
  *
  * @return An PutEvaluationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply * const reply) const
 {
     return new PutEvaluationsResponse(*this, reply);
 }

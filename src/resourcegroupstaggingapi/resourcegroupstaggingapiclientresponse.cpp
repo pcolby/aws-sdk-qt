@@ -40,7 +40,7 @@ namespace ResourceGroupsTaggingAPI {
  * @param  parent   This object's parent.
  */
 ResourceGroupsTaggingAPIClientResponse::ResourceGroupsTaggingAPIClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ResourceGroupsTaggingAPIClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ResourceGroupsTaggingAPIClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool ModifyFpgaImageAttributeRequest::isValid() const
  *
  * @return An ModifyFpgaImageAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyFpgaImageAttributeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool IsVpcPeeredRequest::isValid() const
  *
  * @return An IsVpcPeeredResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * const reply) const
 {
     return new IsVpcPeeredResponse(*this, reply);
 }

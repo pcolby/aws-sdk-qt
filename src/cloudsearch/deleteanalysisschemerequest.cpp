@@ -66,10 +66,10 @@ bool DeleteAnalysisSchemeRequest::isValid() const
  *
  * @return An DeleteAnalysisSchemeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DeleteAnalysisSchemeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAnalysisSchemeRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAnalysisSchemeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ArchiveFindingsRequest::isValid() const
  *
  * @return An ArchiveFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new ArchiveFindingsResponse(*this, reply);
 }

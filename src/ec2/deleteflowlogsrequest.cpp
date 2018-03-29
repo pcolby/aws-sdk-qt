@@ -66,10 +66,10 @@ bool DeleteFlowLogsRequest::isValid() const
  *
  * @return An DeleteFlowLogsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFlowLogsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ChangeTagsForResourceRequest::isValid() const
  *
  * @return An ChangeTagsForResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
     return new ChangeTagsForResourceResponse(*this, reply);
 }

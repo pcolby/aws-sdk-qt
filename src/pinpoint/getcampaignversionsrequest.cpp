@@ -66,10 +66,10 @@ bool GetCampaignVersionsRequest::isValid() const
  *
  * @return An GetCampaignVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetCampaignVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCampaignVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetCampaignVersionsResponse(*this, reply);
 }

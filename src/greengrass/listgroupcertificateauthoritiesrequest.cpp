@@ -66,10 +66,10 @@ bool ListGroupCertificateAuthoritiesRequest::isValid() const
  *
  * @return An ListGroupCertificateAuthoritiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::response(QNetworkReply * const reply) const
 {
     return new ListGroupCertificateAuthoritiesResponse(*this, reply);
 }

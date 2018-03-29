@@ -40,7 +40,7 @@ namespace StorageGateway {
  * @param  parent   This object's parent.
  */
 StorageGatewayClientResponse::StorageGatewayClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new StorageGatewayClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new StorageGatewayClientResponsePrivate(this), parent)
 {
 
 }

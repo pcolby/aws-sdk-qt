@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class KinesisClientRequest;
 
-class QTAWS_EXPORT KinesisClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT KinesisClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     KinesisClientRequest::Action action; ///< Kinesis action to be performed.

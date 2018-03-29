@@ -28,7 +28,7 @@ namespace Translate {
 
 class TranslateClientRequest;
 
-class QTAWS_EXPORT TranslateClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT TranslateClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TranslateClientRequest::Action action; ///< Translate action to be performed.

@@ -66,10 +66,10 @@ bool DisableRuleRequest::isValid() const
  *
  * @return An DisableRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * DisableRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableRuleRequest::response(QNetworkReply * const reply) const
 {
     return new DisableRuleResponse(*this, reply);
 }

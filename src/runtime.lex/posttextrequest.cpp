@@ -66,10 +66,10 @@ bool PostTextRequest::isValid() const
  *
  * @return An PostTextResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexRuntimeServiceClient::send
  */
-AwsAbstractResponse * PostTextRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PostTextRequest::response(QNetworkReply * const reply) const
 {
     return new PostTextResponse(*this, reply);
 }

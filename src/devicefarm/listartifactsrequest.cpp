@@ -66,10 +66,10 @@ bool ListArtifactsRequest::isValid() const
  *
  * @return An ListArtifactsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ListArtifactsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListArtifactsRequest::response(QNetworkReply * const reply) const
 {
     return new ListArtifactsResponse(*this, reply);
 }

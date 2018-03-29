@@ -62,10 +62,10 @@ namespace ECS {
  */
 EcsClient::EcsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EcsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EcsClientPrivate(this), parent)
 {
     Q_D(EcsClient);
     d->apiVersion = QStringLiteral("2014-11-13");
@@ -95,10 +95,10 @@ EcsClient::EcsClient(
  */
 EcsClient::EcsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EcsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EcsClientPrivate(this), parent)
 {
     Q_D(EcsClient);
     d->apiVersion = QStringLiteral("2014-11-13");
@@ -957,9 +957,9 @@ UpdateServiceResponse * EcsClient::updateService(const UpdateServiceRequest &req
  * @param  q  Pointer to this object's public EcsClient instance.
  */
 EcsClientPrivate::EcsClientPrivate(EcsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ECS

@@ -28,7 +28,7 @@ namespace Firehose {
 
 class FirehoseClientRequest;
 
-class QTAWS_EXPORT FirehoseClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT FirehoseClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FirehoseClientRequest::Action action; ///< Firehose action to be performed.

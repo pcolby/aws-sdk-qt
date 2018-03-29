@@ -66,10 +66,10 @@ bool CreateHostedZoneRequest::isValid() const
  *
  * @return An CreateHostedZoneResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkReply * const reply) const
 {
     return new CreateHostedZoneResponse(*this, reply);
 }

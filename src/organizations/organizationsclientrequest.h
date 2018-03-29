@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Organizations {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class OrganizationsClientRequestPrivate;
 
-class QTAWS_EXPORT OrganizationsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT OrganizationsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Organizations.

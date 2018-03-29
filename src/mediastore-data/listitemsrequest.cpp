@@ -66,10 +66,10 @@ bool ListItemsRequest::isValid() const
  *
  * @return An ListItemsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreDataClient::send
  */
-AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * const reply) const
 {
     return new ListItemsResponse(*this, reply);
 }

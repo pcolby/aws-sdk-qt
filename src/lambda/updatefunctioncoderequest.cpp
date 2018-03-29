@@ -66,10 +66,10 @@ bool UpdateFunctionCodeRequest::isValid() const
  *
  * @return An UpdateFunctionCodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFunctionCodeResponse(*this, reply);
 }

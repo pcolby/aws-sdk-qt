@@ -66,10 +66,10 @@ bool CreatePresetRequest::isValid() const
  *
  * @return An CreatePresetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePresetResponse(*this, reply);
 }

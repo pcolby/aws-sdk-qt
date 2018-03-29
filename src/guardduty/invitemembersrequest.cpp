@@ -66,10 +66,10 @@ bool InviteMembersRequest::isValid() const
  *
  * @return An InviteMembersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply * const reply) const
 {
     return new InviteMembersResponse(*this, reply);
 }

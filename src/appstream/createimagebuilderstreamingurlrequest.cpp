@@ -66,10 +66,10 @@ bool CreateImageBuilderStreamingURLRequest::isValid() const
  *
  * @return An CreateImageBuilderStreamingURLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::response(QNetworkReply * const reply) const
 {
     return new CreateImageBuilderStreamingURLResponse(*this, reply);
 }

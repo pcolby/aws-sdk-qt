@@ -29,7 +29,7 @@ namespace SWF {
 
 class SwfClient;
 
-class QTAWS_EXPORT SwfClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT SwfClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SwfClientPrivate(SwfClient * const q);

@@ -66,10 +66,10 @@ bool CreateTapesRequest::isValid() const
  *
  * @return An CreateTapesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CreateTapesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTapesRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTapesResponse(*this, reply);
 }

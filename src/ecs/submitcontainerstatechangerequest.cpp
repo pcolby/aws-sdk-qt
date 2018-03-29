@@ -66,10 +66,10 @@ bool SubmitContainerStateChangeRequest::isValid() const
  *
  * @return An SubmitContainerStateChangeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * SubmitContainerStateChangeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SubmitContainerStateChangeRequest::response(QNetworkReply * const reply) const
 {
     return new SubmitContainerStateChangeResponse(*this, reply);
 }

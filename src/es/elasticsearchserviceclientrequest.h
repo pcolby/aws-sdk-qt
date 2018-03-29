@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ElasticsearchService {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ElasticsearchServiceClientRequestPrivate;
 
-class QTAWS_EXPORT ElasticsearchServiceClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ElasticsearchServiceClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElasticsearchService.

@@ -66,10 +66,10 @@ bool CreateConfigurationRequest::isValid() const
  *
  * @return An CreateConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MQClient::send
  */
-AwsAbstractResponse * CreateConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateConfigurationResponse(*this, reply);
 }

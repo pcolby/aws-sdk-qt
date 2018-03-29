@@ -36,7 +36,7 @@ namespace DirectConnect {
  * @param  action  The DirectConnect action to request.
  */
 DirectConnectClientRequest::DirectConnectClientRequest(const Action action)
-    : AwsAbstractRequest(new DirectConnectClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DirectConnectClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DirectConnectClientRequest::DirectConnectClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 DirectConnectClientRequest::DirectConnectClientRequest(const DirectConnectClientRequest &other)
-    : AwsAbstractRequest(new DirectConnectClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DirectConnectClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DirectConnectClientRequest& DirectConnectClientRequest::operator=(const DirectCo
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DirectConnectClientRequest::DirectConnectClientRequest(DirectConnectClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DirectConnectClientRequest::DirectConnectClientRequest(DirectConnectClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DirectConnectClientRequest::operator==(const DirectConnectClientRequest &ot
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DirectConnectClientRequest::unsignedRequest(const QUrl &endpoint
  * @param  q       Pointer to this object's public DirectConnectClientRequest instance.
  */
 DirectConnectClientRequestPrivate::DirectConnectClientRequestPrivate(const DirectConnectClientRequest::Action action, DirectConnectClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DirectConnectClientRequestPrivate::DirectConnectClientRequestPrivate(const Direc
  */
 DirectConnectClientRequestPrivate::DirectConnectClientRequestPrivate(const DirectConnectClientRequestPrivate &other,
                                      DirectConnectClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

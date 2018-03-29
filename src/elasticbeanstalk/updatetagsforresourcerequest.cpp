@@ -66,10 +66,10 @@ bool UpdateTagsForResourceRequest::isValid() const
  *
  * @return An UpdateTagsForResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * UpdateTagsForResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTagsForResourceRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTagsForResourceResponse(*this, reply);
 }

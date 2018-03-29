@@ -66,10 +66,10 @@ bool DeletePlacementGroupRequest::isValid() const
  *
  * @return An DeletePlacementGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePlacementGroupResponse(*this, reply);
 }

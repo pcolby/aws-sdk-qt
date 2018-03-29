@@ -66,10 +66,10 @@ bool ImportServerCatalogRequest::isValid() const
  *
  * @return An ImportServerCatalogResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * ImportServerCatalogRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetworkReply * const reply) const
 {
     return new ImportServerCatalogResponse(*this, reply);
 }

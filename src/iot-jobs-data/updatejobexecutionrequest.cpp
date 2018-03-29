@@ -66,10 +66,10 @@ bool UpdateJobExecutionRequest::isValid() const
  *
  * @return An UpdateJobExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTJobsDataPlaneClient::send
  */
-AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateJobExecutionResponse(*this, reply);
 }

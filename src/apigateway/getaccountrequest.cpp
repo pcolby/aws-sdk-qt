@@ -66,10 +66,10 @@ bool GetAccountRequest::isValid() const
  *
  * @return An GetAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * const reply) const
 {
     return new GetAccountResponse(*this, reply);
 }

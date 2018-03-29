@@ -66,10 +66,10 @@ bool UpdateLoginProfileRequest::isValid() const
  *
  * @return An UpdateLoginProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateLoginProfileResponse(*this, reply);
 }

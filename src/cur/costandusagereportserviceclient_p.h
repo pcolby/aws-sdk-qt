@@ -29,7 +29,7 @@ namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClient;
 
-class QTAWS_EXPORT CostandUsageReportServiceClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CostandUsageReportServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q);

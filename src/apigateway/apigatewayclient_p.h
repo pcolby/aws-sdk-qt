@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class APIGatewayClient;
 
-class QTAWS_EXPORT APIGatewayClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT APIGatewayClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     APIGatewayClientPrivate(APIGatewayClient * const q);

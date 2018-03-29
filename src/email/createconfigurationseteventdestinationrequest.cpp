@@ -66,10 +66,10 @@ bool CreateConfigurationSetEventDestinationRequest::isValid() const
  *
  * @return An CreateConfigurationSetEventDestinationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * CreateConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateConfigurationSetEventDestinationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteSuggesterRequest::isValid() const
  *
  * @return An DeleteSuggesterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSuggesterResponse(*this, reply);
 }

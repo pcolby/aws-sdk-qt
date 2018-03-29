@@ -66,10 +66,10 @@ bool PublishVersionRequest::isValid() const
  *
  * @return An PublishVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply * const reply) const
 {
     return new PublishVersionResponse(*this, reply);
 }

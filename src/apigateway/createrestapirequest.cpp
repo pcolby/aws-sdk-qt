@@ -66,10 +66,10 @@ bool CreateRestApiRequest::isValid() const
  *
  * @return An CreateRestApiResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRestApiResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeEntityAggregatesRequest::isValid() const
  *
  * @return An DescribeEntityAggregatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  HealthClient::send
  */
-AwsAbstractResponse * DescribeEntityAggregatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEntityAggregatesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEntityAggregatesResponse(*this, reply);
 }

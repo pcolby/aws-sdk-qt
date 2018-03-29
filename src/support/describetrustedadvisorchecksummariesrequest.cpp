@@ -66,10 +66,10 @@ bool DescribeTrustedAdvisorCheckSummariesRequest::isValid() const
  *
  * @return An DescribeTrustedAdvisorCheckSummariesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTrustedAdvisorCheckSummariesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DisassociateElasticIpRequest::isValid() const
  *
  * @return An DisassociateElasticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateElasticIpResponse(*this, reply);
 }

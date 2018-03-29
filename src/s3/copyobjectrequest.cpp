@@ -66,10 +66,10 @@ bool CopyObjectRequest::isValid() const
  *
  * @return An CopyObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * const reply) const
 {
     return new CopyObjectResponse(*this, reply);
 }

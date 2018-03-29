@@ -66,10 +66,10 @@ bool DeleteHealthCheckRequest::isValid() const
  *
  * @return An DeleteHealthCheckResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteHealthCheckResponse(*this, reply);
 }

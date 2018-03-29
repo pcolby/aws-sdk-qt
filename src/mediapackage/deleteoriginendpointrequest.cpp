@@ -66,10 +66,10 @@ bool DeleteOriginEndpointRequest::isValid() const
  *
  * @return An DeleteOriginEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaPackageClient::send
  */
-AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteOriginEndpointResponse(*this, reply);
 }

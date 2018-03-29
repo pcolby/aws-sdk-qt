@@ -29,7 +29,7 @@ namespace SimpleDB {
 
 class SimpleDBClient;
 
-class QTAWS_EXPORT SimpleDBClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT SimpleDBClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SimpleDBClientPrivate(SimpleDBClient * const q);

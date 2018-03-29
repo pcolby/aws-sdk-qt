@@ -66,10 +66,10 @@ bool DeleteConnectionRequest::isValid() const
  *
  * @return An DeleteConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConnectionResponse(*this, reply);
 }

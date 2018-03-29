@@ -66,10 +66,10 @@ bool GetMasterAccountRequest::isValid() const
  *
  * @return An GetMasterAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkReply * const reply) const
 {
     return new GetMasterAccountResponse(*this, reply);
 }

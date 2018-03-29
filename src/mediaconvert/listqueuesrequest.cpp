@@ -66,10 +66,10 @@ bool ListQueuesRequest::isValid() const
  *
  * @return An ListQueuesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * const reply) const
 {
     return new ListQueuesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateCacheClusterRequest::isValid() const
  *
  * @return An CreateCacheClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * CreateCacheClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCacheClusterRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCacheClusterResponse(*this, reply);
 }

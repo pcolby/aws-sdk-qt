@@ -66,10 +66,10 @@ bool GetDeploymentGroupRequest::isValid() const
  *
  * @return An GetDeploymentGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * GetDeploymentGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDeploymentGroupRequest::response(QNetworkReply * const reply) const
 {
     return new GetDeploymentGroupResponse(*this, reply);
 }

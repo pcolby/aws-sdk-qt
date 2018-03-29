@@ -66,10 +66,10 @@ bool ReplaceNetworkAclEntryRequest::isValid() const
  *
  * @return An ReplaceNetworkAclEntryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetworkReply * const reply) const
 {
     return new ReplaceNetworkAclEntryResponse(*this, reply);
 }

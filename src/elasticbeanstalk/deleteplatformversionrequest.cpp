@@ -66,10 +66,10 @@ bool DeletePlatformVersionRequest::isValid() const
  *
  * @return An DeletePlatformVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePlatformVersionResponse(*this, reply);
 }

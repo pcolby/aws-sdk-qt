@@ -66,10 +66,10 @@ bool GetEventStreamRequest::isValid() const
  *
  * @return An GetEventStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply * const reply) const
 {
     return new GetEventStreamResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListThingRegistrationTaskReportsRequest::isValid() const
  *
  * @return An ListThingRegistrationTaskReportsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::response(QNetworkReply * const reply) const
 {
     return new ListThingRegistrationTaskReportsResponse(*this, reply);
 }

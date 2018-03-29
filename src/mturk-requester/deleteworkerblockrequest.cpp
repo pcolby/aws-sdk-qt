@@ -66,10 +66,10 @@ bool DeleteWorkerBlockRequest::isValid() const
  *
  * @return An DeleteWorkerBlockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteWorkerBlockResponse(*this, reply);
 }

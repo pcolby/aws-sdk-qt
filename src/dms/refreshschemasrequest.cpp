@@ -66,10 +66,10 @@ bool RefreshSchemasRequest::isValid() const
  *
  * @return An RefreshSchemasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply * const reply) const
 {
     return new RefreshSchemasResponse(*this, reply);
 }

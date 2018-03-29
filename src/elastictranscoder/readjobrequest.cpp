@@ -66,10 +66,10 @@ bool ReadJobRequest::isValid() const
  *
  * @return An ReadJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticTranscoderClient::send
  */
-AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * const reply) const
 {
     return new ReadJobResponse(*this, reply);
 }

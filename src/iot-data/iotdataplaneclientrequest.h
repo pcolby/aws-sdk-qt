@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace IoTDataPlane {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class IoTDataPlaneClientRequestPrivate;
 
-class QTAWS_EXPORT IoTDataPlaneClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT IoTDataPlaneClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTDataPlane.

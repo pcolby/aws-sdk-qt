@@ -64,10 +64,10 @@ namespace DynamoDB {
  */
 DynamoDBClient::DynamoDBClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
 {
     Q_D(DynamoDBClient);
     d->apiVersion = QStringLiteral("2012-08-10");
@@ -97,10 +97,10 @@ DynamoDBClient::DynamoDBClient(
  */
 DynamoDBClient::DynamoDBClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
 {
     Q_D(DynamoDBClient);
     d->apiVersion = QStringLiteral("2012-08-10");
@@ -1293,9 +1293,9 @@ UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLi
  * @param  q  Pointer to this object's public DynamoDBClient instance.
  */
 DynamoDBClientPrivate::DynamoDBClientPrivate(DynamoDBClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DynamoDB

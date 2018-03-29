@@ -66,10 +66,10 @@ bool GetReservationCoverageRequest::isValid() const
  *
  * @return An GetReservationCoverageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostExplorerClient::send
  */
-AwsAbstractResponse * GetReservationCoverageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetworkReply * const reply) const
 {
     return new GetReservationCoverageResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ReleaseAddressRequest::isValid() const
  *
  * @return An ReleaseAddressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply * const reply) const
 {
     return new ReleaseAddressResponse(*this, reply);
 }

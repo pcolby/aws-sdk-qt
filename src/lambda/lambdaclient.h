@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Lambda {
@@ -92,18 +92,18 @@ class UpdateFunctionCodeResponse;
 class UpdateFunctionConfigurationRequest;
 class UpdateFunctionConfigurationResponse;
 
-class QTAWS_EXPORT LambdaClient : public AwsAbstractClient {
+class QTAWS_EXPORT LambdaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     LambdaClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     LambdaClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

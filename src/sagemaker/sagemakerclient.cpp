@@ -45,10 +45,10 @@ namespace SageMaker {
  */
 SageMakerClient::SageMakerClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SageMakerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SageMakerClientPrivate(this), parent)
 {
     Q_D(SageMakerClient);
     d->apiVersion = QStringLiteral("2017-07-24");
@@ -78,10 +78,10 @@ SageMakerClient::SageMakerClient(
  */
 SageMakerClient::SageMakerClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SageMakerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SageMakerClientPrivate(this), parent)
 {
     Q_D(SageMakerClient);
     d->apiVersion = QStringLiteral("2017-07-24");
@@ -818,9 +818,9 @@ UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookI
  * @param  q  Pointer to this object's public SageMakerClient instance.
  */
 SageMakerClientPrivate::SageMakerClientPrivate(SageMakerClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SageMaker

@@ -28,7 +28,7 @@ namespace Organizations {
 
 class OrganizationsClientResponse;
 
-class QTAWS_EXPORT OrganizationsClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT OrganizationsClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

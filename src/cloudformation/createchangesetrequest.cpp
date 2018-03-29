@@ -66,10 +66,10 @@ bool CreateChangeSetRequest::isValid() const
  *
  * @return An CreateChangeSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * CreateChangeSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateChangeSetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateChangeSetResponse(*this, reply);
 }

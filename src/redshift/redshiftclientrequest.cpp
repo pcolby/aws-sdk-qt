@@ -36,7 +36,7 @@ namespace Redshift {
  * @param  action  The Redshift action to request.
  */
 RedshiftClientRequest::RedshiftClientRequest(const Action action)
-    : AwsAbstractRequest(new RedshiftClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RedshiftClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ RedshiftClientRequest::RedshiftClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 RedshiftClientRequest::RedshiftClientRequest(const RedshiftClientRequest &other)
-    : AwsAbstractRequest(new RedshiftClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RedshiftClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ RedshiftClientRequest& RedshiftClientRequest::operator=(const RedshiftClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-RedshiftClientRequest::RedshiftClientRequest(RedshiftClientRequestPrivate * const d) : AwsAbstractRequest(d)
+RedshiftClientRequest::RedshiftClientRequest(RedshiftClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool RedshiftClientRequest::operator==(const RedshiftClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest RedshiftClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public RedshiftClientRequest instance.
  */
 RedshiftClientRequestPrivate::RedshiftClientRequestPrivate(const RedshiftClientRequest::Action action, RedshiftClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ RedshiftClientRequestPrivate::RedshiftClientRequestPrivate(const RedshiftClientR
  */
 RedshiftClientRequestPrivate::RedshiftClientRequestPrivate(const RedshiftClientRequestPrivate &other,
                                      RedshiftClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

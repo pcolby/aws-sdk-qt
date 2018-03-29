@@ -28,7 +28,7 @@ namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientRequest;
 
-class QTAWS_EXPORT CostandUsageReportServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CostandUsageReportServiceClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CostandUsageReportServiceClientRequest::Action action; ///< CostandUsageReportService action to be performed.

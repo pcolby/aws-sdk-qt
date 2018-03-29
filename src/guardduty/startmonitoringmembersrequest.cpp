@@ -66,10 +66,10 @@ bool StartMonitoringMembersRequest::isValid() const
  *
  * @return An StartMonitoringMembersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * StartMonitoringMembersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartMonitoringMembersRequest::response(QNetworkReply * const reply) const
 {
     return new StartMonitoringMembersResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeletePipelineRequest::isValid() const
  *
  * @return An DeletePipelineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePipelineResponse(*this, reply);
 }

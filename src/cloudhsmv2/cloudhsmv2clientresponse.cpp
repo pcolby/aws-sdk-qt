@@ -40,7 +40,7 @@ namespace CloudHSMV2 {
  * @param  parent   This object's parent.
  */
 CloudHSMV2ClientResponse::CloudHSMV2ClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudHSMV2ClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudHSMV2ClientResponsePrivate(this), parent)
 {
 
 }

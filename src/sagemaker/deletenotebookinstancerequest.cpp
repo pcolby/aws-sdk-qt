@@ -66,10 +66,10 @@ bool DeleteNotebookInstanceRequest::isValid() const
  *
  * @return An DeleteNotebookInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * DeleteNotebookInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNotebookInstanceResponse(*this, reply);
 }

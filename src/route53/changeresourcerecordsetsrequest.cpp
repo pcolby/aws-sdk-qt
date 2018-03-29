@@ -66,10 +66,10 @@ bool ChangeResourceRecordSetsRequest::isValid() const
  *
  * @return An ChangeResourceRecordSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ChangeResourceRecordSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ChangeResourceRecordSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ChangeResourceRecordSetsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool SendAutomationSignalRequest::isValid() const
  *
  * @return An SendAutomationSignalResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * SendAutomationSignalRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendAutomationSignalRequest::response(QNetworkReply * const reply) const
 {
     return new SendAutomationSignalResponse(*this, reply);
 }

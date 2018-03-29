@@ -66,10 +66,10 @@ bool DeleteDBClusterParameterGroupRequest::isValid() const
  *
  * @return An DeleteDBClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DeleteDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDBClusterParameterGroupResponse(*this, reply);
 }

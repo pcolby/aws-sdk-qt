@@ -40,7 +40,7 @@ namespace DirectConnect {
  * @param  parent   This object's parent.
  */
 DirectConnectClientResponse::DirectConnectClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DirectConnectClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DirectConnectClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool GetAliasRequest::isValid() const
  *
  * @return An GetAliasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * const reply) const
 {
     return new GetAliasResponse(*this, reply);
 }

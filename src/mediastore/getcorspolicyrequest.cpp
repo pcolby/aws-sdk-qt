@@ -66,10 +66,10 @@ bool GetCorsPolicyRequest::isValid() const
  *
  * @return An GetCorsPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreClient::send
  */
-AwsAbstractResponse * GetCorsPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCorsPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetCorsPolicyResponse(*this, reply);
 }

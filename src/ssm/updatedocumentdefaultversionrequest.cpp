@@ -66,10 +66,10 @@ bool UpdateDocumentDefaultVersionRequest::isValid() const
  *
  * @return An UpdateDocumentDefaultVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDocumentDefaultVersionResponse(*this, reply);
 }

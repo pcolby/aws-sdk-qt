@@ -66,10 +66,10 @@ bool DescribeLoadBalancerPolicyTypesRequest::isValid() const
  *
  * @return An DescribeLoadBalancerPolicyTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * DescribeLoadBalancerPolicyTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerPolicyTypesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLoadBalancerPolicyTypesResponse(*this, reply);
 }

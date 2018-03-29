@@ -66,10 +66,10 @@ bool ListResourcesForWebACLRequest::isValid() const
  *
  * @return An ListResourcesForWebACLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourcesForWebACLResponse(*this, reply);
 }

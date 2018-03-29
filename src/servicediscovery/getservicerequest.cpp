@@ -66,10 +66,10 @@ bool GetServiceRequest::isValid() const
  *
  * @return An GetServiceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * const reply) const
 {
     return new GetServiceResponse(*this, reply);
 }

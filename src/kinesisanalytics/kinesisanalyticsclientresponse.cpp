@@ -40,7 +40,7 @@ namespace KinesisAnalytics {
  * @param  parent   This object's parent.
  */
 KinesisAnalyticsClientResponse::KinesisAnalyticsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new KinesisAnalyticsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new KinesisAnalyticsClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool UpdateConfigurationSetReputationMetricsEnabledRequest::isValid() const
  *
  * @return An UpdateConfigurationSetReputationMetricsEnabledResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnabledRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnabledRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateConfigurationSetReputationMetricsEnabledResponse(*this, reply);
 }

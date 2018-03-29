@@ -66,10 +66,10 @@ bool DeleteTargetGroupRequest::isValid() const
  *
  * @return An DeleteTargetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DeleteTargetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTargetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTargetGroupResponse(*this, reply);
 }

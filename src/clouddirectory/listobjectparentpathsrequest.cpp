@@ -66,10 +66,10 @@ bool ListObjectParentPathsRequest::isValid() const
  *
  * @return An ListObjectParentPathsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetworkReply * const reply) const
 {
     return new ListObjectParentPathsResponse(*this, reply);
 }

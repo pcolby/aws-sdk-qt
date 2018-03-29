@@ -66,10 +66,10 @@ bool DescribeAssessmentTemplatesRequest::isValid() const
  *
  * @return An DescribeAssessmentTemplatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * DescribeAssessmentTemplatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAssessmentTemplatesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAssessmentTemplatesResponse(*this, reply);
 }

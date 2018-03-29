@@ -66,10 +66,10 @@ bool DeleteDetectorRequest::isValid() const
  *
  * @return An DeleteDetectorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDetectorResponse(*this, reply);
 }

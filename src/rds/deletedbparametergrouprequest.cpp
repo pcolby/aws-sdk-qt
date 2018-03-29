@@ -66,10 +66,10 @@ bool DeleteDBParameterGroupRequest::isValid() const
  *
  * @return An DeleteDBParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDBParameterGroupResponse(*this, reply);
 }

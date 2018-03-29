@@ -66,10 +66,10 @@ bool CreateResourceDefinitionVersionRequest::isValid() const
  *
  * @return An CreateResourceDefinitionVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateResourceDefinitionVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateResourceDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateResourceDefinitionVersionResponse(*this, reply);
 }

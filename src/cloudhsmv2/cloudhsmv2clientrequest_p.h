@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class CloudHSMV2ClientRequest;
 
-class QTAWS_EXPORT CloudHSMV2ClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CloudHSMV2ClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudHSMV2ClientRequest::Action action; ///< CloudHSMV2 action to be performed.

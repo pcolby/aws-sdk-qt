@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Health {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class HealthClientRequestPrivate;
 
-class QTAWS_EXPORT HealthClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT HealthClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Health.

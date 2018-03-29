@@ -66,10 +66,10 @@ bool DeleteRestApiRequest::isValid() const
  *
  * @return An DeleteRestApiResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteRestApiRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRestApiRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRestApiResponse(*this, reply);
 }

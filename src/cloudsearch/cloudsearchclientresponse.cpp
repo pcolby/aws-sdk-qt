@@ -40,7 +40,7 @@ namespace CloudSearch {
  * @param  parent   This object's parent.
  */
 CloudSearchClientResponse::CloudSearchClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudSearchClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudSearchClientResponsePrivate(this), parent)
 {
 
 }

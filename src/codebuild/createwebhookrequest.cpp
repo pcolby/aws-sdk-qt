@@ -66,10 +66,10 @@ bool CreateWebhookRequest::isValid() const
  *
  * @return An CreateWebhookResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * CreateWebhookRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateWebhookRequest::response(QNetworkReply * const reply) const
 {
     return new CreateWebhookResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool TerminateEnvironmentRequest::isValid() const
  *
  * @return An TerminateEnvironmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
     return new TerminateEnvironmentResponse(*this, reply);
 }

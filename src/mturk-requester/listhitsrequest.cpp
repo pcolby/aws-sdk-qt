@@ -66,10 +66,10 @@ bool ListHITsRequest::isValid() const
  *
  * @return An ListHITsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * const reply) const
 {
     return new ListHITsResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace S3 {
 
 class S3ClientRequest;
 
-class QTAWS_EXPORT S3ClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT S3ClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     S3ClientRequest::Action action; ///< S3 action to be performed.

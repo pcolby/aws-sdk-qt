@@ -66,10 +66,10 @@ bool AssociateConnectionWithLagRequest::isValid() const
  *
  * @return An AssociateConnectionWithLagResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * AssociateConnectionWithLagRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateConnectionWithLagRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateConnectionWithLagResponse(*this, reply);
 }

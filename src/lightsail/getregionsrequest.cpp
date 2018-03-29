@@ -66,10 +66,10 @@ bool GetRegionsRequest::isValid() const
  *
  * @return An GetRegionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetRegionsResponse(*this, reply);
 }

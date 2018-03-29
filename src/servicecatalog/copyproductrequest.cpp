@@ -66,10 +66,10 @@ bool CopyProductRequest::isValid() const
  *
  * @return An CopyProductResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * const reply) const
 {
     return new CopyProductResponse(*this, reply);
 }

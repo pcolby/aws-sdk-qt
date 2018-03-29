@@ -66,10 +66,10 @@ bool DeleteContainerPolicyRequest::isValid() const
  *
  * @return An DeleteContainerPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreClient::send
  */
-AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteContainerPolicyResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteRemoteAccessSessionRequest::isValid() const
  *
  * @return An DeleteRemoteAccessSessionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRemoteAccessSessionResponse(*this, reply);
 }

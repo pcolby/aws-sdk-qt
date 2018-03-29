@@ -66,10 +66,10 @@ bool RotateChannelCredentialsRequest::isValid() const
  *
  * @return An RotateChannelCredentialsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaPackageClient::send
  */
-AwsAbstractResponse * RotateChannelCredentialsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RotateChannelCredentialsRequest::response(QNetworkReply * const reply) const
 {
     return new RotateChannelCredentialsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetProductsRequest::isValid() const
  *
  * @return An GetProductsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PricingClient::send
  */
-AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * const reply) const
 {
     return new GetProductsResponse(*this, reply);
 }

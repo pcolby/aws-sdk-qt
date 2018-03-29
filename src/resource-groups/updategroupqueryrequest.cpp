@@ -66,10 +66,10 @@ bool UpdateGroupQueryRequest::isValid() const
  *
  * @return An UpdateGroupQueryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ResourceGroupsClient::send
  */
-AwsAbstractResponse * UpdateGroupQueryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateGroupQueryRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateGroupQueryResponse(*this, reply);
 }

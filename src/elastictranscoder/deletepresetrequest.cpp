@@ -66,10 +66,10 @@ bool DeletePresetRequest::isValid() const
  *
  * @return An DeletePresetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticTranscoderClient::send
  */
-AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePresetResponse(*this, reply);
 }

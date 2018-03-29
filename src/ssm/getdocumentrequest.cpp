@@ -66,10 +66,10 @@ bool GetDocumentRequest::isValid() const
  *
  * @return An GetDocumentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * const reply) const
 {
     return new GetDocumentResponse(*this, reply);
 }

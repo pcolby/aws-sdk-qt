@@ -66,10 +66,10 @@ bool DetachNetworkInterfaceRequest::isValid() const
  *
  * @return An DetachNetworkInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new DetachNetworkInterfaceResponse(*this, reply);
 }

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MarketplaceEntitlementServiceClientRequestPrivate;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MarketplaceEntitlementServiceClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MarketplaceEntitlementService.

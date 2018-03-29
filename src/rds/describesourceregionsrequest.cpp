@@ -66,10 +66,10 @@ bool DescribeSourceRegionsRequest::isValid() const
  *
  * @return An DescribeSourceRegionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSourceRegionsResponse(*this, reply);
 }

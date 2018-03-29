@@ -66,10 +66,10 @@ bool CreateUsagePlanRequest::isValid() const
  *
  * @return An CreateUsagePlanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkReply * const reply) const
 {
     return new CreateUsagePlanResponse(*this, reply);
 }

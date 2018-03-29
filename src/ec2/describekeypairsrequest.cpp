@@ -66,10 +66,10 @@ bool DescribeKeyPairsRequest::isValid() const
  *
  * @return An DescribeKeyPairsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeKeyPairsResponse(*this, reply);
 }

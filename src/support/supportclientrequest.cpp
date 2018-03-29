@@ -36,7 +36,7 @@ namespace Support {
  * @param  action  The Support action to request.
  */
 SupportClientRequest::SupportClientRequest(const Action action)
-    : AwsAbstractRequest(new SupportClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SupportClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SupportClientRequest::SupportClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SupportClientRequest::SupportClientRequest(const SupportClientRequest &other)
-    : AwsAbstractRequest(new SupportClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SupportClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SupportClientRequest& SupportClientRequest::operator=(const SupportClientRequest
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SupportClientRequest::SupportClientRequest(SupportClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SupportClientRequest::SupportClientRequest(SupportClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SupportClientRequest::operator==(const SupportClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SupportClientRequest::unsignedRequest(const QUrl &endpoint) cons
  * @param  q       Pointer to this object's public SupportClientRequest instance.
  */
 SupportClientRequestPrivate::SupportClientRequestPrivate(const SupportClientRequest::Action action, SupportClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SupportClientRequestPrivate::SupportClientRequestPrivate(const SupportClientRequ
  */
 SupportClientRequestPrivate::SupportClientRequestPrivate(const SupportClientRequestPrivate &other,
                                      SupportClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -36,7 +36,7 @@ namespace StorageGateway {
  * @param  action  The StorageGateway action to request.
  */
 StorageGatewayClientRequest::StorageGatewayClientRequest(const Action action)
-    : AwsAbstractRequest(new StorageGatewayClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new StorageGatewayClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ StorageGatewayClientRequest::StorageGatewayClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 StorageGatewayClientRequest::StorageGatewayClientRequest(const StorageGatewayClientRequest &other)
-    : AwsAbstractRequest(new StorageGatewayClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new StorageGatewayClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ StorageGatewayClientRequest& StorageGatewayClientRequest::operator=(const Storag
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-StorageGatewayClientRequest::StorageGatewayClientRequest(StorageGatewayClientRequestPrivate * const d) : AwsAbstractRequest(d)
+StorageGatewayClientRequest::StorageGatewayClientRequest(StorageGatewayClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool StorageGatewayClientRequest::operator==(const StorageGatewayClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest StorageGatewayClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public StorageGatewayClientRequest instance.
  */
 StorageGatewayClientRequestPrivate::StorageGatewayClientRequestPrivate(const StorageGatewayClientRequest::Action action, StorageGatewayClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ StorageGatewayClientRequestPrivate::StorageGatewayClientRequestPrivate(const Sto
  */
 StorageGatewayClientRequestPrivate::StorageGatewayClientRequestPrivate(const StorageGatewayClientRequestPrivate &other,
                                      StorageGatewayClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

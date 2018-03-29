@@ -66,10 +66,10 @@ bool CreateSchemaRequest::isValid() const
  *
  * @return An CreateSchemaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSchemaResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class ServiceDiscoveryClientResponse;
 
-class QTAWS_EXPORT ServiceDiscoveryClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT ServiceDiscoveryClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

@@ -45,10 +45,10 @@ namespace MachineLearning {
  */
 MachineLearningClient::MachineLearningClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
 {
     Q_D(MachineLearningClient);
     d->apiVersion = QStringLiteral("2014-12-12");
@@ -78,10 +78,10 @@ MachineLearningClient::MachineLearningClient(
  */
 MachineLearningClient::MachineLearningClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
 {
     Q_D(MachineLearningClient);
     d->apiVersion = QStringLiteral("2014-12-12");
@@ -705,9 +705,9 @@ UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModel
  * @param  q  Pointer to this object's public MachineLearningClient instance.
  */
 MachineLearningClientPrivate::MachineLearningClientPrivate(MachineLearningClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MachineLearning

@@ -40,7 +40,7 @@ namespace Organizations {
  * @param  parent   This object's parent.
  */
 OrganizationsClientResponse::OrganizationsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new OrganizationsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new OrganizationsClientResponsePrivate(this), parent)
 {
 
 }

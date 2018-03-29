@@ -66,10 +66,10 @@ bool DescribeJobFlowsRequest::isValid() const
  *
  * @return An DescribeJobFlowsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeJobFlowsResponse(*this, reply);
 }

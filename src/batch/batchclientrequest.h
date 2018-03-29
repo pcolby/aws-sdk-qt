@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Batch {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class BatchClientRequestPrivate;
 
-class QTAWS_EXPORT BatchClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT BatchClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Batch.

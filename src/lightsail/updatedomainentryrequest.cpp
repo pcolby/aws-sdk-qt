@@ -66,10 +66,10 @@ bool UpdateDomainEntryRequest::isValid() const
  *
  * @return An UpdateDomainEntryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * UpdateDomainEntryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDomainEntryRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDomainEntryResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeliverConfigSnapshotRequest::isValid() const
  *
  * @return An DeliverConfigSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new DeliverConfigSnapshotResponse(*this, reply);
 }

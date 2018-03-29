@@ -66,10 +66,10 @@ bool SetVisibleToAllUsersRequest::isValid() const
  *
  * @return An SetVisibleToAllUsersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetworkReply * const reply) const
 {
     return new SetVisibleToAllUsersResponse(*this, reply);
 }

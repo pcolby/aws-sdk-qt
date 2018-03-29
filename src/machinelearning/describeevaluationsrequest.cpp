@@ -66,10 +66,10 @@ bool DescribeEvaluationsRequest::isValid() const
  *
  * @return An DescribeEvaluationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEvaluationsResponse(*this, reply);
 }

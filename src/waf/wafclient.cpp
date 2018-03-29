@@ -50,10 +50,10 @@ namespace WAF {
  */
 WafClient::WafClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WafClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WafClientPrivate(this), parent)
 {
     Q_D(WafClient);
     d->apiVersion = QStringLiteral("2015-08-24");
@@ -83,10 +83,10 @@ WafClient::WafClient(
  */
 WafClient::WafClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WafClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WafClientPrivate(this), parent)
 {
     Q_D(WafClient);
     d->apiVersion = QStringLiteral("2015-08-24");
@@ -2485,9 +2485,9 @@ UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSet
  * @param  q  Pointer to this object's public WafClient instance.
  */
 WafClientPrivate::WafClientPrivate(WafClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WAF

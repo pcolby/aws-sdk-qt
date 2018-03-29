@@ -66,10 +66,10 @@ bool DeleteClusterParameterGroupRequest::isValid() const
  *
  * @return An DeleteClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DeleteClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteClusterParameterGroupResponse(*this, reply);
 }

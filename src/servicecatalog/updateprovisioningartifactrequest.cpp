@@ -66,10 +66,10 @@ bool UpdateProvisioningArtifactRequest::isValid() const
  *
  * @return An UpdateProvisioningArtifactResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateProvisioningArtifactResponse(*this, reply);
 }

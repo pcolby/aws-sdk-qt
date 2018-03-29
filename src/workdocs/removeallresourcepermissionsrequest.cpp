@@ -66,10 +66,10 @@ bool RemoveAllResourcePermissionsRequest::isValid() const
  *
  * @return An RemoveAllResourcePermissionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveAllResourcePermissionsResponse(*this, reply);
 }

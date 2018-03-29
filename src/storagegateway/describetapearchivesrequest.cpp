@@ -66,10 +66,10 @@ bool DescribeTapeArchivesRequest::isValid() const
  *
  * @return An DescribeTapeArchivesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeTapeArchivesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTapeArchivesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTapeArchivesResponse(*this, reply);
 }

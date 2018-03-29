@@ -66,10 +66,10 @@ bool BatchDeleteAttributesRequest::isValid() const
  *
  * @return An BatchDeleteAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDeleteAttributesResponse(*this, reply);
 }

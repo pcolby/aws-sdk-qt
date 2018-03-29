@@ -66,10 +66,10 @@ bool ListBundlesRequest::isValid() const
  *
  * @return An ListBundlesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MobileClient::send
  */
-AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * const reply) const
 {
     return new ListBundlesResponse(*this, reply);
 }

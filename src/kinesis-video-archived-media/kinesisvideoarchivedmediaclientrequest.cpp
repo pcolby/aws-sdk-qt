@@ -36,7 +36,7 @@ namespace KinesisVideoArchivedMedia {
  * @param  action  The KinesisVideoArchivedMedia action to request.
  */
 KinesisVideoArchivedMediaClientRequest::KinesisVideoArchivedMediaClientRequest(const Action action)
-    : AwsAbstractRequest(new KinesisVideoArchivedMediaClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisVideoArchivedMediaClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ KinesisVideoArchivedMediaClientRequest::KinesisVideoArchivedMediaClientRequest(c
  * @param  other  Instance to copy.
  */
 KinesisVideoArchivedMediaClientRequest::KinesisVideoArchivedMediaClientRequest(const KinesisVideoArchivedMediaClientRequest &other)
-    : AwsAbstractRequest(new KinesisVideoArchivedMediaClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisVideoArchivedMediaClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ KinesisVideoArchivedMediaClientRequest& KinesisVideoArchivedMediaClientRequest::
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-KinesisVideoArchivedMediaClientRequest::KinesisVideoArchivedMediaClientRequest(KinesisVideoArchivedMediaClientRequestPrivate * const d) : AwsAbstractRequest(d)
+KinesisVideoArchivedMediaClientRequest::KinesisVideoArchivedMediaClientRequest(KinesisVideoArchivedMediaClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool KinesisVideoArchivedMediaClientRequest::operator==(const KinesisVideoArchiv
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest KinesisVideoArchivedMediaClientRequest::unsignedRequest(const QU
  * @param  q       Pointer to this object's public KinesisVideoArchivedMediaClientRequest instance.
  */
 KinesisVideoArchivedMediaClientRequestPrivate::KinesisVideoArchivedMediaClientRequestPrivate(const KinesisVideoArchivedMediaClientRequest::Action action, KinesisVideoArchivedMediaClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ KinesisVideoArchivedMediaClientRequestPrivate::KinesisVideoArchivedMediaClientRe
  */
 KinesisVideoArchivedMediaClientRequestPrivate::KinesisVideoArchivedMediaClientRequestPrivate(const KinesisVideoArchivedMediaClientRequestPrivate &other,
                                      KinesisVideoArchivedMediaClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

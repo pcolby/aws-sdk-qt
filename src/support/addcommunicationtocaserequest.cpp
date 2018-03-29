@@ -66,10 +66,10 @@ bool AddCommunicationToCaseRequest::isValid() const
  *
  * @return An AddCommunicationToCaseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * AddCommunicationToCaseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddCommunicationToCaseRequest::response(QNetworkReply * const reply) const
 {
     return new AddCommunicationToCaseResponse(*this, reply);
 }

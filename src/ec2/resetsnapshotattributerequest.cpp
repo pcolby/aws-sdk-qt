@@ -66,10 +66,10 @@ bool ResetSnapshotAttributeRequest::isValid() const
  *
  * @return An ResetSnapshotAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ResetSnapshotAttributeResponse(*this, reply);
 }

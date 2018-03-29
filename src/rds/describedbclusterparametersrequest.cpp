@@ -66,10 +66,10 @@ bool DescribeDBClusterParametersRequest::isValid() const
  *
  * @return An DescribeDBClusterParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBClusterParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBClusterParametersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBClusterParametersResponse(*this, reply);
 }

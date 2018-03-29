@@ -66,10 +66,10 @@ bool CreateDBInstanceRequest::isValid() const
  *
  * @return An CreateDBInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDBInstanceResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteApplicationOutputRequest::isValid() const
  *
  * @return An DeleteApplicationOutputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * DeleteApplicationOutputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApplicationOutputRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApplicationOutputResponse(*this, reply);
 }

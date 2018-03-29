@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace CloudHSM {
@@ -72,18 +72,18 @@ class ModifyLunaClientResponse;
 class RemoveTagsFromResourceRequest;
 class RemoveTagsFromResourceResponse;
 
-class QTAWS_EXPORT CloudHSMClient : public AwsAbstractClient {
+class QTAWS_EXPORT CloudHSMClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     CloudHSMClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     CloudHSMClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

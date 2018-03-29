@@ -66,10 +66,10 @@ bool CreateStreamingURLRequest::isValid() const
  *
  * @return An CreateStreamingURLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkReply * const reply) const
 {
     return new CreateStreamingURLResponse(*this, reply);
 }

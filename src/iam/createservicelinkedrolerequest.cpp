@@ -66,10 +66,10 @@ bool CreateServiceLinkedRoleRequest::isValid() const
  *
  * @return An CreateServiceLinkedRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
 {
     return new CreateServiceLinkedRoleResponse(*this, reply);
 }

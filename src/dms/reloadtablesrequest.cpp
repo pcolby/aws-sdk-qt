@@ -66,10 +66,10 @@ bool ReloadTablesRequest::isValid() const
  *
  * @return An ReloadTablesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply * const reply) const
 {
     return new ReloadTablesResponse(*this, reply);
 }

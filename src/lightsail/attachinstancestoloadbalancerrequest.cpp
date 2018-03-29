@@ -66,10 +66,10 @@ bool AttachInstancesToLoadBalancerRequest::isValid() const
  *
  * @return An AttachInstancesToLoadBalancerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
     return new AttachInstancesToLoadBalancerResponse(*this, reply);
 }

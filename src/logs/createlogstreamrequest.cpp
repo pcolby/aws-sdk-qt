@@ -66,10 +66,10 @@ bool CreateLogStreamRequest::isValid() const
  *
  * @return An CreateLogStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * CreateLogStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLogStreamRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLogStreamResponse(*this, reply);
 }

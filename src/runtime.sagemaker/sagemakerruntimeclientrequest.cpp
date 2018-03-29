@@ -36,7 +36,7 @@ namespace SageMakerRuntime {
  * @param  action  The SageMakerRuntime action to request.
  */
 SageMakerRuntimeClientRequest::SageMakerRuntimeClientRequest(const Action action)
-    : AwsAbstractRequest(new SageMakerRuntimeClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SageMakerRuntimeClientRequest::SageMakerRuntimeClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 SageMakerRuntimeClientRequest::SageMakerRuntimeClientRequest(const SageMakerRuntimeClientRequest &other)
-    : AwsAbstractRequest(new SageMakerRuntimeClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SageMakerRuntimeClientRequest& SageMakerRuntimeClientRequest::operator=(const Sa
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SageMakerRuntimeClientRequest::SageMakerRuntimeClientRequest(SageMakerRuntimeClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SageMakerRuntimeClientRequest::SageMakerRuntimeClientRequest(SageMakerRuntimeClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SageMakerRuntimeClientRequest::operator==(const SageMakerRuntimeClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SageMakerRuntimeClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public SageMakerRuntimeClientRequest instance.
  */
 SageMakerRuntimeClientRequestPrivate::SageMakerRuntimeClientRequestPrivate(const SageMakerRuntimeClientRequest::Action action, SageMakerRuntimeClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SageMakerRuntimeClientRequestPrivate::SageMakerRuntimeClientRequestPrivate(const
  */
 SageMakerRuntimeClientRequestPrivate::SageMakerRuntimeClientRequestPrivate(const SageMakerRuntimeClientRequestPrivate &other,
                                      SageMakerRuntimeClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

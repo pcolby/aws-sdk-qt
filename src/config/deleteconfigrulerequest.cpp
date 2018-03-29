@@ -66,10 +66,10 @@ bool DeleteConfigRuleRequest::isValid() const
  *
  * @return An DeleteConfigRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConfigRuleResponse(*this, reply);
 }

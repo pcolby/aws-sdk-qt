@@ -66,10 +66,10 @@ bool ResetCacheRequest::isValid() const
  *
  * @return An ResetCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * ResetCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetCacheRequest::response(QNetworkReply * const reply) const
 {
     return new ResetCacheResponse(*this, reply);
 }

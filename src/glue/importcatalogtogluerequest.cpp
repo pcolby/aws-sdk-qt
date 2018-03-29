@@ -66,10 +66,10 @@ bool ImportCatalogToGlueRequest::isValid() const
  *
  * @return An ImportCatalogToGlueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * ImportCatalogToGlueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportCatalogToGlueRequest::response(QNetworkReply * const reply) const
 {
     return new ImportCatalogToGlueResponse(*this, reply);
 }

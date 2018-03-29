@@ -36,7 +36,7 @@ namespace APIGateway {
  * @param  action  The APIGateway action to request.
  */
 APIGatewayClientRequest::APIGatewayClientRequest(const Action action)
-    : AwsAbstractRequest(new APIGatewayClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new APIGatewayClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ APIGatewayClientRequest::APIGatewayClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 APIGatewayClientRequest::APIGatewayClientRequest(const APIGatewayClientRequest &other)
-    : AwsAbstractRequest(new APIGatewayClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new APIGatewayClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ APIGatewayClientRequest& APIGatewayClientRequest::operator=(const APIGatewayClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-APIGatewayClientRequest::APIGatewayClientRequest(APIGatewayClientRequestPrivate * const d) : AwsAbstractRequest(d)
+APIGatewayClientRequest::APIGatewayClientRequest(APIGatewayClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool APIGatewayClientRequest::operator==(const APIGatewayClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest APIGatewayClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public APIGatewayClientRequest instance.
  */
 APIGatewayClientRequestPrivate::APIGatewayClientRequestPrivate(const APIGatewayClientRequest::Action action, APIGatewayClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ APIGatewayClientRequestPrivate::APIGatewayClientRequestPrivate(const APIGatewayC
  */
 APIGatewayClientRequestPrivate::APIGatewayClientRequestPrivate(const APIGatewayClientRequestPrivate &other,
                                      APIGatewayClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

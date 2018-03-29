@@ -66,10 +66,10 @@ bool DeleteVpcLinkRequest::isValid() const
  *
  * @return An DeleteVpcLinkResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVpcLinkResponse(*this, reply);
 }

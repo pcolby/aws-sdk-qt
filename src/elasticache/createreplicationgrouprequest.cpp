@@ -66,10 +66,10 @@ bool CreateReplicationGroupRequest::isValid() const
  *
  * @return An CreateReplicationGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * CreateReplicationGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateReplicationGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateReplicationGroupResponse(*this, reply);
 }

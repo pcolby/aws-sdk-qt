@@ -66,10 +66,10 @@ bool StopTrainingJobRequest::isValid() const
  *
  * @return An StopTrainingJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkReply * const reply) const
 {
     return new StopTrainingJobResponse(*this, reply);
 }

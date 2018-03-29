@@ -66,10 +66,10 @@ bool CreateFleetRequest::isValid() const
  *
  * @return An CreateFleetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateFleetResponse(*this, reply);
 }

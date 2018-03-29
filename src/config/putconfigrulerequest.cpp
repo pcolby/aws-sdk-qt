@@ -66,10 +66,10 @@ bool PutConfigRuleRequest::isValid() const
  *
  * @return An PutConfigRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * PutConfigRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutConfigRuleRequest::response(QNetworkReply * const reply) const
 {
     return new PutConfigRuleResponse(*this, reply);
 }

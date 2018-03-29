@@ -66,10 +66,10 @@ bool AdminAddUserToGroupRequest::isValid() const
  *
  * @return An AdminAddUserToGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetworkReply * const reply) const
 {
     return new AdminAddUserToGroupResponse(*this, reply);
 }

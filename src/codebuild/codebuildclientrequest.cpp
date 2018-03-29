@@ -36,7 +36,7 @@ namespace CodeBuild {
  * @param  action  The CodeBuild action to request.
  */
 CodeBuildClientRequest::CodeBuildClientRequest(const Action action)
-    : AwsAbstractRequest(new CodeBuildClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CodeBuildClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CodeBuildClientRequest::CodeBuildClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CodeBuildClientRequest::CodeBuildClientRequest(const CodeBuildClientRequest &other)
-    : AwsAbstractRequest(new CodeBuildClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CodeBuildClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CodeBuildClientRequest& CodeBuildClientRequest::operator=(const CodeBuildClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CodeBuildClientRequest::CodeBuildClientRequest(CodeBuildClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CodeBuildClientRequest::CodeBuildClientRequest(CodeBuildClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CodeBuildClientRequest::operator==(const CodeBuildClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CodeBuildClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public CodeBuildClientRequest instance.
  */
 CodeBuildClientRequestPrivate::CodeBuildClientRequestPrivate(const CodeBuildClientRequest::Action action, CodeBuildClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CodeBuildClientRequestPrivate::CodeBuildClientRequestPrivate(const CodeBuildClie
  */
 CodeBuildClientRequestPrivate::CodeBuildClientRequestPrivate(const CodeBuildClientRequestPrivate &other,
                                      CodeBuildClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

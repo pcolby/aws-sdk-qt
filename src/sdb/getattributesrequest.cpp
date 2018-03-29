@@ -66,10 +66,10 @@ bool GetAttributesRequest::isValid() const
  *
  * @return An GetAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new GetAttributesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetAuthorizersRequest::isValid() const
  *
  * @return An GetAuthorizersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply * const reply) const
 {
     return new GetAuthorizersResponse(*this, reply);
 }

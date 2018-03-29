@@ -66,10 +66,10 @@ bool DeleteStreamingDistributionRequest::isValid() const
  *
  * @return An DeleteStreamingDistributionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * DeleteStreamingDistributionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteStreamingDistributionResponse(*this, reply);
 }

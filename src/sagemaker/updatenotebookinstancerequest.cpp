@@ -66,10 +66,10 @@ bool UpdateNotebookInstanceRequest::isValid() const
  *
  * @return An UpdateNotebookInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateNotebookInstanceResponse(*this, reply);
 }

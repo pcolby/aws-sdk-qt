@@ -66,10 +66,10 @@ bool ImportCertificateRequest::isValid() const
  *
  * @return An ImportCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ACMClient::send
  */
-AwsAbstractResponse * ImportCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new ImportCertificateResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeDocumentRequest::isValid() const
  *
  * @return An DescribeDocumentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDocumentResponse(*this, reply);
 }

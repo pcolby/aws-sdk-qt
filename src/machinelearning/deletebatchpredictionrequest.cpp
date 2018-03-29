@@ -66,10 +66,10 @@ bool DeleteBatchPredictionRequest::isValid() const
  *
  * @return An DeleteBatchPredictionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBatchPredictionResponse(*this, reply);
 }

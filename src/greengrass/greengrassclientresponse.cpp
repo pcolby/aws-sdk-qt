@@ -40,7 +40,7 @@ namespace Greengrass {
  * @param  parent   This object's parent.
  */
 GreengrassClientResponse::GreengrassClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new GreengrassClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new GreengrassClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool DeleteRetentionPolicyRequest::isValid() const
  *
  * @return An DeleteRetentionPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRetentionPolicyResponse(*this, reply);
 }

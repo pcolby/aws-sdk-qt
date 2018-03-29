@@ -36,7 +36,7 @@ namespace XRay {
  * @param  action  The XRay action to request.
  */
 XRayClientRequest::XRayClientRequest(const Action action)
-    : AwsAbstractRequest(new XRayClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new XRayClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ XRayClientRequest::XRayClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 XRayClientRequest::XRayClientRequest(const XRayClientRequest &other)
-    : AwsAbstractRequest(new XRayClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new XRayClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ XRayClientRequest& XRayClientRequest::operator=(const XRayClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-XRayClientRequest::XRayClientRequest(XRayClientRequestPrivate * const d) : AwsAbstractRequest(d)
+XRayClientRequest::XRayClientRequest(XRayClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool XRayClientRequest::operator==(const XRayClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest XRayClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public XRayClientRequest instance.
  */
 XRayClientRequestPrivate::XRayClientRequestPrivate(const XRayClientRequest::Action action, XRayClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ XRayClientRequestPrivate::XRayClientRequestPrivate(const XRayClientRequest::Acti
  */
 XRayClientRequestPrivate::XRayClientRequestPrivate(const XRayClientRequestPrivate &other,
                                      XRayClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

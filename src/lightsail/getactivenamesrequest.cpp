@@ -66,10 +66,10 @@ bool GetActiveNamesRequest::isValid() const
  *
  * @return An GetActiveNamesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply * const reply) const
 {
     return new GetActiveNamesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteFacesRequest::isValid() const
  *
  * @return An DeleteFacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFacesResponse(*this, reply);
 }

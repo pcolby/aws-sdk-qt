@@ -59,10 +59,10 @@ namespace SNS {
  */
 SnsClient::SnsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SnsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SnsClientPrivate(this), parent)
 {
     Q_D(SnsClient);
     d->apiVersion = QStringLiteral("2010-03-31");
@@ -92,10 +92,10 @@ SnsClient::SnsClient(
  */
 SnsClient::SnsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SnsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SnsClientPrivate(this), parent)
 {
     Q_D(SnsClient);
     d->apiVersion = QStringLiteral("2010-03-31");
@@ -668,9 +668,9 @@ UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
  * @param  q  Pointer to this object's public SnsClient instance.
  */
 SnsClientPrivate::SnsClientPrivate(SnsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SNS

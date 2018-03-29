@@ -66,10 +66,10 @@ bool DeleteSubscriberRequest::isValid() const
  *
  * @return An DeleteSubscriberResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * DeleteSubscriberRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSubscriberRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSubscriberResponse(*this, reply);
 }

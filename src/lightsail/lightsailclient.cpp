@@ -61,10 +61,10 @@ namespace Lightsail {
  */
 LightsailClient::LightsailClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LightsailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LightsailClientPrivate(this), parent)
 {
     Q_D(LightsailClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -94,10 +94,10 @@ LightsailClient::LightsailClient(
  */
 LightsailClient::LightsailClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LightsailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LightsailClientPrivate(this), parent)
 {
     Q_D(LightsailClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -1214,9 +1214,9 @@ UpdateLoadBalancerAttributeResponse * LightsailClient::updateLoadBalancerAttribu
  * @param  q  Pointer to this object's public LightsailClient instance.
  */
 LightsailClientPrivate::LightsailClientPrivate(LightsailClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Lightsail

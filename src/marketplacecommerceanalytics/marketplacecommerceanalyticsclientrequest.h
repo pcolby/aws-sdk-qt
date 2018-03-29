@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MarketplaceCommerceAnalyticsClientRequestPrivate;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MarketplaceCommerceAnalytics.

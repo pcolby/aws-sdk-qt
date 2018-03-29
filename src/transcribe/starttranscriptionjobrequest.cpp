@@ -66,10 +66,10 @@ bool StartTranscriptionJobRequest::isValid() const
  *
  * @return An StartTranscriptionJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  TranscribeServiceClient::send
  */
-AwsAbstractResponse * StartTranscriptionJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartTranscriptionJobRequest::response(QNetworkReply * const reply) const
 {
     return new StartTranscriptionJobResponse(*this, reply);
 }

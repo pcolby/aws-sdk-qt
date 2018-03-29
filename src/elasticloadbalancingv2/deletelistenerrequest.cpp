@@ -66,10 +66,10 @@ bool DeleteListenerRequest::isValid() const
  *
  * @return An DeleteListenerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DeleteListenerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteListenerRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteListenerResponse(*this, reply);
 }

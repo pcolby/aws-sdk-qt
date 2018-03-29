@@ -66,10 +66,10 @@ bool DeleteBotChannelAssociationRequest::isValid() const
  *
  * @return An DeleteBotChannelAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBotChannelAssociationResponse(*this, reply);
 }

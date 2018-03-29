@@ -66,10 +66,10 @@ bool SendCustomVerificationEmailRequest::isValid() const
  *
  * @return An SendCustomVerificationEmailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * SendCustomVerificationEmailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendCustomVerificationEmailRequest::response(QNetworkReply * const reply) const
 {
     return new SendCustomVerificationEmailResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateLagRequest::isValid() const
  *
  * @return An CreateLagResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * CreateLagRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLagRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLagResponse(*this, reply);
 }

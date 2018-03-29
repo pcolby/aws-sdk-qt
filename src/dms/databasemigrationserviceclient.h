@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace DatabaseMigrationService {
@@ -120,18 +120,18 @@ class StopReplicationTaskResponse;
 class TestConnectionRequest;
 class TestConnectionResponse;
 
-class QTAWS_EXPORT DatabaseMigrationServiceClient : public AwsAbstractClient {
+class QTAWS_EXPORT DatabaseMigrationServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     DatabaseMigrationServiceClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     DatabaseMigrationServiceClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

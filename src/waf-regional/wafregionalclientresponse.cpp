@@ -40,7 +40,7 @@ namespace WAFRegional {
  * @param  parent   This object's parent.
  */
 WAFRegionalClientResponse::WAFRegionalClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new WAFRegionalClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new WAFRegionalClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool DeleteDeliveryChannelRequest::isValid() const
  *
  * @return An DeleteDeliveryChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DeleteDeliveryChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDeliveryChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDeliveryChannelResponse(*this, reply);
 }

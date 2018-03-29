@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Pricing {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class PricingClientRequestPrivate;
 
-class QTAWS_EXPORT PricingClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT PricingClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Pricing.

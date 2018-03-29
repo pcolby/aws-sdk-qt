@@ -66,10 +66,10 @@ bool DeleteExpressionRequest::isValid() const
  *
  * @return An DeleteExpressionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteExpressionResponse(*this, reply);
 }

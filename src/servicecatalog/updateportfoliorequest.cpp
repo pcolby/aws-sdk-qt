@@ -66,10 +66,10 @@ bool UpdatePortfolioRequest::isValid() const
  *
  * @return An UpdatePortfolioResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePortfolioResponse(*this, reply);
 }

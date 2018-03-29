@@ -66,10 +66,10 @@ bool DescribeNotebookInstanceLifecycleConfigRequest::isValid() const
  *
  * @return An DescribeNotebookInstanceLifecycleConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeNotebookInstanceLifecycleConfigResponse(*this, reply);
 }

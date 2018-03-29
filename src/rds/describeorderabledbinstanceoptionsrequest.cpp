@@ -66,10 +66,10 @@ bool DescribeOrderableDBInstanceOptionsRequest::isValid() const
  *
  * @return An DescribeOrderableDBInstanceOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeOrderableDBInstanceOptionsResponse(*this, reply);
 }

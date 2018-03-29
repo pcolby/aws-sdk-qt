@@ -66,10 +66,10 @@ bool CreateIPSetRequest::isValid() const
  *
  * @return An CreateIPSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateIPSetResponse(*this, reply);
 }

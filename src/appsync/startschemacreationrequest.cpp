@@ -66,10 +66,10 @@ bool StartSchemaCreationRequest::isValid() const
  *
  * @return An StartSchemaCreationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * StartSchemaCreationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartSchemaCreationRequest::response(QNetworkReply * const reply) const
 {
     return new StartSchemaCreationResponse(*this, reply);
 }

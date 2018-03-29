@@ -66,10 +66,10 @@ bool DescribeSpotDatafeedSubscriptionRequest::isValid() const
  *
  * @return An DescribeSpotDatafeedSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSpotDatafeedSubscriptionResponse(*this, reply);
 }

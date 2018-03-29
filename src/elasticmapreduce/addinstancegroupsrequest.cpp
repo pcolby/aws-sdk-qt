@@ -66,10 +66,10 @@ bool AddInstanceGroupsRequest::isValid() const
  *
  * @return An AddInstanceGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new AddInstanceGroupsResponse(*this, reply);
 }

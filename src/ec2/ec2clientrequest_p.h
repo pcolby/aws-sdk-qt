@@ -28,7 +28,7 @@ namespace EC2 {
 
 class Ec2ClientRequest;
 
-class QTAWS_EXPORT Ec2ClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT Ec2ClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Ec2ClientRequest::Action action; ///< EC2 action to be performed.

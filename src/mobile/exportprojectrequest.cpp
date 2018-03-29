@@ -66,10 +66,10 @@ bool ExportProjectRequest::isValid() const
  *
  * @return An ExportProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MobileClient::send
  */
-AwsAbstractResponse * ExportProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ExportProjectRequest::response(QNetworkReply * const reply) const
 {
     return new ExportProjectResponse(*this, reply);
 }

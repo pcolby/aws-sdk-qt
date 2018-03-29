@@ -66,10 +66,10 @@ bool DeleteGraphqlApiRequest::isValid() const
  *
  * @return An DeleteGraphqlApiResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteGraphqlApiResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DetachStaticIpRequest::isValid() const
  *
  * @return An DetachStaticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply * const reply) const
 {
     return new DetachStaticIpResponse(*this, reply);
 }

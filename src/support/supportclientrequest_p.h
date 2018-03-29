@@ -28,7 +28,7 @@ namespace Support {
 
 class SupportClientRequest;
 
-class QTAWS_EXPORT SupportClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SupportClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SupportClientRequest::Action action; ///< Support action to be performed.

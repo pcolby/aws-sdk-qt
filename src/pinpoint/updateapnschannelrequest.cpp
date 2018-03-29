@@ -66,10 +66,10 @@ bool UpdateApnsChannelRequest::isValid() const
  *
  * @return An UpdateApnsChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateApnsChannelResponse(*this, reply);
 }

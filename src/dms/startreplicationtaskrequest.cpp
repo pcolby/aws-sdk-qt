@@ -66,10 +66,10 @@ bool StartReplicationTaskRequest::isValid() const
  *
  * @return An StartReplicationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * StartReplicationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new StartReplicationTaskResponse(*this, reply);
 }

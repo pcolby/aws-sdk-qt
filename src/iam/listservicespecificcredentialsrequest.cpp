@@ -66,10 +66,10 @@ bool ListServiceSpecificCredentialsRequest::isValid() const
  *
  * @return An ListServiceSpecificCredentialsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListServiceSpecificCredentialsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListServiceSpecificCredentialsRequest::response(QNetworkReply * const reply) const
 {
     return new ListServiceSpecificCredentialsResponse(*this, reply);
 }

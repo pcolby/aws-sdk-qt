@@ -66,10 +66,10 @@ bool GetWorkflowExecutionHistoryRequest::isValid() const
  *
  * @return An GetWorkflowExecutionHistoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(QNetworkReply * const reply) const
 {
     return new GetWorkflowExecutionHistoryResponse(*this, reply);
 }

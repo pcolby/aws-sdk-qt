@@ -66,10 +66,10 @@ bool DeleteBaiduChannelRequest::isValid() const
  *
  * @return An DeleteBaiduChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBaiduChannelResponse(*this, reply);
 }

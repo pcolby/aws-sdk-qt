@@ -66,10 +66,10 @@ bool CreateDataSourceRequest::isValid() const
  *
  * @return An CreateDataSourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * CreateDataSourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDataSourceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDataSourceResponse(*this, reply);
 }

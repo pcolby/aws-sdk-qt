@@ -36,7 +36,7 @@ namespace CloudHSMV2 {
  * @param  action  The CloudHSMV2 action to request.
  */
 CloudHSMV2ClientRequest::CloudHSMV2ClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudHSMV2ClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudHSMV2ClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudHSMV2ClientRequest::CloudHSMV2ClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudHSMV2ClientRequest::CloudHSMV2ClientRequest(const CloudHSMV2ClientRequest &other)
-    : AwsAbstractRequest(new CloudHSMV2ClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudHSMV2ClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudHSMV2ClientRequest& CloudHSMV2ClientRequest::operator=(const CloudHSMV2Clie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudHSMV2ClientRequest::CloudHSMV2ClientRequest(CloudHSMV2ClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudHSMV2ClientRequest::CloudHSMV2ClientRequest(CloudHSMV2ClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudHSMV2ClientRequest::operator==(const CloudHSMV2ClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudHSMV2ClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public CloudHSMV2ClientRequest instance.
  */
 CloudHSMV2ClientRequestPrivate::CloudHSMV2ClientRequestPrivate(const CloudHSMV2ClientRequest::Action action, CloudHSMV2ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudHSMV2ClientRequestPrivate::CloudHSMV2ClientRequestPrivate(const CloudHSMV2C
  */
 CloudHSMV2ClientRequestPrivate::CloudHSMV2ClientRequestPrivate(const CloudHSMV2ClientRequestPrivate &other,
                                      CloudHSMV2ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

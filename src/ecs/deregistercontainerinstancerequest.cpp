@@ -66,10 +66,10 @@ bool DeregisterContainerInstanceRequest::isValid() const
  *
  * @return An DeregisterContainerInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * DeregisterContainerInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterContainerInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterContainerInstanceResponse(*this, reply);
 }

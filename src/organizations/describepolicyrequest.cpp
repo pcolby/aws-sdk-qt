@@ -66,10 +66,10 @@ bool DescribePolicyRequest::isValid() const
  *
  * @return An DescribePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * DescribePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePolicyResponse(*this, reply);
 }

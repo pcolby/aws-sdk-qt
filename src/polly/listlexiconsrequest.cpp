@@ -66,10 +66,10 @@ bool ListLexiconsRequest::isValid() const
  *
  * @return An ListLexiconsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PollyClient::send
  */
-AwsAbstractResponse * ListLexiconsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListLexiconsRequest::response(QNetworkReply * const reply) const
 {
     return new ListLexiconsResponse(*this, reply);
 }

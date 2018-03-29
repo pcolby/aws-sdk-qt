@@ -66,10 +66,10 @@ bool DisassociateConnectorRequest::isValid() const
  *
  * @return An DisassociateConnectorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * DisassociateConnectorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateConnectorRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateConnectorResponse(*this, reply);
 }

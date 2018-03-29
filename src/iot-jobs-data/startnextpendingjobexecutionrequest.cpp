@@ -66,10 +66,10 @@ bool StartNextPendingJobExecutionRequest::isValid() const
  *
  * @return An StartNextPendingJobExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTJobsDataPlaneClient::send
  */
-AwsAbstractResponse * StartNextPendingJobExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartNextPendingJobExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new StartNextPendingJobExecutionResponse(*this, reply);
 }

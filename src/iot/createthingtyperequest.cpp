@@ -66,10 +66,10 @@ bool CreateThingTypeRequest::isValid() const
  *
  * @return An CreateThingTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkReply * const reply) const
 {
     return new CreateThingTypeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateRoleAliasRequest::isValid() const
  *
  * @return An CreateRoleAliasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRoleAliasResponse(*this, reply);
 }

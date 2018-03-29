@@ -59,10 +59,10 @@ namespace Batch {
  */
 BatchClient::BatchClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new BatchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new BatchClientPrivate(this), parent)
 {
     Q_D(BatchClient);
     d->apiVersion = QStringLiteral("2016-08-10");
@@ -92,10 +92,10 @@ BatchClient::BatchClient(
  */
 BatchClient::BatchClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new BatchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new BatchClientPrivate(this), parent)
 {
     Q_D(BatchClient);
     d->apiVersion = QStringLiteral("2016-08-10");
@@ -398,9 +398,9 @@ UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest
  * @param  q  Pointer to this object's public BatchClient instance.
  */
 BatchClientPrivate::BatchClientPrivate(BatchClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Batch

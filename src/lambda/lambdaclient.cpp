@@ -56,10 +56,10 @@ namespace Lambda {
  */
 LambdaClient::LambdaClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LambdaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LambdaClientPrivate(this), parent)
 {
     Q_D(LambdaClient);
     d->apiVersion = QStringLiteral("2015-03-31");
@@ -89,10 +89,10 @@ LambdaClient::LambdaClient(
  */
 LambdaClient::LambdaClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LambdaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LambdaClientPrivate(this), parent)
 {
     Q_D(LambdaClient);
     d->apiVersion = QStringLiteral("2015-03-31");
@@ -833,9 +833,9 @@ UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(
  * @param  q  Pointer to this object's public LambdaClient instance.
  */
 LambdaClientPrivate::LambdaClientPrivate(LambdaClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Lambda

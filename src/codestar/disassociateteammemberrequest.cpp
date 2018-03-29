@@ -66,10 +66,10 @@ bool DisassociateTeamMemberRequest::isValid() const
  *
  * @return An DisassociateTeamMemberResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * DisassociateTeamMemberRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateTeamMemberRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateTeamMemberResponse(*this, reply);
 }

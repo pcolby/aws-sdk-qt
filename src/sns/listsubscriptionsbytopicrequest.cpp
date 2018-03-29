@@ -66,10 +66,10 @@ bool ListSubscriptionsByTopicRequest::isValid() const
  *
  * @return An ListSubscriptionsByTopicResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * ListSubscriptionsByTopicRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSubscriptionsByTopicRequest::response(QNetworkReply * const reply) const
 {
     return new ListSubscriptionsByTopicResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteLoggerDefinitionRequest::isValid() const
  *
  * @return An DeleteLoggerDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLoggerDefinitionResponse(*this, reply);
 }

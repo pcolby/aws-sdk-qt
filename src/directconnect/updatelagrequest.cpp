@@ -66,10 +66,10 @@ bool UpdateLagRequest::isValid() const
  *
  * @return An UpdateLagResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateLagResponse(*this, reply);
 }

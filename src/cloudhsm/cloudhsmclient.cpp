@@ -57,10 +57,10 @@ namespace CloudHSM {
  */
 CloudHSMClient::CloudHSMClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
 {
     Q_D(CloudHSMClient);
     d->apiVersion = QStringLiteral("2014-05-30");
@@ -90,10 +90,10 @@ CloudHSMClient::CloudHSMClient(
  */
 CloudHSMClient::CloudHSMClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
 {
     Q_D(CloudHSMClient);
     d->apiVersion = QStringLiteral("2014-05-30");
@@ -710,9 +710,9 @@ RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const Re
  * @param  q  Pointer to this object's public CloudHSMClient instance.
  */
 CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudHSM

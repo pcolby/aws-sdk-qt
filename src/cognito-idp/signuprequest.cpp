@@ -66,10 +66,10 @@ bool SignUpRequest::isValid() const
  *
  * @return An SignUpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * SignUpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SignUpRequest::response(QNetworkReply * const reply) const
 {
     return new SignUpResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateHostedZoneCommentRequest::isValid() const
  *
  * @return An UpdateHostedZoneCommentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * UpdateHostedZoneCommentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateHostedZoneCommentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateHostedZoneCommentResponse(*this, reply);
 }

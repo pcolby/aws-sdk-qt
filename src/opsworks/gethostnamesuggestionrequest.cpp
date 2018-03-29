@@ -66,10 +66,10 @@ bool GetHostnameSuggestionRequest::isValid() const
  *
  * @return An GetHostnameSuggestionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetworkReply * const reply) const
 {
     return new GetHostnameSuggestionResponse(*this, reply);
 }

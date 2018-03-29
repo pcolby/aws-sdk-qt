@@ -66,10 +66,10 @@ bool ListPoliciesForTargetRequest::isValid() const
  *
  * @return An ListPoliciesForTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListPoliciesForTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPoliciesForTargetRequest::response(QNetworkReply * const reply) const
 {
     return new ListPoliciesForTargetResponse(*this, reply);
 }

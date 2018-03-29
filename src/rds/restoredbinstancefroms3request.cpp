@@ -66,10 +66,10 @@ bool RestoreDBInstanceFromS3Request::isValid() const
  *
  * @return An RestoreDBInstanceFromS3Response instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RestoreDBInstanceFromS3Request::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromS3Request::response(QNetworkReply * const reply) const
 {
     return new RestoreDBInstanceFromS3Response(*this, reply);
 }

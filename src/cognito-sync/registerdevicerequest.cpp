@@ -66,10 +66,10 @@ bool RegisterDeviceRequest::isValid() const
  *
  * @return An RegisterDeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * RegisterDeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterDeviceRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterDeviceResponse(*this, reply);
 }

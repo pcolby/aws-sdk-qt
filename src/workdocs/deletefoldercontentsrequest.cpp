@@ -66,10 +66,10 @@ bool DeleteFolderContentsRequest::isValid() const
  *
  * @return An DeleteFolderContentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DeleteFolderContentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFolderContentsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFolderContentsResponse(*this, reply);
 }

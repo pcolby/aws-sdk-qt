@@ -66,10 +66,10 @@ bool GetAppRequest::isValid() const
  *
  * @return An GetAppResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetAppRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAppRequest::response(QNetworkReply * const reply) const
 {
     return new GetAppResponse(*this, reply);
 }

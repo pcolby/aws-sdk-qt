@@ -66,10 +66,10 @@ bool CreateCollectionRequest::isValid() const
  *
  * @return An CreateCollectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * CreateCollectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCollectionResponse(*this, reply);
 }

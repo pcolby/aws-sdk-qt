@@ -66,10 +66,10 @@ bool GetServiceLinkedRoleDeletionStatusRequest::isValid() const
  *
  * @return An GetServiceLinkedRoleDeletionStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetServiceLinkedRoleDeletionStatusResponse(*this, reply);
 }

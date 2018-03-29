@@ -66,10 +66,10 @@ bool CopyDBParameterGroupRequest::isValid() const
  *
  * @return An CopyDBParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CopyDBParameterGroupResponse(*this, reply);
 }

@@ -63,10 +63,10 @@ namespace DataPipeline {
  */
 DataPipelineClient::DataPipelineClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
 {
     Q_D(DataPipelineClient);
     d->apiVersion = QStringLiteral("2012-10-29");
@@ -96,10 +96,10 @@ DataPipelineClient::DataPipelineClient(
  */
 DataPipelineClient::DataPipelineClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
 {
     Q_D(DataPipelineClient);
     d->apiVersion = QStringLiteral("2012-10-29");
@@ -466,9 +466,9 @@ ValidatePipelineDefinitionResponse * DataPipelineClient::validatePipelineDefinit
  * @param  q  Pointer to this object's public DataPipelineClient instance.
  */
 DataPipelineClientPrivate::DataPipelineClientPrivate(DataPipelineClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DataPipeline

@@ -66,10 +66,10 @@ bool UpdateConditionalForwarderRequest::isValid() const
  *
  * @return An UpdateConditionalForwarderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * UpdateConditionalForwarderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateConditionalForwarderRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateConditionalForwarderResponse(*this, reply);
 }

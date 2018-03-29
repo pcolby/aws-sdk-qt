@@ -66,10 +66,10 @@ bool DeleteNetworkProfileRequest::isValid() const
  *
  * @return An DeleteNetworkProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * DeleteNetworkProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNetworkProfileRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNetworkProfileResponse(*this, reply);
 }

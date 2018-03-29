@@ -66,10 +66,10 @@ bool DescribeAffectedEntitiesRequest::isValid() const
  *
  * @return An DescribeAffectedEntitiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  HealthClient::send
  */
-AwsAbstractResponse * DescribeAffectedEntitiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAffectedEntitiesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAffectedEntitiesResponse(*this, reply);
 }

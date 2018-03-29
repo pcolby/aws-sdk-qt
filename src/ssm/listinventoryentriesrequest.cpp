@@ -66,10 +66,10 @@ bool ListInventoryEntriesRequest::isValid() const
  *
  * @return An ListInventoryEntriesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListInventoryEntriesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListInventoryEntriesRequest::response(QNetworkReply * const reply) const
 {
     return new ListInventoryEntriesResponse(*this, reply);
 }

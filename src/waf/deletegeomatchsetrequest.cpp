@@ -66,10 +66,10 @@ bool DeleteGeoMatchSetRequest::isValid() const
  *
  * @return An DeleteGeoMatchSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteGeoMatchSetResponse(*this, reply);
 }

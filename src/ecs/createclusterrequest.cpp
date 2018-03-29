@@ -66,10 +66,10 @@ bool CreateClusterRequest::isValid() const
  *
  * @return An CreateClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
 {
     return new CreateClusterResponse(*this, reply);
 }

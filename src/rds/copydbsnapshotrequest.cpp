@@ -66,10 +66,10 @@ bool CopyDBSnapshotRequest::isValid() const
  *
  * @return An CopyDBSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new CopyDBSnapshotResponse(*this, reply);
 }

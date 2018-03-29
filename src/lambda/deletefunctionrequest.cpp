@@ -66,10 +66,10 @@ bool DeleteFunctionRequest::isValid() const
  *
  * @return An DeleteFunctionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFunctionResponse(*this, reply);
 }

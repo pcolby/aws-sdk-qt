@@ -66,10 +66,10 @@ bool PutAttributesRequest::isValid() const
  *
  * @return An PutAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new PutAttributesResponse(*this, reply);
 }

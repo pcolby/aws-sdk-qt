@@ -66,10 +66,10 @@ bool GetMaintenanceWindowExecutionRequest::isValid() const
  *
  * @return An GetMaintenanceWindowExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetMaintenanceWindowExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new GetMaintenanceWindowExecutionResponse(*this, reply);
 }

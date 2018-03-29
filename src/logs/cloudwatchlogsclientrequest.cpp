@@ -36,7 +36,7 @@ namespace CloudWatchLogs {
  * @param  action  The CloudWatchLogs action to request.
  */
 CloudWatchLogsClientRequest::CloudWatchLogsClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudWatchLogsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudWatchLogsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudWatchLogsClientRequest::CloudWatchLogsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudWatchLogsClientRequest::CloudWatchLogsClientRequest(const CloudWatchLogsClientRequest &other)
-    : AwsAbstractRequest(new CloudWatchLogsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudWatchLogsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudWatchLogsClientRequest& CloudWatchLogsClientRequest::operator=(const CloudW
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudWatchLogsClientRequest::CloudWatchLogsClientRequest(CloudWatchLogsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudWatchLogsClientRequest::CloudWatchLogsClientRequest(CloudWatchLogsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudWatchLogsClientRequest::operator==(const CloudWatchLogsClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudWatchLogsClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public CloudWatchLogsClientRequest instance.
  */
 CloudWatchLogsClientRequestPrivate::CloudWatchLogsClientRequestPrivate(const CloudWatchLogsClientRequest::Action action, CloudWatchLogsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudWatchLogsClientRequestPrivate::CloudWatchLogsClientRequestPrivate(const Clo
  */
 CloudWatchLogsClientRequestPrivate::CloudWatchLogsClientRequestPrivate(const CloudWatchLogsClientRequestPrivate &other,
                                      CloudWatchLogsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool DeleteApnsVoipChannelRequest::isValid() const
  *
  * @return An DeleteApnsVoipChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteApnsVoipChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApnsVoipChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApnsVoipChannelResponse(*this, reply);
 }

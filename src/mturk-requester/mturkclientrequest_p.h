@@ -28,7 +28,7 @@ namespace MTurk {
 
 class MTurkClientRequest;
 
-class QTAWS_EXPORT MTurkClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MTurkClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MTurkClientRequest::Action action; ///< MTurk action to be performed.

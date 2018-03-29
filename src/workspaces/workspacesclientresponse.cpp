@@ -40,7 +40,7 @@ namespace WorkSpaces {
  * @param  parent   This object's parent.
  */
 WorkSpacesClientResponse::WorkSpacesClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new WorkSpacesClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new WorkSpacesClientResponsePrivate(this), parent)
 {
 
 }

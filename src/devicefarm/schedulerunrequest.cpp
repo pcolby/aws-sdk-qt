@@ -66,10 +66,10 @@ bool ScheduleRunRequest::isValid() const
  *
  * @return An ScheduleRunResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ScheduleRunRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ScheduleRunRequest::response(QNetworkReply * const reply) const
 {
     return new ScheduleRunResponse(*this, reply);
 }

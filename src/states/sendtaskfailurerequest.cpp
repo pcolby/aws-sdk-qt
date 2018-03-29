@@ -66,10 +66,10 @@ bool SendTaskFailureRequest::isValid() const
  *
  * @return An SendTaskFailureResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkReply * const reply) const
 {
     return new SendTaskFailureResponse(*this, reply);
 }

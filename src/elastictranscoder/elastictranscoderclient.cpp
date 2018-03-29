@@ -48,10 +48,10 @@ namespace ElasticTranscoder {
  */
 ElasticTranscoderClient::ElasticTranscoderClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
 {
     Q_D(ElasticTranscoderClient);
     d->apiVersion = QStringLiteral("2012-09-25");
@@ -81,10 +81,10 @@ ElasticTranscoderClient::ElasticTranscoderClient(
  */
 ElasticTranscoderClient::ElasticTranscoderClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
 {
     Q_D(ElasticTranscoderClient);
     d->apiVersion = QStringLiteral("2012-09-25");
@@ -416,9 +416,9 @@ UpdatePipelineStatusResponse * ElasticTranscoderClient::updatePipelineStatus(con
  * @param  q  Pointer to this object's public ElasticTranscoderClient instance.
  */
 ElasticTranscoderClientPrivate::ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticTranscoder

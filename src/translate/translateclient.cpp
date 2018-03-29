@@ -46,10 +46,10 @@ namespace Translate {
  */
 TranslateClient::TranslateClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new TranslateClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new TranslateClientPrivate(this), parent)
 {
     Q_D(TranslateClient);
     d->apiVersion = QStringLiteral("2017-07-01");
@@ -79,10 +79,10 @@ TranslateClient::TranslateClient(
  */
 TranslateClient::TranslateClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new TranslateClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new TranslateClientPrivate(this), parent)
 {
     Q_D(TranslateClient);
     d->apiVersion = QStringLiteral("2017-07-01");
@@ -149,9 +149,9 @@ TranslateTextResponse * TranslateClient::translateText(const TranslateTextReques
  * @param  q  Pointer to this object's public TranslateClient instance.
  */
 TranslateClientPrivate::TranslateClientPrivate(TranslateClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Translate

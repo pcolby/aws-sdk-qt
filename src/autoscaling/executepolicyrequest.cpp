@@ -66,10 +66,10 @@ bool ExecutePolicyRequest::isValid() const
  *
  * @return An ExecutePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new ExecutePolicyResponse(*this, reply);
 }

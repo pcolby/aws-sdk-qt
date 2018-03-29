@@ -66,10 +66,10 @@ bool ResetCacheParameterGroupRequest::isValid() const
  *
  * @return An ResetCacheParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * ResetCacheParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ResetCacheParameterGroupResponse(*this, reply);
 }

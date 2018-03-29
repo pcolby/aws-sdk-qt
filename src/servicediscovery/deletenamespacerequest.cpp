@@ -66,10 +66,10 @@ bool DeleteNamespaceRequest::isValid() const
  *
  * @return An DeleteNamespaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNamespaceResponse(*this, reply);
 }

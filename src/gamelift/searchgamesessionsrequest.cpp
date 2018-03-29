@@ -66,10 +66,10 @@ bool SearchGameSessionsRequest::isValid() const
  *
  * @return An SearchGameSessionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * SearchGameSessionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SearchGameSessionsRequest::response(QNetworkReply * const reply) const
 {
     return new SearchGameSessionsResponse(*this, reply);
 }

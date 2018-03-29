@@ -40,7 +40,7 @@ namespace SNS {
  * @param  parent   This object's parent.
  */
 SnsClientResponse::SnsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SnsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SnsClientResponsePrivate(this), parent)
 {
 
 }

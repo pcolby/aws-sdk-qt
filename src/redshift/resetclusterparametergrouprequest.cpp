@@ -66,10 +66,10 @@ bool ResetClusterParameterGroupRequest::isValid() const
  *
  * @return An ResetClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * ResetClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ResetClusterParameterGroupResponse(*this, reply);
 }

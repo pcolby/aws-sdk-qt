@@ -28,7 +28,7 @@ namespace Mobile {
 
 class MobileClientResponse;
 
-class QTAWS_EXPORT MobileClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT MobileClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

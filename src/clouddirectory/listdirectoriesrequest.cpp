@@ -66,10 +66,10 @@ bool ListDirectoriesRequest::isValid() const
  *
  * @return An ListDirectoriesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListDirectoriesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDirectoriesRequest::response(QNetworkReply * const reply) const
 {
     return new ListDirectoriesResponse(*this, reply);
 }

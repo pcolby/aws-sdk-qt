@@ -66,10 +66,10 @@ bool CreateBGPPeerRequest::isValid() const
  *
  * @return An CreateBGPPeerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBGPPeerResponse(*this, reply);
 }

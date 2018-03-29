@@ -66,10 +66,10 @@ bool StartMatchmakingRequest::isValid() const
  *
  * @return An StartMatchmakingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * StartMatchmakingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartMatchmakingRequest::response(QNetworkReply * const reply) const
 {
     return new StartMatchmakingResponse(*this, reply);
 }

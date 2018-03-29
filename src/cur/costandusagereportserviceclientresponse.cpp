@@ -40,7 +40,7 @@ namespace CostandUsageReportService {
  * @param  parent   This object's parent.
  */
 CostandUsageReportServiceClientResponse::CostandUsageReportServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CostandUsageReportServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CostandUsageReportServiceClientResponsePrivate(this), parent)
 {
 
 }

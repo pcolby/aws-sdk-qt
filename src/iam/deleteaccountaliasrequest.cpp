@@ -66,10 +66,10 @@ bool DeleteAccountAliasRequest::isValid() const
  *
  * @return An DeleteAccountAliasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAccountAliasResponse(*this, reply);
 }

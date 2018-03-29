@@ -66,10 +66,10 @@ bool PutParameterRequest::isValid() const
  *
  * @return An PutParameterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * PutParameterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutParameterRequest::response(QNetworkReply * const reply) const
 {
     return new PutParameterResponse(*this, reply);
 }

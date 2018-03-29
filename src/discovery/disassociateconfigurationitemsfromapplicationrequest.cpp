@@ -66,10 +66,10 @@ bool DisassociateConfigurationItemsFromApplicationRequest::isValid() const
  *
  * @return An DisassociateConfigurationItemsFromApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationDiscoveryServiceClient::send
  */
-AwsAbstractResponse * DisassociateConfigurationItemsFromApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateConfigurationItemsFromApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateConfigurationItemsFromApplicationResponse(*this, reply);
 }

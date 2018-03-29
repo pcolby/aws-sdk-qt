@@ -66,10 +66,10 @@ bool GetContentModerationRequest::isValid() const
  *
  * @return An GetContentModerationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * GetContentModerationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetworkReply * const reply) const
 {
     return new GetContentModerationResponse(*this, reply);
 }

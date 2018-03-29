@@ -28,7 +28,7 @@ namespace Pricing {
 
 class PricingClientResponse;
 
-class QTAWS_EXPORT PricingClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT PricingClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

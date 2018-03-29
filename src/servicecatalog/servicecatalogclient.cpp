@@ -51,10 +51,10 @@ namespace ServiceCatalog {
  */
 ServiceCatalogClient::ServiceCatalogClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ServiceCatalogClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ServiceCatalogClientPrivate(this), parent)
 {
     Q_D(ServiceCatalogClient);
     d->apiVersion = QStringLiteral("2015-12-10");
@@ -84,10 +84,10 @@ ServiceCatalogClient::ServiceCatalogClient(
  */
 ServiceCatalogClient::ServiceCatalogClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ServiceCatalogClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ServiceCatalogClientPrivate(this), parent)
 {
     Q_D(ServiceCatalogClient);
     d->apiVersion = QStringLiteral("2015-12-10");
@@ -1048,9 +1048,9 @@ UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagO
  * @param  q  Pointer to this object's public ServiceCatalogClient instance.
  */
 ServiceCatalogClientPrivate::ServiceCatalogClientPrivate(ServiceCatalogClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ServiceCatalog

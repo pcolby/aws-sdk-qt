@@ -66,10 +66,10 @@ bool AttachElasticLoadBalancerRequest::isValid() const
  *
  * @return An AttachElasticLoadBalancerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * AttachElasticLoadBalancerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachElasticLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
     return new AttachElasticLoadBalancerResponse(*this, reply);
 }

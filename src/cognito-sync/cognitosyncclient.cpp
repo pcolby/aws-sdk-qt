@@ -65,10 +65,10 @@ namespace CognitoSync {
  */
 CognitoSyncClient::CognitoSyncClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
 {
     Q_D(CognitoSyncClient);
     d->apiVersion = QStringLiteral("2014-06-30");
@@ -98,10 +98,10 @@ CognitoSyncClient::CognitoSyncClient(
  */
 CognitoSyncClient::CognitoSyncClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
 {
     Q_D(CognitoSyncClient);
     d->apiVersion = QStringLiteral("2014-06-30");
@@ -469,9 +469,9 @@ UpdateRecordsResponse * CognitoSyncClient::updateRecords(const UpdateRecordsRequ
  * @param  q  Pointer to this object's public CognitoSyncClient instance.
  */
 CognitoSyncClientPrivate::CognitoSyncClientPrivate(CognitoSyncClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CognitoSync

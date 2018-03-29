@@ -66,10 +66,10 @@ bool DeleteScalingPolicyRequest::isValid() const
  *
  * @return An DeleteScalingPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationAutoScalingClient::send
  */
-AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteScalingPolicyResponse(*this, reply);
 }

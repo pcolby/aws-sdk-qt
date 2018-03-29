@@ -36,7 +36,7 @@ namespace Mobile {
  * @param  action  The Mobile action to request.
  */
 MobileClientRequest::MobileClientRequest(const Action action)
-    : AwsAbstractRequest(new MobileClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MobileClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MobileClientRequest::MobileClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MobileClientRequest::MobileClientRequest(const MobileClientRequest &other)
-    : AwsAbstractRequest(new MobileClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MobileClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MobileClientRequest& MobileClientRequest::operator=(const MobileClientRequest &o
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MobileClientRequest::MobileClientRequest(MobileClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MobileClientRequest::MobileClientRequest(MobileClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MobileClientRequest::operator==(const MobileClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MobileClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public MobileClientRequest instance.
  */
 MobileClientRequestPrivate::MobileClientRequestPrivate(const MobileClientRequest::Action action, MobileClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MobileClientRequestPrivate::MobileClientRequestPrivate(const MobileClientRequest
  */
 MobileClientRequestPrivate::MobileClientRequestPrivate(const MobileClientRequestPrivate &other,
                                      MobileClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

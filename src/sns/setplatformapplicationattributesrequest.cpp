@@ -66,10 +66,10 @@ bool SetPlatformApplicationAttributesRequest::isValid() const
  *
  * @return An SetPlatformApplicationAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * SetPlatformApplicationAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetPlatformApplicationAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new SetPlatformApplicationAttributesResponse(*this, reply);
 }

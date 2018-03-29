@@ -66,10 +66,10 @@ bool CreateQueueRequest::isValid() const
  *
  * @return An CreateQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * const reply) const
 {
     return new CreateQueueResponse(*this, reply);
 }

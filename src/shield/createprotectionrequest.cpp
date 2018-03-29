@@ -66,10 +66,10 @@ bool CreateProtectionRequest::isValid() const
  *
  * @return An CreateProtectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * CreateProtectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateProtectionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateProtectionResponse(*this, reply);
 }

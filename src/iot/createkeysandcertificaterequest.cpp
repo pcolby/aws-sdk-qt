@@ -66,10 +66,10 @@ bool CreateKeysAndCertificateRequest::isValid() const
  *
  * @return An CreateKeysAndCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new CreateKeysAndCertificateResponse(*this, reply);
 }

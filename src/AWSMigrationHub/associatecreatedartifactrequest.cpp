@@ -66,10 +66,10 @@ bool AssociateCreatedArtifactRequest::isValid() const
  *
  * @return An AssociateCreatedArtifactResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateCreatedArtifactResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class MediaPackageClientResponse;
 
-class QTAWS_EXPORT MediaPackageClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT MediaPackageClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

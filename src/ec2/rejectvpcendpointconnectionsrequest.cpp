@@ -66,10 +66,10 @@ bool RejectVpcEndpointConnectionsRequest::isValid() const
  *
  * @return An RejectVpcEndpointConnectionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response(QNetworkReply * const reply) const
 {
     return new RejectVpcEndpointConnectionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool EnableAvailabilityZonesForLoadBalancerRequest::isValid() const
  *
  * @return An EnableAvailabilityZonesForLoadBalancerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * EnableAvailabilityZonesForLoadBalancerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableAvailabilityZonesForLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
     return new EnableAvailabilityZonesForLoadBalancerResponse(*this, reply);
 }

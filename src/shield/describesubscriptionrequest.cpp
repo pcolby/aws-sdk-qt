@@ -66,10 +66,10 @@ bool DescribeSubscriptionRequest::isValid() const
  *
  * @return An DescribeSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSubscriptionResponse(*this, reply);
 }

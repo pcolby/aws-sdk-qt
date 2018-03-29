@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class PinpointClientResponse;
 
-class QTAWS_EXPORT PinpointClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT PinpointClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

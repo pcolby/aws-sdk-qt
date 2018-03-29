@@ -66,10 +66,10 @@ bool GetServersRequest::isValid() const
  *
  * @return An GetServersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * GetServersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * const reply) const
 {
     return new GetServersResponse(*this, reply);
 }

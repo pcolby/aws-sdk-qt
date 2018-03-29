@@ -66,10 +66,10 @@ bool PutKeyPolicyRequest::isValid() const
  *
  * @return An PutKeyPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * PutKeyPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutKeyPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutKeyPolicyResponse(*this, reply);
 }

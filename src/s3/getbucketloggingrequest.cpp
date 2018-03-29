@@ -66,10 +66,10 @@ bool GetBucketLoggingRequest::isValid() const
  *
  * @return An GetBucketLoggingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetBucketLoggingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBucketLoggingRequest::response(QNetworkReply * const reply) const
 {
     return new GetBucketLoggingResponse(*this, reply);
 }

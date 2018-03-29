@@ -66,10 +66,10 @@ bool ImportSnapshotRequest::isValid() const
  *
  * @return An ImportSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new ImportSnapshotResponse(*this, reply);
 }

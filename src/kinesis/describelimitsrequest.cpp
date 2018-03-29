@@ -66,10 +66,10 @@ bool DescribeLimitsRequest::isValid() const
  *
  * @return An DescribeLimitsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLimitsResponse(*this, reply);
 }

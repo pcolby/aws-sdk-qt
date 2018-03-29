@@ -66,10 +66,10 @@ bool DeleteTagsRequest::isValid() const
  *
  * @return An DeleteTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTagsResponse(*this, reply);
 }

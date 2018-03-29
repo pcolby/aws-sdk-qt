@@ -66,10 +66,10 @@ bool AcceptQualificationRequestRequest::isValid() const
  *
  * @return An AcceptQualificationRequestResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * AcceptQualificationRequestRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AcceptQualificationRequestRequest::response(QNetworkReply * const reply) const
 {
     return new AcceptQualificationRequestResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeStepRequest::isValid() const
  *
  * @return An DescribeStepResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeStepResponse(*this, reply);
 }

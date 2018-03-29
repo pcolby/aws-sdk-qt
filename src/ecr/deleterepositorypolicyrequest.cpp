@@ -66,10 +66,10 @@ bool DeleteRepositoryPolicyRequest::isValid() const
  *
  * @return An DeleteRepositoryPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRepositoryPolicyResponse(*this, reply);
 }

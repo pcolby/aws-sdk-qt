@@ -66,10 +66,10 @@ bool DetachInstancesRequest::isValid() const
  *
  * @return An DetachInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DetachInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new DetachInstancesResponse(*this, reply);
 }

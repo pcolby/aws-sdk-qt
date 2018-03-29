@@ -66,10 +66,10 @@ bool ListGroupResourcesRequest::isValid() const
  *
  * @return An ListGroupResourcesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ResourceGroupsClient::send
  */
-AwsAbstractResponse * ListGroupResourcesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGroupResourcesRequest::response(QNetworkReply * const reply) const
 {
     return new ListGroupResourcesResponse(*this, reply);
 }

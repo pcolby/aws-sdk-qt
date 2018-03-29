@@ -114,10 +114,10 @@ namespace StorageGateway {
  */
 StorageGatewayClient::StorageGatewayClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
 {
     Q_D(StorageGatewayClient);
     d->apiVersion = QStringLiteral("2013-06-30");
@@ -147,10 +147,10 @@ StorageGatewayClient::StorageGatewayClient(
  */
 StorageGatewayClient::StorageGatewayClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
 {
     Q_D(StorageGatewayClient);
     d->apiVersion = QStringLiteral("2013-06-30");
@@ -1550,9 +1550,9 @@ UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const Up
  * @param  q  Pointer to this object's public StorageGatewayClient instance.
  */
 StorageGatewayClientPrivate::StorageGatewayClientPrivate(StorageGatewayClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace StorageGateway

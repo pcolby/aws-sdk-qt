@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class CloudTrailClientRequest;
 
-class QTAWS_EXPORT CloudTrailClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CloudTrailClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudTrailClientRequest::Action action; ///< CloudTrail action to be performed.

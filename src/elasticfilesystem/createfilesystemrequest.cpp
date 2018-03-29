@@ -66,10 +66,10 @@ bool CreateFileSystemRequest::isValid() const
  *
  * @return An CreateFileSystemResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EFSClient::send
  */
-AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkReply * const reply) const
 {
     return new CreateFileSystemResponse(*this, reply);
 }

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CostExplorer {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CostExplorerClientRequestPrivate;
 
-class QTAWS_EXPORT CostExplorerClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CostExplorerClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CostExplorer.

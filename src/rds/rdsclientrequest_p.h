@@ -28,7 +28,7 @@ namespace RDS {
 
 class RdsClientRequest;
 
-class QTAWS_EXPORT RdsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT RdsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RdsClientRequest::Action action; ///< RDS action to be performed.

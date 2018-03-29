@@ -66,10 +66,10 @@ bool VerifyEmailIdentityRequest::isValid() const
  *
  * @return An VerifyEmailIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new VerifyEmailIdentityResponse(*this, reply);
 }

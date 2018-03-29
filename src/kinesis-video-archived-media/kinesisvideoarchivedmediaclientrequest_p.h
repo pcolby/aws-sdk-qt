@@ -28,7 +28,7 @@ namespace KinesisVideoArchivedMedia {
 
 class KinesisVideoArchivedMediaClientRequest;
 
-class QTAWS_EXPORT KinesisVideoArchivedMediaClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT KinesisVideoArchivedMediaClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     KinesisVideoArchivedMediaClientRequest::Action action; ///< KinesisVideoArchivedMedia action to be performed.

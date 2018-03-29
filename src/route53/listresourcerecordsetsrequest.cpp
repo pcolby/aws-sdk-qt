@@ -66,10 +66,10 @@ bool ListResourceRecordSetsRequest::isValid() const
  *
  * @return An ListResourceRecordSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourceRecordSetsResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace DAX {
  * @param  action  The DAX action to request.
  */
 DaxClientRequest::DaxClientRequest(const Action action)
-    : AwsAbstractRequest(new DaxClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DaxClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DaxClientRequest::DaxClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 DaxClientRequest::DaxClientRequest(const DaxClientRequest &other)
-    : AwsAbstractRequest(new DaxClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DaxClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DaxClientRequest& DaxClientRequest::operator=(const DaxClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DaxClientRequest::DaxClientRequest(DaxClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DaxClientRequest::DaxClientRequest(DaxClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DaxClientRequest::operator==(const DaxClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DaxClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public DaxClientRequest instance.
  */
 DaxClientRequestPrivate::DaxClientRequestPrivate(const DaxClientRequest::Action action, DaxClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DaxClientRequestPrivate::DaxClientRequestPrivate(const DaxClientRequest::Action 
  */
 DaxClientRequestPrivate::DaxClientRequestPrivate(const DaxClientRequestPrivate &other,
                                      DaxClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

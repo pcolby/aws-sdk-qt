@@ -50,10 +50,10 @@ namespace Inspector {
  */
 InspectorClient::InspectorClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new InspectorClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new InspectorClientPrivate(this), parent)
 {
     Q_D(InspectorClient);
     d->apiVersion = QStringLiteral("2016-02-16");
@@ -83,10 +83,10 @@ InspectorClient::InspectorClient(
  */
 InspectorClient::InspectorClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new InspectorClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new InspectorClientPrivate(this), parent)
 {
     Q_D(InspectorClient);
     d->apiVersion = QStringLiteral("2016-02-16");
@@ -593,9 +593,9 @@ UpdateAssessmentTargetResponse * InspectorClient::updateAssessmentTarget(const U
  * @param  q  Pointer to this object's public InspectorClient instance.
  */
 InspectorClientPrivate::InspectorClientPrivate(InspectorClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Inspector

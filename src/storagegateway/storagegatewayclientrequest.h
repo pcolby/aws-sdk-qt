@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace StorageGateway {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class StorageGatewayClientRequestPrivate;
 
-class QTAWS_EXPORT StorageGatewayClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT StorageGatewayClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by StorageGateway.

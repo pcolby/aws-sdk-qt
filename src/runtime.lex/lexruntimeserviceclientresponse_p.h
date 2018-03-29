@@ -28,7 +28,7 @@ namespace LexRuntimeService {
 
 class LexRuntimeServiceClientResponse;
 
-class QTAWS_EXPORT LexRuntimeServiceClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT LexRuntimeServiceClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

@@ -66,10 +66,10 @@ bool UpdateSnapshotScheduleRequest::isValid() const
  *
  * @return An UpdateSnapshotScheduleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * UpdateSnapshotScheduleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSnapshotScheduleRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSnapshotScheduleResponse(*this, reply);
 }

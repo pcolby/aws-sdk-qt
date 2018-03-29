@@ -66,10 +66,10 @@ bool StartPersonTrackingRequest::isValid() const
  *
  * @return An StartPersonTrackingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StartPersonTrackingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartPersonTrackingRequest::response(QNetworkReply * const reply) const
 {
     return new StartPersonTrackingResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool SetTimeBasedAutoScalingRequest::isValid() const
  *
  * @return An SetTimeBasedAutoScalingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * SetTimeBasedAutoScalingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetTimeBasedAutoScalingRequest::response(QNetworkReply * const reply) const
 {
     return new SetTimeBasedAutoScalingResponse(*this, reply);
 }

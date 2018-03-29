@@ -66,10 +66,10 @@ bool AddApplicationOutputRequest::isValid() const
  *
  * @return An AddApplicationOutputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * AddApplicationOutputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetworkReply * const reply) const
 {
     return new AddApplicationOutputResponse(*this, reply);
 }

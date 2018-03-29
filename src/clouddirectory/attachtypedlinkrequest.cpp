@@ -66,10 +66,10 @@ bool AttachTypedLinkRequest::isValid() const
  *
  * @return An AttachTypedLinkResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * AttachTypedLinkRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachTypedLinkRequest::response(QNetworkReply * const reply) const
 {
     return new AttachTypedLinkResponse(*this, reply);
 }

@@ -29,7 +29,7 @@ namespace Firehose {
 
 class FirehoseClient;
 
-class QTAWS_EXPORT FirehoseClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT FirehoseClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     FirehoseClientPrivate(FirehoseClient * const q);

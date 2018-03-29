@@ -66,10 +66,10 @@ bool AssociateTagOptionWithResourceRequest::isValid() const
  *
  * @return An AssociateTagOptionWithResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * AssociateTagOptionWithResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateTagOptionWithResourceRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateTagOptionWithResourceResponse(*this, reply);
 }

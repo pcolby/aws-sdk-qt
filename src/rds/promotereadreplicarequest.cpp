@@ -66,10 +66,10 @@ bool PromoteReadReplicaRequest::isValid() const
  *
  * @return An PromoteReadReplicaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkReply * const reply) const
 {
     return new PromoteReadReplicaResponse(*this, reply);
 }

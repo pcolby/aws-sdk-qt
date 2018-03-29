@@ -40,7 +40,7 @@ namespace CodeDeploy {
  * @param  parent   This object's parent.
  */
 CodeDeployClientResponse::CodeDeployClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CodeDeployClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CodeDeployClientResponsePrivate(this), parent)
 {
 
 }

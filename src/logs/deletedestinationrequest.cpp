@@ -66,10 +66,10 @@ bool DeleteDestinationRequest::isValid() const
  *
  * @return An DeleteDestinationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DeleteDestinationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDestinationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDestinationResponse(*this, reply);
 }

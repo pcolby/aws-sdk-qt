@@ -66,10 +66,10 @@ bool DeleteBandwidthRateLimitRequest::isValid() const
  *
  * @return An DeleteBandwidthRateLimitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBandwidthRateLimitResponse(*this, reply);
 }

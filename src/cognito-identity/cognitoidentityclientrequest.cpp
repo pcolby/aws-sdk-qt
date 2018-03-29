@@ -36,7 +36,7 @@ namespace CognitoIdentity {
  * @param  action  The CognitoIdentity action to request.
  */
 CognitoIdentityClientRequest::CognitoIdentityClientRequest(const Action action)
-    : AwsAbstractRequest(new CognitoIdentityClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CognitoIdentityClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CognitoIdentityClientRequest::CognitoIdentityClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CognitoIdentityClientRequest::CognitoIdentityClientRequest(const CognitoIdentityClientRequest &other)
-    : AwsAbstractRequest(new CognitoIdentityClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CognitoIdentityClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CognitoIdentityClientRequest& CognitoIdentityClientRequest::operator=(const Cogn
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CognitoIdentityClientRequest::CognitoIdentityClientRequest(CognitoIdentityClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CognitoIdentityClientRequest::CognitoIdentityClientRequest(CognitoIdentityClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CognitoIdentityClientRequest::operator==(const CognitoIdentityClientRequest
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CognitoIdentityClientRequest::unsignedRequest(const QUrl &endpoi
  * @param  q       Pointer to this object's public CognitoIdentityClientRequest instance.
  */
 CognitoIdentityClientRequestPrivate::CognitoIdentityClientRequestPrivate(const CognitoIdentityClientRequest::Action action, CognitoIdentityClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CognitoIdentityClientRequestPrivate::CognitoIdentityClientRequestPrivate(const C
  */
 CognitoIdentityClientRequestPrivate::CognitoIdentityClientRequestPrivate(const CognitoIdentityClientRequestPrivate &other,
                                      CognitoIdentityClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

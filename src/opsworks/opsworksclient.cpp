@@ -151,10 +151,10 @@ namespace OpsWorks {
  */
 OpsWorksClient::OpsWorksClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
 {
     Q_D(OpsWorksClient);
     d->apiVersion = QStringLiteral("2013-02-18");
@@ -184,10 +184,10 @@ OpsWorksClient::OpsWorksClient(
  */
 OpsWorksClient::OpsWorksClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
 {
     Q_D(OpsWorksClient);
     d->apiVersion = QStringLiteral("2013-02-18");
@@ -1829,9 +1829,9 @@ UpdateVolumeResponse * OpsWorksClient::updateVolume(const UpdateVolumeRequest &r
  * @param  q  Pointer to this object's public OpsWorksClient instance.
  */
 OpsWorksClientPrivate::OpsWorksClientPrivate(OpsWorksClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace OpsWorks

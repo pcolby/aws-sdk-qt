@@ -66,10 +66,10 @@ bool ListModelsRequest::isValid() const
  *
  * @return An ListModelsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * const reply) const
 {
     return new ListModelsResponse(*this, reply);
 }

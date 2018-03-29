@@ -66,10 +66,10 @@ bool CancelSchemaExtensionRequest::isValid() const
  *
  * @return An CancelSchemaExtensionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetworkReply * const reply) const
 {
     return new CancelSchemaExtensionResponse(*this, reply);
 }

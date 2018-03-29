@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudFormation {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CloudFormationClientRequestPrivate;
 
-class QTAWS_EXPORT CloudFormationClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CloudFormationClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudFormation.

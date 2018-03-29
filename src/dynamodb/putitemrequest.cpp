@@ -66,10 +66,10 @@ bool PutItemRequest::isValid() const
  *
  * @return An PutItemResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * PutItemRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutItemRequest::response(QNetworkReply * const reply) const
 {
     return new PutItemResponse(*this, reply);
 }

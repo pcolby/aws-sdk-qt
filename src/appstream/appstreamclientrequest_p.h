@@ -28,7 +28,7 @@ namespace AppStream {
 
 class AppStreamClientRequest;
 
-class QTAWS_EXPORT AppStreamClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT AppStreamClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppStreamClientRequest::Action action; ///< AppStream action to be performed.

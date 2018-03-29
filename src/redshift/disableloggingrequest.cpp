@@ -66,10 +66,10 @@ bool DisableLoggingRequest::isValid() const
  *
  * @return An DisableLoggingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DisableLoggingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableLoggingRequest::response(QNetworkReply * const reply) const
 {
     return new DisableLoggingResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool InitiateMultipartUploadRequest::isValid() const
  *
  * @return An InitiateMultipartUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * InitiateMultipartUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InitiateMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
     return new InitiateMultipartUploadResponse(*this, reply);
 }

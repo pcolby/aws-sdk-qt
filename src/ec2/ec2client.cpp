@@ -49,10 +49,10 @@ namespace EC2 {
  */
 Ec2Client::Ec2Client(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Ec2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Ec2ClientPrivate(this), parent)
 {
     Q_D(Ec2Client);
     d->apiVersion = QStringLiteral("2016-11-15");
@@ -82,10 +82,10 @@ Ec2Client::Ec2Client(
  */
 Ec2Client::Ec2Client(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Ec2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Ec2ClientPrivate(this), parent)
 {
     Q_D(Ec2Client);
     d->apiVersion = QStringLiteral("2016-11-15");
@@ -6085,9 +6085,9 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGr
  * @param  q  Pointer to this object's public Ec2Client instance.
  */
 Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EC2

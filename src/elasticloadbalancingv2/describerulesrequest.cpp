@@ -66,10 +66,10 @@ bool DescribeRulesRequest::isValid() const
  *
  * @return An DescribeRulesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DescribeRulesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeRulesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeRulesResponse(*this, reply);
 }

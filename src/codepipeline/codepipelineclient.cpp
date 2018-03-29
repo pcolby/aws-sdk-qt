@@ -208,10 +208,10 @@ namespace CodePipeline {
  */
 CodePipelineClient::CodePipelineClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
 {
     Q_D(CodePipelineClient);
     d->apiVersion = QStringLiteral("2015-07-09");
@@ -241,10 +241,10 @@ CodePipelineClient::CodePipelineClient(
  */
 CodePipelineClient::CodePipelineClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
 {
     Q_D(CodePipelineClient);
     d->apiVersion = QStringLiteral("2015-07-09");
@@ -683,9 +683,9 @@ UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipeline
  * @param  q  Pointer to this object's public CodePipelineClient instance.
  */
 CodePipelineClientPrivate::CodePipelineClientPrivate(CodePipelineClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodePipeline

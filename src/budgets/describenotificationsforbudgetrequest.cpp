@@ -66,10 +66,10 @@ bool DescribeNotificationsForBudgetRequest::isValid() const
  *
  * @return An DescribeNotificationsForBudgetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * DescribeNotificationsForBudgetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeNotificationsForBudgetRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeNotificationsForBudgetResponse(*this, reply);
 }

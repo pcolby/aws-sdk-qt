@@ -40,7 +40,7 @@ namespace AppSync {
  * @param  parent   This object's parent.
  */
 AppSyncClientResponse::AppSyncClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new AppSyncClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new AppSyncClientResponsePrivate(this), parent)
 {
 
 }

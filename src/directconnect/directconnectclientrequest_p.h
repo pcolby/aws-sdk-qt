@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DirectConnectClientRequest;
 
-class QTAWS_EXPORT DirectConnectClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT DirectConnectClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DirectConnectClientRequest::Action action; ///< DirectConnect action to be performed.

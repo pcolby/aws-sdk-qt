@@ -40,7 +40,7 @@ namespace MediaLive {
  * @param  parent   This object's parent.
  */
 MediaLiveClientResponse::MediaLiveClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MediaLiveClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MediaLiveClientResponsePrivate(this), parent)
 {
 
 }

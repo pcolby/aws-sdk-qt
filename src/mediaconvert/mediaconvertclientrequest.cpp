@@ -36,7 +36,7 @@ namespace MediaConvert {
  * @param  action  The MediaConvert action to request.
  */
 MediaConvertClientRequest::MediaConvertClientRequest(const Action action)
-    : AwsAbstractRequest(new MediaConvertClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MediaConvertClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MediaConvertClientRequest::MediaConvertClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MediaConvertClientRequest::MediaConvertClientRequest(const MediaConvertClientRequest &other)
-    : AwsAbstractRequest(new MediaConvertClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MediaConvertClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MediaConvertClientRequest& MediaConvertClientRequest::operator=(const MediaConve
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MediaConvertClientRequest::MediaConvertClientRequest(MediaConvertClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MediaConvertClientRequest::MediaConvertClientRequest(MediaConvertClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MediaConvertClientRequest::operator==(const MediaConvertClientRequest &othe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MediaConvertClientRequest::unsignedRequest(const QUrl &endpoint)
  * @param  q       Pointer to this object's public MediaConvertClientRequest instance.
  */
 MediaConvertClientRequestPrivate::MediaConvertClientRequestPrivate(const MediaConvertClientRequest::Action action, MediaConvertClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MediaConvertClientRequestPrivate::MediaConvertClientRequestPrivate(const MediaCo
  */
 MediaConvertClientRequestPrivate::MediaConvertClientRequestPrivate(const MediaConvertClientRequestPrivate &other,
                                      MediaConvertClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool DescribeMaintenanceWindowTasksRequest::isValid() const
  *
  * @return An DescribeMaintenanceWindowTasksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeMaintenanceWindowTasksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowTasksRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMaintenanceWindowTasksResponse(*this, reply);
 }

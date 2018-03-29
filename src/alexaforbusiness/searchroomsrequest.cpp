@@ -66,10 +66,10 @@ bool SearchRoomsRequest::isValid() const
  *
  * @return An SearchRoomsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * SearchRoomsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SearchRoomsRequest::response(QNetworkReply * const reply) const
 {
     return new SearchRoomsResponse(*this, reply);
 }

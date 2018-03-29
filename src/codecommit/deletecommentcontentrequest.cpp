@@ -66,10 +66,10 @@ bool DeleteCommentContentRequest::isValid() const
  *
  * @return An DeleteCommentContentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * DeleteCommentContentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCommentContentRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCommentContentResponse(*this, reply);
 }

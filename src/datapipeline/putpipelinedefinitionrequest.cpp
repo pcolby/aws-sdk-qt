@@ -66,10 +66,10 @@ bool PutPipelineDefinitionRequest::isValid() const
  *
  * @return An PutPipelineDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * PutPipelineDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutPipelineDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new PutPipelineDefinitionResponse(*this, reply);
 }

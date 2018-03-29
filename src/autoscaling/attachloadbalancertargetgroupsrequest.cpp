@@ -66,10 +66,10 @@ bool AttachLoadBalancerTargetGroupsRequest::isValid() const
  *
  * @return An AttachLoadBalancerTargetGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * AttachLoadBalancerTargetGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTargetGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new AttachLoadBalancerTargetGroupsResponse(*this, reply);
 }

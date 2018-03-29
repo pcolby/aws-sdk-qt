@@ -66,10 +66,10 @@ bool DescribeNetworkInterfacesRequest::isValid() const
  *
  * @return An DescribeNetworkInterfacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeNetworkInterfacesResponse(*this, reply);
 }

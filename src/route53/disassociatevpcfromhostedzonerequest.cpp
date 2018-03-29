@@ -66,10 +66,10 @@ bool DisassociateVPCFromHostedZoneRequest::isValid() const
  *
  * @return An DisassociateVPCFromHostedZoneResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateVPCFromHostedZoneResponse(*this, reply);
 }

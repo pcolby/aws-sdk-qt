@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace EMR {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class EmrClientRequestPrivate;
 
-class QTAWS_EXPORT EmrClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT EmrClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EMR.

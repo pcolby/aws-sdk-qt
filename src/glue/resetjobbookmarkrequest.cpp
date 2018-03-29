@@ -66,10 +66,10 @@ bool ResetJobBookmarkRequest::isValid() const
  *
  * @return An ResetJobBookmarkResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkReply * const reply) const
 {
     return new ResetJobBookmarkResponse(*this, reply);
 }

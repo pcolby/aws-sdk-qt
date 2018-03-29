@@ -66,10 +66,10 @@ bool RemoveTagsFromVaultRequest::isValid() const
  *
  * @return An RemoveTagsFromVaultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * RemoveTagsFromVaultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveTagsFromVaultRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveTagsFromVaultResponse(*this, reply);
 }

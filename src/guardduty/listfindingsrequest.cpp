@@ -66,10 +66,10 @@ bool ListFindingsRequest::isValid() const
  *
  * @return An ListFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new ListFindingsResponse(*this, reply);
 }

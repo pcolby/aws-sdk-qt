@@ -28,7 +28,7 @@ namespace WAF {
 
 class WafClientRequest;
 
-class QTAWS_EXPORT WafClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT WafClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WafClientRequest::Action action; ///< WAF action to be performed.

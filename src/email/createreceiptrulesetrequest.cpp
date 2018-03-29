@@ -66,10 +66,10 @@ bool CreateReceiptRuleSetRequest::isValid() const
  *
  * @return An CreateReceiptRuleSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * CreateReceiptRuleSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateReceiptRuleSetResponse(*this, reply);
 }

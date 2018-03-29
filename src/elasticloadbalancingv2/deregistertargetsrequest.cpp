@@ -66,10 +66,10 @@ bool DeregisterTargetsRequest::isValid() const
  *
  * @return An DeregisterTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterTargetsResponse(*this, reply);
 }

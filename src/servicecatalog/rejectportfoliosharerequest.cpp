@@ -66,10 +66,10 @@ bool RejectPortfolioShareRequest::isValid() const
  *
  * @return An RejectPortfolioShareResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetworkReply * const reply) const
 {
     return new RejectPortfolioShareResponse(*this, reply);
 }

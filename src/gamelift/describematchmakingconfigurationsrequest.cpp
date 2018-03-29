@@ -66,10 +66,10 @@ bool DescribeMatchmakingConfigurationsRequest::isValid() const
  *
  * @return An DescribeMatchmakingConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeMatchmakingConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMatchmakingConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMatchmakingConfigurationsResponse(*this, reply);
 }

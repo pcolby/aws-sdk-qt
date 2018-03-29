@@ -66,10 +66,10 @@ bool DescribeAgentVersionsRequest::isValid() const
  *
  * @return An DescribeAgentVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAgentVersionsResponse(*this, reply);
 }

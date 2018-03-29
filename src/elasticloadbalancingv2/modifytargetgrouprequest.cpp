@@ -66,10 +66,10 @@ bool ModifyTargetGroupRequest::isValid() const
  *
  * @return An ModifyTargetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * ModifyTargetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyTargetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyTargetGroupResponse(*this, reply);
 }

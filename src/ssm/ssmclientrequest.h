@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SSM {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SsmClientRequestPrivate;
 
-class QTAWS_EXPORT SsmClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SsmClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSM.

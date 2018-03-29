@@ -66,10 +66,10 @@ bool PutScalingPolicyRequest::isValid() const
  *
  * @return An PutScalingPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutScalingPolicyResponse(*this, reply);
 }

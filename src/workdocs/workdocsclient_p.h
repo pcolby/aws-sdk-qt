@@ -29,7 +29,7 @@ namespace WorkDocs {
 
 class WorkDocsClient;
 
-class QTAWS_EXPORT WorkDocsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT WorkDocsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WorkDocsClientPrivate(WorkDocsClient * const q);

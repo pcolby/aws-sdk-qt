@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Pricing {
@@ -38,18 +38,18 @@ class GetAttributeValuesResponse;
 class GetProductsRequest;
 class GetProductsResponse;
 
-class QTAWS_EXPORT PricingClient : public AwsAbstractClient {
+class QTAWS_EXPORT PricingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     PricingClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     PricingClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

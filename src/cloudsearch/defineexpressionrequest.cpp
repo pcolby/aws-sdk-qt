@@ -66,10 +66,10 @@ bool DefineExpressionRequest::isValid() const
  *
  * @return An DefineExpressionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DefineExpressionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DefineExpressionRequest::response(QNetworkReply * const reply) const
 {
     return new DefineExpressionResponse(*this, reply);
 }

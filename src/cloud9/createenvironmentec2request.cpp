@@ -66,10 +66,10 @@ bool CreateEnvironmentEC2Request::isValid() const
  *
  * @return An CreateEnvironmentEC2Response instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Cloud9Client::send
  */
-AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetworkReply * const reply) const
 {
     return new CreateEnvironmentEC2Response(*this, reply);
 }

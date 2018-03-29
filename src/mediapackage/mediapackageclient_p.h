@@ -29,7 +29,7 @@ namespace MediaPackage {
 
 class MediaPackageClient;
 
-class QTAWS_EXPORT MediaPackageClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT MediaPackageClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MediaPackageClientPrivate(MediaPackageClient * const q);

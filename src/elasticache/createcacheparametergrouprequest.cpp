@@ -66,10 +66,10 @@ bool CreateCacheParameterGroupRequest::isValid() const
  *
  * @return An CreateCacheParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * CreateCacheParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCacheParameterGroupResponse(*this, reply);
 }

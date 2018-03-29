@@ -66,10 +66,10 @@ bool CreateNotificationSubscriptionRequest::isValid() const
  *
  * @return An CreateNotificationSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * CreateNotificationSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateNotificationSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateNotificationSubscriptionResponse(*this, reply);
 }

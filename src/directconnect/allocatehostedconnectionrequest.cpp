@@ -66,10 +66,10 @@ bool AllocateHostedConnectionRequest::isValid() const
  *
  * @return An AllocateHostedConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new AllocateHostedConnectionResponse(*this, reply);
 }

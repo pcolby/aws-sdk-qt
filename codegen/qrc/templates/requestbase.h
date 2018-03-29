@@ -12,10 +12,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{ClassName}} : public AwsAbstractRequest {
+class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by {{ServiceName}}.

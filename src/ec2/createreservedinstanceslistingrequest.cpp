@@ -66,10 +66,10 @@ bool CreateReservedInstancesListingRequest::isValid() const
  *
  * @return An CreateReservedInstancesListingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateReservedInstancesListingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateReservedInstancesListingRequest::response(QNetworkReply * const reply) const
 {
     return new CreateReservedInstancesListingResponse(*this, reply);
 }

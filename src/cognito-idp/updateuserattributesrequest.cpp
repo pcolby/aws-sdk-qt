@@ -66,10 +66,10 @@ bool UpdateUserAttributesRequest::isValid() const
  *
  * @return An UpdateUserAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateUserAttributesResponse(*this, reply);
 }

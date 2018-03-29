@@ -66,10 +66,10 @@ bool ModifyNetworkInterfaceAttributeRequest::isValid() const
  *
  * @return An ModifyNetworkInterfaceAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyNetworkInterfaceAttributeResponse(*this, reply);
 }

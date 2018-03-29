@@ -66,10 +66,10 @@ bool VerifyEmailAddressRequest::isValid() const
  *
  * @return An VerifyEmailAddressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkReply * const reply) const
 {
     return new VerifyEmailAddressResponse(*this, reply);
 }

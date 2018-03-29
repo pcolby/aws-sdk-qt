@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Snowball {
@@ -66,18 +66,18 @@ class UpdateClusterResponse;
 class UpdateJobRequest;
 class UpdateJobResponse;
 
-class QTAWS_EXPORT SnowballClient : public AwsAbstractClient {
+class QTAWS_EXPORT SnowballClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     SnowballClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     SnowballClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

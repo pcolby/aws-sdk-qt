@@ -66,10 +66,10 @@ bool GetMediaForFragmentListRequest::isValid() const
  *
  * @return An GetMediaForFragmentListResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisVideoArchivedMediaClient::send
  */
-AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNetworkReply * const reply) const
 {
     return new GetMediaForFragmentListResponse(*this, reply);
 }

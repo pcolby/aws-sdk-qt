@@ -45,10 +45,10 @@ namespace CostandUsageReportService {
  */
 CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
 {
     Q_D(CostandUsageReportServiceClient);
     d->apiVersion = QStringLiteral("2017-01-06");
@@ -78,10 +78,10 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
  */
 CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
 {
     Q_D(CostandUsageReportServiceClient);
     d->apiVersion = QStringLiteral("2017-01-06");
@@ -148,9 +148,9 @@ PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefiniti
  * @param  q  Pointer to this object's public CostandUsageReportServiceClient instance.
  */
 CostandUsageReportServiceClientPrivate::CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CostandUsageReportService

@@ -36,7 +36,7 @@ namespace EMR {
  * @param  action  The EMR action to request.
  */
 EmrClientRequest::EmrClientRequest(const Action action)
-    : AwsAbstractRequest(new EmrClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EmrClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ EmrClientRequest::EmrClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 EmrClientRequest::EmrClientRequest(const EmrClientRequest &other)
-    : AwsAbstractRequest(new EmrClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EmrClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ EmrClientRequest& EmrClientRequest::operator=(const EmrClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-EmrClientRequest::EmrClientRequest(EmrClientRequestPrivate * const d) : AwsAbstractRequest(d)
+EmrClientRequest::EmrClientRequest(EmrClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool EmrClientRequest::operator==(const EmrClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest EmrClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public EmrClientRequest instance.
  */
 EmrClientRequestPrivate::EmrClientRequestPrivate(const EmrClientRequest::Action action, EmrClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ EmrClientRequestPrivate::EmrClientRequestPrivate(const EmrClientRequest::Action 
  */
 EmrClientRequestPrivate::EmrClientRequestPrivate(const EmrClientRequestPrivate &other,
                                      EmrClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

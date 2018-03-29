@@ -66,10 +66,10 @@ bool ListPullRequestsRequest::isValid() const
  *
  * @return An ListPullRequestsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * ListPullRequestsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPullRequestsRequest::response(QNetworkReply * const reply) const
 {
     return new ListPullRequestsResponse(*this, reply);
 }

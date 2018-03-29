@@ -66,10 +66,10 @@ bool ListGrantsRequest::isValid() const
  *
  * @return An ListGrantsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * ListGrantsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGrantsRequest::response(QNetworkReply * const reply) const
 {
     return new ListGrantsResponse(*this, reply);
 }

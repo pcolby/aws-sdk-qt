@@ -66,10 +66,10 @@ bool DescribeBundleTasksRequest::isValid() const
  *
  * @return An DescribeBundleTasksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBundleTasksResponse(*this, reply);
 }

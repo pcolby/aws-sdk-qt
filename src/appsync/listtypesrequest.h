@@ -37,7 +37,7 @@ public:
 
 
 protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    virtual QtAws::Core::AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
 private:
     Q_DECLARE_PRIVATE(ListTypesRequest)

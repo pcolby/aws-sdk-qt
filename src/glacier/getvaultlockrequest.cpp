@@ -66,10 +66,10 @@ bool GetVaultLockRequest::isValid() const
  *
  * @return An GetVaultLockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * GetVaultLockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetVaultLockRequest::response(QNetworkReply * const reply) const
 {
     return new GetVaultLockResponse(*this, reply);
 }

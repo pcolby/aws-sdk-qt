@@ -40,7 +40,7 @@ namespace AppStream {
  * @param  parent   This object's parent.
  */
 AppStreamClientResponse::AppStreamClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new AppStreamClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new AppStreamClientResponsePrivate(this), parent)
 {
 
 }

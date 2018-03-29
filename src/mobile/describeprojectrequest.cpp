@@ -66,10 +66,10 @@ bool DescribeProjectRequest::isValid() const
  *
  * @return An DescribeProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MobileClient::send
  */
-AwsAbstractResponse * DescribeProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeProjectResponse(*this, reply);
 }

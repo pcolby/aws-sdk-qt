@@ -66,10 +66,10 @@ bool PutRoomSkillParameterRequest::isValid() const
  *
  * @return An PutRoomSkillParameterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * PutRoomSkillParameterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRoomSkillParameterRequest::response(QNetworkReply * const reply) const
 {
     return new PutRoomSkillParameterResponse(*this, reply);
 }

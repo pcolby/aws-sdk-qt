@@ -66,10 +66,10 @@ bool DescribeAttachmentRequest::isValid() const
  *
  * @return An DescribeAttachmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * DescribeAttachmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAttachmentRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAttachmentResponse(*this, reply);
 }

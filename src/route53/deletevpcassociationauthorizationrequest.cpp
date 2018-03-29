@@ -66,10 +66,10 @@ bool DeleteVPCAssociationAuthorizationRequest::isValid() const
  *
  * @return An DeleteVPCAssociationAuthorizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVPCAssociationAuthorizationResponse(*this, reply);
 }

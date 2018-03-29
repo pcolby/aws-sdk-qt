@@ -36,7 +36,7 @@ namespace ElasticsearchService {
  * @param  action  The ElasticsearchService action to request.
  */
 ElasticsearchServiceClientRequest::ElasticsearchServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new ElasticsearchServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ElasticsearchServiceClientRequest::ElasticsearchServiceClientRequest(const Actio
  * @param  other  Instance to copy.
  */
 ElasticsearchServiceClientRequest::ElasticsearchServiceClientRequest(const ElasticsearchServiceClientRequest &other)
-    : AwsAbstractRequest(new ElasticsearchServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ElasticsearchServiceClientRequest& ElasticsearchServiceClientRequest::operator=(
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ElasticsearchServiceClientRequest::ElasticsearchServiceClientRequest(ElasticsearchServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ElasticsearchServiceClientRequest::ElasticsearchServiceClientRequest(ElasticsearchServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ElasticsearchServiceClientRequest::operator==(const ElasticsearchServiceCli
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ElasticsearchServiceClientRequest::unsignedRequest(const QUrl &e
  * @param  q       Pointer to this object's public ElasticsearchServiceClientRequest instance.
  */
 ElasticsearchServiceClientRequestPrivate::ElasticsearchServiceClientRequestPrivate(const ElasticsearchServiceClientRequest::Action action, ElasticsearchServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ElasticsearchServiceClientRequestPrivate::ElasticsearchServiceClientRequestPriva
  */
 ElasticsearchServiceClientRequestPrivate::ElasticsearchServiceClientRequestPrivate(const ElasticsearchServiceClientRequestPrivate &other,
                                      ElasticsearchServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

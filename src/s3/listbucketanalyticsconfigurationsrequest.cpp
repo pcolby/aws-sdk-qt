@@ -66,10 +66,10 @@ bool ListBucketAnalyticsConfigurationsRequest::isValid() const
  *
  * @return An ListBucketAnalyticsConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListBucketAnalyticsConfigurationsResponse(*this, reply);
 }

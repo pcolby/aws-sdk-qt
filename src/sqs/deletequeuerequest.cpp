@@ -66,10 +66,10 @@ bool DeleteQueueRequest::isValid() const
  *
  * @return An DeleteQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteQueueResponse(*this, reply);
 }

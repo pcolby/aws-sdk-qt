@@ -66,10 +66,10 @@ bool SubmitTaskStateChangeRequest::isValid() const
  *
  * @return An SubmitTaskStateChangeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetworkReply * const reply) const
 {
     return new SubmitTaskStateChangeResponse(*this, reply);
 }

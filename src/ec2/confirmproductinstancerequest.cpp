@@ -66,10 +66,10 @@ bool ConfirmProductInstanceRequest::isValid() const
  *
  * @return An ConfirmProductInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new ConfirmProductInstanceResponse(*this, reply);
 }

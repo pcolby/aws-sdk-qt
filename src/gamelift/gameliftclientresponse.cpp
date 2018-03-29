@@ -40,7 +40,7 @@ namespace GameLift {
  * @param  parent   This object's parent.
  */
 GameLiftClientResponse::GameLiftClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new GameLiftClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new GameLiftClientResponsePrivate(this), parent)
 {
 
 }

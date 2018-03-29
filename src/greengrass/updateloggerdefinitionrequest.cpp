@@ -66,10 +66,10 @@ bool UpdateLoggerDefinitionRequest::isValid() const
  *
  * @return An UpdateLoggerDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateLoggerDefinitionResponse(*this, reply);
 }

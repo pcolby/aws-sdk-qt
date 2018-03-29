@@ -66,10 +66,10 @@ bool DeleteCacheClusterRequest::isValid() const
  *
  * @return An DeleteCacheClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DeleteCacheClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCacheClusterRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCacheClusterResponse(*this, reply);
 }

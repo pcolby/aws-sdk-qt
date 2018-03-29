@@ -66,10 +66,10 @@ bool CreateDBParameterGroupRequest::isValid() const
  *
  * @return An CreateDBParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDBParameterGroupResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListPublicKeysRequest::isValid() const
  *
  * @return An ListPublicKeysResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply * const reply) const
 {
     return new ListPublicKeysResponse(*this, reply);
 }

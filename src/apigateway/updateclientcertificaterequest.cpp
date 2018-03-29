@@ -66,10 +66,10 @@ bool UpdateClientCertificateRequest::isValid() const
  *
  * @return An UpdateClientCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * UpdateClientCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateClientCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateClientCertificateResponse(*this, reply);
 }

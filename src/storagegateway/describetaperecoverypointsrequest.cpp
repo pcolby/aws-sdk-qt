@@ -66,10 +66,10 @@ bool DescribeTapeRecoveryPointsRequest::isValid() const
  *
  * @return An DescribeTapeRecoveryPointsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTapeRecoveryPointsResponse(*this, reply);
 }

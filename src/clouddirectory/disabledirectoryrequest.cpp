@@ -66,10 +66,10 @@ bool DisableDirectoryRequest::isValid() const
  *
  * @return An DisableDirectoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkReply * const reply) const
 {
     return new DisableDirectoryResponse(*this, reply);
 }

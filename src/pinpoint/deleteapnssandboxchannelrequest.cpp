@@ -66,10 +66,10 @@ bool DeleteApnsSandboxChannelRequest::isValid() const
  *
  * @return An DeleteApnsSandboxChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteApnsSandboxChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApnsSandboxChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApnsSandboxChannelResponse(*this, reply);
 }

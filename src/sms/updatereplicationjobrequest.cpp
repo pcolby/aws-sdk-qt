@@ -66,10 +66,10 @@ bool UpdateReplicationJobRequest::isValid() const
  *
  * @return An UpdateReplicationJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateReplicationJobResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace DynamoDB {
  * @param  action  The DynamoDB action to request.
  */
 DynamoDBClientRequest::DynamoDBClientRequest(const Action action)
-    : AwsAbstractRequest(new DynamoDBClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DynamoDBClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DynamoDBClientRequest::DynamoDBClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 DynamoDBClientRequest::DynamoDBClientRequest(const DynamoDBClientRequest &other)
-    : AwsAbstractRequest(new DynamoDBClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DynamoDBClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DynamoDBClientRequest& DynamoDBClientRequest::operator=(const DynamoDBClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DynamoDBClientRequest::DynamoDBClientRequest(DynamoDBClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DynamoDBClientRequest::DynamoDBClientRequest(DynamoDBClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DynamoDBClientRequest::operator==(const DynamoDBClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DynamoDBClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public DynamoDBClientRequest instance.
  */
 DynamoDBClientRequestPrivate::DynamoDBClientRequestPrivate(const DynamoDBClientRequest::Action action, DynamoDBClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DynamoDBClientRequestPrivate::DynamoDBClientRequestPrivate(const DynamoDBClientR
  */
 DynamoDBClientRequestPrivate::DynamoDBClientRequestPrivate(const DynamoDBClientRequestPrivate &other,
                                      DynamoDBClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -109,10 +109,10 @@ namespace ApplicationDiscoveryService {
  */
 ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
 {
     Q_D(ApplicationDiscoveryServiceClient);
     d->apiVersion = QStringLiteral("2015-11-01");
@@ -142,10 +142,10 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
  */
 ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
 {
     Q_D(ApplicationDiscoveryServiceClient);
     d->apiVersion = QStringLiteral("2015-11-01");
@@ -477,9 +477,9 @@ UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication
  * @param  q  Pointer to this object's public ApplicationDiscoveryServiceClient instance.
  */
 ApplicationDiscoveryServiceClientPrivate::ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ApplicationDiscoveryService

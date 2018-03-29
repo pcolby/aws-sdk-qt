@@ -66,10 +66,10 @@ bool DeleteUploadRequest::isValid() const
  *
  * @return An DeleteUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * DeleteUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteUploadRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteUploadResponse(*this, reply);
 }

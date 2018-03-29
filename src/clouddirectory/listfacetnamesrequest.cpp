@@ -66,10 +66,10 @@ bool ListFacetNamesRequest::isValid() const
  *
  * @return An ListFacetNamesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListFacetNamesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListFacetNamesRequest::response(QNetworkReply * const reply) const
 {
     return new ListFacetNamesResponse(*this, reply);
 }

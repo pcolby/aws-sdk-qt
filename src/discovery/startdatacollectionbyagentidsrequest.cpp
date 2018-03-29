@@ -66,10 +66,10 @@ bool StartDataCollectionByAgentIdsRequest::isValid() const
  *
  * @return An StartDataCollectionByAgentIdsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationDiscoveryServiceClient::send
  */
-AwsAbstractResponse * StartDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
 {
     return new StartDataCollectionByAgentIdsResponse(*this, reply);
 }

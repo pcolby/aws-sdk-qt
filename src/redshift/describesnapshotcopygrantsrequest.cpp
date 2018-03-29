@@ -66,10 +66,10 @@ bool DescribeSnapshotCopyGrantsRequest::isValid() const
  *
  * @return An DescribeSnapshotCopyGrantsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeSnapshotCopyGrantsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSnapshotCopyGrantsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSnapshotCopyGrantsResponse(*this, reply);
 }

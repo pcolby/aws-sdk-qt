@@ -66,10 +66,10 @@ bool CreateReplicationSubnetGroupRequest::isValid() const
  *
  * @return An CreateReplicationSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateReplicationSubnetGroupResponse(*this, reply);
 }

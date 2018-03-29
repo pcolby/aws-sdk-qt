@@ -66,10 +66,10 @@ bool ListTagsLogGroupRequest::isValid() const
  *
  * @return An ListTagsLogGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * ListTagsLogGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTagsLogGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ListTagsLogGroupResponse(*this, reply);
 }

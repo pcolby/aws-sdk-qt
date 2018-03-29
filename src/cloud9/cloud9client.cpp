@@ -99,10 +99,10 @@ namespace Cloud9 {
  */
 Cloud9Client::Cloud9Client(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
 {
     Q_D(Cloud9Client);
     d->apiVersion = QStringLiteral("2017-09-23");
@@ -132,10 +132,10 @@ Cloud9Client::Cloud9Client(
  */
 Cloud9Client::Cloud9Client(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
 {
     Q_D(Cloud9Client);
     d->apiVersion = QStringLiteral("2017-09-23");
@@ -305,9 +305,9 @@ UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(
  * @param  q  Pointer to this object's public Cloud9Client instance.
  */
 Cloud9ClientPrivate::Cloud9ClientPrivate(Cloud9Client * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Cloud9

@@ -66,10 +66,10 @@ bool AssociateSoftwareTokenRequest::isValid() const
  *
  * @return An AssociateSoftwareTokenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateSoftwareTokenResponse(*this, reply);
 }

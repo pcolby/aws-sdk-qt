@@ -66,10 +66,10 @@ bool UpdateEmailChannelRequest::isValid() const
  *
  * @return An UpdateEmailChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateEmailChannelResponse(*this, reply);
 }

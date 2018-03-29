@@ -66,10 +66,10 @@ bool ListUploadsRequest::isValid() const
  *
  * @return An ListUploadsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ListUploadsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListUploadsRequest::response(QNetworkReply * const reply) const
 {
     return new ListUploadsResponse(*this, reply);
 }

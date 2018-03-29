@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Translate {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class TranslateClientRequestPrivate;
 
-class QTAWS_EXPORT TranslateClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT TranslateClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Translate.

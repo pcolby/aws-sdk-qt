@@ -66,10 +66,10 @@ bool CreateInputRequest::isValid() const
  *
  * @return An CreateInputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * const reply) const
 {
     return new CreateInputResponse(*this, reply);
 }

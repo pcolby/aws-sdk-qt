@@ -66,10 +66,10 @@ bool ModifyInstanceFleetRequest::isValid() const
  *
  * @return An ModifyInstanceFleetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyInstanceFleetResponse(*this, reply);
 }

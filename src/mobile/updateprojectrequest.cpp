@@ -66,10 +66,10 @@ bool UpdateProjectRequest::isValid() const
  *
  * @return An UpdateProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MobileClient::send
  */
-AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateProjectResponse(*this, reply);
 }

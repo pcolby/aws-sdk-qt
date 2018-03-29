@@ -66,10 +66,10 @@ bool GetFindingsRequest::isValid() const
  *
  * @return An GetFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * GetFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new GetFindingsResponse(*this, reply);
 }

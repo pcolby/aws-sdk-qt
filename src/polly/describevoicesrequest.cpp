@@ -66,10 +66,10 @@ bool DescribeVoicesRequest::isValid() const
  *
  * @return An DescribeVoicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PollyClient::send
  */
-AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVoicesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetShardIteratorRequest::isValid() const
  *
  * @return An GetShardIteratorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkReply * const reply) const
 {
     return new GetShardIteratorResponse(*this, reply);
 }

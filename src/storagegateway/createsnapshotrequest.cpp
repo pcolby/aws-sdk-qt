@@ -66,10 +66,10 @@ bool CreateSnapshotRequest::isValid() const
  *
  * @return An CreateSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSnapshotResponse(*this, reply);
 }

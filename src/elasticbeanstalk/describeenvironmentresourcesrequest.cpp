@@ -66,10 +66,10 @@ bool DescribeEnvironmentResourcesRequest::isValid() const
  *
  * @return An DescribeEnvironmentResourcesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEnvironmentResourcesResponse(*this, reply);
 }

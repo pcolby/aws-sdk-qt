@@ -66,10 +66,10 @@ bool DescribePlacementGroupsRequest::isValid() const
  *
  * @return An DescribePlacementGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePlacementGroupsResponse(*this, reply);
 }

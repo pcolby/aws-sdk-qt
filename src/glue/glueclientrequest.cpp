@@ -36,7 +36,7 @@ namespace Glue {
  * @param  action  The Glue action to request.
  */
 GlueClientRequest::GlueClientRequest(const Action action)
-    : AwsAbstractRequest(new GlueClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GlueClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ GlueClientRequest::GlueClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 GlueClientRequest::GlueClientRequest(const GlueClientRequest &other)
-    : AwsAbstractRequest(new GlueClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GlueClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ GlueClientRequest& GlueClientRequest::operator=(const GlueClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-GlueClientRequest::GlueClientRequest(GlueClientRequestPrivate * const d) : AwsAbstractRequest(d)
+GlueClientRequest::GlueClientRequest(GlueClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool GlueClientRequest::operator==(const GlueClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest GlueClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public GlueClientRequest instance.
  */
 GlueClientRequestPrivate::GlueClientRequestPrivate(const GlueClientRequest::Action action, GlueClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ GlueClientRequestPrivate::GlueClientRequestPrivate(const GlueClientRequest::Acti
  */
 GlueClientRequestPrivate::GlueClientRequestPrivate(const GlueClientRequestPrivate &other,
                                      GlueClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

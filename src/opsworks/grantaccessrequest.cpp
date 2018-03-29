@@ -66,10 +66,10 @@ bool GrantAccessRequest::isValid() const
  *
  * @return An GrantAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * const reply) const
 {
     return new GrantAccessResponse(*this, reply);
 }

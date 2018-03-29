@@ -66,10 +66,10 @@ bool DeleteApplicationCloudWatchLoggingOptionRequest::isValid() const
  *
  * @return An DeleteApplicationCloudWatchLoggingOptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApplicationCloudWatchLoggingOptionResponse(*this, reply);
 }

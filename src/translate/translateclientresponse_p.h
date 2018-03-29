@@ -28,7 +28,7 @@ namespace Translate {
 
 class TranslateClientResponse;
 
-class QTAWS_EXPORT TranslateClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT TranslateClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

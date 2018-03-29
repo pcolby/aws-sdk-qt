@@ -66,10 +66,10 @@ bool GetObjectTorrentRequest::isValid() const
  *
  * @return An GetObjectTorrentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetObjectTorrentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetObjectTorrentRequest::response(QNetworkReply * const reply) const
 {
     return new GetObjectTorrentResponse(*this, reply);
 }

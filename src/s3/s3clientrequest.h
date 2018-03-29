@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace S3 {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class S3ClientRequestPrivate;
 
-class QTAWS_EXPORT S3ClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT S3ClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by S3.

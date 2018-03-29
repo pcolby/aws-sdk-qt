@@ -66,10 +66,10 @@ bool DescribeChangeSetRequest::isValid() const
  *
  * @return An DescribeChangeSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeChangeSetResponse(*this, reply);
 }

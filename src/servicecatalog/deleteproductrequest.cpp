@@ -66,10 +66,10 @@ bool DeleteProductRequest::isValid() const
  *
  * @return An DeleteProductResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DeleteProductRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteProductRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteProductResponse(*this, reply);
 }

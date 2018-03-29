@@ -51,10 +51,10 @@ namespace IoTDataPlane {
  */
 IoTDataPlaneClient::IoTDataPlaneClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTDataPlaneClient);
     d->apiVersion = QStringLiteral("2015-05-28");
@@ -84,10 +84,10 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  */
 IoTDataPlaneClient::IoTDataPlaneClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTDataPlaneClient);
     d->apiVersion = QStringLiteral("2015-05-28");
@@ -194,9 +194,9 @@ UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateTh
  * @param  q  Pointer to this object's public IoTDataPlaneClient instance.
  */
 IoTDataPlaneClientPrivate::IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoTDataPlane

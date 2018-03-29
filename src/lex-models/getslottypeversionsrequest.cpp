@@ -66,10 +66,10 @@ bool GetSlotTypeVersionsRequest::isValid() const
  *
  * @return An GetSlotTypeVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetSlotTypeVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSlotTypeVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetSlotTypeVersionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool SendTestEventNotificationRequest::isValid() const
  *
  * @return An SendTestEventNotificationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * SendTestEventNotificationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendTestEventNotificationRequest::response(QNetworkReply * const reply) const
 {
     return new SendTestEventNotificationResponse(*this, reply);
 }

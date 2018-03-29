@@ -66,10 +66,10 @@ bool DeleteObjectRequest::isValid() const
  *
  * @return An DeleteObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreDataClient::send
  */
-AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteObjectResponse(*this, reply);
 }

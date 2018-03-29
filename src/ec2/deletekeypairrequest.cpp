@@ -66,10 +66,10 @@ bool DeleteKeyPairRequest::isValid() const
  *
  * @return An DeleteKeyPairResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteKeyPairResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteIntegrationResponseRequest::isValid() const
  *
  * @return An DeleteIntegrationResponseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteIntegrationResponseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteIntegrationResponseRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteIntegrationResponseResponse(*this, reply);
 }

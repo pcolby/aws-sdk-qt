@@ -66,10 +66,10 @@ bool GetEntitlementsRequest::isValid() const
  *
  * @return An GetEntitlementsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MarketplaceEntitlementServiceClient::send
  */
-AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkReply * const reply) const
 {
     return new GetEntitlementsResponse(*this, reply);
 }

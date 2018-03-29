@@ -36,7 +36,7 @@ namespace SimpleDB {
  * @param  action  The SimpleDB action to request.
  */
 SimpleDBClientRequest::SimpleDBClientRequest(const Action action)
-    : AwsAbstractRequest(new SimpleDBClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SimpleDBClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SimpleDBClientRequest::SimpleDBClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SimpleDBClientRequest::SimpleDBClientRequest(const SimpleDBClientRequest &other)
-    : AwsAbstractRequest(new SimpleDBClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SimpleDBClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SimpleDBClientRequest& SimpleDBClientRequest::operator=(const SimpleDBClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SimpleDBClientRequest::SimpleDBClientRequest(SimpleDBClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SimpleDBClientRequest::SimpleDBClientRequest(SimpleDBClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SimpleDBClientRequest::operator==(const SimpleDBClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SimpleDBClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public SimpleDBClientRequest instance.
  */
 SimpleDBClientRequestPrivate::SimpleDBClientRequestPrivate(const SimpleDBClientRequest::Action action, SimpleDBClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SimpleDBClientRequestPrivate::SimpleDBClientRequestPrivate(const SimpleDBClientR
  */
 SimpleDBClientRequestPrivate::SimpleDBClientRequestPrivate(const SimpleDBClientRequestPrivate &other,
                                      SimpleDBClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

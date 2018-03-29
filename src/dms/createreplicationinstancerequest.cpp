@@ -66,10 +66,10 @@ bool CreateReplicationInstanceRequest::isValid() const
  *
  * @return An CreateReplicationInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * CreateReplicationInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateReplicationInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateReplicationInstanceResponse(*this, reply);
 }

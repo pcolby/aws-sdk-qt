@@ -66,10 +66,10 @@ bool CreateGameSessionQueueRequest::isValid() const
  *
  * @return An CreateGameSessionQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * CreateGameSessionQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateGameSessionQueueRequest::response(QNetworkReply * const reply) const
 {
     return new CreateGameSessionQueueResponse(*this, reply);
 }

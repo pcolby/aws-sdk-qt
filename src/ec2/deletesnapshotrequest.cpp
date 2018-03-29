@@ -66,10 +66,10 @@ bool DeleteSnapshotRequest::isValid() const
  *
  * @return An DeleteSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSnapshotResponse(*this, reply);
 }

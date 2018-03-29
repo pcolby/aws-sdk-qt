@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class CognitoSyncClientRequest;
 
-class QTAWS_EXPORT CognitoSyncClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CognitoSyncClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CognitoSyncClientRequest::Action action; ///< CognitoSync action to be performed.

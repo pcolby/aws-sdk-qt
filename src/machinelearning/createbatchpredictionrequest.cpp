@@ -66,10 +66,10 @@ bool CreateBatchPredictionRequest::isValid() const
  *
  * @return An CreateBatchPredictionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * CreateBatchPredictionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBatchPredictionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBatchPredictionResponse(*this, reply);
 }

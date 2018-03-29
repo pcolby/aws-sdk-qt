@@ -66,10 +66,10 @@ bool DetectKeyPhrasesRequest::isValid() const
  *
  * @return An DetectKeyPhrasesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
 {
     return new DetectKeyPhrasesResponse(*this, reply);
 }

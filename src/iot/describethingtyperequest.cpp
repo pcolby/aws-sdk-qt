@@ -66,10 +66,10 @@ bool DescribeThingTypeRequest::isValid() const
  *
  * @return An DescribeThingTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DescribeThingTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeThingTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeThingTypeResponse(*this, reply);
 }

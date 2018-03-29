@@ -66,10 +66,10 @@ bool IncreaseStreamRetentionPeriodRequest::isValid() const
  *
  * @return An IncreaseStreamRetentionPeriodResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::response(QNetworkReply * const reply) const
 {
     return new IncreaseStreamRetentionPeriodResponse(*this, reply);
 }

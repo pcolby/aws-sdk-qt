@@ -66,10 +66,10 @@ bool ViewBillingRequest::isValid() const
  *
  * @return An ViewBillingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * const reply) const
 {
     return new ViewBillingResponse(*this, reply);
 }

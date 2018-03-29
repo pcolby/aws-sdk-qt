@@ -66,10 +66,10 @@ bool ModifyMountTargetSecurityGroupsRequest::isValid() const
  *
  * @return An ModifyMountTargetSecurityGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EFSClient::send
  */
-AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyMountTargetSecurityGroupsResponse(*this, reply);
 }

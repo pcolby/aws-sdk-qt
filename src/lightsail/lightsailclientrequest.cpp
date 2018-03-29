@@ -36,7 +36,7 @@ namespace Lightsail {
  * @param  action  The Lightsail action to request.
  */
 LightsailClientRequest::LightsailClientRequest(const Action action)
-    : AwsAbstractRequest(new LightsailClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LightsailClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ LightsailClientRequest::LightsailClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 LightsailClientRequest::LightsailClientRequest(const LightsailClientRequest &other)
-    : AwsAbstractRequest(new LightsailClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LightsailClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ LightsailClientRequest& LightsailClientRequest::operator=(const LightsailClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-LightsailClientRequest::LightsailClientRequest(LightsailClientRequestPrivate * const d) : AwsAbstractRequest(d)
+LightsailClientRequest::LightsailClientRequest(LightsailClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool LightsailClientRequest::operator==(const LightsailClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest LightsailClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public LightsailClientRequest instance.
  */
 LightsailClientRequestPrivate::LightsailClientRequestPrivate(const LightsailClientRequest::Action action, LightsailClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ LightsailClientRequestPrivate::LightsailClientRequestPrivate(const LightsailClie
  */
 LightsailClientRequestPrivate::LightsailClientRequestPrivate(const LightsailClientRequestPrivate &other,
                                      LightsailClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

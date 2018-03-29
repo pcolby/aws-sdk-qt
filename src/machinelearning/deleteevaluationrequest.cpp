@@ -66,10 +66,10 @@ bool DeleteEvaluationRequest::isValid() const
  *
  * @return An DeleteEvaluationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEvaluationResponse(*this, reply);
 }

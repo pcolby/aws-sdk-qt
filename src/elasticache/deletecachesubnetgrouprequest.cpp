@@ -66,10 +66,10 @@ bool DeleteCacheSubnetGroupRequest::isValid() const
  *
  * @return An DeleteCacheSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DeleteCacheSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCacheSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCacheSubnetGroupResponse(*this, reply);
 }

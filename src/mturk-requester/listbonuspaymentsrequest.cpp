@@ -66,10 +66,10 @@ bool ListBonusPaymentsRequest::isValid() const
  *
  * @return An ListBonusPaymentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListBonusPaymentsResponse(*this, reply);
 }

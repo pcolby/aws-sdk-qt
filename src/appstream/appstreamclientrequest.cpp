@@ -36,7 +36,7 @@ namespace AppStream {
  * @param  action  The AppStream action to request.
  */
 AppStreamClientRequest::AppStreamClientRequest(const Action action)
-    : AwsAbstractRequest(new AppStreamClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AppStreamClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ AppStreamClientRequest::AppStreamClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 AppStreamClientRequest::AppStreamClientRequest(const AppStreamClientRequest &other)
-    : AwsAbstractRequest(new AppStreamClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AppStreamClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ AppStreamClientRequest& AppStreamClientRequest::operator=(const AppStreamClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-AppStreamClientRequest::AppStreamClientRequest(AppStreamClientRequestPrivate * const d) : AwsAbstractRequest(d)
+AppStreamClientRequest::AppStreamClientRequest(AppStreamClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool AppStreamClientRequest::operator==(const AppStreamClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest AppStreamClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public AppStreamClientRequest instance.
  */
 AppStreamClientRequestPrivate::AppStreamClientRequestPrivate(const AppStreamClientRequest::Action action, AppStreamClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ AppStreamClientRequestPrivate::AppStreamClientRequestPrivate(const AppStreamClie
  */
 AppStreamClientRequestPrivate::AppStreamClientRequestPrivate(const AppStreamClientRequestPrivate &other,
                                      AppStreamClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

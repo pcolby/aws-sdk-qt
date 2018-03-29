@@ -66,10 +66,10 @@ bool StopStreamProcessorRequest::isValid() const
  *
  * @return An StopStreamProcessorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StopStreamProcessorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
     return new StopStreamProcessorResponse(*this, reply);
 }

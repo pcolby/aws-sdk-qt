@@ -66,10 +66,10 @@ bool StopGameSessionPlacementRequest::isValid() const
  *
  * @return An StopGameSessionPlacementResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNetworkReply * const reply) const
 {
     return new StopGameSessionPlacementResponse(*this, reply);
 }

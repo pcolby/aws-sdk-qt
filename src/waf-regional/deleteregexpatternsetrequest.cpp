@@ -66,10 +66,10 @@ bool DeleteRegexPatternSetRequest::isValid() const
  *
  * @return An DeleteRegexPatternSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRegexPatternSetResponse(*this, reply);
 }

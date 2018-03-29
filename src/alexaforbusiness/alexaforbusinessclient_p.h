@@ -29,7 +29,7 @@ namespace AlexaForBusiness {
 
 class AlexaForBusinessClient;
 
-class QTAWS_EXPORT AlexaForBusinessClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT AlexaForBusinessClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q);

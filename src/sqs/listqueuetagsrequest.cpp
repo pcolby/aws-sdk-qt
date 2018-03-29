@@ -66,10 +66,10 @@ bool ListQueueTagsRequest::isValid() const
  *
  * @return An ListQueueTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply * const reply) const
 {
     return new ListQueueTagsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListReceiptRuleSetsRequest::isValid() const
  *
  * @return An ListReceiptRuleSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * ListReceiptRuleSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListReceiptRuleSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListReceiptRuleSetsResponse(*this, reply);
 }

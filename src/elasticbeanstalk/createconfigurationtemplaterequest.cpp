@@ -66,10 +66,10 @@ bool CreateConfigurationTemplateRequest::isValid() const
  *
  * @return An CreateConfigurationTemplateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * CreateConfigurationTemplateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateConfigurationTemplateRequest::response(QNetworkReply * const reply) const
 {
     return new CreateConfigurationTemplateResponse(*this, reply);
 }

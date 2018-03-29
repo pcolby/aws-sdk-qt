@@ -66,10 +66,10 @@ bool DeclineInvitationsRequest::isValid() const
  *
  * @return An DeclineInvitationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * DeclineInvitationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeclineInvitationsRequest::response(QNetworkReply * const reply) const
 {
     return new DeclineInvitationsResponse(*this, reply);
 }

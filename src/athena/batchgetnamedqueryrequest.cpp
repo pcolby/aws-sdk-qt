@@ -66,10 +66,10 @@ bool BatchGetNamedQueryRequest::isValid() const
  *
  * @return An BatchGetNamedQueryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * BatchGetNamedQueryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetNamedQueryRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetNamedQueryResponse(*this, reply);
 }

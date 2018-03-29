@@ -66,10 +66,10 @@ bool ModifyListenerRequest::isValid() const
  *
  * @return An ModifyListenerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * ModifyListenerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyListenerRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyListenerResponse(*this, reply);
 }

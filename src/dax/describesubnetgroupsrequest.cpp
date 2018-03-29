@@ -66,10 +66,10 @@ bool DescribeSubnetGroupsRequest::isValid() const
  *
  * @return An DescribeSubnetGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSubnetGroupsResponse(*this, reply);
 }

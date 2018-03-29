@@ -66,10 +66,10 @@ bool ReadPipelineRequest::isValid() const
  *
  * @return An ReadPipelineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticTranscoderClient::send
  */
-AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply * const reply) const
 {
     return new ReadPipelineResponse(*this, reply);
 }

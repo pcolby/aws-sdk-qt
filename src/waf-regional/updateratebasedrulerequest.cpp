@@ -66,10 +66,10 @@ bool UpdateRateBasedRuleRequest::isValid() const
  *
  * @return An UpdateRateBasedRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRateBasedRuleResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DetachUserPolicyRequest::isValid() const
  *
  * @return An DetachUserPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DetachUserPolicyResponse(*this, reply);
 }

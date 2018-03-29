@@ -28,7 +28,7 @@ namespace Batch {
 
 class BatchClientResponse;
 
-class QTAWS_EXPORT BatchClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT BatchClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

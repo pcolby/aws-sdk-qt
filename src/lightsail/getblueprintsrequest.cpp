@@ -66,10 +66,10 @@ bool GetBlueprintsRequest::isValid() const
  *
  * @return An GetBlueprintsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply * const reply) const
 {
     return new GetBlueprintsResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace LexRuntimeService {
  * @param  parent   This object's parent.
  */
 LexRuntimeServiceClientResponse::LexRuntimeServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new LexRuntimeServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new LexRuntimeServiceClientResponsePrivate(this), parent)
 {
 
 }

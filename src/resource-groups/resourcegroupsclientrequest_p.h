@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class ResourceGroupsClientRequest;
 
-class QTAWS_EXPORT ResourceGroupsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT ResourceGroupsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ResourceGroupsClientRequest::Action action; ///< ResourceGroups action to be performed.

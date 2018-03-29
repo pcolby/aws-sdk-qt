@@ -66,10 +66,10 @@ bool VerifyDomainDkimRequest::isValid() const
  *
  * @return An VerifyDomainDkimResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkReply * const reply) const
 {
     return new VerifyDomainDkimResponse(*this, reply);
 }

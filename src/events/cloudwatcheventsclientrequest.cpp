@@ -36,7 +36,7 @@ namespace CloudWatchEvents {
  * @param  action  The CloudWatchEvents action to request.
  */
 CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudWatchEventsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudWatchEventsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(const CloudWatchEventsClientRequest &other)
-    : AwsAbstractRequest(new CloudWatchEventsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudWatchEventsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudWatchEventsClientRequest& CloudWatchEventsClientRequest::operator=(const Cl
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(CloudWatchEventsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudWatchEventsClientRequest::CloudWatchEventsClientRequest(CloudWatchEventsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudWatchEventsClientRequest::operator==(const CloudWatchEventsClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudWatchEventsClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public CloudWatchEventsClientRequest instance.
  */
 CloudWatchEventsClientRequestPrivate::CloudWatchEventsClientRequestPrivate(const CloudWatchEventsClientRequest::Action action, CloudWatchEventsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudWatchEventsClientRequestPrivate::CloudWatchEventsClientRequestPrivate(const
  */
 CloudWatchEventsClientRequestPrivate::CloudWatchEventsClientRequestPrivate(const CloudWatchEventsClientRequestPrivate &other,
                                      CloudWatchEventsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

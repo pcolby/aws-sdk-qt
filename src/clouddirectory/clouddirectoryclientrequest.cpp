@@ -36,7 +36,7 @@ namespace CloudDirectory {
  * @param  action  The CloudDirectory action to request.
  */
 CloudDirectoryClientRequest::CloudDirectoryClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudDirectoryClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudDirectoryClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudDirectoryClientRequest::CloudDirectoryClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudDirectoryClientRequest::CloudDirectoryClientRequest(const CloudDirectoryClientRequest &other)
-    : AwsAbstractRequest(new CloudDirectoryClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudDirectoryClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudDirectoryClientRequest& CloudDirectoryClientRequest::operator=(const CloudD
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudDirectoryClientRequest::CloudDirectoryClientRequest(CloudDirectoryClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudDirectoryClientRequest::CloudDirectoryClientRequest(CloudDirectoryClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudDirectoryClientRequest::operator==(const CloudDirectoryClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudDirectoryClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public CloudDirectoryClientRequest instance.
  */
 CloudDirectoryClientRequestPrivate::CloudDirectoryClientRequestPrivate(const CloudDirectoryClientRequest::Action action, CloudDirectoryClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudDirectoryClientRequestPrivate::CloudDirectoryClientRequestPrivate(const Clo
  */
 CloudDirectoryClientRequestPrivate::CloudDirectoryClientRequestPrivate(const CloudDirectoryClientRequestPrivate &other,
                                      CloudDirectoryClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool TagQueueRequest::isValid() const
  *
  * @return An TagQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * const reply) const
 {
     return new TagQueueResponse(*this, reply);
 }

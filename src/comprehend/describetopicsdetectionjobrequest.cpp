@@ -66,10 +66,10 @@ bool DescribeTopicsDetectionJobRequest::isValid() const
  *
  * @return An DescribeTopicsDetectionJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTopicsDetectionJobResponse(*this, reply);
 }

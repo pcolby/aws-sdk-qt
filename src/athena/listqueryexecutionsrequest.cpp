@@ -66,10 +66,10 @@ bool ListQueryExecutionsRequest::isValid() const
  *
  * @return An ListQueryExecutionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * ListQueryExecutionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListQueryExecutionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListQueryExecutionsResponse(*this, reply);
 }

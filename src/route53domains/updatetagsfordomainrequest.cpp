@@ -66,10 +66,10 @@ bool UpdateTagsForDomainRequest::isValid() const
  *
  * @return An UpdateTagsForDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTagsForDomainResponse(*this, reply);
 }

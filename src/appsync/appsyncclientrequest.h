@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace AppSync {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class AppSyncClientRequestPrivate;
 
-class QTAWS_EXPORT AppSyncClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT AppSyncClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppSync.

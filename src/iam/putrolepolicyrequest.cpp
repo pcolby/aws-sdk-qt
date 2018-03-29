@@ -66,10 +66,10 @@ bool PutRolePolicyRequest::isValid() const
  *
  * @return An PutRolePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutRolePolicyResponse(*this, reply);
 }

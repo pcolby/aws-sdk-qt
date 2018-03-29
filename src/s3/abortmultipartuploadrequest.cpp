@@ -66,10 +66,10 @@ bool AbortMultipartUploadRequest::isValid() const
  *
  * @return An AbortMultipartUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
     return new AbortMultipartUploadResponse(*this, reply);
 }

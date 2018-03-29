@@ -66,10 +66,10 @@ bool UpdateItemRequest::isValid() const
  *
  * @return An UpdateItemResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * UpdateItemRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateItemRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateItemResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool RevokeClusterSecurityGroupIngressRequest::isValid() const
  *
  * @return An RevokeClusterSecurityGroupIngressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
     return new RevokeClusterSecurityGroupIngressResponse(*this, reply);
 }

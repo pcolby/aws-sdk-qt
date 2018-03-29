@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Snowball {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SnowballClientRequestPrivate;
 
-class QTAWS_EXPORT SnowballClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SnowballClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Snowball.

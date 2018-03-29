@@ -66,10 +66,10 @@ bool ResetDeploymentsRequest::isValid() const
  *
  * @return An ResetDeploymentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkReply * const reply) const
 {
     return new ResetDeploymentsResponse(*this, reply);
 }

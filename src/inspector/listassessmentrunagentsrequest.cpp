@@ -66,10 +66,10 @@ bool ListAssessmentRunAgentsRequest::isValid() const
  *
  * @return An ListAssessmentRunAgentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * ListAssessmentRunAgentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAssessmentRunAgentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListAssessmentRunAgentsResponse(*this, reply);
 }

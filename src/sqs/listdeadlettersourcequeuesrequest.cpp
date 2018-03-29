@@ -66,10 +66,10 @@ bool ListDeadLetterSourceQueuesRequest::isValid() const
  *
  * @return An ListDeadLetterSourceQueuesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(QNetworkReply * const reply) const
 {
     return new ListDeadLetterSourceQueuesResponse(*this, reply);
 }

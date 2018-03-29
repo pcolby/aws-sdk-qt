@@ -66,10 +66,10 @@ bool DescribeOrderableReplicationInstancesRequest::isValid() const
  *
  * @return An DescribeOrderableReplicationInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeOrderableReplicationInstancesResponse(*this, reply);
 }

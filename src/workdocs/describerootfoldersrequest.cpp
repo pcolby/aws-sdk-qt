@@ -66,10 +66,10 @@ bool DescribeRootFoldersRequest::isValid() const
  *
  * @return An DescribeRootFoldersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeRootFoldersResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace SFN {
 
 class SfnClientRequest;
 
-class QTAWS_EXPORT SfnClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SfnClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SfnClientRequest::Action action; ///< SFN action to be performed.

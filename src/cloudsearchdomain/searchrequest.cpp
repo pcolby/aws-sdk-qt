@@ -66,10 +66,10 @@ bool SearchRequest::isValid() const
  *
  * @return An SearchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchDomainClient::send
  */
-AwsAbstractResponse * SearchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const reply) const
 {
     return new SearchResponse(*this, reply);
 }

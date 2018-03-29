@@ -66,10 +66,10 @@ bool DescribeFleetEventsRequest::isValid() const
  *
  * @return An DescribeFleetEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeFleetEventsResponse(*this, reply);
 }

@@ -46,10 +46,10 @@ namespace AppSync {
  */
 AppSyncClient::AppSyncClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AppSyncClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AppSyncClientPrivate(this), parent)
 {
     Q_D(AppSyncClient);
     d->apiVersion = QStringLiteral("2017-07-25");
@@ -79,10 +79,10 @@ AppSyncClient::AppSyncClient(
  */
 AppSyncClient::AppSyncClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AppSyncClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AppSyncClientPrivate(this), parent)
 {
     Q_D(AppSyncClient);
     d->apiVersion = QStringLiteral("2017-07-25");
@@ -497,9 +497,9 @@ UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
  * @param  q  Pointer to this object's public AppSyncClient instance.
  */
 AppSyncClientPrivate::AppSyncClientPrivate(AppSyncClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AppSync

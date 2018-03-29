@@ -36,7 +36,7 @@ namespace WorkMail {
  * @param  action  The WorkMail action to request.
  */
 WorkMailClientRequest::WorkMailClientRequest(const Action action)
-    : AwsAbstractRequest(new WorkMailClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WorkMailClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ WorkMailClientRequest::WorkMailClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 WorkMailClientRequest::WorkMailClientRequest(const WorkMailClientRequest &other)
-    : AwsAbstractRequest(new WorkMailClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WorkMailClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ WorkMailClientRequest& WorkMailClientRequest::operator=(const WorkMailClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-WorkMailClientRequest::WorkMailClientRequest(WorkMailClientRequestPrivate * const d) : AwsAbstractRequest(d)
+WorkMailClientRequest::WorkMailClientRequest(WorkMailClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool WorkMailClientRequest::operator==(const WorkMailClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest WorkMailClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public WorkMailClientRequest instance.
  */
 WorkMailClientRequestPrivate::WorkMailClientRequestPrivate(const WorkMailClientRequest::Action action, WorkMailClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ WorkMailClientRequestPrivate::WorkMailClientRequestPrivate(const WorkMailClientR
  */
 WorkMailClientRequestPrivate::WorkMailClientRequestPrivate(const WorkMailClientRequestPrivate &other,
                                      WorkMailClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

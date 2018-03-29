@@ -66,10 +66,10 @@ bool AddTagsToVaultRequest::isValid() const
  *
  * @return An AddTagsToVaultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * AddTagsToVaultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddTagsToVaultRequest::response(QNetworkReply * const reply) const
 {
     return new AddTagsToVaultResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteBudgetRequest::isValid() const
  *
  * @return An DeleteBudgetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * DeleteBudgetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBudgetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBudgetResponse(*this, reply);
 }

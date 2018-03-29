@@ -66,10 +66,10 @@ bool DescribeCertificatesRequest::isValid() const
  *
  * @return An DescribeCertificatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DescribeCertificatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCertificatesResponse(*this, reply);
 }

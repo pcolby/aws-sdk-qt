@@ -66,10 +66,10 @@ bool StopThingRegistrationTaskRequest::isValid() const
  *
  * @return An StopThingRegistrationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * StopThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new StopThingRegistrationTaskResponse(*this, reply);
 }

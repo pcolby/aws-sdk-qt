@@ -36,7 +36,7 @@ namespace CloudSearchDomain {
  * @param  action  The CloudSearchDomain action to request.
  */
 CloudSearchDomainClientRequest::CloudSearchDomainClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudSearchDomainClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchDomainClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudSearchDomainClientRequest::CloudSearchDomainClientRequest(const Action acti
  * @param  other  Instance to copy.
  */
 CloudSearchDomainClientRequest::CloudSearchDomainClientRequest(const CloudSearchDomainClientRequest &other)
-    : AwsAbstractRequest(new CloudSearchDomainClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchDomainClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudSearchDomainClientRequest& CloudSearchDomainClientRequest::operator=(const 
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudSearchDomainClientRequest::CloudSearchDomainClientRequest(CloudSearchDomainClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudSearchDomainClientRequest::CloudSearchDomainClientRequest(CloudSearchDomainClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudSearchDomainClientRequest::operator==(const CloudSearchDomainClientReq
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudSearchDomainClientRequest::unsignedRequest(const QUrl &endp
  * @param  q       Pointer to this object's public CloudSearchDomainClientRequest instance.
  */
 CloudSearchDomainClientRequestPrivate::CloudSearchDomainClientRequestPrivate(const CloudSearchDomainClientRequest::Action action, CloudSearchDomainClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudSearchDomainClientRequestPrivate::CloudSearchDomainClientRequestPrivate(con
  */
 CloudSearchDomainClientRequestPrivate::CloudSearchDomainClientRequestPrivate(const CloudSearchDomainClientRequestPrivate &other,
                                      CloudSearchDomainClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

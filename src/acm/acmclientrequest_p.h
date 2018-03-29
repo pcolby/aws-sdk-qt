@@ -28,7 +28,7 @@ namespace ACM {
 
 class AcmClientRequest;
 
-class QTAWS_EXPORT AcmClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT AcmClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AcmClientRequest::Action action; ///< ACM action to be performed.

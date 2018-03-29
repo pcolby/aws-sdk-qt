@@ -66,10 +66,10 @@ bool GetTopicAttributesRequest::isValid() const
  *
  * @return An GetTopicAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new GetTopicAttributesResponse(*this, reply);
 }

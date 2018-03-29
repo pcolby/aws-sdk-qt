@@ -66,10 +66,10 @@ bool RemoveResourcePermissionRequest::isValid() const
  *
  * @return An RemoveResourcePermissionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * RemoveResourcePermissionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveResourcePermissionRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveResourcePermissionResponse(*this, reply);
 }

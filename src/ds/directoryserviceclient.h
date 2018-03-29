@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace DirectoryService {
@@ -112,18 +112,18 @@ class UpdateRadiusResponse;
 class VerifyTrustRequest;
 class VerifyTrustResponse;
 
-class QTAWS_EXPORT DirectoryServiceClient : public AwsAbstractClient {
+class QTAWS_EXPORT DirectoryServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     DirectoryServiceClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     DirectoryServiceClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

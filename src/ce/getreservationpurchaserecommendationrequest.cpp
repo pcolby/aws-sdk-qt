@@ -66,10 +66,10 @@ bool GetReservationPurchaseRecommendationRequest::isValid() const
  *
  * @return An GetReservationPurchaseRecommendationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostExplorerClient::send
  */
-AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::response(QNetworkReply * const reply) const
 {
     return new GetReservationPurchaseRecommendationResponse(*this, reply);
 }

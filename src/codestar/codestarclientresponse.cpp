@@ -40,7 +40,7 @@ namespace CodeStar {
  * @param  parent   This object's parent.
  */
 CodeStarClientResponse::CodeStarClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CodeStarClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CodeStarClientResponsePrivate(this), parent)
 {
 
 }

@@ -40,7 +40,7 @@ namespace AlexaForBusiness {
  * @param  parent   This object's parent.
  */
 AlexaForBusinessClientResponse::AlexaForBusinessClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new AlexaForBusinessClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new AlexaForBusinessClientResponsePrivate(this), parent)
 {
 
 }

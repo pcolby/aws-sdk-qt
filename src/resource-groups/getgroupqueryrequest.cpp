@@ -66,10 +66,10 @@ bool GetGroupQueryRequest::isValid() const
  *
  * @return An GetGroupQueryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ResourceGroupsClient::send
  */
-AwsAbstractResponse * GetGroupQueryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetGroupQueryRequest::response(QNetworkReply * const reply) const
 {
     return new GetGroupQueryResponse(*this, reply);
 }

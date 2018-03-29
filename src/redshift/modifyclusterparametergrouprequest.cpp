@@ -66,10 +66,10 @@ bool ModifyClusterParameterGroupRequest::isValid() const
  *
  * @return An ModifyClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * ModifyClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyClusterParameterGroupResponse(*this, reply);
 }

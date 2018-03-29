@@ -66,10 +66,10 @@ bool ListApplicationRevisionsRequest::isValid() const
  *
  * @return An ListApplicationRevisionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * ListApplicationRevisionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListApplicationRevisionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListApplicationRevisionsResponse(*this, reply);
 }

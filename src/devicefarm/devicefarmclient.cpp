@@ -47,10 +47,10 @@ namespace DeviceFarm {
  */
 DeviceFarmClient::DeviceFarmClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
 {
     Q_D(DeviceFarmClient);
     d->apiVersion = QStringLiteral("2015-06-23");
@@ -80,10 +80,10 @@ DeviceFarmClient::DeviceFarmClient(
  */
 DeviceFarmClient::DeviceFarmClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
 {
     Q_D(DeviceFarmClient);
     d->apiVersion = QStringLiteral("2015-06-23");
@@ -832,9 +832,9 @@ UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectReque
  * @param  q  Pointer to this object's public DeviceFarmClient instance.
  */
 DeviceFarmClientPrivate::DeviceFarmClientPrivate(DeviceFarmClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DeviceFarm

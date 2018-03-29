@@ -66,10 +66,10 @@ bool DeleteIdentityPoolRequest::isValid() const
  *
  * @return An DeleteIdentityPoolResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * DeleteIdentityPoolRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteIdentityPoolRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteIdentityPoolResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetV2LoggingOptionsRequest::isValid() const
  *
  * @return An GetV2LoggingOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * GetV2LoggingOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetV2LoggingOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetV2LoggingOptionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeEnvironmentManagedActionHistoryRequest::isValid() const
  *
  * @return An DescribeEnvironmentManagedActionHistoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DescribeEnvironmentManagedActionHistoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionHistoryRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEnvironmentManagedActionHistoryResponse(*this, reply);
 }

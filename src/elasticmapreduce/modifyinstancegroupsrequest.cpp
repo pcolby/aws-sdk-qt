@@ -66,10 +66,10 @@ bool ModifyInstanceGroupsRequest::isValid() const
  *
  * @return An ModifyInstanceGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyInstanceGroupsResponse(*this, reply);
 }

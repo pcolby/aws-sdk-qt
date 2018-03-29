@@ -66,10 +66,10 @@ bool SetUserPoolMfaConfigRequest::isValid() const
  *
  * @return An SetUserPoolMfaConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * SetUserPoolMfaConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetUserPoolMfaConfigRequest::response(QNetworkReply * const reply) const
 {
     return new SetUserPoolMfaConfigResponse(*this, reply);
 }

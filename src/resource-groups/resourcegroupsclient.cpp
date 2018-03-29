@@ -89,10 +89,10 @@ namespace ResourceGroups {
  */
 ResourceGroupsClient::ResourceGroupsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsClient);
     d->apiVersion = QStringLiteral("2017-11-27");
@@ -122,10 +122,10 @@ ResourceGroupsClient::ResourceGroupsClient(
  */
 ResourceGroupsClient::ResourceGroupsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsClient);
     d->apiVersion = QStringLiteral("2017-11-27");
@@ -324,9 +324,9 @@ UpdateGroupQueryResponse * ResourceGroupsClient::updateGroupQuery(const UpdateGr
  * @param  q  Pointer to this object's public ResourceGroupsClient instance.
  */
 ResourceGroupsClientPrivate::ResourceGroupsClientPrivate(ResourceGroupsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ResourceGroups

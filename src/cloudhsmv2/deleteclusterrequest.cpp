@@ -66,10 +66,10 @@ bool DeleteClusterRequest::isValid() const
  *
  * @return An DeleteClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMV2Client::send
  */
-AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteClusterResponse(*this, reply);
 }

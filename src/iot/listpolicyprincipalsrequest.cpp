@@ -66,10 +66,10 @@ bool ListPolicyPrincipalsRequest::isValid() const
  *
  * @return An ListPolicyPrincipalsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListPolicyPrincipalsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPolicyPrincipalsRequest::response(QNetworkReply * const reply) const
 {
     return new ListPolicyPrincipalsResponse(*this, reply);
 }

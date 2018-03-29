@@ -66,10 +66,10 @@ bool GetCallerIdentityRequest::isValid() const
  *
  * @return An GetCallerIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new GetCallerIdentityResponse(*this, reply);
 }

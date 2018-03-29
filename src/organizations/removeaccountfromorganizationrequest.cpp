@@ -66,10 +66,10 @@ bool RemoveAccountFromOrganizationRequest::isValid() const
  *
  * @return An RemoveAccountFromOrganizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * RemoveAccountFromOrganizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveAccountFromOrganizationRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveAccountFromOrganizationResponse(*this, reply);
 }

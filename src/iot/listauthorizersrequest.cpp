@@ -66,10 +66,10 @@ bool ListAuthorizersRequest::isValid() const
  *
  * @return An ListAuthorizersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkReply * const reply) const
 {
     return new ListAuthorizersResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UploadPartCopyRequest::isValid() const
  *
  * @return An UploadPartCopyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply * const reply) const
 {
     return new UploadPartCopyResponse(*this, reply);
 }

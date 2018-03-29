@@ -66,10 +66,10 @@ bool UpdateDomainContactPrivacyRequest::isValid() const
  *
  * @return An UpdateDomainContactPrivacyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * UpdateDomainContactPrivacyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDomainContactPrivacyRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDomainContactPrivacyResponse(*this, reply);
 }

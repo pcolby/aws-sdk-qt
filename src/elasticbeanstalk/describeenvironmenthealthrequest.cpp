@@ -66,10 +66,10 @@ bool DescribeEnvironmentHealthRequest::isValid() const
  *
  * @return An DescribeEnvironmentHealthResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEnvironmentHealthResponse(*this, reply);
 }

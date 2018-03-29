@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace MediaStoreData {
@@ -42,18 +42,18 @@ class ListItemsResponse;
 class PutObjectRequest;
 class PutObjectResponse;
 
-class QTAWS_EXPORT MediaStoreDataClient : public AwsAbstractClient {
+class QTAWS_EXPORT MediaStoreDataClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     MediaStoreDataClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     MediaStoreDataClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

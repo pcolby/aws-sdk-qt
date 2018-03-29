@@ -66,10 +66,10 @@ bool PutActionRevisionRequest::isValid() const
  *
  * @return An PutActionRevisionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * PutActionRevisionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutActionRevisionRequest::response(QNetworkReply * const reply) const
 {
     return new PutActionRevisionResponse(*this, reply);
 }

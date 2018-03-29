@@ -66,10 +66,10 @@ bool DeleteOpenIDConnectProviderRequest::isValid() const
  *
  * @return An DeleteOpenIDConnectProviderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteOpenIDConnectProviderResponse(*this, reply);
 }

@@ -83,10 +83,10 @@ namespace CognitoIdentity {
  */
 CognitoIdentityClient::CognitoIdentityClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CognitoIdentityClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CognitoIdentityClientPrivate(this), parent)
 {
     Q_D(CognitoIdentityClient);
     d->apiVersion = QStringLiteral("2014-06-30");
@@ -116,10 +116,10 @@ CognitoIdentityClient::CognitoIdentityClient(
  */
 CognitoIdentityClient::CognitoIdentityClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CognitoIdentityClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CognitoIdentityClientPrivate(this), parent)
 {
     Q_D(CognitoIdentityClient);
     d->apiVersion = QStringLiteral("2014-06-30");
@@ -524,9 +524,9 @@ UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const Upd
  * @param  q  Pointer to this object's public CognitoIdentityClient instance.
  */
 CognitoIdentityClientPrivate::CognitoIdentityClientPrivate(CognitoIdentityClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CognitoIdentity

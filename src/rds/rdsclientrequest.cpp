@@ -36,7 +36,7 @@ namespace RDS {
  * @param  action  The RDS action to request.
  */
 RdsClientRequest::RdsClientRequest(const Action action)
-    : AwsAbstractRequest(new RdsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RdsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ RdsClientRequest::RdsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 RdsClientRequest::RdsClientRequest(const RdsClientRequest &other)
-    : AwsAbstractRequest(new RdsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RdsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ RdsClientRequest& RdsClientRequest::operator=(const RdsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-RdsClientRequest::RdsClientRequest(RdsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+RdsClientRequest::RdsClientRequest(RdsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool RdsClientRequest::operator==(const RdsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest RdsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public RdsClientRequest instance.
  */
 RdsClientRequestPrivate::RdsClientRequestPrivate(const RdsClientRequest::Action action, RdsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ RdsClientRequestPrivate::RdsClientRequestPrivate(const RdsClientRequest::Action 
  */
 RdsClientRequestPrivate::RdsClientRequestPrivate(const RdsClientRequestPrivate &other,
                                      RdsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

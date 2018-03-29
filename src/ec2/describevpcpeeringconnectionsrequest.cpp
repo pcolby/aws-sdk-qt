@@ -66,10 +66,10 @@ bool DescribeVpcPeeringConnectionsRequest::isValid() const
  *
  * @return An DescribeVpcPeeringConnectionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVpcPeeringConnectionsResponse(*this, reply);
 }

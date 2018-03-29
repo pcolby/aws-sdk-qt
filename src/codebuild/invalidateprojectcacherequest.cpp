@@ -66,10 +66,10 @@ bool InvalidateProjectCacheRequest::isValid() const
  *
  * @return An InvalidateProjectCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * InvalidateProjectCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InvalidateProjectCacheRequest::response(QNetworkReply * const reply) const
 {
     return new InvalidateProjectCacheResponse(*this, reply);
 }

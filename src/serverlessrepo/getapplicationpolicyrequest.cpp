@@ -66,10 +66,10 @@ bool GetApplicationPolicyRequest::isValid() const
  *
  * @return An GetApplicationPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServerlessApplicationRepositoryClient::send
  */
-AwsAbstractResponse * GetApplicationPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetApplicationPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetApplicationPolicyResponse(*this, reply);
 }

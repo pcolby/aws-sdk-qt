@@ -66,10 +66,10 @@ bool ListClustersRequest::isValid() const
  *
  * @return An ListClustersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SnowballClient::send
  */
-AwsAbstractResponse * ListClustersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply * const reply) const
 {
     return new ListClustersResponse(*this, reply);
 }

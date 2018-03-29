@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Mobile {
@@ -50,18 +50,18 @@ class ListProjectsResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
 
-class QTAWS_EXPORT MobileClient : public AwsAbstractClient {
+class QTAWS_EXPORT MobileClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     MobileClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     MobileClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

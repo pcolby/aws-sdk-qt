@@ -66,10 +66,10 @@ bool SetSubnetsRequest::isValid() const
  *
  * @return An SetSubnetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * SetSubnetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetSubnetsRequest::response(QNetworkReply * const reply) const
 {
     return new SetSubnetsResponse(*this, reply);
 }

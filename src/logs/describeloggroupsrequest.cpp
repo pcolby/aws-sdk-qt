@@ -66,10 +66,10 @@ bool DescribeLogGroupsRequest::isValid() const
  *
  * @return An DescribeLogGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DescribeLogGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLogGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLogGroupsResponse(*this, reply);
 }

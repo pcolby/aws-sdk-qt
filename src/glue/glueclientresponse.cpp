@@ -40,7 +40,7 @@ namespace Glue {
  * @param  parent   This object's parent.
  */
 GlueClientResponse::GlueClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new GlueClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new GlueClientResponsePrivate(this), parent)
 {
 
 }

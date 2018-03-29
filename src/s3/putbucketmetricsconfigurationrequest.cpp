@@ -66,10 +66,10 @@ bool PutBucketMetricsConfigurationRequest::isValid() const
  *
  * @return An PutBucketMetricsConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketMetricsConfigurationResponse(*this, reply);
 }

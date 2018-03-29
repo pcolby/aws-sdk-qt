@@ -66,10 +66,10 @@ bool ConfigureHealthCheckRequest::isValid() const
  *
  * @return An ConfigureHealthCheckResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * ConfigureHealthCheckRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ConfigureHealthCheckRequest::response(QNetworkReply * const reply) const
 {
     return new ConfigureHealthCheckResponse(*this, reply);
 }

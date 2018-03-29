@@ -66,10 +66,10 @@ bool GetBundlesRequest::isValid() const
  *
  * @return An GetBundlesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * const reply) const
 {
     return new GetBundlesResponse(*this, reply);
 }

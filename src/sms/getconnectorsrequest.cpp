@@ -66,10 +66,10 @@ bool GetConnectorsRequest::isValid() const
  *
  * @return An GetConnectorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply * const reply) const
 {
     return new GetConnectorsResponse(*this, reply);
 }

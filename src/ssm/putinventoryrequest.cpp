@@ -66,10 +66,10 @@ bool PutInventoryRequest::isValid() const
  *
  * @return An PutInventoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * PutInventoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutInventoryRequest::response(QNetworkReply * const reply) const
 {
     return new PutInventoryResponse(*this, reply);
 }

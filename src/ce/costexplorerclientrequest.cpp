@@ -36,7 +36,7 @@ namespace CostExplorer {
  * @param  action  The CostExplorer action to request.
  */
 CostExplorerClientRequest::CostExplorerClientRequest(const Action action)
-    : AwsAbstractRequest(new CostExplorerClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CostExplorerClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CostExplorerClientRequest::CostExplorerClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CostExplorerClientRequest::CostExplorerClientRequest(const CostExplorerClientRequest &other)
-    : AwsAbstractRequest(new CostExplorerClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CostExplorerClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CostExplorerClientRequest& CostExplorerClientRequest::operator=(const CostExplor
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CostExplorerClientRequest::CostExplorerClientRequest(CostExplorerClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CostExplorerClientRequest::CostExplorerClientRequest(CostExplorerClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CostExplorerClientRequest::operator==(const CostExplorerClientRequest &othe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CostExplorerClientRequest::unsignedRequest(const QUrl &endpoint)
  * @param  q       Pointer to this object's public CostExplorerClientRequest instance.
  */
 CostExplorerClientRequestPrivate::CostExplorerClientRequestPrivate(const CostExplorerClientRequest::Action action, CostExplorerClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CostExplorerClientRequestPrivate::CostExplorerClientRequestPrivate(const CostExp
  */
 CostExplorerClientRequestPrivate::CostExplorerClientRequestPrivate(const CostExplorerClientRequestPrivate &other,
                                      CostExplorerClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

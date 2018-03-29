@@ -66,10 +66,10 @@ bool AdminUpdateDeviceStatusRequest::isValid() const
  *
  * @return An AdminUpdateDeviceStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminUpdateDeviceStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminUpdateDeviceStatusRequest::response(QNetworkReply * const reply) const
 {
     return new AdminUpdateDeviceStatusResponse(*this, reply);
 }

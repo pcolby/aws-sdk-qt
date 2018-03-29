@@ -66,10 +66,10 @@ bool DeleteIntentRequest::isValid() const
  *
  * @return An DeleteIntentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteIntentResponse(*this, reply);
 }

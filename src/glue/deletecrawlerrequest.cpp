@@ -66,10 +66,10 @@ bool DeleteCrawlerRequest::isValid() const
  *
  * @return An DeleteCrawlerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCrawlerResponse(*this, reply);
 }

@@ -59,10 +59,10 @@ namespace CloudWatch {
  */
 CloudWatchClient::CloudWatchClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudWatchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudWatchClientPrivate(this), parent)
 {
     Q_D(CloudWatchClient);
     d->apiVersion = QStringLiteral("2010-08-01");
@@ -92,10 +92,10 @@ CloudWatchClient::CloudWatchClient(
  */
 CloudWatchClient::CloudWatchClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudWatchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudWatchClientPrivate(this), parent)
 {
     Q_D(CloudWatchClient);
     d->apiVersion = QStringLiteral("2010-08-01");
@@ -538,9 +538,9 @@ SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateReque
  * @param  q  Pointer to this object's public CloudWatchClient instance.
  */
 CloudWatchClientPrivate::CloudWatchClientPrivate(CloudWatchClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudWatch

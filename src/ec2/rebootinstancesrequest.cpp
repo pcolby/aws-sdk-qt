@@ -66,10 +66,10 @@ bool RebootInstancesRequest::isValid() const
  *
  * @return An RebootInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * RebootInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new RebootInstancesResponse(*this, reply);
 }

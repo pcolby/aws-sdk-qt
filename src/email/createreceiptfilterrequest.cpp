@@ -66,10 +66,10 @@ bool CreateReceiptFilterRequest::isValid() const
  *
  * @return An CreateReceiptFilterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetworkReply * const reply) const
 {
     return new CreateReceiptFilterResponse(*this, reply);
 }

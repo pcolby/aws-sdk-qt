@@ -66,10 +66,10 @@ bool ListCommandsRequest::isValid() const
  *
  * @return An ListCommandsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply * const reply) const
 {
     return new ListCommandsResponse(*this, reply);
 }

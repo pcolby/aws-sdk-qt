@@ -28,7 +28,7 @@ namespace MQ {
 
 class MqClientRequest;
 
-class QTAWS_EXPORT MqClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MqClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MqClientRequest::Action action; ///< MQ action to be performed.

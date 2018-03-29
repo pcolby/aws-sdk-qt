@@ -66,10 +66,10 @@ bool CreateTypedLinkFacetRequest::isValid() const
  *
  * @return An CreateTypedLinkFacetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * CreateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTypedLinkFacetResponse(*this, reply);
 }

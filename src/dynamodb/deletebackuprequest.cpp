@@ -66,10 +66,10 @@ bool DeleteBackupRequest::isValid() const
  *
  * @return An DeleteBackupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBackupResponse(*this, reply);
 }

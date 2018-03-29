@@ -36,7 +36,7 @@ namespace SageMaker {
  * @param  action  The SageMaker action to request.
  */
 SageMakerClientRequest::SageMakerClientRequest(const Action action)
-    : AwsAbstractRequest(new SageMakerClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SageMakerClientRequest::SageMakerClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SageMakerClientRequest::SageMakerClientRequest(const SageMakerClientRequest &other)
-    : AwsAbstractRequest(new SageMakerClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SageMakerClientRequest& SageMakerClientRequest::operator=(const SageMakerClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SageMakerClientRequest::SageMakerClientRequest(SageMakerClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SageMakerClientRequest::SageMakerClientRequest(SageMakerClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SageMakerClientRequest::operator==(const SageMakerClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SageMakerClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public SageMakerClientRequest instance.
  */
 SageMakerClientRequestPrivate::SageMakerClientRequestPrivate(const SageMakerClientRequest::Action action, SageMakerClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SageMakerClientRequestPrivate::SageMakerClientRequestPrivate(const SageMakerClie
  */
 SageMakerClientRequestPrivate::SageMakerClientRequestPrivate(const SageMakerClientRequestPrivate &other,
                                      SageMakerClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool UploadDocumentsRequest::isValid() const
  *
  * @return An UploadDocumentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchDomainClient::send
  */
-AwsAbstractResponse * UploadDocumentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UploadDocumentsRequest::response(QNetworkReply * const reply) const
 {
     return new UploadDocumentsResponse(*this, reply);
 }

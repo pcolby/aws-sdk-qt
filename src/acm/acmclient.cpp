@@ -54,10 +54,10 @@ namespace ACM {
  */
 AcmClient::AcmClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AcmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AcmClientPrivate(this), parent)
 {
     Q_D(AcmClient);
     d->apiVersion = QStringLiteral("2015-12-08");
@@ -87,10 +87,10 @@ AcmClient::AcmClient(
  */
 AcmClient::AcmClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AcmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AcmClientPrivate(this), parent)
 {
     Q_D(AcmClient);
     d->apiVersion = QStringLiteral("2015-12-08");
@@ -397,9 +397,9 @@ UpdateCertificateOptionsResponse * AcmClient::updateCertificateOptions(const Upd
  * @param  q  Pointer to this object's public AcmClient instance.
  */
 AcmClientPrivate::AcmClientPrivate(AcmClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ACM

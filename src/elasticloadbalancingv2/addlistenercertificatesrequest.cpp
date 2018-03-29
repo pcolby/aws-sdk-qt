@@ -66,10 +66,10 @@ bool AddListenerCertificatesRequest::isValid() const
  *
  * @return An AddListenerCertificatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * AddListenerCertificatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddListenerCertificatesRequest::response(QNetworkReply * const reply) const
 {
     return new AddListenerCertificatesResponse(*this, reply);
 }

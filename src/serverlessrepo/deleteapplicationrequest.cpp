@@ -66,10 +66,10 @@ bool DeleteApplicationRequest::isValid() const
  *
  * @return An DeleteApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServerlessApplicationRepositoryClient::send
  */
-AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApplicationResponse(*this, reply);
 }

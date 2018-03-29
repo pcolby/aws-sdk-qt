@@ -66,10 +66,10 @@ bool UpdateConnectivityInfoRequest::isValid() const
  *
  * @return An UpdateConnectivityInfoResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateConnectivityInfoResponse(*this, reply);
 }

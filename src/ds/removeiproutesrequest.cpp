@@ -66,10 +66,10 @@ bool RemoveIpRoutesRequest::isValid() const
  *
  * @return An RemoveIpRoutesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * RemoveIpRoutesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveIpRoutesRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveIpRoutesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DetachRolePolicyRequest::isValid() const
  *
  * @return An DetachRolePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DetachRolePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachRolePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DetachRolePolicyResponse(*this, reply);
 }

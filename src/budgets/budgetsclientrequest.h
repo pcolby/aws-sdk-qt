@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Budgets {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class BudgetsClientRequestPrivate;
 
-class QTAWS_EXPORT BudgetsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT BudgetsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Budgets.

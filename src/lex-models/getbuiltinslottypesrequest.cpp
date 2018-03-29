@@ -66,10 +66,10 @@ bool GetBuiltinSlotTypesRequest::isValid() const
  *
  * @return An GetBuiltinSlotTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetworkReply * const reply) const
 {
     return new GetBuiltinSlotTypesResponse(*this, reply);
 }

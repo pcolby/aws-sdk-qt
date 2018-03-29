@@ -40,7 +40,7 @@ namespace ApplicationAutoScaling {
  * @param  parent   This object's parent.
  */
 ApplicationAutoScalingClientResponse::ApplicationAutoScalingClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ApplicationAutoScalingClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ApplicationAutoScalingClientResponsePrivate(this), parent)
 {
 
 }

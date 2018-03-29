@@ -66,10 +66,10 @@ bool ListWorkerBlocksRequest::isValid() const
  *
  * @return An ListWorkerBlocksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkReply * const reply) const
 {
     return new ListWorkerBlocksResponse(*this, reply);
 }

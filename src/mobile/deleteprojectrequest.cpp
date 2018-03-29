@@ -66,10 +66,10 @@ bool DeleteProjectRequest::isValid() const
  *
  * @return An DeleteProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MobileClient::send
  */
-AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteProjectResponse(*this, reply);
 }

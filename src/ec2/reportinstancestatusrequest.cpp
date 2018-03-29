@@ -66,10 +66,10 @@ bool ReportInstanceStatusRequest::isValid() const
  *
  * @return An ReportInstanceStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetworkReply * const reply) const
 {
     return new ReportInstanceStatusResponse(*this, reply);
 }

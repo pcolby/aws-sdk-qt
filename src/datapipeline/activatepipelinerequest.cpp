@@ -66,10 +66,10 @@ bool ActivatePipelineRequest::isValid() const
  *
  * @return An ActivatePipelineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * ActivatePipelineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ActivatePipelineRequest::response(QNetworkReply * const reply) const
 {
     return new ActivatePipelineResponse(*this, reply);
 }

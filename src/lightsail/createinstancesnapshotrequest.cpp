@@ -66,10 +66,10 @@ bool CreateInstanceSnapshotRequest::isValid() const
  *
  * @return An CreateInstanceSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * CreateInstanceSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateInstanceSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new CreateInstanceSnapshotResponse(*this, reply);
 }

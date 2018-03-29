@@ -66,10 +66,10 @@ bool ListDevelopmentSchemaArnsRequest::isValid() const
  *
  * @return An ListDevelopmentSchemaArnsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDevelopmentSchemaArnsResponse(*this, reply);
 }

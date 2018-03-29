@@ -78,10 +78,10 @@ namespace WorkMail {
  */
 WorkMailClient::WorkMailClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WorkMailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WorkMailClientPrivate(this), parent)
 {
     Q_D(WorkMailClient);
     d->apiVersion = QStringLiteral("2017-10-01");
@@ -111,10 +111,10 @@ WorkMailClient::WorkMailClient(
  */
 WorkMailClient::WorkMailClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WorkMailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WorkMailClientPrivate(this), parent)
 {
     Q_D(WorkMailClient);
     d->apiVersion = QStringLiteral("2017-10-01");
@@ -545,9 +545,9 @@ UpdateResourceResponse * WorkMailClient::updateResource(const UpdateResourceRequ
  * @param  q  Pointer to this object's public WorkMailClient instance.
  */
 WorkMailClientPrivate::WorkMailClientPrivate(WorkMailClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WorkMail

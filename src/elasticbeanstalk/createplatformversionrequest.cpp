@@ -66,10 +66,10 @@ bool CreatePlatformVersionRequest::isValid() const
  *
  * @return An CreatePlatformVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePlatformVersionResponse(*this, reply);
 }

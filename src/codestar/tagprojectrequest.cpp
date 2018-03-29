@@ -66,10 +66,10 @@ bool TagProjectRequest::isValid() const
  *
  * @return An TagProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * TagProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TagProjectRequest::response(QNetworkReply * const reply) const
 {
     return new TagProjectResponse(*this, reply);
 }

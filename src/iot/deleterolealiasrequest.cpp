@@ -66,10 +66,10 @@ bool DeleteRoleAliasRequest::isValid() const
  *
  * @return An DeleteRoleAliasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRoleAliasResponse(*this, reply);
 }

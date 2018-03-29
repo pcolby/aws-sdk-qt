@@ -29,7 +29,7 @@ namespace S3 {
 
 class S3Client;
 
-class QTAWS_EXPORT S3ClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT S3ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     S3ClientPrivate(S3Client * const q);

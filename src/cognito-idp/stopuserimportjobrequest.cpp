@@ -66,10 +66,10 @@ bool StopUserImportJobRequest::isValid() const
  *
  * @return An StopUserImportJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkReply * const reply) const
 {
     return new StopUserImportJobResponse(*this, reply);
 }

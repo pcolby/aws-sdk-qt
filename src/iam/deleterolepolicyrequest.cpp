@@ -66,10 +66,10 @@ bool DeleteRolePolicyRequest::isValid() const
  *
  * @return An DeleteRolePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteRolePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRolePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRolePolicyResponse(*this, reply);
 }

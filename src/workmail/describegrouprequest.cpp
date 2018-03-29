@@ -66,10 +66,10 @@ bool DescribeGroupRequest::isValid() const
  *
  * @return An DescribeGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * DescribeGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeGroupResponse(*this, reply);
 }

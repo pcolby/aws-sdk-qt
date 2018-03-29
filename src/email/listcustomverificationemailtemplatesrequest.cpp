@@ -66,10 +66,10 @@ bool ListCustomVerificationEmailTemplatesRequest::isValid() const
  *
  * @return An ListCustomVerificationEmailTemplatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * ListCustomVerificationEmailTemplatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCustomVerificationEmailTemplatesRequest::response(QNetworkReply * const reply) const
 {
     return new ListCustomVerificationEmailTemplatesResponse(*this, reply);
 }

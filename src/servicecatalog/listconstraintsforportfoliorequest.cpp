@@ -66,10 +66,10 @@ bool ListConstraintsForPortfolioRequest::isValid() const
  *
  * @return An ListConstraintsForPortfolioResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(QNetworkReply * const reply) const
 {
     return new ListConstraintsForPortfolioResponse(*this, reply);
 }

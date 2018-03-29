@@ -66,10 +66,10 @@ bool DescribeClusterVersionsRequest::isValid() const
  *
  * @return An DescribeClusterVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeClusterVersionsResponse(*this, reply);
 }

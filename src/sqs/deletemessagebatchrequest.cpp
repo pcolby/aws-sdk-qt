@@ -66,10 +66,10 @@ bool DeleteMessageBatchRequest::isValid() const
  *
  * @return An DeleteMessageBatchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * DeleteMessageBatchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMessageBatchRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMessageBatchResponse(*this, reply);
 }

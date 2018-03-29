@@ -66,10 +66,10 @@ bool ListConfigurationsRequest::isValid() const
  *
  * @return An ListConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MQClient::send
  */
-AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListConfigurationsResponse(*this, reply);
 }

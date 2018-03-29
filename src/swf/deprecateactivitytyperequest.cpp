@@ -66,10 +66,10 @@ bool DeprecateActivityTypeRequest::isValid() const
  *
  * @return An DeprecateActivityTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DeprecateActivityTypeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool BatchGetQueryExecutionRequest::isValid() const
  *
  * @return An BatchGetQueryExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetQueryExecutionResponse(*this, reply);
 }

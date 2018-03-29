@@ -66,10 +66,10 @@ bool ScanRequest::isValid() const
  *
  * @return An ScanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * ScanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const reply) const
 {
     return new ScanResponse(*this, reply);
 }

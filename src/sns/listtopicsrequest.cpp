@@ -66,10 +66,10 @@ bool ListTopicsRequest::isValid() const
  *
  * @return An ListTopicsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * ListTopicsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTopicsRequest::response(QNetworkReply * const reply) const
 {
     return new ListTopicsResponse(*this, reply);
 }

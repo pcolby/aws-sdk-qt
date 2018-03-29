@@ -66,10 +66,10 @@ bool UpdateDevicePoolRequest::isValid() const
  *
  * @return An UpdateDevicePoolResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDevicePoolResponse(*this, reply);
 }

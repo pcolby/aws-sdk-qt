@@ -66,10 +66,10 @@ bool RefreshTrustedAdvisorCheckRequest::isValid() const
  *
  * @return An RefreshTrustedAdvisorCheckResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * RefreshTrustedAdvisorCheckRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RefreshTrustedAdvisorCheckRequest::response(QNetworkReply * const reply) const
 {
     return new RefreshTrustedAdvisorCheckResponse(*this, reply);
 }

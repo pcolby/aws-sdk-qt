@@ -66,10 +66,10 @@ bool AssumeRoleRequest::isValid() const
  *
  * @return An AssumeRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * const reply) const
 {
     return new AssumeRoleResponse(*this, reply);
 }

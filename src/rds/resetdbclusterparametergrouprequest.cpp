@@ -66,10 +66,10 @@ bool ResetDBClusterParameterGroupRequest::isValid() const
  *
  * @return An ResetDBClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ResetDBClusterParameterGroupResponse(*this, reply);
 }

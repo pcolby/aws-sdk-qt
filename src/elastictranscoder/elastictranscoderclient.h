@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace ElasticTranscoder {
@@ -66,18 +66,18 @@ class UpdatePipelineNotificationsResponse;
 class UpdatePipelineStatusRequest;
 class UpdatePipelineStatusResponse;
 
-class QTAWS_EXPORT ElasticTranscoderClient : public AwsAbstractClient {
+class QTAWS_EXPORT ElasticTranscoderClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     ElasticTranscoderClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     ElasticTranscoderClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

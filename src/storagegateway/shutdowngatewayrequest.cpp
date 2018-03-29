@@ -66,10 +66,10 @@ bool ShutdownGatewayRequest::isValid() const
  *
  * @return An ShutdownGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new ShutdownGatewayResponse(*this, reply);
 }

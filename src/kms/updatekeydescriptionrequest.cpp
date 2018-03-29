@@ -66,10 +66,10 @@ bool UpdateKeyDescriptionRequest::isValid() const
  *
  * @return An UpdateKeyDescriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateKeyDescriptionResponse(*this, reply);
 }

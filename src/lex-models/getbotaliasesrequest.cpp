@@ -66,10 +66,10 @@ bool GetBotAliasesRequest::isValid() const
  *
  * @return An GetBotAliasesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply * const reply) const
 {
     return new GetBotAliasesResponse(*this, reply);
 }

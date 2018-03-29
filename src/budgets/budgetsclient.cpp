@@ -83,10 +83,10 @@ namespace Budgets {
  */
 BudgetsClient::BudgetsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new BudgetsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new BudgetsClientPrivate(this), parent)
 {
     Q_D(BudgetsClient);
     d->apiVersion = QStringLiteral("2016-10-20");
@@ -116,10 +116,10 @@ BudgetsClient::BudgetsClient(
  */
 BudgetsClient::BudgetsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new BudgetsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new BudgetsClientPrivate(this), parent)
 {
     Q_D(BudgetsClient);
     d->apiVersion = QStringLiteral("2016-10-20");
@@ -343,9 +343,9 @@ UpdateSubscriberResponse * BudgetsClient::updateSubscriber(const UpdateSubscribe
  * @param  q  Pointer to this object's public BudgetsClient instance.
  */
 BudgetsClientPrivate::BudgetsClientPrivate(BudgetsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Budgets

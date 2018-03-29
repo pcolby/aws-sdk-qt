@@ -66,10 +66,10 @@ bool ListAWSServiceAccessForOrganizationRequest::isValid() const
  *
  * @return An ListAWSServiceAccessForOrganizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::response(QNetworkReply * const reply) const
 {
     return new ListAWSServiceAccessForOrganizationResponse(*this, reply);
 }

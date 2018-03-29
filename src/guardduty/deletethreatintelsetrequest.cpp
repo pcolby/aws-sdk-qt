@@ -66,10 +66,10 @@ bool DeleteThreatIntelSetRequest::isValid() const
  *
  * @return An DeleteThreatIntelSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteThreatIntelSetResponse(*this, reply);
 }

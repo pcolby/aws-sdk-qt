@@ -66,10 +66,10 @@ bool DescribeWorkspaceBundlesRequest::isValid() const
  *
  * @return An DescribeWorkspaceBundlesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkSpacesClient::send
  */
-AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeWorkspaceBundlesResponse(*this, reply);
 }

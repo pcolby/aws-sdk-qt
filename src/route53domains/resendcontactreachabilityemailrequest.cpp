@@ -66,10 +66,10 @@ bool ResendContactReachabilityEmailRequest::isValid() const
  *
  * @return An ResendContactReachabilityEmailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * ResendContactReachabilityEmailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::response(QNetworkReply * const reply) const
 {
     return new ResendContactReachabilityEmailResponse(*this, reply);
 }

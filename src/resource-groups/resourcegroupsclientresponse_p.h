@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class ResourceGroupsClientResponse;
 
-class QTAWS_EXPORT ResourceGroupsClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT ResourceGroupsClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

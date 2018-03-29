@@ -66,10 +66,10 @@ bool DeleteReplicationTaskRequest::isValid() const
  *
  * @return An DeleteReplicationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DeleteReplicationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteReplicationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteReplicationTaskResponse(*this, reply);
 }

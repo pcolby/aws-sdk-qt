@@ -66,10 +66,10 @@ bool DeleteMethodResponseRequest::isValid() const
  *
  * @return An DeleteMethodResponseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteMethodResponseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMethodResponseRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMethodResponseResponse(*this, reply);
 }

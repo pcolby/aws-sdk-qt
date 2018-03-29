@@ -66,10 +66,10 @@ bool DescribeReplicationInstanceTaskLogsRequest::isValid() const
  *
  * @return An DescribeReplicationInstanceTaskLogsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeReplicationInstanceTaskLogsResponse(*this, reply);
 }

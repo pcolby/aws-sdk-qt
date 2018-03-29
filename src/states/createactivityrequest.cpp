@@ -66,10 +66,10 @@ bool CreateActivityRequest::isValid() const
  *
  * @return An CreateActivityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * CreateActivityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateActivityRequest::response(QNetworkReply * const reply) const
 {
     return new CreateActivityResponse(*this, reply);
 }

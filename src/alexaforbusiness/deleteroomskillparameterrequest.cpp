@@ -66,10 +66,10 @@ bool DeleteRoomSkillParameterRequest::isValid() const
  *
  * @return An DeleteRoomSkillParameterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRoomSkillParameterResponse(*this, reply);
 }

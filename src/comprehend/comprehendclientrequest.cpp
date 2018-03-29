@@ -36,7 +36,7 @@ namespace Comprehend {
  * @param  action  The Comprehend action to request.
  */
 ComprehendClientRequest::ComprehendClientRequest(const Action action)
-    : AwsAbstractRequest(new ComprehendClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ComprehendClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ComprehendClientRequest::ComprehendClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ComprehendClientRequest::ComprehendClientRequest(const ComprehendClientRequest &other)
-    : AwsAbstractRequest(new ComprehendClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ComprehendClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ComprehendClientRequest& ComprehendClientRequest::operator=(const ComprehendClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ComprehendClientRequest::ComprehendClientRequest(ComprehendClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ComprehendClientRequest::ComprehendClientRequest(ComprehendClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ComprehendClientRequest::operator==(const ComprehendClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ComprehendClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public ComprehendClientRequest instance.
  */
 ComprehendClientRequestPrivate::ComprehendClientRequestPrivate(const ComprehendClientRequest::Action action, ComprehendClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ComprehendClientRequestPrivate::ComprehendClientRequestPrivate(const ComprehendC
  */
 ComprehendClientRequestPrivate::ComprehendClientRequestPrivate(const ComprehendClientRequestPrivate &other,
                                      ComprehendClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

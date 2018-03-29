@@ -66,10 +66,10 @@ bool StartLoggingRequest::isValid() const
  *
  * @return An StartLoggingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply * const reply) const
 {
     return new StartLoggingResponse(*this, reply);
 }

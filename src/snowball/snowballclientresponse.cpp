@@ -40,7 +40,7 @@ namespace Snowball {
  * @param  parent   This object's parent.
  */
 SnowballClientResponse::SnowballClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SnowballClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SnowballClientResponsePrivate(this), parent)
 {
 
 }

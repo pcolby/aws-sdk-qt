@@ -66,10 +66,10 @@ bool ListOTAUpdatesRequest::isValid() const
  *
  * @return An ListOTAUpdatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListOTAUpdatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListOTAUpdatesRequest::response(QNetworkReply * const reply) const
 {
     return new ListOTAUpdatesResponse(*this, reply);
 }

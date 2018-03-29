@@ -66,10 +66,10 @@ bool RegisterEcsClusterRequest::isValid() const
  *
  * @return An RegisterEcsClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterEcsClusterResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ScanProvisionedProductsRequest::isValid() const
  *
  * @return An ScanProvisionedProductsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNetworkReply * const reply) const
 {
     return new ScanProvisionedProductsResponse(*this, reply);
 }

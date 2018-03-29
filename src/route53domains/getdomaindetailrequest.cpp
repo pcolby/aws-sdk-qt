@@ -66,10 +66,10 @@ bool GetDomainDetailRequest::isValid() const
  *
  * @return An GetDomainDetailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * GetDomainDetailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDomainDetailRequest::response(QNetworkReply * const reply) const
 {
     return new GetDomainDetailResponse(*this, reply);
 }

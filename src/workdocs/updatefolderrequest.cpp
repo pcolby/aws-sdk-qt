@@ -66,10 +66,10 @@ bool UpdateFolderRequest::isValid() const
  *
  * @return An UpdateFolderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * UpdateFolderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFolderRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFolderResponse(*this, reply);
 }

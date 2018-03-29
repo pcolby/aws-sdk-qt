@@ -66,10 +66,10 @@ bool PutResourcePolicyRequest::isValid() const
  *
  * @return An PutResourcePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutResourcePolicyResponse(*this, reply);
 }

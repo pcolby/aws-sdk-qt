@@ -66,10 +66,10 @@ bool ModifyVpcPeeringConnectionOptionsRequest::isValid() const
  *
  * @return An ModifyVpcPeeringConnectionOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyVpcPeeringConnectionOptionsResponse(*this, reply);
 }

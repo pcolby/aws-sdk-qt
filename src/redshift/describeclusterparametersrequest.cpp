@@ -66,10 +66,10 @@ bool DescribeClusterParametersRequest::isValid() const
  *
  * @return An DescribeClusterParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeClusterParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeClusterParametersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeClusterParametersResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace CloudWatchLogs {
  * @param  parent   This object's parent.
  */
 CloudWatchLogsClientResponse::CloudWatchLogsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudWatchLogsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudWatchLogsClientResponsePrivate(this), parent)
 {
 
 }

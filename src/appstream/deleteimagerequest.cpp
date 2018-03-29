@@ -66,10 +66,10 @@ bool DeleteImageRequest::isValid() const
  *
  * @return An DeleteImageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteImageResponse(*this, reply);
 }

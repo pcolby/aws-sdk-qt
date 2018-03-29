@@ -66,10 +66,10 @@ bool ModifyInstancePlacementRequest::isValid() const
  *
  * @return An ModifyInstancePlacementResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyInstancePlacementResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PollForDecisionTaskRequest::isValid() const
  *
  * @return An PollForDecisionTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetworkReply * const reply) const
 {
     return new PollForDecisionTaskResponse(*this, reply);
 }

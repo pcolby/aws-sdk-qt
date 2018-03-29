@@ -66,10 +66,10 @@ bool ListApiKeysRequest::isValid() const
  *
  * @return An ListApiKeysResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * const reply) const
 {
     return new ListApiKeysResponse(*this, reply);
 }

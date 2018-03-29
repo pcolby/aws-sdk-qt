@@ -66,10 +66,10 @@ bool UpdateApnsSandboxChannelRequest::isValid() const
  *
  * @return An UpdateApnsSandboxChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateApnsSandboxChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateApnsSandboxChannelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateApnsSandboxChannelResponse(*this, reply);
 }

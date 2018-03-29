@@ -66,10 +66,10 @@ bool StopStackRequest::isValid() const
  *
  * @return An StopStackResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * StopStackRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopStackRequest::response(QNetworkReply * const reply) const
 {
     return new StopStackResponse(*this, reply);
 }

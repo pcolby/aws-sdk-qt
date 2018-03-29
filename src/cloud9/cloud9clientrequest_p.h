@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class Cloud9ClientRequest;
 
-class QTAWS_EXPORT Cloud9ClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT Cloud9ClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Cloud9ClientRequest::Action action; ///< Cloud9 action to be performed.

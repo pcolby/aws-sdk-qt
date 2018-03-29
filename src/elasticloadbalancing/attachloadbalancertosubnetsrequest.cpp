@@ -66,10 +66,10 @@ bool AttachLoadBalancerToSubnetsRequest::isValid() const
  *
  * @return An AttachLoadBalancerToSubnetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(QNetworkReply * const reply) const
 {
     return new AttachLoadBalancerToSubnetsResponse(*this, reply);
 }

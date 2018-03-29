@@ -74,10 +74,10 @@ namespace CloudWatchLogs {
  */
 CloudWatchLogsClient::CloudWatchLogsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudWatchLogsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudWatchLogsClientPrivate(this), parent)
 {
     Q_D(CloudWatchLogsClient);
     d->apiVersion = QStringLiteral("2014-03-28");
@@ -107,10 +107,10 @@ CloudWatchLogsClient::CloudWatchLogsClient(
  */
 CloudWatchLogsClient::CloudWatchLogsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudWatchLogsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudWatchLogsClientPrivate(this), parent)
 {
     Q_D(CloudWatchLogsClient);
     d->apiVersion = QStringLiteral("2014-03-28");
@@ -815,9 +815,9 @@ UntagLogGroupResponse * CloudWatchLogsClient::untagLogGroup(const UntagLogGroupR
  * @param  q  Pointer to this object's public CloudWatchLogsClient instance.
  */
 CloudWatchLogsClientPrivate::CloudWatchLogsClientPrivate(CloudWatchLogsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudWatchLogs

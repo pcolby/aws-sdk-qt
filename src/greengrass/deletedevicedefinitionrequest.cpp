@@ -66,10 +66,10 @@ bool DeleteDeviceDefinitionRequest::isValid() const
  *
  * @return An DeleteDeviceDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDeviceDefinitionResponse(*this, reply);
 }

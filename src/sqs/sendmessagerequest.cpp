@@ -66,10 +66,10 @@ bool SendMessageRequest::isValid() const
  *
  * @return An SendMessageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * const reply) const
 {
     return new SendMessageResponse(*this, reply);
 }

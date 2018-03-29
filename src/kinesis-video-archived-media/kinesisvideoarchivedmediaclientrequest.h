@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class KinesisVideoArchivedMediaClientRequestPrivate;
 
-class QTAWS_EXPORT KinesisVideoArchivedMediaClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT KinesisVideoArchivedMediaClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by KinesisVideoArchivedMedia.

@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class ElasticBeanstalkClientResponse;
 
-class QTAWS_EXPORT ElasticBeanstalkClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT ElasticBeanstalkClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

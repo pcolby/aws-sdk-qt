@@ -66,10 +66,10 @@ bool SetVaultAccessPolicyRequest::isValid() const
  *
  * @return An SetVaultAccessPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * SetVaultAccessPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetVaultAccessPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new SetVaultAccessPolicyResponse(*this, reply);
 }

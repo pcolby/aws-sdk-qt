@@ -66,10 +66,10 @@ bool AddIpRoutesRequest::isValid() const
  *
  * @return An AddIpRoutesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * AddIpRoutesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddIpRoutesRequest::response(QNetworkReply * const reply) const
 {
     return new AddIpRoutesResponse(*this, reply);
 }

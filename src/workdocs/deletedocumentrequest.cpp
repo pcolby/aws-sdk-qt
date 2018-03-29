@@ -66,10 +66,10 @@ bool DeleteDocumentRequest::isValid() const
  *
  * @return An DeleteDocumentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDocumentResponse(*this, reply);
 }

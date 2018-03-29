@@ -66,10 +66,10 @@ bool InvokeRequest::isValid() const
  *
  * @return An InvokeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * InvokeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InvokeRequest::response(QNetworkReply * const reply) const
 {
     return new InvokeResponse(*this, reply);
 }

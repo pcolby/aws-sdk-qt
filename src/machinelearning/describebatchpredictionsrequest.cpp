@@ -66,10 +66,10 @@ bool DescribeBatchPredictionsRequest::isValid() const
  *
  * @return An DescribeBatchPredictionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DescribeBatchPredictionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBatchPredictionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBatchPredictionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UnmonitorInstancesRequest::isValid() const
  *
  * @return An UnmonitorInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new UnmonitorInstancesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CloneStackRequest::isValid() const
  *
  * @return An CloneStackResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * CloneStackRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CloneStackRequest::response(QNetworkReply * const reply) const
 {
     return new CloneStackResponse(*this, reply);
 }

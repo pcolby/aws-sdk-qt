@@ -28,7 +28,7 @@ namespace Health {
 
 class HealthClientRequest;
 
-class QTAWS_EXPORT HealthClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT HealthClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     HealthClientRequest::Action action; ///< Health action to be performed.

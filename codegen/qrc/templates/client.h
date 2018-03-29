@@ -7,8 +7,8 @@
 class QNetworkReply;
 
 {# @todo Consistent namespacing #}
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace {{NameSpaceName}} {
@@ -21,18 +21,18 @@ class {{name}}Request;
 class {{name}}Response;
 {% endfor %}
 
-class QTAWS_EXPORT {{ClassName}} : public AwsAbstractClient {
+class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     {{ClassName}}(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     {{ClassName}}(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

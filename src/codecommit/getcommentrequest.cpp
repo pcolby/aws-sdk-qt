@@ -66,10 +66,10 @@ bool GetCommentRequest::isValid() const
  *
  * @return An GetCommentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetCommentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCommentRequest::response(QNetworkReply * const reply) const
 {
     return new GetCommentResponse(*this, reply);
 }

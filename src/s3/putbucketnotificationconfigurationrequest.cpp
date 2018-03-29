@@ -66,10 +66,10 @@ bool PutBucketNotificationConfigurationRequest::isValid() const
  *
  * @return An PutBucketNotificationConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketNotificationConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketNotificationConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketNotificationConfigurationResponse(*this, reply);
 }

@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace MediaLive {
@@ -66,18 +66,18 @@ class UpdateInputResponse;
 class UpdateInputSecurityGroupRequest;
 class UpdateInputSecurityGroupResponse;
 
-class QTAWS_EXPORT MediaLiveClient : public AwsAbstractClient {
+class QTAWS_EXPORT MediaLiveClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     MediaLiveClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     MediaLiveClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

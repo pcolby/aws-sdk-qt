@@ -66,10 +66,10 @@ bool PutImageRequest::isValid() const
  *
  * @return An PutImageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * PutImageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * const reply) const
 {
     return new PutImageResponse(*this, reply);
 }

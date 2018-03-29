@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class OpsWorksClientResponse;
 
-class QTAWS_EXPORT OpsWorksClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT OpsWorksClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

@@ -66,10 +66,10 @@ bool DeletePermissionPolicyRequest::isValid() const
  *
  * @return An DeletePermissionPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePermissionPolicyResponse(*this, reply);
 }

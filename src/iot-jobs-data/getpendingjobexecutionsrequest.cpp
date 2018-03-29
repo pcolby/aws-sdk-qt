@@ -66,10 +66,10 @@ bool GetPendingJobExecutionsRequest::isValid() const
  *
  * @return An GetPendingJobExecutionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTJobsDataPlaneClient::send
  */
-AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetPendingJobExecutionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool InitiateLayerUploadRequest::isValid() const
  *
  * @return An InitiateLayerUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetworkReply * const reply) const
 {
     return new InitiateLayerUploadResponse(*this, reply);
 }

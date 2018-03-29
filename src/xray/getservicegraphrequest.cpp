@@ -66,10 +66,10 @@ bool GetServiceGraphRequest::isValid() const
  *
  * @return An GetServiceGraphResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  XRayClient::send
  */
-AwsAbstractResponse * GetServiceGraphRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetServiceGraphRequest::response(QNetworkReply * const reply) const
 {
     return new GetServiceGraphResponse(*this, reply);
 }

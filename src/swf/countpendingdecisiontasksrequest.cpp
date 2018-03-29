@@ -66,10 +66,10 @@ bool CountPendingDecisionTasksRequest::isValid() const
  *
  * @return An CountPendingDecisionTasksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QNetworkReply * const reply) const
 {
     return new CountPendingDecisionTasksResponse(*this, reply);
 }

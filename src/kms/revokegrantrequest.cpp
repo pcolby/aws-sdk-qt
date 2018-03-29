@@ -66,10 +66,10 @@ bool RevokeGrantRequest::isValid() const
  *
  * @return An RevokeGrantResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * const reply) const
 {
     return new RevokeGrantResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateUserProfileRequest::isValid() const
  *
  * @return An CreateUserProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkReply * const reply) const
 {
     return new CreateUserProfileResponse(*this, reply);
 }

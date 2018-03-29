@@ -66,10 +66,10 @@ bool RevokeDBSecurityGroupIngressRequest::isValid() const
  *
  * @return An RevokeDBSecurityGroupIngressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
     return new RevokeDBSecurityGroupIngressResponse(*this, reply);
 }

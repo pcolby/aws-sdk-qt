@@ -66,10 +66,10 @@ bool DeleteBucketTaggingRequest::isValid() const
  *
  * @return An DeleteBucketTaggingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * DeleteBucketTaggingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBucketTaggingRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBucketTaggingResponse(*this, reply);
 }

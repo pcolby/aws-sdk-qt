@@ -66,10 +66,10 @@ bool DescribeWorkflowExecutionRequest::isValid() const
  *
  * @return An DescribeWorkflowExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * DescribeWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeWorkflowExecutionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateNotebookInstanceLifecycleConfigRequest::isValid() const
  *
  * @return An UpdateNotebookInstanceLifecycleConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateNotebookInstanceLifecycleConfigResponse(*this, reply);
 }

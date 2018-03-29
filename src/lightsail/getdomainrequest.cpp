@@ -66,10 +66,10 @@ bool GetDomainRequest::isValid() const
  *
  * @return An GetDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDomainRequest::response(QNetworkReply * const reply) const
 {
     return new GetDomainResponse(*this, reply);
 }

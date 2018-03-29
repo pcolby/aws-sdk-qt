@@ -40,7 +40,7 @@ namespace MediaStore {
  * @param  parent   This object's parent.
  */
 MediaStoreClientResponse::MediaStoreClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MediaStoreClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MediaStoreClientResponsePrivate(this), parent)
 {
 
 }

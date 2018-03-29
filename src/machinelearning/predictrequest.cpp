@@ -66,10 +66,10 @@ bool PredictRequest::isValid() const
  *
  * @return An PredictResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * PredictRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * const reply) const
 {
     return new PredictResponse(*this, reply);
 }

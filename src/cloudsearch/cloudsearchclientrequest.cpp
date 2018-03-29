@@ -36,7 +36,7 @@ namespace CloudSearch {
  * @param  action  The CloudSearch action to request.
  */
 CloudSearchClientRequest::CloudSearchClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudSearchClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudSearchClientRequest::CloudSearchClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudSearchClientRequest::CloudSearchClientRequest(const CloudSearchClientRequest &other)
-    : AwsAbstractRequest(new CloudSearchClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudSearchClientRequest& CloudSearchClientRequest::operator=(const CloudSearchC
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudSearchClientRequest::CloudSearchClientRequest(CloudSearchClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudSearchClientRequest::CloudSearchClientRequest(CloudSearchClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudSearchClientRequest::operator==(const CloudSearchClientRequest &other)
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudSearchClientRequest::unsignedRequest(const QUrl &endpoint) 
  * @param  q       Pointer to this object's public CloudSearchClientRequest instance.
  */
 CloudSearchClientRequestPrivate::CloudSearchClientRequestPrivate(const CloudSearchClientRequest::Action action, CloudSearchClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudSearchClientRequestPrivate::CloudSearchClientRequestPrivate(const CloudSear
  */
 CloudSearchClientRequestPrivate::CloudSearchClientRequestPrivate(const CloudSearchClientRequestPrivate &other,
                                      CloudSearchClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

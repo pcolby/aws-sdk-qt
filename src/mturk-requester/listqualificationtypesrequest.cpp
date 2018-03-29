@@ -66,10 +66,10 @@ bool ListQualificationTypesRequest::isValid() const
  *
  * @return An ListQualificationTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * ListQualificationTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListQualificationTypesRequest::response(QNetworkReply * const reply) const
 {
     return new ListQualificationTypesResponse(*this, reply);
 }

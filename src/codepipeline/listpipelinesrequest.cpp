@@ -66,10 +66,10 @@ bool ListPipelinesRequest::isValid() const
  *
  * @return An ListPipelinesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * ListPipelinesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPipelinesRequest::response(QNetworkReply * const reply) const
 {
     return new ListPipelinesResponse(*this, reply);
 }

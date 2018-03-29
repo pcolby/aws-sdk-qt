@@ -40,7 +40,7 @@ namespace WorkDocs {
  * @param  parent   This object's parent.
  */
 WorkDocsClientResponse::WorkDocsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new WorkDocsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new WorkDocsClientResponsePrivate(this), parent)
 {
 
 }

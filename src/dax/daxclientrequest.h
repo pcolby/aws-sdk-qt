@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DAX {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class DaxClientRequestPrivate;
 
-class QTAWS_EXPORT DaxClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT DaxClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DAX.

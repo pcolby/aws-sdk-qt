@@ -66,10 +66,10 @@ bool ListEndpointsByPlatformApplicationRequest::isValid() const
  *
  * @return An ListEndpointsByPlatformApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new ListEndpointsByPlatformApplicationResponse(*this, reply);
 }

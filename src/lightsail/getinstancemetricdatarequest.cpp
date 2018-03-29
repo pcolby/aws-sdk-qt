@@ -66,10 +66,10 @@ bool GetInstanceMetricDataRequest::isValid() const
  *
  * @return An GetInstanceMetricDataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetworkReply * const reply) const
 {
     return new GetInstanceMetricDataResponse(*this, reply);
 }

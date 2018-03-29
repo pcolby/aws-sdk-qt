@@ -66,10 +66,10 @@ bool DeregisterOnPremisesInstanceRequest::isValid() const
  *
  * @return An DeregisterOnPremisesInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * DeregisterOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterOnPremisesInstanceResponse(*this, reply);
 }

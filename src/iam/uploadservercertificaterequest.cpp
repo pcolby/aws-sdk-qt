@@ -66,10 +66,10 @@ bool UploadServerCertificateRequest::isValid() const
  *
  * @return An UploadServerCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UploadServerCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UploadServerCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new UploadServerCertificateResponse(*this, reply);
 }

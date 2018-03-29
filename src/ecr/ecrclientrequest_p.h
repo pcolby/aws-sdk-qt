@@ -28,7 +28,7 @@ namespace ECR {
 
 class EcrClientRequest;
 
-class QTAWS_EXPORT EcrClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT EcrClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EcrClientRequest::Action action; ///< ECR action to be performed.

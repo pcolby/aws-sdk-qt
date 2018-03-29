@@ -66,10 +66,10 @@ bool DescribeSnapshotsRequest::isValid() const
  *
  * @return An DescribeSnapshotsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSnapshotsResponse(*this, reply);
 }

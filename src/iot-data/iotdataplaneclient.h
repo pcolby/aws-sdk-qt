@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace IoTDataPlane {
@@ -40,18 +40,18 @@ class PublishResponse;
 class UpdateThingShadowRequest;
 class UpdateThingShadowResponse;
 
-class QTAWS_EXPORT IoTDataPlaneClient : public AwsAbstractClient {
+class QTAWS_EXPORT IoTDataPlaneClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     IoTDataPlaneClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     IoTDataPlaneClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class PinpointClientRequest;
 
-class QTAWS_EXPORT PinpointClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT PinpointClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PinpointClientRequest::Action action; ///< Pinpoint action to be performed.

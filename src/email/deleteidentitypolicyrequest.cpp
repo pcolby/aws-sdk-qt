@@ -66,10 +66,10 @@ bool DeleteIdentityPolicyRequest::isValid() const
  *
  * @return An DeleteIdentityPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteIdentityPolicyResponse(*this, reply);
 }

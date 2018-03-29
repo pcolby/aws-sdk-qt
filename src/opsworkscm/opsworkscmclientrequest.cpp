@@ -36,7 +36,7 @@ namespace OpsWorksCM {
  * @param  action  The OpsWorksCM action to request.
  */
 OpsWorksCMClientRequest::OpsWorksCMClientRequest(const Action action)
-    : AwsAbstractRequest(new OpsWorksCMClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new OpsWorksCMClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ OpsWorksCMClientRequest::OpsWorksCMClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 OpsWorksCMClientRequest::OpsWorksCMClientRequest(const OpsWorksCMClientRequest &other)
-    : AwsAbstractRequest(new OpsWorksCMClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new OpsWorksCMClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ OpsWorksCMClientRequest& OpsWorksCMClientRequest::operator=(const OpsWorksCMClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-OpsWorksCMClientRequest::OpsWorksCMClientRequest(OpsWorksCMClientRequestPrivate * const d) : AwsAbstractRequest(d)
+OpsWorksCMClientRequest::OpsWorksCMClientRequest(OpsWorksCMClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool OpsWorksCMClientRequest::operator==(const OpsWorksCMClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest OpsWorksCMClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public OpsWorksCMClientRequest instance.
  */
 OpsWorksCMClientRequestPrivate::OpsWorksCMClientRequestPrivate(const OpsWorksCMClientRequest::Action action, OpsWorksCMClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ OpsWorksCMClientRequestPrivate::OpsWorksCMClientRequestPrivate(const OpsWorksCMC
  */
 OpsWorksCMClientRequestPrivate::OpsWorksCMClientRequestPrivate(const OpsWorksCMClientRequestPrivate &other,
                                      OpsWorksCMClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

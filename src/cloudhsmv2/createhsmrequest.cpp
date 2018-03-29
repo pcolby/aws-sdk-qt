@@ -66,10 +66,10 @@ bool CreateHsmRequest::isValid() const
  *
  * @return An CreateHsmResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMV2Client::send
  */
-AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * const reply) const
 {
     return new CreateHsmResponse(*this, reply);
 }

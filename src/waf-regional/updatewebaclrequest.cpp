@@ -66,10 +66,10 @@ bool UpdateWebACLRequest::isValid() const
  *
  * @return An UpdateWebACLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateWebACLResponse(*this, reply);
 }

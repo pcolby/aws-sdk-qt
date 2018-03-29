@@ -66,10 +66,10 @@ bool DescribeProtectionRequest::isValid() const
  *
  * @return An DescribeProtectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeProtectionResponse(*this, reply);
 }

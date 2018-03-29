@@ -66,10 +66,10 @@ bool ListRegexMatchSetsRequest::isValid() const
  *
  * @return An ListRegexMatchSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListRegexMatchSetsResponse(*this, reply);
 }

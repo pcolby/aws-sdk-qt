@@ -66,10 +66,10 @@ bool PutBucketVersioningRequest::isValid() const
  *
  * @return An PutBucketVersioningResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketVersioningRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketVersioningRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketVersioningResponse(*this, reply);
 }

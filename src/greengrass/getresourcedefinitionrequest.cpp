@@ -66,10 +66,10 @@ bool GetResourceDefinitionRequest::isValid() const
  *
  * @return An GetResourceDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new GetResourceDefinitionResponse(*this, reply);
 }

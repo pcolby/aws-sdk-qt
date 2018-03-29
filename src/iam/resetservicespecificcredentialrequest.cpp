@@ -66,10 +66,10 @@ bool ResetServiceSpecificCredentialRequest::isValid() const
  *
  * @return An ResetServiceSpecificCredentialResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ResetServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
     return new ResetServiceSpecificCredentialResponse(*this, reply);
 }

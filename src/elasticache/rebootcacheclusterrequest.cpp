@@ -66,10 +66,10 @@ bool RebootCacheClusterRequest::isValid() const
  *
  * @return An RebootCacheClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkReply * const reply) const
 {
     return new RebootCacheClusterResponse(*this, reply);
 }

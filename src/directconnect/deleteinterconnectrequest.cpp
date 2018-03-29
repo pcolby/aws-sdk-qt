@@ -66,10 +66,10 @@ bool DeleteInterconnectRequest::isValid() const
  *
  * @return An DeleteInterconnectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DeleteInterconnectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteInterconnectRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteInterconnectResponse(*this, reply);
 }

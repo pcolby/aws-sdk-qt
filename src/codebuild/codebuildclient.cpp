@@ -125,10 +125,10 @@ namespace CodeBuild {
  */
 CodeBuildClient::CodeBuildClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
 {
     Q_D(CodeBuildClient);
     d->apiVersion = QStringLiteral("2016-10-06");
@@ -158,10 +158,10 @@ CodeBuildClient::CodeBuildClient(
  */
 CodeBuildClient::CodeBuildClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
 {
     Q_D(CodeBuildClient);
     d->apiVersion = QStringLiteral("2016-10-06");
@@ -425,9 +425,9 @@ UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookReques
  * @param  q  Pointer to this object's public CodeBuildClient instance.
  */
 CodeBuildClientPrivate::CodeBuildClientPrivate(CodeBuildClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeBuild

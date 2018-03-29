@@ -66,10 +66,10 @@ bool GetCommitRequest::isValid() const
  *
  * @return An GetCommitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetCommitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCommitRequest::response(QNetworkReply * const reply) const
 {
     return new GetCommitResponse(*this, reply);
 }

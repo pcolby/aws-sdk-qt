@@ -66,10 +66,10 @@ bool RegisterRdsDbInstanceRequest::isValid() const
  *
  * @return An RegisterRdsDbInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * RegisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterRdsDbInstanceResponse(*this, reply);
 }

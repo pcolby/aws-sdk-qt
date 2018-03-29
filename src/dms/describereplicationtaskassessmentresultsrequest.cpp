@@ -66,10 +66,10 @@ bool DescribeReplicationTaskAssessmentResultsRequest::isValid() const
  *
  * @return An DescribeReplicationTaskAssessmentResultsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeReplicationTaskAssessmentResultsResponse(*this, reply);
 }

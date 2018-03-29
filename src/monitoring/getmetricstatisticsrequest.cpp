@@ -66,10 +66,10 @@ bool GetMetricStatisticsRequest::isValid() const
  *
  * @return An GetMetricStatisticsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * GetMetricStatisticsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMetricStatisticsRequest::response(QNetworkReply * const reply) const
 {
     return new GetMetricStatisticsResponse(*this, reply);
 }

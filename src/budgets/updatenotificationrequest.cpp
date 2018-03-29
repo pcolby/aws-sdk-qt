@@ -66,10 +66,10 @@ bool UpdateNotificationRequest::isValid() const
  *
  * @return An UpdateNotificationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * UpdateNotificationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateNotificationRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateNotificationResponse(*this, reply);
 }

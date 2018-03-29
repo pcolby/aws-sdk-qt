@@ -66,10 +66,10 @@ bool ListDocumentsRequest::isValid() const
  *
  * @return An ListDocumentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDocumentsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool RemoveTargetsRequest::isValid() const
  *
  * @return An RemoveTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * RemoveTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveTargetsResponse(*this, reply);
 }

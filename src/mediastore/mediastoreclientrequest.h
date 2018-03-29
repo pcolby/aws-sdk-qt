@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MediaStore {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MediaStoreClientRequestPrivate;
 
-class QTAWS_EXPORT MediaStoreClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MediaStoreClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaStore.

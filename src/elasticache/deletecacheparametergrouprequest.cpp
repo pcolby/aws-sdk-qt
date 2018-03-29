@@ -66,10 +66,10 @@ bool DeleteCacheParameterGroupRequest::isValid() const
  *
  * @return An DeleteCacheParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCacheParameterGroupResponse(*this, reply);
 }

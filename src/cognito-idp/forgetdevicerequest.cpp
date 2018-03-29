@@ -66,10 +66,10 @@ bool ForgetDeviceRequest::isValid() const
  *
  * @return An ForgetDeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply * const reply) const
 {
     return new ForgetDeviceResponse(*this, reply);
 }

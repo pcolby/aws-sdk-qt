@@ -51,10 +51,10 @@ namespace EFS {
  */
 EfsClient::EfsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EfsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
     Q_D(EfsClient);
     d->apiVersion = QStringLiteral("2015-02-01");
@@ -84,10 +84,10 @@ EfsClient::EfsClient(
  */
 EfsClient::EfsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EfsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
     Q_D(EfsClient);
     d->apiVersion = QStringLiteral("2015-02-01");
@@ -590,9 +590,9 @@ ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGr
  * @param  q  Pointer to this object's public EfsClient instance.
  */
 EfsClientPrivate::EfsClientPrivate(EfsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EFS

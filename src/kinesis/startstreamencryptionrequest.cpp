@@ -66,10 +66,10 @@ bool StartStreamEncryptionRequest::isValid() const
  *
  * @return An StartStreamEncryptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetworkReply * const reply) const
 {
     return new StartStreamEncryptionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListProgressUpdateStreamsRequest::isValid() const
  *
  * @return An ListProgressUpdateStreamsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QNetworkReply * const reply) const
 {
     return new ListProgressUpdateStreamsResponse(*this, reply);
 }

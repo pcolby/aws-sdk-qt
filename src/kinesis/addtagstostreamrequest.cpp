@@ -66,10 +66,10 @@ bool AddTagsToStreamRequest::isValid() const
  *
  * @return An AddTagsToStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkReply * const reply) const
 {
     return new AddTagsToStreamResponse(*this, reply);
 }

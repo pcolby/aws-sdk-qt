@@ -66,10 +66,10 @@ bool StopFleetRequest::isValid() const
  *
  * @return An StopFleetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * const reply) const
 {
     return new StopFleetResponse(*this, reply);
 }

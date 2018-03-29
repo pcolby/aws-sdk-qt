@@ -66,10 +66,10 @@ bool GetTrafficPolicyInstanceCountRequest::isValid() const
  *
  * @return An GetTrafficPolicyInstanceCountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::response(QNetworkReply * const reply) const
 {
     return new GetTrafficPolicyInstanceCountResponse(*this, reply);
 }

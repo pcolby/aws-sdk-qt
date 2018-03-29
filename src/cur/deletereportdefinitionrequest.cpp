@@ -66,10 +66,10 @@ bool DeleteReportDefinitionRequest::isValid() const
  *
  * @return An DeleteReportDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostandUsageReportServiceClient::send
  */
-AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteReportDefinitionResponse(*this, reply);
 }

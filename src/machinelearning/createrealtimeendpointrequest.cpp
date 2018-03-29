@@ -66,10 +66,10 @@ bool CreateRealtimeEndpointRequest::isValid() const
  *
  * @return An CreateRealtimeEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRealtimeEndpointResponse(*this, reply);
 }

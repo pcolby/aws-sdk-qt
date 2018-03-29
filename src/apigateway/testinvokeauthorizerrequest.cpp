@@ -66,10 +66,10 @@ bool TestInvokeAuthorizerRequest::isValid() const
  *
  * @return An TestInvokeAuthorizerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetworkReply * const reply) const
 {
     return new TestInvokeAuthorizerResponse(*this, reply);
 }

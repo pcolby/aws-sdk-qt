@@ -66,10 +66,10 @@ bool UpdateScalingParametersRequest::isValid() const
  *
  * @return An UpdateScalingParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * UpdateScalingParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateScalingParametersResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeFpgaImageAttributeRequest::isValid() const
  *
  * @return An DescribeFpgaImageAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeFpgaImageAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeFpgaImageAttributeResponse(*this, reply);
 }

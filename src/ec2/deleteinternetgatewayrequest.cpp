@@ -66,10 +66,10 @@ bool DeleteInternetGatewayRequest::isValid() const
  *
  * @return An DeleteInternetGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteInternetGatewayResponse(*this, reply);
 }

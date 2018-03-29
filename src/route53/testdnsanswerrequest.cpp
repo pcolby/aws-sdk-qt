@@ -66,10 +66,10 @@ bool TestDNSAnswerRequest::isValid() const
  *
  * @return An TestDNSAnswerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply * const reply) const
 {
     return new TestDNSAnswerResponse(*this, reply);
 }

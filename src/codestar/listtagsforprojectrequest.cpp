@@ -66,10 +66,10 @@ bool ListTagsForProjectRequest::isValid() const
  *
  * @return An ListTagsForProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkReply * const reply) const
 {
     return new ListTagsForProjectResponse(*this, reply);
 }

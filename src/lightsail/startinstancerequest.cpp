@@ -66,10 +66,10 @@ bool StartInstanceRequest::isValid() const
  *
  * @return An StartInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new StartInstanceResponse(*this, reply);
 }

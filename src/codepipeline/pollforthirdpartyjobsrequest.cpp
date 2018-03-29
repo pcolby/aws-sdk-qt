@@ -66,10 +66,10 @@ bool PollForThirdPartyJobsRequest::isValid() const
  *
  * @return An PollForThirdPartyJobsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * PollForThirdPartyJobsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PollForThirdPartyJobsRequest::response(QNetworkReply * const reply) const
 {
     return new PollForThirdPartyJobsResponse(*this, reply);
 }

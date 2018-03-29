@@ -66,10 +66,10 @@ bool ListCreatedArtifactsRequest::isValid() const
  *
  * @return An ListCreatedArtifactsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetworkReply * const reply) const
 {
     return new ListCreatedArtifactsResponse(*this, reply);
 }

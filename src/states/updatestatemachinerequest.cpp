@@ -66,10 +66,10 @@ bool UpdateStateMachineRequest::isValid() const
  *
  * @return An UpdateStateMachineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateStateMachineResponse(*this, reply);
 }

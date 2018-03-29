@@ -66,10 +66,10 @@ bool UpdateServerEngineAttributesRequest::isValid() const
  *
  * @return An UpdateServerEngineAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * UpdateServerEngineAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateServerEngineAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateServerEngineAttributesResponse(*this, reply);
 }

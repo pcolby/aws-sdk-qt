@@ -66,10 +66,10 @@ bool GetDisksRequest::isValid() const
  *
  * @return An GetDisksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetDisksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDisksRequest::response(QNetworkReply * const reply) const
 {
     return new GetDisksResponse(*this, reply);
 }

@@ -49,10 +49,10 @@ bool {{ClassName}}::isValid() const
  *
  * @return An {{OperationName}}Response instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  {{ServiceName}}Client::send
  */
-AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const reply) const
 {
     return new {{OperationName}}Response(*this, reply);
 }

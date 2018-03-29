@@ -66,10 +66,10 @@ bool CreateMountTargetRequest::isValid() const
  *
  * @return An CreateMountTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EFSClient::send
  */
-AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateMountTargetResponse(*this, reply);
 }

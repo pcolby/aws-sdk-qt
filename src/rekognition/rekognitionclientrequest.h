@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Rekognition {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class RekognitionClientRequestPrivate;
 
-class QTAWS_EXPORT RekognitionClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT RekognitionClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Rekognition.

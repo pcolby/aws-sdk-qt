@@ -187,10 +187,10 @@ namespace Organizations {
  */
 OrganizationsClient::OrganizationsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
 {
     Q_D(OrganizationsClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -220,10 +220,10 @@ OrganizationsClient::OrganizationsClient(
  */
 OrganizationsClient::OrganizationsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
 {
     Q_D(OrganizationsClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -1479,9 +1479,9 @@ UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyReque
  * @param  q  Pointer to this object's public OrganizationsClient instance.
  */
 OrganizationsClientPrivate::OrganizationsClientPrivate(OrganizationsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Organizations

@@ -40,7 +40,7 @@ namespace MQ {
  * @param  parent   This object's parent.
  */
 MqClientResponse::MqClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MqClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MqClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool DeleteConfigurationSetRequest::isValid() const
  *
  * @return An DeleteConfigurationSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConfigurationSetResponse(*this, reply);
 }

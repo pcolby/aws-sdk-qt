@@ -66,10 +66,10 @@ bool UntagProjectRequest::isValid() const
  *
  * @return An UntagProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * UntagProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UntagProjectRequest::response(QNetworkReply * const reply) const
 {
     return new UntagProjectResponse(*this, reply);
 }

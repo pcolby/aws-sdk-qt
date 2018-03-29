@@ -36,7 +36,7 @@ namespace ImportExport {
  * @param  action  The ImportExport action to request.
  */
 ImportExportClientRequest::ImportExportClientRequest(const Action action)
-    : AwsAbstractRequest(new ImportExportClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ImportExportClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ImportExportClientRequest::ImportExportClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ImportExportClientRequest::ImportExportClientRequest(const ImportExportClientRequest &other)
-    : AwsAbstractRequest(new ImportExportClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ImportExportClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ImportExportClientRequest& ImportExportClientRequest::operator=(const ImportExpo
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ImportExportClientRequest::ImportExportClientRequest(ImportExportClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ImportExportClientRequest::ImportExportClientRequest(ImportExportClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ImportExportClientRequest::operator==(const ImportExportClientRequest &othe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ImportExportClientRequest::unsignedRequest(const QUrl &endpoint)
  * @param  q       Pointer to this object's public ImportExportClientRequest instance.
  */
 ImportExportClientRequestPrivate::ImportExportClientRequestPrivate(const ImportExportClientRequest::Action action, ImportExportClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ImportExportClientRequestPrivate::ImportExportClientRequestPrivate(const ImportE
  */
 ImportExportClientRequestPrivate::ImportExportClientRequestPrivate(const ImportExportClientRequestPrivate &other,
                                      ImportExportClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

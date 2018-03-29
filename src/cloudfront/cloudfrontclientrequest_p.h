@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CloudFrontClientRequest;
 
-class QTAWS_EXPORT CloudFrontClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CloudFrontClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudFrontClientRequest::Action action; ///< CloudFront action to be performed.

@@ -66,10 +66,10 @@ bool StopDBInstanceRequest::isValid() const
  *
  * @return An StopDBInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new StopDBInstanceResponse(*this, reply);
 }

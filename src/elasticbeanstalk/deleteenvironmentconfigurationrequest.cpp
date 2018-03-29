@@ -66,10 +66,10 @@ bool DeleteEnvironmentConfigurationRequest::isValid() const
  *
  * @return An DeleteEnvironmentConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DeleteEnvironmentConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEnvironmentConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEnvironmentConfigurationResponse(*this, reply);
 }

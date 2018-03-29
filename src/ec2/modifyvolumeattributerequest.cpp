@@ -66,10 +66,10 @@ bool ModifyVolumeAttributeRequest::isValid() const
  *
  * @return An ModifyVolumeAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyVolumeAttributeResponse(*this, reply);
 }

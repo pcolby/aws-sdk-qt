@@ -66,10 +66,10 @@ bool CreateScalingPlanRequest::isValid() const
  *
  * @return An CreateScalingPlanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingPlansClient::send
  */
-AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkReply * const reply) const
 {
     return new CreateScalingPlanResponse(*this, reply);
 }

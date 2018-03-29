@@ -66,10 +66,10 @@ bool GetFederationTokenRequest::isValid() const
  *
  * @return An GetFederationTokenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkReply * const reply) const
 {
     return new GetFederationTokenResponse(*this, reply);
 }

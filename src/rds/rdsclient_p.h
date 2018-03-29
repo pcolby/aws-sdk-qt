@@ -29,7 +29,7 @@ namespace RDS {
 
 class RdsClient;
 
-class QTAWS_EXPORT RdsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT RdsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     RdsClientPrivate(RdsClient * const q);

@@ -66,10 +66,10 @@ bool GetComplianceSummaryByResourceTypeRequest::isValid() const
  *
  * @return An GetComplianceSummaryByResourceTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * GetComplianceSummaryByResourceTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetComplianceSummaryByResourceTypeRequest::response(QNetworkReply * const reply) const
 {
     return new GetComplianceSummaryByResourceTypeResponse(*this, reply);
 }

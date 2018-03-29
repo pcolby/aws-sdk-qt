@@ -66,10 +66,10 @@ bool ListCACertificatesRequest::isValid() const
  *
  * @return An ListCACertificatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkReply * const reply) const
 {
     return new ListCACertificatesResponse(*this, reply);
 }

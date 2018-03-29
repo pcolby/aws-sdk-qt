@@ -66,10 +66,10 @@ bool CreateVPCAssociationAuthorizationRequest::isValid() const
  *
  * @return An CreateVPCAssociationAuthorizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateVPCAssociationAuthorizationResponse(*this, reply);
 }

@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace MediaStore {
@@ -52,18 +52,18 @@ class PutContainerPolicyResponse;
 class PutCorsPolicyRequest;
 class PutCorsPolicyResponse;
 
-class QTAWS_EXPORT MediaStoreClient : public AwsAbstractClient {
+class QTAWS_EXPORT MediaStoreClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     MediaStoreClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     MediaStoreClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

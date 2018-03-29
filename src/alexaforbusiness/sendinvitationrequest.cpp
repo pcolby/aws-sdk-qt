@@ -66,10 +66,10 @@ bool SendInvitationRequest::isValid() const
  *
  * @return An SendInvitationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply * const reply) const
 {
     return new SendInvitationResponse(*this, reply);
 }

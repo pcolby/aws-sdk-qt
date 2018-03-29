@@ -66,10 +66,10 @@ bool UpdatePullRequestDescriptionRequest::isValid() const
  *
  * @return An UpdatePullRequestDescriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * UpdatePullRequestDescriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePullRequestDescriptionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePullRequestDescriptionResponse(*this, reply);
 }

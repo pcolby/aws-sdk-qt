@@ -56,10 +56,10 @@ namespace CloudSearch {
  */
 CloudSearchClient::CloudSearchClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudSearchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudSearchClientPrivate(this), parent)
 {
     Q_D(CloudSearchClient);
     d->apiVersion = QStringLiteral("2013-01-01");
@@ -89,10 +89,10 @@ CloudSearchClient::CloudSearchClient(
  */
 CloudSearchClient::CloudSearchClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudSearchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudSearchClientPrivate(this), parent)
 {
     Q_D(CloudSearchClient);
     d->apiVersion = QStringLiteral("2013-01-01");
@@ -531,9 +531,9 @@ UpdateServiceAccessPoliciesResponse * CloudSearchClient::updateServiceAccessPoli
  * @param  q  Pointer to this object's public CloudSearchClient instance.
  */
 CloudSearchClientPrivate::CloudSearchClientPrivate(CloudSearchClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudSearch

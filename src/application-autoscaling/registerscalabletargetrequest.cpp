@@ -66,10 +66,10 @@ bool RegisterScalableTargetRequest::isValid() const
  *
  * @return An RegisterScalableTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationAutoScalingClient::send
  */
-AwsAbstractResponse * RegisterScalableTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterScalableTargetRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterScalableTargetResponse(*this, reply);
 }

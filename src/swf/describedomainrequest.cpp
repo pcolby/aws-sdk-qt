@@ -66,10 +66,10 @@ bool DescribeDomainRequest::isValid() const
  *
  * @return An DescribeDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDomainResponse(*this, reply);
 }

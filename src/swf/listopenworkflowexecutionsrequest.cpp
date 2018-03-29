@@ -66,10 +66,10 @@ bool ListOpenWorkflowExecutionsRequest::isValid() const
  *
  * @return An ListOpenWorkflowExecutionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListOpenWorkflowExecutionsResponse(*this, reply);
 }

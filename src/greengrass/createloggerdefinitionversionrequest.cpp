@@ -66,10 +66,10 @@ bool CreateLoggerDefinitionVersionRequest::isValid() const
  *
  * @return An CreateLoggerDefinitionVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateLoggerDefinitionVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLoggerDefinitionVersionResponse(*this, reply);
 }

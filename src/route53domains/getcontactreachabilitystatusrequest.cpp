@@ -66,10 +66,10 @@ bool GetContactReachabilityStatusRequest::isValid() const
  *
  * @return An GetContactReachabilityStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * GetContactReachabilityStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetContactReachabilityStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetContactReachabilityStatusResponse(*this, reply);
 }

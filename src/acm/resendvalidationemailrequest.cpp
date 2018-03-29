@@ -66,10 +66,10 @@ bool ResendValidationEmailRequest::isValid() const
  *
  * @return An ResendValidationEmailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ACMClient::send
  */
-AwsAbstractResponse * ResendValidationEmailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetworkReply * const reply) const
 {
     return new ResendValidationEmailResponse(*this, reply);
 }

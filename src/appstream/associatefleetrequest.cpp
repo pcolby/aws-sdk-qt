@@ -66,10 +66,10 @@ bool AssociateFleetRequest::isValid() const
  *
  * @return An AssociateFleetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * AssociateFleetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateFleetRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateFleetResponse(*this, reply);
 }

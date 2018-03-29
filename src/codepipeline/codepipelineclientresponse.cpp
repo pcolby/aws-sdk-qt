@@ -40,7 +40,7 @@ namespace CodePipeline {
  * @param  parent   This object's parent.
  */
 CodePipelineClientResponse::CodePipelineClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CodePipelineClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CodePipelineClientResponsePrivate(this), parent)
 {
 
 }

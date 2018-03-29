@@ -28,7 +28,7 @@ namespace Route53 {
 
 class Route53ClientResponse;
 
-class QTAWS_EXPORT Route53ClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT Route53ClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

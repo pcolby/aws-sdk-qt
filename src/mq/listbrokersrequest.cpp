@@ -66,10 +66,10 @@ bool ListBrokersRequest::isValid() const
  *
  * @return An ListBrokersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MQClient::send
  */
-AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * const reply) const
 {
     return new ListBrokersResponse(*this, reply);
 }

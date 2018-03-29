@@ -66,10 +66,10 @@ bool DeleteFleetRequest::isValid() const
  *
  * @return An DeleteFleetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFleetResponse(*this, reply);
 }

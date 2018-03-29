@@ -66,10 +66,10 @@ bool StartMaintenanceRequest::isValid() const
  *
  * @return An StartMaintenanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkReply * const reply) const
 {
     return new StartMaintenanceResponse(*this, reply);
 }

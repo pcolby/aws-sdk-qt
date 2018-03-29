@@ -28,7 +28,7 @@ namespace Glacier {
 
 class GlacierClientRequest;
 
-class QTAWS_EXPORT GlacierClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT GlacierClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GlacierClientRequest::Action action; ///< Glacier action to be performed.

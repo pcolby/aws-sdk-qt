@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Glue {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class GlueClientRequestPrivate;
 
-class QTAWS_EXPORT GlueClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT GlueClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Glue.

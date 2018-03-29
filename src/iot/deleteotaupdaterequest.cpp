@@ -66,10 +66,10 @@ bool DeleteOTAUpdateRequest::isValid() const
  *
  * @return An DeleteOTAUpdateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteOTAUpdateResponse(*this, reply);
 }

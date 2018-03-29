@@ -66,10 +66,10 @@ bool DescribeResourcePoliciesRequest::isValid() const
  *
  * @return An DescribeResourcePoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeResourcePoliciesResponse(*this, reply);
 }

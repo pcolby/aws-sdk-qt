@@ -66,10 +66,10 @@ bool GetFileUploadURLRequest::isValid() const
  *
  * @return An GetFileUploadURLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkReply * const reply) const
 {
     return new GetFileUploadURLResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateApplicationResourceLifecycleRequest::isValid() const
  *
  * @return An UpdateApplicationResourceLifecycleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * UpdateApplicationResourceLifecycleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateApplicationResourceLifecycleRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateApplicationResourceLifecycleResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeAssessmentTargetsRequest::isValid() const
  *
  * @return An DescribeAssessmentTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAssessmentTargetsResponse(*this, reply);
 }

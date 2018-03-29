@@ -66,10 +66,10 @@ bool DescribeInstanceAssociationsStatusRequest::isValid() const
  *
  * @return An DescribeInstanceAssociationsStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeInstanceAssociationsStatusResponse(*this, reply);
 }

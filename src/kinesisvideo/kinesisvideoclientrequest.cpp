@@ -36,7 +36,7 @@ namespace KinesisVideo {
  * @param  action  The KinesisVideo action to request.
  */
 KinesisVideoClientRequest::KinesisVideoClientRequest(const Action action)
-    : AwsAbstractRequest(new KinesisVideoClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisVideoClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ KinesisVideoClientRequest::KinesisVideoClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 KinesisVideoClientRequest::KinesisVideoClientRequest(const KinesisVideoClientRequest &other)
-    : AwsAbstractRequest(new KinesisVideoClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisVideoClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ KinesisVideoClientRequest& KinesisVideoClientRequest::operator=(const KinesisVid
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-KinesisVideoClientRequest::KinesisVideoClientRequest(KinesisVideoClientRequestPrivate * const d) : AwsAbstractRequest(d)
+KinesisVideoClientRequest::KinesisVideoClientRequest(KinesisVideoClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool KinesisVideoClientRequest::operator==(const KinesisVideoClientRequest &othe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest KinesisVideoClientRequest::unsignedRequest(const QUrl &endpoint)
  * @param  q       Pointer to this object's public KinesisVideoClientRequest instance.
  */
 KinesisVideoClientRequestPrivate::KinesisVideoClientRequestPrivate(const KinesisVideoClientRequest::Action action, KinesisVideoClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ KinesisVideoClientRequestPrivate::KinesisVideoClientRequestPrivate(const Kinesis
  */
 KinesisVideoClientRequestPrivate::KinesisVideoClientRequestPrivate(const KinesisVideoClientRequestPrivate &other,
                                      KinesisVideoClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

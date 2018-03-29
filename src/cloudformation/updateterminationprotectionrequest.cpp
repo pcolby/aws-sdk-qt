@@ -66,10 +66,10 @@ bool UpdateTerminationProtectionRequest::isValid() const
  *
  * @return An UpdateTerminationProtectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * UpdateTerminationProtectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTerminationProtectionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTerminationProtectionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListUniqueProblemsRequest::isValid() const
  *
  * @return An ListUniqueProblemsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkReply * const reply) const
 {
     return new ListUniqueProblemsResponse(*this, reply);
 }

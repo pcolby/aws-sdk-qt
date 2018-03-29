@@ -66,10 +66,10 @@ bool DeleteEmailChannelRequest::isValid() const
  *
  * @return An DeleteEmailChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEmailChannelResponse(*this, reply);
 }

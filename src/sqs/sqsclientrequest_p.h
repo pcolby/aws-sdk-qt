@@ -28,7 +28,7 @@ namespace SQS {
 
 class SqsClientRequest;
 
-class QTAWS_EXPORT SqsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SqsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SqsClientRequest::Action action; ///< SQS action to be performed.

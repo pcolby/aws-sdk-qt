@@ -66,10 +66,10 @@ bool DescribeBuildRequest::isValid() const
  *
  * @return An DescribeBuildResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeBuildRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBuildRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBuildResponse(*this, reply);
 }

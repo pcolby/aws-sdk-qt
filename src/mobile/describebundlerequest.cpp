@@ -66,10 +66,10 @@ bool DescribeBundleRequest::isValid() const
  *
  * @return An DescribeBundleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MobileClient::send
  */
-AwsAbstractResponse * DescribeBundleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBundleRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBundleResponse(*this, reply);
 }

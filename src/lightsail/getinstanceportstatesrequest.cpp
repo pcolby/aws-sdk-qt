@@ -66,10 +66,10 @@ bool GetInstancePortStatesRequest::isValid() const
  *
  * @return An GetInstancePortStatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetInstancePortStatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInstancePortStatesRequest::response(QNetworkReply * const reply) const
 {
     return new GetInstancePortStatesResponse(*this, reply);
 }

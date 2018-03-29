@@ -66,10 +66,10 @@ bool DeleteBucketWebsiteRequest::isValid() const
  *
  * @return An DeleteBucketWebsiteResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBucketWebsiteResponse(*this, reply);
 }

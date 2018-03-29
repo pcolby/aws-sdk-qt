@@ -58,10 +58,10 @@ namespace CostExplorer {
  */
 CostExplorerClient::CostExplorerClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
 {
     Q_D(CostExplorerClient);
     d->apiVersion = QStringLiteral("2017-10-25");
@@ -91,10 +91,10 @@ CostExplorerClient::CostExplorerClient(
  */
 CostExplorerClient::CostExplorerClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
 {
     Q_D(CostExplorerClient);
     d->apiVersion = QStringLiteral("2017-10-25");
@@ -251,9 +251,9 @@ GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
  * @param  q  Pointer to this object's public CostExplorerClient instance.
  */
 CostExplorerClientPrivate::CostExplorerClientPrivate(CostExplorerClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CostExplorer

@@ -66,10 +66,10 @@ bool RebootBrokerRequest::isValid() const
  *
  * @return An RebootBrokerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MQClient::send
  */
-AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply * const reply) const
 {
     return new RebootBrokerResponse(*this, reply);
 }

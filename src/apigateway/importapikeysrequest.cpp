@@ -66,10 +66,10 @@ bool ImportApiKeysRequest::isValid() const
  *
  * @return An ImportApiKeysResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply * const reply) const
 {
     return new ImportApiKeysResponse(*this, reply);
 }

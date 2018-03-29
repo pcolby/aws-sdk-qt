@@ -66,10 +66,10 @@ bool SetLoadBasedAutoScalingRequest::isValid() const
  *
  * @return An SetLoadBasedAutoScalingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * SetLoadBasedAutoScalingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetLoadBasedAutoScalingRequest::response(QNetworkReply * const reply) const
 {
     return new SetLoadBasedAutoScalingResponse(*this, reply);
 }

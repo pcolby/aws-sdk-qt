@@ -66,10 +66,10 @@ bool GetDocumentationVersionRequest::isValid() const
  *
  * @return An GetDocumentationVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetDocumentationVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDocumentationVersionRequest::response(QNetworkReply * const reply) const
 {
     return new GetDocumentationVersionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeInputSecurityGroupRequest::isValid() const
  *
  * @return An DescribeInputSecurityGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeInputSecurityGroupResponse(*this, reply);
 }

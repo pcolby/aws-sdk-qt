@@ -66,10 +66,10 @@ bool UpdateGameSessionQueueRequest::isValid() const
  *
  * @return An UpdateGameSessionQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * UpdateGameSessionQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateGameSessionQueueRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateGameSessionQueueResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateDeploymentRequest::isValid() const
  *
  * @return An UpdateDeploymentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDeploymentResponse(*this, reply);
 }

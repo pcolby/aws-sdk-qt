@@ -66,10 +66,10 @@ bool RemoveTagsFromCertificateRequest::isValid() const
  *
  * @return An RemoveTagsFromCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ACMClient::send
  */
-AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveTagsFromCertificateResponse(*this, reply);
 }

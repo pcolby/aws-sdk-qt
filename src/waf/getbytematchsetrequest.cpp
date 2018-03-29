@@ -66,10 +66,10 @@ bool GetByteMatchSetRequest::isValid() const
  *
  * @return An GetByteMatchSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkReply * const reply) const
 {
     return new GetByteMatchSetResponse(*this, reply);
 }

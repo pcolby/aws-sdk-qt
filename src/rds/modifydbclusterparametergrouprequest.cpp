@@ -66,10 +66,10 @@ bool ModifyDBClusterParameterGroupRequest::isValid() const
  *
  * @return An ModifyDBClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDBClusterParameterGroupResponse(*this, reply);
 }

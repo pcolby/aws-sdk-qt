@@ -29,7 +29,7 @@ namespace Comprehend {
 
 class ComprehendClient;
 
-class QTAWS_EXPORT ComprehendClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT ComprehendClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ComprehendClientPrivate(ComprehendClient * const q);

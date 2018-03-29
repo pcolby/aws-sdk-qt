@@ -66,10 +66,10 @@ bool RebuildEnvironmentRequest::isValid() const
  *
  * @return An RebuildEnvironmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * RebuildEnvironmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RebuildEnvironmentRequest::response(QNetworkReply * const reply) const
 {
     return new RebuildEnvironmentResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool SetUserSettingsRequest::isValid() const
  *
  * @return An SetUserSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new SetUserSettingsResponse(*this, reply);
 }

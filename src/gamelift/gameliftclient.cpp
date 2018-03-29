@@ -481,10 +481,10 @@ namespace GameLift {
  */
 GameLiftClient::GameLiftClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GameLiftClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GameLiftClientPrivate(this), parent)
 {
     Q_D(GameLiftClient);
     d->apiVersion = QStringLiteral("2015-10-01");
@@ -514,10 +514,10 @@ GameLiftClient::GameLiftClient(
  */
 GameLiftClient::GameLiftClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GameLiftClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GameLiftClientPrivate(this), parent)
 {
     Q_D(GameLiftClient);
     d->apiVersion = QStringLiteral("2015-10-01");
@@ -5113,9 +5113,9 @@ ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(
  * @param  q  Pointer to this object's public GameLiftClient instance.
  */
 GameLiftClientPrivate::GameLiftClientPrivate(GameLiftClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GameLift

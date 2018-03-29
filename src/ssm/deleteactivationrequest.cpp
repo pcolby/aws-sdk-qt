@@ -66,10 +66,10 @@ bool DeleteActivationRequest::isValid() const
  *
  * @return An DeleteActivationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DeleteActivationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteActivationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteActivationResponse(*this, reply);
 }

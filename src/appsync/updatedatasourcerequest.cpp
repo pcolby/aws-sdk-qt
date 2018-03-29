@@ -66,10 +66,10 @@ bool UpdateDataSourceRequest::isValid() const
  *
  * @return An UpdateDataSourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDataSourceResponse(*this, reply);
 }

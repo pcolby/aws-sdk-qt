@@ -66,10 +66,10 @@ bool CreateBrokerRequest::isValid() const
  *
  * @return An CreateBrokerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MQClient::send
  */
-AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBrokerResponse(*this, reply);
 }

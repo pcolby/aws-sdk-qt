@@ -66,10 +66,10 @@ bool UpdateInputSecurityGroupRequest::isValid() const
  *
  * @return An UpdateInputSecurityGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * UpdateInputSecurityGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateInputSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateInputSecurityGroupResponse(*this, reply);
 }

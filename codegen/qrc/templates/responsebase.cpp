@@ -22,7 +22,7 @@ namespace {{NameSpaceName}} {
  * @param  parent   This object's parent.
  */
 {{ClassName}}::{{ClassName}}(QObject * const parent)
-    : AwsAbstractResponse(new {{ClassName}}Private(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new {{ClassName}}Private(this), parent)
 {
 
 }

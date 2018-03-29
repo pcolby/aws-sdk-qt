@@ -40,7 +40,7 @@ namespace Mobile {
  * @param  parent   This object's parent.
  */
 MobileClientResponse::MobileClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MobileClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MobileClientResponsePrivate(this), parent)
 {
 
 }

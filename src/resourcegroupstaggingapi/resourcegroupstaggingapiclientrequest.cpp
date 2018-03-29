@@ -36,7 +36,7 @@ namespace ResourceGroupsTaggingAPI {
  * @param  action  The ResourceGroupsTaggingAPI action to request.
  */
 ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(const Action action)
-    : AwsAbstractRequest(new ResourceGroupsTaggingAPIClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingAPIClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(con
  * @param  other  Instance to copy.
  */
 ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(const ResourceGroupsTaggingAPIClientRequest &other)
-    : AwsAbstractRequest(new ResourceGroupsTaggingAPIClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingAPIClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ResourceGroupsTaggingAPIClientRequest& ResourceGroupsTaggingAPIClientRequest::op
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(ResourceGroupsTaggingAPIClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ResourceGroupsTaggingAPIClientRequest::ResourceGroupsTaggingAPIClientRequest(ResourceGroupsTaggingAPIClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ResourceGroupsTaggingAPIClientRequest::operator==(const ResourceGroupsTaggi
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ResourceGroupsTaggingAPIClientRequest::unsignedRequest(const QUr
  * @param  q       Pointer to this object's public ResourceGroupsTaggingAPIClientRequest instance.
  */
 ResourceGroupsTaggingAPIClientRequestPrivate::ResourceGroupsTaggingAPIClientRequestPrivate(const ResourceGroupsTaggingAPIClientRequest::Action action, ResourceGroupsTaggingAPIClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ResourceGroupsTaggingAPIClientRequestPrivate::ResourceGroupsTaggingAPIClientRequ
  */
 ResourceGroupsTaggingAPIClientRequestPrivate::ResourceGroupsTaggingAPIClientRequestPrivate(const ResourceGroupsTaggingAPIClientRequestPrivate &other,
                                      ResourceGroupsTaggingAPIClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool ListTargetsByRuleRequest::isValid() const
  *
  * @return An ListTargetsByRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * ListTargetsByRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTargetsByRuleRequest::response(QNetworkReply * const reply) const
 {
     return new ListTargetsByRuleResponse(*this, reply);
 }

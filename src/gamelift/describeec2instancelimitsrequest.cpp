@@ -66,10 +66,10 @@ bool DescribeEC2InstanceLimitsRequest::isValid() const
  *
  * @return An DescribeEC2InstanceLimitsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeEC2InstanceLimitsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEC2InstanceLimitsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEC2InstanceLimitsResponse(*this, reply);
 }

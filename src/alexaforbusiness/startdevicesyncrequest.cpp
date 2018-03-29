@@ -66,10 +66,10 @@ bool StartDeviceSyncRequest::isValid() const
  *
  * @return An StartDeviceSyncResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkReply * const reply) const
 {
     return new StartDeviceSyncResponse(*this, reply);
 }

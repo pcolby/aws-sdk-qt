@@ -66,10 +66,10 @@ bool CreateBasePathMappingRequest::isValid() const
  *
  * @return An CreateBasePathMappingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateBasePathMappingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBasePathMappingRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBasePathMappingResponse(*this, reply);
 }

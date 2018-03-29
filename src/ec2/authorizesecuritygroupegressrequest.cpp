@@ -66,10 +66,10 @@ bool AuthorizeSecurityGroupEgressRequest::isValid() const
  *
  * @return An AuthorizeSecurityGroupEgressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response(QNetworkReply * const reply) const
 {
     return new AuthorizeSecurityGroupEgressResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool TestInvokeMethodRequest::isValid() const
  *
  * @return An TestInvokeMethodResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkReply * const reply) const
 {
     return new TestInvokeMethodResponse(*this, reply);
 }

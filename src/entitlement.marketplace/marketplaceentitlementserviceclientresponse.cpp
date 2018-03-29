@@ -40,7 +40,7 @@ namespace MarketplaceEntitlementService {
  * @param  parent   This object's parent.
  */
 MarketplaceEntitlementServiceClientResponse::MarketplaceEntitlementServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MarketplaceEntitlementServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MarketplaceEntitlementServiceClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool DeleteImportedKeyMaterialRequest::isValid() const
  *
  * @return An DeleteImportedKeyMaterialResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * DeleteImportedKeyMaterialRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteImportedKeyMaterialRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteImportedKeyMaterialResponse(*this, reply);
 }

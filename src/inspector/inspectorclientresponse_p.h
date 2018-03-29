@@ -28,7 +28,7 @@ namespace Inspector {
 
 class InspectorClientResponse;
 
-class QTAWS_EXPORT InspectorClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT InspectorClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

@@ -66,10 +66,10 @@ bool GlobalSignOutRequest::isValid() const
  *
  * @return An GlobalSignOutResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply * const reply) const
 {
     return new GlobalSignOutResponse(*this, reply);
 }

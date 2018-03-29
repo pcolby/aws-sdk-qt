@@ -66,10 +66,10 @@ bool LookupPolicyRequest::isValid() const
  *
  * @return An LookupPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new LookupPolicyResponse(*this, reply);
 }

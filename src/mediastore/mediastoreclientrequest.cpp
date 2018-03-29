@@ -36,7 +36,7 @@ namespace MediaStore {
  * @param  action  The MediaStore action to request.
  */
 MediaStoreClientRequest::MediaStoreClientRequest(const Action action)
-    : AwsAbstractRequest(new MediaStoreClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MediaStoreClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MediaStoreClientRequest::MediaStoreClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MediaStoreClientRequest::MediaStoreClientRequest(const MediaStoreClientRequest &other)
-    : AwsAbstractRequest(new MediaStoreClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MediaStoreClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MediaStoreClientRequest& MediaStoreClientRequest::operator=(const MediaStoreClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MediaStoreClientRequest::MediaStoreClientRequest(MediaStoreClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MediaStoreClientRequest::MediaStoreClientRequest(MediaStoreClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MediaStoreClientRequest::operator==(const MediaStoreClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MediaStoreClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public MediaStoreClientRequest instance.
  */
 MediaStoreClientRequestPrivate::MediaStoreClientRequestPrivate(const MediaStoreClientRequest::Action action, MediaStoreClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MediaStoreClientRequestPrivate::MediaStoreClientRequestPrivate(const MediaStoreC
  */
 MediaStoreClientRequestPrivate::MediaStoreClientRequestPrivate(const MediaStoreClientRequestPrivate &other,
                                      MediaStoreClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

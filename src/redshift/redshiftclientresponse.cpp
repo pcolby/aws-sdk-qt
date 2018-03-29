@@ -40,7 +40,7 @@ namespace Redshift {
  * @param  parent   This object's parent.
  */
 RedshiftClientResponse::RedshiftClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new RedshiftClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new RedshiftClientResponsePrivate(this), parent)
 {
 
 }

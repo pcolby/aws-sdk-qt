@@ -66,10 +66,10 @@ bool DescribeElasticsearchInstanceTypeLimitsRequest::isValid() const
  *
  * @return An DescribeElasticsearchInstanceTypeLimitsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticsearchServiceClient::send
  */
-AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeElasticsearchInstanceTypeLimitsResponse(*this, reply);
 }

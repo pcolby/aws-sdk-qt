@@ -40,7 +40,7 @@ namespace MediaConvert {
  * @param  parent   This object's parent.
  */
 MediaConvertClientResponse::MediaConvertClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MediaConvertClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MediaConvertClientResponsePrivate(this), parent)
 {
 
 }

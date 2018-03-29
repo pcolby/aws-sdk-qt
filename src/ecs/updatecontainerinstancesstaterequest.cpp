@@ -66,10 +66,10 @@ bool UpdateContainerInstancesStateRequest::isValid() const
  *
  * @return An UpdateContainerInstancesStateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * UpdateContainerInstancesStateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateContainerInstancesStateResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeCommentsRequest::isValid() const
  *
  * @return An DescribeCommentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCommentsResponse(*this, reply);
 }

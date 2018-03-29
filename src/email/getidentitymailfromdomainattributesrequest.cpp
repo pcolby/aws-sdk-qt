@@ -66,10 +66,10 @@ bool GetIdentityMailFromDomainAttributesRequest::isValid() const
  *
  * @return An GetIdentityMailFromDomainAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdentityMailFromDomainAttributesResponse(*this, reply);
 }

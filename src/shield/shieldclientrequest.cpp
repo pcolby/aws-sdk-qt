@@ -36,7 +36,7 @@ namespace Shield {
  * @param  action  The Shield action to request.
  */
 ShieldClientRequest::ShieldClientRequest(const Action action)
-    : AwsAbstractRequest(new ShieldClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ShieldClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ShieldClientRequest::ShieldClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ShieldClientRequest::ShieldClientRequest(const ShieldClientRequest &other)
-    : AwsAbstractRequest(new ShieldClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ShieldClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ShieldClientRequest& ShieldClientRequest::operator=(const ShieldClientRequest &o
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ShieldClientRequest::ShieldClientRequest(ShieldClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ShieldClientRequest::ShieldClientRequest(ShieldClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ShieldClientRequest::operator==(const ShieldClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ShieldClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public ShieldClientRequest instance.
  */
 ShieldClientRequestPrivate::ShieldClientRequestPrivate(const ShieldClientRequest::Action action, ShieldClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ShieldClientRequestPrivate::ShieldClientRequestPrivate(const ShieldClientRequest
  */
 ShieldClientRequestPrivate::ShieldClientRequestPrivate(const ShieldClientRequestPrivate &other,
                                      ShieldClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

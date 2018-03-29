@@ -66,10 +66,10 @@ bool ResetImageAttributeRequest::isValid() const
  *
  * @return An ResetImageAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ResetImageAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ResetImageAttributeResponse(*this, reply);
 }

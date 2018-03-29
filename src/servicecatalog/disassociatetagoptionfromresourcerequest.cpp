@@ -66,10 +66,10 @@ bool DisassociateTagOptionFromResourceRequest::isValid() const
  *
  * @return An DisassociateTagOptionFromResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateTagOptionFromResourceResponse(*this, reply);
 }

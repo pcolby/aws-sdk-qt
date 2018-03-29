@@ -66,10 +66,10 @@ bool GetServiceRoleForAccountRequest::isValid() const
  *
  * @return An GetServiceRoleForAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNetworkReply * const reply) const
 {
     return new GetServiceRoleForAccountResponse(*this, reply);
 }

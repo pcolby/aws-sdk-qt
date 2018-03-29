@@ -66,10 +66,10 @@ bool CreateKeyPairRequest::isValid() const
  *
  * @return An CreateKeyPairResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply * const reply) const
 {
     return new CreateKeyPairResponse(*this, reply);
 }

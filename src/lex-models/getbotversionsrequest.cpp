@@ -66,10 +66,10 @@ bool GetBotVersionsRequest::isValid() const
  *
  * @return An GetBotVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetBotVersionsResponse(*this, reply);
 }

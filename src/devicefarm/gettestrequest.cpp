@@ -66,10 +66,10 @@ bool GetTestRequest::isValid() const
  *
  * @return An GetTestResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * GetTestRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTestRequest::response(QNetworkReply * const reply) const
 {
     return new GetTestResponse(*this, reply);
 }

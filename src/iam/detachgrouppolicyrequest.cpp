@@ -66,10 +66,10 @@ bool DetachGroupPolicyRequest::isValid() const
  *
  * @return An DetachGroupPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DetachGroupPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachGroupPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DetachGroupPolicyResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteStreamProcessorRequest::isValid() const
  *
  * @return An DeleteStreamProcessorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteStreamProcessorResponse(*this, reply);
 }

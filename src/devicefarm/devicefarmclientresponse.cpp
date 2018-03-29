@@ -40,7 +40,7 @@ namespace DeviceFarm {
  * @param  parent   This object's parent.
  */
 DeviceFarmClientResponse::DeviceFarmClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DeviceFarmClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DeviceFarmClientResponsePrivate(this), parent)
 {
 
 }

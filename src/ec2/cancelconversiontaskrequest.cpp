@@ -66,10 +66,10 @@ bool CancelConversionTaskRequest::isValid() const
  *
  * @return An CancelConversionTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CancelConversionTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetworkReply * const reply) const
 {
     return new CancelConversionTaskResponse(*this, reply);
 }

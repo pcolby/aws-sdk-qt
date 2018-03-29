@@ -40,7 +40,7 @@ namespace EC2 {
  * @param  parent   This object's parent.
  */
 Ec2ClientResponse::Ec2ClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new Ec2ClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new Ec2ClientResponsePrivate(this), parent)
 {
 
 }

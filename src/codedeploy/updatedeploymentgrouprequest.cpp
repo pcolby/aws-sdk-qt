@@ -66,10 +66,10 @@ bool UpdateDeploymentGroupRequest::isValid() const
  *
  * @return An UpdateDeploymentGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * UpdateDeploymentGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDeploymentGroupRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDeploymentGroupResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetPullRequestRequest::isValid() const
  *
  * @return An GetPullRequestResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetPullRequestRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPullRequestRequest::response(QNetworkReply * const reply) const
 {
     return new GetPullRequestResponse(*this, reply);
 }

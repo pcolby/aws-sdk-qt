@@ -36,7 +36,7 @@ namespace EC2 {
  * @param  action  The EC2 action to request.
  */
 Ec2ClientRequest::Ec2ClientRequest(const Action action)
-    : AwsAbstractRequest(new Ec2ClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new Ec2ClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ Ec2ClientRequest::Ec2ClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 Ec2ClientRequest::Ec2ClientRequest(const Ec2ClientRequest &other)
-    : AwsAbstractRequest(new Ec2ClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new Ec2ClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ Ec2ClientRequest& Ec2ClientRequest::operator=(const Ec2ClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-Ec2ClientRequest::Ec2ClientRequest(Ec2ClientRequestPrivate * const d) : AwsAbstractRequest(d)
+Ec2ClientRequest::Ec2ClientRequest(Ec2ClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool Ec2ClientRequest::operator==(const Ec2ClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest Ec2ClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public Ec2ClientRequest instance.
  */
 Ec2ClientRequestPrivate::Ec2ClientRequestPrivate(const Ec2ClientRequest::Action action, Ec2ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ Ec2ClientRequestPrivate::Ec2ClientRequestPrivate(const Ec2ClientRequest::Action 
  */
 Ec2ClientRequestPrivate::Ec2ClientRequestPrivate(const Ec2ClientRequestPrivate &other,
                                      Ec2ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

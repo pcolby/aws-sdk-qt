@@ -48,10 +48,10 @@ namespace AppStream {
  */
 AppStreamClient::AppStreamClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AppStreamClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AppStreamClientPrivate(this), parent)
 {
     Q_D(AppStreamClient);
     d->apiVersion = QStringLiteral("2016-12-01");
@@ -81,10 +81,10 @@ AppStreamClient::AppStreamClient(
  */
 AppStreamClient::AppStreamClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AppStreamClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AppStreamClientPrivate(this), parent)
 {
     Q_D(AppStreamClient);
     d->apiVersion = QStringLiteral("2016-12-01");
@@ -623,9 +623,9 @@ UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &req
  * @param  q  Pointer to this object's public AppStreamClient instance.
  */
 AppStreamClientPrivate::AppStreamClientPrivate(AppStreamClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AppStream

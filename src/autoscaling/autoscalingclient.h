@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace AutoScaling {
@@ -129,18 +129,18 @@ class TerminateInstanceInAutoScalingGroupResponse;
 class UpdateAutoScalingGroupRequest;
 class UpdateAutoScalingGroupResponse;
 
-class QTAWS_EXPORT AutoScalingClient : public AwsAbstractClient {
+class QTAWS_EXPORT AutoScalingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     AutoScalingClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     AutoScalingClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

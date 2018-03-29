@@ -66,10 +66,10 @@ bool UntagStreamRequest::isValid() const
  *
  * @return An UntagStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisVideoClient::send
  */
-AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * const reply) const
 {
     return new UntagStreamResponse(*this, reply);
 }

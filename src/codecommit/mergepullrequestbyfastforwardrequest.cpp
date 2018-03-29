@@ -66,10 +66,10 @@ bool MergePullRequestByFastForwardRequest::isValid() const
  *
  * @return An MergePullRequestByFastForwardResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * MergePullRequestByFastForwardRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * MergePullRequestByFastForwardRequest::response(QNetworkReply * const reply) const
 {
     return new MergePullRequestByFastForwardResponse(*this, reply);
 }

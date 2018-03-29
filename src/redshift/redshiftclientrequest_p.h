@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RedshiftClientRequest;
 
-class QTAWS_EXPORT RedshiftClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT RedshiftClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RedshiftClientRequest::Action action; ///< Redshift action to be performed.

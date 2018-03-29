@@ -66,10 +66,10 @@ bool CreatePresignedNotebookInstanceUrlRequest::isValid() const
  *
  * @return An CreatePresignedNotebookInstanceUrlResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePresignedNotebookInstanceUrlResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool RequestSpotFleetRequest::isValid() const
  *
  * @return An RequestSpotFleetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkReply * const reply) const
 {
     return new RequestSpotFleetResponse(*this, reply);
 }

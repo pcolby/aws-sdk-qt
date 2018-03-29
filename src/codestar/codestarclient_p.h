@@ -29,7 +29,7 @@ namespace CodeStar {
 
 class CodeStarClient;
 
-class QTAWS_EXPORT CodeStarClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CodeStarClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeStarClientPrivate(CodeStarClient * const q);

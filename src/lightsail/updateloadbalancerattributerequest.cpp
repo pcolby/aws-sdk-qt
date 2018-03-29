@@ -66,10 +66,10 @@ bool UpdateLoadBalancerAttributeRequest::isValid() const
  *
  * @return An UpdateLoadBalancerAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateLoadBalancerAttributeResponse(*this, reply);
 }

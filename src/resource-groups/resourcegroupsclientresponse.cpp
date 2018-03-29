@@ -40,7 +40,7 @@ namespace ResourceGroups {
  * @param  parent   This object's parent.
  */
 ResourceGroupsClientResponse::ResourceGroupsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ResourceGroupsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ResourceGroupsClientResponsePrivate(this), parent)
 {
 
 }

@@ -36,7 +36,7 @@ namespace MarketplaceEntitlementService {
  * @param  action  The MarketplaceEntitlementService action to request.
  */
 MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new MarketplaceEntitlementServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientR
  * @param  other  Instance to copy.
  */
 MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientRequest(const MarketplaceEntitlementServiceClientRequest &other)
-    : AwsAbstractRequest(new MarketplaceEntitlementServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MarketplaceEntitlementServiceClientRequest& MarketplaceEntitlementServiceClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientRequest(MarketplaceEntitlementServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MarketplaceEntitlementServiceClientRequest::MarketplaceEntitlementServiceClientRequest(MarketplaceEntitlementServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MarketplaceEntitlementServiceClientRequest::operator==(const MarketplaceEnt
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MarketplaceEntitlementServiceClientRequest::unsignedRequest(cons
  * @param  q       Pointer to this object's public MarketplaceEntitlementServiceClientRequest instance.
  */
 MarketplaceEntitlementServiceClientRequestPrivate::MarketplaceEntitlementServiceClientRequestPrivate(const MarketplaceEntitlementServiceClientRequest::Action action, MarketplaceEntitlementServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MarketplaceEntitlementServiceClientRequestPrivate::MarketplaceEntitlementService
  */
 MarketplaceEntitlementServiceClientRequestPrivate::MarketplaceEntitlementServiceClientRequestPrivate(const MarketplaceEntitlementServiceClientRequestPrivate &other,
                                      MarketplaceEntitlementServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

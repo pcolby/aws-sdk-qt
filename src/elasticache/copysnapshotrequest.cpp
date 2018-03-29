@@ -66,10 +66,10 @@ bool CopySnapshotRequest::isValid() const
  *
  * @return An CopySnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new CopySnapshotResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool AddWorkingStorageRequest::isValid() const
  *
  * @return An AddWorkingStorageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * AddWorkingStorageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddWorkingStorageRequest::response(QNetworkReply * const reply) const
 {
     return new AddWorkingStorageResponse(*this, reply);
 }

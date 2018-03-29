@@ -66,10 +66,10 @@ bool CancelClusterRequest::isValid() const
  *
  * @return An CancelClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SnowballClient::send
  */
-AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply * const reply) const
 {
     return new CancelClusterResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CheckDomainTransferabilityRequest::isValid() const
  *
  * @return An CheckDomainTransferabilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * CheckDomainTransferabilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(QNetworkReply * const reply) const
 {
     return new CheckDomainTransferabilityResponse(*this, reply);
 }

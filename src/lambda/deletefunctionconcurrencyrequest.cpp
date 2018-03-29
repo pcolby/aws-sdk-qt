@@ -66,10 +66,10 @@ bool DeleteFunctionConcurrencyRequest::isValid() const
  *
  * @return An DeleteFunctionConcurrencyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFunctionConcurrencyResponse(*this, reply);
 }

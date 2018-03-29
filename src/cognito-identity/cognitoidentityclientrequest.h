@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CognitoIdentity {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CognitoIdentityClientRequestPrivate;
 
-class QTAWS_EXPORT CognitoIdentityClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CognitoIdentityClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CognitoIdentity.

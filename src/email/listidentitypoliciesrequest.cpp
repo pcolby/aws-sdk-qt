@@ -66,10 +66,10 @@ bool ListIdentityPoliciesRequest::isValid() const
  *
  * @return An ListIdentityPoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new ListIdentityPoliciesResponse(*this, reply);
 }

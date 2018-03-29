@@ -66,10 +66,10 @@ bool RestoreObjectRequest::isValid() const
  *
  * @return An RestoreObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreObjectResponse(*this, reply);
 }

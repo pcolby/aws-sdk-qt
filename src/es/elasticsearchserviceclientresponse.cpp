@@ -40,7 +40,7 @@ namespace ElasticsearchService {
  * @param  parent   This object's parent.
  */
 ElasticsearchServiceClientResponse::ElasticsearchServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ElasticsearchServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ElasticsearchServiceClientResponsePrivate(this), parent)
 {
 
 }

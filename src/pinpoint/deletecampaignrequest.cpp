@@ -66,10 +66,10 @@ bool DeleteCampaignRequest::isValid() const
  *
  * @return An DeleteCampaignResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCampaignResponse(*this, reply);
 }

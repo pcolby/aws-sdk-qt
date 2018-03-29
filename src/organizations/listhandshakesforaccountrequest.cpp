@@ -66,10 +66,10 @@ bool ListHandshakesForAccountRequest::isValid() const
  *
  * @return An ListHandshakesForAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListHandshakesForAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListHandshakesForAccountRequest::response(QNetworkReply * const reply) const
 {
     return new ListHandshakesForAccountResponse(*this, reply);
 }

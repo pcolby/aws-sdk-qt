@@ -40,7 +40,7 @@ namespace STS {
  * @param  parent   This object's parent.
  */
 StsClientResponse::StsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new StsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new StsClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool PutRestApiRequest::isValid() const
  *
  * @return An PutRestApiResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * PutRestApiRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRestApiRequest::response(QNetworkReply * const reply) const
 {
     return new PutRestApiResponse(*this, reply);
 }

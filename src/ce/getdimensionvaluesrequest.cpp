@@ -66,10 +66,10 @@ bool GetDimensionValuesRequest::isValid() const
  *
  * @return An GetDimensionValuesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostExplorerClient::send
  */
-AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkReply * const reply) const
 {
     return new GetDimensionValuesResponse(*this, reply);
 }

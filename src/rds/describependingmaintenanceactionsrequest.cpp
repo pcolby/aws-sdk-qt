@@ -66,10 +66,10 @@ bool DescribePendingMaintenanceActionsRequest::isValid() const
  *
  * @return An DescribePendingMaintenanceActionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePendingMaintenanceActionsResponse(*this, reply);
 }

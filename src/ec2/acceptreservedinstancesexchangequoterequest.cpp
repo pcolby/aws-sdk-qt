@@ -66,10 +66,10 @@ bool AcceptReservedInstancesExchangeQuoteRequest::isValid() const
  *
  * @return An AcceptReservedInstancesExchangeQuoteResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AcceptReservedInstancesExchangeQuoteRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AcceptReservedInstancesExchangeQuoteRequest::response(QNetworkReply * const reply) const
 {
     return new AcceptReservedInstancesExchangeQuoteResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace Comprehend {
  * @param  parent   This object's parent.
  */
 ComprehendClientResponse::ComprehendClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ComprehendClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ComprehendClientResponsePrivate(this), parent)
 {
 
 }

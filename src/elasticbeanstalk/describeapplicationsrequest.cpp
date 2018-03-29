@@ -66,10 +66,10 @@ bool DescribeApplicationsRequest::isValid() const
  *
  * @return An DescribeApplicationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DescribeApplicationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeApplicationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeApplicationsResponse(*this, reply);
 }

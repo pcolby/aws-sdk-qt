@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class CloudFrontClient;
 
-class QTAWS_EXPORT CloudFrontClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudFrontClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudFrontClientPrivate(CloudFrontClient * const q);

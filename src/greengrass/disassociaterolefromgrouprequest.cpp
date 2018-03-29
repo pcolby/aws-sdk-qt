@@ -66,10 +66,10 @@ bool DisassociateRoleFromGroupRequest::isValid() const
  *
  * @return An DisassociateRoleFromGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateRoleFromGroupResponse(*this, reply);
 }

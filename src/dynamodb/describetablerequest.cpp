@@ -66,10 +66,10 @@ bool DescribeTableRequest::isValid() const
  *
  * @return An DescribeTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * DescribeTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTableRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTableResponse(*this, reply);
 }

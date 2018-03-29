@@ -66,10 +66,10 @@ bool DeleteDeliveryStreamRequest::isValid() const
  *
  * @return An DeleteDeliveryStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  FirehoseClient::send
  */
-AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDeliveryStreamResponse(*this, reply);
 }

@@ -113,10 +113,10 @@ namespace Support {
  */
 SupportClient::SupportClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SupportClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SupportClientPrivate(this), parent)
 {
     Q_D(SupportClient);
     d->apiVersion = QStringLiteral("2013-04-15");
@@ -146,10 +146,10 @@ SupportClient::SupportClient(
  */
 SupportClient::SupportClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SupportClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SupportClientPrivate(this), parent)
 {
     Q_D(SupportClient);
     d->apiVersion = QStringLiteral("2013-04-15");
@@ -563,9 +563,9 @@ ResolveCaseResponse * SupportClient::resolveCase(const ResolveCaseRequest &reque
  * @param  q  Pointer to this object's public SupportClient instance.
  */
 SupportClientPrivate::SupportClientPrivate(SupportClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Support

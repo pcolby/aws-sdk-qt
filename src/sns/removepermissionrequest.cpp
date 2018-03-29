@@ -66,10 +66,10 @@ bool RemovePermissionRequest::isValid() const
  *
  * @return An RemovePermissionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * RemovePermissionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkReply * const reply) const
 {
     return new RemovePermissionResponse(*this, reply);
 }

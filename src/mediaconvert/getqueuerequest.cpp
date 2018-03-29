@@ -66,10 +66,10 @@ bool GetQueueRequest::isValid() const
  *
  * @return An GetQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * const reply) const
 {
     return new GetQueueResponse(*this, reply);
 }

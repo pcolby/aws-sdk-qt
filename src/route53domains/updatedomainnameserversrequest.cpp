@@ -66,10 +66,10 @@ bool UpdateDomainNameserversRequest::isValid() const
  *
  * @return An UpdateDomainNameserversResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDomainNameserversResponse(*this, reply);
 }

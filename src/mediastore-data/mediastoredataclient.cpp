@@ -47,10 +47,10 @@ namespace MediaStoreData {
  */
 MediaStoreDataClient::MediaStoreDataClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
 {
     Q_D(MediaStoreDataClient);
     d->apiVersion = QStringLiteral("2017-09-01");
@@ -80,10 +80,10 @@ MediaStoreDataClient::MediaStoreDataClient(
  */
 MediaStoreDataClient::MediaStoreDataClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
 {
     Q_D(MediaStoreDataClient);
     d->apiVersion = QStringLiteral("2017-09-01");
@@ -181,9 +181,9 @@ PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &requ
  * @param  q  Pointer to this object's public MediaStoreDataClient instance.
  */
 MediaStoreDataClientPrivate::MediaStoreDataClientPrivate(MediaStoreDataClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaStoreData

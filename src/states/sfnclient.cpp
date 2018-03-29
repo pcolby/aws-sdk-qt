@@ -64,10 +64,10 @@ namespace SFN {
  */
 SfnClient::SfnClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SfnClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SfnClientPrivate(this), parent)
 {
     Q_D(SfnClient);
     d->apiVersion = QStringLiteral("2016-11-23");
@@ -97,10 +97,10 @@ SfnClient::SfnClient(
  */
 SfnClient::SfnClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SfnClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SfnClientPrivate(this), parent)
 {
     Q_D(SfnClient);
     d->apiVersion = QStringLiteral("2016-11-23");
@@ -454,9 +454,9 @@ UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMach
  * @param  q  Pointer to this object's public SfnClient instance.
  */
 SfnClientPrivate::SfnClientPrivate(SfnClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SFN

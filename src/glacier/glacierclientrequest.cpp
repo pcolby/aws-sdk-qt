@@ -36,7 +36,7 @@ namespace Glacier {
  * @param  action  The Glacier action to request.
  */
 GlacierClientRequest::GlacierClientRequest(const Action action)
-    : AwsAbstractRequest(new GlacierClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GlacierClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ GlacierClientRequest::GlacierClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 GlacierClientRequest::GlacierClientRequest(const GlacierClientRequest &other)
-    : AwsAbstractRequest(new GlacierClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GlacierClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ GlacierClientRequest& GlacierClientRequest::operator=(const GlacierClientRequest
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-GlacierClientRequest::GlacierClientRequest(GlacierClientRequestPrivate * const d) : AwsAbstractRequest(d)
+GlacierClientRequest::GlacierClientRequest(GlacierClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool GlacierClientRequest::operator==(const GlacierClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest GlacierClientRequest::unsignedRequest(const QUrl &endpoint) cons
  * @param  q       Pointer to this object's public GlacierClientRequest instance.
  */
 GlacierClientRequestPrivate::GlacierClientRequestPrivate(const GlacierClientRequest::Action action, GlacierClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ GlacierClientRequestPrivate::GlacierClientRequestPrivate(const GlacierClientRequ
  */
 GlacierClientRequestPrivate::GlacierClientRequestPrivate(const GlacierClientRequestPrivate &other,
                                      GlacierClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

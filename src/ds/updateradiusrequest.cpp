@@ -66,10 +66,10 @@ bool UpdateRadiusRequest::isValid() const
  *
  * @return An UpdateRadiusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * UpdateRadiusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRadiusRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRadiusResponse(*this, reply);
 }

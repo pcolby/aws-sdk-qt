@@ -66,10 +66,10 @@ bool DeleteDiskRequest::isValid() const
  *
  * @return An DeleteDiskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * DeleteDiskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDiskRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDiskResponse(*this, reply);
 }

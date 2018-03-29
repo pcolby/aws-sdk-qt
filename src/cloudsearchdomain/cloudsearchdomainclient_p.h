@@ -29,7 +29,7 @@ namespace CloudSearchDomain {
 
 class CloudSearchDomainClient;
 
-class QTAWS_EXPORT CloudSearchDomainClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudSearchDomainClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q);

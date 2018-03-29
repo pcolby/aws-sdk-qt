@@ -66,10 +66,10 @@ bool AttachLoadBalancerTlsCertificateRequest::isValid() const
  *
  * @return An AttachLoadBalancerTlsCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new AttachLoadBalancerTlsCertificateResponse(*this, reply);
 }

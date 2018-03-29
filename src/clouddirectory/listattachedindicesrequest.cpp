@@ -66,10 +66,10 @@ bool ListAttachedIndicesRequest::isValid() const
  *
  * @return An ListAttachedIndicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListAttachedIndicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAttachedIndicesRequest::response(QNetworkReply * const reply) const
 {
     return new ListAttachedIndicesResponse(*this, reply);
 }

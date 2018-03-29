@@ -66,10 +66,10 @@ bool GetRateBasedRuleRequest::isValid() const
  *
  * @return An GetRateBasedRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkReply * const reply) const
 {
     return new GetRateBasedRuleResponse(*this, reply);
 }

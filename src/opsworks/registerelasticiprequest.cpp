@@ -66,10 +66,10 @@ bool RegisterElasticIpRequest::isValid() const
  *
  * @return An RegisterElasticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * RegisterElasticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterElasticIpRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterElasticIpResponse(*this, reply);
 }

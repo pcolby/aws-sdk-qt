@@ -66,10 +66,10 @@ bool DeleteRuleRequest::isValid() const
  *
  * @return An DeleteRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRuleResponse(*this, reply);
 }

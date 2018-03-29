@@ -66,10 +66,10 @@ bool RestoreTableFromClusterSnapshotRequest::isValid() const
  *
  * @return An RestoreTableFromClusterSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * RestoreTableFromClusterSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreTableFromClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreTableFromClusterSnapshotResponse(*this, reply);
 }

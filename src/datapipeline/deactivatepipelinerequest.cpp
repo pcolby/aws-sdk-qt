@@ -66,10 +66,10 @@ bool DeactivatePipelineRequest::isValid() const
  *
  * @return An DeactivatePipelineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * DeactivatePipelineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeactivatePipelineRequest::response(QNetworkReply * const reply) const
 {
     return new DeactivatePipelineResponse(*this, reply);
 }

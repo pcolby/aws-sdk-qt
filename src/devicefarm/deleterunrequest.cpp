@@ -66,10 +66,10 @@ bool DeleteRunRequest::isValid() const
  *
  * @return An DeleteRunResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * DeleteRunRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRunRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRunResponse(*this, reply);
 }

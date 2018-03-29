@@ -66,10 +66,10 @@ bool BatchDetectKeyPhrasesRequest::isValid() const
  *
  * @return An BatchDetectKeyPhrasesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDetectKeyPhrasesResponse(*this, reply);
 }

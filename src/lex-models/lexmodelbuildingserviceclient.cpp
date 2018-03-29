@@ -49,10 +49,10 @@ namespace LexModelBuildingService {
  */
 LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
 {
     Q_D(LexModelBuildingServiceClient);
     d->apiVersion = QStringLiteral("2017-04-19");
@@ -82,10 +82,10 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  */
 LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
 {
     Q_D(LexModelBuildingServiceClient);
     d->apiVersion = QStringLiteral("2017-04-19");
@@ -1006,9 +1006,9 @@ StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImpo
  * @param  q  Pointer to this object's public LexModelBuildingServiceClient instance.
  */
 LexModelBuildingServiceClientPrivate::LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LexModelBuildingService

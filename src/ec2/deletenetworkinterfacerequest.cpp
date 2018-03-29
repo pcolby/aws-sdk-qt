@@ -66,10 +66,10 @@ bool DeleteNetworkInterfaceRequest::isValid() const
  *
  * @return An DeleteNetworkInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNetworkInterfaceResponse(*this, reply);
 }

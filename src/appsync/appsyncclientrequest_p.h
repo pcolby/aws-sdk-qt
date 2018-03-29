@@ -28,7 +28,7 @@ namespace AppSync {
 
 class AppSyncClientRequest;
 
-class QTAWS_EXPORT AppSyncClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT AppSyncClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppSyncClientRequest::Action action; ///< AppSync action to be performed.

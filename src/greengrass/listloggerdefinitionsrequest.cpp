@@ -66,10 +66,10 @@ bool ListLoggerDefinitionsRequest::isValid() const
  *
  * @return An ListLoggerDefinitionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ListLoggerDefinitionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListLoggerDefinitionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateSecurityConfigurationRequest::isValid() const
  *
  * @return An CreateSecurityConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * CreateSecurityConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSecurityConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSecurityConfigurationResponse(*this, reply);
 }

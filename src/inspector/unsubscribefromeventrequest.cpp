@@ -66,10 +66,10 @@ bool UnsubscribeFromEventRequest::isValid() const
  *
  * @return An UnsubscribeFromEventResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetworkReply * const reply) const
 {
     return new UnsubscribeFromEventResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool AddAttributesToFindingsRequest::isValid() const
  *
  * @return An AddAttributesToFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new AddAttributesToFindingsResponse(*this, reply);
 }

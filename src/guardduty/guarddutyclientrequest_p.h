@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GuardDutyClientRequest;
 
-class QTAWS_EXPORT GuardDutyClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT GuardDutyClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GuardDutyClientRequest::Action action; ///< GuardDuty action to be performed.

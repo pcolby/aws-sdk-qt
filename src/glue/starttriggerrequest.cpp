@@ -66,10 +66,10 @@ bool StartTriggerRequest::isValid() const
  *
  * @return An StartTriggerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply * const reply) const
 {
     return new StartTriggerResponse(*this, reply);
 }

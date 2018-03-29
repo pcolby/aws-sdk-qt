@@ -48,10 +48,10 @@ namespace Kinesis {
  */
 KinesisClient::KinesisClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisClientPrivate(this), parent)
 {
     Q_D(KinesisClient);
     d->apiVersion = QStringLiteral("2013-12-02");
@@ -81,10 +81,10 @@ KinesisClient::KinesisClient(
  */
 KinesisClient::KinesisClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisClientPrivate(this), parent)
 {
     Q_D(KinesisClient);
     d->apiVersion = QStringLiteral("2013-12-02");
@@ -1001,9 +1001,9 @@ UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCoun
  * @param  q  Pointer to this object's public KinesisClient instance.
  */
 KinesisClientPrivate::KinesisClientPrivate(KinesisClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Kinesis

@@ -45,10 +45,10 @@ namespace MediaPackage {
  */
 MediaPackageClient::MediaPackageClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
 {
     Q_D(MediaPackageClient);
     d->apiVersion = QStringLiteral("2017-10-12");
@@ -78,10 +78,10 @@ MediaPackageClient::MediaPackageClient(
  */
 MediaPackageClient::MediaPackageClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
 {
     Q_D(MediaPackageClient);
     d->apiVersion = QStringLiteral("2017-10-12");
@@ -252,9 +252,9 @@ UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const Up
  * @param  q  Pointer to this object's public MediaPackageClient instance.
  */
 MediaPackageClientPrivate::MediaPackageClientPrivate(MediaPackageClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaPackage

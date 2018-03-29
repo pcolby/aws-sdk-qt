@@ -66,10 +66,10 @@ bool GetObjectInformationRequest::isValid() const
  *
  * @return An GetObjectInformationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * GetObjectInformationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetObjectInformationRequest::response(QNetworkReply * const reply) const
 {
     return new GetObjectInformationResponse(*this, reply);
 }

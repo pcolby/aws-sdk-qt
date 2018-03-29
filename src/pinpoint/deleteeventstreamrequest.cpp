@@ -66,10 +66,10 @@ bool DeleteEventStreamRequest::isValid() const
  *
  * @return An DeleteEventStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteEventStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEventStreamRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEventStreamResponse(*this, reply);
 }

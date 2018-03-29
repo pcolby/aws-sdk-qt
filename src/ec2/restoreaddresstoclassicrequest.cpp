@@ -66,10 +66,10 @@ bool RestoreAddressToClassicRequest::isValid() const
  *
  * @return An RestoreAddressToClassicResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreAddressToClassicResponse(*this, reply);
 }

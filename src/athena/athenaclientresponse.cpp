@@ -40,7 +40,7 @@ namespace Athena {
  * @param  parent   This object's parent.
  */
 AthenaClientResponse::AthenaClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new AthenaClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new AthenaClientResponsePrivate(this), parent)
 {
 
 }

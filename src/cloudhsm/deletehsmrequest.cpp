@@ -66,10 +66,10 @@ bool DeleteHsmRequest::isValid() const
  *
  * @return An DeleteHsmResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteHsmResponse(*this, reply);
 }

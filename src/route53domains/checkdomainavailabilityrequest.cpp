@@ -66,10 +66,10 @@ bool CheckDomainAvailabilityRequest::isValid() const
  *
  * @return An CheckDomainAvailabilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNetworkReply * const reply) const
 {
     return new CheckDomainAvailabilityResponse(*this, reply);
 }

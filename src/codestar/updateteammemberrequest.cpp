@@ -66,10 +66,10 @@ bool UpdateTeamMemberRequest::isValid() const
  *
  * @return An UpdateTeamMemberResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * UpdateTeamMemberRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTeamMemberRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTeamMemberResponse(*this, reply);
 }

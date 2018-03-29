@@ -36,7 +36,7 @@ namespace GameLift {
  * @param  action  The GameLift action to request.
  */
 GameLiftClientRequest::GameLiftClientRequest(const Action action)
-    : AwsAbstractRequest(new GameLiftClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GameLiftClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ GameLiftClientRequest::GameLiftClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 GameLiftClientRequest::GameLiftClientRequest(const GameLiftClientRequest &other)
-    : AwsAbstractRequest(new GameLiftClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GameLiftClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ GameLiftClientRequest& GameLiftClientRequest::operator=(const GameLiftClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-GameLiftClientRequest::GameLiftClientRequest(GameLiftClientRequestPrivate * const d) : AwsAbstractRequest(d)
+GameLiftClientRequest::GameLiftClientRequest(GameLiftClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool GameLiftClientRequest::operator==(const GameLiftClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest GameLiftClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public GameLiftClientRequest instance.
  */
 GameLiftClientRequestPrivate::GameLiftClientRequestPrivate(const GameLiftClientRequest::Action action, GameLiftClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ GameLiftClientRequestPrivate::GameLiftClientRequestPrivate(const GameLiftClientR
  */
 GameLiftClientRequestPrivate::GameLiftClientRequestPrivate(const GameLiftClientRequestPrivate &other,
                                      GameLiftClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

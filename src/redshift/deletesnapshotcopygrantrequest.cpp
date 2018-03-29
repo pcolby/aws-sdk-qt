@@ -66,10 +66,10 @@ bool DeleteSnapshotCopyGrantRequest::isValid() const
  *
  * @return An DeleteSnapshotCopyGrantResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DeleteSnapshotCopyGrantRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSnapshotCopyGrantRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSnapshotCopyGrantResponse(*this, reply);
 }

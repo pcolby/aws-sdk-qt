@@ -66,10 +66,10 @@ bool ListWorkflowTypesRequest::isValid() const
  *
  * @return An ListWorkflowTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkReply * const reply) const
 {
     return new ListWorkflowTypesResponse(*this, reply);
 }

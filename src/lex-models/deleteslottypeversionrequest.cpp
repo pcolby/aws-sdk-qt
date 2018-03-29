@@ -66,10 +66,10 @@ bool DeleteSlotTypeVersionRequest::isValid() const
  *
  * @return An DeleteSlotTypeVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSlotTypeVersionResponse(*this, reply);
 }

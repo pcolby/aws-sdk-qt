@@ -40,7 +40,7 @@ namespace CostExplorer {
  * @param  parent   This object's parent.
  */
 CostExplorerClientResponse::CostExplorerClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CostExplorerClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CostExplorerClientResponsePrivate(this), parent)
 {
 
 }

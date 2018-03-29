@@ -66,10 +66,10 @@ bool DeleteBranchRequest::isValid() const
  *
  * @return An DeleteBranchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * DeleteBranchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBranchRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBranchResponse(*this, reply);
 }

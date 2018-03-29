@@ -66,10 +66,10 @@ bool GetEvaluationRequest::isValid() const
  *
  * @return An GetEvaluationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply * const reply) const
 {
     return new GetEvaluationResponse(*this, reply);
 }

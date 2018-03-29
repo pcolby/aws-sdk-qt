@@ -66,10 +66,10 @@ bool DeleteResourcePolicyRequest::isValid() const
  *
  * @return An DeleteResourcePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteResourcePolicyResponse(*this, reply);
 }

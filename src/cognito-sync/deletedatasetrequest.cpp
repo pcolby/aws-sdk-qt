@@ -66,10 +66,10 @@ bool DeleteDatasetRequest::isValid() const
  *
  * @return An DeleteDatasetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDatasetResponse(*this, reply);
 }

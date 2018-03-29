@@ -66,10 +66,10 @@ bool DescribeIdFormatRequest::isValid() const
  *
  * @return An DescribeIdFormatResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeIdFormatRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeIdFormatRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeIdFormatResponse(*this, reply);
 }

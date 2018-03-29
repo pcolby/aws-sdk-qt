@@ -66,10 +66,10 @@ bool GetLogEventsRequest::isValid() const
  *
  * @return An GetLogEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * GetLogEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetLogEventsRequest::response(QNetworkReply * const reply) const
 {
     return new GetLogEventsResponse(*this, reply);
 }

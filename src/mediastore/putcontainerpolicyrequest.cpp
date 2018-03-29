@@ -66,10 +66,10 @@ bool PutContainerPolicyRequest::isValid() const
  *
  * @return An PutContainerPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreClient::send
  */
-AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutContainerPolicyResponse(*this, reply);
 }

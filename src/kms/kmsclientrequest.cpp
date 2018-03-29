@@ -36,7 +36,7 @@ namespace KMS {
  * @param  action  The KMS action to request.
  */
 KmsClientRequest::KmsClientRequest(const Action action)
-    : AwsAbstractRequest(new KmsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KmsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ KmsClientRequest::KmsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 KmsClientRequest::KmsClientRequest(const KmsClientRequest &other)
-    : AwsAbstractRequest(new KmsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KmsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ KmsClientRequest& KmsClientRequest::operator=(const KmsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-KmsClientRequest::KmsClientRequest(KmsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+KmsClientRequest::KmsClientRequest(KmsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool KmsClientRequest::operator==(const KmsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest KmsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public KmsClientRequest instance.
  */
 KmsClientRequestPrivate::KmsClientRequestPrivate(const KmsClientRequest::Action action, KmsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ KmsClientRequestPrivate::KmsClientRequestPrivate(const KmsClientRequest::Action 
  */
 KmsClientRequestPrivate::KmsClientRequestPrivate(const KmsClientRequestPrivate &other,
                                      KmsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

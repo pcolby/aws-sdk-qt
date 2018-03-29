@@ -29,7 +29,7 @@ namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClient;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT MarketplaceEntitlementServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q);

@@ -66,10 +66,10 @@ bool DetectDominantLanguageRequest::isValid() const
  *
  * @return An DetectDominantLanguageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetworkReply * const reply) const
 {
     return new DetectDominantLanguageResponse(*this, reply);
 }

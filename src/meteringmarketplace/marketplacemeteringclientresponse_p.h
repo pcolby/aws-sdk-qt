@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientResponse;
 
-class QTAWS_EXPORT MarketplaceMeteringClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT MarketplaceMeteringClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

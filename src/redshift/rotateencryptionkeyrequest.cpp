@@ -66,10 +66,10 @@ bool RotateEncryptionKeyRequest::isValid() const
  *
  * @return An RotateEncryptionKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetworkReply * const reply) const
 {
     return new RotateEncryptionKeyResponse(*this, reply);
 }

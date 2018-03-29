@@ -66,10 +66,10 @@ bool AttachRolePolicyRequest::isValid() const
  *
  * @return An AttachRolePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * AttachRolePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachRolePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new AttachRolePolicyResponse(*this, reply);
 }

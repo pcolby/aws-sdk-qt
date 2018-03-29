@@ -66,10 +66,10 @@ bool DeleteDashboardsRequest::isValid() const
  *
  * @return An DeleteDashboardsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDashboardsResponse(*this, reply);
 }

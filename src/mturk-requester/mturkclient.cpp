@@ -45,10 +45,10 @@ namespace MTurk {
  */
 MTurkClient::MTurkClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MTurkClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MTurkClientPrivate(this), parent)
 {
     Q_D(MTurkClient);
     d->apiVersion = QStringLiteral("2017-01-17");
@@ -78,10 +78,10 @@ MTurkClient::MTurkClient(
  */
 MTurkClient::MTurkClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MTurkClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MTurkClientPrivate(this), parent)
 {
     Q_D(MTurkClient);
     d->apiVersion = QStringLiteral("2017-01-17");
@@ -929,9 +929,9 @@ UpdateQualificationTypeResponse * MTurkClient::updateQualificationType(const Upd
  * @param  q  Pointer to this object's public MTurkClient instance.
  */
 MTurkClientPrivate::MTurkClientPrivate(MTurkClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MTurk

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MachineLearning {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MachineLearningClientRequestPrivate;
 
-class QTAWS_EXPORT MachineLearningClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MachineLearningClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MachineLearning.

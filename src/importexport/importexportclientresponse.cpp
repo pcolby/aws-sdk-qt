@@ -40,7 +40,7 @@ namespace ImportExport {
  * @param  parent   This object's parent.
  */
 ImportExportClientResponse::ImportExportClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ImportExportClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ImportExportClientResponsePrivate(this), parent)
 {
 
 }

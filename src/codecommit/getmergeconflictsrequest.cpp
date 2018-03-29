@@ -66,10 +66,10 @@ bool GetMergeConflictsRequest::isValid() const
  *
  * @return An GetMergeConflictsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetMergeConflictsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMergeConflictsRequest::response(QNetworkReply * const reply) const
 {
     return new GetMergeConflictsResponse(*this, reply);
 }

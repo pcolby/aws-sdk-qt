@@ -66,10 +66,10 @@ bool StartTopicsDetectionJobRequest::isValid() const
  *
  * @return An StartTopicsDetectionJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
 {
     return new StartTopicsDetectionJobResponse(*this, reply);
 }

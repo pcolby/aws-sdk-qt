@@ -53,10 +53,10 @@ namespace DirectConnect {
  */
 DirectConnectClient::DirectConnectClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
 {
     Q_D(DirectConnectClient);
     d->apiVersion = QStringLiteral("2012-10-25");
@@ -86,10 +86,10 @@ DirectConnectClient::DirectConnectClient(
  */
 DirectConnectClient::DirectConnectClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
 {
     Q_D(DirectConnectClient);
     d->apiVersion = QStringLiteral("2012-10-25");
@@ -1042,9 +1042,9 @@ UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &reque
  * @param  q  Pointer to this object's public DirectConnectClient instance.
  */
 DirectConnectClientPrivate::DirectConnectClientPrivate(DirectConnectClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DirectConnect

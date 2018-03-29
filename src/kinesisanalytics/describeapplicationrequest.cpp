@@ -66,10 +66,10 @@ bool DescribeApplicationRequest::isValid() const
  *
  * @return An DescribeApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * DescribeApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeApplicationResponse(*this, reply);
 }

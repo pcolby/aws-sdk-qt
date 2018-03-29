@@ -66,10 +66,10 @@ bool ListDetectorsRequest::isValid() const
  *
  * @return An ListDetectorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDetectorsResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace Inspector {
  * @param  action  The Inspector action to request.
  */
 InspectorClientRequest::InspectorClientRequest(const Action action)
-    : AwsAbstractRequest(new InspectorClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new InspectorClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ InspectorClientRequest::InspectorClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 InspectorClientRequest::InspectorClientRequest(const InspectorClientRequest &other)
-    : AwsAbstractRequest(new InspectorClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new InspectorClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ InspectorClientRequest& InspectorClientRequest::operator=(const InspectorClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-InspectorClientRequest::InspectorClientRequest(InspectorClientRequestPrivate * const d) : AwsAbstractRequest(d)
+InspectorClientRequest::InspectorClientRequest(InspectorClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool InspectorClientRequest::operator==(const InspectorClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest InspectorClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public InspectorClientRequest instance.
  */
 InspectorClientRequestPrivate::InspectorClientRequestPrivate(const InspectorClientRequest::Action action, InspectorClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ InspectorClientRequestPrivate::InspectorClientRequestPrivate(const InspectorClie
  */
 InspectorClientRequestPrivate::InspectorClientRequestPrivate(const InspectorClientRequestPrivate &other,
                                      InspectorClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -40,7 +40,7 @@ namespace DAX {
  * @param  parent   This object's parent.
  */
 DaxClientResponse::DaxClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DaxClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DaxClientResponsePrivate(this), parent)
 {
 
 }

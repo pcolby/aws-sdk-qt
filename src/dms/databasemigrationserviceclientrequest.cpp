@@ -36,7 +36,7 @@ namespace DatabaseMigrationService {
  * @param  action  The DatabaseMigrationService action to request.
  */
 DatabaseMigrationServiceClientRequest::DatabaseMigrationServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new DatabaseMigrationServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DatabaseMigrationServiceClientRequest::DatabaseMigrationServiceClientRequest(con
  * @param  other  Instance to copy.
  */
 DatabaseMigrationServiceClientRequest::DatabaseMigrationServiceClientRequest(const DatabaseMigrationServiceClientRequest &other)
-    : AwsAbstractRequest(new DatabaseMigrationServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DatabaseMigrationServiceClientRequest& DatabaseMigrationServiceClientRequest::op
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DatabaseMigrationServiceClientRequest::DatabaseMigrationServiceClientRequest(DatabaseMigrationServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DatabaseMigrationServiceClientRequest::DatabaseMigrationServiceClientRequest(DatabaseMigrationServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DatabaseMigrationServiceClientRequest::operator==(const DatabaseMigrationSe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DatabaseMigrationServiceClientRequest::unsignedRequest(const QUr
  * @param  q       Pointer to this object's public DatabaseMigrationServiceClientRequest instance.
  */
 DatabaseMigrationServiceClientRequestPrivate::DatabaseMigrationServiceClientRequestPrivate(const DatabaseMigrationServiceClientRequest::Action action, DatabaseMigrationServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DatabaseMigrationServiceClientRequestPrivate::DatabaseMigrationServiceClientRequ
  */
 DatabaseMigrationServiceClientRequestPrivate::DatabaseMigrationServiceClientRequestPrivate(const DatabaseMigrationServiceClientRequestPrivate &other,
                                      DatabaseMigrationServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

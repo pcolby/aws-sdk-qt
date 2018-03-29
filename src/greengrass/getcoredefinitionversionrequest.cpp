@@ -66,10 +66,10 @@ bool GetCoreDefinitionVersionRequest::isValid() const
  *
  * @return An GetCoreDefinitionVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
     return new GetCoreDefinitionVersionResponse(*this, reply);
 }

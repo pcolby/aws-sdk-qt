@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CodeCommit {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CodeCommitClientRequestPrivate;
 
-class QTAWS_EXPORT CodeCommitClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CodeCommitClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeCommit.

@@ -66,10 +66,10 @@ bool UpdateSigningCertificateRequest::isValid() const
  *
  * @return An UpdateSigningCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateSigningCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSigningCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSigningCertificateResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListGeoLocationsRequest::isValid() const
  *
  * @return An ListGeoLocationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListGeoLocationsResponse(*this, reply);
 }

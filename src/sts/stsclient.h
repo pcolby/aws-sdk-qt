@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace STS {
@@ -46,18 +46,18 @@ class GetFederationTokenResponse;
 class GetSessionTokenRequest;
 class GetSessionTokenResponse;
 
-class QTAWS_EXPORT StsClient : public AwsAbstractClient {
+class QTAWS_EXPORT StsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     StsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     StsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

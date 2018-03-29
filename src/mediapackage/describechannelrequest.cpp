@@ -66,10 +66,10 @@ bool DescribeChannelRequest::isValid() const
  *
  * @return An DescribeChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaPackageClient::send
  */
-AwsAbstractResponse * DescribeChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeChannelResponse(*this, reply);
 }

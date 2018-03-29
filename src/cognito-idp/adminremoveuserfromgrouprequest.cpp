@@ -66,10 +66,10 @@ bool AdminRemoveUserFromGroupRequest::isValid() const
  *
  * @return An AdminRemoveUserFromGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNetworkReply * const reply) const
 {
     return new AdminRemoveUserFromGroupResponse(*this, reply);
 }

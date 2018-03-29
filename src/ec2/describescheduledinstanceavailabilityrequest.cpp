@@ -66,10 +66,10 @@ bool DescribeScheduledInstanceAvailabilityRequest::isValid() const
  *
  * @return An DescribeScheduledInstanceAvailabilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeScheduledInstanceAvailabilityResponse(*this, reply);
 }

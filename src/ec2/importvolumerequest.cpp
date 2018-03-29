@@ -66,10 +66,10 @@ bool ImportVolumeRequest::isValid() const
  *
  * @return An ImportVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new ImportVolumeResponse(*this, reply);
 }

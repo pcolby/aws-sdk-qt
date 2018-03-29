@@ -66,10 +66,10 @@ bool EnableAllFeaturesRequest::isValid() const
  *
  * @return An EnableAllFeaturesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkReply * const reply) const
 {
     return new EnableAllFeaturesResponse(*this, reply);
 }

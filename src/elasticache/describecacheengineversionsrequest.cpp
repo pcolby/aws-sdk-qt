@@ -66,10 +66,10 @@ bool DescribeCacheEngineVersionsRequest::isValid() const
  *
  * @return An DescribeCacheEngineVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeCacheEngineVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCacheEngineVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCacheEngineVersionsResponse(*this, reply);
 }

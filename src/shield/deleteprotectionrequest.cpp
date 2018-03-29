@@ -66,10 +66,10 @@ bool DeleteProtectionRequest::isValid() const
  *
  * @return An DeleteProtectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * DeleteProtectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteProtectionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteProtectionResponse(*this, reply);
 }

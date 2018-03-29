@@ -66,10 +66,10 @@ bool AttachDiskRequest::isValid() const
  *
  * @return An AttachDiskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * AttachDiskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachDiskRequest::response(QNetworkReply * const reply) const
 {
     return new AttachDiskResponse(*this, reply);
 }

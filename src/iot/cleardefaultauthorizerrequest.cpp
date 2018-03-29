@@ -66,10 +66,10 @@ bool ClearDefaultAuthorizerRequest::isValid() const
  *
  * @return An ClearDefaultAuthorizerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ClearDefaultAuthorizerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ClearDefaultAuthorizerRequest::response(QNetworkReply * const reply) const
 {
     return new ClearDefaultAuthorizerResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateTagOptionRequest::isValid() const
  *
  * @return An UpdateTagOptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTagOptionResponse(*this, reply);
 }

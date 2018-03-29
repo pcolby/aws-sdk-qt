@@ -66,10 +66,10 @@ bool EnableAWSServiceAccessRequest::isValid() const
  *
  * @return An EnableAWSServiceAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * EnableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
 {
     return new EnableAWSServiceAccessResponse(*this, reply);
 }

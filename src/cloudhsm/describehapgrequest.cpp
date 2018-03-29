@@ -66,10 +66,10 @@ bool DescribeHapgRequest::isValid() const
  *
  * @return An DescribeHapgResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeHapgResponse(*this, reply);
 }

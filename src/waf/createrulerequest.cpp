@@ -66,10 +66,10 @@ bool CreateRuleRequest::isValid() const
  *
  * @return An CreateRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRuleResponse(*this, reply);
 }

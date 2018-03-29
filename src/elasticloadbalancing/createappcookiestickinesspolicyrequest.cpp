@@ -66,10 +66,10 @@ bool CreateAppCookieStickinessPolicyRequest::isValid() const
  *
  * @return An CreateAppCookieStickinessPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * CreateAppCookieStickinessPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateAppCookieStickinessPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new CreateAppCookieStickinessPolicyResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PutDestinationPolicyRequest::isValid() const
  *
  * @return An PutDestinationPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * PutDestinationPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutDestinationPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutDestinationPolicyResponse(*this, reply);
 }

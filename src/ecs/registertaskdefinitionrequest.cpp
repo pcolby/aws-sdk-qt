@@ -66,10 +66,10 @@ bool RegisterTaskDefinitionRequest::isValid() const
  *
  * @return An RegisterTaskDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterTaskDefinitionResponse(*this, reply);
 }

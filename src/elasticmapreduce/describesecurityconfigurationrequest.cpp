@@ -66,10 +66,10 @@ bool DescribeSecurityConfigurationRequest::isValid() const
  *
  * @return An DescribeSecurityConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * DescribeSecurityConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSecurityConfigurationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool OptInPhoneNumberRequest::isValid() const
  *
  * @return An OptInPhoneNumberResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkReply * const reply) const
 {
     return new OptInPhoneNumberResponse(*this, reply);
 }

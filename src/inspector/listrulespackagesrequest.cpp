@@ -66,10 +66,10 @@ bool ListRulesPackagesRequest::isValid() const
  *
  * @return An ListRulesPackagesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkReply * const reply) const
 {
     return new ListRulesPackagesResponse(*this, reply);
 }

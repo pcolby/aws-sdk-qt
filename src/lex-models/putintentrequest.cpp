@@ -66,10 +66,10 @@ bool PutIntentRequest::isValid() const
  *
  * @return An PutIntentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * PutIntentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutIntentRequest::response(QNetworkReply * const reply) const
 {
     return new PutIntentResponse(*this, reply);
 }

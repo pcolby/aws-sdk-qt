@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ServerlessApplicationRepository {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ServerlessApplicationRepositoryClientRequestPrivate;
 
-class QTAWS_EXPORT ServerlessApplicationRepositoryClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ServerlessApplicationRepositoryClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ServerlessApplicationRepository.

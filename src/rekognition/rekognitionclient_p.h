@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class RekognitionClient;
 
-class QTAWS_EXPORT RekognitionClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT RekognitionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     RekognitionClientPrivate(RekognitionClient * const q);

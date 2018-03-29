@@ -40,7 +40,7 @@ namespace Budgets {
  * @param  parent   This object's parent.
  */
 BudgetsClientResponse::BudgetsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new BudgetsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new BudgetsClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool ListRolesRequest::isValid() const
  *
  * @return An ListRolesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListRolesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRolesRequest::response(QNetworkReply * const reply) const
 {
     return new ListRolesResponse(*this, reply);
 }

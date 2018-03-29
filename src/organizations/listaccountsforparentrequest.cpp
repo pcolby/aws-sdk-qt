@@ -66,10 +66,10 @@ bool ListAccountsForParentRequest::isValid() const
  *
  * @return An ListAccountsForParentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListAccountsForParentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAccountsForParentRequest::response(QNetworkReply * const reply) const
 {
     return new ListAccountsForParentResponse(*this, reply);
 }

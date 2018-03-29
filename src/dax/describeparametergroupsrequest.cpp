@@ -66,10 +66,10 @@ bool DescribeParameterGroupsRequest::isValid() const
  *
  * @return An DescribeParameterGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * DescribeParameterGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeParameterGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeParameterGroupsResponse(*this, reply);
 }

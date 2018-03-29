@@ -66,10 +66,10 @@ bool DeleteMembersRequest::isValid() const
  *
  * @return An DeleteMembersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMembersResponse(*this, reply);
 }

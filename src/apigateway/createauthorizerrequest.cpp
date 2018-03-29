@@ -66,10 +66,10 @@ bool CreateAuthorizerRequest::isValid() const
  *
  * @return An CreateAuthorizerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkReply * const reply) const
 {
     return new CreateAuthorizerResponse(*this, reply);
 }

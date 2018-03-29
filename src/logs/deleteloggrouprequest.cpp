@@ -66,10 +66,10 @@ bool DeleteLogGroupRequest::isValid() const
  *
  * @return An DeleteLogGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DeleteLogGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLogGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLogGroupResponse(*this, reply);
 }

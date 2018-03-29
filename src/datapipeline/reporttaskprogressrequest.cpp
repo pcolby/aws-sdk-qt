@@ -66,10 +66,10 @@ bool ReportTaskProgressRequest::isValid() const
  *
  * @return An ReportTaskProgressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkReply * const reply) const
 {
     return new ReportTaskProgressResponse(*this, reply);
 }

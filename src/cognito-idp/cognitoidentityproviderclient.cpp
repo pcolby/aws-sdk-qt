@@ -55,10 +55,10 @@ namespace CognitoIdentityProvider {
  */
 CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
 {
     Q_D(CognitoIdentityProviderClient);
     d->apiVersion = QStringLiteral("2016-04-18");
@@ -88,10 +88,10 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
  */
 CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
 {
     Q_D(CognitoIdentityProviderClient);
     d->apiVersion = QStringLiteral("2016-04-18");
@@ -1674,9 +1674,9 @@ VerifyUserAttributeResponse * CognitoIdentityProviderClient::verifyUserAttribute
  * @param  q  Pointer to this object's public CognitoIdentityProviderClient instance.
  */
 CognitoIdentityProviderClientPrivate::CognitoIdentityProviderClientPrivate(CognitoIdentityProviderClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CognitoIdentityProvider

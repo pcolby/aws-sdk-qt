@@ -66,10 +66,10 @@ bool DeregisterTaskDefinitionRequest::isValid() const
  *
  * @return An DeregisterTaskDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterTaskDefinitionResponse(*this, reply);
 }

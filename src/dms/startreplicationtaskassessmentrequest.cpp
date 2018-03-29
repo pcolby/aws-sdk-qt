@@ -66,10 +66,10 @@ bool StartReplicationTaskAssessmentRequest::isValid() const
  *
  * @return An StartReplicationTaskAssessmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * StartReplicationTaskAssessmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::response(QNetworkReply * const reply) const
 {
     return new StartReplicationTaskAssessmentResponse(*this, reply);
 }

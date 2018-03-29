@@ -66,10 +66,10 @@ bool GetDetectorRequest::isValid() const
  *
  * @return An GetDetectorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * GetDetectorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDetectorRequest::response(QNetworkReply * const reply) const
 {
     return new GetDetectorResponse(*this, reply);
 }

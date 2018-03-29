@@ -66,10 +66,10 @@ bool DescribeEventTopicsRequest::isValid() const
  *
  * @return An DescribeEventTopicsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DescribeEventTopicsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEventTopicsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEventTopicsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateComputerRequest::isValid() const
  *
  * @return An CreateComputerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * CreateComputerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateComputerRequest::response(QNetworkReply * const reply) const
 {
     return new CreateComputerResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteSAMLProviderRequest::isValid() const
  *
  * @return An DeleteSAMLProviderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSAMLProviderResponse(*this, reply);
 }

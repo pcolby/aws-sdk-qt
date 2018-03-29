@@ -66,10 +66,10 @@ bool ListUserProfilesRequest::isValid() const
  *
  * @return An ListUserProfilesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeStarClient::send
  */
-AwsAbstractResponse * ListUserProfilesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListUserProfilesRequest::response(QNetworkReply * const reply) const
 {
     return new ListUserProfilesResponse(*this, reply);
 }

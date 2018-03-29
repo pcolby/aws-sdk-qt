@@ -66,10 +66,10 @@ bool QueryObjectsRequest::isValid() const
  *
  * @return An QueryObjectsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * QueryObjectsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * QueryObjectsRequest::response(QNetworkReply * const reply) const
 {
     return new QueryObjectsResponse(*this, reply);
 }

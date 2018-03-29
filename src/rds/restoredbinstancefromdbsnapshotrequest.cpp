@@ -66,10 +66,10 @@ bool RestoreDBInstanceFromDBSnapshotRequest::isValid() const
  *
  * @return An RestoreDBInstanceFromDBSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreDBInstanceFromDBSnapshotResponse(*this, reply);
 }

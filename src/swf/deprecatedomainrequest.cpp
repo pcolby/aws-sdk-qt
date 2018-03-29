@@ -66,10 +66,10 @@ bool DeprecateDomainRequest::isValid() const
  *
  * @return An DeprecateDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkReply * const reply) const
 {
     return new DeprecateDomainResponse(*this, reply);
 }

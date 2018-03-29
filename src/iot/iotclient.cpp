@@ -56,10 +56,10 @@ namespace IoT {
  */
 IoTClient::IoTClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IoTClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoTClientPrivate(this), parent)
 {
     Q_D(IoTClient);
     d->apiVersion = QStringLiteral("2015-05-28");
@@ -89,10 +89,10 @@ IoTClient::IoTClient(
  */
 IoTClient::IoTClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IoTClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoTClientPrivate(this), parent)
 {
     Q_D(IoTClient);
     d->apiVersion = QStringLiteral("2015-05-28");
@@ -2042,9 +2042,9 @@ UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const U
  * @param  q  Pointer to this object's public IoTClient instance.
  */
 IoTClientPrivate::IoTClientPrivate(IoTClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoT

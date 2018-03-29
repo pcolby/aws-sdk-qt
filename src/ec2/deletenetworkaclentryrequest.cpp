@@ -66,10 +66,10 @@ bool DeleteNetworkAclEntryRequest::isValid() const
  *
  * @return An DeleteNetworkAclEntryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteNetworkAclEntryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNetworkAclEntryRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNetworkAclEntryResponse(*this, reply);
 }

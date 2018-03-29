@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Mobile {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MobileClientRequestPrivate;
 
-class QTAWS_EXPORT MobileClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MobileClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Mobile.

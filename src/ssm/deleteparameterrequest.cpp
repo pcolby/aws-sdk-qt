@@ -66,10 +66,10 @@ bool DeleteParameterRequest::isValid() const
  *
  * @return An DeleteParameterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DeleteParameterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteParameterRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteParameterResponse(*this, reply);
 }

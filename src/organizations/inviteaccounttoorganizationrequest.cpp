@@ -66,10 +66,10 @@ bool InviteAccountToOrganizationRequest::isValid() const
  *
  * @return An InviteAccountToOrganizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * InviteAccountToOrganizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InviteAccountToOrganizationRequest::response(QNetworkReply * const reply) const
 {
     return new InviteAccountToOrganizationResponse(*this, reply);
 }

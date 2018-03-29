@@ -66,10 +66,10 @@ bool EnableKeyRotationRequest::isValid() const
  *
  * @return An EnableKeyRotationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * EnableKeyRotationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableKeyRotationRequest::response(QNetworkReply * const reply) const
 {
     return new EnableKeyRotationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetMaintenanceWindowExecutionTaskInvocationRequest::isValid() const
  *
  * @return An GetMaintenanceWindowExecutionTaskInvocationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetMaintenanceWindowExecutionTaskInvocationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionTaskInvocationRequest::response(QNetworkReply * const reply) const
 {
     return new GetMaintenanceWindowExecutionTaskInvocationResponse(*this, reply);
 }

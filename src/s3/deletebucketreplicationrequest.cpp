@@ -66,10 +66,10 @@ bool DeleteBucketReplicationRequest::isValid() const
  *
  * @return An DeleteBucketReplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * DeleteBucketReplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBucketReplicationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBucketReplicationResponse(*this, reply);
 }

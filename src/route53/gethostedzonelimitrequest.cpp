@@ -66,10 +66,10 @@ bool GetHostedZoneLimitRequest::isValid() const
  *
  * @return An GetHostedZoneLimitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkReply * const reply) const
 {
     return new GetHostedZoneLimitResponse(*this, reply);
 }

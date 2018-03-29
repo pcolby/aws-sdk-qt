@@ -100,10 +100,10 @@ namespace ResourceGroupsTaggingAPI {
  */
 ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsTaggingAPIClient);
     d->apiVersion = QStringLiteral("2017-01-26");
@@ -133,10 +133,10 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  */
 ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsTaggingAPIClient);
     d->apiVersion = QStringLiteral("2017-01-26");
@@ -273,9 +273,9 @@ UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const Un
  * @param  q  Pointer to this object's public ResourceGroupsTaggingAPIClient instance.
  */
 ResourceGroupsTaggingAPIClientPrivate::ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ResourceGroupsTaggingAPI

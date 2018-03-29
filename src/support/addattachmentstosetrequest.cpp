@@ -66,10 +66,10 @@ bool AddAttachmentsToSetRequest::isValid() const
  *
  * @return An AddAttachmentsToSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetworkReply * const reply) const
 {
     return new AddAttachmentsToSetResponse(*this, reply);
 }

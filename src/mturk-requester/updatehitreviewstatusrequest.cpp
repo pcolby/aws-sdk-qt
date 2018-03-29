@@ -66,10 +66,10 @@ bool UpdateHITReviewStatusRequest::isValid() const
  *
  * @return An UpdateHITReviewStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateHITReviewStatusResponse(*this, reply);
 }

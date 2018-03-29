@@ -66,10 +66,10 @@ bool CreateDhcpOptionsRequest::isValid() const
  *
  * @return An CreateDhcpOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateDhcpOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDhcpOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDhcpOptionsResponse(*this, reply);
 }

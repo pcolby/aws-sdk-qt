@@ -66,10 +66,10 @@ bool PutBucketLifecycleConfigurationRequest::isValid() const
  *
  * @return An PutBucketLifecycleConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketLifecycleConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketLifecycleConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketLifecycleConfigurationResponse(*this, reply);
 }

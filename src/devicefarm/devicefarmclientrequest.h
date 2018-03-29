@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DeviceFarm {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class DeviceFarmClientRequestPrivate;
 
-class QTAWS_EXPORT DeviceFarmClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT DeviceFarmClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DeviceFarm.

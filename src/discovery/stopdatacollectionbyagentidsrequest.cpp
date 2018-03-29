@@ -66,10 +66,10 @@ bool StopDataCollectionByAgentIdsRequest::isValid() const
  *
  * @return An StopDataCollectionByAgentIdsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationDiscoveryServiceClient::send
  */
-AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
 {
     return new StopDataCollectionByAgentIdsResponse(*this, reply);
 }

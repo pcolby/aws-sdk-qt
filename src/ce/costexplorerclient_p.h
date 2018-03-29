@@ -29,7 +29,7 @@ namespace CostExplorer {
 
 class CostExplorerClient;
 
-class QTAWS_EXPORT CostExplorerClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CostExplorerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CostExplorerClientPrivate(CostExplorerClient * const q);

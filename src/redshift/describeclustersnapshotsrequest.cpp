@@ -66,10 +66,10 @@ bool DescribeClusterSnapshotsRequest::isValid() const
  *
  * @return An DescribeClusterSnapshotsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeClusterSnapshotsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeClusterSnapshotsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeClusterSnapshotsResponse(*this, reply);
 }

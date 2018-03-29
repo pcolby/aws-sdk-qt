@@ -66,10 +66,10 @@ bool ListClosedWorkflowExecutionsRequest::isValid() const
  *
  * @return An ListClosedWorkflowExecutionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListClosedWorkflowExecutionsResponse(*this, reply);
 }

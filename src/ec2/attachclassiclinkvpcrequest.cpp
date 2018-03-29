@@ -66,10 +66,10 @@ bool AttachClassicLinkVpcRequest::isValid() const
  *
  * @return An AttachClassicLinkVpcResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
 {
     return new AttachClassicLinkVpcResponse(*this, reply);
 }

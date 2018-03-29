@@ -36,7 +36,7 @@ namespace Organizations {
  * @param  action  The Organizations action to request.
  */
 OrganizationsClientRequest::OrganizationsClientRequest(const Action action)
-    : AwsAbstractRequest(new OrganizationsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new OrganizationsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ OrganizationsClientRequest::OrganizationsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 OrganizationsClientRequest::OrganizationsClientRequest(const OrganizationsClientRequest &other)
-    : AwsAbstractRequest(new OrganizationsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new OrganizationsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ OrganizationsClientRequest& OrganizationsClientRequest::operator=(const Organiza
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-OrganizationsClientRequest::OrganizationsClientRequest(OrganizationsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+OrganizationsClientRequest::OrganizationsClientRequest(OrganizationsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool OrganizationsClientRequest::operator==(const OrganizationsClientRequest &ot
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest OrganizationsClientRequest::unsignedRequest(const QUrl &endpoint
  * @param  q       Pointer to this object's public OrganizationsClientRequest instance.
  */
 OrganizationsClientRequestPrivate::OrganizationsClientRequestPrivate(const OrganizationsClientRequest::Action action, OrganizationsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ OrganizationsClientRequestPrivate::OrganizationsClientRequestPrivate(const Organ
  */
 OrganizationsClientRequestPrivate::OrganizationsClientRequestPrivate(const OrganizationsClientRequestPrivate &other,
                                      OrganizationsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

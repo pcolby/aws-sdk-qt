@@ -45,10 +45,10 @@ namespace KinesisAnalytics {
  */
 KinesisAnalyticsClient::KinesisAnalyticsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisAnalyticsClientPrivate(this), parent)
 {
     Q_D(KinesisAnalyticsClient);
     d->apiVersion = QStringLiteral("2015-08-14");
@@ -78,10 +78,10 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
  */
 KinesisAnalyticsClient::KinesisAnalyticsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisAnalyticsClientPrivate(this), parent)
 {
     Q_D(KinesisAnalyticsClient);
     d->apiVersion = QStringLiteral("2015-08-14");
@@ -532,9 +532,9 @@ UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const Upda
  * @param  q  Pointer to this object's public KinesisAnalyticsClient instance.
  */
 KinesisAnalyticsClientPrivate::KinesisAnalyticsClientPrivate(KinesisAnalyticsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KinesisAnalytics

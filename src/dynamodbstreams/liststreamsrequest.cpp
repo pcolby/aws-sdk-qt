@@ -66,10 +66,10 @@ bool ListStreamsRequest::isValid() const
  *
  * @return An ListStreamsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBStreamsClient::send
  */
-AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * const reply) const
 {
     return new ListStreamsResponse(*this, reply);
 }

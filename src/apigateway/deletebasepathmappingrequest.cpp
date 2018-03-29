@@ -66,10 +66,10 @@ bool DeleteBasePathMappingRequest::isValid() const
  *
  * @return An DeleteBasePathMappingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBasePathMappingResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateResolverRequest::isValid() const
  *
  * @return An UpdateResolverResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateResolverResponse(*this, reply);
 }

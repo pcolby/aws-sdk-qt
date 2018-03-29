@@ -66,10 +66,10 @@ bool DeleteBotVersionRequest::isValid() const
  *
  * @return An DeleteBotVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBotVersionResponse(*this, reply);
 }

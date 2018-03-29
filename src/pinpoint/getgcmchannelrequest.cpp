@@ -66,10 +66,10 @@ bool GetGcmChannelRequest::isValid() const
  *
  * @return An GetGcmChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply * const reply) const
 {
     return new GetGcmChannelResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteDirectoryRequest::isValid() const
  *
  * @return An DeleteDirectoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDirectoryResponse(*this, reply);
 }

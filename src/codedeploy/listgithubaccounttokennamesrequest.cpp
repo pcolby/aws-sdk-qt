@@ -66,10 +66,10 @@ bool ListGitHubAccountTokenNamesRequest::isValid() const
  *
  * @return An ListGitHubAccountTokenNamesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * ListGitHubAccountTokenNamesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGitHubAccountTokenNamesRequest::response(QNetworkReply * const reply) const
 {
     return new ListGitHubAccountTokenNamesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ChangeMessageVisibilityBatchRequest::isValid() const
  *
  * @return An ChangeMessageVisibilityBatchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * ChangeMessageVisibilityBatchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityBatchRequest::response(QNetworkReply * const reply) const
 {
     return new ChangeMessageVisibilityBatchResponse(*this, reply);
 }

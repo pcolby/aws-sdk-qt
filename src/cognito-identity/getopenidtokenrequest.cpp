@@ -66,10 +66,10 @@ bool GetOpenIdTokenRequest::isValid() const
  *
  * @return An GetOpenIdTokenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * GetOpenIdTokenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetOpenIdTokenRequest::response(QNetworkReply * const reply) const
 {
     return new GetOpenIdTokenResponse(*this, reply);
 }

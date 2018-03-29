@@ -66,10 +66,10 @@ bool GetBuiltinIntentRequest::isValid() const
  *
  * @return An GetBuiltinIntentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetBuiltinIntentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBuiltinIntentRequest::response(QNetworkReply * const reply) const
 {
     return new GetBuiltinIntentResponse(*this, reply);
 }

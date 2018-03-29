@@ -66,10 +66,10 @@ bool AddResourcePermissionsRequest::isValid() const
  *
  * @return An AddResourcePermissionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * AddResourcePermissionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddResourcePermissionsRequest::response(QNetworkReply * const reply) const
 {
     return new AddResourcePermissionsResponse(*this, reply);
 }

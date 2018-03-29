@@ -66,10 +66,10 @@ bool DescribeEngineDefaultParametersRequest::isValid() const
  *
  * @return An DescribeEngineDefaultParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeEngineDefaultParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEngineDefaultParametersResponse(*this, reply);
 }

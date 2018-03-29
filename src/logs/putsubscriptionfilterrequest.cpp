@@ -66,10 +66,10 @@ bool PutSubscriptionFilterRequest::isValid() const
  *
  * @return An PutSubscriptionFilterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * PutSubscriptionFilterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutSubscriptionFilterRequest::response(QNetworkReply * const reply) const
 {
     return new PutSubscriptionFilterResponse(*this, reply);
 }

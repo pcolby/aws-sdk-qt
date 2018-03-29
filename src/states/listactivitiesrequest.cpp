@@ -66,10 +66,10 @@ bool ListActivitiesRequest::isValid() const
  *
  * @return An ListActivitiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * ListActivitiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListActivitiesRequest::response(QNetworkReply * const reply) const
 {
     return new ListActivitiesResponse(*this, reply);
 }

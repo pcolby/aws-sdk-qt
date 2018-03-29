@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace ImportExport {
@@ -44,18 +44,18 @@ class ListJobsResponse;
 class UpdateJobRequest;
 class UpdateJobResponse;
 
-class QTAWS_EXPORT ImportExportClient : public AwsAbstractClient {
+class QTAWS_EXPORT ImportExportClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     ImportExportClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     ImportExportClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

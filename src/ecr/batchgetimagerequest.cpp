@@ -66,10 +66,10 @@ bool BatchGetImageRequest::isValid() const
  *
  * @return An BatchGetImageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetImageResponse(*this, reply);
 }

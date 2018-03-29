@@ -66,10 +66,10 @@ bool ListRootsRequest::isValid() const
  *
  * @return An ListRootsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * const reply) const
 {
     return new ListRootsResponse(*this, reply);
 }

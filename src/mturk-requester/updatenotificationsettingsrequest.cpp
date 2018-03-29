@@ -66,10 +66,10 @@ bool UpdateNotificationSettingsRequest::isValid() const
  *
  * @return An UpdateNotificationSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * UpdateNotificationSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateNotificationSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateNotificationSettingsResponse(*this, reply);
 }

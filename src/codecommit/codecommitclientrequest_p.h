@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class CodeCommitClientRequest;
 
-class QTAWS_EXPORT CodeCommitClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CodeCommitClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeCommitClientRequest::Action action; ///< CodeCommit action to be performed.

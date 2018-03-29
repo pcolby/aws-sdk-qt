@@ -66,10 +66,10 @@ bool DescribeRuntimeConfigurationRequest::isValid() const
  *
  * @return An DescribeRuntimeConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeRuntimeConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeRuntimeConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeRuntimeConfigurationResponse(*this, reply);
 }

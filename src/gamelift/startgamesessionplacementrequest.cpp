@@ -66,10 +66,10 @@ bool StartGameSessionPlacementRequest::isValid() const
  *
  * @return An StartGameSessionPlacementResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * StartGameSessionPlacementRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartGameSessionPlacementRequest::response(QNetworkReply * const reply) const
 {
     return new StartGameSessionPlacementResponse(*this, reply);
 }

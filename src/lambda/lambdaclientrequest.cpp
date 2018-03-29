@@ -36,7 +36,7 @@ namespace Lambda {
  * @param  action  The Lambda action to request.
  */
 LambdaClientRequest::LambdaClientRequest(const Action action)
-    : AwsAbstractRequest(new LambdaClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LambdaClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ LambdaClientRequest::LambdaClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 LambdaClientRequest::LambdaClientRequest(const LambdaClientRequest &other)
-    : AwsAbstractRequest(new LambdaClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LambdaClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ LambdaClientRequest& LambdaClientRequest::operator=(const LambdaClientRequest &o
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-LambdaClientRequest::LambdaClientRequest(LambdaClientRequestPrivate * const d) : AwsAbstractRequest(d)
+LambdaClientRequest::LambdaClientRequest(LambdaClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool LambdaClientRequest::operator==(const LambdaClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest LambdaClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public LambdaClientRequest instance.
  */
 LambdaClientRequestPrivate::LambdaClientRequestPrivate(const LambdaClientRequest::Action action, LambdaClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ LambdaClientRequestPrivate::LambdaClientRequestPrivate(const LambdaClientRequest
  */
 LambdaClientRequestPrivate::LambdaClientRequestPrivate(const LambdaClientRequestPrivate &other,
                                      LambdaClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

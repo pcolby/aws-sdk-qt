@@ -66,10 +66,10 @@ bool DescribeAvailablePatchesRequest::isValid() const
  *
  * @return An DescribeAvailablePatchesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeAvailablePatchesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAvailablePatchesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAvailablePatchesResponse(*this, reply);
 }

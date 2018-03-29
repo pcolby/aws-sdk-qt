@@ -66,10 +66,10 @@ bool AdminResetUserPasswordRequest::isValid() const
  *
  * @return An AdminResetUserPasswordResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetworkReply * const reply) const
 {
     return new AdminResetUserPasswordResponse(*this, reply);
 }

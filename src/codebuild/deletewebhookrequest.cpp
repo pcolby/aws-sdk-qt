@@ -66,10 +66,10 @@ bool DeleteWebhookRequest::isValid() const
  *
  * @return An DeleteWebhookResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * DeleteWebhookRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteWebhookRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteWebhookResponse(*this, reply);
 }

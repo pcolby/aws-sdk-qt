@@ -78,10 +78,10 @@ namespace DynamoDBStreams {
  */
 DynamoDBStreamsClient::DynamoDBStreamsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
 {
     Q_D(DynamoDBStreamsClient);
     d->apiVersion = QStringLiteral("2012-08-10");
@@ -111,10 +111,10 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  */
 DynamoDBStreamsClient::DynamoDBStreamsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
 {
     Q_D(DynamoDBStreamsClient);
     d->apiVersion = QStringLiteral("2012-08-10");
@@ -217,9 +217,9 @@ ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsReques
  * @param  q  Pointer to this object's public DynamoDBStreamsClient instance.
  */
 DynamoDBStreamsClientPrivate::DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DynamoDBStreams

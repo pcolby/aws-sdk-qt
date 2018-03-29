@@ -29,7 +29,7 @@ namespace CloudWatchEvents {
 
 class CloudWatchEventsClient;
 
-class QTAWS_EXPORT CloudWatchEventsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudWatchEventsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudWatchEventsClientPrivate(CloudWatchEventsClient * const q);

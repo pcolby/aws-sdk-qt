@@ -66,10 +66,10 @@ bool DescribeEndpointRequest::isValid() const
  *
  * @return An DescribeEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEndpointResponse(*this, reply);
 }

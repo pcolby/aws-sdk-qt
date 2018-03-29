@@ -66,10 +66,10 @@ bool DeleteJobTemplateRequest::isValid() const
  *
  * @return An DeleteJobTemplateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteJobTemplateResponse(*this, reply);
 }

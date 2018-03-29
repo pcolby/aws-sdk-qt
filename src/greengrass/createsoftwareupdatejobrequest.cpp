@@ -66,10 +66,10 @@ bool CreateSoftwareUpdateJobRequest::isValid() const
  *
  * @return An CreateSoftwareUpdateJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSoftwareUpdateJobResponse(*this, reply);
 }

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Redshift {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class RedshiftClientRequestPrivate;
 
-class QTAWS_EXPORT RedshiftClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT RedshiftClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Redshift.

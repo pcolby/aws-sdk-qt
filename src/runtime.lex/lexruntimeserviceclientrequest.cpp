@@ -36,7 +36,7 @@ namespace LexRuntimeService {
  * @param  action  The LexRuntimeService action to request.
  */
 LexRuntimeServiceClientRequest::LexRuntimeServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new LexRuntimeServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ LexRuntimeServiceClientRequest::LexRuntimeServiceClientRequest(const Action acti
  * @param  other  Instance to copy.
  */
 LexRuntimeServiceClientRequest::LexRuntimeServiceClientRequest(const LexRuntimeServiceClientRequest &other)
-    : AwsAbstractRequest(new LexRuntimeServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ LexRuntimeServiceClientRequest& LexRuntimeServiceClientRequest::operator=(const 
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-LexRuntimeServiceClientRequest::LexRuntimeServiceClientRequest(LexRuntimeServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+LexRuntimeServiceClientRequest::LexRuntimeServiceClientRequest(LexRuntimeServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool LexRuntimeServiceClientRequest::operator==(const LexRuntimeServiceClientReq
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest LexRuntimeServiceClientRequest::unsignedRequest(const QUrl &endp
  * @param  q       Pointer to this object's public LexRuntimeServiceClientRequest instance.
  */
 LexRuntimeServiceClientRequestPrivate::LexRuntimeServiceClientRequestPrivate(const LexRuntimeServiceClientRequest::Action action, LexRuntimeServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ LexRuntimeServiceClientRequestPrivate::LexRuntimeServiceClientRequestPrivate(con
  */
 LexRuntimeServiceClientRequestPrivate::LexRuntimeServiceClientRequestPrivate(const LexRuntimeServiceClientRequestPrivate &other,
                                      LexRuntimeServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

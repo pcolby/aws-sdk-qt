@@ -66,10 +66,10 @@ bool BatchCheckLayerAvailabilityRequest::isValid() const
  *
  * @return An BatchCheckLayerAvailabilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(QNetworkReply * const reply) const
 {
     return new BatchCheckLayerAvailabilityResponse(*this, reply);
 }

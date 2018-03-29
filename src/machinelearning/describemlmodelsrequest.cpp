@@ -66,10 +66,10 @@ bool DescribeMLModelsRequest::isValid() const
  *
  * @return An DescribeMLModelsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DescribeMLModelsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMLModelsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMLModelsResponse(*this, reply);
 }

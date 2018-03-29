@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class LightsailClientRequest;
 
-class QTAWS_EXPORT LightsailClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT LightsailClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LightsailClientRequest::Action action; ///< Lightsail action to be performed.

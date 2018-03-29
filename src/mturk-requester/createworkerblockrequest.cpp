@@ -66,10 +66,10 @@ bool CreateWorkerBlockRequest::isValid() const
  *
  * @return An CreateWorkerBlockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkReply * const reply) const
 {
     return new CreateWorkerBlockResponse(*this, reply);
 }

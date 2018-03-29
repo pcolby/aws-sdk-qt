@@ -66,10 +66,10 @@ bool AddClientIDToOpenIDConnectProviderRequest::isValid() const
  *
  * @return An AddClientIDToOpenIDConnectProviderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * AddClientIDToOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddClientIDToOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
 {
     return new AddClientIDToOpenIDConnectProviderResponse(*this, reply);
 }

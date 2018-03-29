@@ -66,10 +66,10 @@ bool ListExportsRequest::isValid() const
  *
  * @return An ListExportsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * const reply) const
 {
     return new ListExportsResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class CloudHSMClientResponse;
 
-class QTAWS_EXPORT CloudHSMClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT CloudHSMClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

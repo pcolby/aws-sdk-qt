@@ -66,10 +66,10 @@ bool DeleteTopicRequest::isValid() const
  *
  * @return An DeleteTopicResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTopicResponse(*this, reply);
 }

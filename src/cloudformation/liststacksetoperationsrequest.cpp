@@ -66,10 +66,10 @@ bool ListStackSetOperationsRequest::isValid() const
  *
  * @return An ListStackSetOperationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * ListStackSetOperationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListStackSetOperationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListStackSetOperationsResponse(*this, reply);
 }

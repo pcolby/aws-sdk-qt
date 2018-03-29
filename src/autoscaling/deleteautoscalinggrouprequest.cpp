@@ -66,10 +66,10 @@ bool DeleteAutoScalingGroupRequest::isValid() const
  *
  * @return An DeleteAutoScalingGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAutoScalingGroupResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateSubscriptionRequest::isValid() const
  *
  * @return An CreateSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSubscriptionResponse(*this, reply);
 }

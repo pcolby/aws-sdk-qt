@@ -66,10 +66,10 @@ bool DeleteReplicationGroupRequest::isValid() const
  *
  * @return An DeleteReplicationGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteReplicationGroupResponse(*this, reply);
 }

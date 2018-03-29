@@ -66,10 +66,10 @@ bool StopDeploymentRequest::isValid() const
  *
  * @return An StopDeploymentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply * const reply) const
 {
     return new StopDeploymentResponse(*this, reply);
 }

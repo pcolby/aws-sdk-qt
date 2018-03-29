@@ -66,10 +66,10 @@ bool DeleteBucketMetricsConfigurationRequest::isValid() const
  *
  * @return An DeleteBucketMetricsConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBucketMetricsConfigurationResponse(*this, reply);
 }

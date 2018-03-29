@@ -66,10 +66,10 @@ bool ListElasticsearchVersionsRequest::isValid() const
  *
  * @return An ListElasticsearchVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticsearchServiceClient::send
  */
-AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListElasticsearchVersionsResponse(*this, reply);
 }

@@ -47,10 +47,10 @@ namespace MQ {
  */
 MqClient::MqClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MqClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MqClientPrivate(this), parent)
 {
     Q_D(MqClient);
     d->apiVersion = QStringLiteral("2017-11-27");
@@ -80,10 +80,10 @@ MqClient::MqClient(
  */
 MqClient::MqClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MqClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MqClientPrivate(this), parent)
 {
     Q_D(MqClient);
     d->apiVersion = QStringLiteral("2017-11-27");
@@ -333,9 +333,9 @@ UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
  * @param  q  Pointer to this object's public MqClient instance.
  */
 MqClientPrivate::MqClientPrivate(MqClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MQ

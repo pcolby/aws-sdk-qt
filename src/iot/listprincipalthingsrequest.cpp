@@ -66,10 +66,10 @@ bool ListPrincipalThingsRequest::isValid() const
  *
  * @return An ListPrincipalThingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListPrincipalThingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPrincipalThingsRequest::response(QNetworkReply * const reply) const
 {
     return new ListPrincipalThingsResponse(*this, reply);
 }

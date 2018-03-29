@@ -66,10 +66,10 @@ bool DescribeCustomerGatewaysRequest::isValid() const
  *
  * @return An DescribeCustomerGatewaysResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCustomerGatewaysResponse(*this, reply);
 }

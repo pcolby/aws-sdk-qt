@@ -66,10 +66,10 @@ bool DescribeStorediSCSIVolumesRequest::isValid() const
  *
  * @return An DescribeStorediSCSIVolumesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeStorediSCSIVolumesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeStorediSCSIVolumesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeStorediSCSIVolumesResponse(*this, reply);
 }

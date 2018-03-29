@@ -66,10 +66,10 @@ bool PutRepositoryTriggersRequest::isValid() const
  *
  * @return An PutRepositoryTriggersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetworkReply * const reply) const
 {
     return new PutRepositoryTriggersResponse(*this, reply);
 }

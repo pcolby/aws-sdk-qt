@@ -66,10 +66,10 @@ bool GetSchemaCreationStatusRequest::isValid() const
  *
  * @return An GetSchemaCreationStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetSchemaCreationStatusResponse(*this, reply);
 }

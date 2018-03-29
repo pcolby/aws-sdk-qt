@@ -66,10 +66,10 @@ bool GetPipelineDefinitionRequest::isValid() const
  *
  * @return An GetPipelineDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * GetPipelineDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPipelineDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new GetPipelineDefinitionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteDBSubnetGroupRequest::isValid() const
  *
  * @return An DeleteDBSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDBSubnetGroupResponse(*this, reply);
 }

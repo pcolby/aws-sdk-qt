@@ -66,10 +66,10 @@ bool GetBulkPublishDetailsRequest::isValid() const
  *
  * @return An GetBulkPublishDetailsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * GetBulkPublishDetailsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBulkPublishDetailsRequest::response(QNetworkReply * const reply) const
 {
     return new GetBulkPublishDetailsResponse(*this, reply);
 }

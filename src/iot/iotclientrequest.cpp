@@ -36,7 +36,7 @@ namespace IoT {
  * @param  action  The IoT action to request.
  */
 IoTClientRequest::IoTClientRequest(const Action action)
-    : AwsAbstractRequest(new IoTClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IoTClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ IoTClientRequest::IoTClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 IoTClientRequest::IoTClientRequest(const IoTClientRequest &other)
-    : AwsAbstractRequest(new IoTClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IoTClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ IoTClientRequest& IoTClientRequest::operator=(const IoTClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-IoTClientRequest::IoTClientRequest(IoTClientRequestPrivate * const d) : AwsAbstractRequest(d)
+IoTClientRequest::IoTClientRequest(IoTClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool IoTClientRequest::operator==(const IoTClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest IoTClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public IoTClientRequest instance.
  */
 IoTClientRequestPrivate::IoTClientRequestPrivate(const IoTClientRequest::Action action, IoTClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ IoTClientRequestPrivate::IoTClientRequestPrivate(const IoTClientRequest::Action 
  */
 IoTClientRequestPrivate::IoTClientRequestPrivate(const IoTClientRequestPrivate &other,
                                      IoTClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

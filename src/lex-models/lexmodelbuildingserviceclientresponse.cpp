@@ -40,7 +40,7 @@ namespace LexModelBuildingService {
  * @param  parent   This object's parent.
  */
 LexModelBuildingServiceClientResponse::LexModelBuildingServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new LexModelBuildingServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new LexModelBuildingServiceClientResponsePrivate(this), parent)
 {
 
 }

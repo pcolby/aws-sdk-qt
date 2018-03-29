@@ -66,10 +66,10 @@ bool CreateCustomerGatewayRequest::isValid() const
  *
  * @return An CreateCustomerGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCustomerGatewayResponse(*this, reply);
 }

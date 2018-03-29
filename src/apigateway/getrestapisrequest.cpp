@@ -66,10 +66,10 @@ bool GetRestApisRequest::isValid() const
  *
  * @return An GetRestApisResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetRestApisRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRestApisRequest::response(QNetworkReply * const reply) const
 {
     return new GetRestApisResponse(*this, reply);
 }

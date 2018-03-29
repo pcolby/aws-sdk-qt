@@ -66,10 +66,10 @@ bool DescribeDBSecurityGroupsRequest::isValid() const
  *
  * @return An DescribeDBSecurityGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBSecurityGroupsResponse(*this, reply);
 }

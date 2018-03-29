@@ -45,10 +45,10 @@ namespace Route53 {
  */
 Route53Client::Route53Client(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Route53ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Route53ClientPrivate(this), parent)
 {
     Q_D(Route53Client);
     d->apiVersion = QStringLiteral("2013-04-01");
@@ -78,10 +78,10 @@ Route53Client::Route53Client(
  */
 Route53Client::Route53Client(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Route53ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Route53ClientPrivate(this), parent)
 {
     Q_D(Route53Client);
     d->apiVersion = QStringLiteral("2013-04-01");
@@ -1678,9 +1678,9 @@ UpdateTrafficPolicyInstanceResponse * Route53Client::updateTrafficPolicyInstance
  * @param  q  Pointer to this object's public Route53Client instance.
  */
 Route53ClientPrivate::Route53ClientPrivate(Route53Client * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Route53

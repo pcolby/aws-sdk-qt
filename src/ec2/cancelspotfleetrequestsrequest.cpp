@@ -66,10 +66,10 @@ bool CancelSpotFleetRequestsRequest::isValid() const
  *
  * @return An CancelSpotFleetRequestsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
 {
     return new CancelSpotFleetRequestsResponse(*this, reply);
 }

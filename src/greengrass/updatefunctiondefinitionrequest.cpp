@@ -66,10 +66,10 @@ bool UpdateFunctionDefinitionRequest::isValid() const
  *
  * @return An UpdateFunctionDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * UpdateFunctionDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFunctionDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFunctionDefinitionResponse(*this, reply);
 }

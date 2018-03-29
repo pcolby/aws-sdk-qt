@@ -40,7 +40,7 @@ namespace APIGateway {
  * @param  parent   This object's parent.
  */
 APIGatewayClientResponse::APIGatewayClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new APIGatewayClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new APIGatewayClientResponsePrivate(this), parent)
 {
 
 }

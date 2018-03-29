@@ -66,10 +66,10 @@ bool EvaluateExpressionRequest::isValid() const
  *
  * @return An EvaluateExpressionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * EvaluateExpressionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EvaluateExpressionRequest::response(QNetworkReply * const reply) const
 {
     return new EvaluateExpressionResponse(*this, reply);
 }

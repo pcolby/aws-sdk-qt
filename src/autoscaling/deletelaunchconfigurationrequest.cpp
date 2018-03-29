@@ -66,10 +66,10 @@ bool DeleteLaunchConfigurationRequest::isValid() const
  *
  * @return An DeleteLaunchConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLaunchConfigurationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeDirectoryConfigsRequest::isValid() const
  *
  * @return An DescribeDirectoryConfigsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDirectoryConfigsResponse(*this, reply);
 }

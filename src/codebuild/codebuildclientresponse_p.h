@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class CodeBuildClientResponse;
 
-class QTAWS_EXPORT CodeBuildClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT CodeBuildClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

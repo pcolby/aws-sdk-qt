@@ -66,10 +66,10 @@ bool RegisterJobDefinitionRequest::isValid() const
  *
  * @return An RegisterJobDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * RegisterJobDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterJobDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterJobDefinitionResponse(*this, reply);
 }

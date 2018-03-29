@@ -66,10 +66,10 @@ bool CreateParameterGroupRequest::isValid() const
  *
  * @return An CreateParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * CreateParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateParameterGroupResponse(*this, reply);
 }

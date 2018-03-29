@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class LightsailClient;
 
-class QTAWS_EXPORT LightsailClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT LightsailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LightsailClientPrivate(LightsailClient * const q);

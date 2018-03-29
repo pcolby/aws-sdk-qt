@@ -66,10 +66,10 @@ bool UpdatePartitionRequest::isValid() const
  *
  * @return An UpdatePartitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePartitionResponse(*this, reply);
 }

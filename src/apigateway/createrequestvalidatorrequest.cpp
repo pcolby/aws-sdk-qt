@@ -66,10 +66,10 @@ bool CreateRequestValidatorRequest::isValid() const
  *
  * @return An CreateRequestValidatorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRequestValidatorResponse(*this, reply);
 }

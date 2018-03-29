@@ -66,10 +66,10 @@ bool ListNamespacesRequest::isValid() const
  *
  * @return An ListNamespacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply * const reply) const
 {
     return new ListNamespacesResponse(*this, reply);
 }

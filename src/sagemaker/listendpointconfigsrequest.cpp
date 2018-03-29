@@ -66,10 +66,10 @@ bool ListEndpointConfigsRequest::isValid() const
  *
  * @return An ListEndpointConfigsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * ListEndpointConfigsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListEndpointConfigsRequest::response(QNetworkReply * const reply) const
 {
     return new ListEndpointConfigsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListSubscribedRuleGroupsRequest::isValid() const
  *
  * @return An ListSubscribedRuleGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new ListSubscribedRuleGroupsResponse(*this, reply);
 }

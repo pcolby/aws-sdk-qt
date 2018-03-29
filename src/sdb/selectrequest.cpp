@@ -66,10 +66,10 @@ bool SelectRequest::isValid() const
  *
  * @return An SelectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * SelectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SelectRequest::response(QNetworkReply * const reply) const
 {
     return new SelectResponse(*this, reply);
 }

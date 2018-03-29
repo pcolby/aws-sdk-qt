@@ -40,7 +40,7 @@ namespace CloudDirectory {
  * @param  parent   This object's parent.
  */
 CloudDirectoryClientResponse::CloudDirectoryClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudDirectoryClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudDirectoryClientResponsePrivate(this), parent)
 {
 
 }

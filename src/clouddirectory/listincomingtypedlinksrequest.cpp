@@ -66,10 +66,10 @@ bool ListIncomingTypedLinksRequest::isValid() const
  *
  * @return An ListIncomingTypedLinksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListIncomingTypedLinksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListIncomingTypedLinksRequest::response(QNetworkReply * const reply) const
 {
     return new ListIncomingTypedLinksResponse(*this, reply);
 }

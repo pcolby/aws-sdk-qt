@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Support {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SupportClientRequestPrivate;
 
-class QTAWS_EXPORT SupportClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SupportClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Support.

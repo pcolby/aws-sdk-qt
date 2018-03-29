@@ -66,10 +66,10 @@ bool CreateNetworkProfileRequest::isValid() const
  *
  * @return An CreateNetworkProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * CreateNetworkProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateNetworkProfileRequest::response(QNetworkReply * const reply) const
 {
     return new CreateNetworkProfileResponse(*this, reply);
 }

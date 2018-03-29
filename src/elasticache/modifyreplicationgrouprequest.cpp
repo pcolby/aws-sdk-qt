@@ -66,10 +66,10 @@ bool ModifyReplicationGroupRequest::isValid() const
  *
  * @return An ModifyReplicationGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * ModifyReplicationGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyReplicationGroupResponse(*this, reply);
 }

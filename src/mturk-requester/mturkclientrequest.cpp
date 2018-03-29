@@ -36,7 +36,7 @@ namespace MTurk {
  * @param  action  The MTurk action to request.
  */
 MTurkClientRequest::MTurkClientRequest(const Action action)
-    : AwsAbstractRequest(new MTurkClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MTurkClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MTurkClientRequest::MTurkClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MTurkClientRequest::MTurkClientRequest(const MTurkClientRequest &other)
-    : AwsAbstractRequest(new MTurkClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MTurkClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MTurkClientRequest& MTurkClientRequest::operator=(const MTurkClientRequest &othe
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MTurkClientRequest::MTurkClientRequest(MTurkClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MTurkClientRequest::MTurkClientRequest(MTurkClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MTurkClientRequest::operator==(const MTurkClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MTurkClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public MTurkClientRequest instance.
  */
 MTurkClientRequestPrivate::MTurkClientRequestPrivate(const MTurkClientRequest::Action action, MTurkClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MTurkClientRequestPrivate::MTurkClientRequestPrivate(const MTurkClientRequest::A
  */
 MTurkClientRequestPrivate::MTurkClientRequestPrivate(const MTurkClientRequestPrivate &other,
                                      MTurkClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace SMS {
@@ -54,18 +54,18 @@ class StartOnDemandReplicationRunResponse;
 class UpdateReplicationJobRequest;
 class UpdateReplicationJobResponse;
 
-class QTAWS_EXPORT SmsClient : public AwsAbstractClient {
+class QTAWS_EXPORT SmsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     SmsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     SmsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -40,7 +40,7 @@ namespace MarketplaceCommerceAnalytics {
  * @param  parent   This object's parent.
  */
 MarketplaceCommerceAnalyticsClientResponse::MarketplaceCommerceAnalyticsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MarketplaceCommerceAnalyticsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MarketplaceCommerceAnalyticsClientResponsePrivate(this), parent)
 {
 
 }

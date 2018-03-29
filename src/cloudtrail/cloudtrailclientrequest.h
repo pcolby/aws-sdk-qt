@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudTrail {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CloudTrailClientRequestPrivate;
 
-class QTAWS_EXPORT CloudTrailClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CloudTrailClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudTrail.

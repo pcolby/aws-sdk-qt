@@ -66,10 +66,10 @@ bool AssociateVirtualInterfaceRequest::isValid() const
  *
  * @return An AssociateVirtualInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * AssociateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateVirtualInterfaceResponse(*this, reply);
 }

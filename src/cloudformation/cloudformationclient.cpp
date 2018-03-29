@@ -67,10 +67,10 @@ namespace CloudFormation {
  */
 CloudFormationClient::CloudFormationClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudFormationClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudFormationClientPrivate(this), parent)
 {
     Q_D(CloudFormationClient);
     d->apiVersion = QStringLiteral("2010-05-15");
@@ -100,10 +100,10 @@ CloudFormationClient::CloudFormationClient(
  */
 CloudFormationClient::CloudFormationClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudFormationClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudFormationClientPrivate(this), parent)
 {
     Q_D(CloudFormationClient);
     d->apiVersion = QStringLiteral("2010-05-15");
@@ -904,9 +904,9 @@ ValidateTemplateResponse * CloudFormationClient::validateTemplate(const Validate
  * @param  q  Pointer to this object's public CloudFormationClient instance.
  */
 CloudFormationClientPrivate::CloudFormationClientPrivate(CloudFormationClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudFormation

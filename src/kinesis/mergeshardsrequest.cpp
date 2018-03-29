@@ -66,10 +66,10 @@ bool MergeShardsRequest::isValid() const
  *
  * @return An MergeShardsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * const reply) const
 {
     return new MergeShardsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UploadLayerPartRequest::isValid() const
  *
  * @return An UploadLayerPartResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkReply * const reply) const
 {
     return new UploadLayerPartResponse(*this, reply);
 }

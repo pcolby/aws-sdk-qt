@@ -66,10 +66,10 @@ bool UpdateIdentityProviderRequest::isValid() const
  *
  * @return An UpdateIdentityProviderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateIdentityProviderResponse(*this, reply);
 }

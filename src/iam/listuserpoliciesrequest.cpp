@@ -66,10 +66,10 @@ bool ListUserPoliciesRequest::isValid() const
  *
  * @return An ListUserPoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListUserPoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListUserPoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new ListUserPoliciesResponse(*this, reply);
 }

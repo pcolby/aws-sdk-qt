@@ -66,10 +66,10 @@ bool ListSkillsRequest::isValid() const
  *
  * @return An ListSkillsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * const reply) const
 {
     return new ListSkillsResponse(*this, reply);
 }

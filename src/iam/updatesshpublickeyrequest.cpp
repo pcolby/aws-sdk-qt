@@ -66,10 +66,10 @@ bool UpdateSSHPublicKeyRequest::isValid() const
  *
  * @return An UpdateSSHPublicKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSSHPublicKeyResponse(*this, reply);
 }

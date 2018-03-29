@@ -66,10 +66,10 @@ bool GetQueryLoggingConfigRequest::isValid() const
  *
  * @return An GetQueryLoggingConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
 {
     return new GetQueryLoggingConfigResponse(*this, reply);
 }

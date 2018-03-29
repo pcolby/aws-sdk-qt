@@ -66,10 +66,10 @@ bool DeleteGcmChannelRequest::isValid() const
  *
  * @return An DeleteGcmChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteGcmChannelResponse(*this, reply);
 }

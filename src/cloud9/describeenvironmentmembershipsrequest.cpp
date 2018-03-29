@@ -66,10 +66,10 @@ bool DescribeEnvironmentMembershipsRequest::isValid() const
  *
  * @return An DescribeEnvironmentMembershipsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Cloud9Client::send
  */
-AwsAbstractResponse * DescribeEnvironmentMembershipsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEnvironmentMembershipsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEnvironmentMembershipsResponse(*this, reply);
 }

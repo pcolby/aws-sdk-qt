@@ -66,10 +66,10 @@ bool SetIdentityNotificationTopicRequest::isValid() const
  *
  * @return An SetIdentityNotificationTopicResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * SetIdentityNotificationTopicRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response(QNetworkReply * const reply) const
 {
     return new SetIdentityNotificationTopicResponse(*this, reply);
 }

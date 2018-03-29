@@ -40,7 +40,7 @@ namespace GuardDuty {
  * @param  parent   This object's parent.
  */
 GuardDutyClientResponse::GuardDutyClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new GuardDutyClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new GuardDutyClientResponsePrivate(this), parent)
 {
 
 }

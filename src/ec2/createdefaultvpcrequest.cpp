@@ -66,10 +66,10 @@ bool CreateDefaultVpcRequest::isValid() const
  *
  * @return An CreateDefaultVpcResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDefaultVpcResponse(*this, reply);
 }

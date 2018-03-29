@@ -66,10 +66,10 @@ bool CompleteMultipartUploadRequest::isValid() const
  *
  * @return An CompleteMultipartUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * CompleteMultipartUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CompleteMultipartUploadRequest::response(QNetworkReply * const reply) const
 {
     return new CompleteMultipartUploadResponse(*this, reply);
 }

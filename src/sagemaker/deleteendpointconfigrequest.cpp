@@ -66,10 +66,10 @@ bool DeleteEndpointConfigRequest::isValid() const
  *
  * @return An DeleteEndpointConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * DeleteEndpointConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEndpointConfigRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEndpointConfigResponse(*this, reply);
 }

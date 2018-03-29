@@ -66,10 +66,10 @@ bool GetLaunchTemplateDataRequest::isValid() const
  *
  * @return An GetLaunchTemplateDataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetworkReply * const reply) const
 {
     return new GetLaunchTemplateDataResponse(*this, reply);
 }

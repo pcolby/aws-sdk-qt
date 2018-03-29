@@ -66,10 +66,10 @@ bool CreateResourceRequest::isValid() const
  *
  * @return An CreateResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateResourceResponse(*this, reply);
 }

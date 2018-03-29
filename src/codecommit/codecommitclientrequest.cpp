@@ -36,7 +36,7 @@ namespace CodeCommit {
  * @param  action  The CodeCommit action to request.
  */
 CodeCommitClientRequest::CodeCommitClientRequest(const Action action)
-    : AwsAbstractRequest(new CodeCommitClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CodeCommitClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CodeCommitClientRequest::CodeCommitClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CodeCommitClientRequest::CodeCommitClientRequest(const CodeCommitClientRequest &other)
-    : AwsAbstractRequest(new CodeCommitClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CodeCommitClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CodeCommitClientRequest& CodeCommitClientRequest::operator=(const CodeCommitClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CodeCommitClientRequest::CodeCommitClientRequest(CodeCommitClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CodeCommitClientRequest::CodeCommitClientRequest(CodeCommitClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CodeCommitClientRequest::operator==(const CodeCommitClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CodeCommitClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public CodeCommitClientRequest instance.
  */
 CodeCommitClientRequestPrivate::CodeCommitClientRequestPrivate(const CodeCommitClientRequest::Action action, CodeCommitClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CodeCommitClientRequestPrivate::CodeCommitClientRequestPrivate(const CodeCommitC
  */
 CodeCommitClientRequestPrivate::CodeCommitClientRequestPrivate(const CodeCommitClientRequestPrivate &other,
                                      CodeCommitClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

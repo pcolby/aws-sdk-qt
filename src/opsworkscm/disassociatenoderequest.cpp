@@ -66,10 +66,10 @@ bool DisassociateNodeRequest::isValid() const
  *
  * @return An DisassociateNodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateNodeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool RevokeCacheSecurityGroupIngressRequest::isValid() const
  *
  * @return An RevokeCacheSecurityGroupIngressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
     return new RevokeCacheSecurityGroupIngressResponse(*this, reply);
 }

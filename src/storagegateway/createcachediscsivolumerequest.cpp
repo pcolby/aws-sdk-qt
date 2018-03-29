@@ -66,10 +66,10 @@ bool CreateCachediSCSIVolumeRequest::isValid() const
  *
  * @return An CreateCachediSCSIVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CreateCachediSCSIVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCachediSCSIVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCachediSCSIVolumeResponse(*this, reply);
 }

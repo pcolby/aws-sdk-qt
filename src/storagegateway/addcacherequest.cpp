@@ -66,10 +66,10 @@ bool AddCacheRequest::isValid() const
  *
  * @return An AddCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * AddCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddCacheRequest::response(QNetworkReply * const reply) const
 {
     return new AddCacheResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeTrailsRequest::isValid() const
  *
  * @return An DescribeTrailsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * DescribeTrailsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTrailsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTrailsResponse(*this, reply);
 }

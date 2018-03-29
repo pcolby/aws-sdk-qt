@@ -66,10 +66,10 @@ bool RegisterDomainRequest::isValid() const
  *
  * @return An RegisterDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterDomainResponse(*this, reply);
 }

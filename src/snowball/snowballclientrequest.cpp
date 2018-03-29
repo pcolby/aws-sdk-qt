@@ -36,7 +36,7 @@ namespace Snowball {
  * @param  action  The Snowball action to request.
  */
 SnowballClientRequest::SnowballClientRequest(const Action action)
-    : AwsAbstractRequest(new SnowballClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SnowballClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SnowballClientRequest::SnowballClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SnowballClientRequest::SnowballClientRequest(const SnowballClientRequest &other)
-    : AwsAbstractRequest(new SnowballClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SnowballClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SnowballClientRequest& SnowballClientRequest::operator=(const SnowballClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SnowballClientRequest::SnowballClientRequest(SnowballClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SnowballClientRequest::SnowballClientRequest(SnowballClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SnowballClientRequest::operator==(const SnowballClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SnowballClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public SnowballClientRequest instance.
  */
 SnowballClientRequestPrivate::SnowballClientRequestPrivate(const SnowballClientRequest::Action action, SnowballClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SnowballClientRequestPrivate::SnowballClientRequestPrivate(const SnowballClientR
  */
 SnowballClientRequestPrivate::SnowballClientRequestPrivate(const SnowballClientRequestPrivate &other,
                                      SnowballClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

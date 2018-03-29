@@ -66,10 +66,10 @@ bool ListIndexRequest::isValid() const
  *
  * @return An ListIndexResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListIndexRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListIndexRequest::response(QNetworkReply * const reply) const
 {
     return new ListIndexResponse(*this, reply);
 }

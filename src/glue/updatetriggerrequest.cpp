@@ -66,10 +66,10 @@ bool UpdateTriggerRequest::isValid() const
  *
  * @return An UpdateTriggerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTriggerResponse(*this, reply);
 }

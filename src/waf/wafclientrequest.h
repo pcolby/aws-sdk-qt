@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace WAF {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class WafClientRequestPrivate;
 
-class QTAWS_EXPORT WafClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT WafClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WAF.

@@ -66,10 +66,10 @@ bool DescribeOrderableClusterOptionsRequest::isValid() const
  *
  * @return An DescribeOrderableClusterOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeOrderableClusterOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeOrderableClusterOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeOrderableClusterOptionsResponse(*this, reply);
 }

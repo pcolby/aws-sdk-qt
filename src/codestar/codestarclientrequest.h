@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CodeStar {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CodeStarClientRequestPrivate;
 
-class QTAWS_EXPORT CodeStarClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CodeStarClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeStar.

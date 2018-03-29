@@ -66,10 +66,10 @@ bool CreateCampaignRequest::isValid() const
  *
  * @return An CreateCampaignResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * CreateCampaignRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCampaignRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCampaignResponse(*this, reply);
 }

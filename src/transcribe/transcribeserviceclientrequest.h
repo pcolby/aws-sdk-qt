@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace TranscribeService {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class TranscribeServiceClientRequestPrivate;
 
-class QTAWS_EXPORT TranscribeServiceClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT TranscribeServiceClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by TranscribeService.

@@ -66,10 +66,10 @@ bool VerifyTrustRequest::isValid() const
  *
  * @return An VerifyTrustResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * const reply) const
 {
     return new VerifyTrustResponse(*this, reply);
 }

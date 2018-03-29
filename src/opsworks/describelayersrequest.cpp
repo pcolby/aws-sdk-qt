@@ -66,10 +66,10 @@ bool DescribeLayersRequest::isValid() const
  *
  * @return An DescribeLayersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DescribeLayersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLayersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLayersResponse(*this, reply);
 }

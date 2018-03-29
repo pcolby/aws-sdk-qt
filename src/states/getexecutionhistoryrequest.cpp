@@ -66,10 +66,10 @@ bool GetExecutionHistoryRequest::isValid() const
  *
  * @return An GetExecutionHistoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetworkReply * const reply) const
 {
     return new GetExecutionHistoryResponse(*this, reply);
 }

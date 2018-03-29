@@ -66,10 +66,10 @@ bool ListDatasetsRequest::isValid() const
  *
  * @return An ListDatasetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * ListDatasetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDatasetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDatasetsResponse(*this, reply);
 }

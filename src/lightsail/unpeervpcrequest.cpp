@@ -66,10 +66,10 @@ bool UnpeerVpcRequest::isValid() const
  *
  * @return An UnpeerVpcResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * UnpeerVpcRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnpeerVpcRequest::response(QNetworkReply * const reply) const
 {
     return new UnpeerVpcResponse(*this, reply);
 }

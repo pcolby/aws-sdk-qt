@@ -66,10 +66,10 @@ bool PutBucketWebsiteRequest::isValid() const
  *
  * @return An PutBucketWebsiteResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketWebsiteResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace KinesisVideoArchivedMedia {
  * @param  parent   This object's parent.
  */
 KinesisVideoArchivedMediaClientResponse::KinesisVideoArchivedMediaClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new KinesisVideoArchivedMediaClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new KinesisVideoArchivedMediaClientResponsePrivate(this), parent)
 {
 
 }

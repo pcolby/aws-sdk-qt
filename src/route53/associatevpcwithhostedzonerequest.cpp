@@ -66,10 +66,10 @@ bool AssociateVPCWithHostedZoneRequest::isValid() const
  *
  * @return An AssociateVPCWithHostedZoneResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateVPCWithHostedZoneResponse(*this, reply);
 }

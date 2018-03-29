@@ -66,10 +66,10 @@ bool DeleteChangeSetRequest::isValid() const
  *
  * @return An DeleteChangeSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * DeleteChangeSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteChangeSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteChangeSetResponse(*this, reply);
 }

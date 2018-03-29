@@ -66,10 +66,10 @@ bool TagStreamRequest::isValid() const
  *
  * @return An TagStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisVideoClient::send
  */
-AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * const reply) const
 {
     return new TagStreamResponse(*this, reply);
 }

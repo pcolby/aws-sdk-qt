@@ -66,10 +66,10 @@ bool SendBonusRequest::isValid() const
  *
  * @return An SendBonusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * const reply) const
 {
     return new SendBonusResponse(*this, reply);
 }

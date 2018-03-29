@@ -40,7 +40,7 @@ namespace ElasticTranscoder {
  * @param  parent   This object's parent.
  */
 ElasticTranscoderClientResponse::ElasticTranscoderClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ElasticTranscoderClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ElasticTranscoderClientResponsePrivate(this), parent)
 {
 
 }

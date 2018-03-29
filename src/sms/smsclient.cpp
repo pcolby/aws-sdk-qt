@@ -45,10 +45,10 @@ namespace SMS {
  */
 SmsClient::SmsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SmsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SmsClientPrivate(this), parent)
 {
     Q_D(SmsClient);
     d->apiVersion = QStringLiteral("2016-10-24");
@@ -78,10 +78,10 @@ SmsClient::SmsClient(
  */
 SmsClient::SmsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SmsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SmsClientPrivate(this), parent)
 {
     Q_D(SmsClient);
     d->apiVersion = QStringLiteral("2016-10-24");
@@ -266,9 +266,9 @@ UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateRepli
  * @param  q  Pointer to this object's public SmsClient instance.
  */
 SmsClientPrivate::SmsClientPrivate(SmsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SMS

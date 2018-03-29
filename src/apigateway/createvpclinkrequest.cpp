@@ -66,10 +66,10 @@ bool CreateVpcLinkRequest::isValid() const
  *
  * @return An CreateVpcLinkResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply * const reply) const
 {
     return new CreateVpcLinkResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListResourceDelegatesRequest::isValid() const
  *
  * @return An ListResourceDelegatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * ListResourceDelegatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourceDelegatesRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourceDelegatesResponse(*this, reply);
 }

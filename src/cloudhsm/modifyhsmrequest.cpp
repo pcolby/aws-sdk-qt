@@ -66,10 +66,10 @@ bool ModifyHsmRequest::isValid() const
  *
  * @return An ModifyHsmResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyHsmResponse(*this, reply);
 }

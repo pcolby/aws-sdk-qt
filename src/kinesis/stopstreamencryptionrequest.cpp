@@ -66,10 +66,10 @@ bool StopStreamEncryptionRequest::isValid() const
  *
  * @return An StopStreamEncryptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetworkReply * const reply) const
 {
     return new StopStreamEncryptionResponse(*this, reply);
 }

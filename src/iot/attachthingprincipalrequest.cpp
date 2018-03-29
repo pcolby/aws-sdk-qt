@@ -66,10 +66,10 @@ bool AttachThingPrincipalRequest::isValid() const
  *
  * @return An AttachThingPrincipalResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * AttachThingPrincipalRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachThingPrincipalRequest::response(QNetworkReply * const reply) const
 {
     return new AttachThingPrincipalResponse(*this, reply);
 }

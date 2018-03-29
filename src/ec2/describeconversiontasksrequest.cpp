@@ -66,10 +66,10 @@ bool DescribeConversionTasksRequest::isValid() const
  *
  * @return An DescribeConversionTasksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeConversionTasksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeConversionTasksResponse(*this, reply);
 }

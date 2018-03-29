@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class KinesisAnalyticsClientResponse;
 
-class QTAWS_EXPORT KinesisAnalyticsClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT KinesisAnalyticsClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

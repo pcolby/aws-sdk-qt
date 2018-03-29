@@ -66,10 +66,10 @@ bool DisableMetricsCollectionRequest::isValid() const
  *
  * @return An DisableMetricsCollectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DisableMetricsCollectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableMetricsCollectionRequest::response(QNetworkReply * const reply) const
 {
     return new DisableMetricsCollectionResponse(*this, reply);
 }

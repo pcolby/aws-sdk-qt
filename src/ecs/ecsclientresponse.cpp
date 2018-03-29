@@ -40,7 +40,7 @@ namespace ECS {
  * @param  parent   This object's parent.
  */
 EcsClientResponse::EcsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new EcsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new EcsClientResponsePrivate(this), parent)
 {
 
 }

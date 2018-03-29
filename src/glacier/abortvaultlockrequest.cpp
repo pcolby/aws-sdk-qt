@@ -66,10 +66,10 @@ bool AbortVaultLockRequest::isValid() const
  *
  * @return An AbortVaultLockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * AbortVaultLockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AbortVaultLockRequest::response(QNetworkReply * const reply) const
 {
     return new AbortVaultLockResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListDiscoveredResourcesRequest::isValid() const
  *
  * @return An ListDiscoveredResourcesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNetworkReply * const reply) const
 {
     return new ListDiscoveredResourcesResponse(*this, reply);
 }

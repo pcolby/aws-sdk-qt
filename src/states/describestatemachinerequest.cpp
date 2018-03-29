@@ -66,10 +66,10 @@ bool DescribeStateMachineRequest::isValid() const
  *
  * @return An DescribeStateMachineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * DescribeStateMachineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeStateMachineRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeStateMachineResponse(*this, reply);
 }

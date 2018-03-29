@@ -66,10 +66,10 @@ bool UpdateAdmChannelRequest::isValid() const
  *
  * @return An UpdateAdmChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateAdmChannelResponse(*this, reply);
 }

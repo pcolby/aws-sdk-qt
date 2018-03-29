@@ -66,10 +66,10 @@ bool GetImportRequest::isValid() const
  *
  * @return An GetImportResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetImportRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * const reply) const
 {
     return new GetImportResponse(*this, reply);
 }

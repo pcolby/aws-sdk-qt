@@ -66,10 +66,10 @@ bool PutResourceAttributesRequest::isValid() const
  *
  * @return An PutResourceAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * PutResourceAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new PutResourceAttributesResponse(*this, reply);
 }

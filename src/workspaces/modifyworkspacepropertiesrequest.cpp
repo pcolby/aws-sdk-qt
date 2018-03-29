@@ -66,10 +66,10 @@ bool ModifyWorkspacePropertiesRequest::isValid() const
  *
  * @return An ModifyWorkspacePropertiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkSpacesClient::send
  */
-AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyWorkspacePropertiesResponse(*this, reply);
 }

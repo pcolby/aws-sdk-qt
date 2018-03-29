@@ -66,10 +66,10 @@ bool StopBuildRequest::isValid() const
  *
  * @return An StopBuildResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * const reply) const
 {
     return new StopBuildResponse(*this, reply);
 }

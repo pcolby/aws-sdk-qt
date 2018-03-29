@@ -66,10 +66,10 @@ bool GetIdentityNotificationAttributesRequest::isValid() const
  *
  * @return An GetIdentityNotificationAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * GetIdentityNotificationAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdentityNotificationAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdentityNotificationAttributesResponse(*this, reply);
 }

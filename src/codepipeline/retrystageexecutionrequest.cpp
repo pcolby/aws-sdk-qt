@@ -66,10 +66,10 @@ bool RetryStageExecutionRequest::isValid() const
  *
  * @return An RetryStageExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * RetryStageExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RetryStageExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new RetryStageExecutionResponse(*this, reply);
 }

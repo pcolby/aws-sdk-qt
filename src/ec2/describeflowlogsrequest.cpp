@@ -66,10 +66,10 @@ bool DescribeFlowLogsRequest::isValid() const
  *
  * @return An DescribeFlowLogsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeFlowLogsResponse(*this, reply);
 }

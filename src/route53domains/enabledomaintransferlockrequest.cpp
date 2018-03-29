@@ -66,10 +66,10 @@ bool EnableDomainTransferLockRequest::isValid() const
  *
  * @return An EnableDomainTransferLockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNetworkReply * const reply) const
 {
     return new EnableDomainTransferLockResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeDBClusterParameterGroupsRequest::isValid() const
  *
  * @return An DescribeDBClusterParameterGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBClusterParameterGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBClusterParameterGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBClusterParameterGroupsResponse(*this, reply);
 }

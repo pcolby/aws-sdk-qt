@@ -66,10 +66,10 @@ bool CreateVirtualMFADeviceRequest::isValid() const
  *
  * @return An CreateVirtualMFADeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateVirtualMFADeviceResponse(*this, reply);
 }

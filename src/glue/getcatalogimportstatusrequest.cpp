@@ -66,10 +66,10 @@ bool GetCatalogImportStatusRequest::isValid() const
  *
  * @return An GetCatalogImportStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetCatalogImportStatusResponse(*this, reply);
 }

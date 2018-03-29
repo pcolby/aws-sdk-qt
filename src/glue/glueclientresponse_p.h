@@ -28,7 +28,7 @@ namespace Glue {
 
 class GlueClientResponse;
 
-class QTAWS_EXPORT GlueClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT GlueClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

@@ -66,10 +66,10 @@ bool CreateClusterParameterGroupRequest::isValid() const
  *
  * @return An CreateClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * CreateClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateClusterParameterGroupResponse(*this, reply);
 }

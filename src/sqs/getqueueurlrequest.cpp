@@ -66,10 +66,10 @@ bool GetQueueUrlRequest::isValid() const
  *
  * @return An GetQueueUrlResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * const reply) const
 {
     return new GetQueueUrlResponse(*this, reply);
 }

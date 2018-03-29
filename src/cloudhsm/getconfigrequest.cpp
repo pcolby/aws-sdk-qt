@@ -66,10 +66,10 @@ bool GetConfigRequest::isValid() const
  *
  * @return An GetConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * const reply) const
 {
     return new GetConfigResponse(*this, reply);
 }

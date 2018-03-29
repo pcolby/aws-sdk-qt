@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Glue {
@@ -188,18 +188,18 @@ class UpdateTriggerResponse;
 class UpdateUserDefinedFunctionRequest;
 class UpdateUserDefinedFunctionResponse;
 
-class QTAWS_EXPORT GlueClient : public AwsAbstractClient {
+class QTAWS_EXPORT GlueClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     GlueClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     GlueClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

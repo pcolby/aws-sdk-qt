@@ -66,10 +66,10 @@ bool DeletePortfolioShareRequest::isValid() const
  *
  * @return An DeletePortfolioShareResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DeletePortfolioShareRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePortfolioShareRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePortfolioShareResponse(*this, reply);
 }

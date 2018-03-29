@@ -66,10 +66,10 @@ bool PutRecordRequest::isValid() const
  *
  * @return An PutRecordResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  FirehoseClient::send
  */
-AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * const reply) const
 {
     return new PutRecordResponse(*this, reply);
 }

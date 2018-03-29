@@ -66,10 +66,10 @@ bool CreateApiKeyRequest::isValid() const
  *
  * @return An CreateApiKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply * const reply) const
 {
     return new CreateApiKeyResponse(*this, reply);
 }

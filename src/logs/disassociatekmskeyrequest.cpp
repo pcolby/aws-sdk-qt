@@ -66,10 +66,10 @@ bool DisassociateKmsKeyRequest::isValid() const
  *
  * @return An DisassociateKmsKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateKmsKeyResponse(*this, reply);
 }

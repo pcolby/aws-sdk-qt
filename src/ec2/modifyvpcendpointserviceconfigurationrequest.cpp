@@ -66,10 +66,10 @@ bool ModifyVpcEndpointServiceConfigurationRequest::isValid() const
  *
  * @return An ModifyVpcEndpointServiceConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyVpcEndpointServiceConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServiceConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyVpcEndpointServiceConfigurationResponse(*this, reply);
 }

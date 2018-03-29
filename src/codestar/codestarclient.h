@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace CodeStar {
@@ -68,18 +68,18 @@ class UpdateTeamMemberResponse;
 class UpdateUserProfileRequest;
 class UpdateUserProfileResponse;
 
-class QTAWS_EXPORT CodeStarClient : public AwsAbstractClient {
+class QTAWS_EXPORT CodeStarClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     CodeStarClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     CodeStarClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

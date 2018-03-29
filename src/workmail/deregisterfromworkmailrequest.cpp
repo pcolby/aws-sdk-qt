@@ -66,10 +66,10 @@ bool DeregisterFromWorkMailRequest::isValid() const
  *
  * @return An DeregisterFromWorkMailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * DeregisterFromWorkMailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterFromWorkMailRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterFromWorkMailResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ExecuteProvisionedProductPlanRequest::isValid() const
  *
  * @return An ExecuteProvisionedProductPlanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::response(QNetworkReply * const reply) const
 {
     return new ExecuteProvisionedProductPlanResponse(*this, reply);
 }

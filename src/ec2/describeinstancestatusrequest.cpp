@@ -66,10 +66,10 @@ bool DescribeInstanceStatusRequest::isValid() const
  *
  * @return An DescribeInstanceStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeInstanceStatusResponse(*this, reply);
 }

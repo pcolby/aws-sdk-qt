@@ -66,10 +66,10 @@ bool CreateNamedQueryRequest::isValid() const
  *
  * @return An CreateNamedQueryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * CreateNamedQueryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateNamedQueryRequest::response(QNetworkReply * const reply) const
 {
     return new CreateNamedQueryResponse(*this, reply);
 }

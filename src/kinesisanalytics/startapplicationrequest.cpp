@@ -66,10 +66,10 @@ bool StartApplicationRequest::isValid() const
  *
  * @return An StartApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * StartApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new StartApplicationResponse(*this, reply);
 }

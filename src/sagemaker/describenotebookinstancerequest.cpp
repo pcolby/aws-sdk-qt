@@ -66,10 +66,10 @@ bool DescribeNotebookInstanceRequest::isValid() const
  *
  * @return An DescribeNotebookInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeNotebookInstanceResponse(*this, reply);
 }

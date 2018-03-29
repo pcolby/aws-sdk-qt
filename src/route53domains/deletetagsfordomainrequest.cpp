@@ -66,10 +66,10 @@ bool DeleteTagsForDomainRequest::isValid() const
  *
  * @return An DeleteTagsForDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * DeleteTagsForDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTagsForDomainRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTagsForDomainResponse(*this, reply);
 }

@@ -46,10 +46,10 @@ namespace TranscribeService {
  */
 TranscribeServiceClient::TranscribeServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
 {
     Q_D(TranscribeServiceClient);
     d->apiVersion = QStringLiteral("2017-10-26");
@@ -79,10 +79,10 @@ TranscribeServiceClient::TranscribeServiceClient(
  */
 TranscribeServiceClient::TranscribeServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
 {
     Q_D(TranscribeServiceClient);
     d->apiVersion = QStringLiteral("2017-10-26");
@@ -154,9 +154,9 @@ StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(c
  * @param  q  Pointer to this object's public TranscribeServiceClient instance.
  */
 TranscribeServiceClientPrivate::TranscribeServiceClientPrivate(TranscribeServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace TranscribeService

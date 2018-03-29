@@ -66,10 +66,10 @@ bool UpdateVolumeRequest::isValid() const
  *
  * @return An UpdateVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * UpdateVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateVolumeResponse(*this, reply);
 }

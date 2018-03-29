@@ -66,10 +66,10 @@ bool CreateDirectoryRequest::isValid() const
  *
  * @return An CreateDirectoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDirectoryResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DirectoryServiceClientRequest;
 
-class QTAWS_EXPORT DirectoryServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT DirectoryServiceClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DirectoryServiceClientRequest::Action action; ///< DirectoryService action to be performed.

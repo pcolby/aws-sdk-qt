@@ -66,10 +66,10 @@ bool CreateHITWithHITTypeRequest::isValid() const
  *
  * @return An CreateHITWithHITTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * CreateHITWithHITTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateHITWithHITTypeRequest::response(QNetworkReply * const reply) const
 {
     return new CreateHITWithHITTypeResponse(*this, reply);
 }

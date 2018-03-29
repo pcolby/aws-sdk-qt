@@ -66,10 +66,10 @@ bool GetEndpointRequest::isValid() const
  *
  * @return An GetEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new GetEndpointResponse(*this, reply);
 }

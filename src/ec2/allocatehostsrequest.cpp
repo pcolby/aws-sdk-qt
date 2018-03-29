@@ -66,10 +66,10 @@ bool AllocateHostsRequest::isValid() const
  *
  * @return An AllocateHostsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply * const reply) const
 {
     return new AllocateHostsResponse(*this, reply);
 }

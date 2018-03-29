@@ -66,10 +66,10 @@ bool DescribeAddressRequest::isValid() const
  *
  * @return An DescribeAddressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SnowballClient::send
  */
-AwsAbstractResponse * DescribeAddressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAddressResponse(*this, reply);
 }

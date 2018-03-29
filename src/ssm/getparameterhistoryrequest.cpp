@@ -66,10 +66,10 @@ bool GetParameterHistoryRequest::isValid() const
  *
  * @return An GetParameterHistoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetParameterHistoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetParameterHistoryRequest::response(QNetworkReply * const reply) const
 {
     return new GetParameterHistoryResponse(*this, reply);
 }

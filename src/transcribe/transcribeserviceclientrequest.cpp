@@ -36,7 +36,7 @@ namespace TranscribeService {
  * @param  action  The TranscribeService action to request.
  */
 TranscribeServiceClientRequest::TranscribeServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new TranscribeServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new TranscribeServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ TranscribeServiceClientRequest::TranscribeServiceClientRequest(const Action acti
  * @param  other  Instance to copy.
  */
 TranscribeServiceClientRequest::TranscribeServiceClientRequest(const TranscribeServiceClientRequest &other)
-    : AwsAbstractRequest(new TranscribeServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new TranscribeServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ TranscribeServiceClientRequest& TranscribeServiceClientRequest::operator=(const 
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-TranscribeServiceClientRequest::TranscribeServiceClientRequest(TranscribeServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+TranscribeServiceClientRequest::TranscribeServiceClientRequest(TranscribeServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool TranscribeServiceClientRequest::operator==(const TranscribeServiceClientReq
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest TranscribeServiceClientRequest::unsignedRequest(const QUrl &endp
  * @param  q       Pointer to this object's public TranscribeServiceClientRequest instance.
  */
 TranscribeServiceClientRequestPrivate::TranscribeServiceClientRequestPrivate(const TranscribeServiceClientRequest::Action action, TranscribeServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ TranscribeServiceClientRequestPrivate::TranscribeServiceClientRequestPrivate(con
  */
 TranscribeServiceClientRequestPrivate::TranscribeServiceClientRequestPrivate(const TranscribeServiceClientRequestPrivate &other,
                                      TranscribeServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

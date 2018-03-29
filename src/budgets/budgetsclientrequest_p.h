@@ -28,7 +28,7 @@ namespace Budgets {
 
 class BudgetsClientRequest;
 
-class QTAWS_EXPORT BudgetsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT BudgetsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     BudgetsClientRequest::Action action; ///< Budgets action to be performed.

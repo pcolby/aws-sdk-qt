@@ -66,10 +66,10 @@ bool DeregisterPatchBaselineForPatchGroupRequest::isValid() const
  *
  * @return An DeregisterPatchBaselineForPatchGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterPatchBaselineForPatchGroupResponse(*this, reply);
 }

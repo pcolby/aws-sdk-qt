@@ -66,10 +66,10 @@ bool PutUserPolicyRequest::isValid() const
  *
  * @return An PutUserPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * PutUserPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutUserPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutUserPolicyResponse(*this, reply);
 }

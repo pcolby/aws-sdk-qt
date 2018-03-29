@@ -66,10 +66,10 @@ bool GetRepositoryPolicyRequest::isValid() const
  *
  * @return An GetRepositoryPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetRepositoryPolicyResponse(*this, reply);
 }

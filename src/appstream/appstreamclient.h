@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace AppStream {
@@ -98,18 +98,18 @@ class UpdateFleetResponse;
 class UpdateStackRequest;
 class UpdateStackResponse;
 
-class QTAWS_EXPORT AppStreamClient : public AwsAbstractClient {
+class QTAWS_EXPORT AppStreamClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     AppStreamClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     AppStreamClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

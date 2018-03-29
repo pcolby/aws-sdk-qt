@@ -49,10 +49,10 @@ namespace DAX {
  */
 DaxClient::DaxClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DaxClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DaxClientPrivate(this), parent)
 {
     Q_D(DaxClient);
     d->apiVersion = QStringLiteral("2017-04-19");
@@ -82,10 +82,10 @@ DaxClient::DaxClient(
  */
 DaxClient::DaxClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DaxClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DaxClientPrivate(this), parent)
 {
     Q_D(DaxClient);
     d->apiVersion = QStringLiteral("2017-04-19");
@@ -452,9 +452,9 @@ UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroup
  * @param  q  Pointer to this object's public DaxClient instance.
  */
 DaxClientPrivate::DaxClientPrivate(DaxClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DAX

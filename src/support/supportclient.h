@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Support {
@@ -60,18 +60,18 @@ class RefreshTrustedAdvisorCheckResponse;
 class ResolveCaseRequest;
 class ResolveCaseResponse;
 
-class QTAWS_EXPORT SupportClient : public AwsAbstractClient {
+class QTAWS_EXPORT SupportClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     SupportClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     SupportClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

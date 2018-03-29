@@ -66,10 +66,10 @@ bool DetachClassicLinkVpcRequest::isValid() const
  *
  * @return An DetachClassicLinkVpcResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
 {
     return new DetachClassicLinkVpcResponse(*this, reply);
 }

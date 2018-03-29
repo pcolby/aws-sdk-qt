@@ -66,10 +66,10 @@ bool GetIdentityProviderByIdentifierRequest::isValid() const
  *
  * @return An GetIdentityProviderByIdentifierResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * GetIdentityProviderByIdentifierRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdentityProviderByIdentifierRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdentityProviderByIdentifierResponse(*this, reply);
 }

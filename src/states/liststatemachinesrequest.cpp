@@ -66,10 +66,10 @@ bool ListStateMachinesRequest::isValid() const
  *
  * @return An ListStateMachinesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkReply * const reply) const
 {
     return new ListStateMachinesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateAccessKeyRequest::isValid() const
  *
  * @return An UpdateAccessKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateAccessKeyResponse(*this, reply);
 }

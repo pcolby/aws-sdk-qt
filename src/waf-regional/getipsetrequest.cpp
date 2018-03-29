@@ -66,10 +66,10 @@ bool GetIPSetRequest::isValid() const
  *
  * @return An GetIPSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * const reply) const
 {
     return new GetIPSetResponse(*this, reply);
 }

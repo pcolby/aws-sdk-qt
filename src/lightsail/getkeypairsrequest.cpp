@@ -66,10 +66,10 @@ bool GetKeyPairsRequest::isValid() const
  *
  * @return An GetKeyPairsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetKeyPairsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetKeyPairsRequest::response(QNetworkReply * const reply) const
 {
     return new GetKeyPairsResponse(*this, reply);
 }

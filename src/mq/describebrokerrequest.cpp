@@ -66,10 +66,10 @@ bool DescribeBrokerRequest::isValid() const
  *
  * @return An DescribeBrokerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MQClient::send
  */
-AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBrokerResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool FilterLogEventsRequest::isValid() const
  *
  * @return An FilterLogEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkReply * const reply) const
 {
     return new FilterLogEventsResponse(*this, reply);
 }

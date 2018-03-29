@@ -66,10 +66,10 @@ bool StartFaceDetectionRequest::isValid() const
  *
  * @return An StartFaceDetectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkReply * const reply) const
 {
     return new StartFaceDetectionResponse(*this, reply);
 }

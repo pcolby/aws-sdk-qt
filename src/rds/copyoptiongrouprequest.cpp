@@ -66,10 +66,10 @@ bool CopyOptionGroupRequest::isValid() const
  *
  * @return An CopyOptionGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CopyOptionGroupResponse(*this, reply);
 }

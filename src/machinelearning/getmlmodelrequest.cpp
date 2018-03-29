@@ -66,10 +66,10 @@ bool GetMLModelRequest::isValid() const
  *
  * @return An GetMLModelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * const reply) const
 {
     return new GetMLModelResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateMicrosoftADRequest::isValid() const
  *
  * @return An CreateMicrosoftADResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkReply * const reply) const
 {
     return new CreateMicrosoftADResponse(*this, reply);
 }

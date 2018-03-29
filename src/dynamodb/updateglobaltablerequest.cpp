@@ -66,10 +66,10 @@ bool UpdateGlobalTableRequest::isValid() const
  *
  * @return An UpdateGlobalTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * UpdateGlobalTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateGlobalTableRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateGlobalTableResponse(*this, reply);
 }

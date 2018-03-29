@@ -66,10 +66,10 @@ bool PutLifecyclePolicyRequest::isValid() const
  *
  * @return An PutLifecyclePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutLifecyclePolicyResponse(*this, reply);
 }

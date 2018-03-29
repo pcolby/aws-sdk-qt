@@ -36,7 +36,7 @@ namespace GuardDuty {
  * @param  action  The GuardDuty action to request.
  */
 GuardDutyClientRequest::GuardDutyClientRequest(const Action action)
-    : AwsAbstractRequest(new GuardDutyClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GuardDutyClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ GuardDutyClientRequest::GuardDutyClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 GuardDutyClientRequest::GuardDutyClientRequest(const GuardDutyClientRequest &other)
-    : AwsAbstractRequest(new GuardDutyClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GuardDutyClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ GuardDutyClientRequest& GuardDutyClientRequest::operator=(const GuardDutyClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-GuardDutyClientRequest::GuardDutyClientRequest(GuardDutyClientRequestPrivate * const d) : AwsAbstractRequest(d)
+GuardDutyClientRequest::GuardDutyClientRequest(GuardDutyClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool GuardDutyClientRequest::operator==(const GuardDutyClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest GuardDutyClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public GuardDutyClientRequest instance.
  */
 GuardDutyClientRequestPrivate::GuardDutyClientRequestPrivate(const GuardDutyClientRequest::Action action, GuardDutyClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ GuardDutyClientRequestPrivate::GuardDutyClientRequestPrivate(const GuardDutyClie
  */
 GuardDutyClientRequestPrivate::GuardDutyClientRequestPrivate(const GuardDutyClientRequestPrivate &other,
                                      GuardDutyClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

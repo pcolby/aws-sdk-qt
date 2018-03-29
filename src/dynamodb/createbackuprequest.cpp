@@ -66,10 +66,10 @@ bool CreateBackupRequest::isValid() const
  *
  * @return An CreateBackupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBackupResponse(*this, reply);
 }

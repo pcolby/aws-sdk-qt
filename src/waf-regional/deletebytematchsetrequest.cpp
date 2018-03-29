@@ -66,10 +66,10 @@ bool DeleteByteMatchSetRequest::isValid() const
  *
  * @return An DeleteByteMatchSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteByteMatchSetResponse(*this, reply);
 }

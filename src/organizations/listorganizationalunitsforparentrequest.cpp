@@ -66,10 +66,10 @@ bool ListOrganizationalUnitsForParentRequest::isValid() const
  *
  * @return An ListOrganizationalUnitsForParentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::response(QNetworkReply * const reply) const
 {
     return new ListOrganizationalUnitsForParentResponse(*this, reply);
 }

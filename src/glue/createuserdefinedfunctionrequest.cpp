@@ -66,10 +66,10 @@ bool CreateUserDefinedFunctionRequest::isValid() const
  *
  * @return An CreateUserDefinedFunctionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * CreateUserDefinedFunctionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateUserDefinedFunctionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateUserDefinedFunctionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteLexiconRequest::isValid() const
  *
  * @return An DeleteLexiconResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PollyClient::send
  */
-AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLexiconResponse(*this, reply);
 }

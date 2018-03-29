@@ -66,10 +66,10 @@ bool GetTraceGraphRequest::isValid() const
  *
  * @return An GetTraceGraphResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  XRayClient::send
  */
-AwsAbstractResponse * GetTraceGraphRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTraceGraphRequest::response(QNetworkReply * const reply) const
 {
     return new GetTraceGraphResponse(*this, reply);
 }

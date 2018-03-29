@@ -40,7 +40,7 @@ namespace IoTJobsDataPlane {
  * @param  parent   This object's parent.
  */
 IoTJobsDataPlaneClientResponse::IoTJobsDataPlaneClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new IoTJobsDataPlaneClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new IoTJobsDataPlaneClientResponsePrivate(this), parent)
 {
 
 }

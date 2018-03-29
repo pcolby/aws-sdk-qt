@@ -66,10 +66,10 @@ bool CreateDiskRequest::isValid() const
  *
  * @return An CreateDiskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * CreateDiskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDiskRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDiskResponse(*this, reply);
 }

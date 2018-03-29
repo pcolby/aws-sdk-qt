@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class CodeDeployClientResponse;
 
-class QTAWS_EXPORT CodeDeployClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT CodeDeployClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

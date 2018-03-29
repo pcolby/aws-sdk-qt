@@ -113,10 +113,10 @@ namespace ElasticLoadBalancingv2 {
  */
 ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticLoadBalancingv2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticLoadBalancingv2ClientPrivate(this), parent)
 {
     Q_D(ElasticLoadBalancingv2Client);
     d->apiVersion = QStringLiteral("2015-12-01");
@@ -146,10 +146,10 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
  */
 ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticLoadBalancingv2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticLoadBalancingv2ClientPrivate(this), parent)
 {
     Q_D(ElasticLoadBalancingv2Client);
     d->apiVersion = QStringLiteral("2015-12-01");
@@ -882,9 +882,9 @@ SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRe
  * @param  q  Pointer to this object's public ElasticLoadBalancingv2Client instance.
  */
 ElasticLoadBalancingv2ClientPrivate::ElasticLoadBalancingv2ClientPrivate(ElasticLoadBalancingv2Client * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticLoadBalancingv2

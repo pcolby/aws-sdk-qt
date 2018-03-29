@@ -66,10 +66,10 @@ bool DescribeDBSnapshotAttributesRequest::isValid() const
  *
  * @return An DescribeDBSnapshotAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBSnapshotAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBSnapshotAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBSnapshotAttributesResponse(*this, reply);
 }

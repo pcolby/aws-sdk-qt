@@ -36,7 +36,7 @@ namespace Athena {
  * @param  action  The Athena action to request.
  */
 AthenaClientRequest::AthenaClientRequest(const Action action)
-    : AwsAbstractRequest(new AthenaClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AthenaClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ AthenaClientRequest::AthenaClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 AthenaClientRequest::AthenaClientRequest(const AthenaClientRequest &other)
-    : AwsAbstractRequest(new AthenaClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AthenaClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ AthenaClientRequest& AthenaClientRequest::operator=(const AthenaClientRequest &o
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-AthenaClientRequest::AthenaClientRequest(AthenaClientRequestPrivate * const d) : AwsAbstractRequest(d)
+AthenaClientRequest::AthenaClientRequest(AthenaClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool AthenaClientRequest::operator==(const AthenaClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest AthenaClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public AthenaClientRequest instance.
  */
 AthenaClientRequestPrivate::AthenaClientRequestPrivate(const AthenaClientRequest::Action action, AthenaClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ AthenaClientRequestPrivate::AthenaClientRequestPrivate(const AthenaClientRequest
  */
 AthenaClientRequestPrivate::AthenaClientRequestPrivate(const AthenaClientRequestPrivate &other,
                                      AthenaClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

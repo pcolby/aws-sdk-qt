@@ -66,10 +66,10 @@ bool DeleteVirtualInterfaceRequest::isValid() const
  *
  * @return An DeleteVirtualInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DeleteVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVirtualInterfaceResponse(*this, reply);
 }

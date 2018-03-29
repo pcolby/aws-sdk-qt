@@ -66,10 +66,10 @@ bool PutTargetsRequest::isValid() const
  *
  * @return An PutTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * PutTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new PutTargetsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeWorkspacesConnectionStatusRequest::isValid() const
  *
  * @return An DescribeWorkspacesConnectionStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkSpacesClient::send
  */
-AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeWorkspacesConnectionStatusResponse(*this, reply);
 }

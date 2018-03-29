@@ -66,10 +66,10 @@ bool GetIdentityPoliciesRequest::isValid() const
  *
  * @return An GetIdentityPoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdentityPoliciesResponse(*this, reply);
 }

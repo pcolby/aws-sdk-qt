@@ -66,10 +66,10 @@ bool ListComplianceItemsRequest::isValid() const
  *
  * @return An ListComplianceItemsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListComplianceItemsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListComplianceItemsRequest::response(QNetworkReply * const reply) const
 {
     return new ListComplianceItemsResponse(*this, reply);
 }

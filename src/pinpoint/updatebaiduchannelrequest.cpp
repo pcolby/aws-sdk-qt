@@ -66,10 +66,10 @@ bool UpdateBaiduChannelRequest::isValid() const
  *
  * @return An UpdateBaiduChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateBaiduChannelResponse(*this, reply);
 }

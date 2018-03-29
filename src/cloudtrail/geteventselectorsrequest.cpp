@@ -66,10 +66,10 @@ bool GetEventSelectorsRequest::isValid() const
  *
  * @return An GetEventSelectorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * GetEventSelectorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetEventSelectorsRequest::response(QNetworkReply * const reply) const
 {
     return new GetEventSelectorsResponse(*this, reply);
 }

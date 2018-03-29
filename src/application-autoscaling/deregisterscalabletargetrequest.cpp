@@ -66,10 +66,10 @@ bool DeregisterScalableTargetRequest::isValid() const
  *
  * @return An DeregisterScalableTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationAutoScalingClient::send
  */
-AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterScalableTargetResponse(*this, reply);
 }

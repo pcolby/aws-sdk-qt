@@ -66,10 +66,10 @@ bool DescribeContainerRequest::isValid() const
  *
  * @return An DescribeContainerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreClient::send
  */
-AwsAbstractResponse * DescribeContainerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeContainerRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeContainerResponse(*this, reply);
 }

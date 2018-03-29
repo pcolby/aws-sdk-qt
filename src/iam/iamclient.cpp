@@ -110,10 +110,10 @@ namespace IAM {
  */
 IamClient::IamClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IamClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IamClientPrivate(this), parent)
 {
     Q_D(IamClient);
     d->apiVersion = QStringLiteral("2010-05-08");
@@ -143,10 +143,10 @@ IamClient::IamClient(
  */
 IamClient::IamClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new IamClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IamClientPrivate(this), parent)
 {
     Q_D(IamClient);
     d->apiVersion = QStringLiteral("2010-05-08");
@@ -3089,9 +3089,9 @@ UploadSigningCertificateResponse * IamClient::uploadSigningCertificate(const Upl
  * @param  q  Pointer to this object's public IamClient instance.
  */
 IamClientPrivate::IamClientPrivate(IamClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IAM

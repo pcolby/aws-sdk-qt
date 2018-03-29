@@ -66,10 +66,10 @@ bool CreateTopicRequest::isValid() const
  *
  * @return An CreateTopicResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTopicResponse(*this, reply);
 }

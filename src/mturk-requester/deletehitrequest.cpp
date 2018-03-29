@@ -66,10 +66,10 @@ bool DeleteHITRequest::isValid() const
  *
  * @return An DeleteHITResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteHITResponse(*this, reply);
 }

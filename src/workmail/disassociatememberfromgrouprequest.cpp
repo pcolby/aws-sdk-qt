@@ -66,10 +66,10 @@ bool DisassociateMemberFromGroupRequest::isValid() const
  *
  * @return An DisassociateMemberFromGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateMemberFromGroupResponse(*this, reply);
 }

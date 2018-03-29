@@ -36,7 +36,7 @@ namespace ConfigService {
  * @param  action  The ConfigService action to request.
  */
 ConfigServiceClientRequest::ConfigServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new ConfigServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ConfigServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ConfigServiceClientRequest::ConfigServiceClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ConfigServiceClientRequest::ConfigServiceClientRequest(const ConfigServiceClientRequest &other)
-    : AwsAbstractRequest(new ConfigServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ConfigServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ConfigServiceClientRequest& ConfigServiceClientRequest::operator=(const ConfigSe
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ConfigServiceClientRequest::ConfigServiceClientRequest(ConfigServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ConfigServiceClientRequest::ConfigServiceClientRequest(ConfigServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ConfigServiceClientRequest::operator==(const ConfigServiceClientRequest &ot
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ConfigServiceClientRequest::unsignedRequest(const QUrl &endpoint
  * @param  q       Pointer to this object's public ConfigServiceClientRequest instance.
  */
 ConfigServiceClientRequestPrivate::ConfigServiceClientRequestPrivate(const ConfigServiceClientRequest::Action action, ConfigServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ConfigServiceClientRequestPrivate::ConfigServiceClientRequestPrivate(const Confi
  */
 ConfigServiceClientRequestPrivate::ConfigServiceClientRequestPrivate(const ConfigServiceClientRequestPrivate &other,
                                      ConfigServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

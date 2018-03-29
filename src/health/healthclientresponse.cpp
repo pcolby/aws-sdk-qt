@@ -40,7 +40,7 @@ namespace Health {
  * @param  parent   This object's parent.
  */
 HealthClientResponse::HealthClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new HealthClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new HealthClientResponsePrivate(this), parent)
 {
 
 }

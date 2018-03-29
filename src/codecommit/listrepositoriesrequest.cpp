@@ -66,10 +66,10 @@ bool ListRepositoriesRequest::isValid() const
  *
  * @return An ListRepositoriesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * ListRepositoriesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRepositoriesRequest::response(QNetworkReply * const reply) const
 {
     return new ListRepositoriesResponse(*this, reply);
 }

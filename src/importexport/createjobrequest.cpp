@@ -66,10 +66,10 @@ bool CreateJobRequest::isValid() const
  *
  * @return An CreateJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ImportExportClient::send
  */
-AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * const reply) const
 {
     return new CreateJobResponse(*this, reply);
 }

@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace CloudDirectory {
@@ -156,18 +156,18 @@ class UpgradeAppliedSchemaResponse;
 class UpgradePublishedSchemaRequest;
 class UpgradePublishedSchemaResponse;
 
-class QTAWS_EXPORT CloudDirectoryClient : public AwsAbstractClient {
+class QTAWS_EXPORT CloudDirectoryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     CloudDirectoryClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     CloudDirectoryClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

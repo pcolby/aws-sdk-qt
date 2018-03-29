@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace AppStream {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class AppStreamClientRequestPrivate;
 
-class QTAWS_EXPORT AppStreamClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT AppStreamClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppStream.

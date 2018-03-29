@@ -40,7 +40,7 @@ namespace Lightsail {
  * @param  parent   This object's parent.
  */
 LightsailClientResponse::LightsailClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new LightsailClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new LightsailClientResponsePrivate(this), parent)
 {
 
 }

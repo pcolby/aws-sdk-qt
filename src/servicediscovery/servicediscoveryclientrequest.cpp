@@ -36,7 +36,7 @@ namespace ServiceDiscovery {
  * @param  action  The ServiceDiscovery action to request.
  */
 ServiceDiscoveryClientRequest::ServiceDiscoveryClientRequest(const Action action)
-    : AwsAbstractRequest(new ServiceDiscoveryClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ServiceDiscoveryClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ServiceDiscoveryClientRequest::ServiceDiscoveryClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 ServiceDiscoveryClientRequest::ServiceDiscoveryClientRequest(const ServiceDiscoveryClientRequest &other)
-    : AwsAbstractRequest(new ServiceDiscoveryClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ServiceDiscoveryClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ServiceDiscoveryClientRequest& ServiceDiscoveryClientRequest::operator=(const Se
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ServiceDiscoveryClientRequest::ServiceDiscoveryClientRequest(ServiceDiscoveryClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ServiceDiscoveryClientRequest::ServiceDiscoveryClientRequest(ServiceDiscoveryClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ServiceDiscoveryClientRequest::operator==(const ServiceDiscoveryClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ServiceDiscoveryClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public ServiceDiscoveryClientRequest instance.
  */
 ServiceDiscoveryClientRequestPrivate::ServiceDiscoveryClientRequestPrivate(const ServiceDiscoveryClientRequest::Action action, ServiceDiscoveryClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ServiceDiscoveryClientRequestPrivate::ServiceDiscoveryClientRequestPrivate(const
  */
 ServiceDiscoveryClientRequestPrivate::ServiceDiscoveryClientRequestPrivate(const ServiceDiscoveryClientRequestPrivate &other,
                                      ServiceDiscoveryClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

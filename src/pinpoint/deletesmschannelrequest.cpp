@@ -66,10 +66,10 @@ bool DeleteSmsChannelRequest::isValid() const
  *
  * @return An DeleteSmsChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteSmsChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSmsChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSmsChannelResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteOptionGroupRequest::isValid() const
  *
  * @return An DeleteOptionGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteOptionGroupResponse(*this, reply);
 }

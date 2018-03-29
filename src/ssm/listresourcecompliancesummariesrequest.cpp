@@ -66,10 +66,10 @@ bool ListResourceComplianceSummariesRequest::isValid() const
  *
  * @return An ListResourceComplianceSummariesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListResourceComplianceSummariesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourceComplianceSummariesRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourceComplianceSummariesResponse(*this, reply);
 }

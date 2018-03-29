@@ -66,10 +66,10 @@ bool RemoveFacetFromObjectRequest::isValid() const
  *
  * @return An RemoveFacetFromObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * RemoveFacetFromObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveFacetFromObjectRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveFacetFromObjectResponse(*this, reply);
 }

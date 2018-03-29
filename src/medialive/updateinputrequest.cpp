@@ -66,10 +66,10 @@ bool UpdateInputRequest::isValid() const
  *
  * @return An UpdateInputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateInputResponse(*this, reply);
 }

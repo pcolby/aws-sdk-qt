@@ -66,10 +66,10 @@ bool GetClusterCredentialsRequest::isValid() const
  *
  * @return An GetClusterCredentialsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * GetClusterCredentialsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetClusterCredentialsRequest::response(QNetworkReply * const reply) const
 {
     return new GetClusterCredentialsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetRegexPatternSetRequest::isValid() const
  *
  * @return An GetRegexPatternSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * GetRegexPatternSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRegexPatternSetRequest::response(QNetworkReply * const reply) const
 {
     return new GetRegexPatternSetResponse(*this, reply);
 }

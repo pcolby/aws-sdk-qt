@@ -75,10 +75,10 @@ namespace MarketplaceMetering {
  */
 MarketplaceMeteringClient::MarketplaceMeteringClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
 {
     Q_D(MarketplaceMeteringClient);
     d->apiVersion = QStringLiteral("2016-01-14");
@@ -108,10 +108,10 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
  */
 MarketplaceMeteringClient::MarketplaceMeteringClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
 {
     Q_D(MarketplaceMeteringClient);
     d->apiVersion = QStringLiteral("2016-01-14");
@@ -200,9 +200,9 @@ ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const Resol
  * @param  q  Pointer to this object's public MarketplaceMeteringClient instance.
  */
 MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MarketplaceMetering

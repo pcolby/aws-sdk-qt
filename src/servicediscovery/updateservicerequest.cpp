@@ -66,10 +66,10 @@ bool UpdateServiceRequest::isValid() const
  *
  * @return An UpdateServiceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateServiceResponse(*this, reply);
 }

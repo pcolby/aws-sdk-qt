@@ -66,10 +66,10 @@ bool CopyDBClusterSnapshotRequest::isValid() const
  *
  * @return An CopyDBClusterSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CopyDBClusterSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyDBClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new CopyDBClusterSnapshotResponse(*this, reply);
 }

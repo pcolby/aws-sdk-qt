@@ -66,10 +66,10 @@ bool SendRawEmailRequest::isValid() const
  *
  * @return An SendRawEmailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * SendRawEmailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendRawEmailRequest::response(QNetworkReply * const reply) const
 {
     return new SendRawEmailResponse(*this, reply);
 }

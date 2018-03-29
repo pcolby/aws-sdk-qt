@@ -66,10 +66,10 @@ bool DescribeDBLogFilesRequest::isValid() const
  *
  * @return An DescribeDBLogFilesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBLogFilesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeUsersRequest::isValid() const
  *
  * @return An DescribeUsersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DescribeUsersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeUsersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeUsersResponse(*this, reply);
 }

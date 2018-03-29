@@ -66,10 +66,10 @@ bool ModifyVpcTenancyRequest::isValid() const
  *
  * @return An ModifyVpcTenancyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyVpcTenancyResponse(*this, reply);
 }

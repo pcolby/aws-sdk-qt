@@ -66,10 +66,10 @@ bool ModifyDBSubnetGroupRequest::isValid() const
  *
  * @return An ModifyDBSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDBSubnetGroupResponse(*this, reply);
 }

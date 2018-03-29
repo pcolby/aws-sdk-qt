@@ -66,10 +66,10 @@ bool AssignInstanceRequest::isValid() const
  *
  * @return An AssignInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * AssignInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssignInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new AssignInstanceResponse(*this, reply);
 }

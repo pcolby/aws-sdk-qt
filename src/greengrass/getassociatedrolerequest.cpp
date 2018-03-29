@@ -66,10 +66,10 @@ bool GetAssociatedRoleRequest::isValid() const
  *
  * @return An GetAssociatedRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkReply * const reply) const
 {
     return new GetAssociatedRoleResponse(*this, reply);
 }

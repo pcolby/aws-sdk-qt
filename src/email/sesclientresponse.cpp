@@ -40,7 +40,7 @@ namespace SES {
  * @param  parent   This object's parent.
  */
 SesClientResponse::SesClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SesClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SesClientResponsePrivate(this), parent)
 {
 
 }

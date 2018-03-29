@@ -66,10 +66,10 @@ bool DefineIndexFieldRequest::isValid() const
  *
  * @return An DefineIndexFieldResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkReply * const reply) const
 {
     return new DefineIndexFieldResponse(*this, reply);
 }

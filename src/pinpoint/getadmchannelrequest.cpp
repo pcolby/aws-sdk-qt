@@ -66,10 +66,10 @@ bool GetAdmChannelRequest::isValid() const
  *
  * @return An GetAdmChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply * const reply) const
 {
     return new GetAdmChannelResponse(*this, reply);
 }

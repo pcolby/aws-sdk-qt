@@ -66,10 +66,10 @@ bool UpdateFacetRequest::isValid() const
  *
  * @return An UpdateFacetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFacetResponse(*this, reply);
 }

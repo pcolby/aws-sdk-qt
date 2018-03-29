@@ -66,10 +66,10 @@ bool DisableEnhancedMonitoringRequest::isValid() const
  *
  * @return An DisableEnhancedMonitoringResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * DisableEnhancedMonitoringRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableEnhancedMonitoringRequest::response(QNetworkReply * const reply) const
 {
     return new DisableEnhancedMonitoringResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool AssociateServiceRoleToAccountRequest::isValid() const
  *
  * @return An AssociateServiceRoleToAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * AssociateServiceRoleToAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateServiceRoleToAccountResponse(*this, reply);
 }

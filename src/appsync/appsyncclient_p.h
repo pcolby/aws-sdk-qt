@@ -29,7 +29,7 @@ namespace AppSync {
 
 class AppSyncClient;
 
-class QTAWS_EXPORT AppSyncClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT AppSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppSyncClientPrivate(AppSyncClient * const q);

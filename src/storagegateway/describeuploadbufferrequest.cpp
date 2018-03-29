@@ -66,10 +66,10 @@ bool DescribeUploadBufferRequest::isValid() const
  *
  * @return An DescribeUploadBufferResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeUploadBufferRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeUploadBufferRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeUploadBufferResponse(*this, reply);
 }

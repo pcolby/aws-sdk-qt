@@ -66,10 +66,10 @@ bool PurchaseProvisionedCapacityRequest::isValid() const
  *
  * @return An PurchaseProvisionedCapacityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * PurchaseProvisionedCapacityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PurchaseProvisionedCapacityRequest::response(QNetworkReply * const reply) const
 {
     return new PurchaseProvisionedCapacityResponse(*this, reply);
 }

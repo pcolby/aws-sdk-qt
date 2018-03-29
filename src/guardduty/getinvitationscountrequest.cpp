@@ -66,10 +66,10 @@ bool GetInvitationsCountRequest::isValid() const
  *
  * @return An GetInvitationsCountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * GetInvitationsCountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetworkReply * const reply) const
 {
     return new GetInvitationsCountResponse(*this, reply);
 }

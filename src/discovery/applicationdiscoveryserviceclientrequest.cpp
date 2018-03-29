@@ -36,7 +36,7 @@ namespace ApplicationDiscoveryService {
  * @param  action  The ApplicationDiscoveryService action to request.
  */
 ApplicationDiscoveryServiceClientRequest::ApplicationDiscoveryServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new ApplicationDiscoveryServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ApplicationDiscoveryServiceClientRequest::ApplicationDiscoveryServiceClientReque
  * @param  other  Instance to copy.
  */
 ApplicationDiscoveryServiceClientRequest::ApplicationDiscoveryServiceClientRequest(const ApplicationDiscoveryServiceClientRequest &other)
-    : AwsAbstractRequest(new ApplicationDiscoveryServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ApplicationDiscoveryServiceClientRequest& ApplicationDiscoveryServiceClientReque
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ApplicationDiscoveryServiceClientRequest::ApplicationDiscoveryServiceClientRequest(ApplicationDiscoveryServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ApplicationDiscoveryServiceClientRequest::ApplicationDiscoveryServiceClientRequest(ApplicationDiscoveryServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ApplicationDiscoveryServiceClientRequest::operator==(const ApplicationDisco
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ApplicationDiscoveryServiceClientRequest::unsignedRequest(const 
  * @param  q       Pointer to this object's public ApplicationDiscoveryServiceClientRequest instance.
  */
 ApplicationDiscoveryServiceClientRequestPrivate::ApplicationDiscoveryServiceClientRequestPrivate(const ApplicationDiscoveryServiceClientRequest::Action action, ApplicationDiscoveryServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ApplicationDiscoveryServiceClientRequestPrivate::ApplicationDiscoveryServiceClie
  */
 ApplicationDiscoveryServiceClientRequestPrivate::ApplicationDiscoveryServiceClientRequestPrivate(const ApplicationDiscoveryServiceClientRequestPrivate &other,
                                      ApplicationDiscoveryServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

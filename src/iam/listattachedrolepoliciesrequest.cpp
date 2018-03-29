@@ -66,10 +66,10 @@ bool ListAttachedRolePoliciesRequest::isValid() const
  *
  * @return An ListAttachedRolePoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListAttachedRolePoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAttachedRolePoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new ListAttachedRolePoliciesResponse(*this, reply);
 }

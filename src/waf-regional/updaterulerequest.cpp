@@ -66,10 +66,10 @@ bool UpdateRuleRequest::isValid() const
  *
  * @return An UpdateRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * UpdateRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRuleRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRuleResponse(*this, reply);
 }

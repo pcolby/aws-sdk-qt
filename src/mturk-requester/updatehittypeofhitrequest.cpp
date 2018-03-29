@@ -66,10 +66,10 @@ bool UpdateHITTypeOfHITRequest::isValid() const
  *
  * @return An UpdateHITTypeOfHITResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateHITTypeOfHITResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace Lambda {
  * @param  parent   This object's parent.
  */
 LambdaClientResponse::LambdaClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new LambdaClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new LambdaClientResponsePrivate(this), parent)
 {
 
 }

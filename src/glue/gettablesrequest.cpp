@@ -66,10 +66,10 @@ bool GetTablesRequest::isValid() const
  *
  * @return An GetTablesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetTablesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTablesRequest::response(QNetworkReply * const reply) const
 {
     return new GetTablesResponse(*this, reply);
 }

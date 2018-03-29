@@ -66,10 +66,10 @@ bool DescribeAutomationExecutionsRequest::isValid() const
  *
  * @return An DescribeAutomationExecutionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeAutomationExecutionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAutomationExecutionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAutomationExecutionsResponse(*this, reply);
 }

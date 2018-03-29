@@ -66,10 +66,10 @@ bool AdminForgetDeviceRequest::isValid() const
  *
  * @return An AdminForgetDeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkReply * const reply) const
 {
     return new AdminForgetDeviceResponse(*this, reply);
 }

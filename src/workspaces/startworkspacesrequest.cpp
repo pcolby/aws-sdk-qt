@@ -66,10 +66,10 @@ bool StartWorkspacesRequest::isValid() const
  *
  * @return An StartWorkspacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkSpacesClient::send
  */
-AwsAbstractResponse * StartWorkspacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartWorkspacesRequest::response(QNetworkReply * const reply) const
 {
     return new StartWorkspacesResponse(*this, reply);
 }

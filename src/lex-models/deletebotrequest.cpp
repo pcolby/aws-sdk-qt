@@ -66,10 +66,10 @@ bool DeleteBotRequest::isValid() const
  *
  * @return An DeleteBotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * DeleteBotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBotRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBotResponse(*this, reply);
 }

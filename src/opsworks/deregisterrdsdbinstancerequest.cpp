@@ -66,10 +66,10 @@ bool DeregisterRdsDbInstanceRequest::isValid() const
  *
  * @return An DeregisterRdsDbInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterRdsDbInstanceResponse(*this, reply);
 }

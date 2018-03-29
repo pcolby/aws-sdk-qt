@@ -83,10 +83,10 @@ namespace Glacier {
  */
 GlacierClient::GlacierClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GlacierClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GlacierClientPrivate(this), parent)
 {
     Q_D(GlacierClient);
     d->apiVersion = QStringLiteral("2012-06-01");
@@ -116,10 +116,10 @@ GlacierClient::GlacierClient(
  */
 GlacierClient::GlacierClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GlacierClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GlacierClientPrivate(this), parent)
 {
     Q_D(GlacierClient);
     d->apiVersion = QStringLiteral("2012-06-01");
@@ -1339,9 +1339,9 @@ UploadMultipartPartResponse * GlacierClient::uploadMultipartPart(const UploadMul
  * @param  q  Pointer to this object's public GlacierClient instance.
  */
 GlacierClientPrivate::GlacierClientPrivate(GlacierClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Glacier

@@ -40,7 +40,7 @@ namespace ServiceCatalog {
  * @param  parent   This object's parent.
  */
 ServiceCatalogClientResponse::ServiceCatalogClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ServiceCatalogClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ServiceCatalogClientResponsePrivate(this), parent)
 {
 
 }

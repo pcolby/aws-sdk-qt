@@ -28,7 +28,7 @@ namespace Organizations {
 
 class OrganizationsClientRequest;
 
-class QTAWS_EXPORT OrganizationsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT OrganizationsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     OrganizationsClientRequest::Action action; ///< Organizations action to be performed.

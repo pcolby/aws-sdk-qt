@@ -66,10 +66,10 @@ bool StopCrawlerScheduleRequest::isValid() const
  *
  * @return An StopCrawlerScheduleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * StopCrawlerScheduleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopCrawlerScheduleRequest::response(QNetworkReply * const reply) const
 {
     return new StopCrawlerScheduleResponse(*this, reply);
 }

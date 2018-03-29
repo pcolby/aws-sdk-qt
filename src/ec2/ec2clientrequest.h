@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace EC2 {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class Ec2ClientRequestPrivate;
 
-class QTAWS_EXPORT Ec2ClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT Ec2ClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EC2.

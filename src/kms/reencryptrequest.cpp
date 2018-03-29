@@ -66,10 +66,10 @@ bool ReEncryptRequest::isValid() const
  *
  * @return An ReEncryptResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * const reply) const
 {
     return new ReEncryptResponse(*this, reply);
 }

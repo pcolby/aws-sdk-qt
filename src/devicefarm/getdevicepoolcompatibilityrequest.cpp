@@ -66,10 +66,10 @@ bool GetDevicePoolCompatibilityRequest::isValid() const
  *
  * @return An GetDevicePoolCompatibilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(QNetworkReply * const reply) const
 {
     return new GetDevicePoolCompatibilityResponse(*this, reply);
 }

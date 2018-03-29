@@ -66,10 +66,10 @@ bool GetParameterRequest::isValid() const
  *
  * @return An GetParameterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetParameterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetParameterRequest::response(QNetworkReply * const reply) const
 {
     return new GetParameterResponse(*this, reply);
 }

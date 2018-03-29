@@ -40,7 +40,7 @@ namespace SageMakerRuntime {
  * @param  parent   This object's parent.
  */
 SageMakerRuntimeClientResponse::SageMakerRuntimeClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SageMakerRuntimeClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SageMakerRuntimeClientResponsePrivate(this), parent)
 {
 
 }

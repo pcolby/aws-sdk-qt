@@ -66,10 +66,10 @@ bool CreateExportTaskRequest::isValid() const
  *
  * @return An CreateExportTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * CreateExportTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateExportTaskRequest::response(QNetworkReply * const reply) const
 {
     return new CreateExportTaskResponse(*this, reply);
 }

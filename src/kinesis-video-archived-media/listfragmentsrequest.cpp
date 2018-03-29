@@ -66,10 +66,10 @@ bool ListFragmentsRequest::isValid() const
  *
  * @return An ListFragmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisVideoArchivedMediaClient::send
  */
-AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListFragmentsResponse(*this, reply);
 }

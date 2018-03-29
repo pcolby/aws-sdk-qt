@@ -66,10 +66,10 @@ bool CreateClusterSecurityGroupRequest::isValid() const
  *
  * @return An CreateClusterSecurityGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * CreateClusterSecurityGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateClusterSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateClusterSecurityGroupResponse(*this, reply);
 }

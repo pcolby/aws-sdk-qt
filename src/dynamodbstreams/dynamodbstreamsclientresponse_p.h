@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 
 class DynamoDBStreamsClientResponse;
 
-class QTAWS_EXPORT DynamoDBStreamsClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT DynamoDBStreamsClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

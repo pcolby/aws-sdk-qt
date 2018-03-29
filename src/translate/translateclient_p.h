@@ -29,7 +29,7 @@ namespace Translate {
 
 class TranslateClient;
 
-class QTAWS_EXPORT TranslateClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT TranslateClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     TranslateClientPrivate(TranslateClient * const q);

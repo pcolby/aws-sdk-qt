@@ -66,10 +66,10 @@ bool ModifyIdFormatRequest::isValid() const
  *
  * @return An ModifyIdFormatResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyIdFormatResponse(*this, reply);
 }

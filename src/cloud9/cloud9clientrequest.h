@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Cloud9 {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class Cloud9ClientRequestPrivate;
 
-class QTAWS_EXPORT Cloud9ClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT Cloud9ClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Cloud9.

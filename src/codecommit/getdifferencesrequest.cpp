@@ -66,10 +66,10 @@ bool GetDifferencesRequest::isValid() const
  *
  * @return An GetDifferencesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetDifferencesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDifferencesRequest::response(QNetworkReply * const reply) const
 {
     return new GetDifferencesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeProductRequest::isValid() const
  *
  * @return An DescribeProductResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DescribeProductRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeProductRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeProductResponse(*this, reply);
 }

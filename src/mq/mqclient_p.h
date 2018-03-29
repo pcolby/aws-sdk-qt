@@ -29,7 +29,7 @@ namespace MQ {
 
 class MqClient;
 
-class QTAWS_EXPORT MqClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT MqClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MqClientPrivate(MqClient * const q);

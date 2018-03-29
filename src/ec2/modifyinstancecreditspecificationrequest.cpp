@@ -66,10 +66,10 @@ bool ModifyInstanceCreditSpecificationRequest::isValid() const
  *
  * @return An ModifyInstanceCreditSpecificationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyInstanceCreditSpecificationResponse(*this, reply);
 }

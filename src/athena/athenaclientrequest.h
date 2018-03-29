@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Athena {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class AthenaClientRequestPrivate;
 
-class QTAWS_EXPORT AthenaClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT AthenaClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Athena.

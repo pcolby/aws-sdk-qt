@@ -66,10 +66,10 @@ bool DownloadDefaultKeyPairRequest::isValid() const
  *
  * @return An DownloadDefaultKeyPairResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * DownloadDefaultKeyPairRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DownloadDefaultKeyPairRequest::response(QNetworkReply * const reply) const
 {
     return new DownloadDefaultKeyPairResponse(*this, reply);
 }

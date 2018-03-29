@@ -66,10 +66,10 @@ bool DescribeFleetAttributesRequest::isValid() const
  *
  * @return An DescribeFleetAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeFleetAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeFleetAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeFleetAttributesResponse(*this, reply);
 }

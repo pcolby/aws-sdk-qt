@@ -66,10 +66,10 @@ bool GetSubscriptionStateRequest::isValid() const
  *
  * @return An GetSubscriptionStateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetworkReply * const reply) const
 {
     return new GetSubscriptionStateResponse(*this, reply);
 }

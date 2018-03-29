@@ -66,10 +66,10 @@ bool UpdateLayerRequest::isValid() const
  *
  * @return An UpdateLayerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * UpdateLayerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateLayerRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateLayerResponse(*this, reply);
 }

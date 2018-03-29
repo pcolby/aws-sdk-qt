@@ -66,10 +66,10 @@ bool GenerateDataKeyRequest::isValid() const
  *
  * @return An GenerateDataKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkReply * const reply) const
 {
     return new GenerateDataKeyResponse(*this, reply);
 }

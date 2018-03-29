@@ -66,10 +66,10 @@ bool GetUserAttributeVerificationCodeRequest::isValid() const
  *
  * @return An GetUserAttributeVerificationCodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::response(QNetworkReply * const reply) const
 {
     return new GetUserAttributeVerificationCodeResponse(*this, reply);
 }

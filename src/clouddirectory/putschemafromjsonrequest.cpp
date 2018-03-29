@@ -66,10 +66,10 @@ bool PutSchemaFromJsonRequest::isValid() const
  *
  * @return An PutSchemaFromJsonResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkReply * const reply) const
 {
     return new PutSchemaFromJsonResponse(*this, reply);
 }

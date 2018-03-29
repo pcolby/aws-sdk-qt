@@ -66,10 +66,10 @@ bool DeleteComputeEnvironmentRequest::isValid() const
  *
  * @return An DeleteComputeEnvironmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteComputeEnvironmentResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool BatchPutAttributesRequest::isValid() const
  *
  * @return An BatchPutAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new BatchPutAttributesResponse(*this, reply);
 }

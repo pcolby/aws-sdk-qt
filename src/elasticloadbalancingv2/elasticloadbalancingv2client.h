@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {
@@ -100,18 +100,18 @@ class SetSecurityGroupsResponse;
 class SetSubnetsRequest;
 class SetSubnetsResponse;
 
-class QTAWS_EXPORT ElasticLoadBalancingv2Client : public AwsAbstractClient {
+class QTAWS_EXPORT ElasticLoadBalancingv2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     ElasticLoadBalancingv2Client(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     ElasticLoadBalancingv2Client(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

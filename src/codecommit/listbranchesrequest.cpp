@@ -66,10 +66,10 @@ bool ListBranchesRequest::isValid() const
  *
  * @return An ListBranchesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * ListBranchesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBranchesRequest::response(QNetworkReply * const reply) const
 {
     return new ListBranchesResponse(*this, reply);
 }

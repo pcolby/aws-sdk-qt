@@ -66,10 +66,10 @@ bool ModifyEndpointRequest::isValid() const
  *
  * @return An ModifyEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * ModifyEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyEndpointResponse(*this, reply);
 }

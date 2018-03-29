@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ElastiCache {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ElastiCacheClientRequestPrivate;
 
-class QTAWS_EXPORT ElastiCacheClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ElastiCacheClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElastiCache.

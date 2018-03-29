@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace WorkSpaces {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class WorkSpacesClientRequestPrivate;
 
-class QTAWS_EXPORT WorkSpacesClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT WorkSpacesClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WorkSpaces.

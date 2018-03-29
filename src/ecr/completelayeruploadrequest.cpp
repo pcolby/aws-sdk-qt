@@ -66,10 +66,10 @@ bool CompleteLayerUploadRequest::isValid() const
  *
  * @return An CompleteLayerUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetworkReply * const reply) const
 {
     return new CompleteLayerUploadResponse(*this, reply);
 }

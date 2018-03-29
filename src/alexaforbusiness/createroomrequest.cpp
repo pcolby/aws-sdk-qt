@@ -66,10 +66,10 @@ bool CreateRoomRequest::isValid() const
  *
  * @return An CreateRoomResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * CreateRoomRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRoomRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRoomResponse(*this, reply);
 }

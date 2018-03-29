@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SWF {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SwfClientRequestPrivate;
 
-class QTAWS_EXPORT SwfClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SwfClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SWF.

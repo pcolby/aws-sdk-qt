@@ -66,10 +66,10 @@ bool DeleteAuthorizerRequest::isValid() const
  *
  * @return An DeleteAuthorizerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAuthorizerResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool VerifySoftwareTokenRequest::isValid() const
  *
  * @return An VerifySoftwareTokenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetworkReply * const reply) const
 {
     return new VerifySoftwareTokenResponse(*this, reply);
 }

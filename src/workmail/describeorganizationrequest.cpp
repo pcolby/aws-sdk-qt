@@ -66,10 +66,10 @@ bool DescribeOrganizationRequest::isValid() const
  *
  * @return An DescribeOrganizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * DescribeOrganizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeOrganizationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeOrganizationResponse(*this, reply);
 }

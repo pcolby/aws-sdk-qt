@@ -66,10 +66,10 @@ bool DescribeVirtualInterfacesRequest::isValid() const
  *
  * @return An DescribeVirtualInterfacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DescribeVirtualInterfacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVirtualInterfacesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVirtualInterfacesResponse(*this, reply);
 }

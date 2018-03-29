@@ -66,10 +66,10 @@ bool DescribeVpcsRequest::isValid() const
  *
  * @return An DescribeVpcsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeVpcsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVpcsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVpcsResponse(*this, reply);
 }

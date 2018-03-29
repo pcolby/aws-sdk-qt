@@ -66,10 +66,10 @@ bool ValidateConfigurationSettingsRequest::isValid() const
  *
  * @return An ValidateConfigurationSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * ValidateConfigurationSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ValidateConfigurationSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new ValidateConfigurationSettingsResponse(*this, reply);
 }

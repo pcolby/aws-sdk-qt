@@ -40,7 +40,7 @@ namespace EFS {
  * @param  parent   This object's parent.
  */
 EfsClientResponse::EfsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new EfsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new EfsClientResponsePrivate(this), parent)
 {
 
 }

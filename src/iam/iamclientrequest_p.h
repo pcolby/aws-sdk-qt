@@ -28,7 +28,7 @@ namespace IAM {
 
 class IamClientRequest;
 
-class QTAWS_EXPORT IamClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT IamClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IamClientRequest::Action action; ///< IAM action to be performed.

@@ -28,7 +28,7 @@ namespace SFN {
 
 class SfnClientResponse;
 
-class QTAWS_EXPORT SfnClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT SfnClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

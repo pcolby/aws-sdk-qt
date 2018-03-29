@@ -66,10 +66,10 @@ bool AttachVolumeRequest::isValid() const
  *
  * @return An AttachVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new AttachVolumeResponse(*this, reply);
 }

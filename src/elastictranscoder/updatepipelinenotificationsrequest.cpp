@@ -66,10 +66,10 @@ bool UpdatePipelineNotificationsRequest::isValid() const
  *
  * @return An UpdatePipelineNotificationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticTranscoderClient::send
  */
-AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePipelineNotificationsResponse(*this, reply);
 }

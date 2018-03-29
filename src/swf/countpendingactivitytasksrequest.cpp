@@ -66,10 +66,10 @@ bool CountPendingActivityTasksRequest::isValid() const
  *
  * @return An CountPendingActivityTasksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * CountPendingActivityTasksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QNetworkReply * const reply) const
 {
     return new CountPendingActivityTasksResponse(*this, reply);
 }

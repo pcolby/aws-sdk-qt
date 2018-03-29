@@ -66,10 +66,10 @@ bool DescribeParametersRequest::isValid() const
  *
  * @return An DescribeParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeParametersResponse(*this, reply);
 }

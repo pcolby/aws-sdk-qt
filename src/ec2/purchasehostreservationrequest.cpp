@@ -66,10 +66,10 @@ bool PurchaseHostReservationRequest::isValid() const
  *
  * @return An PurchaseHostReservationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * PurchaseHostReservationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNetworkReply * const reply) const
 {
     return new PurchaseHostReservationResponse(*this, reply);
 }

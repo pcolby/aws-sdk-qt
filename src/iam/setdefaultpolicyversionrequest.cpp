@@ -66,10 +66,10 @@ bool SetDefaultPolicyVersionRequest::isValid() const
  *
  * @return An SetDefaultPolicyVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNetworkReply * const reply) const
 {
     return new SetDefaultPolicyVersionResponse(*this, reply);
 }

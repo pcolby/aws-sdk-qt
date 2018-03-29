@@ -66,10 +66,10 @@ bool SetUICustomizationRequest::isValid() const
  *
  * @return An SetUICustomizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * SetUICustomizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetUICustomizationRequest::response(QNetworkReply * const reply) const
 {
     return new SetUICustomizationResponse(*this, reply);
 }

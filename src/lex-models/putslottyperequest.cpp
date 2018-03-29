@@ -66,10 +66,10 @@ bool PutSlotTypeRequest::isValid() const
  *
  * @return An PutSlotTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * const reply) const
 {
     return new PutSlotTypeResponse(*this, reply);
 }

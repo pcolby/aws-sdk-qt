@@ -40,7 +40,7 @@ namespace Route53 {
  * @param  parent   This object's parent.
  */
 Route53ClientResponse::Route53ClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new Route53ClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new Route53ClientResponsePrivate(this), parent)
 {
 
 }

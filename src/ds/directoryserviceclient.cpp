@@ -59,10 +59,10 @@ namespace DirectoryService {
  */
 DirectoryServiceClient::DirectoryServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
 {
     Q_D(DirectoryServiceClient);
     d->apiVersion = QStringLiteral("2015-04-16");
@@ -92,10 +92,10 @@ DirectoryServiceClient::DirectoryServiceClient(
  */
 DirectoryServiceClient::DirectoryServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
 {
     Q_D(DirectoryServiceClient);
     d->apiVersion = QStringLiteral("2015-04-16");
@@ -803,9 +803,9 @@ VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustReque
  * @param  q  Pointer to this object's public DirectoryServiceClient instance.
  */
 DirectoryServiceClientPrivate::DirectoryServiceClientPrivate(DirectoryServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DirectoryService

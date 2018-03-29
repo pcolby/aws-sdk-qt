@@ -66,10 +66,10 @@ bool DescribeComplianceByConfigRuleRequest::isValid() const
  *
  * @return An DescribeComplianceByConfigRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DescribeComplianceByConfigRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeComplianceByConfigRuleRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeComplianceByConfigRuleResponse(*this, reply);
 }

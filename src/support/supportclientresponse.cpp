@@ -40,7 +40,7 @@ namespace Support {
  * @param  parent   This object's parent.
  */
 SupportClientResponse::SupportClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SupportClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SupportClientResponsePrivate(this), parent)
 {
 
 }

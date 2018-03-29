@@ -66,10 +66,10 @@ bool DeleteRepositoryRequest::isValid() const
  *
  * @return An DeleteRepositoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRepositoryResponse(*this, reply);
 }

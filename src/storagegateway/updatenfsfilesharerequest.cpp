@@ -66,10 +66,10 @@ bool UpdateNFSFileShareRequest::isValid() const
  *
  * @return An UpdateNFSFileShareResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * UpdateNFSFileShareRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateNFSFileShareRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateNFSFileShareResponse(*this, reply);
 }

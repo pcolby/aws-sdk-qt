@@ -66,10 +66,10 @@ bool EnableMFADeviceRequest::isValid() const
  *
  * @return An EnableMFADeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * EnableMFADeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableMFADeviceRequest::response(QNetworkReply * const reply) const
 {
     return new EnableMFADeviceResponse(*this, reply);
 }

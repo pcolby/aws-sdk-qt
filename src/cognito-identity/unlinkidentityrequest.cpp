@@ -66,10 +66,10 @@ bool UnlinkIdentityRequest::isValid() const
  *
  * @return An UnlinkIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * UnlinkIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnlinkIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new UnlinkIdentityResponse(*this, reply);
 }

@@ -29,7 +29,7 @@ namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClient;
 
-class QTAWS_EXPORT ApplicationDiscoveryServiceClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT ApplicationDiscoveryServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q);

@@ -66,10 +66,10 @@ bool GetSmsChannelRequest::isValid() const
  *
  * @return An GetSmsChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply * const reply) const
 {
     return new GetSmsChannelResponse(*this, reply);
 }

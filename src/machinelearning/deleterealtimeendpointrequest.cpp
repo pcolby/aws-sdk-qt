@@ -66,10 +66,10 @@ bool DeleteRealtimeEndpointRequest::isValid() const
  *
  * @return An DeleteRealtimeEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRealtimeEndpointResponse(*this, reply);
 }

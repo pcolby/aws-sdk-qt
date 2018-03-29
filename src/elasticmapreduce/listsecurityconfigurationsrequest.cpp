@@ -66,10 +66,10 @@ bool ListSecurityConfigurationsRequest::isValid() const
  *
  * @return An ListSecurityConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * ListSecurityConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSecurityConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListSecurityConfigurationsResponse(*this, reply);
 }

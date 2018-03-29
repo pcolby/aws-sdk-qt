@@ -40,7 +40,7 @@ namespace CodeBuild {
  * @param  parent   This object's parent.
  */
 CodeBuildClientResponse::CodeBuildClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CodeBuildClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CodeBuildClientResponsePrivate(this), parent)
 {
 
 }

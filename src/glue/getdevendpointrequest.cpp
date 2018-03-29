@@ -66,10 +66,10 @@ bool GetDevEndpointRequest::isValid() const
  *
  * @return An GetDevEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetDevEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDevEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new GetDevEndpointResponse(*this, reply);
 }

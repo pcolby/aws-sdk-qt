@@ -66,10 +66,10 @@ bool GetTrailStatusRequest::isValid() const
  *
  * @return An GetTrailStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetTrailStatusResponse(*this, reply);
 }

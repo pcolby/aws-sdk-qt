@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class CloudFormationClient;
 
-class QTAWS_EXPORT CloudFormationClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudFormationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudFormationClientPrivate(CloudFormationClient * const q);

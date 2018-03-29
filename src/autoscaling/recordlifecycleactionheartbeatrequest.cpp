@@ -66,10 +66,10 @@ bool RecordLifecycleActionHeartbeatRequest::isValid() const
  *
  * @return An RecordLifecycleActionHeartbeatResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * RecordLifecycleActionHeartbeatRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RecordLifecycleActionHeartbeatRequest::response(QNetworkReply * const reply) const
 {
     return new RecordLifecycleActionHeartbeatResponse(*this, reply);
 }

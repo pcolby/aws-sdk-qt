@@ -66,10 +66,10 @@ bool GetIdentityDkimAttributesRequest::isValid() const
  *
  * @return An GetIdentityDkimAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * GetIdentityDkimAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdentityDkimAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdentityDkimAttributesResponse(*this, reply);
 }

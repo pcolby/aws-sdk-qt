@@ -126,10 +126,10 @@ namespace CodeDeploy {
  */
 CodeDeployClient::CodeDeployClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
 {
     Q_D(CodeDeployClient);
     d->apiVersion = QStringLiteral("2014-10-06");
@@ -159,10 +159,10 @@ CodeDeployClient::CodeDeployClient(
  */
 CodeDeployClient::CodeDeployClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
 {
     Q_D(CodeDeployClient);
     d->apiVersion = QStringLiteral("2014-10-06");
@@ -768,9 +768,9 @@ UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const Up
  * @param  q  Pointer to this object's public CodeDeployClient instance.
  */
 CodeDeployClientPrivate::CodeDeployClientPrivate(CodeDeployClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeDeploy

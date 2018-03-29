@@ -66,10 +66,10 @@ bool DisassociateConnectionFromLagRequest::isValid() const
  *
  * @return An DisassociateConnectionFromLagResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DisassociateConnectionFromLagRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateConnectionFromLagRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateConnectionFromLagResponse(*this, reply);
 }

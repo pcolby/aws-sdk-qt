@@ -66,10 +66,10 @@ bool GetDeviceRequest::isValid() const
  *
  * @return An GetDeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * const reply) const
 {
     return new GetDeviceResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeDatasetRequest::isValid() const
  *
  * @return An DescribeDatasetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDatasetResponse(*this, reply);
 }

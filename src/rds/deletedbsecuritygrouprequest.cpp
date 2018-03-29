@@ -66,10 +66,10 @@ bool DeleteDBSecurityGroupRequest::isValid() const
  *
  * @return An DeleteDBSecurityGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDBSecurityGroupResponse(*this, reply);
 }

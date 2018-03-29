@@ -66,10 +66,10 @@ bool DescribeJobQueuesRequest::isValid() const
  *
  * @return An DescribeJobQueuesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * DescribeJobQueuesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeJobQueuesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeJobQueuesResponse(*this, reply);
 }

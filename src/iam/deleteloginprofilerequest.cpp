@@ -66,10 +66,10 @@ bool DeleteLoginProfileRequest::isValid() const
  *
  * @return An DeleteLoginProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLoginProfileResponse(*this, reply);
 }

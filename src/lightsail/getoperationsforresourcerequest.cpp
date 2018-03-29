@@ -66,10 +66,10 @@ bool GetOperationsForResourceRequest::isValid() const
  *
  * @return An GetOperationsForResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetOperationsForResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetOperationsForResourceRequest::response(QNetworkReply * const reply) const
 {
     return new GetOperationsForResourceResponse(*this, reply);
 }

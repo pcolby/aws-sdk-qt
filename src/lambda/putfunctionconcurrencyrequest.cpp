@@ -66,10 +66,10 @@ bool PutFunctionConcurrencyRequest::isValid() const
  *
  * @return An PutFunctionConcurrencyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
 {
     return new PutFunctionConcurrencyResponse(*this, reply);
 }

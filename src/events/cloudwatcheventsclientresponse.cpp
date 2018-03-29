@@ -40,7 +40,7 @@ namespace CloudWatchEvents {
  * @param  parent   This object's parent.
  */
 CloudWatchEventsClientResponse::CloudWatchEventsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudWatchEventsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudWatchEventsClientResponsePrivate(this), parent)
 {
 
 }

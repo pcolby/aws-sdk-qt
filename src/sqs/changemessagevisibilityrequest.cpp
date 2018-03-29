@@ -66,10 +66,10 @@ bool ChangeMessageVisibilityRequest::isValid() const
  *
  * @return An ChangeMessageVisibilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNetworkReply * const reply) const
 {
     return new ChangeMessageVisibilityResponse(*this, reply);
 }

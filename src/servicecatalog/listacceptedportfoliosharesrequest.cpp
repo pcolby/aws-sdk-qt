@@ -66,10 +66,10 @@ bool ListAcceptedPortfolioSharesRequest::isValid() const
  *
  * @return An ListAcceptedPortfolioSharesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ListAcceptedPortfolioSharesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAcceptedPortfolioSharesRequest::response(QNetworkReply * const reply) const
 {
     return new ListAcceptedPortfolioSharesResponse(*this, reply);
 }

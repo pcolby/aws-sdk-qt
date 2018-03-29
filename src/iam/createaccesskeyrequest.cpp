@@ -66,10 +66,10 @@ bool CreateAccessKeyRequest::isValid() const
  *
  * @return An CreateAccessKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkReply * const reply) const
 {
     return new CreateAccessKeyResponse(*this, reply);
 }

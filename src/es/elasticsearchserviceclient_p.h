@@ -29,7 +29,7 @@ namespace ElasticsearchService {
 
 class ElasticsearchServiceClient;
 
-class QTAWS_EXPORT ElasticsearchServiceClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT ElasticsearchServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q);

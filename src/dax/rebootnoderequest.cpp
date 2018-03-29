@@ -66,10 +66,10 @@ bool RebootNodeRequest::isValid() const
  *
  * @return An RebootNodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * const reply) const
 {
     return new RebootNodeResponse(*this, reply);
 }

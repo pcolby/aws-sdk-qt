@@ -66,10 +66,10 @@ bool StartThingRegistrationTaskRequest::isValid() const
  *
  * @return An StartThingRegistrationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * StartThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new StartThingRegistrationTaskResponse(*this, reply);
 }

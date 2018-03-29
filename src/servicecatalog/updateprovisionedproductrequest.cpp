@@ -66,10 +66,10 @@ bool UpdateProvisionedProductRequest::isValid() const
  *
  * @return An UpdateProvisionedProductResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateProvisionedProductResponse(*this, reply);
 }

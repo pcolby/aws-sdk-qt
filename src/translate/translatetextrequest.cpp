@@ -66,10 +66,10 @@ bool TranslateTextRequest::isValid() const
  *
  * @return An TranslateTextResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  TranslateClient::send
  */
-AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply * const reply) const
 {
     return new TranslateTextResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DisableSsoRequest::isValid() const
  *
  * @return An DisableSsoResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * const reply) const
 {
     return new DisableSsoResponse(*this, reply);
 }

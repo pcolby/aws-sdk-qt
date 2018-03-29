@@ -66,10 +66,10 @@ bool StopRemoteAccessSessionRequest::isValid() const
  *
  * @return An StopRemoteAccessSessionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
     return new StopRemoteAccessSessionResponse(*this, reply);
 }

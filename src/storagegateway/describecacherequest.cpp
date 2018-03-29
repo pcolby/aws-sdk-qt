@@ -66,10 +66,10 @@ bool DescribeCacheRequest::isValid() const
  *
  * @return An DescribeCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCacheResponse(*this, reply);
 }

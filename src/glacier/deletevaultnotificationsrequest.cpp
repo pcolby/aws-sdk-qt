@@ -66,10 +66,10 @@ bool DeleteVaultNotificationsRequest::isValid() const
  *
  * @return An DeleteVaultNotificationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * DeleteVaultNotificationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVaultNotificationsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVaultNotificationsResponse(*this, reply);
 }

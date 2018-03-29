@@ -66,10 +66,10 @@ bool UpdateDomainContactRequest::isValid() const
  *
  * @return An UpdateDomainContactResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * UpdateDomainContactRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDomainContactRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDomainContactResponse(*this, reply);
 }

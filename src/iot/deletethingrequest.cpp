@@ -66,10 +66,10 @@ bool DeleteThingRequest::isValid() const
  *
  * @return An DeleteThingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DeleteThingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteThingRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteThingResponse(*this, reply);
 }

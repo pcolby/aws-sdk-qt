@@ -66,10 +66,10 @@ bool DescribeAccountAttributesRequest::isValid() const
  *
  * @return An DescribeAccountAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * DescribeAccountAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAccountAttributesResponse(*this, reply);
 }

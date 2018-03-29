@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class CloudHSMClientRequest;
 
-class QTAWS_EXPORT CloudHSMClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CloudHSMClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudHSMClientRequest::Action action; ///< CloudHSM action to be performed.

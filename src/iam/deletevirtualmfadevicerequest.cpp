@@ -66,10 +66,10 @@ bool DeleteVirtualMFADeviceRequest::isValid() const
  *
  * @return An DeleteVirtualMFADeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVirtualMFADeviceResponse(*this, reply);
 }

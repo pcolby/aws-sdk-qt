@@ -66,10 +66,10 @@ bool DeleteCustomMetadataRequest::isValid() const
  *
  * @return An DeleteCustomMetadataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DeleteCustomMetadataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCustomMetadataRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCustomMetadataResponse(*this, reply);
 }

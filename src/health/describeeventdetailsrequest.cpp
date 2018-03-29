@@ -66,10 +66,10 @@ bool DescribeEventDetailsRequest::isValid() const
  *
  * @return An DescribeEventDetailsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  HealthClient::send
  */
-AwsAbstractResponse * DescribeEventDetailsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEventDetailsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEventDetailsResponse(*this, reply);
 }

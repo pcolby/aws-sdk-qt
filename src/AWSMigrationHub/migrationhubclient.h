@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace MigrationHub {
@@ -64,18 +64,18 @@ class NotifyMigrationTaskStateResponse;
 class PutResourceAttributesRequest;
 class PutResourceAttributesResponse;
 
-class QTAWS_EXPORT MigrationHubClient : public AwsAbstractClient {
+class QTAWS_EXPORT MigrationHubClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     MigrationHubClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     MigrationHubClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

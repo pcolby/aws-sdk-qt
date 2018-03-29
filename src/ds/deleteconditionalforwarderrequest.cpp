@@ -66,10 +66,10 @@ bool DeleteConditionalForwarderRequest::isValid() const
  *
  * @return An DeleteConditionalForwarderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DeleteConditionalForwarderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConditionalForwarderResponse(*this, reply);
 }

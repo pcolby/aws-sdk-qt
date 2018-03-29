@@ -66,10 +66,10 @@ bool CreatePartitionRequest::isValid() const
  *
  * @return An CreatePartitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * CreatePartitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePartitionRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePartitionResponse(*this, reply);
 }

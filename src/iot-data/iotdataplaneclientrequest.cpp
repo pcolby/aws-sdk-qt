@@ -36,7 +36,7 @@ namespace IoTDataPlane {
  * @param  action  The IoTDataPlane action to request.
  */
 IoTDataPlaneClientRequest::IoTDataPlaneClientRequest(const Action action)
-    : AwsAbstractRequest(new IoTDataPlaneClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IoTDataPlaneClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ IoTDataPlaneClientRequest::IoTDataPlaneClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 IoTDataPlaneClientRequest::IoTDataPlaneClientRequest(const IoTDataPlaneClientRequest &other)
-    : AwsAbstractRequest(new IoTDataPlaneClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IoTDataPlaneClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ IoTDataPlaneClientRequest& IoTDataPlaneClientRequest::operator=(const IoTDataPla
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-IoTDataPlaneClientRequest::IoTDataPlaneClientRequest(IoTDataPlaneClientRequestPrivate * const d) : AwsAbstractRequest(d)
+IoTDataPlaneClientRequest::IoTDataPlaneClientRequest(IoTDataPlaneClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool IoTDataPlaneClientRequest::operator==(const IoTDataPlaneClientRequest &othe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest IoTDataPlaneClientRequest::unsignedRequest(const QUrl &endpoint)
  * @param  q       Pointer to this object's public IoTDataPlaneClientRequest instance.
  */
 IoTDataPlaneClientRequestPrivate::IoTDataPlaneClientRequestPrivate(const IoTDataPlaneClientRequest::Action action, IoTDataPlaneClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ IoTDataPlaneClientRequestPrivate::IoTDataPlaneClientRequestPrivate(const IoTData
  */
 IoTDataPlaneClientRequestPrivate::IoTDataPlaneClientRequestPrivate(const IoTDataPlaneClientRequestPrivate &other,
                                      IoTDataPlaneClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

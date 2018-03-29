@@ -66,10 +66,10 @@ bool GetReservationUtilizationRequest::isValid() const
  *
  * @return An GetReservationUtilizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostExplorerClient::send
  */
-AwsAbstractResponse * GetReservationUtilizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QNetworkReply * const reply) const
 {
     return new GetReservationUtilizationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool RestoreDBInstanceToPointInTimeRequest::isValid() const
  *
  * @return An RestoreDBInstanceToPointInTimeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RestoreDBInstanceToPointInTimeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreDBInstanceToPointInTimeRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreDBInstanceToPointInTimeResponse(*this, reply);
 }

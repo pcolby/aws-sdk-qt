@@ -66,10 +66,10 @@ bool DeleteDeploymentConfigRequest::isValid() const
  *
  * @return An DeleteDeploymentConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * DeleteDeploymentConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDeploymentConfigRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDeploymentConfigResponse(*this, reply);
 }

@@ -46,10 +46,10 @@ namespace Route53Domains {
  */
 Route53DomainsClient::Route53DomainsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Route53DomainsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Route53DomainsClientPrivate(this), parent)
 {
     Q_D(Route53DomainsClient);
     d->apiVersion = QStringLiteral("2014-05-15");
@@ -79,10 +79,10 @@ Route53DomainsClient::Route53DomainsClient(
  */
 Route53DomainsClient::Route53DomainsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new Route53DomainsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Route53DomainsClientPrivate(this), parent)
 {
     Q_D(Route53DomainsClient);
     d->apiVersion = QStringLiteral("2014-05-15");
@@ -563,9 +563,9 @@ ViewBillingResponse * Route53DomainsClient::viewBilling(const ViewBillingRequest
  * @param  q  Pointer to this object's public Route53DomainsClient instance.
  */
 Route53DomainsClientPrivate::Route53DomainsClientPrivate(Route53DomainsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Route53Domains

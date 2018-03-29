@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class CodeStarClientRequest;
 
-class QTAWS_EXPORT CodeStarClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CodeStarClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeStarClientRequest::Action action; ///< CodeStar action to be performed.

@@ -66,10 +66,10 @@ bool UpdateRegexPatternSetRequest::isValid() const
  *
  * @return An UpdateRegexPatternSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRegexPatternSetResponse(*this, reply);
 }

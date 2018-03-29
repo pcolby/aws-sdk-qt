@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DirectoryServiceClientResponse;
 
-class QTAWS_EXPORT DirectoryServiceClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT DirectoryServiceClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

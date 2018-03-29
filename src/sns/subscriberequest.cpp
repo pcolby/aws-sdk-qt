@@ -66,10 +66,10 @@ bool SubscribeRequest::isValid() const
  *
  * @return An SubscribeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * const reply) const
 {
     return new SubscribeResponse(*this, reply);
 }

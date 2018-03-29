@@ -66,10 +66,10 @@ namespace ServerlessApplicationRepository {
  */
 ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
 {
     Q_D(ServerlessApplicationRepositoryClient);
     d->apiVersion = QStringLiteral("2017-09-08");
@@ -99,10 +99,10 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
  */
 ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
 {
     Q_D(ServerlessApplicationRepositoryClient);
     d->apiVersion = QStringLiteral("2017-09-08");
@@ -270,9 +270,9 @@ UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplica
  * @param  q  Pointer to this object's public ServerlessApplicationRepositoryClient instance.
  */
 ServerlessApplicationRepositoryClientPrivate::ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ServerlessApplicationRepository

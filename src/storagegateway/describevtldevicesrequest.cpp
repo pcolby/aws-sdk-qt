@@ -66,10 +66,10 @@ bool DescribeVTLDevicesRequest::isValid() const
  *
  * @return An DescribeVTLDevicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVTLDevicesResponse(*this, reply);
 }

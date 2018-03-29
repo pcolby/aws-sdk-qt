@@ -66,10 +66,10 @@ bool UpdateUserPoolRequest::isValid() const
  *
  * @return An UpdateUserPoolResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * UpdateUserPoolRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateUserPoolRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateUserPoolResponse(*this, reply);
 }

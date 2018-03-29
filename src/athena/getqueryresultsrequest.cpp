@@ -66,10 +66,10 @@ bool GetQueryResultsRequest::isValid() const
  *
  * @return An GetQueryResultsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * GetQueryResultsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetQueryResultsRequest::response(QNetworkReply * const reply) const
 {
     return new GetQueryResultsResponse(*this, reply);
 }

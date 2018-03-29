@@ -66,10 +66,10 @@ bool ReorderReceiptRuleSetRequest::isValid() const
  *
  * @return An ReorderReceiptRuleSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
     return new ReorderReceiptRuleSetResponse(*this, reply);
 }

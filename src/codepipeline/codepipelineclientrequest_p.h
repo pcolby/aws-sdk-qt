@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class CodePipelineClientRequest;
 
-class QTAWS_EXPORT CodePipelineClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CodePipelineClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodePipelineClientRequest::Action action; ///< CodePipeline action to be performed.

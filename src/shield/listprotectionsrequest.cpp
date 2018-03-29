@@ -66,10 +66,10 @@ bool ListProtectionsRequest::isValid() const
  *
  * @return An ListProtectionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * ListProtectionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListProtectionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListProtectionsResponse(*this, reply);
 }

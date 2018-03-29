@@ -68,10 +68,10 @@ namespace CloudTrail {
  */
 CloudTrailClient::CloudTrailClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
 {
     Q_D(CloudTrailClient);
     d->apiVersion = QStringLiteral("2013-11-01");
@@ -101,10 +101,10 @@ CloudTrailClient::CloudTrailClient(
  */
 CloudTrailClient::CloudTrailClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
 {
     Q_D(CloudTrailClient);
     d->apiVersion = QStringLiteral("2013-11-01");
@@ -447,9 +447,9 @@ UpdateTrailResponse * CloudTrailClient::updateTrail(const UpdateTrailRequest &re
  * @param  q  Pointer to this object's public CloudTrailClient instance.
  */
 CloudTrailClientPrivate::CloudTrailClientPrivate(CloudTrailClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudTrail

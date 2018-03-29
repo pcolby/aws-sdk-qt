@@ -66,10 +66,10 @@ bool CancelRetrievalRequest::isValid() const
  *
  * @return An CancelRetrievalResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CancelRetrievalRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelRetrievalRequest::response(QNetworkReply * const reply) const
 {
     return new CancelRetrievalResponse(*this, reply);
 }

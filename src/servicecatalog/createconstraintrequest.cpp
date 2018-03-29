@@ -66,10 +66,10 @@ bool CreateConstraintRequest::isValid() const
  *
  * @return An CreateConstraintResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * CreateConstraintRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateConstraintRequest::response(QNetworkReply * const reply) const
 {
     return new CreateConstraintResponse(*this, reply);
 }

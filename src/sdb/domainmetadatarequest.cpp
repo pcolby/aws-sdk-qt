@@ -66,10 +66,10 @@ bool DomainMetadataRequest::isValid() const
  *
  * @return An DomainMetadataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply * const reply) const
 {
     return new DomainMetadataResponse(*this, reply);
 }

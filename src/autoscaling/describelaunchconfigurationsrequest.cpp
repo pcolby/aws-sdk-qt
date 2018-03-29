@@ -66,10 +66,10 @@ bool DescribeLaunchConfigurationsRequest::isValid() const
  *
  * @return An DescribeLaunchConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLaunchConfigurationsResponse(*this, reply);
 }

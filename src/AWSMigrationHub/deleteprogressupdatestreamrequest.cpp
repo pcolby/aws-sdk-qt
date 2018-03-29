@@ -66,10 +66,10 @@ bool DeleteProgressUpdateStreamRequest::isValid() const
  *
  * @return An DeleteProgressUpdateStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteProgressUpdateStreamResponse(*this, reply);
 }

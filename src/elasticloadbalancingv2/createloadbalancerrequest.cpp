@@ -66,10 +66,10 @@ bool CreateLoadBalancerRequest::isValid() const
  *
  * @return An CreateLoadBalancerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * CreateLoadBalancerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLoadBalancerResponse(*this, reply);
 }

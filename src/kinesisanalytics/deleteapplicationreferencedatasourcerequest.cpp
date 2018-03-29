@@ -66,10 +66,10 @@ bool DeleteApplicationReferenceDataSourceRequest::isValid() const
  *
  * @return An DeleteApplicationReferenceDataSourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApplicationReferenceDataSourceResponse(*this, reply);
 }

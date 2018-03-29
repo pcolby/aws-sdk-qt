@@ -66,10 +66,10 @@ bool ListCoreDefinitionsRequest::isValid() const
  *
  * @return An ListCoreDefinitionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ListCoreDefinitionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCoreDefinitionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListCoreDefinitionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetOnPremisesInstanceRequest::isValid() const
  *
  * @return An GetOnPremisesInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * GetOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new GetOnPremisesInstanceResponse(*this, reply);
 }

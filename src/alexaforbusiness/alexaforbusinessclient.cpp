@@ -50,10 +50,10 @@ namespace AlexaForBusiness {
  */
 AlexaForBusinessClient::AlexaForBusinessClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
 {
     Q_D(AlexaForBusinessClient);
     d->apiVersion = QStringLiteral("2017-11-09");
@@ -83,10 +83,10 @@ AlexaForBusinessClient::AlexaForBusinessClient(
  */
 AlexaForBusinessClient::AlexaForBusinessClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
 {
     Q_D(AlexaForBusinessClient);
     d->apiVersion = QStringLiteral("2017-11-09");
@@ -622,9 +622,9 @@ UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const Update
  * @param  q  Pointer to this object's public AlexaForBusinessClient instance.
  */
 AlexaForBusinessClientPrivate::AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AlexaForBusiness

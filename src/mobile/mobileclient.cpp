@@ -48,10 +48,10 @@ namespace Mobile {
  */
 MobileClient::MobileClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MobileClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MobileClientPrivate(this), parent)
 {
     Q_D(MobileClient);
     d->apiVersion = QStringLiteral("2017-07-01");
@@ -81,10 +81,10 @@ MobileClient::MobileClient(
  */
 MobileClient::MobileClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MobileClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MobileClientPrivate(this), parent)
 {
     Q_D(MobileClient);
     d->apiVersion = QStringLiteral("2017-07-01");
@@ -240,9 +240,9 @@ UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &
  * @param  q  Pointer to this object's public MobileClient instance.
  */
 MobileClientPrivate::MobileClientPrivate(MobileClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Mobile

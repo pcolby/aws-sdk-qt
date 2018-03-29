@@ -66,10 +66,10 @@ bool BatchStopJobRunRequest::isValid() const
  *
  * @return An BatchStopJobRunResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkReply * const reply) const
 {
     return new BatchStopJobRunResponse(*this, reply);
 }

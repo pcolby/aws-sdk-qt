@@ -59,10 +59,10 @@ namespace ElastiCache {
  */
 ElastiCacheClient::ElastiCacheClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElastiCacheClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElastiCacheClientPrivate(this), parent)
 {
     Q_D(ElastiCacheClient);
     d->apiVersion = QStringLiteral("2015-02-02");
@@ -92,10 +92,10 @@ ElastiCacheClient::ElastiCacheClient(
  */
 ElastiCacheClient::ElastiCacheClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElastiCacheClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElastiCacheClientPrivate(this), parent)
 {
     Q_D(ElastiCacheClient);
     d->apiVersion = QStringLiteral("2015-02-02");
@@ -1062,9 +1062,9 @@ TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest
  * @param  q  Pointer to this object's public ElastiCacheClient instance.
  */
 ElastiCacheClientPrivate::ElastiCacheClientPrivate(ElastiCacheClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElastiCache

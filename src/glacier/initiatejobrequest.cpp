@@ -66,10 +66,10 @@ bool InitiateJobRequest::isValid() const
  *
  * @return An InitiateJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * InitiateJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InitiateJobRequest::response(QNetworkReply * const reply) const
 {
     return new InitiateJobResponse(*this, reply);
 }

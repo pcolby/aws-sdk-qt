@@ -66,10 +66,10 @@ bool CreatePrivateDnsNamespaceRequest::isValid() const
  *
  * @return An CreatePrivateDnsNamespaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePrivateDnsNamespaceResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace Pricing {
  * @param  parent   This object's parent.
  */
 PricingClientResponse::PricingClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new PricingClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new PricingClientResponsePrivate(this), parent)
 {
 
 }

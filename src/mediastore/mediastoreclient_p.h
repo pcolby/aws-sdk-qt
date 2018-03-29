@@ -29,7 +29,7 @@ namespace MediaStore {
 
 class MediaStoreClient;
 
-class QTAWS_EXPORT MediaStoreClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT MediaStoreClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MediaStoreClientPrivate(MediaStoreClient * const q);

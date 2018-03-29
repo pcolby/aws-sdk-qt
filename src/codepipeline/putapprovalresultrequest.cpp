@@ -66,10 +66,10 @@ bool PutApprovalResultRequest::isValid() const
  *
  * @return An PutApprovalResultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkReply * const reply) const
 {
     return new PutApprovalResultResponse(*this, reply);
 }

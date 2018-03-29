@@ -66,10 +66,10 @@ bool UpdateDeviceRequest::isValid() const
  *
  * @return An UpdateDeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDeviceResponse(*this, reply);
 }

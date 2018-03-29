@@ -66,10 +66,10 @@ bool SetIdentityPoolConfigurationRequest::isValid() const
  *
  * @return An SetIdentityPoolConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * SetIdentityPoolConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetIdentityPoolConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new SetIdentityPoolConfigurationResponse(*this, reply);
 }

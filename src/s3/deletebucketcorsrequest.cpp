@@ -66,10 +66,10 @@ bool DeleteBucketCorsRequest::isValid() const
  *
  * @return An DeleteBucketCorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBucketCorsResponse(*this, reply);
 }

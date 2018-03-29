@@ -40,7 +40,7 @@ namespace KMS {
  * @param  parent   This object's parent.
  */
 KmsClientResponse::KmsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new KmsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new KmsClientResponsePrivate(this), parent)
 {
 
 }

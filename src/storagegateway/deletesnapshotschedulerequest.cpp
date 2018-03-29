@@ -66,10 +66,10 @@ bool DeleteSnapshotScheduleRequest::isValid() const
  *
  * @return An DeleteSnapshotScheduleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSnapshotScheduleResponse(*this, reply);
 }

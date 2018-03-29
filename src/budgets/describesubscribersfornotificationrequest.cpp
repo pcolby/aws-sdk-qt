@@ -66,10 +66,10 @@ bool DescribeSubscribersForNotificationRequest::isValid() const
  *
  * @return An DescribeSubscribersForNotificationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * DescribeSubscribersForNotificationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSubscribersForNotificationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSubscribersForNotificationResponse(*this, reply);
 }

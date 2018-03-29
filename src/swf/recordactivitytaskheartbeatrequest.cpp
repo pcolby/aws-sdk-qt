@@ -66,10 +66,10 @@ bool RecordActivityTaskHeartbeatRequest::isValid() const
  *
  * @return An RecordActivityTaskHeartbeatResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(QNetworkReply * const reply) const
 {
     return new RecordActivityTaskHeartbeatResponse(*this, reply);
 }

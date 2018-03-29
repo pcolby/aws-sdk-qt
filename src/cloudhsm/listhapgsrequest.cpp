@@ -66,10 +66,10 @@ bool ListHapgsRequest::isValid() const
  *
  * @return An ListHapgsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * const reply) const
 {
     return new ListHapgsResponse(*this, reply);
 }

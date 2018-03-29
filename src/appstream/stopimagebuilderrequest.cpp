@@ -66,10 +66,10 @@ bool StopImageBuilderRequest::isValid() const
  *
  * @return An StopImageBuilderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppStreamClient::send
  */
-AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkReply * const reply) const
 {
     return new StopImageBuilderResponse(*this, reply);
 }

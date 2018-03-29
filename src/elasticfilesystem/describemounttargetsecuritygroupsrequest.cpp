@@ -66,10 +66,10 @@ bool DescribeMountTargetSecurityGroupsRequest::isValid() const
  *
  * @return An DescribeMountTargetSecurityGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EFSClient::send
  */
-AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMountTargetSecurityGroupsResponse(*this, reply);
 }

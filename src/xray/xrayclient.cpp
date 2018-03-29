@@ -46,10 +46,10 @@ namespace XRay {
  */
 XRayClient::XRayClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new XRayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new XRayClientPrivate(this), parent)
 {
     Q_D(XRayClient);
     d->apiVersion = QStringLiteral("2016-04-12");
@@ -79,10 +79,10 @@ XRayClient::XRayClient(
  */
 XRayClient::XRayClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new XRayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new XRayClientPrivate(this), parent)
 {
     Q_D(XRayClient);
     d->apiVersion = QStringLiteral("2016-04-12");
@@ -279,9 +279,9 @@ PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRe
  * @param  q  Pointer to this object's public XRayClient instance.
  */
 XRayClientPrivate::XRayClientPrivate(XRayClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace XRay

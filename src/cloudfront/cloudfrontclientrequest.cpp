@@ -36,7 +36,7 @@ namespace CloudFront {
  * @param  action  The CloudFront action to request.
  */
 CloudFrontClientRequest::CloudFrontClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudFrontClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudFrontClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudFrontClientRequest::CloudFrontClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudFrontClientRequest::CloudFrontClientRequest(const CloudFrontClientRequest &other)
-    : AwsAbstractRequest(new CloudFrontClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudFrontClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudFrontClientRequest& CloudFrontClientRequest::operator=(const CloudFrontClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudFrontClientRequest::CloudFrontClientRequest(CloudFrontClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudFrontClientRequest::CloudFrontClientRequest(CloudFrontClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudFrontClientRequest::operator==(const CloudFrontClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudFrontClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public CloudFrontClientRequest instance.
  */
 CloudFrontClientRequestPrivate::CloudFrontClientRequestPrivate(const CloudFrontClientRequest::Action action, CloudFrontClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudFrontClientRequestPrivate::CloudFrontClientRequestPrivate(const CloudFrontC
  */
 CloudFrontClientRequestPrivate::CloudFrontClientRequestPrivate(const CloudFrontClientRequestPrivate &other,
                                      CloudFrontClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

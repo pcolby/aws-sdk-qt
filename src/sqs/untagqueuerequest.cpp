@@ -66,10 +66,10 @@ bool UntagQueueRequest::isValid() const
  *
  * @return An UntagQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * const reply) const
 {
     return new UntagQueueResponse(*this, reply);
 }

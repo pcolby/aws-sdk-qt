@@ -40,7 +40,7 @@ namespace MediaPackage {
  * @param  parent   This object's parent.
  */
 MediaPackageClientResponse::MediaPackageClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MediaPackageClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MediaPackageClientResponsePrivate(this), parent)
 {
 
 }

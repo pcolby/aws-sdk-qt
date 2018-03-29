@@ -66,10 +66,10 @@ bool DeleteLunaClientRequest::isValid() const
  *
  * @return An DeleteLunaClientResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLunaClientResponse(*this, reply);
 }

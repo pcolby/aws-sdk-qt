@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace TranscribeService {
@@ -38,18 +38,18 @@ class ListTranscriptionJobsResponse;
 class StartTranscriptionJobRequest;
 class StartTranscriptionJobResponse;
 
-class QTAWS_EXPORT TranscribeServiceClient : public AwsAbstractClient {
+class QTAWS_EXPORT TranscribeServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     TranscribeServiceClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     TranscribeServiceClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

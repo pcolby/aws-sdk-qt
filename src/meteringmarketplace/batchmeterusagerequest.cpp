@@ -66,10 +66,10 @@ bool BatchMeterUsageRequest::isValid() const
  *
  * @return An BatchMeterUsageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MarketplaceMeteringClient::send
  */
-AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkReply * const reply) const
 {
     return new BatchMeterUsageResponse(*this, reply);
 }

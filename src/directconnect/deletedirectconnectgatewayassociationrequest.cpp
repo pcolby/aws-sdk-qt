@@ -66,10 +66,10 @@ bool DeleteDirectConnectGatewayAssociationRequest::isValid() const
  *
  * @return An DeleteDirectConnectGatewayAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DeleteDirectConnectGatewayAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDirectConnectGatewayAssociationResponse(*this, reply);
 }

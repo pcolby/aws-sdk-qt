@@ -51,10 +51,10 @@ namespace Shield {
  */
 ShieldClient::ShieldClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ShieldClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ShieldClientPrivate(this), parent)
 {
     Q_D(ShieldClient);
     d->apiVersion = QStringLiteral("2016-06-02");
@@ -84,10 +84,10 @@ ShieldClient::ShieldClient(
  */
 ShieldClient::ShieldClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ShieldClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ShieldClientPrivate(this), parent)
 {
     Q_D(ShieldClient);
     d->apiVersion = QStringLiteral("2016-06-02");
@@ -257,9 +257,9 @@ ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsReq
  * @param  q  Pointer to this object's public ShieldClient instance.
  */
 ShieldClientPrivate::ShieldClientPrivate(ShieldClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Shield

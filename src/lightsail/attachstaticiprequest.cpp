@@ -66,10 +66,10 @@ bool AttachStaticIpRequest::isValid() const
  *
  * @return An AttachStaticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * AttachStaticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachStaticIpRequest::response(QNetworkReply * const reply) const
 {
     return new AttachStaticIpResponse(*this, reply);
 }

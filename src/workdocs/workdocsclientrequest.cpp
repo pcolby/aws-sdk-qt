@@ -36,7 +36,7 @@ namespace WorkDocs {
  * @param  action  The WorkDocs action to request.
  */
 WorkDocsClientRequest::WorkDocsClientRequest(const Action action)
-    : AwsAbstractRequest(new WorkDocsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WorkDocsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ WorkDocsClientRequest::WorkDocsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 WorkDocsClientRequest::WorkDocsClientRequest(const WorkDocsClientRequest &other)
-    : AwsAbstractRequest(new WorkDocsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WorkDocsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ WorkDocsClientRequest& WorkDocsClientRequest::operator=(const WorkDocsClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-WorkDocsClientRequest::WorkDocsClientRequest(WorkDocsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+WorkDocsClientRequest::WorkDocsClientRequest(WorkDocsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool WorkDocsClientRequest::operator==(const WorkDocsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest WorkDocsClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public WorkDocsClientRequest instance.
  */
 WorkDocsClientRequestPrivate::WorkDocsClientRequestPrivate(const WorkDocsClientRequest::Action action, WorkDocsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ WorkDocsClientRequestPrivate::WorkDocsClientRequestPrivate(const WorkDocsClientR
  */
 WorkDocsClientRequestPrivate::WorkDocsClientRequestPrivate(const WorkDocsClientRequestPrivate &other,
                                      WorkDocsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool CreateDomainNameRequest::isValid() const
  *
  * @return An CreateDomainNameResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDomainNameResponse(*this, reply);
 }

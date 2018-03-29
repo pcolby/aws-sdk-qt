@@ -66,10 +66,10 @@ bool DescribeAvailabilityOptionsRequest::isValid() const
  *
  * @return An DescribeAvailabilityOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DescribeAvailabilityOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAvailabilityOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAvailabilityOptionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateTrailRequest::isValid() const
  *
  * @return An CreateTrailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * CreateTrailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTrailRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTrailResponse(*this, reply);
 }

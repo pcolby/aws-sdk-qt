@@ -66,10 +66,10 @@ bool CheckIfPhoneNumberIsOptedOutRequest::isValid() const
  *
  * @return An CheckIfPhoneNumberIsOptedOutResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response(QNetworkReply * const reply) const
 {
     return new CheckIfPhoneNumberIsOptedOutResponse(*this, reply);
 }

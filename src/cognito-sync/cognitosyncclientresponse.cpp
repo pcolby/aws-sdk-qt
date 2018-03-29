@@ -40,7 +40,7 @@ namespace CognitoSync {
  * @param  parent   This object's parent.
  */
 CognitoSyncClientResponse::CognitoSyncClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CognitoSyncClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CognitoSyncClientResponsePrivate(this), parent)
 {
 
 }

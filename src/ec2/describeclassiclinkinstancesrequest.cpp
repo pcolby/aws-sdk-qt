@@ -66,10 +66,10 @@ bool DescribeClassicLinkInstancesRequest::isValid() const
  *
  * @return An DescribeClassicLinkInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeClassicLinkInstancesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PutPermissionPolicyRequest::isValid() const
  *
  * @return An PutPermissionPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutPermissionPolicyResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetObjectTaggingRequest::isValid() const
  *
  * @return An GetObjectTaggingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetObjectTaggingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetObjectTaggingRequest::response(QNetworkReply * const reply) const
 {
     return new GetObjectTaggingResponse(*this, reply);
 }

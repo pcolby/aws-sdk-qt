@@ -66,10 +66,10 @@ bool BatchDetectSentimentRequest::isValid() const
  *
  * @return An BatchDetectSentimentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDetectSentimentResponse(*this, reply);
 }

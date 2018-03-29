@@ -66,10 +66,10 @@ bool ListChannelsRequest::isValid() const
  *
  * @return An ListChannelsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply * const reply) const
 {
     return new ListChannelsResponse(*this, reply);
 }

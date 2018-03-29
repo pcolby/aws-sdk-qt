@@ -66,10 +66,10 @@ bool DeprecateThingTypeRequest::isValid() const
  *
  * @return An DeprecateThingTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DeprecateThingTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeprecateThingTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DeprecateThingTypeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateSampleFindingsRequest::isValid() const
  *
  * @return An CreateSampleFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * CreateSampleFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSampleFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSampleFindingsResponse(*this, reply);
 }

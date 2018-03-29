@@ -66,10 +66,10 @@ bool DecryptRequest::isValid() const
  *
  * @return An DecryptResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * DecryptRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DecryptRequest::response(QNetworkReply * const reply) const
 {
     return new DecryptResponse(*this, reply);
 }

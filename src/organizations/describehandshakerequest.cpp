@@ -66,10 +66,10 @@ bool DescribeHandshakeRequest::isValid() const
  *
  * @return An DescribeHandshakeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * DescribeHandshakeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeHandshakeRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeHandshakeResponse(*this, reply);
 }

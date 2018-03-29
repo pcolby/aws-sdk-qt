@@ -66,10 +66,10 @@ bool DeleteHostedZoneRequest::isValid() const
  *
  * @return An DeleteHostedZoneResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteHostedZoneResponse(*this, reply);
 }

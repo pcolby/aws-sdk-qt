@@ -66,10 +66,10 @@ bool PurchaseScheduledInstancesRequest::isValid() const
  *
  * @return An PurchaseScheduledInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new PurchaseScheduledInstancesResponse(*this, reply);
 }

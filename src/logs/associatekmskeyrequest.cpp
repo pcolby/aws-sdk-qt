@@ -66,10 +66,10 @@ bool AssociateKmsKeyRequest::isValid() const
  *
  * @return An AssociateKmsKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * AssociateKmsKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateKmsKeyRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateKmsKeyResponse(*this, reply);
 }

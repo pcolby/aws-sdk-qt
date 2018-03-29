@@ -66,10 +66,10 @@ bool UpdateMaintenanceWindowTargetRequest::isValid() const
  *
  * @return An UpdateMaintenanceWindowTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * UpdateMaintenanceWindowTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowTargetRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateMaintenanceWindowTargetResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ModifyDBParameterGroupRequest::isValid() const
  *
  * @return An ModifyDBParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDBParameterGroupResponse(*this, reply);
 }

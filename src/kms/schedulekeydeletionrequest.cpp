@@ -66,10 +66,10 @@ bool ScheduleKeyDeletionRequest::isValid() const
  *
  * @return An ScheduleKeyDeletionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetworkReply * const reply) const
 {
     return new ScheduleKeyDeletionResponse(*this, reply);
 }

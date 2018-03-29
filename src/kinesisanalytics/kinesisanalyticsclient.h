@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace KinesisAnalytics {
@@ -66,18 +66,18 @@ class StopApplicationResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
-class QTAWS_EXPORT KinesisAnalyticsClient : public AwsAbstractClient {
+class QTAWS_EXPORT KinesisAnalyticsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     KinesisAnalyticsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     KinesisAnalyticsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -66,10 +66,10 @@ bool ListTypesRequest::isValid() const
  *
  * @return An ListTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * const reply) const
 {
     return new ListTypesResponse(*this, reply);
 }

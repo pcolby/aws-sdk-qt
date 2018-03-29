@@ -66,10 +66,10 @@ bool ListPhoneNumbersOptedOutRequest::isValid() const
  *
  * @return An ListPhoneNumbersOptedOutResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNetworkReply * const reply) const
 {
     return new ListPhoneNumbersOptedOutResponse(*this, reply);
 }

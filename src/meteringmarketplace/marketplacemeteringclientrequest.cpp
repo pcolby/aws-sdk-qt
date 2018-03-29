@@ -36,7 +36,7 @@ namespace MarketplaceMetering {
  * @param  action  The MarketplaceMetering action to request.
  */
 MarketplaceMeteringClientRequest::MarketplaceMeteringClientRequest(const Action action)
-    : AwsAbstractRequest(new MarketplaceMeteringClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MarketplaceMeteringClientRequest::MarketplaceMeteringClientRequest(const Action 
  * @param  other  Instance to copy.
  */
 MarketplaceMeteringClientRequest::MarketplaceMeteringClientRequest(const MarketplaceMeteringClientRequest &other)
-    : AwsAbstractRequest(new MarketplaceMeteringClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MarketplaceMeteringClientRequest& MarketplaceMeteringClientRequest::operator=(co
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MarketplaceMeteringClientRequest::MarketplaceMeteringClientRequest(MarketplaceMeteringClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MarketplaceMeteringClientRequest::MarketplaceMeteringClientRequest(MarketplaceMeteringClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MarketplaceMeteringClientRequest::operator==(const MarketplaceMeteringClien
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MarketplaceMeteringClientRequest::unsignedRequest(const QUrl &en
  * @param  q       Pointer to this object's public MarketplaceMeteringClientRequest instance.
  */
 MarketplaceMeteringClientRequestPrivate::MarketplaceMeteringClientRequestPrivate(const MarketplaceMeteringClientRequest::Action action, MarketplaceMeteringClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MarketplaceMeteringClientRequestPrivate::MarketplaceMeteringClientRequestPrivate
  */
 MarketplaceMeteringClientRequestPrivate::MarketplaceMeteringClientRequestPrivate(const MarketplaceMeteringClientRequestPrivate &other,
                                      MarketplaceMeteringClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

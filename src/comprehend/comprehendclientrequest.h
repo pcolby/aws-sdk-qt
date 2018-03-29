@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Comprehend {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ComprehendClientRequestPrivate;
 
-class QTAWS_EXPORT ComprehendClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ComprehendClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Comprehend.

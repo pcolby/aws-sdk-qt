@@ -66,10 +66,10 @@ bool AcceptCertificateTransferRequest::isValid() const
  *
  * @return An AcceptCertificateTransferResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * AcceptCertificateTransferRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AcceptCertificateTransferRequest::response(QNetworkReply * const reply) const
 {
     return new AcceptCertificateTransferResponse(*this, reply);
 }

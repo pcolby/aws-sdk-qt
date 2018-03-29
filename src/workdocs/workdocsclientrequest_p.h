@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class WorkDocsClientRequest;
 
-class QTAWS_EXPORT WorkDocsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT WorkDocsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WorkDocsClientRequest::Action action; ///< WorkDocs action to be performed.

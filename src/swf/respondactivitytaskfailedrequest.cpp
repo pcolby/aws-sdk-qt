@@ -66,10 +66,10 @@ bool RespondActivityTaskFailedRequest::isValid() const
  *
  * @return An RespondActivityTaskFailedResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QNetworkReply * const reply) const
 {
     return new RespondActivityTaskFailedResponse(*this, reply);
 }

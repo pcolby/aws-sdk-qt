@@ -66,10 +66,10 @@ bool DescribeElasticGpusRequest::isValid() const
  *
  * @return An DescribeElasticGpusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeElasticGpusResponse(*this, reply);
 }

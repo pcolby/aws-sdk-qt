@@ -66,10 +66,10 @@ bool ListLocalDisksRequest::isValid() const
  *
  * @return An ListLocalDisksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * ListLocalDisksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListLocalDisksRequest::response(QNetworkReply * const reply) const
 {
     return new ListLocalDisksResponse(*this, reply);
 }

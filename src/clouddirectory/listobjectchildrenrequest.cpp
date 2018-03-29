@@ -66,10 +66,10 @@ bool ListObjectChildrenRequest::isValid() const
  *
  * @return An ListObjectChildrenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListObjectChildrenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListObjectChildrenRequest::response(QNetworkReply * const reply) const
 {
     return new ListObjectChildrenResponse(*this, reply);
 }

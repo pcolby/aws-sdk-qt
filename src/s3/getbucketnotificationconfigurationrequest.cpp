@@ -66,10 +66,10 @@ bool GetBucketNotificationConfigurationRequest::isValid() const
  *
  * @return An GetBucketNotificationConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetBucketNotificationConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBucketNotificationConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new GetBucketNotificationConfigurationResponse(*this, reply);
 }

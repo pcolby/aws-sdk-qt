@@ -66,10 +66,10 @@ bool GetInstanceStateRequest::isValid() const
  *
  * @return An GetInstanceStateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetInstanceStateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInstanceStateRequest::response(QNetworkReply * const reply) const
 {
     return new GetInstanceStateResponse(*this, reply);
 }

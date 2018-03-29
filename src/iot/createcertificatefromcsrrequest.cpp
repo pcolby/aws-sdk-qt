@@ -66,10 +66,10 @@ bool CreateCertificateFromCsrRequest::isValid() const
  *
  * @return An CreateCertificateFromCsrResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCertificateFromCsrResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteTrailRequest::isValid() const
  *
  * @return An DeleteTrailResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * DeleteTrailRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTrailRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTrailResponse(*this, reply);
 }

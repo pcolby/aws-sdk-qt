@@ -66,10 +66,10 @@ bool ListStreamProcessorsRequest::isValid() const
  *
  * @return An ListStreamProcessorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetworkReply * const reply) const
 {
     return new ListStreamProcessorsResponse(*this, reply);
 }

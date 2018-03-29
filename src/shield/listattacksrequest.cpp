@@ -66,10 +66,10 @@ bool ListAttacksRequest::isValid() const
  *
  * @return An ListAttacksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ShieldClient::send
  */
-AwsAbstractResponse * ListAttacksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAttacksRequest::response(QNetworkReply * const reply) const
 {
     return new ListAttacksResponse(*this, reply);
 }

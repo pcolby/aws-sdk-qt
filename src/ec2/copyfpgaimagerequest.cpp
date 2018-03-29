@@ -66,10 +66,10 @@ bool CopyFpgaImageRequest::isValid() const
  *
  * @return An CopyFpgaImageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply * const reply) const
 {
     return new CopyFpgaImageResponse(*this, reply);
 }

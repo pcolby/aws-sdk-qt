@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientRequest;
 
-class QTAWS_EXPORT MarketplaceMeteringClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MarketplaceMeteringClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MarketplaceMeteringClientRequest::Action action; ///< MarketplaceMetering action to be performed.

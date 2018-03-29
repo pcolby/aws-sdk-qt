@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudFront {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CloudFrontClientRequestPrivate;
 
-class QTAWS_EXPORT CloudFrontClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CloudFrontClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudFront.

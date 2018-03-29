@@ -36,7 +36,7 @@ namespace ApplicationAutoScaling {
  * @param  action  The ApplicationAutoScaling action to request.
  */
 ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(const Action action)
-    : AwsAbstractRequest(new ApplicationAutoScalingClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationAutoScalingClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(const A
  * @param  other  Instance to copy.
  */
 ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(const ApplicationAutoScalingClientRequest &other)
-    : AwsAbstractRequest(new ApplicationAutoScalingClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationAutoScalingClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ApplicationAutoScalingClientRequest& ApplicationAutoScalingClientRequest::operat
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(ApplicationAutoScalingClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ApplicationAutoScalingClientRequest::ApplicationAutoScalingClientRequest(ApplicationAutoScalingClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ApplicationAutoScalingClientRequest::operator==(const ApplicationAutoScalin
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ApplicationAutoScalingClientRequest::unsignedRequest(const QUrl 
  * @param  q       Pointer to this object's public ApplicationAutoScalingClientRequest instance.
  */
 ApplicationAutoScalingClientRequestPrivate::ApplicationAutoScalingClientRequestPrivate(const ApplicationAutoScalingClientRequest::Action action, ApplicationAutoScalingClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ApplicationAutoScalingClientRequestPrivate::ApplicationAutoScalingClientRequestP
  */
 ApplicationAutoScalingClientRequestPrivate::ApplicationAutoScalingClientRequestPrivate(const ApplicationAutoScalingClientRequestPrivate &other,
                                      ApplicationAutoScalingClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

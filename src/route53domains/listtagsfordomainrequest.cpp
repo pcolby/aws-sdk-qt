@@ -66,10 +66,10 @@ bool ListTagsForDomainRequest::isValid() const
  *
  * @return An ListTagsForDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * ListTagsForDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTagsForDomainRequest::response(QNetworkReply * const reply) const
 {
     return new ListTagsForDomainResponse(*this, reply);
 }

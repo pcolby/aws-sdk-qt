@@ -66,10 +66,10 @@ bool DeleteMetricFilterRequest::isValid() const
  *
  * @return An DeleteMetricFilterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DeleteMetricFilterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMetricFilterRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMetricFilterResponse(*this, reply);
 }

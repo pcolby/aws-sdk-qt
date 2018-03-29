@@ -66,10 +66,10 @@ bool StopInstanceRequest::isValid() const
  *
  * @return An StopInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new StopInstanceResponse(*this, reply);
 }

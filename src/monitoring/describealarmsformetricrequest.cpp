@@ -66,10 +66,10 @@ bool DescribeAlarmsForMetricRequest::isValid() const
  *
  * @return An DescribeAlarmsForMetricResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAlarmsForMetricResponse(*this, reply);
 }

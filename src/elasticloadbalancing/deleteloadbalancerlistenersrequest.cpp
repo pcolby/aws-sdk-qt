@@ -66,10 +66,10 @@ bool DeleteLoadBalancerListenersRequest::isValid() const
  *
  * @return An DeleteLoadBalancerListenersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * DeleteLoadBalancerListenersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerListenersRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLoadBalancerListenersResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteServiceSpecificCredentialRequest::isValid() const
  *
  * @return An DeleteServiceSpecificCredentialResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteServiceSpecificCredentialResponse(*this, reply);
 }

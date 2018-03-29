@@ -66,10 +66,10 @@ bool GetBucketCorsRequest::isValid() const
  *
  * @return An GetBucketCorsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply * const reply) const
 {
     return new GetBucketCorsResponse(*this, reply);
 }

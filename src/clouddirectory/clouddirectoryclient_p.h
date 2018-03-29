@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class CloudDirectoryClient;
 
-class QTAWS_EXPORT CloudDirectoryClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudDirectoryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudDirectoryClientPrivate(CloudDirectoryClient * const q);

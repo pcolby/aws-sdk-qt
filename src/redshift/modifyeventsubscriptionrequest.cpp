@@ -66,10 +66,10 @@ bool ModifyEventSubscriptionRequest::isValid() const
  *
  * @return An ModifyEventSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyEventSubscriptionResponse(*this, reply);
 }

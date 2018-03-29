@@ -66,10 +66,10 @@ bool DescribeConfigurationRecorderStatusRequest::isValid() const
  *
  * @return An DescribeConfigurationRecorderStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DescribeConfigurationRecorderStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecorderStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeConfigurationRecorderStatusResponse(*this, reply);
 }

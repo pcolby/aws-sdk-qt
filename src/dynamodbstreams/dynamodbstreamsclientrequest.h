@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DynamoDBStreams {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class DynamoDBStreamsClientRequestPrivate;
 
-class QTAWS_EXPORT DynamoDBStreamsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT DynamoDBStreamsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DynamoDBStreams.

@@ -66,10 +66,10 @@ bool ListResourceDefinitionsRequest::isValid() const
  *
  * @return An ListResourceDefinitionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ListResourceDefinitionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourceDefinitionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourceDefinitionsResponse(*this, reply);
 }

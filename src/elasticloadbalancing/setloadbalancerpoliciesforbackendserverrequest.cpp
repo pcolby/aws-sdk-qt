@@ -66,10 +66,10 @@ bool SetLoadBalancerPoliciesForBackendServerRequest::isValid() const
  *
  * @return An SetLoadBalancerPoliciesForBackendServerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerRequest::response(QNetworkReply * const reply) const
 {
     return new SetLoadBalancerPoliciesForBackendServerResponse(*this, reply);
 }

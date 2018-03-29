@@ -66,10 +66,10 @@ bool DetectLabelsRequest::isValid() const
  *
  * @return An DetectLabelsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply * const reply) const
 {
     return new DetectLabelsResponse(*this, reply);
 }

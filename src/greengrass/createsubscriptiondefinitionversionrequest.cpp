@@ -66,10 +66,10 @@ bool CreateSubscriptionDefinitionVersionRequest::isValid() const
  *
  * @return An CreateSubscriptionDefinitionVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateSubscriptionDefinitionVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionVersionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSubscriptionDefinitionVersionResponse(*this, reply);
 }

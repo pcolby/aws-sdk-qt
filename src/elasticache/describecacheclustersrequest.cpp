@@ -66,10 +66,10 @@ bool DescribeCacheClustersRequest::isValid() const
  *
  * @return An DescribeCacheClustersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeCacheClustersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCacheClustersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCacheClustersResponse(*this, reply);
 }

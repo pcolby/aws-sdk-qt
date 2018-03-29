@@ -66,10 +66,10 @@ bool GetDiscoverySummaryRequest::isValid() const
  *
  * @return An GetDiscoverySummaryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationDiscoveryServiceClient::send
  */
-AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetworkReply * const reply) const
 {
     return new GetDiscoverySummaryResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateManagedInstanceRoleRequest::isValid() const
  *
  * @return An UpdateManagedInstanceRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateManagedInstanceRoleResponse(*this, reply);
 }

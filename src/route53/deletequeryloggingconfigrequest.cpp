@@ -66,10 +66,10 @@ bool DeleteQueryLoggingConfigRequest::isValid() const
  *
  * @return An DeleteQueryLoggingConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteQueryLoggingConfigResponse(*this, reply);
 }

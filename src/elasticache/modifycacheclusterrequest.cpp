@@ -66,10 +66,10 @@ bool ModifyCacheClusterRequest::isValid() const
  *
  * @return An ModifyCacheClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * ModifyCacheClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyCacheClusterRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyCacheClusterResponse(*this, reply);
 }

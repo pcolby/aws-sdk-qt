@@ -66,10 +66,10 @@ bool ListPolicyAttachmentsRequest::isValid() const
  *
  * @return An ListPolicyAttachmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListPolicyAttachmentsResponse(*this, reply);
 }

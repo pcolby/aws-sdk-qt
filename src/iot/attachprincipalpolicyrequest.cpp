@@ -66,10 +66,10 @@ bool AttachPrincipalPolicyRequest::isValid() const
  *
  * @return An AttachPrincipalPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new AttachPrincipalPolicyResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetAppliedSchemaVersionRequest::isValid() const
  *
  * @return An GetAppliedSchemaVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNetworkReply * const reply) const
 {
     return new GetAppliedSchemaVersionResponse(*this, reply);
 }

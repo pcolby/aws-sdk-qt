@@ -68,10 +68,10 @@ namespace CloudWatchEvents {
  */
 CloudWatchEventsClient::CloudWatchEventsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
 {
     Q_D(CloudWatchEventsClient);
     d->apiVersion = QStringLiteral("2015-10-07");
@@ -101,10 +101,10 @@ CloudWatchEventsClient::CloudWatchEventsClient(
  */
 CloudWatchEventsClient::CloudWatchEventsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
 {
     Q_D(CloudWatchEventsClient);
     d->apiVersion = QStringLiteral("2015-10-07");
@@ -550,9 +550,9 @@ TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEv
  * @param  q  Pointer to this object's public CloudWatchEventsClient instance.
  */
 CloudWatchEventsClientPrivate::CloudWatchEventsClientPrivate(CloudWatchEventsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudWatchEvents

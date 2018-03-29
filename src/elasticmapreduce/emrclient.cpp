@@ -48,10 +48,10 @@ namespace EMR {
  */
 EmrClient::EmrClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EmrClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EmrClientPrivate(this), parent)
 {
     Q_D(EmrClient);
     d->apiVersion = QStringLiteral("2009-03-31");
@@ -81,10 +81,10 @@ EmrClient::EmrClient(
  */
 EmrClient::EmrClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EmrClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EmrClientPrivate(this), parent)
 {
     Q_D(EmrClient);
     d->apiVersion = QStringLiteral("2009-03-31");
@@ -638,9 +638,9 @@ TerminateJobFlowsResponse * EmrClient::terminateJobFlows(const TerminateJobFlows
  * @param  q  Pointer to this object's public EmrClient instance.
  */
 EmrClientPrivate::EmrClientPrivate(EmrClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EMR

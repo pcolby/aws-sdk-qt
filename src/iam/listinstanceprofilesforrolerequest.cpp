@@ -66,10 +66,10 @@ bool ListInstanceProfilesForRoleRequest::isValid() const
  *
  * @return An ListInstanceProfilesForRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(QNetworkReply * const reply) const
 {
     return new ListInstanceProfilesForRoleResponse(*this, reply);
 }

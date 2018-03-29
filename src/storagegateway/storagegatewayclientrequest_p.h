@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class StorageGatewayClientRequest;
 
-class QTAWS_EXPORT StorageGatewayClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT StorageGatewayClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     StorageGatewayClientRequest::Action action; ///< StorageGateway action to be performed.

@@ -66,10 +66,10 @@ bool ListClusterJobsRequest::isValid() const
  *
  * @return An ListClusterJobsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SnowballClient::send
  */
-AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkReply * const reply) const
 {
     return new ListClusterJobsResponse(*this, reply);
 }

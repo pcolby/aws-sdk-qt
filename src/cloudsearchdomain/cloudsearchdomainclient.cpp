@@ -58,10 +58,10 @@ namespace CloudSearchDomain {
  */
 CloudSearchDomainClient::CloudSearchDomainClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
 {
     Q_D(CloudSearchDomainClient);
     d->apiVersion = QStringLiteral("2013-01-01");
@@ -91,10 +91,10 @@ CloudSearchDomainClient::CloudSearchDomainClient(
  */
 CloudSearchDomainClient::CloudSearchDomainClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
 {
     Q_D(CloudSearchDomainClient);
     d->apiVersion = QStringLiteral("2013-01-01");
@@ -219,9 +219,9 @@ UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadD
  * @param  q  Pointer to this object's public CloudSearchDomainClient instance.
  */
 CloudSearchDomainClientPrivate::CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudSearchDomain

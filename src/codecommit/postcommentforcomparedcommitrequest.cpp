@@ -66,10 +66,10 @@ bool PostCommentForComparedCommitRequest::isValid() const
  *
  * @return An PostCommentForComparedCommitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * PostCommentForComparedCommitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PostCommentForComparedCommitRequest::response(QNetworkReply * const reply) const
 {
     return new PostCommentForComparedCommitResponse(*this, reply);
 }

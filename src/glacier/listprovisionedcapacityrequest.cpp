@@ -66,10 +66,10 @@ bool ListProvisionedCapacityRequest::isValid() const
  *
  * @return An ListProvisionedCapacityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * ListProvisionedCapacityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListProvisionedCapacityRequest::response(QNetworkReply * const reply) const
 {
     return new ListProvisionedCapacityResponse(*this, reply);
 }

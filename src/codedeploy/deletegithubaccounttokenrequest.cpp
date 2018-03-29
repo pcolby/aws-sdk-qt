@@ -66,10 +66,10 @@ bool DeleteGitHubAccountTokenRequest::isValid() const
  *
  * @return An DeleteGitHubAccountTokenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteGitHubAccountTokenResponse(*this, reply);
 }

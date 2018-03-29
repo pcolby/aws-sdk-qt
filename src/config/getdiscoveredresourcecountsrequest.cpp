@@ -66,10 +66,10 @@ bool GetDiscoveredResourceCountsRequest::isValid() const
  *
  * @return An GetDiscoveredResourceCountsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(QNetworkReply * const reply) const
 {
     return new GetDiscoveredResourceCountsResponse(*this, reply);
 }

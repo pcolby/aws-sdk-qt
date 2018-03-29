@@ -66,10 +66,10 @@ bool ListHsmsRequest::isValid() const
  *
  * @return An ListHsmsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * const reply) const
 {
     return new ListHsmsResponse(*this, reply);
 }

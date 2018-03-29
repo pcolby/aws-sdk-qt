@@ -66,10 +66,10 @@ bool ListMFADevicesRequest::isValid() const
  *
  * @return An ListMFADevicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListMFADevicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListMFADevicesRequest::response(QNetworkReply * const reply) const
 {
     return new ListMFADevicesResponse(*this, reply);
 }

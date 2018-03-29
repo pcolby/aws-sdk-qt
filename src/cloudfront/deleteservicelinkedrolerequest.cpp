@@ -66,10 +66,10 @@ bool DeleteServiceLinkedRoleRequest::isValid() const
  *
  * @return An DeleteServiceLinkedRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteServiceLinkedRoleResponse(*this, reply);
 }

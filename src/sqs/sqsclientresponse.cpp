@@ -40,7 +40,7 @@ namespace SQS {
  * @param  parent   This object's parent.
  */
 SqsClientResponse::SqsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SqsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SqsClientResponsePrivate(this), parent)
 {
 
 }

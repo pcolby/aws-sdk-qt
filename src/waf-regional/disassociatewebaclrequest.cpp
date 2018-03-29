@@ -66,10 +66,10 @@ bool DisassociateWebACLRequest::isValid() const
  *
  * @return An DisassociateWebACLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateWebACLResponse(*this, reply);
 }

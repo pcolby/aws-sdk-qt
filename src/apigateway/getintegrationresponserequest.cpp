@@ -66,10 +66,10 @@ bool GetIntegrationResponseRequest::isValid() const
  *
  * @return An GetIntegrationResponseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetIntegrationResponseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIntegrationResponseRequest::response(QNetworkReply * const reply) const
 {
     return new GetIntegrationResponseResponse(*this, reply);
 }

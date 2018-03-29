@@ -40,7 +40,7 @@ namespace Cloud9 {
  * @param  parent   This object's parent.
  */
 Cloud9ClientResponse::Cloud9ClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new Cloud9ClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new Cloud9ClientResponsePrivate(this), parent)
 {
 
 }

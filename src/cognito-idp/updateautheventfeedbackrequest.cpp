@@ -66,10 +66,10 @@ bool UpdateAuthEventFeedbackRequest::isValid() const
  *
  * @return An UpdateAuthEventFeedbackResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateAuthEventFeedbackResponse(*this, reply);
 }

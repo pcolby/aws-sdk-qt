@@ -36,7 +36,7 @@ namespace Greengrass {
  * @param  action  The Greengrass action to request.
  */
 GreengrassClientRequest::GreengrassClientRequest(const Action action)
-    : AwsAbstractRequest(new GreengrassClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GreengrassClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ GreengrassClientRequest::GreengrassClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 GreengrassClientRequest::GreengrassClientRequest(const GreengrassClientRequest &other)
-    : AwsAbstractRequest(new GreengrassClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GreengrassClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ GreengrassClientRequest& GreengrassClientRequest::operator=(const GreengrassClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-GreengrassClientRequest::GreengrassClientRequest(GreengrassClientRequestPrivate * const d) : AwsAbstractRequest(d)
+GreengrassClientRequest::GreengrassClientRequest(GreengrassClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool GreengrassClientRequest::operator==(const GreengrassClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest GreengrassClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public GreengrassClientRequest instance.
  */
 GreengrassClientRequestPrivate::GreengrassClientRequestPrivate(const GreengrassClientRequest::Action action, GreengrassClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ GreengrassClientRequestPrivate::GreengrassClientRequestPrivate(const GreengrassC
  */
 GreengrassClientRequestPrivate::GreengrassClientRequestPrivate(const GreengrassClientRequestPrivate &other,
                                      GreengrassClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

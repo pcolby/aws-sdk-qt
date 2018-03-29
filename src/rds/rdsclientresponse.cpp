@@ -40,7 +40,7 @@ namespace RDS {
  * @param  parent   This object's parent.
  */
 RdsClientResponse::RdsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new RdsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new RdsClientResponsePrivate(this), parent)
 {
 
 }

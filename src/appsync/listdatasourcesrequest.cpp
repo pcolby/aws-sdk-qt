@@ -66,10 +66,10 @@ bool ListDataSourcesRequest::isValid() const
  *
  * @return An ListDataSourcesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * ListDataSourcesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDataSourcesRequest::response(QNetworkReply * const reply) const
 {
     return new ListDataSourcesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool BatchDeleteTableRequest::isValid() const
  *
  * @return An BatchDeleteTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * BatchDeleteTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDeleteTableRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDeleteTableResponse(*this, reply);
 }

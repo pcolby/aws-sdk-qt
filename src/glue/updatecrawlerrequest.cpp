@@ -66,10 +66,10 @@ bool UpdateCrawlerRequest::isValid() const
  *
  * @return An UpdateCrawlerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * UpdateCrawlerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateCrawlerRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateCrawlerResponse(*this, reply);
 }

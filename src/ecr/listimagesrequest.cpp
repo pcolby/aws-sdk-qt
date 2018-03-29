@@ -66,10 +66,10 @@ bool ListImagesRequest::isValid() const
  *
  * @return An ListImagesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * const reply) const
 {
     return new ListImagesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool SendTaskHeartbeatRequest::isValid() const
  *
  * @return An SendTaskHeartbeatResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkReply * const reply) const
 {
     return new SendTaskHeartbeatResponse(*this, reply);
 }

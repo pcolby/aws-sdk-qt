@@ -66,10 +66,10 @@ bool CreateDataSourceFromRDSRequest::isValid() const
  *
  * @return An CreateDataSourceFromRDSResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDataSourceFromRDSResponse(*this, reply);
 }

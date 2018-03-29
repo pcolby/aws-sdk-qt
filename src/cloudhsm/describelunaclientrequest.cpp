@@ -66,10 +66,10 @@ bool DescribeLunaClientRequest::isValid() const
  *
  * @return An DescribeLunaClientResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * DescribeLunaClientRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLunaClientRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLunaClientResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PutTraceSegmentsRequest::isValid() const
  *
  * @return An PutTraceSegmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  XRayClient::send
  */
-AwsAbstractResponse * PutTraceSegmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutTraceSegmentsRequest::response(QNetworkReply * const reply) const
 {
     return new PutTraceSegmentsResponse(*this, reply);
 }

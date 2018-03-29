@@ -66,10 +66,10 @@ bool DeleteAdmChannelRequest::isValid() const
  *
  * @return An DeleteAdmChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * DeleteAdmChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAdmChannelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAdmChannelResponse(*this, reply);
 }

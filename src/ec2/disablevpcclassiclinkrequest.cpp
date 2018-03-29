@@ -66,10 +66,10 @@ bool DisableVpcClassicLinkRequest::isValid() const
  *
  * @return An DisableVpcClassicLinkResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetworkReply * const reply) const
 {
     return new DisableVpcClassicLinkResponse(*this, reply);
 }

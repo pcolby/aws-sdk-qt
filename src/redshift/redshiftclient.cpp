@@ -75,10 +75,10 @@ namespace Redshift {
  */
 RedshiftClient::RedshiftClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new RedshiftClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new RedshiftClientPrivate(this), parent)
 {
     Q_D(RedshiftClient);
     d->apiVersion = QStringLiteral("2012-12-01");
@@ -108,10 +108,10 @@ RedshiftClient::RedshiftClient(
  */
 RedshiftClient::RedshiftClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new RedshiftClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new RedshiftClientPrivate(this), parent)
 {
     Q_D(RedshiftClient);
     d->apiVersion = QStringLiteral("2012-12-01");
@@ -1508,9 +1508,9 @@ RotateEncryptionKeyResponse * RedshiftClient::rotateEncryptionKey(const RotateEn
  * @param  q  Pointer to this object's public RedshiftClient instance.
  */
 RedshiftClientPrivate::RedshiftClientPrivate(RedshiftClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Redshift

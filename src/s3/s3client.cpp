@@ -45,10 +45,10 @@ namespace S3 {
  */
 S3Client::S3Client(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new S3ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new S3ClientPrivate(this), parent)
 {
     Q_D(S3Client);
     d->apiVersion = QStringLiteral("2006-03-01");
@@ -78,10 +78,10 @@ S3Client::S3Client(
  */
 S3Client::S3Client(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new S3ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new S3ClientPrivate(this), parent)
 {
     Q_D(S3Client);
     d->apiVersion = QStringLiteral("2006-03-01");
@@ -1132,9 +1132,9 @@ UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &r
  * @param  q  Pointer to this object's public S3Client instance.
  */
 S3ClientPrivate::S3ClientPrivate(S3Client * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureS3();
+    signature = new QtAws::Core::AwsSignatureS3();
 }
 
 } // namespace S3

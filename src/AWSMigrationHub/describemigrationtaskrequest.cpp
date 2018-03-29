@@ -66,10 +66,10 @@ bool DescribeMigrationTaskRequest::isValid() const
  *
  * @return An DescribeMigrationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMigrationTaskResponse(*this, reply);
 }

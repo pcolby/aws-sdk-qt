@@ -36,7 +36,7 @@ namespace WAF {
  * @param  action  The WAF action to request.
  */
 WafClientRequest::WafClientRequest(const Action action)
-    : AwsAbstractRequest(new WafClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WafClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ WafClientRequest::WafClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 WafClientRequest::WafClientRequest(const WafClientRequest &other)
-    : AwsAbstractRequest(new WafClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WafClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ WafClientRequest& WafClientRequest::operator=(const WafClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-WafClientRequest::WafClientRequest(WafClientRequestPrivate * const d) : AwsAbstractRequest(d)
+WafClientRequest::WafClientRequest(WafClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool WafClientRequest::operator==(const WafClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest WafClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public WafClientRequest instance.
  */
 WafClientRequestPrivate::WafClientRequestPrivate(const WafClientRequest::Action action, WafClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ WafClientRequestPrivate::WafClientRequestPrivate(const WafClientRequest::Action 
  */
 WafClientRequestPrivate::WafClientRequestPrivate(const WafClientRequestPrivate &other,
                                      WafClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

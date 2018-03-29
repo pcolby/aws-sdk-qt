@@ -66,10 +66,10 @@ bool ListDistributionsByWebACLIdRequest::isValid() const
  *
  * @return An ListDistributionsByWebACLIdResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(QNetworkReply * const reply) const
 {
     return new ListDistributionsByWebACLIdResponse(*this, reply);
 }

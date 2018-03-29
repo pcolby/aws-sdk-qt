@@ -66,10 +66,10 @@ bool RequestUploadCredentialsRequest::isValid() const
  *
  * @return An RequestUploadCredentialsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * RequestUploadCredentialsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RequestUploadCredentialsRequest::response(QNetworkReply * const reply) const
 {
     return new RequestUploadCredentialsResponse(*this, reply);
 }

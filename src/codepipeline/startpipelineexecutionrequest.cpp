@@ -66,10 +66,10 @@ bool StartPipelineExecutionRequest::isValid() const
  *
  * @return An StartPipelineExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new StartPipelineExecutionResponse(*this, reply);
 }

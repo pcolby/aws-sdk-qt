@@ -48,10 +48,10 @@ namespace Comprehend {
  */
 ComprehendClient::ComprehendClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ComprehendClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ComprehendClientPrivate(this), parent)
 {
     Q_D(ComprehendClient);
     d->apiVersion = QStringLiteral("2017-11-27");
@@ -81,10 +81,10 @@ ComprehendClient::ComprehendClient(
  */
 ComprehendClient::ComprehendClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ComprehendClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ComprehendClientPrivate(this), parent)
 {
     Q_D(ComprehendClient);
     d->apiVersion = QStringLiteral("2017-11-27");
@@ -274,9 +274,9 @@ StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(cons
  * @param  q  Pointer to this object's public ComprehendClient instance.
  */
 ComprehendClientPrivate::ComprehendClientPrivate(ComprehendClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Comprehend

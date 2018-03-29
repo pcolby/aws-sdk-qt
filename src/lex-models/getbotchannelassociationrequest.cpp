@@ -66,10 +66,10 @@ bool GetBotChannelAssociationRequest::isValid() const
  *
  * @return An GetBotChannelAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetBotChannelAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new GetBotChannelAssociationResponse(*this, reply);
 }

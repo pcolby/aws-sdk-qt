@@ -66,10 +66,10 @@ bool StartTaskRequest::isValid() const
  *
  * @return An StartTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * StartTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartTaskRequest::response(QNetworkReply * const reply) const
 {
     return new StartTaskResponse(*this, reply);
 }

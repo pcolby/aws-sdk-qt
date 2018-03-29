@@ -66,10 +66,10 @@ bool CreateServiceRequest::isValid() const
  *
  * @return An CreateServiceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateServiceResponse(*this, reply);
 }

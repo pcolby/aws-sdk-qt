@@ -40,7 +40,7 @@ namespace Inspector {
  * @param  parent   This object's parent.
  */
 InspectorClientResponse::InspectorClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new InspectorClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new InspectorClientResponsePrivate(this), parent)
 {
 
 }

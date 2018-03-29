@@ -36,7 +36,7 @@ namespace ECS {
  * @param  action  The ECS action to request.
  */
 EcsClientRequest::EcsClientRequest(const Action action)
-    : AwsAbstractRequest(new EcsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EcsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ EcsClientRequest::EcsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 EcsClientRequest::EcsClientRequest(const EcsClientRequest &other)
-    : AwsAbstractRequest(new EcsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EcsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ EcsClientRequest& EcsClientRequest::operator=(const EcsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-EcsClientRequest::EcsClientRequest(EcsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+EcsClientRequest::EcsClientRequest(EcsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool EcsClientRequest::operator==(const EcsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest EcsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public EcsClientRequest instance.
  */
 EcsClientRequestPrivate::EcsClientRequestPrivate(const EcsClientRequest::Action action, EcsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ EcsClientRequestPrivate::EcsClientRequestPrivate(const EcsClientRequest::Action 
  */
 EcsClientRequestPrivate::EcsClientRequestPrivate(const EcsClientRequestPrivate &other,
                                      EcsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

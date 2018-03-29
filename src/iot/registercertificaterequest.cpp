@@ -66,10 +66,10 @@ bool RegisterCertificateRequest::isValid() const
  *
  * @return An RegisterCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * RegisterCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterCertificateResponse(*this, reply);
 }

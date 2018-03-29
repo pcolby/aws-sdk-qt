@@ -40,7 +40,7 @@ namespace TranscribeService {
  * @param  parent   This object's parent.
  */
 TranscribeServiceClientResponse::TranscribeServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new TranscribeServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new TranscribeServiceClientResponsePrivate(this), parent)
 {
 
 }

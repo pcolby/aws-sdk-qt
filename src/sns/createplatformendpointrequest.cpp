@@ -66,10 +66,10 @@ bool CreatePlatformEndpointRequest::isValid() const
  *
  * @return An CreatePlatformEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePlatformEndpointResponse(*this, reply);
 }

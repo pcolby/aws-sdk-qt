@@ -66,10 +66,10 @@ bool RestoreDBClusterToPointInTimeRequest::isValid() const
  *
  * @return An RestoreDBClusterToPointInTimeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreDBClusterToPointInTimeResponse(*this, reply);
 }

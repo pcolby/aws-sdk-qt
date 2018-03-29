@@ -36,7 +36,7 @@ namespace AlexaForBusiness {
  * @param  action  The AlexaForBusiness action to request.
  */
 AlexaForBusinessClientRequest::AlexaForBusinessClientRequest(const Action action)
-    : AwsAbstractRequest(new AlexaForBusinessClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ AlexaForBusinessClientRequest::AlexaForBusinessClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 AlexaForBusinessClientRequest::AlexaForBusinessClientRequest(const AlexaForBusinessClientRequest &other)
-    : AwsAbstractRequest(new AlexaForBusinessClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ AlexaForBusinessClientRequest& AlexaForBusinessClientRequest::operator=(const Al
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-AlexaForBusinessClientRequest::AlexaForBusinessClientRequest(AlexaForBusinessClientRequestPrivate * const d) : AwsAbstractRequest(d)
+AlexaForBusinessClientRequest::AlexaForBusinessClientRequest(AlexaForBusinessClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool AlexaForBusinessClientRequest::operator==(const AlexaForBusinessClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest AlexaForBusinessClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public AlexaForBusinessClientRequest instance.
  */
 AlexaForBusinessClientRequestPrivate::AlexaForBusinessClientRequestPrivate(const AlexaForBusinessClientRequest::Action action, AlexaForBusinessClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ AlexaForBusinessClientRequestPrivate::AlexaForBusinessClientRequestPrivate(const
  */
 AlexaForBusinessClientRequestPrivate::AlexaForBusinessClientRequestPrivate(const AlexaForBusinessClientRequestPrivate &other,
                                      AlexaForBusinessClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

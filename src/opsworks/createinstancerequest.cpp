@@ -66,10 +66,10 @@ bool CreateInstanceRequest::isValid() const
  *
  * @return An CreateInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * CreateInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new CreateInstanceResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateContainerAgentRequest::isValid() const
  *
  * @return An UpdateContainerAgentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateContainerAgentResponse(*this, reply);
 }

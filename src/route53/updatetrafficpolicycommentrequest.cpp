@@ -66,10 +66,10 @@ bool UpdateTrafficPolicyCommentRequest::isValid() const
  *
  * @return An UpdateTrafficPolicyCommentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTrafficPolicyCommentResponse(*this, reply);
 }

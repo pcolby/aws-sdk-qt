@@ -66,10 +66,10 @@ bool RunTaskRequest::isValid() const
  *
  * @return An RunTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * const reply) const
 {
     return new RunTaskResponse(*this, reply);
 }

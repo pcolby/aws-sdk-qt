@@ -66,10 +66,10 @@ bool UpdateConstraintRequest::isValid() const
  *
  * @return An UpdateConstraintResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateConstraintResponse(*this, reply);
 }

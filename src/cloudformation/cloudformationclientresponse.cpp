@@ -40,7 +40,7 @@ namespace CloudFormation {
  * @param  parent   This object's parent.
  */
 CloudFormationClientResponse::CloudFormationClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudFormationClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudFormationClientResponsePrivate(this), parent)
 {
 
 }

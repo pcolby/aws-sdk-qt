@@ -36,7 +36,7 @@ namespace CognitoSync {
  * @param  action  The CognitoSync action to request.
  */
 CognitoSyncClientRequest::CognitoSyncClientRequest(const Action action)
-    : AwsAbstractRequest(new CognitoSyncClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CognitoSyncClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CognitoSyncClientRequest::CognitoSyncClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CognitoSyncClientRequest::CognitoSyncClientRequest(const CognitoSyncClientRequest &other)
-    : AwsAbstractRequest(new CognitoSyncClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CognitoSyncClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CognitoSyncClientRequest& CognitoSyncClientRequest::operator=(const CognitoSyncC
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CognitoSyncClientRequest::CognitoSyncClientRequest(CognitoSyncClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CognitoSyncClientRequest::CognitoSyncClientRequest(CognitoSyncClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CognitoSyncClientRequest::operator==(const CognitoSyncClientRequest &other)
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CognitoSyncClientRequest::unsignedRequest(const QUrl &endpoint) 
  * @param  q       Pointer to this object's public CognitoSyncClientRequest instance.
  */
 CognitoSyncClientRequestPrivate::CognitoSyncClientRequestPrivate(const CognitoSyncClientRequest::Action action, CognitoSyncClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CognitoSyncClientRequestPrivate::CognitoSyncClientRequestPrivate(const CognitoSy
  */
 CognitoSyncClientRequestPrivate::CognitoSyncClientRequestPrivate(const CognitoSyncClientRequestPrivate &other,
                                      CognitoSyncClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool AssociateNodeRequest::isValid() const
  *
  * @return An AssociateNodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateNodeResponse(*this, reply);
 }

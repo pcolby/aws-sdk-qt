@@ -66,10 +66,10 @@ bool FlushStageCacheRequest::isValid() const
  *
  * @return An FlushStageCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkReply * const reply) const
 {
     return new FlushStageCacheResponse(*this, reply);
 }

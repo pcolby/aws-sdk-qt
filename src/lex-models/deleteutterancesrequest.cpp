@@ -66,10 +66,10 @@ bool DeleteUtterancesRequest::isValid() const
  *
  * @return An DeleteUtterancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteUtterancesResponse(*this, reply);
 }

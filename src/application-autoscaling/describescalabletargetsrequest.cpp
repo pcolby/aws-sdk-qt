@@ -66,10 +66,10 @@ bool DescribeScalableTargetsRequest::isValid() const
  *
  * @return An DescribeScalableTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationAutoScalingClient::send
  */
-AwsAbstractResponse * DescribeScalableTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeScalableTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeScalableTargetsResponse(*this, reply);
 }

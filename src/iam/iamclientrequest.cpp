@@ -36,7 +36,7 @@ namespace IAM {
  * @param  action  The IAM action to request.
  */
 IamClientRequest::IamClientRequest(const Action action)
-    : AwsAbstractRequest(new IamClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IamClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ IamClientRequest::IamClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 IamClientRequest::IamClientRequest(const IamClientRequest &other)
-    : AwsAbstractRequest(new IamClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IamClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ IamClientRequest& IamClientRequest::operator=(const IamClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-IamClientRequest::IamClientRequest(IamClientRequestPrivate * const d) : AwsAbstractRequest(d)
+IamClientRequest::IamClientRequest(IamClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool IamClientRequest::operator==(const IamClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest IamClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public IamClientRequest instance.
  */
 IamClientRequestPrivate::IamClientRequestPrivate(const IamClientRequest::Action action, IamClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ IamClientRequestPrivate::IamClientRequestPrivate(const IamClientRequest::Action 
  */
 IamClientRequestPrivate::IamClientRequestPrivate(const IamClientRequestPrivate &other,
                                      IamClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

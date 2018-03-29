@@ -66,10 +66,10 @@ bool DeleteMLModelRequest::isValid() const
  *
  * @return An DeleteMLModelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMLModelResponse(*this, reply);
 }

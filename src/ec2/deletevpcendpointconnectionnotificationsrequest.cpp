@@ -66,10 +66,10 @@ bool DeleteVpcEndpointConnectionNotificationsRequest::isValid() const
  *
  * @return An DeleteVpcEndpointConnectionNotificationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVpcEndpointConnectionNotificationsResponse(*this, reply);
 }

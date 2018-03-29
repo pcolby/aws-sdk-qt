@@ -66,10 +66,10 @@ bool DeleteSigningCertificateRequest::isValid() const
  *
  * @return An DeleteSigningCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSigningCertificateResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteProvisioningArtifactRequest::isValid() const
  *
  * @return An DeleteProvisioningArtifactResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteProvisioningArtifactResponse(*this, reply);
 }

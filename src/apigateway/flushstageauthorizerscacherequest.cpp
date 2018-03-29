@@ -66,10 +66,10 @@ bool FlushStageAuthorizersCacheRequest::isValid() const
  *
  * @return An FlushStageAuthorizersCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(QNetworkReply * const reply) const
 {
     return new FlushStageAuthorizersCacheResponse(*this, reply);
 }

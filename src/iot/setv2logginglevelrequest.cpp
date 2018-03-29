@@ -66,10 +66,10 @@ bool SetV2LoggingLevelRequest::isValid() const
  *
  * @return An SetV2LoggingLevelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * SetV2LoggingLevelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetV2LoggingLevelRequest::response(QNetworkReply * const reply) const
 {
     return new SetV2LoggingLevelResponse(*this, reply);
 }

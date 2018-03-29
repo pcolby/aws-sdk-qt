@@ -66,10 +66,10 @@ bool StopChannelRequest::isValid() const
  *
  * @return An StopChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * const reply) const
 {
     return new StopChannelResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateParameterGroupRequest::isValid() const
  *
  * @return An UpdateParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateParameterGroupResponse(*this, reply);
 }

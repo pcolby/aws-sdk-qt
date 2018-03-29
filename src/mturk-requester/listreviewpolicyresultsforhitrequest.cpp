@@ -66,10 +66,10 @@ bool ListReviewPolicyResultsForHITRequest::isValid() const
  *
  * @return An ListReviewPolicyResultsForHITResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::response(QNetworkReply * const reply) const
 {
     return new ListReviewPolicyResultsForHITResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateGroupVersionRequest::isValid() const
  *
  * @return An CreateGroupVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateGroupVersionResponse(*this, reply);
 }

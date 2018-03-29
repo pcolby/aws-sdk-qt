@@ -66,10 +66,10 @@ bool GetResourceConfigHistoryRequest::isValid() const
  *
  * @return An GetResourceConfigHistoryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNetworkReply * const reply) const
 {
     return new GetResourceConfigHistoryResponse(*this, reply);
 }

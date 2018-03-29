@@ -49,10 +49,10 @@ namespace Firehose {
  */
 FirehoseClient::FirehoseClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new FirehoseClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new FirehoseClientPrivate(this), parent)
 {
     Q_D(FirehoseClient);
     d->apiVersion = QStringLiteral("2015-08-04");
@@ -82,10 +82,10 @@ FirehoseClient::FirehoseClient(
  */
 FirehoseClient::FirehoseClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new FirehoseClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new FirehoseClientPrivate(this), parent)
 {
     Q_D(FirehoseClient);
     d->apiVersion = QStringLiteral("2015-08-04");
@@ -430,9 +430,9 @@ UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestin
  * @param  q  Pointer to this object's public FirehoseClient instance.
  */
 FirehoseClientPrivate::FirehoseClientPrivate(FirehoseClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Firehose

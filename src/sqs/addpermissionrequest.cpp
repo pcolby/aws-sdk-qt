@@ -66,10 +66,10 @@ bool AddPermissionRequest::isValid() const
  *
  * @return An AddPermissionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply * const reply) const
 {
     return new AddPermissionResponse(*this, reply);
 }

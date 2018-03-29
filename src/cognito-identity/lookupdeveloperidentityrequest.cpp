@@ -66,10 +66,10 @@ bool LookupDeveloperIdentityRequest::isValid() const
  *
  * @return An LookupDeveloperIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * LookupDeveloperIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * LookupDeveloperIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new LookupDeveloperIdentityResponse(*this, reply);
 }

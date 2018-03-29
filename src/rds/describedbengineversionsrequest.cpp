@@ -66,10 +66,10 @@ bool DescribeDBEngineVersionsRequest::isValid() const
  *
  * @return An DescribeDBEngineVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBEngineVersionsResponse(*this, reply);
 }

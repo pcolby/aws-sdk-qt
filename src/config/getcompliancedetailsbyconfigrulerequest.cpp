@@ -66,10 +66,10 @@ bool GetComplianceDetailsByConfigRuleRequest::isValid() const
  *
  * @return An GetComplianceDetailsByConfigRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * GetComplianceDetailsByConfigRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetComplianceDetailsByConfigRuleRequest::response(QNetworkReply * const reply) const
 {
     return new GetComplianceDetailsByConfigRuleResponse(*this, reply);
 }

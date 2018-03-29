@@ -66,10 +66,10 @@ bool AssumeRoleWithWebIdentityRequest::isValid() const
  *
  * @return An AssumeRoleWithWebIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new AssumeRoleWithWebIdentityResponse(*this, reply);
 }

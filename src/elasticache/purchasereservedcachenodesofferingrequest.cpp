@@ -66,10 +66,10 @@ bool PurchaseReservedCacheNodesOfferingRequest::isValid() const
  *
  * @return An PurchaseReservedCacheNodesOfferingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::response(QNetworkReply * const reply) const
 {
     return new PurchaseReservedCacheNodesOfferingResponse(*this, reply);
 }

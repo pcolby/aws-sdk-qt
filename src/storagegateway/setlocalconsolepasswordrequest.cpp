@@ -66,10 +66,10 @@ bool SetLocalConsolePasswordRequest::isValid() const
  *
  * @return An SetLocalConsolePasswordResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNetworkReply * const reply) const
 {
     return new SetLocalConsolePasswordResponse(*this, reply);
 }

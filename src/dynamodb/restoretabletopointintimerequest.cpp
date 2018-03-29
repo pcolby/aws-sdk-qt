@@ -66,10 +66,10 @@ bool RestoreTableToPointInTimeRequest::isValid() const
  *
  * @return An RestoreTableToPointInTimeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * RestoreTableToPointInTimeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreTableToPointInTimeRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreTableToPointInTimeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool BatchGetPartitionRequest::isValid() const
  *
  * @return An BatchGetPartitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * BatchGetPartitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetPartitionRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetPartitionResponse(*this, reply);
 }

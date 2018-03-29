@@ -66,10 +66,10 @@ bool SynthesizeSpeechRequest::isValid() const
  *
  * @return An SynthesizeSpeechResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PollyClient::send
  */
-AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkReply * const reply) const
 {
     return new SynthesizeSpeechResponse(*this, reply);
 }

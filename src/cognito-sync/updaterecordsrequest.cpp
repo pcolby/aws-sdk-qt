@@ -66,10 +66,10 @@ bool UpdateRecordsRequest::isValid() const
  *
  * @return An UpdateRecordsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * UpdateRecordsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRecordsRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRecordsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListVolumeRecoveryPointsRequest::isValid() const
  *
  * @return An ListVolumeRecoveryPointsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * ListVolumeRecoveryPointsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListVolumeRecoveryPointsRequest::response(QNetworkReply * const reply) const
 {
     return new ListVolumeRecoveryPointsResponse(*this, reply);
 }

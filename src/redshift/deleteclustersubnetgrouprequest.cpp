@@ -66,10 +66,10 @@ bool DeleteClusterSubnetGroupRequest::isValid() const
  *
  * @return An DeleteClusterSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DeleteClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteClusterSubnetGroupResponse(*this, reply);
 }

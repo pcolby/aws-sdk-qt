@@ -66,10 +66,10 @@ bool GetBucketLocationRequest::isValid() const
  *
  * @return An GetBucketLocationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkReply * const reply) const
 {
     return new GetBucketLocationResponse(*this, reply);
 }

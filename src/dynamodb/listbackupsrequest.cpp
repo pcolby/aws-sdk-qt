@@ -66,10 +66,10 @@ bool ListBackupsRequest::isValid() const
  *
  * @return An ListBackupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * const reply) const
 {
     return new ListBackupsResponse(*this, reply);
 }

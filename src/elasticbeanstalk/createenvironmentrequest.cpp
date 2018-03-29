@@ -66,10 +66,10 @@ bool CreateEnvironmentRequest::isValid() const
  *
  * @return An CreateEnvironmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
     return new CreateEnvironmentResponse(*this, reply);
 }

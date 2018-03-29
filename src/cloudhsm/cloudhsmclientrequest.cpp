@@ -36,7 +36,7 @@ namespace CloudHSM {
  * @param  action  The CloudHSM action to request.
  */
 CloudHSMClientRequest::CloudHSMClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudHSMClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudHSMClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudHSMClientRequest::CloudHSMClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudHSMClientRequest::CloudHSMClientRequest(const CloudHSMClientRequest &other)
-    : AwsAbstractRequest(new CloudHSMClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudHSMClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudHSMClientRequest& CloudHSMClientRequest::operator=(const CloudHSMClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudHSMClientRequest::CloudHSMClientRequest(CloudHSMClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudHSMClientRequest::CloudHSMClientRequest(CloudHSMClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudHSMClientRequest::operator==(const CloudHSMClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudHSMClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public CloudHSMClientRequest instance.
  */
 CloudHSMClientRequestPrivate::CloudHSMClientRequestPrivate(const CloudHSMClientRequest::Action action, CloudHSMClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudHSMClientRequestPrivate::CloudHSMClientRequestPrivate(const CloudHSMClientR
  */
 CloudHSMClientRequestPrivate::CloudHSMClientRequestPrivate(const CloudHSMClientRequestPrivate &other,
                                      CloudHSMClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

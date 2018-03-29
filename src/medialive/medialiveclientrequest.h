@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MediaLive {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MediaLiveClientRequestPrivate;
 
-class QTAWS_EXPORT MediaLiveClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MediaLiveClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaLive.

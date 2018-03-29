@@ -66,10 +66,10 @@ bool DescribeAuthorizerRequest::isValid() const
  *
  * @return An DescribeAuthorizerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DescribeAuthorizerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAuthorizerRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAuthorizerResponse(*this, reply);
 }

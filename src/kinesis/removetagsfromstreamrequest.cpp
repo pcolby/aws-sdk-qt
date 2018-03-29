@@ -66,10 +66,10 @@ bool RemoveTagsFromStreamRequest::isValid() const
  *
  * @return An RemoveTagsFromStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveTagsFromStreamResponse(*this, reply);
 }

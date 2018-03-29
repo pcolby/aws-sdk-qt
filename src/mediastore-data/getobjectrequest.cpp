@@ -66,10 +66,10 @@ bool GetObjectRequest::isValid() const
  *
  * @return An GetObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreDataClient::send
  */
-AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * const reply) const
 {
     return new GetObjectResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateHapgRequest::isValid() const
  *
  * @return An CreateHapgResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * const reply) const
 {
     return new CreateHapgResponse(*this, reply);
 }

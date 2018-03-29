@@ -66,10 +66,10 @@ bool DescribeSpotInstanceRequestsRequest::isValid() const
  *
  * @return An DescribeSpotInstanceRequestsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeSpotInstanceRequestsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSpotInstanceRequestsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSpotInstanceRequestsResponse(*this, reply);
 }

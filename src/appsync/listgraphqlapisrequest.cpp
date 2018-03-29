@@ -66,10 +66,10 @@ bool ListGraphqlApisRequest::isValid() const
  *
  * @return An ListGraphqlApisResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * ListGraphqlApisRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGraphqlApisRequest::response(QNetworkReply * const reply) const
 {
     return new ListGraphqlApisResponse(*this, reply);
 }

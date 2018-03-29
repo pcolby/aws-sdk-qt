@@ -66,10 +66,10 @@ bool AllocatePublicVirtualInterfaceRequest::isValid() const
  *
  * @return An AllocatePublicVirtualInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * AllocatePublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AllocatePublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new AllocatePublicVirtualInterfaceResponse(*this, reply);
 }

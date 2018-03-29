@@ -40,7 +40,7 @@ namespace ElasticLoadBalancingv2 {
  * @param  parent   This object's parent.
  */
 ElasticLoadBalancingv2ClientResponse::ElasticLoadBalancingv2ClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ElasticLoadBalancingv2ClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ElasticLoadBalancingv2ClientResponsePrivate(this), parent)
 {
 
 }

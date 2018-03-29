@@ -66,10 +66,10 @@ bool BatchDeletePartitionRequest::isValid() const
  *
  * @return An BatchDeletePartitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDeletePartitionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteVaultRequest::isValid() const
  *
  * @return An DeleteVaultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * DeleteVaultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVaultRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVaultResponse(*this, reply);
 }

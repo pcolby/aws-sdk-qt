@@ -66,10 +66,10 @@ bool PutJobSuccessResultRequest::isValid() const
  *
  * @return An PutJobSuccessResultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * PutJobSuccessResultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutJobSuccessResultRequest::response(QNetworkReply * const reply) const
 {
     return new PutJobSuccessResultResponse(*this, reply);
 }

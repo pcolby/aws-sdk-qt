@@ -36,7 +36,7 @@ namespace DirectoryService {
  * @param  action  The DirectoryService action to request.
  */
 DirectoryServiceClientRequest::DirectoryServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new DirectoryServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DirectoryServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DirectoryServiceClientRequest::DirectoryServiceClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 DirectoryServiceClientRequest::DirectoryServiceClientRequest(const DirectoryServiceClientRequest &other)
-    : AwsAbstractRequest(new DirectoryServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DirectoryServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DirectoryServiceClientRequest& DirectoryServiceClientRequest::operator=(const Di
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DirectoryServiceClientRequest::DirectoryServiceClientRequest(DirectoryServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DirectoryServiceClientRequest::DirectoryServiceClientRequest(DirectoryServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DirectoryServiceClientRequest::operator==(const DirectoryServiceClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DirectoryServiceClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public DirectoryServiceClientRequest instance.
  */
 DirectoryServiceClientRequestPrivate::DirectoryServiceClientRequestPrivate(const DirectoryServiceClientRequest::Action action, DirectoryServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DirectoryServiceClientRequestPrivate::DirectoryServiceClientRequestPrivate(const
  */
 DirectoryServiceClientRequestPrivate::DirectoryServiceClientRequestPrivate(const DirectoryServiceClientRequestPrivate &other,
                                      DirectoryServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

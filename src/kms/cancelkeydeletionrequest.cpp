@@ -66,10 +66,10 @@ bool CancelKeyDeletionRequest::isValid() const
  *
  * @return An CancelKeyDeletionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkReply * const reply) const
 {
     return new CancelKeyDeletionResponse(*this, reply);
 }

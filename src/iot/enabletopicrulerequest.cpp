@@ -66,10 +66,10 @@ bool EnableTopicRuleRequest::isValid() const
  *
  * @return An EnableTopicRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * EnableTopicRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableTopicRuleRequest::response(QNetworkReply * const reply) const
 {
     return new EnableTopicRuleResponse(*this, reply);
 }

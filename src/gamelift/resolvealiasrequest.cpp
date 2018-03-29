@@ -66,10 +66,10 @@ bool ResolveAliasRequest::isValid() const
  *
  * @return An ResolveAliasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * ResolveAliasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResolveAliasRequest::response(QNetworkReply * const reply) const
 {
     return new ResolveAliasResponse(*this, reply);
 }

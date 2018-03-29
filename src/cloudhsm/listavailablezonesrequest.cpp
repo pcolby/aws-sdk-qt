@@ -66,10 +66,10 @@ bool ListAvailableZonesRequest::isValid() const
  *
  * @return An ListAvailableZonesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkReply * const reply) const
 {
     return new ListAvailableZonesResponse(*this, reply);
 }

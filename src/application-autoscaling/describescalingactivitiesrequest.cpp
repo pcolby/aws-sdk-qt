@@ -66,10 +66,10 @@ bool DescribeScalingActivitiesRequest::isValid() const
  *
  * @return An DescribeScalingActivitiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationAutoScalingClient::send
  */
-AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeScalingActivitiesResponse(*this, reply);
 }

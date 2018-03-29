@@ -66,10 +66,10 @@ bool ListContainerInstancesRequest::isValid() const
  *
  * @return An ListContainerInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * ListContainerInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListContainerInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new ListContainerInstancesResponse(*this, reply);
 }

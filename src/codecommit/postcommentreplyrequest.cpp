@@ -66,10 +66,10 @@ bool PostCommentReplyRequest::isValid() const
  *
  * @return An PostCommentReplyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkReply * const reply) const
 {
     return new PostCommentReplyResponse(*this, reply);
 }

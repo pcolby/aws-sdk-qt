@@ -66,10 +66,10 @@ bool DescribeStackSetOperationRequest::isValid() const
  *
  * @return An DescribeStackSetOperationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * DescribeStackSetOperationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeStackSetOperationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeStackSetOperationResponse(*this, reply);
 }

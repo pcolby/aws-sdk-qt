@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace KinesisVideoMedia {
@@ -34,18 +34,18 @@ class KinesisVideoMediaClientPrivate;
 class GetMediaRequest;
 class GetMediaResponse;
 
-class QTAWS_EXPORT KinesisVideoMediaClient : public AwsAbstractClient {
+class QTAWS_EXPORT KinesisVideoMediaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     KinesisVideoMediaClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     KinesisVideoMediaClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

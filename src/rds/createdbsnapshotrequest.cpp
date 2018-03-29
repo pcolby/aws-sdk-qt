@@ -66,10 +66,10 @@ bool CreateDBSnapshotRequest::isValid() const
  *
  * @return An CreateDBSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CreateDBSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDBSnapshotResponse(*this, reply);
 }

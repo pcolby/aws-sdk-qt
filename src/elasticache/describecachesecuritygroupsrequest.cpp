@@ -66,10 +66,10 @@ bool DescribeCacheSecurityGroupsRequest::isValid() const
  *
  * @return An DescribeCacheSecurityGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeCacheSecurityGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCacheSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCacheSecurityGroupsResponse(*this, reply);
 }

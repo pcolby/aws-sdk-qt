@@ -66,10 +66,10 @@ bool ImportKeyMaterialRequest::isValid() const
  *
  * @return An ImportKeyMaterialResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkReply * const reply) const
 {
     return new ImportKeyMaterialResponse(*this, reply);
 }

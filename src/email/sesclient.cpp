@@ -56,10 +56,10 @@ namespace SES {
  */
 SesClient::SesClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SesClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SesClientPrivate(this), parent)
 {
     Q_D(SesClient);
     d->apiVersion = QStringLiteral("2010-12-01");
@@ -89,10 +89,10 @@ SesClient::SesClient(
  */
 SesClient::SesClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SesClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SesClientPrivate(this), parent)
 {
     Q_D(SesClient);
     d->apiVersion = QStringLiteral("2010-12-01");
@@ -1925,9 +1925,9 @@ VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailId
  * @param  q  Pointer to this object's public SesClient instance.
  */
 SesClientPrivate::SesClientPrivate(SesClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SES

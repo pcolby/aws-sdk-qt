@@ -66,10 +66,10 @@ bool ListGlobalTablesRequest::isValid() const
  *
  * @return An ListGlobalTablesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * ListGlobalTablesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGlobalTablesRequest::response(QNetworkReply * const reply) const
 {
     return new ListGlobalTablesResponse(*this, reply);
 }

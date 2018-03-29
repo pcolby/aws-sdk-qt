@@ -66,10 +66,10 @@ bool UpdateIPSetRequest::isValid() const
  *
  * @return An UpdateIPSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateIPSetResponse(*this, reply);
 }

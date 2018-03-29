@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SES {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SesClientRequestPrivate;
 
-class QTAWS_EXPORT SesClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SesClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SES.

@@ -66,10 +66,10 @@ bool StartWorkflowExecutionRequest::isValid() const
  *
  * @return An StartWorkflowExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new StartWorkflowExecutionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeValidDBInstanceModificationsRequest::isValid() const
  *
  * @return An DescribeValidDBInstanceModificationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeValidDBInstanceModificationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeValidDBInstanceModificationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeValidDBInstanceModificationsResponse(*this, reply);
 }

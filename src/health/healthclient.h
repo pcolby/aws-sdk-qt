@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Health {
@@ -44,18 +44,18 @@ class DescribeEventTypesResponse;
 class DescribeEventsRequest;
 class DescribeEventsResponse;
 
-class QTAWS_EXPORT HealthClient : public AwsAbstractClient {
+class QTAWS_EXPORT HealthClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     HealthClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     HealthClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -66,10 +66,10 @@ bool ReleaseStaticIpRequest::isValid() const
  *
  * @return An ReleaseStaticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkReply * const reply) const
 {
     return new ReleaseStaticIpResponse(*this, reply);
 }

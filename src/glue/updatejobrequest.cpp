@@ -66,10 +66,10 @@ bool UpdateJobRequest::isValid() const
  *
  * @return An UpdateJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateJobResponse(*this, reply);
 }

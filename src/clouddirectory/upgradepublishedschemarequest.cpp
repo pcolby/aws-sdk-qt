@@ -66,10 +66,10 @@ bool UpgradePublishedSchemaRequest::isValid() const
  *
  * @return An UpgradePublishedSchemaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetworkReply * const reply) const
 {
     return new UpgradePublishedSchemaResponse(*this, reply);
 }

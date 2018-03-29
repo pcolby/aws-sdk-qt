@@ -66,10 +66,10 @@ bool DetachThingPrincipalRequest::isValid() const
  *
  * @return An DetachThingPrincipalResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetworkReply * const reply) const
 {
     return new DetachThingPrincipalResponse(*this, reply);
 }

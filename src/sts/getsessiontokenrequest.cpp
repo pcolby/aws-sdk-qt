@@ -66,10 +66,10 @@ bool GetSessionTokenRequest::isValid() const
  *
  * @return An GetSessionTokenResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkReply * const reply) const
 {
     return new GetSessionTokenResponse(*this, reply);
 }

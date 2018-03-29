@@ -66,10 +66,10 @@ bool DeleteTapeRequest::isValid() const
  *
  * @return An DeleteTapeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DeleteTapeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTapeRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTapeResponse(*this, reply);
 }

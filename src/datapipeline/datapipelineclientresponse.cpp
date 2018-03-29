@@ -40,7 +40,7 @@ namespace DataPipeline {
  * @param  parent   This object's parent.
  */
 DataPipelineClientResponse::DataPipelineClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DataPipelineClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DataPipelineClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool ModifyLaunchTemplateRequest::isValid() const
  *
  * @return An ModifyLaunchTemplateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyLaunchTemplateResponse(*this, reply);
 }

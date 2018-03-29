@@ -29,7 +29,7 @@ namespace Batch {
 
 class BatchClient;
 
-class QTAWS_EXPORT BatchClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT BatchClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     BatchClientPrivate(BatchClient * const q);

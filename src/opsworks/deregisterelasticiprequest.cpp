@@ -66,10 +66,10 @@ bool DeregisterElasticIpRequest::isValid() const
  *
  * @return An DeregisterElasticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DeregisterElasticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterElasticIpRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterElasticIpResponse(*this, reply);
 }

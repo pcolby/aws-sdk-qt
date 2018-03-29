@@ -66,10 +66,10 @@ bool PurchaseReservedInstancesOfferingRequest::isValid() const
  *
  * @return An PurchaseReservedInstancesOfferingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::response(QNetworkReply * const reply) const
 {
     return new PurchaseReservedInstancesOfferingResponse(*this, reply);
 }

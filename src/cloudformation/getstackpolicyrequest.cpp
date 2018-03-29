@@ -66,10 +66,10 @@ bool GetStackPolicyRequest::isValid() const
  *
  * @return An GetStackPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * GetStackPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetStackPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetStackPolicyResponse(*this, reply);
 }

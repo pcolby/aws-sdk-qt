@@ -66,10 +66,10 @@ bool DescribeThingRegistrationTaskRequest::isValid() const
  *
  * @return An DescribeThingRegistrationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * DescribeThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeThingRegistrationTaskResponse(*this, reply);
 }

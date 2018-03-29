@@ -66,10 +66,10 @@ bool DescribeEngineDefaultClusterParametersRequest::isValid() const
  *
  * @return An DescribeEngineDefaultClusterParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEngineDefaultClusterParametersResponse(*this, reply);
 }

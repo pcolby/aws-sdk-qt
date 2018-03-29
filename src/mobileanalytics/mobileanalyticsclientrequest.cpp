@@ -36,7 +36,7 @@ namespace MobileAnalytics {
  * @param  action  The MobileAnalytics action to request.
  */
 MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(const Action action)
-    : AwsAbstractRequest(new MobileAnalyticsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MobileAnalyticsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(const MobileAnalyticsClientRequest &other)
-    : AwsAbstractRequest(new MobileAnalyticsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MobileAnalyticsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MobileAnalyticsClientRequest& MobileAnalyticsClientRequest::operator=(const Mobi
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(MobileAnalyticsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MobileAnalyticsClientRequest::MobileAnalyticsClientRequest(MobileAnalyticsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MobileAnalyticsClientRequest::operator==(const MobileAnalyticsClientRequest
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MobileAnalyticsClientRequest::unsignedRequest(const QUrl &endpoi
  * @param  q       Pointer to this object's public MobileAnalyticsClientRequest instance.
  */
 MobileAnalyticsClientRequestPrivate::MobileAnalyticsClientRequestPrivate(const MobileAnalyticsClientRequest::Action action, MobileAnalyticsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MobileAnalyticsClientRequestPrivate::MobileAnalyticsClientRequestPrivate(const M
  */
 MobileAnalyticsClientRequestPrivate::MobileAnalyticsClientRequestPrivate(const MobileAnalyticsClientRequestPrivate &other,
                                      MobileAnalyticsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool PurchaseOfferingRequest::isValid() const
  *
  * @return An PurchaseOfferingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkReply * const reply) const
 {
     return new PurchaseOfferingResponse(*this, reply);
 }

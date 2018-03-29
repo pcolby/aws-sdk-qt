@@ -40,7 +40,7 @@ namespace ServerlessApplicationRepository {
  * @param  parent   This object's parent.
  */
 ServerlessApplicationRepositoryClientResponse::ServerlessApplicationRepositoryClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ServerlessApplicationRepositoryClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ServerlessApplicationRepositoryClientResponsePrivate(this), parent)
 {
 
 }

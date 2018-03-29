@@ -28,7 +28,7 @@ namespace SWF {
 
 class SwfClientResponse;
 
-class QTAWS_EXPORT SwfClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT SwfClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

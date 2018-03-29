@@ -66,10 +66,10 @@ bool DescribeStreamRequest::isValid() const
  *
  * @return An DescribeStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeStreamResponse(*this, reply);
 }

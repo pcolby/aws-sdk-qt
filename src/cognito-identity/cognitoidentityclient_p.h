@@ -29,7 +29,7 @@ namespace CognitoIdentity {
 
 class CognitoIdentityClient;
 
-class QTAWS_EXPORT CognitoIdentityClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CognitoIdentityClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CognitoIdentityClientPrivate(CognitoIdentityClient * const q);

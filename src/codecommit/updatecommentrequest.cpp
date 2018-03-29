@@ -66,10 +66,10 @@ bool UpdateCommentRequest::isValid() const
  *
  * @return An UpdateCommentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * UpdateCommentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateCommentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateCommentResponse(*this, reply);
 }

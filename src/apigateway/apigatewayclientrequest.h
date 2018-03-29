@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace APIGateway {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class APIGatewayClientRequestPrivate;
 
-class QTAWS_EXPORT APIGatewayClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT APIGatewayClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by APIGateway.

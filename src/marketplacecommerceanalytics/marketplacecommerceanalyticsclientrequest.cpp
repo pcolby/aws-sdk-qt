@@ -36,7 +36,7 @@ namespace MarketplaceCommerceAnalytics {
  * @param  action  The MarketplaceCommerceAnalytics action to request.
  */
 MarketplaceCommerceAnalyticsClientRequest::MarketplaceCommerceAnalyticsClientRequest(const Action action)
-    : AwsAbstractRequest(new MarketplaceCommerceAnalyticsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MarketplaceCommerceAnalyticsClientRequest::MarketplaceCommerceAnalyticsClientReq
  * @param  other  Instance to copy.
  */
 MarketplaceCommerceAnalyticsClientRequest::MarketplaceCommerceAnalyticsClientRequest(const MarketplaceCommerceAnalyticsClientRequest &other)
-    : AwsAbstractRequest(new MarketplaceCommerceAnalyticsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MarketplaceCommerceAnalyticsClientRequest& MarketplaceCommerceAnalyticsClientReq
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MarketplaceCommerceAnalyticsClientRequest::MarketplaceCommerceAnalyticsClientRequest(MarketplaceCommerceAnalyticsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MarketplaceCommerceAnalyticsClientRequest::MarketplaceCommerceAnalyticsClientRequest(MarketplaceCommerceAnalyticsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MarketplaceCommerceAnalyticsClientRequest::operator==(const MarketplaceComm
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MarketplaceCommerceAnalyticsClientRequest::unsignedRequest(const
  * @param  q       Pointer to this object's public MarketplaceCommerceAnalyticsClientRequest instance.
  */
 MarketplaceCommerceAnalyticsClientRequestPrivate::MarketplaceCommerceAnalyticsClientRequestPrivate(const MarketplaceCommerceAnalyticsClientRequest::Action action, MarketplaceCommerceAnalyticsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MarketplaceCommerceAnalyticsClientRequestPrivate::MarketplaceCommerceAnalyticsCl
  */
 MarketplaceCommerceAnalyticsClientRequestPrivate::MarketplaceCommerceAnalyticsClientRequestPrivate(const MarketplaceCommerceAnalyticsClientRequestPrivate &other,
                                      MarketplaceCommerceAnalyticsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

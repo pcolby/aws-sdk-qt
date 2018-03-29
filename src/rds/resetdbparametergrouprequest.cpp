@@ -66,10 +66,10 @@ bool ResetDBParameterGroupRequest::isValid() const
  *
  * @return An ResetDBParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ResetDBParameterGroupResponse(*this, reply);
 }

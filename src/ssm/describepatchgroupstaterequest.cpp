@@ -66,10 +66,10 @@ bool DescribePatchGroupStateRequest::isValid() const
  *
  * @return An DescribePatchGroupStateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribePatchGroupStateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePatchGroupStateRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePatchGroupStateResponse(*this, reply);
 }

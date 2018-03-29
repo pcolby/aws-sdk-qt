@@ -66,10 +66,10 @@ bool CreateDBSecurityGroupRequest::isValid() const
  *
  * @return An CreateDBSecurityGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDBSecurityGroupResponse(*this, reply);
 }

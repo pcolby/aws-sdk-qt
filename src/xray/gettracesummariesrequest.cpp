@@ -66,10 +66,10 @@ bool GetTraceSummariesRequest::isValid() const
  *
  * @return An GetTraceSummariesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  XRayClient::send
  */
-AwsAbstractResponse * GetTraceSummariesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTraceSummariesRequest::response(QNetworkReply * const reply) const
 {
     return new GetTraceSummariesResponse(*this, reply);
 }

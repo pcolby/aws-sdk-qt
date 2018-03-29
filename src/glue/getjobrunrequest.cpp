@@ -66,10 +66,10 @@ bool GetJobRunRequest::isValid() const
  *
  * @return An GetJobRunResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetJobRunRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetJobRunRequest::response(QNetworkReply * const reply) const
 {
     return new GetJobRunResponse(*this, reply);
 }

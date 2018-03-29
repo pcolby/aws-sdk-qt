@@ -66,10 +66,10 @@ bool CreateConfigurationSetTrackingOptionsRequest::isValid() const
  *
  * @return An CreateConfigurationSetTrackingOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * CreateConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateConfigurationSetTrackingOptionsResponse(*this, reply);
 }

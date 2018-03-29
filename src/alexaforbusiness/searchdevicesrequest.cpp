@@ -66,10 +66,10 @@ bool SearchDevicesRequest::isValid() const
  *
  * @return An SearchDevicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply * const reply) const
 {
     return new SearchDevicesResponse(*this, reply);
 }

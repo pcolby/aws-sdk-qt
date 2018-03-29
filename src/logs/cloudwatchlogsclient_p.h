@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class CloudWatchLogsClient;
 
-class QTAWS_EXPORT CloudWatchLogsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudWatchLogsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudWatchLogsClientPrivate(CloudWatchLogsClient * const q);

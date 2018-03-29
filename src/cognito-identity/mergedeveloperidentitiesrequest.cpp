@@ -66,10 +66,10 @@ bool MergeDeveloperIdentitiesRequest::isValid() const
  *
  * @return An MergeDeveloperIdentitiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * MergeDeveloperIdentitiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * MergeDeveloperIdentitiesRequest::response(QNetworkReply * const reply) const
 {
     return new MergeDeveloperIdentitiesResponse(*this, reply);
 }

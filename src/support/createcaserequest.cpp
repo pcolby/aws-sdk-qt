@@ -66,10 +66,10 @@ bool CreateCaseRequest::isValid() const
  *
  * @return An CreateCaseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * CreateCaseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCaseRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCaseResponse(*this, reply);
 }

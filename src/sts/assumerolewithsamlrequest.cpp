@@ -66,10 +66,10 @@ bool AssumeRoleWithSAMLRequest::isValid() const
  *
  * @return An AssumeRoleWithSAMLResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  STSClient::send
  */
-AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkReply * const reply) const
 {
     return new AssumeRoleWithSAMLResponse(*this, reply);
 }

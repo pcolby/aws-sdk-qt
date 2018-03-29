@@ -66,10 +66,10 @@ bool SetAlarmStateRequest::isValid() const
  *
  * @return An SetAlarmStateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply * const reply) const
 {
     return new SetAlarmStateResponse(*this, reply);
 }

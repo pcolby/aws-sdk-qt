@@ -66,10 +66,10 @@ bool GetQualificationScoreRequest::isValid() const
  *
  * @return An GetQualificationScoreResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * GetQualificationScoreRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetQualificationScoreRequest::response(QNetworkReply * const reply) const
 {
     return new GetQualificationScoreResponse(*this, reply);
 }

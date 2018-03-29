@@ -66,10 +66,10 @@ bool DescribeTrustsRequest::isValid() const
  *
  * @return An DescribeTrustsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTrustsResponse(*this, reply);
 }

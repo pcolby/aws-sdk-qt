@@ -66,10 +66,10 @@ bool CreateCustomMetadataRequest::isValid() const
  *
  * @return An CreateCustomMetadataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * CreateCustomMetadataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCustomMetadataRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCustomMetadataResponse(*this, reply);
 }

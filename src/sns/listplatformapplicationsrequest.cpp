@@ -66,10 +66,10 @@ bool ListPlatformApplicationsRequest::isValid() const
  *
  * @return An ListPlatformApplicationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListPlatformApplicationsResponse(*this, reply);
 }

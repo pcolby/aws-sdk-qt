@@ -66,10 +66,10 @@ bool ListQueryLoggingConfigsRequest::isValid() const
  *
  * @return An ListQueryLoggingConfigsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNetworkReply * const reply) const
 {
     return new ListQueryLoggingConfigsResponse(*this, reply);
 }

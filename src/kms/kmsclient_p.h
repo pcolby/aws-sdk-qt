@@ -29,7 +29,7 @@ namespace KMS {
 
 class KmsClient;
 
-class QTAWS_EXPORT KmsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT KmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     KmsClientPrivate(KmsClient * const q);

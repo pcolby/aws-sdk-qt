@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudHSM {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CloudHSMClientRequestPrivate;
 
-class QTAWS_EXPORT CloudHSMClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CloudHSMClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudHSM.

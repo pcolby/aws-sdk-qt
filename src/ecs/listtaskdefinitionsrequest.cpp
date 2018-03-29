@@ -66,10 +66,10 @@ bool ListTaskDefinitionsRequest::isValid() const
  *
  * @return An ListTaskDefinitionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * ListTaskDefinitionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTaskDefinitionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListTaskDefinitionsResponse(*this, reply);
 }

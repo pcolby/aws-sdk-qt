@@ -66,10 +66,10 @@ bool ListBootstrapActionsRequest::isValid() const
  *
  * @return An ListBootstrapActionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListBootstrapActionsResponse(*this, reply);
 }

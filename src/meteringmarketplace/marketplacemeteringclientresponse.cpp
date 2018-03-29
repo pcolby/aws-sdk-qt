@@ -40,7 +40,7 @@ namespace MarketplaceMetering {
  * @param  parent   This object's parent.
  */
 MarketplaceMeteringClientResponse::MarketplaceMeteringClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MarketplaceMeteringClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MarketplaceMeteringClientResponsePrivate(this), parent)
 {
 
 }

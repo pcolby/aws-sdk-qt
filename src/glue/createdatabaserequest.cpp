@@ -66,10 +66,10 @@ bool CreateDatabaseRequest::isValid() const
  *
  * @return An CreateDatabaseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDatabaseResponse(*this, reply);
 }

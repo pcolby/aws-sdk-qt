@@ -66,10 +66,10 @@ bool GetAccountSettingsRequest::isValid() const
  *
  * @return An GetAccountSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new GetAccountSettingsResponse(*this, reply);
 }

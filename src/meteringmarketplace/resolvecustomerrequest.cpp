@@ -66,10 +66,10 @@ bool ResolveCustomerRequest::isValid() const
  *
  * @return An ResolveCustomerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MarketplaceMeteringClient::send
  */
-AwsAbstractResponse * ResolveCustomerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResolveCustomerRequest::response(QNetworkReply * const reply) const
 {
     return new ResolveCustomerResponse(*this, reply);
 }

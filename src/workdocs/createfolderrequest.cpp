@@ -66,10 +66,10 @@ bool CreateFolderRequest::isValid() const
  *
  * @return An CreateFolderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * CreateFolderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateFolderRequest::response(QNetworkReply * const reply) const
 {
     return new CreateFolderResponse(*this, reply);
 }

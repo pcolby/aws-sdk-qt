@@ -66,10 +66,10 @@ bool GetAccessKeyLastUsedRequest::isValid() const
  *
  * @return An GetAccessKeyLastUsedResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetworkReply * const reply) const
 {
     return new GetAccessKeyLastUsedResponse(*this, reply);
 }

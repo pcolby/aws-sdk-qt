@@ -66,10 +66,10 @@ bool CreateTagsRequest::isValid() const
  *
  * @return An CreateTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTagsResponse(*this, reply);
 }

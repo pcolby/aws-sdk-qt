@@ -66,10 +66,10 @@ bool DescribeEventsRequest::isValid() const
  *
  * @return An DescribeEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEventsResponse(*this, reply);
 }

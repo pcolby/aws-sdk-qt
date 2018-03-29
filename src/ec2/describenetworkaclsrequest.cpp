@@ -66,10 +66,10 @@ bool DescribeNetworkAclsRequest::isValid() const
  *
  * @return An DescribeNetworkAclsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeNetworkAclsResponse(*this, reply);
 }

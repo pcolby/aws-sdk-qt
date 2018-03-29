@@ -66,10 +66,10 @@ bool PutRuleRequest::isValid() const
  *
  * @return An PutRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * PutRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRuleRequest::response(QNetworkReply * const reply) const
 {
     return new PutRuleResponse(*this, reply);
 }

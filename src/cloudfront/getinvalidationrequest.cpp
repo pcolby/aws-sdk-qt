@@ -66,10 +66,10 @@ bool GetInvalidationRequest::isValid() const
  *
  * @return An GetInvalidationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * GetInvalidationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInvalidationRequest::response(QNetworkReply * const reply) const
 {
     return new GetInvalidationResponse(*this, reply);
 }

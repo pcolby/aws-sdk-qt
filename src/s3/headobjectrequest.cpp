@@ -66,10 +66,10 @@ bool HeadObjectRequest::isValid() const
  *
  * @return An HeadObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * HeadObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * HeadObjectRequest::response(QNetworkReply * const reply) const
 {
     return new HeadObjectResponse(*this, reply);
 }

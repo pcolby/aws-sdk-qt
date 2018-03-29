@@ -66,10 +66,10 @@ bool ModifyLoadBalancerAttributesRequest::isValid() const
  *
  * @return An ModifyLoadBalancerAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyLoadBalancerAttributesResponse(*this, reply);
 }

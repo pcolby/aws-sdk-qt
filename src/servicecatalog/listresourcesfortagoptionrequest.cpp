@@ -66,10 +66,10 @@ bool ListResourcesForTagOptionRequest::isValid() const
  *
  * @return An ListResourcesForTagOptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourcesForTagOptionResponse(*this, reply);
 }

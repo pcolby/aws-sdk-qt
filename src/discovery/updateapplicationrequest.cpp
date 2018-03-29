@@ -66,10 +66,10 @@ bool UpdateApplicationRequest::isValid() const
  *
  * @return An UpdateApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationDiscoveryServiceClient::send
  */
-AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateApplicationResponse(*this, reply);
 }

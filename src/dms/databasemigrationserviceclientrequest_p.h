@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClientRequest;
 
-class QTAWS_EXPORT DatabaseMigrationServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT DatabaseMigrationServiceClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DatabaseMigrationServiceClientRequest::Action action; ///< DatabaseMigrationService action to be performed.

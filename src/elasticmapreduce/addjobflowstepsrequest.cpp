@@ -66,10 +66,10 @@ bool AddJobFlowStepsRequest::isValid() const
  *
  * @return An AddJobFlowStepsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkReply * const reply) const
 {
     return new AddJobFlowStepsResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace TranscribeService {
 
 class TranscribeServiceClientResponse;
 
-class QTAWS_EXPORT TranscribeServiceClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT TranscribeServiceClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

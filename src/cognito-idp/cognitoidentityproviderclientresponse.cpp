@@ -40,7 +40,7 @@ namespace CognitoIdentityProvider {
  * @param  parent   This object's parent.
  */
 CognitoIdentityProviderClientResponse::CognitoIdentityProviderClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CognitoIdentityProviderClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CognitoIdentityProviderClientResponsePrivate(this), parent)
 {
 
 }

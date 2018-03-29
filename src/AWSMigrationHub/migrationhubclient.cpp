@@ -47,10 +47,10 @@ namespace MigrationHub {
  */
 MigrationHubClient::MigrationHubClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
 {
     Q_D(MigrationHubClient);
     d->apiVersion = QStringLiteral("2017-05-31");
@@ -80,10 +80,10 @@ MigrationHubClient::MigrationHubClient(
  */
 MigrationHubClient::MigrationHubClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
 {
     Q_D(MigrationHubClient);
     d->apiVersion = QStringLiteral("2017-05-31");
@@ -457,9 +457,9 @@ PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const 
  * @param  q  Pointer to this object's public MigrationHubClient instance.
  */
 MigrationHubClientPrivate::MigrationHubClientPrivate(MigrationHubClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MigrationHub

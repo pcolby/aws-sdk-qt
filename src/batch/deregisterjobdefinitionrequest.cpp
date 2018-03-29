@@ -66,10 +66,10 @@ bool DeregisterJobDefinitionRequest::isValid() const
  *
  * @return An DeregisterJobDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * DeregisterJobDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterJobDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterJobDefinitionResponse(*this, reply);
 }

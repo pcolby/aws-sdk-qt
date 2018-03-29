@@ -66,10 +66,10 @@ bool UpdateSecurityGroupRuleDescriptionsIngressRequest::isValid() const
  *
  * @return An UpdateSecurityGroupRuleDescriptionsIngressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSecurityGroupRuleDescriptionsIngressResponse(*this, reply);
 }

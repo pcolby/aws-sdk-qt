@@ -66,10 +66,10 @@ bool GetTypeRequest::isValid() const
  *
  * @return An GetTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * const reply) const
 {
     return new GetTypeResponse(*this, reply);
 }

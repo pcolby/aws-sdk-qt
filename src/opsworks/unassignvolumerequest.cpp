@@ -66,10 +66,10 @@ bool UnassignVolumeRequest::isValid() const
  *
  * @return An UnassignVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * UnassignVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnassignVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new UnassignVolumeResponse(*this, reply);
 }

@@ -49,10 +49,10 @@ namespace ECR {
  */
 EcrClient::EcrClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EcrClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
     Q_D(EcrClient);
     d->apiVersion = QStringLiteral("2015-09-21");
@@ -82,10 +82,10 @@ EcrClient::EcrClient(
  */
 EcrClient::EcrClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EcrClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
     Q_D(EcrClient);
     d->apiVersion = QStringLiteral("2015-09-21");
@@ -487,9 +487,9 @@ UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartReques
  * @param  q  Pointer to this object's public EcrClient instance.
  */
 EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ECR

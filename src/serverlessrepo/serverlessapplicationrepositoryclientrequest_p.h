@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClientRequest;
 
-class QTAWS_EXPORT ServerlessApplicationRepositoryClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT ServerlessApplicationRepositoryClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ServerlessApplicationRepositoryClientRequest::Action action; ///< ServerlessApplicationRepository action to be performed.

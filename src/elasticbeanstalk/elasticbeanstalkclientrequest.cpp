@@ -36,7 +36,7 @@ namespace ElasticBeanstalk {
  * @param  action  The ElasticBeanstalk action to request.
  */
 ElasticBeanstalkClientRequest::ElasticBeanstalkClientRequest(const Action action)
-    : AwsAbstractRequest(new ElasticBeanstalkClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticBeanstalkClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ElasticBeanstalkClientRequest::ElasticBeanstalkClientRequest(const Action action
  * @param  other  Instance to copy.
  */
 ElasticBeanstalkClientRequest::ElasticBeanstalkClientRequest(const ElasticBeanstalkClientRequest &other)
-    : AwsAbstractRequest(new ElasticBeanstalkClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticBeanstalkClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ElasticBeanstalkClientRequest& ElasticBeanstalkClientRequest::operator=(const El
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ElasticBeanstalkClientRequest::ElasticBeanstalkClientRequest(ElasticBeanstalkClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ElasticBeanstalkClientRequest::ElasticBeanstalkClientRequest(ElasticBeanstalkClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ElasticBeanstalkClientRequest::operator==(const ElasticBeanstalkClientReque
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ElasticBeanstalkClientRequest::unsignedRequest(const QUrl &endpo
  * @param  q       Pointer to this object's public ElasticBeanstalkClientRequest instance.
  */
 ElasticBeanstalkClientRequestPrivate::ElasticBeanstalkClientRequestPrivate(const ElasticBeanstalkClientRequest::Action action, ElasticBeanstalkClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ElasticBeanstalkClientRequestPrivate::ElasticBeanstalkClientRequestPrivate(const
  */
 ElasticBeanstalkClientRequestPrivate::ElasticBeanstalkClientRequestPrivate(const ElasticBeanstalkClientRequestPrivate &other,
                                      ElasticBeanstalkClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

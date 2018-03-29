@@ -66,10 +66,10 @@ bool StartStreamProcessorRequest::isValid() const
  *
  * @return An StartStreamProcessorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StartStreamProcessorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartStreamProcessorRequest::response(QNetworkReply * const reply) const
 {
     return new StartStreamProcessorResponse(*this, reply);
 }

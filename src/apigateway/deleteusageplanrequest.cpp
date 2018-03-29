@@ -66,10 +66,10 @@ bool DeleteUsagePlanRequest::isValid() const
  *
  * @return An DeleteUsagePlanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteUsagePlanResponse(*this, reply);
 }

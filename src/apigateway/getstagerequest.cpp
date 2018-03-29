@@ -66,10 +66,10 @@ bool GetStageRequest::isValid() const
  *
  * @return An GetStageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetStageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetStageRequest::response(QNetworkReply * const reply) const
 {
     return new GetStageResponse(*this, reply);
 }

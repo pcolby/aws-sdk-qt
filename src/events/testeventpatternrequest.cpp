@@ -66,10 +66,10 @@ bool TestEventPatternRequest::isValid() const
  *
  * @return An TestEventPatternResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * TestEventPatternRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkReply * const reply) const
 {
     return new TestEventPatternResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateEndpointRequest::isValid() const
  *
  * @return An UpdateEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateEndpointResponse(*this, reply);
 }

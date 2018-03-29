@@ -66,10 +66,10 @@ bool DisassociateFromMasterAccountRequest::isValid() const
  *
  * @return An DisassociateFromMasterAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * DisassociateFromMasterAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateFromMasterAccountResponse(*this, reply);
 }

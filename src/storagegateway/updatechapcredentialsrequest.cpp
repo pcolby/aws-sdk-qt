@@ -66,10 +66,10 @@ bool UpdateChapCredentialsRequest::isValid() const
  *
  * @return An UpdateChapCredentialsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * UpdateChapCredentialsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateChapCredentialsRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateChapCredentialsResponse(*this, reply);
 }

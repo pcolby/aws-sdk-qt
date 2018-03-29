@@ -66,10 +66,10 @@ bool ListReusableDelegationSetsRequest::isValid() const
  *
  * @return An ListReusableDelegationSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListReusableDelegationSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListReusableDelegationSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListReusableDelegationSetsResponse(*this, reply);
 }

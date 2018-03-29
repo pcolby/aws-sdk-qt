@@ -66,10 +66,10 @@ bool DeleteCustomerGatewayRequest::isValid() const
  *
  * @return An DeleteCustomerGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCustomerGatewayResponse(*this, reply);
 }

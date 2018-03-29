@@ -66,10 +66,10 @@ bool GetRuleGroupRequest::isValid() const
  *
  * @return An GetRuleGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * GetRuleGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRuleGroupRequest::response(QNetworkReply * const reply) const
 {
     return new GetRuleGroupResponse(*this, reply);
 }

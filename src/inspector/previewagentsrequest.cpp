@@ -66,10 +66,10 @@ bool PreviewAgentsRequest::isValid() const
  *
  * @return An PreviewAgentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply * const reply) const
 {
     return new PreviewAgentsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ModifyClusterIamRolesRequest::isValid() const
  *
  * @return An ModifyClusterIamRolesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * ModifyClusterIamRolesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyClusterIamRolesRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyClusterIamRolesResponse(*this, reply);
 }

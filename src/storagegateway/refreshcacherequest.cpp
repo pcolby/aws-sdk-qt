@@ -66,10 +66,10 @@ bool RefreshCacheRequest::isValid() const
  *
  * @return An RefreshCacheResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * RefreshCacheRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RefreshCacheRequest::response(QNetworkReply * const reply) const
 {
     return new RefreshCacheResponse(*this, reply);
 }

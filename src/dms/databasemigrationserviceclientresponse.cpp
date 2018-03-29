@@ -40,7 +40,7 @@ namespace DatabaseMigrationService {
  * @param  parent   This object's parent.
  */
 DatabaseMigrationServiceClientResponse::DatabaseMigrationServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DatabaseMigrationServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DatabaseMigrationServiceClientResponsePrivate(this), parent)
 {
 
 }

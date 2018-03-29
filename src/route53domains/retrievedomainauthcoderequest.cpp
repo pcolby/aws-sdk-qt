@@ -66,10 +66,10 @@ bool RetrieveDomainAuthCodeRequest::isValid() const
  *
  * @return An RetrieveDomainAuthCodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetworkReply * const reply) const
 {
     return new RetrieveDomainAuthCodeResponse(*this, reply);
 }

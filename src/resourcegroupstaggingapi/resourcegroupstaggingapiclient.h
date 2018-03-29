@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
@@ -42,18 +42,18 @@ class TagResourcesResponse;
 class UntagResourcesRequest;
 class UntagResourcesResponse;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIClient : public AwsAbstractClient {
+class QTAWS_EXPORT ResourceGroupsTaggingAPIClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     ResourceGroupsTaggingAPIClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     ResourceGroupsTaggingAPIClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -66,10 +66,10 @@ bool ListNotebookInstancesRequest::isValid() const
  *
  * @return An ListNotebookInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * ListNotebookInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListNotebookInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new ListNotebookInstancesResponse(*this, reply);
 }

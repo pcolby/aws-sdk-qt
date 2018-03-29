@@ -36,7 +36,7 @@ namespace ResourceGroups {
  * @param  action  The ResourceGroups action to request.
  */
 ResourceGroupsClientRequest::ResourceGroupsClientRequest(const Action action)
-    : AwsAbstractRequest(new ResourceGroupsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ResourceGroupsClientRequest::ResourceGroupsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ResourceGroupsClientRequest::ResourceGroupsClientRequest(const ResourceGroupsClientRequest &other)
-    : AwsAbstractRequest(new ResourceGroupsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ResourceGroupsClientRequest& ResourceGroupsClientRequest::operator=(const Resour
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ResourceGroupsClientRequest::ResourceGroupsClientRequest(ResourceGroupsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ResourceGroupsClientRequest::ResourceGroupsClientRequest(ResourceGroupsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ResourceGroupsClientRequest::operator==(const ResourceGroupsClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ResourceGroupsClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public ResourceGroupsClientRequest instance.
  */
 ResourceGroupsClientRequestPrivate::ResourceGroupsClientRequestPrivate(const ResourceGroupsClientRequest::Action action, ResourceGroupsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ResourceGroupsClientRequestPrivate::ResourceGroupsClientRequestPrivate(const Res
  */
 ResourceGroupsClientRequestPrivate::ResourceGroupsClientRequestPrivate(const ResourceGroupsClientRequestPrivate &other,
                                      ResourceGroupsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

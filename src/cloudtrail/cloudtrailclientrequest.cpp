@@ -36,7 +36,7 @@ namespace CloudTrail {
  * @param  action  The CloudTrail action to request.
  */
 CloudTrailClientRequest::CloudTrailClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudTrailClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudTrailClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudTrailClientRequest::CloudTrailClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudTrailClientRequest::CloudTrailClientRequest(const CloudTrailClientRequest &other)
-    : AwsAbstractRequest(new CloudTrailClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudTrailClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudTrailClientRequest& CloudTrailClientRequest::operator=(const CloudTrailClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudTrailClientRequest::CloudTrailClientRequest(CloudTrailClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudTrailClientRequest::CloudTrailClientRequest(CloudTrailClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudTrailClientRequest::operator==(const CloudTrailClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudTrailClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public CloudTrailClientRequest instance.
  */
 CloudTrailClientRequestPrivate::CloudTrailClientRequestPrivate(const CloudTrailClientRequest::Action action, CloudTrailClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudTrailClientRequestPrivate::CloudTrailClientRequestPrivate(const CloudTrailC
  */
 CloudTrailClientRequestPrivate::CloudTrailClientRequestPrivate(const CloudTrailClientRequestPrivate &other,
                                      CloudTrailClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

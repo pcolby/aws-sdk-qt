@@ -66,10 +66,10 @@ bool AdminCreateUserRequest::isValid() const
  *
  * @return An AdminCreateUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkReply * const reply) const
 {
     return new AdminCreateUserResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdatePolicyRequest::isValid() const
  *
  * @return An UpdatePolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * UpdatePolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePolicyRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePolicyResponse(*this, reply);
 }

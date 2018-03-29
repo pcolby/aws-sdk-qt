@@ -66,10 +66,10 @@ bool SetIdentityHeadersInNotificationsEnabledRequest::isValid() const
  *
  * @return An SetIdentityHeadersInNotificationsEnabledResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledRequest::response(QNetworkReply * const reply) const
 {
     return new SetIdentityHeadersInNotificationsEnabledResponse(*this, reply);
 }

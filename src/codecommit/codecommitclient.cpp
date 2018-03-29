@@ -235,10 +235,10 @@ namespace CodeCommit {
  */
 CodeCommitClient::CodeCommitClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
 {
     Q_D(CodeCommitClient);
     d->apiVersion = QStringLiteral("2015-04-13");
@@ -268,10 +268,10 @@ CodeCommitClient::CodeCommitClient(
  */
 CodeCommitClient::CodeCommitClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
 {
     Q_D(CodeCommitClient);
     d->apiVersion = QStringLiteral("2015-04-13");
@@ -846,9 +846,9 @@ UpdateRepositoryNameResponse * CodeCommitClient::updateRepositoryName(const Upda
  * @param  q  Pointer to this object's public CodeCommitClient instance.
  */
 CodeCommitClientPrivate::CodeCommitClientPrivate(CodeCommitClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeCommit

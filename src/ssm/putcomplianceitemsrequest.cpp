@@ -66,10 +66,10 @@ bool PutComplianceItemsRequest::isValid() const
  *
  * @return An PutComplianceItemsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkReply * const reply) const
 {
     return new PutComplianceItemsResponse(*this, reply);
 }

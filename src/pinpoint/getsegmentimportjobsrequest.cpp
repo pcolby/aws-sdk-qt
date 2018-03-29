@@ -66,10 +66,10 @@ bool GetSegmentImportJobsRequest::isValid() const
  *
  * @return An GetSegmentImportJobsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetSegmentImportJobsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSegmentImportJobsRequest::response(QNetworkReply * const reply) const
 {
     return new GetSegmentImportJobsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetTagsRequest::isValid() const
  *
  * @return An GetTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostExplorerClient::send
  */
-AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * const reply) const
 {
     return new GetTagsResponse(*this, reply);
 }

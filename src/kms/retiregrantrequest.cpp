@@ -66,10 +66,10 @@ bool RetireGrantRequest::isValid() const
  *
  * @return An RetireGrantResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * RetireGrantRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RetireGrantRequest::response(QNetworkReply * const reply) const
 {
     return new RetireGrantResponse(*this, reply);
 }

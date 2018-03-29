@@ -66,10 +66,10 @@ bool PublishSchemaRequest::isValid() const
  *
  * @return An PublishSchemaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply * const reply) const
 {
     return new PublishSchemaResponse(*this, reply);
 }

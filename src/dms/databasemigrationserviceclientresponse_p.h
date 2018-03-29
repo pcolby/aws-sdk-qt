@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClientResponse;
 
-class QTAWS_EXPORT DatabaseMigrationServiceClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT DatabaseMigrationServiceClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

@@ -66,10 +66,10 @@ bool DescribeScheduledActionsRequest::isValid() const
  *
  * @return An DescribeScheduledActionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationAutoScalingClient::send
  */
-AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeScheduledActionsResponse(*this, reply);
 }

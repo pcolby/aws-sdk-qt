@@ -66,10 +66,10 @@ bool DescribeServicesRequest::isValid() const
  *
  * @return An DescribeServicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * DescribeServicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeServicesResponse(*this, reply);
 }

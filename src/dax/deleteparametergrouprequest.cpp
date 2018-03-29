@@ -66,10 +66,10 @@ bool DeleteParameterGroupRequest::isValid() const
  *
  * @return An DeleteParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteParameterGroupResponse(*this, reply);
 }

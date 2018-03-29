@@ -66,10 +66,10 @@ bool BulkPublishRequest::isValid() const
  *
  * @return An BulkPublishResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * BulkPublishRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BulkPublishRequest::response(QNetworkReply * const reply) const
 {
     return new BulkPublishResponse(*this, reply);
 }

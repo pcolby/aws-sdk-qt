@@ -66,10 +66,10 @@ bool StopReplicationTaskRequest::isValid() const
  *
  * @return An StopReplicationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * StopReplicationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new StopReplicationTaskResponse(*this, reply);
 }

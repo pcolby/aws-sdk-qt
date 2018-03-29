@@ -66,10 +66,10 @@ bool GetKeyPolicyRequest::isValid() const
  *
  * @return An GetKeyPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetKeyPolicyResponse(*this, reply);
 }

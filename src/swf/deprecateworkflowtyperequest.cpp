@@ -66,10 +66,10 @@ bool DeprecateWorkflowTypeRequest::isValid() const
  *
  * @return An DeprecateWorkflowTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DeprecateWorkflowTypeResponse(*this, reply);
 }

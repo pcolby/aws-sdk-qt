@@ -66,10 +66,10 @@ bool RespondDecisionTaskCompletedRequest::isValid() const
  *
  * @return An RespondDecisionTaskCompletedResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * RespondDecisionTaskCompletedRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RespondDecisionTaskCompletedRequest::response(QNetworkReply * const reply) const
 {
     return new RespondDecisionTaskCompletedResponse(*this, reply);
 }

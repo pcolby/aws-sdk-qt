@@ -71,10 +71,10 @@ namespace Pricing {
  */
 PricingClient::PricingClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new PricingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new PricingClientPrivate(this), parent)
 {
     Q_D(PricingClient);
     d->apiVersion = QStringLiteral("2017-10-15");
@@ -104,10 +104,10 @@ PricingClient::PricingClient(
  */
 PricingClient::PricingClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new PricingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new PricingClientPrivate(this), parent)
 {
     Q_D(PricingClient);
     d->apiVersion = QStringLiteral("2017-10-15");
@@ -185,9 +185,9 @@ GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &reque
  * @param  q  Pointer to this object's public PricingClient instance.
  */
 PricingClientPrivate::PricingClientPrivate(PricingClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Pricing

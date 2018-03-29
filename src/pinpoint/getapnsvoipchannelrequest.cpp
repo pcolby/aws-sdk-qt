@@ -66,10 +66,10 @@ bool GetApnsVoipChannelRequest::isValid() const
  *
  * @return An GetApnsVoipChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetApnsVoipChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetApnsVoipChannelRequest::response(QNetworkReply * const reply) const
 {
     return new GetApnsVoipChannelResponse(*this, reply);
 }

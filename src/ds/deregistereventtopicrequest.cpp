@@ -66,10 +66,10 @@ bool DeregisterEventTopicRequest::isValid() const
  *
  * @return An DeregisterEventTopicResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterEventTopicResponse(*this, reply);
 }

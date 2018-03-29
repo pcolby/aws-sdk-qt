@@ -66,10 +66,10 @@ bool DisablePolicyTypeRequest::isValid() const
  *
  * @return An DisablePolicyTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * DisablePolicyTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisablePolicyTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DisablePolicyTypeResponse(*this, reply);
 }

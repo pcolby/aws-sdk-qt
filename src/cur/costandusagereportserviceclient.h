@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace CostandUsageReportService {
@@ -38,18 +38,18 @@ class DescribeReportDefinitionsResponse;
 class PutReportDefinitionRequest;
 class PutReportDefinitionResponse;
 
-class QTAWS_EXPORT CostandUsageReportServiceClient : public AwsAbstractClient {
+class QTAWS_EXPORT CostandUsageReportServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     CostandUsageReportServiceClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     CostandUsageReportServiceClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

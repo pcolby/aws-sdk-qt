@@ -28,7 +28,7 @@ namespace Polly {
 
 class PollyClientRequest;
 
-class QTAWS_EXPORT PollyClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT PollyClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PollyClientRequest::Action action; ///< Polly action to be performed.

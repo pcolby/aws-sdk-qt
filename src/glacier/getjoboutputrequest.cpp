@@ -66,10 +66,10 @@ bool GetJobOutputRequest::isValid() const
  *
  * @return An GetJobOutputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * GetJobOutputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetJobOutputRequest::response(QNetworkReply * const reply) const
 {
     return new GetJobOutputResponse(*this, reply);
 }

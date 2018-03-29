@@ -66,10 +66,10 @@ bool DescribeAccountLimitsRequest::isValid() const
  *
  * @return An DescribeAccountLimitsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAccountLimitsResponse(*this, reply);
 }

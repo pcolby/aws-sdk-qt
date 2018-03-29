@@ -66,10 +66,10 @@ bool UnsubscribeRequest::isValid() const
  *
  * @return An UnsubscribeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * const reply) const
 {
     return new UnsubscribeResponse(*this, reply);
 }

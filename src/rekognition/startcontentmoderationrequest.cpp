@@ -66,10 +66,10 @@ bool StartContentModerationRequest::isValid() const
  *
  * @return An StartContentModerationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StartContentModerationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartContentModerationRequest::response(QNetworkReply * const reply) const
 {
     return new StartContentModerationResponse(*this, reply);
 }

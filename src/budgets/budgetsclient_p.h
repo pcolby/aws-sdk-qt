@@ -29,7 +29,7 @@ namespace Budgets {
 
 class BudgetsClient;
 
-class QTAWS_EXPORT BudgetsClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT BudgetsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     BudgetsClientPrivate(BudgetsClient * const q);

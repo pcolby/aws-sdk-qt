@@ -66,10 +66,10 @@ bool TestRoleRequest::isValid() const
  *
  * @return An TestRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticTranscoderClient::send
  */
-AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * const reply) const
 {
     return new TestRoleResponse(*this, reply);
 }

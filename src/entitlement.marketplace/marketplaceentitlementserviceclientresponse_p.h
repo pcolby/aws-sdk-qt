@@ -28,7 +28,7 @@ namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClientResponse;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT MarketplaceEntitlementServiceClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

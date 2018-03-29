@@ -45,10 +45,10 @@ namespace MediaLive {
  */
 MediaLiveClient::MediaLiveClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
 {
     Q_D(MediaLiveClient);
     d->apiVersion = QStringLiteral("2017-10-14");
@@ -78,10 +78,10 @@ MediaLiveClient::MediaLiveClient(
  */
 MediaLiveClient::MediaLiveClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
 {
     Q_D(MediaLiveClient);
     d->apiVersion = QStringLiteral("2017-10-14");
@@ -330,9 +330,9 @@ UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(con
  * @param  q  Pointer to this object's public MediaLiveClient instance.
  */
 MediaLiveClientPrivate::MediaLiveClientPrivate(MediaLiveClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaLive

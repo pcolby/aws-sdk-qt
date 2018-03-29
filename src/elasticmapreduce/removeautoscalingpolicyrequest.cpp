@@ -66,10 +66,10 @@ bool RemoveAutoScalingPolicyRequest::isValid() const
  *
  * @return An RemoveAutoScalingPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveAutoScalingPolicyResponse(*this, reply);
 }

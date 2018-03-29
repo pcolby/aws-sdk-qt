@@ -40,7 +40,7 @@ namespace MobileAnalytics {
  * @param  parent   This object's parent.
  */
 MobileAnalyticsClientResponse::MobileAnalyticsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MobileAnalyticsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MobileAnalyticsClientResponsePrivate(this), parent)
 {
 
 }

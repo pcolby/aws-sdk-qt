@@ -66,10 +66,10 @@ bool CreateLabelsRequest::isValid() const
  *
  * @return An CreateLabelsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * CreateLabelsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLabelsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLabelsResponse(*this, reply);
 }

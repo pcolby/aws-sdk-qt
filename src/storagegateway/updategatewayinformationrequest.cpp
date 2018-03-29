@@ -66,10 +66,10 @@ bool UpdateGatewayInformationRequest::isValid() const
  *
  * @return An UpdateGatewayInformationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * UpdateGatewayInformationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateGatewayInformationRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateGatewayInformationResponse(*this, reply);
 }

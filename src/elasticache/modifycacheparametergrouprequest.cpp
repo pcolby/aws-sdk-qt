@@ -66,10 +66,10 @@ bool ModifyCacheParameterGroupRequest::isValid() const
  *
  * @return An ModifyCacheParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * ModifyCacheParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyCacheParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyCacheParameterGroupResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace EMR {
  * @param  parent   This object's parent.
  */
 EmrClientResponse::EmrClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new EmrClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new EmrClientResponsePrivate(this), parent)
 {
 
 }

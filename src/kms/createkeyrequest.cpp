@@ -66,10 +66,10 @@ bool CreateKeyRequest::isValid() const
  *
  * @return An CreateKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * CreateKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateKeyRequest::response(QNetworkReply * const reply) const
 {
     return new CreateKeyResponse(*this, reply);
 }

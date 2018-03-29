@@ -48,10 +48,10 @@ namespace WorkSpaces {
  */
 WorkSpacesClient::WorkSpacesClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
 {
     Q_D(WorkSpacesClient);
     d->apiVersion = QStringLiteral("2015-04-08");
@@ -81,10 +81,10 @@ WorkSpacesClient::WorkSpacesClient(
  */
 WorkSpacesClient::WorkSpacesClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
 {
     Q_D(WorkSpacesClient);
     d->apiVersion = QStringLiteral("2015-04-08");
@@ -363,9 +363,9 @@ TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const Termin
  * @param  q  Pointer to this object's public WorkSpacesClient instance.
  */
 WorkSpacesClientPrivate::WorkSpacesClientPrivate(WorkSpacesClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WorkSpaces

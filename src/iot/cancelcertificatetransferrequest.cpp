@@ -66,10 +66,10 @@ bool CancelCertificateTransferRequest::isValid() const
  *
  * @return An CancelCertificateTransferResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * CancelCertificateTransferRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelCertificateTransferRequest::response(QNetworkReply * const reply) const
 {
     return new CancelCertificateTransferResponse(*this, reply);
 }

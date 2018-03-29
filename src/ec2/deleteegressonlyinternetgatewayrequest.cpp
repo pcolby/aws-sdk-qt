@@ -66,10 +66,10 @@ bool DeleteEgressOnlyInternetGatewayRequest::isValid() const
  *
  * @return An DeleteEgressOnlyInternetGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEgressOnlyInternetGatewayResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class MachineLearningClientResponse;
 
-class QTAWS_EXPORT MachineLearningClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT MachineLearningClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

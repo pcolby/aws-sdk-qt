@@ -66,10 +66,10 @@ bool CreateRoleRequest::isValid() const
  *
  * @return An CreateRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * CreateRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRoleRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRoleResponse(*this, reply);
 }

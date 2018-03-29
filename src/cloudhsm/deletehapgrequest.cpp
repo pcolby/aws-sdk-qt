@@ -66,10 +66,10 @@ bool DeleteHapgRequest::isValid() const
  *
  * @return An DeleteHapgResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteHapgResponse(*this, reply);
 }

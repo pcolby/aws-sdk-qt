@@ -40,7 +40,7 @@ namespace IoTDataPlane {
  * @param  parent   This object's parent.
  */
 IoTDataPlaneClientResponse::IoTDataPlaneClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new IoTDataPlaneClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new IoTDataPlaneClientResponsePrivate(this), parent)
 {
 
 }

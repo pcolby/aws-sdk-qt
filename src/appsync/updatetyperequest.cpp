@@ -66,10 +66,10 @@ bool UpdateTypeRequest::isValid() const
  *
  * @return An UpdateTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTypeResponse(*this, reply);
 }

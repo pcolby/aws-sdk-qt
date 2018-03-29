@@ -66,10 +66,10 @@ bool DescribeTagOptionRequest::isValid() const
  *
  * @return An DescribeTagOptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTagOptionResponse(*this, reply);
 }

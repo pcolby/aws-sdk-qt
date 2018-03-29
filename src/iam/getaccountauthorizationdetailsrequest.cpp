@@ -66,10 +66,10 @@ bool GetAccountAuthorizationDetailsRequest::isValid() const
  *
  * @return An GetAccountAuthorizationDetailsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::response(QNetworkReply * const reply) const
 {
     return new GetAccountAuthorizationDetailsResponse(*this, reply);
 }

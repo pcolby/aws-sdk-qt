@@ -66,10 +66,10 @@ bool BatchDetectEntitiesRequest::isValid() const
  *
  * @return An BatchDetectEntitiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDetectEntitiesResponse(*this, reply);
 }

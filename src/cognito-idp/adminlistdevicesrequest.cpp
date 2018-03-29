@@ -66,10 +66,10 @@ bool AdminListDevicesRequest::isValid() const
  *
  * @return An AdminListDevicesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkReply * const reply) const
 {
     return new AdminListDevicesResponse(*this, reply);
 }

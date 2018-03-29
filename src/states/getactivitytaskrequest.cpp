@@ -66,10 +66,10 @@ bool GetActivityTaskRequest::isValid() const
  *
  * @return An GetActivityTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkReply * const reply) const
 {
     return new GetActivityTaskResponse(*this, reply);
 }

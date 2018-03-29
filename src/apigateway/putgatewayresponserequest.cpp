@@ -66,10 +66,10 @@ bool PutGatewayResponseRequest::isValid() const
  *
  * @return An PutGatewayResponseResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * PutGatewayResponseRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutGatewayResponseRequest::response(QNetworkReply * const reply) const
 {
     return new PutGatewayResponseResponse(*this, reply);
 }

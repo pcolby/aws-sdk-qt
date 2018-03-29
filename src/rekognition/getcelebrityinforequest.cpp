@@ -66,10 +66,10 @@ bool GetCelebrityInfoRequest::isValid() const
  *
  * @return An GetCelebrityInfoResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkReply * const reply) const
 {
     return new GetCelebrityInfoResponse(*this, reply);
 }

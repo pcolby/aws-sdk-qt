@@ -66,10 +66,10 @@ bool CreateGroupCertificateAuthorityRequest::isValid() const
  *
  * @return An CreateGroupCertificateAuthorityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateGroupCertificateAuthorityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateGroupCertificateAuthorityRequest::response(QNetworkReply * const reply) const
 {
     return new CreateGroupCertificateAuthorityResponse(*this, reply);
 }

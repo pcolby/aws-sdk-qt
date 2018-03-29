@@ -66,10 +66,10 @@ bool UpdateQualificationTypeRequest::isValid() const
  *
  * @return An UpdateQualificationTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * UpdateQualificationTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateQualificationTypeResponse(*this, reply);
 }

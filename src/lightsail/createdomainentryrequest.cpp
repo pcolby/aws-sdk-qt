@@ -66,10 +66,10 @@ bool CreateDomainEntryRequest::isValid() const
  *
  * @return An CreateDomainEntryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * CreateDomainEntryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDomainEntryRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDomainEntryResponse(*this, reply);
 }

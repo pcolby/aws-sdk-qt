@@ -48,10 +48,10 @@ namespace Glue {
  */
 GlueClient::GlueClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GlueClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GlueClientPrivate(this), parent)
 {
     Q_D(GlueClient);
     d->apiVersion = QStringLiteral("2017-03-31");
@@ -81,10 +81,10 @@ GlueClient::GlueClient(
  */
 GlueClient::GlueClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GlueClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GlueClientPrivate(this), parent)
 {
     Q_D(GlueClient);
     d->apiVersion = QStringLiteral("2017-03-31");
@@ -1210,9 +1210,9 @@ UpdateUserDefinedFunctionResponse * GlueClient::updateUserDefinedFunction(const 
  * @param  q  Pointer to this object's public GlueClient instance.
  */
 GlueClientPrivate::GlueClientPrivate(GlueClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Glue

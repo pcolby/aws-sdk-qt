@@ -29,7 +29,7 @@ namespace DirectoryService {
 
 class DirectoryServiceClient;
 
-class QTAWS_EXPORT DirectoryServiceClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT DirectoryServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DirectoryServiceClientPrivate(DirectoryServiceClient * const q);

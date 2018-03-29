@@ -66,10 +66,10 @@ bool CheckDNSAvailabilityRequest::isValid() const
  *
  * @return An CheckDNSAvailabilityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetworkReply * const reply) const
 {
     return new CheckDNSAvailabilityResponse(*this, reply);
 }

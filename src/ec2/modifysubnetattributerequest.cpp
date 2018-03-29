@@ -66,10 +66,10 @@ bool ModifySubnetAttributeRequest::isValid() const
  *
  * @return An ModifySubnetAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ModifySubnetAttributeResponse(*this, reply);
 }

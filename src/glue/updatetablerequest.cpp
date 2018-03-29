@@ -66,10 +66,10 @@ bool UpdateTableRequest::isValid() const
  *
  * @return An UpdateTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * UpdateTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTableRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTableResponse(*this, reply);
 }

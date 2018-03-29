@@ -58,10 +58,10 @@ namespace SimpleDB {
  */
 SimpleDBClient::SimpleDBClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
 {
     Q_D(SimpleDBClient);
     d->apiVersion = QStringLiteral("2009-04-15");
@@ -91,10 +91,10 @@ SimpleDBClient::SimpleDBClient(
  */
 SimpleDBClient::SimpleDBClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
 {
     Q_D(SimpleDBClient);
     d->apiVersion = QStringLiteral("2009-04-15");
@@ -388,9 +388,9 @@ SelectResponse * SimpleDBClient::select(const SelectRequest &request)
  * @param  q  Pointer to this object's public SimpleDBClient instance.
  */
 SimpleDBClientPrivate::SimpleDBClientPrivate(SimpleDBClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV2();
+    signature = new QtAws::Core::AwsSignatureV2();
 }
 
 } // namespace SimpleDB

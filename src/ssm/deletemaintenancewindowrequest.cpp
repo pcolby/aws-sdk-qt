@@ -66,10 +66,10 @@ bool DeleteMaintenanceWindowRequest::isValid() const
  *
  * @return An DeleteMaintenanceWindowResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMaintenanceWindowResponse(*this, reply);
 }

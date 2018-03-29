@@ -66,10 +66,10 @@ bool StopApplicationRequest::isValid() const
  *
  * @return An StopApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * StopApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new StopApplicationResponse(*this, reply);
 }

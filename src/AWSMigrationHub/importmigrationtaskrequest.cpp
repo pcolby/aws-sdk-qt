@@ -66,10 +66,10 @@ bool ImportMigrationTaskRequest::isValid() const
  *
  * @return An ImportMigrationTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * ImportMigrationTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ImportMigrationTaskRequest::response(QNetworkReply * const reply) const
 {
     return new ImportMigrationTaskResponse(*this, reply);
 }

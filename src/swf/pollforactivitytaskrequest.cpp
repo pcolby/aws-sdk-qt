@@ -66,10 +66,10 @@ bool PollForActivityTaskRequest::isValid() const
  *
  * @return An PollForActivityTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * PollForActivityTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PollForActivityTaskRequest::response(QNetworkReply * const reply) const
 {
     return new PollForActivityTaskResponse(*this, reply);
 }

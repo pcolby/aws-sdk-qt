@@ -66,10 +66,10 @@ bool DescribeCasesRequest::isValid() const
  *
  * @return An DescribeCasesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * DescribeCasesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCasesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCasesResponse(*this, reply);
 }

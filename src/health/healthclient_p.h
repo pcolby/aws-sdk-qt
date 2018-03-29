@@ -29,7 +29,7 @@ namespace Health {
 
 class HealthClient;
 
-class QTAWS_EXPORT HealthClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT HealthClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     HealthClientPrivate(HealthClient * const q);

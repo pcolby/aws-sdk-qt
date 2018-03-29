@@ -66,10 +66,10 @@ bool GetXssMatchSetRequest::isValid() const
  *
  * @return An GetXssMatchSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * GetXssMatchSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetXssMatchSetRequest::response(QNetworkReply * const reply) const
 {
     return new GetXssMatchSetResponse(*this, reply);
 }

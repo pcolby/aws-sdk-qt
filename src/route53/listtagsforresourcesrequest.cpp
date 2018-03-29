@@ -66,10 +66,10 @@ bool ListTagsForResourcesRequest::isValid() const
  *
  * @return An ListTagsForResourcesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListTagsForResourcesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTagsForResourcesRequest::response(QNetworkReply * const reply) const
 {
     return new ListTagsForResourcesResponse(*this, reply);
 }

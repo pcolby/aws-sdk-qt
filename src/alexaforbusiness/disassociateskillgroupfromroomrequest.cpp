@@ -66,10 +66,10 @@ bool DisassociateSkillGroupFromRoomRequest::isValid() const
  *
  * @return An DisassociateSkillGroupFromRoomResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * DisassociateSkillGroupFromRoomRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateSkillGroupFromRoomRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateSkillGroupFromRoomResponse(*this, reply);
 }

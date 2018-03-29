@@ -66,10 +66,10 @@ bool GetAssessmentReportRequest::isValid() const
  *
  * @return An GetAssessmentReportResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * GetAssessmentReportRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetworkReply * const reply) const
 {
     return new GetAssessmentReportResponse(*this, reply);
 }

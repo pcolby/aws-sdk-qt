@@ -66,10 +66,10 @@ bool DescribeClusterRequest::isValid() const
  *
  * @return An DescribeClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * DescribeClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeClusterResponse(*this, reply);
 }

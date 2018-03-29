@@ -66,10 +66,10 @@ bool DeleteResourceServerRequest::isValid() const
  *
  * @return An DeleteResourceServerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * DeleteResourceServerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteResourceServerResponse(*this, reply);
 }

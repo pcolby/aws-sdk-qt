@@ -66,10 +66,10 @@ bool PutBucketAnalyticsConfigurationRequest::isValid() const
  *
  * @return An PutBucketAnalyticsConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketAnalyticsConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketAnalyticsConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketAnalyticsConfigurationResponse(*this, reply);
 }

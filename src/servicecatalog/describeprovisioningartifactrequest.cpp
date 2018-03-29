@@ -66,10 +66,10 @@ bool DescribeProvisioningArtifactRequest::isValid() const
  *
  * @return An DescribeProvisioningArtifactResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DescribeProvisioningArtifactRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeProvisioningArtifactRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeProvisioningArtifactResponse(*this, reply);
 }

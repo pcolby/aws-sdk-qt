@@ -29,7 +29,7 @@ namespace ImportExport {
 
 class ImportExportClient;
 
-class QTAWS_EXPORT ImportExportClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT ImportExportClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ImportExportClientPrivate(ImportExportClient * const q);

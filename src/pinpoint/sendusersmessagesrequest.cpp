@@ -66,10 +66,10 @@ bool SendUsersMessagesRequest::isValid() const
  *
  * @return An SendUsersMessagesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkReply * const reply) const
 {
     return new SendUsersMessagesResponse(*this, reply);
 }

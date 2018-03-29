@@ -66,10 +66,10 @@ bool AcceptHandshakeRequest::isValid() const
  *
  * @return An AcceptHandshakeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * AcceptHandshakeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AcceptHandshakeRequest::response(QNetworkReply * const reply) const
 {
     return new AcceptHandshakeResponse(*this, reply);
 }

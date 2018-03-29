@@ -66,10 +66,10 @@ bool DeleteUserRequest::isValid() const
  *
  * @return An DeleteUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteUserResponse(*this, reply);
 }

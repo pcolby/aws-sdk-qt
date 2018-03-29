@@ -66,10 +66,10 @@ bool DownloadDBLogFilePortionRequest::isValid() const
  *
  * @return An DownloadDBLogFilePortionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNetworkReply * const reply) const
 {
     return new DownloadDBLogFilePortionResponse(*this, reply);
 }

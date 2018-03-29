@@ -29,7 +29,7 @@ namespace Mobile {
 
 class MobileClient;
 
-class QTAWS_EXPORT MobileClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT MobileClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MobileClientPrivate(MobileClient * const q);

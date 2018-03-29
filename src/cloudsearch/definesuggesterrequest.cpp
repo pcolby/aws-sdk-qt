@@ -66,10 +66,10 @@ bool DefineSuggesterRequest::isValid() const
  *
  * @return An DefineSuggesterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DefineSuggesterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DefineSuggesterRequest::response(QNetworkReply * const reply) const
 {
     return new DefineSuggesterResponse(*this, reply);
 }

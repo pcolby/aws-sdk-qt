@@ -40,7 +40,7 @@ namespace SWF {
  * @param  parent   This object's parent.
  */
 SwfClientResponse::SwfClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SwfClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SwfClientResponsePrivate(this), parent)
 {
 
 }

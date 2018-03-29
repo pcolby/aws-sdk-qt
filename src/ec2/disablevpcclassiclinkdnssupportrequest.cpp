@@ -66,10 +66,10 @@ bool DisableVpcClassicLinkDnsSupportRequest::isValid() const
  *
  * @return An DisableVpcClassicLinkDnsSupportResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DisableVpcClassicLinkDnsSupportRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkDnsSupportRequest::response(QNetworkReply * const reply) const
 {
     return new DisableVpcClassicLinkDnsSupportResponse(*this, reply);
 }

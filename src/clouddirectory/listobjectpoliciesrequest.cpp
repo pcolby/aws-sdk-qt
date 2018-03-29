@@ -66,10 +66,10 @@ bool ListObjectPoliciesRequest::isValid() const
  *
  * @return An ListObjectPoliciesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListObjectPoliciesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListObjectPoliciesRequest::response(QNetworkReply * const reply) const
 {
     return new ListObjectPoliciesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListOnPremisesInstancesRequest::isValid() const
  *
  * @return An ListOnPremisesInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new ListOnPremisesInstancesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListDocumentVersionsRequest::isValid() const
  *
  * @return An ListDocumentVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDocumentVersionsResponse(*this, reply);
 }

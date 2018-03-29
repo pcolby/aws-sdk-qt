@@ -66,10 +66,10 @@ bool DescribeRiskConfigurationRequest::isValid() const
  *
  * @return An DescribeRiskConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeRiskConfigurationResponse(*this, reply);
 }

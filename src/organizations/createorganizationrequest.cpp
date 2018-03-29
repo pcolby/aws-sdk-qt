@@ -66,10 +66,10 @@ bool CreateOrganizationRequest::isValid() const
  *
  * @return An CreateOrganizationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * CreateOrganizationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateOrganizationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateOrganizationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateEndpointRequest::isValid() const
  *
  * @return An CreateEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new CreateEndpointResponse(*this, reply);
 }

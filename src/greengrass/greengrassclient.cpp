@@ -48,10 +48,10 @@ namespace Greengrass {
  */
 GreengrassClient::GreengrassClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GreengrassClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GreengrassClientPrivate(this), parent)
 {
     Q_D(GreengrassClient);
     d->apiVersion = QStringLiteral("2017-06-07");
@@ -81,10 +81,10 @@ GreengrassClient::GreengrassClient(
  */
 GreengrassClient::GreengrassClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GreengrassClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GreengrassClientPrivate(this), parent)
 {
     Q_D(GreengrassClient);
     d->apiVersion = QStringLiteral("2017-06-07");
@@ -1088,9 +1088,9 @@ UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefin
  * @param  q  Pointer to this object's public GreengrassClient instance.
  */
 GreengrassClientPrivate::GreengrassClientPrivate(GreengrassClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Greengrass

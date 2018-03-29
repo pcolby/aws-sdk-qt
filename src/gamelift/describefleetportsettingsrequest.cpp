@@ -66,10 +66,10 @@ bool DescribeFleetPortSettingsRequest::isValid() const
  *
  * @return An DescribeFleetPortSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeFleetPortSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeFleetPortSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeFleetPortSettingsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateNatGatewayRequest::isValid() const
  *
  * @return An CreateNatGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new CreateNatGatewayResponse(*this, reply);
 }

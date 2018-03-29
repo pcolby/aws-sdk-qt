@@ -36,7 +36,7 @@ namespace DynamoDBStreams {
  * @param  action  The DynamoDBStreams action to request.
  */
 DynamoDBStreamsClientRequest::DynamoDBStreamsClientRequest(const Action action)
-    : AwsAbstractRequest(new DynamoDBStreamsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DynamoDBStreamsClientRequest::DynamoDBStreamsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 DynamoDBStreamsClientRequest::DynamoDBStreamsClientRequest(const DynamoDBStreamsClientRequest &other)
-    : AwsAbstractRequest(new DynamoDBStreamsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DynamoDBStreamsClientRequest& DynamoDBStreamsClientRequest::operator=(const Dyna
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DynamoDBStreamsClientRequest::DynamoDBStreamsClientRequest(DynamoDBStreamsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DynamoDBStreamsClientRequest::DynamoDBStreamsClientRequest(DynamoDBStreamsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DynamoDBStreamsClientRequest::operator==(const DynamoDBStreamsClientRequest
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DynamoDBStreamsClientRequest::unsignedRequest(const QUrl &endpoi
  * @param  q       Pointer to this object's public DynamoDBStreamsClientRequest instance.
  */
 DynamoDBStreamsClientRequestPrivate::DynamoDBStreamsClientRequestPrivate(const DynamoDBStreamsClientRequest::Action action, DynamoDBStreamsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DynamoDBStreamsClientRequestPrivate::DynamoDBStreamsClientRequestPrivate(const D
  */
 DynamoDBStreamsClientRequestPrivate::DynamoDBStreamsClientRequestPrivate(const DynamoDBStreamsClientRequestPrivate &other,
                                      DynamoDBStreamsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

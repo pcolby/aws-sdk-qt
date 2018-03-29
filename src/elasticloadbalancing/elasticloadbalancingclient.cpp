@@ -73,10 +73,10 @@ namespace ElasticLoadBalancing {
  */
 ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticLoadBalancingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticLoadBalancingClientPrivate(this), parent)
 {
     Q_D(ElasticLoadBalancingClient);
     d->apiVersion = QStringLiteral("2012-06-01");
@@ -106,10 +106,10 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
  */
 ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticLoadBalancingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticLoadBalancingClientPrivate(this), parent)
 {
     Q_D(ElasticLoadBalancingClient);
     d->apiVersion = QStringLiteral("2012-06-01");
@@ -816,9 +816,9 @@ SetLoadBalancerPoliciesOfListenerResponse * ElasticLoadBalancingClient::setLoadB
  * @param  q  Pointer to this object's public ElasticLoadBalancingClient instance.
  */
 ElasticLoadBalancingClientPrivate::ElasticLoadBalancingClientPrivate(ElasticLoadBalancingClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticLoadBalancing

@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace RDS {
@@ -214,18 +214,18 @@ class StartDBInstanceResponse;
 class StopDBInstanceRequest;
 class StopDBInstanceResponse;
 
-class QTAWS_EXPORT RdsClient : public AwsAbstractClient {
+class QTAWS_EXPORT RdsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     RdsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     RdsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

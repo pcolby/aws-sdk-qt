@@ -66,10 +66,10 @@ bool GetInstanceAccessDetailsRequest::isValid() const
  *
  * @return An GetInstanceAccessDetailsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNetworkReply * const reply) const
 {
     return new GetInstanceAccessDetailsResponse(*this, reply);
 }

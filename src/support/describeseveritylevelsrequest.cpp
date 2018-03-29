@@ -66,10 +66,10 @@ bool DescribeSeverityLevelsRequest::isValid() const
  *
  * @return An DescribeSeverityLevelsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * DescribeSeverityLevelsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSeverityLevelsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSeverityLevelsResponse(*this, reply);
 }

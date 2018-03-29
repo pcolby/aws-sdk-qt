@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class CostExplorerClientResponse;
 
-class QTAWS_EXPORT CostExplorerClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT CostExplorerClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

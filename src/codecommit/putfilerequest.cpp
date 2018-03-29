@@ -66,10 +66,10 @@ bool PutFileRequest::isValid() const
  *
  * @return An PutFileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * PutFileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutFileRequest::response(QNetworkReply * const reply) const
 {
     return new PutFileResponse(*this, reply);
 }

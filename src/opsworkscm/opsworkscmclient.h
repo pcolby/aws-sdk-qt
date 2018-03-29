@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace OpsWorksCM {
@@ -62,18 +62,18 @@ class UpdateServerResponse;
 class UpdateServerEngineAttributesRequest;
 class UpdateServerEngineAttributesResponse;
 
-class QTAWS_EXPORT OpsWorksCMClient : public AwsAbstractClient {
+class QTAWS_EXPORT OpsWorksCMClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     OpsWorksCMClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     OpsWorksCMClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

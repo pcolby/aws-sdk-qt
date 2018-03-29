@@ -36,7 +36,7 @@ namespace MachineLearning {
  * @param  action  The MachineLearning action to request.
  */
 MachineLearningClientRequest::MachineLearningClientRequest(const Action action)
-    : AwsAbstractRequest(new MachineLearningClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MachineLearningClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MachineLearningClientRequest::MachineLearningClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MachineLearningClientRequest::MachineLearningClientRequest(const MachineLearningClientRequest &other)
-    : AwsAbstractRequest(new MachineLearningClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MachineLearningClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MachineLearningClientRequest& MachineLearningClientRequest::operator=(const Mach
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MachineLearningClientRequest::MachineLearningClientRequest(MachineLearningClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MachineLearningClientRequest::MachineLearningClientRequest(MachineLearningClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MachineLearningClientRequest::operator==(const MachineLearningClientRequest
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MachineLearningClientRequest::unsignedRequest(const QUrl &endpoi
  * @param  q       Pointer to this object's public MachineLearningClientRequest instance.
  */
 MachineLearningClientRequestPrivate::MachineLearningClientRequestPrivate(const MachineLearningClientRequest::Action action, MachineLearningClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MachineLearningClientRequestPrivate::MachineLearningClientRequestPrivate(const M
  */
 MachineLearningClientRequestPrivate::MachineLearningClientRequestPrivate(const MachineLearningClientRequestPrivate &other,
                                      MachineLearningClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

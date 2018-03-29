@@ -52,10 +52,10 @@ namespace LexRuntimeService {
  */
 LexRuntimeServiceClient::LexRuntimeServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
 {
     Q_D(LexRuntimeServiceClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -85,10 +85,10 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  */
 LexRuntimeServiceClient::LexRuntimeServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
 {
     Q_D(LexRuntimeServiceClient);
     d->apiVersion = QStringLiteral("2016-11-28");
@@ -277,9 +277,9 @@ PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &requ
  * @param  q  Pointer to this object's public LexRuntimeServiceClient instance.
  */
 LexRuntimeServiceClientPrivate::LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LexRuntimeService

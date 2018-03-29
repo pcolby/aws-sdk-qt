@@ -66,10 +66,10 @@ bool DescribeReservedInstancesRequest::isValid() const
  *
  * @return An DescribeReservedInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeReservedInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeReservedInstancesResponse(*this, reply);
 }

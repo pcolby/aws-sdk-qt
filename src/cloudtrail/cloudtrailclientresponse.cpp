@@ -40,7 +40,7 @@ namespace CloudTrail {
  * @param  parent   This object's parent.
  */
 CloudTrailClientResponse::CloudTrailClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudTrailClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudTrailClientResponsePrivate(this), parent)
 {
 
 }

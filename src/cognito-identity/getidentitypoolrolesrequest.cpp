@@ -66,10 +66,10 @@ bool GetIdentityPoolRolesRequest::isValid() const
  *
  * @return An GetIdentityPoolRolesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdentityPoolRolesResponse(*this, reply);
 }

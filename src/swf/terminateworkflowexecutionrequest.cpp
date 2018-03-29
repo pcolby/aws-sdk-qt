@@ -66,10 +66,10 @@ bool TerminateWorkflowExecutionRequest::isValid() const
  *
  * @return An TerminateWorkflowExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new TerminateWorkflowExecutionResponse(*this, reply);
 }

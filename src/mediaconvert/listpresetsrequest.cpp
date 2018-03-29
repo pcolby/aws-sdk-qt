@@ -66,10 +66,10 @@ bool ListPresetsRequest::isValid() const
  *
  * @return An ListPresetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListPresetsResponse(*this, reply);
 }

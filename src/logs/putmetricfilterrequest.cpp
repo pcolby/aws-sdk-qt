@@ -66,10 +66,10 @@ bool PutMetricFilterRequest::isValid() const
  *
  * @return An PutMetricFilterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * PutMetricFilterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutMetricFilterRequest::response(QNetworkReply * const reply) const
 {
     return new PutMetricFilterResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeactivateUserRequest::isValid() const
  *
  * @return An DeactivateUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DeactivateUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeactivateUserRequest::response(QNetworkReply * const reply) const
 {
     return new DeactivateUserResponse(*this, reply);
 }

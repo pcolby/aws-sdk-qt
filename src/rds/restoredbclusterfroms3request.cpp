@@ -66,10 +66,10 @@ bool RestoreDBClusterFromS3Request::isValid() const
  *
  * @return An RestoreDBClusterFromS3Response instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RestoreDBClusterFromS3Request::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromS3Request::response(QNetworkReply * const reply) const
 {
     return new RestoreDBClusterFromS3Response(*this, reply);
 }

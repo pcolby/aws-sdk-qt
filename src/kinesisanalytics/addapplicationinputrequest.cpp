@@ -66,10 +66,10 @@ bool AddApplicationInputRequest::isValid() const
  *
  * @return An AddApplicationInputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * AddApplicationInputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetworkReply * const reply) const
 {
     return new AddApplicationInputResponse(*this, reply);
 }

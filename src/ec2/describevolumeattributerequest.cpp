@@ -66,10 +66,10 @@ bool DescribeVolumeAttributeRequest::isValid() const
  *
  * @return An DescribeVolumeAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVolumeAttributeResponse(*this, reply);
 }

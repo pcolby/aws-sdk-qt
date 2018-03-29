@@ -66,10 +66,10 @@ bool CreateElasticsearchDomainRequest::isValid() const
  *
  * @return An CreateElasticsearchDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticsearchServiceClient::send
  */
-AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QNetworkReply * const reply) const
 {
     return new CreateElasticsearchDomainResponse(*this, reply);
 }

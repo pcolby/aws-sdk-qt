@@ -36,7 +36,7 @@ namespace STS {
  * @param  action  The STS action to request.
  */
 StsClientRequest::StsClientRequest(const Action action)
-    : AwsAbstractRequest(new StsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new StsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ StsClientRequest::StsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 StsClientRequest::StsClientRequest(const StsClientRequest &other)
-    : AwsAbstractRequest(new StsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new StsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ StsClientRequest& StsClientRequest::operator=(const StsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-StsClientRequest::StsClientRequest(StsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+StsClientRequest::StsClientRequest(StsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool StsClientRequest::operator==(const StsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest StsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public StsClientRequest instance.
  */
 StsClientRequestPrivate::StsClientRequestPrivate(const StsClientRequest::Action action, StsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ StsClientRequestPrivate::StsClientRequestPrivate(const StsClientRequest::Action 
  */
 StsClientRequestPrivate::StsClientRequestPrivate(const StsClientRequestPrivate &other,
                                      StsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool UpdateDeviceDefinitionRequest::isValid() const
  *
  * @return An UpdateDeviceDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * UpdateDeviceDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDeviceDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDeviceDefinitionResponse(*this, reply);
 }

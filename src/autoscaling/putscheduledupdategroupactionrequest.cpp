@@ -66,10 +66,10 @@ bool PutScheduledUpdateGroupActionRequest::isValid() const
  *
  * @return An PutScheduledUpdateGroupActionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * PutScheduledUpdateGroupActionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutScheduledUpdateGroupActionRequest::response(QNetworkReply * const reply) const
 {
     return new PutScheduledUpdateGroupActionResponse(*this, reply);
 }

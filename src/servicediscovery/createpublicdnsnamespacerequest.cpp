@@ -66,10 +66,10 @@ bool CreatePublicDnsNamespaceRequest::isValid() const
  *
  * @return An CreatePublicDnsNamespaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceDiscoveryClient::send
  */
-AwsAbstractResponse * CreatePublicDnsNamespaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePublicDnsNamespaceRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePublicDnsNamespaceResponse(*this, reply);
 }

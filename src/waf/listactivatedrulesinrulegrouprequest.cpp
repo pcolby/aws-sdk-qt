@@ -66,10 +66,10 @@ bool ListActivatedRulesInRuleGroupRequest::isValid() const
  *
  * @return An ListActivatedRulesInRuleGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ListActivatedRulesInRuleGroupResponse(*this, reply);
 }

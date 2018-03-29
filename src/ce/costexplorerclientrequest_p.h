@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class CostExplorerClientRequest;
 
-class QTAWS_EXPORT CostExplorerClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT CostExplorerClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CostExplorerClientRequest::Action action; ///< CostExplorer action to be performed.

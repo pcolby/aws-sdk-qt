@@ -66,10 +66,10 @@ bool DescribeClusterSubnetGroupsRequest::isValid() const
  *
  * @return An DescribeClusterSubnetGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeClusterSubnetGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeClusterSubnetGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeClusterSubnetGroupsResponse(*this, reply);
 }

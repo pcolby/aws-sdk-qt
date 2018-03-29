@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DataPipeline {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class DataPipelineClientRequestPrivate;
 
-class QTAWS_EXPORT DataPipelineClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT DataPipelineClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DataPipeline.

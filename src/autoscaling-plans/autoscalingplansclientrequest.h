@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace AutoScalingPlans {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class AutoScalingPlansClientRequestPrivate;
 
-class QTAWS_EXPORT AutoScalingPlansClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT AutoScalingPlansClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AutoScalingPlans.

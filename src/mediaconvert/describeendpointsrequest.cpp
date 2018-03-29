@@ -66,10 +66,10 @@ bool DescribeEndpointsRequest::isValid() const
  *
  * @return An DescribeEndpointsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEndpointsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PutBucketAclRequest::isValid() const
  *
  * @return An PutBucketAclResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketAclRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketAclRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketAclResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeSchemasRequest::isValid() const
  *
  * @return An DescribeSchemasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSchemasResponse(*this, reply);
 }

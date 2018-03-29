@@ -36,7 +36,7 @@ namespace MediaLive {
  * @param  action  The MediaLive action to request.
  */
 MediaLiveClientRequest::MediaLiveClientRequest(const Action action)
-    : AwsAbstractRequest(new MediaLiveClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MediaLiveClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MediaLiveClientRequest::MediaLiveClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MediaLiveClientRequest::MediaLiveClientRequest(const MediaLiveClientRequest &other)
-    : AwsAbstractRequest(new MediaLiveClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MediaLiveClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MediaLiveClientRequest& MediaLiveClientRequest::operator=(const MediaLiveClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MediaLiveClientRequest::MediaLiveClientRequest(MediaLiveClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MediaLiveClientRequest::MediaLiveClientRequest(MediaLiveClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MediaLiveClientRequest::operator==(const MediaLiveClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MediaLiveClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public MediaLiveClientRequest instance.
  */
 MediaLiveClientRequestPrivate::MediaLiveClientRequestPrivate(const MediaLiveClientRequest::Action action, MediaLiveClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MediaLiveClientRequestPrivate::MediaLiveClientRequestPrivate(const MediaLiveClie
  */
 MediaLiveClientRequestPrivate::MediaLiveClientRequestPrivate(const MediaLiveClientRequestPrivate &other,
                                      MediaLiveClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

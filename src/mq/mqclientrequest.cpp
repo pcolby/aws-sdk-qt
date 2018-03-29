@@ -36,7 +36,7 @@ namespace MQ {
  * @param  action  The MQ action to request.
  */
 MqClientRequest::MqClientRequest(const Action action)
-    : AwsAbstractRequest(new MqClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MqClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ MqClientRequest::MqClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 MqClientRequest::MqClientRequest(const MqClientRequest &other)
-    : AwsAbstractRequest(new MqClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MqClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ MqClientRequest& MqClientRequest::operator=(const MqClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-MqClientRequest::MqClientRequest(MqClientRequestPrivate * const d) : AwsAbstractRequest(d)
+MqClientRequest::MqClientRequest(MqClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool MqClientRequest::operator==(const MqClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest MqClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public MqClientRequest instance.
  */
 MqClientRequestPrivate::MqClientRequestPrivate(const MqClientRequest::Action action, MqClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ MqClientRequestPrivate::MqClientRequestPrivate(const MqClientRequest::Action act
  */
 MqClientRequestPrivate::MqClientRequestPrivate(const MqClientRequestPrivate &other,
                                      MqClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

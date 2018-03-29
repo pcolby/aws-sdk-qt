@@ -133,10 +133,10 @@ namespace CodeStar {
  */
 CodeStarClient::CodeStarClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeStarClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeStarClientPrivate(this), parent)
 {
     Q_D(CodeStarClient);
     d->apiVersion = QStringLiteral("2017-04-19");
@@ -166,10 +166,10 @@ CodeStarClient::CodeStarClient(
  */
 CodeStarClient::CodeStarClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CodeStarClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodeStarClientPrivate(this), parent)
 {
     Q_D(CodeStarClient);
     d->apiVersion = QStringLiteral("2017-04-19");
@@ -458,9 +458,9 @@ UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserPr
  * @param  q  Pointer to this object's public CodeStarClient instance.
  */
 CodeStarClientPrivate::CodeStarClientPrivate(CodeStarClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeStar

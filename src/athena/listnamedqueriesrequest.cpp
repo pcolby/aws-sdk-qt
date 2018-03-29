@@ -66,10 +66,10 @@ bool ListNamedQueriesRequest::isValid() const
  *
  * @return An ListNamedQueriesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * ListNamedQueriesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListNamedQueriesRequest::response(QNetworkReply * const reply) const
 {
     return new ListNamedQueriesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool StartMatchBackfillRequest::isValid() const
  *
  * @return An StartMatchBackfillResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkReply * const reply) const
 {
     return new StartMatchBackfillResponse(*this, reply);
 }

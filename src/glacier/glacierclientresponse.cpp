@@ -40,7 +40,7 @@ namespace Glacier {
  * @param  parent   This object's parent.
  */
 GlacierClientResponse::GlacierClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new GlacierClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new GlacierClientResponsePrivate(this), parent)
 {
 
 }

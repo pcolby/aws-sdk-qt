@@ -66,10 +66,10 @@ bool AssociateAddressRequest::isValid() const
  *
  * @return An AssociateAddressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AssociateAddressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateAddressRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateAddressResponse(*this, reply);
 }

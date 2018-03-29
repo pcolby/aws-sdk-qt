@@ -66,10 +66,10 @@ bool SearchFacesRequest::isValid() const
  *
  * @return An SearchFacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * const reply) const
 {
     return new SearchFacesResponse(*this, reply);
 }

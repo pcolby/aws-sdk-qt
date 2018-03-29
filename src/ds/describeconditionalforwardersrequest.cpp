@@ -66,10 +66,10 @@ bool DescribeConditionalForwardersRequest::isValid() const
  *
  * @return An DescribeConditionalForwardersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DescribeConditionalForwardersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeConditionalForwardersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeConditionalForwardersResponse(*this, reply);
 }

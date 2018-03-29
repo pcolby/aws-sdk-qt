@@ -36,7 +36,7 @@ namespace WorkSpaces {
  * @param  action  The WorkSpaces action to request.
  */
 WorkSpacesClientRequest::WorkSpacesClientRequest(const Action action)
-    : AwsAbstractRequest(new WorkSpacesClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WorkSpacesClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ WorkSpacesClientRequest::WorkSpacesClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 WorkSpacesClientRequest::WorkSpacesClientRequest(const WorkSpacesClientRequest &other)
-    : AwsAbstractRequest(new WorkSpacesClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WorkSpacesClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ WorkSpacesClientRequest& WorkSpacesClientRequest::operator=(const WorkSpacesClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-WorkSpacesClientRequest::WorkSpacesClientRequest(WorkSpacesClientRequestPrivate * const d) : AwsAbstractRequest(d)
+WorkSpacesClientRequest::WorkSpacesClientRequest(WorkSpacesClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool WorkSpacesClientRequest::operator==(const WorkSpacesClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest WorkSpacesClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public WorkSpacesClientRequest instance.
  */
 WorkSpacesClientRequestPrivate::WorkSpacesClientRequestPrivate(const WorkSpacesClientRequest::Action action, WorkSpacesClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ WorkSpacesClientRequestPrivate::WorkSpacesClientRequestPrivate(const WorkSpacesC
  */
 WorkSpacesClientRequestPrivate::WorkSpacesClientRequestPrivate(const WorkSpacesClientRequestPrivate &other,
                                      WorkSpacesClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

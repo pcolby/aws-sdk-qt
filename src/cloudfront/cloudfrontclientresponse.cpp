@@ -40,7 +40,7 @@ namespace CloudFront {
  * @param  parent   This object's parent.
  */
 CloudFrontClientResponse::CloudFrontClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CloudFrontClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudFrontClientResponsePrivate(this), parent)
 {
 
 }

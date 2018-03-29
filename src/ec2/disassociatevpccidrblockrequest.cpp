@@ -66,10 +66,10 @@ bool DisassociateVpcCidrBlockRequest::isValid() const
  *
  * @return An DisassociateVpcCidrBlockResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateVpcCidrBlockResponse(*this, reply);
 }

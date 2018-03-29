@@ -66,10 +66,10 @@ bool DeleteEndpointRequest::isValid() const
  *
  * @return An DeleteEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteEndpointResponse(*this, reply);
 }

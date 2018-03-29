@@ -66,10 +66,10 @@ bool GetInstanceAccessRequest::isValid() const
  *
  * @return An GetInstanceAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * GetInstanceAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInstanceAccessRequest::response(QNetworkReply * const reply) const
 {
     return new GetInstanceAccessResponse(*this, reply);
 }

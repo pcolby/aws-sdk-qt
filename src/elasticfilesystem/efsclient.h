@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace EFS {
@@ -54,18 +54,18 @@ class DescribeTagsResponse;
 class ModifyMountTargetSecurityGroupsRequest;
 class ModifyMountTargetSecurityGroupsResponse;
 
-class QTAWS_EXPORT EfsClient : public AwsAbstractClient {
+class QTAWS_EXPORT EfsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     EfsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     EfsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -66,10 +66,10 @@ bool DeleteTypedLinkFacetRequest::isValid() const
  *
  * @return An DeleteTypedLinkFacetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * DeleteTypedLinkFacetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTypedLinkFacetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTypedLinkFacetResponse(*this, reply);
 }

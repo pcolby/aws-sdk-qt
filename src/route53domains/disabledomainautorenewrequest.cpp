@@ -66,10 +66,10 @@ bool DisableDomainAutoRenewRequest::isValid() const
  *
  * @return An DisableDomainAutoRenewResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * DisableDomainAutoRenewRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableDomainAutoRenewRequest::response(QNetworkReply * const reply) const
 {
     return new DisableDomainAutoRenewResponse(*this, reply);
 }

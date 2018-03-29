@@ -40,7 +40,7 @@ namespace DirectoryService {
  * @param  parent   This object's parent.
  */
 DirectoryServiceClientResponse::DirectoryServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DirectoryServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DirectoryServiceClientResponsePrivate(this), parent)
 {
 
 }

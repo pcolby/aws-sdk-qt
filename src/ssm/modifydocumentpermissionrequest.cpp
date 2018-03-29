@@ -66,10 +66,10 @@ bool ModifyDocumentPermissionRequest::isValid() const
  *
  * @return An ModifyDocumentPermissionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDocumentPermissionResponse(*this, reply);
 }

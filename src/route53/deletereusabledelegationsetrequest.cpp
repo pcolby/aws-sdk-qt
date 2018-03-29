@@ -66,10 +66,10 @@ bool DeleteReusableDelegationSetRequest::isValid() const
  *
  * @return An DeleteReusableDelegationSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteReusableDelegationSetResponse(*this, reply);
 }

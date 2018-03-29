@@ -66,10 +66,10 @@ bool GetFacetRequest::isValid() const
  *
  * @return An GetFacetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * GetFacetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetFacetRequest::response(QNetworkReply * const reply) const
 {
     return new GetFacetResponse(*this, reply);
 }

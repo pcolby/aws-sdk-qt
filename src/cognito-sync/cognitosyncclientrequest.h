@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CognitoSync {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CognitoSyncClientRequestPrivate;
 
-class QTAWS_EXPORT CognitoSyncClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CognitoSyncClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CognitoSync.

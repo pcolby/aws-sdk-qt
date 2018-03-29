@@ -66,10 +66,10 @@ bool GetDeployablePatchSnapshotForInstanceRequest::isValid() const
  *
  * @return An GetDeployablePatchSnapshotForInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new GetDeployablePatchSnapshotForInstanceResponse(*this, reply);
 }

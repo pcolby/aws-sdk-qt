@@ -66,10 +66,10 @@ bool DeleteActivityRequest::isValid() const
  *
  * @return An DeleteActivityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteActivityResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace ECR {
  * @param  action  The ECR action to request.
  */
 EcrClientRequest::EcrClientRequest(const Action action)
-    : AwsAbstractRequest(new EcrClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EcrClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ EcrClientRequest::EcrClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 EcrClientRequest::EcrClientRequest(const EcrClientRequest &other)
-    : AwsAbstractRequest(new EcrClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EcrClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ EcrClientRequest& EcrClientRequest::operator=(const EcrClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-EcrClientRequest::EcrClientRequest(EcrClientRequestPrivate * const d) : AwsAbstractRequest(d)
+EcrClientRequest::EcrClientRequest(EcrClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool EcrClientRequest::operator==(const EcrClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest EcrClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public EcrClientRequest instance.
  */
 EcrClientRequestPrivate::EcrClientRequestPrivate(const EcrClientRequest::Action action, EcrClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ EcrClientRequestPrivate::EcrClientRequestPrivate(const EcrClientRequest::Action 
  */
 EcrClientRequestPrivate::EcrClientRequestPrivate(const EcrClientRequestPrivate &other,
                                      EcrClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

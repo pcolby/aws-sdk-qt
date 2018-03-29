@@ -66,10 +66,10 @@ bool AssociateDeviceWithRoomRequest::isValid() const
  *
  * @return An AssociateDeviceWithRoomResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * AssociateDeviceWithRoomRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateDeviceWithRoomRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateDeviceWithRoomResponse(*this, reply);
 }

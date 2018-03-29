@@ -36,7 +36,7 @@ namespace ServiceCatalog {
  * @param  action  The ServiceCatalog action to request.
  */
 ServiceCatalogClientRequest::ServiceCatalogClientRequest(const Action action)
-    : AwsAbstractRequest(new ServiceCatalogClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ServiceCatalogClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ServiceCatalogClientRequest::ServiceCatalogClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ServiceCatalogClientRequest::ServiceCatalogClientRequest(const ServiceCatalogClientRequest &other)
-    : AwsAbstractRequest(new ServiceCatalogClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ServiceCatalogClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ServiceCatalogClientRequest& ServiceCatalogClientRequest::operator=(const Servic
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ServiceCatalogClientRequest::ServiceCatalogClientRequest(ServiceCatalogClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ServiceCatalogClientRequest::ServiceCatalogClientRequest(ServiceCatalogClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ServiceCatalogClientRequest::operator==(const ServiceCatalogClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ServiceCatalogClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public ServiceCatalogClientRequest instance.
  */
 ServiceCatalogClientRequestPrivate::ServiceCatalogClientRequestPrivate(const ServiceCatalogClientRequest::Action action, ServiceCatalogClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ServiceCatalogClientRequestPrivate::ServiceCatalogClientRequestPrivate(const Ser
  */
 ServiceCatalogClientRequestPrivate::ServiceCatalogClientRequestPrivate(const ServiceCatalogClientRequestPrivate &other,
                                      ServiceCatalogClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

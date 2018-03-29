@@ -66,10 +66,10 @@ bool BatchGetTracesRequest::isValid() const
  *
  * @return An BatchGetTracesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  XRayClient::send
  */
-AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetTracesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool TerminateInstancesRequest::isValid() const
  *
  * @return An TerminateInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new TerminateInstancesResponse(*this, reply);
 }

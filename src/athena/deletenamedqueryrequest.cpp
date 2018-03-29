@@ -66,10 +66,10 @@ bool DeleteNamedQueryRequest::isValid() const
  *
  * @return An DeleteNamedQueryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNamedQueryResponse(*this, reply);
 }

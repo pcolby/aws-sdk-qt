@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Shield {
@@ -52,18 +52,18 @@ class ListAttacksResponse;
 class ListProtectionsRequest;
 class ListProtectionsResponse;
 
-class QTAWS_EXPORT ShieldClient : public AwsAbstractClient {
+class QTAWS_EXPORT ShieldClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     ShieldClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     ShieldClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -40,7 +40,7 @@ namespace MigrationHub {
  * @param  parent   This object's parent.
  */
 MigrationHubClientResponse::MigrationHubClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MigrationHubClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MigrationHubClientResponsePrivate(this), parent)
 {
 
 }

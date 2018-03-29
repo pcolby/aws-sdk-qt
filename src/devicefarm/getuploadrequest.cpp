@@ -66,10 +66,10 @@ bool GetUploadRequest::isValid() const
  *
  * @return An GetUploadResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * GetUploadRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetUploadRequest::response(QNetworkReply * const reply) const
 {
     return new GetUploadResponse(*this, reply);
 }

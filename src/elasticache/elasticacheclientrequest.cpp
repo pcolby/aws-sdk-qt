@@ -36,7 +36,7 @@ namespace ElastiCache {
  * @param  action  The ElastiCache action to request.
  */
 ElastiCacheClientRequest::ElastiCacheClientRequest(const Action action)
-    : AwsAbstractRequest(new ElastiCacheClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElastiCacheClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ElastiCacheClientRequest::ElastiCacheClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 ElastiCacheClientRequest::ElastiCacheClientRequest(const ElastiCacheClientRequest &other)
-    : AwsAbstractRequest(new ElastiCacheClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElastiCacheClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ElastiCacheClientRequest& ElastiCacheClientRequest::operator=(const ElastiCacheC
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ElastiCacheClientRequest::ElastiCacheClientRequest(ElastiCacheClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ElastiCacheClientRequest::ElastiCacheClientRequest(ElastiCacheClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ElastiCacheClientRequest::operator==(const ElastiCacheClientRequest &other)
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ElastiCacheClientRequest::unsignedRequest(const QUrl &endpoint) 
  * @param  q       Pointer to this object's public ElastiCacheClientRequest instance.
  */
 ElastiCacheClientRequestPrivate::ElastiCacheClientRequestPrivate(const ElastiCacheClientRequest::Action action, ElastiCacheClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ElastiCacheClientRequestPrivate::ElastiCacheClientRequestPrivate(const ElastiCac
  */
 ElastiCacheClientRequestPrivate::ElastiCacheClientRequestPrivate(const ElastiCacheClientRequestPrivate &other,
                                      ElastiCacheClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

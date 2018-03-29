@@ -66,10 +66,10 @@ bool DeleteInputRequest::isValid() const
  *
  * @return An DeleteInputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteInputResponse(*this, reply);
 }

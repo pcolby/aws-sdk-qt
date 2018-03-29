@@ -66,10 +66,10 @@ bool DeleteIndexFieldRequest::isValid() const
  *
  * @return An DeleteIndexFieldResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DeleteIndexFieldRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteIndexFieldRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteIndexFieldResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateShardCountRequest::isValid() const
  *
  * @return An UpdateShardCountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisClient::send
  */
-AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateShardCountResponse(*this, reply);
 }

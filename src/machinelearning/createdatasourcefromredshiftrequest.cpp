@@ -66,10 +66,10 @@ bool CreateDataSourceFromRedshiftRequest::isValid() const
  *
  * @return An CreateDataSourceFromRedshiftResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDataSourceFromRedshiftResponse(*this, reply);
 }

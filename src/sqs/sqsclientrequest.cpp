@@ -36,7 +36,7 @@ namespace SQS {
  * @param  action  The SQS action to request.
  */
 SqsClientRequest::SqsClientRequest(const Action action)
-    : AwsAbstractRequest(new SqsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SqsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SqsClientRequest::SqsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SqsClientRequest::SqsClientRequest(const SqsClientRequest &other)
-    : AwsAbstractRequest(new SqsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SqsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SqsClientRequest& SqsClientRequest::operator=(const SqsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SqsClientRequest::SqsClientRequest(SqsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SqsClientRequest::SqsClientRequest(SqsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SqsClientRequest::operator==(const SqsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SqsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SqsClientRequest instance.
  */
 SqsClientRequestPrivate::SqsClientRequestPrivate(const SqsClientRequest::Action action, SqsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SqsClientRequestPrivate::SqsClientRequestPrivate(const SqsClientRequest::Action 
  */
 SqsClientRequestPrivate::SqsClientRequestPrivate(const SqsClientRequestPrivate &other,
                                      SqsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

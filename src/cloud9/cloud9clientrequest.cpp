@@ -36,7 +36,7 @@ namespace Cloud9 {
  * @param  action  The Cloud9 action to request.
  */
 Cloud9ClientRequest::Cloud9ClientRequest(const Action action)
-    : AwsAbstractRequest(new Cloud9ClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new Cloud9ClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ Cloud9ClientRequest::Cloud9ClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 Cloud9ClientRequest::Cloud9ClientRequest(const Cloud9ClientRequest &other)
-    : AwsAbstractRequest(new Cloud9ClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new Cloud9ClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ Cloud9ClientRequest& Cloud9ClientRequest::operator=(const Cloud9ClientRequest &o
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-Cloud9ClientRequest::Cloud9ClientRequest(Cloud9ClientRequestPrivate * const d) : AwsAbstractRequest(d)
+Cloud9ClientRequest::Cloud9ClientRequest(Cloud9ClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool Cloud9ClientRequest::operator==(const Cloud9ClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest Cloud9ClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public Cloud9ClientRequest instance.
  */
 Cloud9ClientRequestPrivate::Cloud9ClientRequestPrivate(const Cloud9ClientRequest::Action action, Cloud9ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ Cloud9ClientRequestPrivate::Cloud9ClientRequestPrivate(const Cloud9ClientRequest
  */
 Cloud9ClientRequestPrivate::Cloud9ClientRequestPrivate(const Cloud9ClientRequestPrivate &other,
                                      Cloud9ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

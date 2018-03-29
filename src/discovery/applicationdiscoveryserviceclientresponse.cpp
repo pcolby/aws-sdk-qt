@@ -40,7 +40,7 @@ namespace ApplicationDiscoveryService {
  * @param  parent   This object's parent.
  */
 ApplicationDiscoveryServiceClientResponse::ApplicationDiscoveryServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ApplicationDiscoveryServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ApplicationDiscoveryServiceClientResponsePrivate(this), parent)
 {
 
 }

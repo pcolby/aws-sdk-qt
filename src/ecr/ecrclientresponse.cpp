@@ -40,7 +40,7 @@ namespace ECR {
  * @param  parent   This object's parent.
  */
 EcrClientResponse::EcrClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new EcrClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new EcrClientResponsePrivate(this), parent)
 {
 
 }

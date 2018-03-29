@@ -66,10 +66,10 @@ bool DeleteLagRequest::isValid() const
  *
  * @return An DeleteLagResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DeleteLagRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLagRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLagResponse(*this, reply);
 }

@@ -52,10 +52,10 @@ namespace CloudDirectory {
  */
 CloudDirectoryClient::CloudDirectoryClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
     Q_D(CloudDirectoryClient);
     d->apiVersion = QStringLiteral("2016-05-10");
@@ -85,10 +85,10 @@ CloudDirectoryClient::CloudDirectoryClient(
  */
 CloudDirectoryClient::CloudDirectoryClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
     Q_D(CloudDirectoryClient);
     d->apiVersion = QStringLiteral("2016-05-10");
@@ -1061,9 +1061,9 @@ UpgradePublishedSchemaResponse * CloudDirectoryClient::upgradePublishedSchema(co
  * @param  q  Pointer to this object's public CloudDirectoryClient instance.
  */
 CloudDirectoryClientPrivate::CloudDirectoryClientPrivate(CloudDirectoryClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudDirectory

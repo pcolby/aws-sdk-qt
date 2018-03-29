@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DynamoDBClientResponse;
 
-class QTAWS_EXPORT DynamoDBClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT DynamoDBClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

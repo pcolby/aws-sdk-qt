@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class Route53DomainsClientRequest;
 
-class QTAWS_EXPORT Route53DomainsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT Route53DomainsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Route53DomainsClientRequest::Action action; ///< Route53Domains action to be performed.

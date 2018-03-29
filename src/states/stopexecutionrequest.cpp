@@ -66,10 +66,10 @@ bool StopExecutionRequest::isValid() const
  *
  * @return An StopExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SFNClient::send
  */
-AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new StopExecutionResponse(*this, reply);
 }

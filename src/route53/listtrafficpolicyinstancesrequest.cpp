@@ -66,10 +66,10 @@ bool ListTrafficPolicyInstancesRequest::isValid() const
  *
  * @return An ListTrafficPolicyInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListTrafficPolicyInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new ListTrafficPolicyInstancesResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace ACM {
  * @param  action  The ACM action to request.
  */
 AcmClientRequest::AcmClientRequest(const Action action)
-    : AwsAbstractRequest(new AcmClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AcmClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ AcmClientRequest::AcmClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 AcmClientRequest::AcmClientRequest(const AcmClientRequest &other)
-    : AwsAbstractRequest(new AcmClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AcmClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ AcmClientRequest& AcmClientRequest::operator=(const AcmClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-AcmClientRequest::AcmClientRequest(AcmClientRequestPrivate * const d) : AwsAbstractRequest(d)
+AcmClientRequest::AcmClientRequest(AcmClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool AcmClientRequest::operator==(const AcmClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest AcmClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public AcmClientRequest instance.
  */
 AcmClientRequestPrivate::AcmClientRequestPrivate(const AcmClientRequest::Action action, AcmClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ AcmClientRequestPrivate::AcmClientRequestPrivate(const AcmClientRequest::Action 
  */
 AcmClientRequestPrivate::AcmClientRequestPrivate(const AcmClientRequestPrivate &other,
                                      AcmClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

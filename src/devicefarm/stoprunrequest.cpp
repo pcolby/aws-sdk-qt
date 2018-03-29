@@ -66,10 +66,10 @@ bool StopRunRequest::isValid() const
  *
  * @return An StopRunResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * StopRunRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * const reply) const
 {
     return new StopRunResponse(*this, reply);
 }

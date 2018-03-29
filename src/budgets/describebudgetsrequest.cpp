@@ -66,10 +66,10 @@ bool DescribeBudgetsRequest::isValid() const
  *
  * @return An DescribeBudgetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * DescribeBudgetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBudgetsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBudgetsResponse(*this, reply);
 }

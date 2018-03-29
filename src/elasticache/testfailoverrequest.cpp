@@ -66,10 +66,10 @@ bool TestFailoverRequest::isValid() const
  *
  * @return An TestFailoverResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply * const reply) const
 {
     return new TestFailoverResponse(*this, reply);
 }

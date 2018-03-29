@@ -66,10 +66,10 @@ bool AddApplicationCloudWatchLoggingOptionRequest::isValid() const
  *
  * @return An AddApplicationCloudWatchLoggingOptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest::response(QNetworkReply * const reply) const
 {
     return new AddApplicationCloudWatchLoggingOptionResponse(*this, reply);
 }

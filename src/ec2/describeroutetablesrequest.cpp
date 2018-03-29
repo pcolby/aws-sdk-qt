@@ -66,10 +66,10 @@ bool DescribeRouteTablesRequest::isValid() const
  *
  * @return An DescribeRouteTablesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeRouteTablesResponse(*this, reply);
 }

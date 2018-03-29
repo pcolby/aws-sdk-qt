@@ -66,10 +66,10 @@ bool DeregisterVolumeRequest::isValid() const
  *
  * @return An DeregisterVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterVolumeResponse(*this, reply);
 }

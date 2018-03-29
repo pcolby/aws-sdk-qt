@@ -66,10 +66,10 @@ bool DescribeOptionGroupsRequest::isValid() const
  *
  * @return An DescribeOptionGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeOptionGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeOptionGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeOptionGroupsResponse(*this, reply);
 }

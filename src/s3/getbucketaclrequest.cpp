@@ -66,10 +66,10 @@ bool GetBucketAclRequest::isValid() const
  *
  * @return An GetBucketAclResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetBucketAclRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBucketAclRequest::response(QNetworkReply * const reply) const
 {
     return new GetBucketAclResponse(*this, reply);
 }

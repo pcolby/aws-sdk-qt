@@ -66,10 +66,10 @@ bool BatchGetProjectsRequest::isValid() const
  *
  * @return An BatchGetProjectsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * BatchGetProjectsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetProjectsRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetProjectsResponse(*this, reply);
 }

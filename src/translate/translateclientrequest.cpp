@@ -36,7 +36,7 @@ namespace Translate {
  * @param  action  The Translate action to request.
  */
 TranslateClientRequest::TranslateClientRequest(const Action action)
-    : AwsAbstractRequest(new TranslateClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new TranslateClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ TranslateClientRequest::TranslateClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 TranslateClientRequest::TranslateClientRequest(const TranslateClientRequest &other)
-    : AwsAbstractRequest(new TranslateClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new TranslateClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ TranslateClientRequest& TranslateClientRequest::operator=(const TranslateClientR
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-TranslateClientRequest::TranslateClientRequest(TranslateClientRequestPrivate * const d) : AwsAbstractRequest(d)
+TranslateClientRequest::TranslateClientRequest(TranslateClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool TranslateClientRequest::operator==(const TranslateClientRequest &other) con
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest TranslateClientRequest::unsignedRequest(const QUrl &endpoint) co
  * @param  q       Pointer to this object's public TranslateClientRequest instance.
  */
 TranslateClientRequestPrivate::TranslateClientRequestPrivate(const TranslateClientRequest::Action action, TranslateClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ TranslateClientRequestPrivate::TranslateClientRequestPrivate(const TranslateClie
  */
 TranslateClientRequestPrivate::TranslateClientRequestPrivate(const TranslateClientRequestPrivate &other,
                                      TranslateClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

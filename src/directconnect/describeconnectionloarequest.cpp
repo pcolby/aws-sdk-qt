@@ -66,10 +66,10 @@ bool DescribeConnectionLoaRequest::isValid() const
  *
  * @return An DescribeConnectionLoaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DescribeConnectionLoaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeConnectionLoaRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeConnectionLoaResponse(*this, reply);
 }

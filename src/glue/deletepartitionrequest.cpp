@@ -66,10 +66,10 @@ bool DeletePartitionRequest::isValid() const
  *
  * @return An DeletePartitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * DeletePartitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeletePartitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeletePartitionResponse(*this, reply);
 }

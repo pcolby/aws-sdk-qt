@@ -36,7 +36,7 @@ namespace CloudWatch {
  * @param  action  The CloudWatch action to request.
  */
 CloudWatchClientRequest::CloudWatchClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudWatchClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudWatchClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudWatchClientRequest::CloudWatchClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudWatchClientRequest::CloudWatchClientRequest(const CloudWatchClientRequest &other)
-    : AwsAbstractRequest(new CloudWatchClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudWatchClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudWatchClientRequest& CloudWatchClientRequest::operator=(const CloudWatchClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudWatchClientRequest::CloudWatchClientRequest(CloudWatchClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudWatchClientRequest::CloudWatchClientRequest(CloudWatchClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudWatchClientRequest::operator==(const CloudWatchClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudWatchClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public CloudWatchClientRequest instance.
  */
 CloudWatchClientRequestPrivate::CloudWatchClientRequestPrivate(const CloudWatchClientRequest::Action action, CloudWatchClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudWatchClientRequestPrivate::CloudWatchClientRequestPrivate(const CloudWatchC
  */
 CloudWatchClientRequestPrivate::CloudWatchClientRequestPrivate(const CloudWatchClientRequestPrivate &other,
                                      CloudWatchClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

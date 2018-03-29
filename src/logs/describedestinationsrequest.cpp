@@ -66,10 +66,10 @@ bool DescribeDestinationsRequest::isValid() const
  *
  * @return An DescribeDestinationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DescribeDestinationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDestinationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDestinationsResponse(*this, reply);
 }

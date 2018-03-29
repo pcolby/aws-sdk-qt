@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ConfigService {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ConfigServiceClientRequestPrivate;
 
-class QTAWS_EXPORT ConfigServiceClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ConfigServiceClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ConfigService.

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace IAM {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class IamClientRequestPrivate;
 
-class QTAWS_EXPORT IamClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT IamClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IAM.

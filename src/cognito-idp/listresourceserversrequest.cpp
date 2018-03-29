@@ -66,10 +66,10 @@ bool ListResourceServersRequest::isValid() const
  *
  * @return An ListResourceServersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * ListResourceServersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResourceServersRequest::response(QNetworkReply * const reply) const
 {
     return new ListResourceServersResponse(*this, reply);
 }

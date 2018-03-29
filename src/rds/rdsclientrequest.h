@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace RDS {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class RdsClientRequestPrivate;
 
-class QTAWS_EXPORT RdsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT RdsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RDS.

@@ -66,10 +66,10 @@ bool SetDesiredCapacityRequest::isValid() const
  *
  * @return An SetDesiredCapacityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkReply * const reply) const
 {
     return new SetDesiredCapacityResponse(*this, reply);
 }

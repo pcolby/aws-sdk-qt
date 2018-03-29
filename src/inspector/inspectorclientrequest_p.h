@@ -28,7 +28,7 @@ namespace Inspector {
 
 class InspectorClientRequest;
 
-class QTAWS_EXPORT InspectorClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT InspectorClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     InspectorClientRequest::Action action; ///< Inspector action to be performed.

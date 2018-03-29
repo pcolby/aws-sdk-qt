@@ -66,10 +66,10 @@ bool ListSizeConstraintSetsRequest::isValid() const
  *
  * @return An ListSizeConstraintSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListSizeConstraintSetsResponse(*this, reply);
 }

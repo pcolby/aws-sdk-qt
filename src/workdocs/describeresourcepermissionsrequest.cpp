@@ -66,10 +66,10 @@ bool DescribeResourcePermissionsRequest::isValid() const
  *
  * @return An DescribeResourcePermissionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DescribeResourcePermissionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeResourcePermissionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeResourcePermissionsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool StartLabelDetectionRequest::isValid() const
  *
  * @return An StartLabelDetectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StartLabelDetectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartLabelDetectionRequest::response(QNetworkReply * const reply) const
 {
     return new StartLabelDetectionResponse(*this, reply);
 }

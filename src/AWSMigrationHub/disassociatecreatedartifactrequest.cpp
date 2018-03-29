@@ -66,10 +66,10 @@ bool DisassociateCreatedArtifactRequest::isValid() const
  *
  * @return An DisassociateCreatedArtifactResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateCreatedArtifactResponse(*this, reply);
 }

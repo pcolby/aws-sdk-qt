@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class MediaLiveClientRequest;
 
-class QTAWS_EXPORT MediaLiveClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MediaLiveClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaLiveClientRequest::Action action; ///< MediaLive action to be performed.

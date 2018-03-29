@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeviceFarmClientRequest;
 
-class QTAWS_EXPORT DeviceFarmClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT DeviceFarmClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DeviceFarmClientRequest::Action action; ///< DeviceFarm action to be performed.

@@ -66,10 +66,10 @@ bool DeleteBucketInventoryConfigurationRequest::isValid() const
  *
  * @return An DeleteBucketInventoryConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBucketInventoryConfigurationResponse(*this, reply);
 }

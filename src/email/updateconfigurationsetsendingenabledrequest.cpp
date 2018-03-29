@@ -66,10 +66,10 @@ bool UpdateConfigurationSetSendingEnabledRequest::isValid() const
  *
  * @return An UpdateConfigurationSetSendingEnabledResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateConfigurationSetSendingEnabledResponse(*this, reply);
 }

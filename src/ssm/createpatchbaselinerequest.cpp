@@ -66,10 +66,10 @@ bool CreatePatchBaselineRequest::isValid() const
  *
  * @return An CreatePatchBaselineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * CreatePatchBaselineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePatchBaselineRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePatchBaselineResponse(*this, reply);
 }

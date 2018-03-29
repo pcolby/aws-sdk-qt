@@ -66,10 +66,10 @@ bool PutBucketAccelerateConfigurationRequest::isValid() const
  *
  * @return An PutBucketAccelerateConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketAccelerateConfigurationResponse(*this, reply);
 }

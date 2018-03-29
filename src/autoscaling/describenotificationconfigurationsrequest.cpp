@@ -66,10 +66,10 @@ bool DescribeNotificationConfigurationsRequest::isValid() const
  *
  * @return An DescribeNotificationConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DescribeNotificationConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeNotificationConfigurationsResponse(*this, reply);
 }

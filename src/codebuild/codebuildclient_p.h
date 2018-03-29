@@ -29,7 +29,7 @@ namespace CodeBuild {
 
 class CodeBuildClient;
 
-class QTAWS_EXPORT CodeBuildClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CodeBuildClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeBuildClientPrivate(CodeBuildClient * const q);

@@ -66,10 +66,10 @@ bool DescribeBackupRequest::isValid() const
  *
  * @return An DescribeBackupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * DescribeBackupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBackupRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBackupResponse(*this, reply);
 }

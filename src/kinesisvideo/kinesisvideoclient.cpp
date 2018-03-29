@@ -45,10 +45,10 @@ namespace KinesisVideo {
  */
 KinesisVideoClient::KinesisVideoClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisVideoClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisVideoClientPrivate(this), parent)
 {
     Q_D(KinesisVideoClient);
     d->apiVersion = QStringLiteral("2017-09-30");
@@ -78,10 +78,10 @@ KinesisVideoClient::KinesisVideoClient(
  */
 KinesisVideoClient::KinesisVideoClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisVideoClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisVideoClientPrivate(this), parent)
 {
     Q_D(KinesisVideoClient);
     d->apiVersion = QStringLiteral("2017-09-30");
@@ -360,9 +360,9 @@ UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamReques
  * @param  q  Pointer to this object's public KinesisVideoClient instance.
  */
 KinesisVideoClientPrivate::KinesisVideoClientPrivate(KinesisVideoClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KinesisVideo

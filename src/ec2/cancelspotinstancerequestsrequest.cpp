@@ -66,10 +66,10 @@ bool CancelSpotInstanceRequestsRequest::isValid() const
  *
  * @return An CancelSpotInstanceRequestsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(QNetworkReply * const reply) const
 {
     return new CancelSpotInstanceRequestsResponse(*this, reply);
 }

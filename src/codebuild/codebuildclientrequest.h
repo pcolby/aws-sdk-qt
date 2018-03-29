@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CodeBuild {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CodeBuildClientRequestPrivate;
 
-class QTAWS_EXPORT CodeBuildClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CodeBuildClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeBuild.

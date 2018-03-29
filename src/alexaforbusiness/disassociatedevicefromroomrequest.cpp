@@ -66,10 +66,10 @@ bool DisassociateDeviceFromRoomRequest::isValid() const
  *
  * @return An DisassociateDeviceFromRoomResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * DisassociateDeviceFromRoomRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateDeviceFromRoomRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateDeviceFromRoomResponse(*this, reply);
 }

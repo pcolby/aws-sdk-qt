@@ -40,7 +40,7 @@ namespace XRay {
  * @param  parent   This object's parent.
  */
 XRayClientResponse::XRayClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new XRayClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new XRayClientResponsePrivate(this), parent)
 {
 
 }

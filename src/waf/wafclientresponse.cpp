@@ -40,7 +40,7 @@ namespace WAF {
  * @param  parent   This object's parent.
  */
 WafClientResponse::WafClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new WafClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new WafClientResponsePrivate(this), parent)
 {
 
 }

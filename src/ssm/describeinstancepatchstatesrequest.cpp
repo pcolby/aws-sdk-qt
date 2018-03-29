@@ -66,10 +66,10 @@ bool DescribeInstancePatchStatesRequest::isValid() const
  *
  * @return An DescribeInstancePatchStatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeInstancePatchStatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeInstancePatchStatesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeInstancePatchStatesResponse(*this, reply);
 }

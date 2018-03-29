@@ -66,10 +66,10 @@ bool EnableRuleRequest::isValid() const
  *
  * @return An EnableRuleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchEventsClient::send
  */
-AwsAbstractResponse * EnableRuleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableRuleRequest::response(QNetworkReply * const reply) const
 {
     return new EnableRuleResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateDirectConnectGatewayAssociationRequest::isValid() const
  *
  * @return An CreateDirectConnectGatewayAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * CreateDirectConnectGatewayAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDirectConnectGatewayAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDirectConnectGatewayAssociationResponse(*this, reply);
 }

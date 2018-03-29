@@ -66,10 +66,10 @@ bool InvokeEndpointRequest::isValid() const
  *
  * @return An InvokeEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerRuntimeClient::send
  */
-AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new InvokeEndpointResponse(*this, reply);
 }

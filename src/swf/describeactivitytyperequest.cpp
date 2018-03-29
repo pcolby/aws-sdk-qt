@@ -66,10 +66,10 @@ bool DescribeActivityTypeRequest::isValid() const
  *
  * @return An DescribeActivityTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * DescribeActivityTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeActivityTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeActivityTypeResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdatePullRequestTitleRequest::isValid() const
  *
  * @return An UpdatePullRequestTitleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * UpdatePullRequestTitleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePullRequestTitleRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePullRequestTitleResponse(*this, reply);
 }

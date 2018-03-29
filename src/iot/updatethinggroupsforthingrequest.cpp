@@ -66,10 +66,10 @@ bool UpdateThingGroupsForThingRequest::isValid() const
  *
  * @return An UpdateThingGroupsForThingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * UpdateThingGroupsForThingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateThingGroupsForThingRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateThingGroupsForThingResponse(*this, reply);
 }

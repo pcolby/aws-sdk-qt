@@ -66,10 +66,10 @@ bool RejectVpcPeeringConnectionRequest::isValid() const
  *
  * @return An RejectVpcPeeringConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new RejectVpcPeeringConnectionResponse(*this, reply);
 }

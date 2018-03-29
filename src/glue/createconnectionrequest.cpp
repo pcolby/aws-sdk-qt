@@ -66,10 +66,10 @@ bool CreateConnectionRequest::isValid() const
  *
  * @return An CreateConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * CreateConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateConnectionResponse(*this, reply);
 }

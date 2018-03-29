@@ -66,10 +66,10 @@ bool GetSchemaAsJsonRequest::isValid() const
  *
  * @return An GetSchemaAsJsonResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * GetSchemaAsJsonRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSchemaAsJsonRequest::response(QNetworkReply * const reply) const
 {
     return new GetSchemaAsJsonResponse(*this, reply);
 }

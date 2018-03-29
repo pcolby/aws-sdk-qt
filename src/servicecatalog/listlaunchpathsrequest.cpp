@@ -66,10 +66,10 @@ bool ListLaunchPathsRequest::isValid() const
  *
  * @return An ListLaunchPathsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkReply * const reply) const
 {
     return new ListLaunchPathsResponse(*this, reply);
 }

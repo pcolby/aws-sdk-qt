@@ -66,10 +66,10 @@ bool ListStacksRequest::isValid() const
  *
  * @return An ListStacksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * const reply) const
 {
     return new ListStacksResponse(*this, reply);
 }

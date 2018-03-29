@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class CodeStarClientResponse;
 
-class QTAWS_EXPORT CodeStarClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT CodeStarClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

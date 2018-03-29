@@ -66,10 +66,10 @@ bool ListMetricsRequest::isValid() const
  *
  * @return An ListMetricsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * ListMetricsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListMetricsRequest::response(QNetworkReply * const reply) const
 {
     return new ListMetricsResponse(*this, reply);
 }

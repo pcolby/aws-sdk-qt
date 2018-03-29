@@ -54,10 +54,10 @@ namespace ElasticsearchService {
  */
 ElasticsearchServiceClient::ElasticsearchServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
 {
     Q_D(ElasticsearchServiceClient);
     d->apiVersion = QStringLiteral("2015-01-01");
@@ -87,10 +87,10 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
  */
 ElasticsearchServiceClient::ElasticsearchServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
 {
     Q_D(ElasticsearchServiceClient);
     d->apiVersion = QStringLiteral("2015-01-01");
@@ -327,9 +327,9 @@ UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElas
  * @param  q  Pointer to this object's public ElasticsearchServiceClient instance.
  */
 ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticsearchService

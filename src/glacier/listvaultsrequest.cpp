@@ -66,10 +66,10 @@ bool ListVaultsRequest::isValid() const
  *
  * @return An ListVaultsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * ListVaultsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListVaultsRequest::response(QNetworkReply * const reply) const
 {
     return new ListVaultsResponse(*this, reply);
 }

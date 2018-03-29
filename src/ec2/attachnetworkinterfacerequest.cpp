@@ -66,10 +66,10 @@ bool AttachNetworkInterfaceRequest::isValid() const
  *
  * @return An AttachNetworkInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new AttachNetworkInterfaceResponse(*this, reply);
 }

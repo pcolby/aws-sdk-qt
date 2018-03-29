@@ -66,10 +66,10 @@ bool GetEmailChannelRequest::isValid() const
  *
  * @return An GetEmailChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkReply * const reply) const
 {
     return new GetEmailChannelResponse(*this, reply);
 }

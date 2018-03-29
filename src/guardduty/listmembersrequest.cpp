@@ -66,10 +66,10 @@ bool ListMembersRequest::isValid() const
  *
  * @return An ListMembersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * const reply) const
 {
     return new ListMembersResponse(*this, reply);
 }

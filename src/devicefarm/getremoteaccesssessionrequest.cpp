@@ -66,10 +66,10 @@ bool GetRemoteAccessSessionRequest::isValid() const
  *
  * @return An GetRemoteAccessSessionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * GetRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
 {
     return new GetRemoteAccessSessionResponse(*this, reply);
 }

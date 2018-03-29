@@ -66,10 +66,10 @@ bool CreateModelRequest::isValid() const
  *
  * @return An CreateModelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * const reply) const
 {
     return new CreateModelResponse(*this, reply);
 }

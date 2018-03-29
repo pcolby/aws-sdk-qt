@@ -66,10 +66,10 @@ bool DisableSnapshotCopyRequest::isValid() const
  *
  * @return An DisableSnapshotCopyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DisableSnapshotCopyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableSnapshotCopyRequest::response(QNetworkReply * const reply) const
 {
     return new DisableSnapshotCopyResponse(*this, reply);
 }

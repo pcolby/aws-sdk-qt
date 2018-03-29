@@ -66,10 +66,10 @@ bool CountClosedWorkflowExecutionsRequest::isValid() const
  *
  * @return An CountClosedWorkflowExecutionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
 {
     return new CountClosedWorkflowExecutionsResponse(*this, reply);
 }

@@ -30,10 +30,10 @@ namespace {{NameSpaceName}} {
  */
 {{ClassName}}::{{ClassName}}(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new {{ClassName}}Private(this), parent)
+: QtAws::Core::AwsAbstractClient(new {{ClassName}}Private(this), parent)
 {
     Q_D({{ClassName}});
     d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
@@ -65,10 +65,10 @@ namespace {{NameSpaceName}} {
  */
 {{ClassName}}::{{ClassName}}(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new {{ClassName}}Private(this), parent)
+: QtAws::Core::AwsAbstractClient(new {{ClassName}}Private(this), parent)
 {
     Q_D({{ClassName}});
     d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
@@ -116,9 +116,9 @@ namespace {{NameSpaceName}} {
  * @param  q  Pointer to this object's public {{ClassName}} instance.
  */
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignature{{metadata.signatureVersion|upper}}();
+    signature = new QtAws::Core::AwsSignature{{metadata.signatureVersion|upper}}();
 }
 
 } // namespace {{NameSpaceName}}

@@ -109,10 +109,10 @@ namespace RDS {
  */
 RdsClient::RdsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new RdsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new RdsClientPrivate(this), parent)
 {
     Q_D(RdsClient);
     d->apiVersion = QStringLiteral("2014-10-31");
@@ -142,10 +142,10 @@ RdsClient::RdsClient(
  */
 RdsClient::RdsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new RdsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new RdsClientPrivate(this), parent)
 {
     Q_D(RdsClient);
     d->apiVersion = QStringLiteral("2014-10-31");
@@ -2055,9 +2055,9 @@ StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &
  * @param  q  Pointer to this object's public RdsClient instance.
  */
 RdsClientPrivate::RdsClientPrivate(RdsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace RDS

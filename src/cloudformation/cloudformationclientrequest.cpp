@@ -36,7 +36,7 @@ namespace CloudFormation {
  * @param  action  The CloudFormation action to request.
  */
 CloudFormationClientRequest::CloudFormationClientRequest(const Action action)
-    : AwsAbstractRequest(new CloudFormationClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudFormationClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CloudFormationClientRequest::CloudFormationClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CloudFormationClientRequest::CloudFormationClientRequest(const CloudFormationClientRequest &other)
-    : AwsAbstractRequest(new CloudFormationClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudFormationClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CloudFormationClientRequest& CloudFormationClientRequest::operator=(const CloudF
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CloudFormationClientRequest::CloudFormationClientRequest(CloudFormationClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CloudFormationClientRequest::CloudFormationClientRequest(CloudFormationClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CloudFormationClientRequest::operator==(const CloudFormationClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CloudFormationClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public CloudFormationClientRequest instance.
  */
 CloudFormationClientRequestPrivate::CloudFormationClientRequestPrivate(const CloudFormationClientRequest::Action action, CloudFormationClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CloudFormationClientRequestPrivate::CloudFormationClientRequestPrivate(const Clo
  */
 CloudFormationClientRequestPrivate::CloudFormationClientRequestPrivate(const CloudFormationClientRequestPrivate &other,
                                      CloudFormationClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

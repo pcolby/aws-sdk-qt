@@ -66,10 +66,10 @@ bool RegisterCrossAccountAccessRoleRequest::isValid() const
  *
  * @return An RegisterCrossAccountAccessRoleResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterCrossAccountAccessRoleResponse(*this, reply);
 }

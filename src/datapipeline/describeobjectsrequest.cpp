@@ -66,10 +66,10 @@ bool DescribeObjectsRequest::isValid() const
  *
  * @return An DescribeObjectsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * DescribeObjectsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeObjectsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeObjectsResponse(*this, reply);
 }

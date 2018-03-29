@@ -66,10 +66,10 @@ bool DescribePrincipalIdFormatRequest::isValid() const
  *
  * @return An DescribePrincipalIdFormatResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePrincipalIdFormatResponse(*this, reply);
 }

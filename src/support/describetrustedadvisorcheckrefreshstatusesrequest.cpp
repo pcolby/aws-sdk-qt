@@ -66,10 +66,10 @@ bool DescribeTrustedAdvisorCheckRefreshStatusesRequest::isValid() const
  *
  * @return An DescribeTrustedAdvisorCheckRefreshStatusesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SupportClient::send
  */
-AwsAbstractResponse * DescribeTrustedAdvisorCheckRefreshStatusesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckRefreshStatusesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTrustedAdvisorCheckRefreshStatusesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool AssociateDiscoveredResourceRequest::isValid() const
  *
  * @return An AssociateDiscoveredResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateDiscoveredResourceResponse(*this, reply);
 }

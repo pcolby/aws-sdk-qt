@@ -66,10 +66,10 @@ bool AcceptMatchRequest::isValid() const
  *
  * @return An AcceptMatchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * AcceptMatchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AcceptMatchRequest::response(QNetworkReply * const reply) const
 {
     return new AcceptMatchResponse(*this, reply);
 }

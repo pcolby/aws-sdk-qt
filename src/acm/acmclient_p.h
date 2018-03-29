@@ -29,7 +29,7 @@ namespace ACM {
 
 class AcmClient;
 
-class QTAWS_EXPORT AcmClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT AcmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AcmClientPrivate(AcmClient * const q);

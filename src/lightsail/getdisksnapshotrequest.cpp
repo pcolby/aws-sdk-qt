@@ -66,10 +66,10 @@ bool GetDiskSnapshotRequest::isValid() const
  *
  * @return An GetDiskSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetDiskSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDiskSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new GetDiskSnapshotResponse(*this, reply);
 }

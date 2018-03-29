@@ -66,10 +66,10 @@ bool RespondToAuthChallengeRequest::isValid() const
  *
  * @return An RespondToAuthChallengeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetworkReply * const reply) const
 {
     return new RespondToAuthChallengeResponse(*this, reply);
 }

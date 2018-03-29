@@ -66,10 +66,10 @@ bool GetDataflowGraphRequest::isValid() const
  *
  * @return An GetDataflowGraphResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkReply * const reply) const
 {
     return new GetDataflowGraphResponse(*this, reply);
 }

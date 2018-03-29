@@ -66,10 +66,10 @@ bool AuthorizeClusterSecurityGroupIngressRequest::isValid() const
  *
  * @return An AuthorizeClusterSecurityGroupIngressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * AuthorizeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AuthorizeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
 {
     return new AuthorizeClusterSecurityGroupIngressResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListDashboardsRequest::isValid() const
  *
  * @return An ListDashboardsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * ListDashboardsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDashboardsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDashboardsResponse(*this, reply);
 }

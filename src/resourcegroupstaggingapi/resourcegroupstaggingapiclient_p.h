@@ -29,7 +29,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIClient;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT ResourceGroupsTaggingAPIClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q);

@@ -66,10 +66,10 @@ bool GetJobDetailsRequest::isValid() const
  *
  * @return An GetJobDetailsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * GetJobDetailsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetJobDetailsRequest::response(QNetworkReply * const reply) const
 {
     return new GetJobDetailsResponse(*this, reply);
 }

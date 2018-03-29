@@ -66,10 +66,10 @@ bool DescribeExportTasksRequest::isValid() const
  *
  * @return An DescribeExportTasksResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * DescribeExportTasksRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeExportTasksResponse(*this, reply);
 }

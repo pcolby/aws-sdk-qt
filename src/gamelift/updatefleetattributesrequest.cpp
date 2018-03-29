@@ -66,10 +66,10 @@ bool UpdateFleetAttributesRequest::isValid() const
  *
  * @return An UpdateFleetAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFleetAttributesResponse(*this, reply);
 }

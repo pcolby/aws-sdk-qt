@@ -40,7 +40,7 @@ namespace Firehose {
  * @param  parent   This object's parent.
  */
 FirehoseClientResponse::FirehoseClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new FirehoseClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new FirehoseClientResponsePrivate(this), parent)
 {
 
 }

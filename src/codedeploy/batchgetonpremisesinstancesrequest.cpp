@@ -66,10 +66,10 @@ bool BatchGetOnPremisesInstancesRequest::isValid() const
  *
  * @return An BatchGetOnPremisesInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * BatchGetOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetOnPremisesInstancesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool IndexDocumentsRequest::isValid() const
  *
  * @return An IndexDocumentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply * const reply) const
 {
     return new IndexDocumentsResponse(*this, reply);
 }

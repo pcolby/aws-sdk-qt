@@ -66,10 +66,10 @@ bool DeregisterEcsClusterRequest::isValid() const
  *
  * @return An DeregisterEcsClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DeregisterEcsClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterEcsClusterRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterEcsClusterResponse(*this, reply);
 }

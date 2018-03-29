@@ -66,10 +66,10 @@ bool DeleteTemplateRequest::isValid() const
  *
  * @return An DeleteTemplateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTemplateResponse(*this, reply);
 }

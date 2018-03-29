@@ -66,10 +66,10 @@ bool UpdateRepositoryNameRequest::isValid() const
  *
  * @return An UpdateRepositoryNameResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRepositoryNameResponse(*this, reply);
 }

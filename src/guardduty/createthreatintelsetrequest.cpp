@@ -66,10 +66,10 @@ bool CreateThreatIntelSetRequest::isValid() const
  *
  * @return An CreateThreatIntelSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * CreateThreatIntelSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateThreatIntelSetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateThreatIntelSetResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool PutMetricAlarmRequest::isValid() const
  *
  * @return An PutMetricAlarmResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * PutMetricAlarmRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutMetricAlarmRequest::response(QNetworkReply * const reply) const
 {
     return new PutMetricAlarmResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool StartQueryExecutionRequest::isValid() const
  *
  * @return An StartQueryExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AthenaClient::send
  */
-AwsAbstractResponse * StartQueryExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartQueryExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new StartQueryExecutionResponse(*this, reply);
 }

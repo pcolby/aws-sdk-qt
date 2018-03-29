@@ -66,10 +66,10 @@ bool DescribeMountTargetsRequest::isValid() const
  *
  * @return An DescribeMountTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EFSClient::send
  */
-AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeMountTargetsResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace Health {
  * @param  action  The Health action to request.
  */
 HealthClientRequest::HealthClientRequest(const Action action)
-    : AwsAbstractRequest(new HealthClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new HealthClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ HealthClientRequest::HealthClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 HealthClientRequest::HealthClientRequest(const HealthClientRequest &other)
-    : AwsAbstractRequest(new HealthClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new HealthClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ HealthClientRequest& HealthClientRequest::operator=(const HealthClientRequest &o
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-HealthClientRequest::HealthClientRequest(HealthClientRequestPrivate * const d) : AwsAbstractRequest(d)
+HealthClientRequest::HealthClientRequest(HealthClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool HealthClientRequest::operator==(const HealthClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest HealthClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public HealthClientRequest instance.
  */
 HealthClientRequestPrivate::HealthClientRequestPrivate(const HealthClientRequest::Action action, HealthClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ HealthClientRequestPrivate::HealthClientRequestPrivate(const HealthClientRequest
  */
 HealthClientRequestPrivate::HealthClientRequestPrivate(const HealthClientRequestPrivate &other,
                                      HealthClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

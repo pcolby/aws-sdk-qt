@@ -66,10 +66,10 @@ bool DescribeAutoScalingGroupsRequest::isValid() const
  *
  * @return An DescribeAutoScalingGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DescribeAutoScalingGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAutoScalingGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAutoScalingGroupsResponse(*this, reply);
 }

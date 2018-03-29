@@ -66,10 +66,10 @@ bool DescribeTrainingJobRequest::isValid() const
  *
  * @return An DescribeTrainingJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * DescribeTrainingJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTrainingJobRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTrainingJobResponse(*this, reply);
 }

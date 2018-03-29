@@ -66,10 +66,10 @@ bool DescribeCopyProductStatusRequest::isValid() const
  *
  * @return An DescribeCopyProductStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeCopyProductStatusResponse(*this, reply);
 }

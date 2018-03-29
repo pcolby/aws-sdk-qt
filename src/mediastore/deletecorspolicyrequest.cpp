@@ -66,10 +66,10 @@ bool DeleteCorsPolicyRequest::isValid() const
  *
  * @return An DeleteCorsPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaStoreClient::send
  */
-AwsAbstractResponse * DeleteCorsPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCorsPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCorsPolicyResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ModifyOptionGroupRequest::isValid() const
  *
  * @return An ModifyOptionGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyOptionGroupResponse(*this, reply);
 }

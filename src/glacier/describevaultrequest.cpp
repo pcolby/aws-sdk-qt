@@ -66,10 +66,10 @@ bool DescribeVaultRequest::isValid() const
  *
  * @return An DescribeVaultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * DescribeVaultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVaultRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVaultResponse(*this, reply);
 }

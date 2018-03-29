@@ -66,10 +66,10 @@ bool SetLoadBalancerPoliciesOfListenerRequest::isValid() const
  *
  * @return An SetLoadBalancerPoliciesOfListenerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * SetLoadBalancerPoliciesOfListenerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesOfListenerRequest::response(QNetworkReply * const reply) const
 {
     return new SetLoadBalancerPoliciesOfListenerResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace Firehose {
  * @param  action  The Firehose action to request.
  */
 FirehoseClientRequest::FirehoseClientRequest(const Action action)
-    : AwsAbstractRequest(new FirehoseClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new FirehoseClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ FirehoseClientRequest::FirehoseClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 FirehoseClientRequest::FirehoseClientRequest(const FirehoseClientRequest &other)
-    : AwsAbstractRequest(new FirehoseClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new FirehoseClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ FirehoseClientRequest& FirehoseClientRequest::operator=(const FirehoseClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-FirehoseClientRequest::FirehoseClientRequest(FirehoseClientRequestPrivate * const d) : AwsAbstractRequest(d)
+FirehoseClientRequest::FirehoseClientRequest(FirehoseClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool FirehoseClientRequest::operator==(const FirehoseClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest FirehoseClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public FirehoseClientRequest instance.
  */
 FirehoseClientRequestPrivate::FirehoseClientRequestPrivate(const FirehoseClientRequest::Action action, FirehoseClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ FirehoseClientRequestPrivate::FirehoseClientRequestPrivate(const FirehoseClientR
  */
 FirehoseClientRequestPrivate::FirehoseClientRequestPrivate(const FirehoseClientRequestPrivate &other,
                                      FirehoseClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

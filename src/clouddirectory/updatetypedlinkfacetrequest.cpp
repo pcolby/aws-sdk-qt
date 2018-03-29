@@ -66,10 +66,10 @@ bool UpdateTypedLinkFacetRequest::isValid() const
  *
  * @return An UpdateTypedLinkFacetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateTypedLinkFacetResponse(*this, reply);
 }

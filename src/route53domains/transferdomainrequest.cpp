@@ -66,10 +66,10 @@ bool TransferDomainRequest::isValid() const
  *
  * @return An TransferDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply * const reply) const
 {
     return new TransferDomainResponse(*this, reply);
 }

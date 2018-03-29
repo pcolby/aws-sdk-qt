@@ -66,10 +66,10 @@ bool ListInputSecurityGroupsRequest::isValid() const
  *
  * @return An ListInputSecurityGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * ListInputSecurityGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListInputSecurityGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new ListInputSecurityGroupsResponse(*this, reply);
 }

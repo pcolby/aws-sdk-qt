@@ -66,10 +66,10 @@ bool GetTypedLinkFacetInformationRequest::isValid() const
  *
  * @return An GetTypedLinkFacetInformationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response(QNetworkReply * const reply) const
 {
     return new GetTypedLinkFacetInformationResponse(*this, reply);
 }

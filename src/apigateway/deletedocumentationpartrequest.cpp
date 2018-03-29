@@ -66,10 +66,10 @@ bool DeleteDocumentationPartRequest::isValid() const
  *
  * @return An DeleteDocumentationPartResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDocumentationPartResponse(*this, reply);
 }

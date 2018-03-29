@@ -66,10 +66,10 @@ bool DescribeReservedCacheNodesRequest::isValid() const
  *
  * @return An DescribeReservedCacheNodesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeReservedCacheNodesResponse(*this, reply);
 }

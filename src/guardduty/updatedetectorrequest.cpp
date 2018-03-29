@@ -66,10 +66,10 @@ bool UpdateDetectorRequest::isValid() const
  *
  * @return An UpdateDetectorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDetectorResponse(*this, reply);
 }

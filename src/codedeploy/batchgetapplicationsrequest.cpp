@@ -66,10 +66,10 @@ bool BatchGetApplicationsRequest::isValid() const
  *
  * @return An BatchGetApplicationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * BatchGetApplicationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetApplicationsRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetApplicationsResponse(*this, reply);
 }

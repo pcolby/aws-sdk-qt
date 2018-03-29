@@ -66,10 +66,10 @@ bool UpdatePatchBaselineRequest::isValid() const
  *
  * @return An UpdatePatchBaselineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetworkReply * const reply) const
 {
     return new UpdatePatchBaselineResponse(*this, reply);
 }

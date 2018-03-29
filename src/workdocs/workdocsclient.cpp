@@ -74,10 +74,10 @@ namespace WorkDocs {
  */
 WorkDocsClient::WorkDocsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
 {
     Q_D(WorkDocsClient);
     d->apiVersion = QStringLiteral("2016-05-01");
@@ -107,10 +107,10 @@ WorkDocsClient::WorkDocsClient(
  */
 WorkDocsClient::WorkDocsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
 {
     Q_D(WorkDocsClient);
     d->apiVersion = QStringLiteral("2016-05-01");
@@ -753,9 +753,9 @@ UpdateUserResponse * WorkDocsClient::updateUser(const UpdateUserRequest &request
  * @param  q  Pointer to this object's public WorkDocsClient instance.
  */
 WorkDocsClientPrivate::WorkDocsClientPrivate(WorkDocsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WorkDocs

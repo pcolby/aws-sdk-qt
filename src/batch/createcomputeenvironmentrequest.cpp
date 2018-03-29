@@ -66,10 +66,10 @@ bool CreateComputeEnvironmentRequest::isValid() const
  *
  * @return An CreateComputeEnvironmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * CreateComputeEnvironmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateComputeEnvironmentRequest::response(QNetworkReply * const reply) const
 {
     return new CreateComputeEnvironmentResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListActionTypesRequest::isValid() const
  *
  * @return An ListActionTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * ListActionTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListActionTypesRequest::response(QNetworkReply * const reply) const
 {
     return new ListActionTypesResponse(*this, reply);
 }

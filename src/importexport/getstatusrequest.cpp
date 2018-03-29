@@ -66,10 +66,10 @@ bool GetStatusRequest::isValid() const
  *
  * @return An GetStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ImportExportClient::send
  */
-AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * const reply) const
 {
     return new GetStatusResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateSubscriberRequest::isValid() const
  *
  * @return An UpdateSubscriberResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * UpdateSubscriberRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSubscriberRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSubscriberResponse(*this, reply);
 }

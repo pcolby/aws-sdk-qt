@@ -66,10 +66,10 @@ bool ResyncMFADeviceRequest::isValid() const
  *
  * @return An ResyncMFADeviceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkReply * const reply) const
 {
     return new ResyncMFADeviceResponse(*this, reply);
 }

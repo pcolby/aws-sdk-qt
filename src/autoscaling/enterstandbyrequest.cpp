@@ -66,10 +66,10 @@ bool EnterStandbyRequest::isValid() const
  *
  * @return An EnterStandbyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply * const reply) const
 {
     return new EnterStandbyResponse(*this, reply);
 }

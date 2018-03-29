@@ -66,10 +66,10 @@ bool DisableAWSServiceAccessRequest::isValid() const
  *
  * @return An DisableAWSServiceAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
 {
     return new DisableAWSServiceAccessResponse(*this, reply);
 }

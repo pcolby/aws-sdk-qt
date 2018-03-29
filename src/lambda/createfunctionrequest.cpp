@@ -66,10 +66,10 @@ bool CreateFunctionRequest::isValid() const
  *
  * @return An CreateFunctionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateFunctionResponse(*this, reply);
 }

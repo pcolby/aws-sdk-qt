@@ -66,10 +66,10 @@ bool DeleteScalingPlanRequest::isValid() const
  *
  * @return An DeleteScalingPlanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingPlansClient::send
  */
-AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteScalingPlanResponse(*this, reply);
 }

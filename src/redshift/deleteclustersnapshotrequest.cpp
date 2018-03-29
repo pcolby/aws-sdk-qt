@@ -66,10 +66,10 @@ bool DeleteClusterSnapshotRequest::isValid() const
  *
  * @return An DeleteClusterSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DeleteClusterSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteClusterSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteClusterSnapshotResponse(*this, reply);
 }

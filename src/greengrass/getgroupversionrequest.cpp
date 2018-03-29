@@ -66,10 +66,10 @@ bool GetGroupVersionRequest::isValid() const
  *
  * @return An GetGroupVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkReply * const reply) const
 {
     return new GetGroupVersionResponse(*this, reply);
 }

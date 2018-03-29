@@ -29,7 +29,7 @@ namespace DataPipeline {
 
 class DataPipelineClient;
 
-class QTAWS_EXPORT DataPipelineClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT DataPipelineClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DataPipelineClientPrivate(DataPipelineClient * const q);

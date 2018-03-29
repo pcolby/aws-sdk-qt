@@ -66,10 +66,10 @@ bool PutDestinationRequest::isValid() const
  *
  * @return An PutDestinationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply * const reply) const
 {
     return new PutDestinationResponse(*this, reply);
 }

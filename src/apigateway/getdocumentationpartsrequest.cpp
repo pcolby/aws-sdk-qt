@@ -66,10 +66,10 @@ bool GetDocumentationPartsRequest::isValid() const
  *
  * @return An GetDocumentationPartsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetDocumentationPartsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDocumentationPartsRequest::response(QNetworkReply * const reply) const
 {
     return new GetDocumentationPartsResponse(*this, reply);
 }

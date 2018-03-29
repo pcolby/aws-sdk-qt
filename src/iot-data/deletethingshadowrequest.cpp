@@ -66,10 +66,10 @@ bool DeleteThingShadowRequest::isValid() const
  *
  * @return An DeleteThingShadowResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTDataPlaneClient::send
  */
-AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteThingShadowResponse(*this, reply);
 }

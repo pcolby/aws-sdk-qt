@@ -66,10 +66,10 @@ bool TestConnectionRequest::isValid() const
  *
  * @return An TestConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new TestConnectionResponse(*this, reply);
 }

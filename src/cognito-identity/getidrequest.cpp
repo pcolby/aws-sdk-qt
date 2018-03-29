@@ -66,10 +66,10 @@ bool GetIdRequest::isValid() const
  *
  * @return An GetIdResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * GetIdRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIdRequest::response(QNetworkReply * const reply) const
 {
     return new GetIdResponse(*this, reply);
 }

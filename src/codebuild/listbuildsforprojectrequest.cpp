@@ -66,10 +66,10 @@ bool ListBuildsForProjectRequest::isValid() const
  *
  * @return An ListBuildsForProjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * ListBuildsForProjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListBuildsForProjectRequest::response(QNetworkReply * const reply) const
 {
     return new ListBuildsForProjectResponse(*this, reply);
 }

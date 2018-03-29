@@ -66,10 +66,10 @@ bool CreateVpcEndpointRequest::isValid() const
  *
  * @return An CreateVpcEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateVpcEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateVpcEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new CreateVpcEndpointResponse(*this, reply);
 }

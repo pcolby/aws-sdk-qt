@@ -66,10 +66,10 @@ bool DescribeReservedNodeOfferingsRequest::isValid() const
  *
  * @return An DescribeReservedNodeOfferingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeReservedNodeOfferingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeReservedNodeOfferingsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeReservedNodeOfferingsResponse(*this, reply);
 }

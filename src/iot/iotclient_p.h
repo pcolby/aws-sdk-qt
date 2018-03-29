@@ -29,7 +29,7 @@ namespace IoT {
 
 class IoTClient;
 
-class QTAWS_EXPORT IoTClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT IoTClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTClientPrivate(IoTClient * const q);

@@ -66,10 +66,10 @@ bool DeleteHsmClientCertificateRequest::isValid() const
  *
  * @return An DeleteHsmClientCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DeleteHsmClientCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteHsmClientCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteHsmClientCertificateResponse(*this, reply);
 }

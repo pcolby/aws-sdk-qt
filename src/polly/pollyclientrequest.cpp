@@ -36,7 +36,7 @@ namespace Polly {
  * @param  action  The Polly action to request.
  */
 PollyClientRequest::PollyClientRequest(const Action action)
-    : AwsAbstractRequest(new PollyClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new PollyClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ PollyClientRequest::PollyClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 PollyClientRequest::PollyClientRequest(const PollyClientRequest &other)
-    : AwsAbstractRequest(new PollyClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new PollyClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ PollyClientRequest& PollyClientRequest::operator=(const PollyClientRequest &othe
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-PollyClientRequest::PollyClientRequest(PollyClientRequestPrivate * const d) : AwsAbstractRequest(d)
+PollyClientRequest::PollyClientRequest(PollyClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool PollyClientRequest::operator==(const PollyClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest PollyClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public PollyClientRequest instance.
  */
 PollyClientRequestPrivate::PollyClientRequestPrivate(const PollyClientRequest::Action action, PollyClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ PollyClientRequestPrivate::PollyClientRequestPrivate(const PollyClientRequest::A
  */
 PollyClientRequestPrivate::PollyClientRequestPrivate(const PollyClientRequestPrivate &other,
                                      PollyClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

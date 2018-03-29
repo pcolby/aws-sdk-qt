@@ -66,10 +66,10 @@ bool RemoveAttributesFromFindingsRequest::isValid() const
  *
  * @return An RemoveAttributesFromFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveAttributesFromFindingsResponse(*this, reply);
 }

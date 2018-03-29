@@ -66,10 +66,10 @@ bool DeleteServerCertificateRequest::isValid() const
  *
  * @return An DeleteServerCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteServerCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteServerCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteServerCertificateResponse(*this, reply);
 }

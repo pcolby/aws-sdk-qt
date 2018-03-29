@@ -66,10 +66,10 @@ bool DisableStageTransitionRequest::isValid() const
  *
  * @return An DisableStageTransitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * DisableStageTransitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableStageTransitionRequest::response(QNetworkReply * const reply) const
 {
     return new DisableStageTransitionResponse(*this, reply);
 }

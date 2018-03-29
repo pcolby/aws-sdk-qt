@@ -66,10 +66,10 @@ bool CreateSubnetGroupRequest::isValid() const
  *
  * @return An CreateSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSubnetGroupResponse(*this, reply);
 }

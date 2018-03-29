@@ -66,10 +66,10 @@ bool BatchDeleteConnectionRequest::isValid() const
  *
  * @return An BatchDeleteConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * BatchDeleteConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchDeleteConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new BatchDeleteConnectionResponse(*this, reply);
 }

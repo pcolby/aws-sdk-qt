@@ -66,10 +66,10 @@ bool RequestEnvironmentInfoRequest::isValid() const
  *
  * @return An RequestEnvironmentInfoResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * RequestEnvironmentInfoRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RequestEnvironmentInfoRequest::response(QNetworkReply * const reply) const
 {
     return new RequestEnvironmentInfoResponse(*this, reply);
 }

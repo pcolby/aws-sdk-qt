@@ -66,10 +66,10 @@ bool ListDomainsRequest::isValid() const
  *
  * @return An ListDomainsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDomainsResponse(*this, reply);
 }

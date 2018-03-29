@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ResourceGroupsTaggingAPIClientRequestPrivate;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ResourceGroupsTaggingAPIClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ResourceGroupsTaggingAPI.

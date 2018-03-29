@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace SSM {
@@ -226,18 +226,18 @@ class UpdateManagedInstanceRoleResponse;
 class UpdatePatchBaselineRequest;
 class UpdatePatchBaselineResponse;
 
-class QTAWS_EXPORT SsmClient : public AwsAbstractClient {
+class QTAWS_EXPORT SsmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     SsmClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     SsmClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

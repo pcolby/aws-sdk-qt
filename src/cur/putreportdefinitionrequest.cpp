@@ -66,10 +66,10 @@ bool PutReportDefinitionRequest::isValid() const
  *
  * @return An PutReportDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CostandUsageReportServiceClient::send
  */
-AwsAbstractResponse * PutReportDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new PutReportDefinitionResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace SMS {
  * @param  action  The SMS action to request.
  */
 SmsClientRequest::SmsClientRequest(const Action action)
-    : AwsAbstractRequest(new SmsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SmsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SmsClientRequest::SmsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SmsClientRequest::SmsClientRequest(const SmsClientRequest &other)
-    : AwsAbstractRequest(new SmsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SmsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SmsClientRequest& SmsClientRequest::operator=(const SmsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SmsClientRequest::SmsClientRequest(SmsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SmsClientRequest::SmsClientRequest(SmsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SmsClientRequest::operator==(const SmsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SmsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SmsClientRequest instance.
  */
 SmsClientRequestPrivate::SmsClientRequestPrivate(const SmsClientRequest::Action action, SmsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SmsClientRequestPrivate::SmsClientRequestPrivate(const SmsClientRequest::Action 
  */
 SmsClientRequestPrivate::SmsClientRequestPrivate(const SmsClientRequestPrivate &other,
                                      SmsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

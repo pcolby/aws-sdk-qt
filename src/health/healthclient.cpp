@@ -106,10 +106,10 @@ namespace Health {
  */
 HealthClient::HealthClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new HealthClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new HealthClientPrivate(this), parent)
 {
     Q_D(HealthClient);
     d->apiVersion = QStringLiteral("2016-08-04");
@@ -139,10 +139,10 @@ HealthClient::HealthClient(
  */
 HealthClient::HealthClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new HealthClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new HealthClientPrivate(this), parent)
 {
     Q_D(HealthClient);
     d->apiVersion = QStringLiteral("2016-08-04");
@@ -279,9 +279,9 @@ DescribeEventsResponse * HealthClient::describeEvents(const DescribeEventsReques
  * @param  q  Pointer to this object's public HealthClient instance.
  */
 HealthClientPrivate::HealthClientPrivate(HealthClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Health

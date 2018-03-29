@@ -66,10 +66,10 @@ bool ListAccountAliasesRequest::isValid() const
  *
  * @return An ListAccountAliasesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkReply * const reply) const
 {
     return new ListAccountAliasesResponse(*this, reply);
 }

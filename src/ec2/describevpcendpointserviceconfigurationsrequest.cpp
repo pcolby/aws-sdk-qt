@@ -66,10 +66,10 @@ bool DescribeVpcEndpointServiceConfigurationsRequest::isValid() const
  *
  * @return An DescribeVpcEndpointServiceConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVpcEndpointServiceConfigurationsResponse(*this, reply);
 }

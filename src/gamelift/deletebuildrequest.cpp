@@ -66,10 +66,10 @@ bool DeleteBuildRequest::isValid() const
  *
  * @return An DeleteBuildResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteBuildResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateMatchmakingRuleSetRequest::isValid() const
  *
  * @return An CreateMatchmakingRuleSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * CreateMatchmakingRuleSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateMatchmakingRuleSetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateMatchmakingRuleSetResponse(*this, reply);
 }

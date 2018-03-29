@@ -66,10 +66,10 @@ bool UpdateSizeConstraintSetRequest::isValid() const
  *
  * @return An UpdateSizeConstraintSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSizeConstraintSetResponse(*this, reply);
 }

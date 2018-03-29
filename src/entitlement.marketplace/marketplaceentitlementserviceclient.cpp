@@ -62,10 +62,10 @@ namespace MarketplaceEntitlementService {
  */
 MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
 {
     Q_D(MarketplaceEntitlementServiceClient);
     d->apiVersion = QStringLiteral("2017-01-11");
@@ -95,10 +95,10 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
  */
 MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
 {
     Q_D(MarketplaceEntitlementServiceClient);
     d->apiVersion = QStringLiteral("2017-01-11");
@@ -141,9 +141,9 @@ GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(c
  * @param  q  Pointer to this object's public MarketplaceEntitlementServiceClient instance.
  */
 MarketplaceEntitlementServiceClientPrivate::MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MarketplaceEntitlementService

@@ -49,10 +49,10 @@ namespace ServiceDiscovery {
  */
 ServiceDiscoveryClient::ServiceDiscoveryClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
 {
     Q_D(ServiceDiscoveryClient);
     d->apiVersion = QStringLiteral("2017-03-14");
@@ -82,10 +82,10 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
  */
 ServiceDiscoveryClient::ServiceDiscoveryClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
 {
     Q_D(ServiceDiscoveryClient);
     d->apiVersion = QStringLiteral("2017-03-14");
@@ -473,9 +473,9 @@ UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServic
  * @param  q  Pointer to this object's public ServiceDiscoveryClient instance.
  */
 ServiceDiscoveryClientPrivate::ServiceDiscoveryClientPrivate(ServiceDiscoveryClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ServiceDiscovery

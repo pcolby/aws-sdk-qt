@@ -36,7 +36,7 @@ namespace Pinpoint {
  * @param  action  The Pinpoint action to request.
  */
 PinpointClientRequest::PinpointClientRequest(const Action action)
-    : AwsAbstractRequest(new PinpointClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new PinpointClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ PinpointClientRequest::PinpointClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 PinpointClientRequest::PinpointClientRequest(const PinpointClientRequest &other)
-    : AwsAbstractRequest(new PinpointClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new PinpointClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ PinpointClientRequest& PinpointClientRequest::operator=(const PinpointClientRequ
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-PinpointClientRequest::PinpointClientRequest(PinpointClientRequestPrivate * const d) : AwsAbstractRequest(d)
+PinpointClientRequest::PinpointClientRequest(PinpointClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool PinpointClientRequest::operator==(const PinpointClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest PinpointClientRequest::unsignedRequest(const QUrl &endpoint) con
  * @param  q       Pointer to this object's public PinpointClientRequest instance.
  */
 PinpointClientRequestPrivate::PinpointClientRequestPrivate(const PinpointClientRequest::Action action, PinpointClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ PinpointClientRequestPrivate::PinpointClientRequestPrivate(const PinpointClientR
  */
 PinpointClientRequestPrivate::PinpointClientRequestPrivate(const PinpointClientRequestPrivate &other,
                                      PinpointClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

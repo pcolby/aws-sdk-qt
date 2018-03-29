@@ -66,10 +66,10 @@ bool ListOfferingsRequest::isValid() const
  *
  * @return An ListOfferingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ListOfferingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListOfferingsRequest::response(QNetworkReply * const reply) const
 {
     return new ListOfferingsResponse(*this, reply);
 }

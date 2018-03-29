@@ -66,10 +66,10 @@ bool DescribeTimeToLiveRequest::isValid() const
  *
  * @return An DescribeTimeToLiveResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTimeToLiveResponse(*this, reply);
 }

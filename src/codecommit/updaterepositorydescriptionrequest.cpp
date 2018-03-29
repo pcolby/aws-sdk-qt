@@ -66,10 +66,10 @@ bool UpdateRepositoryDescriptionRequest::isValid() const
  *
  * @return An UpdateRepositoryDescriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRepositoryDescriptionResponse(*this, reply);
 }

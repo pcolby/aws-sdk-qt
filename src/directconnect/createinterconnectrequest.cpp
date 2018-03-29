@@ -66,10 +66,10 @@ bool CreateInterconnectRequest::isValid() const
  *
  * @return An CreateInterconnectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkReply * const reply) const
 {
     return new CreateInterconnectResponse(*this, reply);
 }

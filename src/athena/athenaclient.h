@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace Athena {
@@ -54,18 +54,18 @@ class StartQueryExecutionResponse;
 class StopQueryExecutionRequest;
 class StopQueryExecutionResponse;
 
-class QTAWS_EXPORT AthenaClient : public AwsAbstractClient {
+class QTAWS_EXPORT AthenaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     AthenaClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     AthenaClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

@@ -66,10 +66,10 @@ bool DeleteItemRequest::isValid() const
  *
  * @return An DeleteItemResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteItemResponse(*this, reply);
 }

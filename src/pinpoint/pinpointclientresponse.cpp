@@ -40,7 +40,7 @@ namespace Pinpoint {
  * @param  parent   This object's parent.
  */
 PinpointClientResponse::PinpointClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new PinpointClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new PinpointClientResponsePrivate(this), parent)
 {
 
 }

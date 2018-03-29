@@ -40,7 +40,7 @@ namespace SMS {
  * @param  parent   This object's parent.
  */
 SmsClientResponse::SmsClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SmsClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SmsClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool ListDeliveryStreamsRequest::isValid() const
  *
  * @return An ListDeliveryStreamsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  FirehoseClient::send
  */
-AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDeliveryStreamsResponse(*this, reply);
 }

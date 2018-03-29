@@ -66,10 +66,10 @@ bool CreateSnapshotFromVolumeRecoveryPointRequest::isValid() const
  *
  * @return An CreateSnapshotFromVolumeRecoveryPointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSnapshotFromVolumeRecoveryPointResponse(*this, reply);
 }

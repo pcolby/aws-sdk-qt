@@ -36,7 +36,7 @@ namespace SWF {
  * @param  action  The SWF action to request.
  */
 SwfClientRequest::SwfClientRequest(const Action action)
-    : AwsAbstractRequest(new SwfClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SwfClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SwfClientRequest::SwfClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SwfClientRequest::SwfClientRequest(const SwfClientRequest &other)
-    : AwsAbstractRequest(new SwfClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SwfClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SwfClientRequest& SwfClientRequest::operator=(const SwfClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SwfClientRequest::SwfClientRequest(SwfClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SwfClientRequest::SwfClientRequest(SwfClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SwfClientRequest::operator==(const SwfClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SwfClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SwfClientRequest instance.
  */
 SwfClientRequestPrivate::SwfClientRequestPrivate(const SwfClientRequest::Action action, SwfClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SwfClientRequestPrivate::SwfClientRequestPrivate(const SwfClientRequest::Action 
  */
 SwfClientRequestPrivate::SwfClientRequestPrivate(const SwfClientRequestPrivate &other,
                                      SwfClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool ListDevicePoolsRequest::isValid() const
  *
  * @return An ListDevicePoolsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * ListDevicePoolsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDevicePoolsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDevicePoolsResponse(*this, reply);
 }

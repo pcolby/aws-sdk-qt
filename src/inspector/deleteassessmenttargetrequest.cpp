@@ -66,10 +66,10 @@ bool DeleteAssessmentTargetRequest::isValid() const
  *
  * @return An DeleteAssessmentTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAssessmentTargetResponse(*this, reply);
 }

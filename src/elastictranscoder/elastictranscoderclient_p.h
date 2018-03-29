@@ -29,7 +29,7 @@ namespace ElasticTranscoder {
 
 class ElasticTranscoderClient;
 
-class QTAWS_EXPORT ElasticTranscoderClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT ElasticTranscoderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q);

@@ -29,7 +29,7 @@ namespace MediaLive {
 
 class MediaLiveClient;
 
-class QTAWS_EXPORT MediaLiveClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT MediaLiveClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MediaLiveClientPrivate(MediaLiveClient * const q);

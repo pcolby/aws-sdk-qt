@@ -40,7 +40,7 @@ namespace IAM {
  * @param  parent   This object's parent.
  */
 IamClientResponse::IamClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new IamClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new IamClientResponsePrivate(this), parent)
 {
 
 }

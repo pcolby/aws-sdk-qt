@@ -66,10 +66,10 @@ bool CreateEventSubscriptionRequest::isValid() const
  *
  * @return An CreateEventSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateEventSubscriptionResponse(*this, reply);
 }

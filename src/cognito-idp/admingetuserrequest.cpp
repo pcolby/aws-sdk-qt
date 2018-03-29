@@ -66,10 +66,10 @@ bool AdminGetUserRequest::isValid() const
  *
  * @return An AdminGetUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminGetUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminGetUserRequest::response(QNetworkReply * const reply) const
 {
     return new AdminGetUserResponse(*this, reply);
 }

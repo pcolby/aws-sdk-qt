@@ -40,7 +40,7 @@ namespace ConfigService {
  * @param  parent   This object's parent.
  */
 ConfigServiceClientResponse::ConfigServiceClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ConfigServiceClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ConfigServiceClientResponsePrivate(this), parent)
 {
 
 }

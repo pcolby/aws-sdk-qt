@@ -66,10 +66,10 @@ bool DetachLoadBalancersRequest::isValid() const
  *
  * @return An DetachLoadBalancersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetworkReply * const reply) const
 {
     return new DetachLoadBalancersResponse(*this, reply);
 }

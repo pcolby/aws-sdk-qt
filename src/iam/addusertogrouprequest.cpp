@@ -66,10 +66,10 @@ bool AddUserToGroupRequest::isValid() const
  *
  * @return An AddUserToGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply * const reply) const
 {
     return new AddUserToGroupResponse(*this, reply);
 }

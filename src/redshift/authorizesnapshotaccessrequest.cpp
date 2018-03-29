@@ -66,10 +66,10 @@ bool AuthorizeSnapshotAccessRequest::isValid() const
  *
  * @return An AuthorizeSnapshotAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * AuthorizeSnapshotAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AuthorizeSnapshotAccessRequest::response(QNetworkReply * const reply) const
 {
     return new AuthorizeSnapshotAccessResponse(*this, reply);
 }

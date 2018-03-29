@@ -66,10 +66,10 @@ bool GetBucketAccelerateConfigurationRequest::isValid() const
  *
  * @return An GetBucketAccelerateConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new GetBucketAccelerateConfigurationResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeDirectConnectGatewayAttachmentsRequest::isValid() const
  *
  * @return An DescribeDirectConnectGatewayAttachmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DescribeDirectConnectGatewayAttachmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewayAttachmentsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDirectConnectGatewayAttachmentsResponse(*this, reply);
 }

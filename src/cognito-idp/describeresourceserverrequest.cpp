@@ -66,10 +66,10 @@ bool DescribeResourceServerRequest::isValid() const
  *
  * @return An DescribeResourceServerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * DescribeResourceServerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeResourceServerResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace Translate {
  * @param  parent   This object's parent.
  */
 TranslateClientResponse::TranslateClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new TranslateClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new TranslateClientResponsePrivate(this), parent)
 {
 
 }

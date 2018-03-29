@@ -66,10 +66,10 @@ bool ListIdentityPoolsRequest::isValid() const
  *
  * @return An ListIdentityPoolsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * ListIdentityPoolsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListIdentityPoolsRequest::response(QNetworkReply * const reply) const
 {
     return new ListIdentityPoolsResponse(*this, reply);
 }

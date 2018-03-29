@@ -66,10 +66,10 @@ bool DescribeScalingParametersRequest::isValid() const
  *
  * @return An DescribeScalingParametersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DescribeScalingParametersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeScalingParametersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeScalingParametersResponse(*this, reply);
 }

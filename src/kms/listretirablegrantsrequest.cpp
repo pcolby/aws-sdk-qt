@@ -66,10 +66,10 @@ bool ListRetirableGrantsRequest::isValid() const
  *
  * @return An ListRetirableGrantsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetworkReply * const reply) const
 {
     return new ListRetirableGrantsResponse(*this, reply);
 }

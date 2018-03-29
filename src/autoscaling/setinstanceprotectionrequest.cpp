@@ -66,10 +66,10 @@ bool SetInstanceProtectionRequest::isValid() const
  *
  * @return An SetInstanceProtectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetworkReply * const reply) const
 {
     return new SetInstanceProtectionResponse(*this, reply);
 }

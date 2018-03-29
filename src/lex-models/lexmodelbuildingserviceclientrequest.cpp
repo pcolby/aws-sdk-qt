@@ -36,7 +36,7 @@ namespace LexModelBuildingService {
  * @param  action  The LexModelBuildingService action to request.
  */
 LexModelBuildingServiceClientRequest::LexModelBuildingServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new LexModelBuildingServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ LexModelBuildingServiceClientRequest::LexModelBuildingServiceClientRequest(const
  * @param  other  Instance to copy.
  */
 LexModelBuildingServiceClientRequest::LexModelBuildingServiceClientRequest(const LexModelBuildingServiceClientRequest &other)
-    : AwsAbstractRequest(new LexModelBuildingServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ LexModelBuildingServiceClientRequest& LexModelBuildingServiceClientRequest::oper
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-LexModelBuildingServiceClientRequest::LexModelBuildingServiceClientRequest(LexModelBuildingServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+LexModelBuildingServiceClientRequest::LexModelBuildingServiceClientRequest(LexModelBuildingServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool LexModelBuildingServiceClientRequest::operator==(const LexModelBuildingServ
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest LexModelBuildingServiceClientRequest::unsignedRequest(const QUrl
  * @param  q       Pointer to this object's public LexModelBuildingServiceClientRequest instance.
  */
 LexModelBuildingServiceClientRequestPrivate::LexModelBuildingServiceClientRequestPrivate(const LexModelBuildingServiceClientRequest::Action action, LexModelBuildingServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ LexModelBuildingServiceClientRequestPrivate::LexModelBuildingServiceClientReques
  */
 LexModelBuildingServiceClientRequestPrivate::LexModelBuildingServiceClientRequestPrivate(const LexModelBuildingServiceClientRequestPrivate &other,
                                      LexModelBuildingServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

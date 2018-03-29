@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace LexModelBuildingService {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class LexModelBuildingServiceClientRequestPrivate;
 
-class QTAWS_EXPORT LexModelBuildingServiceClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT LexModelBuildingServiceClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LexModelBuildingService.

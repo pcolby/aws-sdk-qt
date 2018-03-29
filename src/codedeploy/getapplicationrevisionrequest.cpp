@@ -66,10 +66,10 @@ bool GetApplicationRevisionRequest::isValid() const
  *
  * @return An GetApplicationRevisionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * GetApplicationRevisionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetApplicationRevisionRequest::response(QNetworkReply * const reply) const
 {
     return new GetApplicationRevisionResponse(*this, reply);
 }

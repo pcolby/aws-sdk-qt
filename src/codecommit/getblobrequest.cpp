@@ -66,10 +66,10 @@ bool GetBlobRequest::isValid() const
  *
  * @return An GetBlobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * const reply) const
 {
     return new GetBlobResponse(*this, reply);
 }

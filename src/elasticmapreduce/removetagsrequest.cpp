@@ -66,10 +66,10 @@ bool RemoveTagsRequest::isValid() const
  *
  * @return An RemoveTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveTagsResponse(*this, reply);
 }

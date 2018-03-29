@@ -66,10 +66,10 @@ bool GetDistributionRequest::isValid() const
  *
  * @return An GetDistributionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * GetDistributionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDistributionRequest::response(QNetworkReply * const reply) const
 {
     return new GetDistributionResponse(*this, reply);
 }

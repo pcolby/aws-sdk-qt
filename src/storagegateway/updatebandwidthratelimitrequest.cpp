@@ -66,10 +66,10 @@ bool UpdateBandwidthRateLimitRequest::isValid() const
  *
  * @return An UpdateBandwidthRateLimitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateBandwidthRateLimitResponse(*this, reply);
 }

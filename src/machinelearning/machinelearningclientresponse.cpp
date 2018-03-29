@@ -40,7 +40,7 @@ namespace MachineLearning {
  * @param  parent   This object's parent.
  */
 MachineLearningClientResponse::MachineLearningClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MachineLearningClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MachineLearningClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool ModifyReplicationInstanceRequest::isValid() const
  *
  * @return An ModifyReplicationInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyReplicationInstanceResponse(*this, reply);
 }

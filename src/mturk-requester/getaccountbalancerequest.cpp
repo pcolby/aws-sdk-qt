@@ -66,10 +66,10 @@ bool GetAccountBalanceRequest::isValid() const
  *
  * @return An GetAccountBalanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkReply * const reply) const
 {
     return new GetAccountBalanceResponse(*this, reply);
 }

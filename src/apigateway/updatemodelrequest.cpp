@@ -66,10 +66,10 @@ bool UpdateModelRequest::isValid() const
  *
  * @return An UpdateModelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * UpdateModelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateModelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateModelResponse(*this, reply);
 }

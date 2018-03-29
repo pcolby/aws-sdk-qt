@@ -66,10 +66,10 @@ bool DeleteConfigurationSetTrackingOptionsRequest::isValid() const
  *
  * @return An DeleteConfigurationSetTrackingOptionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConfigurationSetTrackingOptionsResponse(*this, reply);
 }

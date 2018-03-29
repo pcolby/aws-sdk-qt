@@ -66,10 +66,10 @@ bool MoveAccountRequest::isValid() const
  *
  * @return An MoveAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * MoveAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * MoveAccountRequest::response(QNetworkReply * const reply) const
 {
     return new MoveAccountResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ModifyDBClusterRequest::isValid() const
  *
  * @return An ModifyDBClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDBClusterResponse(*this, reply);
 }

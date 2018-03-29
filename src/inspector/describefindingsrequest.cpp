@@ -66,10 +66,10 @@ bool DescribeFindingsRequest::isValid() const
  *
  * @return An DescribeFindingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeFindingsResponse(*this, reply);
 }

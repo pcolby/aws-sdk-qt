@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CloudFrontClientResponse;
 
-class QTAWS_EXPORT CloudFrontClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT CloudFrontClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

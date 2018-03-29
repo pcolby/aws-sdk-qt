@@ -66,10 +66,10 @@ bool DescribeIamInstanceProfileAssociationsRequest::isValid() const
  *
  * @return An DescribeIamInstanceProfileAssociationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeIamInstanceProfileAssociationsResponse(*this, reply);
 }

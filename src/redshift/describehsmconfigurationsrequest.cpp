@@ -66,10 +66,10 @@ bool DescribeHsmConfigurationsRequest::isValid() const
  *
  * @return An DescribeHsmConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeHsmConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeHsmConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeHsmConfigurationsResponse(*this, reply);
 }

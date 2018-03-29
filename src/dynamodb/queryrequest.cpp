@@ -66,10 +66,10 @@ bool QueryRequest::isValid() const
  *
  * @return An QueryResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * QueryRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const reply) const
 {
     return new QueryResponse(*this, reply);
 }

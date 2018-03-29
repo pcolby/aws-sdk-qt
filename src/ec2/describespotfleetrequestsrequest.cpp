@@ -66,10 +66,10 @@ bool DescribeSpotFleetRequestsRequest::isValid() const
  *
  * @return An DescribeSpotFleetRequestsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeSpotFleetRequestsResponse(*this, reply);
 }

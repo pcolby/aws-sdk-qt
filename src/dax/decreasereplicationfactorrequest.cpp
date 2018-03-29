@@ -66,10 +66,10 @@ bool DecreaseReplicationFactorRequest::isValid() const
  *
  * @return An DecreaseReplicationFactorResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QNetworkReply * const reply) const
 {
     return new DecreaseReplicationFactorResponse(*this, reply);
 }

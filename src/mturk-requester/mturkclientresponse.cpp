@@ -40,7 +40,7 @@ namespace MTurk {
  * @param  parent   This object's parent.
  */
 MTurkClientResponse::MTurkClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new MTurkClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new MTurkClientResponsePrivate(this), parent)
 {
 
 }

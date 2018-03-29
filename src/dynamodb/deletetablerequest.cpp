@@ -66,10 +66,10 @@ bool DeleteTableRequest::isValid() const
  *
  * @return An DeleteTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTableResponse(*this, reply);
 }

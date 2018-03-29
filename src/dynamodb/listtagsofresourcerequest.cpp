@@ -66,10 +66,10 @@ bool ListTagsOfResourceRequest::isValid() const
  *
  * @return An ListTagsOfResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DynamoDBClient::send
  */
-AwsAbstractResponse * ListTagsOfResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTagsOfResourceRequest::response(QNetworkReply * const reply) const
 {
     return new ListTagsOfResourceResponse(*this, reply);
 }

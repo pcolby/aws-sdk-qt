@@ -66,10 +66,10 @@ bool CreateMatchmakingConfigurationRequest::isValid() const
  *
  * @return An CreateMatchmakingConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * CreateMatchmakingConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateMatchmakingConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateMatchmakingConfigurationResponse(*this, reply);
 }

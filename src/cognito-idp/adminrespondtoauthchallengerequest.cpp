@@ -66,10 +66,10 @@ bool AdminRespondToAuthChallengeRequest::isValid() const
  *
  * @return An AdminRespondToAuthChallengeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(QNetworkReply * const reply) const
 {
     return new AdminRespondToAuthChallengeResponse(*this, reply);
 }

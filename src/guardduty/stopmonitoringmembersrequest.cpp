@@ -66,10 +66,10 @@ bool StopMonitoringMembersRequest::isValid() const
  *
  * @return An StopMonitoringMembersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetworkReply * const reply) const
 {
     return new StopMonitoringMembersResponse(*this, reply);
 }

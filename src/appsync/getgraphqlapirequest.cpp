@@ -66,10 +66,10 @@ bool GetGraphqlApiRequest::isValid() const
  *
  * @return An GetGraphqlApiResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply * const reply) const
 {
     return new GetGraphqlApiResponse(*this, reply);
 }

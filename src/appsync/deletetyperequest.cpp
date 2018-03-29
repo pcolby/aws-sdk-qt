@@ -66,10 +66,10 @@ bool DeleteTypeRequest::isValid() const
  *
  * @return An DeleteTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTypeResponse(*this, reply);
 }

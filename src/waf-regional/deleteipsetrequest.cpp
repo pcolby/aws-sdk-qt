@@ -66,10 +66,10 @@ bool DeleteIPSetRequest::isValid() const
  *
  * @return An DeleteIPSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteIPSetResponse(*this, reply);
 }

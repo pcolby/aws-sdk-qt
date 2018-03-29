@@ -66,10 +66,10 @@ bool DescribeActiveReceiptRuleSetRequest::isValid() const
  *
  * @return An DescribeActiveReceiptRuleSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * DescribeActiveReceiptRuleSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeActiveReceiptRuleSetRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeActiveReceiptRuleSetResponse(*this, reply);
 }

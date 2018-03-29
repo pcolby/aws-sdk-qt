@@ -66,10 +66,10 @@ bool DescribeLoggingStatusRequest::isValid() const
  *
  * @return An DescribeLoggingStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeLoggingStatusResponse(*this, reply);
 }

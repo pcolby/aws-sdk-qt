@@ -66,10 +66,10 @@ bool DiscoverPollEndpointRequest::isValid() const
  *
  * @return An DiscoverPollEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new DiscoverPollEndpointResponse(*this, reply);
 }

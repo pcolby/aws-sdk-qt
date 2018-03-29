@@ -66,10 +66,10 @@ bool UpdateGroupCertificateConfigurationRequest::isValid() const
  *
  * @return An UpdateGroupCertificateConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * UpdateGroupCertificateConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateGroupCertificateConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateGroupCertificateConfigurationResponse(*this, reply);
 }

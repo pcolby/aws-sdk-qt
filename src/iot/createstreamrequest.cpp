@@ -66,10 +66,10 @@ bool CreateStreamRequest::isValid() const
  *
  * @return An CreateStreamResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply * const reply) const
 {
     return new CreateStreamResponse(*this, reply);
 }

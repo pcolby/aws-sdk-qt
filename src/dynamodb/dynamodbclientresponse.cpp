@@ -40,7 +40,7 @@ namespace DynamoDB {
  * @param  parent   This object's parent.
  */
 DynamoDBClientResponse::DynamoDBClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new DynamoDBClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new DynamoDBClientResponsePrivate(this), parent)
 {
 
 }

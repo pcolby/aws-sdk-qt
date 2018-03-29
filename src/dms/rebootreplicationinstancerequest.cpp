@@ -66,10 +66,10 @@ bool RebootReplicationInstanceRequest::isValid() const
  *
  * @return An RebootReplicationInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * RebootReplicationInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new RebootReplicationInstanceResponse(*this, reply);
 }

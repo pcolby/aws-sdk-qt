@@ -66,10 +66,10 @@ bool DeleteMessageRequest::isValid() const
  *
  * @return An DeleteMessageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SQSClient::send
  */
-AwsAbstractResponse * DeleteMessageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMessageRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMessageResponse(*this, reply);
 }

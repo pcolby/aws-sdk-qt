@@ -66,10 +66,10 @@ bool DisableRadiusRequest::isValid() const
  *
  * @return An DisableRadiusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply * const reply) const
 {
     return new DisableRadiusResponse(*this, reply);
 }

@@ -67,10 +67,10 @@ namespace ElasticBeanstalk {
  */
 ElasticBeanstalkClient::ElasticBeanstalkClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticBeanstalkClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticBeanstalkClientPrivate(this), parent)
 {
     Q_D(ElasticBeanstalkClient);
     d->apiVersion = QStringLiteral("2010-12-01");
@@ -100,10 +100,10 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
  */
 ElasticBeanstalkClient::ElasticBeanstalkClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ElasticBeanstalkClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticBeanstalkClientPrivate(this), parent)
 {
     Q_D(ElasticBeanstalkClient);
     d->apiVersion = QStringLiteral("2010-12-01");
@@ -948,9 +948,9 @@ ValidateConfigurationSettingsResponse * ElasticBeanstalkClient::validateConfigur
  * @param  q  Pointer to this object's public ElasticBeanstalkClient instance.
  */
 ElasticBeanstalkClientPrivate::ElasticBeanstalkClientPrivate(ElasticBeanstalkClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticBeanstalk

@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class ElasticsearchServiceClientRequest;
 
-class QTAWS_EXPORT ElasticsearchServiceClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT ElasticsearchServiceClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticsearchServiceClientRequest::Action action; ///< ElasticsearchService action to be performed.

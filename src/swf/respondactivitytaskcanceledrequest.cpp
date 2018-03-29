@@ -66,10 +66,10 @@ bool RespondActivityTaskCanceledRequest::isValid() const
  *
  * @return An RespondActivityTaskCanceledResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(QNetworkReply * const reply) const
 {
     return new RespondActivityTaskCanceledResponse(*this, reply);
 }

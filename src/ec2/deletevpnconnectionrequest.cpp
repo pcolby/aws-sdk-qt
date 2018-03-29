@@ -66,10 +66,10 @@ bool DeleteVpnConnectionRequest::isValid() const
  *
  * @return An DeleteVpnConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVpnConnectionResponse(*this, reply);
 }

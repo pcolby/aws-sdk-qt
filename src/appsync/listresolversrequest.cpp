@@ -66,10 +66,10 @@ bool ListResolversRequest::isValid() const
  *
  * @return An ListResolversResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * ListResolversRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply * const reply) const
 {
     return new ListResolversResponse(*this, reply);
 }

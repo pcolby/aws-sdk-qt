@@ -66,10 +66,10 @@ bool GetJobManifestRequest::isValid() const
  *
  * @return An GetJobManifestResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SnowballClient::send
  */
-AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply * const reply) const
 {
     return new GetJobManifestResponse(*this, reply);
 }

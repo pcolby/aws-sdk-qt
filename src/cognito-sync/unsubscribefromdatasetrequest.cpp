@@ -66,10 +66,10 @@ bool UnsubscribeFromDatasetRequest::isValid() const
  *
  * @return An UnsubscribeFromDatasetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetworkReply * const reply) const
 {
     return new UnsubscribeFromDatasetResponse(*this, reply);
 }

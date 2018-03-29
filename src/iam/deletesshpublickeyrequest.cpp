@@ -66,10 +66,10 @@ bool DeleteSSHPublicKeyRequest::isValid() const
  *
  * @return An DeleteSSHPublicKeyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteSSHPublicKeyResponse(*this, reply);
 }

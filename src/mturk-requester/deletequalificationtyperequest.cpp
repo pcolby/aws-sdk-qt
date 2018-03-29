@@ -66,10 +66,10 @@ bool DeleteQualificationTypeRequest::isValid() const
  *
  * @return An DeleteQualificationTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * DeleteQualificationTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteQualificationTypeRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteQualificationTypeResponse(*this, reply);
 }

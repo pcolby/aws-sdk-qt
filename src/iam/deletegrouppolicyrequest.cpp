@@ -66,10 +66,10 @@ bool DeleteGroupPolicyRequest::isValid() const
  *
  * @return An DeleteGroupPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteGroupPolicyResponse(*this, reply);
 }

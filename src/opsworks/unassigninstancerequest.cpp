@@ -66,10 +66,10 @@ bool UnassignInstanceRequest::isValid() const
  *
  * @return An UnassignInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new UnassignInstanceResponse(*this, reply);
 }

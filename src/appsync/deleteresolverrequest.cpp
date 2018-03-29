@@ -66,10 +66,10 @@ bool DeleteResolverRequest::isValid() const
  *
  * @return An DeleteResolverResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * DeleteResolverRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteResolverRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteResolverResponse(*this, reply);
 }

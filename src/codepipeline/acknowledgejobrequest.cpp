@@ -66,10 +66,10 @@ bool AcknowledgeJobRequest::isValid() const
  *
  * @return An AcknowledgeJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply * const reply) const
 {
     return new AcknowledgeJobResponse(*this, reply);
 }

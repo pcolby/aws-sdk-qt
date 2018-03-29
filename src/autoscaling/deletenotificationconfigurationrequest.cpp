@@ -66,10 +66,10 @@ bool DeleteNotificationConfigurationRequest::isValid() const
  *
  * @return An DeleteNotificationConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DeleteNotificationConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteNotificationConfigurationResponse(*this, reply);
 }

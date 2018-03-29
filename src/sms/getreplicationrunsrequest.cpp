@@ -66,10 +66,10 @@ bool GetReplicationRunsRequest::isValid() const
  *
  * @return An GetReplicationRunsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkReply * const reply) const
 {
     return new GetReplicationRunsResponse(*this, reply);
 }

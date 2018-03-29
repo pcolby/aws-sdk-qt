@@ -40,7 +40,7 @@ namespace Shield {
  * @param  parent   This object's parent.
  */
 ShieldClientResponse::ShieldClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ShieldClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ShieldClientResponsePrivate(this), parent)
 {
 
 }

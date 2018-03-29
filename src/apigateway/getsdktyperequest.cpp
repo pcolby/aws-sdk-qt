@@ -66,10 +66,10 @@ bool GetSdkTypeRequest::isValid() const
  *
  * @return An GetSdkTypeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  APIGatewayClient::send
  */
-AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * const reply) const
 {
     return new GetSdkTypeResponse(*this, reply);
 }

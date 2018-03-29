@@ -66,10 +66,10 @@ bool DescribeConfigurationSettingsRequest::isValid() const
  *
  * @return An DescribeConfigurationSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DescribeConfigurationSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeConfigurationSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeConfigurationSettingsResponse(*this, reply);
 }

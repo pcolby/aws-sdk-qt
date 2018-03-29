@@ -66,10 +66,10 @@ bool DetectEntitiesRequest::isValid() const
  *
  * @return An DetectEntitiesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ComprehendClient::send
  */
-AwsAbstractResponse * DetectEntitiesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetectEntitiesRequest::response(QNetworkReply * const reply) const
 {
     return new DetectEntitiesResponse(*this, reply);
 }

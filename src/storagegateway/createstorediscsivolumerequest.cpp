@@ -66,10 +66,10 @@ bool CreateStorediSCSIVolumeRequest::isValid() const
  *
  * @return An CreateStorediSCSIVolumeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * CreateStorediSCSIVolumeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateStorediSCSIVolumeRequest::response(QNetworkReply * const reply) const
 {
     return new CreateStorediSCSIVolumeResponse(*this, reply);
 }

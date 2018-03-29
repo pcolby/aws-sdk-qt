@@ -66,10 +66,10 @@ bool DescribeAvailabilityZonesRequest::isValid() const
  *
  * @return An DescribeAvailabilityZonesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAvailabilityZonesResponse(*this, reply);
 }

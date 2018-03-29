@@ -66,10 +66,10 @@ bool PutBucketInventoryConfigurationRequest::isValid() const
  *
  * @return An PutBucketInventoryConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new PutBucketInventoryConfigurationResponse(*this, reply);
 }

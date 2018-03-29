@@ -40,7 +40,7 @@ namespace ElastiCache {
  * @param  parent   This object's parent.
  */
 ElastiCacheClientResponse::ElastiCacheClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ElastiCacheClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ElastiCacheClientResponsePrivate(this), parent)
 {
 
 }

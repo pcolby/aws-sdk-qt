@@ -66,10 +66,10 @@ bool RegisterInstancesWithLoadBalancerRequest::isValid() const
  *
  * @return An RegisterInstancesWithLoadBalancerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * RegisterInstancesWithLoadBalancerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterInstancesWithLoadBalancerRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterInstancesWithLoadBalancerResponse(*this, reply);
 }

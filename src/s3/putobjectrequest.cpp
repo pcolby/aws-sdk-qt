@@ -66,10 +66,10 @@ bool PutObjectRequest::isValid() const
  *
  * @return An PutObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * const reply) const
 {
     return new PutObjectResponse(*this, reply);
 }

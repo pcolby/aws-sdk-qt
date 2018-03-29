@@ -66,10 +66,10 @@ bool DescribeOriginEndpointRequest::isValid() const
  *
  * @return An DescribeOriginEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaPackageClient::send
  */
-AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeOriginEndpointResponse(*this, reply);
 }

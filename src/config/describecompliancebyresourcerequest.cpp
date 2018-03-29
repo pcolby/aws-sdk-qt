@@ -66,10 +66,10 @@ bool DescribeComplianceByResourceRequest::isValid() const
  *
  * @return An DescribeComplianceByResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DescribeComplianceByResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeComplianceByResourceRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeComplianceByResourceResponse(*this, reply);
 }

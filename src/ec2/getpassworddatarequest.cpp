@@ -66,10 +66,10 @@ bool GetPasswordDataRequest::isValid() const
  *
  * @return An GetPasswordDataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkReply * const reply) const
 {
     return new GetPasswordDataResponse(*this, reply);
 }

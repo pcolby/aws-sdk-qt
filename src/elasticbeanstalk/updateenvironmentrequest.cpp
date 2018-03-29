@@ -66,10 +66,10 @@ bool UpdateEnvironmentRequest::isValid() const
  *
  * @return An UpdateEnvironmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateEnvironmentResponse(*this, reply);
 }

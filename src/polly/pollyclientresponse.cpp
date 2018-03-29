@@ -40,7 +40,7 @@ namespace Polly {
  * @param  parent   This object's parent.
  */
 PollyClientResponse::PollyClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new PollyClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new PollyClientResponsePrivate(this), parent)
 {
 
 }

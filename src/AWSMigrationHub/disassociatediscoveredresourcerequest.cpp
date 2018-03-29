@@ -66,10 +66,10 @@ bool DisassociateDiscoveredResourceRequest::isValid() const
  *
  * @return An DisassociateDiscoveredResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * DisassociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateDiscoveredResourceResponse(*this, reply);
 }

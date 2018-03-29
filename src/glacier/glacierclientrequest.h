@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Glacier {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class GlacierClientRequestPrivate;
 
-class QTAWS_EXPORT GlacierClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT GlacierClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Glacier.

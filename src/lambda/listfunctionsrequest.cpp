@@ -66,10 +66,10 @@ bool ListFunctionsRequest::isValid() const
  *
  * @return An ListFunctionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListFunctionsResponse(*this, reply);
 }

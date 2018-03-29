@@ -66,10 +66,10 @@ bool DisassociateDelegateFromResourceRequest::isValid() const
  *
  * @return An DisassociateDelegateFromResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkMailClient::send
  */
-AwsAbstractResponse * DisassociateDelegateFromResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateDelegateFromResourceRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateDelegateFromResourceResponse(*this, reply);
 }

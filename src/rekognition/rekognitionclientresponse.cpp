@@ -40,7 +40,7 @@ namespace Rekognition {
  * @param  parent   This object's parent.
  */
 RekognitionClientResponse::RekognitionClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new RekognitionClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new RekognitionClientResponsePrivate(this), parent)
 {
 
 }

@@ -40,7 +40,7 @@ namespace SFN {
  * @param  parent   This object's parent.
  */
 SfnClientResponse::SfnClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SfnClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SfnClientResponsePrivate(this), parent)
 {
 
 }

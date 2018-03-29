@@ -66,10 +66,10 @@ bool CreateRouteTableRequest::isValid() const
  *
  * @return An CreateRouteTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkReply * const reply) const
 {
     return new CreateRouteTableResponse(*this, reply);
 }

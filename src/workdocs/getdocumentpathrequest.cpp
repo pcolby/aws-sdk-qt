@@ -66,10 +66,10 @@ bool GetDocumentPathRequest::isValid() const
  *
  * @return An GetDocumentPathResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * GetDocumentPathRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDocumentPathRequest::response(QNetworkReply * const reply) const
 {
     return new GetDocumentPathResponse(*this, reply);
 }

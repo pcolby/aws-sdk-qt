@@ -66,10 +66,10 @@ bool OpenInstancePublicPortsRequest::isValid() const
  *
  * @return An OpenInstancePublicPortsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * OpenInstancePublicPortsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * OpenInstancePublicPortsRequest::response(QNetworkReply * const reply) const
 {
     return new OpenInstancePublicPortsResponse(*this, reply);
 }

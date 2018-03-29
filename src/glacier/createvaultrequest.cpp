@@ -66,10 +66,10 @@ bool CreateVaultRequest::isValid() const
  *
  * @return An CreateVaultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * CreateVaultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateVaultRequest::response(QNetworkReply * const reply) const
 {
     return new CreateVaultResponse(*this, reply);
 }

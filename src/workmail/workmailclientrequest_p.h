@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class WorkMailClientRequest;
 
-class QTAWS_EXPORT WorkMailClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT WorkMailClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WorkMailClientRequest::Action action; ///< WorkMail action to be performed.

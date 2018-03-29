@@ -66,10 +66,10 @@ bool GetIntentVersionsRequest::isValid() const
  *
  * @return An GetIntentVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LexModelBuildingServiceClient::send
  */
-AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetIntentVersionsResponse(*this, reply);
 }

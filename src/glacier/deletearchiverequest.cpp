@@ -66,10 +66,10 @@ bool DeleteArchiveRequest::isValid() const
  *
  * @return An DeleteArchiveResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * DeleteArchiveRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteArchiveRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteArchiveResponse(*this, reply);
 }

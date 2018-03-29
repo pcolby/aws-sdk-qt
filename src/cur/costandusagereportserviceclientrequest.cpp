@@ -36,7 +36,7 @@ namespace CostandUsageReportService {
  * @param  action  The CostandUsageReportService action to request.
  */
 CostandUsageReportServiceClientRequest::CostandUsageReportServiceClientRequest(const Action action)
-    : AwsAbstractRequest(new CostandUsageReportServiceClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CostandUsageReportServiceClientRequest::CostandUsageReportServiceClientRequest(c
  * @param  other  Instance to copy.
  */
 CostandUsageReportServiceClientRequest::CostandUsageReportServiceClientRequest(const CostandUsageReportServiceClientRequest &other)
-    : AwsAbstractRequest(new CostandUsageReportServiceClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CostandUsageReportServiceClientRequest& CostandUsageReportServiceClientRequest::
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CostandUsageReportServiceClientRequest::CostandUsageReportServiceClientRequest(CostandUsageReportServiceClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CostandUsageReportServiceClientRequest::CostandUsageReportServiceClientRequest(CostandUsageReportServiceClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CostandUsageReportServiceClientRequest::operator==(const CostandUsageReport
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CostandUsageReportServiceClientRequest::unsignedRequest(const QU
  * @param  q       Pointer to this object's public CostandUsageReportServiceClientRequest instance.
  */
 CostandUsageReportServiceClientRequestPrivate::CostandUsageReportServiceClientRequestPrivate(const CostandUsageReportServiceClientRequest::Action action, CostandUsageReportServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CostandUsageReportServiceClientRequestPrivate::CostandUsageReportServiceClientRe
  */
 CostandUsageReportServiceClientRequestPrivate::CostandUsageReportServiceClientRequestPrivate(const CostandUsageReportServiceClientRequestPrivate &other,
                                      CostandUsageReportServiceClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

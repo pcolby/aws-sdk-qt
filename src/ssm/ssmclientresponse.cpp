@@ -40,7 +40,7 @@ namespace SSM {
  * @param  parent   This object's parent.
  */
 SsmClientResponse::SsmClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new SsmClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new SsmClientResponsePrivate(this), parent)
 {
 
 }

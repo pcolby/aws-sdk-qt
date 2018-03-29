@@ -66,10 +66,10 @@ bool GetInventorySchemaRequest::isValid() const
  *
  * @return An GetInventorySchemaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetInventorySchemaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetInventorySchemaRequest::response(QNetworkReply * const reply) const
 {
     return new GetInventorySchemaResponse(*this, reply);
 }

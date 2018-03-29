@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Lightsail {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class LightsailClientRequestPrivate;
 
-class QTAWS_EXPORT LightsailClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT LightsailClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Lightsail.

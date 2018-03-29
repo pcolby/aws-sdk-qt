@@ -66,10 +66,10 @@ bool ListDeploymentsRequest::isValid() const
  *
  * @return An ListDeploymentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListDeploymentsResponse(*this, reply);
 }

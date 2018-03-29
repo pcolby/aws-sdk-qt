@@ -45,10 +45,10 @@ namespace KinesisVideoMedia {
  */
 KinesisVideoMediaClient::KinesisVideoMediaClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisVideoMediaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisVideoMediaClientPrivate(this), parent)
 {
     Q_D(KinesisVideoMediaClient);
     d->apiVersion = QStringLiteral("2017-09-30");
@@ -78,10 +78,10 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
  */
 KinesisVideoMediaClient::KinesisVideoMediaClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KinesisVideoMediaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KinesisVideoMediaClientPrivate(this), parent)
 {
     Q_D(KinesisVideoMediaClient);
     d->apiVersion = QStringLiteral("2017-09-30");
@@ -149,9 +149,9 @@ GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &requ
  * @param  q  Pointer to this object's public KinesisVideoMediaClient instance.
  */
 KinesisVideoMediaClientPrivate::KinesisVideoMediaClientPrivate(KinesisVideoMediaClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KinesisVideoMedia

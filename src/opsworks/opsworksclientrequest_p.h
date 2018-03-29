@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class OpsWorksClientRequest;
 
-class QTAWS_EXPORT OpsWorksClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT OpsWorksClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     OpsWorksClientRequest::Action action; ///< OpsWorks action to be performed.

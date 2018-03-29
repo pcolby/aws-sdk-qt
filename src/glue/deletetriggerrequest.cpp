@@ -66,10 +66,10 @@ bool DeleteTriggerRequest::isValid() const
  *
  * @return An DeleteTriggerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteTriggerResponse(*this, reply);
 }

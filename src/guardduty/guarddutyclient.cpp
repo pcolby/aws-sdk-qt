@@ -45,10 +45,10 @@ namespace GuardDuty {
  */
 GuardDutyClient::GuardDutyClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
 {
     Q_D(GuardDutyClient);
     d->apiVersion = QStringLiteral("2017-11-28");
@@ -78,10 +78,10 @@ GuardDutyClient::GuardDutyClient(
  */
 GuardDutyClient::GuardDutyClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
 {
     Q_D(GuardDutyClient);
     d->apiVersion = QStringLiteral("2017-11-28");
@@ -601,9 +601,9 @@ UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const Updat
  * @param  q  Pointer to this object's public GuardDutyClient instance.
  */
 GuardDutyClientPrivate::GuardDutyClientPrivate(GuardDutyClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GuardDuty

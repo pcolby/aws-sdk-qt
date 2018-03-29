@@ -66,10 +66,10 @@ bool DescribeInterconnectsRequest::isValid() const
  *
  * @return An DescribeInterconnectsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * DescribeInterconnectsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeInterconnectsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeInterconnectsResponse(*this, reply);
 }

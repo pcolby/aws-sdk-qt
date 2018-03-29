@@ -66,10 +66,10 @@ bool DescribeHostsRequest::isValid() const
  *
  * @return An DescribeHostsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeHostsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ComposeEnvironmentsRequest::isValid() const
  *
  * @return An ComposeEnvironmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * ComposeEnvironmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ComposeEnvironmentsRequest::response(QNetworkReply * const reply) const
 {
     return new ComposeEnvironmentsResponse(*this, reply);
 }

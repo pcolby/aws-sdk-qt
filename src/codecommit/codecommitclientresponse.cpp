@@ -40,7 +40,7 @@ namespace CodeCommit {
  * @param  parent   This object's parent.
  */
 CodeCommitClientResponse::CodeCommitClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new CodeCommitClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new CodeCommitClientResponsePrivate(this), parent)
 {
 
 }

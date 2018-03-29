@@ -54,10 +54,10 @@ namespace AutoScalingPlans {
  */
 AutoScalingPlansClient::AutoScalingPlansClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
 {
     Q_D(AutoScalingPlansClient);
     d->apiVersion = QStringLiteral("2018-01-06");
@@ -87,10 +87,10 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  */
 AutoScalingPlansClient::AutoScalingPlansClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
 {
     Q_D(AutoScalingPlansClient);
     d->apiVersion = QStringLiteral("2018-01-06");
@@ -179,9 +179,9 @@ DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(cons
  * @param  q  Pointer to this object's public AutoScalingPlansClient instance.
  */
 AutoScalingPlansClientPrivate::AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AutoScalingPlans

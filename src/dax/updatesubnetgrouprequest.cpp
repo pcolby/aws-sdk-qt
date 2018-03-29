@@ -66,10 +66,10 @@ bool UpdateSubnetGroupRequest::isValid() const
  *
  * @return An UpdateSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSubnetGroupResponse(*this, reply);
 }

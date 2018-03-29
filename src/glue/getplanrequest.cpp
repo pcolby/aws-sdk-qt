@@ -66,10 +66,10 @@ bool GetPlanRequest::isValid() const
  *
  * @return An GetPlanResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * const reply) const
 {
     return new GetPlanResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateOpenIDConnectProviderThumbprintRequest::isValid() const
  *
  * @return An UpdateOpenIDConnectProviderThumbprintResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateOpenIDConnectProviderThumbprintResponse(*this, reply);
 }

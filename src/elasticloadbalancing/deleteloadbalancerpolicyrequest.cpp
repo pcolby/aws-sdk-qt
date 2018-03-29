@@ -66,10 +66,10 @@ bool DeleteLoadBalancerPolicyRequest::isValid() const
  *
  * @return An DeleteLoadBalancerPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingClient::send
  */
-AwsAbstractResponse * DeleteLoadBalancerPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteLoadBalancerPolicyResponse(*this, reply);
 }

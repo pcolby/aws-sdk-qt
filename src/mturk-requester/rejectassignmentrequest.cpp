@@ -66,10 +66,10 @@ bool RejectAssignmentRequest::isValid() const
  *
  * @return An RejectAssignmentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MTurkClient::send
  */
-AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkReply * const reply) const
 {
     return new RejectAssignmentResponse(*this, reply);
 }

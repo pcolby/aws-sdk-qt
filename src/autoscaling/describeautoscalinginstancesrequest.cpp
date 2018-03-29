@@ -66,10 +66,10 @@ bool DescribeAutoScalingInstancesRequest::isValid() const
  *
  * @return An DescribeAutoScalingInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAutoScalingInstancesResponse(*this, reply);
 }

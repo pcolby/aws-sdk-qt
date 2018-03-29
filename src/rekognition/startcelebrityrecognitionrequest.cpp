@@ -66,10 +66,10 @@ bool StartCelebrityRecognitionRequest::isValid() const
  *
  * @return An StartCelebrityRecognitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RekognitionClient::send
  */
-AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QNetworkReply * const reply) const
 {
     return new StartCelebrityRecognitionResponse(*this, reply);
 }

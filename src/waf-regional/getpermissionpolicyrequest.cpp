@@ -66,10 +66,10 @@ bool GetPermissionPolicyRequest::isValid() const
  *
  * @return An GetPermissionPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetPermissionPolicyResponse(*this, reply);
 }

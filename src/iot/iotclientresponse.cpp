@@ -40,7 +40,7 @@ namespace IoT {
  * @param  parent   This object's parent.
  */
 IoTClientResponse::IoTClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new IoTClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new IoTClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool SetTaskStatusRequest::isValid() const
  *
  * @return An SetTaskStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * SetTaskStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetTaskStatusRequest::response(QNetworkReply * const reply) const
 {
     return new SetTaskStatusResponse(*this, reply);
 }

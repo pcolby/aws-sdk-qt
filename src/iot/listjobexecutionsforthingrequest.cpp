@@ -66,10 +66,10 @@ bool ListJobExecutionsForThingRequest::isValid() const
  *
  * @return An ListJobExecutionsForThingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QNetworkReply * const reply) const
 {
     return new ListJobExecutionsForThingResponse(*this, reply);
 }

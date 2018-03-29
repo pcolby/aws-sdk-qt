@@ -36,7 +36,7 @@ namespace CodePipeline {
  * @param  action  The CodePipeline action to request.
  */
 CodePipelineClientRequest::CodePipelineClientRequest(const Action action)
-    : AwsAbstractRequest(new CodePipelineClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CodePipelineClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CodePipelineClientRequest::CodePipelineClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CodePipelineClientRequest::CodePipelineClientRequest(const CodePipelineClientRequest &other)
-    : AwsAbstractRequest(new CodePipelineClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CodePipelineClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CodePipelineClientRequest& CodePipelineClientRequest::operator=(const CodePipeli
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CodePipelineClientRequest::CodePipelineClientRequest(CodePipelineClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CodePipelineClientRequest::CodePipelineClientRequest(CodePipelineClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CodePipelineClientRequest::operator==(const CodePipelineClientRequest &othe
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CodePipelineClientRequest::unsignedRequest(const QUrl &endpoint)
  * @param  q       Pointer to this object's public CodePipelineClientRequest instance.
  */
 CodePipelineClientRequestPrivate::CodePipelineClientRequestPrivate(const CodePipelineClientRequest::Action action, CodePipelineClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CodePipelineClientRequestPrivate::CodePipelineClientRequestPrivate(const CodePip
  */
 CodePipelineClientRequestPrivate::CodePipelineClientRequestPrivate(const CodePipelineClientRequestPrivate &other,
                                      CodePipelineClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

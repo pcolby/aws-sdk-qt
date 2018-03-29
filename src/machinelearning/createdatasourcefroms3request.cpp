@@ -66,10 +66,10 @@ bool CreateDataSourceFromS3Request::isValid() const
  *
  * @return An CreateDataSourceFromS3Response instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MachineLearningClient::send
  */
-AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetworkReply * const reply) const
 {
     return new CreateDataSourceFromS3Response(*this, reply);
 }

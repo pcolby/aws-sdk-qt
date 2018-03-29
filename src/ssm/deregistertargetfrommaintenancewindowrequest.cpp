@@ -66,10 +66,10 @@ bool DeregisterTargetFromMaintenanceWindowRequest::isValid() const
  *
  * @return An DeregisterTargetFromMaintenanceWindowResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DeregisterTargetFromMaintenanceWindowRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeregisterTargetFromMaintenanceWindowRequest::response(QNetworkReply * const reply) const
 {
     return new DeregisterTargetFromMaintenanceWindowResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GenerateDataSetRequest::isValid() const
  *
  * @return An GenerateDataSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MarketplaceCommerceAnalyticsClient::send
  */
-AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkReply * const reply) const
 {
     return new GenerateDataSetResponse(*this, reply);
 }

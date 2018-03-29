@@ -66,10 +66,10 @@ bool AdminDeleteUserAttributesRequest::isValid() const
  *
  * @return An AdminDeleteUserAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminDeleteUserAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminDeleteUserAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new AdminDeleteUserAttributesResponse(*this, reply);
 }

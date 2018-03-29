@@ -66,10 +66,10 @@ bool DisableAlarmActionsRequest::isValid() const
  *
  * @return An DisableAlarmActionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * DisableAlarmActionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableAlarmActionsRequest::response(QNetworkReply * const reply) const
 {
     return new DisableAlarmActionsResponse(*this, reply);
 }

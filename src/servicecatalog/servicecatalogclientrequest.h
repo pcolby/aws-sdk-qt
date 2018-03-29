@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ServiceCatalog {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ServiceCatalogClientRequestPrivate;
 
-class QTAWS_EXPORT ServiceCatalogClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ServiceCatalogClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ServiceCatalog.

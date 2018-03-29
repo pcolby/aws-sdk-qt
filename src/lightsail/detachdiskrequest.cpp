@@ -66,10 +66,10 @@ bool DetachDiskRequest::isValid() const
  *
  * @return An DetachDiskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * const reply) const
 {
     return new DetachDiskResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetCredentialsForIdentityRequest::isValid() const
  *
  * @return An GetCredentialsForIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * GetCredentialsForIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCredentialsForIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new GetCredentialsForIdentityResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace EFS {
  * @param  action  The EFS action to request.
  */
 EfsClientRequest::EfsClientRequest(const Action action)
-    : AwsAbstractRequest(new EfsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EfsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ EfsClientRequest::EfsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 EfsClientRequest::EfsClientRequest(const EfsClientRequest &other)
-    : AwsAbstractRequest(new EfsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EfsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ EfsClientRequest& EfsClientRequest::operator=(const EfsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-EfsClientRequest::EfsClientRequest(EfsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+EfsClientRequest::EfsClientRequest(EfsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool EfsClientRequest::operator==(const EfsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest EfsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public EfsClientRequest instance.
  */
 EfsClientRequestPrivate::EfsClientRequestPrivate(const EfsClientRequest::Action action, EfsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ EfsClientRequestPrivate::EfsClientRequestPrivate(const EfsClientRequest::Action 
  */
 EfsClientRequestPrivate::EfsClientRequestPrivate(const EfsClientRequestPrivate &other,
                                      EfsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

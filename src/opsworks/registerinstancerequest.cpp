@@ -66,10 +66,10 @@ bool RegisterInstanceRequest::isValid() const
  *
  * @return An RegisterInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterInstanceResponse(*this, reply);
 }

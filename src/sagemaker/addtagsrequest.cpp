@@ -66,10 +66,10 @@ bool AddTagsRequest::isValid() const
  *
  * @return An AddTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * const reply) const
 {
     return new AddTagsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateClusterSubnetGroupRequest::isValid() const
  *
  * @return An CreateClusterSubnetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * CreateClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateClusterSubnetGroupResponse(*this, reply);
 }

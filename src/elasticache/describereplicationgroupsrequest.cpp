@@ -66,10 +66,10 @@ bool DescribeReplicationGroupsRequest::isValid() const
  *
  * @return An DescribeReplicationGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeReplicationGroupsResponse(*this, reply);
 }

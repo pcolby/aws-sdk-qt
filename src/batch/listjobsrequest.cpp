@@ -66,10 +66,10 @@ bool ListJobsRequest::isValid() const
  *
  * @return An ListJobsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
 {
     return new ListJobsResponse(*this, reply);
 }

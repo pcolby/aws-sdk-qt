@@ -66,10 +66,10 @@ bool CreateOptionGroupRequest::isValid() const
  *
  * @return An CreateOptionGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateOptionGroupResponse(*this, reply);
 }

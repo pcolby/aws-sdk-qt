@@ -66,10 +66,10 @@ bool ConfirmConnectionRequest::isValid() const
  *
  * @return An ConfirmConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * ConfirmConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ConfirmConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new ConfirmConnectionResponse(*this, reply);
 }

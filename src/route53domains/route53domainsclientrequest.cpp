@@ -36,7 +36,7 @@ namespace Route53Domains {
  * @param  action  The Route53Domains action to request.
  */
 Route53DomainsClientRequest::Route53DomainsClientRequest(const Action action)
-    : AwsAbstractRequest(new Route53DomainsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new Route53DomainsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ Route53DomainsClientRequest::Route53DomainsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 Route53DomainsClientRequest::Route53DomainsClientRequest(const Route53DomainsClientRequest &other)
-    : AwsAbstractRequest(new Route53DomainsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new Route53DomainsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ Route53DomainsClientRequest& Route53DomainsClientRequest::operator=(const Route5
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-Route53DomainsClientRequest::Route53DomainsClientRequest(Route53DomainsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+Route53DomainsClientRequest::Route53DomainsClientRequest(Route53DomainsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool Route53DomainsClientRequest::operator==(const Route53DomainsClientRequest &
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest Route53DomainsClientRequest::unsignedRequest(const QUrl &endpoin
  * @param  q       Pointer to this object's public Route53DomainsClientRequest instance.
  */
 Route53DomainsClientRequestPrivate::Route53DomainsClientRequestPrivate(const Route53DomainsClientRequest::Action action, Route53DomainsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ Route53DomainsClientRequestPrivate::Route53DomainsClientRequestPrivate(const Rou
  */
 Route53DomainsClientRequestPrivate::Route53DomainsClientRequestPrivate(const Route53DomainsClientRequestPrivate &other,
                                      Route53DomainsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

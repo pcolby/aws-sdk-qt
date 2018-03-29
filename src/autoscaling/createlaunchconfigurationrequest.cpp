@@ -66,10 +66,10 @@ bool CreateLaunchConfigurationRequest::isValid() const
  *
  * @return An CreateLaunchConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLaunchConfigurationResponse(*this, reply);
 }

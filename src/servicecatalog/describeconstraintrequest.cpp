@@ -66,10 +66,10 @@ bool DescribeConstraintRequest::isValid() const
  *
  * @return An DescribeConstraintResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeConstraintResponse(*this, reply);
 }

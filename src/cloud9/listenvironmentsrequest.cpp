@@ -66,10 +66,10 @@ bool ListEnvironmentsRequest::isValid() const
  *
  * @return An ListEnvironmentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Cloud9Client::send
  */
-AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkReply * const reply) const
 {
     return new ListEnvironmentsResponse(*this, reply);
 }

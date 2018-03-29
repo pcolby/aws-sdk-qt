@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneClientRequest;
 
-class QTAWS_EXPORT IoTJobsDataPlaneClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT IoTJobsDataPlaneClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTJobsDataPlaneClientRequest::Action action; ///< IoTJobsDataPlane action to be performed.

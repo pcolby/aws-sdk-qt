@@ -66,10 +66,10 @@ bool GetLoadBalancerMetricDataRequest::isValid() const
  *
  * @return An GetLoadBalancerMetricDataResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QNetworkReply * const reply) const
 {
     return new GetLoadBalancerMetricDataResponse(*this, reply);
 }

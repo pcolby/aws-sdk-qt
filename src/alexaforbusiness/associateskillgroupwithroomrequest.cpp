@@ -66,10 +66,10 @@ bool AssociateSkillGroupWithRoomRequest::isValid() const
  *
  * @return An AssociateSkillGroupWithRoomResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * AssociateSkillGroupWithRoomRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateSkillGroupWithRoomRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateSkillGroupWithRoomResponse(*this, reply);
 }

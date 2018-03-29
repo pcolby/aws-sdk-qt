@@ -36,7 +36,7 @@ namespace AppSync {
  * @param  action  The AppSync action to request.
  */
 AppSyncClientRequest::AppSyncClientRequest(const Action action)
-    : AwsAbstractRequest(new AppSyncClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AppSyncClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ AppSyncClientRequest::AppSyncClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 AppSyncClientRequest::AppSyncClientRequest(const AppSyncClientRequest &other)
-    : AwsAbstractRequest(new AppSyncClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AppSyncClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ AppSyncClientRequest& AppSyncClientRequest::operator=(const AppSyncClientRequest
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-AppSyncClientRequest::AppSyncClientRequest(AppSyncClientRequestPrivate * const d) : AwsAbstractRequest(d)
+AppSyncClientRequest::AppSyncClientRequest(AppSyncClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool AppSyncClientRequest::operator==(const AppSyncClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest AppSyncClientRequest::unsignedRequest(const QUrl &endpoint) cons
  * @param  q       Pointer to this object's public AppSyncClientRequest instance.
  */
 AppSyncClientRequestPrivate::AppSyncClientRequestPrivate(const AppSyncClientRequest::Action action, AppSyncClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ AppSyncClientRequestPrivate::AppSyncClientRequestPrivate(const AppSyncClientRequ
  */
 AppSyncClientRequestPrivate::AppSyncClientRequestPrivate(const AppSyncClientRequestPrivate &other,
                                      AppSyncClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

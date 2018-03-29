@@ -66,10 +66,10 @@ bool SuggestRequest::isValid() const
  *
  * @return An SuggestResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchDomainClient::send
  */
-AwsAbstractResponse * SuggestRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SuggestRequest::response(QNetworkReply * const reply) const
 {
     return new SuggestResponse(*this, reply);
 }

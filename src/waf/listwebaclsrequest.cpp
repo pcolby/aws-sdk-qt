@@ -66,10 +66,10 @@ bool ListWebACLsRequest::isValid() const
  *
  * @return An ListWebACLsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * const reply) const
 {
     return new ListWebACLsResponse(*this, reply);
 }

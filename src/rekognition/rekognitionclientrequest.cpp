@@ -36,7 +36,7 @@ namespace Rekognition {
  * @param  action  The Rekognition action to request.
  */
 RekognitionClientRequest::RekognitionClientRequest(const Action action)
-    : AwsAbstractRequest(new RekognitionClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RekognitionClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ RekognitionClientRequest::RekognitionClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 RekognitionClientRequest::RekognitionClientRequest(const RekognitionClientRequest &other)
-    : AwsAbstractRequest(new RekognitionClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RekognitionClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ RekognitionClientRequest& RekognitionClientRequest::operator=(const RekognitionC
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-RekognitionClientRequest::RekognitionClientRequest(RekognitionClientRequestPrivate * const d) : AwsAbstractRequest(d)
+RekognitionClientRequest::RekognitionClientRequest(RekognitionClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool RekognitionClientRequest::operator==(const RekognitionClientRequest &other)
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest RekognitionClientRequest::unsignedRequest(const QUrl &endpoint) 
  * @param  q       Pointer to this object's public RekognitionClientRequest instance.
  */
 RekognitionClientRequestPrivate::RekognitionClientRequestPrivate(const RekognitionClientRequest::Action action, RekognitionClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ RekognitionClientRequestPrivate::RekognitionClientRequestPrivate(const Rekogniti
  */
 RekognitionClientRequestPrivate::RekognitionClientRequestPrivate(const RekognitionClientRequestPrivate &other,
                                      RekognitionClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

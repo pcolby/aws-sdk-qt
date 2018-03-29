@@ -66,10 +66,10 @@ bool ListApplicationsRequest::isValid() const
  *
  * @return An ListApplicationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * ListApplicationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkReply * const reply) const
 {
     return new ListApplicationsResponse(*this, reply);
 }

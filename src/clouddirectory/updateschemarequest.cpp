@@ -66,10 +66,10 @@ bool UpdateSchemaRequest::isValid() const
  *
  * @return An UpdateSchemaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSchemaResponse(*this, reply);
 }

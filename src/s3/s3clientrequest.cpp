@@ -36,7 +36,7 @@ namespace S3 {
  * @param  action  The S3 action to request.
  */
 S3ClientRequest::S3ClientRequest(const Action action)
-    : AwsAbstractRequest(new S3ClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new S3ClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ S3ClientRequest::S3ClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 S3ClientRequest::S3ClientRequest(const S3ClientRequest &other)
-    : AwsAbstractRequest(new S3ClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new S3ClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ S3ClientRequest& S3ClientRequest::operator=(const S3ClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-S3ClientRequest::S3ClientRequest(S3ClientRequestPrivate * const d) : AwsAbstractRequest(d)
+S3ClientRequest::S3ClientRequest(S3ClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool S3ClientRequest::operator==(const S3ClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest S3ClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public S3ClientRequest instance.
  */
 S3ClientRequestPrivate::S3ClientRequestPrivate(const S3ClientRequest::Action action, S3ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ S3ClientRequestPrivate::S3ClientRequestPrivate(const S3ClientRequest::Action act
  */
 S3ClientRequestPrivate::S3ClientRequestPrivate(const S3ClientRequestPrivate &other,
                                      S3ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

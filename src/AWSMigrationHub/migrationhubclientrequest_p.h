@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class MigrationHubClientRequest;
 
-class QTAWS_EXPORT MigrationHubClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MigrationHubClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MigrationHubClientRequest::Action action; ///< MigrationHub action to be performed.

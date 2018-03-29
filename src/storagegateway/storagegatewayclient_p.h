@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class StorageGatewayClient;
 
-class QTAWS_EXPORT StorageGatewayClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT StorageGatewayClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     StorageGatewayClientPrivate(StorageGatewayClient * const q);

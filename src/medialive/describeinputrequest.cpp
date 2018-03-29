@@ -66,10 +66,10 @@ bool DescribeInputRequest::isValid() const
  *
  * @return An DescribeInputResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaLiveClient::send
  */
-AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeInputResponse(*this, reply);
 }

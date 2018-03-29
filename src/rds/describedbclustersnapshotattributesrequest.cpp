@@ -66,10 +66,10 @@ bool DescribeDBClusterSnapshotAttributesRequest::isValid() const
  *
  * @return An DescribeDBClusterSnapshotAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DescribeDBClusterSnapshotAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDBClusterSnapshotAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDBClusterSnapshotAttributesResponse(*this, reply);
 }

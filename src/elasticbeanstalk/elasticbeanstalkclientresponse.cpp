@@ -40,7 +40,7 @@ namespace ElasticBeanstalk {
  * @param  parent   This object's parent.
  */
 ElasticBeanstalkClientResponse::ElasticBeanstalkClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new ElasticBeanstalkClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new ElasticBeanstalkClientResponsePrivate(this), parent)
 {
 
 }

@@ -66,10 +66,10 @@ bool CreateCacheSecurityGroupRequest::isValid() const
  *
  * @return An CreateCacheSecurityGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElastiCacheClient::send
  */
-AwsAbstractResponse * CreateCacheSecurityGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCacheSecurityGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCacheSecurityGroupResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteDBInstanceRequest::isValid() const
  *
  * @return An DeleteDBInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDBInstanceResponse(*this, reply);
 }

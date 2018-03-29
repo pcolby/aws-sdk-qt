@@ -66,10 +66,10 @@ bool GetRegistrationCodeRequest::isValid() const
  *
  * @return An GetRegistrationCodeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTClient::send
  */
-AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetworkReply * const reply) const
 {
     return new GetRegistrationCodeResponse(*this, reply);
 }

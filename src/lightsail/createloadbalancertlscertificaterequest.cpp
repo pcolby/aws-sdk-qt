@@ -66,10 +66,10 @@ bool CreateLoadBalancerTlsCertificateRequest::isValid() const
  *
  * @return An CreateLoadBalancerTlsCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LightsailClient::send
  */
-AwsAbstractResponse * CreateLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLoadBalancerTlsCertificateResponse(*this, reply);
 }

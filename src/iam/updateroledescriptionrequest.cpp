@@ -66,10 +66,10 @@ bool UpdateRoleDescriptionRequest::isValid() const
  *
  * @return An UpdateRoleDescriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateRoleDescriptionResponse(*this, reply);
 }

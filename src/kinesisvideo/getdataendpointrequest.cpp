@@ -66,10 +66,10 @@ bool GetDataEndpointRequest::isValid() const
  *
  * @return An GetDataEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisVideoClient::send
  */
-AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new GetDataEndpointResponse(*this, reply);
 }

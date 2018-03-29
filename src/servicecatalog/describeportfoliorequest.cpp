@@ -66,10 +66,10 @@ bool DescribePortfolioRequest::isValid() const
  *
  * @return An DescribePortfolioResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePortfolioResponse(*this, reply);
 }

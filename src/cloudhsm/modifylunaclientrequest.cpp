@@ -66,10 +66,10 @@ bool ModifyLunaClientRequest::isValid() const
  *
  * @return An ModifyLunaClientResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyLunaClientResponse(*this, reply);
 }

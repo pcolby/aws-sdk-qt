@@ -66,10 +66,10 @@ bool CreateOriginEndpointRequest::isValid() const
  *
  * @return An CreateOriginEndpointResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaPackageClient::send
  */
-AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetworkReply * const reply) const
 {
     return new CreateOriginEndpointResponse(*this, reply);
 }

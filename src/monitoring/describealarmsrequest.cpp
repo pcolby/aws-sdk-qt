@@ -66,10 +66,10 @@ bool DescribeAlarmsRequest::isValid() const
  *
  * @return An DescribeAlarmsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchClient::send
  */
-AwsAbstractResponse * DescribeAlarmsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAlarmsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAlarmsResponse(*this, reply);
 }

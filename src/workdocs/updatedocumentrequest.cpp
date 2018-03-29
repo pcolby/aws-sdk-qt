@@ -66,10 +66,10 @@ bool UpdateDocumentRequest::isValid() const
  *
  * @return An UpdateDocumentResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateDocumentResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class KinesisVideoClientResponse;
 
-class QTAWS_EXPORT KinesisVideoClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT KinesisVideoClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

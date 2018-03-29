@@ -66,10 +66,10 @@ bool UpdateServiceSpecificCredentialRequest::isValid() const
  *
  * @return An UpdateServiceSpecificCredentialResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateServiceSpecificCredentialResponse(*this, reply);
 }

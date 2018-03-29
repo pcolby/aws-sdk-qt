@@ -66,10 +66,10 @@ bool GetDownloadUrlForLayerRequest::isValid() const
  *
  * @return An GetDownloadUrlForLayerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetworkReply * const reply) const
 {
     return new GetDownloadUrlForLayerResponse(*this, reply);
 }

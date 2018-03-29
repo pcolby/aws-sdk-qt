@@ -66,10 +66,10 @@ bool GetParametersForImportRequest::isValid() const
  *
  * @return An GetParametersForImportResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * GetParametersForImportRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetParametersForImportRequest::response(QNetworkReply * const reply) const
 {
     return new GetParametersForImportResponse(*this, reply);
 }

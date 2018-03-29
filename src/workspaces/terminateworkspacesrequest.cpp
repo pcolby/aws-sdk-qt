@@ -66,10 +66,10 @@ bool TerminateWorkspacesRequest::isValid() const
  *
  * @return An TerminateWorkspacesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkSpacesClient::send
  */
-AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetworkReply * const reply) const
 {
     return new TerminateWorkspacesResponse(*this, reply);
 }

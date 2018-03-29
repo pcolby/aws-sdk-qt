@@ -66,10 +66,10 @@ bool ListGeoMatchSetsRequest::isValid() const
  *
  * @return An ListGeoMatchSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListGeoMatchSetsResponse(*this, reply);
 }

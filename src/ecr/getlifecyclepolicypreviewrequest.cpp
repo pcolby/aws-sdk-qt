@@ -66,10 +66,10 @@ bool GetLifecyclePolicyPreviewRequest::isValid() const
  *
  * @return An GetLifecyclePolicyPreviewResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECRClient::send
  */
-AwsAbstractResponse * GetLifecyclePolicyPreviewRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyPreviewRequest::response(QNetworkReply * const reply) const
 {
     return new GetLifecyclePolicyPreviewResponse(*this, reply);
 }

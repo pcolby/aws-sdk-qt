@@ -46,10 +46,10 @@ namespace MobileAnalytics {
  */
 MobileAnalyticsClient::MobileAnalyticsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
 {
     Q_D(MobileAnalyticsClient);
     d->apiVersion = QStringLiteral("2014-06-05");
@@ -79,10 +79,10 @@ MobileAnalyticsClient::MobileAnalyticsClient(
  */
 MobileAnalyticsClient::MobileAnalyticsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
 {
     Q_D(MobileAnalyticsClient);
     d->apiVersion = QStringLiteral("2014-06-05");
@@ -125,9 +125,9 @@ PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &req
  * @param  q  Pointer to this object's public MobileAnalyticsClient instance.
  */
 MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MobileAnalytics

@@ -69,10 +69,10 @@ namespace SSM {
  */
 SsmClient::SsmClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SsmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SsmClientPrivate(this), parent)
 {
     Q_D(SsmClient);
     d->apiVersion = QStringLiteral("2014-11-06");
@@ -102,10 +102,10 @@ SsmClient::SsmClient(
  */
 SsmClient::SsmClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SsmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SsmClientPrivate(this), parent)
 {
     Q_D(SsmClient);
     d->apiVersion = QStringLiteral("2014-11-06");
@@ -1752,9 +1752,9 @@ UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBa
  * @param  q  Pointer to this object's public SsmClient instance.
  */
 SsmClientPrivate::SsmClientPrivate(SsmClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SSM

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SNS {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SnsClientRequestPrivate;
 
-class QTAWS_EXPORT SnsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SnsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SNS.

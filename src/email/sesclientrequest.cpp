@@ -36,7 +36,7 @@ namespace SES {
  * @param  action  The SES action to request.
  */
 SesClientRequest::SesClientRequest(const Action action)
-    : AwsAbstractRequest(new SesClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SesClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SesClientRequest::SesClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SesClientRequest::SesClientRequest(const SesClientRequest &other)
-    : AwsAbstractRequest(new SesClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SesClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SesClientRequest& SesClientRequest::operator=(const SesClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SesClientRequest::SesClientRequest(SesClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SesClientRequest::SesClientRequest(SesClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SesClientRequest::operator==(const SesClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SesClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SesClientRequest instance.
  */
 SesClientRequestPrivate::SesClientRequestPrivate(const SesClientRequest::Action action, SesClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SesClientRequestPrivate::SesClientRequestPrivate(const SesClientRequest::Action 
  */
 SesClientRequestPrivate::SesClientRequestPrivate(const SesClientRequestPrivate &other,
                                      SesClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

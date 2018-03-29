@@ -66,10 +66,10 @@ bool CreateStreamingDistributionWithTagsRequest::isValid() const
  *
  * @return An CreateStreamingDistributionWithTagsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::response(QNetworkReply * const reply) const
 {
     return new CreateStreamingDistributionWithTagsResponse(*this, reply);
 }

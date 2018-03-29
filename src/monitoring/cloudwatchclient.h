@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace CloudWatch {
@@ -62,18 +62,18 @@ class PutMetricDataResponse;
 class SetAlarmStateRequest;
 class SetAlarmStateResponse;
 
-class QTAWS_EXPORT CloudWatchClient : public AwsAbstractClient {
+class QTAWS_EXPORT CloudWatchClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     CloudWatchClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     CloudWatchClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

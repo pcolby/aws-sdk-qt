@@ -66,10 +66,10 @@ bool DescribeAssociationRequest::isValid() const
  *
  * @return An DescribeAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DescribeAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAssociationResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace Route53 {
  * @param  action  The Route53 action to request.
  */
 Route53ClientRequest::Route53ClientRequest(const Action action)
-    : AwsAbstractRequest(new Route53ClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new Route53ClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ Route53ClientRequest::Route53ClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 Route53ClientRequest::Route53ClientRequest(const Route53ClientRequest &other)
-    : AwsAbstractRequest(new Route53ClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new Route53ClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ Route53ClientRequest& Route53ClientRequest::operator=(const Route53ClientRequest
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-Route53ClientRequest::Route53ClientRequest(Route53ClientRequestPrivate * const d) : AwsAbstractRequest(d)
+Route53ClientRequest::Route53ClientRequest(Route53ClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool Route53ClientRequest::operator==(const Route53ClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest Route53ClientRequest::unsignedRequest(const QUrl &endpoint) cons
  * @param  q       Pointer to this object's public Route53ClientRequest instance.
  */
 Route53ClientRequestPrivate::Route53ClientRequestPrivate(const Route53ClientRequest::Action action, Route53ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ Route53ClientRequestPrivate::Route53ClientRequestPrivate(const Route53ClientRequ
  */
 Route53ClientRequestPrivate::Route53ClientRequestPrivate(const Route53ClientRequestPrivate &other,
                                      Route53ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

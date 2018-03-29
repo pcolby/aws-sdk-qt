@@ -66,10 +66,10 @@ bool AddRoleToInstanceProfileRequest::isValid() const
  *
  * @return An AddRoleToInstanceProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
     return new AddRoleToInstanceProfileResponse(*this, reply);
 }

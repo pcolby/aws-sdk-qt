@@ -28,7 +28,7 @@ namespace EMR {
 
 class EmrClientRequest;
 
-class QTAWS_EXPORT EmrClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT EmrClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EmrClientRequest::Action action; ///< EMR action to be performed.

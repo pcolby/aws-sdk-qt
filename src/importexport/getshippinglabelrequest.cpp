@@ -66,10 +66,10 @@ bool GetShippingLabelRequest::isValid() const
  *
  * @return An GetShippingLabelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ImportExportClient::send
  */
-AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkReply * const reply) const
 {
     return new GetShippingLabelResponse(*this, reply);
 }

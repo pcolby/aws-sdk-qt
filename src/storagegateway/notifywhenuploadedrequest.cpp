@@ -66,10 +66,10 @@ bool NotifyWhenUploadedRequest::isValid() const
  *
  * @return An NotifyWhenUploadedResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkReply * const reply) const
 {
     return new NotifyWhenUploadedResponse(*this, reply);
 }

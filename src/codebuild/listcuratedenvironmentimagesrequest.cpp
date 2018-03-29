@@ -66,10 +66,10 @@ bool ListCuratedEnvironmentImagesRequest::isValid() const
  *
  * @return An ListCuratedEnvironmentImagesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeBuildClient::send
  */
-AwsAbstractResponse * ListCuratedEnvironmentImagesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCuratedEnvironmentImagesRequest::response(QNetworkReply * const reply) const
 {
     return new ListCuratedEnvironmentImagesResponse(*this, reply);
 }

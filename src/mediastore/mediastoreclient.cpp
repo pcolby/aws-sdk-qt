@@ -47,10 +47,10 @@ namespace MediaStore {
  */
 MediaStoreClient::MediaStoreClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaStoreClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaStoreClientPrivate(this), parent)
 {
     Q_D(MediaStoreClient);
     d->apiVersion = QStringLiteral("2017-09-01");
@@ -80,10 +80,10 @@ MediaStoreClient::MediaStoreClient(
  */
 MediaStoreClient::MediaStoreClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaStoreClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaStoreClientPrivate(this), parent)
 {
     Q_D(MediaStoreClient);
     d->apiVersion = QStringLiteral("2017-09-01");
@@ -294,9 +294,9 @@ PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyReque
  * @param  q  Pointer to this object's public MediaStoreClient instance.
  */
 MediaStoreClientPrivate::MediaStoreClientPrivate(MediaStoreClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaStore

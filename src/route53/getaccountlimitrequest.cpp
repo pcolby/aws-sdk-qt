@@ -66,10 +66,10 @@ bool GetAccountLimitRequest::isValid() const
  *
  * @return An GetAccountLimitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkReply * const reply) const
 {
     return new GetAccountLimitResponse(*this, reply);
 }

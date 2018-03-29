@@ -56,10 +56,10 @@ namespace DatabaseMigrationService {
  */
 DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
 {
     Q_D(DatabaseMigrationServiceClient);
     d->apiVersion = QStringLiteral("2016-01-01");
@@ -89,10 +89,10 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
  */
 DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
 {
     Q_D(DatabaseMigrationServiceClient);
     d->apiVersion = QStringLiteral("2016-01-01");
@@ -807,9 +807,9 @@ TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const Te
  * @param  q  Pointer to this object's public DatabaseMigrationServiceClient instance.
  */
 DatabaseMigrationServiceClientPrivate::DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DatabaseMigrationService

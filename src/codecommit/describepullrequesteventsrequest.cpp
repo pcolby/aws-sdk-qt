@@ -66,10 +66,10 @@ bool DescribePullRequestEventsRequest::isValid() const
  *
  * @return An DescribePullRequestEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * DescribePullRequestEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribePullRequestEventsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribePullRequestEventsResponse(*this, reply);
 }

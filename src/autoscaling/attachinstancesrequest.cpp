@@ -66,10 +66,10 @@ bool AttachInstancesRequest::isValid() const
  *
  * @return An AttachInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * AttachInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new AttachInstancesResponse(*this, reply);
 }

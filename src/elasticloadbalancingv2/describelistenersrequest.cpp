@@ -66,10 +66,10 @@ bool DescribeListenersRequest::isValid() const
  *
  * @return An DescribeListenersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DescribeListenersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeListenersRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeListenersResponse(*this, reply);
 }

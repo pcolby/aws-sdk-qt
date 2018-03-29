@@ -66,10 +66,10 @@ bool ModifyHapgRequest::isValid() const
  *
  * @return An ModifyHapgResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyHapgResponse(*this, reply);
 }

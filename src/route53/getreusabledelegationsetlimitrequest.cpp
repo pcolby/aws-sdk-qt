@@ -66,10 +66,10 @@ bool GetReusableDelegationSetLimitRequest::isValid() const
  *
  * @return An GetReusableDelegationSetLimitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetReusableDelegationSetLimitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::response(QNetworkReply * const reply) const
 {
     return new GetReusableDelegationSetLimitResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListObjectsRequest::isValid() const
  *
  * @return An ListObjectsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * const reply) const
 {
     return new ListObjectsResponse(*this, reply);
 }

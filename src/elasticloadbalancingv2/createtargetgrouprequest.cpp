@@ -66,10 +66,10 @@ bool CreateTargetGroupRequest::isValid() const
  *
  * @return An CreateTargetGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * CreateTargetGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTargetGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTargetGroupResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteAssociationRequest::isValid() const
  *
  * @return An DeleteAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAssociationResponse(*this, reply);
 }

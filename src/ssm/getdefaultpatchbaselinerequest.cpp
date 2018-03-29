@@ -66,10 +66,10 @@ bool GetDefaultPatchBaselineRequest::isValid() const
  *
  * @return An GetDefaultPatchBaselineResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetDefaultPatchBaselineRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDefaultPatchBaselineRequest::response(QNetworkReply * const reply) const
 {
     return new GetDefaultPatchBaselineResponse(*this, reply);
 }

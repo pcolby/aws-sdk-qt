@@ -66,10 +66,10 @@ bool DeleteJobRequest::isValid() const
  *
  * @return An DeleteJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteJobResponse(*this, reply);
 }

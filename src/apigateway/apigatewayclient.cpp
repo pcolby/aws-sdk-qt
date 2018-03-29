@@ -50,10 +50,10 @@ namespace APIGateway {
  */
 APIGatewayClient::APIGatewayClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new APIGatewayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new APIGatewayClientPrivate(this), parent)
 {
     Q_D(APIGatewayClient);
     d->apiVersion = QStringLiteral("2015-07-09");
@@ -83,10 +83,10 @@ APIGatewayClient::APIGatewayClient(
  */
 APIGatewayClient::APIGatewayClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new APIGatewayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new APIGatewayClientPrivate(this), parent)
 {
     Q_D(APIGatewayClient);
     d->apiVersion = QStringLiteral("2015-07-09");
@@ -1802,9 +1802,9 @@ UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkReque
  * @param  q  Pointer to this object's public APIGatewayClient instance.
  */
 APIGatewayClientPrivate::APIGatewayClientPrivate(APIGatewayClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace APIGateway

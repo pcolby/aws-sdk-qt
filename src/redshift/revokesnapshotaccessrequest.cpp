@@ -66,10 +66,10 @@ bool RevokeSnapshotAccessRequest::isValid() const
  *
  * @return An RevokeSnapshotAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * RevokeSnapshotAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RevokeSnapshotAccessRequest::response(QNetworkReply * const reply) const
 {
     return new RevokeSnapshotAccessResponse(*this, reply);
 }

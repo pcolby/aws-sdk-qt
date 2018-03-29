@@ -66,10 +66,10 @@ bool ListPortfolioAccessRequest::isValid() const
  *
  * @return An ListPortfolioAccessResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetworkReply * const reply) const
 {
     return new ListPortfolioAccessResponse(*this, reply);
 }

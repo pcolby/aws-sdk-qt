@@ -66,10 +66,10 @@ bool RequestCancelWorkflowExecutionRequest::isValid() const
  *
  * @return An RequestCancelWorkflowExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new RequestCancelWorkflowExecutionResponse(*this, reply);
 }

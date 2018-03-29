@@ -66,10 +66,10 @@ bool GetRepositoryTriggersRequest::isValid() const
  *
  * @return An GetRepositoryTriggersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * GetRepositoryTriggersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRepositoryTriggersRequest::response(QNetworkReply * const reply) const
 {
     return new GetRepositoryTriggersResponse(*this, reply);
 }

@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudWatchLogs {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class CloudWatchLogsClientRequestPrivate;
 
-class QTAWS_EXPORT CloudWatchLogsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT CloudWatchLogsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudWatchLogs.

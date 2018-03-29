@@ -66,10 +66,10 @@ bool CreatePortfolioShareRequest::isValid() const
  *
  * @return An CreatePortfolioShareResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServiceCatalogClient::send
  */
-AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetworkReply * const reply) const
 {
     return new CreatePortfolioShareResponse(*this, reply);
 }

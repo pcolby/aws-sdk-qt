@@ -66,10 +66,10 @@ bool CreateTrainingJobRequest::isValid() const
  *
  * @return An CreateTrainingJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * CreateTrainingJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateTrainingJobRequest::response(QNetworkReply * const reply) const
 {
     return new CreateTrainingJobResponse(*this, reply);
 }

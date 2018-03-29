@@ -66,10 +66,10 @@ bool DeleteAttributesRequest::isValid() const
  *
  * @return An DeleteAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SimpleDBClient::send
  */
-AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAttributesResponse(*this, reply);
 }

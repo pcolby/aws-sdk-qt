@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace XRay {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class XRayClientRequestPrivate;
 
-class QTAWS_EXPORT XRayClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT XRayClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by XRay.

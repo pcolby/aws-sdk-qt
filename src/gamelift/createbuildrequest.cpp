@@ -66,10 +66,10 @@ bool CreateBuildRequest::isValid() const
  *
  * @return An CreateBuildResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBuildResponse(*this, reply);
 }

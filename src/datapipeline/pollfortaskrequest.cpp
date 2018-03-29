@@ -66,10 +66,10 @@ bool PollForTaskRequest::isValid() const
  *
  * @return An PollForTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DataPipelineClient::send
  */
-AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * const reply) const
 {
     return new PollForTaskResponse(*this, reply);
 }

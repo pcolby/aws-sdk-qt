@@ -66,10 +66,10 @@ bool ResumeProcessesRequest::isValid() const
  *
  * @return An ResumeProcessesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkReply * const reply) const
 {
     return new ResumeProcessesResponse(*this, reply);
 }

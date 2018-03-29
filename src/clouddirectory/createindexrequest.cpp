@@ -66,10 +66,10 @@ bool CreateIndexRequest::isValid() const
  *
  * @return An CreateIndexResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * const reply) const
 {
     return new CreateIndexResponse(*this, reply);
 }

@@ -40,7 +40,7 @@ namespace S3 {
  * @param  parent   This object's parent.
  */
 S3ClientResponse::S3ClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new S3ClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new S3ClientResponsePrivate(this), parent)
 {
 
 }

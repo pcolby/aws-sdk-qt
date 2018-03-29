@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SFN {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class SfnClientRequestPrivate;
 
-class QTAWS_EXPORT SfnClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT SfnClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SFN.

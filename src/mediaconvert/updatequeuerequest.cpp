@@ -66,10 +66,10 @@ bool UpdateQueueRequest::isValid() const
  *
  * @return An UpdateQueueResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MediaConvertClient::send
  */
-AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateQueueResponse(*this, reply);
 }

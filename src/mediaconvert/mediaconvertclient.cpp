@@ -45,10 +45,10 @@ namespace MediaConvert {
  */
 MediaConvertClient::MediaConvertClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
 {
     Q_D(MediaConvertClient);
     d->apiVersion = QStringLiteral("2017-08-29");
@@ -78,10 +78,10 @@ MediaConvertClient::MediaConvertClient(
  */
 MediaConvertClient::MediaConvertClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
 {
     Q_D(MediaConvertClient);
     d->apiVersion = QStringLiteral("2017-08-29");
@@ -379,9 +379,9 @@ UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &
  * @param  q  Pointer to this object's public MediaConvertClient instance.
  */
 MediaConvertClientPrivate::MediaConvertClientPrivate(MediaConvertClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaConvert

@@ -66,10 +66,10 @@ bool ModifyDBSnapshotRequest::isValid() const
  *
  * @return An ModifyDBSnapshotResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyDBSnapshotRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDBSnapshotResponse(*this, reply);
 }

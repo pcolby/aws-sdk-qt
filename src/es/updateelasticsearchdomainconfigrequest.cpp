@@ -66,10 +66,10 @@ bool UpdateElasticsearchDomainConfigRequest::isValid() const
  *
  * @return An UpdateElasticsearchDomainConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticsearchServiceClient::send
  */
-AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateElasticsearchDomainConfigResponse(*this, reply);
 }

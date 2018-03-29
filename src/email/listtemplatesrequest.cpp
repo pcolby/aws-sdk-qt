@@ -66,10 +66,10 @@ bool ListTemplatesRequest::isValid() const
  *
  * @return An ListTemplatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply * const reply) const
 {
     return new ListTemplatesResponse(*this, reply);
 }

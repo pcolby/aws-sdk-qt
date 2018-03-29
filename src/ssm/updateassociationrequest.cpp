@@ -66,10 +66,10 @@ bool UpdateAssociationRequest::isValid() const
  *
  * @return An UpdateAssociationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateAssociationResponse(*this, reply);
 }

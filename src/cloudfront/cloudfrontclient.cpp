@@ -50,10 +50,10 @@ namespace CloudFront {
  */
 CloudFrontClient::CloudFrontClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
     d->apiVersion = QStringLiteral("2017-03-25");
@@ -83,10 +83,10 @@ CloudFrontClient::CloudFrontClient(
  */
 CloudFrontClient::CloudFrontClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
     d->apiVersion = QStringLiteral("2017-03-25");
@@ -655,9 +655,9 @@ UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribut
  * @param  q  Pointer to this object's public CloudFrontClient instance.
  */
 CloudFrontClientPrivate::CloudFrontClientPrivate(CloudFrontClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudFront

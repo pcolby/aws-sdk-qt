@@ -66,10 +66,10 @@ bool DescribeEventCategoriesRequest::isValid() const
  *
  * @return An DescribeEventCategoriesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DatabaseMigrationServiceClient::send
  */
-AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEventCategoriesResponse(*this, reply);
 }

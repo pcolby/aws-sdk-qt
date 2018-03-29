@@ -66,10 +66,10 @@ bool ListElasticsearchInstanceTypesRequest::isValid() const
  *
  * @return An ListElasticsearchInstanceTypesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticsearchServiceClient::send
  */
-AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::response(QNetworkReply * const reply) const
 {
     return new ListElasticsearchInstanceTypesResponse(*this, reply);
 }

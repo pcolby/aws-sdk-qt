@@ -66,10 +66,10 @@ bool GetIntrospectionSchemaRequest::isValid() const
  *
  * @return An GetIntrospectionSchemaResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetworkReply * const reply) const
 {
     return new GetIntrospectionSchemaResponse(*this, reply);
 }

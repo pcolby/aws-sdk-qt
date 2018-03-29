@@ -66,10 +66,10 @@ bool DescribeEnvironmentManagedActionsRequest::isValid() const
  *
  * @return An DescribeEnvironmentManagedActionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DescribeEnvironmentManagedActionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeEnvironmentManagedActionsResponse(*this, reply);
 }

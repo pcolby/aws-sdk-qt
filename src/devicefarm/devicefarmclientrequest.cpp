@@ -36,7 +36,7 @@ namespace DeviceFarm {
  * @param  action  The DeviceFarm action to request.
  */
 DeviceFarmClientRequest::DeviceFarmClientRequest(const Action action)
-    : AwsAbstractRequest(new DeviceFarmClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DeviceFarmClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ DeviceFarmClientRequest::DeviceFarmClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 DeviceFarmClientRequest::DeviceFarmClientRequest(const DeviceFarmClientRequest &other)
-    : AwsAbstractRequest(new DeviceFarmClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DeviceFarmClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ DeviceFarmClientRequest& DeviceFarmClientRequest::operator=(const DeviceFarmClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-DeviceFarmClientRequest::DeviceFarmClientRequest(DeviceFarmClientRequestPrivate * const d) : AwsAbstractRequest(d)
+DeviceFarmClientRequest::DeviceFarmClientRequest(DeviceFarmClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool DeviceFarmClientRequest::operator==(const DeviceFarmClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest DeviceFarmClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public DeviceFarmClientRequest instance.
  */
 DeviceFarmClientRequestPrivate::DeviceFarmClientRequestPrivate(const DeviceFarmClientRequest::Action action, DeviceFarmClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ DeviceFarmClientRequestPrivate::DeviceFarmClientRequestPrivate(const DeviceFarmC
  */
 DeviceFarmClientRequestPrivate::DeviceFarmClientRequestPrivate(const DeviceFarmClientRequestPrivate &other,
                                      DeviceFarmClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

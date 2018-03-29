@@ -66,10 +66,10 @@ bool ListTypedLinkFacetAttributesRequest::isValid() const
  *
  * @return An ListTypedLinkFacetAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * ListTypedLinkFacetAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTypedLinkFacetAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new ListTypedLinkFacetAttributesResponse(*this, reply);
 }

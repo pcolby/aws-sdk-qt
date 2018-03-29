@@ -57,10 +57,10 @@ namespace Athena {
  */
 AthenaClient::AthenaClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AthenaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AthenaClientPrivate(this), parent)
 {
     Q_D(AthenaClient);
     d->apiVersion = QStringLiteral("2017-05-18");
@@ -90,10 +90,10 @@ AthenaClient::AthenaClient(
  */
 AthenaClient::AthenaClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new AthenaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AthenaClientPrivate(this), parent)
 {
     Q_D(AthenaClient);
     d->apiVersion = QStringLiteral("2017-05-18");
@@ -319,9 +319,9 @@ StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExe
  * @param  q  Pointer to this object's public AthenaClient instance.
  */
 AthenaClientPrivate::AthenaClientPrivate(AthenaClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Athena

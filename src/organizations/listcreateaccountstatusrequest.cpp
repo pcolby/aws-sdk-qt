@@ -66,10 +66,10 @@ bool ListCreateAccountStatusRequest::isValid() const
  *
  * @return An ListCreateAccountStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OrganizationsClient::send
  */
-AwsAbstractResponse * ListCreateAccountStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListCreateAccountStatusRequest::response(QNetworkReply * const reply) const
 {
     return new ListCreateAccountStatusResponse(*this, reply);
 }

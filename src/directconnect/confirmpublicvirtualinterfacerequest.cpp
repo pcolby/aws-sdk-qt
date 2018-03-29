@@ -66,10 +66,10 @@ bool ConfirmPublicVirtualInterfaceRequest::isValid() const
  *
  * @return An ConfirmPublicVirtualInterfaceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * ConfirmPublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ConfirmPublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
 {
     return new ConfirmPublicVirtualInterfaceResponse(*this, reply);
 }

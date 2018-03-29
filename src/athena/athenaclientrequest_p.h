@@ -28,7 +28,7 @@ namespace Athena {
 
 class AthenaClientRequest;
 
-class QTAWS_EXPORT AthenaClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT AthenaClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AthenaClientRequest::Action action; ///< Athena action to be performed.

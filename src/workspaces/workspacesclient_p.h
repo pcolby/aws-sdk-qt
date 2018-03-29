@@ -29,7 +29,7 @@ namespace WorkSpaces {
 
 class WorkSpacesClient;
 
-class QTAWS_EXPORT WorkSpacesClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT WorkSpacesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WorkSpacesClientPrivate(WorkSpacesClient * const q);

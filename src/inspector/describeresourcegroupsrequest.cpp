@@ -66,10 +66,10 @@ bool DescribeResourceGroupsRequest::isValid() const
  *
  * @return An DescribeResourceGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeResourceGroupsResponse(*this, reply);
 }

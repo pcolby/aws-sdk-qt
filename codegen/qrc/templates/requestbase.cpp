@@ -18,7 +18,7 @@ namespace {{NameSpaceName}} {
  * @param  action  The {{ServiceName}} action to request.
  */
 {{ClassName}}::{{ClassName}}(const Action action)
-    : AwsAbstractRequest(new {{ClassName}}Private(action, this))
+    : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(action, this))
 {
 
 }
@@ -29,7 +29,7 @@ namespace {{NameSpaceName}} {
  * @param  other  Instance to copy.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
-    : AwsAbstractRequest(new {{ClassName}}Private(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ namespace {{NameSpaceName}} {
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-{{ClassName}}::{{ClassName}}({{ClassName}}Private * const d) : AwsAbstractRequest(d)
+{{ClassName}}::{{ClassName}}({{ClassName}}Private * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -138,7 +138,7 @@ bool {{ClassName}}::operator==(const {{ClassName}} &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -268,7 +268,7 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public {{ClassName}} instance.
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -288,7 +288,7 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}Private &other,
                                      {{ClassName}} * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

@@ -66,10 +66,10 @@ bool SimulateCustomPolicyRequest::isValid() const
  *
  * @return An SimulateCustomPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new SimulateCustomPolicyResponse(*this, reply);
 }

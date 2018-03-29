@@ -66,10 +66,10 @@ bool GenerateDataKeyWithoutPlaintextRequest::isValid() const
  *
  * @return An GenerateDataKeyWithoutPlaintextResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KMSClient::send
  */
-AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::response(QNetworkReply * const reply) const
 {
     return new GenerateDataKeyWithoutPlaintextResponse(*this, reply);
 }

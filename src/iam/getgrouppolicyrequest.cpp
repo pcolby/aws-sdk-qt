@@ -66,10 +66,10 @@ bool GetGroupPolicyRequest::isValid() const
  *
  * @return An GetGroupPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * GetGroupPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetGroupPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new GetGroupPolicyResponse(*this, reply);
 }

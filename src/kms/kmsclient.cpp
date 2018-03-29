@@ -144,10 +144,10 @@ namespace KMS {
  */
 KmsClient::KmsClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KmsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KmsClientPrivate(this), parent)
 {
     Q_D(KmsClient);
     d->apiVersion = QStringLiteral("2014-11-01");
@@ -177,10 +177,10 @@ KmsClient::KmsClient(
  */
 KmsClient::KmsClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new KmsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new KmsClientPrivate(this), parent)
 {
     Q_D(KmsClient);
     d->apiVersion = QStringLiteral("2014-11-01");
@@ -1132,9 +1132,9 @@ UpdateKeyDescriptionResponse * KmsClient::updateKeyDescription(const UpdateKeyDe
  * @param  q  Pointer to this object's public KmsClient instance.
  */
 KmsClientPrivate::KmsClientPrivate(KmsClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KMS

@@ -66,10 +66,10 @@ bool BatchGetDeploymentsRequest::isValid() const
  *
  * @return An BatchGetDeploymentsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * BatchGetDeploymentsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetDeploymentsRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetDeploymentsResponse(*this, reply);
 }

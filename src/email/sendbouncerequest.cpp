@@ -66,10 +66,10 @@ bool SendBounceRequest::isValid() const
  *
  * @return An SendBounceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SESClient::send
  */
-AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * const reply) const
 {
     return new SendBounceResponse(*this, reply);
 }

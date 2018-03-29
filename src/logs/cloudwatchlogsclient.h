@@ -24,8 +24,8 @@
 
 class QNetworkReply;
 
-class AwsAbstractClient;
-class AwsAbstractCredentials;
+class QtAws::Core::AwsAbstractClient;
+class QtAws::Core::AwsAbstractCredentials;
 
 namespace QtAws {
 namespace CloudWatchLogs {
@@ -98,18 +98,18 @@ class TestMetricFilterResponse;
 class UntagLogGroupRequest;
 class UntagLogGroupResponse;
 
-class QTAWS_EXPORT CloudWatchLogsClient : public AwsAbstractClient {
+class QTAWS_EXPORT CloudWatchLogsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
     CloudWatchLogsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
-        AwsAbstractCredentials * credentials = NULL,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
     CloudWatchLogsClient(
-        const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 

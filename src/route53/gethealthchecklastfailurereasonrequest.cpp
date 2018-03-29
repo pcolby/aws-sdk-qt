@@ -66,10 +66,10 @@ bool GetHealthCheckLastFailureReasonRequest::isValid() const
  *
  * @return An GetHealthCheckLastFailureReasonResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::response(QNetworkReply * const reply) const
 {
     return new GetHealthCheckLastFailureReasonResponse(*this, reply);
 }

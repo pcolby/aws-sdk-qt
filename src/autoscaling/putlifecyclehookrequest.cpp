@@ -66,10 +66,10 @@ bool PutLifecycleHookRequest::isValid() const
  *
  * @return An PutLifecycleHookResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkReply * const reply) const
 {
     return new PutLifecycleHookResponse(*this, reply);
 }

@@ -118,10 +118,10 @@ namespace ApplicationAutoScaling {
  */
 ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ApplicationAutoScalingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ApplicationAutoScalingClientPrivate(this), parent)
 {
     Q_D(ApplicationAutoScalingClient);
     d->apiVersion = QStringLiteral("2016-02-06");
@@ -151,10 +151,10 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
  */
 ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ApplicationAutoScalingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ApplicationAutoScalingClientPrivate(this), parent)
 {
     Q_D(ApplicationAutoScalingClient);
     d->apiVersion = QStringLiteral("2016-02-06");
@@ -418,9 +418,9 @@ RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableT
  * @param  q  Pointer to this object's public ApplicationAutoScalingClient instance.
  */
 ApplicationAutoScalingClientPrivate::ApplicationAutoScalingClientPrivate(ApplicationAutoScalingClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ApplicationAutoScaling

@@ -66,10 +66,10 @@ bool ListApplicationVersionsRequest::isValid() const
  *
  * @return An ListApplicationVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ServerlessApplicationRepositoryClient::send
  */
-AwsAbstractResponse * ListApplicationVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListApplicationVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new ListApplicationVersionsResponse(*this, reply);
 }

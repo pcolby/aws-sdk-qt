@@ -40,7 +40,7 @@ namespace WorkMail {
  * @param  parent   This object's parent.
  */
 WorkMailClientResponse::WorkMailClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new WorkMailClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new WorkMailClientResponsePrivate(this), parent)
 {
 
 }

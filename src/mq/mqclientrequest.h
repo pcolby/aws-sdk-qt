@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MQ {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MqClientRequestPrivate;
 
-class QTAWS_EXPORT MqClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MqClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MQ.

@@ -28,7 +28,7 @@ namespace SageMakerRuntime {
 
 class SageMakerRuntimeClientRequest;
 
-class QTAWS_EXPORT SageMakerRuntimeClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SageMakerRuntimeClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SageMakerRuntimeClientRequest::Action action; ///< SageMakerRuntime action to be performed.

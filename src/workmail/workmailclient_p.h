@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class WorkMailClient;
 
-class QTAWS_EXPORT WorkMailClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT WorkMailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WorkMailClientPrivate(WorkMailClient * const q);

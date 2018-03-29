@@ -66,10 +66,10 @@ bool CreateAddressRequest::isValid() const
  *
  * @return An CreateAddressResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SnowballClient::send
  */
-AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply * const reply) const
 {
     return new CreateAddressResponse(*this, reply);
 }

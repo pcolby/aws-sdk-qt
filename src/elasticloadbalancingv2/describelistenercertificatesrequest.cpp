@@ -66,10 +66,10 @@ bool DescribeListenerCertificatesRequest::isValid() const
  *
  * @return An DescribeListenerCertificatesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DescribeListenerCertificatesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeListenerCertificatesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeListenerCertificatesResponse(*this, reply);
 }

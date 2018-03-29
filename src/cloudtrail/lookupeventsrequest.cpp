@@ -66,10 +66,10 @@ bool LookupEventsRequest::isValid() const
  *
  * @return An LookupEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudTrailClient::send
  */
-AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply * const reply) const
 {
     return new LookupEventsResponse(*this, reply);
 }

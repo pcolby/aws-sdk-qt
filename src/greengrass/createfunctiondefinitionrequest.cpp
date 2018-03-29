@@ -66,10 +66,10 @@ bool CreateFunctionDefinitionRequest::isValid() const
  *
  * @return An CreateFunctionDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new CreateFunctionDefinitionResponse(*this, reply);
 }

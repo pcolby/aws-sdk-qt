@@ -66,10 +66,10 @@ bool RemoveTagsFromResourceRequest::isValid() const
  *
  * @return An RemoveTagsFromResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveTagsFromResourceResponse(*this, reply);
 }

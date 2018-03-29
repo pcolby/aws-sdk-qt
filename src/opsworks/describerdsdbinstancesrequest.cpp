@@ -66,10 +66,10 @@ bool DescribeRdsDbInstancesRequest::isValid() const
  *
  * @return An DescribeRdsDbInstancesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DescribeRdsDbInstancesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeRdsDbInstancesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeRdsDbInstancesResponse(*this, reply);
 }

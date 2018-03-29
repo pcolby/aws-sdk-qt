@@ -66,10 +66,10 @@ bool ModifyDBInstanceRequest::isValid() const
  *
  * @return An ModifyDBInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyDBInstanceResponse(*this, reply);
 }

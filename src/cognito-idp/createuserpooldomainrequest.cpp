@@ -66,10 +66,10 @@ bool CreateUserPoolDomainRequest::isValid() const
  *
  * @return An CreateUserPoolDomainResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * CreateUserPoolDomainRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateUserPoolDomainRequest::response(QNetworkReply * const reply) const
 {
     return new CreateUserPoolDomainResponse(*this, reply);
 }

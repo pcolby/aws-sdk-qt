@@ -66,10 +66,10 @@ bool SuspendProcessesRequest::isValid() const
  *
  * @return An SuspendProcessesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AutoScalingClient::send
  */
-AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkReply * const reply) const
 {
     return new SuspendProcessesResponse(*this, reply);
 }

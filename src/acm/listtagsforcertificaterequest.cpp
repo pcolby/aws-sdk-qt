@@ -66,10 +66,10 @@ bool ListTagsForCertificateRequest::isValid() const
  *
  * @return An ListTagsForCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ACMClient::send
  */
-AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new ListTagsForCertificateResponse(*this, reply);
 }

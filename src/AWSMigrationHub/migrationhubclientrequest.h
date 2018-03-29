@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MigrationHub {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class MigrationHubClientRequestPrivate;
 
-class QTAWS_EXPORT MigrationHubClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT MigrationHubClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MigrationHub.

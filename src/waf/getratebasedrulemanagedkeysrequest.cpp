@@ -66,10 +66,10 @@ bool GetRateBasedRuleManagedKeysRequest::isValid() const
  *
  * @return An GetRateBasedRuleManagedKeysResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(QNetworkReply * const reply) const
 {
     return new GetRateBasedRuleManagedKeysResponse(*this, reply);
 }

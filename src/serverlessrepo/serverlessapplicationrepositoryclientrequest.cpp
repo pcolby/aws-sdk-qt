@@ -36,7 +36,7 @@ namespace ServerlessApplicationRepository {
  * @param  action  The ServerlessApplicationRepository action to request.
  */
 ServerlessApplicationRepositoryClientRequest::ServerlessApplicationRepositoryClientRequest(const Action action)
-    : AwsAbstractRequest(new ServerlessApplicationRepositoryClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ServerlessApplicationRepositoryClientRequest::ServerlessApplicationRepositoryCli
  * @param  other  Instance to copy.
  */
 ServerlessApplicationRepositoryClientRequest::ServerlessApplicationRepositoryClientRequest(const ServerlessApplicationRepositoryClientRequest &other)
-    : AwsAbstractRequest(new ServerlessApplicationRepositoryClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ServerlessApplicationRepositoryClientRequest& ServerlessApplicationRepositoryCli
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ServerlessApplicationRepositoryClientRequest::ServerlessApplicationRepositoryClientRequest(ServerlessApplicationRepositoryClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ServerlessApplicationRepositoryClientRequest::ServerlessApplicationRepositoryClientRequest(ServerlessApplicationRepositoryClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ServerlessApplicationRepositoryClientRequest::operator==(const ServerlessAp
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ServerlessApplicationRepositoryClientRequest::unsignedRequest(co
  * @param  q       Pointer to this object's public ServerlessApplicationRepositoryClientRequest instance.
  */
 ServerlessApplicationRepositoryClientRequestPrivate::ServerlessApplicationRepositoryClientRequestPrivate(const ServerlessApplicationRepositoryClientRequest::Action action, ServerlessApplicationRepositoryClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ServerlessApplicationRepositoryClientRequestPrivate::ServerlessApplicationReposi
  */
 ServerlessApplicationRepositoryClientRequestPrivate::ServerlessApplicationRepositoryClientRequestPrivate(const ServerlessApplicationRepositoryClientRequestPrivate &other,
                                      ServerlessApplicationRepositoryClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

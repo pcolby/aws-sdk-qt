@@ -66,10 +66,10 @@ bool StartExportTaskRequest::isValid() const
  *
  * @return An StartExportTaskResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ApplicationDiscoveryServiceClient::send
  */
-AwsAbstractResponse * StartExportTaskRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartExportTaskRequest::response(QNetworkReply * const reply) const
 {
     return new StartExportTaskResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DisableGatewayRequest::isValid() const
  *
  * @return An DisableGatewayResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply * const reply) const
 {
     return new DisableGatewayResponse(*this, reply);
 }

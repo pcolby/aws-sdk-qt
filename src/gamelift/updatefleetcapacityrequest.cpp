@@ -66,10 +66,10 @@ bool UpdateFleetCapacityRequest::isValid() const
  *
  * @return An UpdateFleetCapacityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * UpdateFleetCapacityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFleetCapacityRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFleetCapacityResponse(*this, reply);
 }

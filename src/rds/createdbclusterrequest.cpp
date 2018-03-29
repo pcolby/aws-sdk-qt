@@ -66,10 +66,10 @@ bool CreateDBClusterRequest::isValid() const
  *
  * @return An CreateDBClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkReply * const reply) const
 {
     return new CreateDBClusterResponse(*this, reply);
 }

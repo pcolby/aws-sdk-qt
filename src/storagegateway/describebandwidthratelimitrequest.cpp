@@ -66,10 +66,10 @@ bool DescribeBandwidthRateLimitRequest::isValid() const
  *
  * @return An DescribeBandwidthRateLimitResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeBandwidthRateLimitResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeDocumentVersionsRequest::isValid() const
  *
  * @return An DescribeDocumentVersionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WorkDocsClient::send
  */
-AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeDocumentVersionsResponse(*this, reply);
 }

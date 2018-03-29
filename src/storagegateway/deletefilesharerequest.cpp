@@ -66,10 +66,10 @@ bool DeleteFileShareRequest::isValid() const
  *
  * @return An DeleteFileShareResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  StorageGatewayClient::send
  */
-AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteFileShareResponse(*this, reply);
 }

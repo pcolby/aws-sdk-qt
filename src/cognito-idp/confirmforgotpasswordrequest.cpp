@@ -66,10 +66,10 @@ bool ConfirmForgotPasswordRequest::isValid() const
  *
  * @return An ConfirmForgotPasswordResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetworkReply * const reply) const
 {
     return new ConfirmForgotPasswordResponse(*this, reply);
 }

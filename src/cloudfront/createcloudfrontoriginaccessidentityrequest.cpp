@@ -66,10 +66,10 @@ bool CreateCloudFrontOriginAccessIdentityRequest::isValid() const
  *
  * @return An CreateCloudFrontOriginAccessIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * CreateCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new CreateCloudFrontOriginAccessIdentityResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeAnalysisSchemesRequest::isValid() const
  *
  * @return An DescribeAnalysisSchemesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudSearchClient::send
  */
-AwsAbstractResponse * DescribeAnalysisSchemesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAnalysisSchemesRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAnalysisSchemesResponse(*this, reply);
 }

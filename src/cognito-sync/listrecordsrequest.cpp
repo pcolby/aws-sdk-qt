@@ -66,10 +66,10 @@ bool ListRecordsRequest::isValid() const
  *
  * @return An ListRecordsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * ListRecordsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListRecordsRequest::response(QNetworkReply * const reply) const
 {
     return new ListRecordsResponse(*this, reply);
 }

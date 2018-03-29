@@ -66,10 +66,10 @@ bool CreateApplicationRequest::isValid() const
  *
  * @return An CreateApplicationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * CreateApplicationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkReply * const reply) const
 {
     return new CreateApplicationResponse(*this, reply);
 }

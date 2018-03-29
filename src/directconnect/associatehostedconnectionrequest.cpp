@@ -66,10 +66,10 @@ bool AssociateHostedConnectionRequest::isValid() const
  *
  * @return An AssociateHostedConnectionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * AssociateHostedConnectionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateHostedConnectionRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateHostedConnectionResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetThingShadowRequest::isValid() const
  *
  * @return An GetThingShadowResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IoTDataPlaneClient::send
  */
-AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply * const reply) const
 {
     return new GetThingShadowResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ListChangeSetsRequest::isValid() const
  *
  * @return An ListChangeSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFormationClient::send
  */
-AwsAbstractResponse * ListChangeSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListChangeSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListChangeSetsResponse(*this, reply);
 }

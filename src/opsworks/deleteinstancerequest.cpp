@@ -66,10 +66,10 @@ bool DeleteInstanceRequest::isValid() const
  *
  * @return An DeleteInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteInstanceResponse(*this, reply);
 }

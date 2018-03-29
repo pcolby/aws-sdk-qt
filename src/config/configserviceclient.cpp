@@ -76,10 +76,10 @@ namespace ConfigService {
  */
 ConfigServiceClient::ConfigServiceClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
 {
     Q_D(ConfigServiceClient);
     d->apiVersion = QStringLiteral("2014-11-12");
@@ -109,10 +109,10 @@ ConfigServiceClient::ConfigServiceClient(
  */
 ConfigServiceClient::ConfigServiceClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
 {
     Q_D(ConfigServiceClient);
     d->apiVersion = QStringLiteral("2014-11-12");
@@ -863,9 +863,9 @@ StopConfigurationRecorderResponse * ConfigServiceClient::stopConfigurationRecord
  * @param  q  Pointer to this object's public ConfigServiceClient instance.
  */
 ConfigServiceClientPrivate::ConfigServiceClientPrivate(ConfigServiceClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ConfigService

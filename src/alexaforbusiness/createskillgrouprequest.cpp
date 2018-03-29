@@ -66,10 +66,10 @@ bool CreateSkillGroupRequest::isValid() const
  *
  * @return An CreateSkillGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AlexaForBusinessClient::send
  */
-AwsAbstractResponse * CreateSkillGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateSkillGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CreateSkillGroupResponse(*this, reply);
 }

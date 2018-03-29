@@ -66,10 +66,10 @@ bool PutTelemetryRecordsRequest::isValid() const
  *
  * @return An PutTelemetryRecordsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  XRayClient::send
  */
-AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetworkReply * const reply) const
 {
     return new PutTelemetryRecordsResponse(*this, reply);
 }

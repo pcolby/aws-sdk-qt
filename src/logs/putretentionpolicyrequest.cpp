@@ -66,10 +66,10 @@ bool PutRetentionPolicyRequest::isValid() const
  *
  * @return An PutRetentionPolicyResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudWatchLogsClient::send
  */
-AwsAbstractResponse * PutRetentionPolicyRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutRetentionPolicyRequest::response(QNetworkReply * const reply) const
 {
     return new PutRetentionPolicyResponse(*this, reply);
 }

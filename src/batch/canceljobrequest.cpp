@@ -66,10 +66,10 @@ bool CancelJobRequest::isValid() const
  *
  * @return An CancelJobResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BatchClient::send
  */
-AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * const reply) const
 {
     return new CancelJobResponse(*this, reply);
 }

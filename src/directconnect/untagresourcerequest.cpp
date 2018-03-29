@@ -66,10 +66,10 @@ bool UntagResourceRequest::isValid() const
  *
  * @return An UntagResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectConnectClient::send
  */
-AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply * const reply) const
 {
     return new UntagResourceResponse(*this, reply);
 }

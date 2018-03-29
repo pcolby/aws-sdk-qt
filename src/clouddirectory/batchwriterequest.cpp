@@ -66,10 +66,10 @@ bool BatchWriteRequest::isValid() const
  *
  * @return An BatchWriteResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * const reply) const
 {
     return new BatchWriteResponse(*this, reply);
 }

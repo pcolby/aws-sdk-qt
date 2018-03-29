@@ -66,10 +66,10 @@ bool BatchGetResourceConfigRequest::isValid() const
  *
  * @return An BatchGetResourceConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * BatchGetResourceConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * BatchGetResourceConfigRequest::response(QNetworkReply * const reply) const
 {
     return new BatchGetResourceConfigResponse(*this, reply);
 }

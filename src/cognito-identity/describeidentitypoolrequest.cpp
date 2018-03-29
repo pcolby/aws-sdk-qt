@@ -66,10 +66,10 @@ bool DescribeIdentityPoolRequest::isValid() const
  *
  * @return An DescribeIdentityPoolResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityClient::send
  */
-AwsAbstractResponse * DescribeIdentityPoolRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeIdentityPoolRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeIdentityPoolResponse(*this, reply);
 }

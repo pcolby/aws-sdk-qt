@@ -66,10 +66,10 @@ bool GetChangeRequest::isValid() const
  *
  * @return An GetChangeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * const reply) const
 {
     return new GetChangeResponse(*this, reply);
 }

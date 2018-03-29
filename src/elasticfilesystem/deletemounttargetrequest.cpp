@@ -66,10 +66,10 @@ bool DeleteMountTargetRequest::isValid() const
  *
  * @return An DeleteMountTargetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EFSClient::send
  */
-AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteMountTargetResponse(*this, reply);
 }

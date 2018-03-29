@@ -66,10 +66,10 @@ bool SignalWorkflowExecutionRequest::isValid() const
  *
  * @return An SignalWorkflowExecutionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SWFClient::send
  */
-AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNetworkReply * const reply) const
 {
     return new SignalWorkflowExecutionResponse(*this, reply);
 }

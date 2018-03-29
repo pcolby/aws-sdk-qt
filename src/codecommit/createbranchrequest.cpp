@@ -66,10 +66,10 @@ bool CreateBranchRequest::isValid() const
  *
  * @return An CreateBranchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeCommitClient::send
  */
-AwsAbstractResponse * CreateBranchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBranchRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBranchResponse(*this, reply);
 }

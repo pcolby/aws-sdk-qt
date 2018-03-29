@@ -66,10 +66,10 @@ bool DescribeAliasRequest::isValid() const
  *
  * @return An DescribeAliasResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeAliasRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeAliasRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeAliasResponse(*this, reply);
 }

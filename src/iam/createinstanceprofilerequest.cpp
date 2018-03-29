@@ -66,10 +66,10 @@ bool CreateInstanceProfileRequest::isValid() const
  *
  * @return An CreateInstanceProfileResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetworkReply * const reply) const
 {
     return new CreateInstanceProfileResponse(*this, reply);
 }

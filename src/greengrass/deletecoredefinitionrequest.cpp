@@ -66,10 +66,10 @@ bool DeleteCoreDefinitionRequest::isValid() const
  *
  * @return An DeleteCoreDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCoreDefinitionResponse(*this, reply);
 }

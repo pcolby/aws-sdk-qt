@@ -66,10 +66,10 @@ bool AdminSetUserMFAPreferenceRequest::isValid() const
  *
  * @return An AdminSetUserMFAPreferenceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QNetworkReply * const reply) const
 {
     return new AdminSetUserMFAPreferenceResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool GetClassifierRequest::isValid() const
  *
  * @return An GetClassifierResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlueClient::send
  */
-AwsAbstractResponse * GetClassifierRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetClassifierRequest::response(QNetworkReply * const reply) const
 {
     return new GetClassifierResponse(*this, reply);
 }

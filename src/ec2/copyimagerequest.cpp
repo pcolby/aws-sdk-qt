@@ -66,10 +66,10 @@ bool CopyImageRequest::isValid() const
  *
  * @return An CopyImageResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * const reply) const
 {
     return new CopyImageResponse(*this, reply);
 }

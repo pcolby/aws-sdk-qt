@@ -66,10 +66,10 @@ bool GetDomainSuggestionsRequest::isValid() const
  *
  * @return An GetDomainSuggestionsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53DomainsClient::send
  */
-AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetworkReply * const reply) const
 {
     return new GetDomainSuggestionsResponse(*this, reply);
 }

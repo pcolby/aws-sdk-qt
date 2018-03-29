@@ -66,10 +66,10 @@ bool DescribeTargetGroupsRequest::isValid() const
  *
  * @return An DescribeTargetGroupsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * DescribeTargetGroupsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTargetGroupsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTargetGroupsResponse(*this, reply);
 }

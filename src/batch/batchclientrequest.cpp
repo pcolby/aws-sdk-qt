@@ -36,7 +36,7 @@ namespace Batch {
  * @param  action  The Batch action to request.
  */
 BatchClientRequest::BatchClientRequest(const Action action)
-    : AwsAbstractRequest(new BatchClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new BatchClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ BatchClientRequest::BatchClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 BatchClientRequest::BatchClientRequest(const BatchClientRequest &other)
-    : AwsAbstractRequest(new BatchClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new BatchClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ BatchClientRequest& BatchClientRequest::operator=(const BatchClientRequest &othe
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-BatchClientRequest::BatchClientRequest(BatchClientRequestPrivate * const d) : AwsAbstractRequest(d)
+BatchClientRequest::BatchClientRequest(BatchClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool BatchClientRequest::operator==(const BatchClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest BatchClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public BatchClientRequest instance.
  */
 BatchClientRequestPrivate::BatchClientRequestPrivate(const BatchClientRequest::Action action, BatchClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ BatchClientRequestPrivate::BatchClientRequestPrivate(const BatchClientRequest::A
  */
 BatchClientRequestPrivate::BatchClientRequestPrivate(const BatchClientRequestPrivate &other,
                                      BatchClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

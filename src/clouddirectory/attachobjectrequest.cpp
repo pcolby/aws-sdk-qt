@@ -66,10 +66,10 @@ bool AttachObjectRequest::isValid() const
  *
  * @return An AttachObjectResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudDirectoryClient::send
  */
-AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply * const reply) const
 {
     return new AttachObjectResponse(*this, reply);
 }

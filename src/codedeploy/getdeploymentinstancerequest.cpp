@@ -66,10 +66,10 @@ bool GetDeploymentInstanceRequest::isValid() const
  *
  * @return An GetDeploymentInstanceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * GetDeploymentInstanceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetDeploymentInstanceRequest::response(QNetworkReply * const reply) const
 {
     return new GetDeploymentInstanceResponse(*this, reply);
 }

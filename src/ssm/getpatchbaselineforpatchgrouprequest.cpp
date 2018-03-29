@@ -66,10 +66,10 @@ bool GetPatchBaselineForPatchGroupRequest::isValid() const
  *
  * @return An GetPatchBaselineForPatchGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SSMClient::send
  */
-AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
 {
     return new GetPatchBaselineForPatchGroupResponse(*this, reply);
 }

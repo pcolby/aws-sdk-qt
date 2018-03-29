@@ -66,10 +66,10 @@ bool DeleteVpcEndpointServiceConfigurationsRequest::isValid() const
  *
  * @return An DeleteVpcEndpointServiceConfigurationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteVpcEndpointServiceConfigurationsResponse(*this, reply);
 }

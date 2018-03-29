@@ -66,10 +66,10 @@ bool NotifyMigrationTaskStateRequest::isValid() const
  *
  * @return An NotifyMigrationTaskStateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  MigrationHubClient::send
  */
-AwsAbstractResponse * NotifyMigrationTaskStateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * NotifyMigrationTaskStateRequest::response(QNetworkReply * const reply) const
 {
     return new NotifyMigrationTaskStateResponse(*this, reply);
 }

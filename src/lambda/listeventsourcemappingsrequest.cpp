@@ -66,10 +66,10 @@ bool ListEventSourceMappingsRequest::isValid() const
  *
  * @return An ListEventSourceMappingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  LambdaClient::send
  */
-AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNetworkReply * const reply) const
 {
     return new ListEventSourceMappingsResponse(*this, reply);
 }

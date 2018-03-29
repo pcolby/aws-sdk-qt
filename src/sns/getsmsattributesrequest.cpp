@@ -66,10 +66,10 @@ bool GetSMSAttributesRequest::isValid() const
  *
  * @return An GetSMSAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new GetSMSAttributesResponse(*this, reply);
 }

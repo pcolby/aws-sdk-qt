@@ -66,10 +66,10 @@ bool RegisterTargetsRequest::isValid() const
  *
  * @return An RegisterTargetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticLoadBalancingv2Client::send
  */
-AwsAbstractResponse * RegisterTargetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RegisterTargetsRequest::response(QNetworkReply * const reply) const
 {
     return new RegisterTargetsResponse(*this, reply);
 }

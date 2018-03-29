@@ -66,10 +66,10 @@ bool CreateBudgetRequest::isValid() const
  *
  * @return An CreateBudgetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  BudgetsClient::send
  */
-AwsAbstractResponse * CreateBudgetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateBudgetRequest::response(QNetworkReply * const reply) const
 {
     return new CreateBudgetResponse(*this, reply);
 }

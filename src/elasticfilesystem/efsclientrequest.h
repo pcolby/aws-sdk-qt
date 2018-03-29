@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace EFS {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class EfsClientRequestPrivate;
 
-class QTAWS_EXPORT EfsClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT EfsClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EFS.

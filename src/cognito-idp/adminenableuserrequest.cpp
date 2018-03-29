@@ -66,10 +66,10 @@ bool AdminEnableUserRequest::isValid() const
  *
  * @return An AdminEnableUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkReply * const reply) const
 {
     return new AdminEnableUserResponse(*this, reply);
 }

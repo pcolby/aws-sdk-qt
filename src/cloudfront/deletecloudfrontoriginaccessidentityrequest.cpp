@@ -66,10 +66,10 @@ bool DeleteCloudFrontOriginAccessIdentityRequest::isValid() const
  *
  * @return An DeleteCloudFrontOriginAccessIdentityResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudFrontClient::send
  */
-AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteCloudFrontOriginAccessIdentityResponse(*this, reply);
 }

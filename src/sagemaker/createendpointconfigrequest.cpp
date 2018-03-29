@@ -66,10 +66,10 @@ bool CreateEndpointConfigRequest::isValid() const
  *
  * @return An CreateEndpointConfigResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SageMakerClient::send
  */
-AwsAbstractResponse * CreateEndpointConfigRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateEndpointConfigRequest::response(QNetworkReply * const reply) const
 {
     return new CreateEndpointConfigResponse(*this, reply);
 }

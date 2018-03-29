@@ -36,7 +36,7 @@ namespace SNS {
  * @param  action  The SNS action to request.
  */
 SnsClientRequest::SnsClientRequest(const Action action)
-    : AwsAbstractRequest(new SnsClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SnsClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ SnsClientRequest::SnsClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 SnsClientRequest::SnsClientRequest(const SnsClientRequest &other)
-    : AwsAbstractRequest(new SnsClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SnsClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ SnsClientRequest& SnsClientRequest::operator=(const SnsClientRequest &other)
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-SnsClientRequest::SnsClientRequest(SnsClientRequestPrivate * const d) : AwsAbstractRequest(d)
+SnsClientRequest::SnsClientRequest(SnsClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool SnsClientRequest::operator==(const SnsClientRequest &other) const
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest SnsClientRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SnsClientRequest instance.
  */
 SnsClientRequestPrivate::SnsClientRequestPrivate(const SnsClientRequest::Action action, SnsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ SnsClientRequestPrivate::SnsClientRequestPrivate(const SnsClientRequest::Action 
  */
 SnsClientRequestPrivate::SnsClientRequestPrivate(const SnsClientRequestPrivate &other,
                                      SnsClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

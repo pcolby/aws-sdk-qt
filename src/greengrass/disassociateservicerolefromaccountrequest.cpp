@@ -66,10 +66,10 @@ bool DisassociateServiceRoleFromAccountRequest::isValid() const
  *
  * @return An DisassociateServiceRoleFromAccountResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GreengrassClient::send
  */
-AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::response(QNetworkReply * const reply) const
 {
     return new DisassociateServiceRoleFromAccountResponse(*this, reply);
 }

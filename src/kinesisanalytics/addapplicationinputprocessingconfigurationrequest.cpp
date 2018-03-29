@@ -66,10 +66,10 @@ bool AddApplicationInputProcessingConfigurationRequest::isValid() const
  *
  * @return An AddApplicationInputProcessingConfigurationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  KinesisAnalyticsClient::send
  */
-AwsAbstractResponse * AddApplicationInputProcessingConfigurationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationRequest::response(QNetworkReply * const reply) const
 {
     return new AddApplicationInputProcessingConfigurationResponse(*this, reply);
 }

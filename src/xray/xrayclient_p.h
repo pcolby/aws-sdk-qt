@@ -29,7 +29,7 @@ namespace XRay {
 
 class XRayClient;
 
-class QTAWS_EXPORT XRayClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT XRayClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     XRayClientPrivate(XRayClient * const q);

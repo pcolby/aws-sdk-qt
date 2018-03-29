@@ -66,10 +66,10 @@ bool UpdateResourceServerRequest::isValid() const
  *
  * @return An UpdateResourceServerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * UpdateResourceServerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateResourceServerResponse(*this, reply);
 }

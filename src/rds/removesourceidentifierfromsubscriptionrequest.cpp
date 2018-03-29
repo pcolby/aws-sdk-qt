@@ -66,10 +66,10 @@ bool RemoveSourceIdentifierFromSubscriptionRequest::isValid() const
  *
  * @return An RemoveSourceIdentifierFromSubscriptionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest::response(QNetworkReply * const reply) const
 {
     return new RemoveSourceIdentifierFromSubscriptionResponse(*this, reply);
 }

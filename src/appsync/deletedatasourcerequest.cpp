@@ -66,10 +66,10 @@ bool DeleteDataSourceRequest::isValid() const
  *
  * @return An DeleteDataSourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  AppSyncClient::send
  */
-AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteDataSourceResponse(*this, reply);
 }

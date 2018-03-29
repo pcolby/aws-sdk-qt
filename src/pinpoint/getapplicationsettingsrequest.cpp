@@ -66,10 +66,10 @@ bool GetApplicationSettingsRequest::isValid() const
  *
  * @return An GetApplicationSettingsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetworkReply * const reply) const
 {
     return new GetApplicationSettingsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DeleteConfigurationRecorderRequest::isValid() const
  *
  * @return An DeleteConfigurationRecorderResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ConfigServiceClient::send
  */
-AwsAbstractResponse * DeleteConfigurationRecorderRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteConfigurationRecorderRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteConfigurationRecorderResponse(*this, reply);
 }

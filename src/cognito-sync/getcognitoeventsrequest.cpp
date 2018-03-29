@@ -66,10 +66,10 @@ bool GetCognitoEventsRequest::isValid() const
  *
  * @return An GetCognitoEventsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoSyncClient::send
  */
-AwsAbstractResponse * GetCognitoEventsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetCognitoEventsRequest::response(QNetworkReply * const reply) const
 {
     return new GetCognitoEventsResponse(*this, reply);
 }

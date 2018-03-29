@@ -66,10 +66,10 @@ bool GetObjectAclRequest::isValid() const
  *
  * @return An GetObjectAclResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  S3Client::send
  */
-AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply * const reply) const
 {
     return new GetObjectAclResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool UpdateElasticIpRequest::isValid() const
  *
  * @return An UpdateElasticIpResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * UpdateElasticIpRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateElasticIpRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateElasticIpResponse(*this, reply);
 }

@@ -28,7 +28,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClientRequest;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientRequestPrivate : public AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MarketplaceCommerceAnalyticsClientRequest::Action action; ///< MarketplaceCommerceAnalytics action to be performed.

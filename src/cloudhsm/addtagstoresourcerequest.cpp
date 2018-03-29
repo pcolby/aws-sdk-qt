@@ -66,10 +66,10 @@ bool AddTagsToResourceRequest::isValid() const
  *
  * @return An AddTagsToResourceResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CloudHSMClient::send
  */
-AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkReply * const reply) const
 {
     return new AddTagsToResourceResponse(*this, reply);
 }

@@ -36,7 +36,7 @@ namespace WAFRegional {
  * @param  action  The WAFRegional action to request.
  */
 WAFRegionalClientRequest::WAFRegionalClientRequest(const Action action)
-    : AwsAbstractRequest(new WAFRegionalClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WAFRegionalClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ WAFRegionalClientRequest::WAFRegionalClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 WAFRegionalClientRequest::WAFRegionalClientRequest(const WAFRegionalClientRequest &other)
-    : AwsAbstractRequest(new WAFRegionalClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WAFRegionalClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ WAFRegionalClientRequest& WAFRegionalClientRequest::operator=(const WAFRegionalC
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-WAFRegionalClientRequest::WAFRegionalClientRequest(WAFRegionalClientRequestPrivate * const d) : AwsAbstractRequest(d)
+WAFRegionalClientRequest::WAFRegionalClientRequest(WAFRegionalClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool WAFRegionalClientRequest::operator==(const WAFRegionalClientRequest &other)
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest WAFRegionalClientRequest::unsignedRequest(const QUrl &endpoint) 
  * @param  q       Pointer to this object's public WAFRegionalClientRequest instance.
  */
 WAFRegionalClientRequestPrivate::WAFRegionalClientRequestPrivate(const WAFRegionalClientRequest::Action action, WAFRegionalClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ WAFRegionalClientRequestPrivate::WAFRegionalClientRequestPrivate(const WAFRegion
  */
 WAFRegionalClientRequestPrivate::WAFRegionalClientRequestPrivate(const WAFRegionalClientRequestPrivate &other,
                                      WAFRegionalClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

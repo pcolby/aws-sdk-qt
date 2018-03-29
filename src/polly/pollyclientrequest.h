@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Polly {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class PollyClientRequestPrivate;
 
-class QTAWS_EXPORT PollyClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT PollyClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Polly.

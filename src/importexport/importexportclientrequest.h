@@ -30,10 +30,10 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ImportExport {
 
-class AwsAbstractClient;
+class QtAws::Core::AwsAbstractClient;
 class ImportExportClientRequestPrivate;
 
-class QTAWS_EXPORT ImportExportClientRequest : public AwsAbstractRequest {
+class QTAWS_EXPORT ImportExportClientRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ImportExport.

@@ -66,10 +66,10 @@ bool CreateUserRequest::isValid() const
  *
  * @return An CreateUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * const reply) const
 {
     return new CreateUserResponse(*this, reply);
 }

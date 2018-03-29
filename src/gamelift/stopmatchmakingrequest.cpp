@@ -66,10 +66,10 @@ bool StopMatchmakingRequest::isValid() const
  *
  * @return An StopMatchmakingResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkReply * const reply) const
 {
     return new StopMatchmakingResponse(*this, reply);
 }

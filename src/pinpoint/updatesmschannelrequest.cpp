@@ -66,10 +66,10 @@ bool UpdateSmsChannelRequest::isValid() const
  *
  * @return An UpdateSmsChannelResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateSmsChannelResponse(*this, reply);
 }

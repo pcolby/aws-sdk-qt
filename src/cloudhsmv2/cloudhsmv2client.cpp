@@ -47,10 +47,10 @@ namespace CloudHSMV2 {
  */
 CloudHSMV2Client::CloudHSMV2Client(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
 {
     Q_D(CloudHSMV2Client);
     d->apiVersion = QStringLiteral("2017-04-28");
@@ -80,10 +80,10 @@ CloudHSMV2Client::CloudHSMV2Client(
  */
 CloudHSMV2Client::CloudHSMV2Client(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
 {
     Q_D(CloudHSMV2Client);
     d->apiVersion = QStringLiteral("2017-04-28");
@@ -277,9 +277,9 @@ UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceReque
  * @param  q  Pointer to this object's public CloudHSMV2Client instance.
  */
 CloudHSMV2ClientPrivate::CloudHSMV2ClientPrivate(CloudHSMV2Client * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudHSMV2

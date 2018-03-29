@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class ImportExportClientResponse;
 
-class QTAWS_EXPORT ImportExportClientResponsePrivate : public AwsAbstractResponsePrivate {
+class QTAWS_EXPORT ImportExportClientResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:

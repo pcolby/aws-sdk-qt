@@ -66,10 +66,10 @@ bool DescribeGameSessionPlacementRequest::isValid() const
  *
  * @return An DescribeGameSessionPlacementResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeGameSessionPlacementRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeGameSessionPlacementRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeGameSessionPlacementResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool DescribeElasticIpsRequest::isValid() const
  *
  * @return An DescribeElasticIpsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DescribeElasticIpsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeElasticIpsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeElasticIpsResponse(*this, reply);
 }

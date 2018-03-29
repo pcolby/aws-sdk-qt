@@ -66,10 +66,10 @@ bool UpdateClusterRequest::isValid() const
  *
  * @return An UpdateClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DAXClient::send
  */
-AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateClusterResponse(*this, reply);
 }

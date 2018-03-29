@@ -66,10 +66,10 @@ bool ListSAMLProvidersRequest::isValid() const
  *
  * @return An ListSAMLProvidersResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  IAMClient::send
  */
-AwsAbstractResponse * ListSAMLProvidersRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListSAMLProvidersRequest::response(QNetworkReply * const reply) const
 {
     return new ListSAMLProvidersResponse(*this, reply);
 }

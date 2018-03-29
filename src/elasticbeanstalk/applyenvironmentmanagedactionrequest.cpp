@@ -66,10 +66,10 @@ bool ApplyEnvironmentManagedActionRequest::isValid() const
  *
  * @return An ApplyEnvironmentManagedActionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * ApplyEnvironmentManagedActionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ApplyEnvironmentManagedActionRequest::response(QNetworkReply * const reply) const
 {
     return new ApplyEnvironmentManagedActionResponse(*this, reply);
 }

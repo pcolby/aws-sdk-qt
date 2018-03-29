@@ -66,10 +66,10 @@ bool DescribeTaskDefinitionRequest::isValid() const
  *
  * @return An DescribeTaskDefinitionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ECSClient::send
  */
-AwsAbstractResponse * DescribeTaskDefinitionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeTaskDefinitionRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeTaskDefinitionResponse(*this, reply);
 }

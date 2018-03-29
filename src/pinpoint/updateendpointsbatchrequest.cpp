@@ -66,10 +66,10 @@ bool UpdateEndpointsBatchRequest::isValid() const
  *
  * @return An UpdateEndpointsBatchResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  PinpointClient::send
  */
-AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateEndpointsBatchResponse(*this, reply);
 }

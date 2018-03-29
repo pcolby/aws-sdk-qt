@@ -66,10 +66,10 @@ bool AssociateRouteTableRequest::isValid() const
  *
  * @return An AssociateRouteTableResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * AssociateRouteTableRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetworkReply * const reply) const
 {
     return new AssociateRouteTableResponse(*this, reply);
 }

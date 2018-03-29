@@ -66,10 +66,10 @@ bool PutLifecycleEventHookExecutionStatusRequest::isValid() const
  *
  * @return An PutLifecycleEventHookExecutionStatusResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodeDeployClient::send
  */
-AwsAbstractResponse * PutLifecycleEventHookExecutionStatusRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutLifecycleEventHookExecutionStatusRequest::response(QNetworkReply * const reply) const
 {
     return new PutLifecycleEventHookExecutionStatusResponse(*this, reply);
 }

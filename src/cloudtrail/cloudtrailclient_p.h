@@ -29,7 +29,7 @@ namespace CloudTrail {
 
 class CloudTrailClient;
 
-class QTAWS_EXPORT CloudTrailClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT CloudTrailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudTrailClientPrivate(CloudTrailClient * const q);

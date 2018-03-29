@@ -66,10 +66,10 @@ bool AdminLinkProviderForUserRequest::isValid() const
  *
  * @return An AdminLinkProviderForUserResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNetworkReply * const reply) const
 {
     return new AdminLinkProviderForUserResponse(*this, reply);
 }

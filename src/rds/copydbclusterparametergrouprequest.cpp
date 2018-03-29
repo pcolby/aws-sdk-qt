@@ -66,10 +66,10 @@ bool CopyDBClusterParameterGroupRequest::isValid() const
  *
  * @return An CopyDBClusterParameterGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RDSClient::send
  */
-AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
 {
     return new CopyDBClusterParameterGroupResponse(*this, reply);
 }

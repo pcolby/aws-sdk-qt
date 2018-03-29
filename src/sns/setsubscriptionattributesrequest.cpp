@@ -66,10 +66,10 @@ bool SetSubscriptionAttributesRequest::isValid() const
  *
  * @return An SetSubscriptionAttributesResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SNSClient::send
  */
-AwsAbstractResponse * SetSubscriptionAttributesRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SetSubscriptionAttributesRequest::response(QNetworkReply * const reply) const
 {
     return new SetSubscriptionAttributesResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool ModifyClusterRequest::isValid() const
  *
  * @return An ModifyClusterResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyClusterResponse(*this, reply);
 }

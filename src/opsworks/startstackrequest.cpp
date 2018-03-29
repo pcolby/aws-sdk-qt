@@ -66,10 +66,10 @@ bool StartStackRequest::isValid() const
  *
  * @return An StartStackResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * StartStackRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * StartStackRequest::response(QNetworkReply * const reply) const
 {
     return new StartStackResponse(*this, reply);
 }

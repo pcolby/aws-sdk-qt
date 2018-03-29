@@ -66,10 +66,10 @@ bool DeleteServerCatalogRequest::isValid() const
  *
  * @return An DeleteServerCatalogResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  SMSClient::send
  */
-AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteServerCatalogResponse(*this, reply);
 }

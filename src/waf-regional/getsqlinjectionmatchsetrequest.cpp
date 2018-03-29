@@ -66,10 +66,10 @@ bool GetSqlInjectionMatchSetRequest::isValid() const
  *
  * @return An GetSqlInjectionMatchSetResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFRegionalClient::send
  */
-AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNetworkReply * const reply) const
 {
     return new GetSqlInjectionMatchSetResponse(*this, reply);
 }

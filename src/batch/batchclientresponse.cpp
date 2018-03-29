@@ -40,7 +40,7 @@ namespace Batch {
  * @param  parent   This object's parent.
  */
 BatchClientResponse::BatchClientResponse(QObject * const parent)
-    : AwsAbstractResponse(new BatchClientResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(new BatchClientResponsePrivate(this), parent)
 {
 
 }

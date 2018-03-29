@@ -66,10 +66,10 @@ bool PutThirdPartyJobFailureResultRequest::isValid() const
  *
  * @return An PutThirdPartyJobFailureResultResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CodePipelineClient::send
  */
-AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::response(QNetworkReply * const reply) const
 {
     return new PutThirdPartyJobFailureResultResponse(*this, reply);
 }

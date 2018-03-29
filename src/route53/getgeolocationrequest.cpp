@@ -66,10 +66,10 @@ bool GetGeoLocationRequest::isValid() const
  *
  * @return An GetGeoLocationResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * GetGeoLocationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetGeoLocationRequest::response(QNetworkReply * const reply) const
 {
     return new GetGeoLocationResponse(*this, reply);
 }

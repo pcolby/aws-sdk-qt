@@ -66,10 +66,10 @@ bool ListIPSetsRequest::isValid() const
  *
  * @return An ListIPSetsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * const reply) const
 {
     return new ListIPSetsResponse(*this, reply);
 }

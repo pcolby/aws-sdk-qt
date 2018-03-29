@@ -36,7 +36,7 @@ namespace CodeDeploy {
  * @param  action  The CodeDeploy action to request.
  */
 CodeDeployClientRequest::CodeDeployClientRequest(const Action action)
-    : AwsAbstractRequest(new CodeDeployClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CodeDeployClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ CodeDeployClientRequest::CodeDeployClientRequest(const Action action)
  * @param  other  Instance to copy.
  */
 CodeDeployClientRequest::CodeDeployClientRequest(const CodeDeployClientRequest &other)
-    : AwsAbstractRequest(new CodeDeployClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CodeDeployClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ CodeDeployClientRequest& CodeDeployClientRequest::operator=(const CodeDeployClie
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-CodeDeployClientRequest::CodeDeployClientRequest(CodeDeployClientRequestPrivate * const d) : AwsAbstractRequest(d)
+CodeDeployClientRequest::CodeDeployClientRequest(CodeDeployClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool CodeDeployClientRequest::operator==(const CodeDeployClientRequest &other) c
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest CodeDeployClientRequest::unsignedRequest(const QUrl &endpoint) c
  * @param  q       Pointer to this object's public CodeDeployClientRequest instance.
  */
 CodeDeployClientRequestPrivate::CodeDeployClientRequestPrivate(const CodeDeployClientRequest::Action action, CodeDeployClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ CodeDeployClientRequestPrivate::CodeDeployClientRequestPrivate(const CodeDeployC
  */
 CodeDeployClientRequestPrivate::CodeDeployClientRequestPrivate(const CodeDeployClientRequestPrivate &other,
                                      CodeDeployClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

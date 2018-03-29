@@ -66,10 +66,10 @@ bool GetVaultNotificationsRequest::isValid() const
  *
  * @return An GetVaultNotificationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GlacierClient::send
  */
-AwsAbstractResponse * GetVaultNotificationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetVaultNotificationsRequest::response(QNetworkReply * const reply) const
 {
     return new GetVaultNotificationsResponse(*this, reply);
 }

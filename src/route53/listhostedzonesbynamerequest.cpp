@@ -66,10 +66,10 @@ bool ListHostedZonesByNameRequest::isValid() const
  *
  * @return An ListHostedZonesByNameResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  Route53Client::send
  */
-AwsAbstractResponse * ListHostedZonesByNameRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListHostedZonesByNameRequest::response(QNetworkReply * const reply) const
 {
     return new ListHostedZonesByNameResponse(*this, reply);
 }

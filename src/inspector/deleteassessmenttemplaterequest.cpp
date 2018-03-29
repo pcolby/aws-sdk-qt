@@ -66,10 +66,10 @@ bool DeleteAssessmentTemplateRequest::isValid() const
  *
  * @return An DeleteAssessmentTemplateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  InspectorClient::send
  */
-AwsAbstractResponse * DeleteAssessmentTemplateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteAssessmentTemplateRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteAssessmentTemplateResponse(*this, reply);
 }

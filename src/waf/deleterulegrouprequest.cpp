@@ -66,10 +66,10 @@ bool DeleteRuleGroupRequest::isValid() const
  *
  * @return An DeleteRuleGroupResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  WAFClient::send
  */
-AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteRuleGroupResponse(*this, reply);
 }

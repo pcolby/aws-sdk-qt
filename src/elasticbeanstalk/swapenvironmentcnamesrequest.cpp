@@ -66,10 +66,10 @@ bool SwapEnvironmentCNAMEsRequest::isValid() const
  *
  * @return An SwapEnvironmentCNAMEsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetworkReply * const reply) const
 {
     return new SwapEnvironmentCNAMEsResponse(*this, reply);
 }

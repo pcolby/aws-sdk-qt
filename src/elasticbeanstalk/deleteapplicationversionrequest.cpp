@@ -66,10 +66,10 @@ bool DeleteApplicationVersionRequest::isValid() const
  *
  * @return An DeleteApplicationVersionResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  ElasticBeanstalkClient::send
  */
-AwsAbstractResponse * DeleteApplicationVersionRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteApplicationVersionRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteApplicationVersionResponse(*this, reply);
 }

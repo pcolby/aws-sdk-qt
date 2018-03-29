@@ -66,10 +66,10 @@ bool EnableSsoRequest::isValid() const
  *
  * @return An EnableSsoResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DirectoryServiceClient::send
  */
-AwsAbstractResponse * EnableSsoRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * EnableSsoRequest::response(QNetworkReply * const reply) const
 {
     return new EnableSsoResponse(*this, reply);
 }

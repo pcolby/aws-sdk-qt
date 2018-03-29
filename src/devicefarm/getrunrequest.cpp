@@ -66,10 +66,10 @@ bool GetRunRequest::isValid() const
  *
  * @return An GetRunResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  DeviceFarmClient::send
  */
-AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const reply) const
 {
     return new GetRunResponse(*this, reply);
 }

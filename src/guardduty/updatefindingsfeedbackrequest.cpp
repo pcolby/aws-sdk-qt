@@ -66,10 +66,10 @@ bool UpdateFindingsFeedbackRequest::isValid() const
  *
  * @return An UpdateFindingsFeedbackResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GuardDutyClient::send
  */
-AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetworkReply * const reply) const
 {
     return new UpdateFindingsFeedbackResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool CreateLayerRequest::isValid() const
  *
  * @return An CreateLayerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * CreateLayerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * CreateLayerRequest::response(QNetworkReply * const reply) const
 {
     return new CreateLayerResponse(*this, reply);
 }

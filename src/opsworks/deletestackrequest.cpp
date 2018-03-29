@@ -66,10 +66,10 @@ bool DeleteStackRequest::isValid() const
  *
  * @return An DeleteStackResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksClient::send
  */
-AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * const reply) const
 {
     return new DeleteStackResponse(*this, reply);
 }

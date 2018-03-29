@@ -105,10 +105,10 @@ namespace OpsWorksCM {
  */
 OpsWorksCMClient::OpsWorksCMClient(
     const AwsRegion::Region region,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
 {
     Q_D(OpsWorksCMClient);
     d->apiVersion = QStringLiteral("2016-11-01");
@@ -138,10 +138,10 @@ OpsWorksCMClient::OpsWorksCMClient(
  */
 OpsWorksCMClient::OpsWorksCMClient(
     const QUrl &endpoint,
-    AwsAbstractCredentials * credentials,
+    QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
 {
     Q_D(OpsWorksCMClient);
     d->apiVersion = QStringLiteral("2016-11-01");
@@ -562,9 +562,9 @@ UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttri
  * @param  q  Pointer to this object's public OpsWorksCMClient instance.
  */
 OpsWorksCMClientPrivate::OpsWorksCMClientPrivate(OpsWorksCMClient * const q)
-    : AwsAbstractClientPrivate(q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignatureV4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace OpsWorksCM

@@ -66,10 +66,10 @@ bool DescribeVpcPeeringAuthorizationsRequest::isValid() const
  *
  * @return An DescribeVpcPeeringAuthorizationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  GameLiftClient::send
  */
-AwsAbstractResponse * DescribeVpcPeeringAuthorizationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringAuthorizationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVpcPeeringAuthorizationsResponse(*this, reply);
 }

@@ -66,10 +66,10 @@ bool RestoreServerRequest::isValid() const
  *
  * @return An RestoreServerResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  OpsWorksCMClient::send
  */
-AwsAbstractResponse * RestoreServerRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * RestoreServerRequest::response(QNetworkReply * const reply) const
 {
     return new RestoreServerResponse(*this, reply);
 }

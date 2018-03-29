@@ -36,7 +36,7 @@ namespace ElasticLoadBalancingv2 {
  * @param  action  The ElasticLoadBalancingv2 action to request.
  */
 ElasticLoadBalancingv2ClientRequest::ElasticLoadBalancingv2ClientRequest(const Action action)
-    : AwsAbstractRequest(new ElasticLoadBalancingv2ClientRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingv2ClientRequestPrivate(action, this))
 {
 
 }
@@ -47,7 +47,7 @@ ElasticLoadBalancingv2ClientRequest::ElasticLoadBalancingv2ClientRequest(const A
  * @param  other  Instance to copy.
  */
 ElasticLoadBalancingv2ClientRequest::ElasticLoadBalancingv2ClientRequest(const ElasticLoadBalancingv2ClientRequest &other)
-    : AwsAbstractRequest(new ElasticLoadBalancingv2ClientRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingv2ClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +80,7 @@ ElasticLoadBalancingv2ClientRequest& ElasticLoadBalancingv2ClientRequest::operat
  *
  * @param  d  Pointer to private data (aka D-Pointer).
  */
-ElasticLoadBalancingv2ClientRequest::ElasticLoadBalancingv2ClientRequest(ElasticLoadBalancingv2ClientRequestPrivate * const d) : AwsAbstractRequest(d)
+ElasticLoadBalancingv2ClientRequest::ElasticLoadBalancingv2ClientRequest(ElasticLoadBalancingv2ClientRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -156,7 +156,7 @@ bool ElasticLoadBalancingv2ClientRequest::operator==(const ElasticLoadBalancingv
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
             (parameters() == other.parameters()) &&
-            (AwsAbstractRequest::operator ==(other)));
+            (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
 /**
@@ -286,7 +286,7 @@ QNetworkRequest ElasticLoadBalancingv2ClientRequest::unsignedRequest(const QUrl 
  * @param  q       Pointer to this object's public ElasticLoadBalancingv2ClientRequest instance.
  */
 ElasticLoadBalancingv2ClientRequestPrivate::ElasticLoadBalancingv2ClientRequestPrivate(const ElasticLoadBalancingv2ClientRequest::Action action, ElasticLoadBalancingv2ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,7 +306,7 @@ ElasticLoadBalancingv2ClientRequestPrivate::ElasticLoadBalancingv2ClientRequestP
  */
 ElasticLoadBalancingv2ClientRequestPrivate::ElasticLoadBalancingv2ClientRequestPrivate(const ElasticLoadBalancingv2ClientRequestPrivate &other,
                                      ElasticLoadBalancingv2ClientRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(other.action),
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 

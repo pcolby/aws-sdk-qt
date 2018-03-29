@@ -66,10 +66,10 @@ bool DescribeVolumesModificationsRequest::isValid() const
  *
  * @return An DescribeVolumesModificationsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * DescribeVolumesModificationsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeVolumesModificationsResponse(*this, reply);
 }

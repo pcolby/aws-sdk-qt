@@ -29,7 +29,7 @@ namespace KinesisVideoArchivedMedia {
 
 class KinesisVideoArchivedMediaClient;
 
-class QTAWS_EXPORT KinesisVideoArchivedMediaClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT KinesisVideoArchivedMediaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     KinesisVideoArchivedMediaClientPrivate(KinesisVideoArchivedMediaClient * const q);

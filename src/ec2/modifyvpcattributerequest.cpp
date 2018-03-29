@@ -66,10 +66,10 @@ bool ModifyVpcAttributeRequest::isValid() const
  *
  * @return An ModifyVpcAttributeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EC2Client::send
  */
-AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkReply * const reply) const
 {
     return new ModifyVpcAttributeResponse(*this, reply);
 }

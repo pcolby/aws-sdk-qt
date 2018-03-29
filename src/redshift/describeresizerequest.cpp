@@ -66,10 +66,10 @@ bool DescribeResizeRequest::isValid() const
  *
  * @return An DescribeResizeResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  RedshiftClient::send
  */
-AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply * const reply) const
 {
     return new DescribeResizeResponse(*this, reply);
 }

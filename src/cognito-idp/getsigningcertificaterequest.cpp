@@ -66,10 +66,10 @@ bool GetSigningCertificateRequest::isValid() const
  *
  * @return An GetSigningCertificateResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  CognitoIdentityProviderClient::send
  */
-AwsAbstractResponse * GetSigningCertificateRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetworkReply * const reply) const
 {
     return new GetSigningCertificateResponse(*this, reply);
 }

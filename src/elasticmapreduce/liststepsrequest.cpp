@@ -66,10 +66,10 @@ bool ListStepsRequest::isValid() const
  *
  * @return An ListStepsResponse instance for \a reply.
  *
- * @see  AwsAbstractClient::send
+ * @see  QtAws::Core::AwsAbstractClient::send
  * @see  EMRClient::send
  */
-AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * const reply) const
 {
     return new ListStepsResponse(*this, reply);
 }
