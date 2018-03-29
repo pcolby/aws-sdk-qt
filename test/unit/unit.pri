@@ -40,7 +40,7 @@ unix {
     lcov.commands = lcov --capture --directory $$shell_quote($$TEMPDIR) \
                          --output $$shell_quote($$TEMPDIR/coverage.info) \
                          --quiet; \
-                    sed -i -Ee $$shell_quote(s|^(SF:)/home/src/libqtaws(/src/)|\\1$$TOPDIR\\2|) \
+                    sed -i -Ee $$shell_quote(s|^(SF:)/home/src/aws-sdk-qt(/src/)|\\1$$TOPDIR\\2|) \
                          $$shell_quote($$TEMPDIR/coverage.info); \
                     lcov --remove $$shell_quote($$TEMPDIR/coverage.info) \
                          $$shell_quote(/opt/*/include/*/*) \
@@ -53,7 +53,7 @@ unix {
     coverage.depends = $$TEMPDIR/coverage.info
     coverage.commands = genhtml --output-directory $$shell_quote($$DESTDIR/$$TARGET-coverage) \
                                 --prefix $$TOPDIR/src --quiet \
-                                --title $$shell_quote(libqtaws $$VERSION) \
+                                --title $$shell_quote(libaws-sdk-qt $$VERSION) \
                                 $$shell_quote($$TEMPDIR/coverage.info)
 
     # Include the above custom targets in the generated build scripts (eg Makefile).

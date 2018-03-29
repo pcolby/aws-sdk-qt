@@ -51,7 +51,7 @@ matrix:
 addons:
   coverity_scan:
     project:
-      name: "pcolby/libqtaws"
+      name: "pcolby/aws-sdk-qt"
       description: "Build submitted via Travis CI"
     notification_email: git@colby.id.au
     build_command_prepend: >
@@ -95,7 +95,7 @@ script:
 after_success:
   # Generate LCOV coverage reports
   - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" coverage
-  - sed -i -e "s|^SF:/home/travis/build/libqtaws|SF:$TRAVIS_BUILD_DIR|"
+  - sed -i -e "s|^SF:/home/travis/build/aws-sdk-qt|SF:$TRAVIS_BUILD_DIR|"
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
   # Report code coverage to coveralls.io
   - lcoveralls --retry-count 5
