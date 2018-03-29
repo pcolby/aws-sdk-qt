@@ -31,7 +31,7 @@ class CreateFunctionDefinitionRequest;
 class QTAWS_EXPORT CreateFunctionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateFunctionDefinitionRequestPrivate(const Greengrass::Action action,
+    CreateFunctionDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    CreateFunctionDefinitionRequest * const q);
     CreateFunctionDefinitionRequestPrivate(const CreateFunctionDefinitionRequestPrivate &other,
                                    CreateFunctionDefinitionRequest * const q);

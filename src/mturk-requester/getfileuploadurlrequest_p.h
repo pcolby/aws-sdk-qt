@@ -31,7 +31,7 @@ class GetFileUploadURLRequest;
 class QTAWS_EXPORT GetFileUploadURLRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    GetFileUploadURLRequestPrivate(const MTurk::Action action,
+    GetFileUploadURLRequestPrivate(const MTurkRequest::Action action,
                                    GetFileUploadURLRequest * const q);
     GetFileUploadURLRequestPrivate(const GetFileUploadURLRequestPrivate &other,
                                    GetFileUploadURLRequest * const q);

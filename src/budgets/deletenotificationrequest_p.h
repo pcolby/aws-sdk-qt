@@ -31,7 +31,7 @@ class DeleteNotificationRequest;
 class QTAWS_EXPORT DeleteNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    DeleteNotificationRequestPrivate(const Budgets::Action action,
+    DeleteNotificationRequestPrivate(const BudgetsRequest::Action action,
                                    DeleteNotificationRequest * const q);
     DeleteNotificationRequestPrivate(const DeleteNotificationRequestPrivate &other,
                                    DeleteNotificationRequest * const q);

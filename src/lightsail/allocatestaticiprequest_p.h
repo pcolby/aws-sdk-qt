@@ -31,7 +31,7 @@ class AllocateStaticIpRequest;
 class QTAWS_EXPORT AllocateStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    AllocateStaticIpRequestPrivate(const Lightsail::Action action,
+    AllocateStaticIpRequestPrivate(const LightsailRequest::Action action,
                                    AllocateStaticIpRequest * const q);
     AllocateStaticIpRequestPrivate(const AllocateStaticIpRequestPrivate &other,
                                    AllocateStaticIpRequest * const q);

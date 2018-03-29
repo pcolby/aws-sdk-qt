@@ -31,7 +31,7 @@ class AddUserToGroupRequest;
 class QTAWS_EXPORT AddUserToGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
-    AddUserToGroupRequestPrivate(const IAM::Action action,
+    AddUserToGroupRequestPrivate(const IAMRequest::Action action,
                                    AddUserToGroupRequest * const q);
     AddUserToGroupRequestPrivate(const AddUserToGroupRequestPrivate &other,
                                    AddUserToGroupRequest * const q);

@@ -31,7 +31,7 @@ class DeleteClusterSecurityGroupRequest;
 class QTAWS_EXPORT DeleteClusterSecurityGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteClusterSecurityGroupRequestPrivate(const Redshift::Action action,
+    DeleteClusterSecurityGroupRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteClusterSecurityGroupRequest * const q);
     DeleteClusterSecurityGroupRequestPrivate(const DeleteClusterSecurityGroupRequestPrivate &other,
                                    DeleteClusterSecurityGroupRequest * const q);

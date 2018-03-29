@@ -31,7 +31,7 @@ class AssociateHostedConnectionRequest;
 class QTAWS_EXPORT AssociateHostedConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    AssociateHostedConnectionRequestPrivate(const DirectConnect::Action action,
+    AssociateHostedConnectionRequestPrivate(const DirectConnectRequest::Action action,
                                    AssociateHostedConnectionRequest * const q);
     AssociateHostedConnectionRequestPrivate(const AssociateHostedConnectionRequestPrivate &other,
                                    AssociateHostedConnectionRequest * const q);

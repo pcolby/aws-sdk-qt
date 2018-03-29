@@ -31,7 +31,7 @@ class DeleteGatewayResponseRequest;
 class QTAWS_EXPORT DeleteGatewayResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteGatewayResponseRequestPrivate(const APIGateway::Action action,
+    DeleteGatewayResponseRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteGatewayResponseRequest * const q);
     DeleteGatewayResponseRequestPrivate(const DeleteGatewayResponseRequestPrivate &other,
                                    DeleteGatewayResponseRequest * const q);

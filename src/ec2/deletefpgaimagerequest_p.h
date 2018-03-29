@@ -31,7 +31,7 @@ class DeleteFpgaImageRequest;
 class QTAWS_EXPORT DeleteFpgaImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteFpgaImageRequestPrivate(const EC2::Action action,
+    DeleteFpgaImageRequestPrivate(const EC2Request::Action action,
                                    DeleteFpgaImageRequest * const q);
     DeleteFpgaImageRequestPrivate(const DeleteFpgaImageRequestPrivate &other,
                                    DeleteFpgaImageRequest * const q);

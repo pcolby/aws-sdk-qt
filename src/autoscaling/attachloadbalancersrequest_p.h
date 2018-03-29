@@ -31,7 +31,7 @@ class AttachLoadBalancersRequest;
 class QTAWS_EXPORT AttachLoadBalancersRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    AttachLoadBalancersRequestPrivate(const AutoScaling::Action action,
+    AttachLoadBalancersRequestPrivate(const AutoScalingRequest::Action action,
                                    AttachLoadBalancersRequest * const q);
     AttachLoadBalancersRequestPrivate(const AttachLoadBalancersRequestPrivate &other,
                                    AttachLoadBalancersRequest * const q);

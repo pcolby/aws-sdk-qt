@@ -31,7 +31,7 @@ class SearchFacesByImageRequest;
 class QTAWS_EXPORT SearchFacesByImageRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    SearchFacesByImageRequestPrivate(const Rekognition::Action action,
+    SearchFacesByImageRequestPrivate(const RekognitionRequest::Action action,
                                    SearchFacesByImageRequest * const q);
     SearchFacesByImageRequestPrivate(const SearchFacesByImageRequestPrivate &other,
                                    SearchFacesByImageRequest * const q);

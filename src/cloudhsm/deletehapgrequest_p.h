@@ -31,7 +31,7 @@ class DeleteHapgRequest;
 class QTAWS_EXPORT DeleteHapgRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    DeleteHapgRequestPrivate(const CloudHSM::Action action,
+    DeleteHapgRequestPrivate(const CloudHSMRequest::Action action,
                                    DeleteHapgRequest * const q);
     DeleteHapgRequestPrivate(const DeleteHapgRequestPrivate &other,
                                    DeleteHapgRequest * const q);

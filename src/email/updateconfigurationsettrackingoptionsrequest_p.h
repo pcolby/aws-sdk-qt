@@ -31,7 +31,7 @@ class UpdateConfigurationSetTrackingOptionsRequest;
 class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsRequestPrivate : public SESRequestPrivate {
 
 public:
-    UpdateConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,
+    UpdateConfigurationSetTrackingOptionsRequestPrivate(const SESRequest::Action action,
                                    UpdateConfigurationSetTrackingOptionsRequest * const q);
     UpdateConfigurationSetTrackingOptionsRequestPrivate(const UpdateConfigurationSetTrackingOptionsRequestPrivate &other,
                                    UpdateConfigurationSetTrackingOptionsRequest * const q);

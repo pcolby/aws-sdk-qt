@@ -31,7 +31,7 @@ class ChangePasswordRequest;
 class QTAWS_EXPORT ChangePasswordRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ChangePasswordRequestPrivate(const IAM::Action action,
+    ChangePasswordRequestPrivate(const IAMRequest::Action action,
                                    ChangePasswordRequest * const q);
     ChangePasswordRequestPrivate(const ChangePasswordRequestPrivate &other,
                                    ChangePasswordRequest * const q);

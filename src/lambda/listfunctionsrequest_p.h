@@ -31,7 +31,7 @@ class ListFunctionsRequest;
 class QTAWS_EXPORT ListFunctionsRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    ListFunctionsRequestPrivate(const Lambda::Action action,
+    ListFunctionsRequestPrivate(const LambdaRequest::Action action,
                                    ListFunctionsRequest * const q);
     ListFunctionsRequestPrivate(const ListFunctionsRequestPrivate &other,
                                    ListFunctionsRequest * const q);

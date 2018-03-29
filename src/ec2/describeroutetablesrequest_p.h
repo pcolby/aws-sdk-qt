@@ -31,7 +31,7 @@ class DescribeRouteTablesRequest;
 class QTAWS_EXPORT DescribeRouteTablesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeRouteTablesRequestPrivate(const EC2::Action action,
+    DescribeRouteTablesRequestPrivate(const EC2Request::Action action,
                                    DescribeRouteTablesRequest * const q);
     DescribeRouteTablesRequestPrivate(const DescribeRouteTablesRequestPrivate &other,
                                    DescribeRouteTablesRequest * const q);

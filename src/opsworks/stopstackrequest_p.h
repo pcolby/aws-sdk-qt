@@ -31,7 +31,7 @@ class StopStackRequest;
 class QTAWS_EXPORT StopStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    StopStackRequestPrivate(const OpsWorks::Action action,
+    StopStackRequestPrivate(const OpsWorksRequest::Action action,
                                    StopStackRequest * const q);
     StopStackRequestPrivate(const StopStackRequestPrivate &other,
                                    StopStackRequest * const q);

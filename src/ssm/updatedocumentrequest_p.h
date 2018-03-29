@@ -31,7 +31,7 @@ class UpdateDocumentRequest;
 class QTAWS_EXPORT UpdateDocumentRequestPrivate : public SSMRequestPrivate {
 
 public:
-    UpdateDocumentRequestPrivate(const SSM::Action action,
+    UpdateDocumentRequestPrivate(const SSMRequest::Action action,
                                    UpdateDocumentRequest * const q);
     UpdateDocumentRequestPrivate(const UpdateDocumentRequestPrivate &other,
                                    UpdateDocumentRequest * const q);

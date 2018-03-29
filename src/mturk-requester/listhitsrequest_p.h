@@ -31,7 +31,7 @@ class ListHITsRequest;
 class QTAWS_EXPORT ListHITsRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ListHITsRequestPrivate(const MTurk::Action action,
+    ListHITsRequestPrivate(const MTurkRequest::Action action,
                                    ListHITsRequest * const q);
     ListHITsRequestPrivate(const ListHITsRequestPrivate &other,
                                    ListHITsRequest * const q);

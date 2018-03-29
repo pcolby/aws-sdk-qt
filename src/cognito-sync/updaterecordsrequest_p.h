@@ -31,7 +31,7 @@ class UpdateRecordsRequest;
 class QTAWS_EXPORT UpdateRecordsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    UpdateRecordsRequestPrivate(const CognitoSync::Action action,
+    UpdateRecordsRequestPrivate(const CognitoSyncRequest::Action action,
                                    UpdateRecordsRequest * const q);
     UpdateRecordsRequestPrivate(const UpdateRecordsRequestPrivate &other,
                                    UpdateRecordsRequest * const q);

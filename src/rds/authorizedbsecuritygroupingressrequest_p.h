@@ -31,7 +31,7 @@ class AuthorizeDBSecurityGroupIngressRequest;
 class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressRequestPrivate : public RDSRequestPrivate {
 
 public:
-    AuthorizeDBSecurityGroupIngressRequestPrivate(const RDS::Action action,
+    AuthorizeDBSecurityGroupIngressRequestPrivate(const RDSRequest::Action action,
                                    AuthorizeDBSecurityGroupIngressRequest * const q);
     AuthorizeDBSecurityGroupIngressRequestPrivate(const AuthorizeDBSecurityGroupIngressRequestPrivate &other,
                                    AuthorizeDBSecurityGroupIngressRequest * const q);

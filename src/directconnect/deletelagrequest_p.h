@@ -31,7 +31,7 @@ class DeleteLagRequest;
 class QTAWS_EXPORT DeleteLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DeleteLagRequestPrivate(const DirectConnect::Action action,
+    DeleteLagRequestPrivate(const DirectConnectRequest::Action action,
                                    DeleteLagRequest * const q);
     DeleteLagRequestPrivate(const DeleteLagRequestPrivate &other,
                                    DeleteLagRequest * const q);

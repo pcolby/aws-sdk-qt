@@ -31,7 +31,7 @@ class AssociateCreatedArtifactRequest;
 class QTAWS_EXPORT AssociateCreatedArtifactRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    AssociateCreatedArtifactRequestPrivate(const MigrationHub::Action action,
+    AssociateCreatedArtifactRequestPrivate(const MigrationHubRequest::Action action,
                                    AssociateCreatedArtifactRequest * const q);
     AssociateCreatedArtifactRequestPrivate(const AssociateCreatedArtifactRequestPrivate &other,
                                    AssociateCreatedArtifactRequest * const q);

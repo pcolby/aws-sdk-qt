@@ -31,7 +31,7 @@ class CreateReplicationGroupRequest;
 class QTAWS_EXPORT CreateReplicationGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    CreateReplicationGroupRequestPrivate(const ElastiCache::Action action,
+    CreateReplicationGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    CreateReplicationGroupRequest * const q);
     CreateReplicationGroupRequestPrivate(const CreateReplicationGroupRequestPrivate &other,
                                    CreateReplicationGroupRequest * const q);

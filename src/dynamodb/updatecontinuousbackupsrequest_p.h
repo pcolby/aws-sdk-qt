@@ -31,7 +31,7 @@ class UpdateContinuousBackupsRequest;
 class QTAWS_EXPORT UpdateContinuousBackupsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    UpdateContinuousBackupsRequestPrivate(const DynamoDB::Action action,
+    UpdateContinuousBackupsRequestPrivate(const DynamoDBRequest::Action action,
                                    UpdateContinuousBackupsRequest * const q);
     UpdateContinuousBackupsRequestPrivate(const UpdateContinuousBackupsRequestPrivate &other,
                                    UpdateContinuousBackupsRequest * const q);

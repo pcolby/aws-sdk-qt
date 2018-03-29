@@ -31,7 +31,7 @@ class ConfirmConnectionRequest;
 class QTAWS_EXPORT ConfirmConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    ConfirmConnectionRequestPrivate(const DirectConnect::Action action,
+    ConfirmConnectionRequestPrivate(const DirectConnectRequest::Action action,
                                    ConfirmConnectionRequest * const q);
     ConfirmConnectionRequestPrivate(const ConfirmConnectionRequestPrivate &other,
                                    ConfirmConnectionRequest * const q);

@@ -31,7 +31,7 @@ class DeleteCrawlerRequest;
 class QTAWS_EXPORT DeleteCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteCrawlerRequestPrivate(const Glue::Action action,
+    DeleteCrawlerRequestPrivate(const GlueRequest::Action action,
                                    DeleteCrawlerRequest * const q);
     DeleteCrawlerRequestPrivate(const DeleteCrawlerRequestPrivate &other,
                                    DeleteCrawlerRequest * const q);

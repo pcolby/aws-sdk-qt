@@ -31,7 +31,7 @@ class CreateApplicationVersionRequest;
 class QTAWS_EXPORT CreateApplicationVersionRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    CreateApplicationVersionRequestPrivate(const ElasticBeanstalk::Action action,
+    CreateApplicationVersionRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    CreateApplicationVersionRequest * const q);
     CreateApplicationVersionRequestPrivate(const CreateApplicationVersionRequestPrivate &other,
                                    CreateApplicationVersionRequest * const q);

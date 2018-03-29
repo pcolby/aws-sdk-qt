@@ -31,7 +31,7 @@ class InitializeClusterRequest;
 class QTAWS_EXPORT InitializeClusterRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    InitializeClusterRequestPrivate(const CloudHSMV2::Action action,
+    InitializeClusterRequestPrivate(const CloudHSMV2Request::Action action,
                                    InitializeClusterRequest * const q);
     InitializeClusterRequestPrivate(const InitializeClusterRequestPrivate &other,
                                    InitializeClusterRequest * const q);

@@ -31,7 +31,7 @@ class DescribeListenerCertificatesRequest;
 class QTAWS_EXPORT DescribeListenerCertificatesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeListenerCertificatesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeListenerCertificatesRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeListenerCertificatesRequest * const q);
     DescribeListenerCertificatesRequestPrivate(const DescribeListenerCertificatesRequestPrivate &other,
                                    DescribeListenerCertificatesRequest * const q);

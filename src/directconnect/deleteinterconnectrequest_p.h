@@ -31,7 +31,7 @@ class DeleteInterconnectRequest;
 class QTAWS_EXPORT DeleteInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DeleteInterconnectRequestPrivate(const DirectConnect::Action action,
+    DeleteInterconnectRequestPrivate(const DirectConnectRequest::Action action,
                                    DeleteInterconnectRequest * const q);
     DeleteInterconnectRequestPrivate(const DeleteInterconnectRequestPrivate &other,
                                    DeleteInterconnectRequest * const q);

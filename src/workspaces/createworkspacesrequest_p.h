@@ -31,7 +31,7 @@ class CreateWorkspacesRequest;
 class QTAWS_EXPORT CreateWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    CreateWorkspacesRequestPrivate(const WorkSpaces::Action action,
+    CreateWorkspacesRequestPrivate(const WorkSpacesRequest::Action action,
                                    CreateWorkspacesRequest * const q);
     CreateWorkspacesRequestPrivate(const CreateWorkspacesRequestPrivate &other,
                                    CreateWorkspacesRequest * const q);

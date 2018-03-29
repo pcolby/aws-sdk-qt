@@ -31,7 +31,7 @@ class DeleteRepositoryPolicyRequest;
 class QTAWS_EXPORT DeleteRepositoryPolicyRequestPrivate : public ECRRequestPrivate {
 
 public:
-    DeleteRepositoryPolicyRequestPrivate(const ECR::Action action,
+    DeleteRepositoryPolicyRequestPrivate(const ECRRequest::Action action,
                                    DeleteRepositoryPolicyRequest * const q);
     DeleteRepositoryPolicyRequestPrivate(const DeleteRepositoryPolicyRequestPrivate &other,
                                    DeleteRepositoryPolicyRequest * const q);

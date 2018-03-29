@@ -31,7 +31,7 @@ class CancelReservedInstancesListingRequest;
 class QTAWS_EXPORT CancelReservedInstancesListingRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CancelReservedInstancesListingRequestPrivate(const EC2::Action action,
+    CancelReservedInstancesListingRequestPrivate(const EC2Request::Action action,
                                    CancelReservedInstancesListingRequest * const q);
     CancelReservedInstancesListingRequestPrivate(const CancelReservedInstancesListingRequestPrivate &other,
                                    CancelReservedInstancesListingRequest * const q);

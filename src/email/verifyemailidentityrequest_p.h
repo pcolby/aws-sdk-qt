@@ -31,7 +31,7 @@ class VerifyEmailIdentityRequest;
 class QTAWS_EXPORT VerifyEmailIdentityRequestPrivate : public SESRequestPrivate {
 
 public:
-    VerifyEmailIdentityRequestPrivate(const SES::Action action,
+    VerifyEmailIdentityRequestPrivate(const SESRequest::Action action,
                                    VerifyEmailIdentityRequest * const q);
     VerifyEmailIdentityRequestPrivate(const VerifyEmailIdentityRequestPrivate &other,
                                    VerifyEmailIdentityRequest * const q);

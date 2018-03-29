@@ -31,7 +31,7 @@ class CreateAliasRequest;
 class QTAWS_EXPORT CreateAliasRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    CreateAliasRequestPrivate(const WorkMail::Action action,
+    CreateAliasRequestPrivate(const WorkMailRequest::Action action,
                                    CreateAliasRequest * const q);
     CreateAliasRequestPrivate(const CreateAliasRequestPrivate &other,
                                    CreateAliasRequest * const q);

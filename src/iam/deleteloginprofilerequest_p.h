@@ -31,7 +31,7 @@ class DeleteLoginProfileRequest;
 class QTAWS_EXPORT DeleteLoginProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteLoginProfileRequestPrivate(const IAM::Action action,
+    DeleteLoginProfileRequestPrivate(const IAMRequest::Action action,
                                    DeleteLoginProfileRequest * const q);
     DeleteLoginProfileRequestPrivate(const DeleteLoginProfileRequestPrivate &other,
                                    DeleteLoginProfileRequest * const q);

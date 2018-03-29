@@ -31,7 +31,7 @@ class TerminateInstanceInAutoScalingGroupRequest;
 class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    TerminateInstanceInAutoScalingGroupRequestPrivate(const AutoScaling::Action action,
+    TerminateInstanceInAutoScalingGroupRequestPrivate(const AutoScalingRequest::Action action,
                                    TerminateInstanceInAutoScalingGroupRequest * const q);
     TerminateInstanceInAutoScalingGroupRequestPrivate(const TerminateInstanceInAutoScalingGroupRequestPrivate &other,
                                    TerminateInstanceInAutoScalingGroupRequest * const q);

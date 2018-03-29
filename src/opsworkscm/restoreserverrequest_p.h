@@ -31,7 +31,7 @@ class RestoreServerRequest;
 class QTAWS_EXPORT RestoreServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    RestoreServerRequestPrivate(const OpsWorksCM::Action action,
+    RestoreServerRequestPrivate(const OpsWorksCMRequest::Action action,
                                    RestoreServerRequest * const q);
     RestoreServerRequestPrivate(const RestoreServerRequestPrivate &other,
                                    RestoreServerRequest * const q);

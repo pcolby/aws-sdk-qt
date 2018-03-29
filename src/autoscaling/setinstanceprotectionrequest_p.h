@@ -31,7 +31,7 @@ class SetInstanceProtectionRequest;
 class QTAWS_EXPORT SetInstanceProtectionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    SetInstanceProtectionRequestPrivate(const AutoScaling::Action action,
+    SetInstanceProtectionRequestPrivate(const AutoScalingRequest::Action action,
                                    SetInstanceProtectionRequest * const q);
     SetInstanceProtectionRequestPrivate(const SetInstanceProtectionRequestPrivate &other,
                                    SetInstanceProtectionRequest * const q);

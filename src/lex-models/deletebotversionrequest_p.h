@@ -31,7 +31,7 @@ class DeleteBotVersionRequest;
 class QTAWS_EXPORT DeleteBotVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteBotVersionRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteBotVersionRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteBotVersionRequest * const q);
     DeleteBotVersionRequestPrivate(const DeleteBotVersionRequestPrivate &other,
                                    DeleteBotVersionRequest * const q);

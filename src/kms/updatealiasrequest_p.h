@@ -31,7 +31,7 @@ class UpdateAliasRequest;
 class QTAWS_EXPORT UpdateAliasRequestPrivate : public KMSRequestPrivate {
 
 public:
-    UpdateAliasRequestPrivate(const KMS::Action action,
+    UpdateAliasRequestPrivate(const KMSRequest::Action action,
                                    UpdateAliasRequest * const q);
     UpdateAliasRequestPrivate(const UpdateAliasRequestPrivate &other,
                                    UpdateAliasRequest * const q);

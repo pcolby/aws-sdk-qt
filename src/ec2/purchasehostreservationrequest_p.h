@@ -31,7 +31,7 @@ class PurchaseHostReservationRequest;
 class QTAWS_EXPORT PurchaseHostReservationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    PurchaseHostReservationRequestPrivate(const EC2::Action action,
+    PurchaseHostReservationRequestPrivate(const EC2Request::Action action,
                                    PurchaseHostReservationRequest * const q);
     PurchaseHostReservationRequestPrivate(const PurchaseHostReservationRequestPrivate &other,
                                    PurchaseHostReservationRequest * const q);

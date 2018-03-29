@@ -31,7 +31,7 @@ class DecryptRequest;
 class QTAWS_EXPORT DecryptRequestPrivate : public KMSRequestPrivate {
 
 public:
-    DecryptRequestPrivate(const KMS::Action action,
+    DecryptRequestPrivate(const KMSRequest::Action action,
                                    DecryptRequest * const q);
     DecryptRequestPrivate(const DecryptRequestPrivate &other,
                                    DecryptRequest * const q);

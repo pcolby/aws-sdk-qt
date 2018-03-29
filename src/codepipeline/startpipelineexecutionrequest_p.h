@@ -31,7 +31,7 @@ class StartPipelineExecutionRequest;
 class QTAWS_EXPORT StartPipelineExecutionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    StartPipelineExecutionRequestPrivate(const CodePipeline::Action action,
+    StartPipelineExecutionRequestPrivate(const CodePipelineRequest::Action action,
                                    StartPipelineExecutionRequest * const q);
     StartPipelineExecutionRequestPrivate(const StartPipelineExecutionRequestPrivate &other,
                                    StartPipelineExecutionRequest * const q);

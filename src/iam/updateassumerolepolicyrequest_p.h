@@ -31,7 +31,7 @@ class UpdateAssumeRolePolicyRequest;
 class QTAWS_EXPORT UpdateAssumeRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateAssumeRolePolicyRequestPrivate(const IAM::Action action,
+    UpdateAssumeRolePolicyRequestPrivate(const IAMRequest::Action action,
                                    UpdateAssumeRolePolicyRequest * const q);
     UpdateAssumeRolePolicyRequestPrivate(const UpdateAssumeRolePolicyRequestPrivate &other,
                                    UpdateAssumeRolePolicyRequest * const q);

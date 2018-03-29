@@ -31,7 +31,7 @@ class AssociateConnectionWithLagRequest;
 class QTAWS_EXPORT AssociateConnectionWithLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    AssociateConnectionWithLagRequestPrivate(const DirectConnect::Action action,
+    AssociateConnectionWithLagRequestPrivate(const DirectConnectRequest::Action action,
                                    AssociateConnectionWithLagRequest * const q);
     AssociateConnectionWithLagRequestPrivate(const AssociateConnectionWithLagRequestPrivate &other,
                                    AssociateConnectionWithLagRequest * const q);

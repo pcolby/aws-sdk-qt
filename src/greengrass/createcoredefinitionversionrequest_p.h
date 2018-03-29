@@ -31,7 +31,7 @@ class CreateCoreDefinitionVersionRequest;
 class QTAWS_EXPORT CreateCoreDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateCoreDefinitionVersionRequestPrivate(const Greengrass::Action action,
+    CreateCoreDefinitionVersionRequestPrivate(const GreengrassRequest::Action action,
                                    CreateCoreDefinitionVersionRequest * const q);
     CreateCoreDefinitionVersionRequestPrivate(const CreateCoreDefinitionVersionRequestPrivate &other,
                                    CreateCoreDefinitionVersionRequest * const q);

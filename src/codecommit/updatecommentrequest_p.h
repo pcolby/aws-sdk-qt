@@ -31,7 +31,7 @@ class UpdateCommentRequest;
 class QTAWS_EXPORT UpdateCommentRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    UpdateCommentRequestPrivate(const CodeCommit::Action action,
+    UpdateCommentRequestPrivate(const CodeCommitRequest::Action action,
                                    UpdateCommentRequest * const q);
     UpdateCommentRequestPrivate(const UpdateCommentRequestPrivate &other,
                                    UpdateCommentRequest * const q);

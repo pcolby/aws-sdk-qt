@@ -31,7 +31,7 @@ class DeleteListenerRequest;
 class QTAWS_EXPORT DeleteListenerRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DeleteListenerRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DeleteListenerRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DeleteListenerRequest * const q);
     DeleteListenerRequestPrivate(const DeleteListenerRequestPrivate &other,
                                    DeleteListenerRequest * const q);

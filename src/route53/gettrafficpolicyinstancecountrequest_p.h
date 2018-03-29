@@ -31,7 +31,7 @@ class GetTrafficPolicyInstanceCountRequest;
 class QTAWS_EXPORT GetTrafficPolicyInstanceCountRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetTrafficPolicyInstanceCountRequestPrivate(const Route53::Action action,
+    GetTrafficPolicyInstanceCountRequestPrivate(const Route53Request::Action action,
                                    GetTrafficPolicyInstanceCountRequest * const q);
     GetTrafficPolicyInstanceCountRequestPrivate(const GetTrafficPolicyInstanceCountRequestPrivate &other,
                                    GetTrafficPolicyInstanceCountRequest * const q);

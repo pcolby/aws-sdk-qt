@@ -31,7 +31,7 @@ class DescribeMigrationTaskRequest;
 class QTAWS_EXPORT DescribeMigrationTaskRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    DescribeMigrationTaskRequestPrivate(const MigrationHub::Action action,
+    DescribeMigrationTaskRequestPrivate(const MigrationHubRequest::Action action,
                                    DescribeMigrationTaskRequest * const q);
     DescribeMigrationTaskRequestPrivate(const DescribeMigrationTaskRequestPrivate &other,
                                    DescribeMigrationTaskRequest * const q);

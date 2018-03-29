@@ -31,7 +31,7 @@ class GetDiscoveredResourceCountsRequest;
 class QTAWS_EXPORT GetDiscoveredResourceCountsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    GetDiscoveredResourceCountsRequestPrivate(const ConfigService::Action action,
+    GetDiscoveredResourceCountsRequestPrivate(const ConfigServiceRequest::Action action,
                                    GetDiscoveredResourceCountsRequest * const q);
     GetDiscoveredResourceCountsRequestPrivate(const GetDiscoveredResourceCountsRequestPrivate &other,
                                    GetDiscoveredResourceCountsRequest * const q);

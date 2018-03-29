@@ -31,7 +31,7 @@ class CreateSubscriptionRequest;
 class QTAWS_EXPORT CreateSubscriptionRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    CreateSubscriptionRequestPrivate(const Shield::Action action,
+    CreateSubscriptionRequestPrivate(const ShieldRequest::Action action,
                                    CreateSubscriptionRequest * const q);
     CreateSubscriptionRequestPrivate(const CreateSubscriptionRequestPrivate &other,
                                    CreateSubscriptionRequest * const q);

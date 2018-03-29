@@ -31,7 +31,7 @@ class CreateImageRequest;
 class QTAWS_EXPORT CreateImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateImageRequestPrivate(const EC2::Action action,
+    CreateImageRequestPrivate(const EC2Request::Action action,
                                    CreateImageRequest * const q);
     CreateImageRequestPrivate(const CreateImageRequestPrivate &other,
                                    CreateImageRequest * const q);

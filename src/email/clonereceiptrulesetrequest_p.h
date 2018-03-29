@@ -31,7 +31,7 @@ class CloneReceiptRuleSetRequest;
 class QTAWS_EXPORT CloneReceiptRuleSetRequestPrivate : public SESRequestPrivate {
 
 public:
-    CloneReceiptRuleSetRequestPrivate(const SES::Action action,
+    CloneReceiptRuleSetRequestPrivate(const SESRequest::Action action,
                                    CloneReceiptRuleSetRequest * const q);
     CloneReceiptRuleSetRequestPrivate(const CloneReceiptRuleSetRequestPrivate &other,
                                    CloneReceiptRuleSetRequest * const q);

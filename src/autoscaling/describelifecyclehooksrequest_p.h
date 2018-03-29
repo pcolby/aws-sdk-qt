@@ -31,7 +31,7 @@ class DescribeLifecycleHooksRequest;
 class QTAWS_EXPORT DescribeLifecycleHooksRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DescribeLifecycleHooksRequestPrivate(const AutoScaling::Action action,
+    DescribeLifecycleHooksRequestPrivate(const AutoScalingRequest::Action action,
                                    DescribeLifecycleHooksRequest * const q);
     DescribeLifecycleHooksRequestPrivate(const DescribeLifecycleHooksRequestPrivate &other,
                                    DescribeLifecycleHooksRequest * const q);

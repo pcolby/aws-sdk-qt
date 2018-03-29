@@ -31,7 +31,7 @@ class DescribeResourceGroupsRequest;
 class QTAWS_EXPORT DescribeResourceGroupsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    DescribeResourceGroupsRequestPrivate(const Inspector::Action action,
+    DescribeResourceGroupsRequestPrivate(const InspectorRequest::Action action,
                                    DescribeResourceGroupsRequest * const q);
     DescribeResourceGroupsRequestPrivate(const DescribeResourceGroupsRequestPrivate &other,
                                    DescribeResourceGroupsRequest * const q);

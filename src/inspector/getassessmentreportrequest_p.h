@@ -31,7 +31,7 @@ class GetAssessmentReportRequest;
 class QTAWS_EXPORT GetAssessmentReportRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    GetAssessmentReportRequestPrivate(const Inspector::Action action,
+    GetAssessmentReportRequestPrivate(const InspectorRequest::Action action,
                                    GetAssessmentReportRequest * const q);
     GetAssessmentReportRequestPrivate(const GetAssessmentReportRequestPrivate &other,
                                    GetAssessmentReportRequest * const q);

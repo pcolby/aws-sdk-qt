@@ -31,7 +31,7 @@ class DeleteDataSourceRequest;
 class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    DeleteDataSourceRequestPrivate(const AppSync::Action action,
+    DeleteDataSourceRequestPrivate(const AppSyncRequest::Action action,
                                    DeleteDataSourceRequest * const q);
     DeleteDataSourceRequestPrivate(const DeleteDataSourceRequestPrivate &other,
                                    DeleteDataSourceRequest * const q);

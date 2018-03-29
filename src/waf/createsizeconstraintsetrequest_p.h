@@ -31,7 +31,7 @@ class CreateSizeConstraintSetRequest;
 class QTAWS_EXPORT CreateSizeConstraintSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    CreateSizeConstraintSetRequestPrivate(const WAF::Action action,
+    CreateSizeConstraintSetRequestPrivate(const WAFRequest::Action action,
                                    CreateSizeConstraintSetRequest * const q);
     CreateSizeConstraintSetRequestPrivate(const CreateSizeConstraintSetRequestPrivate &other,
                                    CreateSizeConstraintSetRequest * const q);

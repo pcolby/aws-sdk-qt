@@ -31,7 +31,7 @@ class SkipWaitTimeForInstanceTerminationRequest;
 class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    SkipWaitTimeForInstanceTerminationRequestPrivate(const CodeDeploy::Action action,
+    SkipWaitTimeForInstanceTerminationRequestPrivate(const CodeDeployRequest::Action action,
                                    SkipWaitTimeForInstanceTerminationRequest * const q);
     SkipWaitTimeForInstanceTerminationRequestPrivate(const SkipWaitTimeForInstanceTerminationRequestPrivate &other,
                                    SkipWaitTimeForInstanceTerminationRequest * const q);

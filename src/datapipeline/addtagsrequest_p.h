@@ -31,7 +31,7 @@ class AddTagsRequest;
 class QTAWS_EXPORT AddTagsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    AddTagsRequestPrivate(const DataPipeline::Action action,
+    AddTagsRequestPrivate(const DataPipelineRequest::Action action,
                                    AddTagsRequest * const q);
     AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
                                    AddTagsRequest * const q);

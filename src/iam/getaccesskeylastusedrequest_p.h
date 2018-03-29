@@ -31,7 +31,7 @@ class GetAccessKeyLastUsedRequest;
 class QTAWS_EXPORT GetAccessKeyLastUsedRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetAccessKeyLastUsedRequestPrivate(const IAM::Action action,
+    GetAccessKeyLastUsedRequestPrivate(const IAMRequest::Action action,
                                    GetAccessKeyLastUsedRequest * const q);
     GetAccessKeyLastUsedRequestPrivate(const GetAccessKeyLastUsedRequestPrivate &other,
                                    GetAccessKeyLastUsedRequest * const q);

@@ -31,7 +31,7 @@ class SetLoadBalancerPoliciesOfListenerRequest;
 class QTAWS_EXPORT SetLoadBalancerPoliciesOfListenerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    SetLoadBalancerPoliciesOfListenerRequestPrivate(const ElasticLoadBalancing::Action action,
+    SetLoadBalancerPoliciesOfListenerRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    SetLoadBalancerPoliciesOfListenerRequest * const q);
     SetLoadBalancerPoliciesOfListenerRequestPrivate(const SetLoadBalancerPoliciesOfListenerRequestPrivate &other,
                                    SetLoadBalancerPoliciesOfListenerRequest * const q);

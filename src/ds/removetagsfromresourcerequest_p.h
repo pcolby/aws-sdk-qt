@@ -31,7 +31,7 @@ class RemoveTagsFromResourceRequest;
 class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const DirectoryService::Action action,
+    RemoveTagsFromResourceRequestPrivate(const DirectoryServiceRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);

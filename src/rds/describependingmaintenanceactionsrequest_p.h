@@ -31,7 +31,7 @@ class DescribePendingMaintenanceActionsRequest;
 class QTAWS_EXPORT DescribePendingMaintenanceActionsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribePendingMaintenanceActionsRequestPrivate(const RDS::Action action,
+    DescribePendingMaintenanceActionsRequestPrivate(const RDSRequest::Action action,
                                    DescribePendingMaintenanceActionsRequest * const q);
     DescribePendingMaintenanceActionsRequestPrivate(const DescribePendingMaintenanceActionsRequestPrivate &other,
                                    DescribePendingMaintenanceActionsRequest * const q);

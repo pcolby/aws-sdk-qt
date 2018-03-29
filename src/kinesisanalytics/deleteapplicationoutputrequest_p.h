@@ -31,7 +31,7 @@ class DeleteApplicationOutputRequest;
 class QTAWS_EXPORT DeleteApplicationOutputRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    DeleteApplicationOutputRequestPrivate(const KinesisAnalytics::Action action,
+    DeleteApplicationOutputRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    DeleteApplicationOutputRequest * const q);
     DeleteApplicationOutputRequestPrivate(const DeleteApplicationOutputRequestPrivate &other,
                                    DeleteApplicationOutputRequest * const q);

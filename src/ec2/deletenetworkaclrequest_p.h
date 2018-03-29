@@ -31,7 +31,7 @@ class DeleteNetworkAclRequest;
 class QTAWS_EXPORT DeleteNetworkAclRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteNetworkAclRequestPrivate(const EC2::Action action,
+    DeleteNetworkAclRequestPrivate(const EC2Request::Action action,
                                    DeleteNetworkAclRequest * const q);
     DeleteNetworkAclRequestPrivate(const DeleteNetworkAclRequestPrivate &other,
                                    DeleteNetworkAclRequest * const q);

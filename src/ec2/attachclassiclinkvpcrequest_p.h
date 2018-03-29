@@ -31,7 +31,7 @@ class AttachClassicLinkVpcRequest;
 class QTAWS_EXPORT AttachClassicLinkVpcRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AttachClassicLinkVpcRequestPrivate(const EC2::Action action,
+    AttachClassicLinkVpcRequestPrivate(const EC2Request::Action action,
                                    AttachClassicLinkVpcRequest * const q);
     AttachClassicLinkVpcRequestPrivate(const AttachClassicLinkVpcRequestPrivate &other,
                                    AttachClassicLinkVpcRequest * const q);

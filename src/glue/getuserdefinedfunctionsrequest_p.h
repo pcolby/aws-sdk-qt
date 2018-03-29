@@ -31,7 +31,7 @@ class GetUserDefinedFunctionsRequest;
 class QTAWS_EXPORT GetUserDefinedFunctionsRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetUserDefinedFunctionsRequestPrivate(const Glue::Action action,
+    GetUserDefinedFunctionsRequestPrivate(const GlueRequest::Action action,
                                    GetUserDefinedFunctionsRequest * const q);
     GetUserDefinedFunctionsRequestPrivate(const GetUserDefinedFunctionsRequestPrivate &other,
                                    GetUserDefinedFunctionsRequest * const q);

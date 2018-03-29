@@ -31,7 +31,7 @@ class DeleteIdentityRequest;
 class QTAWS_EXPORT DeleteIdentityRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteIdentityRequestPrivate(const SES::Action action,
+    DeleteIdentityRequestPrivate(const SESRequest::Action action,
                                    DeleteIdentityRequest * const q);
     DeleteIdentityRequestPrivate(const DeleteIdentityRequestPrivate &other,
                                    DeleteIdentityRequest * const q);

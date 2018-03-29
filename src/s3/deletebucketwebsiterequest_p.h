@@ -31,7 +31,7 @@ class DeleteBucketWebsiteRequest;
 class QTAWS_EXPORT DeleteBucketWebsiteRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketWebsiteRequestPrivate(const S3::Action action,
+    DeleteBucketWebsiteRequestPrivate(const S3Request::Action action,
                                    DeleteBucketWebsiteRequest * const q);
     DeleteBucketWebsiteRequestPrivate(const DeleteBucketWebsiteRequestPrivate &other,
                                    DeleteBucketWebsiteRequest * const q);

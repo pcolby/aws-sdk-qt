@@ -31,7 +31,7 @@ class GetCommandInvocationRequest;
 class QTAWS_EXPORT GetCommandInvocationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetCommandInvocationRequestPrivate(const SSM::Action action,
+    GetCommandInvocationRequestPrivate(const SSMRequest::Action action,
                                    GetCommandInvocationRequest * const q);
     GetCommandInvocationRequestPrivate(const GetCommandInvocationRequestPrivate &other,
                                    GetCommandInvocationRequest * const q);

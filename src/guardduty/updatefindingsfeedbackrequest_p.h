@@ -31,7 +31,7 @@ class UpdateFindingsFeedbackRequest;
 class QTAWS_EXPORT UpdateFindingsFeedbackRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    UpdateFindingsFeedbackRequestPrivate(const GuardDuty::Action action,
+    UpdateFindingsFeedbackRequestPrivate(const GuardDutyRequest::Action action,
                                    UpdateFindingsFeedbackRequest * const q);
     UpdateFindingsFeedbackRequestPrivate(const UpdateFindingsFeedbackRequestPrivate &other,
                                    UpdateFindingsFeedbackRequest * const q);

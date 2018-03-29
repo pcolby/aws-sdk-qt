@@ -31,7 +31,7 @@ class DetectKeyPhrasesRequest;
 class QTAWS_EXPORT DetectKeyPhrasesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    DetectKeyPhrasesRequestPrivate(const Comprehend::Action action,
+    DetectKeyPhrasesRequestPrivate(const ComprehendRequest::Action action,
                                    DetectKeyPhrasesRequest * const q);
     DetectKeyPhrasesRequestPrivate(const DetectKeyPhrasesRequestPrivate &other,
                                    DetectKeyPhrasesRequest * const q);

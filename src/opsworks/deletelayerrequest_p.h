@@ -31,7 +31,7 @@ class DeleteLayerRequest;
 class QTAWS_EXPORT DeleteLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeleteLayerRequestPrivate(const OpsWorks::Action action,
+    DeleteLayerRequestPrivate(const OpsWorksRequest::Action action,
                                    DeleteLayerRequest * const q);
     DeleteLayerRequestPrivate(const DeleteLayerRequestPrivate &other,
                                    DeleteLayerRequest * const q);

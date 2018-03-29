@@ -31,7 +31,7 @@ class GetBlueprintsRequest;
 class QTAWS_EXPORT GetBlueprintsRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetBlueprintsRequestPrivate(const Lightsail::Action action,
+    GetBlueprintsRequestPrivate(const LightsailRequest::Action action,
                                    GetBlueprintsRequest * const q);
     GetBlueprintsRequestPrivate(const GetBlueprintsRequestPrivate &other,
                                    GetBlueprintsRequest * const q);

@@ -31,7 +31,7 @@ class AssociateTargetsWithJobRequest;
 class QTAWS_EXPORT AssociateTargetsWithJobRequestPrivate : public IoTRequestPrivate {
 
 public:
-    AssociateTargetsWithJobRequestPrivate(const IoT::Action action,
+    AssociateTargetsWithJobRequestPrivate(const IoTRequest::Action action,
                                    AssociateTargetsWithJobRequest * const q);
     AssociateTargetsWithJobRequestPrivate(const AssociateTargetsWithJobRequestPrivate &other,
                                    AssociateTargetsWithJobRequest * const q);

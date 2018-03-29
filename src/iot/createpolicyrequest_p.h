@@ -31,7 +31,7 @@ class CreatePolicyRequest;
 class QTAWS_EXPORT CreatePolicyRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreatePolicyRequestPrivate(const IoT::Action action,
+    CreatePolicyRequestPrivate(const IoTRequest::Action action,
                                    CreatePolicyRequest * const q);
     CreatePolicyRequestPrivate(const CreatePolicyRequestPrivate &other,
                                    CreatePolicyRequest * const q);

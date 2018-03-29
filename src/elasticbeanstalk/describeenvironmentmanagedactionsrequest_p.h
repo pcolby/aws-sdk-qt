@@ -31,7 +31,7 @@ class DescribeEnvironmentManagedActionsRequest;
 class QTAWS_EXPORT DescribeEnvironmentManagedActionsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeEnvironmentManagedActionsRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeEnvironmentManagedActionsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeEnvironmentManagedActionsRequest * const q);
     DescribeEnvironmentManagedActionsRequestPrivate(const DescribeEnvironmentManagedActionsRequestPrivate &other,
                                    DescribeEnvironmentManagedActionsRequest * const q);

@@ -31,7 +31,7 @@ class RetryStageExecutionRequest;
 class QTAWS_EXPORT RetryStageExecutionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    RetryStageExecutionRequestPrivate(const CodePipeline::Action action,
+    RetryStageExecutionRequestPrivate(const CodePipelineRequest::Action action,
                                    RetryStageExecutionRequest * const q);
     RetryStageExecutionRequestPrivate(const RetryStageExecutionRequestPrivate &other,
                                    RetryStageExecutionRequest * const q);

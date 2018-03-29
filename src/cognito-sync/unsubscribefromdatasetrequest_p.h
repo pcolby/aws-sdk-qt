@@ -31,7 +31,7 @@ class UnsubscribeFromDatasetRequest;
 class QTAWS_EXPORT UnsubscribeFromDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    UnsubscribeFromDatasetRequestPrivate(const CognitoSync::Action action,
+    UnsubscribeFromDatasetRequestPrivate(const CognitoSyncRequest::Action action,
                                    UnsubscribeFromDatasetRequest * const q);
     UnsubscribeFromDatasetRequestPrivate(const UnsubscribeFromDatasetRequestPrivate &other,
                                    UnsubscribeFromDatasetRequest * const q);

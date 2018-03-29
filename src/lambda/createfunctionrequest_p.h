@@ -31,7 +31,7 @@ class CreateFunctionRequest;
 class QTAWS_EXPORT CreateFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    CreateFunctionRequestPrivate(const Lambda::Action action,
+    CreateFunctionRequestPrivate(const LambdaRequest::Action action,
                                    CreateFunctionRequest * const q);
     CreateFunctionRequestPrivate(const CreateFunctionRequestPrivate &other,
                                    CreateFunctionRequest * const q);

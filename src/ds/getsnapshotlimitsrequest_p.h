@@ -31,7 +31,7 @@ class GetSnapshotLimitsRequest;
 class QTAWS_EXPORT GetSnapshotLimitsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    GetSnapshotLimitsRequestPrivate(const DirectoryService::Action action,
+    GetSnapshotLimitsRequestPrivate(const DirectoryServiceRequest::Action action,
                                    GetSnapshotLimitsRequest * const q);
     GetSnapshotLimitsRequestPrivate(const GetSnapshotLimitsRequestPrivate &other,
                                    GetSnapshotLimitsRequest * const q);

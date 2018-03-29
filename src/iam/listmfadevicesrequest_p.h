@@ -31,7 +31,7 @@ class ListMFADevicesRequest;
 class QTAWS_EXPORT ListMFADevicesRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListMFADevicesRequestPrivate(const IAM::Action action,
+    ListMFADevicesRequestPrivate(const IAMRequest::Action action,
                                    ListMFADevicesRequest * const q);
     ListMFADevicesRequestPrivate(const ListMFADevicesRequestPrivate &other,
                                    ListMFADevicesRequest * const q);

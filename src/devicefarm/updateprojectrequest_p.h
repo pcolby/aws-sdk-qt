@@ -31,7 +31,7 @@ class UpdateProjectRequest;
 class QTAWS_EXPORT UpdateProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    UpdateProjectRequestPrivate(const DeviceFarm::Action action,
+    UpdateProjectRequestPrivate(const DeviceFarmRequest::Action action,
                                    UpdateProjectRequest * const q);
     UpdateProjectRequestPrivate(const UpdateProjectRequestPrivate &other,
                                    UpdateProjectRequest * const q);

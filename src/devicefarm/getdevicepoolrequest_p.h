@@ -31,7 +31,7 @@ class GetDevicePoolRequest;
 class QTAWS_EXPORT GetDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetDevicePoolRequestPrivate(const DeviceFarm::Action action,
+    GetDevicePoolRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetDevicePoolRequest * const q);
     GetDevicePoolRequestPrivate(const GetDevicePoolRequestPrivate &other,
                                    GetDevicePoolRequest * const q);

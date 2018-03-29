@@ -31,7 +31,7 @@ class PurchaseReservedInstancesOfferingRequest;
 class QTAWS_EXPORT PurchaseReservedInstancesOfferingRequestPrivate : public EC2RequestPrivate {
 
 public:
-    PurchaseReservedInstancesOfferingRequestPrivate(const EC2::Action action,
+    PurchaseReservedInstancesOfferingRequestPrivate(const EC2Request::Action action,
                                    PurchaseReservedInstancesOfferingRequest * const q);
     PurchaseReservedInstancesOfferingRequestPrivate(const PurchaseReservedInstancesOfferingRequestPrivate &other,
                                    PurchaseReservedInstancesOfferingRequest * const q);

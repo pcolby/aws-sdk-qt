@@ -31,7 +31,7 @@ class GetCampaignVersionRequest;
 class QTAWS_EXPORT GetCampaignVersionRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetCampaignVersionRequestPrivate(const Pinpoint::Action action,
+    GetCampaignVersionRequestPrivate(const PinpointRequest::Action action,
                                    GetCampaignVersionRequest * const q);
     GetCampaignVersionRequestPrivate(const GetCampaignVersionRequestPrivate &other,
                                    GetCampaignVersionRequest * const q);

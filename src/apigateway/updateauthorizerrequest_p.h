@@ -31,7 +31,7 @@ class UpdateAuthorizerRequest;
 class QTAWS_EXPORT UpdateAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateAuthorizerRequestPrivate(const APIGateway::Action action,
+    UpdateAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateAuthorizerRequest * const q);
     UpdateAuthorizerRequestPrivate(const UpdateAuthorizerRequestPrivate &other,
                                    UpdateAuthorizerRequest * const q);

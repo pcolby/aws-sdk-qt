@@ -31,7 +31,7 @@ class DeleteEnvironmentConfigurationRequest;
 class QTAWS_EXPORT DeleteEnvironmentConfigurationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DeleteEnvironmentConfigurationRequestPrivate(const ElasticBeanstalk::Action action,
+    DeleteEnvironmentConfigurationRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DeleteEnvironmentConfigurationRequest * const q);
     DeleteEnvironmentConfigurationRequestPrivate(const DeleteEnvironmentConfigurationRequestPrivate &other,
                                    DeleteEnvironmentConfigurationRequest * const q);

@@ -31,7 +31,7 @@ class DeleteSnapshotCopyGrantRequest;
 class QTAWS_EXPORT DeleteSnapshotCopyGrantRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteSnapshotCopyGrantRequestPrivate(const Redshift::Action action,
+    DeleteSnapshotCopyGrantRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteSnapshotCopyGrantRequest * const q);
     DeleteSnapshotCopyGrantRequestPrivate(const DeleteSnapshotCopyGrantRequestPrivate &other,
                                    DeleteSnapshotCopyGrantRequest * const q);

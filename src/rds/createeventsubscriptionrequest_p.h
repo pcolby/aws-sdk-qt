@@ -31,7 +31,7 @@ class CreateEventSubscriptionRequest;
 class QTAWS_EXPORT CreateEventSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateEventSubscriptionRequestPrivate(const RDS::Action action,
+    CreateEventSubscriptionRequestPrivate(const RDSRequest::Action action,
                                    CreateEventSubscriptionRequest * const q);
     CreateEventSubscriptionRequestPrivate(const CreateEventSubscriptionRequestPrivate &other,
                                    CreateEventSubscriptionRequest * const q);

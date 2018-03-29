@@ -31,7 +31,7 @@ class GetPermissionPolicyRequest;
 class QTAWS_EXPORT GetPermissionPolicyRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetPermissionPolicyRequestPrivate(const WAF::Action action,
+    GetPermissionPolicyRequestPrivate(const WAFRequest::Action action,
                                    GetPermissionPolicyRequest * const q);
     GetPermissionPolicyRequestPrivate(const GetPermissionPolicyRequestPrivate &other,
                                    GetPermissionPolicyRequest * const q);

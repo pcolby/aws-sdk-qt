@@ -31,7 +31,7 @@ class DescribeEnvironmentsRequest;
 class QTAWS_EXPORT DescribeEnvironmentsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeEnvironmentsRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeEnvironmentsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeEnvironmentsRequest * const q);
     DescribeEnvironmentsRequestPrivate(const DescribeEnvironmentsRequestPrivate &other,
                                    DescribeEnvironmentsRequest * const q);

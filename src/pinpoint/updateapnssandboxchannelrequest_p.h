@@ -31,7 +31,7 @@ class UpdateApnsSandboxChannelRequest;
 class QTAWS_EXPORT UpdateApnsSandboxChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateApnsSandboxChannelRequestPrivate(const Pinpoint::Action action,
+    UpdateApnsSandboxChannelRequestPrivate(const PinpointRequest::Action action,
                                    UpdateApnsSandboxChannelRequest * const q);
     UpdateApnsSandboxChannelRequestPrivate(const UpdateApnsSandboxChannelRequestPrivate &other,
                                    UpdateApnsSandboxChannelRequest * const q);

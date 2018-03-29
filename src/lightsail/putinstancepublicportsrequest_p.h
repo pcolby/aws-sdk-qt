@@ -31,7 +31,7 @@ class PutInstancePublicPortsRequest;
 class QTAWS_EXPORT PutInstancePublicPortsRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    PutInstancePublicPortsRequestPrivate(const Lightsail::Action action,
+    PutInstancePublicPortsRequestPrivate(const LightsailRequest::Action action,
                                    PutInstancePublicPortsRequest * const q);
     PutInstancePublicPortsRequestPrivate(const PutInstancePublicPortsRequestPrivate &other,
                                    PutInstancePublicPortsRequest * const q);

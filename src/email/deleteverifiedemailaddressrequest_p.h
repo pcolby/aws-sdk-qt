@@ -31,7 +31,7 @@ class DeleteVerifiedEmailAddressRequest;
 class QTAWS_EXPORT DeleteVerifiedEmailAddressRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteVerifiedEmailAddressRequestPrivate(const SES::Action action,
+    DeleteVerifiedEmailAddressRequestPrivate(const SESRequest::Action action,
                                    DeleteVerifiedEmailAddressRequest * const q);
     DeleteVerifiedEmailAddressRequestPrivate(const DeleteVerifiedEmailAddressRequestPrivate &other,
                                    DeleteVerifiedEmailAddressRequest * const q);

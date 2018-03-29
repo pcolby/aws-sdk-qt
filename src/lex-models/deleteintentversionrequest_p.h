@@ -31,7 +31,7 @@ class DeleteIntentVersionRequest;
 class QTAWS_EXPORT DeleteIntentVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteIntentVersionRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteIntentVersionRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteIntentVersionRequest * const q);
     DeleteIntentVersionRequestPrivate(const DeleteIntentVersionRequestPrivate &other,
                                    DeleteIntentVersionRequest * const q);

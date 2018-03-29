@@ -31,7 +31,7 @@ class GetSubscriptionStateRequest;
 class QTAWS_EXPORT GetSubscriptionStateRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    GetSubscriptionStateRequestPrivate(const Shield::Action action,
+    GetSubscriptionStateRequestPrivate(const ShieldRequest::Action action,
                                    GetSubscriptionStateRequest * const q);
     GetSubscriptionStateRequestPrivate(const GetSubscriptionStateRequestPrivate &other,
                                    GetSubscriptionStateRequest * const q);

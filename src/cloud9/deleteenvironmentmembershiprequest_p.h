@@ -31,7 +31,7 @@ class DeleteEnvironmentMembershipRequest;
 class QTAWS_EXPORT DeleteEnvironmentMembershipRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    DeleteEnvironmentMembershipRequestPrivate(const Cloud9::Action action,
+    DeleteEnvironmentMembershipRequestPrivate(const Cloud9Request::Action action,
                                    DeleteEnvironmentMembershipRequest * const q);
     DeleteEnvironmentMembershipRequestPrivate(const DeleteEnvironmentMembershipRequestPrivate &other,
                                    DeleteEnvironmentMembershipRequest * const q);

@@ -31,7 +31,7 @@ class UpdatePrimaryEmailAddressRequest;
 class QTAWS_EXPORT UpdatePrimaryEmailAddressRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    UpdatePrimaryEmailAddressRequestPrivate(const WorkMail::Action action,
+    UpdatePrimaryEmailAddressRequestPrivate(const WorkMailRequest::Action action,
                                    UpdatePrimaryEmailAddressRequest * const q);
     UpdatePrimaryEmailAddressRequestPrivate(const UpdatePrimaryEmailAddressRequestPrivate &other,
                                    UpdatePrimaryEmailAddressRequest * const q);

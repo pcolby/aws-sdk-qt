@@ -31,7 +31,7 @@ class CreateOriginEndpointRequest;
 class QTAWS_EXPORT CreateOriginEndpointRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    CreateOriginEndpointRequestPrivate(const MediaPackage::Action action,
+    CreateOriginEndpointRequestPrivate(const MediaPackageRequest::Action action,
                                    CreateOriginEndpointRequest * const q);
     CreateOriginEndpointRequestPrivate(const CreateOriginEndpointRequestPrivate &other,
                                    CreateOriginEndpointRequest * const q);

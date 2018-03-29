@@ -31,7 +31,7 @@ class CreateEventSubscriptionRequest;
 class QTAWS_EXPORT CreateEventSubscriptionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    CreateEventSubscriptionRequestPrivate(const DatabaseMigrationService::Action action,
+    CreateEventSubscriptionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    CreateEventSubscriptionRequest * const q);
     CreateEventSubscriptionRequestPrivate(const CreateEventSubscriptionRequestPrivate &other,
                                    CreateEventSubscriptionRequest * const q);

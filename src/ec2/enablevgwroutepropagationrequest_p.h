@@ -31,7 +31,7 @@ class EnableVgwRoutePropagationRequest;
 class QTAWS_EXPORT EnableVgwRoutePropagationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    EnableVgwRoutePropagationRequestPrivate(const EC2::Action action,
+    EnableVgwRoutePropagationRequestPrivate(const EC2Request::Action action,
                                    EnableVgwRoutePropagationRequest * const q);
     EnableVgwRoutePropagationRequestPrivate(const EnableVgwRoutePropagationRequestPrivate &other,
                                    EnableVgwRoutePropagationRequest * const q);

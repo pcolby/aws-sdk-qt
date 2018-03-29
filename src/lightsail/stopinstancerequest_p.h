@@ -31,7 +31,7 @@ class StopInstanceRequest;
 class QTAWS_EXPORT StopInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    StopInstanceRequestPrivate(const Lightsail::Action action,
+    StopInstanceRequestPrivate(const LightsailRequest::Action action,
                                    StopInstanceRequest * const q);
     StopInstanceRequestPrivate(const StopInstanceRequestPrivate &other,
                                    StopInstanceRequest * const q);

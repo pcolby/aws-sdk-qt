@@ -31,7 +31,7 @@ class DescribeReservedCacheNodesOfferingsRequest;
 class QTAWS_EXPORT DescribeReservedCacheNodesOfferingsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeReservedCacheNodesOfferingsRequestPrivate(const ElastiCache::Action action,
+    DescribeReservedCacheNodesOfferingsRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeReservedCacheNodesOfferingsRequest * const q);
     DescribeReservedCacheNodesOfferingsRequestPrivate(const DescribeReservedCacheNodesOfferingsRequestPrivate &other,
                                    DescribeReservedCacheNodesOfferingsRequest * const q);

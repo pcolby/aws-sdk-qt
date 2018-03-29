@@ -31,7 +31,7 @@ class CopySnapshotRequest;
 class QTAWS_EXPORT CopySnapshotRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    CopySnapshotRequestPrivate(const ElastiCache::Action action,
+    CopySnapshotRequestPrivate(const ElastiCacheRequest::Action action,
                                    CopySnapshotRequest * const q);
     CopySnapshotRequestPrivate(const CopySnapshotRequestPrivate &other,
                                    CopySnapshotRequest * const q);

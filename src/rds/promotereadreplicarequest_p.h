@@ -31,7 +31,7 @@ class PromoteReadReplicaRequest;
 class QTAWS_EXPORT PromoteReadReplicaRequestPrivate : public RDSRequestPrivate {
 
 public:
-    PromoteReadReplicaRequestPrivate(const RDS::Action action,
+    PromoteReadReplicaRequestPrivate(const RDSRequest::Action action,
                                    PromoteReadReplicaRequest * const q);
     PromoteReadReplicaRequestPrivate(const PromoteReadReplicaRequestPrivate &other,
                                    PromoteReadReplicaRequest * const q);

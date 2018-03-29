@@ -31,7 +31,7 @@ class UpdateAccountPasswordPolicyRequest;
 class QTAWS_EXPORT UpdateAccountPasswordPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateAccountPasswordPolicyRequestPrivate(const IAM::Action action,
+    UpdateAccountPasswordPolicyRequestPrivate(const IAMRequest::Action action,
                                    UpdateAccountPasswordPolicyRequest * const q);
     UpdateAccountPasswordPolicyRequestPrivate(const UpdateAccountPasswordPolicyRequestPrivate &other,
                                    UpdateAccountPasswordPolicyRequest * const q);

@@ -31,7 +31,7 @@ class DeregisterVolumeRequest;
 class QTAWS_EXPORT DeregisterVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeregisterVolumeRequestPrivate(const OpsWorks::Action action,
+    DeregisterVolumeRequestPrivate(const OpsWorksRequest::Action action,
                                    DeregisterVolumeRequest * const q);
     DeregisterVolumeRequestPrivate(const DeregisterVolumeRequestPrivate &other,
                                    DeregisterVolumeRequest * const q);

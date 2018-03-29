@@ -31,7 +31,7 @@ class UpdateClassifierRequest;
 class QTAWS_EXPORT UpdateClassifierRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateClassifierRequestPrivate(const Glue::Action action,
+    UpdateClassifierRequestPrivate(const GlueRequest::Action action,
                                    UpdateClassifierRequest * const q);
     UpdateClassifierRequestPrivate(const UpdateClassifierRequestPrivate &other,
                                    UpdateClassifierRequest * const q);

@@ -31,7 +31,7 @@ class DeleteGeoMatchSetRequest;
 class QTAWS_EXPORT DeleteGeoMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteGeoMatchSetRequestPrivate(const WAF::Action action,
+    DeleteGeoMatchSetRequestPrivate(const WAFRequest::Action action,
                                    DeleteGeoMatchSetRequest * const q);
     DeleteGeoMatchSetRequestPrivate(const DeleteGeoMatchSetRequestPrivate &other,
                                    DeleteGeoMatchSetRequest * const q);

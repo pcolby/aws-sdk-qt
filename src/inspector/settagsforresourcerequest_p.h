@@ -31,7 +31,7 @@ class SetTagsForResourceRequest;
 class QTAWS_EXPORT SetTagsForResourceRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    SetTagsForResourceRequestPrivate(const Inspector::Action action,
+    SetTagsForResourceRequestPrivate(const InspectorRequest::Action action,
                                    SetTagsForResourceRequest * const q);
     SetTagsForResourceRequestPrivate(const SetTagsForResourceRequestPrivate &other,
                                    SetTagsForResourceRequest * const q);

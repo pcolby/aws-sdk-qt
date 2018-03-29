@@ -31,7 +31,7 @@ class UpdateVTLDeviceTypeRequest;
 class QTAWS_EXPORT UpdateVTLDeviceTypeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateVTLDeviceTypeRequestPrivate(const StorageGateway::Action action,
+    UpdateVTLDeviceTypeRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateVTLDeviceTypeRequest * const q);
     UpdateVTLDeviceTypeRequestPrivate(const UpdateVTLDeviceTypeRequestPrivate &other,
                                    UpdateVTLDeviceTypeRequest * const q);

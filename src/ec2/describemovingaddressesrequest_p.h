@@ -31,7 +31,7 @@ class DescribeMovingAddressesRequest;
 class QTAWS_EXPORT DescribeMovingAddressesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeMovingAddressesRequestPrivate(const EC2::Action action,
+    DescribeMovingAddressesRequestPrivate(const EC2Request::Action action,
                                    DescribeMovingAddressesRequest * const q);
     DescribeMovingAddressesRequestPrivate(const DescribeMovingAddressesRequestPrivate &other,
                                    DescribeMovingAddressesRequest * const q);

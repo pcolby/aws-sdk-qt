@@ -31,7 +31,7 @@ class DescribeTapeArchivesRequest;
 class QTAWS_EXPORT DescribeTapeArchivesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeTapeArchivesRequestPrivate(const StorageGateway::Action action,
+    DescribeTapeArchivesRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeTapeArchivesRequest * const q);
     DescribeTapeArchivesRequestPrivate(const DescribeTapeArchivesRequestPrivate &other,
                                    DescribeTapeArchivesRequest * const q);

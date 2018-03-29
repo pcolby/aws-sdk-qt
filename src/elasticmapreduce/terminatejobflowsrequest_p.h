@@ -31,7 +31,7 @@ class TerminateJobFlowsRequest;
 class QTAWS_EXPORT TerminateJobFlowsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    TerminateJobFlowsRequestPrivate(const EMR::Action action,
+    TerminateJobFlowsRequestPrivate(const EMRRequest::Action action,
                                    TerminateJobFlowsRequest * const q);
     TerminateJobFlowsRequestPrivate(const TerminateJobFlowsRequestPrivate &other,
                                    TerminateJobFlowsRequest * const q);

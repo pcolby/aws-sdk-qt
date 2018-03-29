@@ -31,7 +31,7 @@ class CreateNotificationSubscriptionRequest;
 class QTAWS_EXPORT CreateNotificationSubscriptionRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    CreateNotificationSubscriptionRequestPrivate(const WorkDocs::Action action,
+    CreateNotificationSubscriptionRequestPrivate(const WorkDocsRequest::Action action,
                                    CreateNotificationSubscriptionRequest * const q);
     CreateNotificationSubscriptionRequestPrivate(const CreateNotificationSubscriptionRequestPrivate &other,
                                    CreateNotificationSubscriptionRequest * const q);

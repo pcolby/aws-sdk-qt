@@ -31,7 +31,7 @@ class ListSqlInjectionMatchSetsRequest;
 class QTAWS_EXPORT ListSqlInjectionMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListSqlInjectionMatchSetsRequestPrivate(const WAFRegional::Action action,
+    ListSqlInjectionMatchSetsRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListSqlInjectionMatchSetsRequest * const q);
     ListSqlInjectionMatchSetsRequestPrivate(const ListSqlInjectionMatchSetsRequestPrivate &other,
                                    ListSqlInjectionMatchSetsRequest * const q);

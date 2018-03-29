@@ -31,7 +31,7 @@ class RemoveUserFromGroupRequest;
 class QTAWS_EXPORT RemoveUserFromGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
-    RemoveUserFromGroupRequestPrivate(const IAM::Action action,
+    RemoveUserFromGroupRequestPrivate(const IAMRequest::Action action,
                                    RemoveUserFromGroupRequest * const q);
     RemoveUserFromGroupRequestPrivate(const RemoveUserFromGroupRequestPrivate &other,
                                    RemoveUserFromGroupRequest * const q);

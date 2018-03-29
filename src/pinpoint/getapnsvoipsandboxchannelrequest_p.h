@@ -31,7 +31,7 @@ class GetApnsVoipSandboxChannelRequest;
 class QTAWS_EXPORT GetApnsVoipSandboxChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetApnsVoipSandboxChannelRequestPrivate(const Pinpoint::Action action,
+    GetApnsVoipSandboxChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetApnsVoipSandboxChannelRequest * const q);
     GetApnsVoipSandboxChannelRequestPrivate(const GetApnsVoipSandboxChannelRequestPrivate &other,
                                    GetApnsVoipSandboxChannelRequest * const q);

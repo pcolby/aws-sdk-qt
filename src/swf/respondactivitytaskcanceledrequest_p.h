@@ -31,7 +31,7 @@ class RespondActivityTaskCanceledRequest;
 class QTAWS_EXPORT RespondActivityTaskCanceledRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RespondActivityTaskCanceledRequestPrivate(const SWF::Action action,
+    RespondActivityTaskCanceledRequestPrivate(const SWFRequest::Action action,
                                    RespondActivityTaskCanceledRequest * const q);
     RespondActivityTaskCanceledRequestPrivate(const RespondActivityTaskCanceledRequestPrivate &other,
                                    RespondActivityTaskCanceledRequest * const q);

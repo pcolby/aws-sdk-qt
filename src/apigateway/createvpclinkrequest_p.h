@@ -31,7 +31,7 @@ class CreateVpcLinkRequest;
 class QTAWS_EXPORT CreateVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    CreateVpcLinkRequestPrivate(const APIGateway::Action action,
+    CreateVpcLinkRequestPrivate(const APIGatewayRequest::Action action,
                                    CreateVpcLinkRequest * const q);
     CreateVpcLinkRequestPrivate(const CreateVpcLinkRequestPrivate &other,
                                    CreateVpcLinkRequest * const q);

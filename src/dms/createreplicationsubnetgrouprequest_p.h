@@ -31,7 +31,7 @@ class CreateReplicationSubnetGroupRequest;
 class QTAWS_EXPORT CreateReplicationSubnetGroupRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    CreateReplicationSubnetGroupRequestPrivate(const DatabaseMigrationService::Action action,
+    CreateReplicationSubnetGroupRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    CreateReplicationSubnetGroupRequest * const q);
     CreateReplicationSubnetGroupRequestPrivate(const CreateReplicationSubnetGroupRequestPrivate &other,
                                    CreateReplicationSubnetGroupRequest * const q);

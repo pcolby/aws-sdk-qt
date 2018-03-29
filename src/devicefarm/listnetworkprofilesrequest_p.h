@@ -31,7 +31,7 @@ class ListNetworkProfilesRequest;
 class QTAWS_EXPORT ListNetworkProfilesRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListNetworkProfilesRequestPrivate(const DeviceFarm::Action action,
+    ListNetworkProfilesRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListNetworkProfilesRequest * const q);
     ListNetworkProfilesRequestPrivate(const ListNetworkProfilesRequestPrivate &other,
                                    ListNetworkProfilesRequest * const q);

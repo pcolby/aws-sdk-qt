@@ -31,7 +31,7 @@ class ListShardsRequest;
 class QTAWS_EXPORT ListShardsRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    ListShardsRequestPrivate(const Kinesis::Action action,
+    ListShardsRequestPrivate(const KinesisRequest::Action action,
                                    ListShardsRequest * const q);
     ListShardsRequestPrivate(const ListShardsRequestPrivate &other,
                                    ListShardsRequest * const q);

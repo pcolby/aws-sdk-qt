@@ -31,7 +31,7 @@ class GetOfferingStatusRequest;
 class QTAWS_EXPORT GetOfferingStatusRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetOfferingStatusRequestPrivate(const DeviceFarm::Action action,
+    GetOfferingStatusRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetOfferingStatusRequest * const q);
     GetOfferingStatusRequestPrivate(const GetOfferingStatusRequestPrivate &other,
                                    GetOfferingStatusRequest * const q);

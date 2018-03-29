@@ -31,7 +31,7 @@ class RebootBrokerRequest;
 class QTAWS_EXPORT RebootBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
-    RebootBrokerRequestPrivate(const MQ::Action action,
+    RebootBrokerRequestPrivate(const MQRequest::Action action,
                                    RebootBrokerRequest * const q);
     RebootBrokerRequestPrivate(const RebootBrokerRequestPrivate &other,
                                    RebootBrokerRequest * const q);

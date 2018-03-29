@@ -31,7 +31,7 @@ class ListInstancesRequest;
 class QTAWS_EXPORT ListInstancesRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    ListInstancesRequestPrivate(const ServiceDiscovery::Action action,
+    ListInstancesRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    ListInstancesRequest * const q);
     ListInstancesRequestPrivate(const ListInstancesRequestPrivate &other,
                                    ListInstancesRequest * const q);

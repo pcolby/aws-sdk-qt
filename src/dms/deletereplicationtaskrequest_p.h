@@ -31,7 +31,7 @@ class DeleteReplicationTaskRequest;
 class QTAWS_EXPORT DeleteReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DeleteReplicationTaskRequestPrivate(const DatabaseMigrationService::Action action,
+    DeleteReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DeleteReplicationTaskRequest * const q);
     DeleteReplicationTaskRequestPrivate(const DeleteReplicationTaskRequestPrivate &other,
                                    DeleteReplicationTaskRequest * const q);

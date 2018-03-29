@@ -31,7 +31,7 @@ class GetReservationCoverageRequest;
 class QTAWS_EXPORT GetReservationCoverageRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
-    GetReservationCoverageRequestPrivate(const CostExplorer::Action action,
+    GetReservationCoverageRequestPrivate(const CostExplorerRequest::Action action,
                                    GetReservationCoverageRequest * const q);
     GetReservationCoverageRequestPrivate(const GetReservationCoverageRequestPrivate &other,
                                    GetReservationCoverageRequest * const q);

@@ -31,7 +31,7 @@ class ListItemsRequest;
 class QTAWS_EXPORT ListItemsRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
-    ListItemsRequestPrivate(const MediaStoreData::Action action,
+    ListItemsRequestPrivate(const MediaStoreDataRequest::Action action,
                                    ListItemsRequest * const q);
     ListItemsRequestPrivate(const ListItemsRequestPrivate &other,
                                    ListItemsRequest * const q);

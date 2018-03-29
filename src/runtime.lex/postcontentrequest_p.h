@@ -31,7 +31,7 @@ class PostContentRequest;
 class QTAWS_EXPORT PostContentRequestPrivate : public LexRuntimeServiceRequestPrivate {
 
 public:
-    PostContentRequestPrivate(const LexRuntimeService::Action action,
+    PostContentRequestPrivate(const LexRuntimeServiceRequest::Action action,
                                    PostContentRequest * const q);
     PostContentRequestPrivate(const PostContentRequestPrivate &other,
                                    PostContentRequest * const q);

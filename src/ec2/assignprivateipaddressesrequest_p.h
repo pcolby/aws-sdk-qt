@@ -31,7 +31,7 @@ class AssignPrivateIpAddressesRequest;
 class QTAWS_EXPORT AssignPrivateIpAddressesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AssignPrivateIpAddressesRequestPrivate(const EC2::Action action,
+    AssignPrivateIpAddressesRequestPrivate(const EC2Request::Action action,
                                    AssignPrivateIpAddressesRequest * const q);
     AssignPrivateIpAddressesRequestPrivate(const AssignPrivateIpAddressesRequestPrivate &other,
                                    AssignPrivateIpAddressesRequest * const q);

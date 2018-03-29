@@ -31,7 +31,7 @@ class DescribeSpotFleetRequestHistoryRequest;
 class QTAWS_EXPORT DescribeSpotFleetRequestHistoryRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSpotFleetRequestHistoryRequestPrivate(const EC2::Action action,
+    DescribeSpotFleetRequestHistoryRequestPrivate(const EC2Request::Action action,
                                    DescribeSpotFleetRequestHistoryRequest * const q);
     DescribeSpotFleetRequestHistoryRequestPrivate(const DescribeSpotFleetRequestHistoryRequestPrivate &other,
                                    DescribeSpotFleetRequestHistoryRequest * const q);

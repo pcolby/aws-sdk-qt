@@ -31,7 +31,7 @@ class ModifyReplicationInstanceRequest;
 class QTAWS_EXPORT ModifyReplicationInstanceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ModifyReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,
+    ModifyReplicationInstanceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ModifyReplicationInstanceRequest * const q);
     ModifyReplicationInstanceRequestPrivate(const ModifyReplicationInstanceRequestPrivate &other,
                                    ModifyReplicationInstanceRequest * const q);

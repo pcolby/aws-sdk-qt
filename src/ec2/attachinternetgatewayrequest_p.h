@@ -31,7 +31,7 @@ class AttachInternetGatewayRequest;
 class QTAWS_EXPORT AttachInternetGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AttachInternetGatewayRequestPrivate(const EC2::Action action,
+    AttachInternetGatewayRequestPrivate(const EC2Request::Action action,
                                    AttachInternetGatewayRequest * const q);
     AttachInternetGatewayRequestPrivate(const AttachInternetGatewayRequestPrivate &other,
                                    AttachInternetGatewayRequest * const q);

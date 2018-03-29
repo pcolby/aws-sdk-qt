@@ -31,7 +31,7 @@ class DeleteRealtimeEndpointRequest;
 class QTAWS_EXPORT DeleteRealtimeEndpointRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DeleteRealtimeEndpointRequestPrivate(const MachineLearning::Action action,
+    DeleteRealtimeEndpointRequestPrivate(const MachineLearningRequest::Action action,
                                    DeleteRealtimeEndpointRequest * const q);
     DeleteRealtimeEndpointRequestPrivate(const DeleteRealtimeEndpointRequestPrivate &other,
                                    DeleteRealtimeEndpointRequest * const q);

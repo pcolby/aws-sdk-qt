@@ -31,7 +31,7 @@ class DescribeInstanceAttributeRequest;
 class QTAWS_EXPORT DescribeInstanceAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeInstanceAttributeRequestPrivate(const EC2::Action action,
+    DescribeInstanceAttributeRequestPrivate(const EC2Request::Action action,
                                    DescribeInstanceAttributeRequest * const q);
     DescribeInstanceAttributeRequestPrivate(const DescribeInstanceAttributeRequestPrivate &other,
                                    DescribeInstanceAttributeRequest * const q);

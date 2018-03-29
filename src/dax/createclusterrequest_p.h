@@ -31,7 +31,7 @@ class CreateClusterRequest;
 class QTAWS_EXPORT CreateClusterRequestPrivate : public DAXRequestPrivate {
 
 public:
-    CreateClusterRequestPrivate(const DAX::Action action,
+    CreateClusterRequestPrivate(const DAXRequest::Action action,
                                    CreateClusterRequest * const q);
     CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
                                    CreateClusterRequest * const q);

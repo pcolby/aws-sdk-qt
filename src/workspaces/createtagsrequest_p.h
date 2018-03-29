@@ -31,7 +31,7 @@ class CreateTagsRequest;
 class QTAWS_EXPORT CreateTagsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    CreateTagsRequestPrivate(const WorkSpaces::Action action,
+    CreateTagsRequestPrivate(const WorkSpacesRequest::Action action,
                                    CreateTagsRequest * const q);
     CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
                                    CreateTagsRequest * const q);

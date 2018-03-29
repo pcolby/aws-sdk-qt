@@ -31,7 +31,7 @@ class GetWebACLRequest;
 class QTAWS_EXPORT GetWebACLRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetWebACLRequestPrivate(const WAF::Action action,
+    GetWebACLRequestPrivate(const WAFRequest::Action action,
                                    GetWebACLRequest * const q);
     GetWebACLRequestPrivate(const GetWebACLRequestPrivate &other,
                                    GetWebACLRequest * const q);

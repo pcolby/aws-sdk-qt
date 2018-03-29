@@ -31,7 +31,7 @@ class SetIdentityFeedbackForwardingEnabledRequest;
 class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
-    SetIdentityFeedbackForwardingEnabledRequestPrivate(const SES::Action action,
+    SetIdentityFeedbackForwardingEnabledRequestPrivate(const SESRequest::Action action,
                                    SetIdentityFeedbackForwardingEnabledRequest * const q);
     SetIdentityFeedbackForwardingEnabledRequestPrivate(const SetIdentityFeedbackForwardingEnabledRequestPrivate &other,
                                    SetIdentityFeedbackForwardingEnabledRequest * const q);

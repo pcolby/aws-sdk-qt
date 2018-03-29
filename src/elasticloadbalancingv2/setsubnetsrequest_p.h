@@ -31,7 +31,7 @@ class SetSubnetsRequest;
 class QTAWS_EXPORT SetSubnetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    SetSubnetsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    SetSubnetsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    SetSubnetsRequest * const q);
     SetSubnetsRequestPrivate(const SetSubnetsRequestPrivate &other,
                                    SetSubnetsRequest * const q);

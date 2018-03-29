@@ -31,7 +31,7 @@ class GetBucketLocationRequest;
 class QTAWS_EXPORT GetBucketLocationRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketLocationRequestPrivate(const S3::Action action,
+    GetBucketLocationRequestPrivate(const S3Request::Action action,
                                    GetBucketLocationRequest * const q);
     GetBucketLocationRequestPrivate(const GetBucketLocationRequestPrivate &other,
                                    GetBucketLocationRequest * const q);

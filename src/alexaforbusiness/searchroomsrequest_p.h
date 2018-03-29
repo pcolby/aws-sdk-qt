@@ -31,7 +31,7 @@ class SearchRoomsRequest;
 class QTAWS_EXPORT SearchRoomsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    SearchRoomsRequestPrivate(const AlexaForBusiness::Action action,
+    SearchRoomsRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    SearchRoomsRequest * const q);
     SearchRoomsRequestPrivate(const SearchRoomsRequestPrivate &other,
                                    SearchRoomsRequest * const q);

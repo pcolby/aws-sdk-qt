@@ -31,7 +31,7 @@ class GetServiceRoleForAccountRequest;
 class QTAWS_EXPORT GetServiceRoleForAccountRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetServiceRoleForAccountRequestPrivate(const Greengrass::Action action,
+    GetServiceRoleForAccountRequestPrivate(const GreengrassRequest::Action action,
                                    GetServiceRoleForAccountRequest * const q);
     GetServiceRoleForAccountRequestPrivate(const GetServiceRoleForAccountRequestPrivate &other,
                                    GetServiceRoleForAccountRequest * const q);

@@ -31,7 +31,7 @@ class ModifyHsmRequest;
 class QTAWS_EXPORT ModifyHsmRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    ModifyHsmRequestPrivate(const CloudHSM::Action action,
+    ModifyHsmRequestPrivate(const CloudHSMRequest::Action action,
                                    ModifyHsmRequest * const q);
     ModifyHsmRequestPrivate(const ModifyHsmRequestPrivate &other,
                                    ModifyHsmRequest * const q);

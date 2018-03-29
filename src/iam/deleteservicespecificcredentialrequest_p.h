@@ -31,7 +31,7 @@ class DeleteServiceSpecificCredentialRequest;
 class QTAWS_EXPORT DeleteServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteServiceSpecificCredentialRequestPrivate(const IAM::Action action,
+    DeleteServiceSpecificCredentialRequestPrivate(const IAMRequest::Action action,
                                    DeleteServiceSpecificCredentialRequest * const q);
     DeleteServiceSpecificCredentialRequestPrivate(const DeleteServiceSpecificCredentialRequestPrivate &other,
                                    DeleteServiceSpecificCredentialRequest * const q);

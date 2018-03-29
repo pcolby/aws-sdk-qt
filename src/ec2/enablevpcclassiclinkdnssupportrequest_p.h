@@ -31,7 +31,7 @@ class EnableVpcClassicLinkDnsSupportRequest;
 class QTAWS_EXPORT EnableVpcClassicLinkDnsSupportRequestPrivate : public EC2RequestPrivate {
 
 public:
-    EnableVpcClassicLinkDnsSupportRequestPrivate(const EC2::Action action,
+    EnableVpcClassicLinkDnsSupportRequestPrivate(const EC2Request::Action action,
                                    EnableVpcClassicLinkDnsSupportRequest * const q);
     EnableVpcClassicLinkDnsSupportRequestPrivate(const EnableVpcClassicLinkDnsSupportRequestPrivate &other,
                                    EnableVpcClassicLinkDnsSupportRequest * const q);

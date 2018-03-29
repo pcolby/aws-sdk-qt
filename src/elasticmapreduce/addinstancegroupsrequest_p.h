@@ -31,7 +31,7 @@ class AddInstanceGroupsRequest;
 class QTAWS_EXPORT AddInstanceGroupsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    AddInstanceGroupsRequestPrivate(const EMR::Action action,
+    AddInstanceGroupsRequestPrivate(const EMRRequest::Action action,
                                    AddInstanceGroupsRequest * const q);
     AddInstanceGroupsRequestPrivate(const AddInstanceGroupsRequestPrivate &other,
                                    AddInstanceGroupsRequest * const q);

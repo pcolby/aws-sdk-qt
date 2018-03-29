@@ -31,7 +31,7 @@ class GetUserPoolMfaConfigRequest;
 class QTAWS_EXPORT GetUserPoolMfaConfigRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetUserPoolMfaConfigRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetUserPoolMfaConfigRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetUserPoolMfaConfigRequest * const q);
     GetUserPoolMfaConfigRequestPrivate(const GetUserPoolMfaConfigRequestPrivate &other,
                                    GetUserPoolMfaConfigRequest * const q);

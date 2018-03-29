@@ -31,7 +31,7 @@ class DescribeStackProvisioningParametersRequest;
 class QTAWS_EXPORT DescribeStackProvisioningParametersRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeStackProvisioningParametersRequestPrivate(const OpsWorks::Action action,
+    DescribeStackProvisioningParametersRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeStackProvisioningParametersRequest * const q);
     DescribeStackProvisioningParametersRequestPrivate(const DescribeStackProvisioningParametersRequestPrivate &other,
                                    DescribeStackProvisioningParametersRequest * const q);

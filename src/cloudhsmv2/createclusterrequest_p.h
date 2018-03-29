@@ -31,7 +31,7 @@ class CreateClusterRequest;
 class QTAWS_EXPORT CreateClusterRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    CreateClusterRequestPrivate(const CloudHSMV2::Action action,
+    CreateClusterRequestPrivate(const CloudHSMV2Request::Action action,
                                    CreateClusterRequest * const q);
     CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
                                    CreateClusterRequest * const q);

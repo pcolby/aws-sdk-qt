@@ -31,7 +31,7 @@ class RegisterWorkflowTypeRequest;
 class QTAWS_EXPORT RegisterWorkflowTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RegisterWorkflowTypeRequestPrivate(const SWF::Action action,
+    RegisterWorkflowTypeRequestPrivate(const SWFRequest::Action action,
                                    RegisterWorkflowTypeRequest * const q);
     RegisterWorkflowTypeRequestPrivate(const RegisterWorkflowTypeRequestPrivate &other,
                                    RegisterWorkflowTypeRequest * const q);

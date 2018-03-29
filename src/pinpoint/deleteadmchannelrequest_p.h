@@ -31,7 +31,7 @@ class DeleteAdmChannelRequest;
 class QTAWS_EXPORT DeleteAdmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteAdmChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteAdmChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteAdmChannelRequest * const q);
     DeleteAdmChannelRequestPrivate(const DeleteAdmChannelRequestPrivate &other,
                                    DeleteAdmChannelRequest * const q);

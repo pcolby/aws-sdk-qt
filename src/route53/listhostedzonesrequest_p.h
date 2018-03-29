@@ -31,7 +31,7 @@ class ListHostedZonesRequest;
 class QTAWS_EXPORT ListHostedZonesRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ListHostedZonesRequestPrivate(const Route53::Action action,
+    ListHostedZonesRequestPrivate(const Route53Request::Action action,
                                    ListHostedZonesRequest * const q);
     ListHostedZonesRequestPrivate(const ListHostedZonesRequestPrivate &other,
                                    ListHostedZonesRequest * const q);

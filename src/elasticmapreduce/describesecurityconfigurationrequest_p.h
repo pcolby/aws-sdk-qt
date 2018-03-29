@@ -31,7 +31,7 @@ class DescribeSecurityConfigurationRequest;
 class QTAWS_EXPORT DescribeSecurityConfigurationRequestPrivate : public EMRRequestPrivate {
 
 public:
-    DescribeSecurityConfigurationRequestPrivate(const EMR::Action action,
+    DescribeSecurityConfigurationRequestPrivate(const EMRRequest::Action action,
                                    DescribeSecurityConfigurationRequest * const q);
     DescribeSecurityConfigurationRequestPrivate(const DescribeSecurityConfigurationRequestPrivate &other,
                                    DescribeSecurityConfigurationRequest * const q);

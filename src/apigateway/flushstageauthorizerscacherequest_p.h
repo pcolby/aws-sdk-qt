@@ -31,7 +31,7 @@ class FlushStageAuthorizersCacheRequest;
 class QTAWS_EXPORT FlushStageAuthorizersCacheRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    FlushStageAuthorizersCacheRequestPrivate(const APIGateway::Action action,
+    FlushStageAuthorizersCacheRequestPrivate(const APIGatewayRequest::Action action,
                                    FlushStageAuthorizersCacheRequest * const q);
     FlushStageAuthorizersCacheRequestPrivate(const FlushStageAuthorizersCacheRequestPrivate &other,
                                    FlushStageAuthorizersCacheRequest * const q);

@@ -31,7 +31,7 @@ class DescribeElasticIpsRequest;
 class QTAWS_EXPORT DescribeElasticIpsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeElasticIpsRequestPrivate(const OpsWorks::Action action,
+    DescribeElasticIpsRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeElasticIpsRequest * const q);
     DescribeElasticIpsRequestPrivate(const DescribeElasticIpsRequestPrivate &other,
                                    DescribeElasticIpsRequest * const q);

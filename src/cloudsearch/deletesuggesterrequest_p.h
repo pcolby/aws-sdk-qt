@@ -31,7 +31,7 @@ class DeleteSuggesterRequest;
 class QTAWS_EXPORT DeleteSuggesterRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DeleteSuggesterRequestPrivate(const CloudSearch::Action action,
+    DeleteSuggesterRequestPrivate(const CloudSearchRequest::Action action,
                                    DeleteSuggesterRequest * const q);
     DeleteSuggesterRequestPrivate(const DeleteSuggesterRequestPrivate &other,
                                    DeleteSuggesterRequest * const q);

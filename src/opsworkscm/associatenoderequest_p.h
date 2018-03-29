@@ -31,7 +31,7 @@ class AssociateNodeRequest;
 class QTAWS_EXPORT AssociateNodeRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    AssociateNodeRequestPrivate(const OpsWorksCM::Action action,
+    AssociateNodeRequestPrivate(const OpsWorksCMRequest::Action action,
                                    AssociateNodeRequest * const q);
     AssociateNodeRequestPrivate(const AssociateNodeRequestPrivate &other,
                                    AssociateNodeRequest * const q);

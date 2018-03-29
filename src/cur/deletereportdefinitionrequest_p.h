@@ -31,7 +31,7 @@ class DeleteReportDefinitionRequest;
 class QTAWS_EXPORT DeleteReportDefinitionRequestPrivate : public CostandUsageReportServiceRequestPrivate {
 
 public:
-    DeleteReportDefinitionRequestPrivate(const CostandUsageReportService::Action action,
+    DeleteReportDefinitionRequestPrivate(const CostandUsageReportServiceRequest::Action action,
                                    DeleteReportDefinitionRequest * const q);
     DeleteReportDefinitionRequestPrivate(const DeleteReportDefinitionRequestPrivate &other,
                                    DeleteReportDefinitionRequest * const q);

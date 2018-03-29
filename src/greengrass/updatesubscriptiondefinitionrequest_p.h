@@ -31,7 +31,7 @@ class UpdateSubscriptionDefinitionRequest;
 class QTAWS_EXPORT UpdateSubscriptionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateSubscriptionDefinitionRequestPrivate(const Greengrass::Action action,
+    UpdateSubscriptionDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateSubscriptionDefinitionRequest * const q);
     UpdateSubscriptionDefinitionRequestPrivate(const UpdateSubscriptionDefinitionRequestPrivate &other,
                                    UpdateSubscriptionDefinitionRequest * const q);

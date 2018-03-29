@@ -31,7 +31,7 @@ class DescribeSnapshotsRequest;
 class QTAWS_EXPORT DescribeSnapshotsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeSnapshotsRequestPrivate(const ElastiCache::Action action,
+    DescribeSnapshotsRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeSnapshotsRequest * const q);
     DescribeSnapshotsRequestPrivate(const DescribeSnapshotsRequestPrivate &other,
                                    DescribeSnapshotsRequest * const q);

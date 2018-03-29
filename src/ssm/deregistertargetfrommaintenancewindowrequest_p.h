@@ -31,7 +31,7 @@ class DeregisterTargetFromMaintenanceWindowRequest;
 class QTAWS_EXPORT DeregisterTargetFromMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeregisterTargetFromMaintenanceWindowRequestPrivate(const SSM::Action action,
+    DeregisterTargetFromMaintenanceWindowRequestPrivate(const SSMRequest::Action action,
                                    DeregisterTargetFromMaintenanceWindowRequest * const q);
     DeregisterTargetFromMaintenanceWindowRequestPrivate(const DeregisterTargetFromMaintenanceWindowRequestPrivate &other,
                                    DeregisterTargetFromMaintenanceWindowRequest * const q);

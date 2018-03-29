@@ -31,7 +31,7 @@ class UpdateBasePathMappingRequest;
 class QTAWS_EXPORT UpdateBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateBasePathMappingRequestPrivate(const APIGateway::Action action,
+    UpdateBasePathMappingRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateBasePathMappingRequest * const q);
     UpdateBasePathMappingRequestPrivate(const UpdateBasePathMappingRequestPrivate &other,
                                    UpdateBasePathMappingRequest * const q);

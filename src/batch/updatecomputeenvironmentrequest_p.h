@@ -31,7 +31,7 @@ class UpdateComputeEnvironmentRequest;
 class QTAWS_EXPORT UpdateComputeEnvironmentRequestPrivate : public BatchRequestPrivate {
 
 public:
-    UpdateComputeEnvironmentRequestPrivate(const Batch::Action action,
+    UpdateComputeEnvironmentRequestPrivate(const BatchRequest::Action action,
                                    UpdateComputeEnvironmentRequest * const q);
     UpdateComputeEnvironmentRequestPrivate(const UpdateComputeEnvironmentRequestPrivate &other,
                                    UpdateComputeEnvironmentRequest * const q);

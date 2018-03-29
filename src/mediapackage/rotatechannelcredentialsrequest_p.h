@@ -31,7 +31,7 @@ class RotateChannelCredentialsRequest;
 class QTAWS_EXPORT RotateChannelCredentialsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    RotateChannelCredentialsRequestPrivate(const MediaPackage::Action action,
+    RotateChannelCredentialsRequestPrivate(const MediaPackageRequest::Action action,
                                    RotateChannelCredentialsRequest * const q);
     RotateChannelCredentialsRequestPrivate(const RotateChannelCredentialsRequestPrivate &other,
                                    RotateChannelCredentialsRequest * const q);

@@ -31,7 +31,7 @@ class UpdateEndpointRequest;
 class QTAWS_EXPORT UpdateEndpointRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateEndpointRequestPrivate(const Pinpoint::Action action,
+    UpdateEndpointRequestPrivate(const PinpointRequest::Action action,
                                    UpdateEndpointRequest * const q);
     UpdateEndpointRequestPrivate(const UpdateEndpointRequestPrivate &other,
                                    UpdateEndpointRequest * const q);

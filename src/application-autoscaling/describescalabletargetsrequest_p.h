@@ -31,7 +31,7 @@ class DescribeScalableTargetsRequest;
 class QTAWS_EXPORT DescribeScalableTargetsRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    DescribeScalableTargetsRequestPrivate(const ApplicationAutoScaling::Action action,
+    DescribeScalableTargetsRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    DescribeScalableTargetsRequest * const q);
     DescribeScalableTargetsRequestPrivate(const DescribeScalableTargetsRequestPrivate &other,
                                    DescribeScalableTargetsRequest * const q);

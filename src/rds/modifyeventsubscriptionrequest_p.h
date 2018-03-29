@@ -31,7 +31,7 @@ class ModifyEventSubscriptionRequest;
 class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ModifyEventSubscriptionRequestPrivate(const RDS::Action action,
+    ModifyEventSubscriptionRequestPrivate(const RDSRequest::Action action,
                                    ModifyEventSubscriptionRequest * const q);
     ModifyEventSubscriptionRequestPrivate(const ModifyEventSubscriptionRequestPrivate &other,
                                    ModifyEventSubscriptionRequest * const q);

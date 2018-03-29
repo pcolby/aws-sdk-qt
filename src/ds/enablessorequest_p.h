@@ -31,7 +31,7 @@ class EnableSsoRequest;
 class QTAWS_EXPORT EnableSsoRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    EnableSsoRequestPrivate(const DirectoryService::Action action,
+    EnableSsoRequestPrivate(const DirectoryServiceRequest::Action action,
                                    EnableSsoRequest * const q);
     EnableSsoRequestPrivate(const EnableSsoRequestPrivate &other,
                                    EnableSsoRequest * const q);

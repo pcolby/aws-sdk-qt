@@ -31,7 +31,7 @@ class SetPermissionRequest;
 class QTAWS_EXPORT SetPermissionRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    SetPermissionRequestPrivate(const OpsWorks::Action action,
+    SetPermissionRequestPrivate(const OpsWorksRequest::Action action,
                                    SetPermissionRequest * const q);
     SetPermissionRequestPrivate(const SetPermissionRequestPrivate &other,
                                    SetPermissionRequest * const q);

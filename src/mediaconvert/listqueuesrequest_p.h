@@ -31,7 +31,7 @@ class ListQueuesRequest;
 class QTAWS_EXPORT ListQueuesRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    ListQueuesRequestPrivate(const MediaConvert::Action action,
+    ListQueuesRequestPrivate(const MediaConvertRequest::Action action,
                                    ListQueuesRequest * const q);
     ListQueuesRequestPrivate(const ListQueuesRequestPrivate &other,
                                    ListQueuesRequest * const q);

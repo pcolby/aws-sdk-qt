@@ -31,7 +31,7 @@ class DeleteSAMLProviderRequest;
 class QTAWS_EXPORT DeleteSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteSAMLProviderRequestPrivate(const IAM::Action action,
+    DeleteSAMLProviderRequestPrivate(const IAMRequest::Action action,
                                    DeleteSAMLProviderRequest * const q);
     DeleteSAMLProviderRequestPrivate(const DeleteSAMLProviderRequestPrivate &other,
                                    DeleteSAMLProviderRequest * const q);

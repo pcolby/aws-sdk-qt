@@ -31,7 +31,7 @@ class CreateFileSystemRequest;
 class QTAWS_EXPORT CreateFileSystemRequestPrivate : public EFSRequestPrivate {
 
 public:
-    CreateFileSystemRequestPrivate(const EFS::Action action,
+    CreateFileSystemRequestPrivate(const EFSRequest::Action action,
                                    CreateFileSystemRequest * const q);
     CreateFileSystemRequestPrivate(const CreateFileSystemRequestPrivate &other,
                                    CreateFileSystemRequest * const q);

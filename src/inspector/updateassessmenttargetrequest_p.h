@@ -31,7 +31,7 @@ class UpdateAssessmentTargetRequest;
 class QTAWS_EXPORT UpdateAssessmentTargetRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    UpdateAssessmentTargetRequestPrivate(const Inspector::Action action,
+    UpdateAssessmentTargetRequestPrivate(const InspectorRequest::Action action,
                                    UpdateAssessmentTargetRequest * const q);
     UpdateAssessmentTargetRequestPrivate(const UpdateAssessmentTargetRequestPrivate &other,
                                    UpdateAssessmentTargetRequest * const q);

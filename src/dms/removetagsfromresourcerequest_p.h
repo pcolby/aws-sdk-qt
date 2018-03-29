@@ -31,7 +31,7 @@ class RemoveTagsFromResourceRequest;
 class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const DatabaseMigrationService::Action action,
+    RemoveTagsFromResourceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);

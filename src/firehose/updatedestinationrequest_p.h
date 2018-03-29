@@ -31,7 +31,7 @@ class UpdateDestinationRequest;
 class QTAWS_EXPORT UpdateDestinationRequestPrivate : public FirehoseRequestPrivate {
 
 public:
-    UpdateDestinationRequestPrivate(const Firehose::Action action,
+    UpdateDestinationRequestPrivate(const FirehoseRequest::Action action,
                                    UpdateDestinationRequest * const q);
     UpdateDestinationRequestPrivate(const UpdateDestinationRequestPrivate &other,
                                    UpdateDestinationRequest * const q);

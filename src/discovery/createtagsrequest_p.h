@@ -31,7 +31,7 @@ class CreateTagsRequest;
 class QTAWS_EXPORT CreateTagsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    CreateTagsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    CreateTagsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    CreateTagsRequest * const q);
     CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
                                    CreateTagsRequest * const q);

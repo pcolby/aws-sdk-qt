@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const DirectConnect::Action action,
+    DescribeTagsRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

@@ -31,7 +31,7 @@ class ListProvisioningArtifactsRequest;
 class QTAWS_EXPORT ListProvisioningArtifactsRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListProvisioningArtifactsRequestPrivate(const ServiceCatalog::Action action,
+    ListProvisioningArtifactsRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListProvisioningArtifactsRequest * const q);
     ListProvisioningArtifactsRequestPrivate(const ListProvisioningArtifactsRequestPrivate &other,
                                    ListProvisioningArtifactsRequest * const q);

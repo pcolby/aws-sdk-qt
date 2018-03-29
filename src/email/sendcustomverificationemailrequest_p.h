@@ -31,7 +31,7 @@ class SendCustomVerificationEmailRequest;
 class QTAWS_EXPORT SendCustomVerificationEmailRequestPrivate : public SESRequestPrivate {
 
 public:
-    SendCustomVerificationEmailRequestPrivate(const SES::Action action,
+    SendCustomVerificationEmailRequestPrivate(const SESRequest::Action action,
                                    SendCustomVerificationEmailRequest * const q);
     SendCustomVerificationEmailRequestPrivate(const SendCustomVerificationEmailRequestPrivate &other,
                                    SendCustomVerificationEmailRequest * const q);

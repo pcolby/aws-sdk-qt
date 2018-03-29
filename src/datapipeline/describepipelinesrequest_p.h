@@ -31,7 +31,7 @@ class DescribePipelinesRequest;
 class QTAWS_EXPORT DescribePipelinesRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    DescribePipelinesRequestPrivate(const DataPipeline::Action action,
+    DescribePipelinesRequestPrivate(const DataPipelineRequest::Action action,
                                    DescribePipelinesRequest * const q);
     DescribePipelinesRequestPrivate(const DescribePipelinesRequestPrivate &other,
                                    DescribePipelinesRequest * const q);

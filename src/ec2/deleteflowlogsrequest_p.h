@@ -31,7 +31,7 @@ class DeleteFlowLogsRequest;
 class QTAWS_EXPORT DeleteFlowLogsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteFlowLogsRequestPrivate(const EC2::Action action,
+    DeleteFlowLogsRequestPrivate(const EC2Request::Action action,
                                    DeleteFlowLogsRequest * const q);
     DeleteFlowLogsRequestPrivate(const DeleteFlowLogsRequestPrivate &other,
                                    DeleteFlowLogsRequest * const q);

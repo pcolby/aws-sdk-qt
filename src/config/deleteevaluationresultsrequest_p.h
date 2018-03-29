@@ -31,7 +31,7 @@ class DeleteEvaluationResultsRequest;
 class QTAWS_EXPORT DeleteEvaluationResultsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DeleteEvaluationResultsRequestPrivate(const ConfigService::Action action,
+    DeleteEvaluationResultsRequestPrivate(const ConfigServiceRequest::Action action,
                                    DeleteEvaluationResultsRequest * const q);
     DeleteEvaluationResultsRequestPrivate(const DeleteEvaluationResultsRequestPrivate &other,
                                    DeleteEvaluationResultsRequest * const q);

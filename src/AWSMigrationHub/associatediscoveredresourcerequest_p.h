@@ -31,7 +31,7 @@ class AssociateDiscoveredResourceRequest;
 class QTAWS_EXPORT AssociateDiscoveredResourceRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    AssociateDiscoveredResourceRequestPrivate(const MigrationHub::Action action,
+    AssociateDiscoveredResourceRequestPrivate(const MigrationHubRequest::Action action,
                                    AssociateDiscoveredResourceRequest * const q);
     AssociateDiscoveredResourceRequestPrivate(const AssociateDiscoveredResourceRequestPrivate &other,
                                    AssociateDiscoveredResourceRequest * const q);

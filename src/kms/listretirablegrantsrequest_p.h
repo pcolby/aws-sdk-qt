@@ -31,7 +31,7 @@ class ListRetirableGrantsRequest;
 class QTAWS_EXPORT ListRetirableGrantsRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ListRetirableGrantsRequestPrivate(const KMS::Action action,
+    ListRetirableGrantsRequestPrivate(const KMSRequest::Action action,
                                    ListRetirableGrantsRequest * const q);
     ListRetirableGrantsRequestPrivate(const ListRetirableGrantsRequestPrivate &other,
                                    ListRetirableGrantsRequest * const q);

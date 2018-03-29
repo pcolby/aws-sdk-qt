@@ -31,7 +31,7 @@ class AbortDocumentVersionUploadRequest;
 class QTAWS_EXPORT AbortDocumentVersionUploadRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    AbortDocumentVersionUploadRequestPrivate(const WorkDocs::Action action,
+    AbortDocumentVersionUploadRequestPrivate(const WorkDocsRequest::Action action,
                                    AbortDocumentVersionUploadRequest * const q);
     AbortDocumentVersionUploadRequestPrivate(const AbortDocumentVersionUploadRequestPrivate &other,
                                    AbortDocumentVersionUploadRequest * const q);

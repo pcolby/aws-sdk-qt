@@ -31,7 +31,7 @@ class ListTapesRequest;
 class QTAWS_EXPORT ListTapesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListTapesRequestPrivate(const StorageGateway::Action action,
+    ListTapesRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListTapesRequest * const q);
     ListTapesRequestPrivate(const ListTapesRequestPrivate &other,
                                    ListTapesRequest * const q);

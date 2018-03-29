@@ -31,7 +31,7 @@ class SearchProductsAsAdminRequest;
 class QTAWS_EXPORT SearchProductsAsAdminRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    SearchProductsAsAdminRequestPrivate(const ServiceCatalog::Action action,
+    SearchProductsAsAdminRequestPrivate(const ServiceCatalogRequest::Action action,
                                    SearchProductsAsAdminRequest * const q);
     SearchProductsAsAdminRequestPrivate(const SearchProductsAsAdminRequestPrivate &other,
                                    SearchProductsAsAdminRequest * const q);

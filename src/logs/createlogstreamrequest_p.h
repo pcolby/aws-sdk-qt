@@ -31,7 +31,7 @@ class CreateLogStreamRequest;
 class QTAWS_EXPORT CreateLogStreamRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    CreateLogStreamRequestPrivate(const CloudWatchLogs::Action action,
+    CreateLogStreamRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    CreateLogStreamRequest * const q);
     CreateLogStreamRequestPrivate(const CreateLogStreamRequestPrivate &other,
                                    CreateLogStreamRequest * const q);

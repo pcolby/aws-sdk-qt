@@ -31,7 +31,7 @@ class UploadServerCertificateRequest;
 class QTAWS_EXPORT UploadServerCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UploadServerCertificateRequestPrivate(const IAM::Action action,
+    UploadServerCertificateRequestPrivate(const IAMRequest::Action action,
                                    UploadServerCertificateRequest * const q);
     UploadServerCertificateRequestPrivate(const UploadServerCertificateRequestPrivate &other,
                                    UploadServerCertificateRequest * const q);

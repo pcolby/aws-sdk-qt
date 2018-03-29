@@ -31,7 +31,7 @@ class AddTagsToResourceRequest;
 class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    AddTagsToResourceRequestPrivate(const CloudHSM::Action action,
+    AddTagsToResourceRequestPrivate(const CloudHSMRequest::Action action,
                                    AddTagsToResourceRequest * const q);
     AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
                                    AddTagsToResourceRequest * const q);

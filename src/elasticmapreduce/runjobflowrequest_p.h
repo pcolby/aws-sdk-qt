@@ -31,7 +31,7 @@ class RunJobFlowRequest;
 class QTAWS_EXPORT RunJobFlowRequestPrivate : public EMRRequestPrivate {
 
 public:
-    RunJobFlowRequestPrivate(const EMR::Action action,
+    RunJobFlowRequestPrivate(const EMRRequest::Action action,
                                    RunJobFlowRequest * const q);
     RunJobFlowRequestPrivate(const RunJobFlowRequestPrivate &other,
                                    RunJobFlowRequest * const q);

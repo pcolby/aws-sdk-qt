@@ -31,7 +31,7 @@ class UpdateThingShadowRequest;
 class QTAWS_EXPORT UpdateThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
-    UpdateThingShadowRequestPrivate(const IoTDataPlane::Action action,
+    UpdateThingShadowRequestPrivate(const IoTDataPlaneRequest::Action action,
                                    UpdateThingShadowRequest * const q);
     UpdateThingShadowRequestPrivate(const UpdateThingShadowRequestPrivate &other,
                                    UpdateThingShadowRequest * const q);

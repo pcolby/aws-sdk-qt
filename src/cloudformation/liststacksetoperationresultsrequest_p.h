@@ -31,7 +31,7 @@ class ListStackSetOperationResultsRequest;
 class QTAWS_EXPORT ListStackSetOperationResultsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    ListStackSetOperationResultsRequestPrivate(const CloudFormation::Action action,
+    ListStackSetOperationResultsRequestPrivate(const CloudFormationRequest::Action action,
                                    ListStackSetOperationResultsRequest * const q);
     ListStackSetOperationResultsRequestPrivate(const ListStackSetOperationResultsRequestPrivate &other,
                                    ListStackSetOperationResultsRequest * const q);

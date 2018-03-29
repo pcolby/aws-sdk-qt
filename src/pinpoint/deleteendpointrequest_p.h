@@ -31,7 +31,7 @@ class DeleteEndpointRequest;
 class QTAWS_EXPORT DeleteEndpointRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteEndpointRequestPrivate(const Pinpoint::Action action,
+    DeleteEndpointRequestPrivate(const PinpointRequest::Action action,
                                    DeleteEndpointRequest * const q);
     DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
                                    DeleteEndpointRequest * const q);

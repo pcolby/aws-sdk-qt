@@ -31,7 +31,7 @@ class ResetCacheRequest;
 class QTAWS_EXPORT ResetCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ResetCacheRequestPrivate(const StorageGateway::Action action,
+    ResetCacheRequestPrivate(const StorageGatewayRequest::Action action,
                                    ResetCacheRequest * const q);
     ResetCacheRequestPrivate(const ResetCacheRequestPrivate &other,
                                    ResetCacheRequest * const q);

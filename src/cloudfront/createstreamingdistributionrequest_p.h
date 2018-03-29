@@ -31,7 +31,7 @@ class CreateStreamingDistributionRequest;
 class QTAWS_EXPORT CreateStreamingDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    CreateStreamingDistributionRequestPrivate(const CloudFront::Action action,
+    CreateStreamingDistributionRequestPrivate(const CloudFrontRequest::Action action,
                                    CreateStreamingDistributionRequest * const q);
     CreateStreamingDistributionRequestPrivate(const CreateStreamingDistributionRequestPrivate &other,
                                    CreateStreamingDistributionRequest * const q);

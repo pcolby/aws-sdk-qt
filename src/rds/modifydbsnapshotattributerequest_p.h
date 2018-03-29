@@ -31,7 +31,7 @@ class ModifyDBSnapshotAttributeRequest;
 class QTAWS_EXPORT ModifyDBSnapshotAttributeRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ModifyDBSnapshotAttributeRequestPrivate(const RDS::Action action,
+    ModifyDBSnapshotAttributeRequestPrivate(const RDSRequest::Action action,
                                    ModifyDBSnapshotAttributeRequest * const q);
     ModifyDBSnapshotAttributeRequestPrivate(const ModifyDBSnapshotAttributeRequestPrivate &other,
                                    ModifyDBSnapshotAttributeRequest * const q);

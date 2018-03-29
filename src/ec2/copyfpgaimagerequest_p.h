@@ -31,7 +31,7 @@ class CopyFpgaImageRequest;
 class QTAWS_EXPORT CopyFpgaImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CopyFpgaImageRequestPrivate(const EC2::Action action,
+    CopyFpgaImageRequestPrivate(const EC2Request::Action action,
                                    CopyFpgaImageRequest * const q);
     CopyFpgaImageRequestPrivate(const CopyFpgaImageRequestPrivate &other,
                                    CopyFpgaImageRequest * const q);

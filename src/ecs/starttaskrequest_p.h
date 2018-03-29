@@ -31,7 +31,7 @@ class StartTaskRequest;
 class QTAWS_EXPORT StartTaskRequestPrivate : public ECSRequestPrivate {
 
 public:
-    StartTaskRequestPrivate(const ECS::Action action,
+    StartTaskRequestPrivate(const ECSRequest::Action action,
                                    StartTaskRequest * const q);
     StartTaskRequestPrivate(const StartTaskRequestPrivate &other,
                                    StartTaskRequest * const q);

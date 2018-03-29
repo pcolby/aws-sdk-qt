@@ -31,7 +31,7 @@ class SelectRequest;
 class QTAWS_EXPORT SelectRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    SelectRequestPrivate(const SimpleDB::Action action,
+    SelectRequestPrivate(const SimpleDBRequest::Action action,
                                    SelectRequest * const q);
     SelectRequestPrivate(const SelectRequestPrivate &other,
                                    SelectRequest * const q);

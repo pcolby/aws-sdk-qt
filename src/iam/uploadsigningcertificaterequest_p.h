@@ -31,7 +31,7 @@ class UploadSigningCertificateRequest;
 class QTAWS_EXPORT UploadSigningCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UploadSigningCertificateRequestPrivate(const IAM::Action action,
+    UploadSigningCertificateRequestPrivate(const IAMRequest::Action action,
                                    UploadSigningCertificateRequest * const q);
     UploadSigningCertificateRequestPrivate(const UploadSigningCertificateRequestPrivate &other,
                                    UploadSigningCertificateRequest * const q);

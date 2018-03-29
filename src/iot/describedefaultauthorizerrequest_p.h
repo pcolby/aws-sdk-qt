@@ -31,7 +31,7 @@ class DescribeDefaultAuthorizerRequest;
 class QTAWS_EXPORT DescribeDefaultAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeDefaultAuthorizerRequestPrivate(const IoT::Action action,
+    DescribeDefaultAuthorizerRequestPrivate(const IoTRequest::Action action,
                                    DescribeDefaultAuthorizerRequest * const q);
     DescribeDefaultAuthorizerRequestPrivate(const DescribeDefaultAuthorizerRequestPrivate &other,
                                    DescribeDefaultAuthorizerRequest * const q);

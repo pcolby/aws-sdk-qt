@@ -31,7 +31,7 @@ class GetInventorySchemaRequest;
 class QTAWS_EXPORT GetInventorySchemaRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetInventorySchemaRequestPrivate(const SSM::Action action,
+    GetInventorySchemaRequestPrivate(const SSMRequest::Action action,
                                    GetInventorySchemaRequest * const q);
     GetInventorySchemaRequestPrivate(const GetInventorySchemaRequestPrivate &other,
                                    GetInventorySchemaRequest * const q);

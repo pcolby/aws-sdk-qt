@@ -31,7 +31,7 @@ class GetSchemaCreationStatusRequest;
 class QTAWS_EXPORT GetSchemaCreationStatusRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    GetSchemaCreationStatusRequestPrivate(const AppSync::Action action,
+    GetSchemaCreationStatusRequestPrivate(const AppSyncRequest::Action action,
                                    GetSchemaCreationStatusRequest * const q);
     GetSchemaCreationStatusRequestPrivate(const GetSchemaCreationStatusRequestPrivate &other,
                                    GetSchemaCreationStatusRequest * const q);

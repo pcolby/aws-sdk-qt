@@ -31,7 +31,7 @@ class DisassociateConnectionFromLagRequest;
 class QTAWS_EXPORT DisassociateConnectionFromLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DisassociateConnectionFromLagRequestPrivate(const DirectConnect::Action action,
+    DisassociateConnectionFromLagRequestPrivate(const DirectConnectRequest::Action action,
                                    DisassociateConnectionFromLagRequest * const q);
     DisassociateConnectionFromLagRequestPrivate(const DisassociateConnectionFromLagRequestPrivate &other,
                                    DisassociateConnectionFromLagRequest * const q);

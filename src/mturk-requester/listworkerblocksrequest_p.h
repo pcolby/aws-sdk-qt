@@ -31,7 +31,7 @@ class ListWorkerBlocksRequest;
 class QTAWS_EXPORT ListWorkerBlocksRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ListWorkerBlocksRequestPrivate(const MTurk::Action action,
+    ListWorkerBlocksRequestPrivate(const MTurkRequest::Action action,
                                    ListWorkerBlocksRequest * const q);
     ListWorkerBlocksRequestPrivate(const ListWorkerBlocksRequestPrivate &other,
                                    ListWorkerBlocksRequest * const q);

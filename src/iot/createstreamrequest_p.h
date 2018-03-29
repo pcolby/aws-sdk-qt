@@ -31,7 +31,7 @@ class CreateStreamRequest;
 class QTAWS_EXPORT CreateStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateStreamRequestPrivate(const IoT::Action action,
+    CreateStreamRequestPrivate(const IoTRequest::Action action,
                                    CreateStreamRequest * const q);
     CreateStreamRequestPrivate(const CreateStreamRequestPrivate &other,
                                    CreateStreamRequest * const q);

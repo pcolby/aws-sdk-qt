@@ -31,7 +31,7 @@ class DeleteRouteRequest;
 class QTAWS_EXPORT DeleteRouteRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteRouteRequestPrivate(const EC2::Action action,
+    DeleteRouteRequestPrivate(const EC2Request::Action action,
                                    DeleteRouteRequest * const q);
     DeleteRouteRequestPrivate(const DeleteRouteRequestPrivate &other,
                                    DeleteRouteRequest * const q);

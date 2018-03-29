@@ -31,7 +31,7 @@ class GetCelebrityRecognitionRequest;
 class QTAWS_EXPORT GetCelebrityRecognitionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    GetCelebrityRecognitionRequestPrivate(const Rekognition::Action action,
+    GetCelebrityRecognitionRequestPrivate(const RekognitionRequest::Action action,
                                    GetCelebrityRecognitionRequest * const q);
     GetCelebrityRecognitionRequestPrivate(const GetCelebrityRecognitionRequestPrivate &other,
                                    GetCelebrityRecognitionRequest * const q);

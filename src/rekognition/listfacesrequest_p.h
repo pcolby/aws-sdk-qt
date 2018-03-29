@@ -31,7 +31,7 @@ class ListFacesRequest;
 class QTAWS_EXPORT ListFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    ListFacesRequestPrivate(const Rekognition::Action action,
+    ListFacesRequestPrivate(const RekognitionRequest::Action action,
                                    ListFacesRequest * const q);
     ListFacesRequestPrivate(const ListFacesRequestPrivate &other,
                                    ListFacesRequest * const q);

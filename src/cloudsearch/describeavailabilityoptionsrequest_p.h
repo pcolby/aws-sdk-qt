@@ -31,7 +31,7 @@ class DescribeAvailabilityOptionsRequest;
 class QTAWS_EXPORT DescribeAvailabilityOptionsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DescribeAvailabilityOptionsRequestPrivate(const CloudSearch::Action action,
+    DescribeAvailabilityOptionsRequestPrivate(const CloudSearchRequest::Action action,
                                    DescribeAvailabilityOptionsRequest * const q);
     DescribeAvailabilityOptionsRequestPrivate(const DescribeAvailabilityOptionsRequestPrivate &other,
                                    DescribeAvailabilityOptionsRequest * const q);

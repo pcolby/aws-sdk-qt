@@ -31,7 +31,7 @@ class CreatePlatformApplicationRequest;
 class QTAWS_EXPORT CreatePlatformApplicationRequestPrivate : public SNSRequestPrivate {
 
 public:
-    CreatePlatformApplicationRequestPrivate(const SNS::Action action,
+    CreatePlatformApplicationRequestPrivate(const SNSRequest::Action action,
                                    CreatePlatformApplicationRequest * const q);
     CreatePlatformApplicationRequestPrivate(const CreatePlatformApplicationRequestPrivate &other,
                                    CreatePlatformApplicationRequest * const q);

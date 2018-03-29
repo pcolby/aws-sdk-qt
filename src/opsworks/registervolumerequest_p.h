@@ -31,7 +31,7 @@ class RegisterVolumeRequest;
 class QTAWS_EXPORT RegisterVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    RegisterVolumeRequestPrivate(const OpsWorks::Action action,
+    RegisterVolumeRequestPrivate(const OpsWorksRequest::Action action,
                                    RegisterVolumeRequest * const q);
     RegisterVolumeRequestPrivate(const RegisterVolumeRequestPrivate &other,
                                    RegisterVolumeRequest * const q);

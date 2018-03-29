@@ -31,7 +31,7 @@ class ListPolicyPrincipalsRequest;
 class QTAWS_EXPORT ListPolicyPrincipalsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListPolicyPrincipalsRequestPrivate(const IoT::Action action,
+    ListPolicyPrincipalsRequestPrivate(const IoTRequest::Action action,
                                    ListPolicyPrincipalsRequest * const q);
     ListPolicyPrincipalsRequestPrivate(const ListPolicyPrincipalsRequestPrivate &other,
                                    ListPolicyPrincipalsRequest * const q);

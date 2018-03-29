@@ -31,7 +31,7 @@ class DeleteAuthorizerRequest;
 class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteAuthorizerRequestPrivate(const IoT::Action action,
+    DeleteAuthorizerRequestPrivate(const IoTRequest::Action action,
                                    DeleteAuthorizerRequest * const q);
     DeleteAuthorizerRequestPrivate(const DeleteAuthorizerRequestPrivate &other,
                                    DeleteAuthorizerRequest * const q);

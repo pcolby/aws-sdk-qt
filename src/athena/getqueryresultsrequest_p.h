@@ -31,7 +31,7 @@ class GetQueryResultsRequest;
 class QTAWS_EXPORT GetQueryResultsRequestPrivate : public AthenaRequestPrivate {
 
 public:
-    GetQueryResultsRequestPrivate(const Athena::Action action,
+    GetQueryResultsRequestPrivate(const AthenaRequest::Action action,
                                    GetQueryResultsRequest * const q);
     GetQueryResultsRequestPrivate(const GetQueryResultsRequestPrivate &other,
                                    GetQueryResultsRequest * const q);

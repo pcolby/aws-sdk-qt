@@ -31,7 +31,7 @@ class ListResolversRequest;
 class QTAWS_EXPORT ListResolversRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    ListResolversRequestPrivate(const AppSync::Action action,
+    ListResolversRequestPrivate(const AppSyncRequest::Action action,
                                    ListResolversRequest * const q);
     ListResolversRequestPrivate(const ListResolversRequestPrivate &other,
                                    ListResolversRequest * const q);

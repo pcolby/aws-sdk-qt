@@ -31,7 +31,7 @@ class DeleteUserProfileRequest;
 class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeleteUserProfileRequestPrivate(const OpsWorks::Action action,
+    DeleteUserProfileRequestPrivate(const OpsWorksRequest::Action action,
                                    DeleteUserProfileRequest * const q);
     DeleteUserProfileRequestPrivate(const DeleteUserProfileRequestPrivate &other,
                                    DeleteUserProfileRequest * const q);

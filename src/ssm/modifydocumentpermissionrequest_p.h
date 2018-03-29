@@ -31,7 +31,7 @@ class ModifyDocumentPermissionRequest;
 class QTAWS_EXPORT ModifyDocumentPermissionRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ModifyDocumentPermissionRequestPrivate(const SSM::Action action,
+    ModifyDocumentPermissionRequestPrivate(const SSMRequest::Action action,
                                    ModifyDocumentPermissionRequest * const q);
     ModifyDocumentPermissionRequestPrivate(const ModifyDocumentPermissionRequestPrivate &other,
                                    ModifyDocumentPermissionRequest * const q);

@@ -31,7 +31,7 @@ class ListFileSharesRequest;
 class QTAWS_EXPORT ListFileSharesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListFileSharesRequestPrivate(const StorageGateway::Action action,
+    ListFileSharesRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListFileSharesRequest * const q);
     ListFileSharesRequestPrivate(const ListFileSharesRequestPrivate &other,
                                    ListFileSharesRequest * const q);

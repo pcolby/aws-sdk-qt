@@ -31,7 +31,7 @@ class RemoveTagsFromResourceRequest;
 class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const StorageGateway::Action action,
+    RemoveTagsFromResourceRequestPrivate(const StorageGatewayRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);

@@ -31,7 +31,7 @@ class GetParametersForImportRequest;
 class QTAWS_EXPORT GetParametersForImportRequestPrivate : public KMSRequestPrivate {
 
 public:
-    GetParametersForImportRequestPrivate(const KMS::Action action,
+    GetParametersForImportRequestPrivate(const KMSRequest::Action action,
                                    GetParametersForImportRequest * const q);
     GetParametersForImportRequestPrivate(const GetParametersForImportRequestPrivate &other,
                                    GetParametersForImportRequest * const q);

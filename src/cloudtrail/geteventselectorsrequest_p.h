@@ -31,7 +31,7 @@ class GetEventSelectorsRequest;
 class QTAWS_EXPORT GetEventSelectorsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    GetEventSelectorsRequestPrivate(const CloudTrail::Action action,
+    GetEventSelectorsRequestPrivate(const CloudTrailRequest::Action action,
                                    GetEventSelectorsRequest * const q);
     GetEventSelectorsRequestPrivate(const GetEventSelectorsRequestPrivate &other,
                                    GetEventSelectorsRequest * const q);

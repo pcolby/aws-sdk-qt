@@ -31,7 +31,7 @@ class DeleteAlarmsRequest;
 class QTAWS_EXPORT DeleteAlarmsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    DeleteAlarmsRequestPrivate(const CloudWatch::Action action,
+    DeleteAlarmsRequestPrivate(const CloudWatchRequest::Action action,
                                    DeleteAlarmsRequest * const q);
     DeleteAlarmsRequestPrivate(const DeleteAlarmsRequestPrivate &other,
                                    DeleteAlarmsRequest * const q);

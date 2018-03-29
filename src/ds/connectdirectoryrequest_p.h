@@ -31,7 +31,7 @@ class ConnectDirectoryRequest;
 class QTAWS_EXPORT ConnectDirectoryRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    ConnectDirectoryRequestPrivate(const DirectoryService::Action action,
+    ConnectDirectoryRequestPrivate(const DirectoryServiceRequest::Action action,
                                    ConnectDirectoryRequest * const q);
     ConnectDirectoryRequestPrivate(const ConnectDirectoryRequestPrivate &other,
                                    ConnectDirectoryRequest * const q);

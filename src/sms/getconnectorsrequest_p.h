@@ -31,7 +31,7 @@ class GetConnectorsRequest;
 class QTAWS_EXPORT GetConnectorsRequestPrivate : public SMSRequestPrivate {
 
 public:
-    GetConnectorsRequestPrivate(const SMS::Action action,
+    GetConnectorsRequestPrivate(const SMSRequest::Action action,
                                    GetConnectorsRequest * const q);
     GetConnectorsRequestPrivate(const GetConnectorsRequestPrivate &other,
                                    GetConnectorsRequest * const q);

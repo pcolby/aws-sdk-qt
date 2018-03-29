@@ -31,7 +31,7 @@ class CreateImageBuilderRequest;
 class QTAWS_EXPORT CreateImageBuilderRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CreateImageBuilderRequestPrivate(const AppStream::Action action,
+    CreateImageBuilderRequestPrivate(const AppStreamRequest::Action action,
                                    CreateImageBuilderRequest * const q);
     CreateImageBuilderRequestPrivate(const CreateImageBuilderRequestPrivate &other,
                                    CreateImageBuilderRequest * const q);

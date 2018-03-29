@@ -31,7 +31,7 @@ class GetResourcesRequest;
 class QTAWS_EXPORT GetResourcesRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetResourcesRequestPrivate(const APIGateway::Action action,
+    GetResourcesRequestPrivate(const APIGatewayRequest::Action action,
                                    GetResourcesRequest * const q);
     GetResourcesRequestPrivate(const GetResourcesRequestPrivate &other,
                                    GetResourcesRequest * const q);

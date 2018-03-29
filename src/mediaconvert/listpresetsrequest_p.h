@@ -31,7 +31,7 @@ class ListPresetsRequest;
 class QTAWS_EXPORT ListPresetsRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    ListPresetsRequestPrivate(const MediaConvert::Action action,
+    ListPresetsRequestPrivate(const MediaConvertRequest::Action action,
                                    ListPresetsRequest * const q);
     ListPresetsRequestPrivate(const ListPresetsRequestPrivate &other,
                                    ListPresetsRequest * const q);

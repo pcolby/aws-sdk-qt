@@ -31,7 +31,7 @@ class DescribeStackSetOperationRequest;
 class QTAWS_EXPORT DescribeStackSetOperationRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    DescribeStackSetOperationRequestPrivate(const CloudFormation::Action action,
+    DescribeStackSetOperationRequestPrivate(const CloudFormationRequest::Action action,
                                    DescribeStackSetOperationRequest * const q);
     DescribeStackSetOperationRequestPrivate(const DescribeStackSetOperationRequestPrivate &other,
                                    DescribeStackSetOperationRequest * const q);

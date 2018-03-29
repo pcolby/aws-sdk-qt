@@ -31,7 +31,7 @@ class DescribeDomainControllersRequest;
 class QTAWS_EXPORT DescribeDomainControllersRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DescribeDomainControllersRequestPrivate(const DirectoryService::Action action,
+    DescribeDomainControllersRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DescribeDomainControllersRequest * const q);
     DescribeDomainControllersRequestPrivate(const DescribeDomainControllersRequestPrivate &other,
                                    DescribeDomainControllersRequest * const q);

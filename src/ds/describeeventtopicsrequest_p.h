@@ -31,7 +31,7 @@ class DescribeEventTopicsRequest;
 class QTAWS_EXPORT DescribeEventTopicsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DescribeEventTopicsRequestPrivate(const DirectoryService::Action action,
+    DescribeEventTopicsRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DescribeEventTopicsRequest * const q);
     DescribeEventTopicsRequestPrivate(const DescribeEventTopicsRequestPrivate &other,
                                    DescribeEventTopicsRequest * const q);

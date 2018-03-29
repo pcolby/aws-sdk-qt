@@ -31,7 +31,7 @@ class GetDocumentRequest;
 class QTAWS_EXPORT GetDocumentRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetDocumentRequestPrivate(const SSM::Action action,
+    GetDocumentRequestPrivate(const SSMRequest::Action action,
                                    GetDocumentRequest * const q);
     GetDocumentRequestPrivate(const GetDocumentRequestPrivate &other,
                                    GetDocumentRequest * const q);

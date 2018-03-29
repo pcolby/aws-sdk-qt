@@ -31,7 +31,7 @@ class CreateDirectoryConfigRequest;
 class QTAWS_EXPORT CreateDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CreateDirectoryConfigRequestPrivate(const AppStream::Action action,
+    CreateDirectoryConfigRequestPrivate(const AppStreamRequest::Action action,
                                    CreateDirectoryConfigRequest * const q);
     CreateDirectoryConfigRequestPrivate(const CreateDirectoryConfigRequestPrivate &other,
                                    CreateDirectoryConfigRequest * const q);

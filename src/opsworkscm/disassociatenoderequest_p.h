@@ -31,7 +31,7 @@ class DisassociateNodeRequest;
 class QTAWS_EXPORT DisassociateNodeRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DisassociateNodeRequestPrivate(const OpsWorksCM::Action action,
+    DisassociateNodeRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DisassociateNodeRequest * const q);
     DisassociateNodeRequestPrivate(const DisassociateNodeRequestPrivate &other,
                                    DisassociateNodeRequest * const q);

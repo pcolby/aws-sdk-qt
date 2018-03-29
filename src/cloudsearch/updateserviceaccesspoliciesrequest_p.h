@@ -31,7 +31,7 @@ class UpdateServiceAccessPoliciesRequest;
 class QTAWS_EXPORT UpdateServiceAccessPoliciesRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    UpdateServiceAccessPoliciesRequestPrivate(const CloudSearch::Action action,
+    UpdateServiceAccessPoliciesRequestPrivate(const CloudSearchRequest::Action action,
                                    UpdateServiceAccessPoliciesRequest * const q);
     UpdateServiceAccessPoliciesRequestPrivate(const UpdateServiceAccessPoliciesRequestPrivate &other,
                                    UpdateServiceAccessPoliciesRequest * const q);

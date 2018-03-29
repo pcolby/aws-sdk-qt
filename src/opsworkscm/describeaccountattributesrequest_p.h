@@ -31,7 +31,7 @@ class DescribeAccountAttributesRequest;
 class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DescribeAccountAttributesRequestPrivate(const OpsWorksCM::Action action,
+    DescribeAccountAttributesRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DescribeAccountAttributesRequest * const q);
     DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
                                    DescribeAccountAttributesRequest * const q);

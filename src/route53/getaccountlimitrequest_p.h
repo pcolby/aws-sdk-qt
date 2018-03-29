@@ -31,7 +31,7 @@ class GetAccountLimitRequest;
 class QTAWS_EXPORT GetAccountLimitRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetAccountLimitRequestPrivate(const Route53::Action action,
+    GetAccountLimitRequestPrivate(const Route53Request::Action action,
                                    GetAccountLimitRequest * const q);
     GetAccountLimitRequestPrivate(const GetAccountLimitRequestPrivate &other,
                                    GetAccountLimitRequest * const q);

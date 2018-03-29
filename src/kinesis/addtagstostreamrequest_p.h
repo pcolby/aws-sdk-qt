@@ -31,7 +31,7 @@ class AddTagsToStreamRequest;
 class QTAWS_EXPORT AddTagsToStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    AddTagsToStreamRequestPrivate(const Kinesis::Action action,
+    AddTagsToStreamRequestPrivate(const KinesisRequest::Action action,
                                    AddTagsToStreamRequest * const q);
     AddTagsToStreamRequestPrivate(const AddTagsToStreamRequestPrivate &other,
                                    AddTagsToStreamRequest * const q);

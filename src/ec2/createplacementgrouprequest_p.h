@@ -31,7 +31,7 @@ class CreatePlacementGroupRequest;
 class QTAWS_EXPORT CreatePlacementGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreatePlacementGroupRequestPrivate(const EC2::Action action,
+    CreatePlacementGroupRequestPrivate(const EC2Request::Action action,
                                    CreatePlacementGroupRequest * const q);
     CreatePlacementGroupRequestPrivate(const CreatePlacementGroupRequestPrivate &other,
                                    CreatePlacementGroupRequest * const q);

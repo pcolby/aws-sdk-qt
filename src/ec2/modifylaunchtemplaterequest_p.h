@@ -31,7 +31,7 @@ class ModifyLaunchTemplateRequest;
 class QTAWS_EXPORT ModifyLaunchTemplateRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyLaunchTemplateRequestPrivate(const EC2::Action action,
+    ModifyLaunchTemplateRequestPrivate(const EC2Request::Action action,
                                    ModifyLaunchTemplateRequest * const q);
     ModifyLaunchTemplateRequestPrivate(const ModifyLaunchTemplateRequestPrivate &other,
                                    ModifyLaunchTemplateRequest * const q);

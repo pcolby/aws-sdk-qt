@@ -31,7 +31,7 @@ class UpdateDatabaseRequest;
 class QTAWS_EXPORT UpdateDatabaseRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateDatabaseRequestPrivate(const Glue::Action action,
+    UpdateDatabaseRequestPrivate(const GlueRequest::Action action,
                                    UpdateDatabaseRequest * const q);
     UpdateDatabaseRequestPrivate(const UpdateDatabaseRequestPrivate &other,
                                    UpdateDatabaseRequest * const q);

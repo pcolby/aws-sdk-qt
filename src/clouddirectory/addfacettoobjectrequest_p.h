@@ -31,7 +31,7 @@ class AddFacetToObjectRequest;
 class QTAWS_EXPORT AddFacetToObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    AddFacetToObjectRequestPrivate(const CloudDirectory::Action action,
+    AddFacetToObjectRequestPrivate(const CloudDirectoryRequest::Action action,
                                    AddFacetToObjectRequest * const q);
     AddFacetToObjectRequestPrivate(const AddFacetToObjectRequestPrivate &other,
                                    AddFacetToObjectRequest * const q);

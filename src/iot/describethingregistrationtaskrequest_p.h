@@ -31,7 +31,7 @@ class DescribeThingRegistrationTaskRequest;
 class QTAWS_EXPORT DescribeThingRegistrationTaskRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeThingRegistrationTaskRequestPrivate(const IoT::Action action,
+    DescribeThingRegistrationTaskRequestPrivate(const IoTRequest::Action action,
                                    DescribeThingRegistrationTaskRequest * const q);
     DescribeThingRegistrationTaskRequestPrivate(const DescribeThingRegistrationTaskRequestPrivate &other,
                                    DescribeThingRegistrationTaskRequest * const q);

@@ -31,7 +31,7 @@ class DescribeWorkingStorageRequest;
 class QTAWS_EXPORT DescribeWorkingStorageRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeWorkingStorageRequestPrivate(const StorageGateway::Action action,
+    DescribeWorkingStorageRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeWorkingStorageRequest * const q);
     DescribeWorkingStorageRequestPrivate(const DescribeWorkingStorageRequestPrivate &other,
                                    DescribeWorkingStorageRequest * const q);

@@ -31,7 +31,7 @@ class PredictRequest;
 class QTAWS_EXPORT PredictRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    PredictRequestPrivate(const MachineLearning::Action action,
+    PredictRequestPrivate(const MachineLearningRequest::Action action,
                                    PredictRequest * const q);
     PredictRequestPrivate(const PredictRequestPrivate &other,
                                    PredictRequest * const q);

@@ -31,7 +31,7 @@ class CreateProjectRequest;
 class QTAWS_EXPORT CreateProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    CreateProjectRequestPrivate(const DeviceFarm::Action action,
+    CreateProjectRequestPrivate(const DeviceFarmRequest::Action action,
                                    CreateProjectRequest * const q);
     CreateProjectRequestPrivate(const CreateProjectRequestPrivate &other,
                                    CreateProjectRequest * const q);

@@ -31,7 +31,7 @@ class UpdateAccountSendingEnabledRequest;
 class QTAWS_EXPORT UpdateAccountSendingEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
-    UpdateAccountSendingEnabledRequestPrivate(const SES::Action action,
+    UpdateAccountSendingEnabledRequestPrivate(const SESRequest::Action action,
                                    UpdateAccountSendingEnabledRequest * const q);
     UpdateAccountSendingEnabledRequestPrivate(const UpdateAccountSendingEnabledRequestPrivate &other,
                                    UpdateAccountSendingEnabledRequest * const q);

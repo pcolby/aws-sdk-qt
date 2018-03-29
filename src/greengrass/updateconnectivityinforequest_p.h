@@ -31,7 +31,7 @@ class UpdateConnectivityInfoRequest;
 class QTAWS_EXPORT UpdateConnectivityInfoRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateConnectivityInfoRequestPrivate(const Greengrass::Action action,
+    UpdateConnectivityInfoRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateConnectivityInfoRequest * const q);
     UpdateConnectivityInfoRequestPrivate(const UpdateConnectivityInfoRequestPrivate &other,
                                    UpdateConnectivityInfoRequest * const q);

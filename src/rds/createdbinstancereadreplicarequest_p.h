@@ -31,7 +31,7 @@ class CreateDBInstanceReadReplicaRequest;
 class QTAWS_EXPORT CreateDBInstanceReadReplicaRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateDBInstanceReadReplicaRequestPrivate(const RDS::Action action,
+    CreateDBInstanceReadReplicaRequestPrivate(const RDSRequest::Action action,
                                    CreateDBInstanceReadReplicaRequest * const q);
     CreateDBInstanceReadReplicaRequestPrivate(const CreateDBInstanceReadReplicaRequestPrivate &other,
                                    CreateDBInstanceReadReplicaRequest * const q);

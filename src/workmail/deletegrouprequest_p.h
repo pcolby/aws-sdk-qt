@@ -31,7 +31,7 @@ class DeleteGroupRequest;
 class QTAWS_EXPORT DeleteGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DeleteGroupRequestPrivate(const WorkMail::Action action,
+    DeleteGroupRequestPrivate(const WorkMailRequest::Action action,
                                    DeleteGroupRequest * const q);
     DeleteGroupRequestPrivate(const DeleteGroupRequestPrivate &other,
                                    DeleteGroupRequest * const q);

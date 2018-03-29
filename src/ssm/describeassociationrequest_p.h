@@ -31,7 +31,7 @@ class DescribeAssociationRequest;
 class QTAWS_EXPORT DescribeAssociationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeAssociationRequestPrivate(const SSM::Action action,
+    DescribeAssociationRequestPrivate(const SSMRequest::Action action,
                                    DescribeAssociationRequest * const q);
     DescribeAssociationRequestPrivate(const DescribeAssociationRequestPrivate &other,
                                    DescribeAssociationRequest * const q);

@@ -31,7 +31,7 @@ class DetachPolicyRequest;
 class QTAWS_EXPORT DetachPolicyRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DetachPolicyRequestPrivate(const IoT::Action action,
+    DetachPolicyRequestPrivate(const IoTRequest::Action action,
                                    DetachPolicyRequest * const q);
     DetachPolicyRequestPrivate(const DetachPolicyRequestPrivate &other,
                                    DetachPolicyRequest * const q);

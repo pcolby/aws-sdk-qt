@@ -31,7 +31,7 @@ class DeleteStateMachineRequest;
 class QTAWS_EXPORT DeleteStateMachineRequestPrivate : public SFNRequestPrivate {
 
 public:
-    DeleteStateMachineRequestPrivate(const SFN::Action action,
+    DeleteStateMachineRequestPrivate(const SFNRequest::Action action,
                                    DeleteStateMachineRequest * const q);
     DeleteStateMachineRequestPrivate(const DeleteStateMachineRequestPrivate &other,
                                    DeleteStateMachineRequest * const q);

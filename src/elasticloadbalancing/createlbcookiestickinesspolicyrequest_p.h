@@ -31,7 +31,7 @@ class CreateLBCookieStickinessPolicyRequest;
 class QTAWS_EXPORT CreateLBCookieStickinessPolicyRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    CreateLBCookieStickinessPolicyRequestPrivate(const ElasticLoadBalancing::Action action,
+    CreateLBCookieStickinessPolicyRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    CreateLBCookieStickinessPolicyRequest * const q);
     CreateLBCookieStickinessPolicyRequestPrivate(const CreateLBCookieStickinessPolicyRequestPrivate &other,
                                    CreateLBCookieStickinessPolicyRequest * const q);

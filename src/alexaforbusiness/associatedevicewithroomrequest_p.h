@@ -31,7 +31,7 @@ class AssociateDeviceWithRoomRequest;
 class QTAWS_EXPORT AssociateDeviceWithRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    AssociateDeviceWithRoomRequestPrivate(const AlexaForBusiness::Action action,
+    AssociateDeviceWithRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    AssociateDeviceWithRoomRequest * const q);
     AssociateDeviceWithRoomRequestPrivate(const AssociateDeviceWithRoomRequestPrivate &other,
                                    AssociateDeviceWithRoomRequest * const q);

@@ -31,7 +31,7 @@ class DescribeFileSystemsRequest;
 class QTAWS_EXPORT DescribeFileSystemsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DescribeFileSystemsRequestPrivate(const EFS::Action action,
+    DescribeFileSystemsRequestPrivate(const EFSRequest::Action action,
                                    DescribeFileSystemsRequest * const q);
     DescribeFileSystemsRequestPrivate(const DescribeFileSystemsRequestPrivate &other,
                                    DescribeFileSystemsRequest * const q);

@@ -31,7 +31,7 @@ class CreateUserProfileRequest;
 class QTAWS_EXPORT CreateUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CreateUserProfileRequestPrivate(const OpsWorks::Action action,
+    CreateUserProfileRequestPrivate(const OpsWorksRequest::Action action,
                                    CreateUserProfileRequest * const q);
     CreateUserProfileRequestPrivate(const CreateUserProfileRequestPrivate &other,
                                    CreateUserProfileRequest * const q);

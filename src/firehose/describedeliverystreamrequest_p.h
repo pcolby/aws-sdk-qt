@@ -31,7 +31,7 @@ class DescribeDeliveryStreamRequest;
 class QTAWS_EXPORT DescribeDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
-    DescribeDeliveryStreamRequestPrivate(const Firehose::Action action,
+    DescribeDeliveryStreamRequestPrivate(const FirehoseRequest::Action action,
                                    DescribeDeliveryStreamRequest * const q);
     DescribeDeliveryStreamRequestPrivate(const DescribeDeliveryStreamRequestPrivate &other,
                                    DescribeDeliveryStreamRequest * const q);

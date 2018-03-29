@@ -31,7 +31,7 @@ class PutParameterRequest;
 class QTAWS_EXPORT PutParameterRequestPrivate : public SSMRequestPrivate {
 
 public:
-    PutParameterRequestPrivate(const SSM::Action action,
+    PutParameterRequestPrivate(const SSMRequest::Action action,
                                    PutParameterRequest * const q);
     PutParameterRequestPrivate(const PutParameterRequestPrivate &other,
                                    PutParameterRequest * const q);

@@ -31,7 +31,7 @@ class CreateJobRequest;
 class QTAWS_EXPORT CreateJobRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    CreateJobRequestPrivate(const Snowball::Action action,
+    CreateJobRequestPrivate(const SnowballRequest::Action action,
                                    CreateJobRequest * const q);
     CreateJobRequestPrivate(const CreateJobRequestPrivate &other,
                                    CreateJobRequest * const q);

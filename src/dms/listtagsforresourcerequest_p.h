@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const DatabaseMigrationService::Action action,
+    ListTagsForResourceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

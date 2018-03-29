@@ -31,7 +31,7 @@ class NotifyWorkersRequest;
 class QTAWS_EXPORT NotifyWorkersRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    NotifyWorkersRequestPrivate(const MTurk::Action action,
+    NotifyWorkersRequestPrivate(const MTurkRequest::Action action,
                                    NotifyWorkersRequest * const q);
     NotifyWorkersRequestPrivate(const NotifyWorkersRequestPrivate &other,
                                    NotifyWorkersRequest * const q);

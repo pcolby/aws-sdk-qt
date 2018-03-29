@@ -31,7 +31,7 @@ class UntagProjectRequest;
 class QTAWS_EXPORT UntagProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    UntagProjectRequestPrivate(const CodeStar::Action action,
+    UntagProjectRequestPrivate(const CodeStarRequest::Action action,
                                    UntagProjectRequest * const q);
     UntagProjectRequestPrivate(const UntagProjectRequestPrivate &other,
                                    UntagProjectRequest * const q);

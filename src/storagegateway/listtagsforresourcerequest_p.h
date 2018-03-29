@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const StorageGateway::Action action,
+    ListTagsForResourceRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

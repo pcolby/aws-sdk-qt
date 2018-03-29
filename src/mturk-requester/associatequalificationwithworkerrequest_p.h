@@ -31,7 +31,7 @@ class AssociateQualificationWithWorkerRequest;
 class QTAWS_EXPORT AssociateQualificationWithWorkerRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    AssociateQualificationWithWorkerRequestPrivate(const MTurk::Action action,
+    AssociateQualificationWithWorkerRequestPrivate(const MTurkRequest::Action action,
                                    AssociateQualificationWithWorkerRequest * const q);
     AssociateQualificationWithWorkerRequestPrivate(const AssociateQualificationWithWorkerRequestPrivate &other,
                                    AssociateQualificationWithWorkerRequest * const q);

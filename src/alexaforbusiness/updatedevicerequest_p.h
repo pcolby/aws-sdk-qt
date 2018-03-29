@@ -31,7 +31,7 @@ class UpdateDeviceRequest;
 class QTAWS_EXPORT UpdateDeviceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    UpdateDeviceRequestPrivate(const AlexaForBusiness::Action action,
+    UpdateDeviceRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    UpdateDeviceRequest * const q);
     UpdateDeviceRequestPrivate(const UpdateDeviceRequestPrivate &other,
                                    UpdateDeviceRequest * const q);

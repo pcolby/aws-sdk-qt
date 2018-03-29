@@ -31,7 +31,7 @@ class ReEncryptRequest;
 class QTAWS_EXPORT ReEncryptRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ReEncryptRequestPrivate(const KMS::Action action,
+    ReEncryptRequestPrivate(const KMSRequest::Action action,
                                    ReEncryptRequest * const q);
     ReEncryptRequestPrivate(const ReEncryptRequestPrivate &other,
                                    ReEncryptRequest * const q);

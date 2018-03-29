@@ -31,7 +31,7 @@ class UpdateConditionalForwarderRequest;
 class QTAWS_EXPORT UpdateConditionalForwarderRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    UpdateConditionalForwarderRequestPrivate(const DirectoryService::Action action,
+    UpdateConditionalForwarderRequestPrivate(const DirectoryServiceRequest::Action action,
                                    UpdateConditionalForwarderRequest * const q);
     UpdateConditionalForwarderRequestPrivate(const UpdateConditionalForwarderRequestPrivate &other,
                                    UpdateConditionalForwarderRequest * const q);

@@ -31,7 +31,7 @@ class DeleteTagsRequest;
 class QTAWS_EXPORT DeleteTagsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const WorkSpaces::Action action,
+    DeleteTagsRequestPrivate(const WorkSpacesRequest::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteSlotTypeVersionRequest;
 class QTAWS_EXPORT DeleteSlotTypeVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteSlotTypeVersionRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteSlotTypeVersionRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteSlotTypeVersionRequest * const q);
     DeleteSlotTypeVersionRequestPrivate(const DeleteSlotTypeVersionRequestPrivate &other,
                                    DeleteSlotTypeVersionRequest * const q);

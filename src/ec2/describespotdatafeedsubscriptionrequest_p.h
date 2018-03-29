@@ -31,7 +31,7 @@ class DescribeSpotDatafeedSubscriptionRequest;
 class QTAWS_EXPORT DescribeSpotDatafeedSubscriptionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSpotDatafeedSubscriptionRequestPrivate(const EC2::Action action,
+    DescribeSpotDatafeedSubscriptionRequestPrivate(const EC2Request::Action action,
                                    DescribeSpotDatafeedSubscriptionRequest * const q);
     DescribeSpotDatafeedSubscriptionRequestPrivate(const DescribeSpotDatafeedSubscriptionRequestPrivate &other,
                                    DescribeSpotDatafeedSubscriptionRequest * const q);

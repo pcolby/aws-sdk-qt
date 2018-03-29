@@ -31,7 +31,7 @@ class DescribeJobRequest;
 class QTAWS_EXPORT DescribeJobRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    DescribeJobRequestPrivate(const Glacier::Action action,
+    DescribeJobRequestPrivate(const GlacierRequest::Action action,
                                    DescribeJobRequest * const q);
     DescribeJobRequestPrivate(const DescribeJobRequestPrivate &other,
                                    DescribeJobRequest * const q);

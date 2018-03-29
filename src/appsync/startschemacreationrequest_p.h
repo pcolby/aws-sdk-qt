@@ -31,7 +31,7 @@ class StartSchemaCreationRequest;
 class QTAWS_EXPORT StartSchemaCreationRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    StartSchemaCreationRequestPrivate(const AppSync::Action action,
+    StartSchemaCreationRequestPrivate(const AppSyncRequest::Action action,
                                    StartSchemaCreationRequest * const q);
     StartSchemaCreationRequestPrivate(const StartSchemaCreationRequestPrivate &other,
                                    StartSchemaCreationRequest * const q);

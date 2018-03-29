@@ -31,7 +31,7 @@ class CreateConfigurationTemplateRequest;
 class QTAWS_EXPORT CreateConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    CreateConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,
+    CreateConfigurationTemplateRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    CreateConfigurationTemplateRequest * const q);
     CreateConfigurationTemplateRequestPrivate(const CreateConfigurationTemplateRequestPrivate &other,
                                    CreateConfigurationTemplateRequest * const q);

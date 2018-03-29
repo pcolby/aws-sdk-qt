@@ -31,7 +31,7 @@ class DeleteGroupRequest;
 class QTAWS_EXPORT DeleteGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    DeleteGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+    DeleteGroupRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    DeleteGroupRequest * const q);
     DeleteGroupRequestPrivate(const DeleteGroupRequestPrivate &other,
                                    DeleteGroupRequest * const q);

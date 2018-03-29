@@ -31,7 +31,7 @@ class CreateStackRequest;
 class QTAWS_EXPORT CreateStackRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CreateStackRequestPrivate(const AppStream::Action action,
+    CreateStackRequestPrivate(const AppStreamRequest::Action action,
                                    CreateStackRequest * const q);
     CreateStackRequestPrivate(const CreateStackRequestPrivate &other,
                                    CreateStackRequest * const q);

@@ -31,7 +31,7 @@ class DeleteObjectTaggingRequest;
 class QTAWS_EXPORT DeleteObjectTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteObjectTaggingRequestPrivate(const S3::Action action,
+    DeleteObjectTaggingRequestPrivate(const S3Request::Action action,
                                    DeleteObjectTaggingRequest * const q);
     DeleteObjectTaggingRequestPrivate(const DeleteObjectTaggingRequestPrivate &other,
                                    DeleteObjectTaggingRequest * const q);

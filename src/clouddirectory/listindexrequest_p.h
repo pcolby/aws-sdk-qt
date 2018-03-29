@@ -31,7 +31,7 @@ class ListIndexRequest;
 class QTAWS_EXPORT ListIndexRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListIndexRequestPrivate(const CloudDirectory::Action action,
+    ListIndexRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListIndexRequest * const q);
     ListIndexRequestPrivate(const ListIndexRequestPrivate &other,
                                    ListIndexRequest * const q);

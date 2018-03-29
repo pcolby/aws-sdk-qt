@@ -31,7 +31,7 @@ class CreateNatGatewayRequest;
 class QTAWS_EXPORT CreateNatGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateNatGatewayRequestPrivate(const EC2::Action action,
+    CreateNatGatewayRequestPrivate(const EC2Request::Action action,
                                    CreateNatGatewayRequest * const q);
     CreateNatGatewayRequestPrivate(const CreateNatGatewayRequestPrivate &other,
                                    CreateNatGatewayRequest * const q);

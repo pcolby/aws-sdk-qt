@@ -31,7 +31,7 @@ class DeleteSnapshotRequest;
 class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DeleteSnapshotRequestPrivate(const DirectoryService::Action action,
+    DeleteSnapshotRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DeleteSnapshotRequest * const q);
     DeleteSnapshotRequestPrivate(const DeleteSnapshotRequestPrivate &other,
                                    DeleteSnapshotRequest * const q);

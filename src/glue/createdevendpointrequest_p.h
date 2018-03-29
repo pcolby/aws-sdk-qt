@@ -31,7 +31,7 @@ class CreateDevEndpointRequest;
 class QTAWS_EXPORT CreateDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
-    CreateDevEndpointRequestPrivate(const Glue::Action action,
+    CreateDevEndpointRequestPrivate(const GlueRequest::Action action,
                                    CreateDevEndpointRequest * const q);
     CreateDevEndpointRequestPrivate(const CreateDevEndpointRequestPrivate &other,
                                    CreateDevEndpointRequest * const q);

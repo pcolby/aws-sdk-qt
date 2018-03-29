@@ -31,7 +31,7 @@ class UpdateBuildRequest;
 class QTAWS_EXPORT UpdateBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateBuildRequestPrivate(const GameLift::Action action,
+    UpdateBuildRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateBuildRequest * const q);
     UpdateBuildRequestPrivate(const UpdateBuildRequestPrivate &other,
                                    UpdateBuildRequest * const q);

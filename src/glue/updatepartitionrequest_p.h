@@ -31,7 +31,7 @@ class UpdatePartitionRequest;
 class QTAWS_EXPORT UpdatePartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdatePartitionRequestPrivate(const Glue::Action action,
+    UpdatePartitionRequestPrivate(const GlueRequest::Action action,
                                    UpdatePartitionRequest * const q);
     UpdatePartitionRequestPrivate(const UpdatePartitionRequestPrivate &other,
                                    UpdatePartitionRequest * const q);

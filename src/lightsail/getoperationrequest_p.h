@@ -31,7 +31,7 @@ class GetOperationRequest;
 class QTAWS_EXPORT GetOperationRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetOperationRequestPrivate(const Lightsail::Action action,
+    GetOperationRequestPrivate(const LightsailRequest::Action action,
                                    GetOperationRequest * const q);
     GetOperationRequestPrivate(const GetOperationRequestPrivate &other,
                                    GetOperationRequest * const q);

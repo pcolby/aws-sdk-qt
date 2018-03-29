@@ -31,7 +31,7 @@ class SearchResourcesRequest;
 class QTAWS_EXPORT SearchResourcesRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
-    SearchResourcesRequestPrivate(const ResourceGroups::Action action,
+    SearchResourcesRequestPrivate(const ResourceGroupsRequest::Action action,
                                    SearchResourcesRequest * const q);
     SearchResourcesRequestPrivate(const SearchResourcesRequestPrivate &other,
                                    SearchResourcesRequest * const q);

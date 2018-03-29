@@ -31,7 +31,7 @@ class CreateWorkerBlockRequest;
 class QTAWS_EXPORT CreateWorkerBlockRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    CreateWorkerBlockRequestPrivate(const MTurk::Action action,
+    CreateWorkerBlockRequestPrivate(const MTurkRequest::Action action,
                                    CreateWorkerBlockRequest * const q);
     CreateWorkerBlockRequestPrivate(const CreateWorkerBlockRequestPrivate &other,
                                    CreateWorkerBlockRequest * const q);

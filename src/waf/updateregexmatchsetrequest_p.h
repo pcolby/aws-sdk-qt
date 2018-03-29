@@ -31,7 +31,7 @@ class UpdateRegexMatchSetRequest;
 class QTAWS_EXPORT UpdateRegexMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    UpdateRegexMatchSetRequestPrivate(const WAF::Action action,
+    UpdateRegexMatchSetRequestPrivate(const WAFRequest::Action action,
                                    UpdateRegexMatchSetRequest * const q);
     UpdateRegexMatchSetRequestPrivate(const UpdateRegexMatchSetRequestPrivate &other,
                                    UpdateRegexMatchSetRequest * const q);

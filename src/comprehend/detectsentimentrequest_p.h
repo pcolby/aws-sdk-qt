@@ -31,7 +31,7 @@ class DetectSentimentRequest;
 class QTAWS_EXPORT DetectSentimentRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    DetectSentimentRequestPrivate(const Comprehend::Action action,
+    DetectSentimentRequestPrivate(const ComprehendRequest::Action action,
                                    DetectSentimentRequest * const q);
     DetectSentimentRequestPrivate(const DetectSentimentRequestPrivate &other,
                                    DetectSentimentRequest * const q);

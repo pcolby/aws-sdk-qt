@@ -31,7 +31,7 @@ class DeregisterPatchBaselineForPatchGroupRequest;
 class QTAWS_EXPORT DeregisterPatchBaselineForPatchGroupRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeregisterPatchBaselineForPatchGroupRequestPrivate(const SSM::Action action,
+    DeregisterPatchBaselineForPatchGroupRequestPrivate(const SSMRequest::Action action,
                                    DeregisterPatchBaselineForPatchGroupRequest * const q);
     DeregisterPatchBaselineForPatchGroupRequestPrivate(const DeregisterPatchBaselineForPatchGroupRequestPrivate &other,
                                    DeregisterPatchBaselineForPatchGroupRequest * const q);

@@ -31,7 +31,7 @@ class CreateAutoScalingGroupRequest;
 class QTAWS_EXPORT CreateAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    CreateAutoScalingGroupRequestPrivate(const AutoScaling::Action action,
+    CreateAutoScalingGroupRequestPrivate(const AutoScalingRequest::Action action,
                                    CreateAutoScalingGroupRequest * const q);
     CreateAutoScalingGroupRequestPrivate(const CreateAutoScalingGroupRequestPrivate &other,
                                    CreateAutoScalingGroupRequest * const q);

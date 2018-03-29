@@ -31,7 +31,7 @@ class EnableAllFeaturesRequest;
 class QTAWS_EXPORT EnableAllFeaturesRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    EnableAllFeaturesRequestPrivate(const Organizations::Action action,
+    EnableAllFeaturesRequestPrivate(const OrganizationsRequest::Action action,
                                    EnableAllFeaturesRequest * const q);
     EnableAllFeaturesRequestPrivate(const EnableAllFeaturesRequestPrivate &other,
                                    EnableAllFeaturesRequest * const q);

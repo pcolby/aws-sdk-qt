@@ -31,7 +31,7 @@ class DeleteKeyPairRequest;
 class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DeleteKeyPairRequestPrivate(const Lightsail::Action action,
+    DeleteKeyPairRequestPrivate(const LightsailRequest::Action action,
                                    DeleteKeyPairRequest * const q);
     DeleteKeyPairRequestPrivate(const DeleteKeyPairRequestPrivate &other,
                                    DeleteKeyPairRequest * const q);

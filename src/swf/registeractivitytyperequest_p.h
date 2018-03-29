@@ -31,7 +31,7 @@ class RegisterActivityTypeRequest;
 class QTAWS_EXPORT RegisterActivityTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RegisterActivityTypeRequestPrivate(const SWF::Action action,
+    RegisterActivityTypeRequestPrivate(const SWFRequest::Action action,
                                    RegisterActivityTypeRequest * const q);
     RegisterActivityTypeRequestPrivate(const RegisterActivityTypeRequestPrivate &other,
                                    RegisterActivityTypeRequest * const q);

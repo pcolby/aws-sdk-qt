@@ -31,7 +31,7 @@ class ListResourcesForTagOptionRequest;
 class QTAWS_EXPORT ListResourcesForTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListResourcesForTagOptionRequestPrivate(const ServiceCatalog::Action action,
+    ListResourcesForTagOptionRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListResourcesForTagOptionRequest * const q);
     ListResourcesForTagOptionRequestPrivate(const ListResourcesForTagOptionRequestPrivate &other,
                                    ListResourcesForTagOptionRequest * const q);

@@ -31,7 +31,7 @@ class CreateResourceDefinitionVersionRequest;
 class QTAWS_EXPORT CreateResourceDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateResourceDefinitionVersionRequestPrivate(const Greengrass::Action action,
+    CreateResourceDefinitionVersionRequestPrivate(const GreengrassRequest::Action action,
                                    CreateResourceDefinitionVersionRequest * const q);
     CreateResourceDefinitionVersionRequestPrivate(const CreateResourceDefinitionVersionRequestPrivate &other,
                                    CreateResourceDefinitionVersionRequest * const q);

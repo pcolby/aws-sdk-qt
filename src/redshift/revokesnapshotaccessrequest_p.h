@@ -31,7 +31,7 @@ class RevokeSnapshotAccessRequest;
 class QTAWS_EXPORT RevokeSnapshotAccessRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    RevokeSnapshotAccessRequestPrivate(const Redshift::Action action,
+    RevokeSnapshotAccessRequestPrivate(const RedshiftRequest::Action action,
                                    RevokeSnapshotAccessRequest * const q);
     RevokeSnapshotAccessRequestPrivate(const RevokeSnapshotAccessRequestPrivate &other,
                                    RevokeSnapshotAccessRequest * const q);

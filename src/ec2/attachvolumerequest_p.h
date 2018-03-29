@@ -31,7 +31,7 @@ class AttachVolumeRequest;
 class QTAWS_EXPORT AttachVolumeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AttachVolumeRequestPrivate(const EC2::Action action,
+    AttachVolumeRequestPrivate(const EC2Request::Action action,
                                    AttachVolumeRequest * const q);
     AttachVolumeRequestPrivate(const AttachVolumeRequestPrivate &other,
                                    AttachVolumeRequest * const q);

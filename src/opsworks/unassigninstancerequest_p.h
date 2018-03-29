@@ -31,7 +31,7 @@ class UnassignInstanceRequest;
 class QTAWS_EXPORT UnassignInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UnassignInstanceRequestPrivate(const OpsWorks::Action action,
+    UnassignInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    UnassignInstanceRequest * const q);
     UnassignInstanceRequestPrivate(const UnassignInstanceRequestPrivate &other,
                                    UnassignInstanceRequest * const q);

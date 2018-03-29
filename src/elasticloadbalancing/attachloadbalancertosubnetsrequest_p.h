@@ -31,7 +31,7 @@ class AttachLoadBalancerToSubnetsRequest;
 class QTAWS_EXPORT AttachLoadBalancerToSubnetsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    AttachLoadBalancerToSubnetsRequestPrivate(const ElasticLoadBalancing::Action action,
+    AttachLoadBalancerToSubnetsRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    AttachLoadBalancerToSubnetsRequest * const q);
     AttachLoadBalancerToSubnetsRequestPrivate(const AttachLoadBalancerToSubnetsRequestPrivate &other,
                                    AttachLoadBalancerToSubnetsRequest * const q);

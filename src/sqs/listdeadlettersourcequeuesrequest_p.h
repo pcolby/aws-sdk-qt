@@ -31,7 +31,7 @@ class ListDeadLetterSourceQueuesRequest;
 class QTAWS_EXPORT ListDeadLetterSourceQueuesRequestPrivate : public SQSRequestPrivate {
 
 public:
-    ListDeadLetterSourceQueuesRequestPrivate(const SQS::Action action,
+    ListDeadLetterSourceQueuesRequestPrivate(const SQSRequest::Action action,
                                    ListDeadLetterSourceQueuesRequest * const q);
     ListDeadLetterSourceQueuesRequestPrivate(const ListDeadLetterSourceQueuesRequestPrivate &other,
                                    ListDeadLetterSourceQueuesRequest * const q);

@@ -31,7 +31,7 @@ class GetPlatformApplicationAttributesRequest;
 class QTAWS_EXPORT GetPlatformApplicationAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
-    GetPlatformApplicationAttributesRequestPrivate(const SNS::Action action,
+    GetPlatformApplicationAttributesRequestPrivate(const SNSRequest::Action action,
                                    GetPlatformApplicationAttributesRequest * const q);
     GetPlatformApplicationAttributesRequestPrivate(const GetPlatformApplicationAttributesRequestPrivate &other,
                                    GetPlatformApplicationAttributesRequest * const q);

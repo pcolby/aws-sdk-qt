@@ -31,7 +31,7 @@ class TestAuthorizationRequest;
 class QTAWS_EXPORT TestAuthorizationRequestPrivate : public IoTRequestPrivate {
 
 public:
-    TestAuthorizationRequestPrivate(const IoT::Action action,
+    TestAuthorizationRequestPrivate(const IoTRequest::Action action,
                                    TestAuthorizationRequest * const q);
     TestAuthorizationRequestPrivate(const TestAuthorizationRequestPrivate &other,
                                    TestAuthorizationRequest * const q);

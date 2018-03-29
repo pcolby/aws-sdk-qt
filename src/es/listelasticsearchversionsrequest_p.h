@@ -31,7 +31,7 @@ class ListElasticsearchVersionsRequest;
 class QTAWS_EXPORT ListElasticsearchVersionsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    ListElasticsearchVersionsRequestPrivate(const ElasticsearchService::Action action,
+    ListElasticsearchVersionsRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    ListElasticsearchVersionsRequest * const q);
     ListElasticsearchVersionsRequestPrivate(const ListElasticsearchVersionsRequestPrivate &other,
                                    ListElasticsearchVersionsRequest * const q);

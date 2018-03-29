@@ -31,7 +31,7 @@ class GetIntrospectionSchemaRequest;
 class QTAWS_EXPORT GetIntrospectionSchemaRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    GetIntrospectionSchemaRequestPrivate(const AppSync::Action action,
+    GetIntrospectionSchemaRequestPrivate(const AppSyncRequest::Action action,
                                    GetIntrospectionSchemaRequest * const q);
     GetIntrospectionSchemaRequestPrivate(const GetIntrospectionSchemaRequestPrivate &other,
                                    GetIntrospectionSchemaRequest * const q);

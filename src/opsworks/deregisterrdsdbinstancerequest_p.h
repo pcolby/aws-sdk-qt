@@ -31,7 +31,7 @@ class DeregisterRdsDbInstanceRequest;
 class QTAWS_EXPORT DeregisterRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeregisterRdsDbInstanceRequestPrivate(const OpsWorks::Action action,
+    DeregisterRdsDbInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    DeregisterRdsDbInstanceRequest * const q);
     DeregisterRdsDbInstanceRequestPrivate(const DeregisterRdsDbInstanceRequestPrivate &other,
                                    DeregisterRdsDbInstanceRequest * const q);

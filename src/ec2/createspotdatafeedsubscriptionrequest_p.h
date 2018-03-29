@@ -31,7 +31,7 @@ class CreateSpotDatafeedSubscriptionRequest;
 class QTAWS_EXPORT CreateSpotDatafeedSubscriptionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateSpotDatafeedSubscriptionRequestPrivate(const EC2::Action action,
+    CreateSpotDatafeedSubscriptionRequestPrivate(const EC2Request::Action action,
                                    CreateSpotDatafeedSubscriptionRequest * const q);
     CreateSpotDatafeedSubscriptionRequestPrivate(const CreateSpotDatafeedSubscriptionRequestPrivate &other,
                                    CreateSpotDatafeedSubscriptionRequest * const q);

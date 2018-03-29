@@ -31,7 +31,7 @@ class UpdateEventSourceMappingRequest;
 class QTAWS_EXPORT UpdateEventSourceMappingRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    UpdateEventSourceMappingRequestPrivate(const Lambda::Action action,
+    UpdateEventSourceMappingRequestPrivate(const LambdaRequest::Action action,
                                    UpdateEventSourceMappingRequest * const q);
     UpdateEventSourceMappingRequestPrivate(const UpdateEventSourceMappingRequestPrivate &other,
                                    UpdateEventSourceMappingRequest * const q);

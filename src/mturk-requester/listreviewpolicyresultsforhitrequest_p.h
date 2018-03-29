@@ -31,7 +31,7 @@ class ListReviewPolicyResultsForHITRequest;
 class QTAWS_EXPORT ListReviewPolicyResultsForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ListReviewPolicyResultsForHITRequestPrivate(const MTurk::Action action,
+    ListReviewPolicyResultsForHITRequestPrivate(const MTurkRequest::Action action,
                                    ListReviewPolicyResultsForHITRequest * const q);
     ListReviewPolicyResultsForHITRequestPrivate(const ListReviewPolicyResultsForHITRequestPrivate &other,
                                    ListReviewPolicyResultsForHITRequest * const q);

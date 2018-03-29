@@ -31,7 +31,7 @@ class CreateAdditionalAssignmentsForHITRequest;
 class QTAWS_EXPORT CreateAdditionalAssignmentsForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    CreateAdditionalAssignmentsForHITRequestPrivate(const MTurk::Action action,
+    CreateAdditionalAssignmentsForHITRequestPrivate(const MTurkRequest::Action action,
                                    CreateAdditionalAssignmentsForHITRequest * const q);
     CreateAdditionalAssignmentsForHITRequestPrivate(const CreateAdditionalAssignmentsForHITRequestPrivate &other,
                                    CreateAdditionalAssignmentsForHITRequest * const q);

@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const CloudDirectory::Action action,
+    UntagResourceRequestPrivate(const CloudDirectoryRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

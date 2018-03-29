@@ -31,7 +31,7 @@ class PutThirdPartyJobFailureResultRequest;
 class QTAWS_EXPORT PutThirdPartyJobFailureResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    PutThirdPartyJobFailureResultRequestPrivate(const CodePipeline::Action action,
+    PutThirdPartyJobFailureResultRequestPrivate(const CodePipelineRequest::Action action,
                                    PutThirdPartyJobFailureResultRequest * const q);
     PutThirdPartyJobFailureResultRequestPrivate(const PutThirdPartyJobFailureResultRequestPrivate &other,
                                    PutThirdPartyJobFailureResultRequest * const q);

@@ -31,7 +31,7 @@ class CreateBuildRequest;
 class QTAWS_EXPORT CreateBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    CreateBuildRequestPrivate(const GameLift::Action action,
+    CreateBuildRequestPrivate(const GameLiftRequest::Action action,
                                    CreateBuildRequest * const q);
     CreateBuildRequestPrivate(const CreateBuildRequestPrivate &other,
                                    CreateBuildRequest * const q);

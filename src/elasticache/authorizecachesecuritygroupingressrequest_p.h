@@ -31,7 +31,7 @@ class AuthorizeCacheSecurityGroupIngressRequest;
 class QTAWS_EXPORT AuthorizeCacheSecurityGroupIngressRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    AuthorizeCacheSecurityGroupIngressRequestPrivate(const ElastiCache::Action action,
+    AuthorizeCacheSecurityGroupIngressRequestPrivate(const ElastiCacheRequest::Action action,
                                    AuthorizeCacheSecurityGroupIngressRequest * const q);
     AuthorizeCacheSecurityGroupIngressRequestPrivate(const AuthorizeCacheSecurityGroupIngressRequestPrivate &other,
                                    AuthorizeCacheSecurityGroupIngressRequest * const q);

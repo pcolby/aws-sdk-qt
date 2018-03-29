@@ -31,7 +31,7 @@ class ListHapgsRequest;
 class QTAWS_EXPORT ListHapgsRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    ListHapgsRequestPrivate(const CloudHSM::Action action,
+    ListHapgsRequestPrivate(const CloudHSMRequest::Action action,
                                    ListHapgsRequest * const q);
     ListHapgsRequestPrivate(const ListHapgsRequestPrivate &other,
                                    ListHapgsRequest * const q);

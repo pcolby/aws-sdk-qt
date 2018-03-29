@@ -31,7 +31,7 @@ class CancelCommandRequest;
 class QTAWS_EXPORT CancelCommandRequestPrivate : public SSMRequestPrivate {
 
 public:
-    CancelCommandRequestPrivate(const SSM::Action action,
+    CancelCommandRequestPrivate(const SSMRequest::Action action,
                                    CancelCommandRequest * const q);
     CancelCommandRequestPrivate(const CancelCommandRequestPrivate &other,
                                    CancelCommandRequest * const q);

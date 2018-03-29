@@ -31,7 +31,7 @@ class AddPermissionRequest;
 class QTAWS_EXPORT AddPermissionRequestPrivate : public SNSRequestPrivate {
 
 public:
-    AddPermissionRequestPrivate(const SNS::Action action,
+    AddPermissionRequestPrivate(const SNSRequest::Action action,
                                    AddPermissionRequest * const q);
     AddPermissionRequestPrivate(const AddPermissionRequestPrivate &other,
                                    AddPermissionRequest * const q);

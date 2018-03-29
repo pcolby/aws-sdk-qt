@@ -31,7 +31,7 @@ class RegisterTargetsRequest;
 class QTAWS_EXPORT RegisterTargetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    RegisterTargetsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    RegisterTargetsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    RegisterTargetsRequest * const q);
     RegisterTargetsRequestPrivate(const RegisterTargetsRequestPrivate &other,
                                    RegisterTargetsRequest * const q);

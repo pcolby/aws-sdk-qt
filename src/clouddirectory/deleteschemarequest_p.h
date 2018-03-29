@@ -31,7 +31,7 @@ class DeleteSchemaRequest;
 class QTAWS_EXPORT DeleteSchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DeleteSchemaRequestPrivate(const CloudDirectory::Action action,
+    DeleteSchemaRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DeleteSchemaRequest * const q);
     DeleteSchemaRequestPrivate(const DeleteSchemaRequestPrivate &other,
                                    DeleteSchemaRequest * const q);

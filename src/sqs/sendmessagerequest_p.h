@@ -31,7 +31,7 @@ class SendMessageRequest;
 class QTAWS_EXPORT SendMessageRequestPrivate : public SQSRequestPrivate {
 
 public:
-    SendMessageRequestPrivate(const SQS::Action action,
+    SendMessageRequestPrivate(const SQSRequest::Action action,
                                    SendMessageRequest * const q);
     SendMessageRequestPrivate(const SendMessageRequestPrivate &other,
                                    SendMessageRequest * const q);

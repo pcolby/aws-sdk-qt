@@ -31,7 +31,7 @@ class StopNotebookInstanceRequest;
 class QTAWS_EXPORT StopNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    StopNotebookInstanceRequestPrivate(const SageMaker::Action action,
+    StopNotebookInstanceRequestPrivate(const SageMakerRequest::Action action,
                                    StopNotebookInstanceRequest * const q);
     StopNotebookInstanceRequestPrivate(const StopNotebookInstanceRequestPrivate &other,
                                    StopNotebookInstanceRequest * const q);

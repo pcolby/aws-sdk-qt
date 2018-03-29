@@ -31,7 +31,7 @@ class GetConnectionsRequest;
 class QTAWS_EXPORT GetConnectionsRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetConnectionsRequestPrivate(const Glue::Action action,
+    GetConnectionsRequestPrivate(const GlueRequest::Action action,
                                    GetConnectionsRequest * const q);
     GetConnectionsRequestPrivate(const GetConnectionsRequestPrivate &other,
                                    GetConnectionsRequest * const q);

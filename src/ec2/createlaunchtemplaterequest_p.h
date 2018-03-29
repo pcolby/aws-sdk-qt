@@ -31,7 +31,7 @@ class CreateLaunchTemplateRequest;
 class QTAWS_EXPORT CreateLaunchTemplateRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateLaunchTemplateRequestPrivate(const EC2::Action action,
+    CreateLaunchTemplateRequestPrivate(const EC2Request::Action action,
                                    CreateLaunchTemplateRequest * const q);
     CreateLaunchTemplateRequestPrivate(const CreateLaunchTemplateRequestPrivate &other,
                                    CreateLaunchTemplateRequest * const q);

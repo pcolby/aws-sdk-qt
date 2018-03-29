@@ -31,7 +31,7 @@ class DisableSnapshotCopyRequest;
 class QTAWS_EXPORT DisableSnapshotCopyRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DisableSnapshotCopyRequestPrivate(const Redshift::Action action,
+    DisableSnapshotCopyRequestPrivate(const RedshiftRequest::Action action,
                                    DisableSnapshotCopyRequest * const q);
     DisableSnapshotCopyRequestPrivate(const DisableSnapshotCopyRequestPrivate &other,
                                    DisableSnapshotCopyRequest * const q);

@@ -31,7 +31,7 @@ class DeleteTemplateRequest;
 class QTAWS_EXPORT DeleteTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteTemplateRequestPrivate(const SES::Action action,
+    DeleteTemplateRequestPrivate(const SESRequest::Action action,
                                    DeleteTemplateRequest * const q);
     DeleteTemplateRequestPrivate(const DeleteTemplateRequestPrivate &other,
                                    DeleteTemplateRequest * const q);

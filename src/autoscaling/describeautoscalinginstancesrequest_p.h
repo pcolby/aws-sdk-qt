@@ -31,7 +31,7 @@ class DescribeAutoScalingInstancesRequest;
 class QTAWS_EXPORT DescribeAutoScalingInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DescribeAutoScalingInstancesRequestPrivate(const AutoScaling::Action action,
+    DescribeAutoScalingInstancesRequestPrivate(const AutoScalingRequest::Action action,
                                    DescribeAutoScalingInstancesRequest * const q);
     DescribeAutoScalingInstancesRequestPrivate(const DescribeAutoScalingInstancesRequestPrivate &other,
                                    DescribeAutoScalingInstancesRequest * const q);

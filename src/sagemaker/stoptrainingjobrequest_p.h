@@ -31,7 +31,7 @@ class StopTrainingJobRequest;
 class QTAWS_EXPORT StopTrainingJobRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    StopTrainingJobRequestPrivate(const SageMaker::Action action,
+    StopTrainingJobRequestPrivate(const SageMakerRequest::Action action,
                                    StopTrainingJobRequest * const q);
     StopTrainingJobRequestPrivate(const StopTrainingJobRequestPrivate &other,
                                    StopTrainingJobRequest * const q);

@@ -31,7 +31,7 @@ class DeregisterTargetsRequest;
 class QTAWS_EXPORT DeregisterTargetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DeregisterTargetsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DeregisterTargetsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DeregisterTargetsRequest * const q);
     DeregisterTargetsRequestPrivate(const DeregisterTargetsRequestPrivate &other,
                                    DeregisterTargetsRequest * const q);

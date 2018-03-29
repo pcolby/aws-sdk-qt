@@ -31,7 +31,7 @@ class PutComplianceItemsRequest;
 class QTAWS_EXPORT PutComplianceItemsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    PutComplianceItemsRequestPrivate(const SSM::Action action,
+    PutComplianceItemsRequestPrivate(const SSMRequest::Action action,
                                    PutComplianceItemsRequest * const q);
     PutComplianceItemsRequestPrivate(const PutComplianceItemsRequestPrivate &other,
                                    PutComplianceItemsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeHapgRequest;
 class QTAWS_EXPORT DescribeHapgRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    DescribeHapgRequestPrivate(const CloudHSM::Action action,
+    DescribeHapgRequestPrivate(const CloudHSMRequest::Action action,
                                    DescribeHapgRequest * const q);
     DescribeHapgRequestPrivate(const DescribeHapgRequestPrivate &other,
                                    DescribeHapgRequest * const q);

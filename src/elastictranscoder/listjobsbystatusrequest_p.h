@@ -31,7 +31,7 @@ class ListJobsByStatusRequest;
 class QTAWS_EXPORT ListJobsByStatusRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ListJobsByStatusRequestPrivate(const ElasticTranscoder::Action action,
+    ListJobsByStatusRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ListJobsByStatusRequest * const q);
     ListJobsByStatusRequestPrivate(const ListJobsByStatusRequestPrivate &other,
                                    ListJobsByStatusRequest * const q);

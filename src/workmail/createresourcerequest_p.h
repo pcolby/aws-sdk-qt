@@ -31,7 +31,7 @@ class CreateResourceRequest;
 class QTAWS_EXPORT CreateResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    CreateResourceRequestPrivate(const WorkMail::Action action,
+    CreateResourceRequestPrivate(const WorkMailRequest::Action action,
                                    CreateResourceRequest * const q);
     CreateResourceRequestPrivate(const CreateResourceRequestPrivate &other,
                                    CreateResourceRequest * const q);

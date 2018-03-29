@@ -31,7 +31,7 @@ class DisassociateQualificationFromWorkerRequest;
 class QTAWS_EXPORT DisassociateQualificationFromWorkerRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    DisassociateQualificationFromWorkerRequestPrivate(const MTurk::Action action,
+    DisassociateQualificationFromWorkerRequestPrivate(const MTurkRequest::Action action,
                                    DisassociateQualificationFromWorkerRequest * const q);
     DisassociateQualificationFromWorkerRequestPrivate(const DisassociateQualificationFromWorkerRequestPrivate &other,
                                    DisassociateQualificationFromWorkerRequest * const q);

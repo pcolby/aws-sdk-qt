@@ -31,7 +31,7 @@ class AdminForgetDeviceRequest;
 class QTAWS_EXPORT AdminForgetDeviceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminForgetDeviceRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminForgetDeviceRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminForgetDeviceRequest * const q);
     AdminForgetDeviceRequestPrivate(const AdminForgetDeviceRequestPrivate &other,
                                    AdminForgetDeviceRequest * const q);

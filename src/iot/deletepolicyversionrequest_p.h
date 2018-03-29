@@ -31,7 +31,7 @@ class DeletePolicyVersionRequest;
 class QTAWS_EXPORT DeletePolicyVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeletePolicyVersionRequestPrivate(const IoT::Action action,
+    DeletePolicyVersionRequestPrivate(const IoTRequest::Action action,
                                    DeletePolicyVersionRequest * const q);
     DeletePolicyVersionRequestPrivate(const DeletePolicyVersionRequestPrivate &other,
                                    DeletePolicyVersionRequest * const q);

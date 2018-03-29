@@ -31,7 +31,7 @@ class UpdateRoleRequest;
 class QTAWS_EXPORT UpdateRoleRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateRoleRequestPrivate(const IAM::Action action,
+    UpdateRoleRequestPrivate(const IAMRequest::Action action,
                                    UpdateRoleRequest * const q);
     UpdateRoleRequestPrivate(const UpdateRoleRequestPrivate &other,
                                    UpdateRoleRequest * const q);

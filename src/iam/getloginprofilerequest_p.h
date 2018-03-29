@@ -31,7 +31,7 @@ class GetLoginProfileRequest;
 class QTAWS_EXPORT GetLoginProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetLoginProfileRequestPrivate(const IAM::Action action,
+    GetLoginProfileRequestPrivate(const IAMRequest::Action action,
                                    GetLoginProfileRequest * const q);
     GetLoginProfileRequestPrivate(const GetLoginProfileRequestPrivate &other,
                                    GetLoginProfileRequest * const q);

@@ -31,7 +31,7 @@ class DescribeFindingsRequest;
 class QTAWS_EXPORT DescribeFindingsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    DescribeFindingsRequestPrivate(const Inspector::Action action,
+    DescribeFindingsRequestPrivate(const InspectorRequest::Action action,
                                    DescribeFindingsRequest * const q);
     DescribeFindingsRequestPrivate(const DescribeFindingsRequestPrivate &other,
                                    DescribeFindingsRequest * const q);

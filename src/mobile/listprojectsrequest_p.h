@@ -31,7 +31,7 @@ class ListProjectsRequest;
 class QTAWS_EXPORT ListProjectsRequestPrivate : public MobileRequestPrivate {
 
 public:
-    ListProjectsRequestPrivate(const Mobile::Action action,
+    ListProjectsRequestPrivate(const MobileRequest::Action action,
                                    ListProjectsRequest * const q);
     ListProjectsRequestPrivate(const ListProjectsRequestPrivate &other,
                                    ListProjectsRequest * const q);

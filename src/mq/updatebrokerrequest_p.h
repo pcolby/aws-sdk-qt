@@ -31,7 +31,7 @@ class UpdateBrokerRequest;
 class QTAWS_EXPORT UpdateBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
-    UpdateBrokerRequestPrivate(const MQ::Action action,
+    UpdateBrokerRequestPrivate(const MQRequest::Action action,
                                    UpdateBrokerRequest * const q);
     UpdateBrokerRequestPrivate(const UpdateBrokerRequestPrivate &other,
                                    UpdateBrokerRequest * const q);

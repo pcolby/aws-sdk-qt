@@ -31,7 +31,7 @@ class DeleteDBSubnetGroupRequest;
 class QTAWS_EXPORT DeleteDBSubnetGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteDBSubnetGroupRequestPrivate(const RDS::Action action,
+    DeleteDBSubnetGroupRequestPrivate(const RDSRequest::Action action,
                                    DeleteDBSubnetGroupRequest * const q);
     DeleteDBSubnetGroupRequestPrivate(const DeleteDBSubnetGroupRequestPrivate &other,
                                    DeleteDBSubnetGroupRequest * const q);

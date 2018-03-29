@@ -31,7 +31,7 @@ class RejectAssignmentRequest;
 class QTAWS_EXPORT RejectAssignmentRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    RejectAssignmentRequestPrivate(const MTurk::Action action,
+    RejectAssignmentRequestPrivate(const MTurkRequest::Action action,
                                    RejectAssignmentRequest * const q);
     RejectAssignmentRequestPrivate(const RejectAssignmentRequestPrivate &other,
                                    RejectAssignmentRequest * const q);

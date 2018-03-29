@@ -31,7 +31,7 @@ class DeleteResourceRequest;
 class QTAWS_EXPORT DeleteResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DeleteResourceRequestPrivate(const WorkMail::Action action,
+    DeleteResourceRequestPrivate(const WorkMailRequest::Action action,
                                    DeleteResourceRequest * const q);
     DeleteResourceRequestPrivate(const DeleteResourceRequestPrivate &other,
                                    DeleteResourceRequest * const q);

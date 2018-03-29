@@ -31,7 +31,7 @@ class UpdateHostedZoneCommentRequest;
 class QTAWS_EXPORT UpdateHostedZoneCommentRequestPrivate : public Route53RequestPrivate {
 
 public:
-    UpdateHostedZoneCommentRequestPrivate(const Route53::Action action,
+    UpdateHostedZoneCommentRequestPrivate(const Route53Request::Action action,
                                    UpdateHostedZoneCommentRequest * const q);
     UpdateHostedZoneCommentRequestPrivate(const UpdateHostedZoneCommentRequestPrivate &other,
                                    UpdateHostedZoneCommentRequest * const q);

@@ -31,7 +31,7 @@ class ListOfferingPromotionsRequest;
 class QTAWS_EXPORT ListOfferingPromotionsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListOfferingPromotionsRequestPrivate(const DeviceFarm::Action action,
+    ListOfferingPromotionsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListOfferingPromotionsRequest * const q);
     ListOfferingPromotionsRequestPrivate(const ListOfferingPromotionsRequestPrivate &other,
                                    ListOfferingPromotionsRequest * const q);

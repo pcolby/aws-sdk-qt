@@ -31,7 +31,7 @@ class DescribeMLModelsRequest;
 class QTAWS_EXPORT DescribeMLModelsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DescribeMLModelsRequestPrivate(const MachineLearning::Action action,
+    DescribeMLModelsRequestPrivate(const MachineLearningRequest::Action action,
                                    DescribeMLModelsRequest * const q);
     DescribeMLModelsRequestPrivate(const DescribeMLModelsRequestPrivate &other,
                                    DescribeMLModelsRequest * const q);

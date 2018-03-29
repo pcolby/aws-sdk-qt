@@ -31,7 +31,7 @@ class UpdateParameterGroupRequest;
 class QTAWS_EXPORT UpdateParameterGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
-    UpdateParameterGroupRequestPrivate(const DAX::Action action,
+    UpdateParameterGroupRequestPrivate(const DAXRequest::Action action,
                                    UpdateParameterGroupRequest * const q);
     UpdateParameterGroupRequestPrivate(const UpdateParameterGroupRequestPrivate &other,
                                    UpdateParameterGroupRequest * const q);

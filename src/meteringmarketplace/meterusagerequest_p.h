@@ -31,7 +31,7 @@ class MeterUsageRequest;
 class QTAWS_EXPORT MeterUsageRequestPrivate : public MarketplaceMeteringRequestPrivate {
 
 public:
-    MeterUsageRequestPrivate(const MarketplaceMetering::Action action,
+    MeterUsageRequestPrivate(const MarketplaceMeteringRequest::Action action,
                                    MeterUsageRequest * const q);
     MeterUsageRequestPrivate(const MeterUsageRequestPrivate &other,
                                    MeterUsageRequest * const q);

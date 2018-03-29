@@ -31,7 +31,7 @@ class MergeShardsRequest;
 class QTAWS_EXPORT MergeShardsRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    MergeShardsRequestPrivate(const Kinesis::Action action,
+    MergeShardsRequestPrivate(const KinesisRequest::Action action,
                                    MergeShardsRequest * const q);
     MergeShardsRequestPrivate(const MergeShardsRequestPrivate &other,
                                    MergeShardsRequest * const q);

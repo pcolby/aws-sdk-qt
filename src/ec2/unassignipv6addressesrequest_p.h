@@ -31,7 +31,7 @@ class UnassignIpv6AddressesRequest;
 class QTAWS_EXPORT UnassignIpv6AddressesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    UnassignIpv6AddressesRequestPrivate(const EC2::Action action,
+    UnassignIpv6AddressesRequestPrivate(const EC2Request::Action action,
                                    UnassignIpv6AddressesRequest * const q);
     UnassignIpv6AddressesRequestPrivate(const UnassignIpv6AddressesRequestPrivate &other,
                                    UnassignIpv6AddressesRequest * const q);

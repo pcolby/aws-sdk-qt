@@ -31,7 +31,7 @@ class ListDiscoveredResourcesRequest;
 class QTAWS_EXPORT ListDiscoveredResourcesRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    ListDiscoveredResourcesRequestPrivate(const ConfigService::Action action,
+    ListDiscoveredResourcesRequestPrivate(const ConfigServiceRequest::Action action,
                                    ListDiscoveredResourcesRequest * const q);
     ListDiscoveredResourcesRequestPrivate(const ListDiscoveredResourcesRequestPrivate &other,
                                    ListDiscoveredResourcesRequest * const q);

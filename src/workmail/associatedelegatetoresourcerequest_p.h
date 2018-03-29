@@ -31,7 +31,7 @@ class AssociateDelegateToResourceRequest;
 class QTAWS_EXPORT AssociateDelegateToResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    AssociateDelegateToResourceRequestPrivate(const WorkMail::Action action,
+    AssociateDelegateToResourceRequestPrivate(const WorkMailRequest::Action action,
                                    AssociateDelegateToResourceRequest * const q);
     AssociateDelegateToResourceRequestPrivate(const AssociateDelegateToResourceRequestPrivate &other,
                                    AssociateDelegateToResourceRequest * const q);

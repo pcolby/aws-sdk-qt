@@ -31,7 +31,7 @@ class DeleteMethodRequest;
 class QTAWS_EXPORT DeleteMethodRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteMethodRequestPrivate(const APIGateway::Action action,
+    DeleteMethodRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteMethodRequest * const q);
     DeleteMethodRequestPrivate(const DeleteMethodRequestPrivate &other,
                                    DeleteMethodRequest * const q);

@@ -31,7 +31,7 @@ class UpdateReplicationJobRequest;
 class QTAWS_EXPORT UpdateReplicationJobRequestPrivate : public SMSRequestPrivate {
 
 public:
-    UpdateReplicationJobRequestPrivate(const SMS::Action action,
+    UpdateReplicationJobRequestPrivate(const SMSRequest::Action action,
                                    UpdateReplicationJobRequest * const q);
     UpdateReplicationJobRequestPrivate(const UpdateReplicationJobRequestPrivate &other,
                                    UpdateReplicationJobRequest * const q);

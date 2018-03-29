@@ -31,7 +31,7 @@ class DeleteSlotTypeRequest;
 class QTAWS_EXPORT DeleteSlotTypeRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteSlotTypeRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteSlotTypeRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteSlotTypeRequest * const q);
     DeleteSlotTypeRequestPrivate(const DeleteSlotTypeRequestPrivate &other,
                                    DeleteSlotTypeRequest * const q);

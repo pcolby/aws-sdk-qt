@@ -31,7 +31,7 @@ class CreateServiceSpecificCredentialRequest;
 class QTAWS_EXPORT CreateServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateServiceSpecificCredentialRequestPrivate(const IAM::Action action,
+    CreateServiceSpecificCredentialRequestPrivate(const IAMRequest::Action action,
                                    CreateServiceSpecificCredentialRequest * const q);
     CreateServiceSpecificCredentialRequestPrivate(const CreateServiceSpecificCredentialRequestPrivate &other,
                                    CreateServiceSpecificCredentialRequest * const q);

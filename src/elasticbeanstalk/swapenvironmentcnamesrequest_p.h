@@ -31,7 +31,7 @@ class SwapEnvironmentCNAMEsRequest;
 class QTAWS_EXPORT SwapEnvironmentCNAMEsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    SwapEnvironmentCNAMEsRequestPrivate(const ElasticBeanstalk::Action action,
+    SwapEnvironmentCNAMEsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    SwapEnvironmentCNAMEsRequest * const q);
     SwapEnvironmentCNAMEsRequestPrivate(const SwapEnvironmentCNAMEsRequestPrivate &other,
                                    SwapEnvironmentCNAMEsRequest * const q);

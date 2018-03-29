@@ -31,7 +31,7 @@ class UpdateUserDefinedFunctionRequest;
 class QTAWS_EXPORT UpdateUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateUserDefinedFunctionRequestPrivate(const Glue::Action action,
+    UpdateUserDefinedFunctionRequestPrivate(const GlueRequest::Action action,
                                    UpdateUserDefinedFunctionRequest * const q);
     UpdateUserDefinedFunctionRequestPrivate(const UpdateUserDefinedFunctionRequestPrivate &other,
                                    UpdateUserDefinedFunctionRequest * const q);

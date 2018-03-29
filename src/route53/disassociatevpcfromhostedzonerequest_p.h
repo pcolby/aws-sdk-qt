@@ -31,7 +31,7 @@ class DisassociateVPCFromHostedZoneRequest;
 class QTAWS_EXPORT DisassociateVPCFromHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
-    DisassociateVPCFromHostedZoneRequestPrivate(const Route53::Action action,
+    DisassociateVPCFromHostedZoneRequestPrivate(const Route53Request::Action action,
                                    DisassociateVPCFromHostedZoneRequest * const q);
     DisassociateVPCFromHostedZoneRequestPrivate(const DisassociateVPCFromHostedZoneRequestPrivate &other,
                                    DisassociateVPCFromHostedZoneRequest * const q);

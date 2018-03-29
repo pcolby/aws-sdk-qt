@@ -31,7 +31,7 @@ class DeleteAssessmentRunRequest;
 class QTAWS_EXPORT DeleteAssessmentRunRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    DeleteAssessmentRunRequestPrivate(const Inspector::Action action,
+    DeleteAssessmentRunRequestPrivate(const InspectorRequest::Action action,
                                    DeleteAssessmentRunRequest * const q);
     DeleteAssessmentRunRequestPrivate(const DeleteAssessmentRunRequestPrivate &other,
                                    DeleteAssessmentRunRequest * const q);

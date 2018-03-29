@@ -31,7 +31,7 @@ class UpdateEndpointWeightsAndCapacitiesRequest;
 class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    UpdateEndpointWeightsAndCapacitiesRequestPrivate(const SageMaker::Action action,
+    UpdateEndpointWeightsAndCapacitiesRequestPrivate(const SageMakerRequest::Action action,
                                    UpdateEndpointWeightsAndCapacitiesRequest * const q);
     UpdateEndpointWeightsAndCapacitiesRequestPrivate(const UpdateEndpointWeightsAndCapacitiesRequestPrivate &other,
                                    UpdateEndpointWeightsAndCapacitiesRequest * const q);

@@ -31,7 +31,7 @@ class StartMatchmakingRequest;
 class QTAWS_EXPORT StartMatchmakingRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    StartMatchmakingRequestPrivate(const GameLift::Action action,
+    StartMatchmakingRequestPrivate(const GameLiftRequest::Action action,
                                    StartMatchmakingRequest * const q);
     StartMatchmakingRequestPrivate(const StartMatchmakingRequestPrivate &other,
                                    StartMatchmakingRequest * const q);

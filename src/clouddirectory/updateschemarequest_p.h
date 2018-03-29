@@ -31,7 +31,7 @@ class UpdateSchemaRequest;
 class QTAWS_EXPORT UpdateSchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    UpdateSchemaRequestPrivate(const CloudDirectory::Action action,
+    UpdateSchemaRequestPrivate(const CloudDirectoryRequest::Action action,
                                    UpdateSchemaRequest * const q);
     UpdateSchemaRequestPrivate(const UpdateSchemaRequestPrivate &other,
                                    UpdateSchemaRequest * const q);

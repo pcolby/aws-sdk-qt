@@ -31,7 +31,7 @@ class BatchStopJobRunRequest;
 class QTAWS_EXPORT BatchStopJobRunRequestPrivate : public GlueRequestPrivate {
 
 public:
-    BatchStopJobRunRequestPrivate(const Glue::Action action,
+    BatchStopJobRunRequestPrivate(const GlueRequest::Action action,
                                    BatchStopJobRunRequest * const q);
     BatchStopJobRunRequestPrivate(const BatchStopJobRunRequestPrivate &other,
                                    BatchStopJobRunRequest * const q);

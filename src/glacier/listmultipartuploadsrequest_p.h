@@ -31,7 +31,7 @@ class ListMultipartUploadsRequest;
 class QTAWS_EXPORT ListMultipartUploadsRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    ListMultipartUploadsRequestPrivate(const Glacier::Action action,
+    ListMultipartUploadsRequestPrivate(const GlacierRequest::Action action,
                                    ListMultipartUploadsRequest * const q);
     ListMultipartUploadsRequestPrivate(const ListMultipartUploadsRequestPrivate &other,
                                    ListMultipartUploadsRequest * const q);

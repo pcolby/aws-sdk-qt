@@ -31,7 +31,7 @@ class TagQueueRequest;
 class QTAWS_EXPORT TagQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
-    TagQueueRequestPrivate(const SQS::Action action,
+    TagQueueRequestPrivate(const SQSRequest::Action action,
                                    TagQueueRequest * const q);
     TagQueueRequestPrivate(const TagQueueRequestPrivate &other,
                                    TagQueueRequest * const q);

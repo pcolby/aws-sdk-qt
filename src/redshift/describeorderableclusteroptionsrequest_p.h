@@ -31,7 +31,7 @@ class DescribeOrderableClusterOptionsRequest;
 class QTAWS_EXPORT DescribeOrderableClusterOptionsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeOrderableClusterOptionsRequestPrivate(const Redshift::Action action,
+    DescribeOrderableClusterOptionsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeOrderableClusterOptionsRequest * const q);
     DescribeOrderableClusterOptionsRequestPrivate(const DescribeOrderableClusterOptionsRequestPrivate &other,
                                    DescribeOrderableClusterOptionsRequest * const q);

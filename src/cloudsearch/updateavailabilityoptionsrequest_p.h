@@ -31,7 +31,7 @@ class UpdateAvailabilityOptionsRequest;
 class QTAWS_EXPORT UpdateAvailabilityOptionsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    UpdateAvailabilityOptionsRequestPrivate(const CloudSearch::Action action,
+    UpdateAvailabilityOptionsRequestPrivate(const CloudSearchRequest::Action action,
                                    UpdateAvailabilityOptionsRequest * const q);
     UpdateAvailabilityOptionsRequestPrivate(const UpdateAvailabilityOptionsRequestPrivate &other,
                                    UpdateAvailabilityOptionsRequest * const q);

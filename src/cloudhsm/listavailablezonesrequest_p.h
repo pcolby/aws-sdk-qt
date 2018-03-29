@@ -31,7 +31,7 @@ class ListAvailableZonesRequest;
 class QTAWS_EXPORT ListAvailableZonesRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    ListAvailableZonesRequestPrivate(const CloudHSM::Action action,
+    ListAvailableZonesRequestPrivate(const CloudHSMRequest::Action action,
                                    ListAvailableZonesRequest * const q);
     ListAvailableZonesRequestPrivate(const ListAvailableZonesRequestPrivate &other,
                                    ListAvailableZonesRequest * const q);

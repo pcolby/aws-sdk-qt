@@ -31,7 +31,7 @@ class DeleteLoadBalancerRequest;
 class QTAWS_EXPORT DeleteLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DeleteLoadBalancerRequestPrivate(const Lightsail::Action action,
+    DeleteLoadBalancerRequestPrivate(const LightsailRequest::Action action,
                                    DeleteLoadBalancerRequest * const q);
     DeleteLoadBalancerRequestPrivate(const DeleteLoadBalancerRequestPrivate &other,
                                    DeleteLoadBalancerRequest * const q);

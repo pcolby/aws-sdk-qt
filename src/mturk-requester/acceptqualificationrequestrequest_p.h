@@ -31,7 +31,7 @@ class AcceptQualificationRequestRequest;
 class QTAWS_EXPORT AcceptQualificationRequestRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    AcceptQualificationRequestRequestPrivate(const MTurk::Action action,
+    AcceptQualificationRequestRequestPrivate(const MTurkRequest::Action action,
                                    AcceptQualificationRequestRequest * const q);
     AcceptQualificationRequestRequestPrivate(const AcceptQualificationRequestRequestPrivate &other,
                                    AcceptQualificationRequestRequest * const q);

@@ -31,7 +31,7 @@ class GetDeploymentRequest;
 class QTAWS_EXPORT GetDeploymentRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    GetDeploymentRequestPrivate(const CodeDeploy::Action action,
+    GetDeploymentRequestPrivate(const CodeDeployRequest::Action action,
                                    GetDeploymentRequest * const q);
     GetDeploymentRequestPrivate(const GetDeploymentRequestPrivate &other,
                                    GetDeploymentRequest * const q);

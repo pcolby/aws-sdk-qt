@@ -31,7 +31,7 @@ class UpdateDocumentDefaultVersionRequest;
 class QTAWS_EXPORT UpdateDocumentDefaultVersionRequestPrivate : public SSMRequestPrivate {
 
 public:
-    UpdateDocumentDefaultVersionRequestPrivate(const SSM::Action action,
+    UpdateDocumentDefaultVersionRequestPrivate(const SSMRequest::Action action,
                                    UpdateDocumentDefaultVersionRequest * const q);
     UpdateDocumentDefaultVersionRequestPrivate(const UpdateDocumentDefaultVersionRequestPrivate &other,
                                    UpdateDocumentDefaultVersionRequest * const q);

@@ -31,7 +31,7 @@ class UpdateCertificateOptionsRequest;
 class QTAWS_EXPORT UpdateCertificateOptionsRequestPrivate : public ACMRequestPrivate {
 
 public:
-    UpdateCertificateOptionsRequestPrivate(const ACM::Action action,
+    UpdateCertificateOptionsRequestPrivate(const ACMRequest::Action action,
                                    UpdateCertificateOptionsRequest * const q);
     UpdateCertificateOptionsRequestPrivate(const UpdateCertificateOptionsRequestPrivate &other,
                                    UpdateCertificateOptionsRequest * const q);

@@ -31,7 +31,7 @@ class CreateAddressRequest;
 class QTAWS_EXPORT CreateAddressRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    CreateAddressRequestPrivate(const Snowball::Action action,
+    CreateAddressRequestPrivate(const SnowballRequest::Action action,
                                    CreateAddressRequest * const q);
     CreateAddressRequestPrivate(const CreateAddressRequestPrivate &other,
                                    CreateAddressRequest * const q);

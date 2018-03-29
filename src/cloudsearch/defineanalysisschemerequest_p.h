@@ -31,7 +31,7 @@ class DefineAnalysisSchemeRequest;
 class QTAWS_EXPORT DefineAnalysisSchemeRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DefineAnalysisSchemeRequestPrivate(const CloudSearch::Action action,
+    DefineAnalysisSchemeRequestPrivate(const CloudSearchRequest::Action action,
                                    DefineAnalysisSchemeRequest * const q);
     DefineAnalysisSchemeRequestPrivate(const DefineAnalysisSchemeRequestPrivate &other,
                                    DefineAnalysisSchemeRequest * const q);

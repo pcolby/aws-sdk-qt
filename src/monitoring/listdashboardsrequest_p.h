@@ -31,7 +31,7 @@ class ListDashboardsRequest;
 class QTAWS_EXPORT ListDashboardsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    ListDashboardsRequestPrivate(const CloudWatch::Action action,
+    ListDashboardsRequestPrivate(const CloudWatchRequest::Action action,
                                    ListDashboardsRequest * const q);
     ListDashboardsRequestPrivate(const ListDashboardsRequestPrivate &other,
                                    ListDashboardsRequest * const q);

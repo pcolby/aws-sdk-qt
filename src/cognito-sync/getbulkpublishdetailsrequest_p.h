@@ -31,7 +31,7 @@ class GetBulkPublishDetailsRequest;
 class QTAWS_EXPORT GetBulkPublishDetailsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    GetBulkPublishDetailsRequestPrivate(const CognitoSync::Action action,
+    GetBulkPublishDetailsRequestPrivate(const CognitoSyncRequest::Action action,
                                    GetBulkPublishDetailsRequest * const q);
     GetBulkPublishDetailsRequestPrivate(const GetBulkPublishDetailsRequestPrivate &other,
                                    GetBulkPublishDetailsRequest * const q);

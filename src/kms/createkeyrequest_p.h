@@ -31,7 +31,7 @@ class CreateKeyRequest;
 class QTAWS_EXPORT CreateKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
-    CreateKeyRequestPrivate(const KMS::Action action,
+    CreateKeyRequestPrivate(const KMSRequest::Action action,
                                    CreateKeyRequest * const q);
     CreateKeyRequestPrivate(const CreateKeyRequestPrivate &other,
                                    CreateKeyRequest * const q);

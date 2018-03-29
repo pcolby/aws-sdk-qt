@@ -31,7 +31,7 @@ class AddApplicationInputProcessingConfigurationRequest;
 class QTAWS_EXPORT AddApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    AddApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalytics::Action action,
+    AddApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    AddApplicationInputProcessingConfigurationRequest * const q);
     AddApplicationInputProcessingConfigurationRequestPrivate(const AddApplicationInputProcessingConfigurationRequestPrivate &other,
                                    AddApplicationInputProcessingConfigurationRequest * const q);

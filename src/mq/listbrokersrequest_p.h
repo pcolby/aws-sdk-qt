@@ -31,7 +31,7 @@ class ListBrokersRequest;
 class QTAWS_EXPORT ListBrokersRequestPrivate : public MQRequestPrivate {
 
 public:
-    ListBrokersRequestPrivate(const MQ::Action action,
+    ListBrokersRequestPrivate(const MQRequest::Action action,
                                    ListBrokersRequest * const q);
     ListBrokersRequestPrivate(const ListBrokersRequestPrivate &other,
                                    ListBrokersRequest * const q);

@@ -31,7 +31,7 @@ class RotateEncryptionKeyRequest;
 class QTAWS_EXPORT RotateEncryptionKeyRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    RotateEncryptionKeyRequestPrivate(const Redshift::Action action,
+    RotateEncryptionKeyRequestPrivate(const RedshiftRequest::Action action,
                                    RotateEncryptionKeyRequest * const q);
     RotateEncryptionKeyRequestPrivate(const RotateEncryptionKeyRequestPrivate &other,
                                    RotateEncryptionKeyRequest * const q);

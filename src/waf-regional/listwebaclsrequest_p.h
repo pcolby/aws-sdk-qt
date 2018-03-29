@@ -31,7 +31,7 @@ class ListWebACLsRequest;
 class QTAWS_EXPORT ListWebACLsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListWebACLsRequestPrivate(const WAFRegional::Action action,
+    ListWebACLsRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListWebACLsRequest * const q);
     ListWebACLsRequestPrivate(const ListWebACLsRequestPrivate &other,
                                    ListWebACLsRequest * const q);

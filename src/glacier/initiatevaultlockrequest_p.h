@@ -31,7 +31,7 @@ class InitiateVaultLockRequest;
 class QTAWS_EXPORT InitiateVaultLockRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    InitiateVaultLockRequestPrivate(const Glacier::Action action,
+    InitiateVaultLockRequestPrivate(const GlacierRequest::Action action,
                                    InitiateVaultLockRequest * const q);
     InitiateVaultLockRequestPrivate(const InitiateVaultLockRequestPrivate &other,
                                    InitiateVaultLockRequest * const q);

@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const APIGateway::Action action,
+    TagResourceRequestPrivate(const APIGatewayRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

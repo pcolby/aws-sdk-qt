@@ -31,7 +31,7 @@ class DescribeTagOptionRequest;
 class QTAWS_EXPORT DescribeTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DescribeTagOptionRequestPrivate(const ServiceCatalog::Action action,
+    DescribeTagOptionRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DescribeTagOptionRequest * const q);
     DescribeTagOptionRequestPrivate(const DescribeTagOptionRequestPrivate &other,
                                    DescribeTagOptionRequest * const q);

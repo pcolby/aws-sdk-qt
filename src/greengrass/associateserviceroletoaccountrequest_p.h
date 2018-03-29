@@ -31,7 +31,7 @@ class AssociateServiceRoleToAccountRequest;
 class QTAWS_EXPORT AssociateServiceRoleToAccountRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    AssociateServiceRoleToAccountRequestPrivate(const Greengrass::Action action,
+    AssociateServiceRoleToAccountRequestPrivate(const GreengrassRequest::Action action,
                                    AssociateServiceRoleToAccountRequest * const q);
     AssociateServiceRoleToAccountRequestPrivate(const AssociateServiceRoleToAccountRequestPrivate &other,
                                    AssociateServiceRoleToAccountRequest * const q);

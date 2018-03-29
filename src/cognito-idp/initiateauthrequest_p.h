@@ -31,7 +31,7 @@ class InitiateAuthRequest;
 class QTAWS_EXPORT InitiateAuthRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    InitiateAuthRequestPrivate(const CognitoIdentityProvider::Action action,
+    InitiateAuthRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    InitiateAuthRequest * const q);
     InitiateAuthRequestPrivate(const InitiateAuthRequestPrivate &other,
                                    InitiateAuthRequest * const q);

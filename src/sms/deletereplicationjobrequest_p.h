@@ -31,7 +31,7 @@ class DeleteReplicationJobRequest;
 class QTAWS_EXPORT DeleteReplicationJobRequestPrivate : public SMSRequestPrivate {
 
 public:
-    DeleteReplicationJobRequestPrivate(const SMS::Action action,
+    DeleteReplicationJobRequestPrivate(const SMSRequest::Action action,
                                    DeleteReplicationJobRequest * const q);
     DeleteReplicationJobRequestPrivate(const DeleteReplicationJobRequestPrivate &other,
                                    DeleteReplicationJobRequest * const q);

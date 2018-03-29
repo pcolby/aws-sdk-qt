@@ -31,7 +31,7 @@ class DeleteEventSubscriptionRequest;
 class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteEventSubscriptionRequestPrivate(const RDS::Action action,
+    DeleteEventSubscriptionRequestPrivate(const RDSRequest::Action action,
                                    DeleteEventSubscriptionRequest * const q);
     DeleteEventSubscriptionRequestPrivate(const DeleteEventSubscriptionRequestPrivate &other,
                                    DeleteEventSubscriptionRequest * const q);

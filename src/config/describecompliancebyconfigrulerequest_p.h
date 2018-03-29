@@ -31,7 +31,7 @@ class DescribeComplianceByConfigRuleRequest;
 class QTAWS_EXPORT DescribeComplianceByConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DescribeComplianceByConfigRuleRequestPrivate(const ConfigService::Action action,
+    DescribeComplianceByConfigRuleRequestPrivate(const ConfigServiceRequest::Action action,
                                    DescribeComplianceByConfigRuleRequest * const q);
     DescribeComplianceByConfigRuleRequestPrivate(const DescribeComplianceByConfigRuleRequestPrivate &other,
                                    DescribeComplianceByConfigRuleRequest * const q);

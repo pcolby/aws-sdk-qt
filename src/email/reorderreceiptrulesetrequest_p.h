@@ -31,7 +31,7 @@ class ReorderReceiptRuleSetRequest;
 class QTAWS_EXPORT ReorderReceiptRuleSetRequestPrivate : public SESRequestPrivate {
 
 public:
-    ReorderReceiptRuleSetRequestPrivate(const SES::Action action,
+    ReorderReceiptRuleSetRequestPrivate(const SESRequest::Action action,
                                    ReorderReceiptRuleSetRequest * const q);
     ReorderReceiptRuleSetRequestPrivate(const ReorderReceiptRuleSetRequestPrivate &other,
                                    ReorderReceiptRuleSetRequest * const q);

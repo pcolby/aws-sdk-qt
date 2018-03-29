@@ -31,7 +31,7 @@ class CreateSnapshotRequest;
 class QTAWS_EXPORT CreateSnapshotRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CreateSnapshotRequestPrivate(const StorageGateway::Action action,
+    CreateSnapshotRequestPrivate(const StorageGatewayRequest::Action action,
                                    CreateSnapshotRequest * const q);
     CreateSnapshotRequestPrivate(const CreateSnapshotRequestPrivate &other,
                                    CreateSnapshotRequest * const q);

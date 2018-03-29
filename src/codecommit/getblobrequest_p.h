@@ -31,7 +31,7 @@ class GetBlobRequest;
 class QTAWS_EXPORT GetBlobRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetBlobRequestPrivate(const CodeCommit::Action action,
+    GetBlobRequestPrivate(const CodeCommitRequest::Action action,
                                    GetBlobRequest * const q);
     GetBlobRequestPrivate(const GetBlobRequestPrivate &other,
                                    GetBlobRequest * const q);

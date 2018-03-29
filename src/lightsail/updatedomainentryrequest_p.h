@@ -31,7 +31,7 @@ class UpdateDomainEntryRequest;
 class QTAWS_EXPORT UpdateDomainEntryRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    UpdateDomainEntryRequestPrivate(const Lightsail::Action action,
+    UpdateDomainEntryRequestPrivate(const LightsailRequest::Action action,
                                    UpdateDomainEntryRequest * const q);
     UpdateDomainEntryRequestPrivate(const UpdateDomainEntryRequestPrivate &other,
                                    UpdateDomainEntryRequest * const q);

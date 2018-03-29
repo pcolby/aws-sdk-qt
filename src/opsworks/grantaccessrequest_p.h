@@ -31,7 +31,7 @@ class GrantAccessRequest;
 class QTAWS_EXPORT GrantAccessRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    GrantAccessRequestPrivate(const OpsWorks::Action action,
+    GrantAccessRequestPrivate(const OpsWorksRequest::Action action,
                                    GrantAccessRequest * const q);
     GrantAccessRequestPrivate(const GrantAccessRequestPrivate &other,
                                    GrantAccessRequest * const q);

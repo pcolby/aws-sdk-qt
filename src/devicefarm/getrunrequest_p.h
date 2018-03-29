@@ -31,7 +31,7 @@ class GetRunRequest;
 class QTAWS_EXPORT GetRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetRunRequestPrivate(const DeviceFarm::Action action,
+    GetRunRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetRunRequest * const q);
     GetRunRequestPrivate(const GetRunRequestPrivate &other,
                                    GetRunRequest * const q);

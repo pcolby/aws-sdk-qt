@@ -31,7 +31,7 @@ class GetCoreDefinitionRequest;
 class QTAWS_EXPORT GetCoreDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetCoreDefinitionRequestPrivate(const Greengrass::Action action,
+    GetCoreDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    GetCoreDefinitionRequest * const q);
     GetCoreDefinitionRequestPrivate(const GetCoreDefinitionRequestPrivate &other,
                                    GetCoreDefinitionRequest * const q);

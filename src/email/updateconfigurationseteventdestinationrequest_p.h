@@ -31,7 +31,7 @@ class UpdateConfigurationSetEventDestinationRequest;
 class QTAWS_EXPORT UpdateConfigurationSetEventDestinationRequestPrivate : public SESRequestPrivate {
 
 public:
-    UpdateConfigurationSetEventDestinationRequestPrivate(const SES::Action action,
+    UpdateConfigurationSetEventDestinationRequestPrivate(const SESRequest::Action action,
                                    UpdateConfigurationSetEventDestinationRequest * const q);
     UpdateConfigurationSetEventDestinationRequestPrivate(const UpdateConfigurationSetEventDestinationRequestPrivate &other,
                                    UpdateConfigurationSetEventDestinationRequest * const q);

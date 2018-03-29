@@ -31,7 +31,7 @@ class DeleteIPSetRequest;
 class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    DeleteIPSetRequestPrivate(const WAFRegional::Action action,
+    DeleteIPSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    DeleteIPSetRequest * const q);
     DeleteIPSetRequestPrivate(const DeleteIPSetRequestPrivate &other,
                                    DeleteIPSetRequest * const q);

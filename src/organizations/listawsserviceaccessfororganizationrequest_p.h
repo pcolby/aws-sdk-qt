@@ -31,7 +31,7 @@ class ListAWSServiceAccessForOrganizationRequest;
 class QTAWS_EXPORT ListAWSServiceAccessForOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListAWSServiceAccessForOrganizationRequestPrivate(const Organizations::Action action,
+    ListAWSServiceAccessForOrganizationRequestPrivate(const OrganizationsRequest::Action action,
                                    ListAWSServiceAccessForOrganizationRequest * const q);
     ListAWSServiceAccessForOrganizationRequestPrivate(const ListAWSServiceAccessForOrganizationRequestPrivate &other,
                                    ListAWSServiceAccessForOrganizationRequest * const q);

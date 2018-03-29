@@ -31,7 +31,7 @@ class CreateGroupVersionRequest;
 class QTAWS_EXPORT CreateGroupVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateGroupVersionRequestPrivate(const Greengrass::Action action,
+    CreateGroupVersionRequestPrivate(const GreengrassRequest::Action action,
                                    CreateGroupVersionRequest * const q);
     CreateGroupVersionRequestPrivate(const CreateGroupVersionRequestPrivate &other,
                                    CreateGroupVersionRequest * const q);

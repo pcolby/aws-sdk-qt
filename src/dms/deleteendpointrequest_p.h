@@ -31,7 +31,7 @@ class DeleteEndpointRequest;
 class QTAWS_EXPORT DeleteEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DeleteEndpointRequestPrivate(const DatabaseMigrationService::Action action,
+    DeleteEndpointRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DeleteEndpointRequest * const q);
     DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
                                    DeleteEndpointRequest * const q);

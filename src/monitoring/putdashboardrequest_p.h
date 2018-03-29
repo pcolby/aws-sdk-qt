@@ -31,7 +31,7 @@ class PutDashboardRequest;
 class QTAWS_EXPORT PutDashboardRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    PutDashboardRequestPrivate(const CloudWatch::Action action,
+    PutDashboardRequestPrivate(const CloudWatchRequest::Action action,
                                    PutDashboardRequest * const q);
     PutDashboardRequestPrivate(const PutDashboardRequestPrivate &other,
                                    PutDashboardRequest * const q);

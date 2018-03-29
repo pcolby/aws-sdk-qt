@@ -31,7 +31,7 @@ class GlobalSignOutRequest;
 class QTAWS_EXPORT GlobalSignOutRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GlobalSignOutRequestPrivate(const CognitoIdentityProvider::Action action,
+    GlobalSignOutRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GlobalSignOutRequest * const q);
     GlobalSignOutRequestPrivate(const GlobalSignOutRequestPrivate &other,
                                    GlobalSignOutRequest * const q);

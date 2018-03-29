@@ -31,7 +31,7 @@ class GetDirectoryLimitsRequest;
 class QTAWS_EXPORT GetDirectoryLimitsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    GetDirectoryLimitsRequestPrivate(const DirectoryService::Action action,
+    GetDirectoryLimitsRequestPrivate(const DirectoryServiceRequest::Action action,
                                    GetDirectoryLimitsRequest * const q);
     GetDirectoryLimitsRequestPrivate(const GetDirectoryLimitsRequestPrivate &other,
                                    GetDirectoryLimitsRequest * const q);

@@ -31,7 +31,7 @@ class TagProjectRequest;
 class QTAWS_EXPORT TagProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    TagProjectRequestPrivate(const CodeStar::Action action,
+    TagProjectRequestPrivate(const CodeStarRequest::Action action,
                                    TagProjectRequest * const q);
     TagProjectRequestPrivate(const TagProjectRequestPrivate &other,
                                    TagProjectRequest * const q);

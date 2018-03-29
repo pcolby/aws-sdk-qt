@@ -31,7 +31,7 @@ class ListCuratedEnvironmentImagesRequest;
 class QTAWS_EXPORT ListCuratedEnvironmentImagesRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    ListCuratedEnvironmentImagesRequestPrivate(const CodeBuild::Action action,
+    ListCuratedEnvironmentImagesRequestPrivate(const CodeBuildRequest::Action action,
                                    ListCuratedEnvironmentImagesRequest * const q);
     ListCuratedEnvironmentImagesRequestPrivate(const ListCuratedEnvironmentImagesRequestPrivate &other,
                                    ListCuratedEnvironmentImagesRequest * const q);

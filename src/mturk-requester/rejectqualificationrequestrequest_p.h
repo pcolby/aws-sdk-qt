@@ -31,7 +31,7 @@ class RejectQualificationRequestRequest;
 class QTAWS_EXPORT RejectQualificationRequestRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    RejectQualificationRequestRequestPrivate(const MTurk::Action action,
+    RejectQualificationRequestRequestPrivate(const MTurkRequest::Action action,
                                    RejectQualificationRequestRequest * const q);
     RejectQualificationRequestRequestPrivate(const RejectQualificationRequestRequestPrivate &other,
                                    RejectQualificationRequestRequest * const q);

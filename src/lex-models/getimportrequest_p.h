@@ -31,7 +31,7 @@ class GetImportRequest;
 class QTAWS_EXPORT GetImportRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    GetImportRequestPrivate(const LexModelBuildingService::Action action,
+    GetImportRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    GetImportRequest * const q);
     GetImportRequestPrivate(const GetImportRequestPrivate &other,
                                    GetImportRequest * const q);

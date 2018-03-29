@@ -31,7 +31,7 @@ class DetachRolePolicyRequest;
 class QTAWS_EXPORT DetachRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DetachRolePolicyRequestPrivate(const IAM::Action action,
+    DetachRolePolicyRequestPrivate(const IAMRequest::Action action,
                                    DetachRolePolicyRequest * const q);
     DetachRolePolicyRequestPrivate(const DetachRolePolicyRequestPrivate &other,
                                    DetachRolePolicyRequest * const q);

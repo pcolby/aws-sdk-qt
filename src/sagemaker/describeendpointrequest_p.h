@@ -31,7 +31,7 @@ class DescribeEndpointRequest;
 class QTAWS_EXPORT DescribeEndpointRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    DescribeEndpointRequestPrivate(const SageMaker::Action action,
+    DescribeEndpointRequestPrivate(const SageMakerRequest::Action action,
                                    DescribeEndpointRequest * const q);
     DescribeEndpointRequestPrivate(const DescribeEndpointRequestPrivate &other,
                                    DescribeEndpointRequest * const q);

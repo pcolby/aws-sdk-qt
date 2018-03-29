@@ -31,7 +31,7 @@ class PutBucketMetricsConfigurationRequest;
 class QTAWS_EXPORT PutBucketMetricsConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketMetricsConfigurationRequestPrivate(const S3::Action action,
+    PutBucketMetricsConfigurationRequestPrivate(const S3Request::Action action,
                                    PutBucketMetricsConfigurationRequest * const q);
     PutBucketMetricsConfigurationRequestPrivate(const PutBucketMetricsConfigurationRequestPrivate &other,
                                    PutBucketMetricsConfigurationRequest * const q);

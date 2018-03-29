@@ -31,7 +31,7 @@ class MoveAddressToVpcRequest;
 class QTAWS_EXPORT MoveAddressToVpcRequestPrivate : public EC2RequestPrivate {
 
 public:
-    MoveAddressToVpcRequestPrivate(const EC2::Action action,
+    MoveAddressToVpcRequestPrivate(const EC2Request::Action action,
                                    MoveAddressToVpcRequest * const q);
     MoveAddressToVpcRequestPrivate(const MoveAddressToVpcRequestPrivate &other,
                                    MoveAddressToVpcRequest * const q);

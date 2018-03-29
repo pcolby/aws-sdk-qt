@@ -31,7 +31,7 @@ class ListSubscribedRuleGroupsRequest;
 class QTAWS_EXPORT ListSubscribedRuleGroupsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListSubscribedRuleGroupsRequestPrivate(const WAFRegional::Action action,
+    ListSubscribedRuleGroupsRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListSubscribedRuleGroupsRequest * const q);
     ListSubscribedRuleGroupsRequestPrivate(const ListSubscribedRuleGroupsRequestPrivate &other,
                                    ListSubscribedRuleGroupsRequest * const q);

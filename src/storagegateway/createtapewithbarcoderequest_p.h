@@ -31,7 +31,7 @@ class CreateTapeWithBarcodeRequest;
 class QTAWS_EXPORT CreateTapeWithBarcodeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CreateTapeWithBarcodeRequestPrivate(const StorageGateway::Action action,
+    CreateTapeWithBarcodeRequestPrivate(const StorageGatewayRequest::Action action,
                                    CreateTapeWithBarcodeRequest * const q);
     CreateTapeWithBarcodeRequestPrivate(const CreateTapeWithBarcodeRequestPrivate &other,
                                    CreateTapeWithBarcodeRequest * const q);

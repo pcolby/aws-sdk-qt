@@ -31,7 +31,7 @@ class UpdateEndpointsBatchRequest;
 class QTAWS_EXPORT UpdateEndpointsBatchRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateEndpointsBatchRequestPrivate(const Pinpoint::Action action,
+    UpdateEndpointsBatchRequestPrivate(const PinpointRequest::Action action,
                                    UpdateEndpointsBatchRequest * const q);
     UpdateEndpointsBatchRequestPrivate(const UpdateEndpointsBatchRequestPrivate &other,
                                    UpdateEndpointsBatchRequest * const q);

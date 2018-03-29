@@ -31,7 +31,7 @@ class CreateProgressUpdateStreamRequest;
 class QTAWS_EXPORT CreateProgressUpdateStreamRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    CreateProgressUpdateStreamRequestPrivate(const MigrationHub::Action action,
+    CreateProgressUpdateStreamRequestPrivate(const MigrationHubRequest::Action action,
                                    CreateProgressUpdateStreamRequest * const q);
     CreateProgressUpdateStreamRequestPrivate(const CreateProgressUpdateStreamRequestPrivate &other,
                                    CreateProgressUpdateStreamRequest * const q);

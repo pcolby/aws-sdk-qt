@@ -31,7 +31,7 @@ class CreateAssociationBatchRequest;
 class QTAWS_EXPORT CreateAssociationBatchRequestPrivate : public SSMRequestPrivate {
 
 public:
-    CreateAssociationBatchRequestPrivate(const SSM::Action action,
+    CreateAssociationBatchRequestPrivate(const SSMRequest::Action action,
                                    CreateAssociationBatchRequest * const q);
     CreateAssociationBatchRequestPrivate(const CreateAssociationBatchRequestPrivate &other,
                                    CreateAssociationBatchRequest * const q);

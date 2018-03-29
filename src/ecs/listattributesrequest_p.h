@@ -31,7 +31,7 @@ class ListAttributesRequest;
 class QTAWS_EXPORT ListAttributesRequestPrivate : public ECSRequestPrivate {
 
 public:
-    ListAttributesRequestPrivate(const ECS::Action action,
+    ListAttributesRequestPrivate(const ECSRequest::Action action,
                                    ListAttributesRequest * const q);
     ListAttributesRequestPrivate(const ListAttributesRequestPrivate &other,
                                    ListAttributesRequest * const q);

@@ -31,7 +31,7 @@ class GetRemoteAccessSessionRequest;
 class QTAWS_EXPORT GetRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+    GetRemoteAccessSessionRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetRemoteAccessSessionRequest * const q);
     GetRemoteAccessSessionRequestPrivate(const GetRemoteAccessSessionRequestPrivate &other,
                                    GetRemoteAccessSessionRequest * const q);

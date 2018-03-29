@@ -31,7 +31,7 @@ class DescribeTrustsRequest;
 class QTAWS_EXPORT DescribeTrustsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DescribeTrustsRequestPrivate(const DirectoryService::Action action,
+    DescribeTrustsRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DescribeTrustsRequest * const q);
     DescribeTrustsRequestPrivate(const DescribeTrustsRequestPrivate &other,
                                    DescribeTrustsRequest * const q);

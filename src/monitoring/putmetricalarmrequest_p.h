@@ -31,7 +31,7 @@ class PutMetricAlarmRequest;
 class QTAWS_EXPORT PutMetricAlarmRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    PutMetricAlarmRequestPrivate(const CloudWatch::Action action,
+    PutMetricAlarmRequestPrivate(const CloudWatchRequest::Action action,
                                    PutMetricAlarmRequest * const q);
     PutMetricAlarmRequestPrivate(const PutMetricAlarmRequestPrivate &other,
                                    PutMetricAlarmRequest * const q);

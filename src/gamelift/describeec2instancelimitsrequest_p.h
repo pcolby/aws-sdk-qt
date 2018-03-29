@@ -31,7 +31,7 @@ class DescribeEC2InstanceLimitsRequest;
 class QTAWS_EXPORT DescribeEC2InstanceLimitsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeEC2InstanceLimitsRequestPrivate(const GameLift::Action action,
+    DescribeEC2InstanceLimitsRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeEC2InstanceLimitsRequest * const q);
     DescribeEC2InstanceLimitsRequestPrivate(const DescribeEC2InstanceLimitsRequestPrivate &other,
                                    DescribeEC2InstanceLimitsRequest * const q);

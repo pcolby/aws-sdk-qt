@@ -31,7 +31,7 @@ class UpdateScalingParametersRequest;
 class QTAWS_EXPORT UpdateScalingParametersRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    UpdateScalingParametersRequestPrivate(const CloudSearch::Action action,
+    UpdateScalingParametersRequestPrivate(const CloudSearchRequest::Action action,
                                    UpdateScalingParametersRequest * const q);
     UpdateScalingParametersRequestPrivate(const UpdateScalingParametersRequestPrivate &other,
                                    UpdateScalingParametersRequest * const q);

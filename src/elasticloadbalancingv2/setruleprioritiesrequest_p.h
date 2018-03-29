@@ -31,7 +31,7 @@ class SetRulePrioritiesRequest;
 class QTAWS_EXPORT SetRulePrioritiesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    SetRulePrioritiesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    SetRulePrioritiesRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    SetRulePrioritiesRequest * const q);
     SetRulePrioritiesRequestPrivate(const SetRulePrioritiesRequestPrivate &other,
                                    SetRulePrioritiesRequest * const q);

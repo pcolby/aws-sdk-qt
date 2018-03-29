@@ -31,7 +31,7 @@ class GenerateDataSetRequest;
 class QTAWS_EXPORT GenerateDataSetRequestPrivate : public MarketplaceCommerceAnalyticsRequestPrivate {
 
 public:
-    GenerateDataSetRequestPrivate(const MarketplaceCommerceAnalytics::Action action,
+    GenerateDataSetRequestPrivate(const MarketplaceCommerceAnalyticsRequest::Action action,
                                    GenerateDataSetRequest * const q);
     GenerateDataSetRequestPrivate(const GenerateDataSetRequestPrivate &other,
                                    GenerateDataSetRequest * const q);

@@ -31,7 +31,7 @@ class UploadSSHPublicKeyRequest;
 class QTAWS_EXPORT UploadSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UploadSSHPublicKeyRequestPrivate(const IAM::Action action,
+    UploadSSHPublicKeyRequestPrivate(const IAMRequest::Action action,
                                    UploadSSHPublicKeyRequest * const q);
     UploadSSHPublicKeyRequestPrivate(const UploadSSHPublicKeyRequestPrivate &other,
                                    UploadSSHPublicKeyRequest * const q);

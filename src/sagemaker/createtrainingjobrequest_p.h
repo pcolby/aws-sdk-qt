@@ -31,7 +31,7 @@ class CreateTrainingJobRequest;
 class QTAWS_EXPORT CreateTrainingJobRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    CreateTrainingJobRequestPrivate(const SageMaker::Action action,
+    CreateTrainingJobRequestPrivate(const SageMakerRequest::Action action,
                                    CreateTrainingJobRequest * const q);
     CreateTrainingJobRequestPrivate(const CreateTrainingJobRequestPrivate &other,
                                    CreateTrainingJobRequest * const q);

@@ -31,7 +31,7 @@ class CreateClusterRequest;
 class QTAWS_EXPORT CreateClusterRequestPrivate : public ECSRequestPrivate {
 
 public:
-    CreateClusterRequestPrivate(const ECS::Action action,
+    CreateClusterRequestPrivate(const ECSRequest::Action action,
                                    CreateClusterRequest * const q);
     CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
                                    CreateClusterRequest * const q);

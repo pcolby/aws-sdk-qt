@@ -31,7 +31,7 @@ class GetAttributeValuesRequest;
 class QTAWS_EXPORT GetAttributeValuesRequestPrivate : public PricingRequestPrivate {
 
 public:
-    GetAttributeValuesRequestPrivate(const Pricing::Action action,
+    GetAttributeValuesRequestPrivate(const PricingRequest::Action action,
                                    GetAttributeValuesRequest * const q);
     GetAttributeValuesRequestPrivate(const GetAttributeValuesRequestPrivate &other,
                                    GetAttributeValuesRequest * const q);

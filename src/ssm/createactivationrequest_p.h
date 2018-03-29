@@ -31,7 +31,7 @@ class CreateActivationRequest;
 class QTAWS_EXPORT CreateActivationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    CreateActivationRequestPrivate(const SSM::Action action,
+    CreateActivationRequestPrivate(const SSMRequest::Action action,
                                    CreateActivationRequest * const q);
     CreateActivationRequestPrivate(const CreateActivationRequestPrivate &other,
                                    CreateActivationRequest * const q);

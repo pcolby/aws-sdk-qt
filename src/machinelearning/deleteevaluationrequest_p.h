@@ -31,7 +31,7 @@ class DeleteEvaluationRequest;
 class QTAWS_EXPORT DeleteEvaluationRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DeleteEvaluationRequestPrivate(const MachineLearning::Action action,
+    DeleteEvaluationRequestPrivate(const MachineLearningRequest::Action action,
                                    DeleteEvaluationRequest * const q);
     DeleteEvaluationRequestPrivate(const DeleteEvaluationRequestPrivate &other,
                                    DeleteEvaluationRequest * const q);

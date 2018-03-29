@@ -31,7 +31,7 @@ class DeleteCertificateRequest;
 class QTAWS_EXPORT DeleteCertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteCertificateRequestPrivate(const IoT::Action action,
+    DeleteCertificateRequestPrivate(const IoTRequest::Action action,
                                    DeleteCertificateRequest * const q);
     DeleteCertificateRequestPrivate(const DeleteCertificateRequestPrivate &other,
                                    DeleteCertificateRequest * const q);

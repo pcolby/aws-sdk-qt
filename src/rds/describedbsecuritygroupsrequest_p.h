@@ -31,7 +31,7 @@ class DescribeDBSecurityGroupsRequest;
 class QTAWS_EXPORT DescribeDBSecurityGroupsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeDBSecurityGroupsRequestPrivate(const RDS::Action action,
+    DescribeDBSecurityGroupsRequestPrivate(const RDSRequest::Action action,
                                    DescribeDBSecurityGroupsRequest * const q);
     DescribeDBSecurityGroupsRequestPrivate(const DescribeDBSecurityGroupsRequestPrivate &other,
                                    DescribeDBSecurityGroupsRequest * const q);

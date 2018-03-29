@@ -31,7 +31,7 @@ class DeleteDhcpOptionsRequest;
 class QTAWS_EXPORT DeleteDhcpOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteDhcpOptionsRequestPrivate(const EC2::Action action,
+    DeleteDhcpOptionsRequestPrivate(const EC2Request::Action action,
                                    DeleteDhcpOptionsRequest * const q);
     DeleteDhcpOptionsRequestPrivate(const DeleteDhcpOptionsRequestPrivate &other,
                                    DeleteDhcpOptionsRequest * const q);

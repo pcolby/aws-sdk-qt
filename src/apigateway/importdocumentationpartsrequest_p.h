@@ -31,7 +31,7 @@ class ImportDocumentationPartsRequest;
 class QTAWS_EXPORT ImportDocumentationPartsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    ImportDocumentationPartsRequestPrivate(const APIGateway::Action action,
+    ImportDocumentationPartsRequestPrivate(const APIGatewayRequest::Action action,
                                    ImportDocumentationPartsRequest * const q);
     ImportDocumentationPartsRequestPrivate(const ImportDocumentationPartsRequestPrivate &other,
                                    ImportDocumentationPartsRequest * const q);

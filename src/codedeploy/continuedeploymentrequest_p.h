@@ -31,7 +31,7 @@ class ContinueDeploymentRequest;
 class QTAWS_EXPORT ContinueDeploymentRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    ContinueDeploymentRequestPrivate(const CodeDeploy::Action action,
+    ContinueDeploymentRequestPrivate(const CodeDeployRequest::Action action,
                                    ContinueDeploymentRequest * const q);
     ContinueDeploymentRequestPrivate(const ContinueDeploymentRequestPrivate &other,
                                    ContinueDeploymentRequest * const q);

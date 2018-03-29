@@ -31,7 +31,7 @@ class DeleteInvitationsRequest;
 class QTAWS_EXPORT DeleteInvitationsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DeleteInvitationsRequestPrivate(const GuardDuty::Action action,
+    DeleteInvitationsRequestPrivate(const GuardDutyRequest::Action action,
                                    DeleteInvitationsRequest * const q);
     DeleteInvitationsRequestPrivate(const DeleteInvitationsRequestPrivate &other,
                                    DeleteInvitationsRequest * const q);

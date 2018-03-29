@@ -31,7 +31,7 @@ class RegisterTaskDefinitionRequest;
 class QTAWS_EXPORT RegisterTaskDefinitionRequestPrivate : public ECSRequestPrivate {
 
 public:
-    RegisterTaskDefinitionRequestPrivate(const ECS::Action action,
+    RegisterTaskDefinitionRequestPrivate(const ECSRequest::Action action,
                                    RegisterTaskDefinitionRequest * const q);
     RegisterTaskDefinitionRequestPrivate(const RegisterTaskDefinitionRequestPrivate &other,
                                    RegisterTaskDefinitionRequest * const q);

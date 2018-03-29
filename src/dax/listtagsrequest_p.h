@@ -31,7 +31,7 @@ class ListTagsRequest;
 class QTAWS_EXPORT ListTagsRequestPrivate : public DAXRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const DAX::Action action,
+    ListTagsRequestPrivate(const DAXRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

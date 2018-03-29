@@ -31,7 +31,7 @@ class GetDomainNamesRequest;
 class QTAWS_EXPORT GetDomainNamesRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetDomainNamesRequestPrivate(const APIGateway::Action action,
+    GetDomainNamesRequestPrivate(const APIGatewayRequest::Action action,
                                    GetDomainNamesRequest * const q);
     GetDomainNamesRequestPrivate(const GetDomainNamesRequestPrivate &other,
                                    GetDomainNamesRequest * const q);

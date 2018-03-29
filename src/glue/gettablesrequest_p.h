@@ -31,7 +31,7 @@ class GetTablesRequest;
 class QTAWS_EXPORT GetTablesRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetTablesRequestPrivate(const Glue::Action action,
+    GetTablesRequestPrivate(const GlueRequest::Action action,
                                    GetTablesRequest * const q);
     GetTablesRequestPrivate(const GetTablesRequestPrivate &other,
                                    GetTablesRequest * const q);

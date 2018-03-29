@@ -31,7 +31,7 @@ class StopLoggingRequest;
 class QTAWS_EXPORT StopLoggingRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    StopLoggingRequestPrivate(const CloudTrail::Action action,
+    StopLoggingRequestPrivate(const CloudTrailRequest::Action action,
                                    StopLoggingRequest * const q);
     StopLoggingRequestPrivate(const StopLoggingRequestPrivate &other,
                                    StopLoggingRequest * const q);

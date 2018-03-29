@@ -31,7 +31,7 @@ class CreateOptionGroupRequest;
 class QTAWS_EXPORT CreateOptionGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateOptionGroupRequestPrivate(const RDS::Action action,
+    CreateOptionGroupRequestPrivate(const RDSRequest::Action action,
                                    CreateOptionGroupRequest * const q);
     CreateOptionGroupRequestPrivate(const CreateOptionGroupRequestPrivate &other,
                                    CreateOptionGroupRequest * const q);

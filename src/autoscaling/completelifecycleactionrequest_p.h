@@ -31,7 +31,7 @@ class CompleteLifecycleActionRequest;
 class QTAWS_EXPORT CompleteLifecycleActionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    CompleteLifecycleActionRequestPrivate(const AutoScaling::Action action,
+    CompleteLifecycleActionRequestPrivate(const AutoScalingRequest::Action action,
                                    CompleteLifecycleActionRequest * const q);
     CompleteLifecycleActionRequestPrivate(const CompleteLifecycleActionRequestPrivate &other,
                                    CompleteLifecycleActionRequest * const q);

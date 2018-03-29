@@ -31,7 +31,7 @@ class ListDirectoriesRequest;
 class QTAWS_EXPORT ListDirectoriesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListDirectoriesRequestPrivate(const CloudDirectory::Action action,
+    ListDirectoriesRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListDirectoriesRequest * const q);
     ListDirectoriesRequestPrivate(const ListDirectoriesRequestPrivate &other,
                                    ListDirectoriesRequest * const q);

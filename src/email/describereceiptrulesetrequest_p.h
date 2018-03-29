@@ -31,7 +31,7 @@ class DescribeReceiptRuleSetRequest;
 class QTAWS_EXPORT DescribeReceiptRuleSetRequestPrivate : public SESRequestPrivate {
 
 public:
-    DescribeReceiptRuleSetRequestPrivate(const SES::Action action,
+    DescribeReceiptRuleSetRequestPrivate(const SESRequest::Action action,
                                    DescribeReceiptRuleSetRequest * const q);
     DescribeReceiptRuleSetRequestPrivate(const DescribeReceiptRuleSetRequestPrivate &other,
                                    DescribeReceiptRuleSetRequest * const q);

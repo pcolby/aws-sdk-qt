@@ -31,7 +31,7 @@ class ListCollectionsRequest;
 class QTAWS_EXPORT ListCollectionsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    ListCollectionsRequestPrivate(const Rekognition::Action action,
+    ListCollectionsRequestPrivate(const RekognitionRequest::Action action,
                                    ListCollectionsRequest * const q);
     ListCollectionsRequestPrivate(const ListCollectionsRequestPrivate &other,
                                    ListCollectionsRequest * const q);

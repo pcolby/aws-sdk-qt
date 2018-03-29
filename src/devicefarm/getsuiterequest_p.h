@@ -31,7 +31,7 @@ class GetSuiteRequest;
 class QTAWS_EXPORT GetSuiteRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetSuiteRequestPrivate(const DeviceFarm::Action action,
+    GetSuiteRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetSuiteRequest * const q);
     GetSuiteRequestPrivate(const GetSuiteRequestPrivate &other,
                                    GetSuiteRequest * const q);

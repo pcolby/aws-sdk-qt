@@ -31,7 +31,7 @@ class DescribePermissionsRequest;
 class QTAWS_EXPORT DescribePermissionsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribePermissionsRequestPrivate(const OpsWorks::Action action,
+    DescribePermissionsRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribePermissionsRequest * const q);
     DescribePermissionsRequestPrivate(const DescribePermissionsRequestPrivate &other,
                                    DescribePermissionsRequest * const q);

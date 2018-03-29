@@ -31,7 +31,7 @@ class AddJobFlowStepsRequest;
 class QTAWS_EXPORT AddJobFlowStepsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    AddJobFlowStepsRequestPrivate(const EMR::Action action,
+    AddJobFlowStepsRequestPrivate(const EMRRequest::Action action,
                                    AddJobFlowStepsRequest * const q);
     AddJobFlowStepsRequestPrivate(const AddJobFlowStepsRequestPrivate &other,
                                    AddJobFlowStepsRequest * const q);

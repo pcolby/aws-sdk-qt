@@ -31,7 +31,7 @@ class DeleteVpcEndpointServiceConfigurationsRequest;
 class QTAWS_EXPORT DeleteVpcEndpointServiceConfigurationsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteVpcEndpointServiceConfigurationsRequestPrivate(const EC2::Action action,
+    DeleteVpcEndpointServiceConfigurationsRequestPrivate(const EC2Request::Action action,
                                    DeleteVpcEndpointServiceConfigurationsRequest * const q);
     DeleteVpcEndpointServiceConfigurationsRequestPrivate(const DeleteVpcEndpointServiceConfigurationsRequestPrivate &other,
                                    DeleteVpcEndpointServiceConfigurationsRequest * const q);

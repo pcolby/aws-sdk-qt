@@ -31,7 +31,7 @@ class DeleteJobRequest;
 class QTAWS_EXPORT DeleteJobRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteJobRequestPrivate(const Glue::Action action,
+    DeleteJobRequestPrivate(const GlueRequest::Action action,
                                    DeleteJobRequest * const q);
     DeleteJobRequestPrivate(const DeleteJobRequestPrivate &other,
                                    DeleteJobRequest * const q);

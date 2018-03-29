@@ -31,7 +31,7 @@ class PreviewAgentsRequest;
 class QTAWS_EXPORT PreviewAgentsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    PreviewAgentsRequestPrivate(const Inspector::Action action,
+    PreviewAgentsRequestPrivate(const InspectorRequest::Action action,
                                    PreviewAgentsRequest * const q);
     PreviewAgentsRequestPrivate(const PreviewAgentsRequestPrivate &other,
                                    PreviewAgentsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeVpcEndpointServicePermissionsRequest;
 class QTAWS_EXPORT DescribeVpcEndpointServicePermissionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeVpcEndpointServicePermissionsRequestPrivate(const EC2::Action action,
+    DescribeVpcEndpointServicePermissionsRequestPrivate(const EC2Request::Action action,
                                    DescribeVpcEndpointServicePermissionsRequest * const q);
     DescribeVpcEndpointServicePermissionsRequestPrivate(const DescribeVpcEndpointServicePermissionsRequestPrivate &other,
                                    DescribeVpcEndpointServicePermissionsRequest * const q);

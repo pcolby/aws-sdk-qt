@@ -31,7 +31,7 @@ class DescribeRuntimeConfigurationRequest;
 class QTAWS_EXPORT DescribeRuntimeConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeRuntimeConfigurationRequestPrivate(const GameLift::Action action,
+    DescribeRuntimeConfigurationRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeRuntimeConfigurationRequest * const q);
     DescribeRuntimeConfigurationRequestPrivate(const DescribeRuntimeConfigurationRequestPrivate &other,
                                    DescribeRuntimeConfigurationRequest * const q);

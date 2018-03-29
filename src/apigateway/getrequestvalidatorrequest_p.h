@@ -31,7 +31,7 @@ class GetRequestValidatorRequest;
 class QTAWS_EXPORT GetRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetRequestValidatorRequestPrivate(const APIGateway::Action action,
+    GetRequestValidatorRequestPrivate(const APIGatewayRequest::Action action,
                                    GetRequestValidatorRequest * const q);
     GetRequestValidatorRequestPrivate(const GetRequestValidatorRequestPrivate &other,
                                    GetRequestValidatorRequest * const q);

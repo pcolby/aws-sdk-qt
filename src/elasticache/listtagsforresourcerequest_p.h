@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const ElastiCache::Action action,
+    ListTagsForResourceRequestPrivate(const ElastiCacheRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

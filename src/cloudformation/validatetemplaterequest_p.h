@@ -31,7 +31,7 @@ class ValidateTemplateRequest;
 class QTAWS_EXPORT ValidateTemplateRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    ValidateTemplateRequestPrivate(const CloudFormation::Action action,
+    ValidateTemplateRequestPrivate(const CloudFormationRequest::Action action,
                                    ValidateTemplateRequest * const q);
     ValidateTemplateRequestPrivate(const ValidateTemplateRequestPrivate &other,
                                    ValidateTemplateRequest * const q);

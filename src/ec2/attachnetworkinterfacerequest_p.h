@@ -31,7 +31,7 @@ class AttachNetworkInterfaceRequest;
 class QTAWS_EXPORT AttachNetworkInterfaceRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AttachNetworkInterfaceRequestPrivate(const EC2::Action action,
+    AttachNetworkInterfaceRequestPrivate(const EC2Request::Action action,
                                    AttachNetworkInterfaceRequest * const q);
     AttachNetworkInterfaceRequestPrivate(const AttachNetworkInterfaceRequestPrivate &other,
                                    AttachNetworkInterfaceRequest * const q);

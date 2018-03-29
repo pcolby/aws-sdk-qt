@@ -31,7 +31,7 @@ class DescribeChapCredentialsRequest;
 class QTAWS_EXPORT DescribeChapCredentialsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeChapCredentialsRequestPrivate(const StorageGateway::Action action,
+    DescribeChapCredentialsRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeChapCredentialsRequest * const q);
     DescribeChapCredentialsRequestPrivate(const DescribeChapCredentialsRequestPrivate &other,
                                    DescribeChapCredentialsRequest * const q);

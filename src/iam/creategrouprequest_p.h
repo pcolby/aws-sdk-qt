@@ -31,7 +31,7 @@ class CreateGroupRequest;
 class QTAWS_EXPORT CreateGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateGroupRequestPrivate(const IAM::Action action,
+    CreateGroupRequestPrivate(const IAMRequest::Action action,
                                    CreateGroupRequest * const q);
     CreateGroupRequestPrivate(const CreateGroupRequestPrivate &other,
                                    CreateGroupRequest * const q);

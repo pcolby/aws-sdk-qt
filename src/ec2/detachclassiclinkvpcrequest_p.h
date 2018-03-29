@@ -31,7 +31,7 @@ class DetachClassicLinkVpcRequest;
 class QTAWS_EXPORT DetachClassicLinkVpcRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DetachClassicLinkVpcRequestPrivate(const EC2::Action action,
+    DetachClassicLinkVpcRequestPrivate(const EC2Request::Action action,
                                    DetachClassicLinkVpcRequest * const q);
     DetachClassicLinkVpcRequestPrivate(const DetachClassicLinkVpcRequestPrivate &other,
                                    DetachClassicLinkVpcRequest * const q);

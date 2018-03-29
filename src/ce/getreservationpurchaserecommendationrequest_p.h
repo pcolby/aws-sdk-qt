@@ -31,7 +31,7 @@ class GetReservationPurchaseRecommendationRequest;
 class QTAWS_EXPORT GetReservationPurchaseRecommendationRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
-    GetReservationPurchaseRecommendationRequestPrivate(const CostExplorer::Action action,
+    GetReservationPurchaseRecommendationRequestPrivate(const CostExplorerRequest::Action action,
                                    GetReservationPurchaseRecommendationRequest * const q);
     GetReservationPurchaseRecommendationRequestPrivate(const GetReservationPurchaseRecommendationRequestPrivate &other,
                                    GetReservationPurchaseRecommendationRequest * const q);

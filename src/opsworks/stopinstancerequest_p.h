@@ -31,7 +31,7 @@ class StopInstanceRequest;
 class QTAWS_EXPORT StopInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    StopInstanceRequestPrivate(const OpsWorks::Action action,
+    StopInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    StopInstanceRequest * const q);
     StopInstanceRequestPrivate(const StopInstanceRequestPrivate &other,
                                    StopInstanceRequest * const q);

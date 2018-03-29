@@ -31,7 +31,7 @@ class GetBotVersionsRequest;
 class QTAWS_EXPORT GetBotVersionsRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    GetBotVersionsRequestPrivate(const LexModelBuildingService::Action action,
+    GetBotVersionsRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    GetBotVersionsRequest * const q);
     GetBotVersionsRequestPrivate(const GetBotVersionsRequestPrivate &other,
                                    GetBotVersionsRequest * const q);

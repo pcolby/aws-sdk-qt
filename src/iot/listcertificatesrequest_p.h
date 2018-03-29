@@ -31,7 +31,7 @@ class ListCertificatesRequest;
 class QTAWS_EXPORT ListCertificatesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListCertificatesRequestPrivate(const IoT::Action action,
+    ListCertificatesRequestPrivate(const IoTRequest::Action action,
                                    ListCertificatesRequest * const q);
     ListCertificatesRequestPrivate(const ListCertificatesRequestPrivate &other,
                                    ListCertificatesRequest * const q);

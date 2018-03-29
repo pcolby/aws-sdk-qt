@@ -31,7 +31,7 @@ class CreateFleetRequest;
 class QTAWS_EXPORT CreateFleetRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    CreateFleetRequestPrivate(const GameLift::Action action,
+    CreateFleetRequestPrivate(const GameLiftRequest::Action action,
                                    CreateFleetRequest * const q);
     CreateFleetRequestPrivate(const CreateFleetRequestPrivate &other,
                                    CreateFleetRequest * const q);

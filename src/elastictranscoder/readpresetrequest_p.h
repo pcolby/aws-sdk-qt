@@ -31,7 +31,7 @@ class ReadPresetRequest;
 class QTAWS_EXPORT ReadPresetRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ReadPresetRequestPrivate(const ElasticTranscoder::Action action,
+    ReadPresetRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ReadPresetRequest * const q);
     ReadPresetRequestPrivate(const ReadPresetRequestPrivate &other,
                                    ReadPresetRequest * const q);

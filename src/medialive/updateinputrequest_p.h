@@ -31,7 +31,7 @@ class UpdateInputRequest;
 class QTAWS_EXPORT UpdateInputRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    UpdateInputRequestPrivate(const MediaLive::Action action,
+    UpdateInputRequestPrivate(const MediaLiveRequest::Action action,
                                    UpdateInputRequest * const q);
     UpdateInputRequestPrivate(const UpdateInputRequestPrivate &other,
                                    UpdateInputRequest * const q);

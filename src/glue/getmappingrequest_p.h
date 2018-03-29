@@ -31,7 +31,7 @@ class GetMappingRequest;
 class QTAWS_EXPORT GetMappingRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetMappingRequestPrivate(const Glue::Action action,
+    GetMappingRequestPrivate(const GlueRequest::Action action,
                                    GetMappingRequest * const q);
     GetMappingRequestPrivate(const GetMappingRequestPrivate &other,
                                    GetMappingRequest * const q);

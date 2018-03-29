@@ -31,7 +31,7 @@ class AttachInstancesRequest;
 class QTAWS_EXPORT AttachInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    AttachInstancesRequestPrivate(const AutoScaling::Action action,
+    AttachInstancesRequestPrivate(const AutoScalingRequest::Action action,
                                    AttachInstancesRequest * const q);
     AttachInstancesRequestPrivate(const AttachInstancesRequestPrivate &other,
                                    AttachInstancesRequest * const q);

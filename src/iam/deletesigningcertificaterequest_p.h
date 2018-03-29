@@ -31,7 +31,7 @@ class DeleteSigningCertificateRequest;
 class QTAWS_EXPORT DeleteSigningCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteSigningCertificateRequestPrivate(const IAM::Action action,
+    DeleteSigningCertificateRequestPrivate(const IAMRequest::Action action,
                                    DeleteSigningCertificateRequest * const q);
     DeleteSigningCertificateRequestPrivate(const DeleteSigningCertificateRequestPrivate &other,
                                    DeleteSigningCertificateRequest * const q);

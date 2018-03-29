@@ -31,7 +31,7 @@ class BatchDetectSentimentRequest;
 class QTAWS_EXPORT BatchDetectSentimentRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    BatchDetectSentimentRequestPrivate(const Comprehend::Action action,
+    BatchDetectSentimentRequestPrivate(const ComprehendRequest::Action action,
                                    BatchDetectSentimentRequest * const q);
     BatchDetectSentimentRequestPrivate(const BatchDetectSentimentRequestPrivate &other,
                                    BatchDetectSentimentRequest * const q);

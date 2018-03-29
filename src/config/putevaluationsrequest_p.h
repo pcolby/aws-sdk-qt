@@ -31,7 +31,7 @@ class PutEvaluationsRequest;
 class QTAWS_EXPORT PutEvaluationsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    PutEvaluationsRequestPrivate(const ConfigService::Action action,
+    PutEvaluationsRequestPrivate(const ConfigServiceRequest::Action action,
                                    PutEvaluationsRequest * const q);
     PutEvaluationsRequestPrivate(const PutEvaluationsRequestPrivate &other,
                                    PutEvaluationsRequest * const q);

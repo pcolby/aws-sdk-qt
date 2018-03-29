@@ -31,7 +31,7 @@ class DeleteDatasetRequest;
 class QTAWS_EXPORT DeleteDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    DeleteDatasetRequestPrivate(const CognitoSync::Action action,
+    DeleteDatasetRequestPrivate(const CognitoSyncRequest::Action action,
                                    DeleteDatasetRequest * const q);
     DeleteDatasetRequestPrivate(const DeleteDatasetRequestPrivate &other,
                                    DeleteDatasetRequest * const q);

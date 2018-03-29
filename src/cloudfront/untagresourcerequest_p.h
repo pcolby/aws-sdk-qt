@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const CloudFront::Action action,
+    UntagResourceRequestPrivate(const CloudFrontRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

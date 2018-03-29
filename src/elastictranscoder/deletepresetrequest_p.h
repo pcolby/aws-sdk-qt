@@ -31,7 +31,7 @@ class DeletePresetRequest;
 class QTAWS_EXPORT DeletePresetRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    DeletePresetRequestPrivate(const ElasticTranscoder::Action action,
+    DeletePresetRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    DeletePresetRequest * const q);
     DeletePresetRequestPrivate(const DeletePresetRequestPrivate &other,
                                    DeletePresetRequest * const q);

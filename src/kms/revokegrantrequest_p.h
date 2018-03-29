@@ -31,7 +31,7 @@ class RevokeGrantRequest;
 class QTAWS_EXPORT RevokeGrantRequestPrivate : public KMSRequestPrivate {
 
 public:
-    RevokeGrantRequestPrivate(const KMS::Action action,
+    RevokeGrantRequestPrivate(const KMSRequest::Action action,
                                    RevokeGrantRequest * const q);
     RevokeGrantRequestPrivate(const RevokeGrantRequestPrivate &other,
                                    RevokeGrantRequest * const q);

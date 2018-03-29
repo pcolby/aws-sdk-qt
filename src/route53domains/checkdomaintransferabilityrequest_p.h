@@ -31,7 +31,7 @@ class CheckDomainTransferabilityRequest;
 class QTAWS_EXPORT CheckDomainTransferabilityRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    CheckDomainTransferabilityRequestPrivate(const Route53Domains::Action action,
+    CheckDomainTransferabilityRequestPrivate(const Route53DomainsRequest::Action action,
                                    CheckDomainTransferabilityRequest * const q);
     CheckDomainTransferabilityRequestPrivate(const CheckDomainTransferabilityRequestPrivate &other,
                                    CheckDomainTransferabilityRequest * const q);

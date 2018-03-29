@@ -31,7 +31,7 @@ class CreateNetworkProfileRequest;
 class QTAWS_EXPORT CreateNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    CreateNetworkProfileRequestPrivate(const DeviceFarm::Action action,
+    CreateNetworkProfileRequestPrivate(const DeviceFarmRequest::Action action,
                                    CreateNetworkProfileRequest * const q);
     CreateNetworkProfileRequestPrivate(const CreateNetworkProfileRequestPrivate &other,
                                    CreateNetworkProfileRequest * const q);

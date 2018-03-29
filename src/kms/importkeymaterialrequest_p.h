@@ -31,7 +31,7 @@ class ImportKeyMaterialRequest;
 class QTAWS_EXPORT ImportKeyMaterialRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ImportKeyMaterialRequestPrivate(const KMS::Action action,
+    ImportKeyMaterialRequestPrivate(const KMSRequest::Action action,
                                    ImportKeyMaterialRequest * const q);
     ImportKeyMaterialRequestPrivate(const ImportKeyMaterialRequestPrivate &other,
                                    ImportKeyMaterialRequest * const q);

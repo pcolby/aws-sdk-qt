@@ -31,7 +31,7 @@ class AssignInstanceRequest;
 class QTAWS_EXPORT AssignInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    AssignInstanceRequestPrivate(const OpsWorks::Action action,
+    AssignInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    AssignInstanceRequest * const q);
     AssignInstanceRequestPrivate(const AssignInstanceRequestPrivate &other,
                                    AssignInstanceRequest * const q);

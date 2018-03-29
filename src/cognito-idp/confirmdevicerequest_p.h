@@ -31,7 +31,7 @@ class ConfirmDeviceRequest;
 class QTAWS_EXPORT ConfirmDeviceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ConfirmDeviceRequestPrivate(const CognitoIdentityProvider::Action action,
+    ConfirmDeviceRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ConfirmDeviceRequest * const q);
     ConfirmDeviceRequestPrivate(const ConfirmDeviceRequestPrivate &other,
                                    ConfirmDeviceRequest * const q);

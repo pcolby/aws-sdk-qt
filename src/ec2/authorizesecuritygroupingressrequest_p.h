@@ -31,7 +31,7 @@ class AuthorizeSecurityGroupIngressRequest;
 class QTAWS_EXPORT AuthorizeSecurityGroupIngressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AuthorizeSecurityGroupIngressRequestPrivate(const EC2::Action action,
+    AuthorizeSecurityGroupIngressRequestPrivate(const EC2Request::Action action,
                                    AuthorizeSecurityGroupIngressRequest * const q);
     AuthorizeSecurityGroupIngressRequestPrivate(const AuthorizeSecurityGroupIngressRequestPrivate &other,
                                    AuthorizeSecurityGroupIngressRequest * const q);

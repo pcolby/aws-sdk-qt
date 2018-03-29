@@ -31,7 +31,7 @@ class BatchDeleteTableVersionRequest;
 class QTAWS_EXPORT BatchDeleteTableVersionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    BatchDeleteTableVersionRequestPrivate(const Glue::Action action,
+    BatchDeleteTableVersionRequestPrivate(const GlueRequest::Action action,
                                    BatchDeleteTableVersionRequest * const q);
     BatchDeleteTableVersionRequestPrivate(const BatchDeleteTableVersionRequestPrivate &other,
                                    BatchDeleteTableVersionRequest * const q);

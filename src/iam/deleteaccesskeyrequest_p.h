@@ -31,7 +31,7 @@ class DeleteAccessKeyRequest;
 class QTAWS_EXPORT DeleteAccessKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteAccessKeyRequestPrivate(const IAM::Action action,
+    DeleteAccessKeyRequestPrivate(const IAMRequest::Action action,
                                    DeleteAccessKeyRequest * const q);
     DeleteAccessKeyRequestPrivate(const DeleteAccessKeyRequestPrivate &other,
                                    DeleteAccessKeyRequest * const q);

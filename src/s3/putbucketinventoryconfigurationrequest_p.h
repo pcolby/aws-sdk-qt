@@ -31,7 +31,7 @@ class PutBucketInventoryConfigurationRequest;
 class QTAWS_EXPORT PutBucketInventoryConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketInventoryConfigurationRequestPrivate(const S3::Action action,
+    PutBucketInventoryConfigurationRequestPrivate(const S3Request::Action action,
                                    PutBucketInventoryConfigurationRequest * const q);
     PutBucketInventoryConfigurationRequestPrivate(const PutBucketInventoryConfigurationRequestPrivate &other,
                                    PutBucketInventoryConfigurationRequest * const q);

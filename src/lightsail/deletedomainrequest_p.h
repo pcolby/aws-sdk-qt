@@ -31,7 +31,7 @@ class DeleteDomainRequest;
 class QTAWS_EXPORT DeleteDomainRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DeleteDomainRequestPrivate(const Lightsail::Action action,
+    DeleteDomainRequestPrivate(const LightsailRequest::Action action,
                                    DeleteDomainRequest * const q);
     DeleteDomainRequestPrivate(const DeleteDomainRequestPrivate &other,
                                    DeleteDomainRequest * const q);

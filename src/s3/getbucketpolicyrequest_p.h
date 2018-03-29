@@ -31,7 +31,7 @@ class GetBucketPolicyRequest;
 class QTAWS_EXPORT GetBucketPolicyRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketPolicyRequestPrivate(const S3::Action action,
+    GetBucketPolicyRequestPrivate(const S3Request::Action action,
                                    GetBucketPolicyRequest * const q);
     GetBucketPolicyRequestPrivate(const GetBucketPolicyRequestPrivate &other,
                                    GetBucketPolicyRequest * const q);

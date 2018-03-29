@@ -31,7 +31,7 @@ class DescribeElasticsearchInstanceTypeLimitsRequest;
 class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    DescribeElasticsearchInstanceTypeLimitsRequestPrivate(const ElasticsearchService::Action action,
+    DescribeElasticsearchInstanceTypeLimitsRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    DescribeElasticsearchInstanceTypeLimitsRequest * const q);
     DescribeElasticsearchInstanceTypeLimitsRequestPrivate(const DescribeElasticsearchInstanceTypeLimitsRequestPrivate &other,
                                    DescribeElasticsearchInstanceTypeLimitsRequest * const q);

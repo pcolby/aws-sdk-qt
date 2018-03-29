@@ -31,7 +31,7 @@ class ListUsersRequest;
 class QTAWS_EXPORT ListUsersRequestPrivate : public MQRequestPrivate {
 
 public:
-    ListUsersRequestPrivate(const MQ::Action action,
+    ListUsersRequestPrivate(const MQRequest::Action action,
                                    ListUsersRequest * const q);
     ListUsersRequestPrivate(const ListUsersRequestPrivate &other,
                                    ListUsersRequest * const q);

@@ -31,7 +31,7 @@ class CreateChangeSetRequest;
 class QTAWS_EXPORT CreateChangeSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    CreateChangeSetRequestPrivate(const CloudFormation::Action action,
+    CreateChangeSetRequestPrivate(const CloudFormationRequest::Action action,
                                    CreateChangeSetRequest * const q);
     CreateChangeSetRequestPrivate(const CreateChangeSetRequestPrivate &other,
                                    CreateChangeSetRequest * const q);

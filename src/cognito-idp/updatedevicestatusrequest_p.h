@@ -31,7 +31,7 @@ class UpdateDeviceStatusRequest;
 class QTAWS_EXPORT UpdateDeviceStatusRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    UpdateDeviceStatusRequestPrivate(const CognitoIdentityProvider::Action action,
+    UpdateDeviceStatusRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    UpdateDeviceStatusRequest * const q);
     UpdateDeviceStatusRequestPrivate(const UpdateDeviceStatusRequestPrivate &other,
                                    UpdateDeviceStatusRequest * const q);

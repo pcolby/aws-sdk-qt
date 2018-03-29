@@ -31,7 +31,7 @@ class GetDeployablePatchSnapshotForInstanceRequest;
 class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetDeployablePatchSnapshotForInstanceRequestPrivate(const SSM::Action action,
+    GetDeployablePatchSnapshotForInstanceRequestPrivate(const SSMRequest::Action action,
                                    GetDeployablePatchSnapshotForInstanceRequest * const q);
     GetDeployablePatchSnapshotForInstanceRequestPrivate(const GetDeployablePatchSnapshotForInstanceRequestPrivate &other,
                                    GetDeployablePatchSnapshotForInstanceRequest * const q);

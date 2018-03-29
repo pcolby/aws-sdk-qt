@@ -31,7 +31,7 @@ class PutScalingPolicyRequest;
 class QTAWS_EXPORT PutScalingPolicyRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    PutScalingPolicyRequestPrivate(const ApplicationAutoScaling::Action action,
+    PutScalingPolicyRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    PutScalingPolicyRequest * const q);
     PutScalingPolicyRequestPrivate(const PutScalingPolicyRequestPrivate &other,
                                    PutScalingPolicyRequest * const q);

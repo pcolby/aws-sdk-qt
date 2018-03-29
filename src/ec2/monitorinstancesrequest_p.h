@@ -31,7 +31,7 @@ class MonitorInstancesRequest;
 class QTAWS_EXPORT MonitorInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    MonitorInstancesRequestPrivate(const EC2::Action action,
+    MonitorInstancesRequestPrivate(const EC2Request::Action action,
                                    MonitorInstancesRequest * const q);
     MonitorInstancesRequestPrivate(const MonitorInstancesRequestPrivate &other,
                                    MonitorInstancesRequest * const q);

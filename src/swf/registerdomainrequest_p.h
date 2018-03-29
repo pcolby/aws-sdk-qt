@@ -31,7 +31,7 @@ class RegisterDomainRequest;
 class QTAWS_EXPORT RegisterDomainRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RegisterDomainRequestPrivate(const SWF::Action action,
+    RegisterDomainRequestPrivate(const SWFRequest::Action action,
                                    RegisterDomainRequest * const q);
     RegisterDomainRequestPrivate(const RegisterDomainRequestPrivate &other,
                                    RegisterDomainRequest * const q);

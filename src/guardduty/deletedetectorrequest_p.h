@@ -31,7 +31,7 @@ class DeleteDetectorRequest;
 class QTAWS_EXPORT DeleteDetectorRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DeleteDetectorRequestPrivate(const GuardDuty::Action action,
+    DeleteDetectorRequestPrivate(const GuardDutyRequest::Action action,
                                    DeleteDetectorRequest * const q);
     DeleteDetectorRequestPrivate(const DeleteDetectorRequestPrivate &other,
                                    DeleteDetectorRequest * const q);

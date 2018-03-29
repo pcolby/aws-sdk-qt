@@ -31,7 +31,7 @@ class DescribeAvailablePatchesRequest;
 class QTAWS_EXPORT DescribeAvailablePatchesRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeAvailablePatchesRequestPrivate(const SSM::Action action,
+    DescribeAvailablePatchesRequestPrivate(const SSMRequest::Action action,
                                    DescribeAvailablePatchesRequest * const q);
     DescribeAvailablePatchesRequestPrivate(const DescribeAvailablePatchesRequestPrivate &other,
                                    DescribeAvailablePatchesRequest * const q);

@@ -31,7 +31,7 @@ class SetDesiredCapacityRequest;
 class QTAWS_EXPORT SetDesiredCapacityRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    SetDesiredCapacityRequestPrivate(const AutoScaling::Action action,
+    SetDesiredCapacityRequestPrivate(const AutoScalingRequest::Action action,
                                    SetDesiredCapacityRequest * const q);
     SetDesiredCapacityRequestPrivate(const SetDesiredCapacityRequestPrivate &other,
                                    SetDesiredCapacityRequest * const q);

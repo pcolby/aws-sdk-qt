@@ -31,7 +31,7 @@ class ListApplicationRevisionsRequest;
 class QTAWS_EXPORT ListApplicationRevisionsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    ListApplicationRevisionsRequestPrivate(const CodeDeploy::Action action,
+    ListApplicationRevisionsRequestPrivate(const CodeDeployRequest::Action action,
                                    ListApplicationRevisionsRequest * const q);
     ListApplicationRevisionsRequestPrivate(const ListApplicationRevisionsRequestPrivate &other,
                                    ListApplicationRevisionsRequest * const q);

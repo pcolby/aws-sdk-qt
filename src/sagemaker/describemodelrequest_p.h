@@ -31,7 +31,7 @@ class DescribeModelRequest;
 class QTAWS_EXPORT DescribeModelRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    DescribeModelRequestPrivate(const SageMaker::Action action,
+    DescribeModelRequestPrivate(const SageMakerRequest::Action action,
                                    DescribeModelRequest * const q);
     DescribeModelRequestPrivate(const DescribeModelRequestPrivate &other,
                                    DescribeModelRequest * const q);

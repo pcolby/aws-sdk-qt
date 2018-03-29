@@ -31,7 +31,7 @@ class CreateEnvironmentRequest;
 class QTAWS_EXPORT CreateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    CreateEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,
+    CreateEnvironmentRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    CreateEnvironmentRequest * const q);
     CreateEnvironmentRequestPrivate(const CreateEnvironmentRequestPrivate &other,
                                    CreateEnvironmentRequest * const q);

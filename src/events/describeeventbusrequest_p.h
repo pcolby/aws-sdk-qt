@@ -31,7 +31,7 @@ class DescribeEventBusRequest;
 class QTAWS_EXPORT DescribeEventBusRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    DescribeEventBusRequestPrivate(const CloudWatchEvents::Action action,
+    DescribeEventBusRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    DescribeEventBusRequest * const q);
     DescribeEventBusRequestPrivate(const DescribeEventBusRequestPrivate &other,
                                    DescribeEventBusRequest * const q);

@@ -31,7 +31,7 @@ class PutApplicationPolicyRequest;
 class QTAWS_EXPORT PutApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
-    PutApplicationPolicyRequestPrivate(const ServerlessApplicationRepository::Action action,
+    PutApplicationPolicyRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,
                                    PutApplicationPolicyRequest * const q);
     PutApplicationPolicyRequestPrivate(const PutApplicationPolicyRequestPrivate &other,
                                    PutApplicationPolicyRequest * const q);

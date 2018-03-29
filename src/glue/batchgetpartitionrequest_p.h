@@ -31,7 +31,7 @@ class BatchGetPartitionRequest;
 class QTAWS_EXPORT BatchGetPartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    BatchGetPartitionRequestPrivate(const Glue::Action action,
+    BatchGetPartitionRequestPrivate(const GlueRequest::Action action,
                                    BatchGetPartitionRequest * const q);
     BatchGetPartitionRequestPrivate(const BatchGetPartitionRequestPrivate &other,
                                    BatchGetPartitionRequest * const q);

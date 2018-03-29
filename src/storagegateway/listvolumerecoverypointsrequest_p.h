@@ -31,7 +31,7 @@ class ListVolumeRecoveryPointsRequest;
 class QTAWS_EXPORT ListVolumeRecoveryPointsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListVolumeRecoveryPointsRequestPrivate(const StorageGateway::Action action,
+    ListVolumeRecoveryPointsRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListVolumeRecoveryPointsRequest * const q);
     ListVolumeRecoveryPointsRequestPrivate(const ListVolumeRecoveryPointsRequestPrivate &other,
                                    ListVolumeRecoveryPointsRequest * const q);

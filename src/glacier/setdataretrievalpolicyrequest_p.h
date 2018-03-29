@@ -31,7 +31,7 @@ class SetDataRetrievalPolicyRequest;
 class QTAWS_EXPORT SetDataRetrievalPolicyRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    SetDataRetrievalPolicyRequestPrivate(const Glacier::Action action,
+    SetDataRetrievalPolicyRequestPrivate(const GlacierRequest::Action action,
                                    SetDataRetrievalPolicyRequest * const q);
     SetDataRetrievalPolicyRequestPrivate(const SetDataRetrievalPolicyRequestPrivate &other,
                                    SetDataRetrievalPolicyRequest * const q);

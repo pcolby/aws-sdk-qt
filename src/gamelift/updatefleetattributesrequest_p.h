@@ -31,7 +31,7 @@ class UpdateFleetAttributesRequest;
 class QTAWS_EXPORT UpdateFleetAttributesRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateFleetAttributesRequestPrivate(const GameLift::Action action,
+    UpdateFleetAttributesRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateFleetAttributesRequest * const q);
     UpdateFleetAttributesRequestPrivate(const UpdateFleetAttributesRequestPrivate &other,
                                    UpdateFleetAttributesRequest * const q);

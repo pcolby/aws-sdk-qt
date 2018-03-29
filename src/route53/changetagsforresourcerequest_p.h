@@ -31,7 +31,7 @@ class ChangeTagsForResourceRequest;
 class QTAWS_EXPORT ChangeTagsForResourceRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ChangeTagsForResourceRequestPrivate(const Route53::Action action,
+    ChangeTagsForResourceRequestPrivate(const Route53Request::Action action,
                                    ChangeTagsForResourceRequest * const q);
     ChangeTagsForResourceRequestPrivate(const ChangeTagsForResourceRequestPrivate &other,
                                    ChangeTagsForResourceRequest * const q);

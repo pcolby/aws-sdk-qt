@@ -31,7 +31,7 @@ class RemoveTagsFromVaultRequest;
 class QTAWS_EXPORT RemoveTagsFromVaultRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    RemoveTagsFromVaultRequestPrivate(const Glacier::Action action,
+    RemoveTagsFromVaultRequestPrivate(const GlacierRequest::Action action,
                                    RemoveTagsFromVaultRequest * const q);
     RemoveTagsFromVaultRequestPrivate(const RemoveTagsFromVaultRequestPrivate &other,
                                    RemoveTagsFromVaultRequest * const q);

@@ -31,7 +31,7 @@ class CreateEndpointRequest;
 class QTAWS_EXPORT CreateEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    CreateEndpointRequestPrivate(const DatabaseMigrationService::Action action,
+    CreateEndpointRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    CreateEndpointRequest * const q);
     CreateEndpointRequestPrivate(const CreateEndpointRequestPrivate &other,
                                    CreateEndpointRequest * const q);

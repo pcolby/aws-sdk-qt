@@ -31,7 +31,7 @@ class DeleteStreamRequest;
 class QTAWS_EXPORT DeleteStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteStreamRequestPrivate(const IoT::Action action,
+    DeleteStreamRequestPrivate(const IoTRequest::Action action,
                                    DeleteStreamRequest * const q);
     DeleteStreamRequestPrivate(const DeleteStreamRequestPrivate &other,
                                    DeleteStreamRequest * const q);

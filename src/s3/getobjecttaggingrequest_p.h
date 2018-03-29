@@ -31,7 +31,7 @@ class GetObjectTaggingRequest;
 class QTAWS_EXPORT GetObjectTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetObjectTaggingRequestPrivate(const S3::Action action,
+    GetObjectTaggingRequestPrivate(const S3Request::Action action,
                                    GetObjectTaggingRequest * const q);
     GetObjectTaggingRequestPrivate(const GetObjectTaggingRequestPrivate &other,
                                    GetObjectTaggingRequest * const q);

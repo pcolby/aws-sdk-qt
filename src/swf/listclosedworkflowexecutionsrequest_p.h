@@ -31,7 +31,7 @@ class ListClosedWorkflowExecutionsRequest;
 class QTAWS_EXPORT ListClosedWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
 
 public:
-    ListClosedWorkflowExecutionsRequestPrivate(const SWF::Action action,
+    ListClosedWorkflowExecutionsRequestPrivate(const SWFRequest::Action action,
                                    ListClosedWorkflowExecutionsRequest * const q);
     ListClosedWorkflowExecutionsRequestPrivate(const ListClosedWorkflowExecutionsRequestPrivate &other,
                                    ListClosedWorkflowExecutionsRequest * const q);

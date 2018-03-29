@@ -31,7 +31,7 @@ class ImportImageRequest;
 class QTAWS_EXPORT ImportImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ImportImageRequestPrivate(const EC2::Action action,
+    ImportImageRequestPrivate(const EC2Request::Action action,
                                    ImportImageRequest * const q);
     ImportImageRequestPrivate(const ImportImageRequestPrivate &other,
                                    ImportImageRequest * const q);

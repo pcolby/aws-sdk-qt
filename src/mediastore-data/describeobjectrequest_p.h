@@ -31,7 +31,7 @@ class DescribeObjectRequest;
 class QTAWS_EXPORT DescribeObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
-    DescribeObjectRequestPrivate(const MediaStoreData::Action action,
+    DescribeObjectRequestPrivate(const MediaStoreDataRequest::Action action,
                                    DescribeObjectRequest * const q);
     DescribeObjectRequestPrivate(const DescribeObjectRequestPrivate &other,
                                    DescribeObjectRequest * const q);

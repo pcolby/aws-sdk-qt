@@ -31,7 +31,7 @@ class DeleteJobTemplateRequest;
 class QTAWS_EXPORT DeleteJobTemplateRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    DeleteJobTemplateRequestPrivate(const MediaConvert::Action action,
+    DeleteJobTemplateRequestPrivate(const MediaConvertRequest::Action action,
                                    DeleteJobTemplateRequest * const q);
     DeleteJobTemplateRequestPrivate(const DeleteJobTemplateRequestPrivate &other,
                                    DeleteJobTemplateRequest * const q);

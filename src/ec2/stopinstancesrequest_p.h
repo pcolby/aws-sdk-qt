@@ -31,7 +31,7 @@ class StopInstancesRequest;
 class QTAWS_EXPORT StopInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    StopInstancesRequestPrivate(const EC2::Action action,
+    StopInstancesRequestPrivate(const EC2Request::Action action,
                                    StopInstancesRequest * const q);
     StopInstancesRequestPrivate(const StopInstancesRequestPrivate &other,
                                    StopInstancesRequest * const q);

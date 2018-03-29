@@ -31,7 +31,7 @@ class ResetDBParameterGroupRequest;
 class QTAWS_EXPORT ResetDBParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ResetDBParameterGroupRequestPrivate(const RDS::Action action,
+    ResetDBParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    ResetDBParameterGroupRequest * const q);
     ResetDBParameterGroupRequestPrivate(const ResetDBParameterGroupRequestPrivate &other,
                                    ResetDBParameterGroupRequest * const q);

@@ -31,7 +31,7 @@ class ListRateBasedRulesRequest;
 class QTAWS_EXPORT ListRateBasedRulesRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListRateBasedRulesRequestPrivate(const WAFRegional::Action action,
+    ListRateBasedRulesRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListRateBasedRulesRequest * const q);
     ListRateBasedRulesRequestPrivate(const ListRateBasedRulesRequestPrivate &other,
                                    ListRateBasedRulesRequest * const q);

@@ -31,7 +31,7 @@ class CreateCacheClusterRequest;
 class QTAWS_EXPORT CreateCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    CreateCacheClusterRequestPrivate(const ElastiCache::Action action,
+    CreateCacheClusterRequestPrivate(const ElastiCacheRequest::Action action,
                                    CreateCacheClusterRequest * const q);
     CreateCacheClusterRequestPrivate(const CreateCacheClusterRequestPrivate &other,
                                    CreateCacheClusterRequest * const q);

@@ -31,7 +31,7 @@ class ListDetectorsRequest;
 class QTAWS_EXPORT ListDetectorsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    ListDetectorsRequestPrivate(const GuardDuty::Action action,
+    ListDetectorsRequestPrivate(const GuardDutyRequest::Action action,
                                    ListDetectorsRequest * const q);
     ListDetectorsRequestPrivate(const ListDetectorsRequestPrivate &other,
                                    ListDetectorsRequest * const q);

@@ -31,7 +31,7 @@ class GetContextKeysForCustomPolicyRequest;
 class QTAWS_EXPORT GetContextKeysForCustomPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetContextKeysForCustomPolicyRequestPrivate(const IAM::Action action,
+    GetContextKeysForCustomPolicyRequestPrivate(const IAMRequest::Action action,
                                    GetContextKeysForCustomPolicyRequest * const q);
     GetContextKeysForCustomPolicyRequestPrivate(const GetContextKeysForCustomPolicyRequestPrivate &other,
                                    GetContextKeysForCustomPolicyRequest * const q);

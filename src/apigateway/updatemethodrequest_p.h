@@ -31,7 +31,7 @@ class UpdateMethodRequest;
 class QTAWS_EXPORT UpdateMethodRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateMethodRequestPrivate(const APIGateway::Action action,
+    UpdateMethodRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateMethodRequest * const q);
     UpdateMethodRequestPrivate(const UpdateMethodRequestPrivate &other,
                                    UpdateMethodRequest * const q);

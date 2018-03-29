@@ -31,7 +31,7 @@ class DeleteDistributionRequest;
 class QTAWS_EXPORT DeleteDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    DeleteDistributionRequestPrivate(const CloudFront::Action action,
+    DeleteDistributionRequestPrivate(const CloudFrontRequest::Action action,
                                    DeleteDistributionRequest * const q);
     DeleteDistributionRequestPrivate(const DeleteDistributionRequestPrivate &other,
                                    DeleteDistributionRequest * const q);

@@ -31,7 +31,7 @@ class DescribeLoadBalancerTargetGroupsRequest;
 class QTAWS_EXPORT DescribeLoadBalancerTargetGroupsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DescribeLoadBalancerTargetGroupsRequestPrivate(const AutoScaling::Action action,
+    DescribeLoadBalancerTargetGroupsRequestPrivate(const AutoScalingRequest::Action action,
                                    DescribeLoadBalancerTargetGroupsRequest * const q);
     DescribeLoadBalancerTargetGroupsRequestPrivate(const DescribeLoadBalancerTargetGroupsRequestPrivate &other,
                                    DescribeLoadBalancerTargetGroupsRequest * const q);

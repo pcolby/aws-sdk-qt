@@ -31,7 +31,7 @@ class DescribeOrderableReplicationInstancesRequest;
 class QTAWS_EXPORT DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeOrderableReplicationInstancesRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeOrderableReplicationInstancesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeOrderableReplicationInstancesRequest * const q);
     DescribeOrderableReplicationInstancesRequestPrivate(const DescribeOrderableReplicationInstancesRequestPrivate &other,
                                    DescribeOrderableReplicationInstancesRequest * const q);

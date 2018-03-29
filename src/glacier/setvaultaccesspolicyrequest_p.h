@@ -31,7 +31,7 @@ class SetVaultAccessPolicyRequest;
 class QTAWS_EXPORT SetVaultAccessPolicyRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    SetVaultAccessPolicyRequestPrivate(const Glacier::Action action,
+    SetVaultAccessPolicyRequestPrivate(const GlacierRequest::Action action,
                                    SetVaultAccessPolicyRequest * const q);
     SetVaultAccessPolicyRequestPrivate(const SetVaultAccessPolicyRequestPrivate &other,
                                    SetVaultAccessPolicyRequest * const q);

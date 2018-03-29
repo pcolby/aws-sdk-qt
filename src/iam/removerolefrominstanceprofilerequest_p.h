@@ -31,7 +31,7 @@ class RemoveRoleFromInstanceProfileRequest;
 class QTAWS_EXPORT RemoveRoleFromInstanceProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
-    RemoveRoleFromInstanceProfileRequestPrivate(const IAM::Action action,
+    RemoveRoleFromInstanceProfileRequestPrivate(const IAMRequest::Action action,
                                    RemoveRoleFromInstanceProfileRequest * const q);
     RemoveRoleFromInstanceProfileRequestPrivate(const RemoveRoleFromInstanceProfileRequestPrivate &other,
                                    RemoveRoleFromInstanceProfileRequest * const q);

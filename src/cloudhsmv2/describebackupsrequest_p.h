@@ -31,7 +31,7 @@ class DescribeBackupsRequest;
 class QTAWS_EXPORT DescribeBackupsRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    DescribeBackupsRequestPrivate(const CloudHSMV2::Action action,
+    DescribeBackupsRequestPrivate(const CloudHSMV2Request::Action action,
                                    DescribeBackupsRequest * const q);
     DescribeBackupsRequestPrivate(const DescribeBackupsRequestPrivate &other,
                                    DescribeBackupsRequest * const q);

@@ -31,7 +31,7 @@ class StartApplicationRequest;
 class QTAWS_EXPORT StartApplicationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    StartApplicationRequestPrivate(const KinesisAnalytics::Action action,
+    StartApplicationRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    StartApplicationRequest * const q);
     StartApplicationRequestPrivate(const StartApplicationRequestPrivate &other,
                                    StartApplicationRequest * const q);

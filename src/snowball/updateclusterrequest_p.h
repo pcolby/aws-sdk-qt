@@ -31,7 +31,7 @@ class UpdateClusterRequest;
 class QTAWS_EXPORT UpdateClusterRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    UpdateClusterRequestPrivate(const Snowball::Action action,
+    UpdateClusterRequestPrivate(const SnowballRequest::Action action,
                                    UpdateClusterRequest * const q);
     UpdateClusterRequestPrivate(const UpdateClusterRequestPrivate &other,
                                    UpdateClusterRequest * const q);

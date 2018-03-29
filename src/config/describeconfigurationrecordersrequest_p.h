@@ -31,7 +31,7 @@ class DescribeConfigurationRecordersRequest;
 class QTAWS_EXPORT DescribeConfigurationRecordersRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DescribeConfigurationRecordersRequestPrivate(const ConfigService::Action action,
+    DescribeConfigurationRecordersRequestPrivate(const ConfigServiceRequest::Action action,
                                    DescribeConfigurationRecordersRequest * const q);
     DescribeConfigurationRecordersRequestPrivate(const DescribeConfigurationRecordersRequestPrivate &other,
                                    DescribeConfigurationRecordersRequest * const q);

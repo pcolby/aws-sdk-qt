@@ -31,7 +31,7 @@ class DeleteEndpointRequest;
 class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    DeleteEndpointRequestPrivate(const SageMaker::Action action,
+    DeleteEndpointRequestPrivate(const SageMakerRequest::Action action,
                                    DeleteEndpointRequest * const q);
     DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
                                    DeleteEndpointRequest * const q);

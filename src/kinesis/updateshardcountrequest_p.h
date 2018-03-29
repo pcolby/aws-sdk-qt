@@ -31,7 +31,7 @@ class UpdateShardCountRequest;
 class QTAWS_EXPORT UpdateShardCountRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    UpdateShardCountRequestPrivate(const Kinesis::Action action,
+    UpdateShardCountRequestPrivate(const KinesisRequest::Action action,
                                    UpdateShardCountRequest * const q);
     UpdateShardCountRequestPrivate(const UpdateShardCountRequestPrivate &other,
                                    UpdateShardCountRequest * const q);

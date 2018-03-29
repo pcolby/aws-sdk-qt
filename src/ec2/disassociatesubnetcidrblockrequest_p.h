@@ -31,7 +31,7 @@ class DisassociateSubnetCidrBlockRequest;
 class QTAWS_EXPORT DisassociateSubnetCidrBlockRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DisassociateSubnetCidrBlockRequestPrivate(const EC2::Action action,
+    DisassociateSubnetCidrBlockRequestPrivate(const EC2Request::Action action,
                                    DisassociateSubnetCidrBlockRequest * const q);
     DisassociateSubnetCidrBlockRequestPrivate(const DisassociateSubnetCidrBlockRequestPrivate &other,
                                    DisassociateSubnetCidrBlockRequest * const q);

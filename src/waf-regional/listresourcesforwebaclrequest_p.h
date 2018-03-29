@@ -31,7 +31,7 @@ class ListResourcesForWebACLRequest;
 class QTAWS_EXPORT ListResourcesForWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListResourcesForWebACLRequestPrivate(const WAFRegional::Action action,
+    ListResourcesForWebACLRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListResourcesForWebACLRequest * const q);
     ListResourcesForWebACLRequestPrivate(const ListResourcesForWebACLRequestPrivate &other,
                                    ListResourcesForWebACLRequest * const q);

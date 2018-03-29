@@ -31,7 +31,7 @@ class UnassignVolumeRequest;
 class QTAWS_EXPORT UnassignVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UnassignVolumeRequestPrivate(const OpsWorks::Action action,
+    UnassignVolumeRequestPrivate(const OpsWorksRequest::Action action,
                                    UnassignVolumeRequest * const q);
     UnassignVolumeRequestPrivate(const UnassignVolumeRequestPrivate &other,
                                    UnassignVolumeRequest * const q);

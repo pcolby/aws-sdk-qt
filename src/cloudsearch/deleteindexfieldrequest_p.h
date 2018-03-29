@@ -31,7 +31,7 @@ class DeleteIndexFieldRequest;
 class QTAWS_EXPORT DeleteIndexFieldRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DeleteIndexFieldRequestPrivate(const CloudSearch::Action action,
+    DeleteIndexFieldRequestPrivate(const CloudSearchRequest::Action action,
                                    DeleteIndexFieldRequest * const q);
     DeleteIndexFieldRequestPrivate(const DeleteIndexFieldRequestPrivate &other,
                                    DeleteIndexFieldRequest * const q);

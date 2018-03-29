@@ -31,7 +31,7 @@ class GetInstancePortStatesRequest;
 class QTAWS_EXPORT GetInstancePortStatesRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetInstancePortStatesRequestPrivate(const Lightsail::Action action,
+    GetInstancePortStatesRequestPrivate(const LightsailRequest::Action action,
                                    GetInstancePortStatesRequest * const q);
     GetInstancePortStatesRequestPrivate(const GetInstancePortStatesRequestPrivate &other,
                                    GetInstancePortStatesRequest * const q);

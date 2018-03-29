@@ -31,7 +31,7 @@ class ViewBillingRequest;
 class QTAWS_EXPORT ViewBillingRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    ViewBillingRequestPrivate(const Route53Domains::Action action,
+    ViewBillingRequestPrivate(const Route53DomainsRequest::Action action,
                                    ViewBillingRequest * const q);
     ViewBillingRequestPrivate(const ViewBillingRequestPrivate &other,
                                    ViewBillingRequest * const q);

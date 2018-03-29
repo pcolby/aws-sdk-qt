@@ -31,7 +31,7 @@ class GetEntitlementsRequest;
 class QTAWS_EXPORT GetEntitlementsRequestPrivate : public MarketplaceEntitlementServiceRequestPrivate {
 
 public:
-    GetEntitlementsRequestPrivate(const MarketplaceEntitlementService::Action action,
+    GetEntitlementsRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action,
                                    GetEntitlementsRequest * const q);
     GetEntitlementsRequestPrivate(const GetEntitlementsRequestPrivate &other,
                                    GetEntitlementsRequest * const q);

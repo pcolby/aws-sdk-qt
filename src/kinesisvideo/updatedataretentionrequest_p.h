@@ -31,7 +31,7 @@ class UpdateDataRetentionRequest;
 class QTAWS_EXPORT UpdateDataRetentionRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
-    UpdateDataRetentionRequestPrivate(const KinesisVideo::Action action,
+    UpdateDataRetentionRequestPrivate(const KinesisVideoRequest::Action action,
                                    UpdateDataRetentionRequest * const q);
     UpdateDataRetentionRequestPrivate(const UpdateDataRetentionRequestPrivate &other,
                                    UpdateDataRetentionRequest * const q);

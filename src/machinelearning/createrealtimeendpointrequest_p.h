@@ -31,7 +31,7 @@ class CreateRealtimeEndpointRequest;
 class QTAWS_EXPORT CreateRealtimeEndpointRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    CreateRealtimeEndpointRequestPrivate(const MachineLearning::Action action,
+    CreateRealtimeEndpointRequestPrivate(const MachineLearningRequest::Action action,
                                    CreateRealtimeEndpointRequest * const q);
     CreateRealtimeEndpointRequestPrivate(const CreateRealtimeEndpointRequestPrivate &other,
                                    CreateRealtimeEndpointRequest * const q);

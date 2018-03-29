@@ -31,7 +31,7 @@ class AttachStaticIpRequest;
 class QTAWS_EXPORT AttachStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    AttachStaticIpRequestPrivate(const Lightsail::Action action,
+    AttachStaticIpRequestPrivate(const LightsailRequest::Action action,
                                    AttachStaticIpRequest * const q);
     AttachStaticIpRequestPrivate(const AttachStaticIpRequestPrivate &other,
                                    AttachStaticIpRequest * const q);

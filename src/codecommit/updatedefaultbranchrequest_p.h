@@ -31,7 +31,7 @@ class UpdateDefaultBranchRequest;
 class QTAWS_EXPORT UpdateDefaultBranchRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    UpdateDefaultBranchRequestPrivate(const CodeCommit::Action action,
+    UpdateDefaultBranchRequestPrivate(const CodeCommitRequest::Action action,
                                    UpdateDefaultBranchRequest * const q);
     UpdateDefaultBranchRequestPrivate(const UpdateDefaultBranchRequestPrivate &other,
                                    UpdateDefaultBranchRequest * const q);

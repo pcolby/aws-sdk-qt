@@ -31,7 +31,7 @@ class GetApplicationPolicyRequest;
 class QTAWS_EXPORT GetApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
-    GetApplicationPolicyRequestPrivate(const ServerlessApplicationRepository::Action action,
+    GetApplicationPolicyRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,
                                    GetApplicationPolicyRequest * const q);
     GetApplicationPolicyRequestPrivate(const GetApplicationPolicyRequestPrivate &other,
                                    GetApplicationPolicyRequest * const q);

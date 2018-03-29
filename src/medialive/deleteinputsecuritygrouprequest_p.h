@@ -31,7 +31,7 @@ class DeleteInputSecurityGroupRequest;
 class QTAWS_EXPORT DeleteInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    DeleteInputSecurityGroupRequestPrivate(const MediaLive::Action action,
+    DeleteInputSecurityGroupRequestPrivate(const MediaLiveRequest::Action action,
                                    DeleteInputSecurityGroupRequest * const q);
     DeleteInputSecurityGroupRequestPrivate(const DeleteInputSecurityGroupRequestPrivate &other,
                                    DeleteInputSecurityGroupRequest * const q);

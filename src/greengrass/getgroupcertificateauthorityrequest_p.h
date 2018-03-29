@@ -31,7 +31,7 @@ class GetGroupCertificateAuthorityRequest;
 class QTAWS_EXPORT GetGroupCertificateAuthorityRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetGroupCertificateAuthorityRequestPrivate(const Greengrass::Action action,
+    GetGroupCertificateAuthorityRequestPrivate(const GreengrassRequest::Action action,
                                    GetGroupCertificateAuthorityRequest * const q);
     GetGroupCertificateAuthorityRequestPrivate(const GetGroupCertificateAuthorityRequestPrivate &other,
                                    GetGroupCertificateAuthorityRequest * const q);

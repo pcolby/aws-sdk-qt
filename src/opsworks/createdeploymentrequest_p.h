@@ -31,7 +31,7 @@ class CreateDeploymentRequest;
 class QTAWS_EXPORT CreateDeploymentRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CreateDeploymentRequestPrivate(const OpsWorks::Action action,
+    CreateDeploymentRequestPrivate(const OpsWorksRequest::Action action,
                                    CreateDeploymentRequest * const q);
     CreateDeploymentRequestPrivate(const CreateDeploymentRequestPrivate &other,
                                    CreateDeploymentRequest * const q);

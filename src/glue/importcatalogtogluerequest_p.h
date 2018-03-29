@@ -31,7 +31,7 @@ class ImportCatalogToGlueRequest;
 class QTAWS_EXPORT ImportCatalogToGlueRequestPrivate : public GlueRequestPrivate {
 
 public:
-    ImportCatalogToGlueRequestPrivate(const Glue::Action action,
+    ImportCatalogToGlueRequestPrivate(const GlueRequest::Action action,
                                    ImportCatalogToGlueRequest * const q);
     ImportCatalogToGlueRequestPrivate(const ImportCatalogToGlueRequestPrivate &other,
                                    ImportCatalogToGlueRequest * const q);

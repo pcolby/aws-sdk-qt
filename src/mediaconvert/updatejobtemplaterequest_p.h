@@ -31,7 +31,7 @@ class UpdateJobTemplateRequest;
 class QTAWS_EXPORT UpdateJobTemplateRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    UpdateJobTemplateRequestPrivate(const MediaConvert::Action action,
+    UpdateJobTemplateRequestPrivate(const MediaConvertRequest::Action action,
                                    UpdateJobTemplateRequest * const q);
     UpdateJobTemplateRequestPrivate(const UpdateJobTemplateRequestPrivate &other,
                                    UpdateJobTemplateRequest * const q);

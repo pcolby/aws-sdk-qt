@@ -31,7 +31,7 @@ class CreateCollectionRequest;
 class QTAWS_EXPORT CreateCollectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    CreateCollectionRequestPrivate(const Rekognition::Action action,
+    CreateCollectionRequestPrivate(const RekognitionRequest::Action action,
                                    CreateCollectionRequest * const q);
     CreateCollectionRequestPrivate(const CreateCollectionRequestPrivate &other,
                                    CreateCollectionRequest * const q);

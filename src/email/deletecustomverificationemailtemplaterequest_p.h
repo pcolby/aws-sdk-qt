@@ -31,7 +31,7 @@ class DeleteCustomVerificationEmailTemplateRequest;
 class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteCustomVerificationEmailTemplateRequestPrivate(const SES::Action action,
+    DeleteCustomVerificationEmailTemplateRequestPrivate(const SESRequest::Action action,
                                    DeleteCustomVerificationEmailTemplateRequest * const q);
     DeleteCustomVerificationEmailTemplateRequestPrivate(const DeleteCustomVerificationEmailTemplateRequestPrivate &other,
                                    DeleteCustomVerificationEmailTemplateRequest * const q);

@@ -31,7 +31,7 @@ class DeleteVpcLinkRequest;
 class QTAWS_EXPORT DeleteVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteVpcLinkRequestPrivate(const APIGateway::Action action,
+    DeleteVpcLinkRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteVpcLinkRequest * const q);
     DeleteVpcLinkRequestPrivate(const DeleteVpcLinkRequestPrivate &other,
                                    DeleteVpcLinkRequest * const q);

@@ -31,7 +31,7 @@ class PutIntegrationRequest;
 class QTAWS_EXPORT PutIntegrationRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    PutIntegrationRequestPrivate(const APIGateway::Action action,
+    PutIntegrationRequestPrivate(const APIGatewayRequest::Action action,
                                    PutIntegrationRequest * const q);
     PutIntegrationRequestPrivate(const PutIntegrationRequestPrivate &other,
                                    PutIntegrationRequest * const q);

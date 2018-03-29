@@ -31,7 +31,7 @@ class DescribeExpressionsRequest;
 class QTAWS_EXPORT DescribeExpressionsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DescribeExpressionsRequestPrivate(const CloudSearch::Action action,
+    DescribeExpressionsRequestPrivate(const CloudSearchRequest::Action action,
                                    DescribeExpressionsRequest * const q);
     DescribeExpressionsRequestPrivate(const DescribeExpressionsRequestPrivate &other,
                                    DescribeExpressionsRequest * const q);

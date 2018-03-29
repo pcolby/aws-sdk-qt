@@ -31,7 +31,7 @@ class ImportKeyPairRequest;
 class QTAWS_EXPORT ImportKeyPairRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ImportKeyPairRequestPrivate(const EC2::Action action,
+    ImportKeyPairRequestPrivate(const EC2Request::Action action,
                                    ImportKeyPairRequest * const q);
     ImportKeyPairRequestPrivate(const ImportKeyPairRequestPrivate &other,
                                    ImportKeyPairRequest * const q);

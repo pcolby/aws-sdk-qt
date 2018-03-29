@@ -31,7 +31,7 @@ class ListRulesPackagesRequest;
 class QTAWS_EXPORT ListRulesPackagesRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    ListRulesPackagesRequestPrivate(const Inspector::Action action,
+    ListRulesPackagesRequestPrivate(const InspectorRequest::Action action,
                                    ListRulesPackagesRequest * const q);
     ListRulesPackagesRequestPrivate(const ListRulesPackagesRequestPrivate &other,
                                    ListRulesPackagesRequest * const q);

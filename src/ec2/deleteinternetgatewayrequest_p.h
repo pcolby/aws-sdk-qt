@@ -31,7 +31,7 @@ class DeleteInternetGatewayRequest;
 class QTAWS_EXPORT DeleteInternetGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteInternetGatewayRequestPrivate(const EC2::Action action,
+    DeleteInternetGatewayRequestPrivate(const EC2Request::Action action,
                                    DeleteInternetGatewayRequest * const q);
     DeleteInternetGatewayRequestPrivate(const DeleteInternetGatewayRequestPrivate &other,
                                    DeleteInternetGatewayRequest * const q);

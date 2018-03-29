@@ -31,7 +31,7 @@ class SuspendProcessesRequest;
 class QTAWS_EXPORT SuspendProcessesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    SuspendProcessesRequestPrivate(const AutoScaling::Action action,
+    SuspendProcessesRequestPrivate(const AutoScalingRequest::Action action,
                                    SuspendProcessesRequest * const q);
     SuspendProcessesRequestPrivate(const SuspendProcessesRequestPrivate &other,
                                    SuspendProcessesRequest * const q);

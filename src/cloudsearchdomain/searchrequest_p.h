@@ -31,7 +31,7 @@ class SearchRequest;
 class QTAWS_EXPORT SearchRequestPrivate : public CloudSearchDomainRequestPrivate {
 
 public:
-    SearchRequestPrivate(const CloudSearchDomain::Action action,
+    SearchRequestPrivate(const CloudSearchDomainRequest::Action action,
                                    SearchRequest * const q);
     SearchRequestPrivate(const SearchRequestPrivate &other,
                                    SearchRequest * const q);

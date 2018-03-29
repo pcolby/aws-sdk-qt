@@ -31,7 +31,7 @@ class DescribeRootFoldersRequest;
 class QTAWS_EXPORT DescribeRootFoldersRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DescribeRootFoldersRequestPrivate(const WorkDocs::Action action,
+    DescribeRootFoldersRequestPrivate(const WorkDocsRequest::Action action,
                                    DescribeRootFoldersRequest * const q);
     DescribeRootFoldersRequestPrivate(const DescribeRootFoldersRequestPrivate &other,
                                    DescribeRootFoldersRequest * const q);

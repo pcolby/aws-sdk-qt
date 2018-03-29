@@ -31,7 +31,7 @@ class StopRemoteAccessSessionRequest;
 class QTAWS_EXPORT StopRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    StopRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+    StopRemoteAccessSessionRequestPrivate(const DeviceFarmRequest::Action action,
                                    StopRemoteAccessSessionRequest * const q);
     StopRemoteAccessSessionRequestPrivate(const StopRemoteAccessSessionRequestPrivate &other,
                                    StopRemoteAccessSessionRequest * const q);

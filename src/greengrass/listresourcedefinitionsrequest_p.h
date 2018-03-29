@@ -31,7 +31,7 @@ class ListResourceDefinitionsRequest;
 class QTAWS_EXPORT ListResourceDefinitionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListResourceDefinitionsRequestPrivate(const Greengrass::Action action,
+    ListResourceDefinitionsRequestPrivate(const GreengrassRequest::Action action,
                                    ListResourceDefinitionsRequest * const q);
     ListResourceDefinitionsRequestPrivate(const ListResourceDefinitionsRequestPrivate &other,
                                    ListResourceDefinitionsRequest * const q);

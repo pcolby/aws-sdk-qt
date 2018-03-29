@@ -31,7 +31,7 @@ class CreateCachediSCSIVolumeRequest;
 class QTAWS_EXPORT CreateCachediSCSIVolumeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CreateCachediSCSIVolumeRequestPrivate(const StorageGateway::Action action,
+    CreateCachediSCSIVolumeRequestPrivate(const StorageGatewayRequest::Action action,
                                    CreateCachediSCSIVolumeRequest * const q);
     CreateCachediSCSIVolumeRequestPrivate(const CreateCachediSCSIVolumeRequestPrivate &other,
                                    CreateCachediSCSIVolumeRequest * const q);

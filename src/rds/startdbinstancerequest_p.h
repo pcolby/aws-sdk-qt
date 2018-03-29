@@ -31,7 +31,7 @@ class StartDBInstanceRequest;
 class QTAWS_EXPORT StartDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    StartDBInstanceRequestPrivate(const RDS::Action action,
+    StartDBInstanceRequestPrivate(const RDSRequest::Action action,
                                    StartDBInstanceRequest * const q);
     StartDBInstanceRequestPrivate(const StartDBInstanceRequestPrivate &other,
                                    StartDBInstanceRequest * const q);

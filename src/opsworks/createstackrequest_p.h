@@ -31,7 +31,7 @@ class CreateStackRequest;
 class QTAWS_EXPORT CreateStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CreateStackRequestPrivate(const OpsWorks::Action action,
+    CreateStackRequestPrivate(const OpsWorksRequest::Action action,
                                    CreateStackRequest * const q);
     CreateStackRequestPrivate(const CreateStackRequestPrivate &other,
                                    CreateStackRequest * const q);

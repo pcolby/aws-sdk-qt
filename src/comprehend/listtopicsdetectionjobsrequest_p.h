@@ -31,7 +31,7 @@ class ListTopicsDetectionJobsRequest;
 class QTAWS_EXPORT ListTopicsDetectionJobsRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    ListTopicsDetectionJobsRequestPrivate(const Comprehend::Action action,
+    ListTopicsDetectionJobsRequestPrivate(const ComprehendRequest::Action action,
                                    ListTopicsDetectionJobsRequest * const q);
     ListTopicsDetectionJobsRequestPrivate(const ListTopicsDetectionJobsRequestPrivate &other,
                                    ListTopicsDetectionJobsRequest * const q);

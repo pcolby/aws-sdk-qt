@@ -31,7 +31,7 @@ class AttachTypedLinkRequest;
 class QTAWS_EXPORT AttachTypedLinkRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    AttachTypedLinkRequestPrivate(const CloudDirectory::Action action,
+    AttachTypedLinkRequestPrivate(const CloudDirectoryRequest::Action action,
                                    AttachTypedLinkRequest * const q);
     AttachTypedLinkRequestPrivate(const AttachTypedLinkRequestPrivate &other,
                                    AttachTypedLinkRequest * const q);

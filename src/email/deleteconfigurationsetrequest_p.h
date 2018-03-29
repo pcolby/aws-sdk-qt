@@ -31,7 +31,7 @@ class DeleteConfigurationSetRequest;
 class QTAWS_EXPORT DeleteConfigurationSetRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteConfigurationSetRequestPrivate(const SES::Action action,
+    DeleteConfigurationSetRequestPrivate(const SESRequest::Action action,
                                    DeleteConfigurationSetRequest * const q);
     DeleteConfigurationSetRequestPrivate(const DeleteConfigurationSetRequestPrivate &other,
                                    DeleteConfigurationSetRequest * const q);

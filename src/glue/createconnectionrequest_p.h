@@ -31,7 +31,7 @@ class CreateConnectionRequest;
 class QTAWS_EXPORT CreateConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    CreateConnectionRequestPrivate(const Glue::Action action,
+    CreateConnectionRequestPrivate(const GlueRequest::Action action,
                                    CreateConnectionRequest * const q);
     CreateConnectionRequestPrivate(const CreateConnectionRequestPrivate &other,
                                    CreateConnectionRequest * const q);

@@ -31,7 +31,7 @@ class RegisterInstancesWithLoadBalancerRequest;
 class QTAWS_EXPORT RegisterInstancesWithLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    RegisterInstancesWithLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,
+    RegisterInstancesWithLoadBalancerRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    RegisterInstancesWithLoadBalancerRequest * const q);
     RegisterInstancesWithLoadBalancerRequestPrivate(const RegisterInstancesWithLoadBalancerRequestPrivate &other,
                                    RegisterInstancesWithLoadBalancerRequest * const q);

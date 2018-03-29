@@ -31,7 +31,7 @@ class DeleteGroupRequest;
 class QTAWS_EXPORT DeleteGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteGroupRequestPrivate(const IAM::Action action,
+    DeleteGroupRequestPrivate(const IAMRequest::Action action,
                                    DeleteGroupRequest * const q);
     DeleteGroupRequestPrivate(const DeleteGroupRequestPrivate &other,
                                    DeleteGroupRequest * const q);

@@ -31,7 +31,7 @@ class DescribeComputeEnvironmentsRequest;
 class QTAWS_EXPORT DescribeComputeEnvironmentsRequestPrivate : public BatchRequestPrivate {
 
 public:
-    DescribeComputeEnvironmentsRequestPrivate(const Batch::Action action,
+    DescribeComputeEnvironmentsRequestPrivate(const BatchRequest::Action action,
                                    DescribeComputeEnvironmentsRequest * const q);
     DescribeComputeEnvironmentsRequestPrivate(const DescribeComputeEnvironmentsRequestPrivate &other,
                                    DescribeComputeEnvironmentsRequest * const q);

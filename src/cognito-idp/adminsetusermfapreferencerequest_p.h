@@ -31,7 +31,7 @@ class AdminSetUserMFAPreferenceRequest;
 class QTAWS_EXPORT AdminSetUserMFAPreferenceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminSetUserMFAPreferenceRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminSetUserMFAPreferenceRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminSetUserMFAPreferenceRequest * const q);
     AdminSetUserMFAPreferenceRequestPrivate(const AdminSetUserMFAPreferenceRequestPrivate &other,
                                    AdminSetUserMFAPreferenceRequest * const q);

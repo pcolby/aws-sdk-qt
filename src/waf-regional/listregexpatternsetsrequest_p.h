@@ -31,7 +31,7 @@ class ListRegexPatternSetsRequest;
 class QTAWS_EXPORT ListRegexPatternSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListRegexPatternSetsRequestPrivate(const WAFRegional::Action action,
+    ListRegexPatternSetsRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListRegexPatternSetsRequest * const q);
     ListRegexPatternSetsRequestPrivate(const ListRegexPatternSetsRequestPrivate &other,
                                    ListRegexPatternSetsRequest * const q);

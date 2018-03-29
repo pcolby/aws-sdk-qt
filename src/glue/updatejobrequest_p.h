@@ -31,7 +31,7 @@ class UpdateJobRequest;
 class QTAWS_EXPORT UpdateJobRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateJobRequestPrivate(const Glue::Action action,
+    UpdateJobRequestPrivate(const GlueRequest::Action action,
                                    UpdateJobRequest * const q);
     UpdateJobRequestPrivate(const UpdateJobRequestPrivate &other,
                                    UpdateJobRequest * const q);

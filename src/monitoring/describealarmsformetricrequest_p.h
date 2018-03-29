@@ -31,7 +31,7 @@ class DescribeAlarmsForMetricRequest;
 class QTAWS_EXPORT DescribeAlarmsForMetricRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    DescribeAlarmsForMetricRequestPrivate(const CloudWatch::Action action,
+    DescribeAlarmsForMetricRequestPrivate(const CloudWatchRequest::Action action,
                                    DescribeAlarmsForMetricRequest * const q);
     DescribeAlarmsForMetricRequestPrivate(const DescribeAlarmsForMetricRequestPrivate &other,
                                    DescribeAlarmsForMetricRequest * const q);

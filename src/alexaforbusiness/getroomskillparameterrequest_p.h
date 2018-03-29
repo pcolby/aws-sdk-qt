@@ -31,7 +31,7 @@ class GetRoomSkillParameterRequest;
 class QTAWS_EXPORT GetRoomSkillParameterRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    GetRoomSkillParameterRequestPrivate(const AlexaForBusiness::Action action,
+    GetRoomSkillParameterRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    GetRoomSkillParameterRequest * const q);
     GetRoomSkillParameterRequestPrivate(const GetRoomSkillParameterRequestPrivate &other,
                                    GetRoomSkillParameterRequest * const q);

@@ -31,7 +31,7 @@ class DescribeConfigurationRevisionRequest;
 class QTAWS_EXPORT DescribeConfigurationRevisionRequestPrivate : public MQRequestPrivate {
 
 public:
-    DescribeConfigurationRevisionRequestPrivate(const MQ::Action action,
+    DescribeConfigurationRevisionRequestPrivate(const MQRequest::Action action,
                                    DescribeConfigurationRevisionRequest * const q);
     DescribeConfigurationRevisionRequestPrivate(const DescribeConfigurationRevisionRequestPrivate &other,
                                    DescribeConfigurationRevisionRequest * const q);

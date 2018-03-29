@@ -31,7 +31,7 @@ class DescribeSnapshotScheduleRequest;
 class QTAWS_EXPORT DescribeSnapshotScheduleRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeSnapshotScheduleRequestPrivate(const StorageGateway::Action action,
+    DescribeSnapshotScheduleRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeSnapshotScheduleRequest * const q);
     DescribeSnapshotScheduleRequestPrivate(const DescribeSnapshotScheduleRequestPrivate &other,
                                    DescribeSnapshotScheduleRequest * const q);

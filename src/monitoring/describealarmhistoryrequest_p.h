@@ -31,7 +31,7 @@ class DescribeAlarmHistoryRequest;
 class QTAWS_EXPORT DescribeAlarmHistoryRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    DescribeAlarmHistoryRequestPrivate(const CloudWatch::Action action,
+    DescribeAlarmHistoryRequestPrivate(const CloudWatchRequest::Action action,
                                    DescribeAlarmHistoryRequest * const q);
     DescribeAlarmHistoryRequestPrivate(const DescribeAlarmHistoryRequestPrivate &other,
                                    DescribeAlarmHistoryRequest * const q);

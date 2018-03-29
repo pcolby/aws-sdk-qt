@@ -31,7 +31,7 @@ class DeleteParameterGroupRequest;
 class QTAWS_EXPORT DeleteParameterGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DeleteParameterGroupRequestPrivate(const DAX::Action action,
+    DeleteParameterGroupRequestPrivate(const DAXRequest::Action action,
                                    DeleteParameterGroupRequest * const q);
     DeleteParameterGroupRequestPrivate(const DeleteParameterGroupRequestPrivate &other,
                                    DeleteParameterGroupRequest * const q);

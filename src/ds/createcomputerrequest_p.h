@@ -31,7 +31,7 @@ class CreateComputerRequest;
 class QTAWS_EXPORT CreateComputerRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CreateComputerRequestPrivate(const DirectoryService::Action action,
+    CreateComputerRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CreateComputerRequest * const q);
     CreateComputerRequestPrivate(const CreateComputerRequestPrivate &other,
                                    CreateComputerRequest * const q);

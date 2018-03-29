@@ -31,7 +31,7 @@ class CreateHITWithHITTypeRequest;
 class QTAWS_EXPORT CreateHITWithHITTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    CreateHITWithHITTypeRequestPrivate(const MTurk::Action action,
+    CreateHITWithHITTypeRequestPrivate(const MTurkRequest::Action action,
                                    CreateHITWithHITTypeRequest * const q);
     CreateHITWithHITTypeRequestPrivate(const CreateHITWithHITTypeRequestPrivate &other,
                                    CreateHITWithHITTypeRequest * const q);

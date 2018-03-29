@@ -31,7 +31,7 @@ class GetIdentityPoolRolesRequest;
 class QTAWS_EXPORT GetIdentityPoolRolesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    GetIdentityPoolRolesRequestPrivate(const CognitoIdentity::Action action,
+    GetIdentityPoolRolesRequestPrivate(const CognitoIdentityRequest::Action action,
                                    GetIdentityPoolRolesRequest * const q);
     GetIdentityPoolRolesRequestPrivate(const GetIdentityPoolRolesRequestPrivate &other,
                                    GetIdentityPoolRolesRequest * const q);

@@ -31,7 +31,7 @@ class CreateUserRequest;
 class QTAWS_EXPORT CreateUserRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    CreateUserRequestPrivate(const AlexaForBusiness::Action action,
+    CreateUserRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    CreateUserRequest * const q);
     CreateUserRequestPrivate(const CreateUserRequestPrivate &other,
                                    CreateUserRequest * const q);

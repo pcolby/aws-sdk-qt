@@ -31,7 +31,7 @@ class UpdateIdentityProviderRequest;
 class QTAWS_EXPORT UpdateIdentityProviderRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    UpdateIdentityProviderRequestPrivate(const CognitoIdentityProvider::Action action,
+    UpdateIdentityProviderRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    UpdateIdentityProviderRequest * const q);
     UpdateIdentityProviderRequestPrivate(const UpdateIdentityProviderRequestPrivate &other,
                                    UpdateIdentityProviderRequest * const q);

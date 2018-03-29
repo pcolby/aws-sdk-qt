@@ -31,7 +31,7 @@ class DescribeDBClusterParametersRequest;
 class QTAWS_EXPORT DescribeDBClusterParametersRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeDBClusterParametersRequestPrivate(const RDS::Action action,
+    DescribeDBClusterParametersRequestPrivate(const RDSRequest::Action action,
                                    DescribeDBClusterParametersRequest * const q);
     DescribeDBClusterParametersRequestPrivate(const DescribeDBClusterParametersRequestPrivate &other,
                                    DescribeDBClusterParametersRequest * const q);

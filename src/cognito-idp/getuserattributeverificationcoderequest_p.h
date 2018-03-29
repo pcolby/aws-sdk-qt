@@ -31,7 +31,7 @@ class GetUserAttributeVerificationCodeRequest;
 class QTAWS_EXPORT GetUserAttributeVerificationCodeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetUserAttributeVerificationCodeRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetUserAttributeVerificationCodeRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetUserAttributeVerificationCodeRequest * const q);
     GetUserAttributeVerificationCodeRequestPrivate(const GetUserAttributeVerificationCodeRequestPrivate &other,
                                    GetUserAttributeVerificationCodeRequest * const q);

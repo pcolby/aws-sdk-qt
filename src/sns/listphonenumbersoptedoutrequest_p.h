@@ -31,7 +31,7 @@ class ListPhoneNumbersOptedOutRequest;
 class QTAWS_EXPORT ListPhoneNumbersOptedOutRequestPrivate : public SNSRequestPrivate {
 
 public:
-    ListPhoneNumbersOptedOutRequestPrivate(const SNS::Action action,
+    ListPhoneNumbersOptedOutRequestPrivate(const SNSRequest::Action action,
                                    ListPhoneNumbersOptedOutRequest * const q);
     ListPhoneNumbersOptedOutRequestPrivate(const ListPhoneNumbersOptedOutRequestPrivate &other,
                                    ListPhoneNumbersOptedOutRequest * const q);

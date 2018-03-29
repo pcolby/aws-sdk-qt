@@ -31,7 +31,7 @@ class GetRegionsRequest;
 class QTAWS_EXPORT GetRegionsRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetRegionsRequestPrivate(const Lightsail::Action action,
+    GetRegionsRequestPrivate(const LightsailRequest::Action action,
                                    GetRegionsRequest * const q);
     GetRegionsRequestPrivate(const GetRegionsRequestPrivate &other,
                                    GetRegionsRequest * const q);

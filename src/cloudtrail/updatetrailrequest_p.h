@@ -31,7 +31,7 @@ class UpdateTrailRequest;
 class QTAWS_EXPORT UpdateTrailRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    UpdateTrailRequestPrivate(const CloudTrail::Action action,
+    UpdateTrailRequestPrivate(const CloudTrailRequest::Action action,
                                    UpdateTrailRequest * const q);
     UpdateTrailRequestPrivate(const UpdateTrailRequestPrivate &other,
                                    UpdateTrailRequest * const q);

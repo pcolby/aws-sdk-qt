@@ -31,7 +31,7 @@ class ListHsmsRequest;
 class QTAWS_EXPORT ListHsmsRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    ListHsmsRequestPrivate(const CloudHSM::Action action,
+    ListHsmsRequestPrivate(const CloudHSMRequest::Action action,
                                    ListHsmsRequest * const q);
     ListHsmsRequestPrivate(const ListHsmsRequestPrivate &other,
                                    ListHsmsRequest * const q);

@@ -31,7 +31,7 @@ class PutActionRevisionRequest;
 class QTAWS_EXPORT PutActionRevisionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    PutActionRevisionRequestPrivate(const CodePipeline::Action action,
+    PutActionRevisionRequestPrivate(const CodePipelineRequest::Action action,
                                    PutActionRevisionRequest * const q);
     PutActionRevisionRequestPrivate(const PutActionRevisionRequestPrivate &other,
                                    PutActionRevisionRequest * const q);

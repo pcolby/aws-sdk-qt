@@ -31,7 +31,7 @@ class DescribeAddressRequest;
 class QTAWS_EXPORT DescribeAddressRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    DescribeAddressRequestPrivate(const Snowball::Action action,
+    DescribeAddressRequestPrivate(const SnowballRequest::Action action,
                                    DescribeAddressRequest * const q);
     DescribeAddressRequestPrivate(const DescribeAddressRequestPrivate &other,
                                    DescribeAddressRequest * const q);

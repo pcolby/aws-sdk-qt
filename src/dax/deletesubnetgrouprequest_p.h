@@ -31,7 +31,7 @@ class DeleteSubnetGroupRequest;
 class QTAWS_EXPORT DeleteSubnetGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DeleteSubnetGroupRequestPrivate(const DAX::Action action,
+    DeleteSubnetGroupRequestPrivate(const DAXRequest::Action action,
                                    DeleteSubnetGroupRequest * const q);
     DeleteSubnetGroupRequestPrivate(const DeleteSubnetGroupRequestPrivate &other,
                                    DeleteSubnetGroupRequest * const q);

@@ -31,7 +31,7 @@ class ListFleetsRequest;
 class QTAWS_EXPORT ListFleetsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    ListFleetsRequestPrivate(const GameLift::Action action,
+    ListFleetsRequestPrivate(const GameLiftRequest::Action action,
                                    ListFleetsRequest * const q);
     ListFleetsRequestPrivate(const ListFleetsRequestPrivate &other,
                                    ListFleetsRequest * const q);

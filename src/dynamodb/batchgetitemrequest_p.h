@@ -31,7 +31,7 @@ class BatchGetItemRequest;
 class QTAWS_EXPORT BatchGetItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    BatchGetItemRequestPrivate(const DynamoDB::Action action,
+    BatchGetItemRequestPrivate(const DynamoDBRequest::Action action,
                                    BatchGetItemRequest * const q);
     BatchGetItemRequestPrivate(const BatchGetItemRequestPrivate &other,
                                    BatchGetItemRequest * const q);

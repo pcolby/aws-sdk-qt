@@ -31,7 +31,7 @@ class DeleteLoadBalancerTlsCertificateRequest;
 class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DeleteLoadBalancerTlsCertificateRequestPrivate(const Lightsail::Action action,
+    DeleteLoadBalancerTlsCertificateRequestPrivate(const LightsailRequest::Action action,
                                    DeleteLoadBalancerTlsCertificateRequest * const q);
     DeleteLoadBalancerTlsCertificateRequestPrivate(const DeleteLoadBalancerTlsCertificateRequestPrivate &other,
                                    DeleteLoadBalancerTlsCertificateRequest * const q);

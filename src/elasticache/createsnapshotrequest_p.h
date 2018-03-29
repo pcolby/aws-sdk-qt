@@ -31,7 +31,7 @@ class CreateSnapshotRequest;
 class QTAWS_EXPORT CreateSnapshotRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    CreateSnapshotRequestPrivate(const ElastiCache::Action action,
+    CreateSnapshotRequestPrivate(const ElastiCacheRequest::Action action,
                                    CreateSnapshotRequest * const q);
     CreateSnapshotRequestPrivate(const CreateSnapshotRequestPrivate &other,
                                    CreateSnapshotRequest * const q);

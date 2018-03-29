@@ -31,7 +31,7 @@ class ModifyLoadBalancerAttributesRequest;
 class QTAWS_EXPORT ModifyLoadBalancerAttributesRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    ModifyLoadBalancerAttributesRequestPrivate(const ElasticLoadBalancing::Action action,
+    ModifyLoadBalancerAttributesRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    ModifyLoadBalancerAttributesRequest * const q);
     ModifyLoadBalancerAttributesRequestPrivate(const ModifyLoadBalancerAttributesRequestPrivate &other,
                                    ModifyLoadBalancerAttributesRequest * const q);

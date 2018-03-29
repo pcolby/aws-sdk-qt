@@ -31,7 +31,7 @@ class DescribeLayersRequest;
 class QTAWS_EXPORT DescribeLayersRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeLayersRequestPrivate(const OpsWorks::Action action,
+    DescribeLayersRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeLayersRequest * const q);
     DescribeLayersRequestPrivate(const DescribeLayersRequestPrivate &other,
                                    DescribeLayersRequest * const q);

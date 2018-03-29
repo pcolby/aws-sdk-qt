@@ -31,7 +31,7 @@ class CreateIPSetRequest;
 class QTAWS_EXPORT CreateIPSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    CreateIPSetRequestPrivate(const WAFRegional::Action action,
+    CreateIPSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    CreateIPSetRequest * const q);
     CreateIPSetRequestPrivate(const CreateIPSetRequestPrivate &other,
                                    CreateIPSetRequest * const q);

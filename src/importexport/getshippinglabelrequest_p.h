@@ -31,7 +31,7 @@ class GetShippingLabelRequest;
 class QTAWS_EXPORT GetShippingLabelRequestPrivate : public ImportExportRequestPrivate {
 
 public:
-    GetShippingLabelRequestPrivate(const ImportExport::Action action,
+    GetShippingLabelRequestPrivate(const ImportExportRequest::Action action,
                                    GetShippingLabelRequest * const q);
     GetShippingLabelRequestPrivate(const GetShippingLabelRequestPrivate &other,
                                    GetShippingLabelRequest * const q);

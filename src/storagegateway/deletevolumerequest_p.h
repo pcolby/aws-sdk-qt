@@ -31,7 +31,7 @@ class DeleteVolumeRequest;
 class QTAWS_EXPORT DeleteVolumeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DeleteVolumeRequestPrivate(const StorageGateway::Action action,
+    DeleteVolumeRequestPrivate(const StorageGatewayRequest::Action action,
                                    DeleteVolumeRequest * const q);
     DeleteVolumeRequestPrivate(const DeleteVolumeRequestPrivate &other,
                                    DeleteVolumeRequest * const q);

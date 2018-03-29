@@ -31,7 +31,7 @@ class UpdateXssMatchSetRequest;
 class QTAWS_EXPORT UpdateXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    UpdateXssMatchSetRequestPrivate(const WAFRegional::Action action,
+    UpdateXssMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    UpdateXssMatchSetRequest * const q);
     UpdateXssMatchSetRequestPrivate(const UpdateXssMatchSetRequestPrivate &other,
                                    UpdateXssMatchSetRequest * const q);

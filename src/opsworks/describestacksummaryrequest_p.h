@@ -31,7 +31,7 @@ class DescribeStackSummaryRequest;
 class QTAWS_EXPORT DescribeStackSummaryRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeStackSummaryRequestPrivate(const OpsWorks::Action action,
+    DescribeStackSummaryRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeStackSummaryRequest * const q);
     DescribeStackSummaryRequestPrivate(const DescribeStackSummaryRequestPrivate &other,
                                    DescribeStackSummaryRequest * const q);

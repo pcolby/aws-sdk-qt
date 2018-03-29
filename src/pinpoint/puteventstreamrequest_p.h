@@ -31,7 +31,7 @@ class PutEventStreamRequest;
 class QTAWS_EXPORT PutEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    PutEventStreamRequestPrivate(const Pinpoint::Action action,
+    PutEventStreamRequestPrivate(const PinpointRequest::Action action,
                                    PutEventStreamRequest * const q);
     PutEventStreamRequestPrivate(const PutEventStreamRequestPrivate &other,
                                    PutEventStreamRequest * const q);

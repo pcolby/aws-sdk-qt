@@ -31,7 +31,7 @@ class StopImageBuilderRequest;
 class QTAWS_EXPORT StopImageBuilderRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    StopImageBuilderRequestPrivate(const AppStream::Action action,
+    StopImageBuilderRequestPrivate(const AppStreamRequest::Action action,
                                    StopImageBuilderRequest * const q);
     StopImageBuilderRequestPrivate(const StopImageBuilderRequestPrivate &other,
                                    StopImageBuilderRequest * const q);

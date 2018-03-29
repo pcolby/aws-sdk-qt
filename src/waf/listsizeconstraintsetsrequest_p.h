@@ -31,7 +31,7 @@ class ListSizeConstraintSetsRequest;
 class QTAWS_EXPORT ListSizeConstraintSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
-    ListSizeConstraintSetsRequestPrivate(const WAF::Action action,
+    ListSizeConstraintSetsRequestPrivate(const WAFRequest::Action action,
                                    ListSizeConstraintSetsRequest * const q);
     ListSizeConstraintSetsRequestPrivate(const ListSizeConstraintSetsRequestPrivate &other,
                                    ListSizeConstraintSetsRequest * const q);

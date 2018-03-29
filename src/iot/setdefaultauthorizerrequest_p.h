@@ -31,7 +31,7 @@ class SetDefaultAuthorizerRequest;
 class QTAWS_EXPORT SetDefaultAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
-    SetDefaultAuthorizerRequestPrivate(const IoT::Action action,
+    SetDefaultAuthorizerRequestPrivate(const IoTRequest::Action action,
                                    SetDefaultAuthorizerRequest * const q);
     SetDefaultAuthorizerRequestPrivate(const SetDefaultAuthorizerRequestPrivate &other,
                                    SetDefaultAuthorizerRequest * const q);

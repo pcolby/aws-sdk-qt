@@ -31,7 +31,7 @@ class UpdateSSHPublicKeyRequest;
 class QTAWS_EXPORT UpdateSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateSSHPublicKeyRequestPrivate(const IAM::Action action,
+    UpdateSSHPublicKeyRequestPrivate(const IAMRequest::Action action,
                                    UpdateSSHPublicKeyRequest * const q);
     UpdateSSHPublicKeyRequestPrivate(const UpdateSSHPublicKeyRequestPrivate &other,
                                    UpdateSSHPublicKeyRequest * const q);

@@ -31,7 +31,7 @@ class CreateResourceDataSyncRequest;
 class QTAWS_EXPORT CreateResourceDataSyncRequestPrivate : public SSMRequestPrivate {
 
 public:
-    CreateResourceDataSyncRequestPrivate(const SSM::Action action,
+    CreateResourceDataSyncRequestPrivate(const SSMRequest::Action action,
                                    CreateResourceDataSyncRequest * const q);
     CreateResourceDataSyncRequestPrivate(const CreateResourceDataSyncRequestPrivate &other,
                                    CreateResourceDataSyncRequest * const q);

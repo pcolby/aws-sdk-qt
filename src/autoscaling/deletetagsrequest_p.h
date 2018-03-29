@@ -31,7 +31,7 @@ class DeleteTagsRequest;
 class QTAWS_EXPORT DeleteTagsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const AutoScaling::Action action,
+    DeleteTagsRequestPrivate(const AutoScalingRequest::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);

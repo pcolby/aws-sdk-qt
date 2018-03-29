@@ -31,7 +31,7 @@ class ListDomainsRequest;
 class QTAWS_EXPORT ListDomainsRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    ListDomainsRequestPrivate(const SimpleDB::Action action,
+    ListDomainsRequestPrivate(const SimpleDBRequest::Action action,
                                    ListDomainsRequest * const q);
     ListDomainsRequestPrivate(const ListDomainsRequestPrivate &other,
                                    ListDomainsRequest * const q);

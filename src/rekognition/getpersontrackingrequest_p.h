@@ -31,7 +31,7 @@ class GetPersonTrackingRequest;
 class QTAWS_EXPORT GetPersonTrackingRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    GetPersonTrackingRequestPrivate(const Rekognition::Action action,
+    GetPersonTrackingRequestPrivate(const RekognitionRequest::Action action,
                                    GetPersonTrackingRequest * const q);
     GetPersonTrackingRequestPrivate(const GetPersonTrackingRequestPrivate &other,
                                    GetPersonTrackingRequest * const q);

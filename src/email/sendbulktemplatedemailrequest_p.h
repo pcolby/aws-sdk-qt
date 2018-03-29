@@ -31,7 +31,7 @@ class SendBulkTemplatedEmailRequest;
 class QTAWS_EXPORT SendBulkTemplatedEmailRequestPrivate : public SESRequestPrivate {
 
 public:
-    SendBulkTemplatedEmailRequestPrivate(const SES::Action action,
+    SendBulkTemplatedEmailRequestPrivate(const SESRequest::Action action,
                                    SendBulkTemplatedEmailRequest * const q);
     SendBulkTemplatedEmailRequestPrivate(const SendBulkTemplatedEmailRequestPrivate &other,
                                    SendBulkTemplatedEmailRequest * const q);

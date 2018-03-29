@@ -31,7 +31,7 @@ class UpdateTerminationProtectionRequest;
 class QTAWS_EXPORT UpdateTerminationProtectionRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    UpdateTerminationProtectionRequestPrivate(const CloudFormation::Action action,
+    UpdateTerminationProtectionRequestPrivate(const CloudFormationRequest::Action action,
                                    UpdateTerminationProtectionRequest * const q);
     UpdateTerminationProtectionRequestPrivate(const UpdateTerminationProtectionRequestPrivate &other,
                                    UpdateTerminationProtectionRequest * const q);

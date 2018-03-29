@@ -31,7 +31,7 @@ class UpdateCloudFrontOriginAccessIdentityRequest;
 class QTAWS_EXPORT UpdateCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    UpdateCloudFrontOriginAccessIdentityRequestPrivate(const CloudFront::Action action,
+    UpdateCloudFrontOriginAccessIdentityRequestPrivate(const CloudFrontRequest::Action action,
                                    UpdateCloudFrontOriginAccessIdentityRequest * const q);
     UpdateCloudFrontOriginAccessIdentityRequestPrivate(const UpdateCloudFrontOriginAccessIdentityRequestPrivate &other,
                                    UpdateCloudFrontOriginAccessIdentityRequest * const q);

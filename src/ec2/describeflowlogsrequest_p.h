@@ -31,7 +31,7 @@ class DescribeFlowLogsRequest;
 class QTAWS_EXPORT DescribeFlowLogsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeFlowLogsRequestPrivate(const EC2::Action action,
+    DescribeFlowLogsRequestPrivate(const EC2Request::Action action,
                                    DescribeFlowLogsRequest * const q);
     DescribeFlowLogsRequestPrivate(const DescribeFlowLogsRequestPrivate &other,
                                    DescribeFlowLogsRequest * const q);

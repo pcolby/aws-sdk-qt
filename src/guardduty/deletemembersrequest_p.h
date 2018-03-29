@@ -31,7 +31,7 @@ class DeleteMembersRequest;
 class QTAWS_EXPORT DeleteMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DeleteMembersRequestPrivate(const GuardDuty::Action action,
+    DeleteMembersRequestPrivate(const GuardDutyRequest::Action action,
                                    DeleteMembersRequest * const q);
     DeleteMembersRequestPrivate(const DeleteMembersRequestPrivate &other,
                                    DeleteMembersRequest * const q);

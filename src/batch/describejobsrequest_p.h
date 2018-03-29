@@ -31,7 +31,7 @@ class DescribeJobsRequest;
 class QTAWS_EXPORT DescribeJobsRequestPrivate : public BatchRequestPrivate {
 
 public:
-    DescribeJobsRequestPrivate(const Batch::Action action,
+    DescribeJobsRequestPrivate(const BatchRequest::Action action,
                                    DescribeJobsRequest * const q);
     DescribeJobsRequestPrivate(const DescribeJobsRequestPrivate &other,
                                    DescribeJobsRequest * const q);

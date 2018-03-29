@@ -31,7 +31,7 @@ class StopStreamEncryptionRequest;
 class QTAWS_EXPORT StopStreamEncryptionRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    StopStreamEncryptionRequestPrivate(const Kinesis::Action action,
+    StopStreamEncryptionRequestPrivate(const KinesisRequest::Action action,
                                    StopStreamEncryptionRequest * const q);
     StopStreamEncryptionRequestPrivate(const StopStreamEncryptionRequestPrivate &other,
                                    StopStreamEncryptionRequest * const q);

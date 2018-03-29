@@ -31,7 +31,7 @@ class GetInstanceRequest;
 class QTAWS_EXPORT GetInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    GetInstanceRequestPrivate(const ServiceDiscovery::Action action,
+    GetInstanceRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    GetInstanceRequest * const q);
     GetInstanceRequestPrivate(const GetInstanceRequestPrivate &other,
                                    GetInstanceRequest * const q);

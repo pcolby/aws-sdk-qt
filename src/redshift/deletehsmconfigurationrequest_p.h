@@ -31,7 +31,7 @@ class DeleteHsmConfigurationRequest;
 class QTAWS_EXPORT DeleteHsmConfigurationRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteHsmConfigurationRequestPrivate(const Redshift::Action action,
+    DeleteHsmConfigurationRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteHsmConfigurationRequest * const q);
     DeleteHsmConfigurationRequestPrivate(const DeleteHsmConfigurationRequestPrivate &other,
                                    DeleteHsmConfigurationRequest * const q);

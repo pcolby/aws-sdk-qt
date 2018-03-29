@@ -31,7 +31,7 @@ class UpdateSkillGroupRequest;
 class QTAWS_EXPORT UpdateSkillGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    UpdateSkillGroupRequestPrivate(const AlexaForBusiness::Action action,
+    UpdateSkillGroupRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    UpdateSkillGroupRequest * const q);
     UpdateSkillGroupRequestPrivate(const UpdateSkillGroupRequestPrivate &other,
                                    UpdateSkillGroupRequest * const q);

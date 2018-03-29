@@ -31,7 +31,7 @@ class ReadJobRequest;
 class QTAWS_EXPORT ReadJobRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ReadJobRequestPrivate(const ElasticTranscoder::Action action,
+    ReadJobRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ReadJobRequest * const q);
     ReadJobRequestPrivate(const ReadJobRequestPrivate &other,
                                    ReadJobRequest * const q);

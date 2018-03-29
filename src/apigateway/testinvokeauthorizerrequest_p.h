@@ -31,7 +31,7 @@ class TestInvokeAuthorizerRequest;
 class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    TestInvokeAuthorizerRequestPrivate(const APIGateway::Action action,
+    TestInvokeAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
                                    TestInvokeAuthorizerRequest * const q);
     TestInvokeAuthorizerRequestPrivate(const TestInvokeAuthorizerRequestPrivate &other,
                                    TestInvokeAuthorizerRequest * const q);

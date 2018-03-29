@@ -31,7 +31,7 @@ class ListApplicationsRequest;
 class QTAWS_EXPORT ListApplicationsRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
-    ListApplicationsRequestPrivate(const ServerlessApplicationRepository::Action action,
+    ListApplicationsRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,
                                    ListApplicationsRequest * const q);
     ListApplicationsRequestPrivate(const ListApplicationsRequestPrivate &other,
                                    ListApplicationsRequest * const q);

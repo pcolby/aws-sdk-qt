@@ -31,7 +31,7 @@ class ScanRequest;
 class QTAWS_EXPORT ScanRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    ScanRequestPrivate(const DynamoDB::Action action,
+    ScanRequestPrivate(const DynamoDBRequest::Action action,
                                    ScanRequest * const q);
     ScanRequestPrivate(const ScanRequestPrivate &other,
                                    ScanRequest * const q);

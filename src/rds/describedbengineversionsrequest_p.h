@@ -31,7 +31,7 @@ class DescribeDBEngineVersionsRequest;
 class QTAWS_EXPORT DescribeDBEngineVersionsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeDBEngineVersionsRequestPrivate(const RDS::Action action,
+    DescribeDBEngineVersionsRequestPrivate(const RDSRequest::Action action,
                                    DescribeDBEngineVersionsRequest * const q);
     DescribeDBEngineVersionsRequestPrivate(const DescribeDBEngineVersionsRequestPrivate &other,
                                    DescribeDBEngineVersionsRequest * const q);

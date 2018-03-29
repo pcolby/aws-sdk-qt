@@ -31,7 +31,7 @@ class RegisterScalableTargetRequest;
 class QTAWS_EXPORT RegisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    RegisterScalableTargetRequestPrivate(const ApplicationAutoScaling::Action action,
+    RegisterScalableTargetRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    RegisterScalableTargetRequest * const q);
     RegisterScalableTargetRequestPrivate(const RegisterScalableTargetRequestPrivate &other,
                                    RegisterScalableTargetRequest * const q);

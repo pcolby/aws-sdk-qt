@@ -31,7 +31,7 @@ class InvokeAsyncRequest;
 class QTAWS_EXPORT InvokeAsyncRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    InvokeAsyncRequestPrivate(const Lambda::Action action,
+    InvokeAsyncRequestPrivate(const LambdaRequest::Action action,
                                    InvokeAsyncRequest * const q);
     InvokeAsyncRequestPrivate(const InvokeAsyncRequestPrivate &other,
                                    InvokeAsyncRequest * const q);

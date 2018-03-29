@@ -31,7 +31,7 @@ class AcknowledgeJobRequest;
 class QTAWS_EXPORT AcknowledgeJobRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    AcknowledgeJobRequestPrivate(const CodePipeline::Action action,
+    AcknowledgeJobRequestPrivate(const CodePipelineRequest::Action action,
                                    AcknowledgeJobRequest * const q);
     AcknowledgeJobRequestPrivate(const AcknowledgeJobRequestPrivate &other,
                                    AcknowledgeJobRequest * const q);

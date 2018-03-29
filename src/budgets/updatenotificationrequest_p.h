@@ -31,7 +31,7 @@ class UpdateNotificationRequest;
 class QTAWS_EXPORT UpdateNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    UpdateNotificationRequestPrivate(const Budgets::Action action,
+    UpdateNotificationRequestPrivate(const BudgetsRequest::Action action,
                                    UpdateNotificationRequest * const q);
     UpdateNotificationRequestPrivate(const UpdateNotificationRequestPrivate &other,
                                    UpdateNotificationRequest * const q);

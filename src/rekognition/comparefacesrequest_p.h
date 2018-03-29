@@ -31,7 +31,7 @@ class CompareFacesRequest;
 class QTAWS_EXPORT CompareFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    CompareFacesRequestPrivate(const Rekognition::Action action,
+    CompareFacesRequestPrivate(const RekognitionRequest::Action action,
                                    CompareFacesRequest * const q);
     CompareFacesRequestPrivate(const CompareFacesRequestPrivate &other,
                                    CompareFacesRequest * const q);

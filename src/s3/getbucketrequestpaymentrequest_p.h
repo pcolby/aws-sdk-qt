@@ -31,7 +31,7 @@ class GetBucketRequestPaymentRequest;
 class QTAWS_EXPORT GetBucketRequestPaymentRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketRequestPaymentRequestPrivate(const S3::Action action,
+    GetBucketRequestPaymentRequestPrivate(const S3Request::Action action,
                                    GetBucketRequestPaymentRequest * const q);
     GetBucketRequestPaymentRequestPrivate(const GetBucketRequestPaymentRequestPrivate &other,
                                    GetBucketRequestPaymentRequest * const q);

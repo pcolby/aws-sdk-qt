@@ -31,7 +31,7 @@ class CreateTypeRequest;
 class QTAWS_EXPORT CreateTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    CreateTypeRequestPrivate(const AppSync::Action action,
+    CreateTypeRequestPrivate(const AppSyncRequest::Action action,
                                    CreateTypeRequest * const q);
     CreateTypeRequestPrivate(const CreateTypeRequestPrivate &other,
                                    CreateTypeRequest * const q);

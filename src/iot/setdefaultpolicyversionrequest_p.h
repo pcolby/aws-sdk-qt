@@ -31,7 +31,7 @@ class SetDefaultPolicyVersionRequest;
 class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
-    SetDefaultPolicyVersionRequestPrivate(const IoT::Action action,
+    SetDefaultPolicyVersionRequestPrivate(const IoTRequest::Action action,
                                    SetDefaultPolicyVersionRequest * const q);
     SetDefaultPolicyVersionRequestPrivate(const SetDefaultPolicyVersionRequestPrivate &other,
                                    SetDefaultPolicyVersionRequest * const q);

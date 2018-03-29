@@ -31,7 +31,7 @@ class CreateDocumentationPartRequest;
 class QTAWS_EXPORT CreateDocumentationPartRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    CreateDocumentationPartRequestPrivate(const APIGateway::Action action,
+    CreateDocumentationPartRequestPrivate(const APIGatewayRequest::Action action,
                                    CreateDocumentationPartRequest * const q);
     CreateDocumentationPartRequestPrivate(const CreateDocumentationPartRequestPrivate &other,
                                    CreateDocumentationPartRequest * const q);

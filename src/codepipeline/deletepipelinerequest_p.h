@@ -31,7 +31,7 @@ class DeletePipelineRequest;
 class QTAWS_EXPORT DeletePipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    DeletePipelineRequestPrivate(const CodePipeline::Action action,
+    DeletePipelineRequestPrivate(const CodePipelineRequest::Action action,
                                    DeletePipelineRequest * const q);
     DeletePipelineRequestPrivate(const DeletePipelineRequestPrivate &other,
                                    DeletePipelineRequest * const q);

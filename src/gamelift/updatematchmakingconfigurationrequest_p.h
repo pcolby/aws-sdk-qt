@@ -31,7 +31,7 @@ class UpdateMatchmakingConfigurationRequest;
 class QTAWS_EXPORT UpdateMatchmakingConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateMatchmakingConfigurationRequestPrivate(const GameLift::Action action,
+    UpdateMatchmakingConfigurationRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateMatchmakingConfigurationRequest * const q);
     UpdateMatchmakingConfigurationRequestPrivate(const UpdateMatchmakingConfigurationRequestPrivate &other,
                                    UpdateMatchmakingConfigurationRequest * const q);

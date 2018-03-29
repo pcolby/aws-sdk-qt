@@ -31,7 +31,7 @@ class DeletePatchBaselineRequest;
 class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeletePatchBaselineRequestPrivate(const SSM::Action action,
+    DeletePatchBaselineRequestPrivate(const SSMRequest::Action action,
                                    DeletePatchBaselineRequest * const q);
     DeletePatchBaselineRequestPrivate(const DeletePatchBaselineRequestPrivate &other,
                                    DeletePatchBaselineRequest * const q);

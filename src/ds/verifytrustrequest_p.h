@@ -31,7 +31,7 @@ class VerifyTrustRequest;
 class QTAWS_EXPORT VerifyTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    VerifyTrustRequestPrivate(const DirectoryService::Action action,
+    VerifyTrustRequestPrivate(const DirectoryServiceRequest::Action action,
                                    VerifyTrustRequest * const q);
     VerifyTrustRequestPrivate(const VerifyTrustRequestPrivate &other,
                                    VerifyTrustRequest * const q);

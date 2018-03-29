@@ -31,7 +31,7 @@ class ListAssignmentsForHITRequest;
 class QTAWS_EXPORT ListAssignmentsForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ListAssignmentsForHITRequestPrivate(const MTurk::Action action,
+    ListAssignmentsForHITRequestPrivate(const MTurkRequest::Action action,
                                    ListAssignmentsForHITRequest * const q);
     ListAssignmentsForHITRequestPrivate(const ListAssignmentsForHITRequestPrivate &other,
                                    ListAssignmentsForHITRequest * const q);

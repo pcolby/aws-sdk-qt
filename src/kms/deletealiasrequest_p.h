@@ -31,7 +31,7 @@ class DeleteAliasRequest;
 class QTAWS_EXPORT DeleteAliasRequestPrivate : public KMSRequestPrivate {
 
 public:
-    DeleteAliasRequestPrivate(const KMS::Action action,
+    DeleteAliasRequestPrivate(const KMSRequest::Action action,
                                    DeleteAliasRequest * const q);
     DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
                                    DeleteAliasRequest * const q);

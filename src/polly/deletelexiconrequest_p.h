@@ -31,7 +31,7 @@ class DeleteLexiconRequest;
 class QTAWS_EXPORT DeleteLexiconRequestPrivate : public PollyRequestPrivate {
 
 public:
-    DeleteLexiconRequestPrivate(const Polly::Action action,
+    DeleteLexiconRequestPrivate(const PollyRequest::Action action,
                                    DeleteLexiconRequest * const q);
     DeleteLexiconRequestPrivate(const DeleteLexiconRequestPrivate &other,
                                    DeleteLexiconRequest * const q);

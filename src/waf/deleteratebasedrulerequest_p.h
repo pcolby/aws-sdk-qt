@@ -31,7 +31,7 @@ class DeleteRateBasedRuleRequest;
 class QTAWS_EXPORT DeleteRateBasedRuleRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteRateBasedRuleRequestPrivate(const WAF::Action action,
+    DeleteRateBasedRuleRequestPrivate(const WAFRequest::Action action,
                                    DeleteRateBasedRuleRequest * const q);
     DeleteRateBasedRuleRequestPrivate(const DeleteRateBasedRuleRequestPrivate &other,
                                    DeleteRateBasedRuleRequest * const q);

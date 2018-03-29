@@ -31,7 +31,7 @@ class DeleteNetworkProfileRequest;
 class QTAWS_EXPORT DeleteNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    DeleteNetworkProfileRequestPrivate(const DeviceFarm::Action action,
+    DeleteNetworkProfileRequestPrivate(const DeviceFarmRequest::Action action,
                                    DeleteNetworkProfileRequest * const q);
     DeleteNetworkProfileRequestPrivate(const DeleteNetworkProfileRequestPrivate &other,
                                    DeleteNetworkProfileRequest * const q);

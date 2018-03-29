@@ -31,7 +31,7 @@ class ListAliasesRequest;
 class QTAWS_EXPORT ListAliasesRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    ListAliasesRequestPrivate(const Lambda::Action action,
+    ListAliasesRequestPrivate(const LambdaRequest::Action action,
                                    ListAliasesRequest * const q);
     ListAliasesRequestPrivate(const ListAliasesRequestPrivate &other,
                                    ListAliasesRequest * const q);

@@ -31,7 +31,7 @@ class AddAttachmentsToSetRequest;
 class QTAWS_EXPORT AddAttachmentsToSetRequestPrivate : public SupportRequestPrivate {
 
 public:
-    AddAttachmentsToSetRequestPrivate(const Support::Action action,
+    AddAttachmentsToSetRequestPrivate(const SupportRequest::Action action,
                                    AddAttachmentsToSetRequest * const q);
     AddAttachmentsToSetRequestPrivate(const AddAttachmentsToSetRequestPrivate &other,
                                    AddAttachmentsToSetRequest * const q);

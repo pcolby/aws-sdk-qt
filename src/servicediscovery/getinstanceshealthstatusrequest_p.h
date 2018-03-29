@@ -31,7 +31,7 @@ class GetInstancesHealthStatusRequest;
 class QTAWS_EXPORT GetInstancesHealthStatusRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    GetInstancesHealthStatusRequestPrivate(const ServiceDiscovery::Action action,
+    GetInstancesHealthStatusRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    GetInstancesHealthStatusRequest * const q);
     GetInstancesHealthStatusRequestPrivate(const GetInstancesHealthStatusRequestPrivate &other,
                                    GetInstancesHealthStatusRequest * const q);

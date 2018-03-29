@@ -31,7 +31,7 @@ class GetProductsRequest;
 class QTAWS_EXPORT GetProductsRequestPrivate : public PricingRequestPrivate {
 
 public:
-    GetProductsRequestPrivate(const Pricing::Action action,
+    GetProductsRequestPrivate(const PricingRequest::Action action,
                                    GetProductsRequest * const q);
     GetProductsRequestPrivate(const GetProductsRequestPrivate &other,
                                    GetProductsRequest * const q);

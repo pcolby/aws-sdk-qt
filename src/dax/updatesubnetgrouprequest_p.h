@@ -31,7 +31,7 @@ class UpdateSubnetGroupRequest;
 class QTAWS_EXPORT UpdateSubnetGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
-    UpdateSubnetGroupRequestPrivate(const DAX::Action action,
+    UpdateSubnetGroupRequestPrivate(const DAXRequest::Action action,
                                    UpdateSubnetGroupRequest * const q);
     UpdateSubnetGroupRequestPrivate(const UpdateSubnetGroupRequestPrivate &other,
                                    UpdateSubnetGroupRequest * const q);

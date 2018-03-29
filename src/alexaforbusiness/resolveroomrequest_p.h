@@ -31,7 +31,7 @@ class ResolveRoomRequest;
 class QTAWS_EXPORT ResolveRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    ResolveRoomRequestPrivate(const AlexaForBusiness::Action action,
+    ResolveRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    ResolveRoomRequest * const q);
     ResolveRoomRequestPrivate(const ResolveRoomRequestPrivate &other,
                                    ResolveRoomRequest * const q);

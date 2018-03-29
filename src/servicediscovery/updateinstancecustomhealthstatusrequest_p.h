@@ -31,7 +31,7 @@ class UpdateInstanceCustomHealthStatusRequest;
 class QTAWS_EXPORT UpdateInstanceCustomHealthStatusRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    UpdateInstanceCustomHealthStatusRequestPrivate(const ServiceDiscovery::Action action,
+    UpdateInstanceCustomHealthStatusRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    UpdateInstanceCustomHealthStatusRequest * const q);
     UpdateInstanceCustomHealthStatusRequestPrivate(const UpdateInstanceCustomHealthStatusRequestPrivate &other,
                                    UpdateInstanceCustomHealthStatusRequest * const q);

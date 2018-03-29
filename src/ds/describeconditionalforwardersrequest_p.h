@@ -31,7 +31,7 @@ class DescribeConditionalForwardersRequest;
 class QTAWS_EXPORT DescribeConditionalForwardersRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DescribeConditionalForwardersRequestPrivate(const DirectoryService::Action action,
+    DescribeConditionalForwardersRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DescribeConditionalForwardersRequest * const q);
     DescribeConditionalForwardersRequestPrivate(const DescribeConditionalForwardersRequestPrivate &other,
                                    DescribeConditionalForwardersRequest * const q);

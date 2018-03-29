@@ -31,7 +31,7 @@ class DescribeNodeAssociationStatusRequest;
 class QTAWS_EXPORT DescribeNodeAssociationStatusRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DescribeNodeAssociationStatusRequestPrivate(const OpsWorksCM::Action action,
+    DescribeNodeAssociationStatusRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DescribeNodeAssociationStatusRequest * const q);
     DescribeNodeAssociationStatusRequestPrivate(const DescribeNodeAssociationStatusRequestPrivate &other,
                                    DescribeNodeAssociationStatusRequest * const q);

@@ -31,7 +31,7 @@ class DescribeLaunchTemplateVersionsRequest;
 class QTAWS_EXPORT DescribeLaunchTemplateVersionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeLaunchTemplateVersionsRequestPrivate(const EC2::Action action,
+    DescribeLaunchTemplateVersionsRequestPrivate(const EC2Request::Action action,
                                    DescribeLaunchTemplateVersionsRequest * const q);
     DescribeLaunchTemplateVersionsRequestPrivate(const DescribeLaunchTemplateVersionsRequestPrivate &other,
                                    DescribeLaunchTemplateVersionsRequest * const q);

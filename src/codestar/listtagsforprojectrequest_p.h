@@ -31,7 +31,7 @@ class ListTagsForProjectRequest;
 class QTAWS_EXPORT ListTagsForProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    ListTagsForProjectRequestPrivate(const CodeStar::Action action,
+    ListTagsForProjectRequestPrivate(const CodeStarRequest::Action action,
                                    ListTagsForProjectRequest * const q);
     ListTagsForProjectRequestPrivate(const ListTagsForProjectRequestPrivate &other,
                                    ListTagsForProjectRequest * const q);

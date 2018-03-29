@@ -31,7 +31,7 @@ class CreateDBSubnetGroupRequest;
 class QTAWS_EXPORT CreateDBSubnetGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateDBSubnetGroupRequestPrivate(const RDS::Action action,
+    CreateDBSubnetGroupRequestPrivate(const RDSRequest::Action action,
                                    CreateDBSubnetGroupRequest * const q);
     CreateDBSubnetGroupRequestPrivate(const CreateDBSubnetGroupRequestPrivate &other,
                                    CreateDBSubnetGroupRequest * const q);

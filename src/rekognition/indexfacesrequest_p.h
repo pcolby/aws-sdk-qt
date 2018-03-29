@@ -31,7 +31,7 @@ class IndexFacesRequest;
 class QTAWS_EXPORT IndexFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    IndexFacesRequestPrivate(const Rekognition::Action action,
+    IndexFacesRequestPrivate(const RekognitionRequest::Action action,
                                    IndexFacesRequest * const q);
     IndexFacesRequestPrivate(const IndexFacesRequestPrivate &other,
                                    IndexFacesRequest * const q);

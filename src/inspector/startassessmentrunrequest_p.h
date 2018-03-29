@@ -31,7 +31,7 @@ class StartAssessmentRunRequest;
 class QTAWS_EXPORT StartAssessmentRunRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    StartAssessmentRunRequestPrivate(const Inspector::Action action,
+    StartAssessmentRunRequestPrivate(const InspectorRequest::Action action,
                                    StartAssessmentRunRequest * const q);
     StartAssessmentRunRequestPrivate(const StartAssessmentRunRequestPrivate &other,
                                    StartAssessmentRunRequest * const q);

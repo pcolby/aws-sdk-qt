@@ -31,7 +31,7 @@ class DeprecateDomainRequest;
 class QTAWS_EXPORT DeprecateDomainRequestPrivate : public SWFRequestPrivate {
 
 public:
-    DeprecateDomainRequestPrivate(const SWF::Action action,
+    DeprecateDomainRequestPrivate(const SWFRequest::Action action,
                                    DeprecateDomainRequest * const q);
     DeprecateDomainRequestPrivate(const DeprecateDomainRequestPrivate &other,
                                    DeprecateDomainRequest * const q);

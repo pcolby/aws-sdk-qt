@@ -31,7 +31,7 @@ class DeleteLifecycleHookRequest;
 class QTAWS_EXPORT DeleteLifecycleHookRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DeleteLifecycleHookRequestPrivate(const AutoScaling::Action action,
+    DeleteLifecycleHookRequestPrivate(const AutoScalingRequest::Action action,
                                    DeleteLifecycleHookRequest * const q);
     DeleteLifecycleHookRequestPrivate(const DeleteLifecycleHookRequestPrivate &other,
                                    DeleteLifecycleHookRequest * const q);

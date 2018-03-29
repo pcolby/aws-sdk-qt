@@ -31,7 +31,7 @@ class CreateJobRequest;
 class QTAWS_EXPORT CreateJobRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    CreateJobRequestPrivate(const MediaConvert::Action action,
+    CreateJobRequestPrivate(const MediaConvertRequest::Action action,
                                    CreateJobRequest * const q);
     CreateJobRequestPrivate(const CreateJobRequestPrivate &other,
                                    CreateJobRequest * const q);

@@ -31,7 +31,7 @@ class DisassociateElasticIpRequest;
 class QTAWS_EXPORT DisassociateElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DisassociateElasticIpRequestPrivate(const OpsWorks::Action action,
+    DisassociateElasticIpRequestPrivate(const OpsWorksRequest::Action action,
                                    DisassociateElasticIpRequest * const q);
     DisassociateElasticIpRequestPrivate(const DisassociateElasticIpRequestPrivate &other,
                                    DisassociateElasticIpRequest * const q);

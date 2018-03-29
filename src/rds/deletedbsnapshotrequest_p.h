@@ -31,7 +31,7 @@ class DeleteDBSnapshotRequest;
 class QTAWS_EXPORT DeleteDBSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteDBSnapshotRequestPrivate(const RDS::Action action,
+    DeleteDBSnapshotRequestPrivate(const RDSRequest::Action action,
                                    DeleteDBSnapshotRequest * const q);
     DeleteDBSnapshotRequestPrivate(const DeleteDBSnapshotRequestPrivate &other,
                                    DeleteDBSnapshotRequest * const q);

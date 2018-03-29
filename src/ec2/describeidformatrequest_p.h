@@ -31,7 +31,7 @@ class DescribeIdFormatRequest;
 class QTAWS_EXPORT DescribeIdFormatRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeIdFormatRequestPrivate(const EC2::Action action,
+    DescribeIdFormatRequestPrivate(const EC2Request::Action action,
                                    DescribeIdFormatRequest * const q);
     DescribeIdFormatRequestPrivate(const DescribeIdFormatRequestPrivate &other,
                                    DescribeIdFormatRequest * const q);

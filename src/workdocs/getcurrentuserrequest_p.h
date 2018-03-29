@@ -31,7 +31,7 @@ class GetCurrentUserRequest;
 class QTAWS_EXPORT GetCurrentUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    GetCurrentUserRequestPrivate(const WorkDocs::Action action,
+    GetCurrentUserRequestPrivate(const WorkDocsRequest::Action action,
                                    GetCurrentUserRequest * const q);
     GetCurrentUserRequestPrivate(const GetCurrentUserRequestPrivate &other,
                                    GetCurrentUserRequest * const q);

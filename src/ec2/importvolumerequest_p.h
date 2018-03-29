@@ -31,7 +31,7 @@ class ImportVolumeRequest;
 class QTAWS_EXPORT ImportVolumeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ImportVolumeRequestPrivate(const EC2::Action action,
+    ImportVolumeRequestPrivate(const EC2Request::Action action,
                                    ImportVolumeRequest * const q);
     ImportVolumeRequestPrivate(const ImportVolumeRequestPrivate &other,
                                    ImportVolumeRequest * const q);

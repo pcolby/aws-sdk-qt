@@ -31,7 +31,7 @@ class ListAccessKeysRequest;
 class QTAWS_EXPORT ListAccessKeysRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListAccessKeysRequestPrivate(const IAM::Action action,
+    ListAccessKeysRequestPrivate(const IAMRequest::Action action,
                                    ListAccessKeysRequest * const q);
     ListAccessKeysRequestPrivate(const ListAccessKeysRequestPrivate &other,
                                    ListAccessKeysRequest * const q);

@@ -31,7 +31,7 @@ class GetFolderPathRequest;
 class QTAWS_EXPORT GetFolderPathRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    GetFolderPathRequestPrivate(const WorkDocs::Action action,
+    GetFolderPathRequestPrivate(const WorkDocsRequest::Action action,
                                    GetFolderPathRequest * const q);
     GetFolderPathRequestPrivate(const GetFolderPathRequestPrivate &other,
                                    GetFolderPathRequest * const q);

@@ -31,7 +31,7 @@ class UpdateUserPoolRequest;
 class QTAWS_EXPORT UpdateUserPoolRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    UpdateUserPoolRequestPrivate(const CognitoIdentityProvider::Action action,
+    UpdateUserPoolRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    UpdateUserPoolRequest * const q);
     UpdateUserPoolRequestPrivate(const UpdateUserPoolRequestPrivate &other,
                                    UpdateUserPoolRequest * const q);

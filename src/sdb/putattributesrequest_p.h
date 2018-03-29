@@ -31,7 +31,7 @@ class PutAttributesRequest;
 class QTAWS_EXPORT PutAttributesRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    PutAttributesRequestPrivate(const SimpleDB::Action action,
+    PutAttributesRequestPrivate(const SimpleDBRequest::Action action,
                                    PutAttributesRequest * const q);
     PutAttributesRequestPrivate(const PutAttributesRequestPrivate &other,
                                    PutAttributesRequest * const q);

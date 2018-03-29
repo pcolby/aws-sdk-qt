@@ -31,7 +31,7 @@ class RegisterElasticIpRequest;
 class QTAWS_EXPORT RegisterElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    RegisterElasticIpRequestPrivate(const OpsWorks::Action action,
+    RegisterElasticIpRequestPrivate(const OpsWorksRequest::Action action,
                                    RegisterElasticIpRequest * const q);
     RegisterElasticIpRequestPrivate(const RegisterElasticIpRequestPrivate &other,
                                    RegisterElasticIpRequest * const q);

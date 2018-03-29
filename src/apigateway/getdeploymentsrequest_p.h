@@ -31,7 +31,7 @@ class GetDeploymentsRequest;
 class QTAWS_EXPORT GetDeploymentsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetDeploymentsRequestPrivate(const APIGateway::Action action,
+    GetDeploymentsRequestPrivate(const APIGatewayRequest::Action action,
                                    GetDeploymentsRequest * const q);
     GetDeploymentsRequestPrivate(const GetDeploymentsRequestPrivate &other,
                                    GetDeploymentsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteLabelsRequest;
 class QTAWS_EXPORT DeleteLabelsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DeleteLabelsRequestPrivate(const WorkDocs::Action action,
+    DeleteLabelsRequestPrivate(const WorkDocsRequest::Action action,
                                    DeleteLabelsRequest * const q);
     DeleteLabelsRequestPrivate(const DeleteLabelsRequestPrivate &other,
                                    DeleteLabelsRequest * const q);

@@ -31,7 +31,7 @@ class ListCreatedArtifactsRequest;
 class QTAWS_EXPORT ListCreatedArtifactsRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    ListCreatedArtifactsRequestPrivate(const MigrationHub::Action action,
+    ListCreatedArtifactsRequestPrivate(const MigrationHubRequest::Action action,
                                    ListCreatedArtifactsRequest * const q);
     ListCreatedArtifactsRequestPrivate(const ListCreatedArtifactsRequestPrivate &other,
                                    ListCreatedArtifactsRequest * const q);

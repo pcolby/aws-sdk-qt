@@ -31,7 +31,7 @@ class CloneStackRequest;
 class QTAWS_EXPORT CloneStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CloneStackRequestPrivate(const OpsWorks::Action action,
+    CloneStackRequestPrivate(const OpsWorksRequest::Action action,
                                    CloneStackRequest * const q);
     CloneStackRequestPrivate(const CloneStackRequestPrivate &other,
                                    CloneStackRequest * const q);

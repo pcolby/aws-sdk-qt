@@ -31,7 +31,7 @@ class UpdateRoleAliasRequest;
 class QTAWS_EXPORT UpdateRoleAliasRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateRoleAliasRequestPrivate(const IoT::Action action,
+    UpdateRoleAliasRequestPrivate(const IoTRequest::Action action,
                                    UpdateRoleAliasRequest * const q);
     UpdateRoleAliasRequestPrivate(const UpdateRoleAliasRequestPrivate &other,
                                    UpdateRoleAliasRequest * const q);

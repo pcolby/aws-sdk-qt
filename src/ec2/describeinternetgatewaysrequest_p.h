@@ -31,7 +31,7 @@ class DescribeInternetGatewaysRequest;
 class QTAWS_EXPORT DescribeInternetGatewaysRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeInternetGatewaysRequestPrivate(const EC2::Action action,
+    DescribeInternetGatewaysRequestPrivate(const EC2Request::Action action,
                                    DescribeInternetGatewaysRequest * const q);
     DescribeInternetGatewaysRequestPrivate(const DescribeInternetGatewaysRequestPrivate &other,
                                    DescribeInternetGatewaysRequest * const q);

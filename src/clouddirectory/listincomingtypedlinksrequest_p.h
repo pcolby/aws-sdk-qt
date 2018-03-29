@@ -31,7 +31,7 @@ class ListIncomingTypedLinksRequest;
 class QTAWS_EXPORT ListIncomingTypedLinksRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListIncomingTypedLinksRequestPrivate(const CloudDirectory::Action action,
+    ListIncomingTypedLinksRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListIncomingTypedLinksRequest * const q);
     ListIncomingTypedLinksRequestPrivate(const ListIncomingTypedLinksRequestPrivate &other,
                                    ListIncomingTypedLinksRequest * const q);

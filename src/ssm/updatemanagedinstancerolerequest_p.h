@@ -31,7 +31,7 @@ class UpdateManagedInstanceRoleRequest;
 class QTAWS_EXPORT UpdateManagedInstanceRoleRequestPrivate : public SSMRequestPrivate {
 
 public:
-    UpdateManagedInstanceRoleRequestPrivate(const SSM::Action action,
+    UpdateManagedInstanceRoleRequestPrivate(const SSMRequest::Action action,
                                    UpdateManagedInstanceRoleRequest * const q);
     UpdateManagedInstanceRoleRequestPrivate(const UpdateManagedInstanceRoleRequestPrivate &other,
                                    UpdateManagedInstanceRoleRequest * const q);

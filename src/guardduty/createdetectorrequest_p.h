@@ -31,7 +31,7 @@ class CreateDetectorRequest;
 class QTAWS_EXPORT CreateDetectorRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    CreateDetectorRequestPrivate(const GuardDuty::Action action,
+    CreateDetectorRequestPrivate(const GuardDutyRequest::Action action,
                                    CreateDetectorRequest * const q);
     CreateDetectorRequestPrivate(const CreateDetectorRequestPrivate &other,
                                    CreateDetectorRequest * const q);

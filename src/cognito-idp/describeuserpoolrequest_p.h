@@ -31,7 +31,7 @@ class DescribeUserPoolRequest;
 class QTAWS_EXPORT DescribeUserPoolRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    DescribeUserPoolRequestPrivate(const CognitoIdentityProvider::Action action,
+    DescribeUserPoolRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    DescribeUserPoolRequest * const q);
     DescribeUserPoolRequestPrivate(const DescribeUserPoolRequestPrivate &other,
                                    DescribeUserPoolRequest * const q);

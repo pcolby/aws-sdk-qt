@@ -31,7 +31,7 @@ class CreateTrailRequest;
 class QTAWS_EXPORT CreateTrailRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    CreateTrailRequestPrivate(const CloudTrail::Action action,
+    CreateTrailRequestPrivate(const CloudTrailRequest::Action action,
                                    CreateTrailRequest * const q);
     CreateTrailRequestPrivate(const CreateTrailRequestPrivate &other,
                                    CreateTrailRequest * const q);

@@ -31,7 +31,7 @@ class EnableRuleRequest;
 class QTAWS_EXPORT EnableRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    EnableRuleRequestPrivate(const CloudWatchEvents::Action action,
+    EnableRuleRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    EnableRuleRequest * const q);
     EnableRuleRequestPrivate(const EnableRuleRequestPrivate &other,
                                    EnableRuleRequest * const q);

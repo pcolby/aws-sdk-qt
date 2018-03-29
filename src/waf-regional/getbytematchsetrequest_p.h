@@ -31,7 +31,7 @@ class GetByteMatchSetRequest;
 class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetByteMatchSetRequestPrivate(const WAFRegional::Action action,
+    GetByteMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetByteMatchSetRequest * const q);
     GetByteMatchSetRequestPrivate(const GetByteMatchSetRequestPrivate &other,
                                    GetByteMatchSetRequest * const q);

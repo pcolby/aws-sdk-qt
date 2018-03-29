@@ -31,7 +31,7 @@ class CompleteVaultLockRequest;
 class QTAWS_EXPORT CompleteVaultLockRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    CompleteVaultLockRequestPrivate(const Glacier::Action action,
+    CompleteVaultLockRequestPrivate(const GlacierRequest::Action action,
                                    CompleteVaultLockRequest * const q);
     CompleteVaultLockRequestPrivate(const CompleteVaultLockRequestPrivate &other,
                                    CompleteVaultLockRequest * const q);

@@ -31,7 +31,7 @@ class DescribeBackupRequest;
 class QTAWS_EXPORT DescribeBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    DescribeBackupRequestPrivate(const DynamoDB::Action action,
+    DescribeBackupRequestPrivate(const DynamoDBRequest::Action action,
                                    DescribeBackupRequest * const q);
     DescribeBackupRequestPrivate(const DescribeBackupRequestPrivate &other,
                                    DescribeBackupRequest * const q);

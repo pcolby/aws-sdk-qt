@@ -31,7 +31,7 @@ class InstallToRemoteAccessSessionRequest;
 class QTAWS_EXPORT InstallToRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    InstallToRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+    InstallToRemoteAccessSessionRequestPrivate(const DeviceFarmRequest::Action action,
                                    InstallToRemoteAccessSessionRequest * const q);
     InstallToRemoteAccessSessionRequestPrivate(const InstallToRemoteAccessSessionRequestPrivate &other,
                                    InstallToRemoteAccessSessionRequest * const q);

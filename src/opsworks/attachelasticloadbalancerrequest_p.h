@@ -31,7 +31,7 @@ class AttachElasticLoadBalancerRequest;
 class QTAWS_EXPORT AttachElasticLoadBalancerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    AttachElasticLoadBalancerRequestPrivate(const OpsWorks::Action action,
+    AttachElasticLoadBalancerRequestPrivate(const OpsWorksRequest::Action action,
                                    AttachElasticLoadBalancerRequest * const q);
     AttachElasticLoadBalancerRequestPrivate(const AttachElasticLoadBalancerRequestPrivate &other,
                                    AttachElasticLoadBalancerRequest * const q);

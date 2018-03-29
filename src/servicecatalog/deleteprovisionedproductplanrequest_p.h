@@ -31,7 +31,7 @@ class DeleteProvisionedProductPlanRequest;
 class QTAWS_EXPORT DeleteProvisionedProductPlanRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeleteProvisionedProductPlanRequestPrivate(const ServiceCatalog::Action action,
+    DeleteProvisionedProductPlanRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeleteProvisionedProductPlanRequest * const q);
     DeleteProvisionedProductPlanRequestPrivate(const DeleteProvisionedProductPlanRequestPrivate &other,
                                    DeleteProvisionedProductPlanRequest * const q);

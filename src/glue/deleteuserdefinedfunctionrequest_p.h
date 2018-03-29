@@ -31,7 +31,7 @@ class DeleteUserDefinedFunctionRequest;
 class QTAWS_EXPORT DeleteUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteUserDefinedFunctionRequestPrivate(const Glue::Action action,
+    DeleteUserDefinedFunctionRequestPrivate(const GlueRequest::Action action,
                                    DeleteUserDefinedFunctionRequest * const q);
     DeleteUserDefinedFunctionRequestPrivate(const DeleteUserDefinedFunctionRequestPrivate &other,
                                    DeleteUserDefinedFunctionRequest * const q);

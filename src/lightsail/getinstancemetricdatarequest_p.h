@@ -31,7 +31,7 @@ class GetInstanceMetricDataRequest;
 class QTAWS_EXPORT GetInstanceMetricDataRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetInstanceMetricDataRequestPrivate(const Lightsail::Action action,
+    GetInstanceMetricDataRequestPrivate(const LightsailRequest::Action action,
                                    GetInstanceMetricDataRequest * const q);
     GetInstanceMetricDataRequestPrivate(const GetInstanceMetricDataRequestPrivate &other,
                                    GetInstanceMetricDataRequest * const q);

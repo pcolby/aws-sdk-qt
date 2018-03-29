@@ -31,7 +31,7 @@ class ListIdentitiesRequest;
 class QTAWS_EXPORT ListIdentitiesRequestPrivate : public SESRequestPrivate {
 
 public:
-    ListIdentitiesRequestPrivate(const SES::Action action,
+    ListIdentitiesRequestPrivate(const SESRequest::Action action,
                                    ListIdentitiesRequest * const q);
     ListIdentitiesRequestPrivate(const ListIdentitiesRequestPrivate &other,
                                    ListIdentitiesRequest * const q);

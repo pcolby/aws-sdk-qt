@@ -31,7 +31,7 @@ class AbortEnvironmentUpdateRequest;
 class QTAWS_EXPORT AbortEnvironmentUpdateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    AbortEnvironmentUpdateRequestPrivate(const ElasticBeanstalk::Action action,
+    AbortEnvironmentUpdateRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    AbortEnvironmentUpdateRequest * const q);
     AbortEnvironmentUpdateRequestPrivate(const AbortEnvironmentUpdateRequestPrivate &other,
                                    AbortEnvironmentUpdateRequest * const q);

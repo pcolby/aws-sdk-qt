@@ -31,7 +31,7 @@ class InitiateJobRequest;
 class QTAWS_EXPORT InitiateJobRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    InitiateJobRequestPrivate(const Glacier::Action action,
+    InitiateJobRequestPrivate(const GlacierRequest::Action action,
                                    InitiateJobRequest * const q);
     InitiateJobRequestPrivate(const InitiateJobRequestPrivate &other,
                                    InitiateJobRequest * const q);

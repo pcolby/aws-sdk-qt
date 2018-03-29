@@ -31,7 +31,7 @@ class CancelArchivalRequest;
 class QTAWS_EXPORT CancelArchivalRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CancelArchivalRequestPrivate(const StorageGateway::Action action,
+    CancelArchivalRequestPrivate(const StorageGatewayRequest::Action action,
                                    CancelArchivalRequest * const q);
     CancelArchivalRequestPrivate(const CancelArchivalRequestPrivate &other,
                                    CancelArchivalRequest * const q);

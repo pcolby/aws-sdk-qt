@@ -31,7 +31,7 @@ class SynthesizeSpeechRequest;
 class QTAWS_EXPORT SynthesizeSpeechRequestPrivate : public PollyRequestPrivate {
 
 public:
-    SynthesizeSpeechRequestPrivate(const Polly::Action action,
+    SynthesizeSpeechRequestPrivate(const PollyRequest::Action action,
                                    SynthesizeSpeechRequest * const q);
     SynthesizeSpeechRequestPrivate(const SynthesizeSpeechRequestPrivate &other,
                                    SynthesizeSpeechRequest * const q);

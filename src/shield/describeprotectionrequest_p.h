@@ -31,7 +31,7 @@ class DescribeProtectionRequest;
 class QTAWS_EXPORT DescribeProtectionRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    DescribeProtectionRequestPrivate(const Shield::Action action,
+    DescribeProtectionRequestPrivate(const ShieldRequest::Action action,
                                    DescribeProtectionRequest * const q);
     DescribeProtectionRequestPrivate(const DescribeProtectionRequestPrivate &other,
                                    DescribeProtectionRequest * const q);

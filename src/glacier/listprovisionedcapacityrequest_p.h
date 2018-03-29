@@ -31,7 +31,7 @@ class ListProvisionedCapacityRequest;
 class QTAWS_EXPORT ListProvisionedCapacityRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    ListProvisionedCapacityRequestPrivate(const Glacier::Action action,
+    ListProvisionedCapacityRequestPrivate(const GlacierRequest::Action action,
                                    ListProvisionedCapacityRequest * const q);
     ListProvisionedCapacityRequestPrivate(const ListProvisionedCapacityRequestPrivate &other,
                                    ListProvisionedCapacityRequest * const q);

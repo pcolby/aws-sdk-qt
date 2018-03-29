@@ -31,7 +31,7 @@ class AttachObjectRequest;
 class QTAWS_EXPORT AttachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    AttachObjectRequestPrivate(const CloudDirectory::Action action,
+    AttachObjectRequestPrivate(const CloudDirectoryRequest::Action action,
                                    AttachObjectRequest * const q);
     AttachObjectRequestPrivate(const AttachObjectRequestPrivate &other,
                                    AttachObjectRequest * const q);

@@ -31,7 +31,7 @@ class GetPipelineRequest;
 class QTAWS_EXPORT GetPipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    GetPipelineRequestPrivate(const CodePipeline::Action action,
+    GetPipelineRequestPrivate(const CodePipelineRequest::Action action,
                                    GetPipelineRequest * const q);
     GetPipelineRequestPrivate(const GetPipelineRequestPrivate &other,
                                    GetPipelineRequest * const q);

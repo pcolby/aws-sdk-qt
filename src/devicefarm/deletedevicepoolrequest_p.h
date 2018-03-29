@@ -31,7 +31,7 @@ class DeleteDevicePoolRequest;
 class QTAWS_EXPORT DeleteDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    DeleteDevicePoolRequestPrivate(const DeviceFarm::Action action,
+    DeleteDevicePoolRequestPrivate(const DeviceFarmRequest::Action action,
                                    DeleteDevicePoolRequest * const q);
     DeleteDevicePoolRequestPrivate(const DeleteDevicePoolRequestPrivate &other,
                                    DeleteDevicePoolRequest * const q);

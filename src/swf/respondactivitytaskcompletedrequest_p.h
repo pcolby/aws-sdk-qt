@@ -31,7 +31,7 @@ class RespondActivityTaskCompletedRequest;
 class QTAWS_EXPORT RespondActivityTaskCompletedRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RespondActivityTaskCompletedRequestPrivate(const SWF::Action action,
+    RespondActivityTaskCompletedRequestPrivate(const SWFRequest::Action action,
                                    RespondActivityTaskCompletedRequest * const q);
     RespondActivityTaskCompletedRequestPrivate(const RespondActivityTaskCompletedRequestPrivate &other,
                                    RespondActivityTaskCompletedRequest * const q);

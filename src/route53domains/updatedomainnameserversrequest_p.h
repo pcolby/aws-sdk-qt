@@ -31,7 +31,7 @@ class UpdateDomainNameserversRequest;
 class QTAWS_EXPORT UpdateDomainNameserversRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    UpdateDomainNameserversRequestPrivate(const Route53Domains::Action action,
+    UpdateDomainNameserversRequestPrivate(const Route53DomainsRequest::Action action,
                                    UpdateDomainNameserversRequest * const q);
     UpdateDomainNameserversRequestPrivate(const UpdateDomainNameserversRequestPrivate &other,
                                    UpdateDomainNameserversRequest * const q);

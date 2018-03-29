@@ -31,7 +31,7 @@ class ListDatasetsRequest;
 class QTAWS_EXPORT ListDatasetsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    ListDatasetsRequestPrivate(const CognitoSync::Action action,
+    ListDatasetsRequestPrivate(const CognitoSyncRequest::Action action,
                                    ListDatasetsRequest * const q);
     ListDatasetsRequestPrivate(const ListDatasetsRequestPrivate &other,
                                    ListDatasetsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteDocumentationVersionRequest;
 class QTAWS_EXPORT DeleteDocumentationVersionRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteDocumentationVersionRequestPrivate(const APIGateway::Action action,
+    DeleteDocumentationVersionRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteDocumentationVersionRequest * const q);
     DeleteDocumentationVersionRequestPrivate(const DeleteDocumentationVersionRequestPrivate &other,
                                    DeleteDocumentationVersionRequest * const q);

@@ -31,7 +31,7 @@ class RemoveTagsFromOnPremisesInstancesRequest;
 class QTAWS_EXPORT RemoveTagsFromOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    RemoveTagsFromOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+    RemoveTagsFromOnPremisesInstancesRequestPrivate(const CodeDeployRequest::Action action,
                                    RemoveTagsFromOnPremisesInstancesRequest * const q);
     RemoveTagsFromOnPremisesInstancesRequestPrivate(const RemoveTagsFromOnPremisesInstancesRequestPrivate &other,
                                    RemoveTagsFromOnPremisesInstancesRequest * const q);

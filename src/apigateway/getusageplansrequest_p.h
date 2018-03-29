@@ -31,7 +31,7 @@ class GetUsagePlansRequest;
 class QTAWS_EXPORT GetUsagePlansRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetUsagePlansRequestPrivate(const APIGateway::Action action,
+    GetUsagePlansRequestPrivate(const APIGatewayRequest::Action action,
                                    GetUsagePlansRequest * const q);
     GetUsagePlansRequestPrivate(const GetUsagePlansRequestPrivate &other,
                                    GetUsagePlansRequest * const q);

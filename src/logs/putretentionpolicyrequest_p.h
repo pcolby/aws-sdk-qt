@@ -31,7 +31,7 @@ class PutRetentionPolicyRequest;
 class QTAWS_EXPORT PutRetentionPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    PutRetentionPolicyRequestPrivate(const CloudWatchLogs::Action action,
+    PutRetentionPolicyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    PutRetentionPolicyRequest * const q);
     PutRetentionPolicyRequestPrivate(const PutRetentionPolicyRequestPrivate &other,
                                    PutRetentionPolicyRequest * const q);

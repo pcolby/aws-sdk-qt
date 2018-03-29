@@ -31,7 +31,7 @@ class RecordLifecycleActionHeartbeatRequest;
 class QTAWS_EXPORT RecordLifecycleActionHeartbeatRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    RecordLifecycleActionHeartbeatRequestPrivate(const AutoScaling::Action action,
+    RecordLifecycleActionHeartbeatRequestPrivate(const AutoScalingRequest::Action action,
                                    RecordLifecycleActionHeartbeatRequest * const q);
     RecordLifecycleActionHeartbeatRequestPrivate(const RecordLifecycleActionHeartbeatRequestPrivate &other,
                                    RecordLifecycleActionHeartbeatRequest * const q);

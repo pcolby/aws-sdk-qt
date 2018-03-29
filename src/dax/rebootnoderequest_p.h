@@ -31,7 +31,7 @@ class RebootNodeRequest;
 class QTAWS_EXPORT RebootNodeRequestPrivate : public DAXRequestPrivate {
 
 public:
-    RebootNodeRequestPrivate(const DAX::Action action,
+    RebootNodeRequestPrivate(const DAXRequest::Action action,
                                    RebootNodeRequest * const q);
     RebootNodeRequestPrivate(const RebootNodeRequestPrivate &other,
                                    RebootNodeRequest * const q);

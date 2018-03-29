@@ -31,7 +31,7 @@ class CreatePresetRequest;
 class QTAWS_EXPORT CreatePresetRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    CreatePresetRequestPrivate(const MediaConvert::Action action,
+    CreatePresetRequestPrivate(const MediaConvertRequest::Action action,
                                    CreatePresetRequest * const q);
     CreatePresetRequestPrivate(const CreatePresetRequestPrivate &other,
                                    CreatePresetRequest * const q);

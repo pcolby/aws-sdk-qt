@@ -31,7 +31,7 @@ class ListByteMatchSetsRequest;
 class QTAWS_EXPORT ListByteMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListByteMatchSetsRequestPrivate(const WAFRegional::Action action,
+    ListByteMatchSetsRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListByteMatchSetsRequest * const q);
     ListByteMatchSetsRequestPrivate(const ListByteMatchSetsRequestPrivate &other,
                                    ListByteMatchSetsRequest * const q);

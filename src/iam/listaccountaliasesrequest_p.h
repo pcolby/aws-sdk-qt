@@ -31,7 +31,7 @@ class ListAccountAliasesRequest;
 class QTAWS_EXPORT ListAccountAliasesRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListAccountAliasesRequestPrivate(const IAM::Action action,
+    ListAccountAliasesRequestPrivate(const IAMRequest::Action action,
                                    ListAccountAliasesRequest * const q);
     ListAccountAliasesRequestPrivate(const ListAccountAliasesRequestPrivate &other,
                                    ListAccountAliasesRequest * const q);

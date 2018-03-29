@@ -31,7 +31,7 @@ class ListLaunchPathsRequest;
 class QTAWS_EXPORT ListLaunchPathsRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListLaunchPathsRequestPrivate(const ServiceCatalog::Action action,
+    ListLaunchPathsRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListLaunchPathsRequest * const q);
     ListLaunchPathsRequestPrivate(const ListLaunchPathsRequestPrivate &other,
                                    ListLaunchPathsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeBuildRequest;
 class QTAWS_EXPORT DescribeBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeBuildRequestPrivate(const GameLift::Action action,
+    DescribeBuildRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeBuildRequest * const q);
     DescribeBuildRequestPrivate(const DescribeBuildRequestPrivate &other,
                                    DescribeBuildRequest * const q);

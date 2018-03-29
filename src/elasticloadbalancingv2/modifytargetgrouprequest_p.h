@@ -31,7 +31,7 @@ class ModifyTargetGroupRequest;
 class QTAWS_EXPORT ModifyTargetGroupRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    ModifyTargetGroupRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    ModifyTargetGroupRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    ModifyTargetGroupRequest * const q);
     ModifyTargetGroupRequestPrivate(const ModifyTargetGroupRequestPrivate &other,
                                    ModifyTargetGroupRequest * const q);

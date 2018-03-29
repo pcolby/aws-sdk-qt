@@ -31,7 +31,7 @@ class UpdateAssociationRequest;
 class QTAWS_EXPORT UpdateAssociationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    UpdateAssociationRequestPrivate(const SSM::Action action,
+    UpdateAssociationRequestPrivate(const SSMRequest::Action action,
                                    UpdateAssociationRequest * const q);
     UpdateAssociationRequestPrivate(const UpdateAssociationRequestPrivate &other,
                                    UpdateAssociationRequest * const q);

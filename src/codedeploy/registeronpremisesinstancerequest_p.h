@@ -31,7 +31,7 @@ class RegisterOnPremisesInstanceRequest;
 class QTAWS_EXPORT RegisterOnPremisesInstanceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    RegisterOnPremisesInstanceRequestPrivate(const CodeDeploy::Action action,
+    RegisterOnPremisesInstanceRequestPrivate(const CodeDeployRequest::Action action,
                                    RegisterOnPremisesInstanceRequest * const q);
     RegisterOnPremisesInstanceRequestPrivate(const RegisterOnPremisesInstanceRequestPrivate &other,
                                    RegisterOnPremisesInstanceRequest * const q);

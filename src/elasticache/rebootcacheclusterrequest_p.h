@@ -31,7 +31,7 @@ class RebootCacheClusterRequest;
 class QTAWS_EXPORT RebootCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    RebootCacheClusterRequestPrivate(const ElastiCache::Action action,
+    RebootCacheClusterRequestPrivate(const ElastiCacheRequest::Action action,
                                    RebootCacheClusterRequest * const q);
     RebootCacheClusterRequestPrivate(const RebootCacheClusterRequestPrivate &other,
                                    RebootCacheClusterRequest * const q);

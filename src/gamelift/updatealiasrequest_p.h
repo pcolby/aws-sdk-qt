@@ -31,7 +31,7 @@ class UpdateAliasRequest;
 class QTAWS_EXPORT UpdateAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateAliasRequestPrivate(const GameLift::Action action,
+    UpdateAliasRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateAliasRequest * const q);
     UpdateAliasRequestPrivate(const UpdateAliasRequestPrivate &other,
                                    UpdateAliasRequest * const q);

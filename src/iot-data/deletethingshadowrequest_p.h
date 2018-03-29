@@ -31,7 +31,7 @@ class DeleteThingShadowRequest;
 class QTAWS_EXPORT DeleteThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
-    DeleteThingShadowRequestPrivate(const IoTDataPlane::Action action,
+    DeleteThingShadowRequestPrivate(const IoTDataPlaneRequest::Action action,
                                    DeleteThingShadowRequest * const q);
     DeleteThingShadowRequestPrivate(const DeleteThingShadowRequestPrivate &other,
                                    DeleteThingShadowRequest * const q);

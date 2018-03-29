@@ -31,7 +31,7 @@ class DeleteUserProfileRequest;
 class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    DeleteUserProfileRequestPrivate(const CodeStar::Action action,
+    DeleteUserProfileRequestPrivate(const CodeStarRequest::Action action,
                                    DeleteUserProfileRequest * const q);
     DeleteUserProfileRequestPrivate(const DeleteUserProfileRequestPrivate &other,
                                    DeleteUserProfileRequest * const q);

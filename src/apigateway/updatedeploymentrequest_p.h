@@ -31,7 +31,7 @@ class UpdateDeploymentRequest;
 class QTAWS_EXPORT UpdateDeploymentRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateDeploymentRequestPrivate(const APIGateway::Action action,
+    UpdateDeploymentRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateDeploymentRequest * const q);
     UpdateDeploymentRequestPrivate(const UpdateDeploymentRequestPrivate &other,
                                    UpdateDeploymentRequest * const q);

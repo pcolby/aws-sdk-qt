@@ -31,7 +31,7 @@ class DeleteDeploymentGroupRequest;
 class QTAWS_EXPORT DeleteDeploymentGroupRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    DeleteDeploymentGroupRequestPrivate(const CodeDeploy::Action action,
+    DeleteDeploymentGroupRequestPrivate(const CodeDeployRequest::Action action,
                                    DeleteDeploymentGroupRequest * const q);
     DeleteDeploymentGroupRequestPrivate(const DeleteDeploymentGroupRequestPrivate &other,
                                    DeleteDeploymentGroupRequest * const q);

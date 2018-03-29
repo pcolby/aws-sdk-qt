@@ -31,7 +31,7 @@ class GetBranchRequest;
 class QTAWS_EXPORT GetBranchRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetBranchRequestPrivate(const CodeCommit::Action action,
+    GetBranchRequestPrivate(const CodeCommitRequest::Action action,
                                    GetBranchRequest * const q);
     GetBranchRequestPrivate(const GetBranchRequestPrivate &other,
                                    GetBranchRequest * const q);

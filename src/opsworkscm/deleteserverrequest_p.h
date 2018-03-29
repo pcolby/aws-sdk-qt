@@ -31,7 +31,7 @@ class DeleteServerRequest;
 class QTAWS_EXPORT DeleteServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DeleteServerRequestPrivate(const OpsWorksCM::Action action,
+    DeleteServerRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DeleteServerRequest * const q);
     DeleteServerRequestPrivate(const DeleteServerRequestPrivate &other,
                                    DeleteServerRequest * const q);

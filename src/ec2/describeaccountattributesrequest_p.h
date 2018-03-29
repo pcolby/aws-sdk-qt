@@ -31,7 +31,7 @@ class DescribeAccountAttributesRequest;
 class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeAccountAttributesRequestPrivate(const EC2::Action action,
+    DescribeAccountAttributesRequestPrivate(const EC2Request::Action action,
                                    DescribeAccountAttributesRequest * const q);
     DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
                                    DescribeAccountAttributesRequest * const q);

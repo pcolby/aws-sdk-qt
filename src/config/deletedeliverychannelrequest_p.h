@@ -31,7 +31,7 @@ class DeleteDeliveryChannelRequest;
 class QTAWS_EXPORT DeleteDeliveryChannelRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DeleteDeliveryChannelRequestPrivate(const ConfigService::Action action,
+    DeleteDeliveryChannelRequestPrivate(const ConfigServiceRequest::Action action,
                                    DeleteDeliveryChannelRequest * const q);
     DeleteDeliveryChannelRequestPrivate(const DeleteDeliveryChannelRequestPrivate &other,
                                    DeleteDeliveryChannelRequest * const q);

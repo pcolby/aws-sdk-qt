@@ -31,7 +31,7 @@ class CreateOrUpdateTagsRequest;
 class QTAWS_EXPORT CreateOrUpdateTagsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    CreateOrUpdateTagsRequestPrivate(const AutoScaling::Action action,
+    CreateOrUpdateTagsRequestPrivate(const AutoScalingRequest::Action action,
                                    CreateOrUpdateTagsRequest * const q);
     CreateOrUpdateTagsRequestPrivate(const CreateOrUpdateTagsRequestPrivate &other,
                                    CreateOrUpdateTagsRequest * const q);

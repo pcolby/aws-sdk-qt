@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const DirectConnect::Action action,
+    TagResourceRequestPrivate(const DirectConnectRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

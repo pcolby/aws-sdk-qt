@@ -31,7 +31,7 @@ class DescribeCacheEngineVersionsRequest;
 class QTAWS_EXPORT DescribeCacheEngineVersionsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeCacheEngineVersionsRequestPrivate(const ElastiCache::Action action,
+    DescribeCacheEngineVersionsRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeCacheEngineVersionsRequest * const q);
     DescribeCacheEngineVersionsRequestPrivate(const DescribeCacheEngineVersionsRequestPrivate &other,
                                    DescribeCacheEngineVersionsRequest * const q);

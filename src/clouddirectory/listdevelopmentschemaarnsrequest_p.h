@@ -31,7 +31,7 @@ class ListDevelopmentSchemaArnsRequest;
 class QTAWS_EXPORT ListDevelopmentSchemaArnsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListDevelopmentSchemaArnsRequestPrivate(const CloudDirectory::Action action,
+    ListDevelopmentSchemaArnsRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListDevelopmentSchemaArnsRequest * const q);
     ListDevelopmentSchemaArnsRequestPrivate(const ListDevelopmentSchemaArnsRequestPrivate &other,
                                    ListDevelopmentSchemaArnsRequest * const q);

@@ -31,7 +31,7 @@ class DescribePlatformVersionRequest;
 class QTAWS_EXPORT DescribePlatformVersionRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribePlatformVersionRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribePlatformVersionRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribePlatformVersionRequest * const q);
     DescribePlatformVersionRequestPrivate(const DescribePlatformVersionRequestPrivate &other,
                                    DescribePlatformVersionRequest * const q);

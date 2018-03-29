@@ -31,7 +31,7 @@ class GetContactReachabilityStatusRequest;
 class QTAWS_EXPORT GetContactReachabilityStatusRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    GetContactReachabilityStatusRequestPrivate(const Route53Domains::Action action,
+    GetContactReachabilityStatusRequestPrivate(const Route53DomainsRequest::Action action,
                                    GetContactReachabilityStatusRequest * const q);
     GetContactReachabilityStatusRequestPrivate(const GetContactReachabilityStatusRequestPrivate &other,
                                    GetContactReachabilityStatusRequest * const q);

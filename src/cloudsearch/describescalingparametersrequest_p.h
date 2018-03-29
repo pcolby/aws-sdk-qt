@@ -31,7 +31,7 @@ class DescribeScalingParametersRequest;
 class QTAWS_EXPORT DescribeScalingParametersRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DescribeScalingParametersRequestPrivate(const CloudSearch::Action action,
+    DescribeScalingParametersRequestPrivate(const CloudSearchRequest::Action action,
                                    DescribeScalingParametersRequest * const q);
     DescribeScalingParametersRequestPrivate(const DescribeScalingParametersRequestPrivate &other,
                                    DescribeScalingParametersRequest * const q);

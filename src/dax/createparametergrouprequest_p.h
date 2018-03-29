@@ -31,7 +31,7 @@ class CreateParameterGroupRequest;
 class QTAWS_EXPORT CreateParameterGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
-    CreateParameterGroupRequestPrivate(const DAX::Action action,
+    CreateParameterGroupRequestPrivate(const DAXRequest::Action action,
                                    CreateParameterGroupRequest * const q);
     CreateParameterGroupRequestPrivate(const CreateParameterGroupRequestPrivate &other,
                                    CreateParameterGroupRequest * const q);

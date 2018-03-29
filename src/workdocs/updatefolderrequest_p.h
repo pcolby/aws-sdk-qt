@@ -31,7 +31,7 @@ class UpdateFolderRequest;
 class QTAWS_EXPORT UpdateFolderRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    UpdateFolderRequestPrivate(const WorkDocs::Action action,
+    UpdateFolderRequestPrivate(const WorkDocsRequest::Action action,
                                    UpdateFolderRequest * const q);
     UpdateFolderRequestPrivate(const UpdateFolderRequestPrivate &other,
                                    UpdateFolderRequest * const q);

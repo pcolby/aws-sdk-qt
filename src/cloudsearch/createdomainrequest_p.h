@@ -31,7 +31,7 @@ class CreateDomainRequest;
 class QTAWS_EXPORT CreateDomainRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    CreateDomainRequestPrivate(const CloudSearch::Action action,
+    CreateDomainRequestPrivate(const CloudSearchRequest::Action action,
                                    CreateDomainRequest * const q);
     CreateDomainRequestPrivate(const CreateDomainRequestPrivate &other,
                                    CreateDomainRequest * const q);

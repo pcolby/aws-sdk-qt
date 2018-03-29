@@ -31,7 +31,7 @@ class UpdateConfigurationSetSendingEnabledRequest;
 class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
-    UpdateConfigurationSetSendingEnabledRequestPrivate(const SES::Action action,
+    UpdateConfigurationSetSendingEnabledRequestPrivate(const SESRequest::Action action,
                                    UpdateConfigurationSetSendingEnabledRequest * const q);
     UpdateConfigurationSetSendingEnabledRequestPrivate(const UpdateConfigurationSetSendingEnabledRequestPrivate &other,
                                    UpdateConfigurationSetSendingEnabledRequest * const q);

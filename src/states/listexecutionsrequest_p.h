@@ -31,7 +31,7 @@ class ListExecutionsRequest;
 class QTAWS_EXPORT ListExecutionsRequestPrivate : public SFNRequestPrivate {
 
 public:
-    ListExecutionsRequestPrivate(const SFN::Action action,
+    ListExecutionsRequestPrivate(const SFNRequest::Action action,
                                    ListExecutionsRequest * const q);
     ListExecutionsRequestPrivate(const ListExecutionsRequestPrivate &other,
                                    ListExecutionsRequest * const q);

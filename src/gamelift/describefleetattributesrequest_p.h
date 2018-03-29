@@ -31,7 +31,7 @@ class DescribeFleetAttributesRequest;
 class QTAWS_EXPORT DescribeFleetAttributesRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeFleetAttributesRequestPrivate(const GameLift::Action action,
+    DescribeFleetAttributesRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeFleetAttributesRequest * const q);
     DescribeFleetAttributesRequestPrivate(const DescribeFleetAttributesRequestPrivate &other,
                                    DescribeFleetAttributesRequest * const q);

@@ -31,7 +31,7 @@ class CreateConstraintRequest;
 class QTAWS_EXPORT CreateConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    CreateConstraintRequestPrivate(const ServiceCatalog::Action action,
+    CreateConstraintRequestPrivate(const ServiceCatalogRequest::Action action,
                                    CreateConstraintRequest * const q);
     CreateConstraintRequestPrivate(const CreateConstraintRequestPrivate &other,
                                    CreateConstraintRequest * const q);

@@ -31,7 +31,7 @@ class GetRuleRequest;
 class QTAWS_EXPORT GetRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetRuleRequestPrivate(const WAFRegional::Action action,
+    GetRuleRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetRuleRequest * const q);
     GetRuleRequestPrivate(const GetRuleRequestPrivate &other,
                                    GetRuleRequest * const q);

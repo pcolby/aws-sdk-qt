@@ -31,7 +31,7 @@ class DescribeProvisioningParametersRequest;
 class QTAWS_EXPORT DescribeProvisioningParametersRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DescribeProvisioningParametersRequestPrivate(const ServiceCatalog::Action action,
+    DescribeProvisioningParametersRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DescribeProvisioningParametersRequest * const q);
     DescribeProvisioningParametersRequestPrivate(const DescribeProvisioningParametersRequestPrivate &other,
                                    DescribeProvisioningParametersRequest * const q);

@@ -31,7 +31,7 @@ class RestoreDBClusterToPointInTimeRequest;
 class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RestoreDBClusterToPointInTimeRequestPrivate(const RDS::Action action,
+    RestoreDBClusterToPointInTimeRequestPrivate(const RDSRequest::Action action,
                                    RestoreDBClusterToPointInTimeRequest * const q);
     RestoreDBClusterToPointInTimeRequestPrivate(const RestoreDBClusterToPointInTimeRequestPrivate &other,
                                    RestoreDBClusterToPointInTimeRequest * const q);

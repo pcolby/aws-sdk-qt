@@ -31,7 +31,7 @@ class PutIdentityPolicyRequest;
 class QTAWS_EXPORT PutIdentityPolicyRequestPrivate : public SESRequestPrivate {
 
 public:
-    PutIdentityPolicyRequestPrivate(const SES::Action action,
+    PutIdentityPolicyRequestPrivate(const SESRequest::Action action,
                                    PutIdentityPolicyRequest * const q);
     PutIdentityPolicyRequestPrivate(const PutIdentityPolicyRequestPrivate &other,
                                    PutIdentityPolicyRequest * const q);

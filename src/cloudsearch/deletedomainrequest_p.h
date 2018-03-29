@@ -31,7 +31,7 @@ class DeleteDomainRequest;
 class QTAWS_EXPORT DeleteDomainRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DeleteDomainRequestPrivate(const CloudSearch::Action action,
+    DeleteDomainRequestPrivate(const CloudSearchRequest::Action action,
                                    DeleteDomainRequest * const q);
     DeleteDomainRequestPrivate(const DeleteDomainRequestPrivate &other,
                                    DeleteDomainRequest * const q);

@@ -31,7 +31,7 @@ class DescribeUserRequest;
 class QTAWS_EXPORT DescribeUserRequestPrivate : public MQRequestPrivate {
 
 public:
-    DescribeUserRequestPrivate(const MQ::Action action,
+    DescribeUserRequestPrivate(const MQRequest::Action action,
                                    DescribeUserRequest * const q);
     DescribeUserRequestPrivate(const DescribeUserRequestPrivate &other,
                                    DescribeUserRequest * const q);

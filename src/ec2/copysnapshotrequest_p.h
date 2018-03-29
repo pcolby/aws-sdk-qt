@@ -31,7 +31,7 @@ class CopySnapshotRequest;
 class QTAWS_EXPORT CopySnapshotRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CopySnapshotRequestPrivate(const EC2::Action action,
+    CopySnapshotRequestPrivate(const EC2Request::Action action,
                                    CopySnapshotRequest * const q);
     CopySnapshotRequestPrivate(const CopySnapshotRequestPrivate &other,
                                    CopySnapshotRequest * const q);

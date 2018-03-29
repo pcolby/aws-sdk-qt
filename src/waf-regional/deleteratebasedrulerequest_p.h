@@ -31,7 +31,7 @@ class DeleteRateBasedRuleRequest;
 class QTAWS_EXPORT DeleteRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    DeleteRateBasedRuleRequestPrivate(const WAFRegional::Action action,
+    DeleteRateBasedRuleRequestPrivate(const WAFRegionalRequest::Action action,
                                    DeleteRateBasedRuleRequest * const q);
     DeleteRateBasedRuleRequestPrivate(const DeleteRateBasedRuleRequestPrivate &other,
                                    DeleteRateBasedRuleRequest * const q);

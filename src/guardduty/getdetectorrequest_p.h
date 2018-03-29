@@ -31,7 +31,7 @@ class GetDetectorRequest;
 class QTAWS_EXPORT GetDetectorRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    GetDetectorRequestPrivate(const GuardDuty::Action action,
+    GetDetectorRequestPrivate(const GuardDutyRequest::Action action,
                                    GetDetectorRequest * const q);
     GetDetectorRequestPrivate(const GetDetectorRequestPrivate &other,
                                    GetDetectorRequest * const q);

@@ -31,7 +31,7 @@ class DeleteNotificationSubscriptionRequest;
 class QTAWS_EXPORT DeleteNotificationSubscriptionRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DeleteNotificationSubscriptionRequestPrivate(const WorkDocs::Action action,
+    DeleteNotificationSubscriptionRequestPrivate(const WorkDocsRequest::Action action,
                                    DeleteNotificationSubscriptionRequest * const q);
     DeleteNotificationSubscriptionRequestPrivate(const DeleteNotificationSubscriptionRequestPrivate &other,
                                    DeleteNotificationSubscriptionRequest * const q);

@@ -31,7 +31,7 @@ class ListRootsRequest;
 class QTAWS_EXPORT ListRootsRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListRootsRequestPrivate(const Organizations::Action action,
+    ListRootsRequestPrivate(const OrganizationsRequest::Action action,
                                    ListRootsRequest * const q);
     ListRootsRequestPrivate(const ListRootsRequestPrivate &other,
                                    ListRootsRequest * const q);

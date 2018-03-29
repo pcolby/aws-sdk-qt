@@ -31,7 +31,7 @@ class DescribeApplicationsRequest;
 class QTAWS_EXPORT DescribeApplicationsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeApplicationsRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeApplicationsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeApplicationsRequest * const q);
     DescribeApplicationsRequestPrivate(const DescribeApplicationsRequestPrivate &other,
                                    DescribeApplicationsRequest * const q);

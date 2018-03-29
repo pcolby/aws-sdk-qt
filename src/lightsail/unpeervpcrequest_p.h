@@ -31,7 +31,7 @@ class UnpeerVpcRequest;
 class QTAWS_EXPORT UnpeerVpcRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    UnpeerVpcRequestPrivate(const Lightsail::Action action,
+    UnpeerVpcRequestPrivate(const LightsailRequest::Action action,
                                    UnpeerVpcRequest * const q);
     UnpeerVpcRequestPrivate(const UnpeerVpcRequestPrivate &other,
                                    UnpeerVpcRequest * const q);

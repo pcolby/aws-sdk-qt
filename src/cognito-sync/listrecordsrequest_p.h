@@ -31,7 +31,7 @@ class ListRecordsRequest;
 class QTAWS_EXPORT ListRecordsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    ListRecordsRequestPrivate(const CognitoSync::Action action,
+    ListRecordsRequestPrivate(const CognitoSyncRequest::Action action,
                                    ListRecordsRequest * const q);
     ListRecordsRequestPrivate(const ListRecordsRequestPrivate &other,
                                    ListRecordsRequest * const q);

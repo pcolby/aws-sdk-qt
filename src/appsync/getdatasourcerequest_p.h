@@ -31,7 +31,7 @@ class GetDataSourceRequest;
 class QTAWS_EXPORT GetDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    GetDataSourceRequestPrivate(const AppSync::Action action,
+    GetDataSourceRequestPrivate(const AppSyncRequest::Action action,
                                    GetDataSourceRequest * const q);
     GetDataSourceRequestPrivate(const GetDataSourceRequestPrivate &other,
                                    GetDataSourceRequest * const q);

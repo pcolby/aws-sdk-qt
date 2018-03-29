@@ -31,7 +31,7 @@ class DeleteSnapshotRequest;
 class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DeleteSnapshotRequestPrivate(const ElastiCache::Action action,
+    DeleteSnapshotRequestPrivate(const ElastiCacheRequest::Action action,
                                    DeleteSnapshotRequest * const q);
     DeleteSnapshotRequestPrivate(const DeleteSnapshotRequestPrivate &other,
                                    DeleteSnapshotRequest * const q);

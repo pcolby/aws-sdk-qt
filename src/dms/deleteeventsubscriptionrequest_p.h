@@ -31,7 +31,7 @@ class DeleteEventSubscriptionRequest;
 class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DeleteEventSubscriptionRequestPrivate(const DatabaseMigrationService::Action action,
+    DeleteEventSubscriptionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DeleteEventSubscriptionRequest * const q);
     DeleteEventSubscriptionRequestPrivate(const DeleteEventSubscriptionRequestPrivate &other,
                                    DeleteEventSubscriptionRequest * const q);

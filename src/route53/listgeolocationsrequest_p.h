@@ -31,7 +31,7 @@ class ListGeoLocationsRequest;
 class QTAWS_EXPORT ListGeoLocationsRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ListGeoLocationsRequestPrivate(const Route53::Action action,
+    ListGeoLocationsRequestPrivate(const Route53Request::Action action,
                                    ListGeoLocationsRequest * const q);
     ListGeoLocationsRequestPrivate(const ListGeoLocationsRequestPrivate &other,
                                    ListGeoLocationsRequest * const q);

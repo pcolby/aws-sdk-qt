@@ -31,7 +31,7 @@ class SetUserMFAPreferenceRequest;
 class QTAWS_EXPORT SetUserMFAPreferenceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    SetUserMFAPreferenceRequestPrivate(const CognitoIdentityProvider::Action action,
+    SetUserMFAPreferenceRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    SetUserMFAPreferenceRequest * const q);
     SetUserMFAPreferenceRequestPrivate(const SetUserMFAPreferenceRequestPrivate &other,
                                    SetUserMFAPreferenceRequest * const q);

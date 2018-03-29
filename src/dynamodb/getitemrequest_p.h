@@ -31,7 +31,7 @@ class GetItemRequest;
 class QTAWS_EXPORT GetItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    GetItemRequestPrivate(const DynamoDB::Action action,
+    GetItemRequestPrivate(const DynamoDBRequest::Action action,
                                    GetItemRequest * const q);
     GetItemRequestPrivate(const GetItemRequestPrivate &other,
                                    GetItemRequest * const q);

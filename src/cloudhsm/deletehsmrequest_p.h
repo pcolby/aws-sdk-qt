@@ -31,7 +31,7 @@ class DeleteHsmRequest;
 class QTAWS_EXPORT DeleteHsmRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    DeleteHsmRequestPrivate(const CloudHSM::Action action,
+    DeleteHsmRequestPrivate(const CloudHSMRequest::Action action,
                                    DeleteHsmRequest * const q);
     DeleteHsmRequestPrivate(const DeleteHsmRequestPrivate &other,
                                    DeleteHsmRequest * const q);

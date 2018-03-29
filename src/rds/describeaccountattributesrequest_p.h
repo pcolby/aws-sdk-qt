@@ -31,7 +31,7 @@ class DescribeAccountAttributesRequest;
 class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeAccountAttributesRequestPrivate(const RDS::Action action,
+    DescribeAccountAttributesRequestPrivate(const RDSRequest::Action action,
                                    DescribeAccountAttributesRequest * const q);
     DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
                                    DescribeAccountAttributesRequest * const q);

@@ -31,7 +31,7 @@ class SendMessageBatchRequest;
 class QTAWS_EXPORT SendMessageBatchRequestPrivate : public SQSRequestPrivate {
 
 public:
-    SendMessageBatchRequestPrivate(const SQS::Action action,
+    SendMessageBatchRequestPrivate(const SQSRequest::Action action,
                                    SendMessageBatchRequest * const q);
     SendMessageBatchRequestPrivate(const SendMessageBatchRequestPrivate &other,
                                    SendMessageBatchRequest * const q);

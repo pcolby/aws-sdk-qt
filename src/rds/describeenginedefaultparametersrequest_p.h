@@ -31,7 +31,7 @@ class DescribeEngineDefaultParametersRequest;
 class QTAWS_EXPORT DescribeEngineDefaultParametersRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeEngineDefaultParametersRequestPrivate(const RDS::Action action,
+    DescribeEngineDefaultParametersRequestPrivate(const RDSRequest::Action action,
                                    DescribeEngineDefaultParametersRequest * const q);
     DescribeEngineDefaultParametersRequestPrivate(const DescribeEngineDefaultParametersRequestPrivate &other,
                                    DescribeEngineDefaultParametersRequest * const q);

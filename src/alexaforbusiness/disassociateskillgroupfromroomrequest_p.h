@@ -31,7 +31,7 @@ class DisassociateSkillGroupFromRoomRequest;
 class QTAWS_EXPORT DisassociateSkillGroupFromRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    DisassociateSkillGroupFromRoomRequestPrivate(const AlexaForBusiness::Action action,
+    DisassociateSkillGroupFromRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    DisassociateSkillGroupFromRoomRequest * const q);
     DisassociateSkillGroupFromRoomRequestPrivate(const DisassociateSkillGroupFromRoomRequestPrivate &other,
                                    DisassociateSkillGroupFromRoomRequest * const q);

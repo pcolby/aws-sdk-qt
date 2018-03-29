@@ -31,7 +31,7 @@ class GetStackPolicyRequest;
 class QTAWS_EXPORT GetStackPolicyRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    GetStackPolicyRequestPrivate(const CloudFormation::Action action,
+    GetStackPolicyRequestPrivate(const CloudFormationRequest::Action action,
                                    GetStackPolicyRequest * const q);
     GetStackPolicyRequestPrivate(const GetStackPolicyRequestPrivate &other,
                                    GetStackPolicyRequest * const q);

@@ -31,7 +31,7 @@ class GetActiveNamesRequest;
 class QTAWS_EXPORT GetActiveNamesRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetActiveNamesRequestPrivate(const Lightsail::Action action,
+    GetActiveNamesRequestPrivate(const LightsailRequest::Action action,
                                    GetActiveNamesRequest * const q);
     GetActiveNamesRequestPrivate(const GetActiveNamesRequestPrivate &other,
                                    GetActiveNamesRequest * const q);

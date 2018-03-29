@@ -31,7 +31,7 @@ class DescribeDomainRequest;
 class QTAWS_EXPORT DescribeDomainRequestPrivate : public SWFRequestPrivate {
 
 public:
-    DescribeDomainRequestPrivate(const SWF::Action action,
+    DescribeDomainRequestPrivate(const SWFRequest::Action action,
                                    DescribeDomainRequest * const q);
     DescribeDomainRequestPrivate(const DescribeDomainRequestPrivate &other,
                                    DescribeDomainRequest * const q);

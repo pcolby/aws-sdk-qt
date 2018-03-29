@@ -31,7 +31,7 @@ class CreateDataSourceFromS3Request;
 class QTAWS_EXPORT CreateDataSourceFromS3RequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    CreateDataSourceFromS3RequestPrivate(const MachineLearning::Action action,
+    CreateDataSourceFromS3RequestPrivate(const MachineLearningRequest::Action action,
                                    CreateDataSourceFromS3Request * const q);
     CreateDataSourceFromS3RequestPrivate(const CreateDataSourceFromS3RequestPrivate &other,
                                    CreateDataSourceFromS3Request * const q);

@@ -31,7 +31,7 @@ class CreateExportTaskRequest;
 class QTAWS_EXPORT CreateExportTaskRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    CreateExportTaskRequestPrivate(const CloudWatchLogs::Action action,
+    CreateExportTaskRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    CreateExportTaskRequest * const q);
     CreateExportTaskRequestPrivate(const CreateExportTaskRequestPrivate &other,
                                    CreateExportTaskRequest * const q);

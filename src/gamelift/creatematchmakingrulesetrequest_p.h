@@ -31,7 +31,7 @@ class CreateMatchmakingRuleSetRequest;
 class QTAWS_EXPORT CreateMatchmakingRuleSetRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    CreateMatchmakingRuleSetRequestPrivate(const GameLift::Action action,
+    CreateMatchmakingRuleSetRequestPrivate(const GameLiftRequest::Action action,
                                    CreateMatchmakingRuleSetRequest * const q);
     CreateMatchmakingRuleSetRequestPrivate(const CreateMatchmakingRuleSetRequestPrivate &other,
                                    CreateMatchmakingRuleSetRequest * const q);

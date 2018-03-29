@@ -31,7 +31,7 @@ class GetAppliedSchemaVersionRequest;
 class QTAWS_EXPORT GetAppliedSchemaVersionRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    GetAppliedSchemaVersionRequestPrivate(const CloudDirectory::Action action,
+    GetAppliedSchemaVersionRequestPrivate(const CloudDirectoryRequest::Action action,
                                    GetAppliedSchemaVersionRequest * const q);
     GetAppliedSchemaVersionRequestPrivate(const GetAppliedSchemaVersionRequestPrivate &other,
                                    GetAppliedSchemaVersionRequest * const q);

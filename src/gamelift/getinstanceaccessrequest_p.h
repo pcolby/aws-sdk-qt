@@ -31,7 +31,7 @@ class GetInstanceAccessRequest;
 class QTAWS_EXPORT GetInstanceAccessRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    GetInstanceAccessRequestPrivate(const GameLift::Action action,
+    GetInstanceAccessRequestPrivate(const GameLiftRequest::Action action,
                                    GetInstanceAccessRequest * const q);
     GetInstanceAccessRequestPrivate(const GetInstanceAccessRequestPrivate &other,
                                    GetInstanceAccessRequest * const q);

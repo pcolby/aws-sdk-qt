@@ -31,7 +31,7 @@ class DescribeRecordRequest;
 class QTAWS_EXPORT DescribeRecordRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DescribeRecordRequestPrivate(const ServiceCatalog::Action action,
+    DescribeRecordRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DescribeRecordRequest * const q);
     DescribeRecordRequestPrivate(const DescribeRecordRequestPrivate &other,
                                    DescribeRecordRequest * const q);

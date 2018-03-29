@@ -31,7 +31,7 @@ class PutFunctionConcurrencyRequest;
 class QTAWS_EXPORT PutFunctionConcurrencyRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    PutFunctionConcurrencyRequestPrivate(const Lambda::Action action,
+    PutFunctionConcurrencyRequestPrivate(const LambdaRequest::Action action,
                                    PutFunctionConcurrencyRequest * const q);
     PutFunctionConcurrencyRequestPrivate(const PutFunctionConcurrencyRequestPrivate &other,
                                    PutFunctionConcurrencyRequest * const q);

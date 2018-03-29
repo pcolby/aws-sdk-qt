@@ -31,7 +31,7 @@ class UpdateRepositoryDescriptionRequest;
 class QTAWS_EXPORT UpdateRepositoryDescriptionRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    UpdateRepositoryDescriptionRequestPrivate(const CodeCommit::Action action,
+    UpdateRepositoryDescriptionRequestPrivate(const CodeCommitRequest::Action action,
                                    UpdateRepositoryDescriptionRequest * const q);
     UpdateRepositoryDescriptionRequestPrivate(const UpdateRepositoryDescriptionRequestPrivate &other,
                                    UpdateRepositoryDescriptionRequest * const q);

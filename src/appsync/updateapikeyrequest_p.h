@@ -31,7 +31,7 @@ class UpdateApiKeyRequest;
 class QTAWS_EXPORT UpdateApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    UpdateApiKeyRequestPrivate(const AppSync::Action action,
+    UpdateApiKeyRequestPrivate(const AppSyncRequest::Action action,
                                    UpdateApiKeyRequest * const q);
     UpdateApiKeyRequestPrivate(const UpdateApiKeyRequestPrivate &other,
                                    UpdateApiKeyRequest * const q);

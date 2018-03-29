@@ -31,7 +31,7 @@ class DeleteSubscriptionDefinitionRequest;
 class QTAWS_EXPORT DeleteSubscriptionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteSubscriptionDefinitionRequestPrivate(const Greengrass::Action action,
+    DeleteSubscriptionDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteSubscriptionDefinitionRequest * const q);
     DeleteSubscriptionDefinitionRequestPrivate(const DeleteSubscriptionDefinitionRequestPrivate &other,
                                    DeleteSubscriptionDefinitionRequest * const q);

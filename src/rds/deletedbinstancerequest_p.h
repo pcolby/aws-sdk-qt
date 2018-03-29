@@ -31,7 +31,7 @@ class DeleteDBInstanceRequest;
 class QTAWS_EXPORT DeleteDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteDBInstanceRequestPrivate(const RDS::Action action,
+    DeleteDBInstanceRequestPrivate(const RDSRequest::Action action,
                                    DeleteDBInstanceRequest * const q);
     DeleteDBInstanceRequestPrivate(const DeleteDBInstanceRequestPrivate &other,
                                    DeleteDBInstanceRequest * const q);

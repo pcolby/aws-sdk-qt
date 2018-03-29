@@ -31,7 +31,7 @@ class DisassociateWebACLRequest;
 class QTAWS_EXPORT DisassociateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    DisassociateWebACLRequestPrivate(const WAFRegional::Action action,
+    DisassociateWebACLRequestPrivate(const WAFRegionalRequest::Action action,
                                    DisassociateWebACLRequest * const q);
     DisassociateWebACLRequestPrivate(const DisassociateWebACLRequestPrivate &other,
                                    DisassociateWebACLRequest * const q);

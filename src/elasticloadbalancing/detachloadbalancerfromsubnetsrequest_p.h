@@ -31,7 +31,7 @@ class DetachLoadBalancerFromSubnetsRequest;
 class QTAWS_EXPORT DetachLoadBalancerFromSubnetsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    DetachLoadBalancerFromSubnetsRequestPrivate(const ElasticLoadBalancing::Action action,
+    DetachLoadBalancerFromSubnetsRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    DetachLoadBalancerFromSubnetsRequest * const q);
     DetachLoadBalancerFromSubnetsRequestPrivate(const DetachLoadBalancerFromSubnetsRequestPrivate &other,
                                    DetachLoadBalancerFromSubnetsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const EC2::Action action,
+    DescribeTagsRequestPrivate(const EC2Request::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

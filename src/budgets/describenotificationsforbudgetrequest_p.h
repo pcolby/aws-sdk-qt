@@ -31,7 +31,7 @@ class DescribeNotificationsForBudgetRequest;
 class QTAWS_EXPORT DescribeNotificationsForBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    DescribeNotificationsForBudgetRequestPrivate(const Budgets::Action action,
+    DescribeNotificationsForBudgetRequestPrivate(const BudgetsRequest::Action action,
                                    DescribeNotificationsForBudgetRequest * const q);
     DescribeNotificationsForBudgetRequestPrivate(const DescribeNotificationsForBudgetRequestPrivate &other,
                                    DescribeNotificationsForBudgetRequest * const q);

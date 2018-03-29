@@ -31,7 +31,7 @@ class DeleteInstanceRequest;
 class QTAWS_EXPORT DeleteInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DeleteInstanceRequestPrivate(const Lightsail::Action action,
+    DeleteInstanceRequestPrivate(const LightsailRequest::Action action,
                                    DeleteInstanceRequest * const q);
     DeleteInstanceRequestPrivate(const DeleteInstanceRequestPrivate &other,
                                    DeleteInstanceRequest * const q);

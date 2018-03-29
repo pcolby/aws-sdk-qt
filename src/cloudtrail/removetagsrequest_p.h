@@ -31,7 +31,7 @@ class RemoveTagsRequest;
 class QTAWS_EXPORT RemoveTagsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const CloudTrail::Action action,
+    RemoveTagsRequestPrivate(const CloudTrailRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);

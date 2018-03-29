@@ -31,7 +31,7 @@ class CreateMembersRequest;
 class QTAWS_EXPORT CreateMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    CreateMembersRequestPrivate(const GuardDuty::Action action,
+    CreateMembersRequestPrivate(const GuardDutyRequest::Action action,
                                    CreateMembersRequest * const q);
     CreateMembersRequestPrivate(const CreateMembersRequestPrivate &other,
                                    CreateMembersRequest * const q);

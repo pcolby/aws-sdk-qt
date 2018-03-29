@@ -31,7 +31,7 @@ class DisassociateTagOptionFromResourceRequest;
 class QTAWS_EXPORT DisassociateTagOptionFromResourceRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DisassociateTagOptionFromResourceRequestPrivate(const ServiceCatalog::Action action,
+    DisassociateTagOptionFromResourceRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DisassociateTagOptionFromResourceRequest * const q);
     DisassociateTagOptionFromResourceRequestPrivate(const DisassociateTagOptionFromResourceRequestPrivate &other,
                                    DisassociateTagOptionFromResourceRequest * const q);

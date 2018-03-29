@@ -31,7 +31,7 @@ class AssociateElasticIpRequest;
 class QTAWS_EXPORT AssociateElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    AssociateElasticIpRequestPrivate(const OpsWorks::Action action,
+    AssociateElasticIpRequestPrivate(const OpsWorksRequest::Action action,
                                    AssociateElasticIpRequest * const q);
     AssociateElasticIpRequestPrivate(const AssociateElasticIpRequestPrivate &other,
                                    AssociateElasticIpRequest * const q);

@@ -31,7 +31,7 @@ class UpdateQueueRequest;
 class QTAWS_EXPORT UpdateQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    UpdateQueueRequestPrivate(const MediaConvert::Action action,
+    UpdateQueueRequestPrivate(const MediaConvertRequest::Action action,
                                    UpdateQueueRequest * const q);
     UpdateQueueRequestPrivate(const UpdateQueueRequestPrivate &other,
                                    UpdateQueueRequest * const q);

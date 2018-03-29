@@ -31,7 +31,7 @@ class DeleteClusterParameterGroupRequest;
 class QTAWS_EXPORT DeleteClusterParameterGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteClusterParameterGroupRequestPrivate(const Redshift::Action action,
+    DeleteClusterParameterGroupRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteClusterParameterGroupRequest * const q);
     DeleteClusterParameterGroupRequestPrivate(const DeleteClusterParameterGroupRequestPrivate &other,
                                    DeleteClusterParameterGroupRequest * const q);

@@ -31,7 +31,7 @@ class CreateVirtualMFADeviceRequest;
 class QTAWS_EXPORT CreateVirtualMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateVirtualMFADeviceRequestPrivate(const IAM::Action action,
+    CreateVirtualMFADeviceRequestPrivate(const IAMRequest::Action action,
                                    CreateVirtualMFADeviceRequest * const q);
     CreateVirtualMFADeviceRequestPrivate(const CreateVirtualMFADeviceRequestPrivate &other,
                                    CreateVirtualMFADeviceRequest * const q);

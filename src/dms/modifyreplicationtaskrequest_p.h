@@ -31,7 +31,7 @@ class ModifyReplicationTaskRequest;
 class QTAWS_EXPORT ModifyReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ModifyReplicationTaskRequestPrivate(const DatabaseMigrationService::Action action,
+    ModifyReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ModifyReplicationTaskRequest * const q);
     ModifyReplicationTaskRequestPrivate(const ModifyReplicationTaskRequestPrivate &other,
                                    ModifyReplicationTaskRequest * const q);

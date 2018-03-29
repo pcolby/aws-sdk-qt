@@ -31,7 +31,7 @@ class PromoteReadReplicaDBClusterRequest;
 class QTAWS_EXPORT PromoteReadReplicaDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
-    PromoteReadReplicaDBClusterRequestPrivate(const RDS::Action action,
+    PromoteReadReplicaDBClusterRequestPrivate(const RDSRequest::Action action,
                                    PromoteReadReplicaDBClusterRequest * const q);
     PromoteReadReplicaDBClusterRequestPrivate(const PromoteReadReplicaDBClusterRequestPrivate &other,
                                    PromoteReadReplicaDBClusterRequest * const q);

@@ -31,7 +31,7 @@ class ModifyClusterIamRolesRequest;
 class QTAWS_EXPORT ModifyClusterIamRolesRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    ModifyClusterIamRolesRequestPrivate(const Redshift::Action action,
+    ModifyClusterIamRolesRequestPrivate(const RedshiftRequest::Action action,
                                    ModifyClusterIamRolesRequest * const q);
     ModifyClusterIamRolesRequestPrivate(const ModifyClusterIamRolesRequestPrivate &other,
                                    ModifyClusterIamRolesRequest * const q);

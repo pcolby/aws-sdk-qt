@@ -31,7 +31,7 @@ class DescribeScheduledInstanceAvailabilityRequest;
 class QTAWS_EXPORT DescribeScheduledInstanceAvailabilityRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeScheduledInstanceAvailabilityRequestPrivate(const EC2::Action action,
+    DescribeScheduledInstanceAvailabilityRequestPrivate(const EC2Request::Action action,
                                    DescribeScheduledInstanceAvailabilityRequest * const q);
     DescribeScheduledInstanceAvailabilityRequestPrivate(const DescribeScheduledInstanceAvailabilityRequestPrivate &other,
                                    DescribeScheduledInstanceAvailabilityRequest * const q);

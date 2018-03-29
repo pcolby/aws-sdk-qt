@@ -31,7 +31,7 @@ class BatchWriteItemRequest;
 class QTAWS_EXPORT BatchWriteItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    BatchWriteItemRequestPrivate(const DynamoDB::Action action,
+    BatchWriteItemRequestPrivate(const DynamoDBRequest::Action action,
                                    BatchWriteItemRequest * const q);
     BatchWriteItemRequestPrivate(const BatchWriteItemRequestPrivate &other,
                                    BatchWriteItemRequest * const q);

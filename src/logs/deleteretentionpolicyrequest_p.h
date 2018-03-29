@@ -31,7 +31,7 @@ class DeleteRetentionPolicyRequest;
 class QTAWS_EXPORT DeleteRetentionPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteRetentionPolicyRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteRetentionPolicyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteRetentionPolicyRequest * const q);
     DeleteRetentionPolicyRequestPrivate(const DeleteRetentionPolicyRequestPrivate &other,
                                    DeleteRetentionPolicyRequest * const q);

@@ -31,7 +31,7 @@ class RemovePermissionRequest;
 class QTAWS_EXPORT RemovePermissionRequestPrivate : public SQSRequestPrivate {
 
 public:
-    RemovePermissionRequestPrivate(const SQS::Action action,
+    RemovePermissionRequestPrivate(const SQSRequest::Action action,
                                    RemovePermissionRequest * const q);
     RemovePermissionRequestPrivate(const RemovePermissionRequestPrivate &other,
                                    RemovePermissionRequest * const q);

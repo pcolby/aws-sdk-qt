@@ -31,7 +31,7 @@ class UpdateSigningCertificateRequest;
 class QTAWS_EXPORT UpdateSigningCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateSigningCertificateRequestPrivate(const IAM::Action action,
+    UpdateSigningCertificateRequestPrivate(const IAMRequest::Action action,
                                    UpdateSigningCertificateRequest * const q);
     UpdateSigningCertificateRequestPrivate(const UpdateSigningCertificateRequestPrivate &other,
                                    UpdateSigningCertificateRequest * const q);

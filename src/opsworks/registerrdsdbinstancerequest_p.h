@@ -31,7 +31,7 @@ class RegisterRdsDbInstanceRequest;
 class QTAWS_EXPORT RegisterRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    RegisterRdsDbInstanceRequestPrivate(const OpsWorks::Action action,
+    RegisterRdsDbInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    RegisterRdsDbInstanceRequest * const q);
     RegisterRdsDbInstanceRequestPrivate(const RegisterRdsDbInstanceRequestPrivate &other,
                                    RegisterRdsDbInstanceRequest * const q);

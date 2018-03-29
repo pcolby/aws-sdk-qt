@@ -31,7 +31,7 @@ class ReplaceNetworkAclAssociationRequest;
 class QTAWS_EXPORT ReplaceNetworkAclAssociationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReplaceNetworkAclAssociationRequestPrivate(const EC2::Action action,
+    ReplaceNetworkAclAssociationRequestPrivate(const EC2Request::Action action,
                                    ReplaceNetworkAclAssociationRequest * const q);
     ReplaceNetworkAclAssociationRequestPrivate(const ReplaceNetworkAclAssociationRequestPrivate &other,
                                    ReplaceNetworkAclAssociationRequest * const q);

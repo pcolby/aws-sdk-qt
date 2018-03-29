@@ -31,7 +31,7 @@ class CreateImageBuilderStreamingURLRequest;
 class QTAWS_EXPORT CreateImageBuilderStreamingURLRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CreateImageBuilderStreamingURLRequestPrivate(const AppStream::Action action,
+    CreateImageBuilderStreamingURLRequestPrivate(const AppStreamRequest::Action action,
                                    CreateImageBuilderStreamingURLRequest * const q);
     CreateImageBuilderStreamingURLRequestPrivate(const CreateImageBuilderStreamingURLRequestPrivate &other,
                                    CreateImageBuilderStreamingURLRequest * const q);

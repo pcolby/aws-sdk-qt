@@ -31,7 +31,7 @@ class CreateThingTypeRequest;
 class QTAWS_EXPORT CreateThingTypeRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateThingTypeRequestPrivate(const IoT::Action action,
+    CreateThingTypeRequestPrivate(const IoTRequest::Action action,
                                    CreateThingTypeRequest * const q);
     CreateThingTypeRequestPrivate(const CreateThingTypeRequestPrivate &other,
                                    CreateThingTypeRequest * const q);

@@ -31,7 +31,7 @@ class DeclineHandshakeRequest;
 class QTAWS_EXPORT DeclineHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    DeclineHandshakeRequestPrivate(const Organizations::Action action,
+    DeclineHandshakeRequestPrivate(const OrganizationsRequest::Action action,
                                    DeclineHandshakeRequest * const q);
     DeclineHandshakeRequestPrivate(const DeclineHandshakeRequestPrivate &other,
                                    DeclineHandshakeRequest * const q);

@@ -31,7 +31,7 @@ class DescribePullRequestEventsRequest;
 class QTAWS_EXPORT DescribePullRequestEventsRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    DescribePullRequestEventsRequestPrivate(const CodeCommit::Action action,
+    DescribePullRequestEventsRequestPrivate(const CodeCommitRequest::Action action,
                                    DescribePullRequestEventsRequest * const q);
     DescribePullRequestEventsRequestPrivate(const DescribePullRequestEventsRequestPrivate &other,
                                    DescribePullRequestEventsRequest * const q);

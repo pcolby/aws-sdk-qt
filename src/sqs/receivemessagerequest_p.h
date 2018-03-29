@@ -31,7 +31,7 @@ class ReceiveMessageRequest;
 class QTAWS_EXPORT ReceiveMessageRequestPrivate : public SQSRequestPrivate {
 
 public:
-    ReceiveMessageRequestPrivate(const SQS::Action action,
+    ReceiveMessageRequestPrivate(const SQSRequest::Action action,
                                    ReceiveMessageRequest * const q);
     ReceiveMessageRequestPrivate(const ReceiveMessageRequestPrivate &other,
                                    ReceiveMessageRequest * const q);

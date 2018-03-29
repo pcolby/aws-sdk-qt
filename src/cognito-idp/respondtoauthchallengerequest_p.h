@@ -31,7 +31,7 @@ class RespondToAuthChallengeRequest;
 class QTAWS_EXPORT RespondToAuthChallengeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    RespondToAuthChallengeRequestPrivate(const CognitoIdentityProvider::Action action,
+    RespondToAuthChallengeRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    RespondToAuthChallengeRequest * const q);
     RespondToAuthChallengeRequestPrivate(const RespondToAuthChallengeRequestPrivate &other,
                                    RespondToAuthChallengeRequest * const q);

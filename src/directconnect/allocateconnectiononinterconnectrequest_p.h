@@ -31,7 +31,7 @@ class AllocateConnectionOnInterconnectRequest;
 class QTAWS_EXPORT AllocateConnectionOnInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    AllocateConnectionOnInterconnectRequestPrivate(const DirectConnect::Action action,
+    AllocateConnectionOnInterconnectRequestPrivate(const DirectConnectRequest::Action action,
                                    AllocateConnectionOnInterconnectRequest * const q);
     AllocateConnectionOnInterconnectRequestPrivate(const AllocateConnectionOnInterconnectRequestPrivate &other,
                                    AllocateConnectionOnInterconnectRequest * const q);

@@ -31,7 +31,7 @@ class DescribeDBLogFilesRequest;
 class QTAWS_EXPORT DescribeDBLogFilesRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeDBLogFilesRequestPrivate(const RDS::Action action,
+    DescribeDBLogFilesRequestPrivate(const RDSRequest::Action action,
                                    DescribeDBLogFilesRequest * const q);
     DescribeDBLogFilesRequestPrivate(const DescribeDBLogFilesRequestPrivate &other,
                                    DescribeDBLogFilesRequest * const q);

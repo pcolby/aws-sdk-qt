@@ -31,7 +31,7 @@ class UpdateChapCredentialsRequest;
 class QTAWS_EXPORT UpdateChapCredentialsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateChapCredentialsRequestPrivate(const StorageGateway::Action action,
+    UpdateChapCredentialsRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateChapCredentialsRequest * const q);
     UpdateChapCredentialsRequestPrivate(const UpdateChapCredentialsRequestPrivate &other,
                                    UpdateChapCredentialsRequest * const q);

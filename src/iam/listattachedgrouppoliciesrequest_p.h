@@ -31,7 +31,7 @@ class ListAttachedGroupPoliciesRequest;
 class QTAWS_EXPORT ListAttachedGroupPoliciesRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListAttachedGroupPoliciesRequestPrivate(const IAM::Action action,
+    ListAttachedGroupPoliciesRequestPrivate(const IAMRequest::Action action,
                                    ListAttachedGroupPoliciesRequest * const q);
     ListAttachedGroupPoliciesRequestPrivate(const ListAttachedGroupPoliciesRequestPrivate &other,
                                    ListAttachedGroupPoliciesRequest * const q);

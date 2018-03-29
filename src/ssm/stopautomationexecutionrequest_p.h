@@ -31,7 +31,7 @@ class StopAutomationExecutionRequest;
 class QTAWS_EXPORT StopAutomationExecutionRequestPrivate : public SSMRequestPrivate {
 
 public:
-    StopAutomationExecutionRequestPrivate(const SSM::Action action,
+    StopAutomationExecutionRequestPrivate(const SSMRequest::Action action,
                                    StopAutomationExecutionRequest * const q);
     StopAutomationExecutionRequestPrivate(const StopAutomationExecutionRequestPrivate &other,
                                    StopAutomationExecutionRequest * const q);

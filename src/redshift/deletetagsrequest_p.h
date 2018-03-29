@@ -31,7 +31,7 @@ class DeleteTagsRequest;
 class QTAWS_EXPORT DeleteTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const Redshift::Action action,
+    DeleteTagsRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);

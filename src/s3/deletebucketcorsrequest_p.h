@@ -31,7 +31,7 @@ class DeleteBucketCorsRequest;
 class QTAWS_EXPORT DeleteBucketCorsRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketCorsRequestPrivate(const S3::Action action,
+    DeleteBucketCorsRequestPrivate(const S3Request::Action action,
                                    DeleteBucketCorsRequest * const q);
     DeleteBucketCorsRequestPrivate(const DeleteBucketCorsRequestPrivate &other,
                                    DeleteBucketCorsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeRaidArraysRequest;
 class QTAWS_EXPORT DescribeRaidArraysRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeRaidArraysRequestPrivate(const OpsWorks::Action action,
+    DescribeRaidArraysRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeRaidArraysRequest * const q);
     DescribeRaidArraysRequestPrivate(const DescribeRaidArraysRequestPrivate &other,
                                    DescribeRaidArraysRequest * const q);

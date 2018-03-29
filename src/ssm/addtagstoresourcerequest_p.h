@@ -31,7 +31,7 @@ class AddTagsToResourceRequest;
 class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public SSMRequestPrivate {
 
 public:
-    AddTagsToResourceRequestPrivate(const SSM::Action action,
+    AddTagsToResourceRequestPrivate(const SSMRequest::Action action,
                                    AddTagsToResourceRequest * const q);
     AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
                                    AddTagsToResourceRequest * const q);

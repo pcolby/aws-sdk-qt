@@ -31,7 +31,7 @@ class DescribeNotificationSubscriptionsRequest;
 class QTAWS_EXPORT DescribeNotificationSubscriptionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DescribeNotificationSubscriptionsRequestPrivate(const WorkDocs::Action action,
+    DescribeNotificationSubscriptionsRequestPrivate(const WorkDocsRequest::Action action,
                                    DescribeNotificationSubscriptionsRequest * const q);
     DescribeNotificationSubscriptionsRequestPrivate(const DescribeNotificationSubscriptionsRequestPrivate &other,
                                    DescribeNotificationSubscriptionsRequest * const q);

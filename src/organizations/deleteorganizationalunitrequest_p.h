@@ -31,7 +31,7 @@ class DeleteOrganizationalUnitRequest;
 class QTAWS_EXPORT DeleteOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    DeleteOrganizationalUnitRequestPrivate(const Organizations::Action action,
+    DeleteOrganizationalUnitRequestPrivate(const OrganizationsRequest::Action action,
                                    DeleteOrganizationalUnitRequest * const q);
     DeleteOrganizationalUnitRequestPrivate(const DeleteOrganizationalUnitRequestPrivate &other,
                                    DeleteOrganizationalUnitRequest * const q);

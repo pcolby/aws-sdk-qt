@@ -31,7 +31,7 @@ class CreateLagRequest;
 class QTAWS_EXPORT CreateLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    CreateLagRequestPrivate(const DirectConnect::Action action,
+    CreateLagRequestPrivate(const DirectConnectRequest::Action action,
                                    CreateLagRequest * const q);
     CreateLagRequestPrivate(const CreateLagRequestPrivate &other,
                                    CreateLagRequest * const q);

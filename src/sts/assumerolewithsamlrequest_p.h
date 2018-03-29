@@ -31,7 +31,7 @@ class AssumeRoleWithSAMLRequest;
 class QTAWS_EXPORT AssumeRoleWithSAMLRequestPrivate : public STSRequestPrivate {
 
 public:
-    AssumeRoleWithSAMLRequestPrivate(const STS::Action action,
+    AssumeRoleWithSAMLRequestPrivate(const STSRequest::Action action,
                                    AssumeRoleWithSAMLRequest * const q);
     AssumeRoleWithSAMLRequestPrivate(const AssumeRoleWithSAMLRequestPrivate &other,
                                    AssumeRoleWithSAMLRequest * const q);

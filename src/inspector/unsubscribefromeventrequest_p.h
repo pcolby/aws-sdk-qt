@@ -31,7 +31,7 @@ class UnsubscribeFromEventRequest;
 class QTAWS_EXPORT UnsubscribeFromEventRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    UnsubscribeFromEventRequestPrivate(const Inspector::Action action,
+    UnsubscribeFromEventRequestPrivate(const InspectorRequest::Action action,
                                    UnsubscribeFromEventRequest * const q);
     UnsubscribeFromEventRequestPrivate(const UnsubscribeFromEventRequestPrivate &other,
                                    UnsubscribeFromEventRequest * const q);

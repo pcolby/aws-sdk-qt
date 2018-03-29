@@ -31,7 +31,7 @@ class GetFindingsStatisticsRequest;
 class QTAWS_EXPORT GetFindingsStatisticsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    GetFindingsStatisticsRequestPrivate(const GuardDuty::Action action,
+    GetFindingsStatisticsRequestPrivate(const GuardDutyRequest::Action action,
                                    GetFindingsStatisticsRequest * const q);
     GetFindingsStatisticsRequestPrivate(const GetFindingsStatisticsRequestPrivate &other,
                                    GetFindingsStatisticsRequest * const q);

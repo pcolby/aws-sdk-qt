@@ -31,7 +31,7 @@ class GetQueueAttributesRequest;
 class QTAWS_EXPORT GetQueueAttributesRequestPrivate : public SQSRequestPrivate {
 
 public:
-    GetQueueAttributesRequestPrivate(const SQS::Action action,
+    GetQueueAttributesRequestPrivate(const SQSRequest::Action action,
                                    GetQueueAttributesRequest * const q);
     GetQueueAttributesRequestPrivate(const GetQueueAttributesRequestPrivate &other,
                                    GetQueueAttributesRequest * const q);

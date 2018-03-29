@@ -31,7 +31,7 @@ class PutScheduledActionRequest;
 class QTAWS_EXPORT PutScheduledActionRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    PutScheduledActionRequestPrivate(const ApplicationAutoScaling::Action action,
+    PutScheduledActionRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    PutScheduledActionRequest * const q);
     PutScheduledActionRequestPrivate(const PutScheduledActionRequestPrivate &other,
                                    PutScheduledActionRequest * const q);

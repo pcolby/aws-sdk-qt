@@ -31,7 +31,7 @@ class SendCommandRequest;
 class QTAWS_EXPORT SendCommandRequestPrivate : public SSMRequestPrivate {
 
 public:
-    SendCommandRequestPrivate(const SSM::Action action,
+    SendCommandRequestPrivate(const SSMRequest::Action action,
                                    SendCommandRequest * const q);
     SendCommandRequestPrivate(const SendCommandRequestPrivate &other,
                                    SendCommandRequest * const q);

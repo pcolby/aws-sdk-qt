@@ -31,7 +31,7 @@ class ResendContactReachabilityEmailRequest;
 class QTAWS_EXPORT ResendContactReachabilityEmailRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    ResendContactReachabilityEmailRequestPrivate(const Route53Domains::Action action,
+    ResendContactReachabilityEmailRequestPrivate(const Route53DomainsRequest::Action action,
                                    ResendContactReachabilityEmailRequest * const q);
     ResendContactReachabilityEmailRequestPrivate(const ResendContactReachabilityEmailRequestPrivate &other,
                                    ResendContactReachabilityEmailRequest * const q);

@@ -31,7 +31,7 @@ class DescribeClassicLinkInstancesRequest;
 class QTAWS_EXPORT DescribeClassicLinkInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeClassicLinkInstancesRequestPrivate(const EC2::Action action,
+    DescribeClassicLinkInstancesRequestPrivate(const EC2Request::Action action,
                                    DescribeClassicLinkInstancesRequest * const q);
     DescribeClassicLinkInstancesRequestPrivate(const DescribeClassicLinkInstancesRequestPrivate &other,
                                    DescribeClassicLinkInstancesRequest * const q);

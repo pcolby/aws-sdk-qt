@@ -31,7 +31,7 @@ class DeleteVpcPeeringAuthorizationRequest;
 class QTAWS_EXPORT DeleteVpcPeeringAuthorizationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DeleteVpcPeeringAuthorizationRequestPrivate(const GameLift::Action action,
+    DeleteVpcPeeringAuthorizationRequestPrivate(const GameLiftRequest::Action action,
                                    DeleteVpcPeeringAuthorizationRequest * const q);
     DeleteVpcPeeringAuthorizationRequestPrivate(const DeleteVpcPeeringAuthorizationRequestPrivate &other,
                                    DeleteVpcPeeringAuthorizationRequest * const q);

@@ -31,7 +31,7 @@ class DescribeElasticGpusRequest;
 class QTAWS_EXPORT DescribeElasticGpusRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeElasticGpusRequestPrivate(const EC2::Action action,
+    DescribeElasticGpusRequestPrivate(const EC2Request::Action action,
                                    DescribeElasticGpusRequest * const q);
     DescribeElasticGpusRequestPrivate(const DescribeElasticGpusRequestPrivate &other,
                                    DescribeElasticGpusRequest * const q);

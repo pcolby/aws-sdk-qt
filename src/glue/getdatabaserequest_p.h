@@ -31,7 +31,7 @@ class GetDatabaseRequest;
 class QTAWS_EXPORT GetDatabaseRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetDatabaseRequestPrivate(const Glue::Action action,
+    GetDatabaseRequestPrivate(const GlueRequest::Action action,
                                    GetDatabaseRequest * const q);
     GetDatabaseRequestPrivate(const GetDatabaseRequestPrivate &other,
                                    GetDatabaseRequest * const q);

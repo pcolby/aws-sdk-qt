@@ -31,7 +31,7 @@ class GetEvaluationRequest;
 class QTAWS_EXPORT GetEvaluationRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    GetEvaluationRequestPrivate(const MachineLearning::Action action,
+    GetEvaluationRequestPrivate(const MachineLearningRequest::Action action,
                                    GetEvaluationRequest * const q);
     GetEvaluationRequestPrivate(const GetEvaluationRequestPrivate &other,
                                    GetEvaluationRequest * const q);

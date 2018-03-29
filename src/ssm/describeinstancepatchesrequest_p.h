@@ -31,7 +31,7 @@ class DescribeInstancePatchesRequest;
 class QTAWS_EXPORT DescribeInstancePatchesRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeInstancePatchesRequestPrivate(const SSM::Action action,
+    DescribeInstancePatchesRequestPrivate(const SSMRequest::Action action,
                                    DescribeInstancePatchesRequest * const q);
     DescribeInstancePatchesRequestPrivate(const DescribeInstancePatchesRequestPrivate &other,
                                    DescribeInstancePatchesRequest * const q);

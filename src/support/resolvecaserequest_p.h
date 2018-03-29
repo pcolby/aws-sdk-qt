@@ -31,7 +31,7 @@ class ResolveCaseRequest;
 class QTAWS_EXPORT ResolveCaseRequestPrivate : public SupportRequestPrivate {
 
 public:
-    ResolveCaseRequestPrivate(const Support::Action action,
+    ResolveCaseRequestPrivate(const SupportRequest::Action action,
                                    ResolveCaseRequest * const q);
     ResolveCaseRequestPrivate(const ResolveCaseRequestPrivate &other,
                                    ResolveCaseRequest * const q);

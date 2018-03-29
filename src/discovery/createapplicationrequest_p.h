@@ -31,7 +31,7 @@ class CreateApplicationRequest;
 class QTAWS_EXPORT CreateApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    CreateApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,
+    CreateApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    CreateApplicationRequest * const q);
     CreateApplicationRequestPrivate(const CreateApplicationRequestPrivate &other,
                                    CreateApplicationRequest * const q);

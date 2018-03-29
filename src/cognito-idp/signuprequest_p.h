@@ -31,7 +31,7 @@ class SignUpRequest;
 class QTAWS_EXPORT SignUpRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    SignUpRequestPrivate(const CognitoIdentityProvider::Action action,
+    SignUpRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    SignUpRequest * const q);
     SignUpRequestPrivate(const SignUpRequestPrivate &other,
                                    SignUpRequest * const q);

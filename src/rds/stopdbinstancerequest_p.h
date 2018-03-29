@@ -31,7 +31,7 @@ class StopDBInstanceRequest;
 class QTAWS_EXPORT StopDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    StopDBInstanceRequestPrivate(const RDS::Action action,
+    StopDBInstanceRequestPrivate(const RDSRequest::Action action,
                                    StopDBInstanceRequest * const q);
     StopDBInstanceRequestPrivate(const StopDBInstanceRequestPrivate &other,
                                    StopDBInstanceRequest * const q);

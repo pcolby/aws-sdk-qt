@@ -31,7 +31,7 @@ class CreateReplicationTaskRequest;
 class QTAWS_EXPORT CreateReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    CreateReplicationTaskRequestPrivate(const DatabaseMigrationService::Action action,
+    CreateReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    CreateReplicationTaskRequest * const q);
     CreateReplicationTaskRequestPrivate(const CreateReplicationTaskRequestPrivate &other,
                                    CreateReplicationTaskRequest * const q);

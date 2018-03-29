@@ -31,7 +31,7 @@ class SetUICustomizationRequest;
 class QTAWS_EXPORT SetUICustomizationRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    SetUICustomizationRequestPrivate(const CognitoIdentityProvider::Action action,
+    SetUICustomizationRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    SetUICustomizationRequest * const q);
     SetUICustomizationRequestPrivate(const SetUICustomizationRequestPrivate &other,
                                    SetUICustomizationRequest * const q);

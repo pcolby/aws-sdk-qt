@@ -31,7 +31,7 @@ class ForgotPasswordRequest;
 class QTAWS_EXPORT ForgotPasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ForgotPasswordRequestPrivate(const CognitoIdentityProvider::Action action,
+    ForgotPasswordRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ForgotPasswordRequest * const q);
     ForgotPasswordRequestPrivate(const ForgotPasswordRequestPrivate &other,
                                    ForgotPasswordRequest * const q);

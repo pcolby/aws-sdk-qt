@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const AlexaForBusiness::Action action,
+    UntagResourceRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

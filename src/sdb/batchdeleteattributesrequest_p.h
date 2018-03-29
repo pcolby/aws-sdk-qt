@@ -31,7 +31,7 @@ class BatchDeleteAttributesRequest;
 class QTAWS_EXPORT BatchDeleteAttributesRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    BatchDeleteAttributesRequestPrivate(const SimpleDB::Action action,
+    BatchDeleteAttributesRequestPrivate(const SimpleDBRequest::Action action,
                                    BatchDeleteAttributesRequest * const q);
     BatchDeleteAttributesRequestPrivate(const BatchDeleteAttributesRequestPrivate &other,
                                    BatchDeleteAttributesRequest * const q);

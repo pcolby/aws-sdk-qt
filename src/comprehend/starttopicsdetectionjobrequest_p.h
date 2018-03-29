@@ -31,7 +31,7 @@ class StartTopicsDetectionJobRequest;
 class QTAWS_EXPORT StartTopicsDetectionJobRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    StartTopicsDetectionJobRequestPrivate(const Comprehend::Action action,
+    StartTopicsDetectionJobRequestPrivate(const ComprehendRequest::Action action,
                                    StartTopicsDetectionJobRequest * const q);
     StartTopicsDetectionJobRequestPrivate(const StartTopicsDetectionJobRequestPrivate &other,
                                    StartTopicsDetectionJobRequest * const q);

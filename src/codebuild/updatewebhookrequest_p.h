@@ -31,7 +31,7 @@ class UpdateWebhookRequest;
 class QTAWS_EXPORT UpdateWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    UpdateWebhookRequestPrivate(const CodeBuild::Action action,
+    UpdateWebhookRequestPrivate(const CodeBuildRequest::Action action,
                                    UpdateWebhookRequest * const q);
     UpdateWebhookRequestPrivate(const UpdateWebhookRequestPrivate &other,
                                    UpdateWebhookRequest * const q);

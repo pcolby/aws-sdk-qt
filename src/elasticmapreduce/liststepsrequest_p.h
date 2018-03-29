@@ -31,7 +31,7 @@ class ListStepsRequest;
 class QTAWS_EXPORT ListStepsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    ListStepsRequestPrivate(const EMR::Action action,
+    ListStepsRequestPrivate(const EMRRequest::Action action,
                                    ListStepsRequest * const q);
     ListStepsRequestPrivate(const ListStepsRequestPrivate &other,
                                    ListStepsRequest * const q);

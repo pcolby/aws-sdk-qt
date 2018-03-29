@@ -31,7 +31,7 @@ class ListClustersRequest;
 class QTAWS_EXPORT ListClustersRequestPrivate : public EMRRequestPrivate {
 
 public:
-    ListClustersRequestPrivate(const EMR::Action action,
+    ListClustersRequestPrivate(const EMRRequest::Action action,
                                    ListClustersRequest * const q);
     ListClustersRequestPrivate(const ListClustersRequestPrivate &other,
                                    ListClustersRequest * const q);

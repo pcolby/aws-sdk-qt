@@ -31,7 +31,7 @@ class PutDeliveryChannelRequest;
 class QTAWS_EXPORT PutDeliveryChannelRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    PutDeliveryChannelRequestPrivate(const ConfigService::Action action,
+    PutDeliveryChannelRequestPrivate(const ConfigServiceRequest::Action action,
                                    PutDeliveryChannelRequest * const q);
     PutDeliveryChannelRequestPrivate(const PutDeliveryChannelRequestPrivate &other,
                                    PutDeliveryChannelRequest * const q);

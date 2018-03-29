@@ -31,7 +31,7 @@ class HeadBucketRequest;
 class QTAWS_EXPORT HeadBucketRequestPrivate : public S3RequestPrivate {
 
 public:
-    HeadBucketRequestPrivate(const S3::Action action,
+    HeadBucketRequestPrivate(const S3Request::Action action,
                                    HeadBucketRequest * const q);
     HeadBucketRequestPrivate(const HeadBucketRequestPrivate &other,
                                    HeadBucketRequest * const q);

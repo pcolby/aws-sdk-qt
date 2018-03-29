@@ -31,7 +31,7 @@ class BatchGetOnPremisesInstancesRequest;
 class QTAWS_EXPORT BatchGetOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    BatchGetOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+    BatchGetOnPremisesInstancesRequestPrivate(const CodeDeployRequest::Action action,
                                    BatchGetOnPremisesInstancesRequest * const q);
     BatchGetOnPremisesInstancesRequestPrivate(const BatchGetOnPremisesInstancesRequestPrivate &other,
                                    BatchGetOnPremisesInstancesRequest * const q);

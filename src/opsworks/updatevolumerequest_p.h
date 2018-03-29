@@ -31,7 +31,7 @@ class UpdateVolumeRequest;
 class QTAWS_EXPORT UpdateVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateVolumeRequestPrivate(const OpsWorks::Action action,
+    UpdateVolumeRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateVolumeRequest * const q);
     UpdateVolumeRequestPrivate(const UpdateVolumeRequestPrivate &other,
                                    UpdateVolumeRequest * const q);

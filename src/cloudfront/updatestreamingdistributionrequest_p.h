@@ -31,7 +31,7 @@ class UpdateStreamingDistributionRequest;
 class QTAWS_EXPORT UpdateStreamingDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    UpdateStreamingDistributionRequestPrivate(const CloudFront::Action action,
+    UpdateStreamingDistributionRequestPrivate(const CloudFrontRequest::Action action,
                                    UpdateStreamingDistributionRequest * const q);
     UpdateStreamingDistributionRequestPrivate(const UpdateStreamingDistributionRequestPrivate &other,
                                    UpdateStreamingDistributionRequest * const q);

@@ -31,7 +31,7 @@ class CreateClusterRequest;
 class QTAWS_EXPORT CreateClusterRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    CreateClusterRequestPrivate(const Redshift::Action action,
+    CreateClusterRequestPrivate(const RedshiftRequest::Action action,
                                    CreateClusterRequest * const q);
     CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
                                    CreateClusterRequest * const q);

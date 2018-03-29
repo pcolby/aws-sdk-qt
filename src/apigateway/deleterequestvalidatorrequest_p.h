@@ -31,7 +31,7 @@ class DeleteRequestValidatorRequest;
 class QTAWS_EXPORT DeleteRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteRequestValidatorRequestPrivate(const APIGateway::Action action,
+    DeleteRequestValidatorRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteRequestValidatorRequest * const q);
     DeleteRequestValidatorRequestPrivate(const DeleteRequestValidatorRequestPrivate &other,
                                    DeleteRequestValidatorRequest * const q);

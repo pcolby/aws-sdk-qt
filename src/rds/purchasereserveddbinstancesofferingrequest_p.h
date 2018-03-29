@@ -31,7 +31,7 @@ class PurchaseReservedDBInstancesOfferingRequest;
 class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingRequestPrivate : public RDSRequestPrivate {
 
 public:
-    PurchaseReservedDBInstancesOfferingRequestPrivate(const RDS::Action action,
+    PurchaseReservedDBInstancesOfferingRequestPrivate(const RDSRequest::Action action,
                                    PurchaseReservedDBInstancesOfferingRequest * const q);
     PurchaseReservedDBInstancesOfferingRequestPrivate(const PurchaseReservedDBInstancesOfferingRequestPrivate &other,
                                    PurchaseReservedDBInstancesOfferingRequest * const q);

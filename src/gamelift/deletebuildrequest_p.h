@@ -31,7 +31,7 @@ class DeleteBuildRequest;
 class QTAWS_EXPORT DeleteBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DeleteBuildRequestPrivate(const GameLift::Action action,
+    DeleteBuildRequestPrivate(const GameLiftRequest::Action action,
                                    DeleteBuildRequest * const q);
     DeleteBuildRequestPrivate(const DeleteBuildRequestPrivate &other,
                                    DeleteBuildRequest * const q);

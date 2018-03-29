@@ -31,7 +31,7 @@ class GetFaceSearchRequest;
 class QTAWS_EXPORT GetFaceSearchRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    GetFaceSearchRequestPrivate(const Rekognition::Action action,
+    GetFaceSearchRequestPrivate(const RekognitionRequest::Action action,
                                    GetFaceSearchRequest * const q);
     GetFaceSearchRequestPrivate(const GetFaceSearchRequestPrivate &other,
                                    GetFaceSearchRequest * const q);

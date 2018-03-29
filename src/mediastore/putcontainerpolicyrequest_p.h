@@ -31,7 +31,7 @@ class PutContainerPolicyRequest;
 class QTAWS_EXPORT PutContainerPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
-    PutContainerPolicyRequestPrivate(const MediaStore::Action action,
+    PutContainerPolicyRequestPrivate(const MediaStoreRequest::Action action,
                                    PutContainerPolicyRequest * const q);
     PutContainerPolicyRequestPrivate(const PutContainerPolicyRequestPrivate &other,
                                    PutContainerPolicyRequest * const q);

@@ -31,7 +31,7 @@ class DeleteClusterRequest;
 class QTAWS_EXPORT DeleteClusterRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DeleteClusterRequestPrivate(const DAX::Action action,
+    DeleteClusterRequestPrivate(const DAXRequest::Action action,
                                    DeleteClusterRequest * const q);
     DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
                                    DeleteClusterRequest * const q);

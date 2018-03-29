@@ -31,7 +31,7 @@ class AttachLoadBalancerTargetGroupsRequest;
 class QTAWS_EXPORT AttachLoadBalancerTargetGroupsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    AttachLoadBalancerTargetGroupsRequestPrivate(const AutoScaling::Action action,
+    AttachLoadBalancerTargetGroupsRequestPrivate(const AutoScalingRequest::Action action,
                                    AttachLoadBalancerTargetGroupsRequest * const q);
     AttachLoadBalancerTargetGroupsRequestPrivate(const AttachLoadBalancerTargetGroupsRequestPrivate &other,
                                    AttachLoadBalancerTargetGroupsRequest * const q);

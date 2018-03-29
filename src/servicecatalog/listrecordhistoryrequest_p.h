@@ -31,7 +31,7 @@ class ListRecordHistoryRequest;
 class QTAWS_EXPORT ListRecordHistoryRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListRecordHistoryRequestPrivate(const ServiceCatalog::Action action,
+    ListRecordHistoryRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListRecordHistoryRequest * const q);
     ListRecordHistoryRequestPrivate(const ListRecordHistoryRequestPrivate &other,
                                    ListRecordHistoryRequest * const q);

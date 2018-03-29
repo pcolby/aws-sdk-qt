@@ -31,7 +31,7 @@ class GetFunctionRequest;
 class QTAWS_EXPORT GetFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    GetFunctionRequestPrivate(const Lambda::Action action,
+    GetFunctionRequestPrivate(const LambdaRequest::Action action,
                                    GetFunctionRequest * const q);
     GetFunctionRequestPrivate(const GetFunctionRequestPrivate &other,
                                    GetFunctionRequest * const q);

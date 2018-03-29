@@ -31,7 +31,7 @@ class ListPlatformApplicationsRequest;
 class QTAWS_EXPORT ListPlatformApplicationsRequestPrivate : public SNSRequestPrivate {
 
 public:
-    ListPlatformApplicationsRequestPrivate(const SNS::Action action,
+    ListPlatformApplicationsRequestPrivate(const SNSRequest::Action action,
                                    ListPlatformApplicationsRequest * const q);
     ListPlatformApplicationsRequestPrivate(const ListPlatformApplicationsRequestPrivate &other,
                                    ListPlatformApplicationsRequest * const q);

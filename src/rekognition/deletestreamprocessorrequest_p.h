@@ -31,7 +31,7 @@ class DeleteStreamProcessorRequest;
 class QTAWS_EXPORT DeleteStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    DeleteStreamProcessorRequestPrivate(const Rekognition::Action action,
+    DeleteStreamProcessorRequestPrivate(const RekognitionRequest::Action action,
                                    DeleteStreamProcessorRequest * const q);
     DeleteStreamProcessorRequestPrivate(const DeleteStreamProcessorRequestPrivate &other,
                                    DeleteStreamProcessorRequest * const q);

@@ -31,7 +31,7 @@ class DetectTextRequest;
 class QTAWS_EXPORT DetectTextRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    DetectTextRequestPrivate(const Rekognition::Action action,
+    DetectTextRequestPrivate(const RekognitionRequest::Action action,
                                    DetectTextRequest * const q);
     DetectTextRequestPrivate(const DetectTextRequestPrivate &other,
                                    DetectTextRequest * const q);

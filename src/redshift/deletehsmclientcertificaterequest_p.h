@@ -31,7 +31,7 @@ class DeleteHsmClientCertificateRequest;
 class QTAWS_EXPORT DeleteHsmClientCertificateRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteHsmClientCertificateRequestPrivate(const Redshift::Action action,
+    DeleteHsmClientCertificateRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteHsmClientCertificateRequest * const q);
     DeleteHsmClientCertificateRequestPrivate(const DeleteHsmClientCertificateRequestPrivate &other,
                                    DeleteHsmClientCertificateRequest * const q);

@@ -31,7 +31,7 @@ class CreateDBSecurityGroupRequest;
 class QTAWS_EXPORT CreateDBSecurityGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateDBSecurityGroupRequestPrivate(const RDS::Action action,
+    CreateDBSecurityGroupRequestPrivate(const RDSRequest::Action action,
                                    CreateDBSecurityGroupRequest * const q);
     CreateDBSecurityGroupRequestPrivate(const CreateDBSecurityGroupRequestPrivate &other,
                                    CreateDBSecurityGroupRequest * const q);

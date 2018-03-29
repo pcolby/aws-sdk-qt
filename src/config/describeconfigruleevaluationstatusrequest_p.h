@@ -31,7 +31,7 @@ class DescribeConfigRuleEvaluationStatusRequest;
 class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DescribeConfigRuleEvaluationStatusRequestPrivate(const ConfigService::Action action,
+    DescribeConfigRuleEvaluationStatusRequestPrivate(const ConfigServiceRequest::Action action,
                                    DescribeConfigRuleEvaluationStatusRequest * const q);
     DescribeConfigRuleEvaluationStatusRequestPrivate(const DescribeConfigRuleEvaluationStatusRequestPrivate &other,
                                    DescribeConfigRuleEvaluationStatusRequest * const q);

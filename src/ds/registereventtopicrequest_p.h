@@ -31,7 +31,7 @@ class RegisterEventTopicRequest;
 class QTAWS_EXPORT RegisterEventTopicRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    RegisterEventTopicRequestPrivate(const DirectoryService::Action action,
+    RegisterEventTopicRequestPrivate(const DirectoryServiceRequest::Action action,
                                    RegisterEventTopicRequest * const q);
     RegisterEventTopicRequestPrivate(const RegisterEventTopicRequestPrivate &other,
                                    RegisterEventTopicRequest * const q);

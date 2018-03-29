@@ -31,7 +31,7 @@ class AssociateSubnetCidrBlockRequest;
 class QTAWS_EXPORT AssociateSubnetCidrBlockRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AssociateSubnetCidrBlockRequestPrivate(const EC2::Action action,
+    AssociateSubnetCidrBlockRequestPrivate(const EC2Request::Action action,
                                    AssociateSubnetCidrBlockRequest * const q);
     AssociateSubnetCidrBlockRequestPrivate(const AssociateSubnetCidrBlockRequestPrivate &other,
                                    AssociateSubnetCidrBlockRequest * const q);

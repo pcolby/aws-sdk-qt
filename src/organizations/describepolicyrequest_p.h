@@ -31,7 +31,7 @@ class DescribePolicyRequest;
 class QTAWS_EXPORT DescribePolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    DescribePolicyRequestPrivate(const Organizations::Action action,
+    DescribePolicyRequestPrivate(const OrganizationsRequest::Action action,
                                    DescribePolicyRequest * const q);
     DescribePolicyRequestPrivate(const DescribePolicyRequestPrivate &other,
                                    DescribePolicyRequest * const q);

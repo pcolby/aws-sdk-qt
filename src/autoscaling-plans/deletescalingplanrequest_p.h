@@ -31,7 +31,7 @@ class DeleteScalingPlanRequest;
 class QTAWS_EXPORT DeleteScalingPlanRequestPrivate : public AutoScalingPlansRequestPrivate {
 
 public:
-    DeleteScalingPlanRequestPrivate(const AutoScalingPlans::Action action,
+    DeleteScalingPlanRequestPrivate(const AutoScalingPlansRequest::Action action,
                                    DeleteScalingPlanRequest * const q);
     DeleteScalingPlanRequestPrivate(const DeleteScalingPlanRequestPrivate &other,
                                    DeleteScalingPlanRequest * const q);

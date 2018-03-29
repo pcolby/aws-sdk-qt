@@ -31,7 +31,7 @@ class GetEndpointAttributesRequest;
 class QTAWS_EXPORT GetEndpointAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
-    GetEndpointAttributesRequestPrivate(const SNS::Action action,
+    GetEndpointAttributesRequestPrivate(const SNSRequest::Action action,
                                    GetEndpointAttributesRequest * const q);
     GetEndpointAttributesRequestPrivate(const GetEndpointAttributesRequestPrivate &other,
                                    GetEndpointAttributesRequest * const q);

@@ -31,7 +31,7 @@ class SetSMSAttributesRequest;
 class QTAWS_EXPORT SetSMSAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
-    SetSMSAttributesRequestPrivate(const SNS::Action action,
+    SetSMSAttributesRequestPrivate(const SNSRequest::Action action,
                                    SetSMSAttributesRequest * const q);
     SetSMSAttributesRequestPrivate(const SetSMSAttributesRequestPrivate &other,
                                    SetSMSAttributesRequest * const q);

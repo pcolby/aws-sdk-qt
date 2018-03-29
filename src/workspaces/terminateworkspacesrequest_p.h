@@ -31,7 +31,7 @@ class TerminateWorkspacesRequest;
 class QTAWS_EXPORT TerminateWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    TerminateWorkspacesRequestPrivate(const WorkSpaces::Action action,
+    TerminateWorkspacesRequestPrivate(const WorkSpacesRequest::Action action,
                                    TerminateWorkspacesRequest * const q);
     TerminateWorkspacesRequestPrivate(const TerminateWorkspacesRequestPrivate &other,
                                    TerminateWorkspacesRequest * const q);

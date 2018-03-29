@@ -31,7 +31,7 @@ class ListJobsByPipelineRequest;
 class QTAWS_EXPORT ListJobsByPipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ListJobsByPipelineRequestPrivate(const ElasticTranscoder::Action action,
+    ListJobsByPipelineRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ListJobsByPipelineRequest * const q);
     ListJobsByPipelineRequestPrivate(const ListJobsByPipelineRequestPrivate &other,
                                    ListJobsByPipelineRequest * const q);

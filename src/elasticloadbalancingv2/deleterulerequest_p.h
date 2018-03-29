@@ -31,7 +31,7 @@ class DeleteRuleRequest;
 class QTAWS_EXPORT DeleteRuleRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DeleteRuleRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DeleteRuleRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DeleteRuleRequest * const q);
     DeleteRuleRequestPrivate(const DeleteRuleRequestPrivate &other,
                                    DeleteRuleRequest * const q);

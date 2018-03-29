@@ -31,7 +31,7 @@ class TranslateTextRequest;
 class QTAWS_EXPORT TranslateTextRequestPrivate : public TranslateRequestPrivate {
 
 public:
-    TranslateTextRequestPrivate(const Translate::Action action,
+    TranslateTextRequestPrivate(const TranslateRequest::Action action,
                                    TranslateTextRequest * const q);
     TranslateTextRequestPrivate(const TranslateTextRequestPrivate &other,
                                    TranslateTextRequest * const q);

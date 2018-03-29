@@ -31,7 +31,7 @@ class DescribeInterconnectLoaRequest;
 class QTAWS_EXPORT DescribeInterconnectLoaRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeInterconnectLoaRequestPrivate(const DirectConnect::Action action,
+    DescribeInterconnectLoaRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeInterconnectLoaRequest * const q);
     DescribeInterconnectLoaRequestPrivate(const DescribeInterconnectLoaRequestPrivate &other,
                                    DescribeInterconnectLoaRequest * const q);

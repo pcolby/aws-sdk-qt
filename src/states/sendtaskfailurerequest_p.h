@@ -31,7 +31,7 @@ class SendTaskFailureRequest;
 class QTAWS_EXPORT SendTaskFailureRequestPrivate : public SFNRequestPrivate {
 
 public:
-    SendTaskFailureRequestPrivate(const SFN::Action action,
+    SendTaskFailureRequestPrivate(const SFNRequest::Action action,
                                    SendTaskFailureRequest * const q);
     SendTaskFailureRequestPrivate(const SendTaskFailureRequestPrivate &other,
                                    SendTaskFailureRequest * const q);

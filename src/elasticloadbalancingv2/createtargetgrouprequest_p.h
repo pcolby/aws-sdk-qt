@@ -31,7 +31,7 @@ class CreateTargetGroupRequest;
 class QTAWS_EXPORT CreateTargetGroupRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    CreateTargetGroupRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    CreateTargetGroupRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    CreateTargetGroupRequest * const q);
     CreateTargetGroupRequestPrivate(const CreateTargetGroupRequestPrivate &other,
                                    CreateTargetGroupRequest * const q);

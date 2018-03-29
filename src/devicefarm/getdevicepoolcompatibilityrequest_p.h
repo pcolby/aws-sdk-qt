@@ -31,7 +31,7 @@ class GetDevicePoolCompatibilityRequest;
 class QTAWS_EXPORT GetDevicePoolCompatibilityRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetDevicePoolCompatibilityRequestPrivate(const DeviceFarm::Action action,
+    GetDevicePoolCompatibilityRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetDevicePoolCompatibilityRequest * const q);
     GetDevicePoolCompatibilityRequestPrivate(const GetDevicePoolCompatibilityRequestPrivate &other,
                                    GetDevicePoolCompatibilityRequest * const q);

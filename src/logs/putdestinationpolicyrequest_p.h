@@ -31,7 +31,7 @@ class PutDestinationPolicyRequest;
 class QTAWS_EXPORT PutDestinationPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    PutDestinationPolicyRequestPrivate(const CloudWatchLogs::Action action,
+    PutDestinationPolicyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    PutDestinationPolicyRequest * const q);
     PutDestinationPolicyRequestPrivate(const PutDestinationPolicyRequestPrivate &other,
                                    PutDestinationPolicyRequest * const q);

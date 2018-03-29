@@ -31,7 +31,7 @@ class ResolveAliasRequest;
 class QTAWS_EXPORT ResolveAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    ResolveAliasRequestPrivate(const GameLift::Action action,
+    ResolveAliasRequestPrivate(const GameLiftRequest::Action action,
                                    ResolveAliasRequest * const q);
     ResolveAliasRequestPrivate(const ResolveAliasRequestPrivate &other,
                                    ResolveAliasRequest * const q);

@@ -31,7 +31,7 @@ class ListIdentityProvidersRequest;
 class QTAWS_EXPORT ListIdentityProvidersRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ListIdentityProvidersRequestPrivate(const CognitoIdentityProvider::Action action,
+    ListIdentityProvidersRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ListIdentityProvidersRequest * const q);
     ListIdentityProvidersRequestPrivate(const ListIdentityProvidersRequestPrivate &other,
                                    ListIdentityProvidersRequest * const q);

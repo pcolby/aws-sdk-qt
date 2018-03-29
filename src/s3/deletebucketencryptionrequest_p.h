@@ -31,7 +31,7 @@ class DeleteBucketEncryptionRequest;
 class QTAWS_EXPORT DeleteBucketEncryptionRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketEncryptionRequestPrivate(const S3::Action action,
+    DeleteBucketEncryptionRequestPrivate(const S3Request::Action action,
                                    DeleteBucketEncryptionRequest * const q);
     DeleteBucketEncryptionRequestPrivate(const DeleteBucketEncryptionRequestPrivate &other,
                                    DeleteBucketEncryptionRequest * const q);

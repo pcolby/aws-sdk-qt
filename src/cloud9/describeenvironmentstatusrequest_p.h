@@ -31,7 +31,7 @@ class DescribeEnvironmentStatusRequest;
 class QTAWS_EXPORT DescribeEnvironmentStatusRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    DescribeEnvironmentStatusRequestPrivate(const Cloud9::Action action,
+    DescribeEnvironmentStatusRequestPrivate(const Cloud9Request::Action action,
                                    DescribeEnvironmentStatusRequest * const q);
     DescribeEnvironmentStatusRequestPrivate(const DescribeEnvironmentStatusRequestPrivate &other,
                                    DescribeEnvironmentStatusRequest * const q);

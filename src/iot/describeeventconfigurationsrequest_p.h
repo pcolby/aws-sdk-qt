@@ -31,7 +31,7 @@ class DescribeEventConfigurationsRequest;
 class QTAWS_EXPORT DescribeEventConfigurationsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeEventConfigurationsRequestPrivate(const IoT::Action action,
+    DescribeEventConfigurationsRequestPrivate(const IoTRequest::Action action,
                                    DescribeEventConfigurationsRequest * const q);
     DescribeEventConfigurationsRequestPrivate(const DescribeEventConfigurationsRequestPrivate &other,
                                    DescribeEventConfigurationsRequest * const q);

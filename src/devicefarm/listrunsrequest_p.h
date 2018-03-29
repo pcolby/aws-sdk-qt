@@ -31,7 +31,7 @@ class ListRunsRequest;
 class QTAWS_EXPORT ListRunsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListRunsRequestPrivate(const DeviceFarm::Action action,
+    ListRunsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListRunsRequest * const q);
     ListRunsRequestPrivate(const ListRunsRequestPrivate &other,
                                    ListRunsRequest * const q);

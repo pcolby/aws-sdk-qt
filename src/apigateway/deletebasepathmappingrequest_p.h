@@ -31,7 +31,7 @@ class DeleteBasePathMappingRequest;
 class QTAWS_EXPORT DeleteBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteBasePathMappingRequestPrivate(const APIGateway::Action action,
+    DeleteBasePathMappingRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteBasePathMappingRequest * const q);
     DeleteBasePathMappingRequestPrivate(const DeleteBasePathMappingRequestPrivate &other,
                                    DeleteBasePathMappingRequest * const q);

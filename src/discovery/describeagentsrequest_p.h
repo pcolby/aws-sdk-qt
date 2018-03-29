@@ -31,7 +31,7 @@ class DescribeAgentsRequest;
 class QTAWS_EXPORT DescribeAgentsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    DescribeAgentsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    DescribeAgentsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    DescribeAgentsRequest * const q);
     DescribeAgentsRequestPrivate(const DescribeAgentsRequestPrivate &other,
                                    DescribeAgentsRequest * const q);

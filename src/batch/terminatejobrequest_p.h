@@ -31,7 +31,7 @@ class TerminateJobRequest;
 class QTAWS_EXPORT TerminateJobRequestPrivate : public BatchRequestPrivate {
 
 public:
-    TerminateJobRequestPrivate(const Batch::Action action,
+    TerminateJobRequestPrivate(const BatchRequest::Action action,
                                    TerminateJobRequest * const q);
     TerminateJobRequestPrivate(const TerminateJobRequestPrivate &other,
                                    TerminateJobRequest * const q);

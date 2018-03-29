@@ -31,7 +31,7 @@ class DeleteSubscriberRequest;
 class QTAWS_EXPORT DeleteSubscriberRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    DeleteSubscriberRequestPrivate(const Budgets::Action action,
+    DeleteSubscriberRequestPrivate(const BudgetsRequest::Action action,
                                    DeleteSubscriberRequest * const q);
     DeleteSubscriberRequestPrivate(const DeleteSubscriberRequestPrivate &other,
                                    DeleteSubscriberRequest * const q);

@@ -31,7 +31,7 @@ class DecodeAuthorizationMessageRequest;
 class QTAWS_EXPORT DecodeAuthorizationMessageRequestPrivate : public STSRequestPrivate {
 
 public:
-    DecodeAuthorizationMessageRequestPrivate(const STS::Action action,
+    DecodeAuthorizationMessageRequestPrivate(const STSRequest::Action action,
                                    DecodeAuthorizationMessageRequest * const q);
     DecodeAuthorizationMessageRequestPrivate(const DecodeAuthorizationMessageRequestPrivate &other,
                                    DecodeAuthorizationMessageRequest * const q);

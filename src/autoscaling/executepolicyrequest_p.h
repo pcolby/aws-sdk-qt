@@ -31,7 +31,7 @@ class ExecutePolicyRequest;
 class QTAWS_EXPORT ExecutePolicyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    ExecutePolicyRequestPrivate(const AutoScaling::Action action,
+    ExecutePolicyRequestPrivate(const AutoScalingRequest::Action action,
                                    ExecutePolicyRequest * const q);
     ExecutePolicyRequestPrivate(const ExecutePolicyRequestPrivate &other,
                                    ExecutePolicyRequest * const q);

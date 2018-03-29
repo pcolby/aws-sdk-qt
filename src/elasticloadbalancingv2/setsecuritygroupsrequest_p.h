@@ -31,7 +31,7 @@ class SetSecurityGroupsRequest;
 class QTAWS_EXPORT SetSecurityGroupsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    SetSecurityGroupsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    SetSecurityGroupsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    SetSecurityGroupsRequest * const q);
     SetSecurityGroupsRequestPrivate(const SetSecurityGroupsRequestPrivate &other,
                                    SetSecurityGroupsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteNamedQueryRequest;
 class QTAWS_EXPORT DeleteNamedQueryRequestPrivate : public AthenaRequestPrivate {
 
 public:
-    DeleteNamedQueryRequestPrivate(const Athena::Action action,
+    DeleteNamedQueryRequestPrivate(const AthenaRequest::Action action,
                                    DeleteNamedQueryRequest * const q);
     DeleteNamedQueryRequestPrivate(const DeleteNamedQueryRequestPrivate &other,
                                    DeleteNamedQueryRequest * const q);

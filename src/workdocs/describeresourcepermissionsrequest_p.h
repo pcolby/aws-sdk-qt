@@ -31,7 +31,7 @@ class DescribeResourcePermissionsRequest;
 class QTAWS_EXPORT DescribeResourcePermissionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DescribeResourcePermissionsRequestPrivate(const WorkDocs::Action action,
+    DescribeResourcePermissionsRequestPrivate(const WorkDocsRequest::Action action,
                                    DescribeResourcePermissionsRequest * const q);
     DescribeResourcePermissionsRequestPrivate(const DescribeResourcePermissionsRequestPrivate &other,
                                    DescribeResourcePermissionsRequest * const q);

@@ -31,7 +31,7 @@ class StartExportTaskRequest;
 class QTAWS_EXPORT StartExportTaskRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    StartExportTaskRequestPrivate(const ApplicationDiscoveryService::Action action,
+    StartExportTaskRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    StartExportTaskRequest * const q);
     StartExportTaskRequestPrivate(const StartExportTaskRequestPrivate &other,
                                    StartExportTaskRequest * const q);

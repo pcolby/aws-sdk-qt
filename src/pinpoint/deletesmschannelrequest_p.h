@@ -31,7 +31,7 @@ class DeleteSmsChannelRequest;
 class QTAWS_EXPORT DeleteSmsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteSmsChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteSmsChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteSmsChannelRequest * const q);
     DeleteSmsChannelRequestPrivate(const DeleteSmsChannelRequestPrivate &other,
                                    DeleteSmsChannelRequest * const q);

@@ -31,7 +31,7 @@ class UpdateGatewaySoftwareNowRequest;
 class QTAWS_EXPORT UpdateGatewaySoftwareNowRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateGatewaySoftwareNowRequestPrivate(const StorageGateway::Action action,
+    UpdateGatewaySoftwareNowRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateGatewaySoftwareNowRequest * const q);
     UpdateGatewaySoftwareNowRequestPrivate(const UpdateGatewaySoftwareNowRequestPrivate &other,
                                    UpdateGatewaySoftwareNowRequest * const q);

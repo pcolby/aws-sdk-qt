@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const DynamoDB::Action action,
+    TagResourceRequestPrivate(const DynamoDBRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

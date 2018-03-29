@@ -31,7 +31,7 @@ class GetQueueUrlRequest;
 class QTAWS_EXPORT GetQueueUrlRequestPrivate : public SQSRequestPrivate {
 
 public:
-    GetQueueUrlRequestPrivate(const SQS::Action action,
+    GetQueueUrlRequestPrivate(const SQSRequest::Action action,
                                    GetQueueUrlRequest * const q);
     GetQueueUrlRequestPrivate(const GetQueueUrlRequestPrivate &other,
                                    GetQueueUrlRequest * const q);

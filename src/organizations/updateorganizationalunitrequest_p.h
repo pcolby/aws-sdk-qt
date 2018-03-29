@@ -31,7 +31,7 @@ class UpdateOrganizationalUnitRequest;
 class QTAWS_EXPORT UpdateOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    UpdateOrganizationalUnitRequestPrivate(const Organizations::Action action,
+    UpdateOrganizationalUnitRequestPrivate(const OrganizationsRequest::Action action,
                                    UpdateOrganizationalUnitRequest * const q);
     UpdateOrganizationalUnitRequestPrivate(const UpdateOrganizationalUnitRequestPrivate &other,
                                    UpdateOrganizationalUnitRequest * const q);

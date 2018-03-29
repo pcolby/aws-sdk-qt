@@ -31,7 +31,7 @@ class CopyDBParameterGroupRequest;
 class QTAWS_EXPORT CopyDBParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CopyDBParameterGroupRequestPrivate(const RDS::Action action,
+    CopyDBParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    CopyDBParameterGroupRequest * const q);
     CopyDBParameterGroupRequestPrivate(const CopyDBParameterGroupRequestPrivate &other,
                                    CopyDBParameterGroupRequest * const q);

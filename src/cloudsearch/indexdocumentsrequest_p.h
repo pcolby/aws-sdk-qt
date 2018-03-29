@@ -31,7 +31,7 @@ class IndexDocumentsRequest;
 class QTAWS_EXPORT IndexDocumentsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    IndexDocumentsRequestPrivate(const CloudSearch::Action action,
+    IndexDocumentsRequestPrivate(const CloudSearchRequest::Action action,
                                    IndexDocumentsRequest * const q);
     IndexDocumentsRequestPrivate(const IndexDocumentsRequestPrivate &other,
                                    IndexDocumentsRequest * const q);

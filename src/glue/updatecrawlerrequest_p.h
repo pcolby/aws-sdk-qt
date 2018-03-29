@@ -31,7 +31,7 @@ class UpdateCrawlerRequest;
 class QTAWS_EXPORT UpdateCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateCrawlerRequestPrivate(const Glue::Action action,
+    UpdateCrawlerRequestPrivate(const GlueRequest::Action action,
                                    UpdateCrawlerRequest * const q);
     UpdateCrawlerRequestPrivate(const UpdateCrawlerRequestPrivate &other,
                                    UpdateCrawlerRequest * const q);

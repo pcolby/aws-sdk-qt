@@ -31,7 +31,7 @@ class ListHandshakesForAccountRequest;
 class QTAWS_EXPORT ListHandshakesForAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListHandshakesForAccountRequestPrivate(const Organizations::Action action,
+    ListHandshakesForAccountRequestPrivate(const OrganizationsRequest::Action action,
                                    ListHandshakesForAccountRequest * const q);
     ListHandshakesForAccountRequestPrivate(const ListHandshakesForAccountRequestPrivate &other,
                                    ListHandshakesForAccountRequest * const q);

@@ -31,7 +31,7 @@ class CreateTagsRequest;
 class QTAWS_EXPORT CreateTagsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateTagsRequestPrivate(const EC2::Action action,
+    CreateTagsRequestPrivate(const EC2Request::Action action,
                                    CreateTagsRequest * const q);
     CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
                                    CreateTagsRequest * const q);

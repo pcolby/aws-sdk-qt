@@ -31,7 +31,7 @@ class PutPermissionPolicyRequest;
 class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    PutPermissionPolicyRequestPrivate(const WAFRegional::Action action,
+    PutPermissionPolicyRequestPrivate(const WAFRegionalRequest::Action action,
                                    PutPermissionPolicyRequest * const q);
     PutPermissionPolicyRequestPrivate(const PutPermissionPolicyRequestPrivate &other,
                                    PutPermissionPolicyRequest * const q);

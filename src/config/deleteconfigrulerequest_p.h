@@ -31,7 +31,7 @@ class DeleteConfigRuleRequest;
 class QTAWS_EXPORT DeleteConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DeleteConfigRuleRequestPrivate(const ConfigService::Action action,
+    DeleteConfigRuleRequestPrivate(const ConfigServiceRequest::Action action,
                                    DeleteConfigRuleRequest * const q);
     DeleteConfigRuleRequestPrivate(const DeleteConfigRuleRequestPrivate &other,
                                    DeleteConfigRuleRequest * const q);

@@ -31,7 +31,7 @@ class CreateInputRequest;
 class QTAWS_EXPORT CreateInputRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    CreateInputRequestPrivate(const MediaLive::Action action,
+    CreateInputRequestPrivate(const MediaLiveRequest::Action action,
                                    CreateInputRequest * const q);
     CreateInputRequestPrivate(const CreateInputRequestPrivate &other,
                                    CreateInputRequest * const q);

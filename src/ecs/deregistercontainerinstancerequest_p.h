@@ -31,7 +31,7 @@ class DeregisterContainerInstanceRequest;
 class QTAWS_EXPORT DeregisterContainerInstanceRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DeregisterContainerInstanceRequestPrivate(const ECS::Action action,
+    DeregisterContainerInstanceRequestPrivate(const ECSRequest::Action action,
                                    DeregisterContainerInstanceRequest * const q);
     DeregisterContainerInstanceRequestPrivate(const DeregisterContainerInstanceRequestPrivate &other,
                                    DeregisterContainerInstanceRequest * const q);

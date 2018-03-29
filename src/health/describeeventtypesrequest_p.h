@@ -31,7 +31,7 @@ class DescribeEventTypesRequest;
 class QTAWS_EXPORT DescribeEventTypesRequestPrivate : public HealthRequestPrivate {
 
 public:
-    DescribeEventTypesRequestPrivate(const Health::Action action,
+    DescribeEventTypesRequestPrivate(const HealthRequest::Action action,
                                    DescribeEventTypesRequest * const q);
     DescribeEventTypesRequestPrivate(const DescribeEventTypesRequestPrivate &other,
                                    DescribeEventTypesRequest * const q);

@@ -31,7 +31,7 @@ class DescribeBudgetsRequest;
 class QTAWS_EXPORT DescribeBudgetsRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    DescribeBudgetsRequestPrivate(const Budgets::Action action,
+    DescribeBudgetsRequestPrivate(const BudgetsRequest::Action action,
                                    DescribeBudgetsRequest * const q);
     DescribeBudgetsRequestPrivate(const DescribeBudgetsRequestPrivate &other,
                                    DescribeBudgetsRequest * const q);

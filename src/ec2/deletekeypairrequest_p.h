@@ -31,7 +31,7 @@ class DeleteKeyPairRequest;
 class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteKeyPairRequestPrivate(const EC2::Action action,
+    DeleteKeyPairRequestPrivate(const EC2Request::Action action,
                                    DeleteKeyPairRequest * const q);
     DeleteKeyPairRequestPrivate(const DeleteKeyPairRequestPrivate &other,
                                    DeleteKeyPairRequest * const q);

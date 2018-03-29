@@ -31,7 +31,7 @@ class UpdateJobRequest;
 class QTAWS_EXPORT UpdateJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
-    UpdateJobRequestPrivate(const ImportExport::Action action,
+    UpdateJobRequestPrivate(const ImportExportRequest::Action action,
                                    UpdateJobRequest * const q);
     UpdateJobRequestPrivate(const UpdateJobRequestPrivate &other,
                                    UpdateJobRequest * const q);

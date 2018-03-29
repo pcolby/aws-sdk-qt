@@ -31,7 +31,7 @@ class RemoveThingFromThingGroupRequest;
 class QTAWS_EXPORT RemoveThingFromThingGroupRequestPrivate : public IoTRequestPrivate {
 
 public:
-    RemoveThingFromThingGroupRequestPrivate(const IoT::Action action,
+    RemoveThingFromThingGroupRequestPrivate(const IoTRequest::Action action,
                                    RemoveThingFromThingGroupRequest * const q);
     RemoveThingFromThingGroupRequestPrivate(const RemoveThingFromThingGroupRequestPrivate &other,
                                    RemoveThingFromThingGroupRequest * const q);

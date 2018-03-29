@@ -31,7 +31,7 @@ class CreateServiceLinkedRoleRequest;
 class QTAWS_EXPORT CreateServiceLinkedRoleRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateServiceLinkedRoleRequestPrivate(const IAM::Action action,
+    CreateServiceLinkedRoleRequestPrivate(const IAMRequest::Action action,
                                    CreateServiceLinkedRoleRequest * const q);
     CreateServiceLinkedRoleRequestPrivate(const CreateServiceLinkedRoleRequestPrivate &other,
                                    CreateServiceLinkedRoleRequest * const q);

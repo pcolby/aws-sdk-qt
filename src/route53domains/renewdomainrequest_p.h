@@ -31,7 +31,7 @@ class RenewDomainRequest;
 class QTAWS_EXPORT RenewDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    RenewDomainRequestPrivate(const Route53Domains::Action action,
+    RenewDomainRequestPrivate(const Route53DomainsRequest::Action action,
                                    RenewDomainRequest * const q);
     RenewDomainRequestPrivate(const RenewDomainRequestPrivate &other,
                                    RenewDomainRequest * const q);

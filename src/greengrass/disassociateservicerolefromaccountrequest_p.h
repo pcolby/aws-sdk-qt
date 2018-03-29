@@ -31,7 +31,7 @@ class DisassociateServiceRoleFromAccountRequest;
 class QTAWS_EXPORT DisassociateServiceRoleFromAccountRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DisassociateServiceRoleFromAccountRequestPrivate(const Greengrass::Action action,
+    DisassociateServiceRoleFromAccountRequestPrivate(const GreengrassRequest::Action action,
                                    DisassociateServiceRoleFromAccountRequest * const q);
     DisassociateServiceRoleFromAccountRequestPrivate(const DisassociateServiceRoleFromAccountRequestPrivate &other,
                                    DisassociateServiceRoleFromAccountRequest * const q);

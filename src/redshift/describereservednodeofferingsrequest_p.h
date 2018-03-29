@@ -31,7 +31,7 @@ class DescribeReservedNodeOfferingsRequest;
 class QTAWS_EXPORT DescribeReservedNodeOfferingsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeReservedNodeOfferingsRequestPrivate(const Redshift::Action action,
+    DescribeReservedNodeOfferingsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeReservedNodeOfferingsRequest * const q);
     DescribeReservedNodeOfferingsRequestPrivate(const DescribeReservedNodeOfferingsRequestPrivate &other,
                                    DescribeReservedNodeOfferingsRequest * const q);

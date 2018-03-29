@@ -31,7 +31,7 @@ class DescribeActivationsRequest;
 class QTAWS_EXPORT DescribeActivationsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeActivationsRequestPrivate(const SSM::Action action,
+    DescribeActivationsRequestPrivate(const SSMRequest::Action action,
                                    DescribeActivationsRequest * const q);
     DescribeActivationsRequestPrivate(const DescribeActivationsRequestPrivate &other,
                                    DescribeActivationsRequest * const q);

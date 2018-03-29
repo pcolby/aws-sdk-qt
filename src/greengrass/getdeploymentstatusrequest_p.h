@@ -31,7 +31,7 @@ class GetDeploymentStatusRequest;
 class QTAWS_EXPORT GetDeploymentStatusRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetDeploymentStatusRequestPrivate(const Greengrass::Action action,
+    GetDeploymentStatusRequestPrivate(const GreengrassRequest::Action action,
                                    GetDeploymentStatusRequest * const q);
     GetDeploymentStatusRequestPrivate(const GetDeploymentStatusRequestPrivate &other,
                                    GetDeploymentStatusRequest * const q);

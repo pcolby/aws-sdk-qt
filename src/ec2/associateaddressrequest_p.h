@@ -31,7 +31,7 @@ class AssociateAddressRequest;
 class QTAWS_EXPORT AssociateAddressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AssociateAddressRequestPrivate(const EC2::Action action,
+    AssociateAddressRequestPrivate(const EC2Request::Action action,
                                    AssociateAddressRequest * const q);
     AssociateAddressRequestPrivate(const AssociateAddressRequestPrivate &other,
                                    AssociateAddressRequest * const q);

@@ -31,7 +31,7 @@ class PutSchemaFromJsonRequest;
 class QTAWS_EXPORT PutSchemaFromJsonRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    PutSchemaFromJsonRequestPrivate(const CloudDirectory::Action action,
+    PutSchemaFromJsonRequestPrivate(const CloudDirectoryRequest::Action action,
                                    PutSchemaFromJsonRequest * const q);
     PutSchemaFromJsonRequestPrivate(const PutSchemaFromJsonRequestPrivate &other,
                                    PutSchemaFromJsonRequest * const q);

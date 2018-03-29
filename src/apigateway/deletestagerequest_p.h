@@ -31,7 +31,7 @@ class DeleteStageRequest;
 class QTAWS_EXPORT DeleteStageRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteStageRequestPrivate(const APIGateway::Action action,
+    DeleteStageRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteStageRequest * const q);
     DeleteStageRequestPrivate(const DeleteStageRequestPrivate &other,
                                    DeleteStageRequest * const q);

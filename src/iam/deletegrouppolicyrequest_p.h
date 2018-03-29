@@ -31,7 +31,7 @@ class DeleteGroupPolicyRequest;
 class QTAWS_EXPORT DeleteGroupPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteGroupPolicyRequestPrivate(const IAM::Action action,
+    DeleteGroupPolicyRequestPrivate(const IAMRequest::Action action,
                                    DeleteGroupPolicyRequest * const q);
     DeleteGroupPolicyRequestPrivate(const DeleteGroupPolicyRequestPrivate &other,
                                    DeleteGroupPolicyRequest * const q);

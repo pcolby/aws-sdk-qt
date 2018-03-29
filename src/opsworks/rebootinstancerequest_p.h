@@ -31,7 +31,7 @@ class RebootInstanceRequest;
 class QTAWS_EXPORT RebootInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    RebootInstanceRequestPrivate(const OpsWorks::Action action,
+    RebootInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    RebootInstanceRequest * const q);
     RebootInstanceRequestPrivate(const RebootInstanceRequestPrivate &other,
                                    RebootInstanceRequest * const q);

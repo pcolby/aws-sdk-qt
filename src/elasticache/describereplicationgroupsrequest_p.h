@@ -31,7 +31,7 @@ class DescribeReplicationGroupsRequest;
 class QTAWS_EXPORT DescribeReplicationGroupsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeReplicationGroupsRequestPrivate(const ElastiCache::Action action,
+    DescribeReplicationGroupsRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeReplicationGroupsRequest * const q);
     DescribeReplicationGroupsRequestPrivate(const DescribeReplicationGroupsRequestPrivate &other,
                                    DescribeReplicationGroupsRequest * const q);

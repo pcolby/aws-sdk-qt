@@ -31,7 +31,7 @@ class DescribeChannelRequest;
 class QTAWS_EXPORT DescribeChannelRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    DescribeChannelRequestPrivate(const MediaPackage::Action action,
+    DescribeChannelRequestPrivate(const MediaPackageRequest::Action action,
                                    DescribeChannelRequest * const q);
     DescribeChannelRequestPrivate(const DescribeChannelRequestPrivate &other,
                                    DescribeChannelRequest * const q);

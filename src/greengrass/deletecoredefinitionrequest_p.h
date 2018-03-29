@@ -31,7 +31,7 @@ class DeleteCoreDefinitionRequest;
 class QTAWS_EXPORT DeleteCoreDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteCoreDefinitionRequestPrivate(const Greengrass::Action action,
+    DeleteCoreDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteCoreDefinitionRequest * const q);
     DeleteCoreDefinitionRequestPrivate(const DeleteCoreDefinitionRequestPrivate &other,
                                    DeleteCoreDefinitionRequest * const q);

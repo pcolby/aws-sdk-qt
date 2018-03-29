@@ -31,7 +31,7 @@ class ListFacetAttributesRequest;
 class QTAWS_EXPORT ListFacetAttributesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListFacetAttributesRequestPrivate(const CloudDirectory::Action action,
+    ListFacetAttributesRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListFacetAttributesRequest * const q);
     ListFacetAttributesRequestPrivate(const ListFacetAttributesRequestPrivate &other,
                                    ListFacetAttributesRequest * const q);

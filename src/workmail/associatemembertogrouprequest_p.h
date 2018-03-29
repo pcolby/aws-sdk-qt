@@ -31,7 +31,7 @@ class AssociateMemberToGroupRequest;
 class QTAWS_EXPORT AssociateMemberToGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    AssociateMemberToGroupRequestPrivate(const WorkMail::Action action,
+    AssociateMemberToGroupRequestPrivate(const WorkMailRequest::Action action,
                                    AssociateMemberToGroupRequest * const q);
     AssociateMemberToGroupRequestPrivate(const AssociateMemberToGroupRequestPrivate &other,
                                    AssociateMemberToGroupRequest * const q);

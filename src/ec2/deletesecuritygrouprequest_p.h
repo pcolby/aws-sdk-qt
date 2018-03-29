@@ -31,7 +31,7 @@ class DeleteSecurityGroupRequest;
 class QTAWS_EXPORT DeleteSecurityGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteSecurityGroupRequestPrivate(const EC2::Action action,
+    DeleteSecurityGroupRequestPrivate(const EC2Request::Action action,
                                    DeleteSecurityGroupRequest * const q);
     DeleteSecurityGroupRequestPrivate(const DeleteSecurityGroupRequestPrivate &other,
                                    DeleteSecurityGroupRequest * const q);

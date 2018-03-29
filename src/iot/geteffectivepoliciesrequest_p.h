@@ -31,7 +31,7 @@ class GetEffectivePoliciesRequest;
 class QTAWS_EXPORT GetEffectivePoliciesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    GetEffectivePoliciesRequestPrivate(const IoT::Action action,
+    GetEffectivePoliciesRequestPrivate(const IoTRequest::Action action,
                                    GetEffectivePoliciesRequest * const q);
     GetEffectivePoliciesRequestPrivate(const GetEffectivePoliciesRequestPrivate &other,
                                    GetEffectivePoliciesRequest * const q);

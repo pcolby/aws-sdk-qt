@@ -31,7 +31,7 @@ class DisassociateIamInstanceProfileRequest;
 class QTAWS_EXPORT DisassociateIamInstanceProfileRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DisassociateIamInstanceProfileRequestPrivate(const EC2::Action action,
+    DisassociateIamInstanceProfileRequestPrivate(const EC2Request::Action action,
                                    DisassociateIamInstanceProfileRequest * const q);
     DisassociateIamInstanceProfileRequestPrivate(const DisassociateIamInstanceProfileRequestPrivate &other,
                                    DisassociateIamInstanceProfileRequest * const q);

@@ -31,7 +31,7 @@ class TerminateWorkflowExecutionRequest;
 class QTAWS_EXPORT TerminateWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
-    TerminateWorkflowExecutionRequestPrivate(const SWF::Action action,
+    TerminateWorkflowExecutionRequestPrivate(const SWFRequest::Action action,
                                    TerminateWorkflowExecutionRequest * const q);
     TerminateWorkflowExecutionRequestPrivate(const TerminateWorkflowExecutionRequestPrivate &other,
                                    TerminateWorkflowExecutionRequest * const q);

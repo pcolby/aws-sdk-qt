@@ -31,7 +31,7 @@ class CreateRestApiRequest;
 class QTAWS_EXPORT CreateRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    CreateRestApiRequestPrivate(const APIGateway::Action action,
+    CreateRestApiRequestPrivate(const APIGatewayRequest::Action action,
                                    CreateRestApiRequest * const q);
     CreateRestApiRequestPrivate(const CreateRestApiRequestPrivate &other,
                                    CreateRestApiRequest * const q);

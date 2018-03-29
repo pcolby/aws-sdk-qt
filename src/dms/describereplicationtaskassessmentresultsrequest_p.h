@@ -31,7 +31,7 @@ class DescribeReplicationTaskAssessmentResultsRequest;
 class QTAWS_EXPORT DescribeReplicationTaskAssessmentResultsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeReplicationTaskAssessmentResultsRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeReplicationTaskAssessmentResultsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeReplicationTaskAssessmentResultsRequest * const q);
     DescribeReplicationTaskAssessmentResultsRequestPrivate(const DescribeReplicationTaskAssessmentResultsRequestPrivate &other,
                                    DescribeReplicationTaskAssessmentResultsRequest * const q);

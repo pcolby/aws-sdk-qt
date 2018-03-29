@@ -31,7 +31,7 @@ class AcceptHandshakeRequest;
 class QTAWS_EXPORT AcceptHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    AcceptHandshakeRequestPrivate(const Organizations::Action action,
+    AcceptHandshakeRequestPrivate(const OrganizationsRequest::Action action,
                                    AcceptHandshakeRequest * const q);
     AcceptHandshakeRequestPrivate(const AcceptHandshakeRequestPrivate &other,
                                    AcceptHandshakeRequest * const q);

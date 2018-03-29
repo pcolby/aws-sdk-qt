@@ -31,7 +31,7 @@ class GetAuthorizerRequest;
 class QTAWS_EXPORT GetAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetAuthorizerRequestPrivate(const APIGateway::Action action,
+    GetAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
                                    GetAuthorizerRequest * const q);
     GetAuthorizerRequestPrivate(const GetAuthorizerRequestPrivate &other,
                                    GetAuthorizerRequest * const q);

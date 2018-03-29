@@ -31,7 +31,7 @@ class ListTagsForCertificateRequest;
 class QTAWS_EXPORT ListTagsForCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
-    ListTagsForCertificateRequestPrivate(const ACM::Action action,
+    ListTagsForCertificateRequestPrivate(const ACMRequest::Action action,
                                    ListTagsForCertificateRequest * const q);
     ListTagsForCertificateRequestPrivate(const ListTagsForCertificateRequestPrivate &other,
                                    ListTagsForCertificateRequest * const q);

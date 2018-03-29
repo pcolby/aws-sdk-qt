@@ -31,7 +31,7 @@ class UpdateGameSessionQueueRequest;
 class QTAWS_EXPORT UpdateGameSessionQueueRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateGameSessionQueueRequestPrivate(const GameLift::Action action,
+    UpdateGameSessionQueueRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateGameSessionQueueRequest * const q);
     UpdateGameSessionQueueRequestPrivate(const UpdateGameSessionQueueRequestPrivate &other,
                                    UpdateGameSessionQueueRequest * const q);

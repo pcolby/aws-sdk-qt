@@ -31,7 +31,7 @@ class TerminateProvisionedProductRequest;
 class QTAWS_EXPORT TerminateProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    TerminateProvisionedProductRequestPrivate(const ServiceCatalog::Action action,
+    TerminateProvisionedProductRequestPrivate(const ServiceCatalogRequest::Action action,
                                    TerminateProvisionedProductRequest * const q);
     TerminateProvisionedProductRequestPrivate(const TerminateProvisionedProductRequestPrivate &other,
                                    TerminateProvisionedProductRequest * const q);

@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const EFS::Action action,
+    DescribeTagsRequestPrivate(const EFSRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

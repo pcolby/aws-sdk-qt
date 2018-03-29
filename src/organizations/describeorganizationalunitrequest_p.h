@@ -31,7 +31,7 @@ class DescribeOrganizationalUnitRequest;
 class QTAWS_EXPORT DescribeOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    DescribeOrganizationalUnitRequestPrivate(const Organizations::Action action,
+    DescribeOrganizationalUnitRequestPrivate(const OrganizationsRequest::Action action,
                                    DescribeOrganizationalUnitRequest * const q);
     DescribeOrganizationalUnitRequestPrivate(const DescribeOrganizationalUnitRequestPrivate &other,
                                    DescribeOrganizationalUnitRequest * const q);

@@ -31,7 +31,7 @@ class DeleteCertificateRequest;
 class QTAWS_EXPORT DeleteCertificateRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DeleteCertificateRequestPrivate(const DatabaseMigrationService::Action action,
+    DeleteCertificateRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DeleteCertificateRequest * const q);
     DeleteCertificateRequestPrivate(const DeleteCertificateRequestPrivate &other,
                                    DeleteCertificateRequest * const q);

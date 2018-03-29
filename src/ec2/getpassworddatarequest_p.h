@@ -31,7 +31,7 @@ class GetPasswordDataRequest;
 class QTAWS_EXPORT GetPasswordDataRequestPrivate : public EC2RequestPrivate {
 
 public:
-    GetPasswordDataRequestPrivate(const EC2::Action action,
+    GetPasswordDataRequestPrivate(const EC2Request::Action action,
                                    GetPasswordDataRequest * const q);
     GetPasswordDataRequestPrivate(const GetPasswordDataRequestPrivate &other,
                                    GetPasswordDataRequest * const q);

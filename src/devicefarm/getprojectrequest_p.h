@@ -31,7 +31,7 @@ class GetProjectRequest;
 class QTAWS_EXPORT GetProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetProjectRequestPrivate(const DeviceFarm::Action action,
+    GetProjectRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetProjectRequest * const q);
     GetProjectRequestPrivate(const GetProjectRequestPrivate &other,
                                    GetProjectRequest * const q);

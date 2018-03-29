@@ -31,7 +31,7 @@ class AcceptMatchRequest;
 class QTAWS_EXPORT AcceptMatchRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    AcceptMatchRequestPrivate(const GameLift::Action action,
+    AcceptMatchRequestPrivate(const GameLiftRequest::Action action,
                                    AcceptMatchRequest * const q);
     AcceptMatchRequestPrivate(const AcceptMatchRequestPrivate &other,
                                    AcceptMatchRequest * const q);

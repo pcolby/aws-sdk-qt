@@ -31,7 +31,7 @@ class UpgradeAppliedSchemaRequest;
 class QTAWS_EXPORT UpgradeAppliedSchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    UpgradeAppliedSchemaRequestPrivate(const CloudDirectory::Action action,
+    UpgradeAppliedSchemaRequestPrivate(const CloudDirectoryRequest::Action action,
                                    UpgradeAppliedSchemaRequest * const q);
     UpgradeAppliedSchemaRequestPrivate(const UpgradeAppliedSchemaRequestPrivate &other,
                                    UpgradeAppliedSchemaRequest * const q);

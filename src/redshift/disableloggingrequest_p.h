@@ -31,7 +31,7 @@ class DisableLoggingRequest;
 class QTAWS_EXPORT DisableLoggingRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DisableLoggingRequestPrivate(const Redshift::Action action,
+    DisableLoggingRequestPrivate(const RedshiftRequest::Action action,
                                    DisableLoggingRequest * const q);
     DisableLoggingRequestPrivate(const DisableLoggingRequestPrivate &other,
                                    DisableLoggingRequest * const q);

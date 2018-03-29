@@ -31,7 +31,7 @@ class DeleteDestinationRequest;
 class QTAWS_EXPORT DeleteDestinationRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteDestinationRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteDestinationRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteDestinationRequest * const q);
     DeleteDestinationRequestPrivate(const DeleteDestinationRequestPrivate &other,
                                    DeleteDestinationRequest * const q);

@@ -31,7 +31,7 @@ class UpdateTriggerRequest;
 class QTAWS_EXPORT UpdateTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateTriggerRequestPrivate(const Glue::Action action,
+    UpdateTriggerRequestPrivate(const GlueRequest::Action action,
                                    UpdateTriggerRequest * const q);
     UpdateTriggerRequestPrivate(const UpdateTriggerRequestPrivate &other,
                                    UpdateTriggerRequest * const q);

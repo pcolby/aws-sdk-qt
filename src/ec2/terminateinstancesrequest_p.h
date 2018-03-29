@@ -31,7 +31,7 @@ class TerminateInstancesRequest;
 class QTAWS_EXPORT TerminateInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    TerminateInstancesRequestPrivate(const EC2::Action action,
+    TerminateInstancesRequestPrivate(const EC2Request::Action action,
                                    TerminateInstancesRequest * const q);
     TerminateInstancesRequestPrivate(const TerminateInstancesRequestPrivate &other,
                                    TerminateInstancesRequest * const q);

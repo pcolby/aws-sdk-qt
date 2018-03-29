@@ -31,7 +31,7 @@ class RegisterCrossAccountAccessRoleRequest;
 class QTAWS_EXPORT RegisterCrossAccountAccessRoleRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    RegisterCrossAccountAccessRoleRequestPrivate(const Inspector::Action action,
+    RegisterCrossAccountAccessRoleRequestPrivate(const InspectorRequest::Action action,
                                    RegisterCrossAccountAccessRoleRequest * const q);
     RegisterCrossAccountAccessRoleRequestPrivate(const RegisterCrossAccountAccessRoleRequestPrivate &other,
                                    RegisterCrossAccountAccessRoleRequest * const q);

@@ -31,7 +31,7 @@ class ListBucketAnalyticsConfigurationsRequest;
 class QTAWS_EXPORT ListBucketAnalyticsConfigurationsRequestPrivate : public S3RequestPrivate {
 
 public:
-    ListBucketAnalyticsConfigurationsRequestPrivate(const S3::Action action,
+    ListBucketAnalyticsConfigurationsRequestPrivate(const S3Request::Action action,
                                    ListBucketAnalyticsConfigurationsRequest * const q);
     ListBucketAnalyticsConfigurationsRequestPrivate(const ListBucketAnalyticsConfigurationsRequestPrivate &other,
                                    ListBucketAnalyticsConfigurationsRequest * const q);

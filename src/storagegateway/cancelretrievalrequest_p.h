@@ -31,7 +31,7 @@ class CancelRetrievalRequest;
 class QTAWS_EXPORT CancelRetrievalRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CancelRetrievalRequestPrivate(const StorageGateway::Action action,
+    CancelRetrievalRequestPrivate(const StorageGatewayRequest::Action action,
                                    CancelRetrievalRequest * const q);
     CancelRetrievalRequestPrivate(const CancelRetrievalRequestPrivate &other,
                                    CancelRetrievalRequest * const q);

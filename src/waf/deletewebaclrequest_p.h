@@ -31,7 +31,7 @@ class DeleteWebACLRequest;
 class QTAWS_EXPORT DeleteWebACLRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteWebACLRequestPrivate(const WAF::Action action,
+    DeleteWebACLRequestPrivate(const WAFRequest::Action action,
                                    DeleteWebACLRequest * const q);
     DeleteWebACLRequestPrivate(const DeleteWebACLRequestPrivate &other,
                                    DeleteWebACLRequest * const q);

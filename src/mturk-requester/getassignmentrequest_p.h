@@ -31,7 +31,7 @@ class GetAssignmentRequest;
 class QTAWS_EXPORT GetAssignmentRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    GetAssignmentRequestPrivate(const MTurk::Action action,
+    GetAssignmentRequestPrivate(const MTurkRequest::Action action,
                                    GetAssignmentRequest * const q);
     GetAssignmentRequestPrivate(const GetAssignmentRequestPrivate &other,
                                    GetAssignmentRequest * const q);

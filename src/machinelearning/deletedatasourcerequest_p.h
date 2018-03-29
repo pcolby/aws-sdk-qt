@@ -31,7 +31,7 @@ class DeleteDataSourceRequest;
 class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DeleteDataSourceRequestPrivate(const MachineLearning::Action action,
+    DeleteDataSourceRequestPrivate(const MachineLearningRequest::Action action,
                                    DeleteDataSourceRequest * const q);
     DeleteDataSourceRequestPrivate(const DeleteDataSourceRequestPrivate &other,
                                    DeleteDataSourceRequest * const q);

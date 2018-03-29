@@ -31,7 +31,7 @@ class UpdateClientCertificateRequest;
 class QTAWS_EXPORT UpdateClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateClientCertificateRequestPrivate(const APIGateway::Action action,
+    UpdateClientCertificateRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateClientCertificateRequest * const q);
     UpdateClientCertificateRequestPrivate(const UpdateClientCertificateRequestPrivate &other,
                                    UpdateClientCertificateRequest * const q);

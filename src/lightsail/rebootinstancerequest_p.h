@@ -31,7 +31,7 @@ class RebootInstanceRequest;
 class QTAWS_EXPORT RebootInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    RebootInstanceRequestPrivate(const Lightsail::Action action,
+    RebootInstanceRequestPrivate(const LightsailRequest::Action action,
                                    RebootInstanceRequest * const q);
     RebootInstanceRequestPrivate(const RebootInstanceRequestPrivate &other,
                                    RebootInstanceRequest * const q);

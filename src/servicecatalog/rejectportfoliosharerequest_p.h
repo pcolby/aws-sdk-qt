@@ -31,7 +31,7 @@ class RejectPortfolioShareRequest;
 class QTAWS_EXPORT RejectPortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    RejectPortfolioShareRequestPrivate(const ServiceCatalog::Action action,
+    RejectPortfolioShareRequestPrivate(const ServiceCatalogRequest::Action action,
                                    RejectPortfolioShareRequest * const q);
     RejectPortfolioShareRequestPrivate(const RejectPortfolioShareRequestPrivate &other,
                                    RejectPortfolioShareRequest * const q);

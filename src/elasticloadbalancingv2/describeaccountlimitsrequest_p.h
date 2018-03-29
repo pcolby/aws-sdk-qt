@@ -31,7 +31,7 @@ class DescribeAccountLimitsRequest;
 class QTAWS_EXPORT DescribeAccountLimitsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeAccountLimitsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeAccountLimitsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeAccountLimitsRequest * const q);
     DescribeAccountLimitsRequestPrivate(const DescribeAccountLimitsRequestPrivate &other,
                                    DescribeAccountLimitsRequest * const q);

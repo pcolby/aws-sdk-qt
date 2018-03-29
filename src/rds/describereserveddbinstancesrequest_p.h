@@ -31,7 +31,7 @@ class DescribeReservedDBInstancesRequest;
 class QTAWS_EXPORT DescribeReservedDBInstancesRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeReservedDBInstancesRequestPrivate(const RDS::Action action,
+    DescribeReservedDBInstancesRequestPrivate(const RDSRequest::Action action,
                                    DescribeReservedDBInstancesRequest * const q);
     DescribeReservedDBInstancesRequestPrivate(const DescribeReservedDBInstancesRequestPrivate &other,
                                    DescribeReservedDBInstancesRequest * const q);

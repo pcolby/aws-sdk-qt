@@ -31,7 +31,7 @@ class RenewOfferingRequest;
 class QTAWS_EXPORT RenewOfferingRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    RenewOfferingRequestPrivate(const DeviceFarm::Action action,
+    RenewOfferingRequestPrivate(const DeviceFarmRequest::Action action,
                                    RenewOfferingRequest * const q);
     RenewOfferingRequestPrivate(const RenewOfferingRequestPrivate &other,
                                    RenewOfferingRequest * const q);

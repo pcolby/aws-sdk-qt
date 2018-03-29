@@ -31,7 +31,7 @@ class GetDomainDetailRequest;
 class QTAWS_EXPORT GetDomainDetailRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    GetDomainDetailRequestPrivate(const Route53Domains::Action action,
+    GetDomainDetailRequestPrivate(const Route53DomainsRequest::Action action,
                                    GetDomainDetailRequest * const q);
     GetDomainDetailRequestPrivate(const GetDomainDetailRequestPrivate &other,
                                    GetDomainDetailRequest * const q);

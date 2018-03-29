@@ -31,7 +31,7 @@ class BatchWriteRequest;
 class QTAWS_EXPORT BatchWriteRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    BatchWriteRequestPrivate(const CloudDirectory::Action action,
+    BatchWriteRequestPrivate(const CloudDirectoryRequest::Action action,
                                    BatchWriteRequest * const q);
     BatchWriteRequestPrivate(const BatchWriteRequestPrivate &other,
                                    BatchWriteRequest * const q);

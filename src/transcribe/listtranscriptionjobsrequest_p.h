@@ -31,7 +31,7 @@ class ListTranscriptionJobsRequest;
 class QTAWS_EXPORT ListTranscriptionJobsRequestPrivate : public TranscribeServiceRequestPrivate {
 
 public:
-    ListTranscriptionJobsRequestPrivate(const TranscribeService::Action action,
+    ListTranscriptionJobsRequestPrivate(const TranscribeServiceRequest::Action action,
                                    ListTranscriptionJobsRequest * const q);
     ListTranscriptionJobsRequestPrivate(const ListTranscriptionJobsRequestPrivate &other,
                                    ListTranscriptionJobsRequest * const q);

@@ -31,7 +31,7 @@ class ApplySchemaRequest;
 class QTAWS_EXPORT ApplySchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ApplySchemaRequestPrivate(const CloudDirectory::Action action,
+    ApplySchemaRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ApplySchemaRequest * const q);
     ApplySchemaRequestPrivate(const ApplySchemaRequestPrivate &other,
                                    ApplySchemaRequest * const q);

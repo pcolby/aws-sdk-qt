@@ -31,7 +31,7 @@ class GetOperationsForResourceRequest;
 class QTAWS_EXPORT GetOperationsForResourceRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetOperationsForResourceRequestPrivate(const Lightsail::Action action,
+    GetOperationsForResourceRequestPrivate(const LightsailRequest::Action action,
                                    GetOperationsForResourceRequest * const q);
     GetOperationsForResourceRequestPrivate(const GetOperationsForResourceRequestPrivate &other,
                                    GetOperationsForResourceRequest * const q);

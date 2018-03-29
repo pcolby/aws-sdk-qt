@@ -31,7 +31,7 @@ class DescribeEventsRequest;
 class QTAWS_EXPORT DescribeEventsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const ElastiCache::Action action,
+    DescribeEventsRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);

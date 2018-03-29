@@ -31,7 +31,7 @@ class RestartAppServerRequest;
 class QTAWS_EXPORT RestartAppServerRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    RestartAppServerRequestPrivate(const ElasticBeanstalk::Action action,
+    RestartAppServerRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    RestartAppServerRequest * const q);
     RestartAppServerRequestPrivate(const RestartAppServerRequestPrivate &other,
                                    RestartAppServerRequest * const q);

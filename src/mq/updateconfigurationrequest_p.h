@@ -31,7 +31,7 @@ class UpdateConfigurationRequest;
 class QTAWS_EXPORT UpdateConfigurationRequestPrivate : public MQRequestPrivate {
 
 public:
-    UpdateConfigurationRequestPrivate(const MQ::Action action,
+    UpdateConfigurationRequestPrivate(const MQRequest::Action action,
                                    UpdateConfigurationRequest * const q);
     UpdateConfigurationRequestPrivate(const UpdateConfigurationRequestPrivate &other,
                                    UpdateConfigurationRequest * const q);

@@ -31,7 +31,7 @@ class PurchaseProvisionedCapacityRequest;
 class QTAWS_EXPORT PurchaseProvisionedCapacityRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    PurchaseProvisionedCapacityRequestPrivate(const Glacier::Action action,
+    PurchaseProvisionedCapacityRequestPrivate(const GlacierRequest::Action action,
                                    PurchaseProvisionedCapacityRequest * const q);
     PurchaseProvisionedCapacityRequestPrivate(const PurchaseProvisionedCapacityRequestPrivate &other,
                                    PurchaseProvisionedCapacityRequest * const q);

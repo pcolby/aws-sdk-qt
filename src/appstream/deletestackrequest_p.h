@@ -31,7 +31,7 @@ class DeleteStackRequest;
 class QTAWS_EXPORT DeleteStackRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DeleteStackRequestPrivate(const AppStream::Action action,
+    DeleteStackRequestPrivate(const AppStreamRequest::Action action,
                                    DeleteStackRequest * const q);
     DeleteStackRequestPrivate(const DeleteStackRequestPrivate &other,
                                    DeleteStackRequest * const q);

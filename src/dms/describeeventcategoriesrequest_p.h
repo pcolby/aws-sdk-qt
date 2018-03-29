@@ -31,7 +31,7 @@ class DescribeEventCategoriesRequest;
 class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeEventCategoriesRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeEventCategoriesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeEventCategoriesRequest * const q);
     DescribeEventCategoriesRequestPrivate(const DescribeEventCategoriesRequestPrivate &other,
                                    DescribeEventCategoriesRequest * const q);

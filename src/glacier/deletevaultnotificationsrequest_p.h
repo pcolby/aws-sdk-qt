@@ -31,7 +31,7 @@ class DeleteVaultNotificationsRequest;
 class QTAWS_EXPORT DeleteVaultNotificationsRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    DeleteVaultNotificationsRequestPrivate(const Glacier::Action action,
+    DeleteVaultNotificationsRequestPrivate(const GlacierRequest::Action action,
                                    DeleteVaultNotificationsRequest * const q);
     DeleteVaultNotificationsRequestPrivate(const DeleteVaultNotificationsRequestPrivate &other,
                                    DeleteVaultNotificationsRequest * const q);

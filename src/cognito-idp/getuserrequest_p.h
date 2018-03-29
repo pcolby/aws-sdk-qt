@@ -31,7 +31,7 @@ class GetUserRequest;
 class QTAWS_EXPORT GetUserRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetUserRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetUserRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetUserRequest * const q);
     GetUserRequestPrivate(const GetUserRequestPrivate &other,
                                    GetUserRequest * const q);

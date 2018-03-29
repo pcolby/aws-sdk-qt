@@ -31,7 +31,7 @@ class UpdateVpcLinkRequest;
 class QTAWS_EXPORT UpdateVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateVpcLinkRequestPrivate(const APIGateway::Action action,
+    UpdateVpcLinkRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateVpcLinkRequest * const q);
     UpdateVpcLinkRequestPrivate(const UpdateVpcLinkRequestPrivate &other,
                                    UpdateVpcLinkRequest * const q);

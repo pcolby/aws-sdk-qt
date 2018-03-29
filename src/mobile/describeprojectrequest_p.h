@@ -31,7 +31,7 @@ class DescribeProjectRequest;
 class QTAWS_EXPORT DescribeProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
-    DescribeProjectRequestPrivate(const Mobile::Action action,
+    DescribeProjectRequestPrivate(const MobileRequest::Action action,
                                    DescribeProjectRequest * const q);
     DescribeProjectRequestPrivate(const DescribeProjectRequestPrivate &other,
                                    DescribeProjectRequest * const q);

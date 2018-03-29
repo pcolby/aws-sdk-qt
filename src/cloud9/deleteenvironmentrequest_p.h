@@ -31,7 +31,7 @@ class DeleteEnvironmentRequest;
 class QTAWS_EXPORT DeleteEnvironmentRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    DeleteEnvironmentRequestPrivate(const Cloud9::Action action,
+    DeleteEnvironmentRequestPrivate(const Cloud9Request::Action action,
                                    DeleteEnvironmentRequest * const q);
     DeleteEnvironmentRequestPrivate(const DeleteEnvironmentRequestPrivate &other,
                                    DeleteEnvironmentRequest * const q);

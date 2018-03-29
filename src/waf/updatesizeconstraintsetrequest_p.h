@@ -31,7 +31,7 @@ class UpdateSizeConstraintSetRequest;
 class QTAWS_EXPORT UpdateSizeConstraintSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    UpdateSizeConstraintSetRequestPrivate(const WAF::Action action,
+    UpdateSizeConstraintSetRequestPrivate(const WAFRequest::Action action,
                                    UpdateSizeConstraintSetRequest * const q);
     UpdateSizeConstraintSetRequestPrivate(const UpdateSizeConstraintSetRequestPrivate &other,
                                    UpdateSizeConstraintSetRequest * const q);

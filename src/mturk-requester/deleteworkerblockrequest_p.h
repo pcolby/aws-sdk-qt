@@ -31,7 +31,7 @@ class DeleteWorkerBlockRequest;
 class QTAWS_EXPORT DeleteWorkerBlockRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    DeleteWorkerBlockRequestPrivate(const MTurk::Action action,
+    DeleteWorkerBlockRequestPrivate(const MTurkRequest::Action action,
                                    DeleteWorkerBlockRequest * const q);
     DeleteWorkerBlockRequestPrivate(const DeleteWorkerBlockRequestPrivate &other,
                                    DeleteWorkerBlockRequest * const q);

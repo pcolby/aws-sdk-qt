@@ -31,7 +31,7 @@ class CreateDistributionWithTagsRequest;
 class QTAWS_EXPORT CreateDistributionWithTagsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    CreateDistributionWithTagsRequestPrivate(const CloudFront::Action action,
+    CreateDistributionWithTagsRequestPrivate(const CloudFrontRequest::Action action,
                                    CreateDistributionWithTagsRequest * const q);
     CreateDistributionWithTagsRequestPrivate(const CreateDistributionWithTagsRequestPrivate &other,
                                    CreateDistributionWithTagsRequest * const q);

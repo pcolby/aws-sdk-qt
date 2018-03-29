@@ -31,7 +31,7 @@ class AssociateIamInstanceProfileRequest;
 class QTAWS_EXPORT AssociateIamInstanceProfileRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AssociateIamInstanceProfileRequestPrivate(const EC2::Action action,
+    AssociateIamInstanceProfileRequestPrivate(const EC2Request::Action action,
                                    AssociateIamInstanceProfileRequest * const q);
     AssociateIamInstanceProfileRequestPrivate(const AssociateIamInstanceProfileRequestPrivate &other,
                                    AssociateIamInstanceProfileRequest * const q);

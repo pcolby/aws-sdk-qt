@@ -31,7 +31,7 @@ class GetSessionTokenRequest;
 class QTAWS_EXPORT GetSessionTokenRequestPrivate : public STSRequestPrivate {
 
 public:
-    GetSessionTokenRequestPrivate(const STS::Action action,
+    GetSessionTokenRequestPrivate(const STSRequest::Action action,
                                    GetSessionTokenRequest * const q);
     GetSessionTokenRequestPrivate(const GetSessionTokenRequestPrivate &other,
                                    GetSessionTokenRequest * const q);

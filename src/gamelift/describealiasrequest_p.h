@@ -31,7 +31,7 @@ class DescribeAliasRequest;
 class QTAWS_EXPORT DescribeAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeAliasRequestPrivate(const GameLift::Action action,
+    DescribeAliasRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeAliasRequest * const q);
     DescribeAliasRequestPrivate(const DescribeAliasRequestPrivate &other,
                                    DescribeAliasRequest * const q);

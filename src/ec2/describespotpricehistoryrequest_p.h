@@ -31,7 +31,7 @@ class DescribeSpotPriceHistoryRequest;
 class QTAWS_EXPORT DescribeSpotPriceHistoryRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSpotPriceHistoryRequestPrivate(const EC2::Action action,
+    DescribeSpotPriceHistoryRequestPrivate(const EC2Request::Action action,
                                    DescribeSpotPriceHistoryRequest * const q);
     DescribeSpotPriceHistoryRequestPrivate(const DescribeSpotPriceHistoryRequestPrivate &other,
                                    DescribeSpotPriceHistoryRequest * const q);

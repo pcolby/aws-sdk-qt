@@ -31,7 +31,7 @@ class DeleteSpotDatafeedSubscriptionRequest;
 class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteSpotDatafeedSubscriptionRequestPrivate(const EC2::Action action,
+    DeleteSpotDatafeedSubscriptionRequestPrivate(const EC2Request::Action action,
                                    DeleteSpotDatafeedSubscriptionRequest * const q);
     DeleteSpotDatafeedSubscriptionRequestPrivate(const DeleteSpotDatafeedSubscriptionRequestPrivate &other,
                                    DeleteSpotDatafeedSubscriptionRequest * const q);

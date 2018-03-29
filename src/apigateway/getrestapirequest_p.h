@@ -31,7 +31,7 @@ class GetRestApiRequest;
 class QTAWS_EXPORT GetRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetRestApiRequestPrivate(const APIGateway::Action action,
+    GetRestApiRequestPrivate(const APIGatewayRequest::Action action,
                                    GetRestApiRequest * const q);
     GetRestApiRequestPrivate(const GetRestApiRequestPrivate &other,
                                    GetRestApiRequest * const q);

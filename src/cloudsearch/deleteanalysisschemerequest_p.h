@@ -31,7 +31,7 @@ class DeleteAnalysisSchemeRequest;
 class QTAWS_EXPORT DeleteAnalysisSchemeRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DeleteAnalysisSchemeRequestPrivate(const CloudSearch::Action action,
+    DeleteAnalysisSchemeRequestPrivate(const CloudSearchRequest::Action action,
                                    DeleteAnalysisSchemeRequest * const q);
     DeleteAnalysisSchemeRequestPrivate(const DeleteAnalysisSchemeRequestPrivate &other,
                                    DeleteAnalysisSchemeRequest * const q);

@@ -31,7 +31,7 @@ class ListXssMatchSetsRequest;
 class QTAWS_EXPORT ListXssMatchSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
-    ListXssMatchSetsRequestPrivate(const WAF::Action action,
+    ListXssMatchSetsRequestPrivate(const WAFRequest::Action action,
                                    ListXssMatchSetsRequest * const q);
     ListXssMatchSetsRequestPrivate(const ListXssMatchSetsRequestPrivate &other,
                                    ListXssMatchSetsRequest * const q);

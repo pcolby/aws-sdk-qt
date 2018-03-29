@@ -31,7 +31,7 @@ class ListServicesRequest;
 class QTAWS_EXPORT ListServicesRequestPrivate : public ECSRequestPrivate {
 
 public:
-    ListServicesRequestPrivate(const ECS::Action action,
+    ListServicesRequestPrivate(const ECSRequest::Action action,
                                    ListServicesRequest * const q);
     ListServicesRequestPrivate(const ListServicesRequestPrivate &other,
                                    ListServicesRequest * const q);

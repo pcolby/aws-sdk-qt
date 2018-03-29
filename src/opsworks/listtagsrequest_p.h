@@ -31,7 +31,7 @@ class ListTagsRequest;
 class QTAWS_EXPORT ListTagsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const OpsWorks::Action action,
+    ListTagsRequestPrivate(const OpsWorksRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

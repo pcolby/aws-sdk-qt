@@ -31,7 +31,7 @@ class CreateFpgaImageRequest;
 class QTAWS_EXPORT CreateFpgaImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateFpgaImageRequestPrivate(const EC2::Action action,
+    CreateFpgaImageRequestPrivate(const EC2Request::Action action,
                                    CreateFpgaImageRequest * const q);
     CreateFpgaImageRequestPrivate(const CreateFpgaImageRequestPrivate &other,
                                    CreateFpgaImageRequest * const q);

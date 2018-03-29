@@ -31,7 +31,7 @@ class DisassociateCreatedArtifactRequest;
 class QTAWS_EXPORT DisassociateCreatedArtifactRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    DisassociateCreatedArtifactRequestPrivate(const MigrationHub::Action action,
+    DisassociateCreatedArtifactRequestPrivate(const MigrationHubRequest::Action action,
                                    DisassociateCreatedArtifactRequest * const q);
     DisassociateCreatedArtifactRequestPrivate(const DisassociateCreatedArtifactRequestPrivate &other,
                                    DisassociateCreatedArtifactRequest * const q);

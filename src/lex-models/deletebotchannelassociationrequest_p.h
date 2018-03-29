@@ -31,7 +31,7 @@ class DeleteBotChannelAssociationRequest;
 class QTAWS_EXPORT DeleteBotChannelAssociationRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteBotChannelAssociationRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteBotChannelAssociationRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteBotChannelAssociationRequest * const q);
     DeleteBotChannelAssociationRequestPrivate(const DeleteBotChannelAssociationRequestPrivate &other,
                                    DeleteBotChannelAssociationRequest * const q);

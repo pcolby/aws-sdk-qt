@@ -31,7 +31,7 @@ class CreateCustomMetadataRequest;
 class QTAWS_EXPORT CreateCustomMetadataRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    CreateCustomMetadataRequestPrivate(const WorkDocs::Action action,
+    CreateCustomMetadataRequestPrivate(const WorkDocsRequest::Action action,
                                    CreateCustomMetadataRequest * const q);
     CreateCustomMetadataRequestPrivate(const CreateCustomMetadataRequestPrivate &other,
                                    CreateCustomMetadataRequest * const q);

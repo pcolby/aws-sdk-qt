@@ -31,7 +31,7 @@ class GetTelemetryMetadataRequest;
 class QTAWS_EXPORT GetTelemetryMetadataRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    GetTelemetryMetadataRequestPrivate(const Inspector::Action action,
+    GetTelemetryMetadataRequestPrivate(const InspectorRequest::Action action,
                                    GetTelemetryMetadataRequest * const q);
     GetTelemetryMetadataRequestPrivate(const GetTelemetryMetadataRequestPrivate &other,
                                    GetTelemetryMetadataRequest * const q);

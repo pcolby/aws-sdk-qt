@@ -31,7 +31,7 @@ class PutSubscriptionFilterRequest;
 class QTAWS_EXPORT PutSubscriptionFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    PutSubscriptionFilterRequestPrivate(const CloudWatchLogs::Action action,
+    PutSubscriptionFilterRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    PutSubscriptionFilterRequest * const q);
     PutSubscriptionFilterRequestPrivate(const PutSubscriptionFilterRequestPrivate &other,
                                    PutSubscriptionFilterRequest * const q);

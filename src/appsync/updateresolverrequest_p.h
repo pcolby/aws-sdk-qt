@@ -31,7 +31,7 @@ class UpdateResolverRequest;
 class QTAWS_EXPORT UpdateResolverRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    UpdateResolverRequestPrivate(const AppSync::Action action,
+    UpdateResolverRequestPrivate(const AppSyncRequest::Action action,
                                    UpdateResolverRequest * const q);
     UpdateResolverRequestPrivate(const UpdateResolverRequestPrivate &other,
                                    UpdateResolverRequest * const q);

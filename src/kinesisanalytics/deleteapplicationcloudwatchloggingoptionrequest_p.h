@@ -31,7 +31,7 @@ class DeleteApplicationCloudWatchLoggingOptionRequest;
 class QTAWS_EXPORT DeleteApplicationCloudWatchLoggingOptionRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    DeleteApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalytics::Action action,
+    DeleteApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    DeleteApplicationCloudWatchLoggingOptionRequest * const q);
     DeleteApplicationCloudWatchLoggingOptionRequestPrivate(const DeleteApplicationCloudWatchLoggingOptionRequestPrivate &other,
                                    DeleteApplicationCloudWatchLoggingOptionRequest * const q);

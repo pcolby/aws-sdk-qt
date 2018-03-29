@@ -31,7 +31,7 @@ class GetCallerIdentityRequest;
 class QTAWS_EXPORT GetCallerIdentityRequestPrivate : public STSRequestPrivate {
 
 public:
-    GetCallerIdentityRequestPrivate(const STS::Action action,
+    GetCallerIdentityRequestPrivate(const STSRequest::Action action,
                                    GetCallerIdentityRequest * const q);
     GetCallerIdentityRequestPrivate(const GetCallerIdentityRequestPrivate &other,
                                    GetCallerIdentityRequest * const q);

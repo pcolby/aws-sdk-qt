@@ -31,7 +31,7 @@ class TestFailoverRequest;
 class QTAWS_EXPORT TestFailoverRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    TestFailoverRequestPrivate(const ElastiCache::Action action,
+    TestFailoverRequestPrivate(const ElastiCacheRequest::Action action,
                                    TestFailoverRequest * const q);
     TestFailoverRequestPrivate(const TestFailoverRequestPrivate &other,
                                    TestFailoverRequest * const q);

@@ -31,7 +31,7 @@ class DetachInternetGatewayRequest;
 class QTAWS_EXPORT DetachInternetGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DetachInternetGatewayRequestPrivate(const EC2::Action action,
+    DetachInternetGatewayRequestPrivate(const EC2Request::Action action,
                                    DetachInternetGatewayRequest * const q);
     DetachInternetGatewayRequestPrivate(const DetachInternetGatewayRequestPrivate &other,
                                    DetachInternetGatewayRequest * const q);

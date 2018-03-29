@@ -31,7 +31,7 @@ class DeleteTagsRequest;
 class QTAWS_EXPORT DeleteTagsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const EFS::Action action,
+    DeleteTagsRequestPrivate(const EFSRequest::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);

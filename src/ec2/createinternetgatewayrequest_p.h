@@ -31,7 +31,7 @@ class CreateInternetGatewayRequest;
 class QTAWS_EXPORT CreateInternetGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateInternetGatewayRequestPrivate(const EC2::Action action,
+    CreateInternetGatewayRequestPrivate(const EC2Request::Action action,
                                    CreateInternetGatewayRequest * const q);
     CreateInternetGatewayRequestPrivate(const CreateInternetGatewayRequestPrivate &other,
                                    CreateInternetGatewayRequest * const q);

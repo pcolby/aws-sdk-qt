@@ -31,7 +31,7 @@ class CreateCloudFrontOriginAccessIdentityRequest;
 class QTAWS_EXPORT CreateCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    CreateCloudFrontOriginAccessIdentityRequestPrivate(const CloudFront::Action action,
+    CreateCloudFrontOriginAccessIdentityRequestPrivate(const CloudFrontRequest::Action action,
                                    CreateCloudFrontOriginAccessIdentityRequest * const q);
     CreateCloudFrontOriginAccessIdentityRequestPrivate(const CreateCloudFrontOriginAccessIdentityRequestPrivate &other,
                                    CreateCloudFrontOriginAccessIdentityRequest * const q);

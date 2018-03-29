@@ -31,7 +31,7 @@ class AssociateRoleToGroupRequest;
 class QTAWS_EXPORT AssociateRoleToGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    AssociateRoleToGroupRequestPrivate(const Greengrass::Action action,
+    AssociateRoleToGroupRequestPrivate(const GreengrassRequest::Action action,
                                    AssociateRoleToGroupRequest * const q);
     AssociateRoleToGroupRequestPrivate(const AssociateRoleToGroupRequestPrivate &other,
                                    AssociateRoleToGroupRequest * const q);

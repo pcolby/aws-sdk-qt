@@ -31,7 +31,7 @@ class DeleteLogGroupRequest;
 class QTAWS_EXPORT DeleteLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteLogGroupRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteLogGroupRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteLogGroupRequest * const q);
     DeleteLogGroupRequestPrivate(const DeleteLogGroupRequestPrivate &other,
                                    DeleteLogGroupRequest * const q);

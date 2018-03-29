@@ -31,7 +31,7 @@ class DeleteQueryLoggingConfigRequest;
 class QTAWS_EXPORT DeleteQueryLoggingConfigRequestPrivate : public Route53RequestPrivate {
 
 public:
-    DeleteQueryLoggingConfigRequestPrivate(const Route53::Action action,
+    DeleteQueryLoggingConfigRequestPrivate(const Route53Request::Action action,
                                    DeleteQueryLoggingConfigRequest * const q);
     DeleteQueryLoggingConfigRequestPrivate(const DeleteQueryLoggingConfigRequestPrivate &other,
                                    DeleteQueryLoggingConfigRequest * const q);

@@ -31,7 +31,7 @@ class GetExportRequest;
 class QTAWS_EXPORT GetExportRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetExportRequestPrivate(const APIGateway::Action action,
+    GetExportRequestPrivate(const APIGatewayRequest::Action action,
                                    GetExportRequest * const q);
     GetExportRequestPrivate(const GetExportRequestPrivate &other,
                                    GetExportRequest * const q);

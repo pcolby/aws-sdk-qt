@@ -31,7 +31,7 @@ class DescribeCertificateRequest;
 class QTAWS_EXPORT DescribeCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
-    DescribeCertificateRequestPrivate(const ACM::Action action,
+    DescribeCertificateRequestPrivate(const ACMRequest::Action action,
                                    DescribeCertificateRequest * const q);
     DescribeCertificateRequestPrivate(const DescribeCertificateRequestPrivate &other,
                                    DescribeCertificateRequest * const q);

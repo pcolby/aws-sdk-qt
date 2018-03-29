@@ -31,7 +31,7 @@ class DefineSuggesterRequest;
 class QTAWS_EXPORT DefineSuggesterRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DefineSuggesterRequestPrivate(const CloudSearch::Action action,
+    DefineSuggesterRequestPrivate(const CloudSearchRequest::Action action,
                                    DefineSuggesterRequest * const q);
     DefineSuggesterRequestPrivate(const DefineSuggesterRequestPrivate &other,
                                    DefineSuggesterRequest * const q);

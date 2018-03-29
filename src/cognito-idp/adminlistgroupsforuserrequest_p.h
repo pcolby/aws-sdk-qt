@@ -31,7 +31,7 @@ class AdminListGroupsForUserRequest;
 class QTAWS_EXPORT AdminListGroupsForUserRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminListGroupsForUserRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminListGroupsForUserRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminListGroupsForUserRequest * const q);
     AdminListGroupsForUserRequestPrivate(const AdminListGroupsForUserRequestPrivate &other,
                                    AdminListGroupsForUserRequest * const q);

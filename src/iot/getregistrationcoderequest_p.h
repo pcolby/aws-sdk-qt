@@ -31,7 +31,7 @@ class GetRegistrationCodeRequest;
 class QTAWS_EXPORT GetRegistrationCodeRequestPrivate : public IoTRequestPrivate {
 
 public:
-    GetRegistrationCodeRequestPrivate(const IoT::Action action,
+    GetRegistrationCodeRequestPrivate(const IoTRequest::Action action,
                                    GetRegistrationCodeRequest * const q);
     GetRegistrationCodeRequestPrivate(const GetRegistrationCodeRequestPrivate &other,
                                    GetRegistrationCodeRequest * const q);

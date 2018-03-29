@@ -31,7 +31,7 @@ class DescribeEndpointsRequest;
 class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeEndpointsRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeEndpointsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeEndpointsRequest * const q);
     DescribeEndpointsRequestPrivate(const DescribeEndpointsRequestPrivate &other,
                                    DescribeEndpointsRequest * const q);

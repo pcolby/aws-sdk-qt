@@ -31,7 +31,7 @@ class DeletePipelineRequest;
 class QTAWS_EXPORT DeletePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    DeletePipelineRequestPrivate(const ElasticTranscoder::Action action,
+    DeletePipelineRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    DeletePipelineRequest * const q);
     DeletePipelineRequestPrivate(const DeletePipelineRequestPrivate &other,
                                    DeletePipelineRequest * const q);

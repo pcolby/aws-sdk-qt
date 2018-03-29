@@ -31,7 +31,7 @@ class AttachDiskRequest;
 class QTAWS_EXPORT AttachDiskRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    AttachDiskRequestPrivate(const Lightsail::Action action,
+    AttachDiskRequestPrivate(const LightsailRequest::Action action,
                                    AttachDiskRequest * const q);
     AttachDiskRequestPrivate(const AttachDiskRequestPrivate &other,
                                    AttachDiskRequest * const q);

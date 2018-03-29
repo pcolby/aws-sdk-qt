@@ -31,7 +31,7 @@ class DescribeLoadBalancersRequest;
 class QTAWS_EXPORT DescribeLoadBalancersRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeLoadBalancersRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeLoadBalancersRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeLoadBalancersRequest * const q);
     DescribeLoadBalancersRequestPrivate(const DescribeLoadBalancersRequestPrivate &other,
                                    DescribeLoadBalancersRequest * const q);

@@ -31,7 +31,7 @@ class NotifyApplicationStateRequest;
 class QTAWS_EXPORT NotifyApplicationStateRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    NotifyApplicationStateRequestPrivate(const MigrationHub::Action action,
+    NotifyApplicationStateRequestPrivate(const MigrationHubRequest::Action action,
                                    NotifyApplicationStateRequest * const q);
     NotifyApplicationStateRequestPrivate(const NotifyApplicationStateRequestPrivate &other,
                                    NotifyApplicationStateRequest * const q);

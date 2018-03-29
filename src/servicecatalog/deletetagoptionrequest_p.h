@@ -31,7 +31,7 @@ class DeleteTagOptionRequest;
 class QTAWS_EXPORT DeleteTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeleteTagOptionRequestPrivate(const ServiceCatalog::Action action,
+    DeleteTagOptionRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeleteTagOptionRequest * const q);
     DeleteTagOptionRequestPrivate(const DeleteTagOptionRequestPrivate &other,
                                    DeleteTagOptionRequest * const q);

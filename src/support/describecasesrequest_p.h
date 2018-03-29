@@ -31,7 +31,7 @@ class DescribeCasesRequest;
 class QTAWS_EXPORT DescribeCasesRequestPrivate : public SupportRequestPrivate {
 
 public:
-    DescribeCasesRequestPrivate(const Support::Action action,
+    DescribeCasesRequestPrivate(const SupportRequest::Action action,
                                    DescribeCasesRequest * const q);
     DescribeCasesRequestPrivate(const DescribeCasesRequestPrivate &other,
                                    DescribeCasesRequest * const q);

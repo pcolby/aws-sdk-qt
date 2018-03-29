@@ -31,7 +31,7 @@ class ChangeMessageVisibilityBatchRequest;
 class QTAWS_EXPORT ChangeMessageVisibilityBatchRequestPrivate : public SQSRequestPrivate {
 
 public:
-    ChangeMessageVisibilityBatchRequestPrivate(const SQS::Action action,
+    ChangeMessageVisibilityBatchRequestPrivate(const SQSRequest::Action action,
                                    ChangeMessageVisibilityBatchRequest * const q);
     ChangeMessageVisibilityBatchRequestPrivate(const ChangeMessageVisibilityBatchRequestPrivate &other,
                                    ChangeMessageVisibilityBatchRequest * const q);

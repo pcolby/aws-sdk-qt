@@ -31,7 +31,7 @@ class GetCredentialsForIdentityRequest;
 class QTAWS_EXPORT GetCredentialsForIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    GetCredentialsForIdentityRequestPrivate(const CognitoIdentity::Action action,
+    GetCredentialsForIdentityRequestPrivate(const CognitoIdentityRequest::Action action,
                                    GetCredentialsForIdentityRequest * const q);
     GetCredentialsForIdentityRequestPrivate(const GetCredentialsForIdentityRequestPrivate &other,
                                    GetCredentialsForIdentityRequest * const q);

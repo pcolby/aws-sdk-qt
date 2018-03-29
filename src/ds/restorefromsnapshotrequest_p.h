@@ -31,7 +31,7 @@ class RestoreFromSnapshotRequest;
 class QTAWS_EXPORT RestoreFromSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    RestoreFromSnapshotRequestPrivate(const DirectoryService::Action action,
+    RestoreFromSnapshotRequestPrivate(const DirectoryServiceRequest::Action action,
                                    RestoreFromSnapshotRequest * const q);
     RestoreFromSnapshotRequestPrivate(const RestoreFromSnapshotRequestPrivate &other,
                                    RestoreFromSnapshotRequest * const q);

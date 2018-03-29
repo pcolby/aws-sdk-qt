@@ -31,7 +31,7 @@ class AbortVaultLockRequest;
 class QTAWS_EXPORT AbortVaultLockRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    AbortVaultLockRequestPrivate(const Glacier::Action action,
+    AbortVaultLockRequestPrivate(const GlacierRequest::Action action,
                                    AbortVaultLockRequest * const q);
     AbortVaultLockRequestPrivate(const AbortVaultLockRequestPrivate &other,
                                    AbortVaultLockRequest * const q);

@@ -31,7 +31,7 @@ class CreateVPCAssociationAuthorizationRequest;
 class QTAWS_EXPORT CreateVPCAssociationAuthorizationRequestPrivate : public Route53RequestPrivate {
 
 public:
-    CreateVPCAssociationAuthorizationRequestPrivate(const Route53::Action action,
+    CreateVPCAssociationAuthorizationRequestPrivate(const Route53Request::Action action,
                                    CreateVPCAssociationAuthorizationRequest * const q);
     CreateVPCAssociationAuthorizationRequestPrivate(const CreateVPCAssociationAuthorizationRequestPrivate &other,
                                    CreateVPCAssociationAuthorizationRequest * const q);

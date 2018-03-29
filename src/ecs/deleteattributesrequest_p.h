@@ -31,7 +31,7 @@ class DeleteAttributesRequest;
 class QTAWS_EXPORT DeleteAttributesRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DeleteAttributesRequestPrivate(const ECS::Action action,
+    DeleteAttributesRequestPrivate(const ECSRequest::Action action,
                                    DeleteAttributesRequest * const q);
     DeleteAttributesRequestPrivate(const DeleteAttributesRequestPrivate &other,
                                    DeleteAttributesRequest * const q);

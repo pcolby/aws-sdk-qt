@@ -31,7 +31,7 @@ class DisableDomainAutoRenewRequest;
 class QTAWS_EXPORT DisableDomainAutoRenewRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    DisableDomainAutoRenewRequestPrivate(const Route53Domains::Action action,
+    DisableDomainAutoRenewRequestPrivate(const Route53DomainsRequest::Action action,
                                    DisableDomainAutoRenewRequest * const q);
     DisableDomainAutoRenewRequestPrivate(const DisableDomainAutoRenewRequestPrivate &other,
                                    DisableDomainAutoRenewRequest * const q);

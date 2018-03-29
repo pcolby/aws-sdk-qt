@@ -31,7 +31,7 @@ class RemoveTagsRequest;
 class QTAWS_EXPORT RemoveTagsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const ElasticsearchService::Action action,
+    RemoveTagsRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);

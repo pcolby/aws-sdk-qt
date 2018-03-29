@@ -31,7 +31,7 @@ class ModifyImageAttributeRequest;
 class QTAWS_EXPORT ModifyImageAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyImageAttributeRequestPrivate(const EC2::Action action,
+    ModifyImageAttributeRequestPrivate(const EC2Request::Action action,
                                    ModifyImageAttributeRequest * const q);
     ModifyImageAttributeRequestPrivate(const ModifyImageAttributeRequestPrivate &other,
                                    ModifyImageAttributeRequest * const q);

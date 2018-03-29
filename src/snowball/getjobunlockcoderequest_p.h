@@ -31,7 +31,7 @@ class GetJobUnlockCodeRequest;
 class QTAWS_EXPORT GetJobUnlockCodeRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    GetJobUnlockCodeRequestPrivate(const Snowball::Action action,
+    GetJobUnlockCodeRequestPrivate(const SnowballRequest::Action action,
                                    GetJobUnlockCodeRequest * const q);
     GetJobUnlockCodeRequestPrivate(const GetJobUnlockCodeRequestPrivate &other,
                                    GetJobUnlockCodeRequest * const q);

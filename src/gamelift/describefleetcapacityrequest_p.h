@@ -31,7 +31,7 @@ class DescribeFleetCapacityRequest;
 class QTAWS_EXPORT DescribeFleetCapacityRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeFleetCapacityRequestPrivate(const GameLift::Action action,
+    DescribeFleetCapacityRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeFleetCapacityRequest * const q);
     DescribeFleetCapacityRequestPrivate(const DescribeFleetCapacityRequestPrivate &other,
                                    DescribeFleetCapacityRequest * const q);

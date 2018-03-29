@@ -31,7 +31,7 @@ class ListPoliciesRequest;
 class QTAWS_EXPORT ListPoliciesRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListPoliciesRequestPrivate(const Organizations::Action action,
+    ListPoliciesRequestPrivate(const OrganizationsRequest::Action action,
                                    ListPoliciesRequest * const q);
     ListPoliciesRequestPrivate(const ListPoliciesRequestPrivate &other,
                                    ListPoliciesRequest * const q);

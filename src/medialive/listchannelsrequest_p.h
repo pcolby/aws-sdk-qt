@@ -31,7 +31,7 @@ class ListChannelsRequest;
 class QTAWS_EXPORT ListChannelsRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    ListChannelsRequestPrivate(const MediaLive::Action action,
+    ListChannelsRequestPrivate(const MediaLiveRequest::Action action,
                                    ListChannelsRequest * const q);
     ListChannelsRequestPrivate(const ListChannelsRequestPrivate &other,
                                    ListChannelsRequest * const q);

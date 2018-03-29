@@ -31,7 +31,7 @@ class ListOriginEndpointsRequest;
 class QTAWS_EXPORT ListOriginEndpointsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    ListOriginEndpointsRequestPrivate(const MediaPackage::Action action,
+    ListOriginEndpointsRequestPrivate(const MediaPackageRequest::Action action,
                                    ListOriginEndpointsRequest * const q);
     ListOriginEndpointsRequestPrivate(const ListOriginEndpointsRequestPrivate &other,
                                    ListOriginEndpointsRequest * const q);

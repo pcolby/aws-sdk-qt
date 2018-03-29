@@ -31,7 +31,7 @@ class RemoveAccountFromOrganizationRequest;
 class QTAWS_EXPORT RemoveAccountFromOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    RemoveAccountFromOrganizationRequestPrivate(const Organizations::Action action,
+    RemoveAccountFromOrganizationRequestPrivate(const OrganizationsRequest::Action action,
                                    RemoveAccountFromOrganizationRequest * const q);
     RemoveAccountFromOrganizationRequestPrivate(const RemoveAccountFromOrganizationRequestPrivate &other,
                                    RemoveAccountFromOrganizationRequest * const q);

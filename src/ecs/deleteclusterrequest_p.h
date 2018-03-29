@@ -31,7 +31,7 @@ class DeleteClusterRequest;
 class QTAWS_EXPORT DeleteClusterRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DeleteClusterRequestPrivate(const ECS::Action action,
+    DeleteClusterRequestPrivate(const ECSRequest::Action action,
                                    DeleteClusterRequest * const q);
     DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
                                    DeleteClusterRequest * const q);

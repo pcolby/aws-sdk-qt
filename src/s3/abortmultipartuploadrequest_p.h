@@ -31,7 +31,7 @@ class AbortMultipartUploadRequest;
 class QTAWS_EXPORT AbortMultipartUploadRequestPrivate : public S3RequestPrivate {
 
 public:
-    AbortMultipartUploadRequestPrivate(const S3::Action action,
+    AbortMultipartUploadRequestPrivate(const S3Request::Action action,
                                    AbortMultipartUploadRequest * const q);
     AbortMultipartUploadRequestPrivate(const AbortMultipartUploadRequestPrivate &other,
                                    AbortMultipartUploadRequest * const q);

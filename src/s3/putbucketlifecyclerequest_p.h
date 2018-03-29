@@ -31,7 +31,7 @@ class PutBucketLifecycleRequest;
 class QTAWS_EXPORT PutBucketLifecycleRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketLifecycleRequestPrivate(const S3::Action action,
+    PutBucketLifecycleRequestPrivate(const S3Request::Action action,
                                    PutBucketLifecycleRequest * const q);
     PutBucketLifecycleRequestPrivate(const PutBucketLifecycleRequestPrivate &other,
                                    PutBucketLifecycleRequest * const q);

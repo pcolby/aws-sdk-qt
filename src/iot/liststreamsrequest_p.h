@@ -31,7 +31,7 @@ class ListStreamsRequest;
 class QTAWS_EXPORT ListStreamsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListStreamsRequestPrivate(const IoT::Action action,
+    ListStreamsRequestPrivate(const IoTRequest::Action action,
                                    ListStreamsRequest * const q);
     ListStreamsRequestPrivate(const ListStreamsRequestPrivate &other,
                                    ListStreamsRequest * const q);

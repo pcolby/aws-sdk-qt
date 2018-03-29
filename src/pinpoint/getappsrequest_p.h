@@ -31,7 +31,7 @@ class GetAppsRequest;
 class QTAWS_EXPORT GetAppsRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetAppsRequestPrivate(const Pinpoint::Action action,
+    GetAppsRequestPrivate(const PinpointRequest::Action action,
                                    GetAppsRequest * const q);
     GetAppsRequestPrivate(const GetAppsRequestPrivate &other,
                                    GetAppsRequest * const q);

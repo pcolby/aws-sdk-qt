@@ -31,7 +31,7 @@ class DeleteConnectionRequest;
 class QTAWS_EXPORT DeleteConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DeleteConnectionRequestPrivate(const DirectConnect::Action action,
+    DeleteConnectionRequestPrivate(const DirectConnectRequest::Action action,
                                    DeleteConnectionRequest * const q);
     DeleteConnectionRequestPrivate(const DeleteConnectionRequestPrivate &other,
                                    DeleteConnectionRequest * const q);

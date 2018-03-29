@@ -31,7 +31,7 @@ class GetRecordsRequest;
 class QTAWS_EXPORT GetRecordsRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    GetRecordsRequestPrivate(const Kinesis::Action action,
+    GetRecordsRequestPrivate(const KinesisRequest::Action action,
                                    GetRecordsRequest * const q);
     GetRecordsRequestPrivate(const GetRecordsRequestPrivate &other,
                                    GetRecordsRequest * const q);

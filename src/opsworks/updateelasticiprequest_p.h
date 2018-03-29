@@ -31,7 +31,7 @@ class UpdateElasticIpRequest;
 class QTAWS_EXPORT UpdateElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateElasticIpRequestPrivate(const OpsWorks::Action action,
+    UpdateElasticIpRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateElasticIpRequest * const q);
     UpdateElasticIpRequestPrivate(const UpdateElasticIpRequestPrivate &other,
                                    UpdateElasticIpRequest * const q);

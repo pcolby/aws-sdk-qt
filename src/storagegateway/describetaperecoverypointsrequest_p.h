@@ -31,7 +31,7 @@ class DescribeTapeRecoveryPointsRequest;
 class QTAWS_EXPORT DescribeTapeRecoveryPointsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeTapeRecoveryPointsRequestPrivate(const StorageGateway::Action action,
+    DescribeTapeRecoveryPointsRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeTapeRecoveryPointsRequest * const q);
     DescribeTapeRecoveryPointsRequestPrivate(const DescribeTapeRecoveryPointsRequestPrivate &other,
                                    DescribeTapeRecoveryPointsRequest * const q);

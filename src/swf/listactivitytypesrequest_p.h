@@ -31,7 +31,7 @@ class ListActivityTypesRequest;
 class QTAWS_EXPORT ListActivityTypesRequestPrivate : public SWFRequestPrivate {
 
 public:
-    ListActivityTypesRequestPrivate(const SWF::Action action,
+    ListActivityTypesRequestPrivate(const SWFRequest::Action action,
                                    ListActivityTypesRequest * const q);
     ListActivityTypesRequestPrivate(const ListActivityTypesRequestPrivate &other,
                                    ListActivityTypesRequest * const q);

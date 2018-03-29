@@ -31,7 +31,7 @@ class CancelKeyDeletionRequest;
 class QTAWS_EXPORT CancelKeyDeletionRequestPrivate : public KMSRequestPrivate {
 
 public:
-    CancelKeyDeletionRequestPrivate(const KMS::Action action,
+    CancelKeyDeletionRequestPrivate(const KMSRequest::Action action,
                                    CancelKeyDeletionRequest * const q);
     CancelKeyDeletionRequestPrivate(const CancelKeyDeletionRequestPrivate &other,
                                    CancelKeyDeletionRequest * const q);

@@ -31,7 +31,7 @@ class GetEventStreamRequest;
 class QTAWS_EXPORT GetEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetEventStreamRequestPrivate(const Pinpoint::Action action,
+    GetEventStreamRequestPrivate(const PinpointRequest::Action action,
                                    GetEventStreamRequest * const q);
     GetEventStreamRequestPrivate(const GetEventStreamRequestPrivate &other,
                                    GetEventStreamRequest * const q);

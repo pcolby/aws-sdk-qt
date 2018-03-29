@@ -31,7 +31,7 @@ class ListSigningCertificatesRequest;
 class QTAWS_EXPORT ListSigningCertificatesRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListSigningCertificatesRequestPrivate(const IAM::Action action,
+    ListSigningCertificatesRequestPrivate(const IAMRequest::Action action,
                                    ListSigningCertificatesRequest * const q);
     ListSigningCertificatesRequestPrivate(const ListSigningCertificatesRequestPrivate &other,
                                    ListSigningCertificatesRequest * const q);

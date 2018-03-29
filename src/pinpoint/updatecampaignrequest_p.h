@@ -31,7 +31,7 @@ class UpdateCampaignRequest;
 class QTAWS_EXPORT UpdateCampaignRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateCampaignRequestPrivate(const Pinpoint::Action action,
+    UpdateCampaignRequestPrivate(const PinpointRequest::Action action,
                                    UpdateCampaignRequest * const q);
     UpdateCampaignRequestPrivate(const UpdateCampaignRequestPrivate &other,
                                    UpdateCampaignRequest * const q);

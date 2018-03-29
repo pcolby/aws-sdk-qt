@@ -31,7 +31,7 @@ class SetV2LoggingOptionsRequest;
 class QTAWS_EXPORT SetV2LoggingOptionsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    SetV2LoggingOptionsRequestPrivate(const IoT::Action action,
+    SetV2LoggingOptionsRequestPrivate(const IoTRequest::Action action,
                                    SetV2LoggingOptionsRequest * const q);
     SetV2LoggingOptionsRequestPrivate(const SetV2LoggingOptionsRequestPrivate &other,
                                    SetV2LoggingOptionsRequest * const q);

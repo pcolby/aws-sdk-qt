@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const Lambda::Action action,
+    TagResourceRequestPrivate(const LambdaRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

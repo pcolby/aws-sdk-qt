@@ -31,7 +31,7 @@ class AdminSetUserSettingsRequest;
 class QTAWS_EXPORT AdminSetUserSettingsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminSetUserSettingsRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminSetUserSettingsRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminSetUserSettingsRequest * const q);
     AdminSetUserSettingsRequestPrivate(const AdminSetUserSettingsRequestPrivate &other,
                                    AdminSetUserSettingsRequest * const q);

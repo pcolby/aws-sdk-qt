@@ -31,7 +31,7 @@ class SendTaskSuccessRequest;
 class QTAWS_EXPORT SendTaskSuccessRequestPrivate : public SFNRequestPrivate {
 
 public:
-    SendTaskSuccessRequestPrivate(const SFN::Action action,
+    SendTaskSuccessRequestPrivate(const SFNRequest::Action action,
                                    SendTaskSuccessRequest * const q);
     SendTaskSuccessRequestPrivate(const SendTaskSuccessRequestPrivate &other,
                                    SendTaskSuccessRequest * const q);

@@ -31,7 +31,7 @@ class UpdatePullRequestStatusRequest;
 class QTAWS_EXPORT UpdatePullRequestStatusRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    UpdatePullRequestStatusRequestPrivate(const CodeCommit::Action action,
+    UpdatePullRequestStatusRequestPrivate(const CodeCommitRequest::Action action,
                                    UpdatePullRequestStatusRequest * const q);
     UpdatePullRequestStatusRequestPrivate(const UpdatePullRequestStatusRequestPrivate &other,
                                    UpdatePullRequestStatusRequest * const q);

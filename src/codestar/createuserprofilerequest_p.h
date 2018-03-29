@@ -31,7 +31,7 @@ class CreateUserProfileRequest;
 class QTAWS_EXPORT CreateUserProfileRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    CreateUserProfileRequestPrivate(const CodeStar::Action action,
+    CreateUserProfileRequestPrivate(const CodeStarRequest::Action action,
                                    CreateUserProfileRequest * const q);
     CreateUserProfileRequestPrivate(const CreateUserProfileRequestPrivate &other,
                                    CreateUserProfileRequest * const q);

@@ -31,7 +31,7 @@ class EnableMFADeviceRequest;
 class QTAWS_EXPORT EnableMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
-    EnableMFADeviceRequestPrivate(const IAM::Action action,
+    EnableMFADeviceRequestPrivate(const IAMRequest::Action action,
                                    EnableMFADeviceRequest * const q);
     EnableMFADeviceRequestPrivate(const EnableMFADeviceRequestPrivate &other,
                                    EnableMFADeviceRequest * const q);

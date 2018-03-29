@@ -31,7 +31,7 @@ class RequestSpotInstancesRequest;
 class QTAWS_EXPORT RequestSpotInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RequestSpotInstancesRequestPrivate(const EC2::Action action,
+    RequestSpotInstancesRequestPrivate(const EC2Request::Action action,
                                    RequestSpotInstancesRequest * const q);
     RequestSpotInstancesRequestPrivate(const RequestSpotInstancesRequestPrivate &other,
                                    RequestSpotInstancesRequest * const q);

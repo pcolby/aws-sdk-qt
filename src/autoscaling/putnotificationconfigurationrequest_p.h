@@ -31,7 +31,7 @@ class PutNotificationConfigurationRequest;
 class QTAWS_EXPORT PutNotificationConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    PutNotificationConfigurationRequestPrivate(const AutoScaling::Action action,
+    PutNotificationConfigurationRequestPrivate(const AutoScalingRequest::Action action,
                                    PutNotificationConfigurationRequest * const q);
     PutNotificationConfigurationRequestPrivate(const PutNotificationConfigurationRequestPrivate &other,
                                    PutNotificationConfigurationRequest * const q);

@@ -31,7 +31,7 @@ class RetrieveDomainAuthCodeRequest;
 class QTAWS_EXPORT RetrieveDomainAuthCodeRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    RetrieveDomainAuthCodeRequestPrivate(const Route53Domains::Action action,
+    RetrieveDomainAuthCodeRequestPrivate(const Route53DomainsRequest::Action action,
                                    RetrieveDomainAuthCodeRequest * const q);
     RetrieveDomainAuthCodeRequestPrivate(const RetrieveDomainAuthCodeRequestPrivate &other,
                                    RetrieveDomainAuthCodeRequest * const q);

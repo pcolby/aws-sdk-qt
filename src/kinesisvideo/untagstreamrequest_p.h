@@ -31,7 +31,7 @@ class UntagStreamRequest;
 class QTAWS_EXPORT UntagStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
-    UntagStreamRequestPrivate(const KinesisVideo::Action action,
+    UntagStreamRequestPrivate(const KinesisVideoRequest::Action action,
                                    UntagStreamRequest * const q);
     UntagStreamRequestPrivate(const UntagStreamRequestPrivate &other,
                                    UntagStreamRequest * const q);

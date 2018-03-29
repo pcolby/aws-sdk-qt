@@ -31,7 +31,7 @@ class DeleteAppRequest;
 class QTAWS_EXPORT DeleteAppRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteAppRequestPrivate(const Pinpoint::Action action,
+    DeleteAppRequestPrivate(const PinpointRequest::Action action,
                                    DeleteAppRequest * const q);
     DeleteAppRequestPrivate(const DeleteAppRequestPrivate &other,
                                    DeleteAppRequest * const q);

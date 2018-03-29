@@ -31,7 +31,7 @@ class GetGraphqlApiRequest;
 class QTAWS_EXPORT GetGraphqlApiRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    GetGraphqlApiRequestPrivate(const AppSync::Action action,
+    GetGraphqlApiRequestPrivate(const AppSyncRequest::Action action,
                                    GetGraphqlApiRequest * const q);
     GetGraphqlApiRequestPrivate(const GetGraphqlApiRequestPrivate &other,
                                    GetGraphqlApiRequest * const q);

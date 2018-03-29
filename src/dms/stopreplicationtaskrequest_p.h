@@ -31,7 +31,7 @@ class StopReplicationTaskRequest;
 class QTAWS_EXPORT StopReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    StopReplicationTaskRequestPrivate(const DatabaseMigrationService::Action action,
+    StopReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    StopReplicationTaskRequest * const q);
     StopReplicationTaskRequestPrivate(const StopReplicationTaskRequestPrivate &other,
                                    StopReplicationTaskRequest * const q);

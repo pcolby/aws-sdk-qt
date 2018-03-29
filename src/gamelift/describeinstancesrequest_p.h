@@ -31,7 +31,7 @@ class DescribeInstancesRequest;
 class QTAWS_EXPORT DescribeInstancesRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeInstancesRequestPrivate(const GameLift::Action action,
+    DescribeInstancesRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeInstancesRequest * const q);
     DescribeInstancesRequestPrivate(const DescribeInstancesRequestPrivate &other,
                                    DescribeInstancesRequest * const q);

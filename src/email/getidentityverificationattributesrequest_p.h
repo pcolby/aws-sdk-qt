@@ -31,7 +31,7 @@ class GetIdentityVerificationAttributesRequest;
 class QTAWS_EXPORT GetIdentityVerificationAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
-    GetIdentityVerificationAttributesRequestPrivate(const SES::Action action,
+    GetIdentityVerificationAttributesRequestPrivate(const SESRequest::Action action,
                                    GetIdentityVerificationAttributesRequest * const q);
     GetIdentityVerificationAttributesRequestPrivate(const GetIdentityVerificationAttributesRequestPrivate &other,
                                    GetIdentityVerificationAttributesRequest * const q);

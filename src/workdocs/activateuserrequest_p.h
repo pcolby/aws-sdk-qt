@@ -31,7 +31,7 @@ class ActivateUserRequest;
 class QTAWS_EXPORT ActivateUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    ActivateUserRequestPrivate(const WorkDocs::Action action,
+    ActivateUserRequestPrivate(const WorkDocsRequest::Action action,
                                    ActivateUserRequest * const q);
     ActivateUserRequestPrivate(const ActivateUserRequestPrivate &other,
                                    ActivateUserRequest * const q);

@@ -31,7 +31,7 @@ class DescribeMaintenanceStartTimeRequest;
 class QTAWS_EXPORT DescribeMaintenanceStartTimeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeMaintenanceStartTimeRequestPrivate(const StorageGateway::Action action,
+    DescribeMaintenanceStartTimeRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeMaintenanceStartTimeRequest * const q);
     DescribeMaintenanceStartTimeRequestPrivate(const DescribeMaintenanceStartTimeRequestPrivate &other,
                                    DescribeMaintenanceStartTimeRequest * const q);

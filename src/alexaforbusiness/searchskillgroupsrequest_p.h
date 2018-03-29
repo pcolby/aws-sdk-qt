@@ -31,7 +31,7 @@ class SearchSkillGroupsRequest;
 class QTAWS_EXPORT SearchSkillGroupsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    SearchSkillGroupsRequestPrivate(const AlexaForBusiness::Action action,
+    SearchSkillGroupsRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    SearchSkillGroupsRequest * const q);
     SearchSkillGroupsRequestPrivate(const SearchSkillGroupsRequestPrivate &other,
                                    SearchSkillGroupsRequest * const q);

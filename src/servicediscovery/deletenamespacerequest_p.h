@@ -31,7 +31,7 @@ class DeleteNamespaceRequest;
 class QTAWS_EXPORT DeleteNamespaceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    DeleteNamespaceRequestPrivate(const ServiceDiscovery::Action action,
+    DeleteNamespaceRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    DeleteNamespaceRequest * const q);
     DeleteNamespaceRequestPrivate(const DeleteNamespaceRequestPrivate &other,
                                    DeleteNamespaceRequest * const q);

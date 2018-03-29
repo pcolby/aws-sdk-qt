@@ -31,7 +31,7 @@ class ModifyRuleRequest;
 class QTAWS_EXPORT ModifyRuleRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    ModifyRuleRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    ModifyRuleRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    ModifyRuleRequest * const q);
     ModifyRuleRequestPrivate(const ModifyRuleRequestPrivate &other,
                                    ModifyRuleRequest * const q);

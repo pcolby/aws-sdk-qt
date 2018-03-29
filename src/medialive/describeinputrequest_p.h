@@ -31,7 +31,7 @@ class DescribeInputRequest;
 class QTAWS_EXPORT DescribeInputRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    DescribeInputRequestPrivate(const MediaLive::Action action,
+    DescribeInputRequestPrivate(const MediaLiveRequest::Action action,
                                    DescribeInputRequest * const q);
     DescribeInputRequestPrivate(const DescribeInputRequestPrivate &other,
                                    DescribeInputRequest * const q);

@@ -31,7 +31,7 @@ class DeleteNetworkInterfacePermissionRequest;
 class QTAWS_EXPORT DeleteNetworkInterfacePermissionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteNetworkInterfacePermissionRequestPrivate(const EC2::Action action,
+    DeleteNetworkInterfacePermissionRequestPrivate(const EC2Request::Action action,
                                    DeleteNetworkInterfacePermissionRequest * const q);
     DeleteNetworkInterfacePermissionRequestPrivate(const DeleteNetworkInterfacePermissionRequestPrivate &other,
                                    DeleteNetworkInterfacePermissionRequest * const q);

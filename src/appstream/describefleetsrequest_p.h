@@ -31,7 +31,7 @@ class DescribeFleetsRequest;
 class QTAWS_EXPORT DescribeFleetsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DescribeFleetsRequestPrivate(const AppStream::Action action,
+    DescribeFleetsRequestPrivate(const AppStreamRequest::Action action,
                                    DescribeFleetsRequest * const q);
     DescribeFleetsRequestPrivate(const DescribeFleetsRequestPrivate &other,
                                    DescribeFleetsRequest * const q);

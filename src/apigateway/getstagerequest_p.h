@@ -31,7 +31,7 @@ class GetStageRequest;
 class QTAWS_EXPORT GetStageRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetStageRequestPrivate(const APIGateway::Action action,
+    GetStageRequestPrivate(const APIGatewayRequest::Action action,
                                    GetStageRequest * const q);
     GetStageRequestPrivate(const GetStageRequestPrivate &other,
                                    GetStageRequest * const q);

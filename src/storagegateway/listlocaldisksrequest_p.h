@@ -31,7 +31,7 @@ class ListLocalDisksRequest;
 class QTAWS_EXPORT ListLocalDisksRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListLocalDisksRequestPrivate(const StorageGateway::Action action,
+    ListLocalDisksRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListLocalDisksRequest * const q);
     ListLocalDisksRequestPrivate(const ListLocalDisksRequestPrivate &other,
                                    ListLocalDisksRequest * const q);

@@ -31,7 +31,7 @@ class UpdateIndexingConfigurationRequest;
 class QTAWS_EXPORT UpdateIndexingConfigurationRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateIndexingConfigurationRequestPrivate(const IoT::Action action,
+    UpdateIndexingConfigurationRequestPrivate(const IoTRequest::Action action,
                                    UpdateIndexingConfigurationRequest * const q);
     UpdateIndexingConfigurationRequestPrivate(const UpdateIndexingConfigurationRequestPrivate &other,
                                    UpdateIndexingConfigurationRequest * const q);

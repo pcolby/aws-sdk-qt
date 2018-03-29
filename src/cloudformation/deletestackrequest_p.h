@@ -31,7 +31,7 @@ class DeleteStackRequest;
 class QTAWS_EXPORT DeleteStackRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    DeleteStackRequestPrivate(const CloudFormation::Action action,
+    DeleteStackRequestPrivate(const CloudFormationRequest::Action action,
                                    DeleteStackRequest * const q);
     DeleteStackRequestPrivate(const DeleteStackRequestPrivate &other,
                                    DeleteStackRequest * const q);

@@ -31,7 +31,7 @@ class DeleteReplicationGroupRequest;
 class QTAWS_EXPORT DeleteReplicationGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DeleteReplicationGroupRequestPrivate(const ElastiCache::Action action,
+    DeleteReplicationGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    DeleteReplicationGroupRequest * const q);
     DeleteReplicationGroupRequestPrivate(const DeleteReplicationGroupRequestPrivate &other,
                                    DeleteReplicationGroupRequest * const q);

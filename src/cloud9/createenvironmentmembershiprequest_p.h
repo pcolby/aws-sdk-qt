@@ -31,7 +31,7 @@ class CreateEnvironmentMembershipRequest;
 class QTAWS_EXPORT CreateEnvironmentMembershipRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    CreateEnvironmentMembershipRequestPrivate(const Cloud9::Action action,
+    CreateEnvironmentMembershipRequestPrivate(const Cloud9Request::Action action,
                                    CreateEnvironmentMembershipRequest * const q);
     CreateEnvironmentMembershipRequestPrivate(const CreateEnvironmentMembershipRequestPrivate &other,
                                    CreateEnvironmentMembershipRequest * const q);

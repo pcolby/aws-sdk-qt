@@ -31,7 +31,7 @@ class DeleteCertificateRequest;
 class QTAWS_EXPORT DeleteCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
-    DeleteCertificateRequestPrivate(const ACM::Action action,
+    DeleteCertificateRequestPrivate(const ACMRequest::Action action,
                                    DeleteCertificateRequest * const q);
     DeleteCertificateRequestPrivate(const DeleteCertificateRequestPrivate &other,
                                    DeleteCertificateRequest * const q);

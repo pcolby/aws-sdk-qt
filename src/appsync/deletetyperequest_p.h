@@ -31,7 +31,7 @@ class DeleteTypeRequest;
 class QTAWS_EXPORT DeleteTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    DeleteTypeRequestPrivate(const AppSync::Action action,
+    DeleteTypeRequestPrivate(const AppSyncRequest::Action action,
                                    DeleteTypeRequest * const q);
     DeleteTypeRequestPrivate(const DeleteTypeRequestPrivate &other,
                                    DeleteTypeRequest * const q);

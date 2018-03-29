@@ -31,7 +31,7 @@ class DescribeClusterSubnetGroupsRequest;
 class QTAWS_EXPORT DescribeClusterSubnetGroupsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeClusterSubnetGroupsRequestPrivate(const Redshift::Action action,
+    DescribeClusterSubnetGroupsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeClusterSubnetGroupsRequest * const q);
     DescribeClusterSubnetGroupsRequestPrivate(const DescribeClusterSubnetGroupsRequestPrivate &other,
                                    DescribeClusterSubnetGroupsRequest * const q);

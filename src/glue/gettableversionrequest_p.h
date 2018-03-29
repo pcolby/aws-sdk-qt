@@ -31,7 +31,7 @@ class GetTableVersionRequest;
 class QTAWS_EXPORT GetTableVersionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetTableVersionRequestPrivate(const Glue::Action action,
+    GetTableVersionRequestPrivate(const GlueRequest::Action action,
                                    GetTableVersionRequest * const q);
     GetTableVersionRequestPrivate(const GetTableVersionRequestPrivate &other,
                                    GetTableVersionRequest * const q);

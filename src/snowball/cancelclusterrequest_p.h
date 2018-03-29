@@ -31,7 +31,7 @@ class CancelClusterRequest;
 class QTAWS_EXPORT CancelClusterRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    CancelClusterRequestPrivate(const Snowball::Action action,
+    CancelClusterRequestPrivate(const SnowballRequest::Action action,
                                    CancelClusterRequest * const q);
     CancelClusterRequestPrivate(const CancelClusterRequestPrivate &other,
                                    CancelClusterRequest * const q);

@@ -31,7 +31,7 @@ class ListActivitiesRequest;
 class QTAWS_EXPORT ListActivitiesRequestPrivate : public SFNRequestPrivate {
 
 public:
-    ListActivitiesRequestPrivate(const SFN::Action action,
+    ListActivitiesRequestPrivate(const SFNRequest::Action action,
                                    ListActivitiesRequest * const q);
     ListActivitiesRequestPrivate(const ListActivitiesRequestPrivate &other,
                                    ListActivitiesRequest * const q);

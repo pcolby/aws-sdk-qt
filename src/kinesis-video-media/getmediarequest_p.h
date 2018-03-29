@@ -31,7 +31,7 @@ class GetMediaRequest;
 class QTAWS_EXPORT GetMediaRequestPrivate : public KinesisVideoMediaRequestPrivate {
 
 public:
-    GetMediaRequestPrivate(const KinesisVideoMedia::Action action,
+    GetMediaRequestPrivate(const KinesisVideoMediaRequest::Action action,
                                    GetMediaRequest * const q);
     GetMediaRequestPrivate(const GetMediaRequestPrivate &other,
                                    GetMediaRequest * const q);

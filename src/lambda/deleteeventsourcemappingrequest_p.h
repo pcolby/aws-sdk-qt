@@ -31,7 +31,7 @@ class DeleteEventSourceMappingRequest;
 class QTAWS_EXPORT DeleteEventSourceMappingRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    DeleteEventSourceMappingRequestPrivate(const Lambda::Action action,
+    DeleteEventSourceMappingRequestPrivate(const LambdaRequest::Action action,
                                    DeleteEventSourceMappingRequest * const q);
     DeleteEventSourceMappingRequestPrivate(const DeleteEventSourceMappingRequestPrivate &other,
                                    DeleteEventSourceMappingRequest * const q);

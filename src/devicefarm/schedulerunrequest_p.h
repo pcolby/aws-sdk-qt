@@ -31,7 +31,7 @@ class ScheduleRunRequest;
 class QTAWS_EXPORT ScheduleRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ScheduleRunRequestPrivate(const DeviceFarm::Action action,
+    ScheduleRunRequestPrivate(const DeviceFarmRequest::Action action,
                                    ScheduleRunRequest * const q);
     ScheduleRunRequestPrivate(const ScheduleRunRequestPrivate &other,
                                    ScheduleRunRequest * const q);

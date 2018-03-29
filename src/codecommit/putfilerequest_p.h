@@ -31,7 +31,7 @@ class PutFileRequest;
 class QTAWS_EXPORT PutFileRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    PutFileRequestPrivate(const CodeCommit::Action action,
+    PutFileRequestPrivate(const CodeCommitRequest::Action action,
                                    PutFileRequest * const q);
     PutFileRequestPrivate(const PutFileRequestPrivate &other,
                                    PutFileRequest * const q);

@@ -31,7 +31,7 @@ class ResetPasswordRequest;
 class QTAWS_EXPORT ResetPasswordRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    ResetPasswordRequestPrivate(const WorkMail::Action action,
+    ResetPasswordRequestPrivate(const WorkMailRequest::Action action,
                                    ResetPasswordRequest * const q);
     ResetPasswordRequestPrivate(const ResetPasswordRequestPrivate &other,
                                    ResetPasswordRequest * const q);

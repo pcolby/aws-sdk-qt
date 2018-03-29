@@ -31,7 +31,7 @@ class ListNamespacesRequest;
 class QTAWS_EXPORT ListNamespacesRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    ListNamespacesRequestPrivate(const ServiceDiscovery::Action action,
+    ListNamespacesRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    ListNamespacesRequest * const q);
     ListNamespacesRequestPrivate(const ListNamespacesRequestPrivate &other,
                                    ListNamespacesRequest * const q);

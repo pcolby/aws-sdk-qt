@@ -31,7 +31,7 @@ class ListJobExecutionsForJobRequest;
 class QTAWS_EXPORT ListJobExecutionsForJobRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListJobExecutionsForJobRequestPrivate(const IoT::Action action,
+    ListJobExecutionsForJobRequestPrivate(const IoTRequest::Action action,
                                    ListJobExecutionsForJobRequest * const q);
     ListJobExecutionsForJobRequestPrivate(const ListJobExecutionsForJobRequestPrivate &other,
                                    ListJobExecutionsForJobRequest * const q);

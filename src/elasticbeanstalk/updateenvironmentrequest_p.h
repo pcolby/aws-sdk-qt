@@ -31,7 +31,7 @@ class UpdateEnvironmentRequest;
 class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    UpdateEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,
+    UpdateEnvironmentRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    UpdateEnvironmentRequest * const q);
     UpdateEnvironmentRequestPrivate(const UpdateEnvironmentRequestPrivate &other,
                                    UpdateEnvironmentRequest * const q);

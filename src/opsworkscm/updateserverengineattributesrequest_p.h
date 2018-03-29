@@ -31,7 +31,7 @@ class UpdateServerEngineAttributesRequest;
 class QTAWS_EXPORT UpdateServerEngineAttributesRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    UpdateServerEngineAttributesRequestPrivate(const OpsWorksCM::Action action,
+    UpdateServerEngineAttributesRequestPrivate(const OpsWorksCMRequest::Action action,
                                    UpdateServerEngineAttributesRequest * const q);
     UpdateServerEngineAttributesRequestPrivate(const UpdateServerEngineAttributesRequestPrivate &other,
                                    UpdateServerEngineAttributesRequest * const q);

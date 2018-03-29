@@ -31,7 +31,7 @@ class UpdateConnectionRequest;
 class QTAWS_EXPORT UpdateConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateConnectionRequestPrivate(const Glue::Action action,
+    UpdateConnectionRequestPrivate(const GlueRequest::Action action,
                                    UpdateConnectionRequest * const q);
     UpdateConnectionRequestPrivate(const UpdateConnectionRequestPrivate &other,
                                    UpdateConnectionRequest * const q);

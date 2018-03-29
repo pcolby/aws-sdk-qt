@@ -31,7 +31,7 @@ class CreateEvaluationRequest;
 class QTAWS_EXPORT CreateEvaluationRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    CreateEvaluationRequestPrivate(const MachineLearning::Action action,
+    CreateEvaluationRequestPrivate(const MachineLearningRequest::Action action,
                                    CreateEvaluationRequest * const q);
     CreateEvaluationRequestPrivate(const CreateEvaluationRequestPrivate &other,
                                    CreateEvaluationRequest * const q);

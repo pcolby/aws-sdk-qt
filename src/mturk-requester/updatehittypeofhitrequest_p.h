@@ -31,7 +31,7 @@ class UpdateHITTypeOfHITRequest;
 class QTAWS_EXPORT UpdateHITTypeOfHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    UpdateHITTypeOfHITRequestPrivate(const MTurk::Action action,
+    UpdateHITTypeOfHITRequestPrivate(const MTurkRequest::Action action,
                                    UpdateHITTypeOfHITRequest * const q);
     UpdateHITTypeOfHITRequestPrivate(const UpdateHITTypeOfHITRequestPrivate &other,
                                    UpdateHITTypeOfHITRequest * const q);

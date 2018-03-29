@@ -31,7 +31,7 @@ class GetSubscriptionDefinitionVersionRequest;
 class QTAWS_EXPORT GetSubscriptionDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetSubscriptionDefinitionVersionRequestPrivate(const Greengrass::Action action,
+    GetSubscriptionDefinitionVersionRequestPrivate(const GreengrassRequest::Action action,
                                    GetSubscriptionDefinitionVersionRequest * const q);
     GetSubscriptionDefinitionVersionRequestPrivate(const GetSubscriptionDefinitionVersionRequestPrivate &other,
                                    GetSubscriptionDefinitionVersionRequest * const q);

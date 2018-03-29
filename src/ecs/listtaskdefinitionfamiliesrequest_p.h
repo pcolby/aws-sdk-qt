@@ -31,7 +31,7 @@ class ListTaskDefinitionFamiliesRequest;
 class QTAWS_EXPORT ListTaskDefinitionFamiliesRequestPrivate : public ECSRequestPrivate {
 
 public:
-    ListTaskDefinitionFamiliesRequestPrivate(const ECS::Action action,
+    ListTaskDefinitionFamiliesRequestPrivate(const ECSRequest::Action action,
                                    ListTaskDefinitionFamiliesRequest * const q);
     ListTaskDefinitionFamiliesRequestPrivate(const ListTaskDefinitionFamiliesRequestPrivate &other,
                                    ListTaskDefinitionFamiliesRequest * const q);

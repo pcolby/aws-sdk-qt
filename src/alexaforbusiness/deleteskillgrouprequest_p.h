@@ -31,7 +31,7 @@ class DeleteSkillGroupRequest;
 class QTAWS_EXPORT DeleteSkillGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    DeleteSkillGroupRequestPrivate(const AlexaForBusiness::Action action,
+    DeleteSkillGroupRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    DeleteSkillGroupRequest * const q);
     DeleteSkillGroupRequestPrivate(const DeleteSkillGroupRequestPrivate &other,
                                    DeleteSkillGroupRequest * const q);

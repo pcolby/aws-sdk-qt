@@ -31,7 +31,7 @@ class GetLoggerDefinitionVersionRequest;
 class QTAWS_EXPORT GetLoggerDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetLoggerDefinitionVersionRequestPrivate(const Greengrass::Action action,
+    GetLoggerDefinitionVersionRequestPrivate(const GreengrassRequest::Action action,
                                    GetLoggerDefinitionVersionRequest * const q);
     GetLoggerDefinitionVersionRequestPrivate(const GetLoggerDefinitionVersionRequestPrivate &other,
                                    GetLoggerDefinitionVersionRequest * const q);

@@ -31,7 +31,7 @@ class TagStreamRequest;
 class QTAWS_EXPORT TagStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
-    TagStreamRequestPrivate(const KinesisVideo::Action action,
+    TagStreamRequestPrivate(const KinesisVideoRequest::Action action,
                                    TagStreamRequest * const q);
     TagStreamRequestPrivate(const TagStreamRequestPrivate &other,
                                    TagStreamRequest * const q);

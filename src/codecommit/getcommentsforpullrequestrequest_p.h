@@ -31,7 +31,7 @@ class GetCommentsForPullRequestRequest;
 class QTAWS_EXPORT GetCommentsForPullRequestRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetCommentsForPullRequestRequestPrivate(const CodeCommit::Action action,
+    GetCommentsForPullRequestRequestPrivate(const CodeCommitRequest::Action action,
                                    GetCommentsForPullRequestRequest * const q);
     GetCommentsForPullRequestRequestPrivate(const GetCommentsForPullRequestRequestPrivate &other,
                                    GetCommentsForPullRequestRequest * const q);

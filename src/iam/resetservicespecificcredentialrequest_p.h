@@ -31,7 +31,7 @@ class ResetServiceSpecificCredentialRequest;
 class QTAWS_EXPORT ResetServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ResetServiceSpecificCredentialRequestPrivate(const IAM::Action action,
+    ResetServiceSpecificCredentialRequestPrivate(const IAMRequest::Action action,
                                    ResetServiceSpecificCredentialRequest * const q);
     ResetServiceSpecificCredentialRequestPrivate(const ResetServiceSpecificCredentialRequestPrivate &other,
                                    ResetServiceSpecificCredentialRequest * const q);

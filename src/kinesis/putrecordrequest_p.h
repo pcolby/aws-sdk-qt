@@ -31,7 +31,7 @@ class PutRecordRequest;
 class QTAWS_EXPORT PutRecordRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    PutRecordRequestPrivate(const Kinesis::Action action,
+    PutRecordRequestPrivate(const KinesisRequest::Action action,
                                    PutRecordRequest * const q);
     PutRecordRequestPrivate(const PutRecordRequestPrivate &other,
                                    PutRecordRequest * const q);

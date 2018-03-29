@@ -31,7 +31,7 @@ class ModifyVpcTenancyRequest;
 class QTAWS_EXPORT ModifyVpcTenancyRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyVpcTenancyRequestPrivate(const EC2::Action action,
+    ModifyVpcTenancyRequestPrivate(const EC2Request::Action action,
                                    ModifyVpcTenancyRequest * const q);
     ModifyVpcTenancyRequestPrivate(const ModifyVpcTenancyRequestPrivate &other,
                                    ModifyVpcTenancyRequest * const q);

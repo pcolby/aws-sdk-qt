@@ -31,7 +31,7 @@ class GetTrailStatusRequest;
 class QTAWS_EXPORT GetTrailStatusRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    GetTrailStatusRequestPrivate(const CloudTrail::Action action,
+    GetTrailStatusRequestPrivate(const CloudTrailRequest::Action action,
                                    GetTrailStatusRequest * const q);
     GetTrailStatusRequestPrivate(const GetTrailStatusRequestPrivate &other,
                                    GetTrailStatusRequest * const q);

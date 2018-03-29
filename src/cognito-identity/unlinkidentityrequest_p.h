@@ -31,7 +31,7 @@ class UnlinkIdentityRequest;
 class QTAWS_EXPORT UnlinkIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    UnlinkIdentityRequestPrivate(const CognitoIdentity::Action action,
+    UnlinkIdentityRequestPrivate(const CognitoIdentityRequest::Action action,
                                    UnlinkIdentityRequest * const q);
     UnlinkIdentityRequestPrivate(const UnlinkIdentityRequestPrivate &other,
                                    UnlinkIdentityRequest * const q);

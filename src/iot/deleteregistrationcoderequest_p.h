@@ -31,7 +31,7 @@ class DeleteRegistrationCodeRequest;
 class QTAWS_EXPORT DeleteRegistrationCodeRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteRegistrationCodeRequestPrivate(const IoT::Action action,
+    DeleteRegistrationCodeRequestPrivate(const IoTRequest::Action action,
                                    DeleteRegistrationCodeRequest * const q);
     DeleteRegistrationCodeRequestPrivate(const DeleteRegistrationCodeRequestPrivate &other,
                                    DeleteRegistrationCodeRequest * const q);

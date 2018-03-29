@@ -31,7 +31,7 @@ class DeleteProjectRequest;
 class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    DeleteProjectRequestPrivate(const CodeBuild::Action action,
+    DeleteProjectRequestPrivate(const CodeBuildRequest::Action action,
                                    DeleteProjectRequest * const q);
     DeleteProjectRequestPrivate(const DeleteProjectRequestPrivate &other,
                                    DeleteProjectRequest * const q);

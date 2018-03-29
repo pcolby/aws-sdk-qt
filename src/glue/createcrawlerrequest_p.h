@@ -31,7 +31,7 @@ class CreateCrawlerRequest;
 class QTAWS_EXPORT CreateCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    CreateCrawlerRequestPrivate(const Glue::Action action,
+    CreateCrawlerRequestPrivate(const GlueRequest::Action action,
                                    CreateCrawlerRequest * const q);
     CreateCrawlerRequestPrivate(const CreateCrawlerRequestPrivate &other,
                                    CreateCrawlerRequest * const q);

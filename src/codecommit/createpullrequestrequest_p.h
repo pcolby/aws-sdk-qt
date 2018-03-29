@@ -31,7 +31,7 @@ class CreatePullRequestRequest;
 class QTAWS_EXPORT CreatePullRequestRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    CreatePullRequestRequestPrivate(const CodeCommit::Action action,
+    CreatePullRequestRequestPrivate(const CodeCommitRequest::Action action,
                                    CreatePullRequestRequest * const q);
     CreatePullRequestRequestPrivate(const CreatePullRequestRequestPrivate &other,
                                    CreatePullRequestRequest * const q);

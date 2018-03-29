@@ -31,7 +31,7 @@ class ListTagsForDomainRequest;
 class QTAWS_EXPORT ListTagsForDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    ListTagsForDomainRequestPrivate(const Route53Domains::Action action,
+    ListTagsForDomainRequestPrivate(const Route53DomainsRequest::Action action,
                                    ListTagsForDomainRequest * const q);
     ListTagsForDomainRequestPrivate(const ListTagsForDomainRequestPrivate &other,
                                    ListTagsForDomainRequest * const q);

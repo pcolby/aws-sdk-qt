@@ -31,7 +31,7 @@ class DeleteCloudFrontOriginAccessIdentityRequest;
 class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    DeleteCloudFrontOriginAccessIdentityRequestPrivate(const CloudFront::Action action,
+    DeleteCloudFrontOriginAccessIdentityRequestPrivate(const CloudFrontRequest::Action action,
                                    DeleteCloudFrontOriginAccessIdentityRequest * const q);
     DeleteCloudFrontOriginAccessIdentityRequestPrivate(const DeleteCloudFrontOriginAccessIdentityRequestPrivate &other,
                                    DeleteCloudFrontOriginAccessIdentityRequest * const q);

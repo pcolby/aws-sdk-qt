@@ -31,7 +31,7 @@ class GetDefaultPatchBaselineRequest;
 class QTAWS_EXPORT GetDefaultPatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetDefaultPatchBaselineRequestPrivate(const SSM::Action action,
+    GetDefaultPatchBaselineRequestPrivate(const SSMRequest::Action action,
                                    GetDefaultPatchBaselineRequest * const q);
     GetDefaultPatchBaselineRequestPrivate(const GetDefaultPatchBaselineRequestPrivate &other,
                                    GetDefaultPatchBaselineRequest * const q);

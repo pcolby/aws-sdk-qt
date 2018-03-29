@@ -31,7 +31,7 @@ class UpdateStageRequest;
 class QTAWS_EXPORT UpdateStageRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateStageRequestPrivate(const APIGateway::Action action,
+    UpdateStageRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateStageRequest * const q);
     UpdateStageRequestPrivate(const UpdateStageRequestPrivate &other,
                                    UpdateStageRequest * const q);

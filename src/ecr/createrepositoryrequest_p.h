@@ -31,7 +31,7 @@ class CreateRepositoryRequest;
 class QTAWS_EXPORT CreateRepositoryRequestPrivate : public ECRRequestPrivate {
 
 public:
-    CreateRepositoryRequestPrivate(const ECR::Action action,
+    CreateRepositoryRequestPrivate(const ECRRequest::Action action,
                                    CreateRepositoryRequest * const q);
     CreateRepositoryRequestPrivate(const CreateRepositoryRequestPrivate &other,
                                    CreateRepositoryRequest * const q);

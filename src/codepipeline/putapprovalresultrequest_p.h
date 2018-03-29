@@ -31,7 +31,7 @@ class PutApprovalResultRequest;
 class QTAWS_EXPORT PutApprovalResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    PutApprovalResultRequestPrivate(const CodePipeline::Action action,
+    PutApprovalResultRequestPrivate(const CodePipelineRequest::Action action,
                                    PutApprovalResultRequest * const q);
     PutApprovalResultRequestPrivate(const PutApprovalResultRequestPrivate &other,
                                    PutApprovalResultRequest * const q);

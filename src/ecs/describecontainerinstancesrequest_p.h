@@ -31,7 +31,7 @@ class DescribeContainerInstancesRequest;
 class QTAWS_EXPORT DescribeContainerInstancesRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DescribeContainerInstancesRequestPrivate(const ECS::Action action,
+    DescribeContainerInstancesRequestPrivate(const ECSRequest::Action action,
                                    DescribeContainerInstancesRequest * const q);
     DescribeContainerInstancesRequestPrivate(const DescribeContainerInstancesRequestPrivate &other,
                                    DescribeContainerInstancesRequest * const q);

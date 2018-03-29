@@ -31,7 +31,7 @@ class CreateEventSourceMappingRequest;
 class QTAWS_EXPORT CreateEventSourceMappingRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    CreateEventSourceMappingRequestPrivate(const Lambda::Action action,
+    CreateEventSourceMappingRequestPrivate(const LambdaRequest::Action action,
                                    CreateEventSourceMappingRequest * const q);
     CreateEventSourceMappingRequestPrivate(const CreateEventSourceMappingRequestPrivate &other,
                                    CreateEventSourceMappingRequest * const q);

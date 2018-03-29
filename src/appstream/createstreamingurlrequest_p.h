@@ -31,7 +31,7 @@ class CreateStreamingURLRequest;
 class QTAWS_EXPORT CreateStreamingURLRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CreateStreamingURLRequestPrivate(const AppStream::Action action,
+    CreateStreamingURLRequestPrivate(const AppStreamRequest::Action action,
                                    CreateStreamingURLRequest * const q);
     CreateStreamingURLRequestPrivate(const CreateStreamingURLRequestPrivate &other,
                                    CreateStreamingURLRequest * const q);

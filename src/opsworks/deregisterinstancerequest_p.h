@@ -31,7 +31,7 @@ class DeregisterInstanceRequest;
 class QTAWS_EXPORT DeregisterInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeregisterInstanceRequestPrivate(const OpsWorks::Action action,
+    DeregisterInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    DeregisterInstanceRequest * const q);
     DeregisterInstanceRequestPrivate(const DeregisterInstanceRequestPrivate &other,
                                    DeregisterInstanceRequest * const q);

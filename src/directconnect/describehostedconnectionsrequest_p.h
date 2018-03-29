@@ -31,7 +31,7 @@ class DescribeHostedConnectionsRequest;
 class QTAWS_EXPORT DescribeHostedConnectionsRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeHostedConnectionsRequestPrivate(const DirectConnect::Action action,
+    DescribeHostedConnectionsRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeHostedConnectionsRequest * const q);
     DescribeHostedConnectionsRequestPrivate(const DescribeHostedConnectionsRequestPrivate &other,
                                    DescribeHostedConnectionsRequest * const q);

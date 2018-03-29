@@ -31,7 +31,7 @@ class DescribeTaskDefinitionRequest;
 class QTAWS_EXPORT DescribeTaskDefinitionRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DescribeTaskDefinitionRequestPrivate(const ECS::Action action,
+    DescribeTaskDefinitionRequestPrivate(const ECSRequest::Action action,
                                    DescribeTaskDefinitionRequest * const q);
     DescribeTaskDefinitionRequestPrivate(const DescribeTaskDefinitionRequestPrivate &other,
                                    DescribeTaskDefinitionRequest * const q);

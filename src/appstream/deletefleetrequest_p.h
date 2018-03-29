@@ -31,7 +31,7 @@ class DeleteFleetRequest;
 class QTAWS_EXPORT DeleteFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DeleteFleetRequestPrivate(const AppStream::Action action,
+    DeleteFleetRequestPrivate(const AppStreamRequest::Action action,
                                    DeleteFleetRequest * const q);
     DeleteFleetRequestPrivate(const DeleteFleetRequestPrivate &other,
                                    DeleteFleetRequest * const q);

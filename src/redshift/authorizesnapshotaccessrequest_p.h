@@ -31,7 +31,7 @@ class AuthorizeSnapshotAccessRequest;
 class QTAWS_EXPORT AuthorizeSnapshotAccessRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    AuthorizeSnapshotAccessRequestPrivate(const Redshift::Action action,
+    AuthorizeSnapshotAccessRequestPrivate(const RedshiftRequest::Action action,
                                    AuthorizeSnapshotAccessRequest * const q);
     AuthorizeSnapshotAccessRequestPrivate(const AuthorizeSnapshotAccessRequestPrivate &other,
                                    AuthorizeSnapshotAccessRequest * const q);

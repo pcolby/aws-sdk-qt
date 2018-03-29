@@ -31,7 +31,7 @@ class UpdateThreatIntelSetRequest;
 class QTAWS_EXPORT UpdateThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    UpdateThreatIntelSetRequestPrivate(const GuardDuty::Action action,
+    UpdateThreatIntelSetRequestPrivate(const GuardDutyRequest::Action action,
                                    UpdateThreatIntelSetRequest * const q);
     UpdateThreatIntelSetRequestPrivate(const UpdateThreatIntelSetRequestPrivate &other,
                                    UpdateThreatIntelSetRequest * const q);

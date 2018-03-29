@@ -31,7 +31,7 @@ class TestDNSAnswerRequest;
 class QTAWS_EXPORT TestDNSAnswerRequestPrivate : public Route53RequestPrivate {
 
 public:
-    TestDNSAnswerRequestPrivate(const Route53::Action action,
+    TestDNSAnswerRequestPrivate(const Route53Request::Action action,
                                    TestDNSAnswerRequest * const q);
     TestDNSAnswerRequestPrivate(const TestDNSAnswerRequestPrivate &other,
                                    TestDNSAnswerRequest * const q);

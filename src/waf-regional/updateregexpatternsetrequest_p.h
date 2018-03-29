@@ -31,7 +31,7 @@ class UpdateRegexPatternSetRequest;
 class QTAWS_EXPORT UpdateRegexPatternSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    UpdateRegexPatternSetRequestPrivate(const WAFRegional::Action action,
+    UpdateRegexPatternSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    UpdateRegexPatternSetRequest * const q);
     UpdateRegexPatternSetRequestPrivate(const UpdateRegexPatternSetRequestPrivate &other,
                                    UpdateRegexPatternSetRequest * const q);

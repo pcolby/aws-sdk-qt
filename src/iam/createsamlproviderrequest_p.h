@@ -31,7 +31,7 @@ class CreateSAMLProviderRequest;
 class QTAWS_EXPORT CreateSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateSAMLProviderRequestPrivate(const IAM::Action action,
+    CreateSAMLProviderRequestPrivate(const IAMRequest::Action action,
                                    CreateSAMLProviderRequest * const q);
     CreateSAMLProviderRequestPrivate(const CreateSAMLProviderRequestPrivate &other,
                                    CreateSAMLProviderRequest * const q);

@@ -31,7 +31,7 @@ class RemoveListenerCertificatesRequest;
 class QTAWS_EXPORT RemoveListenerCertificatesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    RemoveListenerCertificatesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    RemoveListenerCertificatesRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    RemoveListenerCertificatesRequest * const q);
     RemoveListenerCertificatesRequestPrivate(const RemoveListenerCertificatesRequestPrivate &other,
                                    RemoveListenerCertificatesRequest * const q);

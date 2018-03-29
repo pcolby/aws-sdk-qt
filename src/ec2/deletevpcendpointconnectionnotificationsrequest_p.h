@@ -31,7 +31,7 @@ class DeleteVpcEndpointConnectionNotificationsRequest;
 class QTAWS_EXPORT DeleteVpcEndpointConnectionNotificationsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteVpcEndpointConnectionNotificationsRequestPrivate(const EC2::Action action,
+    DeleteVpcEndpointConnectionNotificationsRequestPrivate(const EC2Request::Action action,
                                    DeleteVpcEndpointConnectionNotificationsRequest * const q);
     DeleteVpcEndpointConnectionNotificationsRequestPrivate(const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other,
                                    DeleteVpcEndpointConnectionNotificationsRequest * const q);

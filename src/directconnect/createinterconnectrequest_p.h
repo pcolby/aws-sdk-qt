@@ -31,7 +31,7 @@ class CreateInterconnectRequest;
 class QTAWS_EXPORT CreateInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    CreateInterconnectRequestPrivate(const DirectConnect::Action action,
+    CreateInterconnectRequestPrivate(const DirectConnectRequest::Action action,
                                    CreateInterconnectRequest * const q);
     CreateInterconnectRequestPrivate(const CreateInterconnectRequestPrivate &other,
                                    CreateInterconnectRequest * const q);

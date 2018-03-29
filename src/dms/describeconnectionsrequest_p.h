@@ -31,7 +31,7 @@ class DescribeConnectionsRequest;
 class QTAWS_EXPORT DescribeConnectionsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeConnectionsRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeConnectionsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeConnectionsRequest * const q);
     DescribeConnectionsRequestPrivate(const DescribeConnectionsRequestPrivate &other,
                                    DescribeConnectionsRequest * const q);

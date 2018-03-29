@@ -31,7 +31,7 @@ class GetCommentRequest;
 class QTAWS_EXPORT GetCommentRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetCommentRequestPrivate(const CodeCommit::Action action,
+    GetCommentRequestPrivate(const CodeCommitRequest::Action action,
                                    GetCommentRequest * const q);
     GetCommentRequestPrivate(const GetCommentRequestPrivate &other,
                                    GetCommentRequest * const q);

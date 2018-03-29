@@ -31,7 +31,7 @@ class CreateTrustRequest;
 class QTAWS_EXPORT CreateTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CreateTrustRequestPrivate(const DirectoryService::Action action,
+    CreateTrustRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CreateTrustRequest * const q);
     CreateTrustRequestPrivate(const CreateTrustRequestPrivate &other,
                                    CreateTrustRequest * const q);

@@ -31,7 +31,7 @@ class InvalidateProjectCacheRequest;
 class QTAWS_EXPORT InvalidateProjectCacheRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    InvalidateProjectCacheRequestPrivate(const CodeBuild::Action action,
+    InvalidateProjectCacheRequestPrivate(const CodeBuildRequest::Action action,
                                    InvalidateProjectCacheRequest * const q);
     InvalidateProjectCacheRequestPrivate(const InvalidateProjectCacheRequestPrivate &other,
                                    InvalidateProjectCacheRequest * const q);

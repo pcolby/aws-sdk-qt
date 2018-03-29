@@ -31,7 +31,7 @@ class CreateObjectRequest;
 class QTAWS_EXPORT CreateObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    CreateObjectRequestPrivate(const CloudDirectory::Action action,
+    CreateObjectRequestPrivate(const CloudDirectoryRequest::Action action,
                                    CreateObjectRequest * const q);
     CreateObjectRequestPrivate(const CreateObjectRequestPrivate &other,
                                    CreateObjectRequest * const q);

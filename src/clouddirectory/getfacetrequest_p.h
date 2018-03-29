@@ -31,7 +31,7 @@ class GetFacetRequest;
 class QTAWS_EXPORT GetFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    GetFacetRequestPrivate(const CloudDirectory::Action action,
+    GetFacetRequestPrivate(const CloudDirectoryRequest::Action action,
                                    GetFacetRequest * const q);
     GetFacetRequestPrivate(const GetFacetRequestPrivate &other,
                                    GetFacetRequest * const q);

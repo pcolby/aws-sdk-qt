@@ -31,7 +31,7 @@ class DeletePresetRequest;
 class QTAWS_EXPORT DeletePresetRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    DeletePresetRequestPrivate(const MediaConvert::Action action,
+    DeletePresetRequestPrivate(const MediaConvertRequest::Action action,
                                    DeletePresetRequest * const q);
     DeletePresetRequestPrivate(const DeletePresetRequestPrivate &other,
                                    DeletePresetRequest * const q);

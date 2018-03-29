@@ -31,7 +31,7 @@ class DeletePlatformVersionRequest;
 class QTAWS_EXPORT DeletePlatformVersionRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DeletePlatformVersionRequestPrivate(const ElasticBeanstalk::Action action,
+    DeletePlatformVersionRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DeletePlatformVersionRequest * const q);
     DeletePlatformVersionRequestPrivate(const DeletePlatformVersionRequestPrivate &other,
                                    DeletePlatformVersionRequest * const q);

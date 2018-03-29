@@ -31,7 +31,7 @@ class PublishVersionRequest;
 class QTAWS_EXPORT PublishVersionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    PublishVersionRequestPrivate(const Lambda::Action action,
+    PublishVersionRequestPrivate(const LambdaRequest::Action action,
                                    PublishVersionRequest * const q);
     PublishVersionRequestPrivate(const PublishVersionRequestPrivate &other,
                                    PublishVersionRequest * const q);

@@ -31,7 +31,7 @@ class DescribeEventsRequest;
 class QTAWS_EXPORT DescribeEventsRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const DAX::Action action,
+    DescribeEventsRequestPrivate(const DAXRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);

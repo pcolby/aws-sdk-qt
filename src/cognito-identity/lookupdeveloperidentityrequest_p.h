@@ -31,7 +31,7 @@ class LookupDeveloperIdentityRequest;
 class QTAWS_EXPORT LookupDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    LookupDeveloperIdentityRequestPrivate(const CognitoIdentity::Action action,
+    LookupDeveloperIdentityRequestPrivate(const CognitoIdentityRequest::Action action,
                                    LookupDeveloperIdentityRequest * const q);
     LookupDeveloperIdentityRequestPrivate(const LookupDeveloperIdentityRequestPrivate &other,
                                    LookupDeveloperIdentityRequest * const q);

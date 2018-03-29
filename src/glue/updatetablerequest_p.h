@@ -31,7 +31,7 @@ class UpdateTableRequest;
 class QTAWS_EXPORT UpdateTableRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateTableRequestPrivate(const Glue::Action action,
+    UpdateTableRequestPrivate(const GlueRequest::Action action,
                                    UpdateTableRequest * const q);
     UpdateTableRequestPrivate(const UpdateTableRequestPrivate &other,
                                    UpdateTableRequest * const q);

@@ -31,7 +31,7 @@ class PutLifecycleEventHookExecutionStatusRequest;
 class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    PutLifecycleEventHookExecutionStatusRequestPrivate(const CodeDeploy::Action action,
+    PutLifecycleEventHookExecutionStatusRequestPrivate(const CodeDeployRequest::Action action,
                                    PutLifecycleEventHookExecutionStatusRequest * const q);
     PutLifecycleEventHookExecutionStatusRequestPrivate(const PutLifecycleEventHookExecutionStatusRequestPrivate &other,
                                    PutLifecycleEventHookExecutionStatusRequest * const q);

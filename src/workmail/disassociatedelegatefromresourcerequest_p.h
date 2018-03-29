@@ -31,7 +31,7 @@ class DisassociateDelegateFromResourceRequest;
 class QTAWS_EXPORT DisassociateDelegateFromResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DisassociateDelegateFromResourceRequestPrivate(const WorkMail::Action action,
+    DisassociateDelegateFromResourceRequestPrivate(const WorkMailRequest::Action action,
                                    DisassociateDelegateFromResourceRequest * const q);
     DisassociateDelegateFromResourceRequestPrivate(const DisassociateDelegateFromResourceRequestPrivate &other,
                                    DisassociateDelegateFromResourceRequest * const q);

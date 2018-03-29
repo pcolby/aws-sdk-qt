@@ -31,7 +31,7 @@ class DescribeLoadBasedAutoScalingRequest;
 class QTAWS_EXPORT DescribeLoadBasedAutoScalingRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeLoadBasedAutoScalingRequestPrivate(const OpsWorks::Action action,
+    DescribeLoadBasedAutoScalingRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeLoadBasedAutoScalingRequest * const q);
     DescribeLoadBasedAutoScalingRequestPrivate(const DescribeLoadBasedAutoScalingRequestPrivate &other,
                                    DescribeLoadBasedAutoScalingRequest * const q);

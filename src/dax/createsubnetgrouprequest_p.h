@@ -31,7 +31,7 @@ class CreateSubnetGroupRequest;
 class QTAWS_EXPORT CreateSubnetGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
-    CreateSubnetGroupRequestPrivate(const DAX::Action action,
+    CreateSubnetGroupRequestPrivate(const DAXRequest::Action action,
                                    CreateSubnetGroupRequest * const q);
     CreateSubnetGroupRequestPrivate(const CreateSubnetGroupRequestPrivate &other,
                                    CreateSubnetGroupRequest * const q);

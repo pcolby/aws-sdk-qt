@@ -31,7 +31,7 @@ class ModifyInstanceFleetRequest;
 class QTAWS_EXPORT ModifyInstanceFleetRequestPrivate : public EMRRequestPrivate {
 
 public:
-    ModifyInstanceFleetRequestPrivate(const EMR::Action action,
+    ModifyInstanceFleetRequestPrivate(const EMRRequest::Action action,
                                    ModifyInstanceFleetRequest * const q);
     ModifyInstanceFleetRequestPrivate(const ModifyInstanceFleetRequestPrivate &other,
                                    ModifyInstanceFleetRequest * const q);

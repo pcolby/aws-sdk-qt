@@ -31,7 +31,7 @@ class DeleteAuthorizerRequest;
 class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteAuthorizerRequestPrivate(const APIGateway::Action action,
+    DeleteAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteAuthorizerRequest * const q);
     DeleteAuthorizerRequestPrivate(const DeleteAuthorizerRequestPrivate &other,
                                    DeleteAuthorizerRequest * const q);

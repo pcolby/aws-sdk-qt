@@ -31,7 +31,7 @@ class CreateDhcpOptionsRequest;
 class QTAWS_EXPORT CreateDhcpOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateDhcpOptionsRequestPrivate(const EC2::Action action,
+    CreateDhcpOptionsRequestPrivate(const EC2Request::Action action,
                                    CreateDhcpOptionsRequest * const q);
     CreateDhcpOptionsRequestPrivate(const CreateDhcpOptionsRequestPrivate &other,
                                    CreateDhcpOptionsRequest * const q);

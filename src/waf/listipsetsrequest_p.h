@@ -31,7 +31,7 @@ class ListIPSetsRequest;
 class QTAWS_EXPORT ListIPSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
-    ListIPSetsRequestPrivate(const WAF::Action action,
+    ListIPSetsRequestPrivate(const WAFRequest::Action action,
                                    ListIPSetsRequest * const q);
     ListIPSetsRequestPrivate(const ListIPSetsRequestPrivate &other,
                                    ListIPSetsRequest * const q);

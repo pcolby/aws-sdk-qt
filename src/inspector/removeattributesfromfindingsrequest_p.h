@@ -31,7 +31,7 @@ class RemoveAttributesFromFindingsRequest;
 class QTAWS_EXPORT RemoveAttributesFromFindingsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    RemoveAttributesFromFindingsRequestPrivate(const Inspector::Action action,
+    RemoveAttributesFromFindingsRequestPrivate(const InspectorRequest::Action action,
                                    RemoveAttributesFromFindingsRequest * const q);
     RemoveAttributesFromFindingsRequestPrivate(const RemoveAttributesFromFindingsRequestPrivate &other,
                                    RemoveAttributesFromFindingsRequest * const q);

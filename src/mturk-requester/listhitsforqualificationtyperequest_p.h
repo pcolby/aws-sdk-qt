@@ -31,7 +31,7 @@ class ListHITsForQualificationTypeRequest;
 class QTAWS_EXPORT ListHITsForQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ListHITsForQualificationTypeRequestPrivate(const MTurk::Action action,
+    ListHITsForQualificationTypeRequestPrivate(const MTurkRequest::Action action,
                                    ListHITsForQualificationTypeRequest * const q);
     ListHITsForQualificationTypeRequestPrivate(const ListHITsForQualificationTypeRequestPrivate &other,
                                    ListHITsForQualificationTypeRequest * const q);

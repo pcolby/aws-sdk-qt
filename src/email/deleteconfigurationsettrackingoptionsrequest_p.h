@@ -31,7 +31,7 @@ class DeleteConfigurationSetTrackingOptionsRequest;
 class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,
+    DeleteConfigurationSetTrackingOptionsRequestPrivate(const SESRequest::Action action,
                                    DeleteConfigurationSetTrackingOptionsRequest * const q);
     DeleteConfigurationSetTrackingOptionsRequestPrivate(const DeleteConfigurationSetTrackingOptionsRequestPrivate &other,
                                    DeleteConfigurationSetTrackingOptionsRequest * const q);

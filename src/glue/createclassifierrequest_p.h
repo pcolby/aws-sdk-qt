@@ -31,7 +31,7 @@ class CreateClassifierRequest;
 class QTAWS_EXPORT CreateClassifierRequestPrivate : public GlueRequestPrivate {
 
 public:
-    CreateClassifierRequestPrivate(const Glue::Action action,
+    CreateClassifierRequestPrivate(const GlueRequest::Action action,
                                    CreateClassifierRequest * const q);
     CreateClassifierRequestPrivate(const CreateClassifierRequestPrivate &other,
                                    CreateClassifierRequest * const q);

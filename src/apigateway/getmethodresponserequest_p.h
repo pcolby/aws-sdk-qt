@@ -31,7 +31,7 @@ class GetMethodResponseRequest;
 class QTAWS_EXPORT GetMethodResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetMethodResponseRequestPrivate(const APIGateway::Action action,
+    GetMethodResponseRequestPrivate(const APIGatewayRequest::Action action,
                                    GetMethodResponseRequest * const q);
     GetMethodResponseRequestPrivate(const GetMethodResponseRequestPrivate &other,
                                    GetMethodResponseRequest * const q);

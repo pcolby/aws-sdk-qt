@@ -31,7 +31,7 @@ class CreateMountTargetRequest;
 class QTAWS_EXPORT CreateMountTargetRequestPrivate : public EFSRequestPrivate {
 
 public:
-    CreateMountTargetRequestPrivate(const EFS::Action action,
+    CreateMountTargetRequestPrivate(const EFSRequest::Action action,
                                    CreateMountTargetRequest * const q);
     CreateMountTargetRequestPrivate(const CreateMountTargetRequestPrivate &other,
                                    CreateMountTargetRequest * const q);

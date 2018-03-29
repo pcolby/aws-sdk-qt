@@ -31,7 +31,7 @@ class AddApplicationInputRequest;
 class QTAWS_EXPORT AddApplicationInputRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    AddApplicationInputRequestPrivate(const KinesisAnalytics::Action action,
+    AddApplicationInputRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    AddApplicationInputRequest * const q);
     AddApplicationInputRequestPrivate(const AddApplicationInputRequestPrivate &other,
                                    AddApplicationInputRequest * const q);

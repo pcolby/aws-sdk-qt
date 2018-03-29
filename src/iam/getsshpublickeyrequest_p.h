@@ -31,7 +31,7 @@ class GetSSHPublicKeyRequest;
 class QTAWS_EXPORT GetSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetSSHPublicKeyRequestPrivate(const IAM::Action action,
+    GetSSHPublicKeyRequestPrivate(const IAMRequest::Action action,
                                    GetSSHPublicKeyRequest * const q);
     GetSSHPublicKeyRequestPrivate(const GetSSHPublicKeyRequestPrivate &other,
                                    GetSSHPublicKeyRequest * const q);

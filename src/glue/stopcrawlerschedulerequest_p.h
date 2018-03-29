@@ -31,7 +31,7 @@ class StopCrawlerScheduleRequest;
 class QTAWS_EXPORT StopCrawlerScheduleRequestPrivate : public GlueRequestPrivate {
 
 public:
-    StopCrawlerScheduleRequestPrivate(const Glue::Action action,
+    StopCrawlerScheduleRequestPrivate(const GlueRequest::Action action,
                                    StopCrawlerScheduleRequest * const q);
     StopCrawlerScheduleRequestPrivate(const StopCrawlerScheduleRequestPrivate &other,
                                    StopCrawlerScheduleRequest * const q);

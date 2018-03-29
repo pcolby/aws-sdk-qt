@@ -31,7 +31,7 @@ class CheckIfPhoneNumberIsOptedOutRequest;
 class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutRequestPrivate : public SNSRequestPrivate {
 
 public:
-    CheckIfPhoneNumberIsOptedOutRequestPrivate(const SNS::Action action,
+    CheckIfPhoneNumberIsOptedOutRequestPrivate(const SNSRequest::Action action,
                                    CheckIfPhoneNumberIsOptedOutRequest * const q);
     CheckIfPhoneNumberIsOptedOutRequestPrivate(const CheckIfPhoneNumberIsOptedOutRequestPrivate &other,
                                    CheckIfPhoneNumberIsOptedOutRequest * const q);

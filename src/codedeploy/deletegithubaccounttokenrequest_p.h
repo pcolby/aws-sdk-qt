@@ -31,7 +31,7 @@ class DeleteGitHubAccountTokenRequest;
 class QTAWS_EXPORT DeleteGitHubAccountTokenRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    DeleteGitHubAccountTokenRequestPrivate(const CodeDeploy::Action action,
+    DeleteGitHubAccountTokenRequestPrivate(const CodeDeployRequest::Action action,
                                    DeleteGitHubAccountTokenRequest * const q);
     DeleteGitHubAccountTokenRequestPrivate(const DeleteGitHubAccountTokenRequestPrivate &other,
                                    DeleteGitHubAccountTokenRequest * const q);

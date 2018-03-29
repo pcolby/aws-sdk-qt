@@ -31,7 +31,7 @@ class DeleteNotificationConfigurationRequest;
 class QTAWS_EXPORT DeleteNotificationConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DeleteNotificationConfigurationRequestPrivate(const AutoScaling::Action action,
+    DeleteNotificationConfigurationRequestPrivate(const AutoScalingRequest::Action action,
                                    DeleteNotificationConfigurationRequest * const q);
     DeleteNotificationConfigurationRequestPrivate(const DeleteNotificationConfigurationRequestPrivate &other,
                                    DeleteNotificationConfigurationRequest * const q);

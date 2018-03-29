@@ -31,7 +31,7 @@ class DeleteVpcPeeringConnectionRequest;
 class QTAWS_EXPORT DeleteVpcPeeringConnectionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteVpcPeeringConnectionRequestPrivate(const EC2::Action action,
+    DeleteVpcPeeringConnectionRequestPrivate(const EC2Request::Action action,
                                    DeleteVpcPeeringConnectionRequest * const q);
     DeleteVpcPeeringConnectionRequestPrivate(const DeleteVpcPeeringConnectionRequestPrivate &other,
                                    DeleteVpcPeeringConnectionRequest * const q);

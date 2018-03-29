@@ -31,7 +31,7 @@ class AcceptInvitationRequest;
 class QTAWS_EXPORT AcceptInvitationRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    AcceptInvitationRequestPrivate(const GuardDuty::Action action,
+    AcceptInvitationRequestPrivate(const GuardDutyRequest::Action action,
                                    AcceptInvitationRequest * const q);
     AcceptInvitationRequestPrivate(const AcceptInvitationRequestPrivate &other,
                                    AcceptInvitationRequest * const q);

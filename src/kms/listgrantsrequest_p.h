@@ -31,7 +31,7 @@ class ListGrantsRequest;
 class QTAWS_EXPORT ListGrantsRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ListGrantsRequestPrivate(const KMS::Action action,
+    ListGrantsRequestPrivate(const KMSRequest::Action action,
                                    ListGrantsRequest * const q);
     ListGrantsRequestPrivate(const ListGrantsRequestPrivate &other,
                                    ListGrantsRequest * const q);

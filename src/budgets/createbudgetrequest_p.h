@@ -31,7 +31,7 @@ class CreateBudgetRequest;
 class QTAWS_EXPORT CreateBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    CreateBudgetRequestPrivate(const Budgets::Action action,
+    CreateBudgetRequestPrivate(const BudgetsRequest::Action action,
                                    CreateBudgetRequest * const q);
     CreateBudgetRequestPrivate(const CreateBudgetRequestPrivate &other,
                                    CreateBudgetRequest * const q);

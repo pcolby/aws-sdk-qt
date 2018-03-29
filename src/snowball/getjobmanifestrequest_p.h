@@ -31,7 +31,7 @@ class GetJobManifestRequest;
 class QTAWS_EXPORT GetJobManifestRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    GetJobManifestRequestPrivate(const Snowball::Action action,
+    GetJobManifestRequestPrivate(const SnowballRequest::Action action,
                                    GetJobManifestRequest * const q);
     GetJobManifestRequestPrivate(const GetJobManifestRequestPrivate &other,
                                    GetJobManifestRequest * const q);

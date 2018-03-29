@@ -31,7 +31,7 @@ class ListObjectChildrenRequest;
 class QTAWS_EXPORT ListObjectChildrenRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListObjectChildrenRequestPrivate(const CloudDirectory::Action action,
+    ListObjectChildrenRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListObjectChildrenRequest * const q);
     ListObjectChildrenRequestPrivate(const ListObjectChildrenRequestPrivate &other,
                                    ListObjectChildrenRequest * const q);

@@ -31,7 +31,7 @@ class UpdateFacetRequest;
 class QTAWS_EXPORT UpdateFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    UpdateFacetRequestPrivate(const CloudDirectory::Action action,
+    UpdateFacetRequestPrivate(const CloudDirectoryRequest::Action action,
                                    UpdateFacetRequest * const q);
     UpdateFacetRequestPrivate(const UpdateFacetRequestPrivate &other,
                                    UpdateFacetRequest * const q);

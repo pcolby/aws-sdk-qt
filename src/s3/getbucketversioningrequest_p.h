@@ -31,7 +31,7 @@ class GetBucketVersioningRequest;
 class QTAWS_EXPORT GetBucketVersioningRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketVersioningRequestPrivate(const S3::Action action,
+    GetBucketVersioningRequestPrivate(const S3Request::Action action,
                                    GetBucketVersioningRequest * const q);
     GetBucketVersioningRequestPrivate(const GetBucketVersioningRequestPrivate &other,
                                    GetBucketVersioningRequest * const q);

@@ -31,7 +31,7 @@ class ListV2LoggingLevelsRequest;
 class QTAWS_EXPORT ListV2LoggingLevelsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListV2LoggingLevelsRequestPrivate(const IoT::Action action,
+    ListV2LoggingLevelsRequestPrivate(const IoTRequest::Action action,
                                    ListV2LoggingLevelsRequest * const q);
     ListV2LoggingLevelsRequestPrivate(const ListV2LoggingLevelsRequestPrivate &other,
                                    ListV2LoggingLevelsRequest * const q);

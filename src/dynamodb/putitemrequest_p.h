@@ -31,7 +31,7 @@ class PutItemRequest;
 class QTAWS_EXPORT PutItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    PutItemRequestPrivate(const DynamoDB::Action action,
+    PutItemRequestPrivate(const DynamoDBRequest::Action action,
                                    PutItemRequest * const q);
     PutItemRequestPrivate(const PutItemRequestPrivate &other,
                                    PutItemRequest * const q);

@@ -31,7 +31,7 @@ class ListTypedLinkFacetNamesRequest;
 class QTAWS_EXPORT ListTypedLinkFacetNamesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListTypedLinkFacetNamesRequestPrivate(const CloudDirectory::Action action,
+    ListTypedLinkFacetNamesRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListTypedLinkFacetNamesRequest * const q);
     ListTypedLinkFacetNamesRequestPrivate(const ListTypedLinkFacetNamesRequestPrivate &other,
                                    ListTypedLinkFacetNamesRequest * const q);

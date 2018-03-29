@@ -31,7 +31,7 @@ class ListBuildsRequest;
 class QTAWS_EXPORT ListBuildsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    ListBuildsRequestPrivate(const CodeBuild::Action action,
+    ListBuildsRequestPrivate(const CodeBuildRequest::Action action,
                                    ListBuildsRequest * const q);
     ListBuildsRequestPrivate(const ListBuildsRequestPrivate &other,
                                    ListBuildsRequest * const q);

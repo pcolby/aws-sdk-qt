@@ -31,7 +31,7 @@ class RestoreDBInstanceFromS3Request;
 class QTAWS_EXPORT RestoreDBInstanceFromS3RequestPrivate : public RDSRequestPrivate {
 
 public:
-    RestoreDBInstanceFromS3RequestPrivate(const RDS::Action action,
+    RestoreDBInstanceFromS3RequestPrivate(const RDSRequest::Action action,
                                    RestoreDBInstanceFromS3Request * const q);
     RestoreDBInstanceFromS3RequestPrivate(const RestoreDBInstanceFromS3RequestPrivate &other,
                                    RestoreDBInstanceFromS3Request * const q);

@@ -31,7 +31,7 @@ class UpdateIntegrationResponseRequest;
 class QTAWS_EXPORT UpdateIntegrationResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateIntegrationResponseRequestPrivate(const APIGateway::Action action,
+    UpdateIntegrationResponseRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateIntegrationResponseRequest * const q);
     UpdateIntegrationResponseRequestPrivate(const UpdateIntegrationResponseRequestPrivate &other,
                                    UpdateIntegrationResponseRequest * const q);

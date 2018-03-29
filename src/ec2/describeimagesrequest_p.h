@@ -31,7 +31,7 @@ class DescribeImagesRequest;
 class QTAWS_EXPORT DescribeImagesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeImagesRequestPrivate(const EC2::Action action,
+    DescribeImagesRequestPrivate(const EC2Request::Action action,
                                    DescribeImagesRequest * const q);
     DescribeImagesRequestPrivate(const DescribeImagesRequestPrivate &other,
                                    DescribeImagesRequest * const q);

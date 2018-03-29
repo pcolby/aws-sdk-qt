@@ -31,7 +31,7 @@ class ListModelsRequest;
 class QTAWS_EXPORT ListModelsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    ListModelsRequestPrivate(const SageMaker::Action action,
+    ListModelsRequestPrivate(const SageMakerRequest::Action action,
                                    ListModelsRequest * const q);
     ListModelsRequestPrivate(const ListModelsRequestPrivate &other,
                                    ListModelsRequest * const q);

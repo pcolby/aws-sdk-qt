@@ -31,7 +31,7 @@ class ListInvitationsRequest;
 class QTAWS_EXPORT ListInvitationsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    ListInvitationsRequestPrivate(const GuardDuty::Action action,
+    ListInvitationsRequestPrivate(const GuardDutyRequest::Action action,
                                    ListInvitationsRequest * const q);
     ListInvitationsRequestPrivate(const ListInvitationsRequestPrivate &other,
                                    ListInvitationsRequest * const q);

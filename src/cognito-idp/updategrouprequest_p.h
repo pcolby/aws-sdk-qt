@@ -31,7 +31,7 @@ class UpdateGroupRequest;
 class QTAWS_EXPORT UpdateGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    UpdateGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+    UpdateGroupRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    UpdateGroupRequest * const q);
     UpdateGroupRequestPrivate(const UpdateGroupRequestPrivate &other,
                                    UpdateGroupRequest * const q);

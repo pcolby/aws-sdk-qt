@@ -31,7 +31,7 @@ class DetachVpnGatewayRequest;
 class QTAWS_EXPORT DetachVpnGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DetachVpnGatewayRequestPrivate(const EC2::Action action,
+    DetachVpnGatewayRequestPrivate(const EC2Request::Action action,
                                    DetachVpnGatewayRequest * const q);
     DetachVpnGatewayRequestPrivate(const DetachVpnGatewayRequestPrivate &other,
                                    DetachVpnGatewayRequest * const q);

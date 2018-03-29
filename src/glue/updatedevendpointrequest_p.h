@@ -31,7 +31,7 @@ class UpdateDevEndpointRequest;
 class QTAWS_EXPORT UpdateDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateDevEndpointRequestPrivate(const Glue::Action action,
+    UpdateDevEndpointRequestPrivate(const GlueRequest::Action action,
                                    UpdateDevEndpointRequest * const q);
     UpdateDevEndpointRequestPrivate(const UpdateDevEndpointRequestPrivate &other,
                                    UpdateDevEndpointRequest * const q);

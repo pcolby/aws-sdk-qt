@@ -31,7 +31,7 @@ class ListInputsRequest;
 class QTAWS_EXPORT ListInputsRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    ListInputsRequestPrivate(const MediaLive::Action action,
+    ListInputsRequestPrivate(const MediaLiveRequest::Action action,
                                    ListInputsRequest * const q);
     ListInputsRequestPrivate(const ListInputsRequestPrivate &other,
                                    ListInputsRequest * const q);

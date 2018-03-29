@@ -31,7 +31,7 @@ class UpdateJobExecutionRequest;
 class QTAWS_EXPORT UpdateJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
-    UpdateJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,
+    UpdateJobExecutionRequestPrivate(const IoTJobsDataPlaneRequest::Action action,
                                    UpdateJobExecutionRequest * const q);
     UpdateJobExecutionRequestPrivate(const UpdateJobExecutionRequestPrivate &other,
                                    UpdateJobExecutionRequest * const q);

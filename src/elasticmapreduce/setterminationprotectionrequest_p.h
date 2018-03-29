@@ -31,7 +31,7 @@ class SetTerminationProtectionRequest;
 class QTAWS_EXPORT SetTerminationProtectionRequestPrivate : public EMRRequestPrivate {
 
 public:
-    SetTerminationProtectionRequestPrivate(const EMR::Action action,
+    SetTerminationProtectionRequestPrivate(const EMRRequest::Action action,
                                    SetTerminationProtectionRequest * const q);
     SetTerminationProtectionRequestPrivate(const SetTerminationProtectionRequestPrivate &other,
                                    SetTerminationProtectionRequest * const q);

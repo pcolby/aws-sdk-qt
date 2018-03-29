@@ -31,7 +31,7 @@ class GetObjectInformationRequest;
 class QTAWS_EXPORT GetObjectInformationRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    GetObjectInformationRequestPrivate(const CloudDirectory::Action action,
+    GetObjectInformationRequestPrivate(const CloudDirectoryRequest::Action action,
                                    GetObjectInformationRequest * const q);
     GetObjectInformationRequestPrivate(const GetObjectInformationRequestPrivate &other,
                                    GetObjectInformationRequest * const q);

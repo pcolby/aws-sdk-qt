@@ -31,7 +31,7 @@ class DeleteEventSubscriptionRequest;
 class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteEventSubscriptionRequestPrivate(const Redshift::Action action,
+    DeleteEventSubscriptionRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteEventSubscriptionRequest * const q);
     DeleteEventSubscriptionRequestPrivate(const DeleteEventSubscriptionRequestPrivate &other,
                                    DeleteEventSubscriptionRequest * const q);

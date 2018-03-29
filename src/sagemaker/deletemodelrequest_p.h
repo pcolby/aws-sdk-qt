@@ -31,7 +31,7 @@ class DeleteModelRequest;
 class QTAWS_EXPORT DeleteModelRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    DeleteModelRequestPrivate(const SageMaker::Action action,
+    DeleteModelRequestPrivate(const SageMakerRequest::Action action,
                                    DeleteModelRequest * const q);
     DeleteModelRequestPrivate(const DeleteModelRequestPrivate &other,
                                    DeleteModelRequest * const q);

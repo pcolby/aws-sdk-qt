@@ -31,7 +31,7 @@ class ListPresetsRequest;
 class QTAWS_EXPORT ListPresetsRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ListPresetsRequestPrivate(const ElasticTranscoder::Action action,
+    ListPresetsRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ListPresetsRequest * const q);
     ListPresetsRequestPrivate(const ListPresetsRequestPrivate &other,
                                    ListPresetsRequest * const q);

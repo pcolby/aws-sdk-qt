@@ -31,7 +31,7 @@ class ConfirmPrivateVirtualInterfaceRequest;
 class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    ConfirmPrivateVirtualInterfaceRequestPrivate(const DirectConnect::Action action,
+    ConfirmPrivateVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,
                                    ConfirmPrivateVirtualInterfaceRequest * const q);
     ConfirmPrivateVirtualInterfaceRequestPrivate(const ConfirmPrivateVirtualInterfaceRequestPrivate &other,
                                    ConfirmPrivateVirtualInterfaceRequest * const q);

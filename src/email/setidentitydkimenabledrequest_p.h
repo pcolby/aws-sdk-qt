@@ -31,7 +31,7 @@ class SetIdentityDkimEnabledRequest;
 class QTAWS_EXPORT SetIdentityDkimEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
-    SetIdentityDkimEnabledRequestPrivate(const SES::Action action,
+    SetIdentityDkimEnabledRequestPrivate(const SESRequest::Action action,
                                    SetIdentityDkimEnabledRequest * const q);
     SetIdentityDkimEnabledRequestPrivate(const SetIdentityDkimEnabledRequestPrivate &other,
                                    SetIdentityDkimEnabledRequest * const q);

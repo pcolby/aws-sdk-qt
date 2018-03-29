@@ -31,7 +31,7 @@ class DetachInstancesRequest;
 class QTAWS_EXPORT DetachInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DetachInstancesRequestPrivate(const AutoScaling::Action action,
+    DetachInstancesRequestPrivate(const AutoScalingRequest::Action action,
                                    DetachInstancesRequest * const q);
     DetachInstancesRequestPrivate(const DetachInstancesRequestPrivate &other,
                                    DetachInstancesRequest * const q);

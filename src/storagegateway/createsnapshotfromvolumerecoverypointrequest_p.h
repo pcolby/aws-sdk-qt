@@ -31,7 +31,7 @@ class CreateSnapshotFromVolumeRecoveryPointRequest;
 class QTAWS_EXPORT CreateSnapshotFromVolumeRecoveryPointRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CreateSnapshotFromVolumeRecoveryPointRequestPrivate(const StorageGateway::Action action,
+    CreateSnapshotFromVolumeRecoveryPointRequestPrivate(const StorageGatewayRequest::Action action,
                                    CreateSnapshotFromVolumeRecoveryPointRequest * const q);
     CreateSnapshotFromVolumeRecoveryPointRequestPrivate(const CreateSnapshotFromVolumeRecoveryPointRequestPrivate &other,
                                    CreateSnapshotFromVolumeRecoveryPointRequest * const q);

@@ -31,7 +31,7 @@ class DeleteLaunchTemplateVersionsRequest;
 class QTAWS_EXPORT DeleteLaunchTemplateVersionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteLaunchTemplateVersionsRequestPrivate(const EC2::Action action,
+    DeleteLaunchTemplateVersionsRequestPrivate(const EC2Request::Action action,
                                    DeleteLaunchTemplateVersionsRequest * const q);
     DeleteLaunchTemplateVersionsRequestPrivate(const DeleteLaunchTemplateVersionsRequestPrivate &other,
                                    DeleteLaunchTemplateVersionsRequest * const q);

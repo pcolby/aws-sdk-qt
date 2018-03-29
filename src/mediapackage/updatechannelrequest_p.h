@@ -31,7 +31,7 @@ class UpdateChannelRequest;
 class QTAWS_EXPORT UpdateChannelRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    UpdateChannelRequestPrivate(const MediaPackage::Action action,
+    UpdateChannelRequestPrivate(const MediaPackageRequest::Action action,
                                    UpdateChannelRequest * const q);
     UpdateChannelRequestPrivate(const UpdateChannelRequestPrivate &other,
                                    UpdateChannelRequest * const q);

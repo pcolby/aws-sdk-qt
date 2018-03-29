@@ -31,7 +31,7 @@ class GetAccountSettingsRequest;
 class QTAWS_EXPORT GetAccountSettingsRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    GetAccountSettingsRequestPrivate(const Lambda::Action action,
+    GetAccountSettingsRequestPrivate(const LambdaRequest::Action action,
                                    GetAccountSettingsRequest * const q);
     GetAccountSettingsRequestPrivate(const GetAccountSettingsRequestPrivate &other,
                                    GetAccountSettingsRequest * const q);

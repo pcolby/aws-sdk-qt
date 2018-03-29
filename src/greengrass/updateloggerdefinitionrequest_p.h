@@ -31,7 +31,7 @@ class UpdateLoggerDefinitionRequest;
 class QTAWS_EXPORT UpdateLoggerDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateLoggerDefinitionRequestPrivate(const Greengrass::Action action,
+    UpdateLoggerDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateLoggerDefinitionRequest * const q);
     UpdateLoggerDefinitionRequestPrivate(const UpdateLoggerDefinitionRequestPrivate &other,
                                    UpdateLoggerDefinitionRequest * const q);

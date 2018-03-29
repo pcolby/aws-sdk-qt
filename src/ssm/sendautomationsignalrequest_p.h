@@ -31,7 +31,7 @@ class SendAutomationSignalRequest;
 class QTAWS_EXPORT SendAutomationSignalRequestPrivate : public SSMRequestPrivate {
 
 public:
-    SendAutomationSignalRequestPrivate(const SSM::Action action,
+    SendAutomationSignalRequestPrivate(const SSMRequest::Action action,
                                    SendAutomationSignalRequest * const q);
     SendAutomationSignalRequestPrivate(const SendAutomationSignalRequestPrivate &other,
                                    SendAutomationSignalRequest * const q);

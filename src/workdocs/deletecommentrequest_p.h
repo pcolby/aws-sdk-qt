@@ -31,7 +31,7 @@ class DeleteCommentRequest;
 class QTAWS_EXPORT DeleteCommentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DeleteCommentRequestPrivate(const WorkDocs::Action action,
+    DeleteCommentRequestPrivate(const WorkDocsRequest::Action action,
                                    DeleteCommentRequest * const q);
     DeleteCommentRequestPrivate(const DeleteCommentRequestPrivate &other,
                                    DeleteCommentRequest * const q);

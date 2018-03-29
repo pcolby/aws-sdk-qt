@@ -31,7 +31,7 @@ class PutScheduledUpdateGroupActionRequest;
 class QTAWS_EXPORT PutScheduledUpdateGroupActionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    PutScheduledUpdateGroupActionRequestPrivate(const AutoScaling::Action action,
+    PutScheduledUpdateGroupActionRequestPrivate(const AutoScalingRequest::Action action,
                                    PutScheduledUpdateGroupActionRequest * const q);
     PutScheduledUpdateGroupActionRequestPrivate(const PutScheduledUpdateGroupActionRequestPrivate &other,
                                    PutScheduledUpdateGroupActionRequest * const q);

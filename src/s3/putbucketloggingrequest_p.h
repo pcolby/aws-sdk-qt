@@ -31,7 +31,7 @@ class PutBucketLoggingRequest;
 class QTAWS_EXPORT PutBucketLoggingRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketLoggingRequestPrivate(const S3::Action action,
+    PutBucketLoggingRequestPrivate(const S3Request::Action action,
                                    PutBucketLoggingRequest * const q);
     PutBucketLoggingRequestPrivate(const PutBucketLoggingRequestPrivate &other,
                                    PutBucketLoggingRequest * const q);

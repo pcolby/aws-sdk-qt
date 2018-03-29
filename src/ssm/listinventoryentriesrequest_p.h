@@ -31,7 +31,7 @@ class ListInventoryEntriesRequest;
 class QTAWS_EXPORT ListInventoryEntriesRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListInventoryEntriesRequestPrivate(const SSM::Action action,
+    ListInventoryEntriesRequestPrivate(const SSMRequest::Action action,
                                    ListInventoryEntriesRequest * const q);
     ListInventoryEntriesRequestPrivate(const ListInventoryEntriesRequestPrivate &other,
                                    ListInventoryEntriesRequest * const q);

@@ -31,7 +31,7 @@ class DescribeEventsRequest;
 class QTAWS_EXPORT DescribeEventsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const Redshift::Action action,
+    DescribeEventsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);

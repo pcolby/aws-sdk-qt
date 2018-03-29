@@ -31,7 +31,7 @@ class ReleaseStaticIpRequest;
 class QTAWS_EXPORT ReleaseStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    ReleaseStaticIpRequestPrivate(const Lightsail::Action action,
+    ReleaseStaticIpRequestPrivate(const LightsailRequest::Action action,
                                    ReleaseStaticIpRequest * const q);
     ReleaseStaticIpRequestPrivate(const ReleaseStaticIpRequestPrivate &other,
                                    ReleaseStaticIpRequest * const q);

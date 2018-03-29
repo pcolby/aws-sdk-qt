@@ -31,7 +31,7 @@ class DeleteProtectionRequest;
 class QTAWS_EXPORT DeleteProtectionRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    DeleteProtectionRequestPrivate(const Shield::Action action,
+    DeleteProtectionRequestPrivate(const ShieldRequest::Action action,
                                    DeleteProtectionRequest * const q);
     DeleteProtectionRequestPrivate(const DeleteProtectionRequestPrivate &other,
                                    DeleteProtectionRequest * const q);

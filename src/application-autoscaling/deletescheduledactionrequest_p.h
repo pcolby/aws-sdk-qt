@@ -31,7 +31,7 @@ class DeleteScheduledActionRequest;
 class QTAWS_EXPORT DeleteScheduledActionRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    DeleteScheduledActionRequestPrivate(const ApplicationAutoScaling::Action action,
+    DeleteScheduledActionRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    DeleteScheduledActionRequest * const q);
     DeleteScheduledActionRequestPrivate(const DeleteScheduledActionRequestPrivate &other,
                                    DeleteScheduledActionRequest * const q);

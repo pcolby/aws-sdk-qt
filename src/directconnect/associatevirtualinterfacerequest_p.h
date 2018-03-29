@@ -31,7 +31,7 @@ class AssociateVirtualInterfaceRequest;
 class QTAWS_EXPORT AssociateVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    AssociateVirtualInterfaceRequestPrivate(const DirectConnect::Action action,
+    AssociateVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,
                                    AssociateVirtualInterfaceRequest * const q);
     AssociateVirtualInterfaceRequestPrivate(const AssociateVirtualInterfaceRequestPrivate &other,
                                    AssociateVirtualInterfaceRequest * const q);

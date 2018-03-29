@@ -31,7 +31,7 @@ class DescribeScheduledActionsRequest;
 class QTAWS_EXPORT DescribeScheduledActionsRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    DescribeScheduledActionsRequestPrivate(const ApplicationAutoScaling::Action action,
+    DescribeScheduledActionsRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    DescribeScheduledActionsRequest * const q);
     DescribeScheduledActionsRequestPrivate(const DescribeScheduledActionsRequestPrivate &other,
                                    DescribeScheduledActionsRequest * const q);

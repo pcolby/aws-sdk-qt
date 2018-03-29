@@ -31,7 +31,7 @@ class DescribeEndpointsRequest;
 class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    DescribeEndpointsRequestPrivate(const MediaConvert::Action action,
+    DescribeEndpointsRequestPrivate(const MediaConvertRequest::Action action,
                                    DescribeEndpointsRequest * const q);
     DescribeEndpointsRequestPrivate(const DescribeEndpointsRequestPrivate &other,
                                    DescribeEndpointsRequest * const q);

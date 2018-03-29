@@ -31,7 +31,7 @@ class DeleteAliasRequest;
 class QTAWS_EXPORT DeleteAliasRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DeleteAliasRequestPrivate(const WorkMail::Action action,
+    DeleteAliasRequestPrivate(const WorkMailRequest::Action action,
                                    DeleteAliasRequest * const q);
     DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
                                    DeleteAliasRequest * const q);

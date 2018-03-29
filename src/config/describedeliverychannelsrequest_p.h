@@ -31,7 +31,7 @@ class DescribeDeliveryChannelsRequest;
 class QTAWS_EXPORT DescribeDeliveryChannelsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DescribeDeliveryChannelsRequestPrivate(const ConfigService::Action action,
+    DescribeDeliveryChannelsRequestPrivate(const ConfigServiceRequest::Action action,
                                    DescribeDeliveryChannelsRequest * const q);
     DescribeDeliveryChannelsRequestPrivate(const DescribeDeliveryChannelsRequestPrivate &other,
                                    DescribeDeliveryChannelsRequest * const q);

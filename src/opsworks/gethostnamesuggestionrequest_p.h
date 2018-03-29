@@ -31,7 +31,7 @@ class GetHostnameSuggestionRequest;
 class QTAWS_EXPORT GetHostnameSuggestionRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    GetHostnameSuggestionRequestPrivate(const OpsWorks::Action action,
+    GetHostnameSuggestionRequestPrivate(const OpsWorksRequest::Action action,
                                    GetHostnameSuggestionRequest * const q);
     GetHostnameSuggestionRequestPrivate(const GetHostnameSuggestionRequestPrivate &other,
                                    GetHostnameSuggestionRequest * const q);

@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const Lambda::Action action,
+    UntagResourceRequestPrivate(const LambdaRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

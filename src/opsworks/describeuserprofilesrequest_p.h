@@ -31,7 +31,7 @@ class DescribeUserProfilesRequest;
 class QTAWS_EXPORT DescribeUserProfilesRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeUserProfilesRequestPrivate(const OpsWorks::Action action,
+    DescribeUserProfilesRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeUserProfilesRequest * const q);
     DescribeUserProfilesRequestPrivate(const DescribeUserProfilesRequestPrivate &other,
                                    DescribeUserProfilesRequest * const q);

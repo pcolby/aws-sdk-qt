@@ -31,7 +31,7 @@ class GetTagsRequest;
 class QTAWS_EXPORT GetTagsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetTagsRequestPrivate(const APIGateway::Action action,
+    GetTagsRequestPrivate(const APIGatewayRequest::Action action,
                                    GetTagsRequest * const q);
     GetTagsRequestPrivate(const GetTagsRequestPrivate &other,
                                    GetTagsRequest * const q);

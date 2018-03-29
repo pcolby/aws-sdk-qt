@@ -31,7 +31,7 @@ class DeleteClusterSubnetGroupRequest;
 class QTAWS_EXPORT DeleteClusterSubnetGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteClusterSubnetGroupRequestPrivate(const Redshift::Action action,
+    DeleteClusterSubnetGroupRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteClusterSubnetGroupRequest * const q);
     DeleteClusterSubnetGroupRequestPrivate(const DeleteClusterSubnetGroupRequestPrivate &other,
                                    DeleteClusterSubnetGroupRequest * const q);

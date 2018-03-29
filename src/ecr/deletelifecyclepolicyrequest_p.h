@@ -31,7 +31,7 @@ class DeleteLifecyclePolicyRequest;
 class QTAWS_EXPORT DeleteLifecyclePolicyRequestPrivate : public ECRRequestPrivate {
 
 public:
-    DeleteLifecyclePolicyRequestPrivate(const ECR::Action action,
+    DeleteLifecyclePolicyRequestPrivate(const ECRRequest::Action action,
                                    DeleteLifecyclePolicyRequest * const q);
     DeleteLifecyclePolicyRequestPrivate(const DeleteLifecyclePolicyRequestPrivate &other,
                                    DeleteLifecyclePolicyRequest * const q);

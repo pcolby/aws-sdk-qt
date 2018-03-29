@@ -31,7 +31,7 @@ class DeleteBrokerRequest;
 class QTAWS_EXPORT DeleteBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
-    DeleteBrokerRequestPrivate(const MQ::Action action,
+    DeleteBrokerRequestPrivate(const MQRequest::Action action,
                                    DeleteBrokerRequest * const q);
     DeleteBrokerRequestPrivate(const DeleteBrokerRequestPrivate &other,
                                    DeleteBrokerRequest * const q);

@@ -31,7 +31,7 @@ class DeleteVirtualMFADeviceRequest;
 class QTAWS_EXPORT DeleteVirtualMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteVirtualMFADeviceRequestPrivate(const IAM::Action action,
+    DeleteVirtualMFADeviceRequestPrivate(const IAMRequest::Action action,
                                    DeleteVirtualMFADeviceRequest * const q);
     DeleteVirtualMFADeviceRequestPrivate(const DeleteVirtualMFADeviceRequestPrivate &other,
                                    DeleteVirtualMFADeviceRequest * const q);

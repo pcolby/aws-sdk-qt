@@ -31,7 +31,7 @@ class AssociateSoftwareTokenRequest;
 class QTAWS_EXPORT AssociateSoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AssociateSoftwareTokenRequestPrivate(const CognitoIdentityProvider::Action action,
+    AssociateSoftwareTokenRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AssociateSoftwareTokenRequest * const q);
     AssociateSoftwareTokenRequestPrivate(const AssociateSoftwareTokenRequestPrivate &other,
                                    AssociateSoftwareTokenRequest * const q);

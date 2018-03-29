@@ -31,7 +31,7 @@ class DeleteDocumentRequest;
 class QTAWS_EXPORT DeleteDocumentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DeleteDocumentRequestPrivate(const WorkDocs::Action action,
+    DeleteDocumentRequestPrivate(const WorkDocsRequest::Action action,
                                    DeleteDocumentRequest * const q);
     DeleteDocumentRequestPrivate(const DeleteDocumentRequestPrivate &other,
                                    DeleteDocumentRequest * const q);

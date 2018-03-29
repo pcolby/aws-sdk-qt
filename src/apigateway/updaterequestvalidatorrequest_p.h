@@ -31,7 +31,7 @@ class UpdateRequestValidatorRequest;
 class QTAWS_EXPORT UpdateRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateRequestValidatorRequestPrivate(const APIGateway::Action action,
+    UpdateRequestValidatorRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateRequestValidatorRequest * const q);
     UpdateRequestValidatorRequestPrivate(const UpdateRequestValidatorRequestPrivate &other,
                                    UpdateRequestValidatorRequest * const q);

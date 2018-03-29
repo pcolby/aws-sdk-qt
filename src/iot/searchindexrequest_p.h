@@ -31,7 +31,7 @@ class SearchIndexRequest;
 class QTAWS_EXPORT SearchIndexRequestPrivate : public IoTRequestPrivate {
 
 public:
-    SearchIndexRequestPrivate(const IoT::Action action,
+    SearchIndexRequestPrivate(const IoTRequest::Action action,
                                    SearchIndexRequest * const q);
     SearchIndexRequestPrivate(const SearchIndexRequestPrivate &other,
                                    SearchIndexRequest * const q);

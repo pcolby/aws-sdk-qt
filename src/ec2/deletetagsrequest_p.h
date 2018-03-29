@@ -31,7 +31,7 @@ class DeleteTagsRequest;
 class QTAWS_EXPORT DeleteTagsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const EC2::Action action,
+    DeleteTagsRequestPrivate(const EC2Request::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);

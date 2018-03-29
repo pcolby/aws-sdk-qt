@@ -31,7 +31,7 @@ class CreateDeploymentRequest;
 class QTAWS_EXPORT CreateDeploymentRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    CreateDeploymentRequestPrivate(const APIGateway::Action action,
+    CreateDeploymentRequestPrivate(const APIGatewayRequest::Action action,
                                    CreateDeploymentRequest * const q);
     CreateDeploymentRequestPrivate(const CreateDeploymentRequestPrivate &other,
                                    CreateDeploymentRequest * const q);

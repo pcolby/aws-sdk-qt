@@ -31,7 +31,7 @@ class GetSchemaAsJsonRequest;
 class QTAWS_EXPORT GetSchemaAsJsonRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    GetSchemaAsJsonRequestPrivate(const CloudDirectory::Action action,
+    GetSchemaAsJsonRequestPrivate(const CloudDirectoryRequest::Action action,
                                    GetSchemaAsJsonRequest * const q);
     GetSchemaAsJsonRequestPrivate(const GetSchemaAsJsonRequestPrivate &other,
                                    GetSchemaAsJsonRequest * const q);

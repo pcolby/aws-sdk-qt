@@ -31,7 +31,7 @@ class DescribeBundleRequest;
 class QTAWS_EXPORT DescribeBundleRequestPrivate : public MobileRequestPrivate {
 
 public:
-    DescribeBundleRequestPrivate(const Mobile::Action action,
+    DescribeBundleRequestPrivate(const MobileRequest::Action action,
                                    DescribeBundleRequest * const q);
     DescribeBundleRequestPrivate(const DescribeBundleRequestPrivate &other,
                                    DescribeBundleRequest * const q);

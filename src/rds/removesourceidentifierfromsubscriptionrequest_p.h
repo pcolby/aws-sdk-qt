@@ -31,7 +31,7 @@ class RemoveSourceIdentifierFromSubscriptionRequest;
 class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RemoveSourceIdentifierFromSubscriptionRequestPrivate(const RDS::Action action,
+    RemoveSourceIdentifierFromSubscriptionRequestPrivate(const RDSRequest::Action action,
                                    RemoveSourceIdentifierFromSubscriptionRequest * const q);
     RemoveSourceIdentifierFromSubscriptionRequestPrivate(const RemoveSourceIdentifierFromSubscriptionRequestPrivate &other,
                                    RemoveSourceIdentifierFromSubscriptionRequest * const q);

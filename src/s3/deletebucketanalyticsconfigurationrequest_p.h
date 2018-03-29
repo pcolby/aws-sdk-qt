@@ -31,7 +31,7 @@ class DeleteBucketAnalyticsConfigurationRequest;
 class QTAWS_EXPORT DeleteBucketAnalyticsConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketAnalyticsConfigurationRequestPrivate(const S3::Action action,
+    DeleteBucketAnalyticsConfigurationRequestPrivate(const S3Request::Action action,
                                    DeleteBucketAnalyticsConfigurationRequest * const q);
     DeleteBucketAnalyticsConfigurationRequestPrivate(const DeleteBucketAnalyticsConfigurationRequestPrivate &other,
                                    DeleteBucketAnalyticsConfigurationRequest * const q);

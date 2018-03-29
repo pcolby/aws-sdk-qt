@@ -31,7 +31,7 @@ class ListApplicationsRequest;
 class QTAWS_EXPORT ListApplicationsRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    ListApplicationsRequestPrivate(const KinesisAnalytics::Action action,
+    ListApplicationsRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    ListApplicationsRequest * const q);
     ListApplicationsRequestPrivate(const ListApplicationsRequestPrivate &other,
                                    ListApplicationsRequest * const q);

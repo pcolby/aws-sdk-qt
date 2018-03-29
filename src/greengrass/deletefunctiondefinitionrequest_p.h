@@ -31,7 +31,7 @@ class DeleteFunctionDefinitionRequest;
 class QTAWS_EXPORT DeleteFunctionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteFunctionDefinitionRequestPrivate(const Greengrass::Action action,
+    DeleteFunctionDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteFunctionDefinitionRequest * const q);
     DeleteFunctionDefinitionRequestPrivate(const DeleteFunctionDefinitionRequestPrivate &other,
                                    DeleteFunctionDefinitionRequest * const q);

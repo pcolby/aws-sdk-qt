@@ -31,7 +31,7 @@ class CloseInstancePublicPortsRequest;
 class QTAWS_EXPORT CloseInstancePublicPortsRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    CloseInstancePublicPortsRequestPrivate(const Lightsail::Action action,
+    CloseInstancePublicPortsRequestPrivate(const LightsailRequest::Action action,
                                    CloseInstancePublicPortsRequest * const q);
     CloseInstancePublicPortsRequestPrivate(const CloseInstancePublicPortsRequestPrivate &other,
                                    CloseInstancePublicPortsRequest * const q);

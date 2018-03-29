@@ -31,7 +31,7 @@ class GetConsoleScreenshotRequest;
 class QTAWS_EXPORT GetConsoleScreenshotRequestPrivate : public EC2RequestPrivate {
 
 public:
-    GetConsoleScreenshotRequestPrivate(const EC2::Action action,
+    GetConsoleScreenshotRequestPrivate(const EC2Request::Action action,
                                    GetConsoleScreenshotRequest * const q);
     GetConsoleScreenshotRequestPrivate(const GetConsoleScreenshotRequestPrivate &other,
                                    GetConsoleScreenshotRequest * const q);

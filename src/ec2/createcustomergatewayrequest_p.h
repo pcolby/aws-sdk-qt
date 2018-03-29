@@ -31,7 +31,7 @@ class CreateCustomerGatewayRequest;
 class QTAWS_EXPORT CreateCustomerGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateCustomerGatewayRequestPrivate(const EC2::Action action,
+    CreateCustomerGatewayRequestPrivate(const EC2Request::Action action,
                                    CreateCustomerGatewayRequest * const q);
     CreateCustomerGatewayRequestPrivate(const CreateCustomerGatewayRequestPrivate &other,
                                    CreateCustomerGatewayRequest * const q);

@@ -31,7 +31,7 @@ class UpdateQualificationTypeRequest;
 class QTAWS_EXPORT UpdateQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    UpdateQualificationTypeRequestPrivate(const MTurk::Action action,
+    UpdateQualificationTypeRequestPrivate(const MTurkRequest::Action action,
                                    UpdateQualificationTypeRequest * const q);
     UpdateQualificationTypeRequestPrivate(const UpdateQualificationTypeRequestPrivate &other,
                                    UpdateQualificationTypeRequest * const q);

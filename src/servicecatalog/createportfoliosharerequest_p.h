@@ -31,7 +31,7 @@ class CreatePortfolioShareRequest;
 class QTAWS_EXPORT CreatePortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    CreatePortfolioShareRequestPrivate(const ServiceCatalog::Action action,
+    CreatePortfolioShareRequestPrivate(const ServiceCatalogRequest::Action action,
                                    CreatePortfolioShareRequest * const q);
     CreatePortfolioShareRequestPrivate(const CreatePortfolioShareRequestPrivate &other,
                                    CreatePortfolioShareRequest * const q);

@@ -31,7 +31,7 @@ class DeleteHITRequest;
 class QTAWS_EXPORT DeleteHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    DeleteHITRequestPrivate(const MTurk::Action action,
+    DeleteHITRequestPrivate(const MTurkRequest::Action action,
                                    DeleteHITRequest * const q);
     DeleteHITRequestPrivate(const DeleteHITRequestPrivate &other,
                                    DeleteHITRequest * const q);

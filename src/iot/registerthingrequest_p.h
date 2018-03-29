@@ -31,7 +31,7 @@ class RegisterThingRequest;
 class QTAWS_EXPORT RegisterThingRequestPrivate : public IoTRequestPrivate {
 
 public:
-    RegisterThingRequestPrivate(const IoT::Action action,
+    RegisterThingRequestPrivate(const IoTRequest::Action action,
                                    RegisterThingRequest * const q);
     RegisterThingRequestPrivate(const RegisterThingRequestPrivate &other,
                                    RegisterThingRequest * const q);

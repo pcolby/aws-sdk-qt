@@ -31,7 +31,7 @@ class CancelCertificateTransferRequest;
 class QTAWS_EXPORT CancelCertificateTransferRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CancelCertificateTransferRequestPrivate(const IoT::Action action,
+    CancelCertificateTransferRequestPrivate(const IoTRequest::Action action,
                                    CancelCertificateTransferRequest * const q);
     CancelCertificateTransferRequestPrivate(const CancelCertificateTransferRequestPrivate &other,
                                    CancelCertificateTransferRequest * const q);

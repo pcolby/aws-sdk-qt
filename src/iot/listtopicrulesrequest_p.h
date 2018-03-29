@@ -31,7 +31,7 @@ class ListTopicRulesRequest;
 class QTAWS_EXPORT ListTopicRulesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListTopicRulesRequestPrivate(const IoT::Action action,
+    ListTopicRulesRequestPrivate(const IoTRequest::Action action,
                                    ListTopicRulesRequest * const q);
     ListTopicRulesRequestPrivate(const ListTopicRulesRequestPrivate &other,
                                    ListTopicRulesRequest * const q);

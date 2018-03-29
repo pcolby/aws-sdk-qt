@@ -31,7 +31,7 @@ class DeleteCacheSubnetGroupRequest;
 class QTAWS_EXPORT DeleteCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DeleteCacheSubnetGroupRequestPrivate(const ElastiCache::Action action,
+    DeleteCacheSubnetGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    DeleteCacheSubnetGroupRequest * const q);
     DeleteCacheSubnetGroupRequestPrivate(const DeleteCacheSubnetGroupRequestPrivate &other,
                                    DeleteCacheSubnetGroupRequest * const q);

@@ -31,7 +31,7 @@ class UpdateServerRequest;
 class QTAWS_EXPORT UpdateServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    UpdateServerRequestPrivate(const OpsWorksCM::Action action,
+    UpdateServerRequestPrivate(const OpsWorksCMRequest::Action action,
                                    UpdateServerRequest * const q);
     UpdateServerRequestPrivate(const UpdateServerRequestPrivate &other,
                                    UpdateServerRequest * const q);

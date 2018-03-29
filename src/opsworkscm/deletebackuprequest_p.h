@@ -31,7 +31,7 @@ class DeleteBackupRequest;
 class QTAWS_EXPORT DeleteBackupRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DeleteBackupRequestPrivate(const OpsWorksCM::Action action,
+    DeleteBackupRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DeleteBackupRequest * const q);
     DeleteBackupRequestPrivate(const DeleteBackupRequestPrivate &other,
                                    DeleteBackupRequest * const q);

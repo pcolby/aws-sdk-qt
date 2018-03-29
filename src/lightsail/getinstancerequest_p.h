@@ -31,7 +31,7 @@ class GetInstanceRequest;
 class QTAWS_EXPORT GetInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetInstanceRequestPrivate(const Lightsail::Action action,
+    GetInstanceRequestPrivate(const LightsailRequest::Action action,
                                    GetInstanceRequest * const q);
     GetInstanceRequestPrivate(const GetInstanceRequestPrivate &other,
                                    GetInstanceRequest * const q);

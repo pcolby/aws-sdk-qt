@@ -31,7 +31,7 @@ class StartGatewayRequest;
 class QTAWS_EXPORT StartGatewayRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    StartGatewayRequestPrivate(const StorageGateway::Action action,
+    StartGatewayRequestPrivate(const StorageGatewayRequest::Action action,
                                    StartGatewayRequest * const q);
     StartGatewayRequestPrivate(const StartGatewayRequestPrivate &other,
                                    StartGatewayRequest * const q);

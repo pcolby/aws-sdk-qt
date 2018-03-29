@@ -31,7 +31,7 @@ class DeleteLoggerDefinitionRequest;
 class QTAWS_EXPORT DeleteLoggerDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteLoggerDefinitionRequestPrivate(const Greengrass::Action action,
+    DeleteLoggerDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteLoggerDefinitionRequest * const q);
     DeleteLoggerDefinitionRequestPrivate(const DeleteLoggerDefinitionRequestPrivate &other,
                                    DeleteLoggerDefinitionRequest * const q);

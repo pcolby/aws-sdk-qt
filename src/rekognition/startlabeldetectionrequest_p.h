@@ -31,7 +31,7 @@ class StartLabelDetectionRequest;
 class QTAWS_EXPORT StartLabelDetectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    StartLabelDetectionRequestPrivate(const Rekognition::Action action,
+    StartLabelDetectionRequestPrivate(const RekognitionRequest::Action action,
                                    StartLabelDetectionRequest * const q);
     StartLabelDetectionRequestPrivate(const StartLabelDetectionRequestPrivate &other,
                                    StartLabelDetectionRequest * const q);

@@ -31,7 +31,7 @@ class DescribeTrustedAdvisorCheckResultRequest;
 class QTAWS_EXPORT DescribeTrustedAdvisorCheckResultRequestPrivate : public SupportRequestPrivate {
 
 public:
-    DescribeTrustedAdvisorCheckResultRequestPrivate(const Support::Action action,
+    DescribeTrustedAdvisorCheckResultRequestPrivate(const SupportRequest::Action action,
                                    DescribeTrustedAdvisorCheckResultRequest * const q);
     DescribeTrustedAdvisorCheckResultRequestPrivate(const DescribeTrustedAdvisorCheckResultRequestPrivate &other,
                                    DescribeTrustedAdvisorCheckResultRequest * const q);

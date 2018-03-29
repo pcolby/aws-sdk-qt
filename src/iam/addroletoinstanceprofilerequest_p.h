@@ -31,7 +31,7 @@ class AddRoleToInstanceProfileRequest;
 class QTAWS_EXPORT AddRoleToInstanceProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
-    AddRoleToInstanceProfileRequestPrivate(const IAM::Action action,
+    AddRoleToInstanceProfileRequestPrivate(const IAMRequest::Action action,
                                    AddRoleToInstanceProfileRequest * const q);
     AddRoleToInstanceProfileRequestPrivate(const AddRoleToInstanceProfileRequestPrivate &other,
                                    AddRoleToInstanceProfileRequest * const q);

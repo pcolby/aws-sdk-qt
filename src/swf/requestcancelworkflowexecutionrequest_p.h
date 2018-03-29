@@ -31,7 +31,7 @@ class RequestCancelWorkflowExecutionRequest;
 class QTAWS_EXPORT RequestCancelWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RequestCancelWorkflowExecutionRequestPrivate(const SWF::Action action,
+    RequestCancelWorkflowExecutionRequestPrivate(const SWFRequest::Action action,
                                    RequestCancelWorkflowExecutionRequest * const q);
     RequestCancelWorkflowExecutionRequestPrivate(const RequestCancelWorkflowExecutionRequestPrivate &other,
                                    RequestCancelWorkflowExecutionRequest * const q);

@@ -31,7 +31,7 @@ class CreateResourceServerRequest;
 class QTAWS_EXPORT CreateResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    CreateResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,
+    CreateResourceServerRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    CreateResourceServerRequest * const q);
     CreateResourceServerRequestPrivate(const CreateResourceServerRequestPrivate &other,
                                    CreateResourceServerRequest * const q);

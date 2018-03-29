@@ -31,7 +31,7 @@ class DescribeParametersRequest;
 class QTAWS_EXPORT DescribeParametersRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DescribeParametersRequestPrivate(const DAX::Action action,
+    DescribeParametersRequestPrivate(const DAXRequest::Action action,
                                    DescribeParametersRequest * const q);
     DescribeParametersRequestPrivate(const DescribeParametersRequestPrivate &other,
                                    DescribeParametersRequest * const q);

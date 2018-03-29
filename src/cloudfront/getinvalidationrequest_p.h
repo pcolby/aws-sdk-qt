@@ -31,7 +31,7 @@ class GetInvalidationRequest;
 class QTAWS_EXPORT GetInvalidationRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    GetInvalidationRequestPrivate(const CloudFront::Action action,
+    GetInvalidationRequestPrivate(const CloudFrontRequest::Action action,
                                    GetInvalidationRequest * const q);
     GetInvalidationRequestPrivate(const GetInvalidationRequestPrivate &other,
                                    GetInvalidationRequest * const q);

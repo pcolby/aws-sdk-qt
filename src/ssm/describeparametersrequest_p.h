@@ -31,7 +31,7 @@ class DescribeParametersRequest;
 class QTAWS_EXPORT DescribeParametersRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeParametersRequestPrivate(const SSM::Action action,
+    DescribeParametersRequestPrivate(const SSMRequest::Action action,
                                    DescribeParametersRequest * const q);
     DescribeParametersRequestPrivate(const DescribeParametersRequestPrivate &other,
                                    DescribeParametersRequest * const q);

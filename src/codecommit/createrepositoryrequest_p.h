@@ -31,7 +31,7 @@ class CreateRepositoryRequest;
 class QTAWS_EXPORT CreateRepositoryRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    CreateRepositoryRequestPrivate(const CodeCommit::Action action,
+    CreateRepositoryRequestPrivate(const CodeCommitRequest::Action action,
                                    CreateRepositoryRequest * const q);
     CreateRepositoryRequestPrivate(const CreateRepositoryRequestPrivate &other,
                                    CreateRepositoryRequest * const q);

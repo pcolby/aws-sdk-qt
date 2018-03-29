@@ -31,7 +31,7 @@ class DeleteTagsRequest;
 class QTAWS_EXPORT DeleteTagsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const SageMaker::Action action,
+    DeleteTagsRequestPrivate(const SageMakerRequest::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);

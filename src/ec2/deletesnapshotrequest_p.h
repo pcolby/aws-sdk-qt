@@ -31,7 +31,7 @@ class DeleteSnapshotRequest;
 class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteSnapshotRequestPrivate(const EC2::Action action,
+    DeleteSnapshotRequestPrivate(const EC2Request::Action action,
                                    DeleteSnapshotRequest * const q);
     DeleteSnapshotRequestPrivate(const DeleteSnapshotRequestPrivate &other,
                                    DeleteSnapshotRequest * const q);

@@ -31,7 +31,7 @@ class SetLoadBalancerPoliciesForBackendServerRequest;
 class QTAWS_EXPORT SetLoadBalancerPoliciesForBackendServerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    SetLoadBalancerPoliciesForBackendServerRequestPrivate(const ElasticLoadBalancing::Action action,
+    SetLoadBalancerPoliciesForBackendServerRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    SetLoadBalancerPoliciesForBackendServerRequest * const q);
     SetLoadBalancerPoliciesForBackendServerRequestPrivate(const SetLoadBalancerPoliciesForBackendServerRequestPrivate &other,
                                    SetLoadBalancerPoliciesForBackendServerRequest * const q);

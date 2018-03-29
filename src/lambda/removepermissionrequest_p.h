@@ -31,7 +31,7 @@ class RemovePermissionRequest;
 class QTAWS_EXPORT RemovePermissionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    RemovePermissionRequestPrivate(const Lambda::Action action,
+    RemovePermissionRequestPrivate(const LambdaRequest::Action action,
                                    RemovePermissionRequest * const q);
     RemovePermissionRequestPrivate(const RemovePermissionRequestPrivate &other,
                                    RemovePermissionRequest * const q);

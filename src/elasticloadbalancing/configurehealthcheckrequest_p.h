@@ -31,7 +31,7 @@ class ConfigureHealthCheckRequest;
 class QTAWS_EXPORT ConfigureHealthCheckRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    ConfigureHealthCheckRequestPrivate(const ElasticLoadBalancing::Action action,
+    ConfigureHealthCheckRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    ConfigureHealthCheckRequest * const q);
     ConfigureHealthCheckRequestPrivate(const ConfigureHealthCheckRequestPrivate &other,
                                    ConfigureHealthCheckRequest * const q);

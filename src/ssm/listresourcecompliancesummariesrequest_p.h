@@ -31,7 +31,7 @@ class ListResourceComplianceSummariesRequest;
 class QTAWS_EXPORT ListResourceComplianceSummariesRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListResourceComplianceSummariesRequestPrivate(const SSM::Action action,
+    ListResourceComplianceSummariesRequestPrivate(const SSMRequest::Action action,
                                    ListResourceComplianceSummariesRequest * const q);
     ListResourceComplianceSummariesRequestPrivate(const ListResourceComplianceSummariesRequestPrivate &other,
                                    ListResourceComplianceSummariesRequest * const q);

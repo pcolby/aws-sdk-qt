@@ -31,7 +31,7 @@ class RebootReplicationInstanceRequest;
 class QTAWS_EXPORT RebootReplicationInstanceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    RebootReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,
+    RebootReplicationInstanceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    RebootReplicationInstanceRequest * const q);
     RebootReplicationInstanceRequestPrivate(const RebootReplicationInstanceRequestPrivate &other,
                                    RebootReplicationInstanceRequest * const q);

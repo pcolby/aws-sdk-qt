@@ -31,7 +31,7 @@ class ListIdentityPoolUsageRequest;
 class QTAWS_EXPORT ListIdentityPoolUsageRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    ListIdentityPoolUsageRequestPrivate(const CognitoSync::Action action,
+    ListIdentityPoolUsageRequestPrivate(const CognitoSyncRequest::Action action,
                                    ListIdentityPoolUsageRequest * const q);
     ListIdentityPoolUsageRequestPrivate(const ListIdentityPoolUsageRequestPrivate &other,
                                    ListIdentityPoolUsageRequest * const q);

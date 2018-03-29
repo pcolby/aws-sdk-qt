@@ -31,7 +31,7 @@ class DeleteMetricFilterRequest;
 class QTAWS_EXPORT DeleteMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteMetricFilterRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteMetricFilterRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteMetricFilterRequest * const q);
     DeleteMetricFilterRequestPrivate(const DeleteMetricFilterRequestPrivate &other,
                                    DeleteMetricFilterRequest * const q);

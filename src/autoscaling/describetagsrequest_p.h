@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const AutoScaling::Action action,
+    DescribeTagsRequestPrivate(const AutoScalingRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

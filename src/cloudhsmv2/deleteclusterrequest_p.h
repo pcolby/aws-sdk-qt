@@ -31,7 +31,7 @@ class DeleteClusterRequest;
 class QTAWS_EXPORT DeleteClusterRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    DeleteClusterRequestPrivate(const CloudHSMV2::Action action,
+    DeleteClusterRequestPrivate(const CloudHSMV2Request::Action action,
                                    DeleteClusterRequest * const q);
     DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
                                    DeleteClusterRequest * const q);

@@ -31,7 +31,7 @@ class CreateClusterParameterGroupRequest;
 class QTAWS_EXPORT CreateClusterParameterGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    CreateClusterParameterGroupRequestPrivate(const Redshift::Action action,
+    CreateClusterParameterGroupRequestPrivate(const RedshiftRequest::Action action,
                                    CreateClusterParameterGroupRequest * const q);
     CreateClusterParameterGroupRequestPrivate(const CreateClusterParameterGroupRequestPrivate &other,
                                    CreateClusterParameterGroupRequest * const q);

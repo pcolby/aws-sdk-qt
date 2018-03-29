@@ -31,7 +31,7 @@ class DiscoverInputSchemaRequest;
 class QTAWS_EXPORT DiscoverInputSchemaRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    DiscoverInputSchemaRequestPrivate(const KinesisAnalytics::Action action,
+    DiscoverInputSchemaRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    DiscoverInputSchemaRequest * const q);
     DiscoverInputSchemaRequestPrivate(const DiscoverInputSchemaRequestPrivate &other,
                                    DiscoverInputSchemaRequest * const q);

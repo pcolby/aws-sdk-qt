@@ -31,7 +31,7 @@ class ListPortfoliosRequest;
 class QTAWS_EXPORT ListPortfoliosRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListPortfoliosRequestPrivate(const ServiceCatalog::Action action,
+    ListPortfoliosRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListPortfoliosRequest * const q);
     ListPortfoliosRequestPrivate(const ListPortfoliosRequestPrivate &other,
                                    ListPortfoliosRequest * const q);

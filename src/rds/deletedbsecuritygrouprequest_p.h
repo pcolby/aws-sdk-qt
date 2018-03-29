@@ -31,7 +31,7 @@ class DeleteDBSecurityGroupRequest;
 class QTAWS_EXPORT DeleteDBSecurityGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteDBSecurityGroupRequestPrivate(const RDS::Action action,
+    DeleteDBSecurityGroupRequestPrivate(const RDSRequest::Action action,
                                    DeleteDBSecurityGroupRequest * const q);
     DeleteDBSecurityGroupRequestPrivate(const DeleteDBSecurityGroupRequestPrivate &other,
                                    DeleteDBSecurityGroupRequest * const q);

@@ -31,7 +31,7 @@ class UpdateResourceRequest;
 class QTAWS_EXPORT UpdateResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    UpdateResourceRequestPrivate(const WorkMail::Action action,
+    UpdateResourceRequestPrivate(const WorkMailRequest::Action action,
                                    UpdateResourceRequest * const q);
     UpdateResourceRequestPrivate(const UpdateResourceRequestPrivate &other,
                                    UpdateResourceRequest * const q);

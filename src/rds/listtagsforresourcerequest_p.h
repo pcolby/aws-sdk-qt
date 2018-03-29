@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const RDS::Action action,
+    ListTagsForResourceRequestPrivate(const RDSRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

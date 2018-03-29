@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const CloudHSMV2::Action action,
+    TagResourceRequestPrivate(const CloudHSMV2Request::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

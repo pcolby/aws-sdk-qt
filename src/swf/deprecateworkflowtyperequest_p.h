@@ -31,7 +31,7 @@ class DeprecateWorkflowTypeRequest;
 class QTAWS_EXPORT DeprecateWorkflowTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
-    DeprecateWorkflowTypeRequestPrivate(const SWF::Action action,
+    DeprecateWorkflowTypeRequestPrivate(const SWFRequest::Action action,
                                    DeprecateWorkflowTypeRequest * const q);
     DeprecateWorkflowTypeRequestPrivate(const DeprecateWorkflowTypeRequestPrivate &other,
                                    DeprecateWorkflowTypeRequest * const q);

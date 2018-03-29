@@ -31,7 +31,7 @@ class AddTagsToCertificateRequest;
 class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
-    AddTagsToCertificateRequestPrivate(const ACM::Action action,
+    AddTagsToCertificateRequestPrivate(const ACMRequest::Action action,
                                    AddTagsToCertificateRequest * const q);
     AddTagsToCertificateRequestPrivate(const AddTagsToCertificateRequestPrivate &other,
                                    AddTagsToCertificateRequest * const q);

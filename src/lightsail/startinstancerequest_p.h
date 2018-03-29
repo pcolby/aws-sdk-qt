@@ -31,7 +31,7 @@ class StartInstanceRequest;
 class QTAWS_EXPORT StartInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    StartInstanceRequestPrivate(const Lightsail::Action action,
+    StartInstanceRequestPrivate(const LightsailRequest::Action action,
                                    StartInstanceRequest * const q);
     StartInstanceRequestPrivate(const StartInstanceRequestPrivate &other,
                                    StartInstanceRequest * const q);

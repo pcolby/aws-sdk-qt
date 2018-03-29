@@ -31,7 +31,7 @@ class PurchaseReservedCacheNodesOfferingRequest;
 class QTAWS_EXPORT PurchaseReservedCacheNodesOfferingRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    PurchaseReservedCacheNodesOfferingRequestPrivate(const ElastiCache::Action action,
+    PurchaseReservedCacheNodesOfferingRequestPrivate(const ElastiCacheRequest::Action action,
                                    PurchaseReservedCacheNodesOfferingRequest * const q);
     PurchaseReservedCacheNodesOfferingRequestPrivate(const PurchaseReservedCacheNodesOfferingRequestPrivate &other,
                                    PurchaseReservedCacheNodesOfferingRequest * const q);

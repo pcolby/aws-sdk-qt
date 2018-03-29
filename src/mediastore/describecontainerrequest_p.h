@@ -31,7 +31,7 @@ class DescribeContainerRequest;
 class QTAWS_EXPORT DescribeContainerRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
-    DescribeContainerRequestPrivate(const MediaStore::Action action,
+    DescribeContainerRequestPrivate(const MediaStoreRequest::Action action,
                                    DescribeContainerRequest * const q);
     DescribeContainerRequestPrivate(const DescribeContainerRequestPrivate &other,
                                    DescribeContainerRequest * const q);

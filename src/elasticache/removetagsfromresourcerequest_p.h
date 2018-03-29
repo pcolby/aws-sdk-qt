@@ -31,7 +31,7 @@ class RemoveTagsFromResourceRequest;
 class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const ElastiCache::Action action,
+    RemoveTagsFromResourceRequestPrivate(const ElastiCacheRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);

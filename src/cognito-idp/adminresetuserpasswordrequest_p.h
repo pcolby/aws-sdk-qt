@@ -31,7 +31,7 @@ class AdminResetUserPasswordRequest;
 class QTAWS_EXPORT AdminResetUserPasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminResetUserPasswordRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminResetUserPasswordRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminResetUserPasswordRequest * const q);
     AdminResetUserPasswordRequestPrivate(const AdminResetUserPasswordRequestPrivate &other,
                                    AdminResetUserPasswordRequest * const q);

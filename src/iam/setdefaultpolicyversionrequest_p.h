@@ -31,7 +31,7 @@ class SetDefaultPolicyVersionRequest;
 class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IAMRequestPrivate {
 
 public:
-    SetDefaultPolicyVersionRequestPrivate(const IAM::Action action,
+    SetDefaultPolicyVersionRequestPrivate(const IAMRequest::Action action,
                                    SetDefaultPolicyVersionRequest * const q);
     SetDefaultPolicyVersionRequestPrivate(const SetDefaultPolicyVersionRequestPrivate &other,
                                    SetDefaultPolicyVersionRequest * const q);

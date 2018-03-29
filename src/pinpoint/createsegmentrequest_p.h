@@ -31,7 +31,7 @@ class CreateSegmentRequest;
 class QTAWS_EXPORT CreateSegmentRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    CreateSegmentRequestPrivate(const Pinpoint::Action action,
+    CreateSegmentRequestPrivate(const PinpointRequest::Action action,
                                    CreateSegmentRequest * const q);
     CreateSegmentRequestPrivate(const CreateSegmentRequestPrivate &other,
                                    CreateSegmentRequest * const q);

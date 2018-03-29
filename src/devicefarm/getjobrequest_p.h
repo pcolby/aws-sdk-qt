@@ -31,7 +31,7 @@ class GetJobRequest;
 class QTAWS_EXPORT GetJobRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetJobRequestPrivate(const DeviceFarm::Action action,
+    GetJobRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetJobRequest * const q);
     GetJobRequestPrivate(const GetJobRequestPrivate &other,
                                    GetJobRequest * const q);

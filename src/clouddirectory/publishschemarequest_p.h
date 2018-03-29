@@ -31,7 +31,7 @@ class PublishSchemaRequest;
 class QTAWS_EXPORT PublishSchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    PublishSchemaRequestPrivate(const CloudDirectory::Action action,
+    PublishSchemaRequestPrivate(const CloudDirectoryRequest::Action action,
                                    PublishSchemaRequest * const q);
     PublishSchemaRequestPrivate(const PublishSchemaRequestPrivate &other,
                                    PublishSchemaRequest * const q);

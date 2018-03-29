@@ -31,7 +31,7 @@ class CreateUserRequest;
 class QTAWS_EXPORT CreateUserRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateUserRequestPrivate(const IAM::Action action,
+    CreateUserRequestPrivate(const IAMRequest::Action action,
                                    CreateUserRequest * const q);
     CreateUserRequestPrivate(const CreateUserRequestPrivate &other,
                                    CreateUserRequest * const q);

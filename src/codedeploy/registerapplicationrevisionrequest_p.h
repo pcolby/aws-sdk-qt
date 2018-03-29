@@ -31,7 +31,7 @@ class RegisterApplicationRevisionRequest;
 class QTAWS_EXPORT RegisterApplicationRevisionRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    RegisterApplicationRevisionRequestPrivate(const CodeDeploy::Action action,
+    RegisterApplicationRevisionRequestPrivate(const CodeDeployRequest::Action action,
                                    RegisterApplicationRevisionRequest * const q);
     RegisterApplicationRevisionRequestPrivate(const RegisterApplicationRevisionRequestPrivate &other,
                                    RegisterApplicationRevisionRequest * const q);

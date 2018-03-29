@@ -31,7 +31,7 @@ class DescribeStepRequest;
 class QTAWS_EXPORT DescribeStepRequestPrivate : public EMRRequestPrivate {
 
 public:
-    DescribeStepRequestPrivate(const EMR::Action action,
+    DescribeStepRequestPrivate(const EMRRequest::Action action,
                                    DescribeStepRequest * const q);
     DescribeStepRequestPrivate(const DescribeStepRequestPrivate &other,
                                    DescribeStepRequest * const q);

@@ -31,7 +31,7 @@ class DeleteAppRequest;
 class QTAWS_EXPORT DeleteAppRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeleteAppRequestPrivate(const OpsWorks::Action action,
+    DeleteAppRequestPrivate(const OpsWorksRequest::Action action,
                                    DeleteAppRequest * const q);
     DeleteAppRequestPrivate(const DeleteAppRequestPrivate &other,
                                    DeleteAppRequest * const q);

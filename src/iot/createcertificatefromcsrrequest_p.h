@@ -31,7 +31,7 @@ class CreateCertificateFromCsrRequest;
 class QTAWS_EXPORT CreateCertificateFromCsrRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateCertificateFromCsrRequestPrivate(const IoT::Action action,
+    CreateCertificateFromCsrRequestPrivate(const IoTRequest::Action action,
                                    CreateCertificateFromCsrRequest * const q);
     CreateCertificateFromCsrRequestPrivate(const CreateCertificateFromCsrRequestPrivate &other,
                                    CreateCertificateFromCsrRequest * const q);

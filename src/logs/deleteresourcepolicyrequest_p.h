@@ -31,7 +31,7 @@ class DeleteResourcePolicyRequest;
 class QTAWS_EXPORT DeleteResourcePolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteResourcePolicyRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteResourcePolicyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteResourcePolicyRequest * const q);
     DeleteResourcePolicyRequestPrivate(const DeleteResourcePolicyRequestPrivate &other,
                                    DeleteResourcePolicyRequest * const q);

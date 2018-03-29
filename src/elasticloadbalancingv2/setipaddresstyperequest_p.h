@@ -31,7 +31,7 @@ class SetIpAddressTypeRequest;
 class QTAWS_EXPORT SetIpAddressTypeRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    SetIpAddressTypeRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    SetIpAddressTypeRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    SetIpAddressTypeRequest * const q);
     SetIpAddressTypeRequestPrivate(const SetIpAddressTypeRequestPrivate &other,
                                    SetIpAddressTypeRequest * const q);

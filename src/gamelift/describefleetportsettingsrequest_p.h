@@ -31,7 +31,7 @@ class DescribeFleetPortSettingsRequest;
 class QTAWS_EXPORT DescribeFleetPortSettingsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeFleetPortSettingsRequestPrivate(const GameLift::Action action,
+    DescribeFleetPortSettingsRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeFleetPortSettingsRequest * const q);
     DescribeFleetPortSettingsRequestPrivate(const DescribeFleetPortSettingsRequestPrivate &other,
                                    DescribeFleetPortSettingsRequest * const q);

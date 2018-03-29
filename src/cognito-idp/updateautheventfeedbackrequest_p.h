@@ -31,7 +31,7 @@ class UpdateAuthEventFeedbackRequest;
 class QTAWS_EXPORT UpdateAuthEventFeedbackRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    UpdateAuthEventFeedbackRequestPrivate(const CognitoIdentityProvider::Action action,
+    UpdateAuthEventFeedbackRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    UpdateAuthEventFeedbackRequest * const q);
     UpdateAuthEventFeedbackRequestPrivate(const UpdateAuthEventFeedbackRequestPrivate &other,
                                    UpdateAuthEventFeedbackRequest * const q);

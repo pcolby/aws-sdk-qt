@@ -31,7 +31,7 @@ class DeleteBudgetRequest;
 class QTAWS_EXPORT DeleteBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    DeleteBudgetRequestPrivate(const Budgets::Action action,
+    DeleteBudgetRequestPrivate(const BudgetsRequest::Action action,
                                    DeleteBudgetRequest * const q);
     DeleteBudgetRequestPrivate(const DeleteBudgetRequestPrivate &other,
                                    DeleteBudgetRequest * const q);

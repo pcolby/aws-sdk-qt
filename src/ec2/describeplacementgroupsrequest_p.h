@@ -31,7 +31,7 @@ class DescribePlacementGroupsRequest;
 class QTAWS_EXPORT DescribePlacementGroupsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribePlacementGroupsRequestPrivate(const EC2::Action action,
+    DescribePlacementGroupsRequestPrivate(const EC2Request::Action action,
                                    DescribePlacementGroupsRequest * const q);
     DescribePlacementGroupsRequestPrivate(const DescribePlacementGroupsRequestPrivate &other,
                                    DescribePlacementGroupsRequest * const q);

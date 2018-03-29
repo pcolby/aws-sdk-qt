@@ -31,7 +31,7 @@ class AddCustomAttributesRequest;
 class QTAWS_EXPORT AddCustomAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AddCustomAttributesRequestPrivate(const CognitoIdentityProvider::Action action,
+    AddCustomAttributesRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AddCustomAttributesRequest * const q);
     AddCustomAttributesRequestPrivate(const AddCustomAttributesRequestPrivate &other,
                                    AddCustomAttributesRequest * const q);

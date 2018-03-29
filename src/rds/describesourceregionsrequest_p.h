@@ -31,7 +31,7 @@ class DescribeSourceRegionsRequest;
 class QTAWS_EXPORT DescribeSourceRegionsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeSourceRegionsRequestPrivate(const RDS::Action action,
+    DescribeSourceRegionsRequestPrivate(const RDSRequest::Action action,
                                    DescribeSourceRegionsRequest * const q);
     DescribeSourceRegionsRequestPrivate(const DescribeSourceRegionsRequestPrivate &other,
                                    DescribeSourceRegionsRequest * const q);

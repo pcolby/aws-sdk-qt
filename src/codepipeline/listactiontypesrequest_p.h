@@ -31,7 +31,7 @@ class ListActionTypesRequest;
 class QTAWS_EXPORT ListActionTypesRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    ListActionTypesRequestPrivate(const CodePipeline::Action action,
+    ListActionTypesRequestPrivate(const CodePipelineRequest::Action action,
                                    ListActionTypesRequest * const q);
     ListActionTypesRequestPrivate(const ListActionTypesRequestPrivate &other,
                                    ListActionTypesRequest * const q);

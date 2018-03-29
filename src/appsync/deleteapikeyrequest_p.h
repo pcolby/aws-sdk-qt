@@ -31,7 +31,7 @@ class DeleteApiKeyRequest;
 class QTAWS_EXPORT DeleteApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    DeleteApiKeyRequestPrivate(const AppSync::Action action,
+    DeleteApiKeyRequestPrivate(const AppSyncRequest::Action action,
                                    DeleteApiKeyRequest * const q);
     DeleteApiKeyRequestPrivate(const DeleteApiKeyRequestPrivate &other,
                                    DeleteApiKeyRequest * const q);

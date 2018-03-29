@@ -31,7 +31,7 @@ class QueryRequest;
 class QTAWS_EXPORT QueryRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    QueryRequestPrivate(const DynamoDB::Action action,
+    QueryRequestPrivate(const DynamoDBRequest::Action action,
                                    QueryRequest * const q);
     QueryRequestPrivate(const QueryRequestPrivate &other,
                                    QueryRequest * const q);

@@ -31,7 +31,7 @@ class AddTagsToResourceRequest;
 class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    AddTagsToResourceRequestPrivate(const ElastiCache::Action action,
+    AddTagsToResourceRequestPrivate(const ElastiCacheRequest::Action action,
                                    AddTagsToResourceRequest * const q);
     AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
                                    AddTagsToResourceRequest * const q);

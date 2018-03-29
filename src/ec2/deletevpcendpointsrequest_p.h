@@ -31,7 +31,7 @@ class DeleteVpcEndpointsRequest;
 class QTAWS_EXPORT DeleteVpcEndpointsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteVpcEndpointsRequestPrivate(const EC2::Action action,
+    DeleteVpcEndpointsRequestPrivate(const EC2Request::Action action,
                                    DeleteVpcEndpointsRequest * const q);
     DeleteVpcEndpointsRequestPrivate(const DeleteVpcEndpointsRequestPrivate &other,
                                    DeleteVpcEndpointsRequest * const q);

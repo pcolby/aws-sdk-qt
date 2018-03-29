@@ -31,7 +31,7 @@ class BatchDetectDominantLanguageRequest;
 class QTAWS_EXPORT BatchDetectDominantLanguageRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    BatchDetectDominantLanguageRequestPrivate(const Comprehend::Action action,
+    BatchDetectDominantLanguageRequestPrivate(const ComprehendRequest::Action action,
                                    BatchDetectDominantLanguageRequest * const q);
     BatchDetectDominantLanguageRequestPrivate(const BatchDetectDominantLanguageRequestPrivate &other,
                                    BatchDetectDominantLanguageRequest * const q);

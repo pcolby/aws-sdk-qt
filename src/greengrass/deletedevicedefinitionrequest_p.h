@@ -31,7 +31,7 @@ class DeleteDeviceDefinitionRequest;
 class QTAWS_EXPORT DeleteDeviceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteDeviceDefinitionRequestPrivate(const Greengrass::Action action,
+    DeleteDeviceDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteDeviceDefinitionRequest * const q);
     DeleteDeviceDefinitionRequestPrivate(const DeleteDeviceDefinitionRequestPrivate &other,
                                    DeleteDeviceDefinitionRequest * const q);

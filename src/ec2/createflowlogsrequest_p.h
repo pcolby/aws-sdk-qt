@@ -31,7 +31,7 @@ class CreateFlowLogsRequest;
 class QTAWS_EXPORT CreateFlowLogsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateFlowLogsRequestPrivate(const EC2::Action action,
+    CreateFlowLogsRequestPrivate(const EC2Request::Action action,
                                    CreateFlowLogsRequest * const q);
     CreateFlowLogsRequestPrivate(const CreateFlowLogsRequestPrivate &other,
                                    CreateFlowLogsRequest * const q);

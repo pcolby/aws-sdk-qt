@@ -31,7 +31,7 @@ class ListAliasesRequest;
 class QTAWS_EXPORT ListAliasesRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ListAliasesRequestPrivate(const KMS::Action action,
+    ListAliasesRequestPrivate(const KMSRequest::Action action,
                                    ListAliasesRequest * const q);
     ListAliasesRequestPrivate(const ListAliasesRequestPrivate &other,
                                    ListAliasesRequest * const q);

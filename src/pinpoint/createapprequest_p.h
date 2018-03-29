@@ -31,7 +31,7 @@ class CreateAppRequest;
 class QTAWS_EXPORT CreateAppRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    CreateAppRequestPrivate(const Pinpoint::Action action,
+    CreateAppRequestPrivate(const PinpointRequest::Action action,
                                    CreateAppRequest * const q);
     CreateAppRequestPrivate(const CreateAppRequestPrivate &other,
                                    CreateAppRequest * const q);

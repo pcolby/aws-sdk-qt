@@ -31,7 +31,7 @@ class DeleteCustomerGatewayRequest;
 class QTAWS_EXPORT DeleteCustomerGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteCustomerGatewayRequestPrivate(const EC2::Action action,
+    DeleteCustomerGatewayRequestPrivate(const EC2Request::Action action,
                                    DeleteCustomerGatewayRequest * const q);
     DeleteCustomerGatewayRequestPrivate(const DeleteCustomerGatewayRequestPrivate &other,
                                    DeleteCustomerGatewayRequest * const q);

@@ -31,7 +31,7 @@ class CancelJobRequest;
 class QTAWS_EXPORT CancelJobRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    CancelJobRequestPrivate(const ElasticTranscoder::Action action,
+    CancelJobRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    CancelJobRequest * const q);
     CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
                                    CancelJobRequest * const q);

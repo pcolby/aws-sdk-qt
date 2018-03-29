@@ -31,7 +31,7 @@ class ListAssociatedFleetsRequest;
 class QTAWS_EXPORT ListAssociatedFleetsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    ListAssociatedFleetsRequestPrivate(const AppStream::Action action,
+    ListAssociatedFleetsRequestPrivate(const AppStreamRequest::Action action,
                                    ListAssociatedFleetsRequest * const q);
     ListAssociatedFleetsRequestPrivate(const ListAssociatedFleetsRequestPrivate &other,
                                    ListAssociatedFleetsRequest * const q);

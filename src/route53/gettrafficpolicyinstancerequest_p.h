@@ -31,7 +31,7 @@ class GetTrafficPolicyInstanceRequest;
 class QTAWS_EXPORT GetTrafficPolicyInstanceRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetTrafficPolicyInstanceRequestPrivate(const Route53::Action action,
+    GetTrafficPolicyInstanceRequestPrivate(const Route53Request::Action action,
                                    GetTrafficPolicyInstanceRequest * const q);
     GetTrafficPolicyInstanceRequestPrivate(const GetTrafficPolicyInstanceRequestPrivate &other,
                                    GetTrafficPolicyInstanceRequest * const q);

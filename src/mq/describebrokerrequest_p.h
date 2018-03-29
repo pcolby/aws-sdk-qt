@@ -31,7 +31,7 @@ class DescribeBrokerRequest;
 class QTAWS_EXPORT DescribeBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
-    DescribeBrokerRequestPrivate(const MQ::Action action,
+    DescribeBrokerRequestPrivate(const MQRequest::Action action,
                                    DescribeBrokerRequest * const q);
     DescribeBrokerRequestPrivate(const DescribeBrokerRequestPrivate &other,
                                    DescribeBrokerRequest * const q);

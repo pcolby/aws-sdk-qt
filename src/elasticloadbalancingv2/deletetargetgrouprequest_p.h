@@ -31,7 +31,7 @@ class DeleteTargetGroupRequest;
 class QTAWS_EXPORT DeleteTargetGroupRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DeleteTargetGroupRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DeleteTargetGroupRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DeleteTargetGroupRequest * const q);
     DeleteTargetGroupRequestPrivate(const DeleteTargetGroupRequestPrivate &other,
                                    DeleteTargetGroupRequest * const q);

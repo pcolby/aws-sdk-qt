@@ -31,7 +31,7 @@ class UpdateSnapshotScheduleRequest;
 class QTAWS_EXPORT UpdateSnapshotScheduleRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateSnapshotScheduleRequestPrivate(const StorageGateway::Action action,
+    UpdateSnapshotScheduleRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateSnapshotScheduleRequest * const q);
     UpdateSnapshotScheduleRequestPrivate(const UpdateSnapshotScheduleRequestPrivate &other,
                                    UpdateSnapshotScheduleRequest * const q);

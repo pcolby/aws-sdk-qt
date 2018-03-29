@@ -31,7 +31,7 @@ class DisableGatewayRequest;
 class QTAWS_EXPORT DisableGatewayRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DisableGatewayRequestPrivate(const StorageGateway::Action action,
+    DisableGatewayRequestPrivate(const StorageGatewayRequest::Action action,
                                    DisableGatewayRequest * const q);
     DisableGatewayRequestPrivate(const DisableGatewayRequestPrivate &other,
                                    DisableGatewayRequest * const q);

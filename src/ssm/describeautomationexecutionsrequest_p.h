@@ -31,7 +31,7 @@ class DescribeAutomationExecutionsRequest;
 class QTAWS_EXPORT DescribeAutomationExecutionsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeAutomationExecutionsRequestPrivate(const SSM::Action action,
+    DescribeAutomationExecutionsRequestPrivate(const SSMRequest::Action action,
                                    DescribeAutomationExecutionsRequest * const q);
     DescribeAutomationExecutionsRequestPrivate(const DescribeAutomationExecutionsRequestPrivate &other,
                                    DescribeAutomationExecutionsRequest * const q);

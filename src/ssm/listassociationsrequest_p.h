@@ -31,7 +31,7 @@ class ListAssociationsRequest;
 class QTAWS_EXPORT ListAssociationsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListAssociationsRequestPrivate(const SSM::Action action,
+    ListAssociationsRequestPrivate(const SSMRequest::Action action,
                                    ListAssociationsRequest * const q);
     ListAssociationsRequestPrivate(const ListAssociationsRequestPrivate &other,
                                    ListAssociationsRequest * const q);

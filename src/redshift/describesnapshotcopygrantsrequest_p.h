@@ -31,7 +31,7 @@ class DescribeSnapshotCopyGrantsRequest;
 class QTAWS_EXPORT DescribeSnapshotCopyGrantsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeSnapshotCopyGrantsRequestPrivate(const Redshift::Action action,
+    DescribeSnapshotCopyGrantsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeSnapshotCopyGrantsRequest * const q);
     DescribeSnapshotCopyGrantsRequestPrivate(const DescribeSnapshotCopyGrantsRequestPrivate &other,
                                    DescribeSnapshotCopyGrantsRequest * const q);

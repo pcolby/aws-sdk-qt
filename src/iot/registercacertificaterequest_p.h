@@ -31,7 +31,7 @@ class RegisterCACertificateRequest;
 class QTAWS_EXPORT RegisterCACertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    RegisterCACertificateRequestPrivate(const IoT::Action action,
+    RegisterCACertificateRequestPrivate(const IoTRequest::Action action,
                                    RegisterCACertificateRequest * const q);
     RegisterCACertificateRequestPrivate(const RegisterCACertificateRequestPrivate &other,
                                    RegisterCACertificateRequest * const q);

@@ -31,7 +31,7 @@ class CreateModelRequest;
 class QTAWS_EXPORT CreateModelRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    CreateModelRequestPrivate(const APIGateway::Action action,
+    CreateModelRequestPrivate(const APIGatewayRequest::Action action,
                                    CreateModelRequest * const q);
     CreateModelRequestPrivate(const CreateModelRequestPrivate &other,
                                    CreateModelRequest * const q);

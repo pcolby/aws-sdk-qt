@@ -31,7 +31,7 @@ class CreateSnapshotCopyGrantRequest;
 class QTAWS_EXPORT CreateSnapshotCopyGrantRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    CreateSnapshotCopyGrantRequestPrivate(const Redshift::Action action,
+    CreateSnapshotCopyGrantRequestPrivate(const RedshiftRequest::Action action,
                                    CreateSnapshotCopyGrantRequest * const q);
     CreateSnapshotCopyGrantRequestPrivate(const CreateSnapshotCopyGrantRequestPrivate &other,
                                    CreateSnapshotCopyGrantRequest * const q);

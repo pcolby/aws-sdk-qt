@@ -31,7 +31,7 @@ class ClearDefaultAuthorizerRequest;
 class QTAWS_EXPORT ClearDefaultAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ClearDefaultAuthorizerRequestPrivate(const IoT::Action action,
+    ClearDefaultAuthorizerRequestPrivate(const IoTRequest::Action action,
                                    ClearDefaultAuthorizerRequest * const q);
     ClearDefaultAuthorizerRequestPrivate(const ClearDefaultAuthorizerRequestPrivate &other,
                                    ClearDefaultAuthorizerRequest * const q);

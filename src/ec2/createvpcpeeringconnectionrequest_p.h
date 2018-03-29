@@ -31,7 +31,7 @@ class CreateVpcPeeringConnectionRequest;
 class QTAWS_EXPORT CreateVpcPeeringConnectionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateVpcPeeringConnectionRequestPrivate(const EC2::Action action,
+    CreateVpcPeeringConnectionRequestPrivate(const EC2Request::Action action,
                                    CreateVpcPeeringConnectionRequest * const q);
     CreateVpcPeeringConnectionRequestPrivate(const CreateVpcPeeringConnectionRequestPrivate &other,
                                    CreateVpcPeeringConnectionRequest * const q);

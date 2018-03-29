@@ -31,7 +31,7 @@ class ResetInstanceAttributeRequest;
 class QTAWS_EXPORT ResetInstanceAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ResetInstanceAttributeRequestPrivate(const EC2::Action action,
+    ResetInstanceAttributeRequestPrivate(const EC2Request::Action action,
                                    ResetInstanceAttributeRequest * const q);
     ResetInstanceAttributeRequestPrivate(const ResetInstanceAttributeRequestPrivate &other,
                                    ResetInstanceAttributeRequest * const q);

@@ -31,7 +31,7 @@ class ListReusableDelegationSetsRequest;
 class QTAWS_EXPORT ListReusableDelegationSetsRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ListReusableDelegationSetsRequestPrivate(const Route53::Action action,
+    ListReusableDelegationSetsRequestPrivate(const Route53Request::Action action,
                                    ListReusableDelegationSetsRequest * const q);
     ListReusableDelegationSetsRequestPrivate(const ListReusableDelegationSetsRequestPrivate &other,
                                    ListReusableDelegationSetsRequest * const q);

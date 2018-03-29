@@ -31,7 +31,7 @@ class GetJobOutputRequest;
 class QTAWS_EXPORT GetJobOutputRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    GetJobOutputRequestPrivate(const Glacier::Action action,
+    GetJobOutputRequestPrivate(const GlacierRequest::Action action,
                                    GetJobOutputRequest * const q);
     GetJobOutputRequestPrivate(const GetJobOutputRequestPrivate &other,
                                    GetJobOutputRequest * const q);

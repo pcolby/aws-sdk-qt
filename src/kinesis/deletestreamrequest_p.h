@@ -31,7 +31,7 @@ class DeleteStreamRequest;
 class QTAWS_EXPORT DeleteStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    DeleteStreamRequestPrivate(const Kinesis::Action action,
+    DeleteStreamRequestPrivate(const KinesisRequest::Action action,
                                    DeleteStreamRequest * const q);
     DeleteStreamRequestPrivate(const DeleteStreamRequestPrivate &other,
                                    DeleteStreamRequest * const q);

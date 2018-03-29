@@ -31,7 +31,7 @@ class DisassociateTeamMemberRequest;
 class QTAWS_EXPORT DisassociateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    DisassociateTeamMemberRequestPrivate(const CodeStar::Action action,
+    DisassociateTeamMemberRequestPrivate(const CodeStarRequest::Action action,
                                    DisassociateTeamMemberRequest * const q);
     DisassociateTeamMemberRequestPrivate(const DisassociateTeamMemberRequestPrivate &other,
                                    DisassociateTeamMemberRequest * const q);

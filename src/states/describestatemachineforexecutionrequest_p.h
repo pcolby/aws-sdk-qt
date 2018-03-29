@@ -31,7 +31,7 @@ class DescribeStateMachineForExecutionRequest;
 class QTAWS_EXPORT DescribeStateMachineForExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
-    DescribeStateMachineForExecutionRequestPrivate(const SFN::Action action,
+    DescribeStateMachineForExecutionRequestPrivate(const SFNRequest::Action action,
                                    DescribeStateMachineForExecutionRequest * const q);
     DescribeStateMachineForExecutionRequestPrivate(const DescribeStateMachineForExecutionRequestPrivate &other,
                                    DescribeStateMachineForExecutionRequest * const q);

@@ -31,7 +31,7 @@ class DeleteByteMatchSetRequest;
 class QTAWS_EXPORT DeleteByteMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteByteMatchSetRequestPrivate(const WAF::Action action,
+    DeleteByteMatchSetRequestPrivate(const WAFRequest::Action action,
                                    DeleteByteMatchSetRequest * const q);
     DeleteByteMatchSetRequestPrivate(const DeleteByteMatchSetRequestPrivate &other,
                                    DeleteByteMatchSetRequest * const q);

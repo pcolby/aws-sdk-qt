@@ -31,7 +31,7 @@ class GetEndpointRequest;
 class QTAWS_EXPORT GetEndpointRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetEndpointRequestPrivate(const Pinpoint::Action action,
+    GetEndpointRequestPrivate(const PinpointRequest::Action action,
                                    GetEndpointRequest * const q);
     GetEndpointRequestPrivate(const GetEndpointRequestPrivate &other,
                                    GetEndpointRequest * const q);

@@ -31,7 +31,7 @@ class RegisterImageRequest;
 class QTAWS_EXPORT RegisterImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RegisterImageRequestPrivate(const EC2::Action action,
+    RegisterImageRequestPrivate(const EC2Request::Action action,
                                    RegisterImageRequest * const q);
     RegisterImageRequestPrivate(const RegisterImageRequestPrivate &other,
                                    RegisterImageRequest * const q);

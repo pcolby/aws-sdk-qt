@@ -31,7 +31,7 @@ class GetDataEndpointRequest;
 class QTAWS_EXPORT GetDataEndpointRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
-    GetDataEndpointRequestPrivate(const KinesisVideo::Action action,
+    GetDataEndpointRequestPrivate(const KinesisVideoRequest::Action action,
                                    GetDataEndpointRequest * const q);
     GetDataEndpointRequestPrivate(const GetDataEndpointRequestPrivate &other,
                                    GetDataEndpointRequest * const q);

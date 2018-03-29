@@ -31,7 +31,7 @@ class DeregisterEcsClusterRequest;
 class QTAWS_EXPORT DeregisterEcsClusterRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeregisterEcsClusterRequestPrivate(const OpsWorks::Action action,
+    DeregisterEcsClusterRequestPrivate(const OpsWorksRequest::Action action,
                                    DeregisterEcsClusterRequest * const q);
     DeregisterEcsClusterRequestPrivate(const DeregisterEcsClusterRequestPrivate &other,
                                    DeregisterEcsClusterRequest * const q);

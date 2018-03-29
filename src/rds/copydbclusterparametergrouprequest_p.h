@@ -31,7 +31,7 @@ class CopyDBClusterParameterGroupRequest;
 class QTAWS_EXPORT CopyDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CopyDBClusterParameterGroupRequestPrivate(const RDS::Action action,
+    CopyDBClusterParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    CopyDBClusterParameterGroupRequest * const q);
     CopyDBClusterParameterGroupRequestPrivate(const CopyDBClusterParameterGroupRequestPrivate &other,
                                    CopyDBClusterParameterGroupRequest * const q);

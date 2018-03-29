@@ -31,7 +31,7 @@ class CreateDocumentRequest;
 class QTAWS_EXPORT CreateDocumentRequestPrivate : public SSMRequestPrivate {
 
 public:
-    CreateDocumentRequestPrivate(const SSM::Action action,
+    CreateDocumentRequestPrivate(const SSMRequest::Action action,
                                    CreateDocumentRequest * const q);
     CreateDocumentRequestPrivate(const CreateDocumentRequestPrivate &other,
                                    CreateDocumentRequest * const q);

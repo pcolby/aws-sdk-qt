@@ -31,7 +31,7 @@ class CreateFleetRequest;
 class QTAWS_EXPORT CreateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CreateFleetRequestPrivate(const AppStream::Action action,
+    CreateFleetRequestPrivate(const AppStreamRequest::Action action,
                                    CreateFleetRequest * const q);
     CreateFleetRequestPrivate(const CreateFleetRequestPrivate &other,
                                    CreateFleetRequest * const q);

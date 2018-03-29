@@ -31,7 +31,7 @@ class CreateScalingPlanRequest;
 class QTAWS_EXPORT CreateScalingPlanRequestPrivate : public AutoScalingPlansRequestPrivate {
 
 public:
-    CreateScalingPlanRequestPrivate(const AutoScalingPlans::Action action,
+    CreateScalingPlanRequestPrivate(const AutoScalingPlansRequest::Action action,
                                    CreateScalingPlanRequest * const q);
     CreateScalingPlanRequestPrivate(const CreateScalingPlanRequestPrivate &other,
                                    CreateScalingPlanRequest * const q);

@@ -31,7 +31,7 @@ class ListLexiconsRequest;
 class QTAWS_EXPORT ListLexiconsRequestPrivate : public PollyRequestPrivate {
 
 public:
-    ListLexiconsRequestPrivate(const Polly::Action action,
+    ListLexiconsRequestPrivate(const PollyRequest::Action action,
                                    ListLexiconsRequest * const q);
     ListLexiconsRequestPrivate(const ListLexiconsRequestPrivate &other,
                                    ListLexiconsRequest * const q);

@@ -31,7 +31,7 @@ class CreateInstanceProfileRequest;
 class QTAWS_EXPORT CreateInstanceProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateInstanceProfileRequestPrivate(const IAM::Action action,
+    CreateInstanceProfileRequestPrivate(const IAMRequest::Action action,
                                    CreateInstanceProfileRequest * const q);
     CreateInstanceProfileRequestPrivate(const CreateInstanceProfileRequestPrivate &other,
                                    CreateInstanceProfileRequest * const q);

@@ -31,7 +31,7 @@ class RevokeInvitationRequest;
 class QTAWS_EXPORT RevokeInvitationRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    RevokeInvitationRequestPrivate(const AlexaForBusiness::Action action,
+    RevokeInvitationRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    RevokeInvitationRequest * const q);
     RevokeInvitationRequestPrivate(const RevokeInvitationRequestPrivate &other,
                                    RevokeInvitationRequest * const q);

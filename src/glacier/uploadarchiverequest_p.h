@@ -31,7 +31,7 @@ class UploadArchiveRequest;
 class QTAWS_EXPORT UploadArchiveRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    UploadArchiveRequestPrivate(const Glacier::Action action,
+    UploadArchiveRequestPrivate(const GlacierRequest::Action action,
                                    UploadArchiveRequest * const q);
     UploadArchiveRequestPrivate(const UploadArchiveRequestPrivate &other,
                                    UploadArchiveRequest * const q);

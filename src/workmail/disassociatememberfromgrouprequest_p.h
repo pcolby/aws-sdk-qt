@@ -31,7 +31,7 @@ class DisassociateMemberFromGroupRequest;
 class QTAWS_EXPORT DisassociateMemberFromGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DisassociateMemberFromGroupRequestPrivate(const WorkMail::Action action,
+    DisassociateMemberFromGroupRequestPrivate(const WorkMailRequest::Action action,
                                    DisassociateMemberFromGroupRequest * const q);
     DisassociateMemberFromGroupRequestPrivate(const DisassociateMemberFromGroupRequestPrivate &other,
                                    DisassociateMemberFromGroupRequest * const q);

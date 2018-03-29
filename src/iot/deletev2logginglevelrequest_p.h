@@ -31,7 +31,7 @@ class DeleteV2LoggingLevelRequest;
 class QTAWS_EXPORT DeleteV2LoggingLevelRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteV2LoggingLevelRequestPrivate(const IoT::Action action,
+    DeleteV2LoggingLevelRequestPrivate(const IoTRequest::Action action,
                                    DeleteV2LoggingLevelRequest * const q);
     DeleteV2LoggingLevelRequestPrivate(const DeleteV2LoggingLevelRequestPrivate &other,
                                    DeleteV2LoggingLevelRequest * const q);

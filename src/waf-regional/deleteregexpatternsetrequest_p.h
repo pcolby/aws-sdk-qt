@@ -31,7 +31,7 @@ class DeleteRegexPatternSetRequest;
 class QTAWS_EXPORT DeleteRegexPatternSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    DeleteRegexPatternSetRequestPrivate(const WAFRegional::Action action,
+    DeleteRegexPatternSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    DeleteRegexPatternSetRequest * const q);
     DeleteRegexPatternSetRequestPrivate(const DeleteRegexPatternSetRequestPrivate &other,
                                    DeleteRegexPatternSetRequest * const q);

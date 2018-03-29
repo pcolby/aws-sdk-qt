@@ -31,7 +31,7 @@ class DeleteBucketMetricsConfigurationRequest;
 class QTAWS_EXPORT DeleteBucketMetricsConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketMetricsConfigurationRequestPrivate(const S3::Action action,
+    DeleteBucketMetricsConfigurationRequestPrivate(const S3Request::Action action,
                                    DeleteBucketMetricsConfigurationRequest * const q);
     DeleteBucketMetricsConfigurationRequestPrivate(const DeleteBucketMetricsConfigurationRequestPrivate &other,
                                    DeleteBucketMetricsConfigurationRequest * const q);

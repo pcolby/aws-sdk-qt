@@ -31,7 +31,7 @@ class UpdatePortfolioRequest;
 class QTAWS_EXPORT UpdatePortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    UpdatePortfolioRequestPrivate(const ServiceCatalog::Action action,
+    UpdatePortfolioRequestPrivate(const ServiceCatalogRequest::Action action,
                                    UpdatePortfolioRequest * const q);
     UpdatePortfolioRequestPrivate(const UpdatePortfolioRequestPrivate &other,
                                    UpdatePortfolioRequest * const q);

@@ -31,7 +31,7 @@ class ModifyEndpointRequest;
 class QTAWS_EXPORT ModifyEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ModifyEndpointRequestPrivate(const DatabaseMigrationService::Action action,
+    ModifyEndpointRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ModifyEndpointRequest * const q);
     ModifyEndpointRequestPrivate(const ModifyEndpointRequestPrivate &other,
                                    ModifyEndpointRequest * const q);

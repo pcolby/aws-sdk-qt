@@ -31,7 +31,7 @@ class ModifyDBClusterRequest;
 class QTAWS_EXPORT ModifyDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ModifyDBClusterRequestPrivate(const RDS::Action action,
+    ModifyDBClusterRequestPrivate(const RDSRequest::Action action,
                                    ModifyDBClusterRequest * const q);
     ModifyDBClusterRequestPrivate(const ModifyDBClusterRequestPrivate &other,
                                    ModifyDBClusterRequest * const q);

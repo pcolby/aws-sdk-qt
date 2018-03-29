@@ -31,7 +31,7 @@ class CreatePolicyVersionRequest;
 class QTAWS_EXPORT CreatePolicyVersionRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreatePolicyVersionRequestPrivate(const IAM::Action action,
+    CreatePolicyVersionRequestPrivate(const IAMRequest::Action action,
                                    CreatePolicyVersionRequest * const q);
     CreatePolicyVersionRequestPrivate(const CreatePolicyVersionRequestPrivate &other,
                                    CreatePolicyVersionRequest * const q);

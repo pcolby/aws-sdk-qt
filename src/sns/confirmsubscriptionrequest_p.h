@@ -31,7 +31,7 @@ class ConfirmSubscriptionRequest;
 class QTAWS_EXPORT ConfirmSubscriptionRequestPrivate : public SNSRequestPrivate {
 
 public:
-    ConfirmSubscriptionRequestPrivate(const SNS::Action action,
+    ConfirmSubscriptionRequestPrivate(const SNSRequest::Action action,
                                    ConfirmSubscriptionRequest * const q);
     ConfirmSubscriptionRequestPrivate(const ConfirmSubscriptionRequestPrivate &other,
                                    ConfirmSubscriptionRequest * const q);

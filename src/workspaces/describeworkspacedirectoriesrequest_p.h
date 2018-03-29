@@ -31,7 +31,7 @@ class DescribeWorkspaceDirectoriesRequest;
 class QTAWS_EXPORT DescribeWorkspaceDirectoriesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    DescribeWorkspaceDirectoriesRequestPrivate(const WorkSpaces::Action action,
+    DescribeWorkspaceDirectoriesRequestPrivate(const WorkSpacesRequest::Action action,
                                    DescribeWorkspaceDirectoriesRequest * const q);
     DescribeWorkspaceDirectoriesRequestPrivate(const DescribeWorkspaceDirectoriesRequestPrivate &other,
                                    DescribeWorkspaceDirectoriesRequest * const q);

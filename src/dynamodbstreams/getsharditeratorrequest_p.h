@@ -31,7 +31,7 @@ class GetShardIteratorRequest;
 class QTAWS_EXPORT GetShardIteratorRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
-    GetShardIteratorRequestPrivate(const DynamoDBStreams::Action action,
+    GetShardIteratorRequestPrivate(const DynamoDBStreamsRequest::Action action,
                                    GetShardIteratorRequest * const q);
     GetShardIteratorRequestPrivate(const GetShardIteratorRequestPrivate &other,
                                    GetShardIteratorRequest * const q);

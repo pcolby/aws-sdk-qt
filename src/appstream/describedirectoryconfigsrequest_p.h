@@ -31,7 +31,7 @@ class DescribeDirectoryConfigsRequest;
 class QTAWS_EXPORT DescribeDirectoryConfigsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DescribeDirectoryConfigsRequestPrivate(const AppStream::Action action,
+    DescribeDirectoryConfigsRequestPrivate(const AppStreamRequest::Action action,
                                    DescribeDirectoryConfigsRequest * const q);
     DescribeDirectoryConfigsRequestPrivate(const DescribeDirectoryConfigsRequestPrivate &other,
                                    DescribeDirectoryConfigsRequest * const q);

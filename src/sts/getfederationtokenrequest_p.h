@@ -31,7 +31,7 @@ class GetFederationTokenRequest;
 class QTAWS_EXPORT GetFederationTokenRequestPrivate : public STSRequestPrivate {
 
 public:
-    GetFederationTokenRequestPrivate(const STS::Action action,
+    GetFederationTokenRequestPrivate(const STSRequest::Action action,
                                    GetFederationTokenRequest * const q);
     GetFederationTokenRequestPrivate(const GetFederationTokenRequestPrivate &other,
                                    GetFederationTokenRequest * const q);

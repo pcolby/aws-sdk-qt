@@ -31,7 +31,7 @@ class UpdateStateMachineRequest;
 class QTAWS_EXPORT UpdateStateMachineRequestPrivate : public SFNRequestPrivate {
 
 public:
-    UpdateStateMachineRequestPrivate(const SFN::Action action,
+    UpdateStateMachineRequestPrivate(const SFNRequest::Action action,
                                    UpdateStateMachineRequest * const q);
     UpdateStateMachineRequestPrivate(const UpdateStateMachineRequestPrivate &other,
                                    UpdateStateMachineRequest * const q);

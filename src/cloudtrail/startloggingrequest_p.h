@@ -31,7 +31,7 @@ class StartLoggingRequest;
 class QTAWS_EXPORT StartLoggingRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    StartLoggingRequestPrivate(const CloudTrail::Action action,
+    StartLoggingRequestPrivate(const CloudTrailRequest::Action action,
                                    StartLoggingRequest * const q);
     StartLoggingRequestPrivate(const StartLoggingRequestPrivate &other,
                                    StartLoggingRequest * const q);

@@ -31,7 +31,7 @@ class CreateVpcRequest;
 class QTAWS_EXPORT CreateVpcRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateVpcRequestPrivate(const EC2::Action action,
+    CreateVpcRequestPrivate(const EC2Request::Action action,
                                    CreateVpcRequest * const q);
     CreateVpcRequestPrivate(const CreateVpcRequestPrivate &other,
                                    CreateVpcRequest * const q);

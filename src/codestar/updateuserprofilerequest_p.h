@@ -31,7 +31,7 @@ class UpdateUserProfileRequest;
 class QTAWS_EXPORT UpdateUserProfileRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    UpdateUserProfileRequestPrivate(const CodeStar::Action action,
+    UpdateUserProfileRequestPrivate(const CodeStarRequest::Action action,
                                    UpdateUserProfileRequest * const q);
     UpdateUserProfileRequestPrivate(const UpdateUserProfileRequestPrivate &other,
                                    UpdateUserProfileRequest * const q);

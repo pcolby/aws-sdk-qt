@@ -31,7 +31,7 @@ class ImportCertificateRequest;
 class QTAWS_EXPORT ImportCertificateRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ImportCertificateRequestPrivate(const DatabaseMigrationService::Action action,
+    ImportCertificateRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ImportCertificateRequest * const q);
     ImportCertificateRequestPrivate(const ImportCertificateRequestPrivate &other,
                                    ImportCertificateRequest * const q);

@@ -31,7 +31,7 @@ class DeleteSSHPublicKeyRequest;
 class QTAWS_EXPORT DeleteSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteSSHPublicKeyRequestPrivate(const IAM::Action action,
+    DeleteSSHPublicKeyRequestPrivate(const IAMRequest::Action action,
                                    DeleteSSHPublicKeyRequest * const q);
     DeleteSSHPublicKeyRequestPrivate(const DeleteSSHPublicKeyRequestPrivate &other,
                                    DeleteSSHPublicKeyRequest * const q);

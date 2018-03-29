@@ -31,7 +31,7 @@ class DeleteServiceLinkedRoleRequest;
 class QTAWS_EXPORT DeleteServiceLinkedRoleRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    DeleteServiceLinkedRoleRequestPrivate(const CloudFront::Action action,
+    DeleteServiceLinkedRoleRequestPrivate(const CloudFrontRequest::Action action,
                                    DeleteServiceLinkedRoleRequest * const q);
     DeleteServiceLinkedRoleRequestPrivate(const DeleteServiceLinkedRoleRequestPrivate &other,
                                    DeleteServiceLinkedRoleRequest * const q);

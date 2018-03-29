@@ -31,7 +31,7 @@ class ListObjectPoliciesRequest;
 class QTAWS_EXPORT ListObjectPoliciesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListObjectPoliciesRequestPrivate(const CloudDirectory::Action action,
+    ListObjectPoliciesRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListObjectPoliciesRequest * const q);
     ListObjectPoliciesRequestPrivate(const ListObjectPoliciesRequestPrivate &other,
                                    ListObjectPoliciesRequest * const q);

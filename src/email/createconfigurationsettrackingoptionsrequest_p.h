@@ -31,7 +31,7 @@ class CreateConfigurationSetTrackingOptionsRequest;
 class QTAWS_EXPORT CreateConfigurationSetTrackingOptionsRequestPrivate : public SESRequestPrivate {
 
 public:
-    CreateConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,
+    CreateConfigurationSetTrackingOptionsRequestPrivate(const SESRequest::Action action,
                                    CreateConfigurationSetTrackingOptionsRequest * const q);
     CreateConfigurationSetTrackingOptionsRequestPrivate(const CreateConfigurationSetTrackingOptionsRequestPrivate &other,
                                    CreateConfigurationSetTrackingOptionsRequest * const q);

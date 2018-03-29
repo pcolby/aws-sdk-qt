@@ -31,7 +31,7 @@ class ReleaseHostsRequest;
 class QTAWS_EXPORT ReleaseHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReleaseHostsRequestPrivate(const EC2::Action action,
+    ReleaseHostsRequestPrivate(const EC2Request::Action action,
                                    ReleaseHostsRequest * const q);
     ReleaseHostsRequestPrivate(const ReleaseHostsRequestPrivate &other,
                                    ReleaseHostsRequest * const q);

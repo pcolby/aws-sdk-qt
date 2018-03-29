@@ -31,7 +31,7 @@ class DescribeExportConfigurationsRequest;
 class QTAWS_EXPORT DescribeExportConfigurationsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    DescribeExportConfigurationsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    DescribeExportConfigurationsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    DescribeExportConfigurationsRequest * const q);
     DescribeExportConfigurationsRequestPrivate(const DescribeExportConfigurationsRequestPrivate &other,
                                    DescribeExportConfigurationsRequest * const q);

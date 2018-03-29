@@ -31,7 +31,7 @@ class GetInvitationsCountRequest;
 class QTAWS_EXPORT GetInvitationsCountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    GetInvitationsCountRequestPrivate(const GuardDuty::Action action,
+    GetInvitationsCountRequestPrivate(const GuardDutyRequest::Action action,
                                    GetInvitationsCountRequest * const q);
     GetInvitationsCountRequestPrivate(const GetInvitationsCountRequestPrivate &other,
                                    GetInvitationsCountRequest * const q);

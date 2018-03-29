@@ -31,7 +31,7 @@ class CreateSnapshotRequest;
 class QTAWS_EXPORT CreateSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CreateSnapshotRequestPrivate(const DirectoryService::Action action,
+    CreateSnapshotRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CreateSnapshotRequest * const q);
     CreateSnapshotRequestPrivate(const CreateSnapshotRequestPrivate &other,
                                    CreateSnapshotRequest * const q);

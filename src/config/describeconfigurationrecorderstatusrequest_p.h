@@ -31,7 +31,7 @@ class DescribeConfigurationRecorderStatusRequest;
 class QTAWS_EXPORT DescribeConfigurationRecorderStatusRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DescribeConfigurationRecorderStatusRequestPrivate(const ConfigService::Action action,
+    DescribeConfigurationRecorderStatusRequestPrivate(const ConfigServiceRequest::Action action,
                                    DescribeConfigurationRecorderStatusRequest * const q);
     DescribeConfigurationRecorderStatusRequestPrivate(const DescribeConfigurationRecorderStatusRequestPrivate &other,
                                    DescribeConfigurationRecorderStatusRequest * const q);

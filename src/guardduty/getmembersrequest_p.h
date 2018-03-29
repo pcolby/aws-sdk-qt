@@ -31,7 +31,7 @@ class GetMembersRequest;
 class QTAWS_EXPORT GetMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    GetMembersRequestPrivate(const GuardDuty::Action action,
+    GetMembersRequestPrivate(const GuardDutyRequest::Action action,
                                    GetMembersRequest * const q);
     GetMembersRequestPrivate(const GetMembersRequestPrivate &other,
                                    GetMembersRequest * const q);

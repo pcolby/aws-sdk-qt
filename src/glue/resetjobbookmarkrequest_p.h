@@ -31,7 +31,7 @@ class ResetJobBookmarkRequest;
 class QTAWS_EXPORT ResetJobBookmarkRequestPrivate : public GlueRequestPrivate {
 
 public:
-    ResetJobBookmarkRequestPrivate(const Glue::Action action,
+    ResetJobBookmarkRequestPrivate(const GlueRequest::Action action,
                                    ResetJobBookmarkRequest * const q);
     ResetJobBookmarkRequestPrivate(const ResetJobBookmarkRequestPrivate &other,
                                    ResetJobBookmarkRequest * const q);

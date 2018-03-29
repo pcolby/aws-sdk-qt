@@ -31,7 +31,7 @@ class DescribeEffectivePatchesForPatchBaselineRequest;
 class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeEffectivePatchesForPatchBaselineRequestPrivate(const SSM::Action action,
+    DescribeEffectivePatchesForPatchBaselineRequestPrivate(const SSMRequest::Action action,
                                    DescribeEffectivePatchesForPatchBaselineRequest * const q);
     DescribeEffectivePatchesForPatchBaselineRequestPrivate(const DescribeEffectivePatchesForPatchBaselineRequestPrivate &other,
                                    DescribeEffectivePatchesForPatchBaselineRequest * const q);

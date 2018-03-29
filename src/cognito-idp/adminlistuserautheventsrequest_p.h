@@ -31,7 +31,7 @@ class AdminListUserAuthEventsRequest;
 class QTAWS_EXPORT AdminListUserAuthEventsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminListUserAuthEventsRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminListUserAuthEventsRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminListUserAuthEventsRequest * const q);
     AdminListUserAuthEventsRequestPrivate(const AdminListUserAuthEventsRequestPrivate &other,
                                    AdminListUserAuthEventsRequest * const q);

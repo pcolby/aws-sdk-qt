@@ -31,7 +31,7 @@ class GetDashboardRequest;
 class QTAWS_EXPORT GetDashboardRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    GetDashboardRequestPrivate(const CloudWatch::Action action,
+    GetDashboardRequestPrivate(const CloudWatchRequest::Action action,
                                    GetDashboardRequest * const q);
     GetDashboardRequestPrivate(const GetDashboardRequestPrivate &other,
                                    GetDashboardRequest * const q);

@@ -31,7 +31,7 @@ class DeleteBandwidthRateLimitRequest;
 class QTAWS_EXPORT DeleteBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DeleteBandwidthRateLimitRequestPrivate(const StorageGateway::Action action,
+    DeleteBandwidthRateLimitRequestPrivate(const StorageGatewayRequest::Action action,
                                    DeleteBandwidthRateLimitRequest * const q);
     DeleteBandwidthRateLimitRequestPrivate(const DeleteBandwidthRateLimitRequestPrivate &other,
                                    DeleteBandwidthRateLimitRequest * const q);

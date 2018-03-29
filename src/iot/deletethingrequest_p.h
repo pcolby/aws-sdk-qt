@@ -31,7 +31,7 @@ class DeleteThingRequest;
 class QTAWS_EXPORT DeleteThingRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteThingRequestPrivate(const IoT::Action action,
+    DeleteThingRequestPrivate(const IoTRequest::Action action,
                                    DeleteThingRequest * const q);
     DeleteThingRequestPrivate(const DeleteThingRequestPrivate &other,
                                    DeleteThingRequest * const q);

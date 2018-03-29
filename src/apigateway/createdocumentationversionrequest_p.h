@@ -31,7 +31,7 @@ class CreateDocumentationVersionRequest;
 class QTAWS_EXPORT CreateDocumentationVersionRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    CreateDocumentationVersionRequestPrivate(const APIGateway::Action action,
+    CreateDocumentationVersionRequestPrivate(const APIGatewayRequest::Action action,
                                    CreateDocumentationVersionRequest * const q);
     CreateDocumentationVersionRequestPrivate(const CreateDocumentationVersionRequestPrivate &other,
                                    CreateDocumentationVersionRequest * const q);

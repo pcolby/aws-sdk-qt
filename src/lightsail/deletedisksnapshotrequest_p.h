@@ -31,7 +31,7 @@ class DeleteDiskSnapshotRequest;
 class QTAWS_EXPORT DeleteDiskSnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DeleteDiskSnapshotRequestPrivate(const Lightsail::Action action,
+    DeleteDiskSnapshotRequestPrivate(const LightsailRequest::Action action,
                                    DeleteDiskSnapshotRequest * const q);
     DeleteDiskSnapshotRequestPrivate(const DeleteDiskSnapshotRequestPrivate &other,
                                    DeleteDiskSnapshotRequest * const q);

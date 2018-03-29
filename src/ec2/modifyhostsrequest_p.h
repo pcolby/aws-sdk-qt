@@ -31,7 +31,7 @@ class ModifyHostsRequest;
 class QTAWS_EXPORT ModifyHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyHostsRequestPrivate(const EC2::Action action,
+    ModifyHostsRequestPrivate(const EC2Request::Action action,
                                    ModifyHostsRequest * const q);
     ModifyHostsRequestPrivate(const ModifyHostsRequestPrivate &other,
                                    ModifyHostsRequest * const q);

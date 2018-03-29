@@ -31,7 +31,7 @@ class TestInvokeMethodRequest;
 class QTAWS_EXPORT TestInvokeMethodRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    TestInvokeMethodRequestPrivate(const APIGateway::Action action,
+    TestInvokeMethodRequestPrivate(const APIGatewayRequest::Action action,
                                    TestInvokeMethodRequest * const q);
     TestInvokeMethodRequestPrivate(const TestInvokeMethodRequestPrivate &other,
                                    TestInvokeMethodRequest * const q);

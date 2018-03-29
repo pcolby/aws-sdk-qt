@@ -31,7 +31,7 @@ class UnmonitorInstancesRequest;
 class QTAWS_EXPORT UnmonitorInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    UnmonitorInstancesRequestPrivate(const EC2::Action action,
+    UnmonitorInstancesRequestPrivate(const EC2Request::Action action,
                                    UnmonitorInstancesRequest * const q);
     UnmonitorInstancesRequestPrivate(const UnmonitorInstancesRequestPrivate &other,
                                    UnmonitorInstancesRequest * const q);

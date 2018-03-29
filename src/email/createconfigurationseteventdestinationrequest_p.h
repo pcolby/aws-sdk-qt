@@ -31,7 +31,7 @@ class CreateConfigurationSetEventDestinationRequest;
 class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequestPrivate : public SESRequestPrivate {
 
 public:
-    CreateConfigurationSetEventDestinationRequestPrivate(const SES::Action action,
+    CreateConfigurationSetEventDestinationRequestPrivate(const SESRequest::Action action,
                                    CreateConfigurationSetEventDestinationRequest * const q);
     CreateConfigurationSetEventDestinationRequestPrivate(const CreateConfigurationSetEventDestinationRequestPrivate &other,
                                    CreateConfigurationSetEventDestinationRequest * const q);

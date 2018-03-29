@@ -31,7 +31,7 @@ class InvokeEndpointRequest;
 class QTAWS_EXPORT InvokeEndpointRequestPrivate : public SageMakerRuntimeRequestPrivate {
 
 public:
-    InvokeEndpointRequestPrivate(const SageMakerRuntime::Action action,
+    InvokeEndpointRequestPrivate(const SageMakerRuntimeRequest::Action action,
                                    InvokeEndpointRequest * const q);
     InvokeEndpointRequestPrivate(const InvokeEndpointRequestPrivate &other,
                                    InvokeEndpointRequest * const q);

@@ -31,7 +31,7 @@ class UpdateDomainNameRequest;
 class QTAWS_EXPORT UpdateDomainNameRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateDomainNameRequestPrivate(const APIGateway::Action action,
+    UpdateDomainNameRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateDomainNameRequest * const q);
     UpdateDomainNameRequestPrivate(const UpdateDomainNameRequestPrivate &other,
                                    UpdateDomainNameRequest * const q);

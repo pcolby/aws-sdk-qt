@@ -31,7 +31,7 @@ class ModifyVolumeAttributeRequest;
 class QTAWS_EXPORT ModifyVolumeAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyVolumeAttributeRequestPrivate(const EC2::Action action,
+    ModifyVolumeAttributeRequestPrivate(const EC2Request::Action action,
                                    ModifyVolumeAttributeRequest * const q);
     ModifyVolumeAttributeRequestPrivate(const ModifyVolumeAttributeRequestPrivate &other,
                                    ModifyVolumeAttributeRequest * const q);

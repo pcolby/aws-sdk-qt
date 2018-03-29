@@ -31,7 +31,7 @@ class UpdateJobRequest;
 class QTAWS_EXPORT UpdateJobRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    UpdateJobRequestPrivate(const Snowball::Action action,
+    UpdateJobRequestPrivate(const SnowballRequest::Action action,
                                    UpdateJobRequest * const q);
     UpdateJobRequestPrivate(const UpdateJobRequestPrivate &other,
                                    UpdateJobRequest * const q);

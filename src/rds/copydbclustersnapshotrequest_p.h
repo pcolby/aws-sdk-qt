@@ -31,7 +31,7 @@ class CopyDBClusterSnapshotRequest;
 class QTAWS_EXPORT CopyDBClusterSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CopyDBClusterSnapshotRequestPrivate(const RDS::Action action,
+    CopyDBClusterSnapshotRequestPrivate(const RDSRequest::Action action,
                                    CopyDBClusterSnapshotRequest * const q);
     CopyDBClusterSnapshotRequestPrivate(const CopyDBClusterSnapshotRequestPrivate &other,
                                    CopyDBClusterSnapshotRequest * const q);

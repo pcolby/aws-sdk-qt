@@ -31,7 +31,7 @@ class CompleteMultipartUploadRequest;
 class QTAWS_EXPORT CompleteMultipartUploadRequestPrivate : public S3RequestPrivate {
 
 public:
-    CompleteMultipartUploadRequestPrivate(const S3::Action action,
+    CompleteMultipartUploadRequestPrivate(const S3Request::Action action,
                                    CompleteMultipartUploadRequest * const q);
     CompleteMultipartUploadRequestPrivate(const CompleteMultipartUploadRequestPrivate &other,
                                    CompleteMultipartUploadRequest * const q);

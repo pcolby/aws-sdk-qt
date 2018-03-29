@@ -31,7 +31,7 @@ class DeleteTableRequest;
 class QTAWS_EXPORT DeleteTableRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    DeleteTableRequestPrivate(const DynamoDB::Action action,
+    DeleteTableRequestPrivate(const DynamoDBRequest::Action action,
                                    DeleteTableRequest * const q);
     DeleteTableRequestPrivate(const DeleteTableRequestPrivate &other,
                                    DeleteTableRequest * const q);

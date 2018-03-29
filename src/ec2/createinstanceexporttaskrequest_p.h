@@ -31,7 +31,7 @@ class CreateInstanceExportTaskRequest;
 class QTAWS_EXPORT CreateInstanceExportTaskRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateInstanceExportTaskRequestPrivate(const EC2::Action action,
+    CreateInstanceExportTaskRequestPrivate(const EC2Request::Action action,
                                    CreateInstanceExportTaskRequest * const q);
     CreateInstanceExportTaskRequestPrivate(const CreateInstanceExportTaskRequestPrivate &other,
                                    CreateInstanceExportTaskRequest * const q);

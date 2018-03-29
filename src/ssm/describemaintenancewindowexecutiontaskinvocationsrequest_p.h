@@ -31,7 +31,7 @@ class DescribeMaintenanceWindowExecutionTaskInvocationsRequest;
 class QTAWS_EXPORT DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(const SSM::Action action,
+    DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(const SSMRequest::Action action,
                                    DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q);
     DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(const DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate &other,
                                    DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q);

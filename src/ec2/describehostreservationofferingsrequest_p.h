@@ -31,7 +31,7 @@ class DescribeHostReservationOfferingsRequest;
 class QTAWS_EXPORT DescribeHostReservationOfferingsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeHostReservationOfferingsRequestPrivate(const EC2::Action action,
+    DescribeHostReservationOfferingsRequestPrivate(const EC2Request::Action action,
                                    DescribeHostReservationOfferingsRequest * const q);
     DescribeHostReservationOfferingsRequestPrivate(const DescribeHostReservationOfferingsRequestPrivate &other,
                                    DescribeHostReservationOfferingsRequest * const q);

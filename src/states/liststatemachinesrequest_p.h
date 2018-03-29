@@ -31,7 +31,7 @@ class ListStateMachinesRequest;
 class QTAWS_EXPORT ListStateMachinesRequestPrivate : public SFNRequestPrivate {
 
 public:
-    ListStateMachinesRequestPrivate(const SFN::Action action,
+    ListStateMachinesRequestPrivate(const SFNRequest::Action action,
                                    ListStateMachinesRequest * const q);
     ListStateMachinesRequestPrivate(const ListStateMachinesRequestPrivate &other,
                                    ListStateMachinesRequest * const q);

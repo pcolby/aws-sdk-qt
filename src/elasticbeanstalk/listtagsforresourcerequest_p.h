@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const ElasticBeanstalk::Action action,
+    ListTagsForResourceRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

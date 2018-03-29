@@ -31,7 +31,7 @@ class AdminGetUserRequest;
 class QTAWS_EXPORT AdminGetUserRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminGetUserRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminGetUserRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminGetUserRequest * const q);
     AdminGetUserRequestPrivate(const AdminGetUserRequestPrivate &other,
                                    AdminGetUserRequest * const q);

@@ -31,7 +31,7 @@ class GetGeoMatchSetRequest;
 class QTAWS_EXPORT GetGeoMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetGeoMatchSetRequestPrivate(const WAFRegional::Action action,
+    GetGeoMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetGeoMatchSetRequest * const q);
     GetGeoMatchSetRequestPrivate(const GetGeoMatchSetRequestPrivate &other,
                                    GetGeoMatchSetRequest * const q);

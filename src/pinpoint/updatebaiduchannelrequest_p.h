@@ -31,7 +31,7 @@ class UpdateBaiduChannelRequest;
 class QTAWS_EXPORT UpdateBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateBaiduChannelRequestPrivate(const Pinpoint::Action action,
+    UpdateBaiduChannelRequestPrivate(const PinpointRequest::Action action,
                                    UpdateBaiduChannelRequest * const q);
     UpdateBaiduChannelRequestPrivate(const UpdateBaiduChannelRequestPrivate &other,
                                    UpdateBaiduChannelRequest * const q);

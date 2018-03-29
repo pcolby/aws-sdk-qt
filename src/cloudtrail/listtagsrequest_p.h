@@ -31,7 +31,7 @@ class ListTagsRequest;
 class QTAWS_EXPORT ListTagsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const CloudTrail::Action action,
+    ListTagsRequestPrivate(const CloudTrailRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

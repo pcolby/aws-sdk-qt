@@ -31,7 +31,7 @@ class CreateWebhookRequest;
 class QTAWS_EXPORT CreateWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    CreateWebhookRequestPrivate(const CodeBuild::Action action,
+    CreateWebhookRequestPrivate(const CodeBuildRequest::Action action,
                                    CreateWebhookRequest * const q);
     CreateWebhookRequestPrivate(const CreateWebhookRequestPrivate &other,
                                    CreateWebhookRequest * const q);

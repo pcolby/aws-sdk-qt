@@ -31,7 +31,7 @@ class ListPipelinesRequest;
 class QTAWS_EXPORT ListPipelinesRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ListPipelinesRequestPrivate(const ElasticTranscoder::Action action,
+    ListPipelinesRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ListPipelinesRequest * const q);
     ListPipelinesRequestPrivate(const ListPipelinesRequestPrivate &other,
                                    ListPipelinesRequest * const q);

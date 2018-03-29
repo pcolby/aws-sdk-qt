@@ -31,7 +31,7 @@ class ListVolumeInitiatorsRequest;
 class QTAWS_EXPORT ListVolumeInitiatorsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListVolumeInitiatorsRequestPrivate(const StorageGateway::Action action,
+    ListVolumeInitiatorsRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListVolumeInitiatorsRequest * const q);
     ListVolumeInitiatorsRequestPrivate(const ListVolumeInitiatorsRequestPrivate &other,
                                    ListVolumeInitiatorsRequest * const q);

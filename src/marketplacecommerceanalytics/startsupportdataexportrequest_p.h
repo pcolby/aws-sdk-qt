@@ -31,7 +31,7 @@ class StartSupportDataExportRequest;
 class QTAWS_EXPORT StartSupportDataExportRequestPrivate : public MarketplaceCommerceAnalyticsRequestPrivate {
 
 public:
-    StartSupportDataExportRequestPrivate(const MarketplaceCommerceAnalytics::Action action,
+    StartSupportDataExportRequestPrivate(const MarketplaceCommerceAnalyticsRequest::Action action,
                                    StartSupportDataExportRequest * const q);
     StartSupportDataExportRequestPrivate(const StartSupportDataExportRequestPrivate &other,
                                    StartSupportDataExportRequest * const q);

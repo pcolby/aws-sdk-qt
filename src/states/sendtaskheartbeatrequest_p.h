@@ -31,7 +31,7 @@ class SendTaskHeartbeatRequest;
 class QTAWS_EXPORT SendTaskHeartbeatRequestPrivate : public SFNRequestPrivate {
 
 public:
-    SendTaskHeartbeatRequestPrivate(const SFN::Action action,
+    SendTaskHeartbeatRequestPrivate(const SFNRequest::Action action,
                                    SendTaskHeartbeatRequest * const q);
     SendTaskHeartbeatRequestPrivate(const SendTaskHeartbeatRequestPrivate &other,
                                    SendTaskHeartbeatRequest * const q);

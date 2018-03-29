@@ -31,7 +31,7 @@ class UpdateApplicationSettingsRequest;
 class QTAWS_EXPORT UpdateApplicationSettingsRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateApplicationSettingsRequestPrivate(const Pinpoint::Action action,
+    UpdateApplicationSettingsRequestPrivate(const PinpointRequest::Action action,
                                    UpdateApplicationSettingsRequest * const q);
     UpdateApplicationSettingsRequestPrivate(const UpdateApplicationSettingsRequestPrivate &other,
                                    UpdateApplicationSettingsRequest * const q);

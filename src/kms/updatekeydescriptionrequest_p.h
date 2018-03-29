@@ -31,7 +31,7 @@ class UpdateKeyDescriptionRequest;
 class QTAWS_EXPORT UpdateKeyDescriptionRequestPrivate : public KMSRequestPrivate {
 
 public:
-    UpdateKeyDescriptionRequestPrivate(const KMS::Action action,
+    UpdateKeyDescriptionRequestPrivate(const KMSRequest::Action action,
                                    UpdateKeyDescriptionRequest * const q);
     UpdateKeyDescriptionRequestPrivate(const UpdateKeyDescriptionRequestPrivate &other,
                                    UpdateKeyDescriptionRequest * const q);

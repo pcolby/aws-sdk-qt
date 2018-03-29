@@ -31,7 +31,7 @@ class DescribeTableRequest;
 class QTAWS_EXPORT DescribeTableRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    DescribeTableRequestPrivate(const DynamoDB::Action action,
+    DescribeTableRequestPrivate(const DynamoDBRequest::Action action,
                                    DescribeTableRequest * const q);
     DescribeTableRequestPrivate(const DescribeTableRequestPrivate &other,
                                    DescribeTableRequest * const q);

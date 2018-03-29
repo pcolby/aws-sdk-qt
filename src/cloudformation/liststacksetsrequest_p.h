@@ -31,7 +31,7 @@ class ListStackSetsRequest;
 class QTAWS_EXPORT ListStackSetsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    ListStackSetsRequestPrivate(const CloudFormation::Action action,
+    ListStackSetsRequestPrivate(const CloudFormationRequest::Action action,
                                    ListStackSetsRequest * const q);
     ListStackSetsRequestPrivate(const ListStackSetsRequestPrivate &other,
                                    ListStackSetsRequest * const q);

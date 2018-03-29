@@ -31,7 +31,7 @@ class DescribeApplicationStateRequest;
 class QTAWS_EXPORT DescribeApplicationStateRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    DescribeApplicationStateRequestPrivate(const MigrationHub::Action action,
+    DescribeApplicationStateRequestPrivate(const MigrationHubRequest::Action action,
                                    DescribeApplicationStateRequest * const q);
     DescribeApplicationStateRequestPrivate(const DescribeApplicationStateRequestPrivate &other,
                                    DescribeApplicationStateRequest * const q);

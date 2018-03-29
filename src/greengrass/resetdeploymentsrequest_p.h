@@ -31,7 +31,7 @@ class ResetDeploymentsRequest;
 class QTAWS_EXPORT ResetDeploymentsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ResetDeploymentsRequestPrivate(const Greengrass::Action action,
+    ResetDeploymentsRequestPrivate(const GreengrassRequest::Action action,
                                    ResetDeploymentsRequest * const q);
     ResetDeploymentsRequestPrivate(const ResetDeploymentsRequestPrivate &other,
                                    ResetDeploymentsRequest * const q);

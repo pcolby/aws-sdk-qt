@@ -31,7 +31,7 @@ class DescribeCacheClustersRequest;
 class QTAWS_EXPORT DescribeCacheClustersRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeCacheClustersRequestPrivate(const ElastiCache::Action action,
+    DescribeCacheClustersRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeCacheClustersRequest * const q);
     DescribeCacheClustersRequestPrivate(const DescribeCacheClustersRequestPrivate &other,
                                    DescribeCacheClustersRequest * const q);

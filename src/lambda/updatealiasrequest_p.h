@@ -31,7 +31,7 @@ class UpdateAliasRequest;
 class QTAWS_EXPORT UpdateAliasRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    UpdateAliasRequestPrivate(const Lambda::Action action,
+    UpdateAliasRequestPrivate(const LambdaRequest::Action action,
                                    UpdateAliasRequest * const q);
     UpdateAliasRequestPrivate(const UpdateAliasRequestPrivate &other,
                                    UpdateAliasRequest * const q);

@@ -31,7 +31,7 @@ class DescribeDomainsRequest;
 class QTAWS_EXPORT DescribeDomainsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DescribeDomainsRequestPrivate(const CloudSearch::Action action,
+    DescribeDomainsRequestPrivate(const CloudSearchRequest::Action action,
                                    DescribeDomainsRequest * const q);
     DescribeDomainsRequestPrivate(const DescribeDomainsRequestPrivate &other,
                                    DescribeDomainsRequest * const q);

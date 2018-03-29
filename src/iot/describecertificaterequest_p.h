@@ -31,7 +31,7 @@ class DescribeCertificateRequest;
 class QTAWS_EXPORT DescribeCertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeCertificateRequestPrivate(const IoT::Action action,
+    DescribeCertificateRequestPrivate(const IoTRequest::Action action,
                                    DescribeCertificateRequest * const q);
     DescribeCertificateRequestPrivate(const DescribeCertificateRequestPrivate &other,
                                    DescribeCertificateRequest * const q);

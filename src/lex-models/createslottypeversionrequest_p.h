@@ -31,7 +31,7 @@ class CreateSlotTypeVersionRequest;
 class QTAWS_EXPORT CreateSlotTypeVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    CreateSlotTypeVersionRequestPrivate(const LexModelBuildingService::Action action,
+    CreateSlotTypeVersionRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    CreateSlotTypeVersionRequest * const q);
     CreateSlotTypeVersionRequestPrivate(const CreateSlotTypeVersionRequestPrivate &other,
                                    CreateSlotTypeVersionRequest * const q);

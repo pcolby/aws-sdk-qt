@@ -31,7 +31,7 @@ class DeregisterEventTopicRequest;
 class QTAWS_EXPORT DeregisterEventTopicRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DeregisterEventTopicRequestPrivate(const DirectoryService::Action action,
+    DeregisterEventTopicRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DeregisterEventTopicRequest * const q);
     DeregisterEventTopicRequestPrivate(const DeregisterEventTopicRequestPrivate &other,
                                    DeregisterEventTopicRequest * const q);

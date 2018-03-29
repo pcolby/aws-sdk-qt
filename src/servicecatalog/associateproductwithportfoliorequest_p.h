@@ -31,7 +31,7 @@ class AssociateProductWithPortfolioRequest;
 class QTAWS_EXPORT AssociateProductWithPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    AssociateProductWithPortfolioRequestPrivate(const ServiceCatalog::Action action,
+    AssociateProductWithPortfolioRequestPrivate(const ServiceCatalogRequest::Action action,
                                    AssociateProductWithPortfolioRequest * const q);
     AssociateProductWithPortfolioRequestPrivate(const AssociateProductWithPortfolioRequestPrivate &other,
                                    AssociateProductWithPortfolioRequest * const q);

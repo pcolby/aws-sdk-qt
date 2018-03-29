@@ -31,7 +31,7 @@ class DescribeCertificatesRequest;
 class QTAWS_EXPORT DescribeCertificatesRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeCertificatesRequestPrivate(const RDS::Action action,
+    DescribeCertificatesRequestPrivate(const RDSRequest::Action action,
                                    DescribeCertificatesRequest * const q);
     DescribeCertificatesRequestPrivate(const DescribeCertificatesRequestPrivate &other,
                                    DescribeCertificatesRequest * const q);

@@ -31,7 +31,7 @@ class DescribeJobQueuesRequest;
 class QTAWS_EXPORT DescribeJobQueuesRequestPrivate : public BatchRequestPrivate {
 
 public:
-    DescribeJobQueuesRequestPrivate(const Batch::Action action,
+    DescribeJobQueuesRequestPrivate(const BatchRequest::Action action,
                                    DescribeJobQueuesRequest * const q);
     DescribeJobQueuesRequestPrivate(const DescribeJobQueuesRequestPrivate &other,
                                    DescribeJobQueuesRequest * const q);

@@ -31,7 +31,7 @@ class CreateAliasRequest;
 class QTAWS_EXPORT CreateAliasRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CreateAliasRequestPrivate(const DirectoryService::Action action,
+    CreateAliasRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CreateAliasRequest * const q);
     CreateAliasRequestPrivate(const CreateAliasRequestPrivate &other,
                                    CreateAliasRequest * const q);

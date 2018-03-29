@@ -31,7 +31,7 @@ class SetRiskConfigurationRequest;
 class QTAWS_EXPORT SetRiskConfigurationRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    SetRiskConfigurationRequestPrivate(const CognitoIdentityProvider::Action action,
+    SetRiskConfigurationRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    SetRiskConfigurationRequest * const q);
     SetRiskConfigurationRequestPrivate(const SetRiskConfigurationRequestPrivate &other,
                                    SetRiskConfigurationRequest * const q);

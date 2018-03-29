@@ -31,7 +31,7 @@ class DeleteSqlInjectionMatchSetRequest;
 class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteSqlInjectionMatchSetRequestPrivate(const WAF::Action action,
+    DeleteSqlInjectionMatchSetRequestPrivate(const WAFRequest::Action action,
                                    DeleteSqlInjectionMatchSetRequest * const q);
     DeleteSqlInjectionMatchSetRequestPrivate(const DeleteSqlInjectionMatchSetRequestPrivate &other,
                                    DeleteSqlInjectionMatchSetRequest * const q);

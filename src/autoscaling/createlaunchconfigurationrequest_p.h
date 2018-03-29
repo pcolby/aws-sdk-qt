@@ -31,7 +31,7 @@ class CreateLaunchConfigurationRequest;
 class QTAWS_EXPORT CreateLaunchConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    CreateLaunchConfigurationRequestPrivate(const AutoScaling::Action action,
+    CreateLaunchConfigurationRequestPrivate(const AutoScalingRequest::Action action,
                                    CreateLaunchConfigurationRequest * const q);
     CreateLaunchConfigurationRequestPrivate(const CreateLaunchConfigurationRequestPrivate &other,
                                    CreateLaunchConfigurationRequest * const q);

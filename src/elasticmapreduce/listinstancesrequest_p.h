@@ -31,7 +31,7 @@ class ListInstancesRequest;
 class QTAWS_EXPORT ListInstancesRequestPrivate : public EMRRequestPrivate {
 
 public:
-    ListInstancesRequestPrivate(const EMR::Action action,
+    ListInstancesRequestPrivate(const EMRRequest::Action action,
                                    ListInstancesRequest * const q);
     ListInstancesRequestPrivate(const ListInstancesRequestPrivate &other,
                                    ListInstancesRequest * const q);

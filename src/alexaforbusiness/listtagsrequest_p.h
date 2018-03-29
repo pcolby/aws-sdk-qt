@@ -31,7 +31,7 @@ class ListTagsRequest;
 class QTAWS_EXPORT ListTagsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const AlexaForBusiness::Action action,
+    ListTagsRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

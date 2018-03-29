@@ -31,7 +31,7 @@ class ListObjectsRequest;
 class QTAWS_EXPORT ListObjectsRequestPrivate : public S3RequestPrivate {
 
 public:
-    ListObjectsRequestPrivate(const S3::Action action,
+    ListObjectsRequestPrivate(const S3Request::Action action,
                                    ListObjectsRequest * const q);
     ListObjectsRequestPrivate(const ListObjectsRequestPrivate &other,
                                    ListObjectsRequest * const q);

@@ -31,7 +31,7 @@ class GetDataflowGraphRequest;
 class QTAWS_EXPORT GetDataflowGraphRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetDataflowGraphRequestPrivate(const Glue::Action action,
+    GetDataflowGraphRequestPrivate(const GlueRequest::Action action,
                                    GetDataflowGraphRequest * const q);
     GetDataflowGraphRequestPrivate(const GetDataflowGraphRequestPrivate &other,
                                    GetDataflowGraphRequest * const q);

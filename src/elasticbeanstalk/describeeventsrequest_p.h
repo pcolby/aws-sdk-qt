@@ -31,7 +31,7 @@ class DescribeEventsRequest;
 class QTAWS_EXPORT DescribeEventsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeEventsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);

@@ -31,7 +31,7 @@ class EnableVpcClassicLinkRequest;
 class QTAWS_EXPORT EnableVpcClassicLinkRequestPrivate : public EC2RequestPrivate {
 
 public:
-    EnableVpcClassicLinkRequestPrivate(const EC2::Action action,
+    EnableVpcClassicLinkRequestPrivate(const EC2Request::Action action,
                                    EnableVpcClassicLinkRequest * const q);
     EnableVpcClassicLinkRequestPrivate(const EnableVpcClassicLinkRequestPrivate &other,
                                    EnableVpcClassicLinkRequest * const q);

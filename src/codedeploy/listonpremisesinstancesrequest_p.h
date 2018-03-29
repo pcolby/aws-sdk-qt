@@ -31,7 +31,7 @@ class ListOnPremisesInstancesRequest;
 class QTAWS_EXPORT ListOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    ListOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+    ListOnPremisesInstancesRequestPrivate(const CodeDeployRequest::Action action,
                                    ListOnPremisesInstancesRequest * const q);
     ListOnPremisesInstancesRequestPrivate(const ListOnPremisesInstancesRequestPrivate &other,
                                    ListOnPremisesInstancesRequest * const q);

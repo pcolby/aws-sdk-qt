@@ -31,7 +31,7 @@ class BatchGetApplicationRevisionsRequest;
 class QTAWS_EXPORT BatchGetApplicationRevisionsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    BatchGetApplicationRevisionsRequestPrivate(const CodeDeploy::Action action,
+    BatchGetApplicationRevisionsRequestPrivate(const CodeDeployRequest::Action action,
                                    BatchGetApplicationRevisionsRequest * const q);
     BatchGetApplicationRevisionsRequestPrivate(const BatchGetApplicationRevisionsRequestPrivate &other,
                                    BatchGetApplicationRevisionsRequest * const q);

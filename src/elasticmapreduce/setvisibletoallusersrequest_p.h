@@ -31,7 +31,7 @@ class SetVisibleToAllUsersRequest;
 class QTAWS_EXPORT SetVisibleToAllUsersRequestPrivate : public EMRRequestPrivate {
 
 public:
-    SetVisibleToAllUsersRequestPrivate(const EMR::Action action,
+    SetVisibleToAllUsersRequestPrivate(const EMRRequest::Action action,
                                    SetVisibleToAllUsersRequest * const q);
     SetVisibleToAllUsersRequestPrivate(const SetVisibleToAllUsersRequestPrivate &other,
                                    SetVisibleToAllUsersRequest * const q);

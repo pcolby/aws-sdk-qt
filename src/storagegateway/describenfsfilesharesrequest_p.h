@@ -31,7 +31,7 @@ class DescribeNFSFileSharesRequest;
 class QTAWS_EXPORT DescribeNFSFileSharesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeNFSFileSharesRequestPrivate(const StorageGateway::Action action,
+    DescribeNFSFileSharesRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeNFSFileSharesRequest * const q);
     DescribeNFSFileSharesRequestPrivate(const DescribeNFSFileSharesRequestPrivate &other,
                                    DescribeNFSFileSharesRequest * const q);

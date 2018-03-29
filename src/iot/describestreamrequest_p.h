@@ -31,7 +31,7 @@ class DescribeStreamRequest;
 class QTAWS_EXPORT DescribeStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeStreamRequestPrivate(const IoT::Action action,
+    DescribeStreamRequestPrivate(const IoTRequest::Action action,
                                    DescribeStreamRequest * const q);
     DescribeStreamRequestPrivate(const DescribeStreamRequestPrivate &other,
                                    DescribeStreamRequest * const q);

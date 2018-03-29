@@ -31,7 +31,7 @@ class GetPartitionsRequest;
 class QTAWS_EXPORT GetPartitionsRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetPartitionsRequestPrivate(const Glue::Action action,
+    GetPartitionsRequestPrivate(const GlueRequest::Action action,
                                    GetPartitionsRequest * const q);
     GetPartitionsRequestPrivate(const GetPartitionsRequestPrivate &other,
                                    GetPartitionsRequest * const q);

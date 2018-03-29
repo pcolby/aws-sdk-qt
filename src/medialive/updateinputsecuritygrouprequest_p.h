@@ -31,7 +31,7 @@ class UpdateInputSecurityGroupRequest;
 class QTAWS_EXPORT UpdateInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    UpdateInputSecurityGroupRequestPrivate(const MediaLive::Action action,
+    UpdateInputSecurityGroupRequestPrivate(const MediaLiveRequest::Action action,
                                    UpdateInputSecurityGroupRequest * const q);
     UpdateInputSecurityGroupRequestPrivate(const UpdateInputSecurityGroupRequestPrivate &other,
                                    UpdateInputSecurityGroupRequest * const q);

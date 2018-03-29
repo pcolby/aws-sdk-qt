@@ -31,7 +31,7 @@ class GetBucketWebsiteRequest;
 class QTAWS_EXPORT GetBucketWebsiteRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketWebsiteRequestPrivate(const S3::Action action,
+    GetBucketWebsiteRequestPrivate(const S3Request::Action action,
                                    GetBucketWebsiteRequest * const q);
     GetBucketWebsiteRequestPrivate(const GetBucketWebsiteRequestPrivate &other,
                                    GetBucketWebsiteRequest * const q);

@@ -31,7 +31,7 @@ class StartWorkflowExecutionRequest;
 class QTAWS_EXPORT StartWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
-    StartWorkflowExecutionRequestPrivate(const SWF::Action action,
+    StartWorkflowExecutionRequestPrivate(const SWFRequest::Action action,
                                    StartWorkflowExecutionRequest * const q);
     StartWorkflowExecutionRequestPrivate(const StartWorkflowExecutionRequestPrivate &other,
                                    StartWorkflowExecutionRequest * const q);

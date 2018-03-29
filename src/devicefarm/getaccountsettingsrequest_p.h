@@ -31,7 +31,7 @@ class GetAccountSettingsRequest;
 class QTAWS_EXPORT GetAccountSettingsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetAccountSettingsRequestPrivate(const DeviceFarm::Action action,
+    GetAccountSettingsRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetAccountSettingsRequest * const q);
     GetAccountSettingsRequestPrivate(const GetAccountSettingsRequestPrivate &other,
                                    GetAccountSettingsRequest * const q);

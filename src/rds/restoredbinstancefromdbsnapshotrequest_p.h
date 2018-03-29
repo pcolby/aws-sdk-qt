@@ -31,7 +31,7 @@ class RestoreDBInstanceFromDBSnapshotRequest;
 class QTAWS_EXPORT RestoreDBInstanceFromDBSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RestoreDBInstanceFromDBSnapshotRequestPrivate(const RDS::Action action,
+    RestoreDBInstanceFromDBSnapshotRequestPrivate(const RDSRequest::Action action,
                                    RestoreDBInstanceFromDBSnapshotRequest * const q);
     RestoreDBInstanceFromDBSnapshotRequestPrivate(const RestoreDBInstanceFromDBSnapshotRequestPrivate &other,
                                    RestoreDBInstanceFromDBSnapshotRequest * const q);

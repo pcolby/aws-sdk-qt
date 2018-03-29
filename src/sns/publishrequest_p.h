@@ -31,7 +31,7 @@ class PublishRequest;
 class QTAWS_EXPORT PublishRequestPrivate : public SNSRequestPrivate {
 
 public:
-    PublishRequestPrivate(const SNS::Action action,
+    PublishRequestPrivate(const SNSRequest::Action action,
                                    PublishRequest * const q);
     PublishRequestPrivate(const PublishRequestPrivate &other,
                                    PublishRequest * const q);

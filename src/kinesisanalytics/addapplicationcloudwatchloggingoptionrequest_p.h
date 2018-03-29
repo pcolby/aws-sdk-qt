@@ -31,7 +31,7 @@ class AddApplicationCloudWatchLoggingOptionRequest;
 class QTAWS_EXPORT AddApplicationCloudWatchLoggingOptionRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    AddApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalytics::Action action,
+    AddApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    AddApplicationCloudWatchLoggingOptionRequest * const q);
     AddApplicationCloudWatchLoggingOptionRequestPrivate(const AddApplicationCloudWatchLoggingOptionRequestPrivate &other,
                                    AddApplicationCloudWatchLoggingOptionRequest * const q);

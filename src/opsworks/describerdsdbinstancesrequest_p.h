@@ -31,7 +31,7 @@ class DescribeRdsDbInstancesRequest;
 class QTAWS_EXPORT DescribeRdsDbInstancesRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeRdsDbInstancesRequestPrivate(const OpsWorks::Action action,
+    DescribeRdsDbInstancesRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeRdsDbInstancesRequest * const q);
     DescribeRdsDbInstancesRequestPrivate(const DescribeRdsDbInstancesRequestPrivate &other,
                                    DescribeRdsDbInstancesRequest * const q);

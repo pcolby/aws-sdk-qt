@@ -31,7 +31,7 @@ class GetLifecyclePolicyPreviewRequest;
 class QTAWS_EXPORT GetLifecyclePolicyPreviewRequestPrivate : public ECRRequestPrivate {
 
 public:
-    GetLifecyclePolicyPreviewRequestPrivate(const ECR::Action action,
+    GetLifecyclePolicyPreviewRequestPrivate(const ECRRequest::Action action,
                                    GetLifecyclePolicyPreviewRequest * const q);
     GetLifecyclePolicyPreviewRequestPrivate(const GetLifecyclePolicyPreviewRequestPrivate &other,
                                    GetLifecyclePolicyPreviewRequest * const q);

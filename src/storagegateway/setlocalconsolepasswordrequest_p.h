@@ -31,7 +31,7 @@ class SetLocalConsolePasswordRequest;
 class QTAWS_EXPORT SetLocalConsolePasswordRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    SetLocalConsolePasswordRequestPrivate(const StorageGateway::Action action,
+    SetLocalConsolePasswordRequestPrivate(const StorageGatewayRequest::Action action,
                                    SetLocalConsolePasswordRequest * const q);
     SetLocalConsolePasswordRequestPrivate(const SetLocalConsolePasswordRequestPrivate &other,
                                    SetLocalConsolePasswordRequest * const q);

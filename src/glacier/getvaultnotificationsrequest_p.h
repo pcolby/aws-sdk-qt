@@ -31,7 +31,7 @@ class GetVaultNotificationsRequest;
 class QTAWS_EXPORT GetVaultNotificationsRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    GetVaultNotificationsRequestPrivate(const Glacier::Action action,
+    GetVaultNotificationsRequestPrivate(const GlacierRequest::Action action,
                                    GetVaultNotificationsRequest * const q);
     GetVaultNotificationsRequestPrivate(const GetVaultNotificationsRequestPrivate &other,
                                    GetVaultNotificationsRequest * const q);

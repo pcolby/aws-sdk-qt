@@ -31,7 +31,7 @@ class AdminCreateUserRequest;
 class QTAWS_EXPORT AdminCreateUserRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminCreateUserRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminCreateUserRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminCreateUserRequest * const q);
     AdminCreateUserRequestPrivate(const AdminCreateUserRequestPrivate &other,
                                    AdminCreateUserRequest * const q);

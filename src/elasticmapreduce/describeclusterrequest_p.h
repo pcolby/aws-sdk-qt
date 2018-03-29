@@ -31,7 +31,7 @@ class DescribeClusterRequest;
 class QTAWS_EXPORT DescribeClusterRequestPrivate : public EMRRequestPrivate {
 
 public:
-    DescribeClusterRequestPrivate(const EMR::Action action,
+    DescribeClusterRequestPrivate(const EMRRequest::Action action,
                                    DescribeClusterRequest * const q);
     DescribeClusterRequestPrivate(const DescribeClusterRequestPrivate &other,
                                    DescribeClusterRequest * const q);

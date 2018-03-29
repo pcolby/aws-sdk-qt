@@ -31,7 +31,7 @@ class GetOTAUpdateRequest;
 class QTAWS_EXPORT GetOTAUpdateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    GetOTAUpdateRequestPrivate(const IoT::Action action,
+    GetOTAUpdateRequestPrivate(const IoTRequest::Action action,
                                    GetOTAUpdateRequest * const q);
     GetOTAUpdateRequestPrivate(const GetOTAUpdateRequestPrivate &other,
                                    GetOTAUpdateRequest * const q);

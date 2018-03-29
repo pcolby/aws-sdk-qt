@@ -31,7 +31,7 @@ class DeleteHostedZoneRequest;
 class QTAWS_EXPORT DeleteHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
-    DeleteHostedZoneRequestPrivate(const Route53::Action action,
+    DeleteHostedZoneRequestPrivate(const Route53Request::Action action,
                                    DeleteHostedZoneRequest * const q);
     DeleteHostedZoneRequestPrivate(const DeleteHostedZoneRequestPrivate &other,
                                    DeleteHostedZoneRequest * const q);

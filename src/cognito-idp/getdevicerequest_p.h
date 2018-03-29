@@ -31,7 +31,7 @@ class GetDeviceRequest;
 class QTAWS_EXPORT GetDeviceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetDeviceRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetDeviceRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetDeviceRequest * const q);
     GetDeviceRequestPrivate(const GetDeviceRequestPrivate &other,
                                    GetDeviceRequest * const q);

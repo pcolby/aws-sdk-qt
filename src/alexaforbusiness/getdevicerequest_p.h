@@ -31,7 +31,7 @@ class GetDeviceRequest;
 class QTAWS_EXPORT GetDeviceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    GetDeviceRequestPrivate(const AlexaForBusiness::Action action,
+    GetDeviceRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    GetDeviceRequest * const q);
     GetDeviceRequestPrivate(const GetDeviceRequestPrivate &other,
                                    GetDeviceRequest * const q);

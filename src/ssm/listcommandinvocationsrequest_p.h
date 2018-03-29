@@ -31,7 +31,7 @@ class ListCommandInvocationsRequest;
 class QTAWS_EXPORT ListCommandInvocationsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListCommandInvocationsRequestPrivate(const SSM::Action action,
+    ListCommandInvocationsRequestPrivate(const SSMRequest::Action action,
                                    ListCommandInvocationsRequest * const q);
     ListCommandInvocationsRequestPrivate(const ListCommandInvocationsRequestPrivate &other,
                                    ListCommandInvocationsRequest * const q);

@@ -31,7 +31,7 @@ class UpdateTeamMemberRequest;
 class QTAWS_EXPORT UpdateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    UpdateTeamMemberRequestPrivate(const CodeStar::Action action,
+    UpdateTeamMemberRequestPrivate(const CodeStarRequest::Action action,
                                    UpdateTeamMemberRequest * const q);
     UpdateTeamMemberRequestPrivate(const UpdateTeamMemberRequestPrivate &other,
                                    UpdateTeamMemberRequest * const q);

@@ -31,7 +31,7 @@ class DescribeImportSnapshotTasksRequest;
 class QTAWS_EXPORT DescribeImportSnapshotTasksRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeImportSnapshotTasksRequestPrivate(const EC2::Action action,
+    DescribeImportSnapshotTasksRequestPrivate(const EC2Request::Action action,
                                    DescribeImportSnapshotTasksRequest * const q);
     DescribeImportSnapshotTasksRequestPrivate(const DescribeImportSnapshotTasksRequestPrivate &other,
                                    DescribeImportSnapshotTasksRequest * const q);

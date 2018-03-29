@@ -31,7 +31,7 @@ class GetLoggingOptionsRequest;
 class QTAWS_EXPORT GetLoggingOptionsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    GetLoggingOptionsRequestPrivate(const IoT::Action action,
+    GetLoggingOptionsRequestPrivate(const IoTRequest::Action action,
                                    GetLoggingOptionsRequest * const q);
     GetLoggingOptionsRequestPrivate(const GetLoggingOptionsRequestPrivate &other,
                                    GetLoggingOptionsRequest * const q);

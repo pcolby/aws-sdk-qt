@@ -31,7 +31,7 @@ class GetComplianceDetailsByResourceRequest;
 class QTAWS_EXPORT GetComplianceDetailsByResourceRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    GetComplianceDetailsByResourceRequestPrivate(const ConfigService::Action action,
+    GetComplianceDetailsByResourceRequestPrivate(const ConfigServiceRequest::Action action,
                                    GetComplianceDetailsByResourceRequest * const q);
     GetComplianceDetailsByResourceRequestPrivate(const GetComplianceDetailsByResourceRequestPrivate &other,
                                    GetComplianceDetailsByResourceRequest * const q);

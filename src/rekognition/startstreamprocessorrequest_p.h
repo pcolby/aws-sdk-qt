@@ -31,7 +31,7 @@ class StartStreamProcessorRequest;
 class QTAWS_EXPORT StartStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    StartStreamProcessorRequestPrivate(const Rekognition::Action action,
+    StartStreamProcessorRequestPrivate(const RekognitionRequest::Action action,
                                    StartStreamProcessorRequest * const q);
     StartStreamProcessorRequestPrivate(const StartStreamProcessorRequestPrivate &other,
                                    StartStreamProcessorRequest * const q);

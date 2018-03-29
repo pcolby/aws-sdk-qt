@@ -31,7 +31,7 @@ class DescribeEventSubscriptionsRequest;
 class QTAWS_EXPORT DescribeEventSubscriptionsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeEventSubscriptionsRequestPrivate(const Redshift::Action action,
+    DescribeEventSubscriptionsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeEventSubscriptionsRequest * const q);
     DescribeEventSubscriptionsRequestPrivate(const DescribeEventSubscriptionsRequestPrivate &other,
                                    DescribeEventSubscriptionsRequest * const q);

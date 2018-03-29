@@ -31,7 +31,7 @@ class EstimateTemplateCostRequest;
 class QTAWS_EXPORT EstimateTemplateCostRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    EstimateTemplateCostRequestPrivate(const CloudFormation::Action action,
+    EstimateTemplateCostRequestPrivate(const CloudFormationRequest::Action action,
                                    EstimateTemplateCostRequest * const q);
     EstimateTemplateCostRequestPrivate(const EstimateTemplateCostRequestPrivate &other,
                                    EstimateTemplateCostRequest * const q);

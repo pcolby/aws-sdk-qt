@@ -31,7 +31,7 @@ class CreateTagsRequest;
 class QTAWS_EXPORT CreateTagsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    CreateTagsRequestPrivate(const EFS::Action action,
+    CreateTagsRequestPrivate(const EFSRequest::Action action,
                                    CreateTagsRequest * const q);
     CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
                                    CreateTagsRequest * const q);

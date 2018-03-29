@@ -31,7 +31,7 @@ class CreateInstanceRequest;
 class QTAWS_EXPORT CreateInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CreateInstanceRequestPrivate(const OpsWorks::Action action,
+    CreateInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    CreateInstanceRequest * const q);
     CreateInstanceRequestPrivate(const CreateInstanceRequestPrivate &other,
                                    CreateInstanceRequest * const q);

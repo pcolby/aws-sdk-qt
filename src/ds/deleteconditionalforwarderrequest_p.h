@@ -31,7 +31,7 @@ class DeleteConditionalForwarderRequest;
 class QTAWS_EXPORT DeleteConditionalForwarderRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DeleteConditionalForwarderRequestPrivate(const DirectoryService::Action action,
+    DeleteConditionalForwarderRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DeleteConditionalForwarderRequest * const q);
     DeleteConditionalForwarderRequestPrivate(const DeleteConditionalForwarderRequestPrivate &other,
                                    DeleteConditionalForwarderRequest * const q);

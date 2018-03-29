@@ -31,7 +31,7 @@ class ModifyListenerRequest;
 class QTAWS_EXPORT ModifyListenerRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    ModifyListenerRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    ModifyListenerRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    ModifyListenerRequest * const q);
     ModifyListenerRequestPrivate(const ModifyListenerRequestPrivate &other,
                                    ModifyListenerRequest * const q);

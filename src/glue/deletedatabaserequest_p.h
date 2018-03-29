@@ -31,7 +31,7 @@ class DeleteDatabaseRequest;
 class QTAWS_EXPORT DeleteDatabaseRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteDatabaseRequestPrivate(const Glue::Action action,
+    DeleteDatabaseRequestPrivate(const GlueRequest::Action action,
                                    DeleteDatabaseRequest * const q);
     DeleteDatabaseRequestPrivate(const DeleteDatabaseRequestPrivate &other,
                                    DeleteDatabaseRequest * const q);

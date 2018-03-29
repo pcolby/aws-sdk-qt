@@ -31,7 +31,7 @@ class PollForDecisionTaskRequest;
 class QTAWS_EXPORT PollForDecisionTaskRequestPrivate : public SWFRequestPrivate {
 
 public:
-    PollForDecisionTaskRequestPrivate(const SWF::Action action,
+    PollForDecisionTaskRequestPrivate(const SWFRequest::Action action,
                                    PollForDecisionTaskRequest * const q);
     PollForDecisionTaskRequestPrivate(const PollForDecisionTaskRequestPrivate &other,
                                    PollForDecisionTaskRequest * const q);

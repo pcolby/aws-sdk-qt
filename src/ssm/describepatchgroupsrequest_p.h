@@ -31,7 +31,7 @@ class DescribePatchGroupsRequest;
 class QTAWS_EXPORT DescribePatchGroupsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribePatchGroupsRequestPrivate(const SSM::Action action,
+    DescribePatchGroupsRequestPrivate(const SSMRequest::Action action,
                                    DescribePatchGroupsRequest * const q);
     DescribePatchGroupsRequestPrivate(const DescribePatchGroupsRequestPrivate &other,
                                    DescribePatchGroupsRequest * const q);

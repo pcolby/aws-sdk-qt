@@ -31,7 +31,7 @@ class PutSlotTypeRequest;
 class QTAWS_EXPORT PutSlotTypeRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    PutSlotTypeRequestPrivate(const LexModelBuildingService::Action action,
+    PutSlotTypeRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    PutSlotTypeRequest * const q);
     PutSlotTypeRequestPrivate(const PutSlotTypeRequestPrivate &other,
                                    PutSlotTypeRequest * const q);

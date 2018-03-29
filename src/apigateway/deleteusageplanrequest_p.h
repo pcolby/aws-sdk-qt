@@ -31,7 +31,7 @@ class DeleteUsagePlanRequest;
 class QTAWS_EXPORT DeleteUsagePlanRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteUsagePlanRequestPrivate(const APIGateway::Action action,
+    DeleteUsagePlanRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteUsagePlanRequest * const q);
     DeleteUsagePlanRequestPrivate(const DeleteUsagePlanRequestPrivate &other,
                                    DeleteUsagePlanRequest * const q);

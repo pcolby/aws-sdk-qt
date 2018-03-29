@@ -31,7 +31,7 @@ class RetireGrantRequest;
 class QTAWS_EXPORT RetireGrantRequestPrivate : public KMSRequestPrivate {
 
 public:
-    RetireGrantRequestPrivate(const KMS::Action action,
+    RetireGrantRequestPrivate(const KMSRequest::Action action,
                                    RetireGrantRequest * const q);
     RetireGrantRequestPrivate(const RetireGrantRequestPrivate &other,
                                    RetireGrantRequest * const q);

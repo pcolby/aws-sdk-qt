@@ -31,7 +31,7 @@ class CreateNetworkAclEntryRequest;
 class QTAWS_EXPORT CreateNetworkAclEntryRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateNetworkAclEntryRequestPrivate(const EC2::Action action,
+    CreateNetworkAclEntryRequestPrivate(const EC2Request::Action action,
                                    CreateNetworkAclEntryRequest * const q);
     CreateNetworkAclEntryRequestPrivate(const CreateNetworkAclEntryRequestPrivate &other,
                                    CreateNetworkAclEntryRequest * const q);

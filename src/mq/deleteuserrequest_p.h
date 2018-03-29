@@ -31,7 +31,7 @@ class DeleteUserRequest;
 class QTAWS_EXPORT DeleteUserRequestPrivate : public MQRequestPrivate {
 
 public:
-    DeleteUserRequestPrivate(const MQ::Action action,
+    DeleteUserRequestPrivate(const MQRequest::Action action,
                                    DeleteUserRequest * const q);
     DeleteUserRequestPrivate(const DeleteUserRequestPrivate &other,
                                    DeleteUserRequest * const q);

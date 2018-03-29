@@ -31,7 +31,7 @@ class DescribeServicesRequest;
 class QTAWS_EXPORT DescribeServicesRequestPrivate : public PricingRequestPrivate {
 
 public:
-    DescribeServicesRequestPrivate(const Pricing::Action action,
+    DescribeServicesRequestPrivate(const PricingRequest::Action action,
                                    DescribeServicesRequest * const q);
     DescribeServicesRequestPrivate(const DescribeServicesRequestPrivate &other,
                                    DescribeServicesRequest * const q);

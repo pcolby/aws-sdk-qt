@@ -31,7 +31,7 @@ class UpdateProvisioningArtifactRequest;
 class QTAWS_EXPORT UpdateProvisioningArtifactRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    UpdateProvisioningArtifactRequestPrivate(const ServiceCatalog::Action action,
+    UpdateProvisioningArtifactRequestPrivate(const ServiceCatalogRequest::Action action,
                                    UpdateProvisioningArtifactRequest * const q);
     UpdateProvisioningArtifactRequestPrivate(const UpdateProvisioningArtifactRequestPrivate &other,
                                    UpdateProvisioningArtifactRequest * const q);

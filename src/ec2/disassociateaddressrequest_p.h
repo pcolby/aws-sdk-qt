@@ -31,7 +31,7 @@ class DisassociateAddressRequest;
 class QTAWS_EXPORT DisassociateAddressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DisassociateAddressRequestPrivate(const EC2::Action action,
+    DisassociateAddressRequestPrivate(const EC2Request::Action action,
                                    DisassociateAddressRequest * const q);
     DisassociateAddressRequestPrivate(const DisassociateAddressRequestPrivate &other,
                                    DisassociateAddressRequest * const q);

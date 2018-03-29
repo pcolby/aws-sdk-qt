@@ -31,7 +31,7 @@ class UpdateFunctionCodeRequest;
 class QTAWS_EXPORT UpdateFunctionCodeRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    UpdateFunctionCodeRequestPrivate(const Lambda::Action action,
+    UpdateFunctionCodeRequestPrivate(const LambdaRequest::Action action,
                                    UpdateFunctionCodeRequest * const q);
     UpdateFunctionCodeRequestPrivate(const UpdateFunctionCodeRequestPrivate &other,
                                    UpdateFunctionCodeRequest * const q);

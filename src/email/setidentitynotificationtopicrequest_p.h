@@ -31,7 +31,7 @@ class SetIdentityNotificationTopicRequest;
 class QTAWS_EXPORT SetIdentityNotificationTopicRequestPrivate : public SESRequestPrivate {
 
 public:
-    SetIdentityNotificationTopicRequestPrivate(const SES::Action action,
+    SetIdentityNotificationTopicRequestPrivate(const SESRequest::Action action,
                                    SetIdentityNotificationTopicRequest * const q);
     SetIdentityNotificationTopicRequestPrivate(const SetIdentityNotificationTopicRequestPrivate &other,
                                    SetIdentityNotificationTopicRequest * const q);

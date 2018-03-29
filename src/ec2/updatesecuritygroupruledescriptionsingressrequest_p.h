@@ -31,7 +31,7 @@ class UpdateSecurityGroupRuleDescriptionsIngressRequest;
 class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(const EC2::Action action,
+    UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(const EC2Request::Action action,
                                    UpdateSecurityGroupRuleDescriptionsIngressRequest * const q);
     UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(const UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate &other,
                                    UpdateSecurityGroupRuleDescriptionsIngressRequest * const q);

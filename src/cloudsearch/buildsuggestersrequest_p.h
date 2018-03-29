@@ -31,7 +31,7 @@ class BuildSuggestersRequest;
 class QTAWS_EXPORT BuildSuggestersRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    BuildSuggestersRequestPrivate(const CloudSearch::Action action,
+    BuildSuggestersRequestPrivate(const CloudSearchRequest::Action action,
                                    BuildSuggestersRequest * const q);
     BuildSuggestersRequestPrivate(const BuildSuggestersRequestPrivate &other,
                                    BuildSuggestersRequest * const q);

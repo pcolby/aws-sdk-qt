@@ -31,7 +31,7 @@ class DeleteBranchRequest;
 class QTAWS_EXPORT DeleteBranchRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    DeleteBranchRequestPrivate(const CodeCommit::Action action,
+    DeleteBranchRequestPrivate(const CodeCommitRequest::Action action,
                                    DeleteBranchRequest * const q);
     DeleteBranchRequestPrivate(const DeleteBranchRequestPrivate &other,
                                    DeleteBranchRequest * const q);

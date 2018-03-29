@@ -31,7 +31,7 @@ class DeleteFunctionConcurrencyRequest;
 class QTAWS_EXPORT DeleteFunctionConcurrencyRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    DeleteFunctionConcurrencyRequestPrivate(const Lambda::Action action,
+    DeleteFunctionConcurrencyRequestPrivate(const LambdaRequest::Action action,
                                    DeleteFunctionConcurrencyRequest * const q);
     DeleteFunctionConcurrencyRequestPrivate(const DeleteFunctionConcurrencyRequestPrivate &other,
                                    DeleteFunctionConcurrencyRequest * const q);

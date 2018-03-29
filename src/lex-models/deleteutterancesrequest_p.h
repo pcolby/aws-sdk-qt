@@ -31,7 +31,7 @@ class DeleteUtterancesRequest;
 class QTAWS_EXPORT DeleteUtterancesRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteUtterancesRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteUtterancesRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteUtterancesRequest * const q);
     DeleteUtterancesRequestPrivate(const DeleteUtterancesRequestPrivate &other,
                                    DeleteUtterancesRequest * const q);

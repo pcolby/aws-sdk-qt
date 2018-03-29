@@ -31,7 +31,7 @@ class ReplaceIamInstanceProfileAssociationRequest;
 class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReplaceIamInstanceProfileAssociationRequestPrivate(const EC2::Action action,
+    ReplaceIamInstanceProfileAssociationRequestPrivate(const EC2Request::Action action,
                                    ReplaceIamInstanceProfileAssociationRequest * const q);
     ReplaceIamInstanceProfileAssociationRequestPrivate(const ReplaceIamInstanceProfileAssociationRequestPrivate &other,
                                    ReplaceIamInstanceProfileAssociationRequest * const q);

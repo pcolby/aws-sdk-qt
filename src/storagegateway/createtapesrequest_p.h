@@ -31,7 +31,7 @@ class CreateTapesRequest;
 class QTAWS_EXPORT CreateTapesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CreateTapesRequestPrivate(const StorageGateway::Action action,
+    CreateTapesRequestPrivate(const StorageGatewayRequest::Action action,
                                    CreateTapesRequest * const q);
     CreateTapesRequestPrivate(const CreateTapesRequestPrivate &other,
                                    CreateTapesRequest * const q);

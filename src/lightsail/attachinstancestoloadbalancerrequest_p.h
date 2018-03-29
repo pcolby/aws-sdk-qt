@@ -31,7 +31,7 @@ class AttachInstancesToLoadBalancerRequest;
 class QTAWS_EXPORT AttachInstancesToLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    AttachInstancesToLoadBalancerRequestPrivate(const Lightsail::Action action,
+    AttachInstancesToLoadBalancerRequestPrivate(const LightsailRequest::Action action,
                                    AttachInstancesToLoadBalancerRequest * const q);
     AttachInstancesToLoadBalancerRequestPrivate(const AttachInstancesToLoadBalancerRequestPrivate &other,
                                    AttachInstancesToLoadBalancerRequest * const q);

@@ -31,7 +31,7 @@ class ListRolePoliciesRequest;
 class QTAWS_EXPORT ListRolePoliciesRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListRolePoliciesRequestPrivate(const IAM::Action action,
+    ListRolePoliciesRequestPrivate(const IAMRequest::Action action,
                                    ListRolePoliciesRequest * const q);
     ListRolePoliciesRequestPrivate(const ListRolePoliciesRequestPrivate &other,
                                    ListRolePoliciesRequest * const q);

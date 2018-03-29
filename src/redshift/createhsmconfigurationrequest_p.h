@@ -31,7 +31,7 @@ class CreateHsmConfigurationRequest;
 class QTAWS_EXPORT CreateHsmConfigurationRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    CreateHsmConfigurationRequestPrivate(const Redshift::Action action,
+    CreateHsmConfigurationRequestPrivate(const RedshiftRequest::Action action,
                                    CreateHsmConfigurationRequest * const q);
     CreateHsmConfigurationRequestPrivate(const CreateHsmConfigurationRequestPrivate &other,
                                    CreateHsmConfigurationRequest * const q);

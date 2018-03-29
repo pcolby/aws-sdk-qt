@@ -31,7 +31,7 @@ class AddTagsRequest;
 class QTAWS_EXPORT AddTagsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    AddTagsRequestPrivate(const EMR::Action action,
+    AddTagsRequestPrivate(const EMRRequest::Action action,
                                    AddTagsRequest * const q);
     AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
                                    AddTagsRequest * const q);

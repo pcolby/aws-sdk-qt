@@ -31,7 +31,7 @@ class ListEntitiesForPolicyRequest;
 class QTAWS_EXPORT ListEntitiesForPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListEntitiesForPolicyRequestPrivate(const IAM::Action action,
+    ListEntitiesForPolicyRequestPrivate(const IAMRequest::Action action,
                                    ListEntitiesForPolicyRequest * const q);
     ListEntitiesForPolicyRequestPrivate(const ListEntitiesForPolicyRequestPrivate &other,
                                    ListEntitiesForPolicyRequest * const q);

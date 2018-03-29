@@ -31,7 +31,7 @@ class MergeDeveloperIdentitiesRequest;
 class QTAWS_EXPORT MergeDeveloperIdentitiesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    MergeDeveloperIdentitiesRequestPrivate(const CognitoIdentity::Action action,
+    MergeDeveloperIdentitiesRequestPrivate(const CognitoIdentityRequest::Action action,
                                    MergeDeveloperIdentitiesRequest * const q);
     MergeDeveloperIdentitiesRequestPrivate(const MergeDeveloperIdentitiesRequestPrivate &other,
                                    MergeDeveloperIdentitiesRequest * const q);

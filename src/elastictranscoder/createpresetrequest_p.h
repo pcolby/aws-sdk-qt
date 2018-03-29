@@ -31,7 +31,7 @@ class CreatePresetRequest;
 class QTAWS_EXPORT CreatePresetRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    CreatePresetRequestPrivate(const ElasticTranscoder::Action action,
+    CreatePresetRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    CreatePresetRequest * const q);
     CreatePresetRequestPrivate(const CreatePresetRequestPrivate &other,
                                    CreatePresetRequest * const q);

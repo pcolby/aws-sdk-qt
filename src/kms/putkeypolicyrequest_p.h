@@ -31,7 +31,7 @@ class PutKeyPolicyRequest;
 class QTAWS_EXPORT PutKeyPolicyRequestPrivate : public KMSRequestPrivate {
 
 public:
-    PutKeyPolicyRequestPrivate(const KMS::Action action,
+    PutKeyPolicyRequestPrivate(const KMSRequest::Action action,
                                    PutKeyPolicyRequest * const q);
     PutKeyPolicyRequestPrivate(const PutKeyPolicyRequestPrivate &other,
                                    PutKeyPolicyRequest * const q);

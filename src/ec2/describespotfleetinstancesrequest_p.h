@@ -31,7 +31,7 @@ class DescribeSpotFleetInstancesRequest;
 class QTAWS_EXPORT DescribeSpotFleetInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSpotFleetInstancesRequestPrivate(const EC2::Action action,
+    DescribeSpotFleetInstancesRequestPrivate(const EC2Request::Action action,
                                    DescribeSpotFleetInstancesRequest * const q);
     DescribeSpotFleetInstancesRequestPrivate(const DescribeSpotFleetInstancesRequestPrivate &other,
                                    DescribeSpotFleetInstancesRequest * const q);

@@ -31,7 +31,7 @@ class ListUploadsRequest;
 class QTAWS_EXPORT ListUploadsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListUploadsRequestPrivate(const DeviceFarm::Action action,
+    ListUploadsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListUploadsRequest * const q);
     ListUploadsRequestPrivate(const ListUploadsRequestPrivate &other,
                                    ListUploadsRequest * const q);

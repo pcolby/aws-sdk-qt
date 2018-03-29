@@ -31,7 +31,7 @@ class ListResourceDelegatesRequest;
 class QTAWS_EXPORT ListResourceDelegatesRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    ListResourceDelegatesRequestPrivate(const WorkMail::Action action,
+    ListResourceDelegatesRequestPrivate(const WorkMailRequest::Action action,
                                    ListResourceDelegatesRequest * const q);
     ListResourceDelegatesRequestPrivate(const ListResourceDelegatesRequestPrivate &other,
                                    ListResourceDelegatesRequest * const q);

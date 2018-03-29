@@ -31,7 +31,7 @@ class UpdatePolicyRequest;
 class QTAWS_EXPORT UpdatePolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    UpdatePolicyRequestPrivate(const Organizations::Action action,
+    UpdatePolicyRequestPrivate(const OrganizationsRequest::Action action,
                                    UpdatePolicyRequest * const q);
     UpdatePolicyRequestPrivate(const UpdatePolicyRequestPrivate &other,
                                    UpdatePolicyRequest * const q);

@@ -31,7 +31,7 @@ class VerifyDomainDkimRequest;
 class QTAWS_EXPORT VerifyDomainDkimRequestPrivate : public SESRequestPrivate {
 
 public:
-    VerifyDomainDkimRequestPrivate(const SES::Action action,
+    VerifyDomainDkimRequestPrivate(const SESRequest::Action action,
                                    VerifyDomainDkimRequest * const q);
     VerifyDomainDkimRequestPrivate(const VerifyDomainDkimRequestPrivate &other,
                                    VerifyDomainDkimRequest * const q);

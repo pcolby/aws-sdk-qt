@@ -31,7 +31,7 @@ class DeleteTapeArchiveRequest;
 class QTAWS_EXPORT DeleteTapeArchiveRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DeleteTapeArchiveRequestPrivate(const StorageGateway::Action action,
+    DeleteTapeArchiveRequestPrivate(const StorageGatewayRequest::Action action,
                                    DeleteTapeArchiveRequest * const q);
     DeleteTapeArchiveRequestPrivate(const DeleteTapeArchiveRequestPrivate &other,
                                    DeleteTapeArchiveRequest * const q);

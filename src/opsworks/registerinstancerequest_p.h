@@ -31,7 +31,7 @@ class RegisterInstanceRequest;
 class QTAWS_EXPORT RegisterInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    RegisterInstanceRequestPrivate(const OpsWorks::Action action,
+    RegisterInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    RegisterInstanceRequest * const q);
     RegisterInstanceRequestPrivate(const RegisterInstanceRequestPrivate &other,
                                    RegisterInstanceRequest * const q);

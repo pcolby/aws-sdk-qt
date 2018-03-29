@@ -31,7 +31,7 @@ class GetAdmChannelRequest;
 class QTAWS_EXPORT GetAdmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetAdmChannelRequestPrivate(const Pinpoint::Action action,
+    GetAdmChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetAdmChannelRequest * const q);
     GetAdmChannelRequestPrivate(const GetAdmChannelRequestPrivate &other,
                                    GetAdmChannelRequest * const q);

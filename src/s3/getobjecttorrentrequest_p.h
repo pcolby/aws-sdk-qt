@@ -31,7 +31,7 @@ class GetObjectTorrentRequest;
 class QTAWS_EXPORT GetObjectTorrentRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetObjectTorrentRequestPrivate(const S3::Action action,
+    GetObjectTorrentRequestPrivate(const S3Request::Action action,
                                    GetObjectTorrentRequest * const q);
     GetObjectTorrentRequestPrivate(const GetObjectTorrentRequestPrivate &other,
                                    GetObjectTorrentRequest * const q);

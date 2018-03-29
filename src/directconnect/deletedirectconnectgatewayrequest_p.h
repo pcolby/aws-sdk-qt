@@ -31,7 +31,7 @@ class DeleteDirectConnectGatewayRequest;
 class QTAWS_EXPORT DeleteDirectConnectGatewayRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DeleteDirectConnectGatewayRequestPrivate(const DirectConnect::Action action,
+    DeleteDirectConnectGatewayRequestPrivate(const DirectConnectRequest::Action action,
                                    DeleteDirectConnectGatewayRequest * const q);
     DeleteDirectConnectGatewayRequestPrivate(const DeleteDirectConnectGatewayRequestPrivate &other,
                                    DeleteDirectConnectGatewayRequest * const q);

@@ -31,7 +31,7 @@ class UpdateTagsForResourceRequest;
 class QTAWS_EXPORT UpdateTagsForResourceRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    UpdateTagsForResourceRequestPrivate(const ElasticBeanstalk::Action action,
+    UpdateTagsForResourceRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    UpdateTagsForResourceRequest * const q);
     UpdateTagsForResourceRequestPrivate(const UpdateTagsForResourceRequestPrivate &other,
                                    UpdateTagsForResourceRequest * const q);

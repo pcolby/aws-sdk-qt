@@ -31,7 +31,7 @@ class EnterStandbyRequest;
 class QTAWS_EXPORT EnterStandbyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    EnterStandbyRequestPrivate(const AutoScaling::Action action,
+    EnterStandbyRequestPrivate(const AutoScalingRequest::Action action,
                                    EnterStandbyRequest * const q);
     EnterStandbyRequestPrivate(const EnterStandbyRequestPrivate &other,
                                    EnterStandbyRequest * const q);

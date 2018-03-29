@@ -31,7 +31,7 @@ class DescribeClusterSecurityGroupsRequest;
 class QTAWS_EXPORT DescribeClusterSecurityGroupsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeClusterSecurityGroupsRequestPrivate(const Redshift::Action action,
+    DescribeClusterSecurityGroupsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeClusterSecurityGroupsRequest * const q);
     DescribeClusterSecurityGroupsRequestPrivate(const DescribeClusterSecurityGroupsRequestPrivate &other,
                                    DescribeClusterSecurityGroupsRequest * const q);

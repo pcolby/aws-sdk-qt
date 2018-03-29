@@ -31,7 +31,7 @@ class DescribeSSLPoliciesRequest;
 class QTAWS_EXPORT DescribeSSLPoliciesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeSSLPoliciesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeSSLPoliciesRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeSSLPoliciesRequest * const q);
     DescribeSSLPoliciesRequestPrivate(const DescribeSSLPoliciesRequestPrivate &other,
                                    DescribeSSLPoliciesRequest * const q);

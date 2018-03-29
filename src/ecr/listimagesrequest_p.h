@@ -31,7 +31,7 @@ class ListImagesRequest;
 class QTAWS_EXPORT ListImagesRequestPrivate : public ECRRequestPrivate {
 
 public:
-    ListImagesRequestPrivate(const ECR::Action action,
+    ListImagesRequestPrivate(const ECRRequest::Action action,
                                    ListImagesRequest * const q);
     ListImagesRequestPrivate(const ListImagesRequestPrivate &other,
                                    ListImagesRequest * const q);

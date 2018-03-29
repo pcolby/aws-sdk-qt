@@ -31,7 +31,7 @@ class DeleteOriginEndpointRequest;
 class QTAWS_EXPORT DeleteOriginEndpointRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    DeleteOriginEndpointRequestPrivate(const MediaPackage::Action action,
+    DeleteOriginEndpointRequestPrivate(const MediaPackageRequest::Action action,
                                    DeleteOriginEndpointRequest * const q);
     DeleteOriginEndpointRequestPrivate(const DeleteOriginEndpointRequestPrivate &other,
                                    DeleteOriginEndpointRequest * const q);

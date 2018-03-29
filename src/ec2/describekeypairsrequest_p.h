@@ -31,7 +31,7 @@ class DescribeKeyPairsRequest;
 class QTAWS_EXPORT DescribeKeyPairsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeKeyPairsRequestPrivate(const EC2::Action action,
+    DescribeKeyPairsRequestPrivate(const EC2Request::Action action,
                                    DescribeKeyPairsRequest * const q);
     DescribeKeyPairsRequestPrivate(const DescribeKeyPairsRequestPrivate &other,
                                    DescribeKeyPairsRequest * const q);

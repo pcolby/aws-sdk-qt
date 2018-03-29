@@ -31,7 +31,7 @@ class UpdateRuntimeConfigurationRequest;
 class QTAWS_EXPORT UpdateRuntimeConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateRuntimeConfigurationRequestPrivate(const GameLift::Action action,
+    UpdateRuntimeConfigurationRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateRuntimeConfigurationRequest * const q);
     UpdateRuntimeConfigurationRequestPrivate(const UpdateRuntimeConfigurationRequestPrivate &other,
                                    UpdateRuntimeConfigurationRequest * const q);

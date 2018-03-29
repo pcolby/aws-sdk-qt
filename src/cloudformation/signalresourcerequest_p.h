@@ -31,7 +31,7 @@ class SignalResourceRequest;
 class QTAWS_EXPORT SignalResourceRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    SignalResourceRequestPrivate(const CloudFormation::Action action,
+    SignalResourceRequestPrivate(const CloudFormationRequest::Action action,
                                    SignalResourceRequest * const q);
     SignalResourceRequestPrivate(const SignalResourceRequestPrivate &other,
                                    SignalResourceRequest * const q);

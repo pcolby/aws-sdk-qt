@@ -31,7 +31,7 @@ class TagRequest;
 class QTAWS_EXPORT TagRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
-    TagRequestPrivate(const ResourceGroups::Action action,
+    TagRequestPrivate(const ResourceGroupsRequest::Action action,
                                    TagRequest * const q);
     TagRequestPrivate(const TagRequestPrivate &other,
                                    TagRequest * const q);

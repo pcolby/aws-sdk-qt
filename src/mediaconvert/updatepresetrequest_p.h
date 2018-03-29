@@ -31,7 +31,7 @@ class UpdatePresetRequest;
 class QTAWS_EXPORT UpdatePresetRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    UpdatePresetRequestPrivate(const MediaConvert::Action action,
+    UpdatePresetRequestPrivate(const MediaConvertRequest::Action action,
                                    UpdatePresetRequest * const q);
     UpdatePresetRequestPrivate(const UpdatePresetRequestPrivate &other,
                                    UpdatePresetRequest * const q);

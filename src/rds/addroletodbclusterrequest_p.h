@@ -31,7 +31,7 @@ class AddRoleToDBClusterRequest;
 class QTAWS_EXPORT AddRoleToDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
-    AddRoleToDBClusterRequestPrivate(const RDS::Action action,
+    AddRoleToDBClusterRequestPrivate(const RDSRequest::Action action,
                                    AddRoleToDBClusterRequest * const q);
     AddRoleToDBClusterRequestPrivate(const AddRoleToDBClusterRequestPrivate &other,
                                    AddRoleToDBClusterRequest * const q);

@@ -31,7 +31,7 @@ class DeleteServiceRequest;
 class QTAWS_EXPORT DeleteServiceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    DeleteServiceRequestPrivate(const ServiceDiscovery::Action action,
+    DeleteServiceRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    DeleteServiceRequest * const q);
     DeleteServiceRequestPrivate(const DeleteServiceRequestPrivate &other,
                                    DeleteServiceRequest * const q);

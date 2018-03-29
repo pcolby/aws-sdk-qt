@@ -31,7 +31,7 @@ class DescribeAvailabilityZonesRequest;
 class QTAWS_EXPORT DescribeAvailabilityZonesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeAvailabilityZonesRequestPrivate(const EC2::Action action,
+    DescribeAvailabilityZonesRequestPrivate(const EC2Request::Action action,
                                    DescribeAvailabilityZonesRequest * const q);
     DescribeAvailabilityZonesRequestPrivate(const DescribeAvailabilityZonesRequestPrivate &other,
                                    DescribeAvailabilityZonesRequest * const q);

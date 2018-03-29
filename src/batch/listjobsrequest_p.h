@@ -31,7 +31,7 @@ class ListJobsRequest;
 class QTAWS_EXPORT ListJobsRequestPrivate : public BatchRequestPrivate {
 
 public:
-    ListJobsRequestPrivate(const Batch::Action action,
+    ListJobsRequestPrivate(const BatchRequest::Action action,
                                    ListJobsRequest * const q);
     ListJobsRequestPrivate(const ListJobsRequestPrivate &other,
                                    ListJobsRequest * const q);

@@ -31,7 +31,7 @@ class CreateRuleRequest;
 class QTAWS_EXPORT CreateRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    CreateRuleRequestPrivate(const WAFRegional::Action action,
+    CreateRuleRequestPrivate(const WAFRegionalRequest::Action action,
                                    CreateRuleRequest * const q);
     CreateRuleRequestPrivate(const CreateRuleRequestPrivate &other,
                                    CreateRuleRequest * const q);

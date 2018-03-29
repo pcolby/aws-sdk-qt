@@ -31,7 +31,7 @@ class UpdateNotebookInstanceRequest;
 class QTAWS_EXPORT UpdateNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    UpdateNotebookInstanceRequestPrivate(const SageMaker::Action action,
+    UpdateNotebookInstanceRequestPrivate(const SageMakerRequest::Action action,
                                    UpdateNotebookInstanceRequest * const q);
     UpdateNotebookInstanceRequestPrivate(const UpdateNotebookInstanceRequestPrivate &other,
                                    UpdateNotebookInstanceRequest * const q);

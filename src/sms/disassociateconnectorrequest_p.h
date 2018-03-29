@@ -31,7 +31,7 @@ class DisassociateConnectorRequest;
 class QTAWS_EXPORT DisassociateConnectorRequestPrivate : public SMSRequestPrivate {
 
 public:
-    DisassociateConnectorRequestPrivate(const SMS::Action action,
+    DisassociateConnectorRequestPrivate(const SMSRequest::Action action,
                                    DisassociateConnectorRequest * const q);
     DisassociateConnectorRequestPrivate(const DisassociateConnectorRequestPrivate &other,
                                    DisassociateConnectorRequest * const q);

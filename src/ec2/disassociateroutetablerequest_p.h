@@ -31,7 +31,7 @@ class DisassociateRouteTableRequest;
 class QTAWS_EXPORT DisassociateRouteTableRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DisassociateRouteTableRequestPrivate(const EC2::Action action,
+    DisassociateRouteTableRequestPrivate(const EC2Request::Action action,
                                    DisassociateRouteTableRequest * const q);
     DisassociateRouteTableRequestPrivate(const DisassociateRouteTableRequestPrivate &other,
                                    DisassociateRouteTableRequest * const q);

@@ -31,7 +31,7 @@ class RestoreAddressToClassicRequest;
 class QTAWS_EXPORT RestoreAddressToClassicRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RestoreAddressToClassicRequestPrivate(const EC2::Action action,
+    RestoreAddressToClassicRequestPrivate(const EC2Request::Action action,
                                    RestoreAddressToClassicRequest * const q);
     RestoreAddressToClassicRequestPrivate(const RestoreAddressToClassicRequestPrivate &other,
                                    RestoreAddressToClassicRequest * const q);

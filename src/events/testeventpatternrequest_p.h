@@ -31,7 +31,7 @@ class TestEventPatternRequest;
 class QTAWS_EXPORT TestEventPatternRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    TestEventPatternRequestPrivate(const CloudWatchEvents::Action action,
+    TestEventPatternRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    TestEventPatternRequest * const q);
     TestEventPatternRequestPrivate(const TestEventPatternRequestPrivate &other,
                                    TestEventPatternRequest * const q);

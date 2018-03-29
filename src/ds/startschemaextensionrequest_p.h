@@ -31,7 +31,7 @@ class StartSchemaExtensionRequest;
 class QTAWS_EXPORT StartSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    StartSchemaExtensionRequestPrivate(const DirectoryService::Action action,
+    StartSchemaExtensionRequestPrivate(const DirectoryServiceRequest::Action action,
                                    StartSchemaExtensionRequest * const q);
     StartSchemaExtensionRequestPrivate(const StartSchemaExtensionRequestPrivate &other,
                                    StartSchemaExtensionRequest * const q);

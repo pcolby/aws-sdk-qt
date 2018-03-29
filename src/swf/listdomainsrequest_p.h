@@ -31,7 +31,7 @@ class ListDomainsRequest;
 class QTAWS_EXPORT ListDomainsRequestPrivate : public SWFRequestPrivate {
 
 public:
-    ListDomainsRequestPrivate(const SWF::Action action,
+    ListDomainsRequestPrivate(const SWFRequest::Action action,
                                    ListDomainsRequest * const q);
     ListDomainsRequestPrivate(const ListDomainsRequestPrivate &other,
                                    ListDomainsRequest * const q);

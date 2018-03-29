@@ -31,7 +31,7 @@ class GetRepositoryRequest;
 class QTAWS_EXPORT GetRepositoryRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetRepositoryRequestPrivate(const CodeCommit::Action action,
+    GetRepositoryRequestPrivate(const CodeCommitRequest::Action action,
                                    GetRepositoryRequest * const q);
     GetRepositoryRequestPrivate(const GetRepositoryRequestPrivate &other,
                                    GetRepositoryRequest * const q);

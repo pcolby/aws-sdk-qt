@@ -31,7 +31,7 @@ class PollForJobsRequest;
 class QTAWS_EXPORT PollForJobsRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    PollForJobsRequestPrivate(const CodePipeline::Action action,
+    PollForJobsRequestPrivate(const CodePipelineRequest::Action action,
                                    PollForJobsRequest * const q);
     PollForJobsRequestPrivate(const PollForJobsRequestPrivate &other,
                                    PollForJobsRequest * const q);

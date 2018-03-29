@@ -31,7 +31,7 @@ class ModifyCacheClusterRequest;
 class QTAWS_EXPORT ModifyCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ModifyCacheClusterRequestPrivate(const ElastiCache::Action action,
+    ModifyCacheClusterRequestPrivate(const ElastiCacheRequest::Action action,
                                    ModifyCacheClusterRequest * const q);
     ModifyCacheClusterRequestPrivate(const ModifyCacheClusterRequestPrivate &other,
                                    ModifyCacheClusterRequest * const q);

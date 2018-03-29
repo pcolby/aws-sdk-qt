@@ -31,7 +31,7 @@ class CreateReplicationJobRequest;
 class QTAWS_EXPORT CreateReplicationJobRequestPrivate : public SMSRequestPrivate {
 
 public:
-    CreateReplicationJobRequestPrivate(const SMS::Action action,
+    CreateReplicationJobRequestPrivate(const SMSRequest::Action action,
                                    CreateReplicationJobRequest * const q);
     CreateReplicationJobRequestPrivate(const CreateReplicationJobRequestPrivate &other,
                                    CreateReplicationJobRequest * const q);

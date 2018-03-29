@@ -31,7 +31,7 @@ class PurgeQueueRequest;
 class QTAWS_EXPORT PurgeQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
-    PurgeQueueRequestPrivate(const SQS::Action action,
+    PurgeQueueRequestPrivate(const SQSRequest::Action action,
                                    PurgeQueueRequest * const q);
     PurgeQueueRequestPrivate(const PurgeQueueRequestPrivate &other,
                                    PurgeQueueRequest * const q);

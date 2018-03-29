@@ -31,7 +31,7 @@ class UpdateModelRequest;
 class QTAWS_EXPORT UpdateModelRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateModelRequestPrivate(const APIGateway::Action action,
+    UpdateModelRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateModelRequest * const q);
     UpdateModelRequestPrivate(const UpdateModelRequestPrivate &other,
                                    UpdateModelRequest * const q);

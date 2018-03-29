@@ -31,7 +31,7 @@ class UpdateFleetPortSettingsRequest;
 class QTAWS_EXPORT UpdateFleetPortSettingsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateFleetPortSettingsRequestPrivate(const GameLift::Action action,
+    UpdateFleetPortSettingsRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateFleetPortSettingsRequest * const q);
     UpdateFleetPortSettingsRequestPrivate(const UpdateFleetPortSettingsRequestPrivate &other,
                                    UpdateFleetPortSettingsRequest * const q);

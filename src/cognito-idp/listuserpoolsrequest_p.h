@@ -31,7 +31,7 @@ class ListUserPoolsRequest;
 class QTAWS_EXPORT ListUserPoolsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ListUserPoolsRequestPrivate(const CognitoIdentityProvider::Action action,
+    ListUserPoolsRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ListUserPoolsRequest * const q);
     ListUserPoolsRequestPrivate(const ListUserPoolsRequestPrivate &other,
                                    ListUserPoolsRequest * const q);

@@ -31,7 +31,7 @@ class PostCommentReplyRequest;
 class QTAWS_EXPORT PostCommentReplyRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    PostCommentReplyRequestPrivate(const CodeCommit::Action action,
+    PostCommentReplyRequestPrivate(const CodeCommitRequest::Action action,
                                    PostCommentReplyRequest * const q);
     PostCommentReplyRequestPrivate(const PostCommentReplyRequestPrivate &other,
                                    PostCommentReplyRequest * const q);

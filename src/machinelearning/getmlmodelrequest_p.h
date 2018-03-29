@@ -31,7 +31,7 @@ class GetMLModelRequest;
 class QTAWS_EXPORT GetMLModelRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    GetMLModelRequestPrivate(const MachineLearning::Action action,
+    GetMLModelRequestPrivate(const MachineLearningRequest::Action action,
                                    GetMLModelRequest * const q);
     GetMLModelRequestPrivate(const GetMLModelRequestPrivate &other,
                                    GetMLModelRequest * const q);

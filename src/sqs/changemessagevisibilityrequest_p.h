@@ -31,7 +31,7 @@ class ChangeMessageVisibilityRequest;
 class QTAWS_EXPORT ChangeMessageVisibilityRequestPrivate : public SQSRequestPrivate {
 
 public:
-    ChangeMessageVisibilityRequestPrivate(const SQS::Action action,
+    ChangeMessageVisibilityRequestPrivate(const SQSRequest::Action action,
                                    ChangeMessageVisibilityRequest * const q);
     ChangeMessageVisibilityRequestPrivate(const ChangeMessageVisibilityRequestPrivate &other,
                                    ChangeMessageVisibilityRequest * const q);

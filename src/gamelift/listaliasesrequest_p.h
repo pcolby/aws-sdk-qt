@@ -31,7 +31,7 @@ class ListAliasesRequest;
 class QTAWS_EXPORT ListAliasesRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    ListAliasesRequestPrivate(const GameLift::Action action,
+    ListAliasesRequestPrivate(const GameLiftRequest::Action action,
                                    ListAliasesRequest * const q);
     ListAliasesRequestPrivate(const ListAliasesRequestPrivate &other,
                                    ListAliasesRequest * const q);

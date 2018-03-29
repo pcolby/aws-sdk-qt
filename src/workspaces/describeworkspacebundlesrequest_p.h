@@ -31,7 +31,7 @@ class DescribeWorkspaceBundlesRequest;
 class QTAWS_EXPORT DescribeWorkspaceBundlesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    DescribeWorkspaceBundlesRequestPrivate(const WorkSpaces::Action action,
+    DescribeWorkspaceBundlesRequestPrivate(const WorkSpacesRequest::Action action,
                                    DescribeWorkspaceBundlesRequest * const q);
     DescribeWorkspaceBundlesRequestPrivate(const DescribeWorkspaceBundlesRequestPrivate &other,
                                    DescribeWorkspaceBundlesRequest * const q);

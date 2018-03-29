@@ -31,7 +31,7 @@ class DeleteContainerPolicyRequest;
 class QTAWS_EXPORT DeleteContainerPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
-    DeleteContainerPolicyRequestPrivate(const MediaStore::Action action,
+    DeleteContainerPolicyRequestPrivate(const MediaStoreRequest::Action action,
                                    DeleteContainerPolicyRequest * const q);
     DeleteContainerPolicyRequestPrivate(const DeleteContainerPolicyRequestPrivate &other,
                                    DeleteContainerPolicyRequest * const q);

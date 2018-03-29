@@ -31,7 +31,7 @@ class ListConstraintsForPortfolioRequest;
 class QTAWS_EXPORT ListConstraintsForPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListConstraintsForPortfolioRequestPrivate(const ServiceCatalog::Action action,
+    ListConstraintsForPortfolioRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListConstraintsForPortfolioRequest * const q);
     ListConstraintsForPortfolioRequestPrivate(const ListConstraintsForPortfolioRequestPrivate &other,
                                    ListConstraintsForPortfolioRequest * const q);

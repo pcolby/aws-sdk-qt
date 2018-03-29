@@ -31,7 +31,7 @@ class CreateSubscriptionDefinitionRequest;
 class QTAWS_EXPORT CreateSubscriptionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateSubscriptionDefinitionRequestPrivate(const Greengrass::Action action,
+    CreateSubscriptionDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    CreateSubscriptionDefinitionRequest * const q);
     CreateSubscriptionDefinitionRequestPrivate(const CreateSubscriptionDefinitionRequestPrivate &other,
                                    CreateSubscriptionDefinitionRequest * const q);

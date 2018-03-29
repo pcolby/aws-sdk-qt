@@ -31,7 +31,7 @@ class DeleteCustomActionTypeRequest;
 class QTAWS_EXPORT DeleteCustomActionTypeRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    DeleteCustomActionTypeRequestPrivate(const CodePipeline::Action action,
+    DeleteCustomActionTypeRequestPrivate(const CodePipelineRequest::Action action,
                                    DeleteCustomActionTypeRequest * const q);
     DeleteCustomActionTypeRequestPrivate(const DeleteCustomActionTypeRequestPrivate &other,
                                    DeleteCustomActionTypeRequest * const q);

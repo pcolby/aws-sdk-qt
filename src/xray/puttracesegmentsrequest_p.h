@@ -31,7 +31,7 @@ class PutTraceSegmentsRequest;
 class QTAWS_EXPORT PutTraceSegmentsRequestPrivate : public XRayRequestPrivate {
 
 public:
-    PutTraceSegmentsRequestPrivate(const XRay::Action action,
+    PutTraceSegmentsRequestPrivate(const XRayRequest::Action action,
                                    PutTraceSegmentsRequest * const q);
     PutTraceSegmentsRequestPrivate(const PutTraceSegmentsRequestPrivate &other,
                                    PutTraceSegmentsRequest * const q);

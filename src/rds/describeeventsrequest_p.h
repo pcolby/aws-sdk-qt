@@ -31,7 +31,7 @@ class DescribeEventsRequest;
 class QTAWS_EXPORT DescribeEventsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const RDS::Action action,
+    DescribeEventsRequestPrivate(const RDSRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);

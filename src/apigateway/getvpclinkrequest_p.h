@@ -31,7 +31,7 @@ class GetVpcLinkRequest;
 class QTAWS_EXPORT GetVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetVpcLinkRequestPrivate(const APIGateway::Action action,
+    GetVpcLinkRequestPrivate(const APIGatewayRequest::Action action,
                                    GetVpcLinkRequest * const q);
     GetVpcLinkRequestPrivate(const GetVpcLinkRequestPrivate &other,
                                    GetVpcLinkRequest * const q);

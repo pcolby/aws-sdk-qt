@@ -31,7 +31,7 @@ class DeleteResolverRequest;
 class QTAWS_EXPORT DeleteResolverRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    DeleteResolverRequestPrivate(const AppSync::Action action,
+    DeleteResolverRequestPrivate(const AppSyncRequest::Action action,
                                    DeleteResolverRequest * const q);
     DeleteResolverRequestPrivate(const DeleteResolverRequestPrivate &other,
                                    DeleteResolverRequest * const q);

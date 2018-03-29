@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const DirectoryService::Action action,
+    ListTagsForResourceRequestPrivate(const DirectoryServiceRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

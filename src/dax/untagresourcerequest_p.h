@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public DAXRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const DAX::Action action,
+    UntagResourceRequestPrivate(const DAXRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

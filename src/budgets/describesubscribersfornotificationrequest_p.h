@@ -31,7 +31,7 @@ class DescribeSubscribersForNotificationRequest;
 class QTAWS_EXPORT DescribeSubscribersForNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    DescribeSubscribersForNotificationRequestPrivate(const Budgets::Action action,
+    DescribeSubscribersForNotificationRequestPrivate(const BudgetsRequest::Action action,
                                    DescribeSubscribersForNotificationRequest * const q);
     DescribeSubscribersForNotificationRequestPrivate(const DescribeSubscribersForNotificationRequestPrivate &other,
                                    DescribeSubscribersForNotificationRequest * const q);

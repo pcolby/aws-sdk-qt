@@ -31,7 +31,7 @@ class CreateAuthorizerRequest;
 class QTAWS_EXPORT CreateAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateAuthorizerRequestPrivate(const IoT::Action action,
+    CreateAuthorizerRequestPrivate(const IoTRequest::Action action,
                                    CreateAuthorizerRequest * const q);
     CreateAuthorizerRequestPrivate(const CreateAuthorizerRequestPrivate &other,
                                    CreateAuthorizerRequest * const q);

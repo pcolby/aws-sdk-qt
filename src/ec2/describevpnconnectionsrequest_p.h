@@ -31,7 +31,7 @@ class DescribeVpnConnectionsRequest;
 class QTAWS_EXPORT DescribeVpnConnectionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeVpnConnectionsRequestPrivate(const EC2::Action action,
+    DescribeVpnConnectionsRequestPrivate(const EC2Request::Action action,
                                    DescribeVpnConnectionsRequest * const q);
     DescribeVpnConnectionsRequestPrivate(const DescribeVpnConnectionsRequestPrivate &other,
                                    DescribeVpnConnectionsRequest * const q);

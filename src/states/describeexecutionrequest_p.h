@@ -31,7 +31,7 @@ class DescribeExecutionRequest;
 class QTAWS_EXPORT DescribeExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
-    DescribeExecutionRequestPrivate(const SFN::Action action,
+    DescribeExecutionRequestPrivate(const SFNRequest::Action action,
                                    DescribeExecutionRequest * const q);
     DescribeExecutionRequestPrivate(const DescribeExecutionRequestPrivate &other,
                                    DescribeExecutionRequest * const q);

@@ -31,7 +31,7 @@ class DescribeCommentsRequest;
 class QTAWS_EXPORT DescribeCommentsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DescribeCommentsRequestPrivate(const WorkDocs::Action action,
+    DescribeCommentsRequestPrivate(const WorkDocsRequest::Action action,
                                    DescribeCommentsRequest * const q);
     DescribeCommentsRequestPrivate(const DescribeCommentsRequestPrivate &other,
                                    DescribeCommentsRequest * const q);

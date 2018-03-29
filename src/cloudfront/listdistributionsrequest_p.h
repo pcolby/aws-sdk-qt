@@ -31,7 +31,7 @@ class ListDistributionsRequest;
 class QTAWS_EXPORT ListDistributionsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    ListDistributionsRequestPrivate(const CloudFront::Action action,
+    ListDistributionsRequestPrivate(const CloudFrontRequest::Action action,
                                    ListDistributionsRequest * const q);
     ListDistributionsRequestPrivate(const ListDistributionsRequestPrivate &other,
                                    ListDistributionsRequest * const q);

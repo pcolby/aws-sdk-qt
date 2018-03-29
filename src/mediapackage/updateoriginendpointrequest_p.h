@@ -31,7 +31,7 @@ class UpdateOriginEndpointRequest;
 class QTAWS_EXPORT UpdateOriginEndpointRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
-    UpdateOriginEndpointRequestPrivate(const MediaPackage::Action action,
+    UpdateOriginEndpointRequestPrivate(const MediaPackageRequest::Action action,
                                    UpdateOriginEndpointRequest * const q);
     UpdateOriginEndpointRequestPrivate(const UpdateOriginEndpointRequestPrivate &other,
                                    UpdateOriginEndpointRequest * const q);

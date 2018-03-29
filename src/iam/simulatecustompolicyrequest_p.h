@@ -31,7 +31,7 @@ class SimulateCustomPolicyRequest;
 class QTAWS_EXPORT SimulateCustomPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    SimulateCustomPolicyRequestPrivate(const IAM::Action action,
+    SimulateCustomPolicyRequestPrivate(const IAMRequest::Action action,
                                    SimulateCustomPolicyRequest * const q);
     SimulateCustomPolicyRequestPrivate(const SimulateCustomPolicyRequestPrivate &other,
                                    SimulateCustomPolicyRequest * const q);

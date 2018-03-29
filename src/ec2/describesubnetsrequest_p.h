@@ -31,7 +31,7 @@ class DescribeSubnetsRequest;
 class QTAWS_EXPORT DescribeSubnetsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSubnetsRequestPrivate(const EC2::Action action,
+    DescribeSubnetsRequestPrivate(const EC2Request::Action action,
                                    DescribeSubnetsRequest * const q);
     DescribeSubnetsRequestPrivate(const DescribeSubnetsRequestPrivate &other,
                                    DescribeSubnetsRequest * const q);

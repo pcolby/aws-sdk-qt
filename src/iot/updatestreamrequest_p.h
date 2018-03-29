@@ -31,7 +31,7 @@ class UpdateStreamRequest;
 class QTAWS_EXPORT UpdateStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateStreamRequestPrivate(const IoT::Action action,
+    UpdateStreamRequestPrivate(const IoTRequest::Action action,
                                    UpdateStreamRequest * const q);
     UpdateStreamRequestPrivate(const UpdateStreamRequestPrivate &other,
                                    UpdateStreamRequest * const q);

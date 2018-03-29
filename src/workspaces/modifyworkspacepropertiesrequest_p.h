@@ -31,7 +31,7 @@ class ModifyWorkspacePropertiesRequest;
 class QTAWS_EXPORT ModifyWorkspacePropertiesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    ModifyWorkspacePropertiesRequestPrivate(const WorkSpaces::Action action,
+    ModifyWorkspacePropertiesRequestPrivate(const WorkSpacesRequest::Action action,
                                    ModifyWorkspacePropertiesRequest * const q);
     ModifyWorkspacePropertiesRequestPrivate(const ModifyWorkspacePropertiesRequestPrivate &other,
                                    ModifyWorkspacePropertiesRequest * const q);

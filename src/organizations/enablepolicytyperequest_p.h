@@ -31,7 +31,7 @@ class EnablePolicyTypeRequest;
 class QTAWS_EXPORT EnablePolicyTypeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    EnablePolicyTypeRequestPrivate(const Organizations::Action action,
+    EnablePolicyTypeRequestPrivate(const OrganizationsRequest::Action action,
                                    EnablePolicyTypeRequest * const q);
     EnablePolicyTypeRequestPrivate(const EnablePolicyTypeRequestPrivate &other,
                                    EnablePolicyTypeRequest * const q);

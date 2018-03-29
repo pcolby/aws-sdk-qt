@@ -31,7 +31,7 @@ class DescribeServiceAccessPoliciesRequest;
 class QTAWS_EXPORT DescribeServiceAccessPoliciesRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DescribeServiceAccessPoliciesRequestPrivate(const CloudSearch::Action action,
+    DescribeServiceAccessPoliciesRequestPrivate(const CloudSearchRequest::Action action,
                                    DescribeServiceAccessPoliciesRequest * const q);
     DescribeServiceAccessPoliciesRequestPrivate(const DescribeServiceAccessPoliciesRequestPrivate &other,
                                    DescribeServiceAccessPoliciesRequest * const q);

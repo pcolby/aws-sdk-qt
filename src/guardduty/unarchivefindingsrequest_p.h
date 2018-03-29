@@ -31,7 +31,7 @@ class UnarchiveFindingsRequest;
 class QTAWS_EXPORT UnarchiveFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    UnarchiveFindingsRequestPrivate(const GuardDuty::Action action,
+    UnarchiveFindingsRequestPrivate(const GuardDutyRequest::Action action,
                                    UnarchiveFindingsRequest * const q);
     UnarchiveFindingsRequestPrivate(const UnarchiveFindingsRequestPrivate &other,
                                    UnarchiveFindingsRequest * const q);

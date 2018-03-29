@@ -31,7 +31,7 @@ class ListDocumentVersionsRequest;
 class QTAWS_EXPORT ListDocumentVersionsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListDocumentVersionsRequestPrivate(const SSM::Action action,
+    ListDocumentVersionsRequestPrivate(const SSMRequest::Action action,
                                    ListDocumentVersionsRequest * const q);
     ListDocumentVersionsRequestPrivate(const ListDocumentVersionsRequestPrivate &other,
                                    ListDocumentVersionsRequest * const q);

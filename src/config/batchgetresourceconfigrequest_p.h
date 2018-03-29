@@ -31,7 +31,7 @@ class BatchGetResourceConfigRequest;
 class QTAWS_EXPORT BatchGetResourceConfigRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    BatchGetResourceConfigRequestPrivate(const ConfigService::Action action,
+    BatchGetResourceConfigRequestPrivate(const ConfigServiceRequest::Action action,
                                    BatchGetResourceConfigRequest * const q);
     BatchGetResourceConfigRequestPrivate(const BatchGetResourceConfigRequestPrivate &other,
                                    BatchGetResourceConfigRequest * const q);

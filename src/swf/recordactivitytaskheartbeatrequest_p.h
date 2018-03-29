@@ -31,7 +31,7 @@ class RecordActivityTaskHeartbeatRequest;
 class QTAWS_EXPORT RecordActivityTaskHeartbeatRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RecordActivityTaskHeartbeatRequestPrivate(const SWF::Action action,
+    RecordActivityTaskHeartbeatRequestPrivate(const SWFRequest::Action action,
                                    RecordActivityTaskHeartbeatRequest * const q);
     RecordActivityTaskHeartbeatRequestPrivate(const RecordActivityTaskHeartbeatRequestPrivate &other,
                                    RecordActivityTaskHeartbeatRequest * const q);

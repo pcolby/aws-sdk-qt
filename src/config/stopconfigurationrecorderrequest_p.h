@@ -31,7 +31,7 @@ class StopConfigurationRecorderRequest;
 class QTAWS_EXPORT StopConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    StopConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+    StopConfigurationRecorderRequestPrivate(const ConfigServiceRequest::Action action,
                                    StopConfigurationRecorderRequest * const q);
     StopConfigurationRecorderRequestPrivate(const StopConfigurationRecorderRequestPrivate &other,
                                    StopConfigurationRecorderRequest * const q);

@@ -31,7 +31,7 @@ class ListLoggerDefinitionVersionsRequest;
 class QTAWS_EXPORT ListLoggerDefinitionVersionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListLoggerDefinitionVersionsRequestPrivate(const Greengrass::Action action,
+    ListLoggerDefinitionVersionsRequestPrivate(const GreengrassRequest::Action action,
                                    ListLoggerDefinitionVersionsRequest * const q);
     ListLoggerDefinitionVersionsRequestPrivate(const ListLoggerDefinitionVersionsRequestPrivate &other,
                                    ListLoggerDefinitionVersionsRequest * const q);

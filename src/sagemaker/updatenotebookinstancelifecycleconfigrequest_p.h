@@ -31,7 +31,7 @@ class UpdateNotebookInstanceLifecycleConfigRequest;
 class QTAWS_EXPORT UpdateNotebookInstanceLifecycleConfigRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    UpdateNotebookInstanceLifecycleConfigRequestPrivate(const SageMaker::Action action,
+    UpdateNotebookInstanceLifecycleConfigRequestPrivate(const SageMakerRequest::Action action,
                                    UpdateNotebookInstanceLifecycleConfigRequest * const q);
     UpdateNotebookInstanceLifecycleConfigRequestPrivate(const UpdateNotebookInstanceLifecycleConfigRequestPrivate &other,
                                    UpdateNotebookInstanceLifecycleConfigRequest * const q);

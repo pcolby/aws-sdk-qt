@@ -31,7 +31,7 @@ class SimulatePrincipalPolicyRequest;
 class QTAWS_EXPORT SimulatePrincipalPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    SimulatePrincipalPolicyRequestPrivate(const IAM::Action action,
+    SimulatePrincipalPolicyRequestPrivate(const IAMRequest::Action action,
                                    SimulatePrincipalPolicyRequest * const q);
     SimulatePrincipalPolicyRequestPrivate(const SimulatePrincipalPolicyRequestPrivate &other,
                                    SimulatePrincipalPolicyRequest * const q);

@@ -31,7 +31,7 @@ class SearchProfilesRequest;
 class QTAWS_EXPORT SearchProfilesRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    SearchProfilesRequestPrivate(const AlexaForBusiness::Action action,
+    SearchProfilesRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    SearchProfilesRequest * const q);
     SearchProfilesRequestPrivate(const SearchProfilesRequestPrivate &other,
                                    SearchProfilesRequest * const q);

@@ -31,7 +31,7 @@ class GetTypeRequest;
 class QTAWS_EXPORT GetTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    GetTypeRequestPrivate(const AppSync::Action action,
+    GetTypeRequestPrivate(const AppSyncRequest::Action action,
                                    GetTypeRequest * const q);
     GetTypeRequestPrivate(const GetTypeRequestPrivate &other,
                                    GetTypeRequest * const q);

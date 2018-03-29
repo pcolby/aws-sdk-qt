@@ -31,7 +31,7 @@ class GetDocumentRequest;
 class QTAWS_EXPORT GetDocumentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    GetDocumentRequestPrivate(const WorkDocs::Action action,
+    GetDocumentRequestPrivate(const WorkDocsRequest::Action action,
                                    GetDocumentRequest * const q);
     GetDocumentRequestPrivate(const GetDocumentRequestPrivate &other,
                                    GetDocumentRequest * const q);

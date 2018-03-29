@@ -31,7 +31,7 @@ class ListRulesRequest;
 class QTAWS_EXPORT ListRulesRequestPrivate : public WAFRequestPrivate {
 
 public:
-    ListRulesRequestPrivate(const WAF::Action action,
+    ListRulesRequestPrivate(const WAFRequest::Action action,
                                    ListRulesRequest * const q);
     ListRulesRequestPrivate(const ListRulesRequestPrivate &other,
                                    ListRulesRequest * const q);

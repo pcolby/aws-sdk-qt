@@ -31,7 +31,7 @@ class ListGitHubAccountTokenNamesRequest;
 class QTAWS_EXPORT ListGitHubAccountTokenNamesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    ListGitHubAccountTokenNamesRequestPrivate(const CodeDeploy::Action action,
+    ListGitHubAccountTokenNamesRequestPrivate(const CodeDeployRequest::Action action,
                                    ListGitHubAccountTokenNamesRequest * const q);
     ListGitHubAccountTokenNamesRequestPrivate(const ListGitHubAccountTokenNamesRequestPrivate &other,
                                    ListGitHubAccountTokenNamesRequest * const q);

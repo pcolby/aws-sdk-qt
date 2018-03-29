@@ -31,7 +31,7 @@ class ListConfigurationSetsRequest;
 class QTAWS_EXPORT ListConfigurationSetsRequestPrivate : public SESRequestPrivate {
 
 public:
-    ListConfigurationSetsRequestPrivate(const SES::Action action,
+    ListConfigurationSetsRequestPrivate(const SESRequest::Action action,
                                    ListConfigurationSetsRequest * const q);
     ListConfigurationSetsRequestPrivate(const ListConfigurationSetsRequestPrivate &other,
                                    ListConfigurationSetsRequest * const q);

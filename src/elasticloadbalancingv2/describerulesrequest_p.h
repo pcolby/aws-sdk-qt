@@ -31,7 +31,7 @@ class DescribeRulesRequest;
 class QTAWS_EXPORT DescribeRulesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeRulesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeRulesRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeRulesRequest * const q);
     DescribeRulesRequestPrivate(const DescribeRulesRequestPrivate &other,
                                    DescribeRulesRequest * const q);

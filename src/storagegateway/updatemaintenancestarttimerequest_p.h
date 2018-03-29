@@ -31,7 +31,7 @@ class UpdateMaintenanceStartTimeRequest;
 class QTAWS_EXPORT UpdateMaintenanceStartTimeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateMaintenanceStartTimeRequestPrivate(const StorageGateway::Action action,
+    UpdateMaintenanceStartTimeRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateMaintenanceStartTimeRequest * const q);
     UpdateMaintenanceStartTimeRequestPrivate(const UpdateMaintenanceStartTimeRequestPrivate &other,
                                    UpdateMaintenanceStartTimeRequest * const q);

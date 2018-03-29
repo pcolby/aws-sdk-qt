@@ -31,7 +31,7 @@ class DeleteLogStreamRequest;
 class QTAWS_EXPORT DeleteLogStreamRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteLogStreamRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteLogStreamRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteLogStreamRequest * const q);
     DeleteLogStreamRequestPrivate(const DeleteLogStreamRequestPrivate &other,
                                    DeleteLogStreamRequest * const q);

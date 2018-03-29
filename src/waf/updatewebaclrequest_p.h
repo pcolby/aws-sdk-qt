@@ -31,7 +31,7 @@ class UpdateWebACLRequest;
 class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFRequestPrivate {
 
 public:
-    UpdateWebACLRequestPrivate(const WAF::Action action,
+    UpdateWebACLRequestPrivate(const WAFRequest::Action action,
                                    UpdateWebACLRequest * const q);
     UpdateWebACLRequestPrivate(const UpdateWebACLRequestPrivate &other,
                                    UpdateWebACLRequest * const q);

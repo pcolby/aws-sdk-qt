@@ -31,7 +31,7 @@ class UpdateClusterRequest;
 class QTAWS_EXPORT UpdateClusterRequestPrivate : public DAXRequestPrivate {
 
 public:
-    UpdateClusterRequestPrivate(const DAX::Action action,
+    UpdateClusterRequestPrivate(const DAXRequest::Action action,
                                    UpdateClusterRequest * const q);
     UpdateClusterRequestPrivate(const UpdateClusterRequestPrivate &other,
                                    UpdateClusterRequest * const q);

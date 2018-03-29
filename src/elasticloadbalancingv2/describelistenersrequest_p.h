@@ -31,7 +31,7 @@ class DescribeListenersRequest;
 class QTAWS_EXPORT DescribeListenersRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeListenersRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeListenersRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeListenersRequest * const q);
     DescribeListenersRequestPrivate(const DescribeListenersRequestPrivate &other,
                                    DescribeListenersRequest * const q);

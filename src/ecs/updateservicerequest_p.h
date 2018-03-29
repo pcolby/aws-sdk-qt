@@ -31,7 +31,7 @@ class UpdateServiceRequest;
 class QTAWS_EXPORT UpdateServiceRequestPrivate : public ECSRequestPrivate {
 
 public:
-    UpdateServiceRequestPrivate(const ECS::Action action,
+    UpdateServiceRequestPrivate(const ECSRequest::Action action,
                                    UpdateServiceRequest * const q);
     UpdateServiceRequestPrivate(const UpdateServiceRequestPrivate &other,
                                    UpdateServiceRequest * const q);

@@ -31,7 +31,7 @@ class CreatePlatformEndpointRequest;
 class QTAWS_EXPORT CreatePlatformEndpointRequestPrivate : public SNSRequestPrivate {
 
 public:
-    CreatePlatformEndpointRequestPrivate(const SNS::Action action,
+    CreatePlatformEndpointRequestPrivate(const SNSRequest::Action action,
                                    CreatePlatformEndpointRequest * const q);
     CreatePlatformEndpointRequestPrivate(const CreatePlatformEndpointRequestPrivate &other,
                                    CreatePlatformEndpointRequest * const q);

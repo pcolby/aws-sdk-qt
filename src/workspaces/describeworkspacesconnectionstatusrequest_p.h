@@ -31,7 +31,7 @@ class DescribeWorkspacesConnectionStatusRequest;
 class QTAWS_EXPORT DescribeWorkspacesConnectionStatusRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    DescribeWorkspacesConnectionStatusRequestPrivate(const WorkSpaces::Action action,
+    DescribeWorkspacesConnectionStatusRequestPrivate(const WorkSpacesRequest::Action action,
                                    DescribeWorkspacesConnectionStatusRequest * const q);
     DescribeWorkspacesConnectionStatusRequestPrivate(const DescribeWorkspacesConnectionStatusRequestPrivate &other,
                                    DescribeWorkspacesConnectionStatusRequest * const q);

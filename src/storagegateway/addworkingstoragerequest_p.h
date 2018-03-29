@@ -31,7 +31,7 @@ class AddWorkingStorageRequest;
 class QTAWS_EXPORT AddWorkingStorageRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    AddWorkingStorageRequestPrivate(const StorageGateway::Action action,
+    AddWorkingStorageRequestPrivate(const StorageGatewayRequest::Action action,
                                    AddWorkingStorageRequest * const q);
     AddWorkingStorageRequestPrivate(const AddWorkingStorageRequestPrivate &other,
                                    AddWorkingStorageRequest * const q);

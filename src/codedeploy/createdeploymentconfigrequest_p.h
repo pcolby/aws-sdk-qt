@@ -31,7 +31,7 @@ class CreateDeploymentConfigRequest;
 class QTAWS_EXPORT CreateDeploymentConfigRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    CreateDeploymentConfigRequestPrivate(const CodeDeploy::Action action,
+    CreateDeploymentConfigRequestPrivate(const CodeDeployRequest::Action action,
                                    CreateDeploymentConfigRequest * const q);
     CreateDeploymentConfigRequestPrivate(const CreateDeploymentConfigRequestPrivate &other,
                                    CreateDeploymentConfigRequest * const q);

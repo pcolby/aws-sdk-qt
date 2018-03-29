@@ -31,7 +31,7 @@ class BatchGetApplicationsRequest;
 class QTAWS_EXPORT BatchGetApplicationsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    BatchGetApplicationsRequestPrivate(const CodeDeploy::Action action,
+    BatchGetApplicationsRequestPrivate(const CodeDeployRequest::Action action,
                                    BatchGetApplicationsRequest * const q);
     BatchGetApplicationsRequestPrivate(const BatchGetApplicationsRequestPrivate &other,
                                    BatchGetApplicationsRequest * const q);

@@ -31,7 +31,7 @@ class UpdateConfigurationTemplateRequest;
 class QTAWS_EXPORT UpdateConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    UpdateConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,
+    UpdateConfigurationTemplateRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    UpdateConfigurationTemplateRequest * const q);
     UpdateConfigurationTemplateRequestPrivate(const UpdateConfigurationTemplateRequestPrivate &other,
                                    UpdateConfigurationTemplateRequest * const q);

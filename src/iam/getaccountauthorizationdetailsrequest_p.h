@@ -31,7 +31,7 @@ class GetAccountAuthorizationDetailsRequest;
 class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetAccountAuthorizationDetailsRequestPrivate(const IAM::Action action,
+    GetAccountAuthorizationDetailsRequestPrivate(const IAMRequest::Action action,
                                    GetAccountAuthorizationDetailsRequest * const q);
     GetAccountAuthorizationDetailsRequestPrivate(const GetAccountAuthorizationDetailsRequestPrivate &other,
                                    GetAccountAuthorizationDetailsRequest * const q);

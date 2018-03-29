@@ -31,7 +31,7 @@ class GetStatusRequest;
 class QTAWS_EXPORT GetStatusRequestPrivate : public ImportExportRequestPrivate {
 
 public:
-    GetStatusRequestPrivate(const ImportExport::Action action,
+    GetStatusRequestPrivate(const ImportExportRequest::Action action,
                                    GetStatusRequest * const q);
     GetStatusRequestPrivate(const GetStatusRequestPrivate &other,
                                    GetStatusRequest * const q);

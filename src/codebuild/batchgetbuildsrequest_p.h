@@ -31,7 +31,7 @@ class BatchGetBuildsRequest;
 class QTAWS_EXPORT BatchGetBuildsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    BatchGetBuildsRequestPrivate(const CodeBuild::Action action,
+    BatchGetBuildsRequestPrivate(const CodeBuildRequest::Action action,
                                    BatchGetBuildsRequest * const q);
     BatchGetBuildsRequestPrivate(const BatchGetBuildsRequestPrivate &other,
                                    BatchGetBuildsRequest * const q);

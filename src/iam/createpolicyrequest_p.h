@@ -31,7 +31,7 @@ class CreatePolicyRequest;
 class QTAWS_EXPORT CreatePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreatePolicyRequestPrivate(const IAM::Action action,
+    CreatePolicyRequestPrivate(const IAMRequest::Action action,
                                    CreatePolicyRequest * const q);
     CreatePolicyRequestPrivate(const CreatePolicyRequestPrivate &other,
                                    CreatePolicyRequest * const q);

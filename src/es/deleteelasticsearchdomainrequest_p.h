@@ -31,7 +31,7 @@ class DeleteElasticsearchDomainRequest;
 class QTAWS_EXPORT DeleteElasticsearchDomainRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    DeleteElasticsearchDomainRequestPrivate(const ElasticsearchService::Action action,
+    DeleteElasticsearchDomainRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    DeleteElasticsearchDomainRequest * const q);
     DeleteElasticsearchDomainRequestPrivate(const DeleteElasticsearchDomainRequestPrivate &other,
                                    DeleteElasticsearchDomainRequest * const q);

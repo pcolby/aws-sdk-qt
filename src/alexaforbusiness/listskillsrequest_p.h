@@ -31,7 +31,7 @@ class ListSkillsRequest;
 class QTAWS_EXPORT ListSkillsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    ListSkillsRequestPrivate(const AlexaForBusiness::Action action,
+    ListSkillsRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    ListSkillsRequest * const q);
     ListSkillsRequestPrivate(const ListSkillsRequestPrivate &other,
                                    ListSkillsRequest * const q);

@@ -31,7 +31,7 @@ class DetachPolicyRequest;
 class QTAWS_EXPORT DetachPolicyRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DetachPolicyRequestPrivate(const CloudDirectory::Action action,
+    DetachPolicyRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DetachPolicyRequest * const q);
     DetachPolicyRequestPrivate(const DetachPolicyRequestPrivate &other,
                                    DetachPolicyRequest * const q);

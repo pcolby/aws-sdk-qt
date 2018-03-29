@@ -31,7 +31,7 @@ class ResendConfirmationCodeRequest;
 class QTAWS_EXPORT ResendConfirmationCodeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ResendConfirmationCodeRequestPrivate(const CognitoIdentityProvider::Action action,
+    ResendConfirmationCodeRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ResendConfirmationCodeRequest * const q);
     ResendConfirmationCodeRequestPrivate(const ResendConfirmationCodeRequestPrivate &other,
                                    ResendConfirmationCodeRequest * const q);

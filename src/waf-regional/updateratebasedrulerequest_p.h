@@ -31,7 +31,7 @@ class UpdateRateBasedRuleRequest;
 class QTAWS_EXPORT UpdateRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    UpdateRateBasedRuleRequestPrivate(const WAFRegional::Action action,
+    UpdateRateBasedRuleRequestPrivate(const WAFRegionalRequest::Action action,
                                    UpdateRateBasedRuleRequest * const q);
     UpdateRateBasedRuleRequestPrivate(const UpdateRateBasedRuleRequestPrivate &other,
                                    UpdateRateBasedRuleRequest * const q);

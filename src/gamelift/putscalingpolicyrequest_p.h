@@ -31,7 +31,7 @@ class PutScalingPolicyRequest;
 class QTAWS_EXPORT PutScalingPolicyRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    PutScalingPolicyRequestPrivate(const GameLift::Action action,
+    PutScalingPolicyRequestPrivate(const GameLiftRequest::Action action,
                                    PutScalingPolicyRequest * const q);
     PutScalingPolicyRequestPrivate(const PutScalingPolicyRequestPrivate &other,
                                    PutScalingPolicyRequest * const q);

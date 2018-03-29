@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const AlexaForBusiness::Action action,
+    TagResourceRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

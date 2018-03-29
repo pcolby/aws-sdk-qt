@@ -31,7 +31,7 @@ class ListQueryLoggingConfigsRequest;
 class QTAWS_EXPORT ListQueryLoggingConfigsRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ListQueryLoggingConfigsRequestPrivate(const Route53::Action action,
+    ListQueryLoggingConfigsRequestPrivate(const Route53Request::Action action,
                                    ListQueryLoggingConfigsRequest * const q);
     ListQueryLoggingConfigsRequestPrivate(const ListQueryLoggingConfigsRequestPrivate &other,
                                    ListQueryLoggingConfigsRequest * const q);

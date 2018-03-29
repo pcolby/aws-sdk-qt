@@ -31,7 +31,7 @@ class DeleteBackupRequest;
 class QTAWS_EXPORT DeleteBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    DeleteBackupRequestPrivate(const DynamoDB::Action action,
+    DeleteBackupRequestPrivate(const DynamoDBRequest::Action action,
                                    DeleteBackupRequest * const q);
     DeleteBackupRequestPrivate(const DeleteBackupRequestPrivate &other,
                                    DeleteBackupRequest * const q);

@@ -31,7 +31,7 @@ class DescribeInstancePatchStatesForPatchGroupRequest;
 class QTAWS_EXPORT DescribeInstancePatchStatesForPatchGroupRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeInstancePatchStatesForPatchGroupRequestPrivate(const SSM::Action action,
+    DescribeInstancePatchStatesForPatchGroupRequestPrivate(const SSMRequest::Action action,
                                    DescribeInstancePatchStatesForPatchGroupRequest * const q);
     DescribeInstancePatchStatesForPatchGroupRequestPrivate(const DescribeInstancePatchStatesForPatchGroupRequestPrivate &other,
                                    DescribeInstancePatchStatesForPatchGroupRequest * const q);

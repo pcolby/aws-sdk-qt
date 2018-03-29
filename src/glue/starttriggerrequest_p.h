@@ -31,7 +31,7 @@ class StartTriggerRequest;
 class QTAWS_EXPORT StartTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    StartTriggerRequestPrivate(const Glue::Action action,
+    StartTriggerRequestPrivate(const GlueRequest::Action action,
                                    StartTriggerRequest * const q);
     StartTriggerRequestPrivate(const StartTriggerRequestPrivate &other,
                                    StartTriggerRequest * const q);

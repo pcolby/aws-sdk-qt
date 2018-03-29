@@ -31,7 +31,7 @@ class UpdatePatchBaselineRequest;
 class QTAWS_EXPORT UpdatePatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
-    UpdatePatchBaselineRequestPrivate(const SSM::Action action,
+    UpdatePatchBaselineRequestPrivate(const SSMRequest::Action action,
                                    UpdatePatchBaselineRequest * const q);
     UpdatePatchBaselineRequestPrivate(const UpdatePatchBaselineRequestPrivate &other,
                                    UpdatePatchBaselineRequest * const q);

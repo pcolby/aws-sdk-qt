@@ -31,7 +31,7 @@ class DescribeSeverityLevelsRequest;
 class QTAWS_EXPORT DescribeSeverityLevelsRequestPrivate : public SupportRequestPrivate {
 
 public:
-    DescribeSeverityLevelsRequestPrivate(const Support::Action action,
+    DescribeSeverityLevelsRequestPrivate(const SupportRequest::Action action,
                                    DescribeSeverityLevelsRequest * const q);
     DescribeSeverityLevelsRequestPrivate(const DescribeSeverityLevelsRequestPrivate &other,
                                    DescribeSeverityLevelsRequest * const q);

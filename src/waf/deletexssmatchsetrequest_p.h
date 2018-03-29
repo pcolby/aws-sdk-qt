@@ -31,7 +31,7 @@ class DeleteXssMatchSetRequest;
 class QTAWS_EXPORT DeleteXssMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteXssMatchSetRequestPrivate(const WAF::Action action,
+    DeleteXssMatchSetRequestPrivate(const WAFRequest::Action action,
                                    DeleteXssMatchSetRequest * const q);
     DeleteXssMatchSetRequestPrivate(const DeleteXssMatchSetRequestPrivate &other,
                                    DeleteXssMatchSetRequest * const q);

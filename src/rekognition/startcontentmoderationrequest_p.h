@@ -31,7 +31,7 @@ class StartContentModerationRequest;
 class QTAWS_EXPORT StartContentModerationRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    StartContentModerationRequestPrivate(const Rekognition::Action action,
+    StartContentModerationRequestPrivate(const RekognitionRequest::Action action,
                                    StartContentModerationRequest * const q);
     StartContentModerationRequestPrivate(const StartContentModerationRequestPrivate &other,
                                    StartContentModerationRequest * const q);

@@ -31,7 +31,7 @@ class DeleteRunRequest;
 class QTAWS_EXPORT DeleteRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    DeleteRunRequestPrivate(const DeviceFarm::Action action,
+    DeleteRunRequestPrivate(const DeviceFarmRequest::Action action,
                                    DeleteRunRequest * const q);
     DeleteRunRequestPrivate(const DeleteRunRequestPrivate &other,
                                    DeleteRunRequest * const q);

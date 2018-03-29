@@ -31,7 +31,7 @@ class DescribeLimitsRequest;
 class QTAWS_EXPORT DescribeLimitsRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    DescribeLimitsRequestPrivate(const Kinesis::Action action,
+    DescribeLimitsRequestPrivate(const KinesisRequest::Action action,
                                    DescribeLimitsRequest * const q);
     DescribeLimitsRequestPrivate(const DescribeLimitsRequestPrivate &other,
                                    DescribeLimitsRequest * const q);

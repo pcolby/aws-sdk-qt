@@ -31,7 +31,7 @@ class DeleteProjectRequest;
 class QTAWS_EXPORT DeleteProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    DeleteProjectRequestPrivate(const DeviceFarm::Action action,
+    DeleteProjectRequestPrivate(const DeviceFarmRequest::Action action,
                                    DeleteProjectRequest * const q);
     DeleteProjectRequestPrivate(const DeleteProjectRequestPrivate &other,
                                    DeleteProjectRequest * const q);

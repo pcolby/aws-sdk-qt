@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const AppStream::Action action,
+    UntagResourceRequestPrivate(const AppStreamRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

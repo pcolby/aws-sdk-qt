@@ -31,7 +31,7 @@ class AssumeRoleWithWebIdentityRequest;
 class QTAWS_EXPORT AssumeRoleWithWebIdentityRequestPrivate : public STSRequestPrivate {
 
 public:
-    AssumeRoleWithWebIdentityRequestPrivate(const STS::Action action,
+    AssumeRoleWithWebIdentityRequestPrivate(const STSRequest::Action action,
                                    AssumeRoleWithWebIdentityRequest * const q);
     AssumeRoleWithWebIdentityRequestPrivate(const AssumeRoleWithWebIdentityRequestPrivate &other,
                                    AssumeRoleWithWebIdentityRequest * const q);

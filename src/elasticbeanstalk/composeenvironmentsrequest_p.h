@@ -31,7 +31,7 @@ class ComposeEnvironmentsRequest;
 class QTAWS_EXPORT ComposeEnvironmentsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    ComposeEnvironmentsRequestPrivate(const ElasticBeanstalk::Action action,
+    ComposeEnvironmentsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    ComposeEnvironmentsRequest * const q);
     ComposeEnvironmentsRequestPrivate(const ComposeEnvironmentsRequestPrivate &other,
                                    ComposeEnvironmentsRequest * const q);

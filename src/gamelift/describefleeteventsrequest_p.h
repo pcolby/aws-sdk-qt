@@ -31,7 +31,7 @@ class DescribeFleetEventsRequest;
 class QTAWS_EXPORT DescribeFleetEventsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeFleetEventsRequestPrivate(const GameLift::Action action,
+    DescribeFleetEventsRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeFleetEventsRequest * const q);
     DescribeFleetEventsRequestPrivate(const DescribeFleetEventsRequestPrivate &other,
                                    DescribeFleetEventsRequest * const q);

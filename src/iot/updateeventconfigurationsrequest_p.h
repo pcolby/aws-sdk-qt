@@ -31,7 +31,7 @@ class UpdateEventConfigurationsRequest;
 class QTAWS_EXPORT UpdateEventConfigurationsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateEventConfigurationsRequestPrivate(const IoT::Action action,
+    UpdateEventConfigurationsRequestPrivate(const IoTRequest::Action action,
                                    UpdateEventConfigurationsRequest * const q);
     UpdateEventConfigurationsRequestPrivate(const UpdateEventConfigurationsRequestPrivate &other,
                                    UpdateEventConfigurationsRequest * const q);

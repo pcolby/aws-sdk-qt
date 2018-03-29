@@ -31,7 +31,7 @@ class ListPartsRequest;
 class QTAWS_EXPORT ListPartsRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    ListPartsRequestPrivate(const Glacier::Action action,
+    ListPartsRequestPrivate(const GlacierRequest::Action action,
                                    ListPartsRequest * const q);
     ListPartsRequestPrivate(const ListPartsRequestPrivate &other,
                                    ListPartsRequest * const q);

@@ -31,7 +31,7 @@ class ListDeliveryStreamsRequest;
 class QTAWS_EXPORT ListDeliveryStreamsRequestPrivate : public FirehoseRequestPrivate {
 
 public:
-    ListDeliveryStreamsRequestPrivate(const Firehose::Action action,
+    ListDeliveryStreamsRequestPrivate(const FirehoseRequest::Action action,
                                    ListDeliveryStreamsRequest * const q);
     ListDeliveryStreamsRequestPrivate(const ListDeliveryStreamsRequestPrivate &other,
                                    ListDeliveryStreamsRequest * const q);

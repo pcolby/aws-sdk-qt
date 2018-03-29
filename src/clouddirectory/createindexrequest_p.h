@@ -31,7 +31,7 @@ class CreateIndexRequest;
 class QTAWS_EXPORT CreateIndexRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    CreateIndexRequestPrivate(const CloudDirectory::Action action,
+    CreateIndexRequestPrivate(const CloudDirectoryRequest::Action action,
                                    CreateIndexRequest * const q);
     CreateIndexRequestPrivate(const CreateIndexRequestPrivate &other,
                                    CreateIndexRequest * const q);

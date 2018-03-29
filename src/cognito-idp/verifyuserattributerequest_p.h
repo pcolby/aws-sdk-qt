@@ -31,7 +31,7 @@ class VerifyUserAttributeRequest;
 class QTAWS_EXPORT VerifyUserAttributeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    VerifyUserAttributeRequestPrivate(const CognitoIdentityProvider::Action action,
+    VerifyUserAttributeRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    VerifyUserAttributeRequest * const q);
     VerifyUserAttributeRequestPrivate(const VerifyUserAttributeRequestPrivate &other,
                                    VerifyUserAttributeRequest * const q);

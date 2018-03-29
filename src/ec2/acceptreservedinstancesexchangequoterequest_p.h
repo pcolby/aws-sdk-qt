@@ -31,7 +31,7 @@ class AcceptReservedInstancesExchangeQuoteRequest;
 class QTAWS_EXPORT AcceptReservedInstancesExchangeQuoteRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AcceptReservedInstancesExchangeQuoteRequestPrivate(const EC2::Action action,
+    AcceptReservedInstancesExchangeQuoteRequestPrivate(const EC2Request::Action action,
                                    AcceptReservedInstancesExchangeQuoteRequest * const q);
     AcceptReservedInstancesExchangeQuoteRequestPrivate(const AcceptReservedInstancesExchangeQuoteRequestPrivate &other,
                                    AcceptReservedInstancesExchangeQuoteRequest * const q);

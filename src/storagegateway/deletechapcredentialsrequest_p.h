@@ -31,7 +31,7 @@ class DeleteChapCredentialsRequest;
 class QTAWS_EXPORT DeleteChapCredentialsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DeleteChapCredentialsRequestPrivate(const StorageGateway::Action action,
+    DeleteChapCredentialsRequestPrivate(const StorageGatewayRequest::Action action,
                                    DeleteChapCredentialsRequest * const q);
     DeleteChapCredentialsRequestPrivate(const DeleteChapCredentialsRequestPrivate &other,
                                    DeleteChapCredentialsRequest * const q);

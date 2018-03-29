@@ -31,7 +31,7 @@ class PutGatewayResponseRequest;
 class QTAWS_EXPORT PutGatewayResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    PutGatewayResponseRequestPrivate(const APIGateway::Action action,
+    PutGatewayResponseRequestPrivate(const APIGatewayRequest::Action action,
                                    PutGatewayResponseRequest * const q);
     PutGatewayResponseRequestPrivate(const PutGatewayResponseRequestPrivate &other,
                                    PutGatewayResponseRequest * const q);

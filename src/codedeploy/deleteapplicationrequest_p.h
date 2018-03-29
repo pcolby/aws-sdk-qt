@@ -31,7 +31,7 @@ class DeleteApplicationRequest;
 class QTAWS_EXPORT DeleteApplicationRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    DeleteApplicationRequestPrivate(const CodeDeploy::Action action,
+    DeleteApplicationRequestPrivate(const CodeDeployRequest::Action action,
                                    DeleteApplicationRequest * const q);
     DeleteApplicationRequestPrivate(const DeleteApplicationRequestPrivate &other,
                                    DeleteApplicationRequest * const q);

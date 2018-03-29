@@ -31,7 +31,7 @@ class SetLoadBalancerListenerSSLCertificateRequest;
 class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    SetLoadBalancerListenerSSLCertificateRequestPrivate(const ElasticLoadBalancing::Action action,
+    SetLoadBalancerListenerSSLCertificateRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    SetLoadBalancerListenerSSLCertificateRequest * const q);
     SetLoadBalancerListenerSSLCertificateRequestPrivate(const SetLoadBalancerListenerSSLCertificateRequestPrivate &other,
                                    SetLoadBalancerListenerSSLCertificateRequest * const q);

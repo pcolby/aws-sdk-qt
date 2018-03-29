@@ -31,7 +31,7 @@ class DeleteResourceDefinitionRequest;
 class QTAWS_EXPORT DeleteResourceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteResourceDefinitionRequestPrivate(const Greengrass::Action action,
+    DeleteResourceDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteResourceDefinitionRequest * const q);
     DeleteResourceDefinitionRequestPrivate(const DeleteResourceDefinitionRequestPrivate &other,
                                    DeleteResourceDefinitionRequest * const q);

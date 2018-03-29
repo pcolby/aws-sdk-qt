@@ -31,7 +31,7 @@ class BatchGetImageRequest;
 class QTAWS_EXPORT BatchGetImageRequestPrivate : public ECRRequestPrivate {
 
 public:
-    BatchGetImageRequestPrivate(const ECR::Action action,
+    BatchGetImageRequestPrivate(const ECRRequest::Action action,
                                    BatchGetImageRequest * const q);
     BatchGetImageRequestPrivate(const BatchGetImageRequestPrivate &other,
                                    BatchGetImageRequest * const q);

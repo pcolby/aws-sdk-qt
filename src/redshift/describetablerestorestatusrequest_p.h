@@ -31,7 +31,7 @@ class DescribeTableRestoreStatusRequest;
 class QTAWS_EXPORT DescribeTableRestoreStatusRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeTableRestoreStatusRequestPrivate(const Redshift::Action action,
+    DescribeTableRestoreStatusRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeTableRestoreStatusRequest * const q);
     DescribeTableRestoreStatusRequestPrivate(const DescribeTableRestoreStatusRequestPrivate &other,
                                    DescribeTableRestoreStatusRequest * const q);

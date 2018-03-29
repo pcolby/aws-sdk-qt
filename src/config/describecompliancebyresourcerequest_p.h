@@ -31,7 +31,7 @@ class DescribeComplianceByResourceRequest;
 class QTAWS_EXPORT DescribeComplianceByResourceRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DescribeComplianceByResourceRequestPrivate(const ConfigService::Action action,
+    DescribeComplianceByResourceRequestPrivate(const ConfigServiceRequest::Action action,
                                    DescribeComplianceByResourceRequest * const q);
     DescribeComplianceByResourceRequestPrivate(const DescribeComplianceByResourceRequestPrivate &other,
                                    DescribeComplianceByResourceRequest * const q);

@@ -31,7 +31,7 @@ class EnableStageTransitionRequest;
 class QTAWS_EXPORT EnableStageTransitionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    EnableStageTransitionRequestPrivate(const CodePipeline::Action action,
+    EnableStageTransitionRequestPrivate(const CodePipelineRequest::Action action,
                                    EnableStageTransitionRequest * const q);
     EnableStageTransitionRequestPrivate(const EnableStageTransitionRequestPrivate &other,
                                    EnableStageTransitionRequest * const q);

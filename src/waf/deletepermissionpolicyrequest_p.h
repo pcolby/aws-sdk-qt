@@ -31,7 +31,7 @@ class DeletePermissionPolicyRequest;
 class QTAWS_EXPORT DeletePermissionPolicyRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeletePermissionPolicyRequestPrivate(const WAF::Action action,
+    DeletePermissionPolicyRequestPrivate(const WAFRequest::Action action,
                                    DeletePermissionPolicyRequest * const q);
     DeletePermissionPolicyRequestPrivate(const DeletePermissionPolicyRequestPrivate &other,
                                    DeletePermissionPolicyRequest * const q);

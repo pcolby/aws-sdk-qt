@@ -31,7 +31,7 @@ class SendBonusRequest;
 class QTAWS_EXPORT SendBonusRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    SendBonusRequestPrivate(const MTurk::Action action,
+    SendBonusRequestPrivate(const MTurkRequest::Action action,
                                    SendBonusRequest * const q);
     SendBonusRequestPrivate(const SendBonusRequestPrivate &other,
                                    SendBonusRequest * const q);

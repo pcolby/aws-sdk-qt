@@ -31,7 +31,7 @@ class ListTopicsRequest;
 class QTAWS_EXPORT ListTopicsRequestPrivate : public SNSRequestPrivate {
 
 public:
-    ListTopicsRequestPrivate(const SNS::Action action,
+    ListTopicsRequestPrivate(const SNSRequest::Action action,
                                    ListTopicsRequest * const q);
     ListTopicsRequestPrivate(const ListTopicsRequestPrivate &other,
                                    ListTopicsRequest * const q);

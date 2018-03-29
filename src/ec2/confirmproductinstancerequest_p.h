@@ -31,7 +31,7 @@ class ConfirmProductInstanceRequest;
 class QTAWS_EXPORT ConfirmProductInstanceRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ConfirmProductInstanceRequestPrivate(const EC2::Action action,
+    ConfirmProductInstanceRequestPrivate(const EC2Request::Action action,
                                    ConfirmProductInstanceRequest * const q);
     ConfirmProductInstanceRequestPrivate(const ConfirmProductInstanceRequestPrivate &other,
                                    ConfirmProductInstanceRequest * const q);

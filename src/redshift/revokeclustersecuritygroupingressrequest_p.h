@@ -31,7 +31,7 @@ class RevokeClusterSecurityGroupIngressRequest;
 class QTAWS_EXPORT RevokeClusterSecurityGroupIngressRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    RevokeClusterSecurityGroupIngressRequestPrivate(const Redshift::Action action,
+    RevokeClusterSecurityGroupIngressRequestPrivate(const RedshiftRequest::Action action,
                                    RevokeClusterSecurityGroupIngressRequest * const q);
     RevokeClusterSecurityGroupIngressRequestPrivate(const RevokeClusterSecurityGroupIngressRequestPrivate &other,
                                    RevokeClusterSecurityGroupIngressRequest * const q);

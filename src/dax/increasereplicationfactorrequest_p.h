@@ -31,7 +31,7 @@ class IncreaseReplicationFactorRequest;
 class QTAWS_EXPORT IncreaseReplicationFactorRequestPrivate : public DAXRequestPrivate {
 
 public:
-    IncreaseReplicationFactorRequestPrivate(const DAX::Action action,
+    IncreaseReplicationFactorRequestPrivate(const DAXRequest::Action action,
                                    IncreaseReplicationFactorRequest * const q);
     IncreaseReplicationFactorRequestPrivate(const IncreaseReplicationFactorRequestPrivate &other,
                                    IncreaseReplicationFactorRequest * const q);

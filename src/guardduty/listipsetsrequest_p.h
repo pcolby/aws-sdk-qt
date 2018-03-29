@@ -31,7 +31,7 @@ class ListIPSetsRequest;
 class QTAWS_EXPORT ListIPSetsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    ListIPSetsRequestPrivate(const GuardDuty::Action action,
+    ListIPSetsRequestPrivate(const GuardDutyRequest::Action action,
                                    ListIPSetsRequest * const q);
     ListIPSetsRequestPrivate(const ListIPSetsRequestPrivate &other,
                                    ListIPSetsRequest * const q);

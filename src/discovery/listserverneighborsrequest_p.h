@@ -31,7 +31,7 @@ class ListServerNeighborsRequest;
 class QTAWS_EXPORT ListServerNeighborsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    ListServerNeighborsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    ListServerNeighborsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    ListServerNeighborsRequest * const q);
     ListServerNeighborsRequestPrivate(const ListServerNeighborsRequestPrivate &other,
                                    ListServerNeighborsRequest * const q);

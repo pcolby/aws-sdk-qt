@@ -31,7 +31,7 @@ class UpdateEndpointRequest;
 class QTAWS_EXPORT UpdateEndpointRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    UpdateEndpointRequestPrivate(const SageMaker::Action action,
+    UpdateEndpointRequestPrivate(const SageMakerRequest::Action action,
                                    UpdateEndpointRequest * const q);
     UpdateEndpointRequestPrivate(const UpdateEndpointRequestPrivate &other,
                                    UpdateEndpointRequest * const q);

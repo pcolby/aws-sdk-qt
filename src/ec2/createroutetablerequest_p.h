@@ -31,7 +31,7 @@ class CreateRouteTableRequest;
 class QTAWS_EXPORT CreateRouteTableRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateRouteTableRequestPrivate(const EC2::Action action,
+    CreateRouteTableRequestPrivate(const EC2Request::Action action,
                                    CreateRouteTableRequest * const q);
     CreateRouteTableRequestPrivate(const CreateRouteTableRequestPrivate &other,
                                    CreateRouteTableRequest * const q);

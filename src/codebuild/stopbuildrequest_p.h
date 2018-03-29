@@ -31,7 +31,7 @@ class StopBuildRequest;
 class QTAWS_EXPORT StopBuildRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    StopBuildRequestPrivate(const CodeBuild::Action action,
+    StopBuildRequestPrivate(const CodeBuildRequest::Action action,
                                    StopBuildRequest * const q);
     StopBuildRequestPrivate(const StopBuildRequestPrivate &other,
                                    StopBuildRequest * const q);

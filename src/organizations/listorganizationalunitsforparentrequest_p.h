@@ -31,7 +31,7 @@ class ListOrganizationalUnitsForParentRequest;
 class QTAWS_EXPORT ListOrganizationalUnitsForParentRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListOrganizationalUnitsForParentRequestPrivate(const Organizations::Action action,
+    ListOrganizationalUnitsForParentRequestPrivate(const OrganizationsRequest::Action action,
                                    ListOrganizationalUnitsForParentRequest * const q);
     ListOrganizationalUnitsForParentRequestPrivate(const ListOrganizationalUnitsForParentRequestPrivate &other,
                                    ListOrganizationalUnitsForParentRequest * const q);

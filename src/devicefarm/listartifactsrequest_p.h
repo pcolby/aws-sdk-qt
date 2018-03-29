@@ -31,7 +31,7 @@ class ListArtifactsRequest;
 class QTAWS_EXPORT ListArtifactsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListArtifactsRequestPrivate(const DeviceFarm::Action action,
+    ListArtifactsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListArtifactsRequest * const q);
     ListArtifactsRequestPrivate(const ListArtifactsRequestPrivate &other,
                                    ListArtifactsRequest * const q);

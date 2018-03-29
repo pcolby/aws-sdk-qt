@@ -31,7 +31,7 @@ class GetTraceSummariesRequest;
 class QTAWS_EXPORT GetTraceSummariesRequestPrivate : public XRayRequestPrivate {
 
 public:
-    GetTraceSummariesRequestPrivate(const XRay::Action action,
+    GetTraceSummariesRequestPrivate(const XRayRequest::Action action,
                                    GetTraceSummariesRequest * const q);
     GetTraceSummariesRequestPrivate(const GetTraceSummariesRequestPrivate &other,
                                    GetTraceSummariesRequest * const q);

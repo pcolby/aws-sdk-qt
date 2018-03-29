@@ -31,7 +31,7 @@ class GetSdkTypesRequest;
 class QTAWS_EXPORT GetSdkTypesRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetSdkTypesRequestPrivate(const APIGateway::Action action,
+    GetSdkTypesRequestPrivate(const APIGatewayRequest::Action action,
                                    GetSdkTypesRequest * const q);
     GetSdkTypesRequestPrivate(const GetSdkTypesRequestPrivate &other,
                                    GetSdkTypesRequest * const q);

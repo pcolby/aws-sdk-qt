@@ -31,7 +31,7 @@ class DescribeLunaClientRequest;
 class QTAWS_EXPORT DescribeLunaClientRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    DescribeLunaClientRequestPrivate(const CloudHSM::Action action,
+    DescribeLunaClientRequestPrivate(const CloudHSMRequest::Action action,
                                    DescribeLunaClientRequest * const q);
     DescribeLunaClientRequestPrivate(const DescribeLunaClientRequestPrivate &other,
                                    DescribeLunaClientRequest * const q);

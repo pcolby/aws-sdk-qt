@@ -31,7 +31,7 @@ class StopUserImportJobRequest;
 class QTAWS_EXPORT StopUserImportJobRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    StopUserImportJobRequestPrivate(const CognitoIdentityProvider::Action action,
+    StopUserImportJobRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    StopUserImportJobRequest * const q);
     StopUserImportJobRequestPrivate(const StopUserImportJobRequestPrivate &other,
                                    StopUserImportJobRequest * const q);

@@ -31,7 +31,7 @@ class RemoveTagsRequest;
 class QTAWS_EXPORT RemoveTagsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const EMR::Action action,
+    RemoveTagsRequestPrivate(const EMRRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);

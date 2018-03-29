@@ -31,7 +31,7 @@ class ListEndpointsRequest;
 class QTAWS_EXPORT ListEndpointsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    ListEndpointsRequestPrivate(const SageMaker::Action action,
+    ListEndpointsRequestPrivate(const SageMakerRequest::Action action,
                                    ListEndpointsRequest * const q);
     ListEndpointsRequestPrivate(const ListEndpointsRequestPrivate &other,
                                    ListEndpointsRequest * const q);

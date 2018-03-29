@@ -31,7 +31,7 @@ class GetResolverRequest;
 class QTAWS_EXPORT GetResolverRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    GetResolverRequestPrivate(const AppSync::Action action,
+    GetResolverRequestPrivate(const AppSyncRequest::Action action,
                                    GetResolverRequest * const q);
     GetResolverRequestPrivate(const GetResolverRequestPrivate &other,
                                    GetResolverRequest * const q);

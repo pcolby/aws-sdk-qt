@@ -31,7 +31,7 @@ class CreateTopicRuleRequest;
 class QTAWS_EXPORT CreateTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateTopicRuleRequestPrivate(const IoT::Action action,
+    CreateTopicRuleRequestPrivate(const IoTRequest::Action action,
                                    CreateTopicRuleRequest * const q);
     CreateTopicRuleRequestPrivate(const CreateTopicRuleRequestPrivate &other,
                                    CreateTopicRuleRequest * const q);

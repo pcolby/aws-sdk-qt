@@ -31,7 +31,7 @@ class AddTagsRequest;
 class QTAWS_EXPORT AddTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    AddTagsRequestPrivate(const ElasticLoadBalancing::Action action,
+    AddTagsRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    AddTagsRequest * const q);
     AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
                                    AddTagsRequest * const q);

@@ -31,7 +31,7 @@ class RegisterDeviceRequest;
 class QTAWS_EXPORT RegisterDeviceRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    RegisterDeviceRequestPrivate(const CognitoSync::Action action,
+    RegisterDeviceRequestPrivate(const CognitoSyncRequest::Action action,
                                    RegisterDeviceRequest * const q);
     RegisterDeviceRequestPrivate(const RegisterDeviceRequestPrivate &other,
                                    RegisterDeviceRequest * const q);

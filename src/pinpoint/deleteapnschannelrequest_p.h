@@ -31,7 +31,7 @@ class DeleteApnsChannelRequest;
 class QTAWS_EXPORT DeleteApnsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteApnsChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteApnsChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteApnsChannelRequest * const q);
     DeleteApnsChannelRequestPrivate(const DeleteApnsChannelRequestPrivate &other,
                                    DeleteApnsChannelRequest * const q);

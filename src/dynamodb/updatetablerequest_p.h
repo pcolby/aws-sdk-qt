@@ -31,7 +31,7 @@ class UpdateTableRequest;
 class QTAWS_EXPORT UpdateTableRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    UpdateTableRequestPrivate(const DynamoDB::Action action,
+    UpdateTableRequestPrivate(const DynamoDBRequest::Action action,
                                    UpdateTableRequest * const q);
     UpdateTableRequestPrivate(const UpdateTableRequestPrivate &other,
                                    UpdateTableRequest * const q);

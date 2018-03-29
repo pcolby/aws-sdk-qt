@@ -31,7 +31,7 @@ class DeleteApnsSandboxChannelRequest;
 class QTAWS_EXPORT DeleteApnsSandboxChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteApnsSandboxChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteApnsSandboxChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteApnsSandboxChannelRequest * const q);
     DeleteApnsSandboxChannelRequestPrivate(const DeleteApnsSandboxChannelRequestPrivate &other,
                                    DeleteApnsSandboxChannelRequest * const q);

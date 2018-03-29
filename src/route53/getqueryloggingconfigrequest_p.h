@@ -31,7 +31,7 @@ class GetQueryLoggingConfigRequest;
 class QTAWS_EXPORT GetQueryLoggingConfigRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetQueryLoggingConfigRequestPrivate(const Route53::Action action,
+    GetQueryLoggingConfigRequestPrivate(const Route53Request::Action action,
                                    GetQueryLoggingConfigRequest * const q);
     GetQueryLoggingConfigRequestPrivate(const GetQueryLoggingConfigRequestPrivate &other,
                                    GetQueryLoggingConfigRequest * const q);

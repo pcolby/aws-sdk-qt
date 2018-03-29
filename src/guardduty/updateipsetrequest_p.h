@@ -31,7 +31,7 @@ class UpdateIPSetRequest;
 class QTAWS_EXPORT UpdateIPSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    UpdateIPSetRequestPrivate(const GuardDuty::Action action,
+    UpdateIPSetRequestPrivate(const GuardDutyRequest::Action action,
                                    UpdateIPSetRequest * const q);
     UpdateIPSetRequestPrivate(const UpdateIPSetRequestPrivate &other,
                                    UpdateIPSetRequest * const q);

@@ -31,7 +31,7 @@ class InitiateMultipartUploadRequest;
 class QTAWS_EXPORT InitiateMultipartUploadRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    InitiateMultipartUploadRequestPrivate(const Glacier::Action action,
+    InitiateMultipartUploadRequestPrivate(const GlacierRequest::Action action,
                                    InitiateMultipartUploadRequest * const q);
     InitiateMultipartUploadRequestPrivate(const InitiateMultipartUploadRequestPrivate &other,
                                    InitiateMultipartUploadRequest * const q);

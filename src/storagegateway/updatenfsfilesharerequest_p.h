@@ -31,7 +31,7 @@ class UpdateNFSFileShareRequest;
 class QTAWS_EXPORT UpdateNFSFileShareRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateNFSFileShareRequestPrivate(const StorageGateway::Action action,
+    UpdateNFSFileShareRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateNFSFileShareRequest * const q);
     UpdateNFSFileShareRequestPrivate(const UpdateNFSFileShareRequestPrivate &other,
                                    UpdateNFSFileShareRequest * const q);

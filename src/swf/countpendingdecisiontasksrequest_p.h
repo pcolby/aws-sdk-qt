@@ -31,7 +31,7 @@ class CountPendingDecisionTasksRequest;
 class QTAWS_EXPORT CountPendingDecisionTasksRequestPrivate : public SWFRequestPrivate {
 
 public:
-    CountPendingDecisionTasksRequestPrivate(const SWF::Action action,
+    CountPendingDecisionTasksRequestPrivate(const SWFRequest::Action action,
                                    CountPendingDecisionTasksRequest * const q);
     CountPendingDecisionTasksRequestPrivate(const CountPendingDecisionTasksRequestPrivate &other,
                                    CountPendingDecisionTasksRequest * const q);

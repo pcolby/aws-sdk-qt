@@ -31,7 +31,7 @@ class CreateAliasRequest;
 class QTAWS_EXPORT CreateAliasRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    CreateAliasRequestPrivate(const Lambda::Action action,
+    CreateAliasRequestPrivate(const LambdaRequest::Action action,
                                    CreateAliasRequest * const q);
     CreateAliasRequestPrivate(const CreateAliasRequestPrivate &other,
                                    CreateAliasRequest * const q);

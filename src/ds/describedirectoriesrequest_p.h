@@ -31,7 +31,7 @@ class DescribeDirectoriesRequest;
 class QTAWS_EXPORT DescribeDirectoriesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DescribeDirectoriesRequestPrivate(const DirectoryService::Action action,
+    DescribeDirectoriesRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DescribeDirectoriesRequest * const q);
     DescribeDirectoriesRequestPrivate(const DescribeDirectoriesRequestPrivate &other,
                                    DescribeDirectoriesRequest * const q);

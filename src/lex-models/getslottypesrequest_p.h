@@ -31,7 +31,7 @@ class GetSlotTypesRequest;
 class QTAWS_EXPORT GetSlotTypesRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    GetSlotTypesRequestPrivate(const LexModelBuildingService::Action action,
+    GetSlotTypesRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    GetSlotTypesRequest * const q);
     GetSlotTypesRequestPrivate(const GetSlotTypesRequestPrivate &other,
                                    GetSlotTypesRequest * const q);

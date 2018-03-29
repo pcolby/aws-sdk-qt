@@ -31,7 +31,7 @@ class DeleteWebhookRequest;
 class QTAWS_EXPORT DeleteWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    DeleteWebhookRequestPrivate(const CodeBuild::Action action,
+    DeleteWebhookRequestPrivate(const CodeBuildRequest::Action action,
                                    DeleteWebhookRequest * const q);
     DeleteWebhookRequestPrivate(const DeleteWebhookRequestPrivate &other,
                                    DeleteWebhookRequest * const q);

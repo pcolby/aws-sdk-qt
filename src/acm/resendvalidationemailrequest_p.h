@@ -31,7 +31,7 @@ class ResendValidationEmailRequest;
 class QTAWS_EXPORT ResendValidationEmailRequestPrivate : public ACMRequestPrivate {
 
 public:
-    ResendValidationEmailRequestPrivate(const ACM::Action action,
+    ResendValidationEmailRequestPrivate(const ACMRequest::Action action,
                                    ResendValidationEmailRequest * const q);
     ResendValidationEmailRequestPrivate(const ResendValidationEmailRequestPrivate &other,
                                    ResendValidationEmailRequest * const q);

@@ -31,7 +31,7 @@ class UpdateTagOptionRequest;
 class QTAWS_EXPORT UpdateTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    UpdateTagOptionRequestPrivate(const ServiceCatalog::Action action,
+    UpdateTagOptionRequestPrivate(const ServiceCatalogRequest::Action action,
                                    UpdateTagOptionRequest * const q);
     UpdateTagOptionRequestPrivate(const UpdateTagOptionRequestPrivate &other,
                                    UpdateTagOptionRequest * const q);

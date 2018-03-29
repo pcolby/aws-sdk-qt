@@ -31,7 +31,7 @@ class BatchDeleteConnectionRequest;
 class QTAWS_EXPORT BatchDeleteConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    BatchDeleteConnectionRequestPrivate(const Glue::Action action,
+    BatchDeleteConnectionRequestPrivate(const GlueRequest::Action action,
                                    BatchDeleteConnectionRequest * const q);
     BatchDeleteConnectionRequestPrivate(const BatchDeleteConnectionRequestPrivate &other,
                                    BatchDeleteConnectionRequest * const q);

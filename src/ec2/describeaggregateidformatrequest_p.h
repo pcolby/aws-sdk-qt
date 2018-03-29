@@ -31,7 +31,7 @@ class DescribeAggregateIdFormatRequest;
 class QTAWS_EXPORT DescribeAggregateIdFormatRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeAggregateIdFormatRequestPrivate(const EC2::Action action,
+    DescribeAggregateIdFormatRequestPrivate(const EC2Request::Action action,
                                    DescribeAggregateIdFormatRequest * const q);
     DescribeAggregateIdFormatRequestPrivate(const DescribeAggregateIdFormatRequestPrivate &other,
                                    DescribeAggregateIdFormatRequest * const q);

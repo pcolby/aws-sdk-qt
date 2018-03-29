@@ -31,7 +31,7 @@ class SetUserSettingsRequest;
 class QTAWS_EXPORT SetUserSettingsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    SetUserSettingsRequestPrivate(const CognitoIdentityProvider::Action action,
+    SetUserSettingsRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    SetUserSettingsRequest * const q);
     SetUserSettingsRequestPrivate(const SetUserSettingsRequestPrivate &other,
                                    SetUserSettingsRequest * const q);

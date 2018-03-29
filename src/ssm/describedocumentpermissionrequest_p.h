@@ -31,7 +31,7 @@ class DescribeDocumentPermissionRequest;
 class QTAWS_EXPORT DescribeDocumentPermissionRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeDocumentPermissionRequestPrivate(const SSM::Action action,
+    DescribeDocumentPermissionRequestPrivate(const SSMRequest::Action action,
                                    DescribeDocumentPermissionRequest * const q);
     DescribeDocumentPermissionRequestPrivate(const DescribeDocumentPermissionRequestPrivate &other,
                                    DescribeDocumentPermissionRequest * const q);

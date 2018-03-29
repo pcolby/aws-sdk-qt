@@ -31,7 +31,7 @@ class RevokeSecurityGroupIngressRequest;
 class QTAWS_EXPORT RevokeSecurityGroupIngressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RevokeSecurityGroupIngressRequestPrivate(const EC2::Action action,
+    RevokeSecurityGroupIngressRequestPrivate(const EC2Request::Action action,
                                    RevokeSecurityGroupIngressRequest * const q);
     RevokeSecurityGroupIngressRequestPrivate(const RevokeSecurityGroupIngressRequestPrivate &other,
                                    RevokeSecurityGroupIngressRequest * const q);

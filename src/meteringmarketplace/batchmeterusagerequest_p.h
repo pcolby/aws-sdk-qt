@@ -31,7 +31,7 @@ class BatchMeterUsageRequest;
 class QTAWS_EXPORT BatchMeterUsageRequestPrivate : public MarketplaceMeteringRequestPrivate {
 
 public:
-    BatchMeterUsageRequestPrivate(const MarketplaceMetering::Action action,
+    BatchMeterUsageRequestPrivate(const MarketplaceMeteringRequest::Action action,
                                    BatchMeterUsageRequest * const q);
     BatchMeterUsageRequestPrivate(const BatchMeterUsageRequestPrivate &other,
                                    BatchMeterUsageRequest * const q);

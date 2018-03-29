@@ -31,7 +31,7 @@ class DownloadDefaultKeyPairRequest;
 class QTAWS_EXPORT DownloadDefaultKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DownloadDefaultKeyPairRequestPrivate(const Lightsail::Action action,
+    DownloadDefaultKeyPairRequestPrivate(const LightsailRequest::Action action,
                                    DownloadDefaultKeyPairRequest * const q);
     DownloadDefaultKeyPairRequestPrivate(const DownloadDefaultKeyPairRequestPrivate &other,
                                    DownloadDefaultKeyPairRequest * const q);

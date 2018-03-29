@@ -31,7 +31,7 @@ class PublishRequest;
 class QTAWS_EXPORT PublishRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
-    PublishRequestPrivate(const IoTDataPlane::Action action,
+    PublishRequestPrivate(const IoTDataPlaneRequest::Action action,
                                    PublishRequest * const q);
     PublishRequestPrivate(const PublishRequestPrivate &other,
                                    PublishRequest * const q);

@@ -31,7 +31,7 @@ class DescribeReplicationTasksRequest;
 class QTAWS_EXPORT DescribeReplicationTasksRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeReplicationTasksRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeReplicationTasksRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeReplicationTasksRequest * const q);
     DescribeReplicationTasksRequestPrivate(const DescribeReplicationTasksRequestPrivate &other,
                                    DescribeReplicationTasksRequest * const q);

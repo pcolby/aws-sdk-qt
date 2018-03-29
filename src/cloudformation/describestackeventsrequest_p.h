@@ -31,7 +31,7 @@ class DescribeStackEventsRequest;
 class QTAWS_EXPORT DescribeStackEventsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    DescribeStackEventsRequestPrivate(const CloudFormation::Action action,
+    DescribeStackEventsRequestPrivate(const CloudFormationRequest::Action action,
                                    DescribeStackEventsRequest * const q);
     DescribeStackEventsRequestPrivate(const DescribeStackEventsRequestPrivate &other,
                                    DescribeStackEventsRequest * const q);

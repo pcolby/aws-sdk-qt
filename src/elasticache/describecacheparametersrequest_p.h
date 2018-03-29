@@ -31,7 +31,7 @@ class DescribeCacheParametersRequest;
 class QTAWS_EXPORT DescribeCacheParametersRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeCacheParametersRequestPrivate(const ElastiCache::Action action,
+    DescribeCacheParametersRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeCacheParametersRequest * const q);
     DescribeCacheParametersRequestPrivate(const DescribeCacheParametersRequestPrivate &other,
                                    DescribeCacheParametersRequest * const q);

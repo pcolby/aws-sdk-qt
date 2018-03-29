@@ -31,7 +31,7 @@ class AllocateHostsRequest;
 class QTAWS_EXPORT AllocateHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AllocateHostsRequestPrivate(const EC2::Action action,
+    AllocateHostsRequestPrivate(const EC2Request::Action action,
                                    AllocateHostsRequest * const q);
     AllocateHostsRequestPrivate(const AllocateHostsRequestPrivate &other,
                                    AllocateHostsRequest * const q);

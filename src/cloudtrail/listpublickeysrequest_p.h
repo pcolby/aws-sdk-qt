@@ -31,7 +31,7 @@ class ListPublicKeysRequest;
 class QTAWS_EXPORT ListPublicKeysRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    ListPublicKeysRequestPrivate(const CloudTrail::Action action,
+    ListPublicKeysRequestPrivate(const CloudTrailRequest::Action action,
                                    ListPublicKeysRequest * const q);
     ListPublicKeysRequestPrivate(const ListPublicKeysRequestPrivate &other,
                                    ListPublicKeysRequest * const q);

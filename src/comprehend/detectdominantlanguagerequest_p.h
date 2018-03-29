@@ -31,7 +31,7 @@ class DetectDominantLanguageRequest;
 class QTAWS_EXPORT DetectDominantLanguageRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    DetectDominantLanguageRequestPrivate(const Comprehend::Action action,
+    DetectDominantLanguageRequestPrivate(const ComprehendRequest::Action action,
                                    DetectDominantLanguageRequest * const q);
     DetectDominantLanguageRequestPrivate(const DetectDominantLanguageRequestPrivate &other,
                                    DetectDominantLanguageRequest * const q);

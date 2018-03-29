@@ -31,7 +31,7 @@ class RevokeCacheSecurityGroupIngressRequest;
 class QTAWS_EXPORT RevokeCacheSecurityGroupIngressRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    RevokeCacheSecurityGroupIngressRequestPrivate(const ElastiCache::Action action,
+    RevokeCacheSecurityGroupIngressRequestPrivate(const ElastiCacheRequest::Action action,
                                    RevokeCacheSecurityGroupIngressRequest * const q);
     RevokeCacheSecurityGroupIngressRequestPrivate(const RevokeCacheSecurityGroupIngressRequestPrivate &other,
                                    RevokeCacheSecurityGroupIngressRequest * const q);

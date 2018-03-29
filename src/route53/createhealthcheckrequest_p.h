@@ -31,7 +31,7 @@ class CreateHealthCheckRequest;
 class QTAWS_EXPORT CreateHealthCheckRequestPrivate : public Route53RequestPrivate {
 
 public:
-    CreateHealthCheckRequestPrivate(const Route53::Action action,
+    CreateHealthCheckRequestPrivate(const Route53Request::Action action,
                                    CreateHealthCheckRequest * const q);
     CreateHealthCheckRequestPrivate(const CreateHealthCheckRequestPrivate &other,
                                    CreateHealthCheckRequest * const q);

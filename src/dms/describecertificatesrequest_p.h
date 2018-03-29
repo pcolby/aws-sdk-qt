@@ -31,7 +31,7 @@ class DescribeCertificatesRequest;
 class QTAWS_EXPORT DescribeCertificatesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeCertificatesRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeCertificatesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeCertificatesRequest * const q);
     DescribeCertificatesRequestPrivate(const DescribeCertificatesRequestPrivate &other,
                                    DescribeCertificatesRequest * const q);

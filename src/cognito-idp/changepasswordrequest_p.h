@@ -31,7 +31,7 @@ class ChangePasswordRequest;
 class QTAWS_EXPORT ChangePasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ChangePasswordRequestPrivate(const CognitoIdentityProvider::Action action,
+    ChangePasswordRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ChangePasswordRequest * const q);
     ChangePasswordRequestPrivate(const ChangePasswordRequestPrivate &other,
                                    ChangePasswordRequest * const q);

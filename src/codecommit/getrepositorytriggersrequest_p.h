@@ -31,7 +31,7 @@ class GetRepositoryTriggersRequest;
 class QTAWS_EXPORT GetRepositoryTriggersRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetRepositoryTriggersRequestPrivate(const CodeCommit::Action action,
+    GetRepositoryTriggersRequestPrivate(const CodeCommitRequest::Action action,
                                    GetRepositoryTriggersRequest * const q);
     GetRepositoryTriggersRequestPrivate(const GetRepositoryTriggersRequestPrivate &other,
                                    GetRepositoryTriggersRequest * const q);

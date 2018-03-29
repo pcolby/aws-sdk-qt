@@ -31,7 +31,7 @@ class DescribeAttachmentRequest;
 class QTAWS_EXPORT DescribeAttachmentRequestPrivate : public SupportRequestPrivate {
 
 public:
-    DescribeAttachmentRequestPrivate(const Support::Action action,
+    DescribeAttachmentRequestPrivate(const SupportRequest::Action action,
                                    DescribeAttachmentRequest * const q);
     DescribeAttachmentRequestPrivate(const DescribeAttachmentRequestPrivate &other,
                                    DescribeAttachmentRequest * const q);

@@ -31,7 +31,7 @@ class DisassociateMembersRequest;
 class QTAWS_EXPORT DisassociateMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DisassociateMembersRequestPrivate(const GuardDuty::Action action,
+    DisassociateMembersRequestPrivate(const GuardDutyRequest::Action action,
                                    DisassociateMembersRequest * const q);
     DisassociateMembersRequestPrivate(const DisassociateMembersRequestPrivate &other,
                                    DisassociateMembersRequest * const q);

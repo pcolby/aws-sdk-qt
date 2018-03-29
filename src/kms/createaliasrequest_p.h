@@ -31,7 +31,7 @@ class CreateAliasRequest;
 class QTAWS_EXPORT CreateAliasRequestPrivate : public KMSRequestPrivate {
 
 public:
-    CreateAliasRequestPrivate(const KMS::Action action,
+    CreateAliasRequestPrivate(const KMSRequest::Action action,
                                    CreateAliasRequest * const q);
     CreateAliasRequestPrivate(const CreateAliasRequestPrivate &other,
                                    CreateAliasRequest * const q);

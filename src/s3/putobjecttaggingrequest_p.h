@@ -31,7 +31,7 @@ class PutObjectTaggingRequest;
 class QTAWS_EXPORT PutObjectTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutObjectTaggingRequestPrivate(const S3::Action action,
+    PutObjectTaggingRequestPrivate(const S3Request::Action action,
                                    PutObjectTaggingRequest * const q);
     PutObjectTaggingRequestPrivate(const PutObjectTaggingRequestPrivate &other,
                                    PutObjectTaggingRequest * const q);

@@ -31,7 +31,7 @@ class CreateStreamRequest;
 class QTAWS_EXPORT CreateStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
-    CreateStreamRequestPrivate(const KinesisVideo::Action action,
+    CreateStreamRequestPrivate(const KinesisVideoRequest::Action action,
                                    CreateStreamRequest * const q);
     CreateStreamRequestPrivate(const CreateStreamRequestPrivate &other,
                                    CreateStreamRequest * const q);

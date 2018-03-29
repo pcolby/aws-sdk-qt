@@ -31,7 +31,7 @@ class ListRepositoriesRequest;
 class QTAWS_EXPORT ListRepositoriesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    ListRepositoriesRequestPrivate(const CodeCommit::Action action,
+    ListRepositoriesRequestPrivate(const CodeCommitRequest::Action action,
                                    ListRepositoriesRequest * const q);
     ListRepositoriesRequestPrivate(const ListRepositoriesRequestPrivate &other,
                                    ListRepositoriesRequest * const q);

@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const CloudHSM::Action action,
+    ListTagsForResourceRequestPrivate(const CloudHSMRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

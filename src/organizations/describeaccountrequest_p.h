@@ -31,7 +31,7 @@ class DescribeAccountRequest;
 class QTAWS_EXPORT DescribeAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    DescribeAccountRequestPrivate(const Organizations::Action action,
+    DescribeAccountRequestPrivate(const OrganizationsRequest::Action action,
                                    DescribeAccountRequest * const q);
     DescribeAccountRequestPrivate(const DescribeAccountRequestPrivate &other,
                                    DescribeAccountRequest * const q);

@@ -31,7 +31,7 @@ class DeleteTrustRequest;
 class QTAWS_EXPORT DeleteTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DeleteTrustRequestPrivate(const DirectoryService::Action action,
+    DeleteTrustRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DeleteTrustRequest * const q);
     DeleteTrustRequestPrivate(const DeleteTrustRequestPrivate &other,
                                    DeleteTrustRequest * const q);

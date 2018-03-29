@@ -31,7 +31,7 @@ class RegisterPatchBaselineForPatchGroupRequest;
 class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupRequestPrivate : public SSMRequestPrivate {
 
 public:
-    RegisterPatchBaselineForPatchGroupRequestPrivate(const SSM::Action action,
+    RegisterPatchBaselineForPatchGroupRequestPrivate(const SSMRequest::Action action,
                                    RegisterPatchBaselineForPatchGroupRequest * const q);
     RegisterPatchBaselineForPatchGroupRequestPrivate(const RegisterPatchBaselineForPatchGroupRequestPrivate &other,
                                    RegisterPatchBaselineForPatchGroupRequest * const q);

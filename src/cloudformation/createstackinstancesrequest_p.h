@@ -31,7 +31,7 @@ class CreateStackInstancesRequest;
 class QTAWS_EXPORT CreateStackInstancesRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    CreateStackInstancesRequestPrivate(const CloudFormation::Action action,
+    CreateStackInstancesRequestPrivate(const CloudFormationRequest::Action action,
                                    CreateStackInstancesRequest * const q);
     CreateStackInstancesRequestPrivate(const CreateStackInstancesRequestPrivate &other,
                                    CreateStackInstancesRequest * const q);

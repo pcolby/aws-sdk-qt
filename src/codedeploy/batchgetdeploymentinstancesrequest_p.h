@@ -31,7 +31,7 @@ class BatchGetDeploymentInstancesRequest;
 class QTAWS_EXPORT BatchGetDeploymentInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    BatchGetDeploymentInstancesRequestPrivate(const CodeDeploy::Action action,
+    BatchGetDeploymentInstancesRequestPrivate(const CodeDeployRequest::Action action,
                                    BatchGetDeploymentInstancesRequest * const q);
     BatchGetDeploymentInstancesRequestPrivate(const BatchGetDeploymentInstancesRequestPrivate &other,
                                    BatchGetDeploymentInstancesRequest * const q);

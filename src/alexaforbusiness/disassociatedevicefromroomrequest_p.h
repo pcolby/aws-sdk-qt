@@ -31,7 +31,7 @@ class DisassociateDeviceFromRoomRequest;
 class QTAWS_EXPORT DisassociateDeviceFromRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    DisassociateDeviceFromRoomRequestPrivate(const AlexaForBusiness::Action action,
+    DisassociateDeviceFromRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    DisassociateDeviceFromRoomRequest * const q);
     DisassociateDeviceFromRoomRequestPrivate(const DisassociateDeviceFromRoomRequestPrivate &other,
                                    DisassociateDeviceFromRoomRequest * const q);

@@ -31,7 +31,7 @@ class StartUserImportJobRequest;
 class QTAWS_EXPORT StartUserImportJobRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    StartUserImportJobRequestPrivate(const CognitoIdentityProvider::Action action,
+    StartUserImportJobRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    StartUserImportJobRequest * const q);
     StartUserImportJobRequestPrivate(const StartUserImportJobRequestPrivate &other,
                                    StartUserImportJobRequest * const q);

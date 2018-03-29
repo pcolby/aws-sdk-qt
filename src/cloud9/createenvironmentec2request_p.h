@@ -31,7 +31,7 @@ class CreateEnvironmentEC2Request;
 class QTAWS_EXPORT CreateEnvironmentEC2RequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    CreateEnvironmentEC2RequestPrivate(const Cloud9::Action action,
+    CreateEnvironmentEC2RequestPrivate(const Cloud9Request::Action action,
                                    CreateEnvironmentEC2Request * const q);
     CreateEnvironmentEC2RequestPrivate(const CreateEnvironmentEC2RequestPrivate &other,
                                    CreateEnvironmentEC2Request * const q);

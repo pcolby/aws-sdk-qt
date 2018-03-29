@@ -31,7 +31,7 @@ class ModifyMountTargetSecurityGroupsRequest;
 class QTAWS_EXPORT ModifyMountTargetSecurityGroupsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    ModifyMountTargetSecurityGroupsRequestPrivate(const EFS::Action action,
+    ModifyMountTargetSecurityGroupsRequestPrivate(const EFSRequest::Action action,
                                    ModifyMountTargetSecurityGroupsRequest * const q);
     ModifyMountTargetSecurityGroupsRequestPrivate(const ModifyMountTargetSecurityGroupsRequestPrivate &other,
                                    ModifyMountTargetSecurityGroupsRequest * const q);

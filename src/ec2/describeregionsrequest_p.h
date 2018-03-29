@@ -31,7 +31,7 @@ class DescribeRegionsRequest;
 class QTAWS_EXPORT DescribeRegionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeRegionsRequestPrivate(const EC2::Action action,
+    DescribeRegionsRequestPrivate(const EC2Request::Action action,
                                    DescribeRegionsRequest * const q);
     DescribeRegionsRequestPrivate(const DescribeRegionsRequestPrivate &other,
                                    DescribeRegionsRequest * const q);

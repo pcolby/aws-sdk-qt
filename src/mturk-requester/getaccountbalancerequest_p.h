@@ -31,7 +31,7 @@ class GetAccountBalanceRequest;
 class QTAWS_EXPORT GetAccountBalanceRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    GetAccountBalanceRequestPrivate(const MTurk::Action action,
+    GetAccountBalanceRequestPrivate(const MTurkRequest::Action action,
                                    GetAccountBalanceRequest * const q);
     GetAccountBalanceRequestPrivate(const GetAccountBalanceRequestPrivate &other,
                                    GetAccountBalanceRequest * const q);

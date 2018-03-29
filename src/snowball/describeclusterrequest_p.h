@@ -31,7 +31,7 @@ class DescribeClusterRequest;
 class QTAWS_EXPORT DescribeClusterRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    DescribeClusterRequestPrivate(const Snowball::Action action,
+    DescribeClusterRequestPrivate(const SnowballRequest::Action action,
                                    DescribeClusterRequest * const q);
     DescribeClusterRequestPrivate(const DescribeClusterRequestPrivate &other,
                                    DescribeClusterRequest * const q);

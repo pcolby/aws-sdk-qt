@@ -31,7 +31,7 @@ class GetGroupRequest;
 class QTAWS_EXPORT GetGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetGroupRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetGroupRequest * const q);
     GetGroupRequestPrivate(const GetGroupRequestPrivate &other,
                                    GetGroupRequest * const q);

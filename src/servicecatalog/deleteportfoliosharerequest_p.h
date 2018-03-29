@@ -31,7 +31,7 @@ class DeletePortfolioShareRequest;
 class QTAWS_EXPORT DeletePortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeletePortfolioShareRequestPrivate(const ServiceCatalog::Action action,
+    DeletePortfolioShareRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeletePortfolioShareRequest * const q);
     DeletePortfolioShareRequestPrivate(const DeletePortfolioShareRequestPrivate &other,
                                    DeletePortfolioShareRequest * const q);

@@ -31,7 +31,7 @@ class PutObjectRequest;
 class QTAWS_EXPORT PutObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
-    PutObjectRequestPrivate(const MediaStoreData::Action action,
+    PutObjectRequestPrivate(const MediaStoreDataRequest::Action action,
                                    PutObjectRequest * const q);
     PutObjectRequestPrivate(const PutObjectRequestPrivate &other,
                                    PutObjectRequest * const q);

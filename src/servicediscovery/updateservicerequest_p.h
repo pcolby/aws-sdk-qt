@@ -31,7 +31,7 @@ class UpdateServiceRequest;
 class QTAWS_EXPORT UpdateServiceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    UpdateServiceRequestPrivate(const ServiceDiscovery::Action action,
+    UpdateServiceRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    UpdateServiceRequest * const q);
     UpdateServiceRequestPrivate(const UpdateServiceRequestPrivate &other,
                                    UpdateServiceRequest * const q);

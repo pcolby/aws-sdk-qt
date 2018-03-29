@@ -31,7 +31,7 @@ class ModifyIdentityIdFormatRequest;
 class QTAWS_EXPORT ModifyIdentityIdFormatRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyIdentityIdFormatRequestPrivate(const EC2::Action action,
+    ModifyIdentityIdFormatRequestPrivate(const EC2Request::Action action,
                                    ModifyIdentityIdFormatRequest * const q);
     ModifyIdentityIdFormatRequestPrivate(const ModifyIdentityIdFormatRequestPrivate &other,
                                    ModifyIdentityIdFormatRequest * const q);

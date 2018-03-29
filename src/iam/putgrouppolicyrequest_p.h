@@ -31,7 +31,7 @@ class PutGroupPolicyRequest;
 class QTAWS_EXPORT PutGroupPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    PutGroupPolicyRequestPrivate(const IAM::Action action,
+    PutGroupPolicyRequestPrivate(const IAMRequest::Action action,
                                    PutGroupPolicyRequest * const q);
     PutGroupPolicyRequestPrivate(const PutGroupPolicyRequestPrivate &other,
                                    PutGroupPolicyRequest * const q);

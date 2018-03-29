@@ -31,7 +31,7 @@ class CopyDBSnapshotRequest;
 class QTAWS_EXPORT CopyDBSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CopyDBSnapshotRequestPrivate(const RDS::Action action,
+    CopyDBSnapshotRequestPrivate(const RDSRequest::Action action,
                                    CopyDBSnapshotRequest * const q);
     CopyDBSnapshotRequestPrivate(const CopyDBSnapshotRequestPrivate &other,
                                    CopyDBSnapshotRequest * const q);

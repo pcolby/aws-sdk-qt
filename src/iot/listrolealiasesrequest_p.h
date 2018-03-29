@@ -31,7 +31,7 @@ class ListRoleAliasesRequest;
 class QTAWS_EXPORT ListRoleAliasesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListRoleAliasesRequestPrivate(const IoT::Action action,
+    ListRoleAliasesRequestPrivate(const IoTRequest::Action action,
                                    ListRoleAliasesRequest * const q);
     ListRoleAliasesRequestPrivate(const ListRoleAliasesRequestPrivate &other,
                                    ListRoleAliasesRequest * const q);

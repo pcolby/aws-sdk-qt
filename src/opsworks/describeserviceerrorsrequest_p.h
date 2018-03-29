@@ -31,7 +31,7 @@ class DescribeServiceErrorsRequest;
 class QTAWS_EXPORT DescribeServiceErrorsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeServiceErrorsRequestPrivate(const OpsWorks::Action action,
+    DescribeServiceErrorsRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeServiceErrorsRequest * const q);
     DescribeServiceErrorsRequestPrivate(const DescribeServiceErrorsRequestPrivate &other,
                                    DescribeServiceErrorsRequest * const q);

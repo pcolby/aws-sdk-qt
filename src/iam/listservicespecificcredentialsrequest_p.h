@@ -31,7 +31,7 @@ class ListServiceSpecificCredentialsRequest;
 class QTAWS_EXPORT ListServiceSpecificCredentialsRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListServiceSpecificCredentialsRequestPrivate(const IAM::Action action,
+    ListServiceSpecificCredentialsRequestPrivate(const IAMRequest::Action action,
                                    ListServiceSpecificCredentialsRequest * const q);
     ListServiceSpecificCredentialsRequestPrivate(const ListServiceSpecificCredentialsRequestPrivate &other,
                                    ListServiceSpecificCredentialsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteConfigurationTemplateRequest;
 class QTAWS_EXPORT DeleteConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DeleteConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,
+    DeleteConfigurationTemplateRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DeleteConfigurationTemplateRequest * const q);
     DeleteConfigurationTemplateRequestPrivate(const DeleteConfigurationTemplateRequestPrivate &other,
                                    DeleteConfigurationTemplateRequest * const q);

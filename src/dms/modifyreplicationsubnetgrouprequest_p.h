@@ -31,7 +31,7 @@ class ModifyReplicationSubnetGroupRequest;
 class QTAWS_EXPORT ModifyReplicationSubnetGroupRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ModifyReplicationSubnetGroupRequestPrivate(const DatabaseMigrationService::Action action,
+    ModifyReplicationSubnetGroupRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ModifyReplicationSubnetGroupRequest * const q);
     ModifyReplicationSubnetGroupRequestPrivate(const ModifyReplicationSubnetGroupRequestPrivate &other,
                                    ModifyReplicationSubnetGroupRequest * const q);

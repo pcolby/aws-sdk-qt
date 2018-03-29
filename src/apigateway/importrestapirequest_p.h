@@ -31,7 +31,7 @@ class ImportRestApiRequest;
 class QTAWS_EXPORT ImportRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    ImportRestApiRequestPrivate(const APIGateway::Action action,
+    ImportRestApiRequestPrivate(const APIGatewayRequest::Action action,
                                    ImportRestApiRequest * const q);
     ImportRestApiRequestPrivate(const ImportRestApiRequestPrivate &other,
                                    ImportRestApiRequest * const q);

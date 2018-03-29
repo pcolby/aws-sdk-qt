@@ -31,7 +31,7 @@ class DeleteRegexMatchSetRequest;
 class QTAWS_EXPORT DeleteRegexMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    DeleteRegexMatchSetRequestPrivate(const WAF::Action action,
+    DeleteRegexMatchSetRequestPrivate(const WAFRequest::Action action,
                                    DeleteRegexMatchSetRequest * const q);
     DeleteRegexMatchSetRequestPrivate(const DeleteRegexMatchSetRequestPrivate &other,
                                    DeleteRegexMatchSetRequest * const q);

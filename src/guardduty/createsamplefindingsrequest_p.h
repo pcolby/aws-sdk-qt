@@ -31,7 +31,7 @@ class CreateSampleFindingsRequest;
 class QTAWS_EXPORT CreateSampleFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    CreateSampleFindingsRequestPrivate(const GuardDuty::Action action,
+    CreateSampleFindingsRequestPrivate(const GuardDutyRequest::Action action,
                                    CreateSampleFindingsRequest * const q);
     CreateSampleFindingsRequestPrivate(const CreateSampleFindingsRequestPrivate &other,
                                    CreateSampleFindingsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteSubscriptionFilterRequest;
 class QTAWS_EXPORT DeleteSubscriptionFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DeleteSubscriptionFilterRequestPrivate(const CloudWatchLogs::Action action,
+    DeleteSubscriptionFilterRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DeleteSubscriptionFilterRequest * const q);
     DeleteSubscriptionFilterRequestPrivate(const DeleteSubscriptionFilterRequestPrivate &other,
                                    DeleteSubscriptionFilterRequest * const q);

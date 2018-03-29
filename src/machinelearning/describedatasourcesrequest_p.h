@@ -31,7 +31,7 @@ class DescribeDataSourcesRequest;
 class QTAWS_EXPORT DescribeDataSourcesRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DescribeDataSourcesRequestPrivate(const MachineLearning::Action action,
+    DescribeDataSourcesRequestPrivate(const MachineLearningRequest::Action action,
                                    DescribeDataSourcesRequest * const q);
     DescribeDataSourcesRequestPrivate(const DescribeDataSourcesRequestPrivate &other,
                                    DescribeDataSourcesRequest * const q);

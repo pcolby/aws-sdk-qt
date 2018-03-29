@@ -31,7 +31,7 @@ class RemoveTargetsRequest;
 class QTAWS_EXPORT RemoveTargetsRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    RemoveTargetsRequestPrivate(const CloudWatchEvents::Action action,
+    RemoveTargetsRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    RemoveTargetsRequest * const q);
     RemoveTargetsRequestPrivate(const RemoveTargetsRequestPrivate &other,
                                    RemoveTargetsRequest * const q);

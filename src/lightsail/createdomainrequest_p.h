@@ -31,7 +31,7 @@ class CreateDomainRequest;
 class QTAWS_EXPORT CreateDomainRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    CreateDomainRequestPrivate(const Lightsail::Action action,
+    CreateDomainRequestPrivate(const LightsailRequest::Action action,
                                    CreateDomainRequest * const q);
     CreateDomainRequestPrivate(const CreateDomainRequestPrivate &other,
                                    CreateDomainRequest * const q);

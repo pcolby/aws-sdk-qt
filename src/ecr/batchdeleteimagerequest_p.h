@@ -31,7 +31,7 @@ class BatchDeleteImageRequest;
 class QTAWS_EXPORT BatchDeleteImageRequestPrivate : public ECRRequestPrivate {
 
 public:
-    BatchDeleteImageRequestPrivate(const ECR::Action action,
+    BatchDeleteImageRequestPrivate(const ECRRequest::Action action,
                                    BatchDeleteImageRequest * const q);
     BatchDeleteImageRequestPrivate(const BatchDeleteImageRequestPrivate &other,
                                    BatchDeleteImageRequest * const q);

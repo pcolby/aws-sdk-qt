@@ -31,7 +31,7 @@ class GetTopicAttributesRequest;
 class QTAWS_EXPORT GetTopicAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
-    GetTopicAttributesRequestPrivate(const SNS::Action action,
+    GetTopicAttributesRequestPrivate(const SNSRequest::Action action,
                                    GetTopicAttributesRequest * const q);
     GetTopicAttributesRequestPrivate(const GetTopicAttributesRequestPrivate &other,
                                    GetTopicAttributesRequest * const q);

@@ -13,7 +13,7 @@ class {{ClassName}};
 class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceName}}RequestPrivate {
 
 public:
-    {{ClassName}}Private(const {{ServiceName}}::Action action,
+    {{ClassName}}Private(const {{ServiceName}}Request::Action action,
                                    {{ClassName}} * const q);
     {{ClassName}}Private(const {{ClassName}}Private &other,
                                    {{ClassName}} * const q);

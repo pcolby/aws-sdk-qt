@@ -31,7 +31,7 @@ class GetRateBasedRuleRequest;
 class QTAWS_EXPORT GetRateBasedRuleRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetRateBasedRuleRequestPrivate(const WAF::Action action,
+    GetRateBasedRuleRequestPrivate(const WAFRequest::Action action,
                                    GetRateBasedRuleRequest * const q);
     GetRateBasedRuleRequestPrivate(const GetRateBasedRuleRequestPrivate &other,
                                    GetRateBasedRuleRequest * const q);

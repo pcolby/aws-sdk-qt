@@ -31,7 +31,7 @@ class GetTraceGraphRequest;
 class QTAWS_EXPORT GetTraceGraphRequestPrivate : public XRayRequestPrivate {
 
 public:
-    GetTraceGraphRequestPrivate(const XRay::Action action,
+    GetTraceGraphRequestPrivate(const XRayRequest::Action action,
                                    GetTraceGraphRequest * const q);
     GetTraceGraphRequestPrivate(const GetTraceGraphRequestPrivate &other,
                                    GetTraceGraphRequest * const q);

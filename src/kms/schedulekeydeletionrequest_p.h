@@ -31,7 +31,7 @@ class ScheduleKeyDeletionRequest;
 class QTAWS_EXPORT ScheduleKeyDeletionRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ScheduleKeyDeletionRequestPrivate(const KMS::Action action,
+    ScheduleKeyDeletionRequestPrivate(const KMSRequest::Action action,
                                    ScheduleKeyDeletionRequest * const q);
     ScheduleKeyDeletionRequestPrivate(const ScheduleKeyDeletionRequestPrivate &other,
                                    ScheduleKeyDeletionRequest * const q);

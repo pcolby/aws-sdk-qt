@@ -31,7 +31,7 @@ class CreateSubscriberRequest;
 class QTAWS_EXPORT CreateSubscriberRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    CreateSubscriberRequestPrivate(const Budgets::Action action,
+    CreateSubscriberRequestPrivate(const BudgetsRequest::Action action,
                                    CreateSubscriberRequest * const q);
     CreateSubscriberRequestPrivate(const CreateSubscriberRequestPrivate &other,
                                    CreateSubscriberRequest * const q);

@@ -31,7 +31,7 @@ class DescribeSecurityGroupsRequest;
 class QTAWS_EXPORT DescribeSecurityGroupsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSecurityGroupsRequestPrivate(const EC2::Action action,
+    DescribeSecurityGroupsRequestPrivate(const EC2Request::Action action,
                                    DescribeSecurityGroupsRequest * const q);
     DescribeSecurityGroupsRequestPrivate(const DescribeSecurityGroupsRequestPrivate &other,
                                    DescribeSecurityGroupsRequest * const q);

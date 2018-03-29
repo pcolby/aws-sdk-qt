@@ -31,7 +31,7 @@ class DeleteQualificationTypeRequest;
 class QTAWS_EXPORT DeleteQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    DeleteQualificationTypeRequestPrivate(const MTurk::Action action,
+    DeleteQualificationTypeRequestPrivate(const MTurkRequest::Action action,
                                    DeleteQualificationTypeRequest * const q);
     DeleteQualificationTypeRequestPrivate(const DeleteQualificationTypeRequestPrivate &other,
                                    DeleteQualificationTypeRequest * const q);

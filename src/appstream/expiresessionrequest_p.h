@@ -31,7 +31,7 @@ class ExpireSessionRequest;
 class QTAWS_EXPORT ExpireSessionRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    ExpireSessionRequestPrivate(const AppStream::Action action,
+    ExpireSessionRequestPrivate(const AppStreamRequest::Action action,
                                    ExpireSessionRequest * const q);
     ExpireSessionRequestPrivate(const ExpireSessionRequestPrivate &other,
                                    ExpireSessionRequest * const q);

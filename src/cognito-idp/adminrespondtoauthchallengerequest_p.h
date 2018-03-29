@@ -31,7 +31,7 @@ class AdminRespondToAuthChallengeRequest;
 class QTAWS_EXPORT AdminRespondToAuthChallengeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminRespondToAuthChallengeRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminRespondToAuthChallengeRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminRespondToAuthChallengeRequest * const q);
     AdminRespondToAuthChallengeRequestPrivate(const AdminRespondToAuthChallengeRequestPrivate &other,
                                    AdminRespondToAuthChallengeRequest * const q);

@@ -31,7 +31,7 @@ class GetMaintenanceWindowTaskRequest;
 class QTAWS_EXPORT GetMaintenanceWindowTaskRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetMaintenanceWindowTaskRequestPrivate(const SSM::Action action,
+    GetMaintenanceWindowTaskRequestPrivate(const SSMRequest::Action action,
                                    GetMaintenanceWindowTaskRequest * const q);
     GetMaintenanceWindowTaskRequestPrivate(const GetMaintenanceWindowTaskRequestPrivate &other,
                                    GetMaintenanceWindowTaskRequest * const q);

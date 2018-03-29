@@ -31,7 +31,7 @@ class ListStreamingDistributionsRequest;
 class QTAWS_EXPORT ListStreamingDistributionsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    ListStreamingDistributionsRequestPrivate(const CloudFront::Action action,
+    ListStreamingDistributionsRequestPrivate(const CloudFrontRequest::Action action,
                                    ListStreamingDistributionsRequest * const q);
     ListStreamingDistributionsRequestPrivate(const ListStreamingDistributionsRequestPrivate &other,
                                    ListStreamingDistributionsRequest * const q);

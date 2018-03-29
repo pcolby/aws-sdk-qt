@@ -31,7 +31,7 @@ class CancelStepsRequest;
 class QTAWS_EXPORT CancelStepsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    CancelStepsRequestPrivate(const EMR::Action action,
+    CancelStepsRequestPrivate(const EMRRequest::Action action,
                                    CancelStepsRequest * const q);
     CancelStepsRequestPrivate(const CancelStepsRequestPrivate &other,
                                    CancelStepsRequest * const q);

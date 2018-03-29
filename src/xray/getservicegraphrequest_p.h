@@ -31,7 +31,7 @@ class GetServiceGraphRequest;
 class QTAWS_EXPORT GetServiceGraphRequestPrivate : public XRayRequestPrivate {
 
 public:
-    GetServiceGraphRequestPrivate(const XRay::Action action,
+    GetServiceGraphRequestPrivate(const XRayRequest::Action action,
                                    GetServiceGraphRequest * const q);
     GetServiceGraphRequestPrivate(const GetServiceGraphRequestPrivate &other,
                                    GetServiceGraphRequest * const q);

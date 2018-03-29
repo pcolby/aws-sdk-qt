@@ -31,7 +31,7 @@ class AddTagsRequest;
 class QTAWS_EXPORT AddTagsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    AddTagsRequestPrivate(const SageMaker::Action action,
+    AddTagsRequestPrivate(const SageMakerRequest::Action action,
                                    AddTagsRequest * const q);
     AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
                                    AddTagsRequest * const q);

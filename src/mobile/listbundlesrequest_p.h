@@ -31,7 +31,7 @@ class ListBundlesRequest;
 class QTAWS_EXPORT ListBundlesRequestPrivate : public MobileRequestPrivate {
 
 public:
-    ListBundlesRequestPrivate(const Mobile::Action action,
+    ListBundlesRequestPrivate(const MobileRequest::Action action,
                                    ListBundlesRequest * const q);
     ListBundlesRequestPrivate(const ListBundlesRequestPrivate &other,
                                    ListBundlesRequest * const q);

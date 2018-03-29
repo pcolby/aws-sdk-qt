@@ -31,7 +31,7 @@ class DeleteVolumeRequest;
 class QTAWS_EXPORT DeleteVolumeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteVolumeRequestPrivate(const EC2::Action action,
+    DeleteVolumeRequestPrivate(const EC2Request::Action action,
                                    DeleteVolumeRequest * const q);
     DeleteVolumeRequestPrivate(const DeleteVolumeRequestPrivate &other,
                                    DeleteVolumeRequest * const q);

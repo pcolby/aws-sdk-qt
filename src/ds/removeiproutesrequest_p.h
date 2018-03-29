@@ -31,7 +31,7 @@ class RemoveIpRoutesRequest;
 class QTAWS_EXPORT RemoveIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    RemoveIpRoutesRequestPrivate(const DirectoryService::Action action,
+    RemoveIpRoutesRequestPrivate(const DirectoryServiceRequest::Action action,
                                    RemoveIpRoutesRequest * const q);
     RemoveIpRoutesRequestPrivate(const RemoveIpRoutesRequestPrivate &other,
                                    RemoveIpRoutesRequest * const q);

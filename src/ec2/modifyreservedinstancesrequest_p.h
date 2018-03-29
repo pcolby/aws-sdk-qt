@@ -31,7 +31,7 @@ class ModifyReservedInstancesRequest;
 class QTAWS_EXPORT ModifyReservedInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyReservedInstancesRequestPrivate(const EC2::Action action,
+    ModifyReservedInstancesRequestPrivate(const EC2Request::Action action,
                                    ModifyReservedInstancesRequest * const q);
     ModifyReservedInstancesRequestPrivate(const ModifyReservedInstancesRequestPrivate &other,
                                    ModifyReservedInstancesRequest * const q);

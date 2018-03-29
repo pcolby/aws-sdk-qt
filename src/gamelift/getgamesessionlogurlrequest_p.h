@@ -31,7 +31,7 @@ class GetGameSessionLogUrlRequest;
 class QTAWS_EXPORT GetGameSessionLogUrlRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    GetGameSessionLogUrlRequestPrivate(const GameLift::Action action,
+    GetGameSessionLogUrlRequestPrivate(const GameLiftRequest::Action action,
                                    GetGameSessionLogUrlRequest * const q);
     GetGameSessionLogUrlRequestPrivate(const GetGameSessionLogUrlRequestPrivate &other,
                                    GetGameSessionLogUrlRequest * const q);

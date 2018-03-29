@@ -31,7 +31,7 @@ class PutBotAliasRequest;
 class QTAWS_EXPORT PutBotAliasRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    PutBotAliasRequestPrivate(const LexModelBuildingService::Action action,
+    PutBotAliasRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    PutBotAliasRequest * const q);
     PutBotAliasRequestPrivate(const PutBotAliasRequestPrivate &other,
                                    PutBotAliasRequest * const q);

@@ -31,7 +31,7 @@ class DescribeProductViewRequest;
 class QTAWS_EXPORT DescribeProductViewRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DescribeProductViewRequestPrivate(const ServiceCatalog::Action action,
+    DescribeProductViewRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DescribeProductViewRequest * const q);
     DescribeProductViewRequestPrivate(const DescribeProductViewRequestPrivate &other,
                                    DescribeProductViewRequest * const q);

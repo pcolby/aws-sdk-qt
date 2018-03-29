@@ -31,7 +31,7 @@ class DescribeCustomerGatewaysRequest;
 class QTAWS_EXPORT DescribeCustomerGatewaysRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeCustomerGatewaysRequestPrivate(const EC2::Action action,
+    DescribeCustomerGatewaysRequestPrivate(const EC2Request::Action action,
                                    DescribeCustomerGatewaysRequest * const q);
     DescribeCustomerGatewaysRequestPrivate(const DescribeCustomerGatewaysRequestPrivate &other,
                                    DescribeCustomerGatewaysRequest * const q);

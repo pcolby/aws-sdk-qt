@@ -31,7 +31,7 @@ class GetIdentityDkimAttributesRequest;
 class QTAWS_EXPORT GetIdentityDkimAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
-    GetIdentityDkimAttributesRequestPrivate(const SES::Action action,
+    GetIdentityDkimAttributesRequestPrivate(const SESRequest::Action action,
                                    GetIdentityDkimAttributesRequest * const q);
     GetIdentityDkimAttributesRequestPrivate(const GetIdentityDkimAttributesRequestPrivate &other,
                                    GetIdentityDkimAttributesRequest * const q);

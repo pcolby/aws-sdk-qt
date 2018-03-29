@@ -31,7 +31,7 @@ class StartGameSessionPlacementRequest;
 class QTAWS_EXPORT StartGameSessionPlacementRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    StartGameSessionPlacementRequestPrivate(const GameLift::Action action,
+    StartGameSessionPlacementRequestPrivate(const GameLiftRequest::Action action,
                                    StartGameSessionPlacementRequest * const q);
     StartGameSessionPlacementRequestPrivate(const StartGameSessionPlacementRequestPrivate &other,
                                    StartGameSessionPlacementRequest * const q);

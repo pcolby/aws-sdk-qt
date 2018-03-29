@@ -31,7 +31,7 @@ class CreateCustomActionTypeRequest;
 class QTAWS_EXPORT CreateCustomActionTypeRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    CreateCustomActionTypeRequestPrivate(const CodePipeline::Action action,
+    CreateCustomActionTypeRequestPrivate(const CodePipelineRequest::Action action,
                                    CreateCustomActionTypeRequest * const q);
     CreateCustomActionTypeRequestPrivate(const CreateCustomActionTypeRequestPrivate &other,
                                    CreateCustomActionTypeRequest * const q);

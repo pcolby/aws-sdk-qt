@@ -31,7 +31,7 @@ class AddTagsToVaultRequest;
 class QTAWS_EXPORT AddTagsToVaultRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    AddTagsToVaultRequestPrivate(const Glacier::Action action,
+    AddTagsToVaultRequestPrivate(const GlacierRequest::Action action,
                                    AddTagsToVaultRequest * const q);
     AddTagsToVaultRequestPrivate(const AddTagsToVaultRequestPrivate &other,
                                    AddTagsToVaultRequest * const q);

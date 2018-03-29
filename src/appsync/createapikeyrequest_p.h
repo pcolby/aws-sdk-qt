@@ -31,7 +31,7 @@ class CreateApiKeyRequest;
 class QTAWS_EXPORT CreateApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    CreateApiKeyRequestPrivate(const AppSync::Action action,
+    CreateApiKeyRequestPrivate(const AppSyncRequest::Action action,
                                    CreateApiKeyRequest * const q);
     CreateApiKeyRequestPrivate(const CreateApiKeyRequestPrivate &other,
                                    CreateApiKeyRequest * const q);

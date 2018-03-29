@@ -31,7 +31,7 @@ class ResetNetworkInterfaceAttributeRequest;
 class QTAWS_EXPORT ResetNetworkInterfaceAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ResetNetworkInterfaceAttributeRequestPrivate(const EC2::Action action,
+    ResetNetworkInterfaceAttributeRequestPrivate(const EC2Request::Action action,
                                    ResetNetworkInterfaceAttributeRequest * const q);
     ResetNetworkInterfaceAttributeRequestPrivate(const ResetNetworkInterfaceAttributeRequestPrivate &other,
                                    ResetNetworkInterfaceAttributeRequest * const q);

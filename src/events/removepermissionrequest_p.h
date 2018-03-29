@@ -31,7 +31,7 @@ class RemovePermissionRequest;
 class QTAWS_EXPORT RemovePermissionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    RemovePermissionRequestPrivate(const CloudWatchEvents::Action action,
+    RemovePermissionRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    RemovePermissionRequest * const q);
     RemovePermissionRequestPrivate(const RemovePermissionRequestPrivate &other,
                                    RemovePermissionRequest * const q);

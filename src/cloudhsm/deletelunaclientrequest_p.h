@@ -31,7 +31,7 @@ class DeleteLunaClientRequest;
 class QTAWS_EXPORT DeleteLunaClientRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    DeleteLunaClientRequestPrivate(const CloudHSM::Action action,
+    DeleteLunaClientRequestPrivate(const CloudHSMRequest::Action action,
                                    DeleteLunaClientRequest * const q);
     DeleteLunaClientRequestPrivate(const DeleteLunaClientRequestPrivate &other,
                                    DeleteLunaClientRequest * const q);

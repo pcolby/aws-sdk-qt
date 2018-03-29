@@ -31,7 +31,7 @@ class QueryObjectsRequest;
 class QTAWS_EXPORT QueryObjectsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    QueryObjectsRequestPrivate(const DataPipeline::Action action,
+    QueryObjectsRequestPrivate(const DataPipelineRequest::Action action,
                                    QueryObjectsRequest * const q);
     QueryObjectsRequestPrivate(const QueryObjectsRequestPrivate &other,
                                    QueryObjectsRequest * const q);

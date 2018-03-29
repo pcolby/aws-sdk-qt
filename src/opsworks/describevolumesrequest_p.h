@@ -31,7 +31,7 @@ class DescribeVolumesRequest;
 class QTAWS_EXPORT DescribeVolumesRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeVolumesRequestPrivate(const OpsWorks::Action action,
+    DescribeVolumesRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeVolumesRequest * const q);
     DescribeVolumesRequestPrivate(const DescribeVolumesRequestPrivate &other,
                                    DescribeVolumesRequest * const q);

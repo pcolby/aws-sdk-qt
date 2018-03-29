@@ -31,7 +31,7 @@ class DetachFromIndexRequest;
 class QTAWS_EXPORT DetachFromIndexRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DetachFromIndexRequestPrivate(const CloudDirectory::Action action,
+    DetachFromIndexRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DetachFromIndexRequest * const q);
     DetachFromIndexRequestPrivate(const DetachFromIndexRequestPrivate &other,
                                    DetachFromIndexRequest * const q);

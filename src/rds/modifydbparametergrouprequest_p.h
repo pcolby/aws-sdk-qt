@@ -31,7 +31,7 @@ class ModifyDBParameterGroupRequest;
 class QTAWS_EXPORT ModifyDBParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ModifyDBParameterGroupRequestPrivate(const RDS::Action action,
+    ModifyDBParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    ModifyDBParameterGroupRequest * const q);
     ModifyDBParameterGroupRequestPrivate(const ModifyDBParameterGroupRequestPrivate &other,
                                    ModifyDBParameterGroupRequest * const q);

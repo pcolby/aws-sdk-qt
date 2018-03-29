@@ -31,7 +31,7 @@ class ListLoggerDefinitionsRequest;
 class QTAWS_EXPORT ListLoggerDefinitionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListLoggerDefinitionsRequestPrivate(const Greengrass::Action action,
+    ListLoggerDefinitionsRequestPrivate(const GreengrassRequest::Action action,
                                    ListLoggerDefinitionsRequest * const q);
     ListLoggerDefinitionsRequestPrivate(const ListLoggerDefinitionsRequestPrivate &other,
                                    ListLoggerDefinitionsRequest * const q);

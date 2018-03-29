@@ -31,7 +31,7 @@ class GetProfileRequest;
 class QTAWS_EXPORT GetProfileRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    GetProfileRequestPrivate(const AlexaForBusiness::Action action,
+    GetProfileRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    GetProfileRequest * const q);
     GetProfileRequestPrivate(const GetProfileRequestPrivate &other,
                                    GetProfileRequest * const q);

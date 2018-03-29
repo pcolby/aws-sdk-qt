@@ -31,7 +31,7 @@ class RestoreTableFromClusterSnapshotRequest;
 class QTAWS_EXPORT RestoreTableFromClusterSnapshotRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    RestoreTableFromClusterSnapshotRequestPrivate(const Redshift::Action action,
+    RestoreTableFromClusterSnapshotRequestPrivate(const RedshiftRequest::Action action,
                                    RestoreTableFromClusterSnapshotRequest * const q);
     RestoreTableFromClusterSnapshotRequestPrivate(const RestoreTableFromClusterSnapshotRequestPrivate &other,
                                    RestoreTableFromClusterSnapshotRequest * const q);

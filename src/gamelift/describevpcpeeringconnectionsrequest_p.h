@@ -31,7 +31,7 @@ class DescribeVpcPeeringConnectionsRequest;
 class QTAWS_EXPORT DescribeVpcPeeringConnectionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeVpcPeeringConnectionsRequestPrivate(const GameLift::Action action,
+    DescribeVpcPeeringConnectionsRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeVpcPeeringConnectionsRequest * const q);
     DescribeVpcPeeringConnectionsRequestPrivate(const DescribeVpcPeeringConnectionsRequestPrivate &other,
                                    DescribeVpcPeeringConnectionsRequest * const q);

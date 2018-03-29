@@ -31,7 +31,7 @@ class TestRenderTemplateRequest;
 class QTAWS_EXPORT TestRenderTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
-    TestRenderTemplateRequestPrivate(const SES::Action action,
+    TestRenderTemplateRequestPrivate(const SESRequest::Action action,
                                    TestRenderTemplateRequest * const q);
     TestRenderTemplateRequestPrivate(const TestRenderTemplateRequestPrivate &other,
                                    TestRenderTemplateRequest * const q);

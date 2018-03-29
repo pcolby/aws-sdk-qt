@@ -31,7 +31,7 @@ class DeleteInputRequest;
 class QTAWS_EXPORT DeleteInputRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    DeleteInputRequestPrivate(const MediaLive::Action action,
+    DeleteInputRequestPrivate(const MediaLiveRequest::Action action,
                                    DeleteInputRequest * const q);
     DeleteInputRequestPrivate(const DeleteInputRequestPrivate &other,
                                    DeleteInputRequest * const q);

@@ -31,7 +31,7 @@ class DescribeEffectiveInstanceAssociationsRequest;
 class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeEffectiveInstanceAssociationsRequestPrivate(const SSM::Action action,
+    DescribeEffectiveInstanceAssociationsRequestPrivate(const SSMRequest::Action action,
                                    DescribeEffectiveInstanceAssociationsRequest * const q);
     DescribeEffectiveInstanceAssociationsRequestPrivate(const DescribeEffectiveInstanceAssociationsRequestPrivate &other,
                                    DescribeEffectiveInstanceAssociationsRequest * const q);

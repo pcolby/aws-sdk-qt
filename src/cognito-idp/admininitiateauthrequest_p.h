@@ -31,7 +31,7 @@ class AdminInitiateAuthRequest;
 class QTAWS_EXPORT AdminInitiateAuthRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminInitiateAuthRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminInitiateAuthRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminInitiateAuthRequest * const q);
     AdminInitiateAuthRequestPrivate(const AdminInitiateAuthRequestPrivate &other,
                                    AdminInitiateAuthRequest * const q);

@@ -31,7 +31,7 @@ class AssociateKmsKeyRequest;
 class QTAWS_EXPORT AssociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    AssociateKmsKeyRequestPrivate(const CloudWatchLogs::Action action,
+    AssociateKmsKeyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    AssociateKmsKeyRequest * const q);
     AssociateKmsKeyRequestPrivate(const AssociateKmsKeyRequestPrivate &other,
                                    AssociateKmsKeyRequest * const q);

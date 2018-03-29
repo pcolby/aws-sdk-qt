@@ -31,7 +31,7 @@ class DescribeHsmClientCertificatesRequest;
 class QTAWS_EXPORT DescribeHsmClientCertificatesRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeHsmClientCertificatesRequestPrivate(const Redshift::Action action,
+    DescribeHsmClientCertificatesRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeHsmClientCertificatesRequest * const q);
     DescribeHsmClientCertificatesRequestPrivate(const DescribeHsmClientCertificatesRequestPrivate &other,
                                    DescribeHsmClientCertificatesRequest * const q);

@@ -31,7 +31,7 @@ class ExitStandbyRequest;
 class QTAWS_EXPORT ExitStandbyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    ExitStandbyRequestPrivate(const AutoScaling::Action action,
+    ExitStandbyRequestPrivate(const AutoScalingRequest::Action action,
                                    ExitStandbyRequest * const q);
     ExitStandbyRequestPrivate(const ExitStandbyRequestPrivate &other,
                                    ExitStandbyRequest * const q);

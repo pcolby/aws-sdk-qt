@@ -31,7 +31,7 @@ class DescribeVolumesModificationsRequest;
 class QTAWS_EXPORT DescribeVolumesModificationsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeVolumesModificationsRequestPrivate(const EC2::Action action,
+    DescribeVolumesModificationsRequestPrivate(const EC2Request::Action action,
                                    DescribeVolumesModificationsRequest * const q);
     DescribeVolumesModificationsRequestPrivate(const DescribeVolumesModificationsRequestPrivate &other,
                                    DescribeVolumesModificationsRequest * const q);

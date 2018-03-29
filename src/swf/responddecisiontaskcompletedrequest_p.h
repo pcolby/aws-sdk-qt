@@ -31,7 +31,7 @@ class RespondDecisionTaskCompletedRequest;
 class QTAWS_EXPORT RespondDecisionTaskCompletedRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RespondDecisionTaskCompletedRequestPrivate(const SWF::Action action,
+    RespondDecisionTaskCompletedRequestPrivate(const SWFRequest::Action action,
                                    RespondDecisionTaskCompletedRequest * const q);
     RespondDecisionTaskCompletedRequestPrivate(const RespondDecisionTaskCompletedRequestPrivate &other,
                                    RespondDecisionTaskCompletedRequest * const q);

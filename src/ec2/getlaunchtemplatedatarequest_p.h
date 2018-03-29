@@ -31,7 +31,7 @@ class GetLaunchTemplateDataRequest;
 class QTAWS_EXPORT GetLaunchTemplateDataRequestPrivate : public EC2RequestPrivate {
 
 public:
-    GetLaunchTemplateDataRequestPrivate(const EC2::Action action,
+    GetLaunchTemplateDataRequestPrivate(const EC2Request::Action action,
                                    GetLaunchTemplateDataRequest * const q);
     GetLaunchTemplateDataRequestPrivate(const GetLaunchTemplateDataRequestPrivate &other,
                                    GetLaunchTemplateDataRequest * const q);

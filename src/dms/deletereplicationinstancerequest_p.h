@@ -31,7 +31,7 @@ class DeleteReplicationInstanceRequest;
 class QTAWS_EXPORT DeleteReplicationInstanceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DeleteReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,
+    DeleteReplicationInstanceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DeleteReplicationInstanceRequest * const q);
     DeleteReplicationInstanceRequestPrivate(const DeleteReplicationInstanceRequestPrivate &other,
                                    DeleteReplicationInstanceRequest * const q);

@@ -31,7 +31,7 @@ class DescribeConstraintRequest;
 class QTAWS_EXPORT DescribeConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DescribeConstraintRequestPrivate(const ServiceCatalog::Action action,
+    DescribeConstraintRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DescribeConstraintRequest * const q);
     DescribeConstraintRequestPrivate(const DescribeConstraintRequestPrivate &other,
                                    DescribeConstraintRequest * const q);

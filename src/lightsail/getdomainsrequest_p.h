@@ -31,7 +31,7 @@ class GetDomainsRequest;
 class QTAWS_EXPORT GetDomainsRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetDomainsRequestPrivate(const Lightsail::Action action,
+    GetDomainsRequestPrivate(const LightsailRequest::Action action,
                                    GetDomainsRequest * const q);
     GetDomainsRequestPrivate(const GetDomainsRequestPrivate &other,
                                    GetDomainsRequest * const q);

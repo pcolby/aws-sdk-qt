@@ -31,7 +31,7 @@ class UpdateDomainContactPrivacyRequest;
 class QTAWS_EXPORT UpdateDomainContactPrivacyRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    UpdateDomainContactPrivacyRequestPrivate(const Route53Domains::Action action,
+    UpdateDomainContactPrivacyRequestPrivate(const Route53DomainsRequest::Action action,
                                    UpdateDomainContactPrivacyRequest * const q);
     UpdateDomainContactPrivacyRequestPrivate(const UpdateDomainContactPrivacyRequestPrivate &other,
                                    UpdateDomainContactPrivacyRequest * const q);

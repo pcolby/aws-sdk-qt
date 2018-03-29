@@ -31,7 +31,7 @@ class GetLogEventsRequest;
 class QTAWS_EXPORT GetLogEventsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    GetLogEventsRequestPrivate(const CloudWatchLogs::Action action,
+    GetLogEventsRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    GetLogEventsRequest * const q);
     GetLogEventsRequestPrivate(const GetLogEventsRequestPrivate &other,
                                    GetLogEventsRequest * const q);

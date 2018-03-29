@@ -31,7 +31,7 @@ class DescribeEngineDefaultClusterParametersRequest;
 class QTAWS_EXPORT DescribeEngineDefaultClusterParametersRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeEngineDefaultClusterParametersRequestPrivate(const RDS::Action action,
+    DescribeEngineDefaultClusterParametersRequestPrivate(const RDSRequest::Action action,
                                    DescribeEngineDefaultClusterParametersRequest * const q);
     DescribeEngineDefaultClusterParametersRequestPrivate(const DescribeEngineDefaultClusterParametersRequestPrivate &other,
                                    DescribeEngineDefaultClusterParametersRequest * const q);

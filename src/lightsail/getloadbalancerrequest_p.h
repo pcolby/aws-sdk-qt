@@ -31,7 +31,7 @@ class GetLoadBalancerRequest;
 class QTAWS_EXPORT GetLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetLoadBalancerRequestPrivate(const Lightsail::Action action,
+    GetLoadBalancerRequestPrivate(const LightsailRequest::Action action,
                                    GetLoadBalancerRequest * const q);
     GetLoadBalancerRequestPrivate(const GetLoadBalancerRequestPrivate &other,
                                    GetLoadBalancerRequest * const q);

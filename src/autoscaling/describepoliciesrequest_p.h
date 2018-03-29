@@ -31,7 +31,7 @@ class DescribePoliciesRequest;
 class QTAWS_EXPORT DescribePoliciesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DescribePoliciesRequestPrivate(const AutoScaling::Action action,
+    DescribePoliciesRequestPrivate(const AutoScalingRequest::Action action,
                                    DescribePoliciesRequest * const q);
     DescribePoliciesRequestPrivate(const DescribePoliciesRequestPrivate &other,
                                    DescribePoliciesRequest * const q);

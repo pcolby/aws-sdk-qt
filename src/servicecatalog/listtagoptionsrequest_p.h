@@ -31,7 +31,7 @@ class ListTagOptionsRequest;
 class QTAWS_EXPORT ListTagOptionsRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListTagOptionsRequestPrivate(const ServiceCatalog::Action action,
+    ListTagOptionsRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListTagOptionsRequest * const q);
     ListTagOptionsRequestPrivate(const ListTagOptionsRequestPrivate &other,
                                    ListTagOptionsRequest * const q);

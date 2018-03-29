@@ -31,7 +31,7 @@ class GetAutomationExecutionRequest;
 class QTAWS_EXPORT GetAutomationExecutionRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetAutomationExecutionRequestPrivate(const SSM::Action action,
+    GetAutomationExecutionRequestPrivate(const SSMRequest::Action action,
                                    GetAutomationExecutionRequest * const q);
     GetAutomationExecutionRequestPrivate(const GetAutomationExecutionRequestPrivate &other,
                                    GetAutomationExecutionRequest * const q);

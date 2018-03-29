@@ -31,7 +31,7 @@ class CreateDataSourceFromRedshiftRequest;
 class QTAWS_EXPORT CreateDataSourceFromRedshiftRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    CreateDataSourceFromRedshiftRequestPrivate(const MachineLearning::Action action,
+    CreateDataSourceFromRedshiftRequestPrivate(const MachineLearningRequest::Action action,
                                    CreateDataSourceFromRedshiftRequest * const q);
     CreateDataSourceFromRedshiftRequestPrivate(const CreateDataSourceFromRedshiftRequestPrivate &other,
                                    CreateDataSourceFromRedshiftRequest * const q);

@@ -31,7 +31,7 @@ class GetDirectoryRequest;
 class QTAWS_EXPORT GetDirectoryRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    GetDirectoryRequestPrivate(const CloudDirectory::Action action,
+    GetDirectoryRequestPrivate(const CloudDirectoryRequest::Action action,
                                    GetDirectoryRequest * const q);
     GetDirectoryRequestPrivate(const GetDirectoryRequestPrivate &other,
                                    GetDirectoryRequest * const q);

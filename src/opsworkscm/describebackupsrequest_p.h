@@ -31,7 +31,7 @@ class DescribeBackupsRequest;
 class QTAWS_EXPORT DescribeBackupsRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DescribeBackupsRequestPrivate(const OpsWorksCM::Action action,
+    DescribeBackupsRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DescribeBackupsRequest * const q);
     DescribeBackupsRequestPrivate(const DescribeBackupsRequestPrivate &other,
                                    DescribeBackupsRequest * const q);

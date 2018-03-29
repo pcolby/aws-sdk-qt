@@ -31,7 +31,7 @@ class ListFragmentsRequest;
 class QTAWS_EXPORT ListFragmentsRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
 
 public:
-    ListFragmentsRequestPrivate(const KinesisVideoArchivedMedia::Action action,
+    ListFragmentsRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action,
                                    ListFragmentsRequest * const q);
     ListFragmentsRequestPrivate(const ListFragmentsRequestPrivate &other,
                                    ListFragmentsRequest * const q);

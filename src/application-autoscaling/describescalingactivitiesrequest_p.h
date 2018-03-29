@@ -31,7 +31,7 @@ class DescribeScalingActivitiesRequest;
 class QTAWS_EXPORT DescribeScalingActivitiesRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    DescribeScalingActivitiesRequestPrivate(const ApplicationAutoScaling::Action action,
+    DescribeScalingActivitiesRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    DescribeScalingActivitiesRequest * const q);
     DescribeScalingActivitiesRequestPrivate(const DescribeScalingActivitiesRequestPrivate &other,
                                    DescribeScalingActivitiesRequest * const q);

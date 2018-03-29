@@ -31,7 +31,7 @@ class DeleteSubscriptionRequest;
 class QTAWS_EXPORT DeleteSubscriptionRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    DeleteSubscriptionRequestPrivate(const Shield::Action action,
+    DeleteSubscriptionRequestPrivate(const ShieldRequest::Action action,
                                    DeleteSubscriptionRequest * const q);
     DeleteSubscriptionRequestPrivate(const DeleteSubscriptionRequestPrivate &other,
                                    DeleteSubscriptionRequest * const q);

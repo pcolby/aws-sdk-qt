@@ -31,7 +31,7 @@ class BulkPublishRequest;
 class QTAWS_EXPORT BulkPublishRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    BulkPublishRequestPrivate(const CognitoSync::Action action,
+    BulkPublishRequestPrivate(const CognitoSyncRequest::Action action,
                                    BulkPublishRequest * const q);
     BulkPublishRequestPrivate(const BulkPublishRequestPrivate &other,
                                    BulkPublishRequest * const q);

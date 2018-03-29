@@ -31,7 +31,7 @@ class GetReservationUtilizationRequest;
 class QTAWS_EXPORT GetReservationUtilizationRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
-    GetReservationUtilizationRequestPrivate(const CostExplorer::Action action,
+    GetReservationUtilizationRequestPrivate(const CostExplorerRequest::Action action,
                                    GetReservationUtilizationRequest * const q);
     GetReservationUtilizationRequestPrivate(const GetReservationUtilizationRequestPrivate &other,
                                    GetReservationUtilizationRequest * const q);

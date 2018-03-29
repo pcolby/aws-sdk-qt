@@ -31,7 +31,7 @@ class PutRepositoryTriggersRequest;
 class QTAWS_EXPORT PutRepositoryTriggersRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    PutRepositoryTriggersRequestPrivate(const CodeCommit::Action action,
+    PutRepositoryTriggersRequestPrivate(const CodeCommitRequest::Action action,
                                    PutRepositoryTriggersRequest * const q);
     PutRepositoryTriggersRequestPrivate(const PutRepositoryTriggersRequestPrivate &other,
                                    PutRepositoryTriggersRequest * const q);

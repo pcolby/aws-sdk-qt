@@ -31,7 +31,7 @@ class DeleteReceiptFilterRequest;
 class QTAWS_EXPORT DeleteReceiptFilterRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteReceiptFilterRequestPrivate(const SES::Action action,
+    DeleteReceiptFilterRequestPrivate(const SESRequest::Action action,
                                    DeleteReceiptFilterRequest * const q);
     DeleteReceiptFilterRequestPrivate(const DeleteReceiptFilterRequestPrivate &other,
                                    DeleteReceiptFilterRequest * const q);

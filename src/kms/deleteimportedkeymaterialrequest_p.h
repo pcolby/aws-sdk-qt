@@ -31,7 +31,7 @@ class DeleteImportedKeyMaterialRequest;
 class QTAWS_EXPORT DeleteImportedKeyMaterialRequestPrivate : public KMSRequestPrivate {
 
 public:
-    DeleteImportedKeyMaterialRequestPrivate(const KMS::Action action,
+    DeleteImportedKeyMaterialRequestPrivate(const KMSRequest::Action action,
                                    DeleteImportedKeyMaterialRequest * const q);
     DeleteImportedKeyMaterialRequestPrivate(const DeleteImportedKeyMaterialRequestPrivate &other,
                                    DeleteImportedKeyMaterialRequest * const q);

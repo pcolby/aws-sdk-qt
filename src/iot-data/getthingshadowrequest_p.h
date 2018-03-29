@@ -31,7 +31,7 @@ class GetThingShadowRequest;
 class QTAWS_EXPORT GetThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
-    GetThingShadowRequestPrivate(const IoTDataPlane::Action action,
+    GetThingShadowRequestPrivate(const IoTDataPlaneRequest::Action action,
                                    GetThingShadowRequest * const q);
     GetThingShadowRequestPrivate(const GetThingShadowRequestPrivate &other,
                                    GetThingShadowRequest * const q);

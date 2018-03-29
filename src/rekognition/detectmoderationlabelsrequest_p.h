@@ -31,7 +31,7 @@ class DetectModerationLabelsRequest;
 class QTAWS_EXPORT DetectModerationLabelsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    DetectModerationLabelsRequestPrivate(const Rekognition::Action action,
+    DetectModerationLabelsRequestPrivate(const RekognitionRequest::Action action,
                                    DetectModerationLabelsRequest * const q);
     DetectModerationLabelsRequestPrivate(const DetectModerationLabelsRequestPrivate &other,
                                    DetectModerationLabelsRequest * const q);

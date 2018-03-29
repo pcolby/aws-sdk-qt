@@ -31,7 +31,7 @@ class DescribeSubnetGroupsRequest;
 class QTAWS_EXPORT DescribeSubnetGroupsRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DescribeSubnetGroupsRequestPrivate(const DAX::Action action,
+    DescribeSubnetGroupsRequestPrivate(const DAXRequest::Action action,
                                    DescribeSubnetGroupsRequest * const q);
     DescribeSubnetGroupsRequestPrivate(const DescribeSubnetGroupsRequestPrivate &other,
                                    DescribeSubnetGroupsRequest * const q);

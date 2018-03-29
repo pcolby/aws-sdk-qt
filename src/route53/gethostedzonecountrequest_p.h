@@ -31,7 +31,7 @@ class GetHostedZoneCountRequest;
 class QTAWS_EXPORT GetHostedZoneCountRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetHostedZoneCountRequestPrivate(const Route53::Action action,
+    GetHostedZoneCountRequestPrivate(const Route53Request::Action action,
                                    GetHostedZoneCountRequest * const q);
     GetHostedZoneCountRequestPrivate(const GetHostedZoneCountRequestPrivate &other,
                                    GetHostedZoneCountRequest * const q);

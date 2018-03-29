@@ -31,7 +31,7 @@ class UploadDocumentsRequest;
 class QTAWS_EXPORT UploadDocumentsRequestPrivate : public CloudSearchDomainRequestPrivate {
 
 public:
-    UploadDocumentsRequestPrivate(const CloudSearchDomain::Action action,
+    UploadDocumentsRequestPrivate(const CloudSearchDomainRequest::Action action,
                                    UploadDocumentsRequest * const q);
     UploadDocumentsRequestPrivate(const UploadDocumentsRequestPrivate &other,
                                    UploadDocumentsRequest * const q);

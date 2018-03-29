@@ -31,7 +31,7 @@ class UpdateApnsChannelRequest;
 class QTAWS_EXPORT UpdateApnsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateApnsChannelRequestPrivate(const Pinpoint::Action action,
+    UpdateApnsChannelRequestPrivate(const PinpointRequest::Action action,
                                    UpdateApnsChannelRequest * const q);
     UpdateApnsChannelRequestPrivate(const UpdateApnsChannelRequestPrivate &other,
                                    UpdateApnsChannelRequest * const q);

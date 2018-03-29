@@ -31,7 +31,7 @@ class DeleteCacheClusterRequest;
 class QTAWS_EXPORT DeleteCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DeleteCacheClusterRequestPrivate(const ElastiCache::Action action,
+    DeleteCacheClusterRequestPrivate(const ElastiCacheRequest::Action action,
                                    DeleteCacheClusterRequest * const q);
     DeleteCacheClusterRequestPrivate(const DeleteCacheClusterRequestPrivate &other,
                                    DeleteCacheClusterRequest * const q);

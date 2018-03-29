@@ -31,7 +31,7 @@ class RefreshCacheRequest;
 class QTAWS_EXPORT RefreshCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    RefreshCacheRequestPrivate(const StorageGateway::Action action,
+    RefreshCacheRequestPrivate(const StorageGatewayRequest::Action action,
                                    RefreshCacheRequest * const q);
     RefreshCacheRequestPrivate(const RefreshCacheRequestPrivate &other,
                                    RefreshCacheRequest * const q);

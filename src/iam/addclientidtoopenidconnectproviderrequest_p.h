@@ -31,7 +31,7 @@ class AddClientIDToOpenIDConnectProviderRequest;
 class QTAWS_EXPORT AddClientIDToOpenIDConnectProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
-    AddClientIDToOpenIDConnectProviderRequestPrivate(const IAM::Action action,
+    AddClientIDToOpenIDConnectProviderRequestPrivate(const IAMRequest::Action action,
                                    AddClientIDToOpenIDConnectProviderRequest * const q);
     AddClientIDToOpenIDConnectProviderRequestPrivate(const AddClientIDToOpenIDConnectProviderRequestPrivate &other,
                                    AddClientIDToOpenIDConnectProviderRequest * const q);

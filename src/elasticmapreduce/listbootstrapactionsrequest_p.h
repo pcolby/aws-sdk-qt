@@ -31,7 +31,7 @@ class ListBootstrapActionsRequest;
 class QTAWS_EXPORT ListBootstrapActionsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    ListBootstrapActionsRequestPrivate(const EMR::Action action,
+    ListBootstrapActionsRequestPrivate(const EMRRequest::Action action,
                                    ListBootstrapActionsRequest * const q);
     ListBootstrapActionsRequestPrivate(const ListBootstrapActionsRequestPrivate &other,
                                    ListBootstrapActionsRequest * const q);

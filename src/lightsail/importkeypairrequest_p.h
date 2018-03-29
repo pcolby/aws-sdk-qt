@@ -31,7 +31,7 @@ class ImportKeyPairRequest;
 class QTAWS_EXPORT ImportKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    ImportKeyPairRequestPrivate(const Lightsail::Action action,
+    ImportKeyPairRequestPrivate(const LightsailRequest::Action action,
                                    ImportKeyPairRequest * const q);
     ImportKeyPairRequestPrivate(const ImportKeyPairRequestPrivate &other,
                                    ImportKeyPairRequest * const q);

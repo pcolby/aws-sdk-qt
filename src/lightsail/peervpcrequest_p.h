@@ -31,7 +31,7 @@ class PeerVpcRequest;
 class QTAWS_EXPORT PeerVpcRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    PeerVpcRequestPrivate(const Lightsail::Action action,
+    PeerVpcRequestPrivate(const LightsailRequest::Action action,
                                    PeerVpcRequest * const q);
     PeerVpcRequestPrivate(const PeerVpcRequestPrivate &other,
                                    PeerVpcRequest * const q);

@@ -31,7 +31,7 @@ class DeleteFacesRequest;
 class QTAWS_EXPORT DeleteFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    DeleteFacesRequestPrivate(const Rekognition::Action action,
+    DeleteFacesRequestPrivate(const RekognitionRequest::Action action,
                                    DeleteFacesRequest * const q);
     DeleteFacesRequestPrivate(const DeleteFacesRequestPrivate &other,
                                    DeleteFacesRequest * const q);

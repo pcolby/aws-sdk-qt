@@ -31,7 +31,7 @@ class DisassociateRoleFromGroupRequest;
 class QTAWS_EXPORT DisassociateRoleFromGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DisassociateRoleFromGroupRequestPrivate(const Greengrass::Action action,
+    DisassociateRoleFromGroupRequestPrivate(const GreengrassRequest::Action action,
                                    DisassociateRoleFromGroupRequest * const q);
     DisassociateRoleFromGroupRequestPrivate(const DisassociateRoleFromGroupRequestPrivate &other,
                                    DisassociateRoleFromGroupRequest * const q);

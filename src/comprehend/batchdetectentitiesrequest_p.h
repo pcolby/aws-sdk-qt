@@ -31,7 +31,7 @@ class BatchDetectEntitiesRequest;
 class QTAWS_EXPORT BatchDetectEntitiesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    BatchDetectEntitiesRequestPrivate(const Comprehend::Action action,
+    BatchDetectEntitiesRequestPrivate(const ComprehendRequest::Action action,
                                    BatchDetectEntitiesRequest * const q);
     BatchDetectEntitiesRequestPrivate(const BatchDetectEntitiesRequestPrivate &other,
                                    BatchDetectEntitiesRequest * const q);

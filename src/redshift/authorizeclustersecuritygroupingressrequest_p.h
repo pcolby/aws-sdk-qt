@@ -31,7 +31,7 @@ class AuthorizeClusterSecurityGroupIngressRequest;
 class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    AuthorizeClusterSecurityGroupIngressRequestPrivate(const Redshift::Action action,
+    AuthorizeClusterSecurityGroupIngressRequestPrivate(const RedshiftRequest::Action action,
                                    AuthorizeClusterSecurityGroupIngressRequest * const q);
     AuthorizeClusterSecurityGroupIngressRequestPrivate(const AuthorizeClusterSecurityGroupIngressRequestPrivate &other,
                                    AuthorizeClusterSecurityGroupIngressRequest * const q);

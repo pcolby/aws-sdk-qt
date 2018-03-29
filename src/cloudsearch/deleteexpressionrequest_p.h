@@ -31,7 +31,7 @@ class DeleteExpressionRequest;
 class QTAWS_EXPORT DeleteExpressionRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DeleteExpressionRequestPrivate(const CloudSearch::Action action,
+    DeleteExpressionRequestPrivate(const CloudSearchRequest::Action action,
                                    DeleteExpressionRequest * const q);
     DeleteExpressionRequestPrivate(const DeleteExpressionRequestPrivate &other,
                                    DeleteExpressionRequest * const q);

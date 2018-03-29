@@ -31,7 +31,7 @@ class RegisterToWorkMailRequest;
 class QTAWS_EXPORT RegisterToWorkMailRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    RegisterToWorkMailRequestPrivate(const WorkMail::Action action,
+    RegisterToWorkMailRequestPrivate(const WorkMailRequest::Action action,
                                    RegisterToWorkMailRequest * const q);
     RegisterToWorkMailRequestPrivate(const RegisterToWorkMailRequestPrivate &other,
                                    RegisterToWorkMailRequest * const q);

@@ -31,7 +31,7 @@ class ListGroupResourcesRequest;
 class QTAWS_EXPORT ListGroupResourcesRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
-    ListGroupResourcesRequestPrivate(const ResourceGroups::Action action,
+    ListGroupResourcesRequestPrivate(const ResourceGroupsRequest::Action action,
                                    ListGroupResourcesRequest * const q);
     ListGroupResourcesRequestPrivate(const ListGroupResourcesRequestPrivate &other,
                                    ListGroupResourcesRequest * const q);

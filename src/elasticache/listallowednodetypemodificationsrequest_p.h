@@ -31,7 +31,7 @@ class ListAllowedNodeTypeModificationsRequest;
 class QTAWS_EXPORT ListAllowedNodeTypeModificationsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ListAllowedNodeTypeModificationsRequestPrivate(const ElastiCache::Action action,
+    ListAllowedNodeTypeModificationsRequestPrivate(const ElastiCacheRequest::Action action,
                                    ListAllowedNodeTypeModificationsRequest * const q);
     ListAllowedNodeTypeModificationsRequestPrivate(const ListAllowedNodeTypeModificationsRequestPrivate &other,
                                    ListAllowedNodeTypeModificationsRequest * const q);

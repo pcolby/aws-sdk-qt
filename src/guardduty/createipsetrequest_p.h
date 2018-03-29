@@ -31,7 +31,7 @@ class CreateIPSetRequest;
 class QTAWS_EXPORT CreateIPSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    CreateIPSetRequestPrivate(const GuardDuty::Action action,
+    CreateIPSetRequestPrivate(const GuardDutyRequest::Action action,
                                    CreateIPSetRequest * const q);
     CreateIPSetRequestPrivate(const CreateIPSetRequestPrivate &other,
                                    CreateIPSetRequest * const q);

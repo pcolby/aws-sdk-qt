@@ -31,7 +31,7 @@ class ListOpenWorkflowExecutionsRequest;
 class QTAWS_EXPORT ListOpenWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
 
 public:
-    ListOpenWorkflowExecutionsRequestPrivate(const SWF::Action action,
+    ListOpenWorkflowExecutionsRequestPrivate(const SWFRequest::Action action,
                                    ListOpenWorkflowExecutionsRequest * const q);
     ListOpenWorkflowExecutionsRequestPrivate(const ListOpenWorkflowExecutionsRequestPrivate &other,
                                    ListOpenWorkflowExecutionsRequest * const q);

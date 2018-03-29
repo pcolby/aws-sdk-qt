@@ -31,7 +31,7 @@ class CreateSecurityGroupRequest;
 class QTAWS_EXPORT CreateSecurityGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateSecurityGroupRequestPrivate(const EC2::Action action,
+    CreateSecurityGroupRequestPrivate(const EC2Request::Action action,
                                    CreateSecurityGroupRequest * const q);
     CreateSecurityGroupRequestPrivate(const CreateSecurityGroupRequestPrivate &other,
                                    CreateSecurityGroupRequest * const q);

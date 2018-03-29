@@ -31,7 +31,7 @@ class DeleteBatchPredictionRequest;
 class QTAWS_EXPORT DeleteBatchPredictionRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DeleteBatchPredictionRequestPrivate(const MachineLearning::Action action,
+    DeleteBatchPredictionRequestPrivate(const MachineLearningRequest::Action action,
                                    DeleteBatchPredictionRequest * const q);
     DeleteBatchPredictionRequestPrivate(const DeleteBatchPredictionRequestPrivate &other,
                                    DeleteBatchPredictionRequest * const q);

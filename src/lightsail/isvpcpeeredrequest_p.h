@@ -31,7 +31,7 @@ class IsVpcPeeredRequest;
 class QTAWS_EXPORT IsVpcPeeredRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    IsVpcPeeredRequestPrivate(const Lightsail::Action action,
+    IsVpcPeeredRequestPrivate(const LightsailRequest::Action action,
                                    IsVpcPeeredRequest * const q);
     IsVpcPeeredRequestPrivate(const IsVpcPeeredRequestPrivate &other,
                                    IsVpcPeeredRequest * const q);

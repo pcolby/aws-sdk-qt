@@ -31,7 +31,7 @@ class GetCampaignsRequest;
 class QTAWS_EXPORT GetCampaignsRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetCampaignsRequestPrivate(const Pinpoint::Action action,
+    GetCampaignsRequestPrivate(const PinpointRequest::Action action,
                                    GetCampaignsRequest * const q);
     GetCampaignsRequestPrivate(const GetCampaignsRequestPrivate &other,
                                    GetCampaignsRequest * const q);

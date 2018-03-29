@@ -31,7 +31,7 @@ class DeleteRoomRequest;
 class QTAWS_EXPORT DeleteRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    DeleteRoomRequestPrivate(const AlexaForBusiness::Action action,
+    DeleteRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    DeleteRoomRequest * const q);
     DeleteRoomRequestPrivate(const DeleteRoomRequestPrivate &other,
                                    DeleteRoomRequest * const q);

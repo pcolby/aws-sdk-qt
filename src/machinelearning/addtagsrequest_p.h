@@ -31,7 +31,7 @@ class AddTagsRequest;
 class QTAWS_EXPORT AddTagsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    AddTagsRequestPrivate(const MachineLearning::Action action,
+    AddTagsRequestPrivate(const MachineLearningRequest::Action action,
                                    AddTagsRequest * const q);
     AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
                                    AddTagsRequest * const q);

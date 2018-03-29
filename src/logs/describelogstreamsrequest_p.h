@@ -31,7 +31,7 @@ class DescribeLogStreamsRequest;
 class QTAWS_EXPORT DescribeLogStreamsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DescribeLogStreamsRequestPrivate(const CloudWatchLogs::Action action,
+    DescribeLogStreamsRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DescribeLogStreamsRequest * const q);
     DescribeLogStreamsRequestPrivate(const DescribeLogStreamsRequestPrivate &other,
                                    DescribeLogStreamsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeScalingPlanResourcesRequest;
 class QTAWS_EXPORT DescribeScalingPlanResourcesRequestPrivate : public AutoScalingPlansRequestPrivate {
 
 public:
-    DescribeScalingPlanResourcesRequestPrivate(const AutoScalingPlans::Action action,
+    DescribeScalingPlanResourcesRequestPrivate(const AutoScalingPlansRequest::Action action,
                                    DescribeScalingPlanResourcesRequest * const q);
     DescribeScalingPlanResourcesRequestPrivate(const DescribeScalingPlanResourcesRequestPrivate &other,
                                    DescribeScalingPlanResourcesRequest * const q);

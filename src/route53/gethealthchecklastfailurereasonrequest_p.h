@@ -31,7 +31,7 @@ class GetHealthCheckLastFailureReasonRequest;
 class QTAWS_EXPORT GetHealthCheckLastFailureReasonRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetHealthCheckLastFailureReasonRequestPrivate(const Route53::Action action,
+    GetHealthCheckLastFailureReasonRequestPrivate(const Route53Request::Action action,
                                    GetHealthCheckLastFailureReasonRequest * const q);
     GetHealthCheckLastFailureReasonRequestPrivate(const GetHealthCheckLastFailureReasonRequestPrivate &other,
                                    GetHealthCheckLastFailureReasonRequest * const q);

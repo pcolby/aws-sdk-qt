@@ -31,7 +31,7 @@ class DeregisterManagedInstanceRequest;
 class QTAWS_EXPORT DeregisterManagedInstanceRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeregisterManagedInstanceRequestPrivate(const SSM::Action action,
+    DeregisterManagedInstanceRequestPrivate(const SSMRequest::Action action,
                                    DeregisterManagedInstanceRequest * const q);
     DeregisterManagedInstanceRequestPrivate(const DeregisterManagedInstanceRequestPrivate &other,
                                    DeregisterManagedInstanceRequest * const q);

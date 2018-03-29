@@ -31,7 +31,7 @@ class CreateJobQueueRequest;
 class QTAWS_EXPORT CreateJobQueueRequestPrivate : public BatchRequestPrivate {
 
 public:
-    CreateJobQueueRequestPrivate(const Batch::Action action,
+    CreateJobQueueRequestPrivate(const BatchRequest::Action action,
                                    CreateJobQueueRequest * const q);
     CreateJobQueueRequestPrivate(const CreateJobQueueRequestPrivate &other,
                                    CreateJobQueueRequest * const q);

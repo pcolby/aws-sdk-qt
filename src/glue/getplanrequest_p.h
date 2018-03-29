@@ -31,7 +31,7 @@ class GetPlanRequest;
 class QTAWS_EXPORT GetPlanRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetPlanRequestPrivate(const Glue::Action action,
+    GetPlanRequestPrivate(const GlueRequest::Action action,
                                    GetPlanRequest * const q);
     GetPlanRequestPrivate(const GetPlanRequestPrivate &other,
                                    GetPlanRequest * const q);

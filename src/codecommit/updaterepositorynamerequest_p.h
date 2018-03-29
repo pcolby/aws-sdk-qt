@@ -31,7 +31,7 @@ class UpdateRepositoryNameRequest;
 class QTAWS_EXPORT UpdateRepositoryNameRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    UpdateRepositoryNameRequestPrivate(const CodeCommit::Action action,
+    UpdateRepositoryNameRequestPrivate(const CodeCommitRequest::Action action,
                                    UpdateRepositoryNameRequest * const q);
     UpdateRepositoryNameRequestPrivate(const UpdateRepositoryNameRequestPrivate &other,
                                    UpdateRepositoryNameRequest * const q);

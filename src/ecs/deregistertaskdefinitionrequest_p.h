@@ -31,7 +31,7 @@ class DeregisterTaskDefinitionRequest;
 class QTAWS_EXPORT DeregisterTaskDefinitionRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DeregisterTaskDefinitionRequestPrivate(const ECS::Action action,
+    DeregisterTaskDefinitionRequestPrivate(const ECSRequest::Action action,
                                    DeregisterTaskDefinitionRequest * const q);
     DeregisterTaskDefinitionRequestPrivate(const DeregisterTaskDefinitionRequestPrivate &other,
                                    DeregisterTaskDefinitionRequest * const q);

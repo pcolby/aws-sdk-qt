@@ -31,7 +31,7 @@ class SearchGameSessionsRequest;
 class QTAWS_EXPORT SearchGameSessionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    SearchGameSessionsRequestPrivate(const GameLift::Action action,
+    SearchGameSessionsRequestPrivate(const GameLiftRequest::Action action,
                                    SearchGameSessionsRequest * const q);
     SearchGameSessionsRequestPrivate(const SearchGameSessionsRequestPrivate &other,
                                    SearchGameSessionsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteGraphqlApiRequest;
 class QTAWS_EXPORT DeleteGraphqlApiRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    DeleteGraphqlApiRequestPrivate(const AppSync::Action action,
+    DeleteGraphqlApiRequestPrivate(const AppSyncRequest::Action action,
                                    DeleteGraphqlApiRequest * const q);
     DeleteGraphqlApiRequestPrivate(const DeleteGraphqlApiRequestPrivate &other,
                                    DeleteGraphqlApiRequest * const q);

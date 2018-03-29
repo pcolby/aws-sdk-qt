@@ -31,7 +31,7 @@ class SignalWorkflowExecutionRequest;
 class QTAWS_EXPORT SignalWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
-    SignalWorkflowExecutionRequestPrivate(const SWF::Action action,
+    SignalWorkflowExecutionRequestPrivate(const SWFRequest::Action action,
                                    SignalWorkflowExecutionRequest * const q);
     SignalWorkflowExecutionRequestPrivate(const SignalWorkflowExecutionRequestPrivate &other,
                                    SignalWorkflowExecutionRequest * const q);

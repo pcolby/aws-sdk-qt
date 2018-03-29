@@ -31,7 +31,7 @@ class UpdateConstraintRequest;
 class QTAWS_EXPORT UpdateConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    UpdateConstraintRequestPrivate(const ServiceCatalog::Action action,
+    UpdateConstraintRequestPrivate(const ServiceCatalogRequest::Action action,
                                    UpdateConstraintRequest * const q);
     UpdateConstraintRequestPrivate(const UpdateConstraintRequestPrivate &other,
                                    UpdateConstraintRequest * const q);

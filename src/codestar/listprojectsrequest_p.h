@@ -31,7 +31,7 @@ class ListProjectsRequest;
 class QTAWS_EXPORT ListProjectsRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    ListProjectsRequestPrivate(const CodeStar::Action action,
+    ListProjectsRequestPrivate(const CodeStarRequest::Action action,
                                    ListProjectsRequest * const q);
     ListProjectsRequestPrivate(const ListProjectsRequestPrivate &other,
                                    ListProjectsRequest * const q);

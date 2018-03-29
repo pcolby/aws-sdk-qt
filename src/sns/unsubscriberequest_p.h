@@ -31,7 +31,7 @@ class UnsubscribeRequest;
 class QTAWS_EXPORT UnsubscribeRequestPrivate : public SNSRequestPrivate {
 
 public:
-    UnsubscribeRequestPrivate(const SNS::Action action,
+    UnsubscribeRequestPrivate(const SNSRequest::Action action,
                                    UnsubscribeRequest * const q);
     UnsubscribeRequestPrivate(const UnsubscribeRequestPrivate &other,
                                    UnsubscribeRequest * const q);

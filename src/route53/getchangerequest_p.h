@@ -31,7 +31,7 @@ class GetChangeRequest;
 class QTAWS_EXPORT GetChangeRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetChangeRequestPrivate(const Route53::Action action,
+    GetChangeRequestPrivate(const Route53Request::Action action,
                                    GetChangeRequest * const q);
     GetChangeRequestPrivate(const GetChangeRequestPrivate &other,
                                    GetChangeRequest * const q);

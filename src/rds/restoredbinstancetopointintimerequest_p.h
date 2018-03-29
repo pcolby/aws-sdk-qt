@@ -31,7 +31,7 @@ class RestoreDBInstanceToPointInTimeRequest;
 class QTAWS_EXPORT RestoreDBInstanceToPointInTimeRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RestoreDBInstanceToPointInTimeRequestPrivate(const RDS::Action action,
+    RestoreDBInstanceToPointInTimeRequestPrivate(const RDSRequest::Action action,
                                    RestoreDBInstanceToPointInTimeRequest * const q);
     RestoreDBInstanceToPointInTimeRequestPrivate(const RestoreDBInstanceToPointInTimeRequestPrivate &other,
                                    RestoreDBInstanceToPointInTimeRequest * const q);

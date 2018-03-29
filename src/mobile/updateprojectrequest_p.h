@@ -31,7 +31,7 @@ class UpdateProjectRequest;
 class QTAWS_EXPORT UpdateProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
-    UpdateProjectRequestPrivate(const Mobile::Action action,
+    UpdateProjectRequestPrivate(const MobileRequest::Action action,
                                    UpdateProjectRequest * const q);
     UpdateProjectRequestPrivate(const UpdateProjectRequestPrivate &other,
                                    UpdateProjectRequest * const q);

@@ -31,7 +31,7 @@ class EnableAlarmActionsRequest;
 class QTAWS_EXPORT EnableAlarmActionsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    EnableAlarmActionsRequestPrivate(const CloudWatch::Action action,
+    EnableAlarmActionsRequestPrivate(const CloudWatchRequest::Action action,
                                    EnableAlarmActionsRequest * const q);
     EnableAlarmActionsRequestPrivate(const EnableAlarmActionsRequestPrivate &other,
                                    EnableAlarmActionsRequest * const q);

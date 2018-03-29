@@ -31,7 +31,7 @@ class DeleteTrafficPolicyRequest;
 class QTAWS_EXPORT DeleteTrafficPolicyRequestPrivate : public Route53RequestPrivate {
 
 public:
-    DeleteTrafficPolicyRequestPrivate(const Route53::Action action,
+    DeleteTrafficPolicyRequestPrivate(const Route53Request::Action action,
                                    DeleteTrafficPolicyRequest * const q);
     DeleteTrafficPolicyRequestPrivate(const DeleteTrafficPolicyRequestPrivate &other,
                                    DeleteTrafficPolicyRequest * const q);

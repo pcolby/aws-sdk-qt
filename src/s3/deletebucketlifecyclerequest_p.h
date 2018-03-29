@@ -31,7 +31,7 @@ class DeleteBucketLifecycleRequest;
 class QTAWS_EXPORT DeleteBucketLifecycleRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketLifecycleRequestPrivate(const S3::Action action,
+    DeleteBucketLifecycleRequestPrivate(const S3Request::Action action,
                                    DeleteBucketLifecycleRequest * const q);
     DeleteBucketLifecycleRequestPrivate(const DeleteBucketLifecycleRequestPrivate &other,
                                    DeleteBucketLifecycleRequest * const q);

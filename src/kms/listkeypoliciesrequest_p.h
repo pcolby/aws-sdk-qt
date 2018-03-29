@@ -31,7 +31,7 @@ class ListKeyPoliciesRequest;
 class QTAWS_EXPORT ListKeyPoliciesRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ListKeyPoliciesRequestPrivate(const KMS::Action action,
+    ListKeyPoliciesRequestPrivate(const KMSRequest::Action action,
                                    ListKeyPoliciesRequest * const q);
     ListKeyPoliciesRequestPrivate(const ListKeyPoliciesRequestPrivate &other,
                                    ListKeyPoliciesRequest * const q);

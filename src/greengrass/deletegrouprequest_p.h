@@ -31,7 +31,7 @@ class DeleteGroupRequest;
 class QTAWS_EXPORT DeleteGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    DeleteGroupRequestPrivate(const Greengrass::Action action,
+    DeleteGroupRequestPrivate(const GreengrassRequest::Action action,
                                    DeleteGroupRequest * const q);
     DeleteGroupRequestPrivate(const DeleteGroupRequestPrivate &other,
                                    DeleteGroupRequest * const q);

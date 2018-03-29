@@ -31,7 +31,7 @@ class StopTriggerRequest;
 class QTAWS_EXPORT StopTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    StopTriggerRequestPrivate(const Glue::Action action,
+    StopTriggerRequestPrivate(const GlueRequest::Action action,
                                    StopTriggerRequest * const q);
     StopTriggerRequestPrivate(const StopTriggerRequestPrivate &other,
                                    StopTriggerRequest * const q);

@@ -31,7 +31,7 @@ class DeleteGcmChannelRequest;
 class QTAWS_EXPORT DeleteGcmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteGcmChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteGcmChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteGcmChannelRequest * const q);
     DeleteGcmChannelRequestPrivate(const DeleteGcmChannelRequestPrivate &other,
                                    DeleteGcmChannelRequest * const q);

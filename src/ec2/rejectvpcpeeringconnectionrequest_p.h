@@ -31,7 +31,7 @@ class RejectVpcPeeringConnectionRequest;
 class QTAWS_EXPORT RejectVpcPeeringConnectionRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RejectVpcPeeringConnectionRequestPrivate(const EC2::Action action,
+    RejectVpcPeeringConnectionRequestPrivate(const EC2Request::Action action,
                                    RejectVpcPeeringConnectionRequest * const q);
     RejectVpcPeeringConnectionRequestPrivate(const RejectVpcPeeringConnectionRequestPrivate &other,
                                    RejectVpcPeeringConnectionRequest * const q);

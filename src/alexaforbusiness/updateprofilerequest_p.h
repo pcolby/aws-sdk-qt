@@ -31,7 +31,7 @@ class UpdateProfileRequest;
 class QTAWS_EXPORT UpdateProfileRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    UpdateProfileRequestPrivate(const AlexaForBusiness::Action action,
+    UpdateProfileRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    UpdateProfileRequest * const q);
     UpdateProfileRequestPrivate(const UpdateProfileRequestPrivate &other,
                                    UpdateProfileRequest * const q);

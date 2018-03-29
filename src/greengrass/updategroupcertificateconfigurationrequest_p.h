@@ -31,7 +31,7 @@ class UpdateGroupCertificateConfigurationRequest;
 class QTAWS_EXPORT UpdateGroupCertificateConfigurationRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateGroupCertificateConfigurationRequestPrivate(const Greengrass::Action action,
+    UpdateGroupCertificateConfigurationRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateGroupCertificateConfigurationRequest * const q);
     UpdateGroupCertificateConfigurationRequestPrivate(const UpdateGroupCertificateConfigurationRequestPrivate &other,
                                    UpdateGroupCertificateConfigurationRequest * const q);

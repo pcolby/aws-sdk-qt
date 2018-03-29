@@ -31,7 +31,7 @@ class UpdateDeviceDefinitionRequest;
 class QTAWS_EXPORT UpdateDeviceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateDeviceDefinitionRequestPrivate(const Greengrass::Action action,
+    UpdateDeviceDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateDeviceDefinitionRequest * const q);
     UpdateDeviceDefinitionRequestPrivate(const UpdateDeviceDefinitionRequestPrivate &other,
                                    UpdateDeviceDefinitionRequest * const q);

@@ -31,7 +31,7 @@ class DeleteSizeConstraintSetRequest;
 class QTAWS_EXPORT DeleteSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    DeleteSizeConstraintSetRequestPrivate(const WAFRegional::Action action,
+    DeleteSizeConstraintSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    DeleteSizeConstraintSetRequest * const q);
     DeleteSizeConstraintSetRequestPrivate(const DeleteSizeConstraintSetRequestPrivate &other,
                                    DeleteSizeConstraintSetRequest * const q);

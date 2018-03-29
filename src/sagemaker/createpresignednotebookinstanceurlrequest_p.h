@@ -31,7 +31,7 @@ class CreatePresignedNotebookInstanceUrlRequest;
 class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    CreatePresignedNotebookInstanceUrlRequestPrivate(const SageMaker::Action action,
+    CreatePresignedNotebookInstanceUrlRequestPrivate(const SageMakerRequest::Action action,
                                    CreatePresignedNotebookInstanceUrlRequest * const q);
     CreatePresignedNotebookInstanceUrlRequestPrivate(const CreatePresignedNotebookInstanceUrlRequestPrivate &other,
                                    CreatePresignedNotebookInstanceUrlRequest * const q);

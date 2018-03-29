@@ -31,7 +31,7 @@ class DeletePartitionRequest;
 class QTAWS_EXPORT DeletePartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeletePartitionRequestPrivate(const Glue::Action action,
+    DeletePartitionRequestPrivate(const GlueRequest::Action action,
                                    DeletePartitionRequest * const q);
     DeletePartitionRequestPrivate(const DeletePartitionRequestPrivate &other,
                                    DeletePartitionRequest * const q);

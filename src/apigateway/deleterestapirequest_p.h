@@ -31,7 +31,7 @@ class DeleteRestApiRequest;
 class QTAWS_EXPORT DeleteRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteRestApiRequestPrivate(const APIGateway::Action action,
+    DeleteRestApiRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteRestApiRequest * const q);
     DeleteRestApiRequestPrivate(const DeleteRestApiRequestPrivate &other,
                                    DeleteRestApiRequest * const q);

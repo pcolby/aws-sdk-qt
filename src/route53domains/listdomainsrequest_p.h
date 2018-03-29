@@ -31,7 +31,7 @@ class ListDomainsRequest;
 class QTAWS_EXPORT ListDomainsRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    ListDomainsRequestPrivate(const Route53Domains::Action action,
+    ListDomainsRequestPrivate(const Route53DomainsRequest::Action action,
                                    ListDomainsRequest * const q);
     ListDomainsRequestPrivate(const ListDomainsRequestPrivate &other,
                                    ListDomainsRequest * const q);

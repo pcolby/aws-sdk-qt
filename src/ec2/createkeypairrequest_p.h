@@ -31,7 +31,7 @@ class CreateKeyPairRequest;
 class QTAWS_EXPORT CreateKeyPairRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateKeyPairRequestPrivate(const EC2::Action action,
+    CreateKeyPairRequestPrivate(const EC2Request::Action action,
                                    CreateKeyPairRequest * const q);
     CreateKeyPairRequestPrivate(const CreateKeyPairRequestPrivate &other,
                                    CreateKeyPairRequest * const q);

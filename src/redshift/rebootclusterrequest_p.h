@@ -31,7 +31,7 @@ class RebootClusterRequest;
 class QTAWS_EXPORT RebootClusterRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    RebootClusterRequestPrivate(const Redshift::Action action,
+    RebootClusterRequestPrivate(const RedshiftRequest::Action action,
                                    RebootClusterRequest * const q);
     RebootClusterRequestPrivate(const RebootClusterRequestPrivate &other,
                                    RebootClusterRequest * const q);

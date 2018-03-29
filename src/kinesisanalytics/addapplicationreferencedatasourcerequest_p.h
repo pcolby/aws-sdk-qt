@@ -31,7 +31,7 @@ class AddApplicationReferenceDataSourceRequest;
 class QTAWS_EXPORT AddApplicationReferenceDataSourceRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    AddApplicationReferenceDataSourceRequestPrivate(const KinesisAnalytics::Action action,
+    AddApplicationReferenceDataSourceRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    AddApplicationReferenceDataSourceRequest * const q);
     AddApplicationReferenceDataSourceRequestPrivate(const AddApplicationReferenceDataSourceRequestPrivate &other,
                                    AddApplicationReferenceDataSourceRequest * const q);

@@ -31,7 +31,7 @@ class DescribeVolumeAttributeRequest;
 class QTAWS_EXPORT DescribeVolumeAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeVolumeAttributeRequestPrivate(const EC2::Action action,
+    DescribeVolumeAttributeRequestPrivate(const EC2Request::Action action,
                                    DescribeVolumeAttributeRequest * const q);
     DescribeVolumeAttributeRequestPrivate(const DescribeVolumeAttributeRequestPrivate &other,
                                    DescribeVolumeAttributeRequest * const q);

@@ -31,7 +31,7 @@ class CreateCommentRequest;
 class QTAWS_EXPORT CreateCommentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    CreateCommentRequestPrivate(const WorkDocs::Action action,
+    CreateCommentRequestPrivate(const WorkDocsRequest::Action action,
                                    CreateCommentRequest * const q);
     CreateCommentRequestPrivate(const CreateCommentRequestPrivate &other,
                                    CreateCommentRequest * const q);

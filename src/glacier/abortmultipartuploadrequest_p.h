@@ -31,7 +31,7 @@ class AbortMultipartUploadRequest;
 class QTAWS_EXPORT AbortMultipartUploadRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    AbortMultipartUploadRequestPrivate(const Glacier::Action action,
+    AbortMultipartUploadRequestPrivate(const GlacierRequest::Action action,
                                    AbortMultipartUploadRequest * const q);
     AbortMultipartUploadRequestPrivate(const AbortMultipartUploadRequestPrivate &other,
                                    AbortMultipartUploadRequest * const q);

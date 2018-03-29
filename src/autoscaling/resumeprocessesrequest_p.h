@@ -31,7 +31,7 @@ class ResumeProcessesRequest;
 class QTAWS_EXPORT ResumeProcessesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    ResumeProcessesRequestPrivate(const AutoScaling::Action action,
+    ResumeProcessesRequestPrivate(const AutoScalingRequest::Action action,
                                    ResumeProcessesRequest * const q);
     ResumeProcessesRequestPrivate(const ResumeProcessesRequestPrivate &other,
                                    ResumeProcessesRequest * const q);

@@ -31,7 +31,7 @@ class CreateConfigurationRequest;
 class QTAWS_EXPORT CreateConfigurationRequestPrivate : public MQRequestPrivate {
 
 public:
-    CreateConfigurationRequestPrivate(const MQ::Action action,
+    CreateConfigurationRequestPrivate(const MQRequest::Action action,
                                    CreateConfigurationRequest * const q);
     CreateConfigurationRequestPrivate(const CreateConfigurationRequestPrivate &other,
                                    CreateConfigurationRequest * const q);

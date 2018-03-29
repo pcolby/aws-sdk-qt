@@ -31,7 +31,7 @@ class UpdateApplicationRequest;
 class QTAWS_EXPORT UpdateApplicationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    UpdateApplicationRequestPrivate(const KinesisAnalytics::Action action,
+    UpdateApplicationRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    UpdateApplicationRequest * const q);
     UpdateApplicationRequestPrivate(const UpdateApplicationRequestPrivate &other,
                                    UpdateApplicationRequest * const q);

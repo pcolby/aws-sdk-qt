@@ -31,7 +31,7 @@ class UpdateContainerInstancesStateRequest;
 class QTAWS_EXPORT UpdateContainerInstancesStateRequestPrivate : public ECSRequestPrivate {
 
 public:
-    UpdateContainerInstancesStateRequestPrivate(const ECS::Action action,
+    UpdateContainerInstancesStateRequestPrivate(const ECSRequest::Action action,
                                    UpdateContainerInstancesStateRequest * const q);
     UpdateContainerInstancesStateRequestPrivate(const UpdateContainerInstancesStateRequestPrivate &other,
                                    UpdateContainerInstancesStateRequest * const q);

@@ -31,7 +31,7 @@ class DescribeVpcEndpointConnectionsRequest;
 class QTAWS_EXPORT DescribeVpcEndpointConnectionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeVpcEndpointConnectionsRequestPrivate(const EC2::Action action,
+    DescribeVpcEndpointConnectionsRequestPrivate(const EC2Request::Action action,
                                    DescribeVpcEndpointConnectionsRequest * const q);
     DescribeVpcEndpointConnectionsRequestPrivate(const DescribeVpcEndpointConnectionsRequestPrivate &other,
                                    DescribeVpcEndpointConnectionsRequest * const q);

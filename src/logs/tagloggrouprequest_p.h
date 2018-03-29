@@ -31,7 +31,7 @@ class TagLogGroupRequest;
 class QTAWS_EXPORT TagLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    TagLogGroupRequestPrivate(const CloudWatchLogs::Action action,
+    TagLogGroupRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    TagLogGroupRequest * const q);
     TagLogGroupRequestPrivate(const TagLogGroupRequestPrivate &other,
                                    TagLogGroupRequest * const q);

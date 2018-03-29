@@ -31,7 +31,7 @@ class CreateDBClusterSnapshotRequest;
 class QTAWS_EXPORT CreateDBClusterSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateDBClusterSnapshotRequestPrivate(const RDS::Action action,
+    CreateDBClusterSnapshotRequestPrivate(const RDSRequest::Action action,
                                    CreateDBClusterSnapshotRequest * const q);
     CreateDBClusterSnapshotRequestPrivate(const CreateDBClusterSnapshotRequestPrivate &other,
                                    CreateDBClusterSnapshotRequest * const q);

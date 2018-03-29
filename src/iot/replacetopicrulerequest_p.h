@@ -31,7 +31,7 @@ class ReplaceTopicRuleRequest;
 class QTAWS_EXPORT ReplaceTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ReplaceTopicRuleRequestPrivate(const IoT::Action action,
+    ReplaceTopicRuleRequestPrivate(const IoTRequest::Action action,
                                    ReplaceTopicRuleRequest * const q);
     ReplaceTopicRuleRequestPrivate(const ReplaceTopicRuleRequestPrivate &other,
                                    ReplaceTopicRuleRequest * const q);

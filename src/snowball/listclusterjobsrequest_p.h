@@ -31,7 +31,7 @@ class ListClusterJobsRequest;
 class QTAWS_EXPORT ListClusterJobsRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    ListClusterJobsRequestPrivate(const Snowball::Action action,
+    ListClusterJobsRequestPrivate(const SnowballRequest::Action action,
                                    ListClusterJobsRequest * const q);
     ListClusterJobsRequestPrivate(const ListClusterJobsRequestPrivate &other,
                                    ListClusterJobsRequest * const q);

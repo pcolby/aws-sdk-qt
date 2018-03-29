@@ -31,7 +31,7 @@ class GetLoadBalancerTlsCertificatesRequest;
 class QTAWS_EXPORT GetLoadBalancerTlsCertificatesRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetLoadBalancerTlsCertificatesRequestPrivate(const Lightsail::Action action,
+    GetLoadBalancerTlsCertificatesRequestPrivate(const LightsailRequest::Action action,
                                    GetLoadBalancerTlsCertificatesRequest * const q);
     GetLoadBalancerTlsCertificatesRequestPrivate(const GetLoadBalancerTlsCertificatesRequestPrivate &other,
                                    GetLoadBalancerTlsCertificatesRequest * const q);

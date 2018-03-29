@@ -31,7 +31,7 @@ class RemoveTagsFromResourceRequest;
 class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const RDS::Action action,
+    RemoveTagsFromResourceRequestPrivate(const RDSRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);

@@ -31,7 +31,7 @@ class DeleteIntegrationRequest;
 class QTAWS_EXPORT DeleteIntegrationRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteIntegrationRequestPrivate(const APIGateway::Action action,
+    DeleteIntegrationRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteIntegrationRequest * const q);
     DeleteIntegrationRequestPrivate(const DeleteIntegrationRequestPrivate &other,
                                    DeleteIntegrationRequest * const q);

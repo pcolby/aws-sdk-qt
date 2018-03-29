@@ -31,7 +31,7 @@ class ModifySubnetAttributeRequest;
 class QTAWS_EXPORT ModifySubnetAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifySubnetAttributeRequestPrivate(const EC2::Action action,
+    ModifySubnetAttributeRequestPrivate(const EC2Request::Action action,
                                    ModifySubnetAttributeRequest * const q);
     ModifySubnetAttributeRequestPrivate(const ModifySubnetAttributeRequestPrivate &other,
                                    ModifySubnetAttributeRequest * const q);

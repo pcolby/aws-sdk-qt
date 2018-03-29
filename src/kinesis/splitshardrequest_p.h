@@ -31,7 +31,7 @@ class SplitShardRequest;
 class QTAWS_EXPORT SplitShardRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    SplitShardRequestPrivate(const Kinesis::Action action,
+    SplitShardRequestPrivate(const KinesisRequest::Action action,
                                    SplitShardRequest * const q);
     SplitShardRequestPrivate(const SplitShardRequestPrivate &other,
                                    SplitShardRequest * const q);

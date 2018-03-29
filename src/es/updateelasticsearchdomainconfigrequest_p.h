@@ -31,7 +31,7 @@ class UpdateElasticsearchDomainConfigRequest;
 class QTAWS_EXPORT UpdateElasticsearchDomainConfigRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    UpdateElasticsearchDomainConfigRequestPrivate(const ElasticsearchService::Action action,
+    UpdateElasticsearchDomainConfigRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    UpdateElasticsearchDomainConfigRequest * const q);
     UpdateElasticsearchDomainConfigRequestPrivate(const UpdateElasticsearchDomainConfigRequestPrivate &other,
                                    UpdateElasticsearchDomainConfigRequest * const q);

@@ -31,7 +31,7 @@ class RegisterEcsClusterRequest;
 class QTAWS_EXPORT RegisterEcsClusterRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    RegisterEcsClusterRequestPrivate(const OpsWorks::Action action,
+    RegisterEcsClusterRequestPrivate(const OpsWorksRequest::Action action,
                                    RegisterEcsClusterRequest * const q);
     RegisterEcsClusterRequestPrivate(const RegisterEcsClusterRequestPrivate &other,
                                    RegisterEcsClusterRequest * const q);

@@ -31,7 +31,7 @@ class GenerateDataKeyRequest;
 class QTAWS_EXPORT GenerateDataKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
-    GenerateDataKeyRequestPrivate(const KMS::Action action,
+    GenerateDataKeyRequestPrivate(const KMSRequest::Action action,
                                    GenerateDataKeyRequest * const q);
     GenerateDataKeyRequestPrivate(const GenerateDataKeyRequestPrivate &other,
                                    GenerateDataKeyRequest * const q);

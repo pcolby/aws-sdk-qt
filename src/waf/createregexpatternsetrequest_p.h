@@ -31,7 +31,7 @@ class CreateRegexPatternSetRequest;
 class QTAWS_EXPORT CreateRegexPatternSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    CreateRegexPatternSetRequestPrivate(const WAF::Action action,
+    CreateRegexPatternSetRequestPrivate(const WAFRequest::Action action,
                                    CreateRegexPatternSetRequest * const q);
     CreateRegexPatternSetRequestPrivate(const CreateRegexPatternSetRequestPrivate &other,
                                    CreateRegexPatternSetRequest * const q);

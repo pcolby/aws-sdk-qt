@@ -31,7 +31,7 @@ class FlushStageCacheRequest;
 class QTAWS_EXPORT FlushStageCacheRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    FlushStageCacheRequestPrivate(const APIGateway::Action action,
+    FlushStageCacheRequestPrivate(const APIGatewayRequest::Action action,
                                    FlushStageCacheRequest * const q);
     FlushStageCacheRequestPrivate(const FlushStageCacheRequestPrivate &other,
                                    FlushStageCacheRequest * const q);

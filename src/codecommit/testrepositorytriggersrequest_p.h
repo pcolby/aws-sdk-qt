@@ -31,7 +31,7 @@ class TestRepositoryTriggersRequest;
 class QTAWS_EXPORT TestRepositoryTriggersRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    TestRepositoryTriggersRequestPrivate(const CodeCommit::Action action,
+    TestRepositoryTriggersRequestPrivate(const CodeCommitRequest::Action action,
                                    TestRepositoryTriggersRequest * const q);
     TestRepositoryTriggersRequestPrivate(const TestRepositoryTriggersRequestPrivate &other,
                                    TestRepositoryTriggersRequest * const q);

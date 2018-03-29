@@ -31,7 +31,7 @@ class GetWebACLForResourceRequest;
 class QTAWS_EXPORT GetWebACLForResourceRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetWebACLForResourceRequestPrivate(const WAFRegional::Action action,
+    GetWebACLForResourceRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetWebACLForResourceRequest * const q);
     GetWebACLForResourceRequestPrivate(const GetWebACLForResourceRequestPrivate &other,
                                    GetWebACLForResourceRequest * const q);

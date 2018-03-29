@@ -31,7 +31,7 @@ class ListChangeSetsRequest;
 class QTAWS_EXPORT ListChangeSetsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    ListChangeSetsRequestPrivate(const CloudFormation::Action action,
+    ListChangeSetsRequestPrivate(const CloudFormationRequest::Action action,
                                    ListChangeSetsRequest * const q);
     ListChangeSetsRequestPrivate(const ListChangeSetsRequestPrivate &other,
                                    ListChangeSetsRequest * const q);

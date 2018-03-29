@@ -31,7 +31,7 @@ class GetOperationRequest;
 class QTAWS_EXPORT GetOperationRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    GetOperationRequestPrivate(const ServiceDiscovery::Action action,
+    GetOperationRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    GetOperationRequest * const q);
     GetOperationRequestPrivate(const GetOperationRequestPrivate &other,
                                    GetOperationRequest * const q);

@@ -31,7 +31,7 @@ class BatchDetectKeyPhrasesRequest;
 class QTAWS_EXPORT BatchDetectKeyPhrasesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    BatchDetectKeyPhrasesRequestPrivate(const Comprehend::Action action,
+    BatchDetectKeyPhrasesRequestPrivate(const ComprehendRequest::Action action,
                                    BatchDetectKeyPhrasesRequest * const q);
     BatchDetectKeyPhrasesRequestPrivate(const BatchDetectKeyPhrasesRequestPrivate &other,
                                    BatchDetectKeyPhrasesRequest * const q);

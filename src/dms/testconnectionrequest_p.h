@@ -31,7 +31,7 @@ class TestConnectionRequest;
 class QTAWS_EXPORT TestConnectionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    TestConnectionRequestPrivate(const DatabaseMigrationService::Action action,
+    TestConnectionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    TestConnectionRequest * const q);
     TestConnectionRequestPrivate(const TestConnectionRequestPrivate &other,
                                    TestConnectionRequest * const q);

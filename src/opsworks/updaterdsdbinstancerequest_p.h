@@ -31,7 +31,7 @@ class UpdateRdsDbInstanceRequest;
 class QTAWS_EXPORT UpdateRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateRdsDbInstanceRequestPrivate(const OpsWorks::Action action,
+    UpdateRdsDbInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateRdsDbInstanceRequest * const q);
     UpdateRdsDbInstanceRequestPrivate(const UpdateRdsDbInstanceRequestPrivate &other,
                                    UpdateRdsDbInstanceRequest * const q);

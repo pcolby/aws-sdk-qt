@@ -31,7 +31,7 @@ class ListSamplesRequest;
 class QTAWS_EXPORT ListSamplesRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListSamplesRequestPrivate(const DeviceFarm::Action action,
+    ListSamplesRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListSamplesRequest * const q);
     ListSamplesRequestPrivate(const ListSamplesRequestPrivate &other,
                                    ListSamplesRequest * const q);

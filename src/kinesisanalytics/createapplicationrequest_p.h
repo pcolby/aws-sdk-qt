@@ -31,7 +31,7 @@ class CreateApplicationRequest;
 class QTAWS_EXPORT CreateApplicationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    CreateApplicationRequestPrivate(const KinesisAnalytics::Action action,
+    CreateApplicationRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    CreateApplicationRequest * const q);
     CreateApplicationRequestPrivate(const CreateApplicationRequestPrivate &other,
                                    CreateApplicationRequest * const q);

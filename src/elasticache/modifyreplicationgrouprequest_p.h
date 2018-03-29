@@ -31,7 +31,7 @@ class ModifyReplicationGroupRequest;
 class QTAWS_EXPORT ModifyReplicationGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ModifyReplicationGroupRequestPrivate(const ElastiCache::Action action,
+    ModifyReplicationGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    ModifyReplicationGroupRequest * const q);
     ModifyReplicationGroupRequestPrivate(const ModifyReplicationGroupRequestPrivate &other,
                                    ModifyReplicationGroupRequest * const q);

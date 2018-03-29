@@ -31,7 +31,7 @@ class DescribeActivityTypeRequest;
 class QTAWS_EXPORT DescribeActivityTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
-    DescribeActivityTypeRequestPrivate(const SWF::Action action,
+    DescribeActivityTypeRequestPrivate(const SWFRequest::Action action,
                                    DescribeActivityTypeRequest * const q);
     DescribeActivityTypeRequestPrivate(const DescribeActivityTypeRequestPrivate &other,
                                    DescribeActivityTypeRequest * const q);

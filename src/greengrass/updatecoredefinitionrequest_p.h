@@ -31,7 +31,7 @@ class UpdateCoreDefinitionRequest;
 class QTAWS_EXPORT UpdateCoreDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateCoreDefinitionRequestPrivate(const Greengrass::Action action,
+    UpdateCoreDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateCoreDefinitionRequest * const q);
     UpdateCoreDefinitionRequestPrivate(const UpdateCoreDefinitionRequestPrivate &other,
                                    UpdateCoreDefinitionRequest * const q);

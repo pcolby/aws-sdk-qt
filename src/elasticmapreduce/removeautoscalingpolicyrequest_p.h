@@ -31,7 +31,7 @@ class RemoveAutoScalingPolicyRequest;
 class QTAWS_EXPORT RemoveAutoScalingPolicyRequestPrivate : public EMRRequestPrivate {
 
 public:
-    RemoveAutoScalingPolicyRequestPrivate(const EMR::Action action,
+    RemoveAutoScalingPolicyRequestPrivate(const EMRRequest::Action action,
                                    RemoveAutoScalingPolicyRequest * const q);
     RemoveAutoScalingPolicyRequestPrivate(const RemoveAutoScalingPolicyRequestPrivate &other,
                                    RemoveAutoScalingPolicyRequest * const q);

@@ -31,7 +31,7 @@ class CreateProvisionedProductPlanRequest;
 class QTAWS_EXPORT CreateProvisionedProductPlanRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    CreateProvisionedProductPlanRequestPrivate(const ServiceCatalog::Action action,
+    CreateProvisionedProductPlanRequestPrivate(const ServiceCatalogRequest::Action action,
                                    CreateProvisionedProductPlanRequest * const q);
     CreateProvisionedProductPlanRequestPrivate(const CreateProvisionedProductPlanRequestPrivate &other,
                                    CreateProvisionedProductPlanRequest * const q);

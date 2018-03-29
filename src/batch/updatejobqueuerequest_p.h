@@ -31,7 +31,7 @@ class UpdateJobQueueRequest;
 class QTAWS_EXPORT UpdateJobQueueRequestPrivate : public BatchRequestPrivate {
 
 public:
-    UpdateJobQueueRequestPrivate(const Batch::Action action,
+    UpdateJobQueueRequestPrivate(const BatchRequest::Action action,
                                    UpdateJobQueueRequest * const q);
     UpdateJobQueueRequestPrivate(const UpdateJobQueueRequestPrivate &other,
                                    UpdateJobQueueRequest * const q);

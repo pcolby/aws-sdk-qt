@@ -31,7 +31,7 @@ class VerifySoftwareTokenRequest;
 class QTAWS_EXPORT VerifySoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    VerifySoftwareTokenRequestPrivate(const CognitoIdentityProvider::Action action,
+    VerifySoftwareTokenRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    VerifySoftwareTokenRequest * const q);
     VerifySoftwareTokenRequestPrivate(const VerifySoftwareTokenRequestPrivate &other,
                                    VerifySoftwareTokenRequest * const q);

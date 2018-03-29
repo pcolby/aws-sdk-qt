@@ -31,7 +31,7 @@ class GetChangeTokenStatusRequest;
 class QTAWS_EXPORT GetChangeTokenStatusRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetChangeTokenStatusRequestPrivate(const WAF::Action action,
+    GetChangeTokenStatusRequestPrivate(const WAFRequest::Action action,
                                    GetChangeTokenStatusRequest * const q);
     GetChangeTokenStatusRequestPrivate(const GetChangeTokenStatusRequestPrivate &other,
                                    GetChangeTokenStatusRequest * const q);

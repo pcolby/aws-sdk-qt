@@ -31,7 +31,7 @@ class DeleteDevEndpointRequest;
 class QTAWS_EXPORT DeleteDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteDevEndpointRequestPrivate(const Glue::Action action,
+    DeleteDevEndpointRequestPrivate(const GlueRequest::Action action,
                                    DeleteDevEndpointRequest * const q);
     DeleteDevEndpointRequestPrivate(const DeleteDevEndpointRequestPrivate &other,
                                    DeleteDevEndpointRequest * const q);

@@ -31,7 +31,7 @@ class RetrieveEnvironmentInfoRequest;
 class QTAWS_EXPORT RetrieveEnvironmentInfoRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    RetrieveEnvironmentInfoRequestPrivate(const ElasticBeanstalk::Action action,
+    RetrieveEnvironmentInfoRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    RetrieveEnvironmentInfoRequest * const q);
     RetrieveEnvironmentInfoRequestPrivate(const RetrieveEnvironmentInfoRequestPrivate &other,
                                    RetrieveEnvironmentInfoRequest * const q);

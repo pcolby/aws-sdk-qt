@@ -31,7 +31,7 @@ class StopRunRequest;
 class QTAWS_EXPORT StopRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    StopRunRequestPrivate(const DeviceFarm::Action action,
+    StopRunRequestPrivate(const DeviceFarmRequest::Action action,
                                    StopRunRequest * const q);
     StopRunRequestPrivate(const StopRunRequestPrivate &other,
                                    StopRunRequest * const q);

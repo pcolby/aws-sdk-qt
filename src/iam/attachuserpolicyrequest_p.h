@@ -31,7 +31,7 @@ class AttachUserPolicyRequest;
 class QTAWS_EXPORT AttachUserPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    AttachUserPolicyRequestPrivate(const IAM::Action action,
+    AttachUserPolicyRequestPrivate(const IAMRequest::Action action,
                                    AttachUserPolicyRequest * const q);
     AttachUserPolicyRequestPrivate(const AttachUserPolicyRequestPrivate &other,
                                    AttachUserPolicyRequest * const q);

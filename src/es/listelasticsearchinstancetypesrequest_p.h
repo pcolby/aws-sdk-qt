@@ -31,7 +31,7 @@ class ListElasticsearchInstanceTypesRequest;
 class QTAWS_EXPORT ListElasticsearchInstanceTypesRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    ListElasticsearchInstanceTypesRequestPrivate(const ElasticsearchService::Action action,
+    ListElasticsearchInstanceTypesRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    ListElasticsearchInstanceTypesRequest * const q);
     ListElasticsearchInstanceTypesRequestPrivate(const ListElasticsearchInstanceTypesRequestPrivate &other,
                                    ListElasticsearchInstanceTypesRequest * const q);

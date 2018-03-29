@@ -31,7 +31,7 @@ class CreateNFSFileShareRequest;
 class QTAWS_EXPORT CreateNFSFileShareRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    CreateNFSFileShareRequestPrivate(const StorageGateway::Action action,
+    CreateNFSFileShareRequestPrivate(const StorageGatewayRequest::Action action,
                                    CreateNFSFileShareRequest * const q);
     CreateNFSFileShareRequestPrivate(const CreateNFSFileShareRequestPrivate &other,
                                    CreateNFSFileShareRequest * const q);

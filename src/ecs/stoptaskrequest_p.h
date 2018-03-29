@@ -31,7 +31,7 @@ class StopTaskRequest;
 class QTAWS_EXPORT StopTaskRequestPrivate : public ECSRequestPrivate {
 
 public:
-    StopTaskRequestPrivate(const ECS::Action action,
+    StopTaskRequestPrivate(const ECSRequest::Action action,
                                    StopTaskRequest * const q);
     StopTaskRequestPrivate(const StopTaskRequestPrivate &other,
                                    StopTaskRequest * const q);

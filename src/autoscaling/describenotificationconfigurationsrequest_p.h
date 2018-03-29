@@ -31,7 +31,7 @@ class DescribeNotificationConfigurationsRequest;
 class QTAWS_EXPORT DescribeNotificationConfigurationsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DescribeNotificationConfigurationsRequestPrivate(const AutoScaling::Action action,
+    DescribeNotificationConfigurationsRequestPrivate(const AutoScalingRequest::Action action,
                                    DescribeNotificationConfigurationsRequest * const q);
     DescribeNotificationConfigurationsRequestPrivate(const DescribeNotificationConfigurationsRequestPrivate &other,
                                    DescribeNotificationConfigurationsRequest * const q);

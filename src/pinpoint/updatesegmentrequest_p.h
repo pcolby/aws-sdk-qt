@@ -31,7 +31,7 @@ class UpdateSegmentRequest;
 class QTAWS_EXPORT UpdateSegmentRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateSegmentRequestPrivate(const Pinpoint::Action action,
+    UpdateSegmentRequestPrivate(const PinpointRequest::Action action,
                                    UpdateSegmentRequest * const q);
     UpdateSegmentRequestPrivate(const UpdateSegmentRequestPrivate &other,
                                    UpdateSegmentRequest * const q);

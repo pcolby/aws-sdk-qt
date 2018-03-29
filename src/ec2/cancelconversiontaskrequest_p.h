@@ -31,7 +31,7 @@ class CancelConversionTaskRequest;
 class QTAWS_EXPORT CancelConversionTaskRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CancelConversionTaskRequestPrivate(const EC2::Action action,
+    CancelConversionTaskRequestPrivate(const EC2Request::Action action,
                                    CancelConversionTaskRequest * const q);
     CancelConversionTaskRequestPrivate(const CancelConversionTaskRequestPrivate &other,
                                    CancelConversionTaskRequest * const q);

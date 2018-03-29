@@ -31,7 +31,7 @@ class UpdateNumberOfDomainControllersRequest;
 class QTAWS_EXPORT UpdateNumberOfDomainControllersRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    UpdateNumberOfDomainControllersRequestPrivate(const DirectoryService::Action action,
+    UpdateNumberOfDomainControllersRequestPrivate(const DirectoryServiceRequest::Action action,
                                    UpdateNumberOfDomainControllersRequest * const q);
     UpdateNumberOfDomainControllersRequestPrivate(const UpdateNumberOfDomainControllersRequestPrivate &other,
                                    UpdateNumberOfDomainControllersRequest * const q);

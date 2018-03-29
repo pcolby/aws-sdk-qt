@@ -31,7 +31,7 @@ class UpdateMaintenanceWindowRequest;
 class QTAWS_EXPORT UpdateMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
 
 public:
-    UpdateMaintenanceWindowRequestPrivate(const SSM::Action action,
+    UpdateMaintenanceWindowRequestPrivate(const SSMRequest::Action action,
                                    UpdateMaintenanceWindowRequest * const q);
     UpdateMaintenanceWindowRequestPrivate(const UpdateMaintenanceWindowRequestPrivate &other,
                                    UpdateMaintenanceWindowRequest * const q);

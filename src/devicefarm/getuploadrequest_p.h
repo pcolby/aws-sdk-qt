@@ -31,7 +31,7 @@ class GetUploadRequest;
 class QTAWS_EXPORT GetUploadRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    GetUploadRequestPrivate(const DeviceFarm::Action action,
+    GetUploadRequestPrivate(const DeviceFarmRequest::Action action,
                                    GetUploadRequest * const q);
     GetUploadRequestPrivate(const GetUploadRequestPrivate &other,
                                    GetUploadRequest * const q);

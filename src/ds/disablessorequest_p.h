@@ -31,7 +31,7 @@ class DisableSsoRequest;
 class QTAWS_EXPORT DisableSsoRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DisableSsoRequestPrivate(const DirectoryService::Action action,
+    DisableSsoRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DisableSsoRequest * const q);
     DisableSsoRequestPrivate(const DisableSsoRequestPrivate &other,
                                    DisableSsoRequest * const q);

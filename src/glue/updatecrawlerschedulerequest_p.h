@@ -31,7 +31,7 @@ class UpdateCrawlerScheduleRequest;
 class QTAWS_EXPORT UpdateCrawlerScheduleRequestPrivate : public GlueRequestPrivate {
 
 public:
-    UpdateCrawlerScheduleRequestPrivate(const Glue::Action action,
+    UpdateCrawlerScheduleRequestPrivate(const GlueRequest::Action action,
                                    UpdateCrawlerScheduleRequest * const q);
     UpdateCrawlerScheduleRequestPrivate(const UpdateCrawlerScheduleRequestPrivate &other,
                                    UpdateCrawlerScheduleRequest * const q);

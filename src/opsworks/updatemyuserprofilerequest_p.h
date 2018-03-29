@@ -31,7 +31,7 @@ class UpdateMyUserProfileRequest;
 class QTAWS_EXPORT UpdateMyUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateMyUserProfileRequestPrivate(const OpsWorks::Action action,
+    UpdateMyUserProfileRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateMyUserProfileRequest * const q);
     UpdateMyUserProfileRequestPrivate(const UpdateMyUserProfileRequestPrivate &other,
                                    UpdateMyUserProfileRequest * const q);

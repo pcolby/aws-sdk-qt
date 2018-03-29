@@ -31,7 +31,7 @@ class GetObjectRequest;
 class QTAWS_EXPORT GetObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
-    GetObjectRequestPrivate(const MediaStoreData::Action action,
+    GetObjectRequestPrivate(const MediaStoreDataRequest::Action action,
                                    GetObjectRequest * const q);
     GetObjectRequestPrivate(const GetObjectRequestPrivate &other,
                                    GetObjectRequest * const q);

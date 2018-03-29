@@ -31,7 +31,7 @@ class DescribeBatchPredictionsRequest;
 class QTAWS_EXPORT DescribeBatchPredictionsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DescribeBatchPredictionsRequestPrivate(const MachineLearning::Action action,
+    DescribeBatchPredictionsRequestPrivate(const MachineLearningRequest::Action action,
                                    DescribeBatchPredictionsRequest * const q);
     DescribeBatchPredictionsRequestPrivate(const DescribeBatchPredictionsRequestPrivate &other,
                                    DescribeBatchPredictionsRequest * const q);

@@ -31,7 +31,7 @@ class DeleteEndpointRequest;
 class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SNSRequestPrivate {
 
 public:
-    DeleteEndpointRequestPrivate(const SNS::Action action,
+    DeleteEndpointRequestPrivate(const SNSRequest::Action action,
                                    DeleteEndpointRequest * const q);
     DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
                                    DeleteEndpointRequest * const q);

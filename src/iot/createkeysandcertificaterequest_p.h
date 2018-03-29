@@ -31,7 +31,7 @@ class CreateKeysAndCertificateRequest;
 class QTAWS_EXPORT CreateKeysAndCertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateKeysAndCertificateRequestPrivate(const IoT::Action action,
+    CreateKeysAndCertificateRequestPrivate(const IoTRequest::Action action,
                                    CreateKeysAndCertificateRequest * const q);
     CreateKeysAndCertificateRequestPrivate(const CreateKeysAndCertificateRequestPrivate &other,
                                    CreateKeysAndCertificateRequest * const q);

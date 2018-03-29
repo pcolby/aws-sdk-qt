@@ -31,7 +31,7 @@ class CreateSecurityConfigurationRequest;
 class QTAWS_EXPORT CreateSecurityConfigurationRequestPrivate : public EMRRequestPrivate {
 
 public:
-    CreateSecurityConfigurationRequestPrivate(const EMR::Action action,
+    CreateSecurityConfigurationRequestPrivate(const EMRRequest::Action action,
                                    CreateSecurityConfigurationRequest * const q);
     CreateSecurityConfigurationRequestPrivate(const CreateSecurityConfigurationRequestPrivate &other,
                                    CreateSecurityConfigurationRequest * const q);

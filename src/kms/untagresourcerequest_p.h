@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public KMSRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const KMS::Action action,
+    UntagResourceRequestPrivate(const KMSRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

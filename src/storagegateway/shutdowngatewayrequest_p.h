@@ -31,7 +31,7 @@ class ShutdownGatewayRequest;
 class QTAWS_EXPORT ShutdownGatewayRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ShutdownGatewayRequestPrivate(const StorageGateway::Action action,
+    ShutdownGatewayRequestPrivate(const StorageGatewayRequest::Action action,
                                    ShutdownGatewayRequest * const q);
     ShutdownGatewayRequestPrivate(const ShutdownGatewayRequestPrivate &other,
                                    ShutdownGatewayRequest * const q);

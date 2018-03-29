@@ -31,7 +31,7 @@ class UpdateSmsChannelRequest;
 class QTAWS_EXPORT UpdateSmsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateSmsChannelRequestPrivate(const Pinpoint::Action action,
+    UpdateSmsChannelRequestPrivate(const PinpointRequest::Action action,
                                    UpdateSmsChannelRequest * const q);
     UpdateSmsChannelRequestPrivate(const UpdateSmsChannelRequestPrivate &other,
                                    UpdateSmsChannelRequest * const q);

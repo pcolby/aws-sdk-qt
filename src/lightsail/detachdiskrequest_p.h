@@ -31,7 +31,7 @@ class DetachDiskRequest;
 class QTAWS_EXPORT DetachDiskRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DetachDiskRequestPrivate(const Lightsail::Action action,
+    DetachDiskRequestPrivate(const LightsailRequest::Action action,
                                    DetachDiskRequest * const q);
     DetachDiskRequestPrivate(const DetachDiskRequestPrivate &other,
                                    DetachDiskRequest * const q);

@@ -31,7 +31,7 @@ class PutRolePolicyRequest;
 class QTAWS_EXPORT PutRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    PutRolePolicyRequestPrivate(const IAM::Action action,
+    PutRolePolicyRequestPrivate(const IAMRequest::Action action,
                                    PutRolePolicyRequest * const q);
     PutRolePolicyRequestPrivate(const PutRolePolicyRequestPrivate &other,
                                    PutRolePolicyRequest * const q);

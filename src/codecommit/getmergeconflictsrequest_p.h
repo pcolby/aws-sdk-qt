@@ -31,7 +31,7 @@ class GetMergeConflictsRequest;
 class QTAWS_EXPORT GetMergeConflictsRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetMergeConflictsRequestPrivate(const CodeCommit::Action action,
+    GetMergeConflictsRequestPrivate(const CodeCommitRequest::Action action,
                                    GetMergeConflictsRequest * const q);
     GetMergeConflictsRequestPrivate(const GetMergeConflictsRequestPrivate &other,
                                    GetMergeConflictsRequest * const q);

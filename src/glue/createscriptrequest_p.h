@@ -31,7 +31,7 @@ class CreateScriptRequest;
 class QTAWS_EXPORT CreateScriptRequestPrivate : public GlueRequestPrivate {
 
 public:
-    CreateScriptRequestPrivate(const Glue::Action action,
+    CreateScriptRequestPrivate(const GlueRequest::Action action,
                                    CreateScriptRequest * const q);
     CreateScriptRequestPrivate(const CreateScriptRequestPrivate &other,
                                    CreateScriptRequest * const q);

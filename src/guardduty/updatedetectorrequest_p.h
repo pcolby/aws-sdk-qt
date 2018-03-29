@@ -31,7 +31,7 @@ class UpdateDetectorRequest;
 class QTAWS_EXPORT UpdateDetectorRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    UpdateDetectorRequestPrivate(const GuardDuty::Action action,
+    UpdateDetectorRequestPrivate(const GuardDutyRequest::Action action,
                                    UpdateDetectorRequest * const q);
     UpdateDetectorRequestPrivate(const UpdateDetectorRequestPrivate &other,
                                    UpdateDetectorRequest * const q);

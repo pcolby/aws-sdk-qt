@@ -31,7 +31,7 @@ class CreateGrantRequest;
 class QTAWS_EXPORT CreateGrantRequestPrivate : public KMSRequestPrivate {
 
 public:
-    CreateGrantRequestPrivate(const KMS::Action action,
+    CreateGrantRequestPrivate(const KMSRequest::Action action,
                                    CreateGrantRequest * const q);
     CreateGrantRequestPrivate(const CreateGrantRequestPrivate &other,
                                    CreateGrantRequest * const q);

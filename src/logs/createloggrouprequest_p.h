@@ -31,7 +31,7 @@ class CreateLogGroupRequest;
 class QTAWS_EXPORT CreateLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    CreateLogGroupRequestPrivate(const CloudWatchLogs::Action action,
+    CreateLogGroupRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    CreateLogGroupRequest * const q);
     CreateLogGroupRequestPrivate(const CreateLogGroupRequestPrivate &other,
                                    CreateLogGroupRequest * const q);

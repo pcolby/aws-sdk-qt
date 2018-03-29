@@ -31,7 +31,7 @@ class GetCommentsForComparedCommitRequest;
 class QTAWS_EXPORT GetCommentsForComparedCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetCommentsForComparedCommitRequestPrivate(const CodeCommit::Action action,
+    GetCommentsForComparedCommitRequestPrivate(const CodeCommitRequest::Action action,
                                    GetCommentsForComparedCommitRequest * const q);
     GetCommentsForComparedCommitRequestPrivate(const GetCommentsForComparedCommitRequestPrivate &other,
                                    GetCommentsForComparedCommitRequest * const q);

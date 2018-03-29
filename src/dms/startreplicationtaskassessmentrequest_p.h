@@ -31,7 +31,7 @@ class StartReplicationTaskAssessmentRequest;
 class QTAWS_EXPORT StartReplicationTaskAssessmentRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    StartReplicationTaskAssessmentRequestPrivate(const DatabaseMigrationService::Action action,
+    StartReplicationTaskAssessmentRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    StartReplicationTaskAssessmentRequest * const q);
     StartReplicationTaskAssessmentRequestPrivate(const StartReplicationTaskAssessmentRequestPrivate &other,
                                    StartReplicationTaskAssessmentRequest * const q);

@@ -31,7 +31,7 @@ class GetOpenIDConnectProviderRequest;
 class QTAWS_EXPORT GetOpenIDConnectProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetOpenIDConnectProviderRequestPrivate(const IAM::Action action,
+    GetOpenIDConnectProviderRequestPrivate(const IAMRequest::Action action,
                                    GetOpenIDConnectProviderRequest * const q);
     GetOpenIDConnectProviderRequestPrivate(const GetOpenIDConnectProviderRequestPrivate &other,
                                    GetOpenIDConnectProviderRequest * const q);

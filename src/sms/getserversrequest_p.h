@@ -31,7 +31,7 @@ class GetServersRequest;
 class QTAWS_EXPORT GetServersRequestPrivate : public SMSRequestPrivate {
 
 public:
-    GetServersRequestPrivate(const SMS::Action action,
+    GetServersRequestPrivate(const SMSRequest::Action action,
                                    GetServersRequest * const q);
     GetServersRequestPrivate(const GetServersRequestPrivate &other,
                                    GetServersRequest * const q);

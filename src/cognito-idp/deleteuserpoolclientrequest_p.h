@@ -31,7 +31,7 @@ class DeleteUserPoolClientRequest;
 class QTAWS_EXPORT DeleteUserPoolClientRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    DeleteUserPoolClientRequestPrivate(const CognitoIdentityProvider::Action action,
+    DeleteUserPoolClientRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    DeleteUserPoolClientRequest * const q);
     DeleteUserPoolClientRequestPrivate(const DeleteUserPoolClientRequestPrivate &other,
                                    DeleteUserPoolClientRequest * const q);

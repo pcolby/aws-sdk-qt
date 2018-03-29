@@ -31,7 +31,7 @@ class UpdateBudgetRequest;
 class QTAWS_EXPORT UpdateBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    UpdateBudgetRequestPrivate(const Budgets::Action action,
+    UpdateBudgetRequestPrivate(const BudgetsRequest::Action action,
                                    UpdateBudgetRequest * const q);
     UpdateBudgetRequestPrivate(const UpdateBudgetRequestPrivate &other,
                                    UpdateBudgetRequest * const q);

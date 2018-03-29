@@ -31,7 +31,7 @@ class CreateSnapshotRequest;
 class QTAWS_EXPORT CreateSnapshotRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateSnapshotRequestPrivate(const EC2::Action action,
+    CreateSnapshotRequestPrivate(const EC2Request::Action action,
                                    CreateSnapshotRequest * const q);
     CreateSnapshotRequestPrivate(const CreateSnapshotRequestPrivate &other,
                                    CreateSnapshotRequest * const q);

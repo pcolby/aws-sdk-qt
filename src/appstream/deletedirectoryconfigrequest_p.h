@@ -31,7 +31,7 @@ class DeleteDirectoryConfigRequest;
 class QTAWS_EXPORT DeleteDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DeleteDirectoryConfigRequestPrivate(const AppStream::Action action,
+    DeleteDirectoryConfigRequestPrivate(const AppStreamRequest::Action action,
                                    DeleteDirectoryConfigRequest * const q);
     DeleteDirectoryConfigRequestPrivate(const DeleteDirectoryConfigRequestPrivate &other,
                                    DeleteDirectoryConfigRequest * const q);

@@ -31,7 +31,7 @@ class DeleteBotAliasRequest;
 class QTAWS_EXPORT DeleteBotAliasRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteBotAliasRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteBotAliasRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteBotAliasRequest * const q);
     DeleteBotAliasRequestPrivate(const DeleteBotAliasRequestPrivate &other,
                                    DeleteBotAliasRequest * const q);

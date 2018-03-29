@@ -31,7 +31,7 @@ class DeprecateActivityTypeRequest;
 class QTAWS_EXPORT DeprecateActivityTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
-    DeprecateActivityTypeRequestPrivate(const SWF::Action action,
+    DeprecateActivityTypeRequestPrivate(const SWFRequest::Action action,
                                    DeprecateActivityTypeRequest * const q);
     DeprecateActivityTypeRequestPrivate(const DeprecateActivityTypeRequestPrivate &other,
                                    DeprecateActivityTypeRequest * const q);

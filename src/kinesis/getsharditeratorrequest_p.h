@@ -31,7 +31,7 @@ class GetShardIteratorRequest;
 class QTAWS_EXPORT GetShardIteratorRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    GetShardIteratorRequestPrivate(const Kinesis::Action action,
+    GetShardIteratorRequestPrivate(const KinesisRequest::Action action,
                                    GetShardIteratorRequest * const q);
     GetShardIteratorRequestPrivate(const GetShardIteratorRequestPrivate &other,
                                    GetShardIteratorRequest * const q);

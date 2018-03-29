@@ -31,7 +31,7 @@ class DisableMetricsCollectionRequest;
 class QTAWS_EXPORT DisableMetricsCollectionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DisableMetricsCollectionRequestPrivate(const AutoScaling::Action action,
+    DisableMetricsCollectionRequestPrivate(const AutoScalingRequest::Action action,
                                    DisableMetricsCollectionRequest * const q);
     DisableMetricsCollectionRequestPrivate(const DisableMetricsCollectionRequestPrivate &other,
                                    DisableMetricsCollectionRequest * const q);

@@ -31,7 +31,7 @@ class PutLexiconRequest;
 class QTAWS_EXPORT PutLexiconRequestPrivate : public PollyRequestPrivate {
 
 public:
-    PutLexiconRequestPrivate(const Polly::Action action,
+    PutLexiconRequestPrivate(const PollyRequest::Action action,
                                    PutLexiconRequest * const q);
     PutLexiconRequestPrivate(const PutLexiconRequestPrivate &other,
                                    PutLexiconRequest * const q);

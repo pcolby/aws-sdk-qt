@@ -31,7 +31,7 @@ class CountPendingActivityTasksRequest;
 class QTAWS_EXPORT CountPendingActivityTasksRequestPrivate : public SWFRequestPrivate {
 
 public:
-    CountPendingActivityTasksRequestPrivate(const SWF::Action action,
+    CountPendingActivityTasksRequestPrivate(const SWFRequest::Action action,
                                    CountPendingActivityTasksRequest * const q);
     CountPendingActivityTasksRequestPrivate(const CountPendingActivityTasksRequestPrivate &other,
                                    CountPendingActivityTasksRequest * const q);

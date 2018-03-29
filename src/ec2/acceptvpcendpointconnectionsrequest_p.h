@@ -31,7 +31,7 @@ class AcceptVpcEndpointConnectionsRequest;
 class QTAWS_EXPORT AcceptVpcEndpointConnectionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AcceptVpcEndpointConnectionsRequestPrivate(const EC2::Action action,
+    AcceptVpcEndpointConnectionsRequestPrivate(const EC2Request::Action action,
                                    AcceptVpcEndpointConnectionsRequest * const q);
     AcceptVpcEndpointConnectionsRequestPrivate(const AcceptVpcEndpointConnectionsRequestPrivate &other,
                                    AcceptVpcEndpointConnectionsRequest * const q);

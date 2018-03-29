@@ -31,7 +31,7 @@ class ListGraphqlApisRequest;
 class QTAWS_EXPORT ListGraphqlApisRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    ListGraphqlApisRequestPrivate(const AppSync::Action action,
+    ListGraphqlApisRequestPrivate(const AppSyncRequest::Action action,
                                    ListGraphqlApisRequest * const q);
     ListGraphqlApisRequestPrivate(const ListGraphqlApisRequestPrivate &other,
                                    ListGraphqlApisRequest * const q);

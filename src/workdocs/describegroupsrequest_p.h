@@ -31,7 +31,7 @@ class DescribeGroupsRequest;
 class QTAWS_EXPORT DescribeGroupsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DescribeGroupsRequestPrivate(const WorkDocs::Action action,
+    DescribeGroupsRequestPrivate(const WorkDocsRequest::Action action,
                                    DescribeGroupsRequest * const q);
     DescribeGroupsRequestPrivate(const DescribeGroupsRequestPrivate &other,
                                    DescribeGroupsRequest * const q);

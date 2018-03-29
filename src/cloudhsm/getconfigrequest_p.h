@@ -31,7 +31,7 @@ class GetConfigRequest;
 class QTAWS_EXPORT GetConfigRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    GetConfigRequestPrivate(const CloudHSM::Action action,
+    GetConfigRequestPrivate(const CloudHSMRequest::Action action,
                                    GetConfigRequest * const q);
     GetConfigRequestPrivate(const GetConfigRequestPrivate &other,
                                    GetConfigRequest * const q);

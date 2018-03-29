@@ -31,7 +31,7 @@ class CreateCacheSubnetGroupRequest;
 class QTAWS_EXPORT CreateCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    CreateCacheSubnetGroupRequestPrivate(const ElastiCache::Action action,
+    CreateCacheSubnetGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    CreateCacheSubnetGroupRequest * const q);
     CreateCacheSubnetGroupRequestPrivate(const CreateCacheSubnetGroupRequestPrivate &other,
                                    CreateCacheSubnetGroupRequest * const q);

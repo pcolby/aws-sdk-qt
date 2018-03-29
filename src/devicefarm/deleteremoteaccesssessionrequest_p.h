@@ -31,7 +31,7 @@ class DeleteRemoteAccessSessionRequest;
 class QTAWS_EXPORT DeleteRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    DeleteRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+    DeleteRemoteAccessSessionRequestPrivate(const DeviceFarmRequest::Action action,
                                    DeleteRemoteAccessSessionRequest * const q);
     DeleteRemoteAccessSessionRequestPrivate(const DeleteRemoteAccessSessionRequestPrivate &other,
                                    DeleteRemoteAccessSessionRequest * const q);

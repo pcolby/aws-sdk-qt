@@ -31,7 +31,7 @@ class DeleteIntentRequest;
 class QTAWS_EXPORT DeleteIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    DeleteIntentRequestPrivate(const LexModelBuildingService::Action action,
+    DeleteIntentRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    DeleteIntentRequest * const q);
     DeleteIntentRequestPrivate(const DeleteIntentRequestPrivate &other,
                                    DeleteIntentRequest * const q);

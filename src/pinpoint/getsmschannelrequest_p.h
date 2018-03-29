@@ -31,7 +31,7 @@ class GetSmsChannelRequest;
 class QTAWS_EXPORT GetSmsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetSmsChannelRequestPrivate(const Pinpoint::Action action,
+    GetSmsChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetSmsChannelRequest * const q);
     GetSmsChannelRequestPrivate(const GetSmsChannelRequestPrivate &other,
                                    GetSmsChannelRequest * const q);

@@ -31,7 +31,7 @@ class UpdateTrafficPolicyCommentRequest;
 class QTAWS_EXPORT UpdateTrafficPolicyCommentRequestPrivate : public Route53RequestPrivate {
 
 public:
-    UpdateTrafficPolicyCommentRequestPrivate(const Route53::Action action,
+    UpdateTrafficPolicyCommentRequestPrivate(const Route53Request::Action action,
                                    UpdateTrafficPolicyCommentRequest * const q);
     UpdateTrafficPolicyCommentRequestPrivate(const UpdateTrafficPolicyCommentRequestPrivate &other,
                                    UpdateTrafficPolicyCommentRequest * const q);

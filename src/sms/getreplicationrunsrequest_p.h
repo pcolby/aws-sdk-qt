@@ -31,7 +31,7 @@ class GetReplicationRunsRequest;
 class QTAWS_EXPORT GetReplicationRunsRequestPrivate : public SMSRequestPrivate {
 
 public:
-    GetReplicationRunsRequestPrivate(const SMS::Action action,
+    GetReplicationRunsRequestPrivate(const SMSRequest::Action action,
                                    GetReplicationRunsRequest * const q);
     GetReplicationRunsRequestPrivate(const GetReplicationRunsRequestPrivate &other,
                                    GetReplicationRunsRequest * const q);

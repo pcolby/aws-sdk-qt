@@ -31,7 +31,7 @@ class DescribeVoicesRequest;
 class QTAWS_EXPORT DescribeVoicesRequestPrivate : public PollyRequestPrivate {
 
 public:
-    DescribeVoicesRequestPrivate(const Polly::Action action,
+    DescribeVoicesRequestPrivate(const PollyRequest::Action action,
                                    DescribeVoicesRequest * const q);
     DescribeVoicesRequestPrivate(const DescribeVoicesRequestPrivate &other,
                                    DescribeVoicesRequest * const q);

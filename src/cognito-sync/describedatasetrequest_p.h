@@ -31,7 +31,7 @@ class DescribeDatasetRequest;
 class QTAWS_EXPORT DescribeDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    DescribeDatasetRequestPrivate(const CognitoSync::Action action,
+    DescribeDatasetRequestPrivate(const CognitoSyncRequest::Action action,
                                    DescribeDatasetRequest * const q);
     DescribeDatasetRequestPrivate(const DescribeDatasetRequestPrivate &other,
                                    DescribeDatasetRequest * const q);

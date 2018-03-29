@@ -31,7 +31,7 @@ class DescribeInstanceInformationRequest;
 class QTAWS_EXPORT DescribeInstanceInformationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeInstanceInformationRequestPrivate(const SSM::Action action,
+    DescribeInstanceInformationRequestPrivate(const SSMRequest::Action action,
                                    DescribeInstanceInformationRequest * const q);
     DescribeInstanceInformationRequestPrivate(const DescribeInstanceInformationRequestPrivate &other,
                                    DescribeInstanceInformationRequest * const q);

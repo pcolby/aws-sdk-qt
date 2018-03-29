@@ -31,7 +31,7 @@ class RemoveTagsFromStreamRequest;
 class QTAWS_EXPORT RemoveTagsFromStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    RemoveTagsFromStreamRequestPrivate(const Kinesis::Action action,
+    RemoveTagsFromStreamRequestPrivate(const KinesisRequest::Action action,
                                    RemoveTagsFromStreamRequest * const q);
     RemoveTagsFromStreamRequestPrivate(const RemoveTagsFromStreamRequestPrivate &other,
                                    RemoveTagsFromStreamRequest * const q);

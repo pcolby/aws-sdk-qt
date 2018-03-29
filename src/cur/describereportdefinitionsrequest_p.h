@@ -31,7 +31,7 @@ class DescribeReportDefinitionsRequest;
 class QTAWS_EXPORT DescribeReportDefinitionsRequestPrivate : public CostandUsageReportServiceRequestPrivate {
 
 public:
-    DescribeReportDefinitionsRequestPrivate(const CostandUsageReportService::Action action,
+    DescribeReportDefinitionsRequestPrivate(const CostandUsageReportServiceRequest::Action action,
                                    DescribeReportDefinitionsRequest * const q);
     DescribeReportDefinitionsRequestPrivate(const DescribeReportDefinitionsRequestPrivate &other,
                                    DescribeReportDefinitionsRequest * const q);

@@ -31,7 +31,7 @@ class DeactivateUserRequest;
 class QTAWS_EXPORT DeactivateUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DeactivateUserRequestPrivate(const WorkDocs::Action action,
+    DeactivateUserRequestPrivate(const WorkDocsRequest::Action action,
                                    DeactivateUserRequest * const q);
     DeactivateUserRequestPrivate(const DeactivateUserRequestPrivate &other,
                                    DeactivateUserRequest * const q);

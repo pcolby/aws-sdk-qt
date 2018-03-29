@@ -31,7 +31,7 @@ class DescribeConnectionsOnInterconnectRequest;
 class QTAWS_EXPORT DescribeConnectionsOnInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeConnectionsOnInterconnectRequestPrivate(const DirectConnect::Action action,
+    DescribeConnectionsOnInterconnectRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeConnectionsOnInterconnectRequest * const q);
     DescribeConnectionsOnInterconnectRequestPrivate(const DescribeConnectionsOnInterconnectRequestPrivate &other,
                                    DescribeConnectionsOnInterconnectRequest * const q);

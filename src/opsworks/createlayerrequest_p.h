@@ -31,7 +31,7 @@ class CreateLayerRequest;
 class QTAWS_EXPORT CreateLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CreateLayerRequestPrivate(const OpsWorks::Action action,
+    CreateLayerRequestPrivate(const OpsWorksRequest::Action action,
                                    CreateLayerRequest * const q);
     CreateLayerRequestPrivate(const CreateLayerRequestPrivate &other,
                                    CreateLayerRequest * const q);

@@ -31,7 +31,7 @@ class DeleteLoadBalancerRequest;
 class QTAWS_EXPORT DeleteLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    DeleteLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,
+    DeleteLoadBalancerRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    DeleteLoadBalancerRequest * const q);
     DeleteLoadBalancerRequestPrivate(const DeleteLoadBalancerRequestPrivate &other,
                                    DeleteLoadBalancerRequest * const q);

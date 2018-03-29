@@ -31,7 +31,7 @@ class DescribeRulesPackagesRequest;
 class QTAWS_EXPORT DescribeRulesPackagesRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    DescribeRulesPackagesRequestPrivate(const Inspector::Action action,
+    DescribeRulesPackagesRequestPrivate(const InspectorRequest::Action action,
                                    DescribeRulesPackagesRequest * const q);
     DescribeRulesPackagesRequestPrivate(const DescribeRulesPackagesRequestPrivate &other,
                                    DescribeRulesPackagesRequest * const q);

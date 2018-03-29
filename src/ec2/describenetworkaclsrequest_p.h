@@ -31,7 +31,7 @@ class DescribeNetworkAclsRequest;
 class QTAWS_EXPORT DescribeNetworkAclsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeNetworkAclsRequestPrivate(const EC2::Action action,
+    DescribeNetworkAclsRequestPrivate(const EC2Request::Action action,
                                    DescribeNetworkAclsRequest * const q);
     DescribeNetworkAclsRequestPrivate(const DescribeNetworkAclsRequestPrivate &other,
                                    DescribeNetworkAclsRequest * const q);

@@ -31,7 +31,7 @@ class BatchPutAttributesRequest;
 class QTAWS_EXPORT BatchPutAttributesRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    BatchPutAttributesRequestPrivate(const SimpleDB::Action action,
+    BatchPutAttributesRequestPrivate(const SimpleDBRequest::Action action,
                                    BatchPutAttributesRequest * const q);
     BatchPutAttributesRequestPrivate(const BatchPutAttributesRequestPrivate &other,
                                    BatchPutAttributesRequest * const q);

@@ -31,7 +31,7 @@ class AddSourceIdentifierToSubscriptionRequest;
 class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
-    AddSourceIdentifierToSubscriptionRequestPrivate(const RDS::Action action,
+    AddSourceIdentifierToSubscriptionRequestPrivate(const RDSRequest::Action action,
                                    AddSourceIdentifierToSubscriptionRequest * const q);
     AddSourceIdentifierToSubscriptionRequestPrivate(const AddSourceIdentifierToSubscriptionRequestPrivate &other,
                                    AddSourceIdentifierToSubscriptionRequest * const q);

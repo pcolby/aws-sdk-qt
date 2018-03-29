@@ -31,7 +31,7 @@ class DeleteFleetRequest;
 class QTAWS_EXPORT DeleteFleetRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DeleteFleetRequestPrivate(const GameLift::Action action,
+    DeleteFleetRequestPrivate(const GameLiftRequest::Action action,
                                    DeleteFleetRequest * const q);
     DeleteFleetRequestPrivate(const DeleteFleetRequestPrivate &other,
                                    DeleteFleetRequest * const q);

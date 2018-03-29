@@ -31,7 +31,7 @@ class GetThirdPartyJobDetailsRequest;
 class QTAWS_EXPORT GetThirdPartyJobDetailsRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    GetThirdPartyJobDetailsRequestPrivate(const CodePipeline::Action action,
+    GetThirdPartyJobDetailsRequestPrivate(const CodePipelineRequest::Action action,
                                    GetThirdPartyJobDetailsRequest * const q);
     GetThirdPartyJobDetailsRequestPrivate(const GetThirdPartyJobDetailsRequestPrivate &other,
                                    GetThirdPartyJobDetailsRequest * const q);

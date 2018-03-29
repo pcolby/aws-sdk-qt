@@ -31,7 +31,7 @@ class DeleteIPSetRequest;
 class QTAWS_EXPORT DeleteIPSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DeleteIPSetRequestPrivate(const GuardDuty::Action action,
+    DeleteIPSetRequestPrivate(const GuardDutyRequest::Action action,
                                    DeleteIPSetRequest * const q);
     DeleteIPSetRequestPrivate(const DeleteIPSetRequestPrivate &other,
                                    DeleteIPSetRequest * const q);

@@ -31,7 +31,7 @@ class RegisterInstanceRequest;
 class QTAWS_EXPORT RegisterInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    RegisterInstanceRequestPrivate(const ServiceDiscovery::Action action,
+    RegisterInstanceRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    RegisterInstanceRequest * const q);
     RegisterInstanceRequestPrivate(const RegisterInstanceRequestPrivate &other,
                                    RegisterInstanceRequest * const q);

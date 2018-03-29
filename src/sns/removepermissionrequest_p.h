@@ -31,7 +31,7 @@ class RemovePermissionRequest;
 class QTAWS_EXPORT RemovePermissionRequestPrivate : public SNSRequestPrivate {
 
 public:
-    RemovePermissionRequestPrivate(const SNS::Action action,
+    RemovePermissionRequestPrivate(const SNSRequest::Action action,
                                    RemovePermissionRequest * const q);
     RemovePermissionRequestPrivate(const RemovePermissionRequestPrivate &other,
                                    RemovePermissionRequest * const q);

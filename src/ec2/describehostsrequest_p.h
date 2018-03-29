@@ -31,7 +31,7 @@ class DescribeHostsRequest;
 class QTAWS_EXPORT DescribeHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeHostsRequestPrivate(const EC2::Action action,
+    DescribeHostsRequestPrivate(const EC2Request::Action action,
                                    DescribeHostsRequest * const q);
     DescribeHostsRequestPrivate(const DescribeHostsRequestPrivate &other,
                                    DescribeHostsRequest * const q);

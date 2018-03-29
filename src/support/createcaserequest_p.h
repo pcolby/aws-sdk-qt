@@ -31,7 +31,7 @@ class CreateCaseRequest;
 class QTAWS_EXPORT CreateCaseRequestPrivate : public SupportRequestPrivate {
 
 public:
-    CreateCaseRequestPrivate(const Support::Action action,
+    CreateCaseRequestPrivate(const SupportRequest::Action action,
                                    CreateCaseRequest * const q);
     CreateCaseRequestPrivate(const CreateCaseRequestPrivate &other,
                                    CreateCaseRequest * const q);

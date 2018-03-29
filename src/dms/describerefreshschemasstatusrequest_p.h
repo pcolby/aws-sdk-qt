@@ -31,7 +31,7 @@ class DescribeRefreshSchemasStatusRequest;
 class QTAWS_EXPORT DescribeRefreshSchemasStatusRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeRefreshSchemasStatusRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeRefreshSchemasStatusRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeRefreshSchemasStatusRequest * const q);
     DescribeRefreshSchemasStatusRequestPrivate(const DescribeRefreshSchemasStatusRequestPrivate &other,
                                    DescribeRefreshSchemasStatusRequest * const q);

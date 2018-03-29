@@ -31,7 +31,7 @@ class CancelBundleTaskRequest;
 class QTAWS_EXPORT CancelBundleTaskRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CancelBundleTaskRequestPrivate(const EC2::Action action,
+    CancelBundleTaskRequestPrivate(const EC2Request::Action action,
                                    CancelBundleTaskRequest * const q);
     CancelBundleTaskRequestPrivate(const CancelBundleTaskRequestPrivate &other,
                                    CancelBundleTaskRequest * const q);

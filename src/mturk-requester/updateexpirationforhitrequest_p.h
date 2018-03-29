@@ -31,7 +31,7 @@ class UpdateExpirationForHITRequest;
 class QTAWS_EXPORT UpdateExpirationForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    UpdateExpirationForHITRequestPrivate(const MTurk::Action action,
+    UpdateExpirationForHITRequestPrivate(const MTurkRequest::Action action,
                                    UpdateExpirationForHITRequest * const q);
     UpdateExpirationForHITRequestPrivate(const UpdateExpirationForHITRequestPrivate &other,
                                    UpdateExpirationForHITRequest * const q);

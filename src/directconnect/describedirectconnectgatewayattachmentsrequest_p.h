@@ -31,7 +31,7 @@ class DescribeDirectConnectGatewayAttachmentsRequest;
 class QTAWS_EXPORT DescribeDirectConnectGatewayAttachmentsRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeDirectConnectGatewayAttachmentsRequestPrivate(const DirectConnect::Action action,
+    DescribeDirectConnectGatewayAttachmentsRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeDirectConnectGatewayAttachmentsRequest * const q);
     DescribeDirectConnectGatewayAttachmentsRequestPrivate(const DescribeDirectConnectGatewayAttachmentsRequestPrivate &other,
                                    DescribeDirectConnectGatewayAttachmentsRequest * const q);

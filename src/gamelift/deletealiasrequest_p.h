@@ -31,7 +31,7 @@ class DeleteAliasRequest;
 class QTAWS_EXPORT DeleteAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DeleteAliasRequestPrivate(const GameLift::Action action,
+    DeleteAliasRequestPrivate(const GameLiftRequest::Action action,
                                    DeleteAliasRequest * const q);
     DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
                                    DeleteAliasRequest * const q);

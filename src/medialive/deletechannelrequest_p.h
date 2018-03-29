@@ -31,7 +31,7 @@ class DeleteChannelRequest;
 class QTAWS_EXPORT DeleteChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    DeleteChannelRequestPrivate(const MediaLive::Action action,
+    DeleteChannelRequestPrivate(const MediaLiveRequest::Action action,
                                    DeleteChannelRequest * const q);
     DeleteChannelRequestPrivate(const DeleteChannelRequestPrivate &other,
                                    DeleteChannelRequest * const q);

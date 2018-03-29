@@ -31,7 +31,7 @@ class EnableVolumeIORequest;
 class QTAWS_EXPORT EnableVolumeIORequestPrivate : public EC2RequestPrivate {
 
 public:
-    EnableVolumeIORequestPrivate(const EC2::Action action,
+    EnableVolumeIORequestPrivate(const EC2Request::Action action,
                                    EnableVolumeIORequest * const q);
     EnableVolumeIORequestPrivate(const EnableVolumeIORequestPrivate &other,
                                    EnableVolumeIORequest * const q);

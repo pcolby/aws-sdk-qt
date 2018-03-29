@@ -31,7 +31,7 @@ class SearchProvisionedProductsRequest;
 class QTAWS_EXPORT SearchProvisionedProductsRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    SearchProvisionedProductsRequestPrivate(const ServiceCatalog::Action action,
+    SearchProvisionedProductsRequestPrivate(const ServiceCatalogRequest::Action action,
                                    SearchProvisionedProductsRequest * const q);
     SearchProvisionedProductsRequestPrivate(const SearchProvisionedProductsRequestPrivate &other,
                                    SearchProvisionedProductsRequest * const q);

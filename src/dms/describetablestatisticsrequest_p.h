@@ -31,7 +31,7 @@ class DescribeTableStatisticsRequest;
 class QTAWS_EXPORT DescribeTableStatisticsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeTableStatisticsRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeTableStatisticsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeTableStatisticsRequest * const q);
     DescribeTableStatisticsRequestPrivate(const DescribeTableStatisticsRequestPrivate &other,
                                    DescribeTableStatisticsRequest * const q);

@@ -31,7 +31,7 @@ class GetJobRunRequest;
 class QTAWS_EXPORT GetJobRunRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetJobRunRequestPrivate(const Glue::Action action,
+    GetJobRunRequestPrivate(const GlueRequest::Action action,
                                    GetJobRunRequest * const q);
     GetJobRunRequestPrivate(const GetJobRunRequestPrivate &other,
                                    GetJobRunRequest * const q);

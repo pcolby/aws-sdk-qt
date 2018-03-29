@@ -31,7 +31,7 @@ class ListConfigurationsRequest;
 class QTAWS_EXPORT ListConfigurationsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    ListConfigurationsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    ListConfigurationsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    ListConfigurationsRequest * const q);
     ListConfigurationsRequestPrivate(const ListConfigurationsRequestPrivate &other,
                                    ListConfigurationsRequest * const q);

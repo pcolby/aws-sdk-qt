@@ -31,7 +31,7 @@ class SetIdentityMailFromDomainRequest;
 class QTAWS_EXPORT SetIdentityMailFromDomainRequestPrivate : public SESRequestPrivate {
 
 public:
-    SetIdentityMailFromDomainRequestPrivate(const SES::Action action,
+    SetIdentityMailFromDomainRequestPrivate(const SESRequest::Action action,
                                    SetIdentityMailFromDomainRequest * const q);
     SetIdentityMailFromDomainRequestPrivate(const SetIdentityMailFromDomainRequestPrivate &other,
                                    SetIdentityMailFromDomainRequest * const q);

@@ -31,7 +31,7 @@ class GetSkillGroupRequest;
 class QTAWS_EXPORT GetSkillGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    GetSkillGroupRequestPrivate(const AlexaForBusiness::Action action,
+    GetSkillGroupRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    GetSkillGroupRequest * const q);
     GetSkillGroupRequestPrivate(const GetSkillGroupRequestPrivate &other,
                                    GetSkillGroupRequest * const q);

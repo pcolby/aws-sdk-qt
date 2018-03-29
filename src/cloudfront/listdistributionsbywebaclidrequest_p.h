@@ -31,7 +31,7 @@ class ListDistributionsByWebACLIdRequest;
 class QTAWS_EXPORT ListDistributionsByWebACLIdRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    ListDistributionsByWebACLIdRequestPrivate(const CloudFront::Action action,
+    ListDistributionsByWebACLIdRequestPrivate(const CloudFrontRequest::Action action,
                                    ListDistributionsByWebACLIdRequest * const q);
     ListDistributionsByWebACLIdRequestPrivate(const ListDistributionsByWebACLIdRequestPrivate &other,
                                    ListDistributionsByWebACLIdRequest * const q);

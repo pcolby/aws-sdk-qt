@@ -31,7 +31,7 @@ class RemoveResourcePermissionRequest;
 class QTAWS_EXPORT RemoveResourcePermissionRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    RemoveResourcePermissionRequestPrivate(const WorkDocs::Action action,
+    RemoveResourcePermissionRequestPrivate(const WorkDocsRequest::Action action,
                                    RemoveResourcePermissionRequest * const q);
     RemoveResourcePermissionRequestPrivate(const RemoveResourcePermissionRequestPrivate &other,
                                    RemoveResourcePermissionRequest * const q);

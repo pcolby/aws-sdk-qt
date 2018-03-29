@@ -31,7 +31,7 @@ class ListApplicationVersionsRequest;
 class QTAWS_EXPORT ListApplicationVersionsRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
-    ListApplicationVersionsRequestPrivate(const ServerlessApplicationRepository::Action action,
+    ListApplicationVersionsRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,
                                    ListApplicationVersionsRequest * const q);
     ListApplicationVersionsRequestPrivate(const ListApplicationVersionsRequestPrivate &other,
                                    ListApplicationVersionsRequest * const q);

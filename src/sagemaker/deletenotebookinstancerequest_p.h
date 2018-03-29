@@ -31,7 +31,7 @@ class DeleteNotebookInstanceRequest;
 class QTAWS_EXPORT DeleteNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    DeleteNotebookInstanceRequestPrivate(const SageMaker::Action action,
+    DeleteNotebookInstanceRequestPrivate(const SageMakerRequest::Action action,
                                    DeleteNotebookInstanceRequest * const q);
     DeleteNotebookInstanceRequestPrivate(const DeleteNotebookInstanceRequestPrivate &other,
                                    DeleteNotebookInstanceRequest * const q);

@@ -31,7 +31,7 @@ class DeleteVpnConnectionRouteRequest;
 class QTAWS_EXPORT DeleteVpnConnectionRouteRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteVpnConnectionRouteRequestPrivate(const EC2::Action action,
+    DeleteVpnConnectionRouteRequestPrivate(const EC2Request::Action action,
                                    DeleteVpnConnectionRouteRequest * const q);
     DeleteVpnConnectionRouteRequestPrivate(const DeleteVpnConnectionRouteRequestPrivate &other,
                                    DeleteVpnConnectionRouteRequest * const q);

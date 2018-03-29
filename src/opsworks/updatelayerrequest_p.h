@@ -31,7 +31,7 @@ class UpdateLayerRequest;
 class QTAWS_EXPORT UpdateLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateLayerRequestPrivate(const OpsWorks::Action action,
+    UpdateLayerRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateLayerRequest * const q);
     UpdateLayerRequestPrivate(const UpdateLayerRequestPrivate &other,
                                    UpdateLayerRequest * const q);

@@ -31,7 +31,7 @@ class DisableEnhancedMonitoringRequest;
 class QTAWS_EXPORT DisableEnhancedMonitoringRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    DisableEnhancedMonitoringRequestPrivate(const Kinesis::Action action,
+    DisableEnhancedMonitoringRequestPrivate(const KinesisRequest::Action action,
                                    DisableEnhancedMonitoringRequest * const q);
     DisableEnhancedMonitoringRequestPrivate(const DisableEnhancedMonitoringRequestPrivate &other,
                                    DisableEnhancedMonitoringRequest * const q);

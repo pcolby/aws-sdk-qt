@@ -31,7 +31,7 @@ class DetachTypedLinkRequest;
 class QTAWS_EXPORT DetachTypedLinkRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DetachTypedLinkRequestPrivate(const CloudDirectory::Action action,
+    DetachTypedLinkRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DetachTypedLinkRequest * const q);
     DetachTypedLinkRequestPrivate(const DetachTypedLinkRequestPrivate &other,
                                    DetachTypedLinkRequest * const q);

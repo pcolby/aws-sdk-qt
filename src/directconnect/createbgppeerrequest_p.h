@@ -31,7 +31,7 @@ class CreateBGPPeerRequest;
 class QTAWS_EXPORT CreateBGPPeerRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    CreateBGPPeerRequestPrivate(const DirectConnect::Action action,
+    CreateBGPPeerRequestPrivate(const DirectConnectRequest::Action action,
                                    CreateBGPPeerRequest * const q);
     CreateBGPPeerRequestPrivate(const CreateBGPPeerRequestPrivate &other,
                                    CreateBGPPeerRequest * const q);

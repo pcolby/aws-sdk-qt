@@ -31,7 +31,7 @@ class AddResourcePermissionsRequest;
 class QTAWS_EXPORT AddResourcePermissionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    AddResourcePermissionsRequestPrivate(const WorkDocs::Action action,
+    AddResourcePermissionsRequestPrivate(const WorkDocsRequest::Action action,
                                    AddResourcePermissionsRequest * const q);
     AddResourcePermissionsRequestPrivate(const AddResourcePermissionsRequestPrivate &other,
                                    AddResourcePermissionsRequest * const q);

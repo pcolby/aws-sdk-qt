@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const DirectConnect::Action action,
+    UntagResourceRequestPrivate(const DirectConnectRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

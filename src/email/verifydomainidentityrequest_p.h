@@ -31,7 +31,7 @@ class VerifyDomainIdentityRequest;
 class QTAWS_EXPORT VerifyDomainIdentityRequestPrivate : public SESRequestPrivate {
 
 public:
-    VerifyDomainIdentityRequestPrivate(const SES::Action action,
+    VerifyDomainIdentityRequestPrivate(const SESRequest::Action action,
                                    VerifyDomainIdentityRequest * const q);
     VerifyDomainIdentityRequestPrivate(const VerifyDomainIdentityRequestPrivate &other,
                                    VerifyDomainIdentityRequest * const q);

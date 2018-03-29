@@ -31,7 +31,7 @@ class BatchDeleteTableRequest;
 class QTAWS_EXPORT BatchDeleteTableRequestPrivate : public GlueRequestPrivate {
 
 public:
-    BatchDeleteTableRequestPrivate(const Glue::Action action,
+    BatchDeleteTableRequestPrivate(const GlueRequest::Action action,
                                    BatchDeleteTableRequest * const q);
     BatchDeleteTableRequestPrivate(const BatchDeleteTableRequestPrivate &other,
                                    BatchDeleteTableRequest * const q);

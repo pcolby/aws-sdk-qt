@@ -31,7 +31,7 @@ class UpdatePipelineRequest;
 class QTAWS_EXPORT UpdatePipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    UpdatePipelineRequestPrivate(const CodePipeline::Action action,
+    UpdatePipelineRequestPrivate(const CodePipelineRequest::Action action,
                                    UpdatePipelineRequest * const q);
     UpdatePipelineRequestPrivate(const UpdatePipelineRequestPrivate &other,
                                    UpdatePipelineRequest * const q);

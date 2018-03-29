@@ -31,7 +31,7 @@ class UpdateSAMLProviderRequest;
 class QTAWS_EXPORT UpdateSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateSAMLProviderRequestPrivate(const IAM::Action action,
+    UpdateSAMLProviderRequestPrivate(const IAMRequest::Action action,
                                    UpdateSAMLProviderRequest * const q);
     UpdateSAMLProviderRequestPrivate(const UpdateSAMLProviderRequestPrivate &other,
                                    UpdateSAMLProviderRequest * const q);

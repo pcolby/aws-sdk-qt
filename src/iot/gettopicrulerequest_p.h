@@ -31,7 +31,7 @@ class GetTopicRuleRequest;
 class QTAWS_EXPORT GetTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
-    GetTopicRuleRequestPrivate(const IoT::Action action,
+    GetTopicRuleRequestPrivate(const IoTRequest::Action action,
                                    GetTopicRuleRequest * const q);
     GetTopicRuleRequestPrivate(const GetTopicRuleRequestPrivate &other,
                                    GetTopicRuleRequest * const q);

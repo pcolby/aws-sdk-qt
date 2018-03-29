@@ -31,7 +31,7 @@ class DescribeAgentVersionsRequest;
 class QTAWS_EXPORT DescribeAgentVersionsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeAgentVersionsRequestPrivate(const OpsWorks::Action action,
+    DescribeAgentVersionsRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeAgentVersionsRequest * const q);
     DescribeAgentVersionsRequestPrivate(const DescribeAgentVersionsRequestPrivate &other,
                                    DescribeAgentVersionsRequest * const q);

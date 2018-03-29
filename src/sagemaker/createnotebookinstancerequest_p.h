@@ -31,7 +31,7 @@ class CreateNotebookInstanceRequest;
 class QTAWS_EXPORT CreateNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    CreateNotebookInstanceRequestPrivate(const SageMaker::Action action,
+    CreateNotebookInstanceRequestPrivate(const SageMakerRequest::Action action,
                                    CreateNotebookInstanceRequest * const q);
     CreateNotebookInstanceRequestPrivate(const CreateNotebookInstanceRequestPrivate &other,
                                    CreateNotebookInstanceRequest * const q);

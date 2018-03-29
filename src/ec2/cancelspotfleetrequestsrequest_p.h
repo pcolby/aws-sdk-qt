@@ -31,7 +31,7 @@ class CancelSpotFleetRequestsRequest;
 class QTAWS_EXPORT CancelSpotFleetRequestsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CancelSpotFleetRequestsRequestPrivate(const EC2::Action action,
+    CancelSpotFleetRequestsRequestPrivate(const EC2Request::Action action,
                                    CancelSpotFleetRequestsRequest * const q);
     CancelSpotFleetRequestsRequestPrivate(const CancelSpotFleetRequestsRequestPrivate &other,
                                    CancelSpotFleetRequestsRequest * const q);

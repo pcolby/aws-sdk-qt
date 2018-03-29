@@ -31,7 +31,7 @@ class DescribeEngineDefaultParametersRequest;
 class QTAWS_EXPORT DescribeEngineDefaultParametersRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    DescribeEngineDefaultParametersRequestPrivate(const ElastiCache::Action action,
+    DescribeEngineDefaultParametersRequestPrivate(const ElastiCacheRequest::Action action,
                                    DescribeEngineDefaultParametersRequest * const q);
     DescribeEngineDefaultParametersRequestPrivate(const DescribeEngineDefaultParametersRequestPrivate &other,
                                    DescribeEngineDefaultParametersRequest * const q);

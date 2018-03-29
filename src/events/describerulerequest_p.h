@@ -31,7 +31,7 @@ class DescribeRuleRequest;
 class QTAWS_EXPORT DescribeRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    DescribeRuleRequestPrivate(const CloudWatchEvents::Action action,
+    DescribeRuleRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    DescribeRuleRequest * const q);
     DescribeRuleRequestPrivate(const DescribeRuleRequestPrivate &other,
                                    DescribeRuleRequest * const q);

@@ -31,7 +31,7 @@ class ListAccountsRequest;
 class QTAWS_EXPORT ListAccountsRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListAccountsRequestPrivate(const Organizations::Action action,
+    ListAccountsRequestPrivate(const OrganizationsRequest::Action action,
                                    ListAccountsRequest * const q);
     ListAccountsRequestPrivate(const ListAccountsRequestPrivate &other,
                                    ListAccountsRequest * const q);

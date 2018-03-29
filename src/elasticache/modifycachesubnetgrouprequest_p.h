@@ -31,7 +31,7 @@ class ModifyCacheSubnetGroupRequest;
 class QTAWS_EXPORT ModifyCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ModifyCacheSubnetGroupRequestPrivate(const ElastiCache::Action action,
+    ModifyCacheSubnetGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    ModifyCacheSubnetGroupRequest * const q);
     ModifyCacheSubnetGroupRequestPrivate(const ModifyCacheSubnetGroupRequestPrivate &other,
                                    ModifyCacheSubnetGroupRequest * const q);

@@ -31,7 +31,7 @@ class DescribeValidDBInstanceModificationsRequest;
 class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeValidDBInstanceModificationsRequestPrivate(const RDS::Action action,
+    DescribeValidDBInstanceModificationsRequestPrivate(const RDSRequest::Action action,
                                    DescribeValidDBInstanceModificationsRequest * const q);
     DescribeValidDBInstanceModificationsRequestPrivate(const DescribeValidDBInstanceModificationsRequestPrivate &other,
                                    DescribeValidDBInstanceModificationsRequest * const q);

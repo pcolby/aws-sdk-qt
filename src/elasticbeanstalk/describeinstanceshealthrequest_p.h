@@ -31,7 +31,7 @@ class DescribeInstancesHealthRequest;
 class QTAWS_EXPORT DescribeInstancesHealthRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeInstancesHealthRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeInstancesHealthRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeInstancesHealthRequest * const q);
     DescribeInstancesHealthRequestPrivate(const DescribeInstancesHealthRequestPrivate &other,
                                    DescribeInstancesHealthRequest * const q);

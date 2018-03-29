@@ -31,7 +31,7 @@ class AdminLinkProviderForUserRequest;
 class QTAWS_EXPORT AdminLinkProviderForUserRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminLinkProviderForUserRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminLinkProviderForUserRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminLinkProviderForUserRequest * const q);
     AdminLinkProviderForUserRequestPrivate(const AdminLinkProviderForUserRequestPrivate &other,
                                    AdminLinkProviderForUserRequest * const q);

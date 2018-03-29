@@ -31,7 +31,7 @@ class CreateKeyPairRequest;
 class QTAWS_EXPORT CreateKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    CreateKeyPairRequestPrivate(const Lightsail::Action action,
+    CreateKeyPairRequestPrivate(const LightsailRequest::Action action,
                                    CreateKeyPairRequest * const q);
     CreateKeyPairRequestPrivate(const CreateKeyPairRequestPrivate &other,
                                    CreateKeyPairRequest * const q);

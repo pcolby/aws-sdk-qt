@@ -31,7 +31,7 @@ class CreateLabelsRequest;
 class QTAWS_EXPORT CreateLabelsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    CreateLabelsRequestPrivate(const WorkDocs::Action action,
+    CreateLabelsRequestPrivate(const WorkDocsRequest::Action action,
                                    CreateLabelsRequest * const q);
     CreateLabelsRequestPrivate(const CreateLabelsRequestPrivate &other,
                                    CreateLabelsRequest * const q);

@@ -31,7 +31,7 @@ class PutRuleRequest;
 class QTAWS_EXPORT PutRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    PutRuleRequestPrivate(const CloudWatchEvents::Action action,
+    PutRuleRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    PutRuleRequest * const q);
     PutRuleRequestPrivate(const PutRuleRequestPrivate &other,
                                    PutRuleRequest * const q);

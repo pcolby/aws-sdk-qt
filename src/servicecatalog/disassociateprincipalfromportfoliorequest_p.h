@@ -31,7 +31,7 @@ class DisassociatePrincipalFromPortfolioRequest;
 class QTAWS_EXPORT DisassociatePrincipalFromPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DisassociatePrincipalFromPortfolioRequestPrivate(const ServiceCatalog::Action action,
+    DisassociatePrincipalFromPortfolioRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DisassociatePrincipalFromPortfolioRequest * const q);
     DisassociatePrincipalFromPortfolioRequestPrivate(const DisassociatePrincipalFromPortfolioRequestPrivate &other,
                                    DisassociatePrincipalFromPortfolioRequest * const q);

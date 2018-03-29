@@ -31,7 +31,7 @@ class DetachElasticLoadBalancerRequest;
 class QTAWS_EXPORT DetachElasticLoadBalancerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DetachElasticLoadBalancerRequestPrivate(const OpsWorks::Action action,
+    DetachElasticLoadBalancerRequestPrivate(const OpsWorksRequest::Action action,
                                    DetachElasticLoadBalancerRequest * const q);
     DetachElasticLoadBalancerRequestPrivate(const DetachElasticLoadBalancerRequestPrivate &other,
                                    DetachElasticLoadBalancerRequest * const q);

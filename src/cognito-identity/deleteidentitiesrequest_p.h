@@ -31,7 +31,7 @@ class DeleteIdentitiesRequest;
 class QTAWS_EXPORT DeleteIdentitiesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    DeleteIdentitiesRequestPrivate(const CognitoIdentity::Action action,
+    DeleteIdentitiesRequestPrivate(const CognitoIdentityRequest::Action action,
                                    DeleteIdentitiesRequest * const q);
     DeleteIdentitiesRequestPrivate(const DeleteIdentitiesRequestPrivate &other,
                                    DeleteIdentitiesRequest * const q);

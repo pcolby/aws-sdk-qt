@@ -31,7 +31,7 @@ class DeleteAccountAliasRequest;
 class QTAWS_EXPORT DeleteAccountAliasRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteAccountAliasRequestPrivate(const IAM::Action action,
+    DeleteAccountAliasRequestPrivate(const IAMRequest::Action action,
                                    DeleteAccountAliasRequest * const q);
     DeleteAccountAliasRequestPrivate(const DeleteAccountAliasRequestPrivate &other,
                                    DeleteAccountAliasRequest * const q);

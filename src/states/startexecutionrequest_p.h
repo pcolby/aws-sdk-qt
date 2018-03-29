@@ -31,7 +31,7 @@ class StartExecutionRequest;
 class QTAWS_EXPORT StartExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
-    StartExecutionRequestPrivate(const SFN::Action action,
+    StartExecutionRequestPrivate(const SFNRequest::Action action,
                                    StartExecutionRequest * const q);
     StartExecutionRequestPrivate(const StartExecutionRequestPrivate &other,
                                    StartExecutionRequest * const q);

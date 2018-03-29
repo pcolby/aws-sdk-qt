@@ -31,7 +31,7 @@ class DeleteServerCertificateRequest;
 class QTAWS_EXPORT DeleteServerCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteServerCertificateRequestPrivate(const IAM::Action action,
+    DeleteServerCertificateRequestPrivate(const IAMRequest::Action action,
                                    DeleteServerCertificateRequest * const q);
     DeleteServerCertificateRequestPrivate(const DeleteServerCertificateRequestPrivate &other,
                                    DeleteServerCertificateRequest * const q);

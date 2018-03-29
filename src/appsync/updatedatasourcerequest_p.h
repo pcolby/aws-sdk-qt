@@ -31,7 +31,7 @@ class UpdateDataSourceRequest;
 class QTAWS_EXPORT UpdateDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    UpdateDataSourceRequestPrivate(const AppSync::Action action,
+    UpdateDataSourceRequestPrivate(const AppSyncRequest::Action action,
                                    UpdateDataSourceRequest * const q);
     UpdateDataSourceRequestPrivate(const UpdateDataSourceRequestPrivate &other,
                                    UpdateDataSourceRequest * const q);

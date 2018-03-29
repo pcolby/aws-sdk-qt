@@ -31,7 +31,7 @@ class DeleteTagsForDomainRequest;
 class QTAWS_EXPORT DeleteTagsForDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    DeleteTagsForDomainRequestPrivate(const Route53Domains::Action action,
+    DeleteTagsForDomainRequestPrivate(const Route53DomainsRequest::Action action,
                                    DeleteTagsForDomainRequest * const q);
     DeleteTagsForDomainRequestPrivate(const DeleteTagsForDomainRequestPrivate &other,
                                    DeleteTagsForDomainRequest * const q);

@@ -31,7 +31,7 @@ class StopAssessmentRunRequest;
 class QTAWS_EXPORT StopAssessmentRunRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    StopAssessmentRunRequestPrivate(const Inspector::Action action,
+    StopAssessmentRunRequestPrivate(const InspectorRequest::Action action,
                                    StopAssessmentRunRequest * const q);
     StopAssessmentRunRequestPrivate(const StopAssessmentRunRequestPrivate &other,
                                    StopAssessmentRunRequest * const q);

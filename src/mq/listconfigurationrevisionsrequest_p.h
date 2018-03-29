@@ -31,7 +31,7 @@ class ListConfigurationRevisionsRequest;
 class QTAWS_EXPORT ListConfigurationRevisionsRequestPrivate : public MQRequestPrivate {
 
 public:
-    ListConfigurationRevisionsRequestPrivate(const MQ::Action action,
+    ListConfigurationRevisionsRequestPrivate(const MQRequest::Action action,
                                    ListConfigurationRevisionsRequest * const q);
     ListConfigurationRevisionsRequestPrivate(const ListConfigurationRevisionsRequestPrivate &other,
                                    ListConfigurationRevisionsRequest * const q);

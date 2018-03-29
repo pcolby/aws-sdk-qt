@@ -31,7 +31,7 @@ class CancelSchemaExtensionRequest;
 class QTAWS_EXPORT CancelSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CancelSchemaExtensionRequestPrivate(const DirectoryService::Action action,
+    CancelSchemaExtensionRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CancelSchemaExtensionRequest * const q);
     CancelSchemaExtensionRequestPrivate(const CancelSchemaExtensionRequestPrivate &other,
                                    CancelSchemaExtensionRequest * const q);

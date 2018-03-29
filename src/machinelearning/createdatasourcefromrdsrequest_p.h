@@ -31,7 +31,7 @@ class CreateDataSourceFromRDSRequest;
 class QTAWS_EXPORT CreateDataSourceFromRDSRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    CreateDataSourceFromRDSRequestPrivate(const MachineLearning::Action action,
+    CreateDataSourceFromRDSRequestPrivate(const MachineLearningRequest::Action action,
                                    CreateDataSourceFromRDSRequest * const q);
     CreateDataSourceFromRDSRequestPrivate(const CreateDataSourceFromRDSRequestPrivate &other,
                                    CreateDataSourceFromRDSRequest * const q);

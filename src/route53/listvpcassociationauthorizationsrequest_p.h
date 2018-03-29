@@ -31,7 +31,7 @@ class ListVPCAssociationAuthorizationsRequest;
 class QTAWS_EXPORT ListVPCAssociationAuthorizationsRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ListVPCAssociationAuthorizationsRequestPrivate(const Route53::Action action,
+    ListVPCAssociationAuthorizationsRequestPrivate(const Route53Request::Action action,
                                    ListVPCAssociationAuthorizationsRequest * const q);
     ListVPCAssociationAuthorizationsRequestPrivate(const ListVPCAssociationAuthorizationsRequestPrivate &other,
                                    ListVPCAssociationAuthorizationsRequest * const q);

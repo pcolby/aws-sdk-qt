@@ -31,7 +31,7 @@ class DisassociateProductFromPortfolioRequest;
 class QTAWS_EXPORT DisassociateProductFromPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DisassociateProductFromPortfolioRequestPrivate(const ServiceCatalog::Action action,
+    DisassociateProductFromPortfolioRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DisassociateProductFromPortfolioRequest * const q);
     DisassociateProductFromPortfolioRequestPrivate(const DisassociateProductFromPortfolioRequestPrivate &other,
                                    DisassociateProductFromPortfolioRequest * const q);

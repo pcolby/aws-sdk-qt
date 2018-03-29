@@ -31,7 +31,7 @@ class DisassociateKmsKeyRequest;
 class QTAWS_EXPORT DisassociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DisassociateKmsKeyRequestPrivate(const CloudWatchLogs::Action action,
+    DisassociateKmsKeyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DisassociateKmsKeyRequest * const q);
     DisassociateKmsKeyRequestPrivate(const DisassociateKmsKeyRequestPrivate &other,
                                    DisassociateKmsKeyRequest * const q);

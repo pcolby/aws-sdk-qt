@@ -31,7 +31,7 @@ class SubmitContainerStateChangeRequest;
 class QTAWS_EXPORT SubmitContainerStateChangeRequestPrivate : public ECSRequestPrivate {
 
 public:
-    SubmitContainerStateChangeRequestPrivate(const ECS::Action action,
+    SubmitContainerStateChangeRequestPrivate(const ECSRequest::Action action,
                                    SubmitContainerStateChangeRequest * const q);
     SubmitContainerStateChangeRequestPrivate(const SubmitContainerStateChangeRequestPrivate &other,
                                    SubmitContainerStateChangeRequest * const q);

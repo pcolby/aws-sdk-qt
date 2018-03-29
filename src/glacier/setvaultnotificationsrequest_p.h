@@ -31,7 +31,7 @@ class SetVaultNotificationsRequest;
 class QTAWS_EXPORT SetVaultNotificationsRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    SetVaultNotificationsRequestPrivate(const Glacier::Action action,
+    SetVaultNotificationsRequestPrivate(const GlacierRequest::Action action,
                                    SetVaultNotificationsRequest * const q);
     SetVaultNotificationsRequestPrivate(const SetVaultNotificationsRequestPrivate &other,
                                    SetVaultNotificationsRequest * const q);

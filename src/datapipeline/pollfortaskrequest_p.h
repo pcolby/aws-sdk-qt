@@ -31,7 +31,7 @@ class PollForTaskRequest;
 class QTAWS_EXPORT PollForTaskRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    PollForTaskRequestPrivate(const DataPipeline::Action action,
+    PollForTaskRequestPrivate(const DataPipelineRequest::Action action,
                                    PollForTaskRequest * const q);
     PollForTaskRequestPrivate(const PollForTaskRequestPrivate &other,
                                    PollForTaskRequest * const q);

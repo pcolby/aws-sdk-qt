@@ -31,7 +31,7 @@ class DeleteMessageRequest;
 class QTAWS_EXPORT DeleteMessageRequestPrivate : public SQSRequestPrivate {
 
 public:
-    DeleteMessageRequestPrivate(const SQS::Action action,
+    DeleteMessageRequestPrivate(const SQSRequest::Action action,
                                    DeleteMessageRequest * const q);
     DeleteMessageRequestPrivate(const DeleteMessageRequestPrivate &other,
                                    DeleteMessageRequest * const q);

@@ -31,7 +31,7 @@ class ListAssociationVersionsRequest;
 class QTAWS_EXPORT ListAssociationVersionsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListAssociationVersionsRequestPrivate(const SSM::Action action,
+    ListAssociationVersionsRequestPrivate(const SSMRequest::Action action,
                                    ListAssociationVersionsRequest * const q);
     ListAssociationVersionsRequestPrivate(const ListAssociationVersionsRequestPrivate &other,
                                    ListAssociationVersionsRequest * const q);

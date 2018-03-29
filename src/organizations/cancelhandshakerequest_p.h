@@ -31,7 +31,7 @@ class CancelHandshakeRequest;
 class QTAWS_EXPORT CancelHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    CancelHandshakeRequestPrivate(const Organizations::Action action,
+    CancelHandshakeRequestPrivate(const OrganizationsRequest::Action action,
                                    CancelHandshakeRequest * const q);
     CancelHandshakeRequestPrivate(const CancelHandshakeRequestPrivate &other,
                                    CancelHandshakeRequest * const q);

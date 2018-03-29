@@ -31,7 +31,7 @@ class DescribeTimeBasedAutoScalingRequest;
 class QTAWS_EXPORT DescribeTimeBasedAutoScalingRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeTimeBasedAutoScalingRequestPrivate(const OpsWorks::Action action,
+    DescribeTimeBasedAutoScalingRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeTimeBasedAutoScalingRequest * const q);
     DescribeTimeBasedAutoScalingRequestPrivate(const DescribeTimeBasedAutoScalingRequestPrivate &other,
                                    DescribeTimeBasedAutoScalingRequest * const q);

@@ -31,7 +31,7 @@ class GetActivityTaskRequest;
 class QTAWS_EXPORT GetActivityTaskRequestPrivate : public SFNRequestPrivate {
 
 public:
-    GetActivityTaskRequestPrivate(const SFN::Action action,
+    GetActivityTaskRequestPrivate(const SFNRequest::Action action,
                                    GetActivityTaskRequest * const q);
     GetActivityTaskRequestPrivate(const GetActivityTaskRequestPrivate &other,
                                    GetActivityTaskRequest * const q);

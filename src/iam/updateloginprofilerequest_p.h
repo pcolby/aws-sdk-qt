@@ -31,7 +31,7 @@ class UpdateLoginProfileRequest;
 class QTAWS_EXPORT UpdateLoginProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateLoginProfileRequestPrivate(const IAM::Action action,
+    UpdateLoginProfileRequestPrivate(const IAMRequest::Action action,
                                    UpdateLoginProfileRequest * const q);
     UpdateLoginProfileRequestPrivate(const UpdateLoginProfileRequestPrivate &other,
                                    UpdateLoginProfileRequest * const q);

@@ -31,7 +31,7 @@ class UpdateDeploymentGroupRequest;
 class QTAWS_EXPORT UpdateDeploymentGroupRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    UpdateDeploymentGroupRequestPrivate(const CodeDeploy::Action action,
+    UpdateDeploymentGroupRequestPrivate(const CodeDeployRequest::Action action,
                                    UpdateDeploymentGroupRequest * const q);
     UpdateDeploymentGroupRequestPrivate(const UpdateDeploymentGroupRequestPrivate &other,
                                    UpdateDeploymentGroupRequest * const q);

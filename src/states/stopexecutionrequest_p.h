@@ -31,7 +31,7 @@ class StopExecutionRequest;
 class QTAWS_EXPORT StopExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
-    StopExecutionRequestPrivate(const SFN::Action action,
+    StopExecutionRequestPrivate(const SFNRequest::Action action,
                                    StopExecutionRequest * const q);
     StopExecutionRequestPrivate(const StopExecutionRequestPrivate &other,
                                    StopExecutionRequest * const q);

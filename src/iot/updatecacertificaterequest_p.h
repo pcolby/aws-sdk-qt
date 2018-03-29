@@ -31,7 +31,7 @@ class UpdateCACertificateRequest;
 class QTAWS_EXPORT UpdateCACertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateCACertificateRequestPrivate(const IoT::Action action,
+    UpdateCACertificateRequestPrivate(const IoTRequest::Action action,
                                    UpdateCACertificateRequest * const q);
     UpdateCACertificateRequestPrivate(const UpdateCACertificateRequestPrivate &other,
                                    UpdateCACertificateRequest * const q);

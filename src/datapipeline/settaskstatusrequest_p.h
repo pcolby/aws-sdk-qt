@@ -31,7 +31,7 @@ class SetTaskStatusRequest;
 class QTAWS_EXPORT SetTaskStatusRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    SetTaskStatusRequestPrivate(const DataPipeline::Action action,
+    SetTaskStatusRequestPrivate(const DataPipelineRequest::Action action,
                                    SetTaskStatusRequest * const q);
     SetTaskStatusRequestPrivate(const SetTaskStatusRequestPrivate &other,
                                    SetTaskStatusRequest * const q);

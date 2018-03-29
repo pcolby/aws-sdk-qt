@@ -31,7 +31,7 @@ class PurchaseReservedNodeOfferingRequest;
 class QTAWS_EXPORT PurchaseReservedNodeOfferingRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    PurchaseReservedNodeOfferingRequestPrivate(const Redshift::Action action,
+    PurchaseReservedNodeOfferingRequestPrivate(const RedshiftRequest::Action action,
                                    PurchaseReservedNodeOfferingRequest * const q);
     PurchaseReservedNodeOfferingRequestPrivate(const PurchaseReservedNodeOfferingRequestPrivate &other,
                                    PurchaseReservedNodeOfferingRequest * const q);

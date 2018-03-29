@@ -31,7 +31,7 @@ class DetachInstancesFromLoadBalancerRequest;
 class QTAWS_EXPORT DetachInstancesFromLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DetachInstancesFromLoadBalancerRequestPrivate(const Lightsail::Action action,
+    DetachInstancesFromLoadBalancerRequestPrivate(const LightsailRequest::Action action,
                                    DetachInstancesFromLoadBalancerRequest * const q);
     DetachInstancesFromLoadBalancerRequestPrivate(const DetachInstancesFromLoadBalancerRequestPrivate &other,
                                    DetachInstancesFromLoadBalancerRequest * const q);

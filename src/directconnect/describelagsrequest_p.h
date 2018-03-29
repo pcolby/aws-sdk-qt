@@ -31,7 +31,7 @@ class DescribeLagsRequest;
 class QTAWS_EXPORT DescribeLagsRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeLagsRequestPrivate(const DirectConnect::Action action,
+    DescribeLagsRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeLagsRequest * const q);
     DescribeLagsRequestPrivate(const DescribeLagsRequestPrivate &other,
                                    DescribeLagsRequest * const q);

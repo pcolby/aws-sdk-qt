@@ -31,7 +31,7 @@ class CreateNetworkInterfaceRequest;
 class QTAWS_EXPORT CreateNetworkInterfaceRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateNetworkInterfaceRequestPrivate(const EC2::Action action,
+    CreateNetworkInterfaceRequestPrivate(const EC2Request::Action action,
                                    CreateNetworkInterfaceRequest * const q);
     CreateNetworkInterfaceRequestPrivate(const CreateNetworkInterfaceRequestPrivate &other,
                                    CreateNetworkInterfaceRequest * const q);

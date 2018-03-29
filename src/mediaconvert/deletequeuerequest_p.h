@@ -31,7 +31,7 @@ class DeleteQueueRequest;
 class QTAWS_EXPORT DeleteQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    DeleteQueueRequestPrivate(const MediaConvert::Action action,
+    DeleteQueueRequestPrivate(const MediaConvertRequest::Action action,
                                    DeleteQueueRequest * const q);
     DeleteQueueRequestPrivate(const DeleteQueueRequestPrivate &other,
                                    DeleteQueueRequest * const q);

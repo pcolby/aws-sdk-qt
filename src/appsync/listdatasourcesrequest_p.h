@@ -31,7 +31,7 @@ class ListDataSourcesRequest;
 class QTAWS_EXPORT ListDataSourcesRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    ListDataSourcesRequestPrivate(const AppSync::Action action,
+    ListDataSourcesRequestPrivate(const AppSyncRequest::Action action,
                                    ListDataSourcesRequest * const q);
     ListDataSourcesRequestPrivate(const ListDataSourcesRequestPrivate &other,
                                    ListDataSourcesRequest * const q);

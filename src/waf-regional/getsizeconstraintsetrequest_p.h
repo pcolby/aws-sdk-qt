@@ -31,7 +31,7 @@ class GetSizeConstraintSetRequest;
 class QTAWS_EXPORT GetSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetSizeConstraintSetRequestPrivate(const WAFRegional::Action action,
+    GetSizeConstraintSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetSizeConstraintSetRequest * const q);
     GetSizeConstraintSetRequestPrivate(const GetSizeConstraintSetRequestPrivate &other,
                                    GetSizeConstraintSetRequest * const q);

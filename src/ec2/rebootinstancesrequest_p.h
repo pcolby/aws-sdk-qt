@@ -31,7 +31,7 @@ class RebootInstancesRequest;
 class QTAWS_EXPORT RebootInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RebootInstancesRequestPrivate(const EC2::Action action,
+    RebootInstancesRequestPrivate(const EC2Request::Action action,
                                    RebootInstancesRequest * const q);
     RebootInstancesRequestPrivate(const RebootInstancesRequestPrivate &other,
                                    RebootInstancesRequest * const q);

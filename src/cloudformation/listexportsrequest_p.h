@@ -31,7 +31,7 @@ class ListExportsRequest;
 class QTAWS_EXPORT ListExportsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    ListExportsRequestPrivate(const CloudFormation::Action action,
+    ListExportsRequestPrivate(const CloudFormationRequest::Action action,
                                    ListExportsRequest * const q);
     ListExportsRequestPrivate(const ListExportsRequestPrivate &other,
                                    ListExportsRequest * const q);

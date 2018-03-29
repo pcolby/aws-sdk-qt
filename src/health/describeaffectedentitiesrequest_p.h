@@ -31,7 +31,7 @@ class DescribeAffectedEntitiesRequest;
 class QTAWS_EXPORT DescribeAffectedEntitiesRequestPrivate : public HealthRequestPrivate {
 
 public:
-    DescribeAffectedEntitiesRequestPrivate(const Health::Action action,
+    DescribeAffectedEntitiesRequestPrivate(const HealthRequest::Action action,
                                    DescribeAffectedEntitiesRequest * const q);
     DescribeAffectedEntitiesRequestPrivate(const DescribeAffectedEntitiesRequestPrivate &other,
                                    DescribeAffectedEntitiesRequest * const q);

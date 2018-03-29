@@ -31,7 +31,7 @@ class GetEmailChannelRequest;
 class QTAWS_EXPORT GetEmailChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetEmailChannelRequestPrivate(const Pinpoint::Action action,
+    GetEmailChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetEmailChannelRequest * const q);
     GetEmailChannelRequestPrivate(const GetEmailChannelRequestPrivate &other,
                                    GetEmailChannelRequest * const q);

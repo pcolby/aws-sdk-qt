@@ -31,7 +31,7 @@ class DescribeTargetHealthRequest;
 class QTAWS_EXPORT DescribeTargetHealthRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    DescribeTargetHealthRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    DescribeTargetHealthRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    DescribeTargetHealthRequest * const q);
     DescribeTargetHealthRequestPrivate(const DescribeTargetHealthRequestPrivate &other,
                                    DescribeTargetHealthRequest * const q);

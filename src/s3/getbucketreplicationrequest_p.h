@@ -31,7 +31,7 @@ class GetBucketReplicationRequest;
 class QTAWS_EXPORT GetBucketReplicationRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketReplicationRequestPrivate(const S3::Action action,
+    GetBucketReplicationRequestPrivate(const S3Request::Action action,
                                    GetBucketReplicationRequest * const q);
     GetBucketReplicationRequestPrivate(const GetBucketReplicationRequestPrivate &other,
                                    GetBucketReplicationRequest * const q);

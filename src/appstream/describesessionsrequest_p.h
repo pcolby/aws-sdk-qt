@@ -31,7 +31,7 @@ class DescribeSessionsRequest;
 class QTAWS_EXPORT DescribeSessionsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DescribeSessionsRequestPrivate(const AppStream::Action action,
+    DescribeSessionsRequestPrivate(const AppStreamRequest::Action action,
                                    DescribeSessionsRequest * const q);
     DescribeSessionsRequestPrivate(const DescribeSessionsRequestPrivate &other,
                                    DescribeSessionsRequest * const q);

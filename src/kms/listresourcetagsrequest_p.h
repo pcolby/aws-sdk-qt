@@ -31,7 +31,7 @@ class ListResourceTagsRequest;
 class QTAWS_EXPORT ListResourceTagsRequestPrivate : public KMSRequestPrivate {
 
 public:
-    ListResourceTagsRequestPrivate(const KMS::Action action,
+    ListResourceTagsRequestPrivate(const KMSRequest::Action action,
                                    ListResourceTagsRequest * const q);
     ListResourceTagsRequestPrivate(const ListResourceTagsRequestPrivate &other,
                                    ListResourceTagsRequest * const q);

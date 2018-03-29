@@ -31,7 +31,7 @@ class DescribeNetworkInterfacePermissionsRequest;
 class QTAWS_EXPORT DescribeNetworkInterfacePermissionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeNetworkInterfacePermissionsRequestPrivate(const EC2::Action action,
+    DescribeNetworkInterfacePermissionsRequestPrivate(const EC2Request::Action action,
                                    DescribeNetworkInterfacePermissionsRequest * const q);
     DescribeNetworkInterfacePermissionsRequestPrivate(const DescribeNetworkInterfacePermissionsRequestPrivate &other,
                                    DescribeNetworkInterfacePermissionsRequest * const q);

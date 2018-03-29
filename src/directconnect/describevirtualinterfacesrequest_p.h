@@ -31,7 +31,7 @@ class DescribeVirtualInterfacesRequest;
 class QTAWS_EXPORT DescribeVirtualInterfacesRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeVirtualInterfacesRequestPrivate(const DirectConnect::Action action,
+    DescribeVirtualInterfacesRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeVirtualInterfacesRequest * const q);
     DescribeVirtualInterfacesRequestPrivate(const DescribeVirtualInterfacesRequestPrivate &other,
                                    DescribeVirtualInterfacesRequest * const q);

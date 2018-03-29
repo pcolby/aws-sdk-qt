@@ -31,7 +31,7 @@ class DeleteVPCAssociationAuthorizationRequest;
 class QTAWS_EXPORT DeleteVPCAssociationAuthorizationRequestPrivate : public Route53RequestPrivate {
 
 public:
-    DeleteVPCAssociationAuthorizationRequestPrivate(const Route53::Action action,
+    DeleteVPCAssociationAuthorizationRequestPrivate(const Route53Request::Action action,
                                    DeleteVPCAssociationAuthorizationRequest * const q);
     DeleteVPCAssociationAuthorizationRequestPrivate(const DeleteVPCAssociationAuthorizationRequestPrivate &other,
                                    DeleteVPCAssociationAuthorizationRequest * const q);

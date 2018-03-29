@@ -31,7 +31,7 @@ class CreateDomainRequest;
 class QTAWS_EXPORT CreateDomainRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    CreateDomainRequestPrivate(const SimpleDB::Action action,
+    CreateDomainRequestPrivate(const SimpleDBRequest::Action action,
                                    CreateDomainRequest * const q);
     CreateDomainRequestPrivate(const CreateDomainRequestPrivate &other,
                                    CreateDomainRequest * const q);

@@ -31,7 +31,7 @@ class UpdateNotificationSettingsRequest;
 class QTAWS_EXPORT UpdateNotificationSettingsRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    UpdateNotificationSettingsRequestPrivate(const MTurk::Action action,
+    UpdateNotificationSettingsRequestPrivate(const MTurkRequest::Action action,
                                    UpdateNotificationSettingsRequest * const q);
     UpdateNotificationSettingsRequestPrivate(const UpdateNotificationSettingsRequestPrivate &other,
                                    UpdateNotificationSettingsRequest * const q);

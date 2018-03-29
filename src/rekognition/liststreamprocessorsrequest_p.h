@@ -31,7 +31,7 @@ class ListStreamProcessorsRequest;
 class QTAWS_EXPORT ListStreamProcessorsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    ListStreamProcessorsRequestPrivate(const Rekognition::Action action,
+    ListStreamProcessorsRequestPrivate(const RekognitionRequest::Action action,
                                    ListStreamProcessorsRequest * const q);
     ListStreamProcessorsRequestPrivate(const ListStreamProcessorsRequestPrivate &other,
                                    ListStreamProcessorsRequest * const q);

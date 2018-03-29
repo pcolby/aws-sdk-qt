@@ -31,7 +31,7 @@ class DescribeStacksRequest;
 class QTAWS_EXPORT DescribeStacksRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DescribeStacksRequestPrivate(const AppStream::Action action,
+    DescribeStacksRequestPrivate(const AppStreamRequest::Action action,
                                    DescribeStacksRequest * const q);
     DescribeStacksRequestPrivate(const DescribeStacksRequestPrivate &other,
                                    DescribeStacksRequest * const q);

@@ -31,7 +31,7 @@ class RefreshTrustedAdvisorCheckRequest;
 class QTAWS_EXPORT RefreshTrustedAdvisorCheckRequestPrivate : public SupportRequestPrivate {
 
 public:
-    RefreshTrustedAdvisorCheckRequestPrivate(const Support::Action action,
+    RefreshTrustedAdvisorCheckRequestPrivate(const SupportRequest::Action action,
                                    RefreshTrustedAdvisorCheckRequest * const q);
     RefreshTrustedAdvisorCheckRequestPrivate(const RefreshTrustedAdvisorCheckRequestPrivate &other,
                                    RefreshTrustedAdvisorCheckRequest * const q);

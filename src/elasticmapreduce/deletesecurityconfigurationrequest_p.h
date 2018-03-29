@@ -31,7 +31,7 @@ class DeleteSecurityConfigurationRequest;
 class QTAWS_EXPORT DeleteSecurityConfigurationRequestPrivate : public EMRRequestPrivate {
 
 public:
-    DeleteSecurityConfigurationRequestPrivate(const EMR::Action action,
+    DeleteSecurityConfigurationRequestPrivate(const EMRRequest::Action action,
                                    DeleteSecurityConfigurationRequest * const q);
     DeleteSecurityConfigurationRequestPrivate(const DeleteSecurityConfigurationRequestPrivate &other,
                                    DeleteSecurityConfigurationRequest * const q);

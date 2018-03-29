@@ -31,7 +31,7 @@ class IncreaseStreamRetentionPeriodRequest;
 class QTAWS_EXPORT IncreaseStreamRetentionPeriodRequestPrivate : public KinesisRequestPrivate {
 
 public:
-    IncreaseStreamRetentionPeriodRequestPrivate(const Kinesis::Action action,
+    IncreaseStreamRetentionPeriodRequestPrivate(const KinesisRequest::Action action,
                                    IncreaseStreamRetentionPeriodRequest * const q);
     IncreaseStreamRetentionPeriodRequestPrivate(const IncreaseStreamRetentionPeriodRequestPrivate &other,
                                    IncreaseStreamRetentionPeriodRequest * const q);

@@ -31,7 +31,7 @@ class CreateCustomVerificationEmailTemplateRequest;
 class QTAWS_EXPORT CreateCustomVerificationEmailTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
-    CreateCustomVerificationEmailTemplateRequestPrivate(const SES::Action action,
+    CreateCustomVerificationEmailTemplateRequestPrivate(const SESRequest::Action action,
                                    CreateCustomVerificationEmailTemplateRequest * const q);
     CreateCustomVerificationEmailTemplateRequestPrivate(const CreateCustomVerificationEmailTemplateRequestPrivate &other,
                                    CreateCustomVerificationEmailTemplateRequest * const q);

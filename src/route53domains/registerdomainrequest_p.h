@@ -31,7 +31,7 @@ class RegisterDomainRequest;
 class QTAWS_EXPORT RegisterDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    RegisterDomainRequestPrivate(const Route53Domains::Action action,
+    RegisterDomainRequestPrivate(const Route53DomainsRequest::Action action,
                                    RegisterDomainRequest * const q);
     RegisterDomainRequestPrivate(const RegisterDomainRequestPrivate &other,
                                    RegisterDomainRequest * const q);

@@ -31,7 +31,7 @@ class UpdateApplicationResourceLifecycleRequest;
 class QTAWS_EXPORT UpdateApplicationResourceLifecycleRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    UpdateApplicationResourceLifecycleRequestPrivate(const ElasticBeanstalk::Action action,
+    UpdateApplicationResourceLifecycleRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    UpdateApplicationResourceLifecycleRequest * const q);
     UpdateApplicationResourceLifecycleRequestPrivate(const UpdateApplicationResourceLifecycleRequestPrivate &other,
                                    UpdateApplicationResourceLifecycleRequest * const q);

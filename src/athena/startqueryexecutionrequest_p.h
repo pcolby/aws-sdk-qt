@@ -31,7 +31,7 @@ class StartQueryExecutionRequest;
 class QTAWS_EXPORT StartQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
-    StartQueryExecutionRequestPrivate(const Athena::Action action,
+    StartQueryExecutionRequestPrivate(const AthenaRequest::Action action,
                                    StartQueryExecutionRequest * const q);
     StartQueryExecutionRequestPrivate(const StartQueryExecutionRequestPrivate &other,
                                    StartQueryExecutionRequest * const q);

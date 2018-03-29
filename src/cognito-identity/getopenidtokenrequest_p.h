@@ -31,7 +31,7 @@ class GetOpenIdTokenRequest;
 class QTAWS_EXPORT GetOpenIdTokenRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    GetOpenIdTokenRequestPrivate(const CognitoIdentity::Action action,
+    GetOpenIdTokenRequestPrivate(const CognitoIdentityRequest::Action action,
                                    GetOpenIdTokenRequest * const q);
     GetOpenIdTokenRequestPrivate(const GetOpenIdTokenRequestPrivate &other,
                                    GetOpenIdTokenRequest * const q);

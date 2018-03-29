@@ -31,7 +31,7 @@ class ListTypesRequest;
 class QTAWS_EXPORT ListTypesRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    ListTypesRequestPrivate(const AppSync::Action action,
+    ListTypesRequestPrivate(const AppSyncRequest::Action action,
                                    ListTypesRequest * const q);
     ListTypesRequestPrivate(const ListTypesRequestPrivate &other,
                                    ListTypesRequest * const q);

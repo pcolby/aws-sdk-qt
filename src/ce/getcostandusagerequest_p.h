@@ -31,7 +31,7 @@ class GetCostAndUsageRequest;
 class QTAWS_EXPORT GetCostAndUsageRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
-    GetCostAndUsageRequestPrivate(const CostExplorer::Action action,
+    GetCostAndUsageRequestPrivate(const CostExplorerRequest::Action action,
                                    GetCostAndUsageRequest * const q);
     GetCostAndUsageRequestPrivate(const GetCostAndUsageRequestPrivate &other,
                                    GetCostAndUsageRequest * const q);

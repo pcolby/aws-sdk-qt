@@ -31,7 +31,7 @@ class GetDocumentPathRequest;
 class QTAWS_EXPORT GetDocumentPathRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    GetDocumentPathRequestPrivate(const WorkDocs::Action action,
+    GetDocumentPathRequestPrivate(const WorkDocsRequest::Action action,
                                    GetDocumentPathRequest * const q);
     GetDocumentPathRequestPrivate(const GetDocumentPathRequestPrivate &other,
                                    GetDocumentPathRequest * const q);

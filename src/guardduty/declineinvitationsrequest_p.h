@@ -31,7 +31,7 @@ class DeclineInvitationsRequest;
 class QTAWS_EXPORT DeclineInvitationsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DeclineInvitationsRequestPrivate(const GuardDuty::Action action,
+    DeclineInvitationsRequestPrivate(const GuardDutyRequest::Action action,
                                    DeclineInvitationsRequest * const q);
     DeclineInvitationsRequestPrivate(const DeclineInvitationsRequestPrivate &other,
                                    DeclineInvitationsRequest * const q);

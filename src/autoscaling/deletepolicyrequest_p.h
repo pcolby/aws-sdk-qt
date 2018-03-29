@@ -31,7 +31,7 @@ class DeletePolicyRequest;
 class QTAWS_EXPORT DeletePolicyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DeletePolicyRequestPrivate(const AutoScaling::Action action,
+    DeletePolicyRequestPrivate(const AutoScalingRequest::Action action,
                                    DeletePolicyRequest * const q);
     DeletePolicyRequestPrivate(const DeletePolicyRequestPrivate &other,
                                    DeletePolicyRequest * const q);

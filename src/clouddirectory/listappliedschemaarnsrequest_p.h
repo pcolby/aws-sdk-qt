@@ -31,7 +31,7 @@ class ListAppliedSchemaArnsRequest;
 class QTAWS_EXPORT ListAppliedSchemaArnsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListAppliedSchemaArnsRequestPrivate(const CloudDirectory::Action action,
+    ListAppliedSchemaArnsRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListAppliedSchemaArnsRequest * const q);
     ListAppliedSchemaArnsRequestPrivate(const ListAppliedSchemaArnsRequestPrivate &other,
                                    ListAppliedSchemaArnsRequest * const q);

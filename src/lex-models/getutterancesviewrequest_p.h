@@ -31,7 +31,7 @@ class GetUtterancesViewRequest;
 class QTAWS_EXPORT GetUtterancesViewRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    GetUtterancesViewRequestPrivate(const LexModelBuildingService::Action action,
+    GetUtterancesViewRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    GetUtterancesViewRequest * const q);
     GetUtterancesViewRequestPrivate(const GetUtterancesViewRequestPrivate &other,
                                    GetUtterancesViewRequest * const q);

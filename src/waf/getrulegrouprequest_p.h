@@ -31,7 +31,7 @@ class GetRuleGroupRequest;
 class QTAWS_EXPORT GetRuleGroupRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetRuleGroupRequestPrivate(const WAF::Action action,
+    GetRuleGroupRequestPrivate(const WAFRequest::Action action,
                                    GetRuleGroupRequest * const q);
     GetRuleGroupRequestPrivate(const GetRuleGroupRequestPrivate &other,
                                    GetRuleGroupRequest * const q);

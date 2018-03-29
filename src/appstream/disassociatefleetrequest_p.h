@@ -31,7 +31,7 @@ class DisassociateFleetRequest;
 class QTAWS_EXPORT DisassociateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DisassociateFleetRequestPrivate(const AppStream::Action action,
+    DisassociateFleetRequestPrivate(const AppStreamRequest::Action action,
                                    DisassociateFleetRequest * const q);
     DisassociateFleetRequestPrivate(const DisassociateFleetRequestPrivate &other,
                                    DisassociateFleetRequest * const q);

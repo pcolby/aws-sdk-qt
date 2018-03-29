@@ -31,7 +31,7 @@ class DeleteSnapshotScheduleRequest;
 class QTAWS_EXPORT DeleteSnapshotScheduleRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DeleteSnapshotScheduleRequestPrivate(const StorageGateway::Action action,
+    DeleteSnapshotScheduleRequestPrivate(const StorageGatewayRequest::Action action,
                                    DeleteSnapshotScheduleRequest * const q);
     DeleteSnapshotScheduleRequestPrivate(const DeleteSnapshotScheduleRequestPrivate &other,
                                    DeleteSnapshotScheduleRequest * const q);

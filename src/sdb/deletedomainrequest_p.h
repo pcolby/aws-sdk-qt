@@ -31,7 +31,7 @@ class DeleteDomainRequest;
 class QTAWS_EXPORT DeleteDomainRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    DeleteDomainRequestPrivate(const SimpleDB::Action action,
+    DeleteDomainRequestPrivate(const SimpleDBRequest::Action action,
                                    DeleteDomainRequest * const q);
     DeleteDomainRequestPrivate(const DeleteDomainRequestPrivate &other,
                                    DeleteDomainRequest * const q);

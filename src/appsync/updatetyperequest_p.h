@@ -31,7 +31,7 @@ class UpdateTypeRequest;
 class QTAWS_EXPORT UpdateTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    UpdateTypeRequestPrivate(const AppSync::Action action,
+    UpdateTypeRequestPrivate(const AppSyncRequest::Action action,
                                    UpdateTypeRequest * const q);
     UpdateTypeRequestPrivate(const UpdateTypeRequestPrivate &other,
                                    UpdateTypeRequest * const q);

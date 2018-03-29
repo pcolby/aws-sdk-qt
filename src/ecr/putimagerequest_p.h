@@ -31,7 +31,7 @@ class PutImageRequest;
 class QTAWS_EXPORT PutImageRequestPrivate : public ECRRequestPrivate {
 
 public:
-    PutImageRequestPrivate(const ECR::Action action,
+    PutImageRequestPrivate(const ECRRequest::Action action,
                                    PutImageRequest * const q);
     PutImageRequestPrivate(const PutImageRequestPrivate &other,
                                    PutImageRequest * const q);

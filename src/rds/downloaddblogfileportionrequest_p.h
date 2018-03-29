@@ -31,7 +31,7 @@ class DownloadDBLogFilePortionRequest;
 class QTAWS_EXPORT DownloadDBLogFilePortionRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DownloadDBLogFilePortionRequestPrivate(const RDS::Action action,
+    DownloadDBLogFilePortionRequestPrivate(const RDSRequest::Action action,
                                    DownloadDBLogFilePortionRequest * const q);
     DownloadDBLogFilePortionRequestPrivate(const DownloadDBLogFilePortionRequestPrivate &other,
                                    DownloadDBLogFilePortionRequest * const q);

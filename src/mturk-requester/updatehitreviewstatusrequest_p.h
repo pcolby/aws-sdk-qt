@@ -31,7 +31,7 @@ class UpdateHITReviewStatusRequest;
 class QTAWS_EXPORT UpdateHITReviewStatusRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    UpdateHITReviewStatusRequestPrivate(const MTurk::Action action,
+    UpdateHITReviewStatusRequestPrivate(const MTurkRequest::Action action,
                                    UpdateHITReviewStatusRequest * const q);
     UpdateHITReviewStatusRequestPrivate(const UpdateHITReviewStatusRequestPrivate &other,
                                    UpdateHITReviewStatusRequest * const q);

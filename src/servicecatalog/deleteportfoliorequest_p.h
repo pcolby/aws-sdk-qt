@@ -31,7 +31,7 @@ class DeletePortfolioRequest;
 class QTAWS_EXPORT DeletePortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeletePortfolioRequestPrivate(const ServiceCatalog::Action action,
+    DeletePortfolioRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeletePortfolioRequest * const q);
     DeletePortfolioRequestPrivate(const DeletePortfolioRequestPrivate &other,
                                    DeletePortfolioRequest * const q);

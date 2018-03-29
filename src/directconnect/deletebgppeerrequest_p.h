@@ -31,7 +31,7 @@ class DeleteBGPPeerRequest;
 class QTAWS_EXPORT DeleteBGPPeerRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DeleteBGPPeerRequestPrivate(const DirectConnect::Action action,
+    DeleteBGPPeerRequestPrivate(const DirectConnectRequest::Action action,
                                    DeleteBGPPeerRequest * const q);
     DeleteBGPPeerRequestPrivate(const DeleteBGPPeerRequestPrivate &other,
                                    DeleteBGPPeerRequest * const q);

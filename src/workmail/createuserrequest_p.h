@@ -31,7 +31,7 @@ class CreateUserRequest;
 class QTAWS_EXPORT CreateUserRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    CreateUserRequestPrivate(const WorkMail::Action action,
+    CreateUserRequestPrivate(const WorkMailRequest::Action action,
                                    CreateUserRequest * const q);
     CreateUserRequestPrivate(const CreateUserRequestPrivate &other,
                                    CreateUserRequest * const q);

@@ -31,7 +31,7 @@ class GetDifferencesRequest;
 class QTAWS_EXPORT GetDifferencesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetDifferencesRequestPrivate(const CodeCommit::Action action,
+    GetDifferencesRequestPrivate(const CodeCommitRequest::Action action,
                                    GetDifferencesRequest * const q);
     GetDifferencesRequestPrivate(const GetDifferencesRequestPrivate &other,
                                    GetDifferencesRequest * const q);

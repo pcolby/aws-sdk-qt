@@ -31,7 +31,7 @@ class DescribeActivityRequest;
 class QTAWS_EXPORT DescribeActivityRequestPrivate : public SFNRequestPrivate {
 
 public:
-    DescribeActivityRequestPrivate(const SFN::Action action,
+    DescribeActivityRequestPrivate(const SFNRequest::Action action,
                                    DescribeActivityRequest * const q);
     DescribeActivityRequestPrivate(const DescribeActivityRequestPrivate &other,
                                    DescribeActivityRequest * const q);

@@ -31,7 +31,7 @@ class ResetImageAttributeRequest;
 class QTAWS_EXPORT ResetImageAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ResetImageAttributeRequestPrivate(const EC2::Action action,
+    ResetImageAttributeRequestPrivate(const EC2Request::Action action,
                                    ResetImageAttributeRequest * const q);
     ResetImageAttributeRequestPrivate(const ResetImageAttributeRequestPrivate &other,
                                    ResetImageAttributeRequest * const q);

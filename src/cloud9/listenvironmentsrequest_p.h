@@ -31,7 +31,7 @@ class ListEnvironmentsRequest;
 class QTAWS_EXPORT ListEnvironmentsRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    ListEnvironmentsRequestPrivate(const Cloud9::Action action,
+    ListEnvironmentsRequestPrivate(const Cloud9Request::Action action,
                                    ListEnvironmentsRequest * const q);
     ListEnvironmentsRequestPrivate(const ListEnvironmentsRequestPrivate &other,
                                    ListEnvironmentsRequest * const q);

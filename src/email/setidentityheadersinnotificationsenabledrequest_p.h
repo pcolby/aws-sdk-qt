@@ -31,7 +31,7 @@ class SetIdentityHeadersInNotificationsEnabledRequest;
 class QTAWS_EXPORT SetIdentityHeadersInNotificationsEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
-    SetIdentityHeadersInNotificationsEnabledRequestPrivate(const SES::Action action,
+    SetIdentityHeadersInNotificationsEnabledRequestPrivate(const SESRequest::Action action,
                                    SetIdentityHeadersInNotificationsEnabledRequest * const q);
     SetIdentityHeadersInNotificationsEnabledRequestPrivate(const SetIdentityHeadersInNotificationsEnabledRequestPrivate &other,
                                    SetIdentityHeadersInNotificationsEnabledRequest * const q);

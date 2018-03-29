@@ -31,7 +31,7 @@ class CreateDeploymentRequest;
 class QTAWS_EXPORT CreateDeploymentRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateDeploymentRequestPrivate(const Greengrass::Action action,
+    CreateDeploymentRequestPrivate(const GreengrassRequest::Action action,
                                    CreateDeploymentRequest * const q);
     CreateDeploymentRequestPrivate(const CreateDeploymentRequestPrivate &other,
                                    CreateDeploymentRequest * const q);

@@ -31,7 +31,7 @@ class GetSegmentRequest;
 class QTAWS_EXPORT GetSegmentRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetSegmentRequestPrivate(const Pinpoint::Action action,
+    GetSegmentRequestPrivate(const PinpointRequest::Action action,
                                    GetSegmentRequest * const q);
     GetSegmentRequestPrivate(const GetSegmentRequestPrivate &other,
                                    GetSegmentRequest * const q);

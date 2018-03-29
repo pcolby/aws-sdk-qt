@@ -31,7 +31,7 @@ class MergePullRequestByFastForwardRequest;
 class QTAWS_EXPORT MergePullRequestByFastForwardRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    MergePullRequestByFastForwardRequestPrivate(const CodeCommit::Action action,
+    MergePullRequestByFastForwardRequestPrivate(const CodeCommitRequest::Action action,
                                    MergePullRequestByFastForwardRequest * const q);
     MergePullRequestByFastForwardRequestPrivate(const MergePullRequestByFastForwardRequestPrivate &other,
                                    MergePullRequestByFastForwardRequest * const q);

@@ -31,7 +31,7 @@ class SetTimeBasedAutoScalingRequest;
 class QTAWS_EXPORT SetTimeBasedAutoScalingRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    SetTimeBasedAutoScalingRequestPrivate(const OpsWorks::Action action,
+    SetTimeBasedAutoScalingRequestPrivate(const OpsWorksRequest::Action action,
                                    SetTimeBasedAutoScalingRequest * const q);
     SetTimeBasedAutoScalingRequestPrivate(const SetTimeBasedAutoScalingRequestPrivate &other,
                                    SetTimeBasedAutoScalingRequest * const q);

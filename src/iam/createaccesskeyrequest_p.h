@@ -31,7 +31,7 @@ class CreateAccessKeyRequest;
 class QTAWS_EXPORT CreateAccessKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateAccessKeyRequestPrivate(const IAM::Action action,
+    CreateAccessKeyRequestPrivate(const IAMRequest::Action action,
                                    CreateAccessKeyRequest * const q);
     CreateAccessKeyRequestPrivate(const CreateAccessKeyRequestPrivate &other,
                                    CreateAccessKeyRequest * const q);

@@ -31,7 +31,7 @@ class DeleteFunctionRequest;
 class QTAWS_EXPORT DeleteFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    DeleteFunctionRequestPrivate(const Lambda::Action action,
+    DeleteFunctionRequestPrivate(const LambdaRequest::Action action,
                                    DeleteFunctionRequest * const q);
     DeleteFunctionRequestPrivate(const DeleteFunctionRequestPrivate &other,
                                    DeleteFunctionRequest * const q);

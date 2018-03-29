@@ -31,7 +31,7 @@ class BatchDeleteBuildsRequest;
 class QTAWS_EXPORT BatchDeleteBuildsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    BatchDeleteBuildsRequestPrivate(const CodeBuild::Action action,
+    BatchDeleteBuildsRequestPrivate(const CodeBuildRequest::Action action,
                                    BatchDeleteBuildsRequest * const q);
     BatchDeleteBuildsRequestPrivate(const BatchDeleteBuildsRequestPrivate &other,
                                    BatchDeleteBuildsRequest * const q);

@@ -31,7 +31,7 @@ class RegisterContainerInstanceRequest;
 class QTAWS_EXPORT RegisterContainerInstanceRequestPrivate : public ECSRequestPrivate {
 
 public:
-    RegisterContainerInstanceRequestPrivate(const ECS::Action action,
+    RegisterContainerInstanceRequestPrivate(const ECSRequest::Action action,
                                    RegisterContainerInstanceRequest * const q);
     RegisterContainerInstanceRequestPrivate(const RegisterContainerInstanceRequestPrivate &other,
                                    RegisterContainerInstanceRequest * const q);

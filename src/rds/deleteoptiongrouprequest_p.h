@@ -31,7 +31,7 @@ class DeleteOptionGroupRequest;
 class QTAWS_EXPORT DeleteOptionGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteOptionGroupRequestPrivate(const RDS::Action action,
+    DeleteOptionGroupRequestPrivate(const RDSRequest::Action action,
                                    DeleteOptionGroupRequest * const q);
     DeleteOptionGroupRequestPrivate(const DeleteOptionGroupRequestPrivate &other,
                                    DeleteOptionGroupRequest * const q);

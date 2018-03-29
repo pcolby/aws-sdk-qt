@@ -31,7 +31,7 @@ class StopMonitoringMembersRequest;
 class QTAWS_EXPORT StopMonitoringMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    StopMonitoringMembersRequestPrivate(const GuardDuty::Action action,
+    StopMonitoringMembersRequestPrivate(const GuardDutyRequest::Action action,
                                    StopMonitoringMembersRequest * const q);
     StopMonitoringMembersRequestPrivate(const StopMonitoringMembersRequestPrivate &other,
                                    StopMonitoringMembersRequest * const q);

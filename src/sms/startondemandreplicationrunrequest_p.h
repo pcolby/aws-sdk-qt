@@ -31,7 +31,7 @@ class StartOnDemandReplicationRunRequest;
 class QTAWS_EXPORT StartOnDemandReplicationRunRequestPrivate : public SMSRequestPrivate {
 
 public:
-    StartOnDemandReplicationRunRequestPrivate(const SMS::Action action,
+    StartOnDemandReplicationRunRequestPrivate(const SMSRequest::Action action,
                                    StartOnDemandReplicationRunRequest * const q);
     StartOnDemandReplicationRunRequestPrivate(const StartOnDemandReplicationRunRequestPrivate &other,
                                    StartOnDemandReplicationRunRequest * const q);

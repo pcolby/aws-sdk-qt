@@ -31,7 +31,7 @@ class CreateDBParameterGroupRequest;
 class QTAWS_EXPORT CreateDBParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CreateDBParameterGroupRequestPrivate(const RDS::Action action,
+    CreateDBParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    CreateDBParameterGroupRequest * const q);
     CreateDBParameterGroupRequestPrivate(const CreateDBParameterGroupRequestPrivate &other,
                                    CreateDBParameterGroupRequest * const q);

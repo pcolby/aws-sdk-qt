@@ -31,7 +31,7 @@ class ReplaceNetworkAclEntryRequest;
 class QTAWS_EXPORT ReplaceNetworkAclEntryRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReplaceNetworkAclEntryRequestPrivate(const EC2::Action action,
+    ReplaceNetworkAclEntryRequestPrivate(const EC2Request::Action action,
                                    ReplaceNetworkAclEntryRequest * const q);
     ReplaceNetworkAclEntryRequestPrivate(const ReplaceNetworkAclEntryRequestPrivate &other,
                                    ReplaceNetworkAclEntryRequest * const q);

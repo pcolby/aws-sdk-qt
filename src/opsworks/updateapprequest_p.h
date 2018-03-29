@@ -31,7 +31,7 @@ class UpdateAppRequest;
 class QTAWS_EXPORT UpdateAppRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateAppRequestPrivate(const OpsWorks::Action action,
+    UpdateAppRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateAppRequest * const q);
     UpdateAppRequestPrivate(const UpdateAppRequestPrivate &other,
                                    UpdateAppRequest * const q);

@@ -31,7 +31,7 @@ class DeregisterFromWorkMailRequest;
 class QTAWS_EXPORT DeregisterFromWorkMailRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DeregisterFromWorkMailRequestPrivate(const WorkMail::Action action,
+    DeregisterFromWorkMailRequestPrivate(const WorkMailRequest::Action action,
                                    DeregisterFromWorkMailRequest * const q);
     DeregisterFromWorkMailRequestPrivate(const DeregisterFromWorkMailRequestPrivate &other,
                                    DeregisterFromWorkMailRequest * const q);

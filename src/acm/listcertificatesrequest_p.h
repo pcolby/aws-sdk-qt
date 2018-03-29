@@ -31,7 +31,7 @@ class ListCertificatesRequest;
 class QTAWS_EXPORT ListCertificatesRequestPrivate : public ACMRequestPrivate {
 
 public:
-    ListCertificatesRequestPrivate(const ACM::Action action,
+    ListCertificatesRequestPrivate(const ACMRequest::Action action,
                                    ListCertificatesRequest * const q);
     ListCertificatesRequestPrivate(const ListCertificatesRequestPrivate &other,
                                    ListCertificatesRequest * const q);

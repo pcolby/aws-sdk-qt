@@ -31,7 +31,7 @@ class UpdateConfigurationSetReputationMetricsEnabledRequest;
 class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
-    UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SES::Action action,
+    UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SESRequest::Action action,
                                    UpdateConfigurationSetReputationMetricsEnabledRequest * const q);
     UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other,
                                    UpdateConfigurationSetReputationMetricsEnabledRequest * const q);

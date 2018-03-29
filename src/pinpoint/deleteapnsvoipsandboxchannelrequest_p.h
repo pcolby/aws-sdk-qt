@@ -31,7 +31,7 @@ class DeleteApnsVoipSandboxChannelRequest;
 class QTAWS_EXPORT DeleteApnsVoipSandboxChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteApnsVoipSandboxChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteApnsVoipSandboxChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteApnsVoipSandboxChannelRequest * const q);
     DeleteApnsVoipSandboxChannelRequestPrivate(const DeleteApnsVoipSandboxChannelRequestPrivate &other,
                                    DeleteApnsVoipSandboxChannelRequest * const q);

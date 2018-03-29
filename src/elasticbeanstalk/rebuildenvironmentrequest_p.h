@@ -31,7 +31,7 @@ class RebuildEnvironmentRequest;
 class QTAWS_EXPORT RebuildEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    RebuildEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,
+    RebuildEnvironmentRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    RebuildEnvironmentRequest * const q);
     RebuildEnvironmentRequestPrivate(const RebuildEnvironmentRequestPrivate &other,
                                    RebuildEnvironmentRequest * const q);

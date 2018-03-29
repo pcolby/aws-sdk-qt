@@ -31,7 +31,7 @@ class GetMetricStatisticsRequest;
 class QTAWS_EXPORT GetMetricStatisticsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    GetMetricStatisticsRequestPrivate(const CloudWatch::Action action,
+    GetMetricStatisticsRequestPrivate(const CloudWatchRequest::Action action,
                                    GetMetricStatisticsRequest * const q);
     GetMetricStatisticsRequestPrivate(const GetMetricStatisticsRequestPrivate &other,
                                    GetMetricStatisticsRequest * const q);

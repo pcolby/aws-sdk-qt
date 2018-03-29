@@ -31,7 +31,7 @@ class GetIdentityPoolConfigurationRequest;
 class QTAWS_EXPORT GetIdentityPoolConfigurationRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    GetIdentityPoolConfigurationRequestPrivate(const CognitoSync::Action action,
+    GetIdentityPoolConfigurationRequestPrivate(const CognitoSyncRequest::Action action,
                                    GetIdentityPoolConfigurationRequest * const q);
     GetIdentityPoolConfigurationRequestPrivate(const GetIdentityPoolConfigurationRequestPrivate &other,
                                    GetIdentityPoolConfigurationRequest * const q);

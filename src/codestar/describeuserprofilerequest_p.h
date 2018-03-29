@@ -31,7 +31,7 @@ class DescribeUserProfileRequest;
 class QTAWS_EXPORT DescribeUserProfileRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    DescribeUserProfileRequestPrivate(const CodeStar::Action action,
+    DescribeUserProfileRequestPrivate(const CodeStarRequest::Action action,
                                    DescribeUserProfileRequest * const q);
     DescribeUserProfileRequestPrivate(const DescribeUserProfileRequestPrivate &other,
                                    DescribeUserProfileRequest * const q);

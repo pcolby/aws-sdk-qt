@@ -31,7 +31,7 @@ class GetKeyRotationStatusRequest;
 class QTAWS_EXPORT GetKeyRotationStatusRequestPrivate : public KMSRequestPrivate {
 
 public:
-    GetKeyRotationStatusRequestPrivate(const KMS::Action action,
+    GetKeyRotationStatusRequestPrivate(const KMSRequest::Action action,
                                    GetKeyRotationStatusRequest * const q);
     GetKeyRotationStatusRequestPrivate(const GetKeyRotationStatusRequestPrivate &other,
                                    GetKeyRotationStatusRequest * const q);

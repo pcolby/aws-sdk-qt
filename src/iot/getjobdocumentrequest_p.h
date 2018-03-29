@@ -31,7 +31,7 @@ class GetJobDocumentRequest;
 class QTAWS_EXPORT GetJobDocumentRequestPrivate : public IoTRequestPrivate {
 
 public:
-    GetJobDocumentRequestPrivate(const IoT::Action action,
+    GetJobDocumentRequestPrivate(const IoTRequest::Action action,
                                    GetJobDocumentRequest * const q);
     GetJobDocumentRequestPrivate(const GetJobDocumentRequestPrivate &other,
                                    GetJobDocumentRequest * const q);

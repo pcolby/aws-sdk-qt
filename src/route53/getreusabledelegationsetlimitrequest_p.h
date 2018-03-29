@@ -31,7 +31,7 @@ class GetReusableDelegationSetLimitRequest;
 class QTAWS_EXPORT GetReusableDelegationSetLimitRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetReusableDelegationSetLimitRequestPrivate(const Route53::Action action,
+    GetReusableDelegationSetLimitRequestPrivate(const Route53Request::Action action,
                                    GetReusableDelegationSetLimitRequest * const q);
     GetReusableDelegationSetLimitRequestPrivate(const GetReusableDelegationSetLimitRequestPrivate &other,
                                    GetReusableDelegationSetLimitRequest * const q);

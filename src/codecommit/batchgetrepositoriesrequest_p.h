@@ -31,7 +31,7 @@ class BatchGetRepositoriesRequest;
 class QTAWS_EXPORT BatchGetRepositoriesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    BatchGetRepositoriesRequestPrivate(const CodeCommit::Action action,
+    BatchGetRepositoriesRequestPrivate(const CodeCommitRequest::Action action,
                                    BatchGetRepositoriesRequest * const q);
     BatchGetRepositoriesRequestPrivate(const BatchGetRepositoriesRequestPrivate &other,
                                    BatchGetRepositoriesRequest * const q);

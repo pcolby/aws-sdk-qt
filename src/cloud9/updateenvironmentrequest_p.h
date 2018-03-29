@@ -31,7 +31,7 @@ class UpdateEnvironmentRequest;
 class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    UpdateEnvironmentRequestPrivate(const Cloud9::Action action,
+    UpdateEnvironmentRequestPrivate(const Cloud9Request::Action action,
                                    UpdateEnvironmentRequest * const q);
     UpdateEnvironmentRequestPrivate(const UpdateEnvironmentRequestPrivate &other,
                                    UpdateEnvironmentRequest * const q);

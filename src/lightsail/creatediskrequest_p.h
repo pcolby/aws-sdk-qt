@@ -31,7 +31,7 @@ class CreateDiskRequest;
 class QTAWS_EXPORT CreateDiskRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    CreateDiskRequestPrivate(const Lightsail::Action action,
+    CreateDiskRequestPrivate(const LightsailRequest::Action action,
                                    CreateDiskRequest * const q);
     CreateDiskRequestPrivate(const CreateDiskRequestPrivate &other,
                                    CreateDiskRequest * const q);

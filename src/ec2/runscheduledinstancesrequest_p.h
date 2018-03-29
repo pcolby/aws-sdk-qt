@@ -31,7 +31,7 @@ class RunScheduledInstancesRequest;
 class QTAWS_EXPORT RunScheduledInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    RunScheduledInstancesRequestPrivate(const EC2::Action action,
+    RunScheduledInstancesRequestPrivate(const EC2Request::Action action,
                                    RunScheduledInstancesRequest * const q);
     RunScheduledInstancesRequestPrivate(const RunScheduledInstancesRequestPrivate &other,
                                    RunScheduledInstancesRequest * const q);

@@ -31,7 +31,7 @@ class GetDownloadUrlForLayerRequest;
 class QTAWS_EXPORT GetDownloadUrlForLayerRequestPrivate : public ECRRequestPrivate {
 
 public:
-    GetDownloadUrlForLayerRequestPrivate(const ECR::Action action,
+    GetDownloadUrlForLayerRequestPrivate(const ECRRequest::Action action,
                                    GetDownloadUrlForLayerRequest * const q);
     GetDownloadUrlForLayerRequestPrivate(const GetDownloadUrlForLayerRequestPrivate &other,
                                    GetDownloadUrlForLayerRequest * const q);

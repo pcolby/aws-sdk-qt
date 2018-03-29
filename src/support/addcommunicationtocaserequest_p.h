@@ -31,7 +31,7 @@ class AddCommunicationToCaseRequest;
 class QTAWS_EXPORT AddCommunicationToCaseRequestPrivate : public SupportRequestPrivate {
 
 public:
-    AddCommunicationToCaseRequestPrivate(const Support::Action action,
+    AddCommunicationToCaseRequestPrivate(const SupportRequest::Action action,
                                    AddCommunicationToCaseRequest * const q);
     AddCommunicationToCaseRequestPrivate(const AddCommunicationToCaseRequestPrivate &other,
                                    AddCommunicationToCaseRequest * const q);

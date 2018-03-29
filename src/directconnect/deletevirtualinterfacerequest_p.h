@@ -31,7 +31,7 @@ class DeleteVirtualInterfaceRequest;
 class QTAWS_EXPORT DeleteVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DeleteVirtualInterfaceRequestPrivate(const DirectConnect::Action action,
+    DeleteVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,
                                    DeleteVirtualInterfaceRequest * const q);
     DeleteVirtualInterfaceRequestPrivate(const DeleteVirtualInterfaceRequestPrivate &other,
                                    DeleteVirtualInterfaceRequest * const q);

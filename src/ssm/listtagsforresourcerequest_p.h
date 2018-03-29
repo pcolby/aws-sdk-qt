@@ -31,7 +31,7 @@ class ListTagsForResourceRequest;
 class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const SSM::Action action,
+    ListTagsForResourceRequestPrivate(const SSMRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);

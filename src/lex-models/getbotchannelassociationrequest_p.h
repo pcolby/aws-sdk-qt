@@ -31,7 +31,7 @@ class GetBotChannelAssociationRequest;
 class QTAWS_EXPORT GetBotChannelAssociationRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    GetBotChannelAssociationRequestPrivate(const LexModelBuildingService::Action action,
+    GetBotChannelAssociationRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    GetBotChannelAssociationRequest * const q);
     GetBotChannelAssociationRequestPrivate(const GetBotChannelAssociationRequestPrivate &other,
                                    GetBotChannelAssociationRequest * const q);

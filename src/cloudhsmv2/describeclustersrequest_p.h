@@ -31,7 +31,7 @@ class DescribeClustersRequest;
 class QTAWS_EXPORT DescribeClustersRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    DescribeClustersRequestPrivate(const CloudHSMV2::Action action,
+    DescribeClustersRequestPrivate(const CloudHSMV2Request::Action action,
                                    DescribeClustersRequest * const q);
     DescribeClustersRequestPrivate(const DescribeClustersRequestPrivate &other,
                                    DescribeClustersRequest * const q);

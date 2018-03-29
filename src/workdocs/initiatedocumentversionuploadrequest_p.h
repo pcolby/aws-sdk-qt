@@ -31,7 +31,7 @@ class InitiateDocumentVersionUploadRequest;
 class QTAWS_EXPORT InitiateDocumentVersionUploadRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    InitiateDocumentVersionUploadRequestPrivate(const WorkDocs::Action action,
+    InitiateDocumentVersionUploadRequestPrivate(const WorkDocsRequest::Action action,
                                    InitiateDocumentVersionUploadRequest * const q);
     InitiateDocumentVersionUploadRequestPrivate(const InitiateDocumentVersionUploadRequestPrivate &other,
                                    InitiateDocumentVersionUploadRequest * const q);

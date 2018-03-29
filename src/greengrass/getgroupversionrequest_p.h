@@ -31,7 +31,7 @@ class GetGroupVersionRequest;
 class QTAWS_EXPORT GetGroupVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetGroupVersionRequestPrivate(const Greengrass::Action action,
+    GetGroupVersionRequestPrivate(const GreengrassRequest::Action action,
                                    GetGroupVersionRequest * const q);
     GetGroupVersionRequestPrivate(const GetGroupVersionRequestPrivate &other,
                                    GetGroupVersionRequest * const q);

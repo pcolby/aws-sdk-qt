@@ -31,7 +31,7 @@ class DescribeIndexRequest;
 class QTAWS_EXPORT DescribeIndexRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeIndexRequestPrivate(const IoT::Action action,
+    DescribeIndexRequestPrivate(const IoTRequest::Action action,
                                    DescribeIndexRequest * const q);
     DescribeIndexRequestPrivate(const DescribeIndexRequestPrivate &other,
                                    DescribeIndexRequest * const q);

@@ -31,7 +31,7 @@ class CreateJobRequest;
 class QTAWS_EXPORT CreateJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
-    CreateJobRequestPrivate(const ImportExport::Action action,
+    CreateJobRequestPrivate(const ImportExportRequest::Action action,
                                    CreateJobRequest * const q);
     CreateJobRequestPrivate(const CreateJobRequestPrivate &other,
                                    CreateJobRequest * const q);

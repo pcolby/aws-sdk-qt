@@ -31,7 +31,7 @@ class DeleteImageBuilderRequest;
 class QTAWS_EXPORT DeleteImageBuilderRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DeleteImageBuilderRequestPrivate(const AppStream::Action action,
+    DeleteImageBuilderRequestPrivate(const AppStreamRequest::Action action,
                                    DeleteImageBuilderRequest * const q);
     DeleteImageBuilderRequestPrivate(const DeleteImageBuilderRequestPrivate &other,
                                    DeleteImageBuilderRequest * const q);

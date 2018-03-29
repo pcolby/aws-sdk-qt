@@ -31,7 +31,7 @@ class GetExecutionHistoryRequest;
 class QTAWS_EXPORT GetExecutionHistoryRequestPrivate : public SFNRequestPrivate {
 
 public:
-    GetExecutionHistoryRequestPrivate(const SFN::Action action,
+    GetExecutionHistoryRequestPrivate(const SFNRequest::Action action,
                                    GetExecutionHistoryRequest * const q);
     GetExecutionHistoryRequestPrivate(const GetExecutionHistoryRequestPrivate &other,
                                    GetExecutionHistoryRequest * const q);

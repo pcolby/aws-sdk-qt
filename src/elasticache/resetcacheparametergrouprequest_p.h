@@ -31,7 +31,7 @@ class ResetCacheParameterGroupRequest;
 class QTAWS_EXPORT ResetCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ResetCacheParameterGroupRequestPrivate(const ElastiCache::Action action,
+    ResetCacheParameterGroupRequestPrivate(const ElastiCacheRequest::Action action,
                                    ResetCacheParameterGroupRequest * const q);
     ResetCacheParameterGroupRequestPrivate(const ResetCacheParameterGroupRequestPrivate &other,
                                    ResetCacheParameterGroupRequest * const q);

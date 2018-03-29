@@ -31,7 +31,7 @@ class GetTypedLinkFacetInformationRequest;
 class QTAWS_EXPORT GetTypedLinkFacetInformationRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    GetTypedLinkFacetInformationRequestPrivate(const CloudDirectory::Action action,
+    GetTypedLinkFacetInformationRequestPrivate(const CloudDirectoryRequest::Action action,
                                    GetTypedLinkFacetInformationRequest * const q);
     GetTypedLinkFacetInformationRequestPrivate(const GetTypedLinkFacetInformationRequestPrivate &other,
                                    GetTypedLinkFacetInformationRequest * const q);

@@ -31,7 +31,7 @@ class DescribeConfigurationSetRequest;
 class QTAWS_EXPORT DescribeConfigurationSetRequestPrivate : public SESRequestPrivate {
 
 public:
-    DescribeConfigurationSetRequestPrivate(const SES::Action action,
+    DescribeConfigurationSetRequestPrivate(const SESRequest::Action action,
                                    DescribeConfigurationSetRequest * const q);
     DescribeConfigurationSetRequestPrivate(const DescribeConfigurationSetRequestPrivate &other,
                                    DescribeConfigurationSetRequest * const q);

@@ -31,7 +31,7 @@ class DeleteProgressUpdateStreamRequest;
 class QTAWS_EXPORT DeleteProgressUpdateStreamRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    DeleteProgressUpdateStreamRequestPrivate(const MigrationHub::Action action,
+    DeleteProgressUpdateStreamRequestPrivate(const MigrationHubRequest::Action action,
                                    DeleteProgressUpdateStreamRequest * const q);
     DeleteProgressUpdateStreamRequestPrivate(const DeleteProgressUpdateStreamRequestPrivate &other,
                                    DeleteProgressUpdateStreamRequest * const q);

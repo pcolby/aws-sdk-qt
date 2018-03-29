@@ -31,7 +31,7 @@ class ListAttacksRequest;
 class QTAWS_EXPORT ListAttacksRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    ListAttacksRequestPrivate(const Shield::Action action,
+    ListAttacksRequestPrivate(const ShieldRequest::Action action,
                                    ListAttacksRequest * const q);
     ListAttacksRequestPrivate(const ListAttacksRequestPrivate &other,
                                    ListAttacksRequest * const q);

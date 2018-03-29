@@ -31,7 +31,7 @@ class DescribeEcsClustersRequest;
 class QTAWS_EXPORT DescribeEcsClustersRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeEcsClustersRequestPrivate(const OpsWorks::Action action,
+    DescribeEcsClustersRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeEcsClustersRequest * const q);
     DescribeEcsClustersRequestPrivate(const DescribeEcsClustersRequestPrivate &other,
                                    DescribeEcsClustersRequest * const q);

@@ -31,7 +31,7 @@ class GetHostedZoneLimitRequest;
 class QTAWS_EXPORT GetHostedZoneLimitRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetHostedZoneLimitRequestPrivate(const Route53::Action action,
+    GetHostedZoneLimitRequestPrivate(const Route53Request::Action action,
                                    GetHostedZoneLimitRequest * const q);
     GetHostedZoneLimitRequestPrivate(const GetHostedZoneLimitRequestPrivate &other,
                                    GetHostedZoneLimitRequest * const q);

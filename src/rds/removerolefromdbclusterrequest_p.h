@@ -31,7 +31,7 @@ class RemoveRoleFromDBClusterRequest;
 class QTAWS_EXPORT RemoveRoleFromDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RemoveRoleFromDBClusterRequestPrivate(const RDS::Action action,
+    RemoveRoleFromDBClusterRequestPrivate(const RDSRequest::Action action,
                                    RemoveRoleFromDBClusterRequest * const q);
     RemoveRoleFromDBClusterRequestPrivate(const RemoveRoleFromDBClusterRequestPrivate &other,
                                    RemoveRoleFromDBClusterRequest * const q);

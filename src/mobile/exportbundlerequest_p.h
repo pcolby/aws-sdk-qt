@@ -31,7 +31,7 @@ class ExportBundleRequest;
 class QTAWS_EXPORT ExportBundleRequestPrivate : public MobileRequestPrivate {
 
 public:
-    ExportBundleRequestPrivate(const Mobile::Action action,
+    ExportBundleRequestPrivate(const MobileRequest::Action action,
                                    ExportBundleRequest * const q);
     ExportBundleRequestPrivate(const ExportBundleRequestPrivate &other,
                                    ExportBundleRequest * const q);

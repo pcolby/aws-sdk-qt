@@ -31,7 +31,7 @@ class DeleteClassifierRequest;
 class QTAWS_EXPORT DeleteClassifierRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteClassifierRequestPrivate(const Glue::Action action,
+    DeleteClassifierRequestPrivate(const GlueRequest::Action action,
                                    DeleteClassifierRequest * const q);
     DeleteClassifierRequestPrivate(const DeleteClassifierRequestPrivate &other,
                                    DeleteClassifierRequest * const q);

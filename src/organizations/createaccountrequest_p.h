@@ -31,7 +31,7 @@ class CreateAccountRequest;
 class QTAWS_EXPORT CreateAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    CreateAccountRequestPrivate(const Organizations::Action action,
+    CreateAccountRequestPrivate(const OrganizationsRequest::Action action,
                                    CreateAccountRequest * const q);
     CreateAccountRequestPrivate(const CreateAccountRequestPrivate &other,
                                    CreateAccountRequest * const q);

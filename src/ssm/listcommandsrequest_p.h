@@ -31,7 +31,7 @@ class ListCommandsRequest;
 class QTAWS_EXPORT ListCommandsRequestPrivate : public SSMRequestPrivate {
 
 public:
-    ListCommandsRequestPrivate(const SSM::Action action,
+    ListCommandsRequestPrivate(const SSMRequest::Action action,
                                    ListCommandsRequest * const q);
     ListCommandsRequestPrivate(const ListCommandsRequestPrivate &other,
                                    ListCommandsRequest * const q);

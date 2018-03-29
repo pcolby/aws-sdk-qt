@@ -31,7 +31,7 @@ class SendTestEventNotificationRequest;
 class QTAWS_EXPORT SendTestEventNotificationRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    SendTestEventNotificationRequestPrivate(const MTurk::Action action,
+    SendTestEventNotificationRequestPrivate(const MTurkRequest::Action action,
                                    SendTestEventNotificationRequest * const q);
     SendTestEventNotificationRequestPrivate(const SendTestEventNotificationRequestPrivate &other,
                                    SendTestEventNotificationRequest * const q);

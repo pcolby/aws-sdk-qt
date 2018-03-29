@@ -31,7 +31,7 @@ class GetBucketInventoryConfigurationRequest;
 class QTAWS_EXPORT GetBucketInventoryConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketInventoryConfigurationRequestPrivate(const S3::Action action,
+    GetBucketInventoryConfigurationRequestPrivate(const S3Request::Action action,
                                    GetBucketInventoryConfigurationRequest * const q);
     GetBucketInventoryConfigurationRequestPrivate(const GetBucketInventoryConfigurationRequestPrivate &other,
                                    GetBucketInventoryConfigurationRequest * const q);

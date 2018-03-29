@@ -31,7 +31,7 @@ class SendBounceRequest;
 class QTAWS_EXPORT SendBounceRequestPrivate : public SESRequestPrivate {
 
 public:
-    SendBounceRequestPrivate(const SES::Action action,
+    SendBounceRequestPrivate(const SESRequest::Action action,
                                    SendBounceRequest * const q);
     SendBounceRequestPrivate(const SendBounceRequestPrivate &other,
                                    SendBounceRequest * const q);

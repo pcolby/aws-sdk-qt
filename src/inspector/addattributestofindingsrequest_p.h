@@ -31,7 +31,7 @@ class AddAttributesToFindingsRequest;
 class QTAWS_EXPORT AddAttributesToFindingsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    AddAttributesToFindingsRequestPrivate(const Inspector::Action action,
+    AddAttributesToFindingsRequestPrivate(const InspectorRequest::Action action,
                                    AddAttributesToFindingsRequest * const q);
     AddAttributesToFindingsRequestPrivate(const AddAttributesToFindingsRequestPrivate &other,
                                    AddAttributesToFindingsRequest * const q);

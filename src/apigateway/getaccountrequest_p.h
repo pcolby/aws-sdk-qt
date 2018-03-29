@@ -31,7 +31,7 @@ class GetAccountRequest;
 class QTAWS_EXPORT GetAccountRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetAccountRequestPrivate(const APIGateway::Action action,
+    GetAccountRequestPrivate(const APIGatewayRequest::Action action,
                                    GetAccountRequest * const q);
     GetAccountRequestPrivate(const GetAccountRequestPrivate &other,
                                    GetAccountRequest * const q);

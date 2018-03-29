@@ -31,7 +31,7 @@ class GetAttributesRequest;
 class QTAWS_EXPORT GetAttributesRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    GetAttributesRequestPrivate(const SimpleDB::Action action,
+    GetAttributesRequestPrivate(const SimpleDBRequest::Action action,
                                    GetAttributesRequest * const q);
     GetAttributesRequestPrivate(const GetAttributesRequestPrivate &other,
                                    GetAttributesRequest * const q);

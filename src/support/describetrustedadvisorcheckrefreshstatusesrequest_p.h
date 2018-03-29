@@ -31,7 +31,7 @@ class DescribeTrustedAdvisorCheckRefreshStatusesRequest;
 class QTAWS_EXPORT DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate : public SupportRequestPrivate {
 
 public:
-    DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(const Support::Action action,
+    DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(const SupportRequest::Action action,
                                    DescribeTrustedAdvisorCheckRefreshStatusesRequest * const q);
     DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(const DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate &other,
                                    DescribeTrustedAdvisorCheckRefreshStatusesRequest * const q);

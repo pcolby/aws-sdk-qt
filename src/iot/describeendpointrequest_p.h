@@ -31,7 +31,7 @@ class DescribeEndpointRequest;
 class QTAWS_EXPORT DescribeEndpointRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DescribeEndpointRequestPrivate(const IoT::Action action,
+    DescribeEndpointRequestPrivate(const IoTRequest::Action action,
                                    DescribeEndpointRequest * const q);
     DescribeEndpointRequestPrivate(const DescribeEndpointRequestPrivate &other,
                                    DescribeEndpointRequest * const q);

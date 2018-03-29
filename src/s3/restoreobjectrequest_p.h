@@ -31,7 +31,7 @@ class RestoreObjectRequest;
 class QTAWS_EXPORT RestoreObjectRequestPrivate : public S3RequestPrivate {
 
 public:
-    RestoreObjectRequestPrivate(const S3::Action action,
+    RestoreObjectRequestPrivate(const S3Request::Action action,
                                    RestoreObjectRequest * const q);
     RestoreObjectRequestPrivate(const RestoreObjectRequestPrivate &other,
                                    RestoreObjectRequest * const q);

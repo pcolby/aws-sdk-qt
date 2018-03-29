@@ -31,7 +31,7 @@ class CreateReservedInstancesListingRequest;
 class QTAWS_EXPORT CreateReservedInstancesListingRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateReservedInstancesListingRequestPrivate(const EC2::Action action,
+    CreateReservedInstancesListingRequestPrivate(const EC2Request::Action action,
                                    CreateReservedInstancesListingRequest * const q);
     CreateReservedInstancesListingRequestPrivate(const CreateReservedInstancesListingRequestPrivate &other,
                                    CreateReservedInstancesListingRequest * const q);

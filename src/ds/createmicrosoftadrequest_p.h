@@ -31,7 +31,7 @@ class CreateMicrosoftADRequest;
 class QTAWS_EXPORT CreateMicrosoftADRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CreateMicrosoftADRequestPrivate(const DirectoryService::Action action,
+    CreateMicrosoftADRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CreateMicrosoftADRequest * const q);
     CreateMicrosoftADRequestPrivate(const CreateMicrosoftADRequestPrivate &other,
                                    CreateMicrosoftADRequest * const q);

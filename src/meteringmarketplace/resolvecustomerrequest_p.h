@@ -31,7 +31,7 @@ class ResolveCustomerRequest;
 class QTAWS_EXPORT ResolveCustomerRequestPrivate : public MarketplaceMeteringRequestPrivate {
 
 public:
-    ResolveCustomerRequestPrivate(const MarketplaceMetering::Action action,
+    ResolveCustomerRequestPrivate(const MarketplaceMeteringRequest::Action action,
                                    ResolveCustomerRequest * const q);
     ResolveCustomerRequestPrivate(const ResolveCustomerRequestPrivate &other,
                                    ResolveCustomerRequest * const q);

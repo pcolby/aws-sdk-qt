@@ -31,7 +31,7 @@ class UpdateDirectoryConfigRequest;
 class QTAWS_EXPORT UpdateDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    UpdateDirectoryConfigRequestPrivate(const AppStream::Action action,
+    UpdateDirectoryConfigRequestPrivate(const AppStreamRequest::Action action,
                                    UpdateDirectoryConfigRequest * const q);
     UpdateDirectoryConfigRequestPrivate(const UpdateDirectoryConfigRequestPrivate &other,
                                    UpdateDirectoryConfigRequest * const q);

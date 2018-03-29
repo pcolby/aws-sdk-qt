@@ -31,7 +31,7 @@ class AdminUpdateAuthEventFeedbackRequest;
 class QTAWS_EXPORT AdminUpdateAuthEventFeedbackRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminUpdateAuthEventFeedbackRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminUpdateAuthEventFeedbackRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminUpdateAuthEventFeedbackRequest * const q);
     AdminUpdateAuthEventFeedbackRequestPrivate(const AdminUpdateAuthEventFeedbackRequestPrivate &other,
                                    AdminUpdateAuthEventFeedbackRequest * const q);

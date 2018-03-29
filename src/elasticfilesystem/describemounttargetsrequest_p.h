@@ -31,7 +31,7 @@ class DescribeMountTargetsRequest;
 class QTAWS_EXPORT DescribeMountTargetsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DescribeMountTargetsRequestPrivate(const EFS::Action action,
+    DescribeMountTargetsRequestPrivate(const EFSRequest::Action action,
                                    DescribeMountTargetsRequest * const q);
     DescribeMountTargetsRequestPrivate(const DescribeMountTargetsRequestPrivate &other,
                                    DescribeMountTargetsRequest * const q);

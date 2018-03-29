@@ -31,7 +31,7 @@ class SetCognitoEventsRequest;
 class QTAWS_EXPORT SetCognitoEventsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    SetCognitoEventsRequestPrivate(const CognitoSync::Action action,
+    SetCognitoEventsRequestPrivate(const CognitoSyncRequest::Action action,
                                    SetCognitoEventsRequest * const q);
     SetCognitoEventsRequestPrivate(const SetCognitoEventsRequestPrivate &other,
                                    SetCognitoEventsRequest * const q);

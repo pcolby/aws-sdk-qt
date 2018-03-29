@@ -31,7 +31,7 @@ class DeleteInstanceRequest;
 class QTAWS_EXPORT DeleteInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeleteInstanceRequestPrivate(const OpsWorks::Action action,
+    DeleteInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    DeleteInstanceRequest * const q);
     DeleteInstanceRequestPrivate(const DeleteInstanceRequestPrivate &other,
                                    DeleteInstanceRequest * const q);

@@ -31,7 +31,7 @@ class StartMatchBackfillRequest;
 class QTAWS_EXPORT StartMatchBackfillRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    StartMatchBackfillRequestPrivate(const GameLift::Action action,
+    StartMatchBackfillRequestPrivate(const GameLiftRequest::Action action,
                                    StartMatchBackfillRequest * const q);
     StartMatchBackfillRequestPrivate(const StartMatchBackfillRequestPrivate &other,
                                    StartMatchBackfillRequest * const q);

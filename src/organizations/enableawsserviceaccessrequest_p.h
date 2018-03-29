@@ -31,7 +31,7 @@ class EnableAWSServiceAccessRequest;
 class QTAWS_EXPORT EnableAWSServiceAccessRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    EnableAWSServiceAccessRequestPrivate(const Organizations::Action action,
+    EnableAWSServiceAccessRequestPrivate(const OrganizationsRequest::Action action,
                                    EnableAWSServiceAccessRequest * const q);
     EnableAWSServiceAccessRequestPrivate(const EnableAWSServiceAccessRequestPrivate &other,
                                    EnableAWSServiceAccessRequest * const q);

@@ -31,7 +31,7 @@ class CreateHostedZoneRequest;
 class QTAWS_EXPORT CreateHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
-    CreateHostedZoneRequestPrivate(const Route53::Action action,
+    CreateHostedZoneRequestPrivate(const Route53Request::Action action,
                                    CreateHostedZoneRequest * const q);
     CreateHostedZoneRequestPrivate(const CreateHostedZoneRequestPrivate &other,
                                    CreateHostedZoneRequest * const q);

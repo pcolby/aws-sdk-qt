@@ -31,7 +31,7 @@ class CopyImageRequest;
 class QTAWS_EXPORT CopyImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CopyImageRequestPrivate(const EC2::Action action,
+    CopyImageRequestPrivate(const EC2Request::Action action,
                                    CopyImageRequest * const q);
     CopyImageRequestPrivate(const CopyImageRequestPrivate &other,
                                    CopyImageRequest * const q);

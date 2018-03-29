@@ -31,7 +31,7 @@ class DescribeLoggingStatusRequest;
 class QTAWS_EXPORT DescribeLoggingStatusRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeLoggingStatusRequestPrivate(const Redshift::Action action,
+    DescribeLoggingStatusRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeLoggingStatusRequest * const q);
     DescribeLoggingStatusRequestPrivate(const DescribeLoggingStatusRequestPrivate &other,
                                    DescribeLoggingStatusRequest * const q);

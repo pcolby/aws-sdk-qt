@@ -31,7 +31,7 @@ class ListAliasesRequest;
 class QTAWS_EXPORT ListAliasesRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    ListAliasesRequestPrivate(const WorkMail::Action action,
+    ListAliasesRequestPrivate(const WorkMailRequest::Action action,
                                    ListAliasesRequest * const q);
     ListAliasesRequestPrivate(const ListAliasesRequestPrivate &other,
                                    ListAliasesRequest * const q);

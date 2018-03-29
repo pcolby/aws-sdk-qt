@@ -31,7 +31,7 @@ class ListGroupsRequest;
 class QTAWS_EXPORT ListGroupsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListGroupsRequestPrivate(const Greengrass::Action action,
+    ListGroupsRequestPrivate(const GreengrassRequest::Action action,
                                    ListGroupsRequest * const q);
     ListGroupsRequestPrivate(const ListGroupsRequestPrivate &other,
                                    ListGroupsRequest * const q);

@@ -31,7 +31,7 @@ class DescribeAppsRequest;
 class QTAWS_EXPORT DescribeAppsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DescribeAppsRequestPrivate(const OpsWorks::Action action,
+    DescribeAppsRequestPrivate(const OpsWorksRequest::Action action,
                                    DescribeAppsRequest * const q);
     DescribeAppsRequestPrivate(const DescribeAppsRequestPrivate &other,
                                    DescribeAppsRequest * const q);

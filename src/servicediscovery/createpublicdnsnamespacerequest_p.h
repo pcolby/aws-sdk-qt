@@ -31,7 +31,7 @@ class CreatePublicDnsNamespaceRequest;
 class QTAWS_EXPORT CreatePublicDnsNamespaceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
-    CreatePublicDnsNamespaceRequestPrivate(const ServiceDiscovery::Action action,
+    CreatePublicDnsNamespaceRequestPrivate(const ServiceDiscoveryRequest::Action action,
                                    CreatePublicDnsNamespaceRequest * const q);
     CreatePublicDnsNamespaceRequestPrivate(const CreatePublicDnsNamespaceRequestPrivate &other,
                                    CreatePublicDnsNamespaceRequest * const q);

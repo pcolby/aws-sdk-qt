@@ -31,7 +31,7 @@ class StopFleetRequest;
 class QTAWS_EXPORT StopFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    StopFleetRequestPrivate(const AppStream::Action action,
+    StopFleetRequestPrivate(const AppStreamRequest::Action action,
                                    StopFleetRequest * const q);
     StopFleetRequestPrivate(const StopFleetRequestPrivate &other,
                                    StopFleetRequest * const q);

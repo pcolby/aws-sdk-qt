@@ -31,7 +31,7 @@ class CreateUploadRequest;
 class QTAWS_EXPORT CreateUploadRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    CreateUploadRequestPrivate(const DeviceFarm::Action action,
+    CreateUploadRequestPrivate(const DeviceFarmRequest::Action action,
                                    CreateUploadRequest * const q);
     CreateUploadRequestPrivate(const CreateUploadRequestPrivate &other,
                                    CreateUploadRequest * const q);

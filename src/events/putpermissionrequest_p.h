@@ -31,7 +31,7 @@ class PutPermissionRequest;
 class QTAWS_EXPORT PutPermissionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    PutPermissionRequestPrivate(const CloudWatchEvents::Action action,
+    PutPermissionRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    PutPermissionRequest * const q);
     PutPermissionRequestPrivate(const PutPermissionRequestPrivate &other,
                                    PutPermissionRequest * const q);

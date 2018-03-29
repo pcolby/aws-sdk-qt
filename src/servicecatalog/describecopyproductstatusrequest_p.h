@@ -31,7 +31,7 @@ class DescribeCopyProductStatusRequest;
 class QTAWS_EXPORT DescribeCopyProductStatusRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DescribeCopyProductStatusRequestPrivate(const ServiceCatalog::Action action,
+    DescribeCopyProductStatusRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DescribeCopyProductStatusRequest * const q);
     DescribeCopyProductStatusRequestPrivate(const DescribeCopyProductStatusRequestPrivate &other,
                                    DescribeCopyProductStatusRequest * const q);

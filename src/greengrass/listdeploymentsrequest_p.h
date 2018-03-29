@@ -31,7 +31,7 @@ class ListDeploymentsRequest;
 class QTAWS_EXPORT ListDeploymentsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListDeploymentsRequestPrivate(const Greengrass::Action action,
+    ListDeploymentsRequestPrivate(const GreengrassRequest::Action action,
                                    ListDeploymentsRequest * const q);
     ListDeploymentsRequestPrivate(const ListDeploymentsRequestPrivate &other,
                                    ListDeploymentsRequest * const q);

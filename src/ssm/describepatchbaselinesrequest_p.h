@@ -31,7 +31,7 @@ class DescribePatchBaselinesRequest;
 class QTAWS_EXPORT DescribePatchBaselinesRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribePatchBaselinesRequestPrivate(const SSM::Action action,
+    DescribePatchBaselinesRequestPrivate(const SSMRequest::Action action,
                                    DescribePatchBaselinesRequest * const q);
     DescribePatchBaselinesRequestPrivate(const DescribePatchBaselinesRequestPrivate &other,
                                    DescribePatchBaselinesRequest * const q);

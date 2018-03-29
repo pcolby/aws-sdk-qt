@@ -31,7 +31,7 @@ class EnableLoggingRequest;
 class QTAWS_EXPORT EnableLoggingRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    EnableLoggingRequestPrivate(const Redshift::Action action,
+    EnableLoggingRequestPrivate(const RedshiftRequest::Action action,
                                    EnableLoggingRequest * const q);
     EnableLoggingRequestPrivate(const EnableLoggingRequestPrivate &other,
                                    EnableLoggingRequest * const q);

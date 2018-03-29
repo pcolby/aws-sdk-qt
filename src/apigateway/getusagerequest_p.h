@@ -31,7 +31,7 @@ class GetUsageRequest;
 class QTAWS_EXPORT GetUsageRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetUsageRequestPrivate(const APIGateway::Action action,
+    GetUsageRequestPrivate(const APIGatewayRequest::Action action,
                                    GetUsageRequest * const q);
     GetUsageRequestPrivate(const GetUsageRequestPrivate &other,
                                    GetUsageRequest * const q);

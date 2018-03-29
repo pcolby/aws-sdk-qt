@@ -31,7 +31,7 @@ class CreateTagsRequest;
 class QTAWS_EXPORT CreateTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    CreateTagsRequestPrivate(const Redshift::Action action,
+    CreateTagsRequestPrivate(const RedshiftRequest::Action action,
                                    CreateTagsRequest * const q);
     CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
                                    CreateTagsRequest * const q);

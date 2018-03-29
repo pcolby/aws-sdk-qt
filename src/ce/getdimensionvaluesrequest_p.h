@@ -31,7 +31,7 @@ class GetDimensionValuesRequest;
 class QTAWS_EXPORT GetDimensionValuesRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
-    GetDimensionValuesRequestPrivate(const CostExplorer::Action action,
+    GetDimensionValuesRequestPrivate(const CostExplorerRequest::Action action,
                                    GetDimensionValuesRequest * const q);
     GetDimensionValuesRequestPrivate(const GetDimensionValuesRequestPrivate &other,
                                    GetDimensionValuesRequest * const q);

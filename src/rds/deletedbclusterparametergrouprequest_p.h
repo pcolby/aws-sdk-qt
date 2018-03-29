@@ -31,7 +31,7 @@ class DeleteDBClusterParameterGroupRequest;
 class QTAWS_EXPORT DeleteDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteDBClusterParameterGroupRequestPrivate(const RDS::Action action,
+    DeleteDBClusterParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    DeleteDBClusterParameterGroupRequest * const q);
     DeleteDBClusterParameterGroupRequestPrivate(const DeleteDBClusterParameterGroupRequestPrivate &other,
                                    DeleteDBClusterParameterGroupRequest * const q);

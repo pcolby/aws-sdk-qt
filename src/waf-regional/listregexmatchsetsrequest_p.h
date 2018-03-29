@@ -31,7 +31,7 @@ class ListRegexMatchSetsRequest;
 class QTAWS_EXPORT ListRegexMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    ListRegexMatchSetsRequestPrivate(const WAFRegional::Action action,
+    ListRegexMatchSetsRequestPrivate(const WAFRegionalRequest::Action action,
                                    ListRegexMatchSetsRequest * const q);
     ListRegexMatchSetsRequestPrivate(const ListRegexMatchSetsRequestPrivate &other,
                                    ListRegexMatchSetsRequest * const q);

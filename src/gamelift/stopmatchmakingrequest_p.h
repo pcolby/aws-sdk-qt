@@ -31,7 +31,7 @@ class StopMatchmakingRequest;
 class QTAWS_EXPORT StopMatchmakingRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    StopMatchmakingRequestPrivate(const GameLift::Action action,
+    StopMatchmakingRequestPrivate(const GameLiftRequest::Action action,
                                    StopMatchmakingRequest * const q);
     StopMatchmakingRequestPrivate(const StopMatchmakingRequestPrivate &other,
                                    StopMatchmakingRequest * const q);

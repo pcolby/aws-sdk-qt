@@ -31,7 +31,7 @@ class DescribeAccountLimitsRequest;
 class QTAWS_EXPORT DescribeAccountLimitsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    DescribeAccountLimitsRequestPrivate(const CloudFormation::Action action,
+    DescribeAccountLimitsRequestPrivate(const CloudFormationRequest::Action action,
                                    DescribeAccountLimitsRequest * const q);
     DescribeAccountLimitsRequestPrivate(const DescribeAccountLimitsRequestPrivate &other,
                                    DescribeAccountLimitsRequest * const q);

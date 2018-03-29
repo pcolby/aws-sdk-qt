@@ -31,7 +31,7 @@ class DeleteTopicRequest;
 class QTAWS_EXPORT DeleteTopicRequestPrivate : public SNSRequestPrivate {
 
 public:
-    DeleteTopicRequestPrivate(const SNS::Action action,
+    DeleteTopicRequestPrivate(const SNSRequest::Action action,
                                    DeleteTopicRequest * const q);
     DeleteTopicRequestPrivate(const DeleteTopicRequestPrivate &other,
                                    DeleteTopicRequest * const q);

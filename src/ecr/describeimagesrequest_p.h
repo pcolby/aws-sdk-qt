@@ -31,7 +31,7 @@ class DescribeImagesRequest;
 class QTAWS_EXPORT DescribeImagesRequestPrivate : public ECRRequestPrivate {
 
 public:
-    DescribeImagesRequestPrivate(const ECR::Action action,
+    DescribeImagesRequestPrivate(const ECRRequest::Action action,
                                    DescribeImagesRequest * const q);
     DescribeImagesRequestPrivate(const DescribeImagesRequestPrivate &other,
                                    DescribeImagesRequest * const q);

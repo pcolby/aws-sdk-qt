@@ -31,7 +31,7 @@ class PutTelemetryRecordsRequest;
 class QTAWS_EXPORT PutTelemetryRecordsRequestPrivate : public XRayRequestPrivate {
 
 public:
-    PutTelemetryRecordsRequestPrivate(const XRay::Action action,
+    PutTelemetryRecordsRequestPrivate(const XRayRequest::Action action,
                                    PutTelemetryRecordsRequest * const q);
     PutTelemetryRecordsRequestPrivate(const PutTelemetryRecordsRequestPrivate &other,
                                    PutTelemetryRecordsRequest * const q);

@@ -31,7 +31,7 @@ class ListJobsRequest;
 class QTAWS_EXPORT ListJobsRequestPrivate : public ImportExportRequestPrivate {
 
 public:
-    ListJobsRequestPrivate(const ImportExport::Action action,
+    ListJobsRequestPrivate(const ImportExportRequest::Action action,
                                    ListJobsRequest * const q);
     ListJobsRequestPrivate(const ListJobsRequestPrivate &other,
                                    ListJobsRequest * const q);

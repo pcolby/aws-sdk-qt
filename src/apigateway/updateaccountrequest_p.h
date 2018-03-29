@@ -31,7 +31,7 @@ class UpdateAccountRequest;
 class QTAWS_EXPORT UpdateAccountRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateAccountRequestPrivate(const APIGateway::Action action,
+    UpdateAccountRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateAccountRequest * const q);
     UpdateAccountRequestPrivate(const UpdateAccountRequestPrivate &other,
                                    UpdateAccountRequest * const q);

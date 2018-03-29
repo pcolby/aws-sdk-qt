@@ -31,7 +31,7 @@ class CreateBackupRequest;
 class QTAWS_EXPORT CreateBackupRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    CreateBackupRequestPrivate(const OpsWorksCM::Action action,
+    CreateBackupRequestPrivate(const OpsWorksCMRequest::Action action,
                                    CreateBackupRequest * const q);
     CreateBackupRequestPrivate(const CreateBackupRequestPrivate &other,
                                    CreateBackupRequest * const q);

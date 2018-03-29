@@ -31,7 +31,7 @@ class DeregisterInstancesFromLoadBalancerRequest;
 class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    DeregisterInstancesFromLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,
+    DeregisterInstancesFromLoadBalancerRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    DeregisterInstancesFromLoadBalancerRequest * const q);
     DeregisterInstancesFromLoadBalancerRequestPrivate(const DeregisterInstancesFromLoadBalancerRequestPrivate &other,
                                    DeregisterInstancesFromLoadBalancerRequest * const q);

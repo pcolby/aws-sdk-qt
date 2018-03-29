@@ -31,7 +31,7 @@ class CreateVpcEndpointConnectionNotificationRequest;
 class QTAWS_EXPORT CreateVpcEndpointConnectionNotificationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateVpcEndpointConnectionNotificationRequestPrivate(const EC2::Action action,
+    CreateVpcEndpointConnectionNotificationRequestPrivate(const EC2Request::Action action,
                                    CreateVpcEndpointConnectionNotificationRequest * const q);
     CreateVpcEndpointConnectionNotificationRequestPrivate(const CreateVpcEndpointConnectionNotificationRequestPrivate &other,
                                    CreateVpcEndpointConnectionNotificationRequest * const q);

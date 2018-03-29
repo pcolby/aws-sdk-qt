@@ -31,7 +31,7 @@ class DeleteTriggerRequest;
 class QTAWS_EXPORT DeleteTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteTriggerRequestPrivate(const Glue::Action action,
+    DeleteTriggerRequestPrivate(const GlueRequest::Action action,
                                    DeleteTriggerRequest * const q);
     DeleteTriggerRequestPrivate(const DeleteTriggerRequestPrivate &other,
                                    DeleteTriggerRequest * const q);

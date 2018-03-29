@@ -31,7 +31,7 @@ class GetParametersRequest;
 class QTAWS_EXPORT GetParametersRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetParametersRequestPrivate(const SSM::Action action,
+    GetParametersRequestPrivate(const SSMRequest::Action action,
                                    GetParametersRequest * const q);
     GetParametersRequestPrivate(const GetParametersRequestPrivate &other,
                                    GetParametersRequest * const q);

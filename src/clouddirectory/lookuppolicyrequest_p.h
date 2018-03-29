@@ -31,7 +31,7 @@ class LookupPolicyRequest;
 class QTAWS_EXPORT LookupPolicyRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    LookupPolicyRequestPrivate(const CloudDirectory::Action action,
+    LookupPolicyRequestPrivate(const CloudDirectoryRequest::Action action,
                                    LookupPolicyRequest * const q);
     LookupPolicyRequestPrivate(const LookupPolicyRequestPrivate &other,
                                    LookupPolicyRequest * const q);

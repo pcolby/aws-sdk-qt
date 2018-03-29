@@ -31,7 +31,7 @@ class BatchCheckLayerAvailabilityRequest;
 class QTAWS_EXPORT BatchCheckLayerAvailabilityRequestPrivate : public ECRRequestPrivate {
 
 public:
-    BatchCheckLayerAvailabilityRequestPrivate(const ECR::Action action,
+    BatchCheckLayerAvailabilityRequestPrivate(const ECRRequest::Action action,
                                    BatchCheckLayerAvailabilityRequest * const q);
     BatchCheckLayerAvailabilityRequestPrivate(const BatchCheckLayerAvailabilityRequestPrivate &other,
                                    BatchCheckLayerAvailabilityRequest * const q);

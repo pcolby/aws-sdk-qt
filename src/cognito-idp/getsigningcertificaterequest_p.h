@@ -31,7 +31,7 @@ class GetSigningCertificateRequest;
 class QTAWS_EXPORT GetSigningCertificateRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetSigningCertificateRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetSigningCertificateRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetSigningCertificateRequest * const q);
     GetSigningCertificateRequestPrivate(const GetSigningCertificateRequestPrivate &other,
                                    GetSigningCertificateRequest * const q);

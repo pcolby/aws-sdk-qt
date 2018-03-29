@@ -31,7 +31,7 @@ class RespondActivityTaskFailedRequest;
 class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SWFRequestPrivate {
 
 public:
-    RespondActivityTaskFailedRequestPrivate(const SWF::Action action,
+    RespondActivityTaskFailedRequestPrivate(const SWFRequest::Action action,
                                    RespondActivityTaskFailedRequest * const q);
     RespondActivityTaskFailedRequestPrivate(const RespondActivityTaskFailedRequestPrivate &other,
                                    RespondActivityTaskFailedRequest * const q);

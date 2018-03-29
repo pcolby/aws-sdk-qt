@@ -31,7 +31,7 @@ class DisassociateConfigurationItemsFromApplicationRequest;
 class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,
+    DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    DisassociateConfigurationItemsFromApplicationRequest * const q);
     DisassociateConfigurationItemsFromApplicationRequestPrivate(const DisassociateConfigurationItemsFromApplicationRequestPrivate &other,
                                    DisassociateConfigurationItemsFromApplicationRequest * const q);

@@ -31,7 +31,7 @@ class DescribeSubscriptionFiltersRequest;
 class QTAWS_EXPORT DescribeSubscriptionFiltersRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    DescribeSubscriptionFiltersRequestPrivate(const CloudWatchLogs::Action action,
+    DescribeSubscriptionFiltersRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    DescribeSubscriptionFiltersRequest * const q);
     DescribeSubscriptionFiltersRequestPrivate(const DescribeSubscriptionFiltersRequestPrivate &other,
                                    DescribeSubscriptionFiltersRequest * const q);

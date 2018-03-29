@@ -31,7 +31,7 @@ class DeleteServerCatalogRequest;
 class QTAWS_EXPORT DeleteServerCatalogRequestPrivate : public SMSRequestPrivate {
 
 public:
-    DeleteServerCatalogRequestPrivate(const SMS::Action action,
+    DeleteServerCatalogRequestPrivate(const SMSRequest::Action action,
                                    DeleteServerCatalogRequest * const q);
     DeleteServerCatalogRequestPrivate(const DeleteServerCatalogRequestPrivate &other,
                                    DeleteServerCatalogRequest * const q);

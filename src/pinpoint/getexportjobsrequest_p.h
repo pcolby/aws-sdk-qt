@@ -31,7 +31,7 @@ class GetExportJobsRequest;
 class QTAWS_EXPORT GetExportJobsRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetExportJobsRequestPrivate(const Pinpoint::Action action,
+    GetExportJobsRequestPrivate(const PinpointRequest::Action action,
                                    GetExportJobsRequest * const q);
     GetExportJobsRequestPrivate(const GetExportJobsRequestPrivate &other,
                                    GetExportJobsRequest * const q);

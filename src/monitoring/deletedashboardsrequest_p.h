@@ -31,7 +31,7 @@ class DeleteDashboardsRequest;
 class QTAWS_EXPORT DeleteDashboardsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    DeleteDashboardsRequestPrivate(const CloudWatch::Action action,
+    DeleteDashboardsRequestPrivate(const CloudWatchRequest::Action action,
                                    DeleteDashboardsRequest * const q);
     DeleteDashboardsRequestPrivate(const DeleteDashboardsRequestPrivate &other,
                                    DeleteDashboardsRequest * const q);

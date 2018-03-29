@@ -31,7 +31,7 @@ class GetApiKeysRequest;
 class QTAWS_EXPORT GetApiKeysRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetApiKeysRequestPrivate(const APIGateway::Action action,
+    GetApiKeysRequestPrivate(const APIGatewayRequest::Action action,
                                    GetApiKeysRequest * const q);
     GetApiKeysRequestPrivate(const GetApiKeysRequestPrivate &other,
                                    GetApiKeysRequest * const q);

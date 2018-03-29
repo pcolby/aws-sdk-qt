@@ -31,7 +31,7 @@ class DeleteParameterRequest;
 class QTAWS_EXPORT DeleteParameterRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeleteParameterRequestPrivate(const SSM::Action action,
+    DeleteParameterRequestPrivate(const SSMRequest::Action action,
                                    DeleteParameterRequest * const q);
     DeleteParameterRequestPrivate(const DeleteParameterRequestPrivate &other,
                                    DeleteParameterRequest * const q);

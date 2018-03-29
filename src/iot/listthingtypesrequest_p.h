@@ -31,7 +31,7 @@ class ListThingTypesRequest;
 class QTAWS_EXPORT ListThingTypesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListThingTypesRequestPrivate(const IoT::Action action,
+    ListThingTypesRequestPrivate(const IoTRequest::Action action,
                                    ListThingTypesRequest * const q);
     ListThingTypesRequestPrivate(const ListThingTypesRequestPrivate &other,
                                    ListThingTypesRequest * const q);

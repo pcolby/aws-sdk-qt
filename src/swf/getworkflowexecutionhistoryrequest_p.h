@@ -31,7 +31,7 @@ class GetWorkflowExecutionHistoryRequest;
 class QTAWS_EXPORT GetWorkflowExecutionHistoryRequestPrivate : public SWFRequestPrivate {
 
 public:
-    GetWorkflowExecutionHistoryRequestPrivate(const SWF::Action action,
+    GetWorkflowExecutionHistoryRequestPrivate(const SWFRequest::Action action,
                                    GetWorkflowExecutionHistoryRequest * const q);
     GetWorkflowExecutionHistoryRequestPrivate(const GetWorkflowExecutionHistoryRequestPrivate &other,
                                    GetWorkflowExecutionHistoryRequest * const q);

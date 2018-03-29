@@ -31,7 +31,7 @@ class RestoreDBClusterFromSnapshotRequest;
 class QTAWS_EXPORT RestoreDBClusterFromSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RestoreDBClusterFromSnapshotRequestPrivate(const RDS::Action action,
+    RestoreDBClusterFromSnapshotRequestPrivate(const RDSRequest::Action action,
                                    RestoreDBClusterFromSnapshotRequest * const q);
     RestoreDBClusterFromSnapshotRequestPrivate(const RestoreDBClusterFromSnapshotRequestPrivate &other,
                                    RestoreDBClusterFromSnapshotRequest * const q);

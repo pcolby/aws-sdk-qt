@@ -31,7 +31,7 @@ class GetTemplateSummaryRequest;
 class QTAWS_EXPORT GetTemplateSummaryRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    GetTemplateSummaryRequestPrivate(const CloudFormation::Action action,
+    GetTemplateSummaryRequestPrivate(const CloudFormationRequest::Action action,
                                    GetTemplateSummaryRequest * const q);
     GetTemplateSummaryRequestPrivate(const GetTemplateSummaryRequestPrivate &other,
                                    GetTemplateSummaryRequest * const q);

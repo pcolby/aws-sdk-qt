@@ -31,7 +31,7 @@ class GetDomainSuggestionsRequest;
 class QTAWS_EXPORT GetDomainSuggestionsRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    GetDomainSuggestionsRequestPrivate(const Route53Domains::Action action,
+    GetDomainSuggestionsRequestPrivate(const Route53DomainsRequest::Action action,
                                    GetDomainSuggestionsRequest * const q);
     GetDomainSuggestionsRequestPrivate(const GetDomainSuggestionsRequestPrivate &other,
                                    GetDomainSuggestionsRequest * const q);

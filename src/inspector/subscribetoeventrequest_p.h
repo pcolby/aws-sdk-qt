@@ -31,7 +31,7 @@ class SubscribeToEventRequest;
 class QTAWS_EXPORT SubscribeToEventRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    SubscribeToEventRequestPrivate(const Inspector::Action action,
+    SubscribeToEventRequestPrivate(const InspectorRequest::Action action,
                                    SubscribeToEventRequest * const q);
     SubscribeToEventRequestPrivate(const SubscribeToEventRequestPrivate &other,
                                    SubscribeToEventRequest * const q);

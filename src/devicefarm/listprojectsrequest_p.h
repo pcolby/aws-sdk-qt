@@ -31,7 +31,7 @@ class ListProjectsRequest;
 class QTAWS_EXPORT ListProjectsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListProjectsRequestPrivate(const DeviceFarm::Action action,
+    ListProjectsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListProjectsRequest * const q);
     ListProjectsRequestPrivate(const ListProjectsRequestPrivate &other,
                                    ListProjectsRequest * const q);

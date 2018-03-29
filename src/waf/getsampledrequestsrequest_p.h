@@ -31,7 +31,7 @@ class GetSampledRequestsRequest;
 class QTAWS_EXPORT GetSampledRequestsRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetSampledRequestsRequestPrivate(const WAF::Action action,
+    GetSampledRequestsRequestPrivate(const WAFRequest::Action action,
                                    GetSampledRequestsRequest * const q);
     GetSampledRequestsRequestPrivate(const GetSampledRequestsRequestPrivate &other,
                                    GetSampledRequestsRequest * const q);

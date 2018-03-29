@@ -31,7 +31,7 @@ class DescribeVaultRequest;
 class QTAWS_EXPORT DescribeVaultRequestPrivate : public GlacierRequestPrivate {
 
 public:
-    DescribeVaultRequestPrivate(const Glacier::Action action,
+    DescribeVaultRequestPrivate(const GlacierRequest::Action action,
                                    DescribeVaultRequest * const q);
     DescribeVaultRequestPrivate(const DescribeVaultRequestPrivate &other,
                                    DescribeVaultRequest * const q);

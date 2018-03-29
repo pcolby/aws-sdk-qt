@@ -31,7 +31,7 @@ class AssociateTagOptionWithResourceRequest;
 class QTAWS_EXPORT AssociateTagOptionWithResourceRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    AssociateTagOptionWithResourceRequestPrivate(const ServiceCatalog::Action action,
+    AssociateTagOptionWithResourceRequestPrivate(const ServiceCatalogRequest::Action action,
                                    AssociateTagOptionWithResourceRequest * const q);
     AssociateTagOptionWithResourceRequestPrivate(const AssociateTagOptionWithResourceRequestPrivate &other,
                                    AssociateTagOptionWithResourceRequest * const q);

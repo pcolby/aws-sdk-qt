@@ -31,7 +31,7 @@ class GetSubscriptionAttributesRequest;
 class QTAWS_EXPORT GetSubscriptionAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
-    GetSubscriptionAttributesRequestPrivate(const SNS::Action action,
+    GetSubscriptionAttributesRequestPrivate(const SNSRequest::Action action,
                                    GetSubscriptionAttributesRequest * const q);
     GetSubscriptionAttributesRequestPrivate(const GetSubscriptionAttributesRequestPrivate &other,
                                    GetSubscriptionAttributesRequest * const q);

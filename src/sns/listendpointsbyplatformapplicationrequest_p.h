@@ -31,7 +31,7 @@ class ListEndpointsByPlatformApplicationRequest;
 class QTAWS_EXPORT ListEndpointsByPlatformApplicationRequestPrivate : public SNSRequestPrivate {
 
 public:
-    ListEndpointsByPlatformApplicationRequestPrivate(const SNS::Action action,
+    ListEndpointsByPlatformApplicationRequestPrivate(const SNSRequest::Action action,
                                    ListEndpointsByPlatformApplicationRequest * const q);
     ListEndpointsByPlatformApplicationRequestPrivate(const ListEndpointsByPlatformApplicationRequestPrivate &other,
                                    ListEndpointsByPlatformApplicationRequest * const q);

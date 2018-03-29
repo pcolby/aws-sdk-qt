@@ -31,7 +31,7 @@ class ListAssociatedStacksRequest;
 class QTAWS_EXPORT ListAssociatedStacksRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    ListAssociatedStacksRequestPrivate(const AppStream::Action action,
+    ListAssociatedStacksRequestPrivate(const AppStreamRequest::Action action,
                                    ListAssociatedStacksRequest * const q);
     ListAssociatedStacksRequestPrivate(const ListAssociatedStacksRequestPrivate &other,
                                    ListAssociatedStacksRequest * const q);

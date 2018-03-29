@@ -31,7 +31,7 @@ class ListJobsRequest;
 class QTAWS_EXPORT ListJobsRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListJobsRequestPrivate(const IoT::Action action,
+    ListJobsRequestPrivate(const IoTRequest::Action action,
                                    ListJobsRequest * const q);
     ListJobsRequestPrivate(const ListJobsRequestPrivate &other,
                                    ListJobsRequest * const q);

@@ -31,7 +31,7 @@ class DeregisterElasticIpRequest;
 class QTAWS_EXPORT DeregisterElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    DeregisterElasticIpRequestPrivate(const OpsWorks::Action action,
+    DeregisterElasticIpRequestPrivate(const OpsWorksRequest::Action action,
                                    DeregisterElasticIpRequest * const q);
     DeregisterElasticIpRequestPrivate(const DeregisterElasticIpRequestPrivate &other,
                                    DeregisterElasticIpRequest * const q);

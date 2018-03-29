@@ -31,7 +31,7 @@ class PostCommentForComparedCommitRequest;
 class QTAWS_EXPORT PostCommentForComparedCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    PostCommentForComparedCommitRequestPrivate(const CodeCommit::Action action,
+    PostCommentForComparedCommitRequestPrivate(const CodeCommitRequest::Action action,
                                    PostCommentForComparedCommitRequest * const q);
     PostCommentForComparedCommitRequestPrivate(const PostCommentForComparedCommitRequestPrivate &other,
                                    PostCommentForComparedCommitRequest * const q);

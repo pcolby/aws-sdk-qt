@@ -31,7 +31,7 @@ class CreateInstanceSnapshotRequest;
 class QTAWS_EXPORT CreateInstanceSnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    CreateInstanceSnapshotRequestPrivate(const Lightsail::Action action,
+    CreateInstanceSnapshotRequestPrivate(const LightsailRequest::Action action,
                                    CreateInstanceSnapshotRequest * const q);
     CreateInstanceSnapshotRequestPrivate(const CreateInstanceSnapshotRequestPrivate &other,
                                    CreateInstanceSnapshotRequest * const q);

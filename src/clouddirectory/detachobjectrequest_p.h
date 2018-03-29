@@ -31,7 +31,7 @@ class DetachObjectRequest;
 class QTAWS_EXPORT DetachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DetachObjectRequestPrivate(const CloudDirectory::Action action,
+    DetachObjectRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DetachObjectRequest * const q);
     DetachObjectRequestPrivate(const DetachObjectRequestPrivate &other,
                                    DetachObjectRequest * const q);

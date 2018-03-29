@@ -31,7 +31,7 @@ class CreateThreatIntelSetRequest;
 class QTAWS_EXPORT CreateThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    CreateThreatIntelSetRequestPrivate(const GuardDuty::Action action,
+    CreateThreatIntelSetRequestPrivate(const GuardDutyRequest::Action action,
                                    CreateThreatIntelSetRequest * const q);
     CreateThreatIntelSetRequestPrivate(const CreateThreatIntelSetRequestPrivate &other,
                                    CreateThreatIntelSetRequest * const q);

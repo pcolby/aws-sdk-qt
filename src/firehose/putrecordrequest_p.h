@@ -31,7 +31,7 @@ class PutRecordRequest;
 class QTAWS_EXPORT PutRecordRequestPrivate : public FirehoseRequestPrivate {
 
 public:
-    PutRecordRequestPrivate(const Firehose::Action action,
+    PutRecordRequestPrivate(const FirehoseRequest::Action action,
                                    PutRecordRequest * const q);
     PutRecordRequestPrivate(const PutRecordRequestPrivate &other,
                                    PutRecordRequest * const q);

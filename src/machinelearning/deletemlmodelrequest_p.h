@@ -31,7 +31,7 @@ class DeleteMLModelRequest;
 class QTAWS_EXPORT DeleteMLModelRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DeleteMLModelRequestPrivate(const MachineLearning::Action action,
+    DeleteMLModelRequestPrivate(const MachineLearningRequest::Action action,
                                    DeleteMLModelRequest * const q);
     DeleteMLModelRequestPrivate(const DeleteMLModelRequestPrivate &other,
                                    DeleteMLModelRequest * const q);

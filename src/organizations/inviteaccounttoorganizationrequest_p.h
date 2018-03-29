@@ -31,7 +31,7 @@ class InviteAccountToOrganizationRequest;
 class QTAWS_EXPORT InviteAccountToOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    InviteAccountToOrganizationRequestPrivate(const Organizations::Action action,
+    InviteAccountToOrganizationRequestPrivate(const OrganizationsRequest::Action action,
                                    InviteAccountToOrganizationRequest * const q);
     InviteAccountToOrganizationRequestPrivate(const InviteAccountToOrganizationRequestPrivate &other,
                                    InviteAccountToOrganizationRequest * const q);

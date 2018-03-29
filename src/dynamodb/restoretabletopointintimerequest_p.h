@@ -31,7 +31,7 @@ class RestoreTableToPointInTimeRequest;
 class QTAWS_EXPORT RestoreTableToPointInTimeRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    RestoreTableToPointInTimeRequestPrivate(const DynamoDB::Action action,
+    RestoreTableToPointInTimeRequestPrivate(const DynamoDBRequest::Action action,
                                    RestoreTableToPointInTimeRequest * const q);
     RestoreTableToPointInTimeRequestPrivate(const RestoreTableToPointInTimeRequestPrivate &other,
                                    RestoreTableToPointInTimeRequest * const q);

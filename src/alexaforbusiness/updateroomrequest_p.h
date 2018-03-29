@@ -31,7 +31,7 @@ class UpdateRoomRequest;
 class QTAWS_EXPORT UpdateRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    UpdateRoomRequestPrivate(const AlexaForBusiness::Action action,
+    UpdateRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    UpdateRoomRequest * const q);
     UpdateRoomRequestPrivate(const UpdateRoomRequestPrivate &other,
                                    UpdateRoomRequest * const q);

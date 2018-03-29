@@ -31,7 +31,7 @@ class DeleteTopicRuleRequest;
 class QTAWS_EXPORT DeleteTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteTopicRuleRequestPrivate(const IoT::Action action,
+    DeleteTopicRuleRequestPrivate(const IoTRequest::Action action,
                                    DeleteTopicRuleRequest * const q);
     DeleteTopicRuleRequestPrivate(const DeleteTopicRuleRequestPrivate &other,
                                    DeleteTopicRuleRequest * const q);

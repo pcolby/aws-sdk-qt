@@ -31,7 +31,7 @@ class GetReservedInstancesExchangeQuoteRequest;
 class QTAWS_EXPORT GetReservedInstancesExchangeQuoteRequestPrivate : public EC2RequestPrivate {
 
 public:
-    GetReservedInstancesExchangeQuoteRequestPrivate(const EC2::Action action,
+    GetReservedInstancesExchangeQuoteRequestPrivate(const EC2Request::Action action,
                                    GetReservedInstancesExchangeQuoteRequest * const q);
     GetReservedInstancesExchangeQuoteRequestPrivate(const GetReservedInstancesExchangeQuoteRequestPrivate &other,
                                    GetReservedInstancesExchangeQuoteRequest * const q);

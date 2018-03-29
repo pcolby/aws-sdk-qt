@@ -31,7 +31,7 @@ class DeleteDirectoryRequest;
 class QTAWS_EXPORT DeleteDirectoryRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DeleteDirectoryRequestPrivate(const CloudDirectory::Action action,
+    DeleteDirectoryRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DeleteDirectoryRequest * const q);
     DeleteDirectoryRequestPrivate(const DeleteDirectoryRequestPrivate &other,
                                    DeleteDirectoryRequest * const q);

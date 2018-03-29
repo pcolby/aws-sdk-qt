@@ -31,7 +31,7 @@ class CreateSoftwareUpdateJobRequest;
 class QTAWS_EXPORT CreateSoftwareUpdateJobRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    CreateSoftwareUpdateJobRequestPrivate(const Greengrass::Action action,
+    CreateSoftwareUpdateJobRequestPrivate(const GreengrassRequest::Action action,
                                    CreateSoftwareUpdateJobRequest * const q);
     CreateSoftwareUpdateJobRequestPrivate(const CreateSoftwareUpdateJobRequestPrivate &other,
                                    CreateSoftwareUpdateJobRequest * const q);

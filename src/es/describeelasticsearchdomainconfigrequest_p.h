@@ -31,7 +31,7 @@ class DescribeElasticsearchDomainConfigRequest;
 class QTAWS_EXPORT DescribeElasticsearchDomainConfigRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
-    DescribeElasticsearchDomainConfigRequestPrivate(const ElasticsearchService::Action action,
+    DescribeElasticsearchDomainConfigRequestPrivate(const ElasticsearchServiceRequest::Action action,
                                    DescribeElasticsearchDomainConfigRequest * const q);
     DescribeElasticsearchDomainConfigRequestPrivate(const DescribeElasticsearchDomainConfigRequestPrivate &other,
                                    DescribeElasticsearchDomainConfigRequest * const q);

@@ -31,7 +31,7 @@ class DeleteResourceRequest;
 class QTAWS_EXPORT DeleteResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteResourceRequestPrivate(const APIGateway::Action action,
+    DeleteResourceRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteResourceRequest * const q);
     DeleteResourceRequestPrivate(const DeleteResourceRequestPrivate &other,
                                    DeleteResourceRequest * const q);

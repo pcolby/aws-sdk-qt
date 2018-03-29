@@ -31,7 +31,7 @@ class AdminListDevicesRequest;
 class QTAWS_EXPORT AdminListDevicesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminListDevicesRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminListDevicesRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminListDevicesRequest * const q);
     AdminListDevicesRequestPrivate(const AdminListDevicesRequestPrivate &other,
                                    AdminListDevicesRequest * const q);

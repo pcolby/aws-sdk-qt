@@ -31,7 +31,7 @@ class AddUploadBufferRequest;
 class QTAWS_EXPORT AddUploadBufferRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    AddUploadBufferRequestPrivate(const StorageGateway::Action action,
+    AddUploadBufferRequestPrivate(const StorageGatewayRequest::Action action,
                                    AddUploadBufferRequest * const q);
     AddUploadBufferRequestPrivate(const AddUploadBufferRequestPrivate &other,
                                    AddUploadBufferRequest * const q);

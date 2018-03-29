@@ -31,7 +31,7 @@ class DescribeSnapshotAttributeRequest;
 class QTAWS_EXPORT DescribeSnapshotAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSnapshotAttributeRequestPrivate(const EC2::Action action,
+    DescribeSnapshotAttributeRequestPrivate(const EC2Request::Action action,
                                    DescribeSnapshotAttributeRequest * const q);
     DescribeSnapshotAttributeRequestPrivate(const DescribeSnapshotAttributeRequestPrivate &other,
                                    DescribeSnapshotAttributeRequest * const q);

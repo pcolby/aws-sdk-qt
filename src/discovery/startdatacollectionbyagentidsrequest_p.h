@@ -31,7 +31,7 @@ class StartDataCollectionByAgentIdsRequest;
 class QTAWS_EXPORT StartDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    StartDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    StartDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    StartDataCollectionByAgentIdsRequest * const q);
     StartDataCollectionByAgentIdsRequestPrivate(const StartDataCollectionByAgentIdsRequestPrivate &other,
                                    StartDataCollectionByAgentIdsRequest * const q);

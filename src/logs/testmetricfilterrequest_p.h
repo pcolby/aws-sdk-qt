@@ -31,7 +31,7 @@ class TestMetricFilterRequest;
 class QTAWS_EXPORT TestMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    TestMetricFilterRequestPrivate(const CloudWatchLogs::Action action,
+    TestMetricFilterRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    TestMetricFilterRequest * const q);
     TestMetricFilterRequestPrivate(const TestMetricFilterRequestPrivate &other,
                                    TestMetricFilterRequest * const q);

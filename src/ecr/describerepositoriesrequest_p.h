@@ -31,7 +31,7 @@ class DescribeRepositoriesRequest;
 class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public ECRRequestPrivate {
 
 public:
-    DescribeRepositoriesRequestPrivate(const ECR::Action action,
+    DescribeRepositoriesRequestPrivate(const ECRRequest::Action action,
                                    DescribeRepositoriesRequest * const q);
     DescribeRepositoriesRequestPrivate(const DescribeRepositoriesRequestPrivate &other,
                                    DescribeRepositoriesRequest * const q);

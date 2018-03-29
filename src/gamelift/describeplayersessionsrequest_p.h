@@ -31,7 +31,7 @@ class DescribePlayerSessionsRequest;
 class QTAWS_EXPORT DescribePlayerSessionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribePlayerSessionsRequestPrivate(const GameLift::Action action,
+    DescribePlayerSessionsRequestPrivate(const GameLiftRequest::Action action,
                                    DescribePlayerSessionsRequest * const q);
     DescribePlayerSessionsRequestPrivate(const DescribePlayerSessionsRequestPrivate &other,
                                    DescribePlayerSessionsRequest * const q);

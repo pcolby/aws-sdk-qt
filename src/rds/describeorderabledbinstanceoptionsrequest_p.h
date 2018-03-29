@@ -31,7 +31,7 @@ class DescribeOrderableDBInstanceOptionsRequest;
 class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DescribeOrderableDBInstanceOptionsRequestPrivate(const RDS::Action action,
+    DescribeOrderableDBInstanceOptionsRequestPrivate(const RDSRequest::Action action,
                                    DescribeOrderableDBInstanceOptionsRequest * const q);
     DescribeOrderableDBInstanceOptionsRequestPrivate(const DescribeOrderableDBInstanceOptionsRequestPrivate &other,
                                    DescribeOrderableDBInstanceOptionsRequest * const q);

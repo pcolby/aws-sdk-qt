@@ -31,7 +31,7 @@ class CreateGraphqlApiRequest;
 class QTAWS_EXPORT CreateGraphqlApiRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    CreateGraphqlApiRequestPrivate(const AppSync::Action action,
+    CreateGraphqlApiRequestPrivate(const AppSyncRequest::Action action,
                                    CreateGraphqlApiRequest * const q);
     CreateGraphqlApiRequestPrivate(const CreateGraphqlApiRequestPrivate &other,
                                    CreateGraphqlApiRequest * const q);

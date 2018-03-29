@@ -31,7 +31,7 @@ class AdminDeleteUserAttributesRequest;
 class QTAWS_EXPORT AdminDeleteUserAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminDeleteUserAttributesRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminDeleteUserAttributesRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminDeleteUserAttributesRequest * const q);
     AdminDeleteUserAttributesRequestPrivate(const AdminDeleteUserAttributesRequestPrivate &other,
                                    AdminDeleteUserAttributesRequest * const q);

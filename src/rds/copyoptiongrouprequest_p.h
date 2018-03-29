@@ -31,7 +31,7 @@ class CopyOptionGroupRequest;
 class QTAWS_EXPORT CopyOptionGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    CopyOptionGroupRequestPrivate(const RDS::Action action,
+    CopyOptionGroupRequestPrivate(const RDSRequest::Action action,
                                    CopyOptionGroupRequest * const q);
     CopyOptionGroupRequestPrivate(const CopyOptionGroupRequestPrivate &other,
                                    CopyOptionGroupRequest * const q);

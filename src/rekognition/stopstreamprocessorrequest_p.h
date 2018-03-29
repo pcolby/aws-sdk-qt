@@ -31,7 +31,7 @@ class StopStreamProcessorRequest;
 class QTAWS_EXPORT StopStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    StopStreamProcessorRequestPrivate(const Rekognition::Action action,
+    StopStreamProcessorRequestPrivate(const RekognitionRequest::Action action,
                                    StopStreamProcessorRequest * const q);
     StopStreamProcessorRequestPrivate(const StopStreamProcessorRequestPrivate &other,
                                    StopStreamProcessorRequest * const q);

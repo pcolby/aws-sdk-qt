@@ -31,7 +31,7 @@ class PutAttributesRequest;
 class QTAWS_EXPORT PutAttributesRequestPrivate : public ECSRequestPrivate {
 
 public:
-    PutAttributesRequestPrivate(const ECS::Action action,
+    PutAttributesRequestPrivate(const ECSRequest::Action action,
                                    PutAttributesRequest * const q);
     PutAttributesRequestPrivate(const PutAttributesRequestPrivate &other,
                                    PutAttributesRequest * const q);

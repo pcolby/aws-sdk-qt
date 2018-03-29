@@ -31,7 +31,7 @@ class UpdateTypedLinkFacetRequest;
 class QTAWS_EXPORT UpdateTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    UpdateTypedLinkFacetRequestPrivate(const CloudDirectory::Action action,
+    UpdateTypedLinkFacetRequestPrivate(const CloudDirectoryRequest::Action action,
                                    UpdateTypedLinkFacetRequest * const q);
     UpdateTypedLinkFacetRequestPrivate(const UpdateTypedLinkFacetRequestPrivate &other,
                                    UpdateTypedLinkFacetRequest * const q);

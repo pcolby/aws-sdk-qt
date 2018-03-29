@@ -31,7 +31,7 @@ class CancelUpdateStackRequest;
 class QTAWS_EXPORT CancelUpdateStackRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    CancelUpdateStackRequestPrivate(const CloudFormation::Action action,
+    CancelUpdateStackRequestPrivate(const CloudFormationRequest::Action action,
                                    CancelUpdateStackRequest * const q);
     CancelUpdateStackRequestPrivate(const CancelUpdateStackRequestPrivate &other,
                                    CancelUpdateStackRequest * const q);

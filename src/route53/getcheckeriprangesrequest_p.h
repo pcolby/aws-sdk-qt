@@ -31,7 +31,7 @@ class GetCheckerIpRangesRequest;
 class QTAWS_EXPORT GetCheckerIpRangesRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetCheckerIpRangesRequestPrivate(const Route53::Action action,
+    GetCheckerIpRangesRequestPrivate(const Route53Request::Action action,
                                    GetCheckerIpRangesRequest * const q);
     GetCheckerIpRangesRequestPrivate(const GetCheckerIpRangesRequestPrivate &other,
                                    GetCheckerIpRangesRequest * const q);

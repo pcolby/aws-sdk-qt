@@ -31,7 +31,7 @@ class DeleteGameSessionQueueRequest;
 class QTAWS_EXPORT DeleteGameSessionQueueRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DeleteGameSessionQueueRequestPrivate(const GameLift::Action action,
+    DeleteGameSessionQueueRequestPrivate(const GameLiftRequest::Action action,
                                    DeleteGameSessionQueueRequest * const q);
     DeleteGameSessionQueueRequestPrivate(const DeleteGameSessionQueueRequestPrivate &other,
                                    DeleteGameSessionQueueRequest * const q);

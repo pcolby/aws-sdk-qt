@@ -31,7 +31,7 @@ class CreateBatchPredictionRequest;
 class QTAWS_EXPORT CreateBatchPredictionRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    CreateBatchPredictionRequestPrivate(const MachineLearning::Action action,
+    CreateBatchPredictionRequestPrivate(const MachineLearningRequest::Action action,
                                    CreateBatchPredictionRequest * const q);
     CreateBatchPredictionRequestPrivate(const CreateBatchPredictionRequestPrivate &other,
                                    CreateBatchPredictionRequest * const q);

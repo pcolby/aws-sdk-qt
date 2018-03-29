@@ -31,7 +31,7 @@ class CreateJobRequest;
 class QTAWS_EXPORT CreateJobRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    CreateJobRequestPrivate(const ElasticTranscoder::Action action,
+    CreateJobRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    CreateJobRequest * const q);
     CreateJobRequestPrivate(const CreateJobRequestPrivate &other,
                                    CreateJobRequest * const q);

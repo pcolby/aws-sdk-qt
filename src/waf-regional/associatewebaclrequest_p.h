@@ -31,7 +31,7 @@ class AssociateWebACLRequest;
 class QTAWS_EXPORT AssociateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    AssociateWebACLRequestPrivate(const WAFRegional::Action action,
+    AssociateWebACLRequestPrivate(const WAFRegionalRequest::Action action,
                                    AssociateWebACLRequest * const q);
     AssociateWebACLRequestPrivate(const AssociateWebACLRequestPrivate &other,
                                    AssociateWebACLRequest * const q);

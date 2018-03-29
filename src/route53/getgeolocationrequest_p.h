@@ -31,7 +31,7 @@ class GetGeoLocationRequest;
 class QTAWS_EXPORT GetGeoLocationRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetGeoLocationRequestPrivate(const Route53::Action action,
+    GetGeoLocationRequestPrivate(const Route53Request::Action action,
                                    GetGeoLocationRequest * const q);
     GetGeoLocationRequestPrivate(const GetGeoLocationRequestPrivate &other,
                                    GetGeoLocationRequest * const q);

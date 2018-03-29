@@ -31,7 +31,7 @@ class ReportTaskProgressRequest;
 class QTAWS_EXPORT ReportTaskProgressRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    ReportTaskProgressRequestPrivate(const DataPipeline::Action action,
+    ReportTaskProgressRequestPrivate(const DataPipelineRequest::Action action,
                                    ReportTaskProgressRequest * const q);
     ReportTaskProgressRequestPrivate(const ReportTaskProgressRequestPrivate &other,
                                    ReportTaskProgressRequest * const q);

@@ -31,7 +31,7 @@ class GetBuiltinIntentRequest;
 class QTAWS_EXPORT GetBuiltinIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    GetBuiltinIntentRequestPrivate(const LexModelBuildingService::Action action,
+    GetBuiltinIntentRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    GetBuiltinIntentRequest * const q);
     GetBuiltinIntentRequestPrivate(const GetBuiltinIntentRequestPrivate &other,
                                    GetBuiltinIntentRequest * const q);

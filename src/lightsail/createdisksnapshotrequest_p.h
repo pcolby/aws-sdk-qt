@@ -31,7 +31,7 @@ class CreateDiskSnapshotRequest;
 class QTAWS_EXPORT CreateDiskSnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    CreateDiskSnapshotRequestPrivate(const Lightsail::Action action,
+    CreateDiskSnapshotRequestPrivate(const LightsailRequest::Action action,
                                    CreateDiskSnapshotRequest * const q);
     CreateDiskSnapshotRequestPrivate(const CreateDiskSnapshotRequestPrivate &other,
                                    CreateDiskSnapshotRequest * const q);

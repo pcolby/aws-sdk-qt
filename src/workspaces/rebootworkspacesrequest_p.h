@@ -31,7 +31,7 @@ class RebootWorkspacesRequest;
 class QTAWS_EXPORT RebootWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    RebootWorkspacesRequestPrivate(const WorkSpaces::Action action,
+    RebootWorkspacesRequestPrivate(const WorkSpacesRequest::Action action,
                                    RebootWorkspacesRequest * const q);
     RebootWorkspacesRequestPrivate(const RebootWorkspacesRequestPrivate &other,
                                    RebootWorkspacesRequest * const q);

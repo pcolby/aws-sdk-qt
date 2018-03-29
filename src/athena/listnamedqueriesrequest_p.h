@@ -31,7 +31,7 @@ class ListNamedQueriesRequest;
 class QTAWS_EXPORT ListNamedQueriesRequestPrivate : public AthenaRequestPrivate {
 
 public:
-    ListNamedQueriesRequestPrivate(const Athena::Action action,
+    ListNamedQueriesRequestPrivate(const AthenaRequest::Action action,
                                    ListNamedQueriesRequest * const q);
     ListNamedQueriesRequestPrivate(const ListNamedQueriesRequestPrivate &other,
                                    ListNamedQueriesRequest * const q);

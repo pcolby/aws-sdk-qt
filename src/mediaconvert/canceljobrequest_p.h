@@ -31,7 +31,7 @@ class CancelJobRequest;
 class QTAWS_EXPORT CancelJobRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    CancelJobRequestPrivate(const MediaConvert::Action action,
+    CancelJobRequestPrivate(const MediaConvertRequest::Action action,
                                    CancelJobRequest * const q);
     CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
                                    CancelJobRequest * const q);

@@ -31,7 +31,7 @@ class RemoveTagsRequest;
 class QTAWS_EXPORT RemoveTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const ElasticLoadBalancing::Action action,
+    RemoveTagsRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);

@@ -31,7 +31,7 @@ class PutObjectAclRequest;
 class QTAWS_EXPORT PutObjectAclRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutObjectAclRequestPrivate(const S3::Action action,
+    PutObjectAclRequestPrivate(const S3Request::Action action,
                                    PutObjectAclRequest * const q);
     PutObjectAclRequestPrivate(const PutObjectAclRequestPrivate &other,
                                    PutObjectAclRequest * const q);

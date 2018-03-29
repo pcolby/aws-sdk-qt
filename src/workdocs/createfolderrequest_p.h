@@ -31,7 +31,7 @@ class CreateFolderRequest;
 class QTAWS_EXPORT CreateFolderRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    CreateFolderRequestPrivate(const WorkDocs::Action action,
+    CreateFolderRequestPrivate(const WorkDocsRequest::Action action,
                                    CreateFolderRequest * const q);
     CreateFolderRequestPrivate(const CreateFolderRequestPrivate &other,
                                    CreateFolderRequest * const q);

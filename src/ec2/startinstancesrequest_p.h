@@ -31,7 +31,7 @@ class StartInstancesRequest;
 class QTAWS_EXPORT StartInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    StartInstancesRequestPrivate(const EC2::Action action,
+    StartInstancesRequestPrivate(const EC2Request::Action action,
                                    StartInstancesRequest * const q);
     StartInstancesRequestPrivate(const StartInstancesRequestPrivate &other,
                                    StartInstancesRequest * const q);

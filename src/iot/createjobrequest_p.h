@@ -31,7 +31,7 @@ class CreateJobRequest;
 class QTAWS_EXPORT CreateJobRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CreateJobRequestPrivate(const IoT::Action action,
+    CreateJobRequestPrivate(const IoTRequest::Action action,
                                    CreateJobRequest * const q);
     CreateJobRequestPrivate(const CreateJobRequestPrivate &other,
                                    CreateJobRequest * const q);

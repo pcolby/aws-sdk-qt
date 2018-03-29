@@ -31,7 +31,7 @@ class GetMasterAccountRequest;
 class QTAWS_EXPORT GetMasterAccountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    GetMasterAccountRequestPrivate(const GuardDuty::Action action,
+    GetMasterAccountRequestPrivate(const GuardDutyRequest::Action action,
                                    GetMasterAccountRequest * const q);
     GetMasterAccountRequestPrivate(const GetMasterAccountRequestPrivate &other,
                                    GetMasterAccountRequest * const q);

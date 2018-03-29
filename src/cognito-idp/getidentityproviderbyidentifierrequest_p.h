@@ -31,7 +31,7 @@ class GetIdentityProviderByIdentifierRequest;
 class QTAWS_EXPORT GetIdentityProviderByIdentifierRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetIdentityProviderByIdentifierRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetIdentityProviderByIdentifierRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetIdentityProviderByIdentifierRequest * const q);
     GetIdentityProviderByIdentifierRequestPrivate(const GetIdentityProviderByIdentifierRequestPrivate &other,
                                    GetIdentityProviderByIdentifierRequest * const q);

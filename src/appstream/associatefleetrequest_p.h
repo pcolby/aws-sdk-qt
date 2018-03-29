@@ -31,7 +31,7 @@ class AssociateFleetRequest;
 class QTAWS_EXPORT AssociateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    AssociateFleetRequestPrivate(const AppStream::Action action,
+    AssociateFleetRequestPrivate(const AppStreamRequest::Action action,
                                    AssociateFleetRequest * const q);
     AssociateFleetRequestPrivate(const AssociateFleetRequestPrivate &other,
                                    AssociateFleetRequest * const q);

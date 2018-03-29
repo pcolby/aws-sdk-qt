@@ -31,7 +31,7 @@ class DeprecateThingTypeRequest;
 class QTAWS_EXPORT DeprecateThingTypeRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeprecateThingTypeRequestPrivate(const IoT::Action action,
+    DeprecateThingTypeRequestPrivate(const IoTRequest::Action action,
                                    DeprecateThingTypeRequest * const q);
     DeprecateThingTypeRequestPrivate(const DeprecateThingTypeRequestPrivate &other,
                                    DeprecateThingTypeRequest * const q);

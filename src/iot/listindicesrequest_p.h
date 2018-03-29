@@ -31,7 +31,7 @@ class ListIndicesRequest;
 class QTAWS_EXPORT ListIndicesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListIndicesRequestPrivate(const IoT::Action action,
+    ListIndicesRequestPrivate(const IoTRequest::Action action,
                                    ListIndicesRequest * const q);
     ListIndicesRequestPrivate(const ListIndicesRequestPrivate &other,
                                    ListIndicesRequest * const q);

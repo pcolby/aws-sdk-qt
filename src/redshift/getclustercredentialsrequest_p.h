@@ -31,7 +31,7 @@ class GetClusterCredentialsRequest;
 class QTAWS_EXPORT GetClusterCredentialsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    GetClusterCredentialsRequestPrivate(const Redshift::Action action,
+    GetClusterCredentialsRequestPrivate(const RedshiftRequest::Action action,
                                    GetClusterCredentialsRequest * const q);
     GetClusterCredentialsRequestPrivate(const GetClusterCredentialsRequestPrivate &other,
                                    GetClusterCredentialsRequest * const q);

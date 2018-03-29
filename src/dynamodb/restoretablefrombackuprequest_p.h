@@ -31,7 +31,7 @@ class RestoreTableFromBackupRequest;
 class QTAWS_EXPORT RestoreTableFromBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    RestoreTableFromBackupRequestPrivate(const DynamoDB::Action action,
+    RestoreTableFromBackupRequestPrivate(const DynamoDBRequest::Action action,
                                    RestoreTableFromBackupRequest * const q);
     RestoreTableFromBackupRequestPrivate(const RestoreTableFromBackupRequestPrivate &other,
                                    RestoreTableFromBackupRequest * const q);

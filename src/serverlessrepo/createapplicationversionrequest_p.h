@@ -31,7 +31,7 @@ class CreateApplicationVersionRequest;
 class QTAWS_EXPORT CreateApplicationVersionRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
-    CreateApplicationVersionRequestPrivate(const ServerlessApplicationRepository::Action action,
+    CreateApplicationVersionRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,
                                    CreateApplicationVersionRequest * const q);
     CreateApplicationVersionRequestPrivate(const CreateApplicationVersionRequestPrivate &other,
                                    CreateApplicationVersionRequest * const q);

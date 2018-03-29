@@ -31,7 +31,7 @@ class GetIdentityMailFromDomainAttributesRequest;
 class QTAWS_EXPORT GetIdentityMailFromDomainAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
-    GetIdentityMailFromDomainAttributesRequestPrivate(const SES::Action action,
+    GetIdentityMailFromDomainAttributesRequestPrivate(const SESRequest::Action action,
                                    GetIdentityMailFromDomainAttributesRequest * const q);
     GetIdentityMailFromDomainAttributesRequestPrivate(const GetIdentityMailFromDomainAttributesRequestPrivate &other,
                                    GetIdentityMailFromDomainAttributesRequest * const q);

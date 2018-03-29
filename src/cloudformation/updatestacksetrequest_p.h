@@ -31,7 +31,7 @@ class UpdateStackSetRequest;
 class QTAWS_EXPORT UpdateStackSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    UpdateStackSetRequestPrivate(const CloudFormation::Action action,
+    UpdateStackSetRequestPrivate(const CloudFormationRequest::Action action,
                                    UpdateStackSetRequest * const q);
     UpdateStackSetRequestPrivate(const UpdateStackSetRequestPrivate &other,
                                    UpdateStackSetRequest * const q);

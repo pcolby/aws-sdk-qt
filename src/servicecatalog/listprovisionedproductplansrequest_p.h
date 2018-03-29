@@ -31,7 +31,7 @@ class ListProvisionedProductPlansRequest;
 class QTAWS_EXPORT ListProvisionedProductPlansRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ListProvisionedProductPlansRequestPrivate(const ServiceCatalog::Action action,
+    ListProvisionedProductPlansRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ListProvisionedProductPlansRequest * const q);
     ListProvisionedProductPlansRequestPrivate(const ListProvisionedProductPlansRequestPrivate &other,
                                    ListProvisionedProductPlansRequest * const q);

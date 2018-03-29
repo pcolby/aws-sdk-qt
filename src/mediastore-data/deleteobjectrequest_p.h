@@ -31,7 +31,7 @@ class DeleteObjectRequest;
 class QTAWS_EXPORT DeleteObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
-    DeleteObjectRequestPrivate(const MediaStoreData::Action action,
+    DeleteObjectRequestPrivate(const MediaStoreDataRequest::Action action,
                                    DeleteObjectRequest * const q);
     DeleteObjectRequestPrivate(const DeleteObjectRequestPrivate &other,
                                    DeleteObjectRequest * const q);

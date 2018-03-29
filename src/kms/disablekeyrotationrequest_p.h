@@ -31,7 +31,7 @@ class DisableKeyRotationRequest;
 class QTAWS_EXPORT DisableKeyRotationRequestPrivate : public KMSRequestPrivate {
 
 public:
-    DisableKeyRotationRequestPrivate(const KMS::Action action,
+    DisableKeyRotationRequestPrivate(const KMSRequest::Action action,
                                    DisableKeyRotationRequest * const q);
     DisableKeyRotationRequestPrivate(const DisableKeyRotationRequestPrivate &other,
                                    DisableKeyRotationRequest * const q);

@@ -31,7 +31,7 @@ class DeleteClusterRequest;
 class QTAWS_EXPORT DeleteClusterRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DeleteClusterRequestPrivate(const Redshift::Action action,
+    DeleteClusterRequestPrivate(const RedshiftRequest::Action action,
                                    DeleteClusterRequest * const q);
     DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
                                    DeleteClusterRequest * const q);

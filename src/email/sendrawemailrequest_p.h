@@ -31,7 +31,7 @@ class SendRawEmailRequest;
 class QTAWS_EXPORT SendRawEmailRequestPrivate : public SESRequestPrivate {
 
 public:
-    SendRawEmailRequestPrivate(const SES::Action action,
+    SendRawEmailRequestPrivate(const SESRequest::Action action,
                                    SendRawEmailRequest * const q);
     SendRawEmailRequestPrivate(const SendRawEmailRequestPrivate &other,
                                    SendRawEmailRequest * const q);

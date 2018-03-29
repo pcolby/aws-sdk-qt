@@ -31,7 +31,7 @@ class UpdateDataSourceRequest;
 class QTAWS_EXPORT UpdateDataSourceRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    UpdateDataSourceRequestPrivate(const MachineLearning::Action action,
+    UpdateDataSourceRequestPrivate(const MachineLearningRequest::Action action,
                                    UpdateDataSourceRequest * const q);
     UpdateDataSourceRequestPrivate(const UpdateDataSourceRequestPrivate &other,
                                    UpdateDataSourceRequest * const q);

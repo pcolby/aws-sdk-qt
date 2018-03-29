@@ -31,7 +31,7 @@ class RetrieveTapeArchiveRequest;
 class QTAWS_EXPORT RetrieveTapeArchiveRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    RetrieveTapeArchiveRequestPrivate(const StorageGateway::Action action,
+    RetrieveTapeArchiveRequestPrivate(const StorageGatewayRequest::Action action,
                                    RetrieveTapeArchiveRequest * const q);
     RetrieveTapeArchiveRequestPrivate(const RetrieveTapeArchiveRequestPrivate &other,
                                    RetrieveTapeArchiveRequest * const q);

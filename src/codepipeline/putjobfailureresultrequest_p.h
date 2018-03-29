@@ -31,7 +31,7 @@ class PutJobFailureResultRequest;
 class QTAWS_EXPORT PutJobFailureResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
-    PutJobFailureResultRequestPrivate(const CodePipeline::Action action,
+    PutJobFailureResultRequestPrivate(const CodePipelineRequest::Action action,
                                    PutJobFailureResultRequest * const q);
     PutJobFailureResultRequestPrivate(const PutJobFailureResultRequestPrivate &other,
                                    PutJobFailureResultRequest * const q);

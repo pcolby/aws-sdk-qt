@@ -31,7 +31,7 @@ class ResyncMFADeviceRequest;
 class QTAWS_EXPORT ResyncMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ResyncMFADeviceRequestPrivate(const IAM::Action action,
+    ResyncMFADeviceRequestPrivate(const IAMRequest::Action action,
                                    ResyncMFADeviceRequest * const q);
     ResyncMFADeviceRequestPrivate(const ResyncMFADeviceRequestPrivate &other,
                                    ResyncMFADeviceRequest * const q);

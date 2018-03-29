@@ -31,7 +31,7 @@ class GetParametersByPathRequest;
 class QTAWS_EXPORT GetParametersByPathRequestPrivate : public SSMRequestPrivate {
 
 public:
-    GetParametersByPathRequestPrivate(const SSM::Action action,
+    GetParametersByPathRequestPrivate(const SSMRequest::Action action,
                                    GetParametersByPathRequest * const q);
     GetParametersByPathRequestPrivate(const GetParametersByPathRequestPrivate &other,
                                    GetParametersByPathRequest * const q);

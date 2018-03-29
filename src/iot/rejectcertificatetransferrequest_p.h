@@ -31,7 +31,7 @@ class RejectCertificateTransferRequest;
 class QTAWS_EXPORT RejectCertificateTransferRequestPrivate : public IoTRequestPrivate {
 
 public:
-    RejectCertificateTransferRequestPrivate(const IoT::Action action,
+    RejectCertificateTransferRequestPrivate(const IoTRequest::Action action,
                                    RejectCertificateTransferRequest * const q);
     RejectCertificateTransferRequestPrivate(const RejectCertificateTransferRequestPrivate &other,
                                    RejectCertificateTransferRequest * const q);

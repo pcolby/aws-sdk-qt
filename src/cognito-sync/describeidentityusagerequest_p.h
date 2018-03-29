@@ -31,7 +31,7 @@ class DescribeIdentityUsageRequest;
 class QTAWS_EXPORT DescribeIdentityUsageRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    DescribeIdentityUsageRequestPrivate(const CognitoSync::Action action,
+    DescribeIdentityUsageRequestPrivate(const CognitoSyncRequest::Action action,
                                    DescribeIdentityUsageRequest * const q);
     DescribeIdentityUsageRequestPrivate(const DescribeIdentityUsageRequestPrivate &other,
                                    DescribeIdentityUsageRequest * const q);

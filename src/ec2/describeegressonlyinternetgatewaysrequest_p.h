@@ -31,7 +31,7 @@ class DescribeEgressOnlyInternetGatewaysRequest;
 class QTAWS_EXPORT DescribeEgressOnlyInternetGatewaysRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeEgressOnlyInternetGatewaysRequestPrivate(const EC2::Action action,
+    DescribeEgressOnlyInternetGatewaysRequestPrivate(const EC2Request::Action action,
                                    DescribeEgressOnlyInternetGatewaysRequest * const q);
     DescribeEgressOnlyInternetGatewaysRequestPrivate(const DescribeEgressOnlyInternetGatewaysRequestPrivate &other,
                                    DescribeEgressOnlyInternetGatewaysRequest * const q);

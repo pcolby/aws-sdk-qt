@@ -31,7 +31,7 @@ class GetQualificationScoreRequest;
 class QTAWS_EXPORT GetQualificationScoreRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    GetQualificationScoreRequestPrivate(const MTurk::Action action,
+    GetQualificationScoreRequestPrivate(const MTurkRequest::Action action,
                                    GetQualificationScoreRequest * const q);
     GetQualificationScoreRequestPrivate(const GetQualificationScoreRequestPrivate &other,
                                    GetQualificationScoreRequest * const q);

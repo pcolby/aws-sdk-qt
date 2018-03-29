@@ -31,7 +31,7 @@ class EnableRadiusRequest;
 class QTAWS_EXPORT EnableRadiusRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    EnableRadiusRequestPrivate(const DirectoryService::Action action,
+    EnableRadiusRequestPrivate(const DirectoryServiceRequest::Action action,
                                    EnableRadiusRequest * const q);
     EnableRadiusRequestPrivate(const EnableRadiusRequestPrivate &other,
                                    EnableRadiusRequest * const q);

@@ -31,7 +31,7 @@ class DeleteQueueRequest;
 class QTAWS_EXPORT DeleteQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
-    DeleteQueueRequestPrivate(const SQS::Action action,
+    DeleteQueueRequestPrivate(const SQSRequest::Action action,
                                    DeleteQueueRequest * const q);
     DeleteQueueRequestPrivate(const DeleteQueueRequestPrivate &other,
                                    DeleteQueueRequest * const q);

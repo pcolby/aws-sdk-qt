@@ -31,7 +31,7 @@ class CopyImageRequest;
 class QTAWS_EXPORT CopyImageRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    CopyImageRequestPrivate(const AppStream::Action action,
+    CopyImageRequestPrivate(const AppStreamRequest::Action action,
                                    CopyImageRequest * const q);
     CopyImageRequestPrivate(const CopyImageRequestPrivate &other,
                                    CopyImageRequest * const q);

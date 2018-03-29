@@ -31,7 +31,7 @@ class DeleteActivityRequest;
 class QTAWS_EXPORT DeleteActivityRequestPrivate : public SFNRequestPrivate {
 
 public:
-    DeleteActivityRequestPrivate(const SFN::Action action,
+    DeleteActivityRequestPrivate(const SFNRequest::Action action,
                                    DeleteActivityRequest * const q);
     DeleteActivityRequestPrivate(const DeleteActivityRequestPrivate &other,
                                    DeleteActivityRequest * const q);

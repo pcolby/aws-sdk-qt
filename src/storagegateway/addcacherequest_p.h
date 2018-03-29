@@ -31,7 +31,7 @@ class AddCacheRequest;
 class QTAWS_EXPORT AddCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    AddCacheRequestPrivate(const StorageGateway::Action action,
+    AddCacheRequestPrivate(const StorageGatewayRequest::Action action,
                                    AddCacheRequest * const q);
     AddCacheRequestPrivate(const AddCacheRequestPrivate &other,
                                    AddCacheRequest * const q);

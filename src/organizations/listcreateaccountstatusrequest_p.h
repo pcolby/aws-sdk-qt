@@ -31,7 +31,7 @@ class ListCreateAccountStatusRequest;
 class QTAWS_EXPORT ListCreateAccountStatusRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    ListCreateAccountStatusRequestPrivate(const Organizations::Action action,
+    ListCreateAccountStatusRequestPrivate(const OrganizationsRequest::Action action,
                                    ListCreateAccountStatusRequest * const q);
     ListCreateAccountStatusRequestPrivate(const ListCreateAccountStatusRequestPrivate &other,
                                    ListCreateAccountStatusRequest * const q);

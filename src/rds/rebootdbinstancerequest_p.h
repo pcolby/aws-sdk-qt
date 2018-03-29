@@ -31,7 +31,7 @@ class RebootDBInstanceRequest;
 class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RebootDBInstanceRequestPrivate(const RDS::Action action,
+    RebootDBInstanceRequestPrivate(const RDSRequest::Action action,
                                    RebootDBInstanceRequest * const q);
     RebootDBInstanceRequestPrivate(const RebootDBInstanceRequestPrivate &other,
                                    RebootDBInstanceRequest * const q);

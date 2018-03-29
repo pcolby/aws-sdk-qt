@@ -31,7 +31,7 @@ class CreateNotificationRequest;
 class QTAWS_EXPORT CreateNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
-    CreateNotificationRequestPrivate(const Budgets::Action action,
+    CreateNotificationRequestPrivate(const BudgetsRequest::Action action,
                                    CreateNotificationRequest * const q);
     CreateNotificationRequestPrivate(const CreateNotificationRequestPrivate &other,
                                    CreateNotificationRequest * const q);

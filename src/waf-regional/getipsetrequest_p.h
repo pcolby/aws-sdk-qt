@@ -31,7 +31,7 @@ class GetIPSetRequest;
 class QTAWS_EXPORT GetIPSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetIPSetRequestPrivate(const WAFRegional::Action action,
+    GetIPSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetIPSetRequest * const q);
     GetIPSetRequestPrivate(const GetIPSetRequestPrivate &other,
                                    GetIPSetRequest * const q);

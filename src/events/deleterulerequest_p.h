@@ -31,7 +31,7 @@ class DeleteRuleRequest;
 class QTAWS_EXPORT DeleteRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    DeleteRuleRequestPrivate(const CloudWatchEvents::Action action,
+    DeleteRuleRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    DeleteRuleRequest * const q);
     DeleteRuleRequestPrivate(const DeleteRuleRequestPrivate &other,
                                    DeleteRuleRequest * const q);

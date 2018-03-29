@@ -31,7 +31,7 @@ class HeadObjectRequest;
 class QTAWS_EXPORT HeadObjectRequestPrivate : public S3RequestPrivate {
 
 public:
-    HeadObjectRequestPrivate(const S3::Action action,
+    HeadObjectRequestPrivate(const S3Request::Action action,
                                    HeadObjectRequest * const q);
     HeadObjectRequestPrivate(const HeadObjectRequestPrivate &other,
                                    HeadObjectRequest * const q);

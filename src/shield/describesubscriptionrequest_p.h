@@ -31,7 +31,7 @@ class DescribeSubscriptionRequest;
 class QTAWS_EXPORT DescribeSubscriptionRequestPrivate : public ShieldRequestPrivate {
 
 public:
-    DescribeSubscriptionRequestPrivate(const Shield::Action action,
+    DescribeSubscriptionRequestPrivate(const ShieldRequest::Action action,
                                    DescribeSubscriptionRequest * const q);
     DescribeSubscriptionRequestPrivate(const DescribeSubscriptionRequestPrivate &other,
                                    DescribeSubscriptionRequest * const q);

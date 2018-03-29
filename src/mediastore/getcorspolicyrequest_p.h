@@ -31,7 +31,7 @@ class GetCorsPolicyRequest;
 class QTAWS_EXPORT GetCorsPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
-    GetCorsPolicyRequestPrivate(const MediaStore::Action action,
+    GetCorsPolicyRequestPrivate(const MediaStoreRequest::Action action,
                                    GetCorsPolicyRequest * const q);
     GetCorsPolicyRequestPrivate(const GetCorsPolicyRequestPrivate &other,
                                    GetCorsPolicyRequest * const q);

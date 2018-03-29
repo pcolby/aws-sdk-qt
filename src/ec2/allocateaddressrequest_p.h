@@ -31,7 +31,7 @@ class AllocateAddressRequest;
 class QTAWS_EXPORT AllocateAddressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AllocateAddressRequestPrivate(const EC2::Action action,
+    AllocateAddressRequestPrivate(const EC2Request::Action action,
                                    AllocateAddressRequest * const q);
     AllocateAddressRequestPrivate(const AllocateAddressRequestPrivate &other,
                                    AllocateAddressRequest * const q);

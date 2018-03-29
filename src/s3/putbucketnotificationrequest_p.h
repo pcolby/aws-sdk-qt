@@ -31,7 +31,7 @@ class PutBucketNotificationRequest;
 class QTAWS_EXPORT PutBucketNotificationRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketNotificationRequestPrivate(const S3::Action action,
+    PutBucketNotificationRequestPrivate(const S3Request::Action action,
                                    PutBucketNotificationRequest * const q);
     PutBucketNotificationRequestPrivate(const PutBucketNotificationRequestPrivate &other,
                                    PutBucketNotificationRequest * const q);

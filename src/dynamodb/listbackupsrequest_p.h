@@ -31,7 +31,7 @@ class ListBackupsRequest;
 class QTAWS_EXPORT ListBackupsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    ListBackupsRequestPrivate(const DynamoDB::Action action,
+    ListBackupsRequestPrivate(const DynamoDBRequest::Action action,
                                    ListBackupsRequest * const q);
     ListBackupsRequestPrivate(const ListBackupsRequestPrivate &other,
                                    ListBackupsRequest * const q);

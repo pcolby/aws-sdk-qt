@@ -31,7 +31,7 @@ class DeleteProfileRequest;
 class QTAWS_EXPORT DeleteProfileRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    DeleteProfileRequestPrivate(const AlexaForBusiness::Action action,
+    DeleteProfileRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    DeleteProfileRequest * const q);
     DeleteProfileRequestPrivate(const DeleteProfileRequestPrivate &other,
                                    DeleteProfileRequest * const q);

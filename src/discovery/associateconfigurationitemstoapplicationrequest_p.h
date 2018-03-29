@@ -31,7 +31,7 @@ class AssociateConfigurationItemsToApplicationRequest;
 class QTAWS_EXPORT AssociateConfigurationItemsToApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    AssociateConfigurationItemsToApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,
+    AssociateConfigurationItemsToApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    AssociateConfigurationItemsToApplicationRequest * const q);
     AssociateConfigurationItemsToApplicationRequestPrivate(const AssociateConfigurationItemsToApplicationRequestPrivate &other,
                                    AssociateConfigurationItemsToApplicationRequest * const q);

@@ -31,7 +31,7 @@ class AttachVpnGatewayRequest;
 class QTAWS_EXPORT AttachVpnGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AttachVpnGatewayRequestPrivate(const EC2::Action action,
+    AttachVpnGatewayRequestPrivate(const EC2Request::Action action,
                                    AttachVpnGatewayRequest * const q);
     AttachVpnGatewayRequestPrivate(const AttachVpnGatewayRequestPrivate &other,
                                    AttachVpnGatewayRequest * const q);

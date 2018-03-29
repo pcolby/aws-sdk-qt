@@ -31,7 +31,7 @@ class DeregisterImageRequest;
 class QTAWS_EXPORT DeregisterImageRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeregisterImageRequestPrivate(const EC2::Action action,
+    DeregisterImageRequestPrivate(const EC2Request::Action action,
                                    DeregisterImageRequest * const q);
     DeregisterImageRequestPrivate(const DeregisterImageRequestPrivate &other,
                                    DeregisterImageRequest * const q);

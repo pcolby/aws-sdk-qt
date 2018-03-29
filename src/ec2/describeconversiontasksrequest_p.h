@@ -31,7 +31,7 @@ class DescribeConversionTasksRequest;
 class QTAWS_EXPORT DescribeConversionTasksRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeConversionTasksRequestPrivate(const EC2::Action action,
+    DescribeConversionTasksRequestPrivate(const EC2Request::Action action,
                                    DescribeConversionTasksRequest * const q);
     DescribeConversionTasksRequestPrivate(const DescribeConversionTasksRequestPrivate &other,
                                    DescribeConversionTasksRequest * const q);

@@ -31,7 +31,7 @@ class PutIntentRequest;
 class QTAWS_EXPORT PutIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    PutIntentRequestPrivate(const LexModelBuildingService::Action action,
+    PutIntentRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    PutIntentRequest * const q);
     PutIntentRequestPrivate(const PutIntentRequestPrivate &other,
                                    PutIntentRequest * const q);

@@ -31,7 +31,7 @@ class StartCrawlerScheduleRequest;
 class QTAWS_EXPORT StartCrawlerScheduleRequestPrivate : public GlueRequestPrivate {
 
 public:
-    StartCrawlerScheduleRequestPrivate(const Glue::Action action,
+    StartCrawlerScheduleRequestPrivate(const GlueRequest::Action action,
                                    StartCrawlerScheduleRequest * const q);
     StartCrawlerScheduleRequestPrivate(const StartCrawlerScheduleRequestPrivate &other,
                                    StartCrawlerScheduleRequest * const q);

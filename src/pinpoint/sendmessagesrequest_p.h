@@ -31,7 +31,7 @@ class SendMessagesRequest;
 class QTAWS_EXPORT SendMessagesRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    SendMessagesRequestPrivate(const Pinpoint::Action action,
+    SendMessagesRequestPrivate(const PinpointRequest::Action action,
                                    SendMessagesRequest * const q);
     SendMessagesRequestPrivate(const SendMessagesRequestPrivate &other,
                                    SendMessagesRequest * const q);

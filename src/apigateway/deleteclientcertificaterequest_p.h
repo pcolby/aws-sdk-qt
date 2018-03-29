@@ -31,7 +31,7 @@ class DeleteClientCertificateRequest;
 class QTAWS_EXPORT DeleteClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteClientCertificateRequestPrivate(const APIGateway::Action action,
+    DeleteClientCertificateRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteClientCertificateRequest * const q);
     DeleteClientCertificateRequestPrivate(const DeleteClientCertificateRequestPrivate &other,
                                    DeleteClientCertificateRequest * const q);

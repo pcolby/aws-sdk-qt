@@ -31,7 +31,7 @@ class DescribeMatchmakingConfigurationsRequest;
 class QTAWS_EXPORT DescribeMatchmakingConfigurationsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DescribeMatchmakingConfigurationsRequestPrivate(const GameLift::Action action,
+    DescribeMatchmakingConfigurationsRequestPrivate(const GameLiftRequest::Action action,
                                    DescribeMatchmakingConfigurationsRequest * const q);
     DescribeMatchmakingConfigurationsRequestPrivate(const DescribeMatchmakingConfigurationsRequestPrivate &other,
                                    DescribeMatchmakingConfigurationsRequest * const q);

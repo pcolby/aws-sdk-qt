@@ -31,7 +31,7 @@ class StopDataCollectionByAgentIdsRequest;
 class QTAWS_EXPORT StopDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    StopDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryService::Action action,
+    StopDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    StopDataCollectionByAgentIdsRequest * const q);
     StopDataCollectionByAgentIdsRequestPrivate(const StopDataCollectionByAgentIdsRequestPrivate &other,
                                    StopDataCollectionByAgentIdsRequest * const q);

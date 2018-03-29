@@ -31,7 +31,7 @@ class SubmitTaskStateChangeRequest;
 class QTAWS_EXPORT SubmitTaskStateChangeRequestPrivate : public ECSRequestPrivate {
 
 public:
-    SubmitTaskStateChangeRequestPrivate(const ECS::Action action,
+    SubmitTaskStateChangeRequestPrivate(const ECSRequest::Action action,
                                    SubmitTaskStateChangeRequest * const q);
     SubmitTaskStateChangeRequestPrivate(const SubmitTaskStateChangeRequestPrivate &other,
                                    SubmitTaskStateChangeRequest * const q);

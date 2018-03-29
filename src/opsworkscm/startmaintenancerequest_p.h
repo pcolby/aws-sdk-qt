@@ -31,7 +31,7 @@ class StartMaintenanceRequest;
 class QTAWS_EXPORT StartMaintenanceRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    StartMaintenanceRequestPrivate(const OpsWorksCM::Action action,
+    StartMaintenanceRequestPrivate(const OpsWorksCMRequest::Action action,
                                    StartMaintenanceRequest * const q);
     StartMaintenanceRequestPrivate(const StartMaintenanceRequestPrivate &other,
                                    StartMaintenanceRequest * const q);

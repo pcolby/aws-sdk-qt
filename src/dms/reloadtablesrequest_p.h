@@ -31,7 +31,7 @@ class ReloadTablesRequest;
 class QTAWS_EXPORT ReloadTablesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    ReloadTablesRequestPrivate(const DatabaseMigrationService::Action action,
+    ReloadTablesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    ReloadTablesRequest * const q);
     ReloadTablesRequestPrivate(const ReloadTablesRequestPrivate &other,
                                    ReloadTablesRequest * const q);

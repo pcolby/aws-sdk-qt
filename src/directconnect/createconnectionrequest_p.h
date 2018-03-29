@@ -31,7 +31,7 @@ class CreateConnectionRequest;
 class QTAWS_EXPORT CreateConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    CreateConnectionRequestPrivate(const DirectConnect::Action action,
+    CreateConnectionRequestPrivate(const DirectConnectRequest::Action action,
                                    CreateConnectionRequest * const q);
     CreateConnectionRequestPrivate(const CreateConnectionRequestPrivate &other,
                                    CreateConnectionRequest * const q);

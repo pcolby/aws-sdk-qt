@@ -31,7 +31,7 @@ class DeleteMaintenanceWindowRequest;
 class QTAWS_EXPORT DeleteMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeleteMaintenanceWindowRequestPrivate(const SSM::Action action,
+    DeleteMaintenanceWindowRequestPrivate(const SSMRequest::Action action,
                                    DeleteMaintenanceWindowRequest * const q);
     DeleteMaintenanceWindowRequestPrivate(const DeleteMaintenanceWindowRequestPrivate &other,
                                    DeleteMaintenanceWindowRequest * const q);

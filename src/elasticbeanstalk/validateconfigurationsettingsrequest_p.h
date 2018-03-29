@@ -31,7 +31,7 @@ class ValidateConfigurationSettingsRequest;
 class QTAWS_EXPORT ValidateConfigurationSettingsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    ValidateConfigurationSettingsRequestPrivate(const ElasticBeanstalk::Action action,
+    ValidateConfigurationSettingsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    ValidateConfigurationSettingsRequest * const q);
     ValidateConfigurationSettingsRequestPrivate(const ValidateConfigurationSettingsRequestPrivate &other,
                                    ValidateConfigurationSettingsRequest * const q);

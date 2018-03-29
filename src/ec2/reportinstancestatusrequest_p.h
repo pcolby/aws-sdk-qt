@@ -31,7 +31,7 @@ class ReportInstanceStatusRequest;
 class QTAWS_EXPORT ReportInstanceStatusRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReportInstanceStatusRequestPrivate(const EC2::Action action,
+    ReportInstanceStatusRequestPrivate(const EC2Request::Action action,
                                    ReportInstanceStatusRequest * const q);
     ReportInstanceStatusRequestPrivate(const ReportInstanceStatusRequestPrivate &other,
                                    ReportInstanceStatusRequest * const q);

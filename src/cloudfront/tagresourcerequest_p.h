@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const CloudFront::Action action,
+    TagResourceRequestPrivate(const CloudFrontRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

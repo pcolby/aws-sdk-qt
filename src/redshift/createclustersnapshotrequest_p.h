@@ -31,7 +31,7 @@ class CreateClusterSnapshotRequest;
 class QTAWS_EXPORT CreateClusterSnapshotRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    CreateClusterSnapshotRequestPrivate(const Redshift::Action action,
+    CreateClusterSnapshotRequestPrivate(const RedshiftRequest::Action action,
                                    CreateClusterSnapshotRequest * const q);
     CreateClusterSnapshotRequestPrivate(const CreateClusterSnapshotRequestPrivate &other,
                                    CreateClusterSnapshotRequest * const q);

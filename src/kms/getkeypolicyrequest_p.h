@@ -31,7 +31,7 @@ class GetKeyPolicyRequest;
 class QTAWS_EXPORT GetKeyPolicyRequestPrivate : public KMSRequestPrivate {
 
 public:
-    GetKeyPolicyRequestPrivate(const KMS::Action action,
+    GetKeyPolicyRequestPrivate(const KMSRequest::Action action,
                                    GetKeyPolicyRequest * const q);
     GetKeyPolicyRequestPrivate(const GetKeyPolicyRequestPrivate &other,
                                    GetKeyPolicyRequest * const q);

@@ -31,7 +31,7 @@ class FailoverDBClusterRequest;
 class QTAWS_EXPORT FailoverDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
-    FailoverDBClusterRequestPrivate(const RDS::Action action,
+    FailoverDBClusterRequestPrivate(const RDSRequest::Action action,
                                    FailoverDBClusterRequest * const q);
     FailoverDBClusterRequestPrivate(const FailoverDBClusterRequestPrivate &other,
                                    FailoverDBClusterRequest * const q);

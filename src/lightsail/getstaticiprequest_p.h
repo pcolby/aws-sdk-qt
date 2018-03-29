@@ -31,7 +31,7 @@ class GetStaticIpRequest;
 class QTAWS_EXPORT GetStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetStaticIpRequestPrivate(const Lightsail::Action action,
+    GetStaticIpRequestPrivate(const LightsailRequest::Action action,
                                    GetStaticIpRequest * const q);
     GetStaticIpRequestPrivate(const GetStaticIpRequestPrivate &other,
                                    GetStaticIpRequest * const q);

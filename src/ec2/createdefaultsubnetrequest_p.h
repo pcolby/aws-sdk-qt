@@ -31,7 +31,7 @@ class CreateDefaultSubnetRequest;
 class QTAWS_EXPORT CreateDefaultSubnetRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateDefaultSubnetRequestPrivate(const EC2::Action action,
+    CreateDefaultSubnetRequestPrivate(const EC2Request::Action action,
                                    CreateDefaultSubnetRequest * const q);
     CreateDefaultSubnetRequestPrivate(const CreateDefaultSubnetRequestPrivate &other,
                                    CreateDefaultSubnetRequest * const q);

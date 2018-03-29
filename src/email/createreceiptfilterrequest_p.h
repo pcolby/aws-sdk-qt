@@ -31,7 +31,7 @@ class CreateReceiptFilterRequest;
 class QTAWS_EXPORT CreateReceiptFilterRequestPrivate : public SESRequestPrivate {
 
 public:
-    CreateReceiptFilterRequestPrivate(const SES::Action action,
+    CreateReceiptFilterRequestPrivate(const SESRequest::Action action,
                                    CreateReceiptFilterRequest * const q);
     CreateReceiptFilterRequestPrivate(const CreateReceiptFilterRequestPrivate &other,
                                    CreateReceiptFilterRequest * const q);

@@ -31,7 +31,7 @@ class DeleteCorsPolicyRequest;
 class QTAWS_EXPORT DeleteCorsPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
-    DeleteCorsPolicyRequestPrivate(const MediaStore::Action action,
+    DeleteCorsPolicyRequestPrivate(const MediaStoreRequest::Action action,
                                    DeleteCorsPolicyRequest * const q);
     DeleteCorsPolicyRequestPrivate(const DeleteCorsPolicyRequestPrivate &other,
                                    DeleteCorsPolicyRequest * const q);

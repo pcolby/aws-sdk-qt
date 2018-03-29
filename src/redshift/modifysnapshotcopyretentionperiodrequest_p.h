@@ -31,7 +31,7 @@ class ModifySnapshotCopyRetentionPeriodRequest;
 class QTAWS_EXPORT ModifySnapshotCopyRetentionPeriodRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    ModifySnapshotCopyRetentionPeriodRequestPrivate(const Redshift::Action action,
+    ModifySnapshotCopyRetentionPeriodRequestPrivate(const RedshiftRequest::Action action,
                                    ModifySnapshotCopyRetentionPeriodRequest * const q);
     ModifySnapshotCopyRetentionPeriodRequestPrivate(const ModifySnapshotCopyRetentionPeriodRequestPrivate &other,
                                    ModifySnapshotCopyRetentionPeriodRequest * const q);

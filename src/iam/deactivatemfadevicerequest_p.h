@@ -31,7 +31,7 @@ class DeactivateMFADeviceRequest;
 class QTAWS_EXPORT DeactivateMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeactivateMFADeviceRequestPrivate(const IAM::Action action,
+    DeactivateMFADeviceRequestPrivate(const IAMRequest::Action action,
                                    DeactivateMFADeviceRequest * const q);
     DeactivateMFADeviceRequestPrivate(const DeactivateMFADeviceRequestPrivate &other,
                                    DeactivateMFADeviceRequest * const q);

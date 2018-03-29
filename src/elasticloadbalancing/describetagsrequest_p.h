@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const ElasticLoadBalancing::Action action,
+    DescribeTagsRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

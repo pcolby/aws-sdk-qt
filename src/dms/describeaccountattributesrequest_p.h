@@ -31,7 +31,7 @@ class DescribeAccountAttributesRequest;
 class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeAccountAttributesRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeAccountAttributesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeAccountAttributesRequest * const q);
     DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
                                    DescribeAccountAttributesRequest * const q);

@@ -31,7 +31,7 @@ class DetectEntitiesRequest;
 class QTAWS_EXPORT DetectEntitiesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
-    DetectEntitiesRequestPrivate(const Comprehend::Action action,
+    DetectEntitiesRequestPrivate(const ComprehendRequest::Action action,
                                    DetectEntitiesRequest * const q);
     DetectEntitiesRequestPrivate(const DetectEntitiesRequestPrivate &other,
                                    DetectEntitiesRequest * const q);

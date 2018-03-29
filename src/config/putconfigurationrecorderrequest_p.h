@@ -31,7 +31,7 @@ class PutConfigurationRecorderRequest;
 class QTAWS_EXPORT PutConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    PutConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+    PutConfigurationRecorderRequestPrivate(const ConfigServiceRequest::Action action,
                                    PutConfigurationRecorderRequest * const q);
     PutConfigurationRecorderRequestPrivate(const PutConfigurationRecorderRequestPrivate &other,
                                    PutConfigurationRecorderRequest * const q);

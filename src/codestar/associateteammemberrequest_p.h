@@ -31,7 +31,7 @@ class AssociateTeamMemberRequest;
 class QTAWS_EXPORT AssociateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
 
 public:
-    AssociateTeamMemberRequestPrivate(const CodeStar::Action action,
+    AssociateTeamMemberRequestPrivate(const CodeStarRequest::Action action,
                                    AssociateTeamMemberRequest * const q);
     AssociateTeamMemberRequestPrivate(const AssociateTeamMemberRequestPrivate &other,
                                    AssociateTeamMemberRequest * const q);

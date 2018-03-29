@@ -31,7 +31,7 @@ class AssociateSkillGroupWithRoomRequest;
 class QTAWS_EXPORT AssociateSkillGroupWithRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    AssociateSkillGroupWithRoomRequestPrivate(const AlexaForBusiness::Action action,
+    AssociateSkillGroupWithRoomRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    AssociateSkillGroupWithRoomRequest * const q);
     AssociateSkillGroupWithRoomRequestPrivate(const AssociateSkillGroupWithRoomRequestPrivate &other,
                                    AssociateSkillGroupWithRoomRequest * const q);

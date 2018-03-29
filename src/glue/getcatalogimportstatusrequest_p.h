@@ -31,7 +31,7 @@ class GetCatalogImportStatusRequest;
 class QTAWS_EXPORT GetCatalogImportStatusRequestPrivate : public GlueRequestPrivate {
 
 public:
-    GetCatalogImportStatusRequestPrivate(const Glue::Action action,
+    GetCatalogImportStatusRequestPrivate(const GlueRequest::Action action,
                                    GetCatalogImportStatusRequest * const q);
     GetCatalogImportStatusRequestPrivate(const GetCatalogImportStatusRequestPrivate &other,
                                    GetCatalogImportStatusRequest * const q);

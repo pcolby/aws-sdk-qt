@@ -31,7 +31,7 @@ class StartConfigurationRecorderRequest;
 class QTAWS_EXPORT StartConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    StartConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+    StartConfigurationRecorderRequestPrivate(const ConfigServiceRequest::Action action,
                                    StartConfigurationRecorderRequest * const q);
     StartConfigurationRecorderRequestPrivate(const StartConfigurationRecorderRequestPrivate &other,
                                    StartConfigurationRecorderRequest * const q);

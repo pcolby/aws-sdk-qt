@@ -31,7 +31,7 @@ class ModifyReplicationGroupShardConfigurationRequest;
 class QTAWS_EXPORT ModifyReplicationGroupShardConfigurationRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
-    ModifyReplicationGroupShardConfigurationRequestPrivate(const ElastiCache::Action action,
+    ModifyReplicationGroupShardConfigurationRequestPrivate(const ElastiCacheRequest::Action action,
                                    ModifyReplicationGroupShardConfigurationRequest * const q);
     ModifyReplicationGroupShardConfigurationRequestPrivate(const ModifyReplicationGroupShardConfigurationRequestPrivate &other,
                                    ModifyReplicationGroupShardConfigurationRequest * const q);

@@ -31,7 +31,7 @@ class DescribeImagesRequest;
 class QTAWS_EXPORT DescribeImagesRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    DescribeImagesRequestPrivate(const AppStream::Action action,
+    DescribeImagesRequestPrivate(const AppStreamRequest::Action action,
                                    DescribeImagesRequest * const q);
     DescribeImagesRequestPrivate(const DescribeImagesRequestPrivate &other,
                                    DescribeImagesRequest * const q);

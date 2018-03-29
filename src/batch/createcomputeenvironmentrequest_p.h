@@ -31,7 +31,7 @@ class CreateComputeEnvironmentRequest;
 class QTAWS_EXPORT CreateComputeEnvironmentRequestPrivate : public BatchRequestPrivate {
 
 public:
-    CreateComputeEnvironmentRequestPrivate(const Batch::Action action,
+    CreateComputeEnvironmentRequestPrivate(const BatchRequest::Action action,
                                    CreateComputeEnvironmentRequest * const q);
     CreateComputeEnvironmentRequestPrivate(const CreateComputeEnvironmentRequestPrivate &other,
                                    CreateComputeEnvironmentRequest * const q);

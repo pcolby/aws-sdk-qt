@@ -31,7 +31,7 @@ class GetApnsSandboxChannelRequest;
 class QTAWS_EXPORT GetApnsSandboxChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetApnsSandboxChannelRequestPrivate(const Pinpoint::Action action,
+    GetApnsSandboxChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetApnsSandboxChannelRequest * const q);
     GetApnsSandboxChannelRequestPrivate(const GetApnsSandboxChannelRequestPrivate &other,
                                    GetApnsSandboxChannelRequest * const q);

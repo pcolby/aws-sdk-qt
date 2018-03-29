@@ -31,7 +31,7 @@ class ReportTaskRunnerHeartbeatRequest;
 class QTAWS_EXPORT ReportTaskRunnerHeartbeatRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    ReportTaskRunnerHeartbeatRequestPrivate(const DataPipeline::Action action,
+    ReportTaskRunnerHeartbeatRequestPrivate(const DataPipelineRequest::Action action,
                                    ReportTaskRunnerHeartbeatRequest * const q);
     ReportTaskRunnerHeartbeatRequestPrivate(const ReportTaskRunnerHeartbeatRequestPrivate &other,
                                    ReportTaskRunnerHeartbeatRequest * const q);

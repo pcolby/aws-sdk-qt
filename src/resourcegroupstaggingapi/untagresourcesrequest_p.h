@@ -31,7 +31,7 @@ class UntagResourcesRequest;
 class QTAWS_EXPORT UntagResourcesRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
 
 public:
-    UntagResourcesRequestPrivate(const ResourceGroupsTaggingAPI::Action action,
+    UntagResourcesRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,
                                    UntagResourcesRequest * const q);
     UntagResourcesRequestPrivate(const UntagResourcesRequestPrivate &other,
                                    UntagResourcesRequest * const q);

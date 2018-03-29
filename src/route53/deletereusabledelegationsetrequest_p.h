@@ -31,7 +31,7 @@ class DeleteReusableDelegationSetRequest;
 class QTAWS_EXPORT DeleteReusableDelegationSetRequestPrivate : public Route53RequestPrivate {
 
 public:
-    DeleteReusableDelegationSetRequestPrivate(const Route53::Action action,
+    DeleteReusableDelegationSetRequestPrivate(const Route53Request::Action action,
                                    DeleteReusableDelegationSetRequest * const q);
     DeleteReusableDelegationSetRequestPrivate(const DeleteReusableDelegationSetRequestPrivate &other,
                                    DeleteReusableDelegationSetRequest * const q);

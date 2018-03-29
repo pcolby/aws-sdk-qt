@@ -31,7 +31,7 @@ class DisableDomainTransferLockRequest;
 class QTAWS_EXPORT DisableDomainTransferLockRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    DisableDomainTransferLockRequestPrivate(const Route53Domains::Action action,
+    DisableDomainTransferLockRequestPrivate(const Route53DomainsRequest::Action action,
                                    DisableDomainTransferLockRequest * const q);
     DisableDomainTransferLockRequestPrivate(const DisableDomainTransferLockRequestPrivate &other,
                                    DisableDomainTransferLockRequest * const q);

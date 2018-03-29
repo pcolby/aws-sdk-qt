@@ -31,7 +31,7 @@ class StartFleetRequest;
 class QTAWS_EXPORT StartFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    StartFleetRequestPrivate(const AppStream::Action action,
+    StartFleetRequestPrivate(const AppStreamRequest::Action action,
                                    StartFleetRequest * const q);
     StartFleetRequestPrivate(const StartFleetRequestPrivate &other,
                                    StartFleetRequest * const q);

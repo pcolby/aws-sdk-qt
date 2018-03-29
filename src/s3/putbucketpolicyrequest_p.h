@@ -31,7 +31,7 @@ class PutBucketPolicyRequest;
 class QTAWS_EXPORT PutBucketPolicyRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketPolicyRequestPrivate(const S3::Action action,
+    PutBucketPolicyRequestPrivate(const S3Request::Action action,
                                    PutBucketPolicyRequest * const q);
     PutBucketPolicyRequestPrivate(const PutBucketPolicyRequestPrivate &other,
                                    PutBucketPolicyRequest * const q);

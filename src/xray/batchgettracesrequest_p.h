@@ -31,7 +31,7 @@ class BatchGetTracesRequest;
 class QTAWS_EXPORT BatchGetTracesRequestPrivate : public XRayRequestPrivate {
 
 public:
-    BatchGetTracesRequestPrivate(const XRay::Action action,
+    BatchGetTracesRequestPrivate(const XRayRequest::Action action,
                                    BatchGetTracesRequest * const q);
     BatchGetTracesRequestPrivate(const BatchGetTracesRequestPrivate &other,
                                    BatchGetTracesRequest * const q);

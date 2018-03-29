@@ -31,7 +31,7 @@ class DeleteResourceDataSyncRequest;
 class QTAWS_EXPORT DeleteResourceDataSyncRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeleteResourceDataSyncRequestPrivate(const SSM::Action action,
+    DeleteResourceDataSyncRequestPrivate(const SSMRequest::Action action,
                                    DeleteResourceDataSyncRequest * const q);
     DeleteResourceDataSyncRequestPrivate(const DeleteResourceDataSyncRequestPrivate &other,
                                    DeleteResourceDataSyncRequest * const q);

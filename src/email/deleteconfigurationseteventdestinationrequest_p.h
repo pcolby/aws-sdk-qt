@@ -31,7 +31,7 @@ class DeleteConfigurationSetEventDestinationRequest;
 class QTAWS_EXPORT DeleteConfigurationSetEventDestinationRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteConfigurationSetEventDestinationRequestPrivate(const SES::Action action,
+    DeleteConfigurationSetEventDestinationRequestPrivate(const SESRequest::Action action,
                                    DeleteConfigurationSetEventDestinationRequest * const q);
     DeleteConfigurationSetEventDestinationRequestPrivate(const DeleteConfigurationSetEventDestinationRequestPrivate &other,
                                    DeleteConfigurationSetEventDestinationRequest * const q);

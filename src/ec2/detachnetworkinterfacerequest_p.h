@@ -31,7 +31,7 @@ class DetachNetworkInterfaceRequest;
 class QTAWS_EXPORT DetachNetworkInterfaceRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DetachNetworkInterfaceRequestPrivate(const EC2::Action action,
+    DetachNetworkInterfaceRequestPrivate(const EC2Request::Action action,
                                    DetachNetworkInterfaceRequest * const q);
     DetachNetworkInterfaceRequestPrivate(const DetachNetworkInterfaceRequestPrivate &other,
                                    DetachNetworkInterfaceRequest * const q);

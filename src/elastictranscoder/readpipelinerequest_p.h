@@ -31,7 +31,7 @@ class ReadPipelineRequest;
 class QTAWS_EXPORT ReadPipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    ReadPipelineRequestPrivate(const ElasticTranscoder::Action action,
+    ReadPipelineRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    ReadPipelineRequest * const q);
     ReadPipelineRequestPrivate(const ReadPipelineRequestPrivate &other,
                                    ReadPipelineRequest * const q);

@@ -31,7 +31,7 @@ class DescribeHandshakeRequest;
 class QTAWS_EXPORT DescribeHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    DescribeHandshakeRequestPrivate(const Organizations::Action action,
+    DescribeHandshakeRequestPrivate(const OrganizationsRequest::Action action,
                                    DescribeHandshakeRequest * const q);
     DescribeHandshakeRequestPrivate(const DescribeHandshakeRequestPrivate &other,
                                    DescribeHandshakeRequest * const q);

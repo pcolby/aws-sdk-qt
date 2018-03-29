@@ -31,7 +31,7 @@ class DeleteComputeEnvironmentRequest;
 class QTAWS_EXPORT DeleteComputeEnvironmentRequestPrivate : public BatchRequestPrivate {
 
 public:
-    DeleteComputeEnvironmentRequestPrivate(const Batch::Action action,
+    DeleteComputeEnvironmentRequestPrivate(const BatchRequest::Action action,
                                    DeleteComputeEnvironmentRequest * const q);
     DeleteComputeEnvironmentRequestPrivate(const DeleteComputeEnvironmentRequestPrivate &other,
                                    DeleteComputeEnvironmentRequest * const q);

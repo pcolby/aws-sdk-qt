@@ -31,7 +31,7 @@ class CreateQueueRequest;
 class QTAWS_EXPORT CreateQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
-    CreateQueueRequestPrivate(const SQS::Action action,
+    CreateQueueRequestPrivate(const SQSRequest::Action action,
                                    CreateQueueRequest * const q);
     CreateQueueRequestPrivate(const CreateQueueRequestPrivate &other,
                                    CreateQueueRequest * const q);

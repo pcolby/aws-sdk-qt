@@ -31,7 +31,7 @@ class UpdateStreamRequest;
 class QTAWS_EXPORT UpdateStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
-    UpdateStreamRequestPrivate(const KinesisVideo::Action action,
+    UpdateStreamRequestPrivate(const KinesisVideoRequest::Action action,
                                    UpdateStreamRequest * const q);
     UpdateStreamRequestPrivate(const UpdateStreamRequestPrivate &other,
                                    UpdateStreamRequest * const q);

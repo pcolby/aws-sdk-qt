@@ -31,7 +31,7 @@ class DisableDirectoryRequest;
 class QTAWS_EXPORT DisableDirectoryRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DisableDirectoryRequestPrivate(const CloudDirectory::Action action,
+    DisableDirectoryRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DisableDirectoryRequest * const q);
     DisableDirectoryRequestPrivate(const DisableDirectoryRequestPrivate &other,
                                    DisableDirectoryRequest * const q);

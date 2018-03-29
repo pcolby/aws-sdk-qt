@@ -31,7 +31,7 @@ class UpdateEmailChannelRequest;
 class QTAWS_EXPORT UpdateEmailChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    UpdateEmailChannelRequestPrivate(const Pinpoint::Action action,
+    UpdateEmailChannelRequestPrivate(const PinpointRequest::Action action,
                                    UpdateEmailChannelRequest * const q);
     UpdateEmailChannelRequestPrivate(const UpdateEmailChannelRequestPrivate &other,
                                    UpdateEmailChannelRequest * const q);

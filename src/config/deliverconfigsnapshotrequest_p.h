@@ -31,7 +31,7 @@ class DeliverConfigSnapshotRequest;
 class QTAWS_EXPORT DeliverConfigSnapshotRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DeliverConfigSnapshotRequestPrivate(const ConfigService::Action action,
+    DeliverConfigSnapshotRequestPrivate(const ConfigServiceRequest::Action action,
                                    DeliverConfigSnapshotRequest * const q);
     DeliverConfigSnapshotRequestPrivate(const DeliverConfigSnapshotRequestPrivate &other,
                                    DeliverConfigSnapshotRequest * const q);

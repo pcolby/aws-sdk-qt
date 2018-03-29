@@ -31,7 +31,7 @@ class ListPlatformVersionsRequest;
 class QTAWS_EXPORT ListPlatformVersionsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    ListPlatformVersionsRequestPrivate(const ElasticBeanstalk::Action action,
+    ListPlatformVersionsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    ListPlatformVersionsRequest * const q);
     ListPlatformVersionsRequestPrivate(const ListPlatformVersionsRequestPrivate &other,
                                    ListPlatformVersionsRequest * const q);

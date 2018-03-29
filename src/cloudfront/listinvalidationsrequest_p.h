@@ -31,7 +31,7 @@ class ListInvalidationsRequest;
 class QTAWS_EXPORT ListInvalidationsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
-    ListInvalidationsRequestPrivate(const CloudFront::Action action,
+    ListInvalidationsRequestPrivate(const CloudFrontRequest::Action action,
                                    ListInvalidationsRequest * const q);
     ListInvalidationsRequestPrivate(const ListInvalidationsRequestPrivate &other,
                                    ListInvalidationsRequest * const q);

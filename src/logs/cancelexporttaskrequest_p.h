@@ -31,7 +31,7 @@ class CancelExportTaskRequest;
 class QTAWS_EXPORT CancelExportTaskRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    CancelExportTaskRequestPrivate(const CloudWatchLogs::Action action,
+    CancelExportTaskRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    CancelExportTaskRequest * const q);
     CancelExportTaskRequestPrivate(const CancelExportTaskRequestPrivate &other,
                                    CancelExportTaskRequest * const q);

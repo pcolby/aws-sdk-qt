@@ -31,7 +31,7 @@ class UpdateResourceServerRequest;
 class QTAWS_EXPORT UpdateResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    UpdateResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,
+    UpdateResourceServerRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    UpdateResourceServerRequest * const q);
     UpdateResourceServerRequestPrivate(const UpdateResourceServerRequestPrivate &other,
                                    UpdateResourceServerRequest * const q);

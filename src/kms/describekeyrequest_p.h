@@ -31,7 +31,7 @@ class DescribeKeyRequest;
 class QTAWS_EXPORT DescribeKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
-    DescribeKeyRequestPrivate(const KMS::Action action,
+    DescribeKeyRequestPrivate(const KMSRequest::Action action,
                                    DescribeKeyRequest * const q);
     DescribeKeyRequestPrivate(const DescribeKeyRequestPrivate &other,
                                    DescribeKeyRequest * const q);

@@ -31,7 +31,7 @@ class DeletePlacementGroupRequest;
 class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeletePlacementGroupRequestPrivate(const EC2::Action action,
+    DeletePlacementGroupRequestPrivate(const EC2Request::Action action,
                                    DeletePlacementGroupRequest * const q);
     DeletePlacementGroupRequestPrivate(const DeletePlacementGroupRequestPrivate &other,
                                    DeletePlacementGroupRequest * const q);

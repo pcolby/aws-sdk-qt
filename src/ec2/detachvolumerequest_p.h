@@ -31,7 +31,7 @@ class DetachVolumeRequest;
 class QTAWS_EXPORT DetachVolumeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DetachVolumeRequestPrivate(const EC2::Action action,
+    DetachVolumeRequestPrivate(const EC2Request::Action action,
                                    DetachVolumeRequest * const q);
     DetachVolumeRequestPrivate(const DetachVolumeRequestPrivate &other,
                                    DetachVolumeRequest * const q);

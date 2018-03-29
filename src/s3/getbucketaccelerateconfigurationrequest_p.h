@@ -31,7 +31,7 @@ class GetBucketAccelerateConfigurationRequest;
 class QTAWS_EXPORT GetBucketAccelerateConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketAccelerateConfigurationRequestPrivate(const S3::Action action,
+    GetBucketAccelerateConfigurationRequestPrivate(const S3Request::Action action,
                                    GetBucketAccelerateConfigurationRequest * const q);
     GetBucketAccelerateConfigurationRequestPrivate(const GetBucketAccelerateConfigurationRequestPrivate &other,
                                    GetBucketAccelerateConfigurationRequest * const q);

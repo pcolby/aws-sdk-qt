@@ -31,7 +31,7 @@ class ListCoreDefinitionVersionsRequest;
 class QTAWS_EXPORT ListCoreDefinitionVersionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListCoreDefinitionVersionsRequestPrivate(const Greengrass::Action action,
+    ListCoreDefinitionVersionsRequestPrivate(const GreengrassRequest::Action action,
                                    ListCoreDefinitionVersionsRequest * const q);
     ListCoreDefinitionVersionsRequestPrivate(const ListCoreDefinitionVersionsRequestPrivate &other,
                                    ListCoreDefinitionVersionsRequest * const q);

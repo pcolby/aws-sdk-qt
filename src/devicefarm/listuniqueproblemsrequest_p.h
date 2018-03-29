@@ -31,7 +31,7 @@ class ListUniqueProblemsRequest;
 class QTAWS_EXPORT ListUniqueProblemsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListUniqueProblemsRequestPrivate(const DeviceFarm::Action action,
+    ListUniqueProblemsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListUniqueProblemsRequest * const q);
     ListUniqueProblemsRequestPrivate(const ListUniqueProblemsRequestPrivate &other,
                                    ListUniqueProblemsRequest * const q);

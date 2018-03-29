@@ -31,7 +31,7 @@ class UpdateFunctionConfigurationRequest;
 class QTAWS_EXPORT UpdateFunctionConfigurationRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    UpdateFunctionConfigurationRequestPrivate(const Lambda::Action action,
+    UpdateFunctionConfigurationRequestPrivate(const LambdaRequest::Action action,
                                    UpdateFunctionConfigurationRequest * const q);
     UpdateFunctionConfigurationRequestPrivate(const UpdateFunctionConfigurationRequestPrivate &other,
                                    UpdateFunctionConfigurationRequest * const q);

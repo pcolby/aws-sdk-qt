@@ -31,7 +31,7 @@ class EnableKeyRequest;
 class QTAWS_EXPORT EnableKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
-    EnableKeyRequestPrivate(const KMS::Action action,
+    EnableKeyRequestPrivate(const KMSRequest::Action action,
                                    EnableKeyRequest * const q);
     EnableKeyRequestPrivate(const EnableKeyRequestPrivate &other,
                                    EnableKeyRequest * const q);

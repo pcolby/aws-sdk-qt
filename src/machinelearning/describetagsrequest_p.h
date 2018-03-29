@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const MachineLearning::Action action,
+    DescribeTagsRequestPrivate(const MachineLearningRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

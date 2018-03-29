@@ -31,7 +31,7 @@ class DeleteApplicationInputProcessingConfigurationRequest;
 class QTAWS_EXPORT DeleteApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    DeleteApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalytics::Action action,
+    DeleteApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    DeleteApplicationInputProcessingConfigurationRequest * const q);
     DeleteApplicationInputProcessingConfigurationRequestPrivate(const DeleteApplicationInputProcessingConfigurationRequestPrivate &other,
                                    DeleteApplicationInputProcessingConfigurationRequest * const q);

@@ -31,7 +31,7 @@ class DescribeInputSecurityGroupRequest;
 class QTAWS_EXPORT DescribeInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    DescribeInputSecurityGroupRequestPrivate(const MediaLive::Action action,
+    DescribeInputSecurityGroupRequestPrivate(const MediaLiveRequest::Action action,
                                    DescribeInputSecurityGroupRequest * const q);
     DescribeInputSecurityGroupRequestPrivate(const DescribeInputSecurityGroupRequestPrivate &other,
                                    DescribeInputSecurityGroupRequest * const q);

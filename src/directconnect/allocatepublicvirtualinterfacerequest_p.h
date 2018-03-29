@@ -31,7 +31,7 @@ class AllocatePublicVirtualInterfaceRequest;
 class QTAWS_EXPORT AllocatePublicVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    AllocatePublicVirtualInterfaceRequestPrivate(const DirectConnect::Action action,
+    AllocatePublicVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,
                                    AllocatePublicVirtualInterfaceRequest * const q);
     AllocatePublicVirtualInterfaceRequestPrivate(const AllocatePublicVirtualInterfaceRequestPrivate &other,
                                    AllocatePublicVirtualInterfaceRequest * const q);

@@ -31,7 +31,7 @@ class StopApplicationRequest;
 class QTAWS_EXPORT StopApplicationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    StopApplicationRequestPrivate(const KinesisAnalytics::Action action,
+    StopApplicationRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    StopApplicationRequest * const q);
     StopApplicationRequestPrivate(const StopApplicationRequestPrivate &other,
                                    StopApplicationRequest * const q);

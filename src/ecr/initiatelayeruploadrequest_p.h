@@ -31,7 +31,7 @@ class InitiateLayerUploadRequest;
 class QTAWS_EXPORT InitiateLayerUploadRequestPrivate : public ECRRequestPrivate {
 
 public:
-    InitiateLayerUploadRequestPrivate(const ECR::Action action,
+    InitiateLayerUploadRequestPrivate(const ECRRequest::Action action,
                                    InitiateLayerUploadRequest * const q);
     InitiateLayerUploadRequestPrivate(const InitiateLayerUploadRequestPrivate &other,
                                    InitiateLayerUploadRequest * const q);

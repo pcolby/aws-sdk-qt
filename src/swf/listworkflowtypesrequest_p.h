@@ -31,7 +31,7 @@ class ListWorkflowTypesRequest;
 class QTAWS_EXPORT ListWorkflowTypesRequestPrivate : public SWFRequestPrivate {
 
 public:
-    ListWorkflowTypesRequestPrivate(const SWF::Action action,
+    ListWorkflowTypesRequestPrivate(const SWFRequest::Action action,
                                    ListWorkflowTypesRequest * const q);
     ListWorkflowTypesRequestPrivate(const ListWorkflowTypesRequestPrivate &other,
                                    ListWorkflowTypesRequest * const q);

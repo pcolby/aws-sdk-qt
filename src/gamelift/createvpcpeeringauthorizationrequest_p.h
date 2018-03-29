@@ -31,7 +31,7 @@ class CreateVpcPeeringAuthorizationRequest;
 class QTAWS_EXPORT CreateVpcPeeringAuthorizationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    CreateVpcPeeringAuthorizationRequestPrivate(const GameLift::Action action,
+    CreateVpcPeeringAuthorizationRequestPrivate(const GameLiftRequest::Action action,
                                    CreateVpcPeeringAuthorizationRequest * const q);
     CreateVpcPeeringAuthorizationRequestPrivate(const CreateVpcPeeringAuthorizationRequestPrivate &other,
                                    CreateVpcPeeringAuthorizationRequest * const q);

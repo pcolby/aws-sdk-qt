@@ -31,7 +31,7 @@ class ModifyDBInstanceRequest;
 class QTAWS_EXPORT ModifyDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ModifyDBInstanceRequestPrivate(const RDS::Action action,
+    ModifyDBInstanceRequestPrivate(const RDSRequest::Action action,
                                    ModifyDBInstanceRequest * const q);
     ModifyDBInstanceRequestPrivate(const ModifyDBInstanceRequestPrivate &other,
                                    ModifyDBInstanceRequest * const q);

@@ -31,7 +31,7 @@ class DescribeSchemasRequest;
 class QTAWS_EXPORT DescribeSchemasRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DescribeSchemasRequestPrivate(const DatabaseMigrationService::Action action,
+    DescribeSchemasRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DescribeSchemasRequest * const q);
     DescribeSchemasRequestPrivate(const DescribeSchemasRequestPrivate &other,
                                    DescribeSchemasRequest * const q);

@@ -31,7 +31,7 @@ class DeleteMessageBatchRequest;
 class QTAWS_EXPORT DeleteMessageBatchRequestPrivate : public SQSRequestPrivate {
 
 public:
-    DeleteMessageBatchRequestPrivate(const SQS::Action action,
+    DeleteMessageBatchRequestPrivate(const SQSRequest::Action action,
                                    DeleteMessageBatchRequest * const q);
     DeleteMessageBatchRequestPrivate(const DeleteMessageBatchRequestPrivate &other,
                                    DeleteMessageBatchRequest * const q);

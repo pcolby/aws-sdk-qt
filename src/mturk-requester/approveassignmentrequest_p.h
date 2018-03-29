@@ -31,7 +31,7 @@ class ApproveAssignmentRequest;
 class QTAWS_EXPORT ApproveAssignmentRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ApproveAssignmentRequestPrivate(const MTurk::Action action,
+    ApproveAssignmentRequestPrivate(const MTurkRequest::Action action,
                                    ApproveAssignmentRequest * const q);
     ApproveAssignmentRequestPrivate(const ApproveAssignmentRequestPrivate &other,
                                    ApproveAssignmentRequest * const q);

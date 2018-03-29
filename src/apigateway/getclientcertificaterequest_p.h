@@ -31,7 +31,7 @@ class GetClientCertificateRequest;
 class QTAWS_EXPORT GetClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetClientCertificateRequestPrivate(const APIGateway::Action action,
+    GetClientCertificateRequestPrivate(const APIGatewayRequest::Action action,
                                    GetClientCertificateRequest * const q);
     GetClientCertificateRequestPrivate(const GetClientCertificateRequestPrivate &other,
                                    GetClientCertificateRequest * const q);

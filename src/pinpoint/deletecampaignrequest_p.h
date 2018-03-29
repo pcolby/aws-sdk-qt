@@ -31,7 +31,7 @@ class DeleteCampaignRequest;
 class QTAWS_EXPORT DeleteCampaignRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteCampaignRequestPrivate(const Pinpoint::Action action,
+    DeleteCampaignRequestPrivate(const PinpointRequest::Action action,
                                    DeleteCampaignRequest * const q);
     DeleteCampaignRequestPrivate(const DeleteCampaignRequestPrivate &other,
                                    DeleteCampaignRequest * const q);

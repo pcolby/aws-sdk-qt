@@ -31,7 +31,7 @@ class CreateAssociationRequest;
 class QTAWS_EXPORT CreateAssociationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    CreateAssociationRequestPrivate(const SSM::Action action,
+    CreateAssociationRequestPrivate(const SSMRequest::Action action,
                                    CreateAssociationRequest * const q);
     CreateAssociationRequestPrivate(const CreateAssociationRequestPrivate &other,
                                    CreateAssociationRequest * const q);

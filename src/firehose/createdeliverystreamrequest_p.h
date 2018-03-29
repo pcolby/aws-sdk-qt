@@ -31,7 +31,7 @@ class CreateDeliveryStreamRequest;
 class QTAWS_EXPORT CreateDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
-    CreateDeliveryStreamRequestPrivate(const Firehose::Action action,
+    CreateDeliveryStreamRequestPrivate(const FirehoseRequest::Action action,
                                    CreateDeliveryStreamRequest * const q);
     CreateDeliveryStreamRequestPrivate(const CreateDeliveryStreamRequestPrivate &other,
                                    CreateDeliveryStreamRequest * const q);

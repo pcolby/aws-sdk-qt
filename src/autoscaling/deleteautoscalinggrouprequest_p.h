@@ -31,7 +31,7 @@ class DeleteAutoScalingGroupRequest;
 class QTAWS_EXPORT DeleteAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DeleteAutoScalingGroupRequestPrivate(const AutoScaling::Action action,
+    DeleteAutoScalingGroupRequestPrivate(const AutoScalingRequest::Action action,
                                    DeleteAutoScalingGroupRequest * const q);
     DeleteAutoScalingGroupRequestPrivate(const DeleteAutoScalingGroupRequestPrivate &other,
                                    DeleteAutoScalingGroupRequest * const q);

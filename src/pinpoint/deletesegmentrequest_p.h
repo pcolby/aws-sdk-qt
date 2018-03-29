@@ -31,7 +31,7 @@ class DeleteSegmentRequest;
 class QTAWS_EXPORT DeleteSegmentRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteSegmentRequestPrivate(const Pinpoint::Action action,
+    DeleteSegmentRequestPrivate(const PinpointRequest::Action action,
                                    DeleteSegmentRequest * const q);
     DeleteSegmentRequestPrivate(const DeleteSegmentRequestPrivate &other,
                                    DeleteSegmentRequest * const q);

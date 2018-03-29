@@ -31,7 +31,7 @@ class UpdateGroupRequest;
 class QTAWS_EXPORT UpdateGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    UpdateGroupRequestPrivate(const Greengrass::Action action,
+    UpdateGroupRequestPrivate(const GreengrassRequest::Action action,
                                    UpdateGroupRequest * const q);
     UpdateGroupRequestPrivate(const UpdateGroupRequestPrivate &other,
                                    UpdateGroupRequest * const q);

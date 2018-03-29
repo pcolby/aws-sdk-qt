@@ -31,7 +31,7 @@ class GetServiceLinkedRoleDeletionStatusRequest;
 class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusRequestPrivate : public IAMRequestPrivate {
 
 public:
-    GetServiceLinkedRoleDeletionStatusRequestPrivate(const IAM::Action action,
+    GetServiceLinkedRoleDeletionStatusRequestPrivate(const IAMRequest::Action action,
                                    GetServiceLinkedRoleDeletionStatusRequest * const q);
     GetServiceLinkedRoleDeletionStatusRequestPrivate(const GetServiceLinkedRoleDeletionStatusRequestPrivate &other,
                                    GetServiceLinkedRoleDeletionStatusRequest * const q);

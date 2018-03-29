@@ -31,7 +31,7 @@ class UpdateDevicePoolRequest;
 class QTAWS_EXPORT UpdateDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    UpdateDevicePoolRequestPrivate(const DeviceFarm::Action action,
+    UpdateDevicePoolRequestPrivate(const DeviceFarmRequest::Action action,
                                    UpdateDevicePoolRequest * const q);
     UpdateDevicePoolRequestPrivate(const UpdateDevicePoolRequestPrivate &other,
                                    UpdateDevicePoolRequest * const q);

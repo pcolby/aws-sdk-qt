@@ -31,7 +31,7 @@ class GetMediaForFragmentListRequest;
 class QTAWS_EXPORT GetMediaForFragmentListRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
 
 public:
-    GetMediaForFragmentListRequestPrivate(const KinesisVideoArchivedMedia::Action action,
+    GetMediaForFragmentListRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action,
                                    GetMediaForFragmentListRequest * const q);
     GetMediaForFragmentListRequestPrivate(const GetMediaForFragmentListRequestPrivate &other,
                                    GetMediaForFragmentListRequest * const q);

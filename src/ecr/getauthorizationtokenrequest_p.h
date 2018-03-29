@@ -31,7 +31,7 @@ class GetAuthorizationTokenRequest;
 class QTAWS_EXPORT GetAuthorizationTokenRequestPrivate : public ECRRequestPrivate {
 
 public:
-    GetAuthorizationTokenRequestPrivate(const ECR::Action action,
+    GetAuthorizationTokenRequestPrivate(const ECRRequest::Action action,
                                    GetAuthorizationTokenRequest * const q);
     GetAuthorizationTokenRequestPrivate(const GetAuthorizationTokenRequestPrivate &other,
                                    GetAuthorizationTokenRequest * const q);

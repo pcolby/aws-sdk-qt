@@ -31,7 +31,7 @@ class AdminRemoveUserFromGroupRequest;
 class QTAWS_EXPORT AdminRemoveUserFromGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminRemoveUserFromGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminRemoveUserFromGroupRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminRemoveUserFromGroupRequest * const q);
     AdminRemoveUserFromGroupRequestPrivate(const AdminRemoveUserFromGroupRequestPrivate &other,
                                    AdminRemoveUserFromGroupRequest * const q);

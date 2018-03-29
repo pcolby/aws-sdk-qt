@@ -31,7 +31,7 @@ class ValidatePipelineDefinitionRequest;
 class QTAWS_EXPORT ValidatePipelineDefinitionRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    ValidatePipelineDefinitionRequestPrivate(const DataPipeline::Action action,
+    ValidatePipelineDefinitionRequestPrivate(const DataPipelineRequest::Action action,
                                    ValidatePipelineDefinitionRequest * const q);
     ValidatePipelineDefinitionRequestPrivate(const ValidatePipelineDefinitionRequestPrivate &other,
                                    ValidatePipelineDefinitionRequest * const q);

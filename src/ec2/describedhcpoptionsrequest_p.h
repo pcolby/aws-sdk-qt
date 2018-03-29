@@ -31,7 +31,7 @@ class DescribeDhcpOptionsRequest;
 class QTAWS_EXPORT DescribeDhcpOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeDhcpOptionsRequestPrivate(const EC2::Action action,
+    DescribeDhcpOptionsRequestPrivate(const EC2Request::Action action,
                                    DescribeDhcpOptionsRequest * const q);
     DescribeDhcpOptionsRequestPrivate(const DescribeDhcpOptionsRequestPrivate &other,
                                    DescribeDhcpOptionsRequest * const q);

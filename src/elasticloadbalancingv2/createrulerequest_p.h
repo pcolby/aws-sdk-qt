@@ -31,7 +31,7 @@ class CreateRuleRequest;
 class QTAWS_EXPORT CreateRuleRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
-    CreateRuleRequestPrivate(const ElasticLoadBalancingv2::Action action,
+    CreateRuleRequestPrivate(const ElasticLoadBalancingv2Request::Action action,
                                    CreateRuleRequest * const q);
     CreateRuleRequestPrivate(const CreateRuleRequestPrivate &other,
                                    CreateRuleRequest * const q);

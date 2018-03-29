@@ -31,7 +31,7 @@ class ListSubscriptionsByTopicRequest;
 class QTAWS_EXPORT ListSubscriptionsByTopicRequestPrivate : public SNSRequestPrivate {
 
 public:
-    ListSubscriptionsByTopicRequestPrivate(const SNS::Action action,
+    ListSubscriptionsByTopicRequestPrivate(const SNSRequest::Action action,
                                    ListSubscriptionsByTopicRequest * const q);
     ListSubscriptionsByTopicRequestPrivate(const ListSubscriptionsByTopicRequestPrivate &other,
                                    ListSubscriptionsByTopicRequest * const q);

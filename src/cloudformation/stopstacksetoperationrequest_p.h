@@ -31,7 +31,7 @@ class StopStackSetOperationRequest;
 class QTAWS_EXPORT StopStackSetOperationRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    StopStackSetOperationRequestPrivate(const CloudFormation::Action action,
+    StopStackSetOperationRequestPrivate(const CloudFormationRequest::Action action,
                                    StopStackSetOperationRequest * const q);
     StopStackSetOperationRequestPrivate(const StopStackSetOperationRequestPrivate &other,
                                    StopStackSetOperationRequest * const q);

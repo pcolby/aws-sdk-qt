@@ -31,7 +31,7 @@ class RemoveClientIDFromOpenIDConnectProviderRequest;
 class QTAWS_EXPORT RemoveClientIDFromOpenIDConnectProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
-    RemoveClientIDFromOpenIDConnectProviderRequestPrivate(const IAM::Action action,
+    RemoveClientIDFromOpenIDConnectProviderRequestPrivate(const IAMRequest::Action action,
                                    RemoveClientIDFromOpenIDConnectProviderRequest * const q);
     RemoveClientIDFromOpenIDConnectProviderRequestPrivate(const RemoveClientIDFromOpenIDConnectProviderRequestPrivate &other,
                                    RemoveClientIDFromOpenIDConnectProviderRequest * const q);

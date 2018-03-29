@@ -31,7 +31,7 @@ class UpdateFleetCapacityRequest;
 class QTAWS_EXPORT UpdateFleetCapacityRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    UpdateFleetCapacityRequestPrivate(const GameLift::Action action,
+    UpdateFleetCapacityRequestPrivate(const GameLiftRequest::Action action,
                                    UpdateFleetCapacityRequest * const q);
     UpdateFleetCapacityRequestPrivate(const UpdateFleetCapacityRequestPrivate &other,
                                    UpdateFleetCapacityRequest * const q);

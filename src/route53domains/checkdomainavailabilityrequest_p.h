@@ -31,7 +31,7 @@ class CheckDomainAvailabilityRequest;
 class QTAWS_EXPORT CheckDomainAvailabilityRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    CheckDomainAvailabilityRequestPrivate(const Route53Domains::Action action,
+    CheckDomainAvailabilityRequestPrivate(const Route53DomainsRequest::Action action,
                                    CheckDomainAvailabilityRequest * const q);
     CheckDomainAvailabilityRequestPrivate(const CheckDomainAvailabilityRequestPrivate &other,
                                    CheckDomainAvailabilityRequest * const q);

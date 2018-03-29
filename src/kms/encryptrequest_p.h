@@ -31,7 +31,7 @@ class EncryptRequest;
 class QTAWS_EXPORT EncryptRequestPrivate : public KMSRequestPrivate {
 
 public:
-    EncryptRequestPrivate(const KMS::Action action,
+    EncryptRequestPrivate(const KMSRequest::Action action,
                                    EncryptRequest * const q);
     EncryptRequestPrivate(const EncryptRequestPrivate &other,
                                    EncryptRequest * const q);

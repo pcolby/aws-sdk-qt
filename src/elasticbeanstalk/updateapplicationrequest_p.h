@@ -31,7 +31,7 @@ class UpdateApplicationRequest;
 class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    UpdateApplicationRequestPrivate(const ElasticBeanstalk::Action action,
+    UpdateApplicationRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    UpdateApplicationRequest * const q);
     UpdateApplicationRequestPrivate(const UpdateApplicationRequestPrivate &other,
                                    UpdateApplicationRequest * const q);

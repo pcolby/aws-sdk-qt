@@ -31,7 +31,7 @@ class UpdateResourceRequest;
 class QTAWS_EXPORT UpdateResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateResourceRequestPrivate(const APIGateway::Action action,
+    UpdateResourceRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateResourceRequest * const q);
     UpdateResourceRequestPrivate(const UpdateResourceRequestPrivate &other,
                                    UpdateResourceRequest * const q);

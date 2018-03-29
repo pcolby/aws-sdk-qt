@@ -31,7 +31,7 @@ class ModifyVpcEndpointRequest;
 class QTAWS_EXPORT ModifyVpcEndpointRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyVpcEndpointRequestPrivate(const EC2::Action action,
+    ModifyVpcEndpointRequestPrivate(const EC2Request::Action action,
                                    ModifyVpcEndpointRequest * const q);
     ModifyVpcEndpointRequestPrivate(const ModifyVpcEndpointRequestPrivate &other,
                                    ModifyVpcEndpointRequest * const q);

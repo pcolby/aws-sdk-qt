@@ -31,7 +31,7 @@ class UpdateLagRequest;
 class QTAWS_EXPORT UpdateLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    UpdateLagRequestPrivate(const DirectConnect::Action action,
+    UpdateLagRequestPrivate(const DirectConnectRequest::Action action,
                                    UpdateLagRequest * const q);
     UpdateLagRequestPrivate(const UpdateLagRequestPrivate &other,
                                    UpdateLagRequest * const q);

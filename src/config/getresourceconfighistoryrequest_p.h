@@ -31,7 +31,7 @@ class GetResourceConfigHistoryRequest;
 class QTAWS_EXPORT GetResourceConfigHistoryRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    GetResourceConfigHistoryRequestPrivate(const ConfigService::Action action,
+    GetResourceConfigHistoryRequestPrivate(const ConfigServiceRequest::Action action,
                                    GetResourceConfigHistoryRequest * const q);
     GetResourceConfigHistoryRequestPrivate(const GetResourceConfigHistoryRequestPrivate &other,
                                    GetResourceConfigHistoryRequest * const q);

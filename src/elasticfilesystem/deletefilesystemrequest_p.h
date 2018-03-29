@@ -31,7 +31,7 @@ class DeleteFileSystemRequest;
 class QTAWS_EXPORT DeleteFileSystemRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DeleteFileSystemRequestPrivate(const EFS::Action action,
+    DeleteFileSystemRequestPrivate(const EFSRequest::Action action,
                                    DeleteFileSystemRequest * const q);
     DeleteFileSystemRequestPrivate(const DeleteFileSystemRequestPrivate &other,
                                    DeleteFileSystemRequest * const q);

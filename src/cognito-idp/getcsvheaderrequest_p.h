@@ -31,7 +31,7 @@ class GetCSVHeaderRequest;
 class QTAWS_EXPORT GetCSVHeaderRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    GetCSVHeaderRequestPrivate(const CognitoIdentityProvider::Action action,
+    GetCSVHeaderRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    GetCSVHeaderRequest * const q);
     GetCSVHeaderRequestPrivate(const GetCSVHeaderRequestPrivate &other,
                                    GetCSVHeaderRequest * const q);

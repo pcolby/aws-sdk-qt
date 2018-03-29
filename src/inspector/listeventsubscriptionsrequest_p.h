@@ -31,7 +31,7 @@ class ListEventSubscriptionsRequest;
 class QTAWS_EXPORT ListEventSubscriptionsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    ListEventSubscriptionsRequestPrivate(const Inspector::Action action,
+    ListEventSubscriptionsRequestPrivate(const InspectorRequest::Action action,
                                    ListEventSubscriptionsRequest * const q);
     ListEventSubscriptionsRequestPrivate(const ListEventSubscriptionsRequestPrivate &other,
                                    ListEventSubscriptionsRequest * const q);

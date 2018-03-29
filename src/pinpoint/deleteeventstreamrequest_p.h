@@ -31,7 +31,7 @@ class DeleteEventStreamRequest;
 class QTAWS_EXPORT DeleteEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteEventStreamRequestPrivate(const Pinpoint::Action action,
+    DeleteEventStreamRequestPrivate(const PinpointRequest::Action action,
                                    DeleteEventStreamRequest * const q);
     DeleteEventStreamRequestPrivate(const DeleteEventStreamRequestPrivate &other,
                                    DeleteEventStreamRequest * const q);

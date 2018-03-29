@@ -31,7 +31,7 @@ class DeleteActivationRequest;
 class QTAWS_EXPORT DeleteActivationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeleteActivationRequestPrivate(const SSM::Action action,
+    DeleteActivationRequestPrivate(const SSMRequest::Action action,
                                    DeleteActivationRequest * const q);
     DeleteActivationRequestPrivate(const DeleteActivationRequestPrivate &other,
                                    DeleteActivationRequest * const q);

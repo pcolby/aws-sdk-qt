@@ -31,7 +31,7 @@ class TransferDomainRequest;
 class QTAWS_EXPORT TransferDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    TransferDomainRequestPrivate(const Route53Domains::Action action,
+    TransferDomainRequestPrivate(const Route53DomainsRequest::Action action,
                                    TransferDomainRequest * const q);
     TransferDomainRequestPrivate(const TransferDomainRequestPrivate &other,
                                    TransferDomainRequest * const q);

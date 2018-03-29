@@ -31,7 +31,7 @@ class DeleteDeploymentRequest;
 class QTAWS_EXPORT DeleteDeploymentRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteDeploymentRequestPrivate(const APIGateway::Action action,
+    DeleteDeploymentRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteDeploymentRequest * const q);
     DeleteDeploymentRequestPrivate(const DeleteDeploymentRequestPrivate &other,
                                    DeleteDeploymentRequest * const q);

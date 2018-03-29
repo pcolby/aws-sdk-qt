@@ -31,7 +31,7 @@ class DescribeEnvironmentResourcesRequest;
 class QTAWS_EXPORT DescribeEnvironmentResourcesRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeEnvironmentResourcesRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeEnvironmentResourcesRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeEnvironmentResourcesRequest * const q);
     DescribeEnvironmentResourcesRequestPrivate(const DescribeEnvironmentResourcesRequestPrivate &other,
                                    DescribeEnvironmentResourcesRequest * const q);

@@ -31,7 +31,7 @@ class ListResourceServersRequest;
 class QTAWS_EXPORT ListResourceServersRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ListResourceServersRequestPrivate(const CognitoIdentityProvider::Action action,
+    ListResourceServersRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ListResourceServersRequest * const q);
     ListResourceServersRequestPrivate(const ListResourceServersRequestPrivate &other,
                                    ListResourceServersRequest * const q);

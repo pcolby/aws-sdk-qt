@@ -31,7 +31,7 @@ class DescribeLimitsRequest;
 class QTAWS_EXPORT DescribeLimitsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    DescribeLimitsRequestPrivate(const DynamoDB::Action action,
+    DescribeLimitsRequestPrivate(const DynamoDBRequest::Action action,
                                    DescribeLimitsRequest * const q);
     DescribeLimitsRequestPrivate(const DescribeLimitsRequestPrivate &other,
                                    DescribeLimitsRequest * const q);

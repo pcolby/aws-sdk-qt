@@ -31,7 +31,7 @@ class ListUserImportJobsRequest;
 class QTAWS_EXPORT ListUserImportJobsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ListUserImportJobsRequestPrivate(const CognitoIdentityProvider::Action action,
+    ListUserImportJobsRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ListUserImportJobsRequest * const q);
     ListUserImportJobsRequestPrivate(const ListUserImportJobsRequestPrivate &other,
                                    ListUserImportJobsRequest * const q);

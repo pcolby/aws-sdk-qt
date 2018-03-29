@@ -31,7 +31,7 @@ class DescribeConfigurationSettingsRequest;
 class QTAWS_EXPORT DescribeConfigurationSettingsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeConfigurationSettingsRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeConfigurationSettingsRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeConfigurationSettingsRequest * const q);
     DescribeConfigurationSettingsRequestPrivate(const DescribeConfigurationSettingsRequestPrivate &other,
                                    DescribeConfigurationSettingsRequest * const q);

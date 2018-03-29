@@ -31,7 +31,7 @@ class PutBucketEncryptionRequest;
 class QTAWS_EXPORT PutBucketEncryptionRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketEncryptionRequestPrivate(const S3::Action action,
+    PutBucketEncryptionRequestPrivate(const S3Request::Action action,
                                    PutBucketEncryptionRequest * const q);
     PutBucketEncryptionRequestPrivate(const PutBucketEncryptionRequestPrivate &other,
                                    PutBucketEncryptionRequest * const q);

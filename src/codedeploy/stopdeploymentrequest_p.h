@@ -31,7 +31,7 @@ class StopDeploymentRequest;
 class QTAWS_EXPORT StopDeploymentRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    StopDeploymentRequestPrivate(const CodeDeploy::Action action,
+    StopDeploymentRequestPrivate(const CodeDeployRequest::Action action,
                                    StopDeploymentRequest * const q);
     StopDeploymentRequestPrivate(const StopDeploymentRequestPrivate &other,
                                    StopDeploymentRequest * const q);

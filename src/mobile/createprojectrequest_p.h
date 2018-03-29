@@ -31,7 +31,7 @@ class CreateProjectRequest;
 class QTAWS_EXPORT CreateProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
-    CreateProjectRequestPrivate(const Mobile::Action action,
+    CreateProjectRequestPrivate(const MobileRequest::Action action,
                                    CreateProjectRequest * const q);
     CreateProjectRequestPrivate(const CreateProjectRequestPrivate &other,
                                    CreateProjectRequest * const q);

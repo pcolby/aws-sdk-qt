@@ -31,7 +31,7 @@ class GetCelebrityInfoRequest;
 class QTAWS_EXPORT GetCelebrityInfoRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    GetCelebrityInfoRequestPrivate(const Rekognition::Action action,
+    GetCelebrityInfoRequestPrivate(const RekognitionRequest::Action action,
                                    GetCelebrityInfoRequest * const q);
     GetCelebrityInfoRequestPrivate(const GetCelebrityInfoRequestPrivate &other,
                                    GetCelebrityInfoRequest * const q);

@@ -31,7 +31,7 @@ class DisassociateDiscoveredResourceRequest;
 class QTAWS_EXPORT DisassociateDiscoveredResourceRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    DisassociateDiscoveredResourceRequestPrivate(const MigrationHub::Action action,
+    DisassociateDiscoveredResourceRequestPrivate(const MigrationHubRequest::Action action,
                                    DisassociateDiscoveredResourceRequest * const q);
     DisassociateDiscoveredResourceRequestPrivate(const DisassociateDiscoveredResourceRequestPrivate &other,
                                    DisassociateDiscoveredResourceRequest * const q);

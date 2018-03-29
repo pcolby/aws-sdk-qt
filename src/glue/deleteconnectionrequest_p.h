@@ -31,7 +31,7 @@ class DeleteConnectionRequest;
 class QTAWS_EXPORT DeleteConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteConnectionRequestPrivate(const Glue::Action action,
+    DeleteConnectionRequestPrivate(const GlueRequest::Action action,
                                    DeleteConnectionRequest * const q);
     DeleteConnectionRequestPrivate(const DeleteConnectionRequestPrivate &other,
                                    DeleteConnectionRequest * const q);

@@ -31,7 +31,7 @@ class DeleteLaunchConfigurationRequest;
 class QTAWS_EXPORT DeleteLaunchConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    DeleteLaunchConfigurationRequestPrivate(const AutoScaling::Action action,
+    DeleteLaunchConfigurationRequestPrivate(const AutoScalingRequest::Action action,
                                    DeleteLaunchConfigurationRequest * const q);
     DeleteLaunchConfigurationRequestPrivate(const DeleteLaunchConfigurationRequestPrivate &other,
                                    DeleteLaunchConfigurationRequest * const q);

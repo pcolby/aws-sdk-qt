@@ -31,7 +31,7 @@ class ResetFpgaImageAttributeRequest;
 class QTAWS_EXPORT ResetFpgaImageAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ResetFpgaImageAttributeRequestPrivate(const EC2::Action action,
+    ResetFpgaImageAttributeRequestPrivate(const EC2Request::Action action,
                                    ResetFpgaImageAttributeRequest * const q);
     ResetFpgaImageAttributeRequestPrivate(const ResetFpgaImageAttributeRequestPrivate &other,
                                    ResetFpgaImageAttributeRequest * const q);

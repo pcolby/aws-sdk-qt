@@ -31,7 +31,7 @@ class DeleteDeploymentConfigRequest;
 class QTAWS_EXPORT DeleteDeploymentConfigRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    DeleteDeploymentConfigRequestPrivate(const CodeDeploy::Action action,
+    DeleteDeploymentConfigRequestPrivate(const CodeDeployRequest::Action action,
                                    DeleteDeploymentConfigRequest * const q);
     DeleteDeploymentConfigRequestPrivate(const DeleteDeploymentConfigRequestPrivate &other,
                                    DeleteDeploymentConfigRequest * const q);

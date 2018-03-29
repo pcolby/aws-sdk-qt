@@ -31,7 +31,7 @@ class CreateRoleRequest;
 class QTAWS_EXPORT CreateRoleRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateRoleRequestPrivate(const IAM::Action action,
+    CreateRoleRequestPrivate(const IAMRequest::Action action,
                                    CreateRoleRequest * const q);
     CreateRoleRequestPrivate(const CreateRoleRequestPrivate &other,
                                    CreateRoleRequest * const q);

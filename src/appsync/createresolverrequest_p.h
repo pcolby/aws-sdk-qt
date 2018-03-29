@@ -31,7 +31,7 @@ class CreateResolverRequest;
 class QTAWS_EXPORT CreateResolverRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    CreateResolverRequestPrivate(const AppSync::Action action,
+    CreateResolverRequestPrivate(const AppSyncRequest::Action action,
                                    CreateResolverRequest * const q);
     CreateResolverRequestPrivate(const CreateResolverRequestPrivate &other,
                                    CreateResolverRequest * const q);

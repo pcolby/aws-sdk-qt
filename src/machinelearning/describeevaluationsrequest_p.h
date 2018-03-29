@@ -31,7 +31,7 @@ class DescribeEvaluationsRequest;
 class QTAWS_EXPORT DescribeEvaluationsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    DescribeEvaluationsRequestPrivate(const MachineLearning::Action action,
+    DescribeEvaluationsRequestPrivate(const MachineLearningRequest::Action action,
                                    DescribeEvaluationsRequest * const q);
     DescribeEvaluationsRequestPrivate(const DescribeEvaluationsRequestPrivate &other,
                                    DescribeEvaluationsRequest * const q);

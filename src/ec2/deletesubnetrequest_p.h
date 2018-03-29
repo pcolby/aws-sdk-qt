@@ -31,7 +31,7 @@ class DeleteSubnetRequest;
 class QTAWS_EXPORT DeleteSubnetRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DeleteSubnetRequestPrivate(const EC2::Action action,
+    DeleteSubnetRequestPrivate(const EC2Request::Action action,
                                    DeleteSubnetRequest * const q);
     DeleteSubnetRequestPrivate(const DeleteSubnetRequestPrivate &other,
                                    DeleteSubnetRequest * const q);

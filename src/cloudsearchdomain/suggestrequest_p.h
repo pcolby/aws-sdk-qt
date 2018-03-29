@@ -31,7 +31,7 @@ class SuggestRequest;
 class QTAWS_EXPORT SuggestRequestPrivate : public CloudSearchDomainRequestPrivate {
 
 public:
-    SuggestRequestPrivate(const CloudSearchDomain::Action action,
+    SuggestRequestPrivate(const CloudSearchDomainRequest::Action action,
                                    SuggestRequest * const q);
     SuggestRequestPrivate(const SuggestRequestPrivate &other,
                                    SuggestRequest * const q);

@@ -31,7 +31,7 @@ class DescribeFpgaImageAttributeRequest;
 class QTAWS_EXPORT DescribeFpgaImageAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeFpgaImageAttributeRequestPrivate(const EC2::Action action,
+    DescribeFpgaImageAttributeRequestPrivate(const EC2Request::Action action,
                                    DescribeFpgaImageAttributeRequest * const q);
     DescribeFpgaImageAttributeRequestPrivate(const DescribeFpgaImageAttributeRequestPrivate &other,
                                    DescribeFpgaImageAttributeRequest * const q);

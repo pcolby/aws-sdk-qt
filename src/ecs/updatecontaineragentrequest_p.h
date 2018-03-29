@@ -31,7 +31,7 @@ class UpdateContainerAgentRequest;
 class QTAWS_EXPORT UpdateContainerAgentRequestPrivate : public ECSRequestPrivate {
 
 public:
-    UpdateContainerAgentRequestPrivate(const ECS::Action action,
+    UpdateContainerAgentRequestPrivate(const ECSRequest::Action action,
                                    UpdateContainerAgentRequest * const q);
     UpdateContainerAgentRequestPrivate(const UpdateContainerAgentRequestPrivate &other,
                                    UpdateContainerAgentRequest * const q);

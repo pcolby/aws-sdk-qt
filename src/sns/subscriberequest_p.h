@@ -31,7 +31,7 @@ class SubscribeRequest;
 class QTAWS_EXPORT SubscribeRequestPrivate : public SNSRequestPrivate {
 
 public:
-    SubscribeRequestPrivate(const SNS::Action action,
+    SubscribeRequestPrivate(const SNSRequest::Action action,
                                    SubscribeRequest * const q);
     SubscribeRequestPrivate(const SubscribeRequestPrivate &other,
                                    SubscribeRequest * const q);

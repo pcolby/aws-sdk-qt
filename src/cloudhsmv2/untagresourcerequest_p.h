@@ -31,7 +31,7 @@ class UntagResourceRequest;
 class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const CloudHSMV2::Action action,
+    UntagResourceRequestPrivate(const CloudHSMV2Request::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

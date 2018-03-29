@@ -31,7 +31,7 @@ class GetTemplateRequest;
 class QTAWS_EXPORT GetTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
-    GetTemplateRequestPrivate(const SES::Action action,
+    GetTemplateRequestPrivate(const SESRequest::Action action,
                                    GetTemplateRequest * const q);
     GetTemplateRequestPrivate(const GetTemplateRequestPrivate &other,
                                    GetTemplateRequest * const q);

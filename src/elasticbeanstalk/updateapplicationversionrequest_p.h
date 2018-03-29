@@ -31,7 +31,7 @@ class UpdateApplicationVersionRequest;
 class QTAWS_EXPORT UpdateApplicationVersionRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    UpdateApplicationVersionRequestPrivate(const ElasticBeanstalk::Action action,
+    UpdateApplicationVersionRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    UpdateApplicationVersionRequest * const q);
     UpdateApplicationVersionRequestPrivate(const UpdateApplicationVersionRequestPrivate &other,
                                    UpdateApplicationVersionRequest * const q);

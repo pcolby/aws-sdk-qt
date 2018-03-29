@@ -31,7 +31,7 @@ class DeleteDeliveryStreamRequest;
 class QTAWS_EXPORT DeleteDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
-    DeleteDeliveryStreamRequestPrivate(const Firehose::Action action,
+    DeleteDeliveryStreamRequestPrivate(const FirehoseRequest::Action action,
                                    DeleteDeliveryStreamRequest * const q);
     DeleteDeliveryStreamRequestPrivate(const DeleteDeliveryStreamRequestPrivate &other,
                                    DeleteDeliveryStreamRequest * const q);

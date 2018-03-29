@@ -31,7 +31,7 @@ class DisassociateFromMasterAccountRequest;
 class QTAWS_EXPORT DisassociateFromMasterAccountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DisassociateFromMasterAccountRequestPrivate(const GuardDuty::Action action,
+    DisassociateFromMasterAccountRequestPrivate(const GuardDutyRequest::Action action,
                                    DisassociateFromMasterAccountRequest * const q);
     DisassociateFromMasterAccountRequestPrivate(const DisassociateFromMasterAccountRequestPrivate &other,
                                    DisassociateFromMasterAccountRequest * const q);

@@ -31,7 +31,7 @@ class DeleteChangeSetRequest;
 class QTAWS_EXPORT DeleteChangeSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    DeleteChangeSetRequestPrivate(const CloudFormation::Action action,
+    DeleteChangeSetRequestPrivate(const CloudFormationRequest::Action action,
                                    DeleteChangeSetRequest * const q);
     DeleteChangeSetRequestPrivate(const DeleteChangeSetRequestPrivate &other,
                                    DeleteChangeSetRequest * const q);

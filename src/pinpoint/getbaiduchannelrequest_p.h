@@ -31,7 +31,7 @@ class GetBaiduChannelRequest;
 class QTAWS_EXPORT GetBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetBaiduChannelRequestPrivate(const Pinpoint::Action action,
+    GetBaiduChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetBaiduChannelRequest * const q);
     GetBaiduChannelRequestPrivate(const GetBaiduChannelRequestPrivate &other,
                                    GetBaiduChannelRequest * const q);

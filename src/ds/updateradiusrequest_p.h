@@ -31,7 +31,7 @@ class UpdateRadiusRequest;
 class QTAWS_EXPORT UpdateRadiusRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    UpdateRadiusRequestPrivate(const DirectoryService::Action action,
+    UpdateRadiusRequestPrivate(const DirectoryServiceRequest::Action action,
                                    UpdateRadiusRequest * const q);
     UpdateRadiusRequestPrivate(const UpdateRadiusRequestPrivate &other,
                                    UpdateRadiusRequest * const q);

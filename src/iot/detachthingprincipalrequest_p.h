@@ -31,7 +31,7 @@ class DetachThingPrincipalRequest;
 class QTAWS_EXPORT DetachThingPrincipalRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DetachThingPrincipalRequestPrivate(const IoT::Action action,
+    DetachThingPrincipalRequestPrivate(const IoTRequest::Action action,
                                    DetachThingPrincipalRequest * const q);
     DetachThingPrincipalRequestPrivate(const DetachThingPrincipalRequestPrivate &other,
                                    DetachThingPrincipalRequest * const q);

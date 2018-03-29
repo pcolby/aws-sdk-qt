@@ -31,7 +31,7 @@ class UpdateSqlInjectionMatchSetRequest;
 class QTAWS_EXPORT UpdateSqlInjectionMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    UpdateSqlInjectionMatchSetRequestPrivate(const WAF::Action action,
+    UpdateSqlInjectionMatchSetRequestPrivate(const WAFRequest::Action action,
                                    UpdateSqlInjectionMatchSetRequest * const q);
     UpdateSqlInjectionMatchSetRequestPrivate(const UpdateSqlInjectionMatchSetRequestPrivate &other,
                                    UpdateSqlInjectionMatchSetRequest * const q);

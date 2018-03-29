@@ -31,7 +31,7 @@ class UpdateTimeToLiveRequest;
 class QTAWS_EXPORT UpdateTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    UpdateTimeToLiveRequestPrivate(const DynamoDB::Action action,
+    UpdateTimeToLiveRequestPrivate(const DynamoDBRequest::Action action,
                                    UpdateTimeToLiveRequest * const q);
     UpdateTimeToLiveRequestPrivate(const UpdateTimeToLiveRequestPrivate &other,
                                    UpdateTimeToLiveRequest * const q);

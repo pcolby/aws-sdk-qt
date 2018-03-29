@@ -31,7 +31,7 @@ class ListTagsRequest;
 class QTAWS_EXPORT ListTagsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const SageMaker::Action action,
+    ListTagsRequestPrivate(const SageMakerRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

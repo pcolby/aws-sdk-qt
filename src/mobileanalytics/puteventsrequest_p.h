@@ -31,7 +31,7 @@ class PutEventsRequest;
 class QTAWS_EXPORT PutEventsRequestPrivate : public MobileAnalyticsRequestPrivate {
 
 public:
-    PutEventsRequestPrivate(const MobileAnalytics::Action action,
+    PutEventsRequestPrivate(const MobileAnalyticsRequest::Action action,
                                    PutEventsRequest * const q);
     PutEventsRequestPrivate(const PutEventsRequestPrivate &other,
                                    PutEventsRequest * const q);

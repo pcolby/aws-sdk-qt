@@ -31,7 +31,7 @@ class ConfirmForgotPasswordRequest;
 class QTAWS_EXPORT ConfirmForgotPasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    ConfirmForgotPasswordRequestPrivate(const CognitoIdentityProvider::Action action,
+    ConfirmForgotPasswordRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    ConfirmForgotPasswordRequest * const q);
     ConfirmForgotPasswordRequestPrivate(const ConfirmForgotPasswordRequestPrivate &other,
                                    ConfirmForgotPasswordRequest * const q);

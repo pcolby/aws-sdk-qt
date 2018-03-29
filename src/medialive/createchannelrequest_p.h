@@ -31,7 +31,7 @@ class CreateChannelRequest;
 class QTAWS_EXPORT CreateChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    CreateChannelRequestPrivate(const MediaLive::Action action,
+    CreateChannelRequestPrivate(const MediaLiveRequest::Action action,
                                    CreateChannelRequest * const q);
     CreateChannelRequestPrivate(const CreateChannelRequestPrivate &other,
                                    CreateChannelRequest * const q);

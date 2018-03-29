@@ -31,7 +31,7 @@ class SetRepositoryPolicyRequest;
 class QTAWS_EXPORT SetRepositoryPolicyRequestPrivate : public ECRRequestPrivate {
 
 public:
-    SetRepositoryPolicyRequestPrivate(const ECR::Action action,
+    SetRepositoryPolicyRequestPrivate(const ECRRequest::Action action,
                                    SetRepositoryPolicyRequest * const q);
     SetRepositoryPolicyRequestPrivate(const SetRepositoryPolicyRequestPrivate &other,
                                    SetRepositoryPolicyRequest * const q);

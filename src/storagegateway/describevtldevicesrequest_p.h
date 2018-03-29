@@ -31,7 +31,7 @@ class DescribeVTLDevicesRequest;
 class QTAWS_EXPORT DescribeVTLDevicesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeVTLDevicesRequestPrivate(const StorageGateway::Action action,
+    DescribeVTLDevicesRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeVTLDevicesRequest * const q);
     DescribeVTLDevicesRequestPrivate(const DescribeVTLDevicesRequestPrivate &other,
                                    DescribeVTLDevicesRequest * const q);

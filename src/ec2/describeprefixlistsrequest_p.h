@@ -31,7 +31,7 @@ class DescribePrefixListsRequest;
 class QTAWS_EXPORT DescribePrefixListsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribePrefixListsRequestPrivate(const EC2::Action action,
+    DescribePrefixListsRequestPrivate(const EC2Request::Action action,
                                    DescribePrefixListsRequest * const q);
     DescribePrefixListsRequestPrivate(const DescribePrefixListsRequestPrivate &other,
                                    DescribePrefixListsRequest * const q);

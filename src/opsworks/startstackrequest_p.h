@@ -31,7 +31,7 @@ class StartStackRequest;
 class QTAWS_EXPORT StartStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    StartStackRequestPrivate(const OpsWorks::Action action,
+    StartStackRequestPrivate(const OpsWorksRequest::Action action,
                                    StartStackRequest * const q);
     StartStackRequestPrivate(const StartStackRequestPrivate &other,
                                    StartStackRequest * const q);

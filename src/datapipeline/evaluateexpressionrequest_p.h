@@ -31,7 +31,7 @@ class EvaluateExpressionRequest;
 class QTAWS_EXPORT EvaluateExpressionRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    EvaluateExpressionRequestPrivate(const DataPipeline::Action action,
+    EvaluateExpressionRequestPrivate(const DataPipelineRequest::Action action,
                                    EvaluateExpressionRequest * const q);
     EvaluateExpressionRequestPrivate(const EvaluateExpressionRequestPrivate &other,
                                    EvaluateExpressionRequest * const q);

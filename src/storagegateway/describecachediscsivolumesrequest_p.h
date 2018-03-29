@@ -31,7 +31,7 @@ class DescribeCachediSCSIVolumesRequest;
 class QTAWS_EXPORT DescribeCachediSCSIVolumesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeCachediSCSIVolumesRequestPrivate(const StorageGateway::Action action,
+    DescribeCachediSCSIVolumesRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeCachediSCSIVolumesRequest * const q);
     DescribeCachediSCSIVolumesRequestPrivate(const DescribeCachediSCSIVolumesRequestPrivate &other,
                                    DescribeCachediSCSIVolumesRequest * const q);

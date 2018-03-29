@@ -31,7 +31,7 @@ class UpdatePipelineStatusRequest;
 class QTAWS_EXPORT UpdatePipelineStatusRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    UpdatePipelineStatusRequestPrivate(const ElasticTranscoder::Action action,
+    UpdatePipelineStatusRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    UpdatePipelineStatusRequest * const q);
     UpdatePipelineStatusRequestPrivate(const UpdatePipelineStatusRequestPrivate &other,
                                    UpdatePipelineStatusRequest * const q);

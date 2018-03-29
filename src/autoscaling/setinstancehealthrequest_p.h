@@ -31,7 +31,7 @@ class SetInstanceHealthRequest;
 class QTAWS_EXPORT SetInstanceHealthRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
-    SetInstanceHealthRequestPrivate(const AutoScaling::Action action,
+    SetInstanceHealthRequestPrivate(const AutoScalingRequest::Action action,
                                    SetInstanceHealthRequest * const q);
     SetInstanceHealthRequestPrivate(const SetInstanceHealthRequestPrivate &other,
                                    SetInstanceHealthRequest * const q);

@@ -31,7 +31,7 @@ class ListGlobalTablesRequest;
 class QTAWS_EXPORT ListGlobalTablesRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
-    ListGlobalTablesRequestPrivate(const DynamoDB::Action action,
+    ListGlobalTablesRequestPrivate(const DynamoDBRequest::Action action,
                                    ListGlobalTablesRequest * const q);
     ListGlobalTablesRequestPrivate(const ListGlobalTablesRequestPrivate &other,
                                    ListGlobalTablesRequest * const q);

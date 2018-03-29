@@ -31,7 +31,7 @@ class DescribeEventsRequest;
 class QTAWS_EXPORT DescribeEventsRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const OpsWorksCM::Action action,
+    DescribeEventsRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);

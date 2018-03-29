@@ -31,7 +31,7 @@ class ResetClusterParameterGroupRequest;
 class QTAWS_EXPORT ResetClusterParameterGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    ResetClusterParameterGroupRequestPrivate(const Redshift::Action action,
+    ResetClusterParameterGroupRequestPrivate(const RedshiftRequest::Action action,
                                    ResetClusterParameterGroupRequest * const q);
     ResetClusterParameterGroupRequestPrivate(const ResetClusterParameterGroupRequestPrivate &other,
                                    ResetClusterParameterGroupRequest * const q);

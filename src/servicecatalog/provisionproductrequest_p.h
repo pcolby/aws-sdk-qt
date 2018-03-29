@@ -31,7 +31,7 @@ class ProvisionProductRequest;
 class QTAWS_EXPORT ProvisionProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    ProvisionProductRequestPrivate(const ServiceCatalog::Action action,
+    ProvisionProductRequestPrivate(const ServiceCatalogRequest::Action action,
                                    ProvisionProductRequest * const q);
     ProvisionProductRequestPrivate(const ProvisionProductRequestPrivate &other,
                                    ProvisionProductRequest * const q);

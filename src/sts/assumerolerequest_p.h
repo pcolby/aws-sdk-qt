@@ -31,7 +31,7 @@ class AssumeRoleRequest;
 class QTAWS_EXPORT AssumeRoleRequestPrivate : public STSRequestPrivate {
 
 public:
-    AssumeRoleRequestPrivate(const STS::Action action,
+    AssumeRoleRequestPrivate(const STSRequest::Action action,
                                    AssumeRoleRequest * const q);
     AssumeRoleRequestPrivate(const AssumeRoleRequestPrivate &other,
                                    AssumeRoleRequest * const q);

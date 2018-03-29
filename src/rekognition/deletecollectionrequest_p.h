@@ -31,7 +31,7 @@ class DeleteCollectionRequest;
 class QTAWS_EXPORT DeleteCollectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
-    DeleteCollectionRequestPrivate(const Rekognition::Action action,
+    DeleteCollectionRequestPrivate(const RekognitionRequest::Action action,
                                    DeleteCollectionRequest * const q);
     DeleteCollectionRequestPrivate(const DeleteCollectionRequestPrivate &other,
                                    DeleteCollectionRequest * const q);

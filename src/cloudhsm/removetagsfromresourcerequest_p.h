@@ -31,7 +31,7 @@ class RemoveTagsFromResourceRequest;
 class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const CloudHSM::Action action,
+    RemoveTagsFromResourceRequestPrivate(const CloudHSMRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);

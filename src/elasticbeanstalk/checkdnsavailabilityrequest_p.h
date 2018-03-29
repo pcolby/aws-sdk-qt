@@ -31,7 +31,7 @@ class CheckDNSAvailabilityRequest;
 class QTAWS_EXPORT CheckDNSAvailabilityRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    CheckDNSAvailabilityRequestPrivate(const ElasticBeanstalk::Action action,
+    CheckDNSAvailabilityRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    CheckDNSAvailabilityRequest * const q);
     CheckDNSAvailabilityRequestPrivate(const CheckDNSAvailabilityRequestPrivate &other,
                                    CheckDNSAvailabilityRequest * const q);

@@ -31,7 +31,7 @@ class GetRateBasedRuleManagedKeysRequest;
 class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequestPrivate : public WAFRequestPrivate {
 
 public:
-    GetRateBasedRuleManagedKeysRequestPrivate(const WAF::Action action,
+    GetRateBasedRuleManagedKeysRequestPrivate(const WAFRequest::Action action,
                                    GetRateBasedRuleManagedKeysRequest * const q);
     GetRateBasedRuleManagedKeysRequestPrivate(const GetRateBasedRuleManagedKeysRequestPrivate &other,
                                    GetRateBasedRuleManagedKeysRequest * const q);

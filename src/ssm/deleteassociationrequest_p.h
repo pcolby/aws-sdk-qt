@@ -31,7 +31,7 @@ class DeleteAssociationRequest;
 class QTAWS_EXPORT DeleteAssociationRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DeleteAssociationRequestPrivate(const SSM::Action action,
+    DeleteAssociationRequestPrivate(const SSMRequest::Action action,
                                    DeleteAssociationRequest * const q);
     DeleteAssociationRequestPrivate(const DeleteAssociationRequestPrivate &other,
                                    DeleteAssociationRequest * const q);

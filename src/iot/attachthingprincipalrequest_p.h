@@ -31,7 +31,7 @@ class AttachThingPrincipalRequest;
 class QTAWS_EXPORT AttachThingPrincipalRequestPrivate : public IoTRequestPrivate {
 
 public:
-    AttachThingPrincipalRequestPrivate(const IoT::Action action,
+    AttachThingPrincipalRequestPrivate(const IoTRequest::Action action,
                                    AttachThingPrincipalRequest * const q);
     AttachThingPrincipalRequestPrivate(const AttachThingPrincipalRequestPrivate &other,
                                    AttachThingPrincipalRequest * const q);

@@ -31,7 +31,7 @@ class DeleteFileShareRequest;
 class QTAWS_EXPORT DeleteFileShareRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DeleteFileShareRequestPrivate(const StorageGateway::Action action,
+    DeleteFileShareRequestPrivate(const StorageGatewayRequest::Action action,
                                    DeleteFileShareRequest * const q);
     DeleteFileShareRequestPrivate(const DeleteFileShareRequestPrivate &other,
                                    DeleteFileShareRequest * const q);

@@ -31,7 +31,7 @@ class AllocateHostedConnectionRequest;
 class QTAWS_EXPORT AllocateHostedConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    AllocateHostedConnectionRequestPrivate(const DirectConnect::Action action,
+    AllocateHostedConnectionRequestPrivate(const DirectConnectRequest::Action action,
                                    AllocateHostedConnectionRequest * const q);
     AllocateHostedConnectionRequestPrivate(const AllocateHostedConnectionRequestPrivate &other,
                                    AllocateHostedConnectionRequest * const q);

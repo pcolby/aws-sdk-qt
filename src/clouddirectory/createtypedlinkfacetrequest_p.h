@@ -31,7 +31,7 @@ class CreateTypedLinkFacetRequest;
 class QTAWS_EXPORT CreateTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    CreateTypedLinkFacetRequestPrivate(const CloudDirectory::Action action,
+    CreateTypedLinkFacetRequestPrivate(const CloudDirectoryRequest::Action action,
                                    CreateTypedLinkFacetRequest * const q);
     CreateTypedLinkFacetRequestPrivate(const CreateTypedLinkFacetRequestPrivate &other,
                                    CreateTypedLinkFacetRequest * const q);

@@ -31,7 +31,7 @@ class ResetDBClusterParameterGroupRequest;
 class QTAWS_EXPORT ResetDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
-    ResetDBClusterParameterGroupRequestPrivate(const RDS::Action action,
+    ResetDBClusterParameterGroupRequestPrivate(const RDSRequest::Action action,
                                    ResetDBClusterParameterGroupRequest * const q);
     ResetDBClusterParameterGroupRequestPrivate(const ResetDBClusterParameterGroupRequestPrivate &other,
                                    ResetDBClusterParameterGroupRequest * const q);

@@ -31,7 +31,7 @@ class DescribeAssessmentRunsRequest;
 class QTAWS_EXPORT DescribeAssessmentRunsRequestPrivate : public InspectorRequestPrivate {
 
 public:
-    DescribeAssessmentRunsRequestPrivate(const Inspector::Action action,
+    DescribeAssessmentRunsRequestPrivate(const InspectorRequest::Action action,
                                    DescribeAssessmentRunsRequest * const q);
     DescribeAssessmentRunsRequestPrivate(const DescribeAssessmentRunsRequestPrivate &other,
                                    DescribeAssessmentRunsRequest * const q);

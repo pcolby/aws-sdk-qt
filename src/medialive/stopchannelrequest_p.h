@@ -31,7 +31,7 @@ class StopChannelRequest;
 class QTAWS_EXPORT StopChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
-    StopChannelRequestPrivate(const MediaLive::Action action,
+    StopChannelRequestPrivate(const MediaLiveRequest::Action action,
                                    StopChannelRequest * const q);
     StopChannelRequestPrivate(const StopChannelRequestPrivate &other,
                                    StopChannelRequest * const q);

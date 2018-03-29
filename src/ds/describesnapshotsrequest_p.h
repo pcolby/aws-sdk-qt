@@ -31,7 +31,7 @@ class DescribeSnapshotsRequest;
 class QTAWS_EXPORT DescribeSnapshotsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    DescribeSnapshotsRequestPrivate(const DirectoryService::Action action,
+    DescribeSnapshotsRequestPrivate(const DirectoryServiceRequest::Action action,
                                    DescribeSnapshotsRequest * const q);
     DescribeSnapshotsRequestPrivate(const DescribeSnapshotsRequestPrivate &other,
                                    DescribeSnapshotsRequest * const q);

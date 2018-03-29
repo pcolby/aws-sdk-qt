@@ -31,7 +31,7 @@ class LookupEventsRequest;
 class QTAWS_EXPORT LookupEventsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    LookupEventsRequestPrivate(const CloudTrail::Action action,
+    LookupEventsRequestPrivate(const CloudTrailRequest::Action action,
                                    LookupEventsRequest * const q);
     LookupEventsRequestPrivate(const LookupEventsRequestPrivate &other,
                                    LookupEventsRequest * const q);

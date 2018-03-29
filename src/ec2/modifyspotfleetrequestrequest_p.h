@@ -31,7 +31,7 @@ class ModifySpotFleetRequestRequest;
 class QTAWS_EXPORT ModifySpotFleetRequestRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifySpotFleetRequestRequestPrivate(const EC2::Action action,
+    ModifySpotFleetRequestRequestPrivate(const EC2Request::Action action,
                                    ModifySpotFleetRequestRequest * const q);
     ModifySpotFleetRequestRequestPrivate(const ModifySpotFleetRequestRequestPrivate &other,
                                    ModifySpotFleetRequestRequest * const q);

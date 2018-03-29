@@ -31,7 +31,7 @@ class UpdateMLModelRequest;
 class QTAWS_EXPORT UpdateMLModelRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    UpdateMLModelRequestPrivate(const MachineLearning::Action action,
+    UpdateMLModelRequestPrivate(const MachineLearningRequest::Action action,
                                    UpdateMLModelRequest * const q);
     UpdateMLModelRequestPrivate(const UpdateMLModelRequestPrivate &other,
                                    UpdateMLModelRequest * const q);

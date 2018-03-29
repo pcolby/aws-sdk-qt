@@ -31,7 +31,7 @@ class AddTagsToOnPremisesInstancesRequest;
 class QTAWS_EXPORT AddTagsToOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    AddTagsToOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+    AddTagsToOnPremisesInstancesRequestPrivate(const CodeDeployRequest::Action action,
                                    AddTagsToOnPremisesInstancesRequest * const q);
     AddTagsToOnPremisesInstancesRequestPrivate(const AddTagsToOnPremisesInstancesRequestPrivate &other,
                                    AddTagsToOnPremisesInstancesRequest * const q);

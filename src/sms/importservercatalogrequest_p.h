@@ -31,7 +31,7 @@ class ImportServerCatalogRequest;
 class QTAWS_EXPORT ImportServerCatalogRequestPrivate : public SMSRequestPrivate {
 
 public:
-    ImportServerCatalogRequestPrivate(const SMS::Action action,
+    ImportServerCatalogRequestPrivate(const SMSRequest::Action action,
                                    ImportServerCatalogRequest * const q);
     ImportServerCatalogRequestPrivate(const ImportServerCatalogRequestPrivate &other,
                                    ImportServerCatalogRequest * const q);

@@ -31,7 +31,7 @@ class GetBundlesRequest;
 class QTAWS_EXPORT GetBundlesRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    GetBundlesRequestPrivate(const Lightsail::Action action,
+    GetBundlesRequestPrivate(const LightsailRequest::Action action,
                                    GetBundlesRequest * const q);
     GetBundlesRequestPrivate(const GetBundlesRequestPrivate &other,
                                    GetBundlesRequest * const q);

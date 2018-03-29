@@ -31,7 +31,7 @@ class StartDeviceSyncRequest;
 class QTAWS_EXPORT StartDeviceSyncRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    StartDeviceSyncRequestPrivate(const AlexaForBusiness::Action action,
+    StartDeviceSyncRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    StartDeviceSyncRequest * const q);
     StartDeviceSyncRequestPrivate(const StartDeviceSyncRequestPrivate &other,
                                    StartDeviceSyncRequest * const q);

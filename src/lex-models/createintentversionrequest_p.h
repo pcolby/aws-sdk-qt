@@ -31,7 +31,7 @@ class CreateIntentVersionRequest;
 class QTAWS_EXPORT CreateIntentVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
-    CreateIntentVersionRequestPrivate(const LexModelBuildingService::Action action,
+    CreateIntentVersionRequestPrivate(const LexModelBuildingServiceRequest::Action action,
                                    CreateIntentVersionRequest * const q);
     CreateIntentVersionRequestPrivate(const CreateIntentVersionRequestPrivate &other,
                                    CreateIntentVersionRequest * const q);

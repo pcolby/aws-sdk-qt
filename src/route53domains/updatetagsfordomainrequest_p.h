@@ -31,7 +31,7 @@ class UpdateTagsForDomainRequest;
 class QTAWS_EXPORT UpdateTagsForDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
-    UpdateTagsForDomainRequestPrivate(const Route53Domains::Action action,
+    UpdateTagsForDomainRequestPrivate(const Route53DomainsRequest::Action action,
                                    UpdateTagsForDomainRequest * const q);
     UpdateTagsForDomainRequestPrivate(const UpdateTagsForDomainRequestPrivate &other,
                                    UpdateTagsForDomainRequest * const q);

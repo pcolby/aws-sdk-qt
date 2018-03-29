@@ -31,7 +31,7 @@ class PurchaseScheduledInstancesRequest;
 class QTAWS_EXPORT PurchaseScheduledInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    PurchaseScheduledInstancesRequestPrivate(const EC2::Action action,
+    PurchaseScheduledInstancesRequestPrivate(const EC2Request::Action action,
                                    PurchaseScheduledInstancesRequest * const q);
     PurchaseScheduledInstancesRequestPrivate(const PurchaseScheduledInstancesRequestPrivate &other,
                                    PurchaseScheduledInstancesRequest * const q);

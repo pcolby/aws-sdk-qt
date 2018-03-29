@@ -31,7 +31,7 @@ class GetCommitRequest;
 class QTAWS_EXPORT GetCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    GetCommitRequestPrivate(const CodeCommit::Action action,
+    GetCommitRequestPrivate(const CodeCommitRequest::Action action,
                                    GetCommitRequest * const q);
     GetCommitRequestPrivate(const GetCommitRequestPrivate &other,
                                    GetCommitRequest * const q);

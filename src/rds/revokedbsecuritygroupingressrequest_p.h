@@ -31,7 +31,7 @@ class RevokeDBSecurityGroupIngressRequest;
 class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequestPrivate : public RDSRequestPrivate {
 
 public:
-    RevokeDBSecurityGroupIngressRequestPrivate(const RDS::Action action,
+    RevokeDBSecurityGroupIngressRequestPrivate(const RDSRequest::Action action,
                                    RevokeDBSecurityGroupIngressRequest * const q);
     RevokeDBSecurityGroupIngressRequestPrivate(const RevokeDBSecurityGroupIngressRequestPrivate &other,
                                    RevokeDBSecurityGroupIngressRequest * const q);

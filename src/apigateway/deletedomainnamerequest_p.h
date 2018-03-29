@@ -31,7 +31,7 @@ class DeleteDomainNameRequest;
 class QTAWS_EXPORT DeleteDomainNameRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteDomainNameRequestPrivate(const APIGateway::Action action,
+    DeleteDomainNameRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteDomainNameRequest * const q);
     DeleteDomainNameRequestPrivate(const DeleteDomainNameRequestPrivate &other,
                                    DeleteDomainNameRequest * const q);

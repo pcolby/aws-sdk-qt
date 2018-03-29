@@ -31,7 +31,7 @@ class ContinueUpdateRollbackRequest;
 class QTAWS_EXPORT ContinueUpdateRollbackRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
-    ContinueUpdateRollbackRequestPrivate(const CloudFormation::Action action,
+    ContinueUpdateRollbackRequestPrivate(const CloudFormationRequest::Action action,
                                    ContinueUpdateRollbackRequest * const q);
     ContinueUpdateRollbackRequestPrivate(const ContinueUpdateRollbackRequestPrivate &other,
                                    ContinueUpdateRollbackRequest * const q);

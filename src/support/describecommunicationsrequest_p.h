@@ -31,7 +31,7 @@ class DescribeCommunicationsRequest;
 class QTAWS_EXPORT DescribeCommunicationsRequestPrivate : public SupportRequestPrivate {
 
 public:
-    DescribeCommunicationsRequestPrivate(const Support::Action action,
+    DescribeCommunicationsRequestPrivate(const SupportRequest::Action action,
                                    DescribeCommunicationsRequest * const q);
     DescribeCommunicationsRequestPrivate(const DescribeCommunicationsRequestPrivate &other,
                                    DescribeCommunicationsRequest * const q);

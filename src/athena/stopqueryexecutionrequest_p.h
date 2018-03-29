@@ -31,7 +31,7 @@ class StopQueryExecutionRequest;
 class QTAWS_EXPORT StopQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
-    StopQueryExecutionRequestPrivate(const Athena::Action action,
+    StopQueryExecutionRequestPrivate(const AthenaRequest::Action action,
                                    StopQueryExecutionRequest * const q);
     StopQueryExecutionRequestPrivate(const StopQueryExecutionRequestPrivate &other,
                                    StopQueryExecutionRequest * const q);

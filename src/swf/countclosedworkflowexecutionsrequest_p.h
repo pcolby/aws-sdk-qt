@@ -31,7 +31,7 @@ class CountClosedWorkflowExecutionsRequest;
 class QTAWS_EXPORT CountClosedWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
 
 public:
-    CountClosedWorkflowExecutionsRequestPrivate(const SWF::Action action,
+    CountClosedWorkflowExecutionsRequestPrivate(const SWFRequest::Action action,
                                    CountClosedWorkflowExecutionsRequest * const q);
     CountClosedWorkflowExecutionsRequestPrivate(const CountClosedWorkflowExecutionsRequestPrivate &other,
                                    CountClosedWorkflowExecutionsRequest * const q);

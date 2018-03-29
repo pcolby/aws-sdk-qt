@@ -31,7 +31,7 @@ class CreateEndpointRequest;
 class QTAWS_EXPORT CreateEndpointRequestPrivate : public SageMakerRequestPrivate {
 
 public:
-    CreateEndpointRequestPrivate(const SageMaker::Action action,
+    CreateEndpointRequestPrivate(const SageMakerRequest::Action action,
                                    CreateEndpointRequest * const q);
     CreateEndpointRequestPrivate(const CreateEndpointRequestPrivate &other,
                                    CreateEndpointRequest * const q);

@@ -31,7 +31,7 @@ class GetXssMatchSetRequest;
 class QTAWS_EXPORT GetXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetXssMatchSetRequestPrivate(const WAFRegional::Action action,
+    GetXssMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetXssMatchSetRequest * const q);
     GetXssMatchSetRequestPrivate(const GetXssMatchSetRequestPrivate &other,
                                    GetXssMatchSetRequest * const q);

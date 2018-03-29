@@ -31,7 +31,7 @@ class DeleteTableVersionRequest;
 class QTAWS_EXPORT DeleteTableVersionRequestPrivate : public GlueRequestPrivate {
 
 public:
-    DeleteTableVersionRequestPrivate(const Glue::Action action,
+    DeleteTableVersionRequestPrivate(const GlueRequest::Action action,
                                    DeleteTableVersionRequest * const q);
     DeleteTableVersionRequestPrivate(const DeleteTableVersionRequestPrivate &other,
                                    DeleteTableVersionRequest * const q);

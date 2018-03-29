@@ -31,7 +31,7 @@ class StartConfigRulesEvaluationRequest;
 class QTAWS_EXPORT StartConfigRulesEvaluationRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    StartConfigRulesEvaluationRequestPrivate(const ConfigService::Action action,
+    StartConfigRulesEvaluationRequestPrivate(const ConfigServiceRequest::Action action,
                                    StartConfigRulesEvaluationRequest * const q);
     StartConfigRulesEvaluationRequestPrivate(const StartConfigRulesEvaluationRequestPrivate &other,
                                    StartConfigRulesEvaluationRequest * const q);

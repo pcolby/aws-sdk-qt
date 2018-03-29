@@ -31,7 +31,7 @@ class DeleteResourceServerRequest;
 class QTAWS_EXPORT DeleteResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    DeleteResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,
+    DeleteResourceServerRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    DeleteResourceServerRequest * const q);
     DeleteResourceServerRequestPrivate(const DeleteResourceServerRequestPrivate &other,
                                    DeleteResourceServerRequest * const q);

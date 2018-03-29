@@ -31,7 +31,7 @@ class ModifyFpgaImageAttributeRequest;
 class QTAWS_EXPORT ModifyFpgaImageAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyFpgaImageAttributeRequestPrivate(const EC2::Action action,
+    ModifyFpgaImageAttributeRequestPrivate(const EC2Request::Action action,
                                    ModifyFpgaImageAttributeRequest * const q);
     ModifyFpgaImageAttributeRequestPrivate(const ModifyFpgaImageAttributeRequestPrivate &other,
                                    ModifyFpgaImageAttributeRequest * const q);

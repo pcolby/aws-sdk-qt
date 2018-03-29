@@ -31,7 +31,7 @@ class RegisterJobDefinitionRequest;
 class QTAWS_EXPORT RegisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
 
 public:
-    RegisterJobDefinitionRequestPrivate(const Batch::Action action,
+    RegisterJobDefinitionRequestPrivate(const BatchRequest::Action action,
                                    RegisterJobDefinitionRequest * const q);
     RegisterJobDefinitionRequestPrivate(const RegisterJobDefinitionRequestPrivate &other,
                                    RegisterJobDefinitionRequest * const q);

@@ -31,7 +31,7 @@ class ReleaseAddressRequest;
 class QTAWS_EXPORT ReleaseAddressRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReleaseAddressRequestPrivate(const EC2::Action action,
+    ReleaseAddressRequestPrivate(const EC2Request::Action action,
                                    ReleaseAddressRequest * const q);
     ReleaseAddressRequestPrivate(const ReleaseAddressRequestPrivate &other,
                                    ReleaseAddressRequest * const q);

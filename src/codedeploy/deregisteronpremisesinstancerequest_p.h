@@ -31,7 +31,7 @@ class DeregisterOnPremisesInstanceRequest;
 class QTAWS_EXPORT DeregisterOnPremisesInstanceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    DeregisterOnPremisesInstanceRequestPrivate(const CodeDeploy::Action action,
+    DeregisterOnPremisesInstanceRequestPrivate(const CodeDeployRequest::Action action,
                                    DeregisterOnPremisesInstanceRequest * const q);
     DeregisterOnPremisesInstanceRequestPrivate(const DeregisterOnPremisesInstanceRequestPrivate &other,
                                    DeregisterOnPremisesInstanceRequest * const q);

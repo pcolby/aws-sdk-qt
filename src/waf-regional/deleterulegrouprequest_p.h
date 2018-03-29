@@ -31,7 +31,7 @@ class DeleteRuleGroupRequest;
 class QTAWS_EXPORT DeleteRuleGroupRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    DeleteRuleGroupRequestPrivate(const WAFRegional::Action action,
+    DeleteRuleGroupRequestPrivate(const WAFRegionalRequest::Action action,
                                    DeleteRuleGroupRequest * const q);
     DeleteRuleGroupRequestPrivate(const DeleteRuleGroupRequestPrivate &other,
                                    DeleteRuleGroupRequest * const q);

@@ -31,7 +31,7 @@ class DescribeCacheRequest;
 class QTAWS_EXPORT DescribeCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeCacheRequestPrivate(const StorageGateway::Action action,
+    DescribeCacheRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeCacheRequest * const q);
     DescribeCacheRequestPrivate(const DescribeCacheRequestPrivate &other,
                                    DescribeCacheRequest * const q);

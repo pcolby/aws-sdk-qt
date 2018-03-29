@@ -31,7 +31,7 @@ class DescribeInstanceAssociationsStatusRequest;
 class QTAWS_EXPORT DescribeInstanceAssociationsStatusRequestPrivate : public SSMRequestPrivate {
 
 public:
-    DescribeInstanceAssociationsStatusRequestPrivate(const SSM::Action action,
+    DescribeInstanceAssociationsStatusRequestPrivate(const SSMRequest::Action action,
                                    DescribeInstanceAssociationsStatusRequest * const q);
     DescribeInstanceAssociationsStatusRequestPrivate(const DescribeInstanceAssociationsStatusRequestPrivate &other,
                                    DescribeInstanceAssociationsStatusRequest * const q);

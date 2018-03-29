@@ -31,7 +31,7 @@ class UpdateTemplateRequest;
 class QTAWS_EXPORT UpdateTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
-    UpdateTemplateRequestPrivate(const SES::Action action,
+    UpdateTemplateRequestPrivate(const SESRequest::Action action,
                                    UpdateTemplateRequest * const q);
     UpdateTemplateRequestPrivate(const UpdateTemplateRequestPrivate &other,
                                    UpdateTemplateRequest * const q);

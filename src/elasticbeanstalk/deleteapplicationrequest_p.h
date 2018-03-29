@@ -31,7 +31,7 @@ class DeleteApplicationRequest;
 class QTAWS_EXPORT DeleteApplicationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DeleteApplicationRequestPrivate(const ElasticBeanstalk::Action action,
+    DeleteApplicationRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DeleteApplicationRequest * const q);
     DeleteApplicationRequestPrivate(const DeleteApplicationRequestPrivate &other,
                                    DeleteApplicationRequest * const q);

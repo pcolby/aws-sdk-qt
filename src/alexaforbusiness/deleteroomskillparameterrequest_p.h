@@ -31,7 +31,7 @@ class DeleteRoomSkillParameterRequest;
 class QTAWS_EXPORT DeleteRoomSkillParameterRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    DeleteRoomSkillParameterRequestPrivate(const AlexaForBusiness::Action action,
+    DeleteRoomSkillParameterRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    DeleteRoomSkillParameterRequest * const q);
     DeleteRoomSkillParameterRequestPrivate(const DeleteRoomSkillParameterRequestPrivate &other,
                                    DeleteRoomSkillParameterRequest * const q);

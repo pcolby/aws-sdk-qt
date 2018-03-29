@@ -31,7 +31,7 @@ class DeleteOTAUpdateRequest;
 class QTAWS_EXPORT DeleteOTAUpdateRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteOTAUpdateRequestPrivate(const IoT::Action action,
+    DeleteOTAUpdateRequestPrivate(const IoTRequest::Action action,
                                    DeleteOTAUpdateRequest * const q);
     DeleteOTAUpdateRequestPrivate(const DeleteOTAUpdateRequestPrivate &other,
                                    DeleteOTAUpdateRequest * const q);

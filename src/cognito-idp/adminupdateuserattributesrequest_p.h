@@ -31,7 +31,7 @@ class AdminUpdateUserAttributesRequest;
 class QTAWS_EXPORT AdminUpdateUserAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    AdminUpdateUserAttributesRequestPrivate(const CognitoIdentityProvider::Action action,
+    AdminUpdateUserAttributesRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    AdminUpdateUserAttributesRequest * const q);
     AdminUpdateUserAttributesRequestPrivate(const AdminUpdateUserAttributesRequestPrivate &other,
                                    AdminUpdateUserAttributesRequest * const q);

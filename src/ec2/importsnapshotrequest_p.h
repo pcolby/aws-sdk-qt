@@ -31,7 +31,7 @@ class ImportSnapshotRequest;
 class QTAWS_EXPORT ImportSnapshotRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ImportSnapshotRequestPrivate(const EC2::Action action,
+    ImportSnapshotRequestPrivate(const EC2Request::Action action,
                                    ImportSnapshotRequest * const q);
     ImportSnapshotRequestPrivate(const ImportSnapshotRequestPrivate &other,
                                    ImportSnapshotRequest * const q);

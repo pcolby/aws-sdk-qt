@@ -31,7 +31,7 @@ class UpdateAccessKeyRequest;
 class QTAWS_EXPORT UpdateAccessKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateAccessKeyRequestPrivate(const IAM::Action action,
+    UpdateAccessKeyRequestPrivate(const IAMRequest::Action action,
                                    UpdateAccessKeyRequest * const q);
     UpdateAccessKeyRequestPrivate(const UpdateAccessKeyRequestPrivate &other,
                                    UpdateAccessKeyRequest * const q);

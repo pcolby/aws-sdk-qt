@@ -31,7 +31,7 @@ class CancelJobRequest;
 class QTAWS_EXPORT CancelJobRequestPrivate : public IoTRequestPrivate {
 
 public:
-    CancelJobRequestPrivate(const IoT::Action action,
+    CancelJobRequestPrivate(const IoTRequest::Action action,
                                    CancelJobRequest * const q);
     CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
                                    CancelJobRequest * const q);

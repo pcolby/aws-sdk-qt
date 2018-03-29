@@ -31,7 +31,7 @@ class UpdateOpenIDConnectProviderThumbprintRequest;
 class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateOpenIDConnectProviderThumbprintRequestPrivate(const IAM::Action action,
+    UpdateOpenIDConnectProviderThumbprintRequestPrivate(const IAMRequest::Action action,
                                    UpdateOpenIDConnectProviderThumbprintRequest * const q);
     UpdateOpenIDConnectProviderThumbprintRequestPrivate(const UpdateOpenIDConnectProviderThumbprintRequestPrivate &other,
                                    UpdateOpenIDConnectProviderThumbprintRequest * const q);

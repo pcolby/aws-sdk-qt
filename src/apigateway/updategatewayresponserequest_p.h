@@ -31,7 +31,7 @@ class UpdateGatewayResponseRequest;
 class QTAWS_EXPORT UpdateGatewayResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateGatewayResponseRequestPrivate(const APIGateway::Action action,
+    UpdateGatewayResponseRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateGatewayResponseRequest * const q);
     UpdateGatewayResponseRequestPrivate(const UpdateGatewayResponseRequestPrivate &other,
                                    UpdateGatewayResponseRequest * const q);

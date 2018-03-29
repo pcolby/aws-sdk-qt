@@ -31,7 +31,7 @@ class UploadLayerPartRequest;
 class QTAWS_EXPORT UploadLayerPartRequestPrivate : public ECRRequestPrivate {
 
 public:
-    UploadLayerPartRequestPrivate(const ECR::Action action,
+    UploadLayerPartRequestPrivate(const ECRRequest::Action action,
                                    UploadLayerPartRequest * const q);
     UploadLayerPartRequestPrivate(const UploadLayerPartRequestPrivate &other,
                                    UploadLayerPartRequest * const q);

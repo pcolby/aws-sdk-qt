@@ -31,7 +31,7 @@ class GetSnowballUsageRequest;
 class QTAWS_EXPORT GetSnowballUsageRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    GetSnowballUsageRequestPrivate(const Snowball::Action action,
+    GetSnowballUsageRequestPrivate(const SnowballRequest::Action action,
                                    GetSnowballUsageRequest * const q);
     GetSnowballUsageRequestPrivate(const GetSnowballUsageRequestPrivate &other,
                                    GetSnowballUsageRequest * const q);

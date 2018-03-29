@@ -31,7 +31,7 @@ class PutBucketRequestPaymentRequest;
 class QTAWS_EXPORT PutBucketRequestPaymentRequestPrivate : public S3RequestPrivate {
 
 public:
-    PutBucketRequestPaymentRequestPrivate(const S3::Action action,
+    PutBucketRequestPaymentRequestPrivate(const S3Request::Action action,
                                    PutBucketRequestPaymentRequest * const q);
     PutBucketRequestPaymentRequestPrivate(const PutBucketRequestPaymentRequestPrivate &other,
                                    PutBucketRequestPaymentRequest * const q);

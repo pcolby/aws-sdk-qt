@@ -31,7 +31,7 @@ class GetResourceDefinitionRequest;
 class QTAWS_EXPORT GetResourceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    GetResourceDefinitionRequestPrivate(const Greengrass::Action action,
+    GetResourceDefinitionRequestPrivate(const GreengrassRequest::Action action,
                                    GetResourceDefinitionRequest * const q);
     GetResourceDefinitionRequestPrivate(const GetResourceDefinitionRequestPrivate &other,
                                    GetResourceDefinitionRequest * const q);

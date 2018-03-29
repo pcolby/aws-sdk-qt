@@ -31,7 +31,7 @@ class DescribeEnvironmentHealthRequest;
 class QTAWS_EXPORT DescribeEnvironmentHealthRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    DescribeEnvironmentHealthRequestPrivate(const ElasticBeanstalk::Action action,
+    DescribeEnvironmentHealthRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    DescribeEnvironmentHealthRequest * const q);
     DescribeEnvironmentHealthRequestPrivate(const DescribeEnvironmentHealthRequestPrivate &other,
                                    DescribeEnvironmentHealthRequest * const q);

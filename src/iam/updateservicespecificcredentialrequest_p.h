@@ -31,7 +31,7 @@ class UpdateServiceSpecificCredentialRequest;
 class QTAWS_EXPORT UpdateServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateServiceSpecificCredentialRequestPrivate(const IAM::Action action,
+    UpdateServiceSpecificCredentialRequestPrivate(const IAMRequest::Action action,
                                    UpdateServiceSpecificCredentialRequest * const q);
     UpdateServiceSpecificCredentialRequestPrivate(const UpdateServiceSpecificCredentialRequestPrivate &other,
                                    UpdateServiceSpecificCredentialRequest * const q);

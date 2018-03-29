@@ -31,7 +31,7 @@ class UpdateServerCertificateRequest;
 class QTAWS_EXPORT UpdateServerCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
-    UpdateServerCertificateRequestPrivate(const IAM::Action action,
+    UpdateServerCertificateRequestPrivate(const IAMRequest::Action action,
                                    UpdateServerCertificateRequest * const q);
     UpdateServerCertificateRequestPrivate(const UpdateServerCertificateRequestPrivate &other,
                                    UpdateServerCertificateRequest * const q);

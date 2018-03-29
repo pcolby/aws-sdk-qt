@@ -31,7 +31,7 @@ class DescribeRiskConfigurationRequest;
 class QTAWS_EXPORT DescribeRiskConfigurationRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
-    DescribeRiskConfigurationRequestPrivate(const CognitoIdentityProvider::Action action,
+    DescribeRiskConfigurationRequestPrivate(const CognitoIdentityProviderRequest::Action action,
                                    DescribeRiskConfigurationRequest * const q);
     DescribeRiskConfigurationRequestPrivate(const DescribeRiskConfigurationRequestPrivate &other,
                                    DescribeRiskConfigurationRequest * const q);

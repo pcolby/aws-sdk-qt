@@ -31,7 +31,7 @@ class UpdateLoadBalancerAttributeRequest;
 class QTAWS_EXPORT UpdateLoadBalancerAttributeRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    UpdateLoadBalancerAttributeRequestPrivate(const Lightsail::Action action,
+    UpdateLoadBalancerAttributeRequestPrivate(const LightsailRequest::Action action,
                                    UpdateLoadBalancerAttributeRequest * const q);
     UpdateLoadBalancerAttributeRequestPrivate(const UpdateLoadBalancerAttributeRequestPrivate &other,
                                    UpdateLoadBalancerAttributeRequest * const q);

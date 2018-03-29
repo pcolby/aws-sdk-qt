@@ -31,7 +31,7 @@ class DeleteCustomMetadataRequest;
 class QTAWS_EXPORT DeleteCustomMetadataRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DeleteCustomMetadataRequestPrivate(const WorkDocs::Action action,
+    DeleteCustomMetadataRequestPrivate(const WorkDocsRequest::Action action,
                                    DeleteCustomMetadataRequest * const q);
     DeleteCustomMetadataRequestPrivate(const DeleteCustomMetadataRequestPrivate &other,
                                    DeleteCustomMetadataRequest * const q);

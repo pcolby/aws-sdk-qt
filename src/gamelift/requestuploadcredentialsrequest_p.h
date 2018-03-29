@@ -31,7 +31,7 @@ class RequestUploadCredentialsRequest;
 class QTAWS_EXPORT RequestUploadCredentialsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    RequestUploadCredentialsRequestPrivate(const GameLift::Action action,
+    RequestUploadCredentialsRequestPrivate(const GameLiftRequest::Action action,
                                    RequestUploadCredentialsRequest * const q);
     RequestUploadCredentialsRequestPrivate(const RequestUploadCredentialsRequestPrivate &other,
                                    RequestUploadCredentialsRequest * const q);

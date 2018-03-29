@@ -31,7 +31,7 @@ class ListDeploymentInstancesRequest;
 class QTAWS_EXPORT ListDeploymentInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    ListDeploymentInstancesRequestPrivate(const CodeDeploy::Action action,
+    ListDeploymentInstancesRequestPrivate(const CodeDeployRequest::Action action,
                                    ListDeploymentInstancesRequest * const q);
     ListDeploymentInstancesRequestPrivate(const ListDeploymentInstancesRequestPrivate &other,
                                    ListDeploymentInstancesRequest * const q);

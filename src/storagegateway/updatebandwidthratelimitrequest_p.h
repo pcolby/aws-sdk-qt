@@ -31,7 +31,7 @@ class UpdateBandwidthRateLimitRequest;
 class QTAWS_EXPORT UpdateBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    UpdateBandwidthRateLimitRequestPrivate(const StorageGateway::Action action,
+    UpdateBandwidthRateLimitRequestPrivate(const StorageGatewayRequest::Action action,
                                    UpdateBandwidthRateLimitRequest * const q);
     UpdateBandwidthRateLimitRequestPrivate(const UpdateBandwidthRateLimitRequestPrivate &other,
                                    UpdateBandwidthRateLimitRequest * const q);

@@ -31,7 +31,7 @@ class GetConsoleOutputRequest;
 class QTAWS_EXPORT GetConsoleOutputRequestPrivate : public EC2RequestPrivate {
 
 public:
-    GetConsoleOutputRequestPrivate(const EC2::Action action,
+    GetConsoleOutputRequestPrivate(const EC2Request::Action action,
                                    GetConsoleOutputRequest * const q);
     GetConsoleOutputRequestPrivate(const GetConsoleOutputRequestPrivate &other,
                                    GetConsoleOutputRequest * const q);

@@ -31,7 +31,7 @@ class ListFindingsRequest;
 class QTAWS_EXPORT ListFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    ListFindingsRequestPrivate(const GuardDuty::Action action,
+    ListFindingsRequestPrivate(const GuardDutyRequest::Action action,
                                    ListFindingsRequest * const q);
     ListFindingsRequestPrivate(const ListFindingsRequestPrivate &other,
                                    ListFindingsRequest * const q);

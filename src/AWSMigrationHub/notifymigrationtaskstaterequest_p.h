@@ -31,7 +31,7 @@ class NotifyMigrationTaskStateRequest;
 class QTAWS_EXPORT NotifyMigrationTaskStateRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    NotifyMigrationTaskStateRequestPrivate(const MigrationHub::Action action,
+    NotifyMigrationTaskStateRequestPrivate(const MigrationHubRequest::Action action,
                                    NotifyMigrationTaskStateRequest * const q);
     NotifyMigrationTaskStateRequestPrivate(const NotifyMigrationTaskStateRequestPrivate &other,
                                    NotifyMigrationTaskStateRequest * const q);

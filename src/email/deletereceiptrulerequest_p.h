@@ -31,7 +31,7 @@ class DeleteReceiptRuleRequest;
 class QTAWS_EXPORT DeleteReceiptRuleRequestPrivate : public SESRequestPrivate {
 
 public:
-    DeleteReceiptRuleRequestPrivate(const SES::Action action,
+    DeleteReceiptRuleRequestPrivate(const SESRequest::Action action,
                                    DeleteReceiptRuleRequest * const q);
     DeleteReceiptRuleRequestPrivate(const DeleteReceiptRuleRequestPrivate &other,
                                    DeleteReceiptRuleRequest * const q);

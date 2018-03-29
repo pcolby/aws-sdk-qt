@@ -31,7 +31,7 @@ class GetBucketCorsRequest;
 class QTAWS_EXPORT GetBucketCorsRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketCorsRequestPrivate(const S3::Action action,
+    GetBucketCorsRequestPrivate(const S3Request::Action action,
                                    GetBucketCorsRequest * const q);
     GetBucketCorsRequestPrivate(const GetBucketCorsRequestPrivate &other,
                                    GetBucketCorsRequest * const q);

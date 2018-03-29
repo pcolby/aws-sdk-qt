@@ -31,7 +31,7 @@ class DescribeLoaRequest;
 class QTAWS_EXPORT DescribeLoaRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
-    DescribeLoaRequestPrivate(const DirectConnect::Action action,
+    DescribeLoaRequestPrivate(const DirectConnectRequest::Action action,
                                    DescribeLoaRequest * const q);
     DescribeLoaRequestPrivate(const DescribeLoaRequestPrivate &other,
                                    DescribeLoaRequest * const q);

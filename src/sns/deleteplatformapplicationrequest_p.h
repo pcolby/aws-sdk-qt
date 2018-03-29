@@ -31,7 +31,7 @@ class DeletePlatformApplicationRequest;
 class QTAWS_EXPORT DeletePlatformApplicationRequestPrivate : public SNSRequestPrivate {
 
 public:
-    DeletePlatformApplicationRequestPrivate(const SNS::Action action,
+    DeletePlatformApplicationRequestPrivate(const SNSRequest::Action action,
                                    DeletePlatformApplicationRequest * const q);
     DeletePlatformApplicationRequestPrivate(const DeletePlatformApplicationRequestPrivate &other,
                                    DeletePlatformApplicationRequest * const q);

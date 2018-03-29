@@ -31,7 +31,7 @@ class BatchReadRequest;
 class QTAWS_EXPORT BatchReadRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    BatchReadRequestPrivate(const CloudDirectory::Action action,
+    BatchReadRequestPrivate(const CloudDirectoryRequest::Action action,
                                    BatchReadRequest * const q);
     BatchReadRequestPrivate(const BatchReadRequestPrivate &other,
                                    BatchReadRequest * const q);

@@ -31,7 +31,7 @@ class ListTagsRequest;
 class QTAWS_EXPORT ListTagsRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const CloudHSMV2::Action action,
+    ListTagsRequestPrivate(const CloudHSMV2Request::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

@@ -31,7 +31,7 @@ class UpdateProvisionedProductRequest;
 class QTAWS_EXPORT UpdateProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    UpdateProvisionedProductRequestPrivate(const ServiceCatalog::Action action,
+    UpdateProvisionedProductRequestPrivate(const ServiceCatalogRequest::Action action,
                                    UpdateProvisionedProductRequest * const q);
     UpdateProvisionedProductRequestPrivate(const UpdateProvisionedProductRequestPrivate &other,
                                    UpdateProvisionedProductRequest * const q);

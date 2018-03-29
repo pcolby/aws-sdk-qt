@@ -31,7 +31,7 @@ class GetHealthCheckCountRequest;
 class QTAWS_EXPORT GetHealthCheckCountRequestPrivate : public Route53RequestPrivate {
 
 public:
-    GetHealthCheckCountRequestPrivate(const Route53::Action action,
+    GetHealthCheckCountRequestPrivate(const Route53Request::Action action,
                                    GetHealthCheckCountRequest * const q);
     GetHealthCheckCountRequestPrivate(const GetHealthCheckCountRequestPrivate &other,
                                    GetHealthCheckCountRequest * const q);

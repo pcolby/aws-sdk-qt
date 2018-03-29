@@ -31,7 +31,7 @@ class CopyProductRequest;
 class QTAWS_EXPORT CopyProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    CopyProductRequestPrivate(const ServiceCatalog::Action action,
+    CopyProductRequestPrivate(const ServiceCatalogRequest::Action action,
                                    CopyProductRequest * const q);
     CopyProductRequestPrivate(const CopyProductRequestPrivate &other,
                                    CopyProductRequest * const q);

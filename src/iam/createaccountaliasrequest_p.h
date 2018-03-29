@@ -31,7 +31,7 @@ class CreateAccountAliasRequest;
 class QTAWS_EXPORT CreateAccountAliasRequestPrivate : public IAMRequestPrivate {
 
 public:
-    CreateAccountAliasRequestPrivate(const IAM::Action action,
+    CreateAccountAliasRequestPrivate(const IAMRequest::Action action,
                                    CreateAccountAliasRequest * const q);
     CreateAccountAliasRequestPrivate(const CreateAccountAliasRequestPrivate &other,
                                    CreateAccountAliasRequest * const q);

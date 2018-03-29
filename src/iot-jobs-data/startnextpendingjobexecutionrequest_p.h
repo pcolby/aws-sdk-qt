@@ -31,7 +31,7 @@ class StartNextPendingJobExecutionRequest;
 class QTAWS_EXPORT StartNextPendingJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
-    StartNextPendingJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,
+    StartNextPendingJobExecutionRequestPrivate(const IoTJobsDataPlaneRequest::Action action,
                                    StartNextPendingJobExecutionRequest * const q);
     StartNextPendingJobExecutionRequestPrivate(const StartNextPendingJobExecutionRequestPrivate &other,
                                    StartNextPendingJobExecutionRequest * const q);

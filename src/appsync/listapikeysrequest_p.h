@@ -31,7 +31,7 @@ class ListApiKeysRequest;
 class QTAWS_EXPORT ListApiKeysRequestPrivate : public AppSyncRequestPrivate {
 
 public:
-    ListApiKeysRequestPrivate(const AppSync::Action action,
+    ListApiKeysRequestPrivate(const AppSyncRequest::Action action,
                                    ListApiKeysRequest * const q);
     ListApiKeysRequestPrivate(const ListApiKeysRequestPrivate &other,
                                    ListApiKeysRequest * const q);

@@ -31,7 +31,7 @@ class DescribeJobExecutionRequest;
 class QTAWS_EXPORT DescribeJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
-    DescribeJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,
+    DescribeJobExecutionRequestPrivate(const IoTJobsDataPlaneRequest::Action action,
                                    DescribeJobExecutionRequest * const q);
     DescribeJobExecutionRequestPrivate(const DescribeJobExecutionRequestPrivate &other,
                                    DescribeJobExecutionRequest * const q);

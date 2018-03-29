@@ -31,7 +31,7 @@ class OptInPhoneNumberRequest;
 class QTAWS_EXPORT OptInPhoneNumberRequestPrivate : public SNSRequestPrivate {
 
 public:
-    OptInPhoneNumberRequestPrivate(const SNS::Action action,
+    OptInPhoneNumberRequestPrivate(const SNSRequest::Action action,
                                    OptInPhoneNumberRequest * const q);
     OptInPhoneNumberRequestPrivate(const OptInPhoneNumberRequestPrivate &other,
                                    OptInPhoneNumberRequest * const q);

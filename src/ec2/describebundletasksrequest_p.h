@@ -31,7 +31,7 @@ class DescribeBundleTasksRequest;
 class QTAWS_EXPORT DescribeBundleTasksRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeBundleTasksRequestPrivate(const EC2::Action action,
+    DescribeBundleTasksRequestPrivate(const EC2Request::Action action,
                                    DescribeBundleTasksRequest * const q);
     DescribeBundleTasksRequestPrivate(const DescribeBundleTasksRequestPrivate &other,
                                    DescribeBundleTasksRequest * const q);

@@ -31,7 +31,7 @@ class DeleteRoleAliasRequest;
 class QTAWS_EXPORT DeleteRoleAliasRequestPrivate : public IoTRequestPrivate {
 
 public:
-    DeleteRoleAliasRequestPrivate(const IoT::Action action,
+    DeleteRoleAliasRequestPrivate(const IoTRequest::Action action,
                                    DeleteRoleAliasRequest * const q);
     DeleteRoleAliasRequestPrivate(const DeleteRoleAliasRequestPrivate &other,
                                    DeleteRoleAliasRequest * const q);

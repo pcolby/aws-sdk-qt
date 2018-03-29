@@ -31,7 +31,7 @@ class ListStreamsRequest;
 class QTAWS_EXPORT ListStreamsRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
-    ListStreamsRequestPrivate(const DynamoDBStreams::Action action,
+    ListStreamsRequestPrivate(const DynamoDBStreamsRequest::Action action,
                                    ListStreamsRequest * const q);
     ListStreamsRequestPrivate(const ListStreamsRequestPrivate &other,
                                    ListStreamsRequest * const q);

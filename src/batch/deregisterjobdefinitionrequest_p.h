@@ -31,7 +31,7 @@ class DeregisterJobDefinitionRequest;
 class QTAWS_EXPORT DeregisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
 
 public:
-    DeregisterJobDefinitionRequestPrivate(const Batch::Action action,
+    DeregisterJobDefinitionRequestPrivate(const BatchRequest::Action action,
                                    DeregisterJobDefinitionRequest * const q);
     DeregisterJobDefinitionRequestPrivate(const DeregisterJobDefinitionRequestPrivate &other,
                                    DeregisterJobDefinitionRequest * const q);

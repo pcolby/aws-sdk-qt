@@ -31,7 +31,7 @@ class BatchGetQueryExecutionRequest;
 class QTAWS_EXPORT BatchGetQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
-    BatchGetQueryExecutionRequestPrivate(const Athena::Action action,
+    BatchGetQueryExecutionRequestPrivate(const AthenaRequest::Action action,
                                    BatchGetQueryExecutionRequest * const q);
     BatchGetQueryExecutionRequestPrivate(const BatchGetQueryExecutionRequestPrivate &other,
                                    BatchGetQueryExecutionRequest * const q);

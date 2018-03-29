@@ -31,7 +31,7 @@ class CreateApplicationRequest;
 class QTAWS_EXPORT CreateApplicationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    CreateApplicationRequestPrivate(const ElasticBeanstalk::Action action,
+    CreateApplicationRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    CreateApplicationRequest * const q);
     CreateApplicationRequestPrivate(const CreateApplicationRequestPrivate &other,
                                    CreateApplicationRequest * const q);

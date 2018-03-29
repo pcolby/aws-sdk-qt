@@ -31,7 +31,7 @@ class CancelJobRequest;
 class QTAWS_EXPORT CancelJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
-    CancelJobRequestPrivate(const ImportExport::Action action,
+    CancelJobRequestPrivate(const ImportExportRequest::Action action,
                                    CancelJobRequest * const q);
     CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
                                    CancelJobRequest * const q);

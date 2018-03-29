@@ -31,7 +31,7 @@ class CreateCloudFormationChangeSetRequest;
 class QTAWS_EXPORT CreateCloudFormationChangeSetRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
-    CreateCloudFormationChangeSetRequestPrivate(const ServerlessApplicationRepository::Action action,
+    CreateCloudFormationChangeSetRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,
                                    CreateCloudFormationChangeSetRequest * const q);
     CreateCloudFormationChangeSetRequestPrivate(const CreateCloudFormationChangeSetRequestPrivate &other,
                                    CreateCloudFormationChangeSetRequest * const q);

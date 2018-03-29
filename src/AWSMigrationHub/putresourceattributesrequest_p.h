@@ -31,7 +31,7 @@ class PutResourceAttributesRequest;
 class QTAWS_EXPORT PutResourceAttributesRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    PutResourceAttributesRequestPrivate(const MigrationHub::Action action,
+    PutResourceAttributesRequestPrivate(const MigrationHubRequest::Action action,
                                    PutResourceAttributesRequest * const q);
     PutResourceAttributesRequestPrivate(const PutResourceAttributesRequestPrivate &other,
                                    PutResourceAttributesRequest * const q);

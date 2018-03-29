@@ -31,7 +31,7 @@ class DescribeBandwidthRateLimitRequest;
 class QTAWS_EXPORT DescribeBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeBandwidthRateLimitRequestPrivate(const StorageGateway::Action action,
+    DescribeBandwidthRateLimitRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeBandwidthRateLimitRequest * const q);
     DescribeBandwidthRateLimitRequestPrivate(const DescribeBandwidthRateLimitRequestPrivate &other,
                                    DescribeBandwidthRateLimitRequest * const q);

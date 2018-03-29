@@ -31,7 +31,7 @@ class AttachPolicyRequest;
 class QTAWS_EXPORT AttachPolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    AttachPolicyRequestPrivate(const Organizations::Action action,
+    AttachPolicyRequestPrivate(const OrganizationsRequest::Action action,
                                    AttachPolicyRequest * const q);
     AttachPolicyRequestPrivate(const AttachPolicyRequestPrivate &other,
                                    AttachPolicyRequest * const q);

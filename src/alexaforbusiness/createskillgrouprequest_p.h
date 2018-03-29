@@ -31,7 +31,7 @@ class CreateSkillGroupRequest;
 class QTAWS_EXPORT CreateSkillGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    CreateSkillGroupRequestPrivate(const AlexaForBusiness::Action action,
+    CreateSkillGroupRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    CreateSkillGroupRequest * const q);
     CreateSkillGroupRequestPrivate(const CreateSkillGroupRequestPrivate &other,
                                    CreateSkillGroupRequest * const q);

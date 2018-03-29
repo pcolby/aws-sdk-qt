@@ -31,7 +31,7 @@ class SendInvitationRequest;
 class QTAWS_EXPORT SendInvitationRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
-    SendInvitationRequestPrivate(const AlexaForBusiness::Action action,
+    SendInvitationRequestPrivate(const AlexaForBusinessRequest::Action action,
                                    SendInvitationRequest * const q);
     SendInvitationRequestPrivate(const SendInvitationRequestPrivate &other,
                                    SendInvitationRequest * const q);

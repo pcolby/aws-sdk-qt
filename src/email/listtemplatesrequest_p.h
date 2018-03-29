@@ -31,7 +31,7 @@ class ListTemplatesRequest;
 class QTAWS_EXPORT ListTemplatesRequestPrivate : public SESRequestPrivate {
 
 public:
-    ListTemplatesRequestPrivate(const SES::Action action,
+    ListTemplatesRequestPrivate(const SESRequest::Action action,
                                    ListTemplatesRequest * const q);
     ListTemplatesRequestPrivate(const ListTemplatesRequestPrivate &other,
                                    ListTemplatesRequest * const q);

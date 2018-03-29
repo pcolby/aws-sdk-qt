@@ -31,7 +31,7 @@ class CopyObjectRequest;
 class QTAWS_EXPORT CopyObjectRequestPrivate : public S3RequestPrivate {
 
 public:
-    CopyObjectRequestPrivate(const S3::Action action,
+    CopyObjectRequestPrivate(const S3Request::Action action,
                                    CopyObjectRequest * const q);
     CopyObjectRequestPrivate(const CopyObjectRequestPrivate &other,
                                    CopyObjectRequest * const q);

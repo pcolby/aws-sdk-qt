@@ -31,7 +31,7 @@ class DeleteJobQueueRequest;
 class QTAWS_EXPORT DeleteJobQueueRequestPrivate : public BatchRequestPrivate {
 
 public:
-    DeleteJobQueueRequestPrivate(const Batch::Action action,
+    DeleteJobQueueRequestPrivate(const BatchRequest::Action action,
                                    DeleteJobQueueRequest * const q);
     DeleteJobQueueRequestPrivate(const DeleteJobQueueRequestPrivate &other,
                                    DeleteJobQueueRequest * const q);

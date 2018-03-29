@@ -31,7 +31,7 @@ class ModifyInstancePlacementRequest;
 class QTAWS_EXPORT ModifyInstancePlacementRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyInstancePlacementRequestPrivate(const EC2::Action action,
+    ModifyInstancePlacementRequestPrivate(const EC2Request::Action action,
                                    ModifyInstancePlacementRequest * const q);
     ModifyInstancePlacementRequestPrivate(const ModifyInstancePlacementRequestPrivate &other,
                                    ModifyInstancePlacementRequest * const q);

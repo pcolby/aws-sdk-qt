@@ -31,7 +31,7 @@ class CreateServerRequest;
 class QTAWS_EXPORT CreateServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    CreateServerRequestPrivate(const OpsWorksCM::Action action,
+    CreateServerRequestPrivate(const OpsWorksCMRequest::Action action,
                                    CreateServerRequest * const q);
     CreateServerRequestPrivate(const CreateServerRequestPrivate &other,
                                    CreateServerRequest * const q);

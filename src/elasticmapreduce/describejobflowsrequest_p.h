@@ -31,7 +31,7 @@ class DescribeJobFlowsRequest;
 class QTAWS_EXPORT DescribeJobFlowsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    DescribeJobFlowsRequestPrivate(const EMR::Action action,
+    DescribeJobFlowsRequestPrivate(const EMRRequest::Action action,
                                    DescribeJobFlowsRequest * const q);
     DescribeJobFlowsRequestPrivate(const DescribeJobFlowsRequestPrivate &other,
                                    DescribeJobFlowsRequest * const q);

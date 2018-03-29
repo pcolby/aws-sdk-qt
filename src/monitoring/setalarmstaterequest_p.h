@@ -31,7 +31,7 @@ class SetAlarmStateRequest;
 class QTAWS_EXPORT SetAlarmStateRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
-    SetAlarmStateRequestPrivate(const CloudWatch::Action action,
+    SetAlarmStateRequestPrivate(const CloudWatchRequest::Action action,
                                    SetAlarmStateRequest * const q);
     SetAlarmStateRequestPrivate(const SetAlarmStateRequestPrivate &other,
                                    SetAlarmStateRequest * const q);

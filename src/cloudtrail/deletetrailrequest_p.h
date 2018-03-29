@@ -31,7 +31,7 @@ class DeleteTrailRequest;
 class QTAWS_EXPORT DeleteTrailRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
-    DeleteTrailRequestPrivate(const CloudTrail::Action action,
+    DeleteTrailRequestPrivate(const CloudTrailRequest::Action action,
                                    DeleteTrailRequest * const q);
     DeleteTrailRequestPrivate(const DeleteTrailRequestPrivate &other,
                                    DeleteTrailRequest * const q);

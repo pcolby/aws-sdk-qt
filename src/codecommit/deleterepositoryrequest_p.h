@@ -31,7 +31,7 @@ class DeleteRepositoryRequest;
 class QTAWS_EXPORT DeleteRepositoryRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    DeleteRepositoryRequestPrivate(const CodeCommit::Action action,
+    DeleteRepositoryRequestPrivate(const CodeCommitRequest::Action action,
                                    DeleteRepositoryRequest * const q);
     DeleteRepositoryRequestPrivate(const DeleteRepositoryRequestPrivate &other,
                                    DeleteRepositoryRequest * const q);

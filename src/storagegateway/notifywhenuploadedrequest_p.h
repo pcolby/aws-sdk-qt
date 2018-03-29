@@ -31,7 +31,7 @@ class NotifyWhenUploadedRequest;
 class QTAWS_EXPORT NotifyWhenUploadedRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    NotifyWhenUploadedRequestPrivate(const StorageGateway::Action action,
+    NotifyWhenUploadedRequestPrivate(const StorageGatewayRequest::Action action,
                                    NotifyWhenUploadedRequest * const q);
     NotifyWhenUploadedRequestPrivate(const NotifyWhenUploadedRequestPrivate &other,
                                    NotifyWhenUploadedRequest * const q);

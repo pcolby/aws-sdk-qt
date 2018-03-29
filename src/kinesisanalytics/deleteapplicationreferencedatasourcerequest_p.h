@@ -31,7 +31,7 @@ class DeleteApplicationReferenceDataSourceRequest;
 class QTAWS_EXPORT DeleteApplicationReferenceDataSourceRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
-    DeleteApplicationReferenceDataSourceRequestPrivate(const KinesisAnalytics::Action action,
+    DeleteApplicationReferenceDataSourceRequestPrivate(const KinesisAnalyticsRequest::Action action,
                                    DeleteApplicationReferenceDataSourceRequest * const q);
     DeleteApplicationReferenceDataSourceRequestPrivate(const DeleteApplicationReferenceDataSourceRequestPrivate &other,
                                    DeleteApplicationReferenceDataSourceRequest * const q);

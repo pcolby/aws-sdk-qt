@@ -31,7 +31,7 @@ class UpdateGroupRequest;
 class QTAWS_EXPORT UpdateGroupRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
-    UpdateGroupRequestPrivate(const ResourceGroups::Action action,
+    UpdateGroupRequestPrivate(const ResourceGroupsRequest::Action action,
                                    UpdateGroupRequest * const q);
     UpdateGroupRequestPrivate(const UpdateGroupRequestPrivate &other,
                                    UpdateGroupRequest * const q);

@@ -31,7 +31,7 @@ class StartTranscriptionJobRequest;
 class QTAWS_EXPORT StartTranscriptionJobRequestPrivate : public TranscribeServiceRequestPrivate {
 
 public:
-    StartTranscriptionJobRequestPrivate(const TranscribeService::Action action,
+    StartTranscriptionJobRequestPrivate(const TranscribeServiceRequest::Action action,
                                    StartTranscriptionJobRequest * const q);
     StartTranscriptionJobRequestPrivate(const StartTranscriptionJobRequestPrivate &other,
                                    StartTranscriptionJobRequest * const q);

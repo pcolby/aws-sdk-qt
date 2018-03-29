@@ -31,7 +31,7 @@ class DetachStaticIpRequest;
 class QTAWS_EXPORT DetachStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
-    DetachStaticIpRequestPrivate(const Lightsail::Action action,
+    DetachStaticIpRequestPrivate(const LightsailRequest::Action action,
                                    DetachStaticIpRequest * const q);
     DetachStaticIpRequestPrivate(const DetachStaticIpRequestPrivate &other,
                                    DetachStaticIpRequest * const q);

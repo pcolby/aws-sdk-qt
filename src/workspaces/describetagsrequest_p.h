@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const WorkSpaces::Action action,
+    DescribeTagsRequestPrivate(const WorkSpacesRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

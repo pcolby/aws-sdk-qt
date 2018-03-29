@@ -31,7 +31,7 @@ class GetRecordsRequest;
 class QTAWS_EXPORT GetRecordsRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
-    GetRecordsRequestPrivate(const DynamoDBStreams::Action action,
+    GetRecordsRequestPrivate(const DynamoDBStreamsRequest::Action action,
                                    GetRecordsRequest * const q);
     GetRecordsRequestPrivate(const GetRecordsRequestPrivate &other,
                                    GetRecordsRequest * const q);

@@ -31,7 +31,7 @@ class UpdateInstanceRequest;
 class QTAWS_EXPORT UpdateInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    UpdateInstanceRequestPrivate(const OpsWorks::Action action,
+    UpdateInstanceRequestPrivate(const OpsWorksRequest::Action action,
                                    UpdateInstanceRequest * const q);
     UpdateInstanceRequestPrivate(const UpdateInstanceRequestPrivate &other,
                                    UpdateInstanceRequest * const q);

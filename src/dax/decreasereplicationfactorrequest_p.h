@@ -31,7 +31,7 @@ class DecreaseReplicationFactorRequest;
 class QTAWS_EXPORT DecreaseReplicationFactorRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DecreaseReplicationFactorRequestPrivate(const DAX::Action action,
+    DecreaseReplicationFactorRequestPrivate(const DAXRequest::Action action,
                                    DecreaseReplicationFactorRequest * const q);
     DecreaseReplicationFactorRequestPrivate(const DecreaseReplicationFactorRequestPrivate &other,
                                    DecreaseReplicationFactorRequest * const q);

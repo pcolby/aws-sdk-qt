@@ -31,7 +31,7 @@ class ListIpRoutesRequest;
 class QTAWS_EXPORT ListIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    ListIpRoutesRequestPrivate(const DirectoryService::Action action,
+    ListIpRoutesRequestPrivate(const DirectoryServiceRequest::Action action,
                                    ListIpRoutesRequest * const q);
     ListIpRoutesRequestPrivate(const ListIpRoutesRequestPrivate &other,
                                    ListIpRoutesRequest * const q);

@@ -31,7 +31,7 @@ class UpdateXssMatchSetRequest;
 class QTAWS_EXPORT UpdateXssMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    UpdateXssMatchSetRequestPrivate(const WAF::Action action,
+    UpdateXssMatchSetRequestPrivate(const WAFRequest::Action action,
                                    UpdateXssMatchSetRequest * const q);
     UpdateXssMatchSetRequestPrivate(const UpdateXssMatchSetRequestPrivate &other,
                                    UpdateXssMatchSetRequest * const q);

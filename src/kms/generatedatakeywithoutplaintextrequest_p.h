@@ -31,7 +31,7 @@ class GenerateDataKeyWithoutPlaintextRequest;
 class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextRequestPrivate : public KMSRequestPrivate {
 
 public:
-    GenerateDataKeyWithoutPlaintextRequestPrivate(const KMS::Action action,
+    GenerateDataKeyWithoutPlaintextRequestPrivate(const KMSRequest::Action action,
                                    GenerateDataKeyWithoutPlaintextRequest * const q);
     GenerateDataKeyWithoutPlaintextRequestPrivate(const GenerateDataKeyWithoutPlaintextRequestPrivate &other,
                                    GenerateDataKeyWithoutPlaintextRequest * const q);

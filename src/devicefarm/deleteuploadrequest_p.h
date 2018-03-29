@@ -31,7 +31,7 @@ class DeleteUploadRequest;
 class QTAWS_EXPORT DeleteUploadRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    DeleteUploadRequestPrivate(const DeviceFarm::Action action,
+    DeleteUploadRequestPrivate(const DeviceFarmRequest::Action action,
                                    DeleteUploadRequest * const q);
     DeleteUploadRequestPrivate(const DeleteUploadRequestPrivate &other,
                                    DeleteUploadRequest * const q);

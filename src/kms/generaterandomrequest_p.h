@@ -31,7 +31,7 @@ class GenerateRandomRequest;
 class QTAWS_EXPORT GenerateRandomRequestPrivate : public KMSRequestPrivate {
 
 public:
-    GenerateRandomRequestPrivate(const KMS::Action action,
+    GenerateRandomRequestPrivate(const KMSRequest::Action action,
                                    GenerateRandomRequest * const q);
     GenerateRandomRequestPrivate(const GenerateRandomRequestPrivate &other,
                                    GenerateRandomRequest * const q);

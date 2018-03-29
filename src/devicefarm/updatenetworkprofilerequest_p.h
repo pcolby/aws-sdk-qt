@@ -31,7 +31,7 @@ class UpdateNetworkProfileRequest;
 class QTAWS_EXPORT UpdateNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    UpdateNetworkProfileRequestPrivate(const DeviceFarm::Action action,
+    UpdateNetworkProfileRequestPrivate(const DeviceFarmRequest::Action action,
                                    UpdateNetworkProfileRequest * const q);
     UpdateNetworkProfileRequestPrivate(const UpdateNetworkProfileRequestPrivate &other,
                                    UpdateNetworkProfileRequest * const q);

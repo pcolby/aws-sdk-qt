@@ -31,7 +31,7 @@ class UpdateIPSetRequest;
 class QTAWS_EXPORT UpdateIPSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    UpdateIPSetRequestPrivate(const WAFRegional::Action action,
+    UpdateIPSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    UpdateIPSetRequest * const q);
     UpdateIPSetRequestPrivate(const UpdateIPSetRequestPrivate &other,
                                    UpdateIPSetRequest * const q);

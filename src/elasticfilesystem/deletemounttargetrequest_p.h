@@ -31,7 +31,7 @@ class DeleteMountTargetRequest;
 class QTAWS_EXPORT DeleteMountTargetRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DeleteMountTargetRequestPrivate(const EFS::Action action,
+    DeleteMountTargetRequestPrivate(const EFSRequest::Action action,
                                    DeleteMountTargetRequest * const q);
     DeleteMountTargetRequestPrivate(const DeleteMountTargetRequestPrivate &other,
                                    DeleteMountTargetRequest * const q);

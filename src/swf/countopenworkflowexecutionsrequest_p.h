@@ -31,7 +31,7 @@ class CountOpenWorkflowExecutionsRequest;
 class QTAWS_EXPORT CountOpenWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
 
 public:
-    CountOpenWorkflowExecutionsRequestPrivate(const SWF::Action action,
+    CountOpenWorkflowExecutionsRequestPrivate(const SWFRequest::Action action,
                                    CountOpenWorkflowExecutionsRequest * const q);
     CountOpenWorkflowExecutionsRequestPrivate(const CountOpenWorkflowExecutionsRequestPrivate &other,
                                    CountOpenWorkflowExecutionsRequest * const q);

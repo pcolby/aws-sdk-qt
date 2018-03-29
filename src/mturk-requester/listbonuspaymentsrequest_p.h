@@ -31,7 +31,7 @@ class ListBonusPaymentsRequest;
 class QTAWS_EXPORT ListBonusPaymentsRequestPrivate : public MTurkRequestPrivate {
 
 public:
-    ListBonusPaymentsRequestPrivate(const MTurk::Action action,
+    ListBonusPaymentsRequestPrivate(const MTurkRequest::Action action,
                                    ListBonusPaymentsRequest * const q);
     ListBonusPaymentsRequestPrivate(const ListBonusPaymentsRequestPrivate &other,
                                    ListBonusPaymentsRequest * const q);

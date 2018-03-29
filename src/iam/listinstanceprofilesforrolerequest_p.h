@@ -31,7 +31,7 @@ class ListInstanceProfilesForRoleRequest;
 class QTAWS_EXPORT ListInstanceProfilesForRoleRequestPrivate : public IAMRequestPrivate {
 
 public:
-    ListInstanceProfilesForRoleRequestPrivate(const IAM::Action action,
+    ListInstanceProfilesForRoleRequestPrivate(const IAMRequest::Action action,
                                    ListInstanceProfilesForRoleRequest * const q);
     ListInstanceProfilesForRoleRequestPrivate(const ListInstanceProfilesForRoleRequestPrivate &other,
                                    ListInstanceProfilesForRoleRequest * const q);

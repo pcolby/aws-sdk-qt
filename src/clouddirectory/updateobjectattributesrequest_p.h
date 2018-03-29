@@ -31,7 +31,7 @@ class UpdateObjectAttributesRequest;
 class QTAWS_EXPORT UpdateObjectAttributesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    UpdateObjectAttributesRequestPrivate(const CloudDirectory::Action action,
+    UpdateObjectAttributesRequestPrivate(const CloudDirectoryRequest::Action action,
                                    UpdateObjectAttributesRequest * const q);
     UpdateObjectAttributesRequestPrivate(const UpdateObjectAttributesRequestPrivate &other,
                                    UpdateObjectAttributesRequest * const q);

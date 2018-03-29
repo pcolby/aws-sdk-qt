@@ -31,7 +31,7 @@ class ListVolumesRequest;
 class QTAWS_EXPORT ListVolumesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    ListVolumesRequestPrivate(const StorageGateway::Action action,
+    ListVolumesRequestPrivate(const StorageGatewayRequest::Action action,
                                    ListVolumesRequest * const q);
     ListVolumesRequestPrivate(const ListVolumesRequestPrivate &other,
                                    ListVolumesRequest * const q);

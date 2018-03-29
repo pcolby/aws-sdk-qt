@@ -31,7 +31,7 @@ class DescribeSecurityGroupReferencesRequest;
 class QTAWS_EXPORT DescribeSecurityGroupReferencesRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeSecurityGroupReferencesRequestPrivate(const EC2::Action action,
+    DescribeSecurityGroupReferencesRequestPrivate(const EC2Request::Action action,
                                    DescribeSecurityGroupReferencesRequest * const q);
     DescribeSecurityGroupReferencesRequestPrivate(const DescribeSecurityGroupReferencesRequestPrivate &other,
                                    DescribeSecurityGroupReferencesRequest * const q);

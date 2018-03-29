@@ -31,7 +31,7 @@ class CreateMultipartUploadRequest;
 class QTAWS_EXPORT CreateMultipartUploadRequestPrivate : public S3RequestPrivate {
 
 public:
-    CreateMultipartUploadRequestPrivate(const S3::Action action,
+    CreateMultipartUploadRequestPrivate(const S3Request::Action action,
                                    CreateMultipartUploadRequest * const q);
     CreateMultipartUploadRequestPrivate(const CreateMultipartUploadRequestPrivate &other,
                                    CreateMultipartUploadRequest * const q);

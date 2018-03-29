@@ -31,7 +31,7 @@ class CreateBucketRequest;
 class QTAWS_EXPORT CreateBucketRequestPrivate : public S3RequestPrivate {
 
 public:
-    CreateBucketRequestPrivate(const S3::Action action,
+    CreateBucketRequestPrivate(const S3Request::Action action,
                                    CreateBucketRequest * const q);
     CreateBucketRequestPrivate(const CreateBucketRequestPrivate &other,
                                    CreateBucketRequest * const q);

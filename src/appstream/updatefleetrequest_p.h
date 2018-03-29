@@ -31,7 +31,7 @@ class UpdateFleetRequest;
 class QTAWS_EXPORT UpdateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
-    UpdateFleetRequestPrivate(const AppStream::Action action,
+    UpdateFleetRequestPrivate(const AppStreamRequest::Action action,
                                    UpdateFleetRequest * const q);
     UpdateFleetRequestPrivate(const UpdateFleetRequestPrivate &other,
                                    UpdateFleetRequest * const q);

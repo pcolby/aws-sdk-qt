@@ -31,7 +31,7 @@ class DeleteBaiduChannelRequest;
 class QTAWS_EXPORT DeleteBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    DeleteBaiduChannelRequestPrivate(const Pinpoint::Action action,
+    DeleteBaiduChannelRequestPrivate(const PinpointRequest::Action action,
                                    DeleteBaiduChannelRequest * const q);
     DeleteBaiduChannelRequestPrivate(const DeleteBaiduChannelRequestPrivate &other,
                                    DeleteBaiduChannelRequest * const q);

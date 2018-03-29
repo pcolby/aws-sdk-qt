@@ -31,7 +31,7 @@ class ReplaceRouteTableAssociationRequest;
 class QTAWS_EXPORT ReplaceRouteTableAssociationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ReplaceRouteTableAssociationRequestPrivate(const EC2::Action action,
+    ReplaceRouteTableAssociationRequestPrivate(const EC2Request::Action action,
                                    ReplaceRouteTableAssociationRequest * const q);
     ReplaceRouteTableAssociationRequestPrivate(const ReplaceRouteTableAssociationRequestPrivate &other,
                                    ReplaceRouteTableAssociationRequest * const q);

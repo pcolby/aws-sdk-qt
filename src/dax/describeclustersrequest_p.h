@@ -31,7 +31,7 @@ class DescribeClustersRequest;
 class QTAWS_EXPORT DescribeClustersRequestPrivate : public DAXRequestPrivate {
 
 public:
-    DescribeClustersRequestPrivate(const DAX::Action action,
+    DescribeClustersRequestPrivate(const DAXRequest::Action action,
                                    DescribeClustersRequest * const q);
     DescribeClustersRequestPrivate(const DescribeClustersRequestPrivate &other,
                                    DescribeClustersRequest * const q);

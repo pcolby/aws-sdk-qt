@@ -31,7 +31,7 @@ class TerminateEnvironmentRequest;
 class QTAWS_EXPORT TerminateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
-    TerminateEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,
+    TerminateEnvironmentRequestPrivate(const ElasticBeanstalkRequest::Action action,
                                    TerminateEnvironmentRequest * const q);
     TerminateEnvironmentRequestPrivate(const TerminateEnvironmentRequestPrivate &other,
                                    TerminateEnvironmentRequest * const q);

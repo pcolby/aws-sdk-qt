@@ -31,7 +31,7 @@ class DeleteBucketInventoryConfigurationRequest;
 class QTAWS_EXPORT DeleteBucketInventoryConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    DeleteBucketInventoryConfigurationRequestPrivate(const S3::Action action,
+    DeleteBucketInventoryConfigurationRequestPrivate(const S3Request::Action action,
                                    DeleteBucketInventoryConfigurationRequest * const q);
     DeleteBucketInventoryConfigurationRequestPrivate(const DeleteBucketInventoryConfigurationRequestPrivate &other,
                                    DeleteBucketInventoryConfigurationRequest * const q);

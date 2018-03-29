@@ -31,7 +31,7 @@ class StopGameSessionPlacementRequest;
 class QTAWS_EXPORT StopGameSessionPlacementRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    StopGameSessionPlacementRequestPrivate(const GameLift::Action action,
+    StopGameSessionPlacementRequestPrivate(const GameLiftRequest::Action action,
                                    StopGameSessionPlacementRequest * const q);
     StopGameSessionPlacementRequestPrivate(const StopGameSessionPlacementRequestPrivate &other,
                                    StopGameSessionPlacementRequest * const q);

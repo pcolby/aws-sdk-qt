@@ -31,7 +31,7 @@ class UpdateAuthorizerRequest;
 class QTAWS_EXPORT UpdateAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateAuthorizerRequestPrivate(const IoT::Action action,
+    UpdateAuthorizerRequestPrivate(const IoTRequest::Action action,
                                    UpdateAuthorizerRequest * const q);
     UpdateAuthorizerRequestPrivate(const UpdateAuthorizerRequestPrivate &other,
                                    UpdateAuthorizerRequest * const q);

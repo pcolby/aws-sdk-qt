@@ -31,7 +31,7 @@ class GetQueueRequest;
 class QTAWS_EXPORT GetQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
-    GetQueueRequestPrivate(const MediaConvert::Action action,
+    GetQueueRequestPrivate(const MediaConvertRequest::Action action,
                                    GetQueueRequest * const q);
     GetQueueRequestPrivate(const GetQueueRequestPrivate &other,
                                    GetQueueRequest * const q);

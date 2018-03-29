@@ -31,7 +31,7 @@ class DescribeServersRequest;
 class QTAWS_EXPORT DescribeServersRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
-    DescribeServersRequestPrivate(const OpsWorksCM::Action action,
+    DescribeServersRequestPrivate(const OpsWorksCMRequest::Action action,
                                    DescribeServersRequest * const q);
     DescribeServersRequestPrivate(const DescribeServersRequestPrivate &other,
                                    DescribeServersRequest * const q);

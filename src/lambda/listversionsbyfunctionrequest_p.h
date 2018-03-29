@@ -31,7 +31,7 @@ class ListVersionsByFunctionRequest;
 class QTAWS_EXPORT ListVersionsByFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    ListVersionsByFunctionRequestPrivate(const Lambda::Action action,
+    ListVersionsByFunctionRequestPrivate(const LambdaRequest::Action action,
                                    ListVersionsByFunctionRequest * const q);
     ListVersionsByFunctionRequestPrivate(const ListVersionsByFunctionRequestPrivate &other,
                                    ListVersionsByFunctionRequest * const q);

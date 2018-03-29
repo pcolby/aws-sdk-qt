@@ -31,7 +31,7 @@ class ListTargetsByRuleRequest;
 class QTAWS_EXPORT ListTargetsByRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
-    ListTargetsByRuleRequestPrivate(const CloudWatchEvents::Action action,
+    ListTargetsByRuleRequestPrivate(const CloudWatchEventsRequest::Action action,
                                    ListTargetsByRuleRequest * const q);
     ListTargetsByRuleRequestPrivate(const ListTargetsByRuleRequestPrivate &other,
                                    ListTargetsByRuleRequest * const q);

@@ -31,7 +31,7 @@ class UploadPartCopyRequest;
 class QTAWS_EXPORT UploadPartCopyRequestPrivate : public S3RequestPrivate {
 
 public:
-    UploadPartCopyRequestPrivate(const S3::Action action,
+    UploadPartCopyRequestPrivate(const S3Request::Action action,
                                    UploadPartCopyRequest * const q);
     UploadPartCopyRequestPrivate(const UploadPartCopyRequestPrivate &other,
                                    UploadPartCopyRequest * const q);

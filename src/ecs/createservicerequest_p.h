@@ -31,7 +31,7 @@ class CreateServiceRequest;
 class QTAWS_EXPORT CreateServiceRequestPrivate : public ECSRequestPrivate {
 
 public:
-    CreateServiceRequestPrivate(const ECS::Action action,
+    CreateServiceRequestPrivate(const ECSRequest::Action action,
                                    CreateServiceRequest * const q);
     CreateServiceRequestPrivate(const CreateServiceRequestPrivate &other,
                                    CreateServiceRequest * const q);

@@ -31,7 +31,7 @@ class ModifyInstanceAttributeRequest;
 class QTAWS_EXPORT ModifyInstanceAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyInstanceAttributeRequestPrivate(const EC2::Action action,
+    ModifyInstanceAttributeRequestPrivate(const EC2Request::Action action,
                                    ModifyInstanceAttributeRequest * const q);
     ModifyInstanceAttributeRequestPrivate(const ModifyInstanceAttributeRequestPrivate &other,
                                    ModifyInstanceAttributeRequest * const q);

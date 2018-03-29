@@ -31,7 +31,7 @@ class CreateVpnConnectionRouteRequest;
 class QTAWS_EXPORT CreateVpnConnectionRouteRequestPrivate : public EC2RequestPrivate {
 
 public:
-    CreateVpnConnectionRouteRequestPrivate(const EC2::Action action,
+    CreateVpnConnectionRouteRequestPrivate(const EC2Request::Action action,
                                    CreateVpnConnectionRouteRequest * const q);
     CreateVpnConnectionRouteRequestPrivate(const CreateVpnConnectionRouteRequestPrivate &other,
                                    CreateVpnConnectionRouteRequest * const q);

@@ -31,7 +31,7 @@ class DeleteThreatIntelSetRequest;
 class QTAWS_EXPORT DeleteThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
-    DeleteThreatIntelSetRequestPrivate(const GuardDuty::Action action,
+    DeleteThreatIntelSetRequestPrivate(const GuardDutyRequest::Action action,
                                    DeleteThreatIntelSetRequest * const q);
     DeleteThreatIntelSetRequestPrivate(const DeleteThreatIntelSetRequestPrivate &other,
                                    DeleteThreatIntelSetRequest * const q);

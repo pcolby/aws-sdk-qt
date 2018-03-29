@@ -31,7 +31,7 @@ class UpdateGeoMatchSetRequest;
 class QTAWS_EXPORT UpdateGeoMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
-    UpdateGeoMatchSetRequestPrivate(const WAF::Action action,
+    UpdateGeoMatchSetRequestPrivate(const WAFRequest::Action action,
                                    UpdateGeoMatchSetRequest * const q);
     UpdateGeoMatchSetRequestPrivate(const UpdateGeoMatchSetRequestPrivate &other,
                                    UpdateGeoMatchSetRequest * const q);

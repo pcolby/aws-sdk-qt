@@ -31,7 +31,7 @@ class DescribeIndexFieldsRequest;
 class QTAWS_EXPORT DescribeIndexFieldsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
-    DescribeIndexFieldsRequestPrivate(const CloudSearch::Action action,
+    DescribeIndexFieldsRequestPrivate(const CloudSearchRequest::Action action,
                                    DescribeIndexFieldsRequest * const q);
     DescribeIndexFieldsRequestPrivate(const DescribeIndexFieldsRequestPrivate &other,
                                    DescribeIndexFieldsRequest * const q);

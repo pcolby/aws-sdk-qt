@@ -31,7 +31,7 @@ class ListSchemaExtensionsRequest;
 class QTAWS_EXPORT ListSchemaExtensionsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    ListSchemaExtensionsRequestPrivate(const DirectoryService::Action action,
+    ListSchemaExtensionsRequestPrivate(const DirectoryServiceRequest::Action action,
                                    ListSchemaExtensionsRequest * const q);
     ListSchemaExtensionsRequestPrivate(const ListSchemaExtensionsRequestPrivate &other,
                                    ListSchemaExtensionsRequest * const q);

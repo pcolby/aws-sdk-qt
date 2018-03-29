@@ -31,7 +31,7 @@ class ListProgressUpdateStreamsRequest;
 class QTAWS_EXPORT ListProgressUpdateStreamsRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
-    ListProgressUpdateStreamsRequestPrivate(const MigrationHub::Action action,
+    ListProgressUpdateStreamsRequestPrivate(const MigrationHubRequest::Action action,
                                    ListProgressUpdateStreamsRequest * const q);
     ListProgressUpdateStreamsRequestPrivate(const ListProgressUpdateStreamsRequestPrivate &other,
                                    ListProgressUpdateStreamsRequest * const q);

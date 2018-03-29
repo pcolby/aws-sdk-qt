@@ -31,7 +31,7 @@ class GetTagsRequest;
 class QTAWS_EXPORT GetTagsRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
-    GetTagsRequestPrivate(const CostExplorer::Action action,
+    GetTagsRequestPrivate(const CostExplorerRequest::Action action,
                                    GetTagsRequest * const q);
     GetTagsRequestPrivate(const GetTagsRequestPrivate &other,
                                    GetTagsRequest * const q);

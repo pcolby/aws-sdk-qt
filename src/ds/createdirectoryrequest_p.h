@@ -31,7 +31,7 @@ class CreateDirectoryRequest;
 class QTAWS_EXPORT CreateDirectoryRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
-    CreateDirectoryRequestPrivate(const DirectoryService::Action action,
+    CreateDirectoryRequestPrivate(const DirectoryServiceRequest::Action action,
                                    CreateDirectoryRequest * const q);
     CreateDirectoryRequestPrivate(const CreateDirectoryRequestPrivate &other,
                                    CreateDirectoryRequest * const q);

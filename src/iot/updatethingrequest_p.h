@@ -31,7 +31,7 @@ class UpdateThingRequest;
 class QTAWS_EXPORT UpdateThingRequestPrivate : public IoTRequestPrivate {
 
 public:
-    UpdateThingRequestPrivate(const IoT::Action action,
+    UpdateThingRequestPrivate(const IoTRequest::Action action,
                                    UpdateThingRequest * const q);
     UpdateThingRequestPrivate(const UpdateThingRequestPrivate &other,
                                    UpdateThingRequest * const q);

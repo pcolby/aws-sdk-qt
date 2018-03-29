@@ -31,7 +31,7 @@ class GetOnPremisesInstanceRequest;
 class QTAWS_EXPORT GetOnPremisesInstanceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    GetOnPremisesInstanceRequestPrivate(const CodeDeploy::Action action,
+    GetOnPremisesInstanceRequestPrivate(const CodeDeployRequest::Action action,
                                    GetOnPremisesInstanceRequest * const q);
     GetOnPremisesInstanceRequestPrivate(const GetOnPremisesInstanceRequestPrivate &other,
                                    GetOnPremisesInstanceRequest * const q);

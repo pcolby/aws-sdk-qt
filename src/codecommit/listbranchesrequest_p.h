@@ -31,7 +31,7 @@ class ListBranchesRequest;
 class QTAWS_EXPORT ListBranchesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
-    ListBranchesRequestPrivate(const CodeCommit::Action action,
+    ListBranchesRequestPrivate(const CodeCommitRequest::Action action,
                                    ListBranchesRequest * const q);
     ListBranchesRequestPrivate(const ListBranchesRequestPrivate &other,
                                    ListBranchesRequest * const q);

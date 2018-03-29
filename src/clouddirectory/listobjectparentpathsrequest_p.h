@@ -31,7 +31,7 @@ class ListObjectParentPathsRequest;
 class QTAWS_EXPORT ListObjectParentPathsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    ListObjectParentPathsRequestPrivate(const CloudDirectory::Action action,
+    ListObjectParentPathsRequestPrivate(const CloudDirectoryRequest::Action action,
                                    ListObjectParentPathsRequest * const q);
     ListObjectParentPathsRequestPrivate(const ListObjectParentPathsRequestPrivate &other,
                                    ListObjectParentPathsRequest * const q);

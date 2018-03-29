@@ -31,7 +31,7 @@ class GetPendingJobExecutionsRequest;
 class QTAWS_EXPORT GetPendingJobExecutionsRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
-    GetPendingJobExecutionsRequestPrivate(const IoTJobsDataPlane::Action action,
+    GetPendingJobExecutionsRequestPrivate(const IoTJobsDataPlaneRequest::Action action,
                                    GetPendingJobExecutionsRequest * const q);
     GetPendingJobExecutionsRequestPrivate(const GetPendingJobExecutionsRequestPrivate &other,
                                    GetPendingJobExecutionsRequest * const q);

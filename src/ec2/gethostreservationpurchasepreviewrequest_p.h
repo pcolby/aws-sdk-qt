@@ -31,7 +31,7 @@ class GetHostReservationPurchasePreviewRequest;
 class QTAWS_EXPORT GetHostReservationPurchasePreviewRequestPrivate : public EC2RequestPrivate {
 
 public:
-    GetHostReservationPurchasePreviewRequestPrivate(const EC2::Action action,
+    GetHostReservationPurchasePreviewRequestPrivate(const EC2Request::Action action,
                                    GetHostReservationPurchasePreviewRequest * const q);
     GetHostReservationPurchasePreviewRequestPrivate(const GetHostReservationPurchasePreviewRequestPrivate &other,
                                    GetHostReservationPurchasePreviewRequest * const q);

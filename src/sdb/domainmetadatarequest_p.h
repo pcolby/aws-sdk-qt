@@ -31,7 +31,7 @@ class DomainMetadataRequest;
 class QTAWS_EXPORT DomainMetadataRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
-    DomainMetadataRequestPrivate(const SimpleDB::Action action,
+    DomainMetadataRequestPrivate(const SimpleDBRequest::Action action,
                                    DomainMetadataRequest * const q);
     DomainMetadataRequestPrivate(const DomainMetadataRequestPrivate &other,
                                    DomainMetadataRequest * const q);

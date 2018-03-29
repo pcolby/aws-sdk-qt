@@ -31,7 +31,7 @@ class CompleteLayerUploadRequest;
 class QTAWS_EXPORT CompleteLayerUploadRequestPrivate : public ECRRequestPrivate {
 
 public:
-    CompleteLayerUploadRequestPrivate(const ECR::Action action,
+    CompleteLayerUploadRequestPrivate(const ECRRequest::Action action,
                                    CompleteLayerUploadRequest * const q);
     CompleteLayerUploadRequestPrivate(const CompleteLayerUploadRequestPrivate &other,
                                    CompleteLayerUploadRequest * const q);

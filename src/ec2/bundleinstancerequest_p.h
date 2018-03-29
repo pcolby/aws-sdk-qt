@@ -31,7 +31,7 @@ class BundleInstanceRequest;
 class QTAWS_EXPORT BundleInstanceRequestPrivate : public EC2RequestPrivate {
 
 public:
-    BundleInstanceRequestPrivate(const EC2::Action action,
+    BundleInstanceRequestPrivate(const EC2Request::Action action,
                                    BundleInstanceRequest * const q);
     BundleInstanceRequestPrivate(const BundleInstanceRequestPrivate &other,
                                    BundleInstanceRequest * const q);

@@ -31,7 +31,7 @@ class DeleteProvisioningArtifactRequest;
 class QTAWS_EXPORT DeleteProvisioningArtifactRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeleteProvisioningArtifactRequestPrivate(const ServiceCatalog::Action action,
+    DeleteProvisioningArtifactRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeleteProvisioningArtifactRequest * const q);
     DeleteProvisioningArtifactRequestPrivate(const DeleteProvisioningArtifactRequestPrivate &other,
                                    DeleteProvisioningArtifactRequest * const q);

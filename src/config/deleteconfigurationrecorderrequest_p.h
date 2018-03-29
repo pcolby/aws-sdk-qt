@@ -31,7 +31,7 @@ class DeleteConfigurationRecorderRequest;
 class QTAWS_EXPORT DeleteConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
-    DeleteConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+    DeleteConfigurationRecorderRequestPrivate(const ConfigServiceRequest::Action action,
                                    DeleteConfigurationRecorderRequest * const q);
     DeleteConfigurationRecorderRequestPrivate(const DeleteConfigurationRecorderRequestPrivate &other,
                                    DeleteConfigurationRecorderRequest * const q);

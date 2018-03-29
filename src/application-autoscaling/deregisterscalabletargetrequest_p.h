@@ -31,7 +31,7 @@ class DeregisterScalableTargetRequest;
 class QTAWS_EXPORT DeregisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
-    DeregisterScalableTargetRequestPrivate(const ApplicationAutoScaling::Action action,
+    DeregisterScalableTargetRequestPrivate(const ApplicationAutoScalingRequest::Action action,
                                    DeregisterScalableTargetRequest * const q);
     DeregisterScalableTargetRequestPrivate(const DeregisterScalableTargetRequestPrivate &other,
                                    DeregisterScalableTargetRequest * const q);

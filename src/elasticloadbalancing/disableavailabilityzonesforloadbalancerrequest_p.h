@@ -31,7 +31,7 @@ class DisableAvailabilityZonesForLoadBalancerRequest;
 class QTAWS_EXPORT DisableAvailabilityZonesForLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
-    DisableAvailabilityZonesForLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,
+    DisableAvailabilityZonesForLoadBalancerRequestPrivate(const ElasticLoadBalancingRequest::Action action,
                                    DisableAvailabilityZonesForLoadBalancerRequest * const q);
     DisableAvailabilityZonesForLoadBalancerRequestPrivate(const DisableAvailabilityZonesForLoadBalancerRequestPrivate &other,
                                    DisableAvailabilityZonesForLoadBalancerRequest * const q);

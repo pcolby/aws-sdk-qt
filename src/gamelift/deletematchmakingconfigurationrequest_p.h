@@ -31,7 +31,7 @@ class DeleteMatchmakingConfigurationRequest;
 class QTAWS_EXPORT DeleteMatchmakingConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
-    DeleteMatchmakingConfigurationRequestPrivate(const GameLift::Action action,
+    DeleteMatchmakingConfigurationRequestPrivate(const GameLiftRequest::Action action,
                                    DeleteMatchmakingConfigurationRequest * const q);
     DeleteMatchmakingConfigurationRequestPrivate(const DeleteMatchmakingConfigurationRequestPrivate &other,
                                    DeleteMatchmakingConfigurationRequest * const q);

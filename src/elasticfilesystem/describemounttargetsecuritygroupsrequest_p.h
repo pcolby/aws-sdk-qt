@@ -31,7 +31,7 @@ class DescribeMountTargetSecurityGroupsRequest;
 class QTAWS_EXPORT DescribeMountTargetSecurityGroupsRequestPrivate : public EFSRequestPrivate {
 
 public:
-    DescribeMountTargetSecurityGroupsRequestPrivate(const EFS::Action action,
+    DescribeMountTargetSecurityGroupsRequestPrivate(const EFSRequest::Action action,
                                    DescribeMountTargetSecurityGroupsRequest * const q);
     DescribeMountTargetSecurityGroupsRequestPrivate(const DescribeMountTargetSecurityGroupsRequestPrivate &other,
                                    DescribeMountTargetSecurityGroupsRequest * const q);

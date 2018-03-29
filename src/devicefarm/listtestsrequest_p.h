@@ -31,7 +31,7 @@ class ListTestsRequest;
 class QTAWS_EXPORT ListTestsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    ListTestsRequestPrivate(const DeviceFarm::Action action,
+    ListTestsRequestPrivate(const DeviceFarmRequest::Action action,
                                    ListTestsRequest * const q);
     ListTestsRequestPrivate(const ListTestsRequestPrivate &other,
                                    ListTestsRequest * const q);

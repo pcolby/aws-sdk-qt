@@ -31,7 +31,7 @@ class SetIdentityPoolRolesRequest;
 class QTAWS_EXPORT SetIdentityPoolRolesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
-    SetIdentityPoolRolesRequestPrivate(const CognitoIdentity::Action action,
+    SetIdentityPoolRolesRequestPrivate(const CognitoIdentityRequest::Action action,
                                    SetIdentityPoolRolesRequest * const q);
     SetIdentityPoolRolesRequestPrivate(const SetIdentityPoolRolesRequestPrivate &other,
                                    SetIdentityPoolRolesRequest * const q);

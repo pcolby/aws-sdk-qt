@@ -31,7 +31,7 @@ class GetBasePathMappingsRequest;
 class QTAWS_EXPORT GetBasePathMappingsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    GetBasePathMappingsRequestPrivate(const APIGateway::Action action,
+    GetBasePathMappingsRequestPrivate(const APIGatewayRequest::Action action,
                                    GetBasePathMappingsRequest * const q);
     GetBasePathMappingsRequestPrivate(const GetBasePathMappingsRequestPrivate &other,
                                    GetBasePathMappingsRequest * const q);

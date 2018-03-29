@@ -31,7 +31,7 @@ class DeleteReplicationSubnetGroupRequest;
 class QTAWS_EXPORT DeleteReplicationSubnetGroupRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
-    DeleteReplicationSubnetGroupRequestPrivate(const DatabaseMigrationService::Action action,
+    DeleteReplicationSubnetGroupRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
                                    DeleteReplicationSubnetGroupRequest * const q);
     DeleteReplicationSubnetGroupRequestPrivate(const DeleteReplicationSubnetGroupRequestPrivate &other,
                                    DeleteReplicationSubnetGroupRequest * const q);

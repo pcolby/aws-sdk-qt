@@ -31,7 +31,7 @@ class DescribeIamInstanceProfileAssociationsRequest;
 class QTAWS_EXPORT DescribeIamInstanceProfileAssociationsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeIamInstanceProfileAssociationsRequestPrivate(const EC2::Action action,
+    DescribeIamInstanceProfileAssociationsRequestPrivate(const EC2Request::Action action,
                                    DescribeIamInstanceProfileAssociationsRequest * const q);
     DescribeIamInstanceProfileAssociationsRequestPrivate(const DescribeIamInstanceProfileAssociationsRequestPrivate &other,
                                    DescribeIamInstanceProfileAssociationsRequest * const q);

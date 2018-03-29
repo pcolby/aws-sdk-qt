@@ -31,7 +31,7 @@ class ListDeviceDefinitionsRequest;
 class QTAWS_EXPORT ListDeviceDefinitionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
-    ListDeviceDefinitionsRequestPrivate(const Greengrass::Action action,
+    ListDeviceDefinitionsRequestPrivate(const GreengrassRequest::Action action,
                                    ListDeviceDefinitionsRequest * const q);
     ListDeviceDefinitionsRequestPrivate(const ListDeviceDefinitionsRequestPrivate &other,
                                    ListDeviceDefinitionsRequest * const q);

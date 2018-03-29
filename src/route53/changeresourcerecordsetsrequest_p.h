@@ -31,7 +31,7 @@ class ChangeResourceRecordSetsRequest;
 class QTAWS_EXPORT ChangeResourceRecordSetsRequestPrivate : public Route53RequestPrivate {
 
 public:
-    ChangeResourceRecordSetsRequestPrivate(const Route53::Action action,
+    ChangeResourceRecordSetsRequestPrivate(const Route53Request::Action action,
                                    ChangeResourceRecordSetsRequest * const q);
     ChangeResourceRecordSetsRequestPrivate(const ChangeResourceRecordSetsRequestPrivate &other,
                                    ChangeResourceRecordSetsRequest * const q);

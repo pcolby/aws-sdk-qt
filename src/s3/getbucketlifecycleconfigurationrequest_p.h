@@ -31,7 +31,7 @@ class GetBucketLifecycleConfigurationRequest;
 class QTAWS_EXPORT GetBucketLifecycleConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
-    GetBucketLifecycleConfigurationRequestPrivate(const S3::Action action,
+    GetBucketLifecycleConfigurationRequestPrivate(const S3Request::Action action,
                                    GetBucketLifecycleConfigurationRequest * const q);
     GetBucketLifecycleConfigurationRequestPrivate(const GetBucketLifecycleConfigurationRequestPrivate &other,
                                    GetBucketLifecycleConfigurationRequest * const q);

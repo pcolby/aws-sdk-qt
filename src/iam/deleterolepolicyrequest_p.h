@@ -31,7 +31,7 @@ class DeleteRolePolicyRequest;
 class QTAWS_EXPORT DeleteRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
-    DeleteRolePolicyRequestPrivate(const IAM::Action action,
+    DeleteRolePolicyRequestPrivate(const IAMRequest::Action action,
                                    DeleteRolePolicyRequest * const q);
     DeleteRolePolicyRequestPrivate(const DeleteRolePolicyRequestPrivate &other,
                                    DeleteRolePolicyRequest * const q);

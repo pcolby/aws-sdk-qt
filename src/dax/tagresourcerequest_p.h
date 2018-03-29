@@ -31,7 +31,7 @@ class TagResourceRequest;
 class QTAWS_EXPORT TagResourceRequestPrivate : public DAXRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const DAX::Action action,
+    TagResourceRequestPrivate(const DAXRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);

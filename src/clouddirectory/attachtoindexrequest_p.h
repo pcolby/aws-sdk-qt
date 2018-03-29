@@ -31,7 +31,7 @@ class AttachToIndexRequest;
 class QTAWS_EXPORT AttachToIndexRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    AttachToIndexRequestPrivate(const CloudDirectory::Action action,
+    AttachToIndexRequestPrivate(const CloudDirectoryRequest::Action action,
                                    AttachToIndexRequest * const q);
     AttachToIndexRequestPrivate(const AttachToIndexRequestPrivate &other,
                                    AttachToIndexRequest * const q);

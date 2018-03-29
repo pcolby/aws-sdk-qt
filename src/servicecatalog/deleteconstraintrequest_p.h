@@ -31,7 +31,7 @@ class DeleteConstraintRequest;
 class QTAWS_EXPORT DeleteConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeleteConstraintRequestPrivate(const ServiceCatalog::Action action,
+    DeleteConstraintRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeleteConstraintRequest * const q);
     DeleteConstraintRequestPrivate(const DeleteConstraintRequestPrivate &other,
                                    DeleteConstraintRequest * const q);

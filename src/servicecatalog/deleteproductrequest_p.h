@@ -31,7 +31,7 @@ class DeleteProductRequest;
 class QTAWS_EXPORT DeleteProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
-    DeleteProductRequestPrivate(const ServiceCatalog::Action action,
+    DeleteProductRequestPrivate(const ServiceCatalogRequest::Action action,
                                    DeleteProductRequest * const q);
     DeleteProductRequestPrivate(const DeleteProductRequestPrivate &other,
                                    DeleteProductRequest * const q);

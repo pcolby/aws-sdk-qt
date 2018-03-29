@@ -31,7 +31,7 @@ class DescribeDocumentVersionsRequest;
 class QTAWS_EXPORT DescribeDocumentVersionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    DescribeDocumentVersionsRequestPrivate(const WorkDocs::Action action,
+    DescribeDocumentVersionsRequestPrivate(const WorkDocsRequest::Action action,
                                    DescribeDocumentVersionsRequest * const q);
     DescribeDocumentVersionsRequestPrivate(const DescribeDocumentVersionsRequestPrivate &other,
                                    DescribeDocumentVersionsRequest * const q);

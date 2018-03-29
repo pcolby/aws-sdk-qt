@@ -31,7 +31,7 @@ class GetDiscoverySummaryRequest;
 class QTAWS_EXPORT GetDiscoverySummaryRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
-    GetDiscoverySummaryRequestPrivate(const ApplicationDiscoveryService::Action action,
+    GetDiscoverySummaryRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
                                    GetDiscoverySummaryRequest * const q);
     GetDiscoverySummaryRequestPrivate(const GetDiscoverySummaryRequestPrivate &other,
                                    GetDiscoverySummaryRequest * const q);

@@ -31,7 +31,7 @@ class DescribeEnvironmentsRequest;
 class QTAWS_EXPORT DescribeEnvironmentsRequestPrivate : public Cloud9RequestPrivate {
 
 public:
-    DescribeEnvironmentsRequestPrivate(const Cloud9::Action action,
+    DescribeEnvironmentsRequestPrivate(const Cloud9Request::Action action,
                                    DescribeEnvironmentsRequest * const q);
     DescribeEnvironmentsRequestPrivate(const DescribeEnvironmentsRequestPrivate &other,
                                    DescribeEnvironmentsRequest * const q);

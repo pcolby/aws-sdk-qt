@@ -31,7 +31,7 @@ class SetReceiptRulePositionRequest;
 class QTAWS_EXPORT SetReceiptRulePositionRequestPrivate : public SESRequestPrivate {
 
 public:
-    SetReceiptRulePositionRequestPrivate(const SES::Action action,
+    SetReceiptRulePositionRequestPrivate(const SESRequest::Action action,
                                    SetReceiptRulePositionRequest * const q);
     SetReceiptRulePositionRequestPrivate(const SetReceiptRulePositionRequestPrivate &other,
                                    SetReceiptRulePositionRequest * const q);

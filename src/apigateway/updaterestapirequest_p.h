@@ -31,7 +31,7 @@ class UpdateRestApiRequest;
 class QTAWS_EXPORT UpdateRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    UpdateRestApiRequestPrivate(const APIGateway::Action action,
+    UpdateRestApiRequestPrivate(const APIGatewayRequest::Action action,
                                    UpdateRestApiRequest * const q);
     UpdateRestApiRequestPrivate(const UpdateRestApiRequestPrivate &other,
                                    UpdateRestApiRequest * const q);

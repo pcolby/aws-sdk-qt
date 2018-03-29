@@ -31,7 +31,7 @@ class DeleteTypedLinkFacetRequest;
 class QTAWS_EXPORT DeleteTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    DeleteTypedLinkFacetRequestPrivate(const CloudDirectory::Action action,
+    DeleteTypedLinkFacetRequestPrivate(const CloudDirectoryRequest::Action action,
                                    DeleteTypedLinkFacetRequest * const q);
     DeleteTypedLinkFacetRequestPrivate(const DeleteTypedLinkFacetRequestPrivate &other,
                                    DeleteTypedLinkFacetRequest * const q);

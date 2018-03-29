@@ -31,7 +31,7 @@ class DiscoverPollEndpointRequest;
 class QTAWS_EXPORT DiscoverPollEndpointRequestPrivate : public ECSRequestPrivate {
 
 public:
-    DiscoverPollEndpointRequestPrivate(const ECS::Action action,
+    DiscoverPollEndpointRequestPrivate(const ECSRequest::Action action,
                                    DiscoverPollEndpointRequest * const q);
     DiscoverPollEndpointRequestPrivate(const DiscoverPollEndpointRequestPrivate &other,
                                    DiscoverPollEndpointRequest * const q);

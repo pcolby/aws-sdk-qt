@@ -31,7 +31,7 @@ class AddPermissionRequest;
 class QTAWS_EXPORT AddPermissionRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    AddPermissionRequestPrivate(const Lambda::Action action,
+    AddPermissionRequestPrivate(const LambdaRequest::Action action,
                                    AddPermissionRequest * const q);
     AddPermissionRequestPrivate(const AddPermissionRequestPrivate &other,
                                    AddPermissionRequest * const q);

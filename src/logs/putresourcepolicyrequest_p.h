@@ -31,7 +31,7 @@ class PutResourcePolicyRequest;
 class QTAWS_EXPORT PutResourcePolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
-    PutResourcePolicyRequestPrivate(const CloudWatchLogs::Action action,
+    PutResourcePolicyRequestPrivate(const CloudWatchLogsRequest::Action action,
                                    PutResourcePolicyRequest * const q);
     PutResourcePolicyRequestPrivate(const PutResourcePolicyRequestPrivate &other,
                                    PutResourcePolicyRequest * const q);

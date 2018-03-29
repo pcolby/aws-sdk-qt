@@ -31,7 +31,7 @@ class ModifyVpcPeeringConnectionOptionsRequest;
 class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyVpcPeeringConnectionOptionsRequestPrivate(const EC2::Action action,
+    ModifyVpcPeeringConnectionOptionsRequestPrivate(const EC2Request::Action action,
                                    ModifyVpcPeeringConnectionOptionsRequest * const q);
     ModifyVpcPeeringConnectionOptionsRequestPrivate(const ModifyVpcPeeringConnectionOptionsRequestPrivate &other,
                                    ModifyVpcPeeringConnectionOptionsRequest * const q);

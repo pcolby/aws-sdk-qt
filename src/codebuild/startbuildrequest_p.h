@@ -31,7 +31,7 @@ class StartBuildRequest;
 class QTAWS_EXPORT StartBuildRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
-    StartBuildRequestPrivate(const CodeBuild::Action action,
+    StartBuildRequestPrivate(const CodeBuildRequest::Action action,
                                    StartBuildRequest * const q);
     StartBuildRequestPrivate(const StartBuildRequestPrivate &other,
                                    StartBuildRequest * const q);

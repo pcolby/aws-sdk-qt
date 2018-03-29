@@ -31,7 +31,7 @@ class ListAuthorizersRequest;
 class QTAWS_EXPORT ListAuthorizersRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListAuthorizersRequestPrivate(const IoT::Action action,
+    ListAuthorizersRequestPrivate(const IoTRequest::Action action,
                                    ListAuthorizersRequest * const q);
     ListAuthorizersRequestPrivate(const ListAuthorizersRequestPrivate &other,
                                    ListAuthorizersRequest * const q);

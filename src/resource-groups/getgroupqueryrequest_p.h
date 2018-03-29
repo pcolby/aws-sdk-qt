@@ -31,7 +31,7 @@ class GetGroupQueryRequest;
 class QTAWS_EXPORT GetGroupQueryRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
-    GetGroupQueryRequestPrivate(const ResourceGroups::Action action,
+    GetGroupQueryRequestPrivate(const ResourceGroupsRequest::Action action,
                                    GetGroupQueryRequest * const q);
     GetGroupQueryRequestPrivate(const GetGroupQueryRequestPrivate &other,
                                    GetGroupQueryRequest * const q);

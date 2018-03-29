@@ -31,7 +31,7 @@ class CreateAppRequest;
 class QTAWS_EXPORT CreateAppRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
-    CreateAppRequestPrivate(const OpsWorks::Action action,
+    CreateAppRequestPrivate(const OpsWorksRequest::Action action,
                                    CreateAppRequest * const q);
     CreateAppRequestPrivate(const CreateAppRequestPrivate &other,
                                    CreateAppRequest * const q);

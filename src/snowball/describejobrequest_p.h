@@ -31,7 +31,7 @@ class DescribeJobRequest;
 class QTAWS_EXPORT DescribeJobRequestPrivate : public SnowballRequestPrivate {
 
 public:
-    DescribeJobRequestPrivate(const Snowball::Action action,
+    DescribeJobRequestPrivate(const SnowballRequest::Action action,
                                    DescribeJobRequest * const q);
     DescribeJobRequestPrivate(const DescribeJobRequestPrivate &other,
                                    DescribeJobRequest * const q);

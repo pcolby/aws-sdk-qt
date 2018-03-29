@@ -31,7 +31,7 @@ class PurchaseOfferingRequest;
 class QTAWS_EXPORT PurchaseOfferingRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
-    PurchaseOfferingRequestPrivate(const DeviceFarm::Action action,
+    PurchaseOfferingRequestPrivate(const DeviceFarmRequest::Action action,
                                    PurchaseOfferingRequest * const q);
     PurchaseOfferingRequestPrivate(const PurchaseOfferingRequestPrivate &other,
                                    PurchaseOfferingRequest * const q);

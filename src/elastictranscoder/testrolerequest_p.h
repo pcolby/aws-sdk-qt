@@ -31,7 +31,7 @@ class TestRoleRequest;
 class QTAWS_EXPORT TestRoleRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
-    TestRoleRequestPrivate(const ElasticTranscoder::Action action,
+    TestRoleRequestPrivate(const ElasticTranscoderRequest::Action action,
                                    TestRoleRequest * const q);
     TestRoleRequestPrivate(const TestRoleRequestPrivate &other,
                                    TestRoleRequest * const q);

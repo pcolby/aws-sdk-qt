@@ -31,7 +31,7 @@ class DescribeGatewayInformationRequest;
 class QTAWS_EXPORT DescribeGatewayInformationRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
-    DescribeGatewayInformationRequestPrivate(const StorageGateway::Action action,
+    DescribeGatewayInformationRequestPrivate(const StorageGatewayRequest::Action action,
                                    DescribeGatewayInformationRequest * const q);
     DescribeGatewayInformationRequestPrivate(const DescribeGatewayInformationRequestPrivate &other,
                                    DescribeGatewayInformationRequest * const q);

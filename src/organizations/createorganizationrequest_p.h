@@ -31,7 +31,7 @@ class CreateOrganizationRequest;
 class QTAWS_EXPORT CreateOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
-    CreateOrganizationRequestPrivate(const Organizations::Action action,
+    CreateOrganizationRequestPrivate(const OrganizationsRequest::Action action,
                                    CreateOrganizationRequest * const q);
     CreateOrganizationRequestPrivate(const CreateOrganizationRequestPrivate &other,
                                    CreateOrganizationRequest * const q);

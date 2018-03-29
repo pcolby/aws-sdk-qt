@@ -31,7 +31,7 @@ class DescribeTagsRequest;
 class QTAWS_EXPORT DescribeTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const Redshift::Action action,
+    DescribeTagsRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

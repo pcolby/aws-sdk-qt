@@ -31,7 +31,7 @@ class ModifyInstanceCreditSpecificationRequest;
 class QTAWS_EXPORT ModifyInstanceCreditSpecificationRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ModifyInstanceCreditSpecificationRequestPrivate(const EC2::Action action,
+    ModifyInstanceCreditSpecificationRequestPrivate(const EC2Request::Action action,
                                    ModifyInstanceCreditSpecificationRequest * const q);
     ModifyInstanceCreditSpecificationRequestPrivate(const ModifyInstanceCreditSpecificationRequestPrivate &other,
                                    ModifyInstanceCreditSpecificationRequest * const q);

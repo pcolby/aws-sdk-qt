@@ -31,7 +31,7 @@ class ListOTAUpdatesRequest;
 class QTAWS_EXPORT ListOTAUpdatesRequestPrivate : public IoTRequestPrivate {
 
 public:
-    ListOTAUpdatesRequestPrivate(const IoT::Action action,
+    ListOTAUpdatesRequestPrivate(const IoTRequest::Action action,
                                    ListOTAUpdatesRequest * const q);
     ListOTAUpdatesRequestPrivate(const ListOTAUpdatesRequestPrivate &other,
                                    ListOTAUpdatesRequest * const q);

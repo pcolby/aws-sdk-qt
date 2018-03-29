@@ -31,7 +31,7 @@ class AttachPolicyRequest;
 class QTAWS_EXPORT AttachPolicyRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
-    AttachPolicyRequestPrivate(const CloudDirectory::Action action,
+    AttachPolicyRequestPrivate(const CloudDirectoryRequest::Action action,
                                    AttachPolicyRequest * const q);
     AttachPolicyRequestPrivate(const AttachPolicyRequestPrivate &other,
                                    AttachPolicyRequest * const q);

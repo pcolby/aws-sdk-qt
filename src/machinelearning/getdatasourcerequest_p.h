@@ -31,7 +31,7 @@ class GetDataSourceRequest;
 class QTAWS_EXPORT GetDataSourceRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
-    GetDataSourceRequestPrivate(const MachineLearning::Action action,
+    GetDataSourceRequestPrivate(const MachineLearningRequest::Action action,
                                    GetDataSourceRequest * const q);
     GetDataSourceRequestPrivate(const GetDataSourceRequestPrivate &other,
                                    GetDataSourceRequest * const q);

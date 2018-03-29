@@ -31,7 +31,7 @@ class AssociateVPCWithHostedZoneRequest;
 class QTAWS_EXPORT AssociateVPCWithHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
-    AssociateVPCWithHostedZoneRequestPrivate(const Route53::Action action,
+    AssociateVPCWithHostedZoneRequestPrivate(const Route53Request::Action action,
                                    AssociateVPCWithHostedZoneRequest * const q);
     AssociateVPCWithHostedZoneRequestPrivate(const AssociateVPCWithHostedZoneRequestPrivate &other,
                                    AssociateVPCWithHostedZoneRequest * const q);

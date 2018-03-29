@@ -31,7 +31,7 @@ class BatchGetDeploymentGroupsRequest;
 class QTAWS_EXPORT BatchGetDeploymentGroupsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
-    BatchGetDeploymentGroupsRequestPrivate(const CodeDeploy::Action action,
+    BatchGetDeploymentGroupsRequestPrivate(const CodeDeployRequest::Action action,
                                    BatchGetDeploymentGroupsRequest * const q);
     BatchGetDeploymentGroupsRequestPrivate(const BatchGetDeploymentGroupsRequestPrivate &other,
                                    BatchGetDeploymentGroupsRequest * const q);

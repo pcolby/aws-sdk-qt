@@ -31,7 +31,7 @@ class DescribeResourceRequest;
 class QTAWS_EXPORT DescribeResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
-    DescribeResourceRequestPrivate(const WorkMail::Action action,
+    DescribeResourceRequestPrivate(const WorkMailRequest::Action action,
                                    DescribeResourceRequest * const q);
     DescribeResourceRequestPrivate(const DescribeResourceRequestPrivate &other,
                                    DescribeResourceRequest * const q);

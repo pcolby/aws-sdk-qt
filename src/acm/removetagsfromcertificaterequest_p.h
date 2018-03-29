@@ -31,7 +31,7 @@ class RemoveTagsFromCertificateRequest;
 class QTAWS_EXPORT RemoveTagsFromCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
-    RemoveTagsFromCertificateRequestPrivate(const ACM::Action action,
+    RemoveTagsFromCertificateRequestPrivate(const ACMRequest::Action action,
                                    RemoveTagsFromCertificateRequest * const q);
     RemoveTagsFromCertificateRequestPrivate(const RemoveTagsFromCertificateRequestPrivate &other,
                                    RemoveTagsFromCertificateRequest * const q);

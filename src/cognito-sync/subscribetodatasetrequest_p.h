@@ -31,7 +31,7 @@ class SubscribeToDatasetRequest;
 class QTAWS_EXPORT SubscribeToDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
-    SubscribeToDatasetRequestPrivate(const CognitoSync::Action action,
+    SubscribeToDatasetRequestPrivate(const CognitoSyncRequest::Action action,
                                    SubscribeToDatasetRequest * const q);
     SubscribeToDatasetRequestPrivate(const SubscribeToDatasetRequestPrivate &other,
                                    SubscribeToDatasetRequest * const q);

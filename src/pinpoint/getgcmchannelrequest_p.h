@@ -31,7 +31,7 @@ class GetGcmChannelRequest;
 class QTAWS_EXPORT GetGcmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
-    GetGcmChannelRequestPrivate(const Pinpoint::Action action,
+    GetGcmChannelRequestPrivate(const PinpointRequest::Action action,
                                    GetGcmChannelRequest * const q);
     GetGcmChannelRequestPrivate(const GetGcmChannelRequestPrivate &other,
                                    GetGcmChannelRequest * const q);

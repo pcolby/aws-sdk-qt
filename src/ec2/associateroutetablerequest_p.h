@@ -31,7 +31,7 @@ class AssociateRouteTableRequest;
 class QTAWS_EXPORT AssociateRouteTableRequestPrivate : public EC2RequestPrivate {
 
 public:
-    AssociateRouteTableRequestPrivate(const EC2::Action action,
+    AssociateRouteTableRequestPrivate(const EC2Request::Action action,
                                    AssociateRouteTableRequest * const q);
     AssociateRouteTableRequestPrivate(const AssociateRouteTableRequestPrivate &other,
                                    AssociateRouteTableRequest * const q);

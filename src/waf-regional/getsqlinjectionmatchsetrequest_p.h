@@ -31,7 +31,7 @@ class GetSqlInjectionMatchSetRequest;
 class QTAWS_EXPORT GetSqlInjectionMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
-    GetSqlInjectionMatchSetRequestPrivate(const WAFRegional::Action action,
+    GetSqlInjectionMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
                                    GetSqlInjectionMatchSetRequest * const q);
     GetSqlInjectionMatchSetRequestPrivate(const GetSqlInjectionMatchSetRequestPrivate &other,
                                    GetSqlInjectionMatchSetRequest * const q);

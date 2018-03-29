@@ -31,7 +31,7 @@ class DeleteModelRequest;
 class QTAWS_EXPORT DeleteModelRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
-    DeleteModelRequestPrivate(const APIGateway::Action action,
+    DeleteModelRequestPrivate(const APIGatewayRequest::Action action,
                                    DeleteModelRequest * const q);
     DeleteModelRequestPrivate(const DeleteModelRequestPrivate &other,
                                    DeleteModelRequest * const q);

@@ -31,7 +31,7 @@ class ListSecurityConfigurationsRequest;
 class QTAWS_EXPORT ListSecurityConfigurationsRequestPrivate : public EMRRequestPrivate {
 
 public:
-    ListSecurityConfigurationsRequestPrivate(const EMR::Action action,
+    ListSecurityConfigurationsRequestPrivate(const EMRRequest::Action action,
                                    ListSecurityConfigurationsRequest * const q);
     ListSecurityConfigurationsRequestPrivate(const ListSecurityConfigurationsRequestPrivate &other,
                                    ListSecurityConfigurationsRequest * const q);

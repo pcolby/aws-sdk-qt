@@ -31,7 +31,7 @@ class DescribeResizeRequest;
 class QTAWS_EXPORT DescribeResizeRequestPrivate : public RedshiftRequestPrivate {
 
 public:
-    DescribeResizeRequestPrivate(const Redshift::Action action,
+    DescribeResizeRequestPrivate(const RedshiftRequest::Action action,
                                    DescribeResizeRequest * const q);
     DescribeResizeRequestPrivate(const DescribeResizeRequestPrivate &other,
                                    DescribeResizeRequest * const q);

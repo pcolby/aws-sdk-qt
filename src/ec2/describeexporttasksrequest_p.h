@@ -31,7 +31,7 @@ class DescribeExportTasksRequest;
 class QTAWS_EXPORT DescribeExportTasksRequestPrivate : public EC2RequestPrivate {
 
 public:
-    DescribeExportTasksRequestPrivate(const EC2::Action action,
+    DescribeExportTasksRequestPrivate(const EC2Request::Action action,
                                    DescribeExportTasksRequest * const q);
     DescribeExportTasksRequestPrivate(const DescribeExportTasksRequestPrivate &other,
                                    DescribeExportTasksRequest * const q);

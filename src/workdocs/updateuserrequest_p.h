@@ -31,7 +31,7 @@ class UpdateUserRequest;
 class QTAWS_EXPORT UpdateUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
-    UpdateUserRequestPrivate(const WorkDocs::Action action,
+    UpdateUserRequestPrivate(const WorkDocsRequest::Action action,
                                    UpdateUserRequest * const q);
     UpdateUserRequestPrivate(const UpdateUserRequestPrivate &other,
                                    UpdateUserRequest * const q);

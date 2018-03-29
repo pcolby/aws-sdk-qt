@@ -31,7 +31,7 @@ class RemoveTagsRequest;
 class QTAWS_EXPORT RemoveTagsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const DataPipeline::Action action,
+    RemoveTagsRequestPrivate(const DataPipelineRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);

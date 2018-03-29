@@ -31,7 +31,7 @@ class DeleteDBClusterSnapshotRequest;
 class QTAWS_EXPORT DeleteDBClusterSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
-    DeleteDBClusterSnapshotRequestPrivate(const RDS::Action action,
+    DeleteDBClusterSnapshotRequestPrivate(const RDSRequest::Action action,
                                    DeleteDBClusterSnapshotRequest * const q);
     DeleteDBClusterSnapshotRequestPrivate(const DeleteDBClusterSnapshotRequestPrivate &other,
                                    DeleteDBClusterSnapshotRequest * const q);

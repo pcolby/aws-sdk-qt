@@ -31,7 +31,7 @@ class DeleteAliasRequest;
 class QTAWS_EXPORT DeleteAliasRequestPrivate : public LambdaRequestPrivate {
 
 public:
-    DeleteAliasRequestPrivate(const Lambda::Action action,
+    DeleteAliasRequestPrivate(const LambdaRequest::Action action,
                                    DeleteAliasRequest * const q);
     DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
                                    DeleteAliasRequest * const q);

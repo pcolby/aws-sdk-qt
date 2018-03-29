@@ -31,7 +31,7 @@ class ImportInstanceRequest;
 class QTAWS_EXPORT ImportInstanceRequestPrivate : public EC2RequestPrivate {
 
 public:
-    ImportInstanceRequestPrivate(const EC2::Action action,
+    ImportInstanceRequestPrivate(const EC2Request::Action action,
                                    ImportInstanceRequest * const q);
     ImportInstanceRequestPrivate(const ImportInstanceRequestPrivate &other,
                                    ImportInstanceRequest * const q);
