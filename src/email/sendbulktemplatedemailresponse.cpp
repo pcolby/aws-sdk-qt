@@ -96,7 +96,7 @@ SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponse(QXmlStreamReader &xml)
+void SendBulkTemplatedEmailResponsePrivate::parseSendBulkTemplatedEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendBulkTemplatedEmailResponse"));
     /// @todo

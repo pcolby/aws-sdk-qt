@@ -96,7 +96,7 @@ DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfoli
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfolioResponse(QXmlStreamReader &xml)
+void DisassociateProductFromPortfolioResponsePrivate::parseDisassociateProductFromPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateProductFromPortfolioResponse"));
     /// @todo

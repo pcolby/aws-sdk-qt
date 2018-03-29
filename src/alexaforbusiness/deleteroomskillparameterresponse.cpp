@@ -96,7 +96,7 @@ DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponse(QXmlStreamReader &xml)
+void DeleteRoomSkillParameterResponsePrivate::parseDeleteRoomSkillParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoomSkillParameterResponse"));
     /// @todo

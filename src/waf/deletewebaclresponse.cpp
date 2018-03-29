@@ -96,7 +96,7 @@ DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteWebACLResponsePrivate::DeleteWebACLResponse(QXmlStreamReader &xml)
+void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteWebACLResponse"));
     /// @todo

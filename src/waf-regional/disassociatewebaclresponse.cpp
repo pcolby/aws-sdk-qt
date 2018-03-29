@@ -96,7 +96,7 @@ DisassociateWebACLResponsePrivate::DisassociateWebACLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateWebACLResponsePrivate::DisassociateWebACLResponse(QXmlStreamReader &xml)
+void DisassociateWebACLResponsePrivate::parseDisassociateWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateWebACLResponse"));
     /// @todo

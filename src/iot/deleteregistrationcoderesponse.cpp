@@ -96,7 +96,7 @@ DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponse(QXmlStreamReader &xml)
+void DeleteRegistrationCodeResponsePrivate::parseDeleteRegistrationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegistrationCodeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponse(QXmlStreamReader &xml)
+void GetJobUnlockCodeResponsePrivate::parseGetJobUnlockCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobUnlockCodeResponse"));
     /// @todo

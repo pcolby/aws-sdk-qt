@@ -96,7 +96,7 @@ CreateIdentityProviderResponsePrivate::CreateIdentityProviderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateIdentityProviderResponsePrivate::CreateIdentityProviderResponse(QXmlStreamReader &xml)
+void CreateIdentityProviderResponsePrivate::parseCreateIdentityProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIdentityProviderResponse"));
     /// @todo

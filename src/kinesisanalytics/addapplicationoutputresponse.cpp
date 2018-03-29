@@ -96,7 +96,7 @@ AddApplicationOutputResponsePrivate::AddApplicationOutputResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddApplicationOutputResponsePrivate::AddApplicationOutputResponse(QXmlStreamReader &xml)
+void AddApplicationOutputResponsePrivate::parseAddApplicationOutputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationOutputResponse"));
     /// @todo

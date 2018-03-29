@@ -96,7 +96,7 @@ DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTask
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTaskAssessmentResultsResponse(QXmlStreamReader &xml)
+void DescribeReplicationTaskAssessmentResultsResponsePrivate::parseDescribeReplicationTaskAssessmentResultsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationTaskAssessmentResultsResponse"));
     /// @todo

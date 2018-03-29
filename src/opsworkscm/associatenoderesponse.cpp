@@ -96,7 +96,7 @@ AssociateNodeResponsePrivate::AssociateNodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateNodeResponsePrivate::AssociateNodeResponse(QXmlStreamReader &xml)
+void AssociateNodeResponsePrivate::parseAssociateNodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateNodeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml)
+void AcceptVpcPeeringConnectionResponsePrivate::parseAcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptVpcPeeringConnectionResponse"));
     /// @todo

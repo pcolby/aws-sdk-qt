@@ -96,7 +96,7 @@ UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponse(QXmlStreamReader &xml)
+void UpdateBasePathMappingResponsePrivate::parseUpdateBasePathMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBasePathMappingResponse"));
     /// @todo

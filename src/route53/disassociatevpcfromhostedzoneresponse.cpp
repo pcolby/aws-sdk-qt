@@ -96,7 +96,7 @@ DisassociateVPCFromHostedZoneResponsePrivate::DisassociateVPCFromHostedZoneRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateVPCFromHostedZoneResponsePrivate::DisassociateVPCFromHostedZoneResponse(QXmlStreamReader &xml)
+void DisassociateVPCFromHostedZoneResponsePrivate::parseDisassociateVPCFromHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateVPCFromHostedZoneResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeRes
  *
  * @param  xml  XML stream to parse.
  */
-void ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
+void ResetNetworkInterfaceAttributeResponsePrivate::parseResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetNetworkInterfaceAttributeResponse"));
     /// @todo

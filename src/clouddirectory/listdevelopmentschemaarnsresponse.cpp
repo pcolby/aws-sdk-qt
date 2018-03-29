@@ -96,7 +96,7 @@ ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponse(QXmlStreamReader &xml)
+void ListDevelopmentSchemaArnsResponsePrivate::parseListDevelopmentSchemaArnsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDevelopmentSchemaArnsResponse"));
     /// @todo

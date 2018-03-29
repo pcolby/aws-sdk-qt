@@ -96,7 +96,7 @@ PutMetricAlarmResponsePrivate::PutMetricAlarmResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutMetricAlarmResponsePrivate::PutMetricAlarmResponse(QXmlStreamReader &xml)
+void PutMetricAlarmResponsePrivate::parsePutMetricAlarmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutMetricAlarmResponse"));
     /// @todo

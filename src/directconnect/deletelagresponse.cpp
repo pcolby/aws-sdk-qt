@@ -96,7 +96,7 @@ DeleteLagResponsePrivate::DeleteLagResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLagResponsePrivate::DeleteLagResponse(QXmlStreamReader &xml)
+void DeleteLagResponsePrivate::parseDeleteLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLagResponse"));
     /// @todo

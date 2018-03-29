@@ -96,7 +96,7 @@ RegisterImageResponsePrivate::RegisterImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterImageResponsePrivate::RegisterImageResponse(QXmlStreamReader &xml)
+void RegisterImageResponsePrivate::parseRegisterImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterImageResponse"));
     /// @todo

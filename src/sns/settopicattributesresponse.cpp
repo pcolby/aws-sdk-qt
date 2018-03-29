@@ -96,7 +96,7 @@ SetTopicAttributesResponsePrivate::SetTopicAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetTopicAttributesResponsePrivate::SetTopicAttributesResponse(QXmlStreamReader &xml)
+void SetTopicAttributesResponsePrivate::parseSetTopicAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetTopicAttributesResponse"));
     /// @todo

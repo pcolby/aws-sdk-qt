@@ -96,7 +96,7 @@ GetLoggerDefinitionResponsePrivate::GetLoggerDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLoggerDefinitionResponsePrivate::GetLoggerDefinitionResponse(QXmlStreamReader &xml)
+void GetLoggerDefinitionResponsePrivate::parseGetLoggerDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLoggerDefinitionResponse"));
     /// @todo

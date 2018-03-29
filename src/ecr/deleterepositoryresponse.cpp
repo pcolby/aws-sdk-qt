@@ -96,7 +96,7 @@ DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRepositoryResponsePrivate::DeleteRepositoryResponse(QXmlStreamReader &xml)
+void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRepositoryResponse"));
     /// @todo

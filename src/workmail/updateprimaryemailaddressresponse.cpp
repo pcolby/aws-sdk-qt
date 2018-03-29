@@ -96,7 +96,7 @@ UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponse(QXmlStreamReader &xml)
+void UpdatePrimaryEmailAddressResponsePrivate::parseUpdatePrimaryEmailAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePrimaryEmailAddressResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponse(QXmlStreamReader &xml)
+void CompleteLifecycleActionResponsePrivate::parseCompleteLifecycleActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteLifecycleActionResponse"));
     /// @todo

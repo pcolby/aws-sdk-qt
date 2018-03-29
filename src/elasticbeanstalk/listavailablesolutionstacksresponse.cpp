@@ -96,7 +96,7 @@ ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponse(QXmlStreamReader &xml)
+void ListAvailableSolutionStacksResponsePrivate::parseListAvailableSolutionStacksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAvailableSolutionStacksResponse"));
     /// @todo

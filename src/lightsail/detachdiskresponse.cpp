@@ -96,7 +96,7 @@ DetachDiskResponsePrivate::DetachDiskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachDiskResponsePrivate::DetachDiskResponse(QXmlStreamReader &xml)
+void DetachDiskResponsePrivate::parseDetachDiskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachDiskResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponse(QXmlStreamReader &xml)
+void CreateVpcEndpointResponsePrivate::parseCreateVpcEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointResponse"));
     /// @todo

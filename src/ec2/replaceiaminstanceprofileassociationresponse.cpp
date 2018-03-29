@@ -96,7 +96,7 @@ ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAs
  *
  * @param  xml  XML stream to parse.
  */
-void ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAssociationResponse(QXmlStreamReader &xml)
+void ReplaceIamInstanceProfileAssociationResponsePrivate::parseReplaceIamInstanceProfileAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReplaceIamInstanceProfileAssociationResponse"));
     /// @todo

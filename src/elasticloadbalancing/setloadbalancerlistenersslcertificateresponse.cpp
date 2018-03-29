@@ -96,7 +96,7 @@ SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSL
  *
  * @param  xml  XML stream to parse.
  */
-void SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSLCertificateResponse(QXmlStreamReader &xml)
+void SetLoadBalancerListenerSSLCertificateResponsePrivate::parseSetLoadBalancerListenerSSLCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerListenerSSLCertificateResponse"));
     /// @todo

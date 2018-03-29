@@ -96,7 +96,7 @@ UpdateBudgetResponsePrivate::UpdateBudgetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateBudgetResponsePrivate::UpdateBudgetResponse(QXmlStreamReader &xml)
+void UpdateBudgetResponsePrivate::parseUpdateBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBudgetResponse"));
     /// @todo

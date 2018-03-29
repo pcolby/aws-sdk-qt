@@ -96,7 +96,7 @@ DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponse(QXmlStreamReader &xml)
+void DescribeBundleTasksResponsePrivate::parseDescribeBundleTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBundleTasksResponse"));
     /// @todo

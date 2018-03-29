@@ -96,7 +96,7 @@ DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponse(QXmlStreamReader &xml)
+void DescribeContainerInstancesResponsePrivate::parseDescribeContainerInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeContainerInstancesResponse"));
     /// @todo

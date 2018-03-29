@@ -96,7 +96,7 @@ RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponse(QXmlStreamReader &xml)
+void RegisterToWorkMailResponsePrivate::parseRegisterToWorkMailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterToWorkMailResponse"));
     /// @todo

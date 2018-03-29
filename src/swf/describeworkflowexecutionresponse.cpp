@@ -96,7 +96,7 @@ DescribeWorkflowExecutionResponsePrivate::DescribeWorkflowExecutionResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeWorkflowExecutionResponsePrivate::DescribeWorkflowExecutionResponse(QXmlStreamReader &xml)
+void DescribeWorkflowExecutionResponsePrivate::parseDescribeWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkflowExecutionResponse"));
     /// @todo

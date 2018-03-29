@@ -96,7 +96,7 @@ GetSchemaAsJsonResponsePrivate::GetSchemaAsJsonResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSchemaAsJsonResponsePrivate::GetSchemaAsJsonResponse(QXmlStreamReader &xml)
+void GetSchemaAsJsonResponsePrivate::parseGetSchemaAsJsonResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSchemaAsJsonResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponse(QXmlStreamReader &xml)
+void UpdateTagsForDomainResponsePrivate::parseUpdateTagsForDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTagsForDomainResponse"));
     /// @todo

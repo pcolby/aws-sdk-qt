@@ -96,7 +96,7 @@ DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponse(QXmlStreamReader &xml)
+void DeleteFlowLogsResponsePrivate::parseDeleteFlowLogsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFlowLogsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponse(QXmlStreamReader &xml)
+void ConfirmForgotPasswordResponsePrivate::parseConfirmForgotPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmForgotPasswordResponse"));
     /// @todo

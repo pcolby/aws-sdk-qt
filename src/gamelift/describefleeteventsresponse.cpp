@@ -96,7 +96,7 @@ DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponse(QXmlStreamReader &xml)
+void DescribeFleetEventsResponsePrivate::parseDescribeFleetEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetEventsResponse"));
     /// @todo

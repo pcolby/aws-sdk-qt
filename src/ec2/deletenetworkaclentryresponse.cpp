@@ -96,7 +96,7 @@ DeleteNetworkAclEntryResponsePrivate::DeleteNetworkAclEntryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNetworkAclEntryResponsePrivate::DeleteNetworkAclEntryResponse(QXmlStreamReader &xml)
+void DeleteNetworkAclEntryResponsePrivate::parseDeleteNetworkAclEntryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkAclEntryResponse"));
     /// @todo

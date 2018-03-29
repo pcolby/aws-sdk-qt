@@ -96,7 +96,7 @@ SetIdentityPoolRolesResponsePrivate::SetIdentityPoolRolesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetIdentityPoolRolesResponsePrivate::SetIdentityPoolRolesResponse(QXmlStreamReader &xml)
+void SetIdentityPoolRolesResponsePrivate::parseSetIdentityPoolRolesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityPoolRolesResponse"));
     /// @todo

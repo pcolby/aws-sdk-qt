@@ -96,7 +96,7 @@ CopyImageResponsePrivate::CopyImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyImageResponsePrivate::CopyImageResponse(QXmlStreamReader &xml)
+void CopyImageResponsePrivate::parseCopyImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyImageResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponse(QXmlStreamReader &xml)
+void SynthesizeSpeechResponsePrivate::parseSynthesizeSpeechResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SynthesizeSpeechResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsResponse(QXmlStreamReader &xml)
+void RemoveAttributesFromFindingsResponsePrivate::parseRemoveAttributesFromFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAttributesFromFindingsResponse"));
     /// @todo

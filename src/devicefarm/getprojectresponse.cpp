@@ -96,7 +96,7 @@ GetProjectResponsePrivate::GetProjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetProjectResponsePrivate::GetProjectResponse(QXmlStreamReader &xml)
+void GetProjectResponsePrivate::parseGetProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetProjectResponse"));
     /// @todo

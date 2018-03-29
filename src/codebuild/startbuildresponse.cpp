@@ -96,7 +96,7 @@ StartBuildResponsePrivate::StartBuildResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartBuildResponsePrivate::StartBuildResponse(QXmlStreamReader &xml)
+void StartBuildResponsePrivate::parseStartBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartBuildResponse"));
     /// @todo

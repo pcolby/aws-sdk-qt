@@ -96,7 +96,7 @@ GetOperationsForResourceResponsePrivate::GetOperationsForResourceResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetOperationsForResourceResponsePrivate::GetOperationsForResourceResponse(QXmlStreamReader &xml)
+void GetOperationsForResourceResponsePrivate::parseGetOperationsForResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOperationsForResourceResponse"));
     /// @todo

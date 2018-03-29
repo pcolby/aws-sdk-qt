@@ -96,7 +96,7 @@ CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponse(QXmlStreamReader &xml)
+void CreateSampleFindingsResponsePrivate::parseCreateSampleFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSampleFindingsResponse"));
     /// @todo

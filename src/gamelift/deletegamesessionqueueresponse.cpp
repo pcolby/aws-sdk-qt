@@ -96,7 +96,7 @@ DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponse(QXmlStreamReader &xml)
+void DeleteGameSessionQueueResponsePrivate::parseDeleteGameSessionQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGameSessionQueueResponse"));
     /// @todo

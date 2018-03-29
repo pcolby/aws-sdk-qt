@@ -96,7 +96,7 @@ DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificatesRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificatesResponse(QXmlStreamReader &xml)
+void DescribeHsmClientCertificatesResponsePrivate::parseDescribeHsmClientCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmClientCertificatesResponse"));
     /// @todo

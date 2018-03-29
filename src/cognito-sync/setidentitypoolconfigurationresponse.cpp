@@ -96,7 +96,7 @@ SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationRespons
  *
  * @param  xml  XML stream to parse.
  */
-void SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationResponse(QXmlStreamReader &xml)
+void SetIdentityPoolConfigurationResponsePrivate::parseSetIdentityPoolConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityPoolConfigurationResponse"));
     /// @todo

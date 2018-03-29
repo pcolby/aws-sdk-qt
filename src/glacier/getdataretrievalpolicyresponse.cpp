@@ -96,7 +96,7 @@ GetDataRetrievalPolicyResponsePrivate::GetDataRetrievalPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDataRetrievalPolicyResponsePrivate::GetDataRetrievalPolicyResponse(QXmlStreamReader &xml)
+void GetDataRetrievalPolicyResponsePrivate::parseGetDataRetrievalPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDataRetrievalPolicyResponse"));
     /// @todo

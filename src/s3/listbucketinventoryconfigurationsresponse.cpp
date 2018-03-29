@@ -96,7 +96,7 @@ ListBucketInventoryConfigurationsResponsePrivate::ListBucketInventoryConfigurati
  *
  * @param  xml  XML stream to parse.
  */
-void ListBucketInventoryConfigurationsResponsePrivate::ListBucketInventoryConfigurationsResponse(QXmlStreamReader &xml)
+void ListBucketInventoryConfigurationsResponsePrivate::parseListBucketInventoryConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBucketInventoryConfigurationsResponse"));
     /// @todo

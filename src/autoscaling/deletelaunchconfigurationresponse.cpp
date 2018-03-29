@@ -96,7 +96,7 @@ DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponse(QXmlStreamReader &xml)
+void DeleteLaunchConfigurationResponsePrivate::parseDeleteLaunchConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchConfigurationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponse(QXmlStreamReader &xml)
+void EstimateTemplateCostResponsePrivate::parseEstimateTemplateCostResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EstimateTemplateCostResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateResourceGroupResponsePrivate::CreateResourceGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateResourceGroupResponsePrivate::CreateResourceGroupResponse(QXmlStreamReader &xml)
+void CreateResourceGroupResponsePrivate::parseCreateResourceGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceGroupResponse"));
     /// @todo

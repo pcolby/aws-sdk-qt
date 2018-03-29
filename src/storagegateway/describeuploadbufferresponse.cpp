@@ -96,7 +96,7 @@ DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponse(QXmlStreamReader &xml)
+void DescribeUploadBufferResponsePrivate::parseDescribeUploadBufferResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUploadBufferResponse"));
     /// @todo

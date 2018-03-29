@@ -96,7 +96,7 @@ CreateLagResponsePrivate::CreateLagResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLagResponsePrivate::CreateLagResponse(QXmlStreamReader &xml)
+void CreateLagResponsePrivate::parseCreateLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLagResponse"));
     /// @todo

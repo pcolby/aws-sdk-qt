@@ -96,7 +96,7 @@ DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponse(QXmlStreamReader &xml)
+void DescribeTimeToLiveResponsePrivate::parseDescribeTimeToLiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTimeToLiveResponse"));
     /// @todo

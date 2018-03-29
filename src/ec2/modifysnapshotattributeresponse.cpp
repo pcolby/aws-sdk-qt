@@ -96,7 +96,7 @@ ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponse(QXmlStreamReader &xml)
+void ModifySnapshotAttributeResponsePrivate::parseModifySnapshotAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifySnapshotAttributeResponse"));
     /// @todo

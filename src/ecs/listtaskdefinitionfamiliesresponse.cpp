@@ -96,7 +96,7 @@ ListTaskDefinitionFamiliesResponsePrivate::ListTaskDefinitionFamiliesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListTaskDefinitionFamiliesResponsePrivate::ListTaskDefinitionFamiliesResponse(QXmlStreamReader &xml)
+void ListTaskDefinitionFamiliesResponsePrivate::parseListTaskDefinitionFamiliesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTaskDefinitionFamiliesResponse"));
     /// @todo

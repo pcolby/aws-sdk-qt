@@ -96,7 +96,7 @@ CreateTrainingJobResponsePrivate::CreateTrainingJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTrainingJobResponsePrivate::CreateTrainingJobResponse(QXmlStreamReader &xml)
+void CreateTrainingJobResponsePrivate::parseCreateTrainingJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTrainingJobResponse"));
     /// @todo

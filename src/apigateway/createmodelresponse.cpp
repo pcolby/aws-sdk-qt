@@ -96,7 +96,7 @@ CreateModelResponsePrivate::CreateModelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateModelResponsePrivate::CreateModelResponse(QXmlStreamReader &xml)
+void CreateModelResponsePrivate::parseCreateModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateModelResponse"));
     /// @todo

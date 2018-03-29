@@ -96,7 +96,7 @@ DefineSuggesterResponsePrivate::DefineSuggesterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DefineSuggesterResponsePrivate::DefineSuggesterResponse(QXmlStreamReader &xml)
+void DefineSuggesterResponsePrivate::parseDefineSuggesterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineSuggesterResponse"));
     /// @todo

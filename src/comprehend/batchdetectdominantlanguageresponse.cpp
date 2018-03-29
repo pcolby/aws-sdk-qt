@@ -96,7 +96,7 @@ BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponse(QXmlStreamReader &xml)
+void BatchDetectDominantLanguageResponsePrivate::parseBatchDetectDominantLanguageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectDominantLanguageResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeTrustedAdvisorCheckResultResponsePrivate::DescribeTrustedAdvisorCheckRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTrustedAdvisorCheckResultResponsePrivate::DescribeTrustedAdvisorCheckResultResponse(QXmlStreamReader &xml)
+void DescribeTrustedAdvisorCheckResultResponsePrivate::parseDescribeTrustedAdvisorCheckResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrustedAdvisorCheckResultResponse"));
     /// @todo

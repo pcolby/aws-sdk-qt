@@ -96,7 +96,7 @@ DeleteBucketWebsiteResponsePrivate::DeleteBucketWebsiteResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketWebsiteResponsePrivate::DeleteBucketWebsiteResponse(QXmlStreamReader &xml)
+void DeleteBucketWebsiteResponsePrivate::parseDeleteBucketWebsiteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketWebsiteResponse"));
     /// @todo

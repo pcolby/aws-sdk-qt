@@ -96,7 +96,7 @@ UpdateRuleGroupResponsePrivate::UpdateRuleGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRuleGroupResponsePrivate::UpdateRuleGroupResponse(QXmlStreamReader &xml)
+void UpdateRuleGroupResponsePrivate::parseUpdateRuleGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRuleGroupResponse"));
     /// @todo

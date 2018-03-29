@@ -96,7 +96,7 @@ CreateTrailResponsePrivate::CreateTrailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTrailResponsePrivate::CreateTrailResponse(QXmlStreamReader &xml)
+void CreateTrailResponsePrivate::parseCreateTrailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTrailResponse"));
     /// @todo

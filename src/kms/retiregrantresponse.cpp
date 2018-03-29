@@ -96,7 +96,7 @@ RetireGrantResponsePrivate::RetireGrantResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RetireGrantResponsePrivate::RetireGrantResponse(QXmlStreamReader &xml)
+void RetireGrantResponsePrivate::parseRetireGrantResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetireGrantResponse"));
     /// @todo

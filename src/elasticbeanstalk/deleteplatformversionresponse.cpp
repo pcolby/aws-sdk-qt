@@ -96,7 +96,7 @@ DeletePlatformVersionResponsePrivate::DeletePlatformVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePlatformVersionResponsePrivate::DeletePlatformVersionResponse(QXmlStreamReader &xml)
+void DeletePlatformVersionResponsePrivate::parseDeletePlatformVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePlatformVersionResponse"));
     /// @todo

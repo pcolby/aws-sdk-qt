@@ -96,7 +96,7 @@ ListChannelsResponsePrivate::ListChannelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListChannelsResponsePrivate::ListChannelsResponse(QXmlStreamReader &xml)
+void ListChannelsResponsePrivate::parseListChannelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListChannelsResponse"));
     /// @todo

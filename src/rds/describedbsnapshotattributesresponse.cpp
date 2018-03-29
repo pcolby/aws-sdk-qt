@@ -96,7 +96,7 @@ DescribeDBSnapshotAttributesResponsePrivate::DescribeDBSnapshotAttributesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBSnapshotAttributesResponsePrivate::DescribeDBSnapshotAttributesResponse(QXmlStreamReader &xml)
+void DescribeDBSnapshotAttributesResponsePrivate::parseDescribeDBSnapshotAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBSnapshotAttributesResponse"));
     /// @todo

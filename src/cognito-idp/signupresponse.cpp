@@ -96,7 +96,7 @@ SignUpResponsePrivate::SignUpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SignUpResponsePrivate::SignUpResponse(QXmlStreamReader &xml)
+void SignUpResponsePrivate::parseSignUpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SignUpResponse"));
     /// @todo

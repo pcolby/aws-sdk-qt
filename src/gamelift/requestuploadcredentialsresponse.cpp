@@ -96,7 +96,7 @@ RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponse(QXmlStreamReader &xml)
+void RequestUploadCredentialsResponsePrivate::parseRequestUploadCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestUploadCredentialsResponse"));
     /// @todo

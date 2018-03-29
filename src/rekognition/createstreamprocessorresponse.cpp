@@ -96,7 +96,7 @@ CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponse(QXmlStreamReader &xml)
+void CreateStreamProcessorResponsePrivate::parseCreateStreamProcessorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamProcessorResponse"));
     /// @todo

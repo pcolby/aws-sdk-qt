@@ -96,7 +96,7 @@ DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicati
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicationInstancesResponse(QXmlStreamReader &xml)
+void DescribeOrderableReplicationInstancesResponsePrivate::parseDescribeOrderableReplicationInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableReplicationInstancesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetIdResponsePrivate::GetIdResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetIdResponsePrivate::GetIdResponse(QXmlStreamReader &xml)
+void GetIdResponsePrivate::parseGetIdResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetSmsChannelResponsePrivate::GetSmsChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSmsChannelResponsePrivate::GetSmsChannelResponse(QXmlStreamReader &xml)
+void GetSmsChannelResponsePrivate::parseGetSmsChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSmsChannelResponse"));
     /// @todo

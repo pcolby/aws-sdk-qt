@@ -96,7 +96,7 @@ PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponse(QXmlStreamReader &xml)
+void PutRetentionPolicyResponsePrivate::parsePutRetentionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRetentionPolicyResponse"));
     /// @todo

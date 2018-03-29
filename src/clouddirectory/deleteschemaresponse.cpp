@@ -96,7 +96,7 @@ DeleteSchemaResponsePrivate::DeleteSchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSchemaResponsePrivate::DeleteSchemaResponse(QXmlStreamReader &xml)
+void DeleteSchemaResponsePrivate::parseDeleteSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSchemaResponse"));
     /// @todo

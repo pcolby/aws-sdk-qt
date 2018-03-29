@@ -96,7 +96,7 @@ ListIncomingTypedLinksResponsePrivate::ListIncomingTypedLinksResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListIncomingTypedLinksResponsePrivate::ListIncomingTypedLinksResponse(QXmlStreamReader &xml)
+void ListIncomingTypedLinksResponsePrivate::parseListIncomingTypedLinksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIncomingTypedLinksResponse"));
     /// @todo

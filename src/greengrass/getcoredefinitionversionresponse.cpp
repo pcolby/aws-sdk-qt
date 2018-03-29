@@ -96,7 +96,7 @@ GetCoreDefinitionVersionResponsePrivate::GetCoreDefinitionVersionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetCoreDefinitionVersionResponsePrivate::GetCoreDefinitionVersionResponse(QXmlStreamReader &xml)
+void GetCoreDefinitionVersionResponsePrivate::parseGetCoreDefinitionVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCoreDefinitionVersionResponse"));
     /// @todo

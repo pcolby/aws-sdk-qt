@@ -96,7 +96,7 @@ UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponse(QXmlStreamReader &xml)
+void UpdateProvisioningArtifactResponsePrivate::parseUpdateProvisioningArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateProvisioningArtifactResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsResponse(QXmlStreamReader &xml)
+void DescribeEnvironmentMembershipsResponsePrivate::parseDescribeEnvironmentMembershipsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentMembershipsResponse"));
     /// @todo

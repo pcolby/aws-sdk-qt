@@ -96,7 +96,7 @@ SearchRoomsResponsePrivate::SearchRoomsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchRoomsResponsePrivate::SearchRoomsResponse(QXmlStreamReader &xml)
+void SearchRoomsResponsePrivate::parseSearchRoomsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchRoomsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PutEvaluationsResponsePrivate::PutEvaluationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutEvaluationsResponsePrivate::PutEvaluationsResponse(QXmlStreamReader &xml)
+void PutEvaluationsResponsePrivate::parsePutEvaluationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutEvaluationsResponse"));
     /// @todo

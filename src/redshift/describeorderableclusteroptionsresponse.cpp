@@ -96,7 +96,7 @@ DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsR
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml)
+void DescribeOrderableClusterOptionsResponsePrivate::parseDescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableClusterOptionsResponse"));
     /// @todo

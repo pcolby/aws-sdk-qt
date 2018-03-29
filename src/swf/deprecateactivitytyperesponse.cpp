@@ -96,7 +96,7 @@ DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponse(QXmlStreamReader &xml)
+void DeprecateActivityTypeResponsePrivate::parseDeprecateActivityTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateActivityTypeResponse"));
     /// @todo

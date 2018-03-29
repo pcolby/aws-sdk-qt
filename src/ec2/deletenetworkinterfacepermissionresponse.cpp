@@ -96,7 +96,7 @@ DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissio
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
+void DeleteNetworkInterfacePermissionResponsePrivate::parseDeleteNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkInterfacePermissionResponse"));
     /// @todo

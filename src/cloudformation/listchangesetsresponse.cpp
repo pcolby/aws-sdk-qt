@@ -96,7 +96,7 @@ ListChangeSetsResponsePrivate::ListChangeSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListChangeSetsResponsePrivate::ListChangeSetsResponse(QXmlStreamReader &xml)
+void ListChangeSetsResponsePrivate::parseListChangeSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListChangeSetsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RetryStageExecutionResponsePrivate::RetryStageExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RetryStageExecutionResponsePrivate::RetryStageExecutionResponse(QXmlStreamReader &xml)
+void RetryStageExecutionResponsePrivate::parseRetryStageExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetryStageExecutionResponse"));
     /// @todo

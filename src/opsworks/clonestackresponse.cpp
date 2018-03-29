@@ -96,7 +96,7 @@ CloneStackResponsePrivate::CloneStackResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CloneStackResponsePrivate::CloneStackResponse(QXmlStreamReader &xml)
+void CloneStackResponsePrivate::parseCloneStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CloneStackResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateUserPoolClientResponsePrivate::CreateUserPoolClientResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateUserPoolClientResponsePrivate::CreateUserPoolClientResponse(QXmlStreamReader &xml)
+void CreateUserPoolClientResponsePrivate::parseCreateUserPoolClientResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateUserPoolClientResponse"));
     /// @todo

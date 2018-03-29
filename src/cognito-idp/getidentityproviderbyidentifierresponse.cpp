@@ -96,7 +96,7 @@ GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierR
  *
  * @param  xml  XML stream to parse.
  */
-void GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierResponse(QXmlStreamReader &xml)
+void GetIdentityProviderByIdentifierResponsePrivate::parseGetIdentityProviderByIdentifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityProviderByIdentifierResponse"));
     /// @todo

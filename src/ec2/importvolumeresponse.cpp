@@ -96,7 +96,7 @@ ImportVolumeResponsePrivate::ImportVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportVolumeResponsePrivate::ImportVolumeResponse(QXmlStreamReader &xml)
+void ImportVolumeResponsePrivate::parseImportVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportVolumeResponse"));
     /// @todo

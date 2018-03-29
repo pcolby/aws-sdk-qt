@@ -96,7 +96,7 @@ ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponse(QXmlStreamReader &xml)
+void ImportCatalogToGlueResponsePrivate::parseImportCatalogToGlueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportCatalogToGlueResponse"));
     /// @todo

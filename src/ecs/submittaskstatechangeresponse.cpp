@@ -96,7 +96,7 @@ SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponse(QXmlStreamReader &xml)
+void SubmitTaskStateChangeResponsePrivate::parseSubmitTaskStateChangeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubmitTaskStateChangeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponse(QXmlStreamReader &xml)
+void ModifyOptionGroupResponsePrivate::parseModifyOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyOptionGroupResponse"));
     /// @todo

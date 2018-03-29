@@ -96,7 +96,7 @@ ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponse(QXmlStreamReader &xml)
+void ChangeResourceRecordSetsResponsePrivate::parseChangeResourceRecordSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangeResourceRecordSetsResponse"));
     /// @todo

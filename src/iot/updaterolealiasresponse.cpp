@@ -96,7 +96,7 @@ UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponse(QXmlStreamReader &xml)
+void UpdateRoleAliasResponsePrivate::parseUpdateRoleAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRoleAliasResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListSubscriptionDefinitionVersionsResponsePrivate::ListSubscriptionDefinitionVer
  *
  * @param  xml  XML stream to parse.
  */
-void ListSubscriptionDefinitionVersionsResponsePrivate::ListSubscriptionDefinitionVersionsResponse(QXmlStreamReader &xml)
+void ListSubscriptionDefinitionVersionsResponsePrivate::parseListSubscriptionDefinitionVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionDefinitionVersionsResponse"));
     /// @todo

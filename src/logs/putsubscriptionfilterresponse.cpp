@@ -96,7 +96,7 @@ PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponse(QXmlStreamReader &xml)
+void PutSubscriptionFilterResponsePrivate::parsePutSubscriptionFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutSubscriptionFilterResponse"));
     /// @todo

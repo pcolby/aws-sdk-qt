@@ -96,7 +96,7 @@ StartMatchBackfillResponsePrivate::StartMatchBackfillResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartMatchBackfillResponsePrivate::StartMatchBackfillResponse(QXmlStreamReader &xml)
+void StartMatchBackfillResponsePrivate::parseStartMatchBackfillResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartMatchBackfillResponse"));
     /// @todo

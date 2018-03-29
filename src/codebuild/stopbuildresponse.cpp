@@ -96,7 +96,7 @@ StopBuildResponsePrivate::StopBuildResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopBuildResponsePrivate::StopBuildResponse(QXmlStreamReader &xml)
+void StopBuildResponsePrivate::parseStopBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopBuildResponse"));
     /// @todo

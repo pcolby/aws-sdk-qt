@@ -96,7 +96,7 @@ ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponse(QXmlStreamReader &xml)
+void ModifyImageAttributeResponsePrivate::parseModifyImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyImageAttributeResponse"));
     /// @todo

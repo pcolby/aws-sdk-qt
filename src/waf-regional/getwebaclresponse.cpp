@@ -96,7 +96,7 @@ GetWebACLResponsePrivate::GetWebACLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetWebACLResponsePrivate::GetWebACLResponse(QXmlStreamReader &xml)
+void GetWebACLResponsePrivate::parseGetWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetWebACLResponse"));
     /// @todo

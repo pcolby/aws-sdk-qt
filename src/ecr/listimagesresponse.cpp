@@ -96,7 +96,7 @@ ListImagesResponsePrivate::ListImagesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListImagesResponsePrivate::ListImagesResponse(QXmlStreamReader &xml)
+void ListImagesResponsePrivate::parseListImagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListImagesResponse"));
     /// @todo

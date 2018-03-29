@@ -96,7 +96,7 @@ CreateResourceDefinitionVersionResponsePrivate::CreateResourceDefinitionVersionR
  *
  * @param  xml  XML stream to parse.
  */
-void CreateResourceDefinitionVersionResponsePrivate::CreateResourceDefinitionVersionResponse(QXmlStreamReader &xml)
+void CreateResourceDefinitionVersionResponsePrivate::parseCreateResourceDefinitionVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceDefinitionVersionResponse"));
     /// @todo

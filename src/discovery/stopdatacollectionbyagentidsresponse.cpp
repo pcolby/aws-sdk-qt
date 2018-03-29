@@ -96,7 +96,7 @@ StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
+void StopDataCollectionByAgentIdsResponsePrivate::parseStopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDataCollectionByAgentIdsResponse"));
     /// @todo

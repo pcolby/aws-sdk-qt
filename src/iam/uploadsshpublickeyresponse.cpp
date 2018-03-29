@@ -96,7 +96,7 @@ UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponse(QXmlStreamReader &xml)
+void UploadSSHPublicKeyResponsePrivate::parseUploadSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadSSHPublicKeyResponse"));
     /// @todo

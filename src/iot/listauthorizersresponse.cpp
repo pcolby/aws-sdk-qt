@@ -96,7 +96,7 @@ ListAuthorizersResponsePrivate::ListAuthorizersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAuthorizersResponsePrivate::ListAuthorizersResponse(QXmlStreamReader &xml)
+void ListAuthorizersResponsePrivate::parseListAuthorizersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAuthorizersResponse"));
     /// @todo

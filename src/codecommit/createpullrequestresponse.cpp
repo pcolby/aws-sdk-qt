@@ -96,7 +96,7 @@ CreatePullRequestResponsePrivate::CreatePullRequestResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePullRequestResponsePrivate::CreatePullRequestResponse(QXmlStreamReader &xml)
+void CreatePullRequestResponsePrivate::parseCreatePullRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePullRequestResponse"));
     /// @todo

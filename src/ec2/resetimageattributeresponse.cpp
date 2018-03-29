@@ -96,7 +96,7 @@ ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetImageAttributeResponsePrivate::ResetImageAttributeResponse(QXmlStreamReader &xml)
+void ResetImageAttributeResponsePrivate::parseResetImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetImageAttributeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml)
+void GetRateBasedRuleManagedKeysResponsePrivate::parseGetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRateBasedRuleManagedKeysResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateTapesResponsePrivate::CreateTapesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTapesResponsePrivate::CreateTapesResponse(QXmlStreamReader &xml)
+void CreateTapesResponsePrivate::parseCreateTapesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTapesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateSubscriptionDefinitionResponsePrivate::UpdateSubscriptionDefinitionRespons
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSubscriptionDefinitionResponsePrivate::UpdateSubscriptionDefinitionResponse(QXmlStreamReader &xml)
+void UpdateSubscriptionDefinitionResponsePrivate::parseUpdateSubscriptionDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSubscriptionDefinitionResponse"));
     /// @todo

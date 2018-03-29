@@ -96,7 +96,7 @@ ResolveRoomResponsePrivate::ResolveRoomResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResolveRoomResponsePrivate::ResolveRoomResponse(QXmlStreamReader &xml)
+void ResolveRoomResponsePrivate::parseResolveRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveRoomResponse"));
     /// @todo

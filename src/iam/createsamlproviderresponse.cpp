@@ -96,7 +96,7 @@ CreateSAMLProviderResponsePrivate::CreateSAMLProviderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSAMLProviderResponsePrivate::CreateSAMLProviderResponse(QXmlStreamReader &xml)
+void CreateSAMLProviderResponsePrivate::parseCreateSAMLProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSAMLProviderResponse"));
     /// @todo

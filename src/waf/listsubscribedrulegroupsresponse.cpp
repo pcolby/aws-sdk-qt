@@ -96,7 +96,7 @@ ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponse(QXmlStreamReader &xml)
+void ListSubscribedRuleGroupsResponsePrivate::parseListSubscribedRuleGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSubscribedRuleGroupsResponse"));
     /// @todo

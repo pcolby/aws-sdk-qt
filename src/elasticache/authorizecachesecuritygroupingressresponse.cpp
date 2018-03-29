@@ -96,7 +96,7 @@ AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIn
  *
  * @param  xml  XML stream to parse.
  */
-void AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
+void AuthorizeCacheSecurityGroupIngressResponsePrivate::parseAuthorizeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeCacheSecurityGroupIngressResponse"));
     /// @todo

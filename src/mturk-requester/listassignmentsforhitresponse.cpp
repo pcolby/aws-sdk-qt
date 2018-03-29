@@ -96,7 +96,7 @@ ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponse(QXmlStreamReader &xml)
+void ListAssignmentsForHITResponsePrivate::parseListAssignmentsForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssignmentsForHITResponse"));
     /// @todo

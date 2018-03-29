@@ -96,7 +96,7 @@ AddPermissionResponsePrivate::AddPermissionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddPermissionResponsePrivate::AddPermissionResponse(QXmlStreamReader &xml)
+void AddPermissionResponsePrivate::parseAddPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddPermissionResponse"));
     /// @todo

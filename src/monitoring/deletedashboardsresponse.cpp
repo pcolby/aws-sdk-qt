@@ -96,7 +96,7 @@ DeleteDashboardsResponsePrivate::DeleteDashboardsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDashboardsResponsePrivate::DeleteDashboardsResponse(QXmlStreamReader &xml)
+void DeleteDashboardsResponsePrivate::parseDeleteDashboardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDashboardsResponse"));
     /// @todo

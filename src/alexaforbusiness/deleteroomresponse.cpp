@@ -96,7 +96,7 @@ DeleteRoomResponsePrivate::DeleteRoomResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRoomResponsePrivate::DeleteRoomResponse(QXmlStreamReader &xml)
+void DeleteRoomResponsePrivate::parseDeleteRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoomResponse"));
     /// @todo

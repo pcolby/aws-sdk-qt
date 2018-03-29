@@ -96,7 +96,7 @@ GetSdkTypeResponsePrivate::GetSdkTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSdkTypeResponsePrivate::GetSdkTypeResponse(QXmlStreamReader &xml)
+void GetSdkTypeResponsePrivate::parseGetSdkTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSdkTypeResponse"));
     /// @todo

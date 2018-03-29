@@ -96,7 +96,7 @@ ListLunaClientsResponsePrivate::ListLunaClientsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListLunaClientsResponsePrivate::ListLunaClientsResponse(QXmlStreamReader &xml)
+void ListLunaClientsResponsePrivate::parseListLunaClientsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLunaClientsResponse"));
     /// @todo

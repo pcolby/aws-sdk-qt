@@ -96,7 +96,7 @@ UpdateThingGroupsForThingResponsePrivate::UpdateThingGroupsForThingResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateThingGroupsForThingResponsePrivate::UpdateThingGroupsForThingResponse(QXmlStreamReader &xml)
+void UpdateThingGroupsForThingResponsePrivate::parseUpdateThingGroupsForThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingGroupsForThingResponse"));
     /// @todo

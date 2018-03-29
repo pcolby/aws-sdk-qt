@@ -96,7 +96,7 @@ PutMetricFilterResponsePrivate::PutMetricFilterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutMetricFilterResponsePrivate::PutMetricFilterResponse(QXmlStreamReader &xml)
+void PutMetricFilterResponsePrivate::parsePutMetricFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutMetricFilterResponse"));
     /// @todo

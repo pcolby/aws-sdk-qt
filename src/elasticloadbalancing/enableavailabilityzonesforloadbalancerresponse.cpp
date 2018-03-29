@@ -96,7 +96,7 @@ EnableAvailabilityZonesForLoadBalancerResponsePrivate::EnableAvailabilityZonesFo
  *
  * @param  xml  XML stream to parse.
  */
-void EnableAvailabilityZonesForLoadBalancerResponsePrivate::EnableAvailabilityZonesForLoadBalancerResponse(QXmlStreamReader &xml)
+void EnableAvailabilityZonesForLoadBalancerResponsePrivate::parseEnableAvailabilityZonesForLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableAvailabilityZonesForLoadBalancerResponse"));
     /// @todo

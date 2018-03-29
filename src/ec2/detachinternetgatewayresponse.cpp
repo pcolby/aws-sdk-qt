@@ -96,7 +96,7 @@ DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponse(QXmlStreamReader &xml)
+void DetachInternetGatewayResponsePrivate::parseDetachInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachInternetGatewayResponse"));
     /// @todo

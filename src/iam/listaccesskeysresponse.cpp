@@ -96,7 +96,7 @@ ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAccessKeysResponsePrivate::ListAccessKeysResponse(QXmlStreamReader &xml)
+void ListAccessKeysResponsePrivate::parseListAccessKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAccessKeysResponse"));
     /// @todo

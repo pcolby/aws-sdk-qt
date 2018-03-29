@@ -96,7 +96,7 @@ EnableKeyResponsePrivate::EnableKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableKeyResponsePrivate::EnableKeyResponse(QXmlStreamReader &xml)
+void EnableKeyResponsePrivate::parseEnableKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableKeyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListDeploymentGroupsResponsePrivate::ListDeploymentGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListDeploymentGroupsResponsePrivate::ListDeploymentGroupsResponse(QXmlStreamReader &xml)
+void ListDeploymentGroupsResponsePrivate::parseListDeploymentGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentGroupsResponse"));
     /// @todo

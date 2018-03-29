@@ -96,7 +96,7 @@ GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponse(QXmlStreamReader &xml)
+void GetHostedZoneLimitResponsePrivate::parseGetHostedZoneLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHostedZoneLimitResponse"));
     /// @todo

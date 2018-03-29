@@ -96,7 +96,7 @@ ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponse(QXmlStreamReader &xml)
+void ListOutgoingCertificatesResponsePrivate::parseListOutgoingCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOutgoingCertificatesResponse"));
     /// @todo

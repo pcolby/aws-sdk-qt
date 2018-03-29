@@ -96,7 +96,7 @@ UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::UpdateSecurityGroupRu
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::UpdateSecurityGroupRuleDescriptionsIngressResponse(QXmlStreamReader &xml)
+void UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::parseUpdateSecurityGroupRuleDescriptionsIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSecurityGroupRuleDescriptionsIngressResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetServiceGraphResponsePrivate::GetServiceGraphResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetServiceGraphResponsePrivate::GetServiceGraphResponse(QXmlStreamReader &xml)
+void GetServiceGraphResponsePrivate::parseGetServiceGraphResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServiceGraphResponse"));
     /// @todo

@@ -96,7 +96,7 @@ InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponse(QXmlStreamReader &xml)
+void InvalidateProjectCacheResponsePrivate::parseInvalidateProjectCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InvalidateProjectCacheResponse"));
     /// @todo

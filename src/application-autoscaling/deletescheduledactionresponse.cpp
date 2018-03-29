@@ -96,7 +96,7 @@ DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponse(QXmlStreamReader &xml)
+void DeleteScheduledActionResponsePrivate::parseDeleteScheduledActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteScheduledActionResponse"));
     /// @todo

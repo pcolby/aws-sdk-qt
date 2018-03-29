@@ -96,7 +96,7 @@ ListStackSetsResponsePrivate::ListStackSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListStackSetsResponsePrivate::ListStackSetsResponse(QXmlStreamReader &xml)
+void ListStackSetsResponsePrivate::parseListStackSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStackSetsResponse"));
     /// @todo

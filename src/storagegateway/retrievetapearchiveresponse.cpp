@@ -96,7 +96,7 @@ RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponse(QXmlStreamReader &xml)
+void RetrieveTapeArchiveResponsePrivate::parseRetrieveTapeArchiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetrieveTapeArchiveResponse"));
     /// @todo

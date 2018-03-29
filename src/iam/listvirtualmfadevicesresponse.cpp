@@ -96,7 +96,7 @@ ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponse(QXmlStreamReader &xml)
+void ListVirtualMFADevicesResponsePrivate::parseListVirtualMFADevicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVirtualMFADevicesResponse"));
     /// @todo

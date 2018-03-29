@@ -96,7 +96,7 @@ DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponse(QXmlStreamReader &xml)
+void DeleteMaintenanceWindowResponsePrivate::parseDeleteMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMaintenanceWindowResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterDomainResponsePrivate::RegisterDomainResponse(QXmlStreamReader &xml)
+void RegisterDomainResponsePrivate::parseRegisterDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterDomainResponse"));
     /// @todo

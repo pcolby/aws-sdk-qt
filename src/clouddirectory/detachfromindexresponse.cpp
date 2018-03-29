@@ -96,7 +96,7 @@ DetachFromIndexResponsePrivate::DetachFromIndexResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachFromIndexResponsePrivate::DetachFromIndexResponse(QXmlStreamReader &xml)
+void DetachFromIndexResponsePrivate::parseDetachFromIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachFromIndexResponse"));
     /// @todo

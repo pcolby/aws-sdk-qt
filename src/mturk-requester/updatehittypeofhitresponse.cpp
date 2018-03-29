@@ -96,7 +96,7 @@ UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponse(QXmlStreamReader &xml)
+void UpdateHITTypeOfHITResponsePrivate::parseUpdateHITTypeOfHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateHITTypeOfHITResponse"));
     /// @todo

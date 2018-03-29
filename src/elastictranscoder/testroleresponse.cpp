@@ -96,7 +96,7 @@ TestRoleResponsePrivate::TestRoleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestRoleResponsePrivate::TestRoleResponse(QXmlStreamReader &xml)
+void TestRoleResponsePrivate::parseTestRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestRoleResponse"));
     /// @todo

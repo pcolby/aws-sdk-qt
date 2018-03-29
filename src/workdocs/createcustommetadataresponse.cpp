@@ -96,7 +96,7 @@ CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponse(QXmlStreamReader &xml)
+void CreateCustomMetadataResponsePrivate::parseCreateCustomMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomMetadataResponse"));
     /// @todo

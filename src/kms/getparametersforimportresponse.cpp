@@ -96,7 +96,7 @@ GetParametersForImportResponsePrivate::GetParametersForImportResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetParametersForImportResponsePrivate::GetParametersForImportResponse(QXmlStreamReader &xml)
+void GetParametersForImportResponsePrivate::parseGetParametersForImportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetParametersForImportResponse"));
     /// @todo

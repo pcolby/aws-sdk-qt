@@ -96,7 +96,7 @@ DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponse(QXmlStreamReader &xml)
+void DetachClassicLinkVpcResponsePrivate::parseDetachClassicLinkVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachClassicLinkVpcResponse"));
     /// @todo

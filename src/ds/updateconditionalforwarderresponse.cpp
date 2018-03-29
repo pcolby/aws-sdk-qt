@@ -96,7 +96,7 @@ UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponse(QXmlStreamReader &xml)
+void UpdateConditionalForwarderResponsePrivate::parseUpdateConditionalForwarderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConditionalForwarderResponse"));
     /// @todo

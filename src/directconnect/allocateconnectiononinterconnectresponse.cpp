@@ -96,7 +96,7 @@ AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnec
  *
  * @param  xml  XML stream to parse.
  */
-void AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnectResponse(QXmlStreamReader &xml)
+void AllocateConnectionOnInterconnectResponsePrivate::parseAllocateConnectionOnInterconnectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateConnectionOnInterconnectResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StartThingRegistrationTaskResponsePrivate::StartThingRegistrationTaskResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void StartThingRegistrationTaskResponsePrivate::StartThingRegistrationTaskResponse(QXmlStreamReader &xml)
+void StartThingRegistrationTaskResponsePrivate::parseStartThingRegistrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartThingRegistrationTaskResponse"));
     /// @todo

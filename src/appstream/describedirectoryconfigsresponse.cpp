@@ -96,7 +96,7 @@ DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponse(QXmlStreamReader &xml)
+void DescribeDirectoryConfigsResponsePrivate::parseDescribeDirectoryConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectoryConfigsResponse"));
     /// @todo

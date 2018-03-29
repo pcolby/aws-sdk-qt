@@ -96,7 +96,7 @@ TestConnectionResponsePrivate::TestConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestConnectionResponsePrivate::TestConnectionResponse(QXmlStreamReader &xml)
+void TestConnectionResponsePrivate::parseTestConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestConnectionResponse"));
     /// @todo

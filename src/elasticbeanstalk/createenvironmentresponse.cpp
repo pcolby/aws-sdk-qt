@@ -96,7 +96,7 @@ CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateEnvironmentResponsePrivate::CreateEnvironmentResponse(QXmlStreamReader &xml)
+void CreateEnvironmentResponsePrivate::parseCreateEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentResponse"));
     /// @todo

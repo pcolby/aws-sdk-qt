@@ -96,7 +96,7 @@ GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePrev
  *
  * @param  xml  XML stream to parse.
  */
-void GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePreviewResponse(QXmlStreamReader &xml)
+void GetHostReservationPurchasePreviewResponsePrivate::parseGetHostReservationPurchasePreviewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHostReservationPurchasePreviewResponse"));
     /// @todo

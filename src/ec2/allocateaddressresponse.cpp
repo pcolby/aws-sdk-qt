@@ -96,7 +96,7 @@ AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AllocateAddressResponsePrivate::AllocateAddressResponse(QXmlStreamReader &xml)
+void AllocateAddressResponsePrivate::parseAllocateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateAddressResponse"));
     /// @todo

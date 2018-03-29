@@ -96,7 +96,7 @@ AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponse(QXmlStreamReader &xml)
+void AssociateTeamMemberResponsePrivate::parseAssociateTeamMemberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateTeamMemberResponse"));
     /// @todo

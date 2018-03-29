@@ -96,7 +96,7 @@ DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponse(QXmlStreamReader &xml)
+void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEventSubscriptionResponse"));
     /// @todo

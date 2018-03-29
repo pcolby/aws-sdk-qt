@@ -96,7 +96,7 @@ RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponse(QXmlStreamReader &xml)
+void RegisterContainerInstanceResponsePrivate::parseRegisterContainerInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterContainerInstanceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponse(QXmlStreamReader &xml)
+void DeleteReusableDelegationSetResponsePrivate::parseDeleteReusableDelegationSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReusableDelegationSetResponse"));
     /// @todo

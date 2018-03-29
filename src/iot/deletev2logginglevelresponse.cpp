@@ -96,7 +96,7 @@ DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponse(QXmlStreamReader &xml)
+void DeleteV2LoggingLevelResponsePrivate::parseDeleteV2LoggingLevelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteV2LoggingLevelResponse"));
     /// @todo

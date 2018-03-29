@@ -96,7 +96,7 @@ CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponse(QXmlStreamReader &xml)
+void CreatePlatformApplicationResponsePrivate::parseCreatePlatformApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformApplicationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeMaintenanceWindowsResponsePrivate::DescribeMaintenanceWindowsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMaintenanceWindowsResponsePrivate::DescribeMaintenanceWindowsResponse(QXmlStreamReader &xml)
+void DescribeMaintenanceWindowsResponsePrivate::parseDescribeMaintenanceWindowsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceWindowsResponse"));
     /// @todo

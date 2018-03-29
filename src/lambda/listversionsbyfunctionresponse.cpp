@@ -96,7 +96,7 @@ ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponse(QXmlStreamReader &xml)
+void ListVersionsByFunctionResponsePrivate::parseListVersionsByFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVersionsByFunctionResponse"));
     /// @todo

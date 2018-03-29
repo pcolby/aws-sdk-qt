@@ -96,7 +96,7 @@ CreateInputResponsePrivate::CreateInputResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateInputResponsePrivate::CreateInputResponse(QXmlStreamReader &xml)
+void CreateInputResponsePrivate::parseCreateInputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInputResponse"));
     /// @todo

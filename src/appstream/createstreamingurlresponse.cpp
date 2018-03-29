@@ -96,7 +96,7 @@ CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateStreamingURLResponsePrivate::CreateStreamingURLResponse(QXmlStreamReader &xml)
+void CreateStreamingURLResponsePrivate::parseCreateStreamingURLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamingURLResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponse(QXmlStreamReader &xml)
+void ListApplicationVersionsResponsePrivate::parseListApplicationVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListApplicationVersionsResponse"));
     /// @todo

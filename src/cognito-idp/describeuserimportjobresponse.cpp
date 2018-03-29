@@ -96,7 +96,7 @@ DescribeUserImportJobResponsePrivate::DescribeUserImportJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeUserImportJobResponsePrivate::DescribeUserImportJobResponse(QXmlStreamReader &xml)
+void DescribeUserImportJobResponsePrivate::parseDescribeUserImportJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserImportJobResponse"));
     /// @todo

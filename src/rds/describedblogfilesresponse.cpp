@@ -96,7 +96,7 @@ DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponse(QXmlStreamReader &xml)
+void DescribeDBLogFilesResponsePrivate::parseDescribeDBLogFilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBLogFilesResponse"));
     /// @todo

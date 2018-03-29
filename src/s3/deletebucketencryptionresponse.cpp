@@ -96,7 +96,7 @@ DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponse(QXmlStreamReader &xml)
+void DeleteBucketEncryptionResponsePrivate::parseDeleteBucketEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketEncryptionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponse(QXmlStreamReader &xml)
+void NotifyMigrationTaskStateResponsePrivate::parseNotifyMigrationTaskStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyMigrationTaskStateResponse"));
     /// @todo

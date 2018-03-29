@@ -96,7 +96,7 @@ ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponse(QXmlStreamReader &xml)
+void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSizeConstraintSetsResponse"));
     /// @todo

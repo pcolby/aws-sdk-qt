@@ -96,7 +96,7 @@ DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLagRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLagResponse(QXmlStreamReader &xml)
+void DisassociateConnectionFromLagResponsePrivate::parseDisassociateConnectionFromLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectionFromLagResponse"));
     /// @todo

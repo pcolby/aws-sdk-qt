@@ -96,7 +96,7 @@ GetSegmentImportJobsResponsePrivate::GetSegmentImportJobsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSegmentImportJobsResponsePrivate::GetSegmentImportJobsResponse(QXmlStreamReader &xml)
+void GetSegmentImportJobsResponsePrivate::parseGetSegmentImportJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentImportJobsResponse"));
     /// @todo

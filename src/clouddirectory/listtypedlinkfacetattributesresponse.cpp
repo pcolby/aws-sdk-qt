@@ -96,7 +96,7 @@ ListTypedLinkFacetAttributesResponsePrivate::ListTypedLinkFacetAttributesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ListTypedLinkFacetAttributesResponsePrivate::ListTypedLinkFacetAttributesResponse(QXmlStreamReader &xml)
+void ListTypedLinkFacetAttributesResponsePrivate::parseListTypedLinkFacetAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTypedLinkFacetAttributesResponse"));
     /// @todo

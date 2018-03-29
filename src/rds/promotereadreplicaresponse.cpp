@@ -96,7 +96,7 @@ PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponse(QXmlStreamReader &xml)
+void PromoteReadReplicaResponsePrivate::parsePromoteReadReplicaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaResponse"));
     /// @todo

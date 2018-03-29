@@ -96,7 +96,7 @@ GetModelsResponsePrivate::GetModelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetModelsResponsePrivate::GetModelsResponse(QXmlStreamReader &xml)
+void GetModelsResponsePrivate::parseGetModelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetModelsResponse"));
     /// @todo

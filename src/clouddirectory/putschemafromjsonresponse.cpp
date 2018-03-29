@@ -96,7 +96,7 @@ PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponse(QXmlStreamReader &xml)
+void PutSchemaFromJsonResponsePrivate::parsePutSchemaFromJsonResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutSchemaFromJsonResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DefineExpressionResponsePrivate::DefineExpressionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DefineExpressionResponsePrivate::DefineExpressionResponse(QXmlStreamReader &xml)
+void DefineExpressionResponsePrivate::parseDefineExpressionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineExpressionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateDevicePoolResponsePrivate::UpdateDevicePoolResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDevicePoolResponsePrivate::UpdateDevicePoolResponse(QXmlStreamReader &xml)
+void UpdateDevicePoolResponsePrivate::parseUpdateDevicePoolResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDevicePoolResponse"));
     /// @todo

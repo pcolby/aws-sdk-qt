@@ -96,7 +96,7 @@ DeleteDevEndpointResponsePrivate::DeleteDevEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDevEndpointResponsePrivate::DeleteDevEndpointResponse(QXmlStreamReader &xml)
+void DeleteDevEndpointResponsePrivate::parseDeleteDevEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDevEndpointResponse"));
     /// @todo

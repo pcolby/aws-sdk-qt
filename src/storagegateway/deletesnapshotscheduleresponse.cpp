@@ -96,7 +96,7 @@ DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponse(QXmlStreamReader &xml)
+void DeleteSnapshotScheduleResponsePrivate::parseDeleteSnapshotScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotScheduleResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateListenerResponsePrivate::CreateListenerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateListenerResponsePrivate::CreateListenerResponse(QXmlStreamReader &xml)
+void CreateListenerResponsePrivate::parseCreateListenerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateListenerResponse"));
     /// @todo

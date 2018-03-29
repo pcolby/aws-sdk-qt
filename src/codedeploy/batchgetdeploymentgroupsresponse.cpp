@@ -96,7 +96,7 @@ BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponse(QXmlStreamReader &xml)
+void BatchGetDeploymentGroupsResponsePrivate::parseBatchGetDeploymentGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetDeploymentGroupsResponse"));
     /// @todo

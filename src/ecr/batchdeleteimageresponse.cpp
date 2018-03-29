@@ -96,7 +96,7 @@ BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDeleteImageResponsePrivate::BatchDeleteImageResponse(QXmlStreamReader &xml)
+void BatchDeleteImageResponsePrivate::parseBatchDeleteImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteImageResponse"));
     /// @todo

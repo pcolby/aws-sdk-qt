@@ -96,7 +96,7 @@ PutConfigRuleResponsePrivate::PutConfigRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutConfigRuleResponsePrivate::PutConfigRuleResponse(QXmlStreamReader &xml)
+void PutConfigRuleResponsePrivate::parsePutConfigRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutConfigRuleResponse"));
     /// @todo

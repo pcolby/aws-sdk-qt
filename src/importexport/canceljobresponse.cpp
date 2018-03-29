@@ -96,7 +96,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelJobResponsePrivate::CancelJobResponse(QXmlStreamReader &xml)
+void CancelJobResponsePrivate::parseCancelJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelJobResponse"));
     /// @todo

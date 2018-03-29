@@ -96,7 +96,7 @@ ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponse(QXmlStreamReader &xml)
+void ListSSHPublicKeysResponsePrivate::parseListSSHPublicKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSSHPublicKeysResponse"));
     /// @todo

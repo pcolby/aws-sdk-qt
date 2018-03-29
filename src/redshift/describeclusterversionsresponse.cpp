@@ -96,7 +96,7 @@ DescribeClusterVersionsResponsePrivate::DescribeClusterVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeClusterVersionsResponsePrivate::DescribeClusterVersionsResponse(QXmlStreamReader &xml)
+void DescribeClusterVersionsResponsePrivate::parseDescribeClusterVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterVersionsResponse"));
     /// @todo

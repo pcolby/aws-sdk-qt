@@ -96,7 +96,7 @@ UpdatePipelineNotificationsResponsePrivate::UpdatePipelineNotificationsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdatePipelineNotificationsResponsePrivate::UpdatePipelineNotificationsResponse(QXmlStreamReader &xml)
+void UpdatePipelineNotificationsResponsePrivate::parseUpdatePipelineNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePipelineNotificationsResponse"));
     /// @todo

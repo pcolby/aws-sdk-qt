@@ -96,7 +96,7 @@ ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponse(QXmlStreamReader &xml)
+void ListTargetsForPolicyResponsePrivate::parseListTargetsForPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTargetsForPolicyResponse"));
     /// @todo

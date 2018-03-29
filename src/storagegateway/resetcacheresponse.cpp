@@ -96,7 +96,7 @@ ResetCacheResponsePrivate::ResetCacheResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetCacheResponsePrivate::ResetCacheResponse(QXmlStreamReader &xml)
+void ResetCacheResponsePrivate::parseResetCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetCacheResponse"));
     /// @todo

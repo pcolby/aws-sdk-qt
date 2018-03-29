@@ -96,7 +96,7 @@ GlobalSignOutResponsePrivate::GlobalSignOutResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GlobalSignOutResponsePrivate::GlobalSignOutResponse(QXmlStreamReader &xml)
+void GlobalSignOutResponsePrivate::parseGlobalSignOutResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GlobalSignOutResponse"));
     /// @todo

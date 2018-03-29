@@ -96,7 +96,7 @@ DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponse(QXmlStreamReader &xml)
+void DeleteLoadBalancerListenersResponsePrivate::parseDeleteLoadBalancerListenersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerListenersResponse"));
     /// @todo

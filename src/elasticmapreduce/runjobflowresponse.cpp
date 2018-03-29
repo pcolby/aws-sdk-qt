@@ -96,7 +96,7 @@ RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RunJobFlowResponsePrivate::RunJobFlowResponse(QXmlStreamReader &xml)
+void RunJobFlowResponsePrivate::parseRunJobFlowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunJobFlowResponse"));
     /// @todo

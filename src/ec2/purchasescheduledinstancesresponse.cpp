@@ -96,7 +96,7 @@ PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponse(QXmlStreamReader &xml)
+void PurchaseScheduledInstancesResponsePrivate::parsePurchaseScheduledInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseScheduledInstancesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponse(QXmlStreamReader &xml)
+void UpdateGlobalTableResponsePrivate::parseUpdateGlobalTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGlobalTableResponse"));
     /// @todo

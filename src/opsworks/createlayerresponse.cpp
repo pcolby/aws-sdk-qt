@@ -96,7 +96,7 @@ CreateLayerResponsePrivate::CreateLayerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLayerResponsePrivate::CreateLayerResponse(QXmlStreamReader &xml)
+void CreateLayerResponsePrivate::parseCreateLayerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLayerResponse"));
     /// @todo

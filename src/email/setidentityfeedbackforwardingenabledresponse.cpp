@@ -96,7 +96,7 @@ SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardi
  *
  * @param  xml  XML stream to parse.
  */
-void SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardingEnabledResponse(QXmlStreamReader &xml)
+void SetIdentityFeedbackForwardingEnabledResponsePrivate::parseSetIdentityFeedbackForwardingEnabledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityFeedbackForwardingEnabledResponse"));
     /// @todo

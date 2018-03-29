@@ -96,7 +96,7 @@ PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponse(QXmlStreamReader &xml)
+void PutFunctionConcurrencyResponsePrivate::parsePutFunctionConcurrencyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutFunctionConcurrencyResponse"));
     /// @todo

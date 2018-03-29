@@ -96,7 +96,7 @@ SubmitJobResponsePrivate::SubmitJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SubmitJobResponsePrivate::SubmitJobResponse(QXmlStreamReader &xml)
+void SubmitJobResponsePrivate::parseSubmitJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubmitJobResponse"));
     /// @todo

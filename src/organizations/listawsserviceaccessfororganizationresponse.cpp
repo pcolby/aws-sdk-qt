@@ -96,7 +96,7 @@ ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrgan
  *
  * @param  xml  XML stream to parse.
  */
-void ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml)
+void ListAWSServiceAccessForOrganizationResponsePrivate::parseListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAWSServiceAccessForOrganizationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeActiveReceiptRuleSetResponsePrivate::DescribeActiveReceiptRuleSetRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeActiveReceiptRuleSetResponsePrivate::DescribeActiveReceiptRuleSetResponse(QXmlStreamReader &xml)
+void DescribeActiveReceiptRuleSetResponsePrivate::parseDescribeActiveReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeActiveReceiptRuleSetResponse"));
     /// @todo

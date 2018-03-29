@@ -96,7 +96,7 @@ GetRuleGroupResponsePrivate::GetRuleGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRuleGroupResponsePrivate::GetRuleGroupResponse(QXmlStreamReader &xml)
+void GetRuleGroupResponsePrivate::parseGetRuleGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRuleGroupResponse"));
     /// @todo

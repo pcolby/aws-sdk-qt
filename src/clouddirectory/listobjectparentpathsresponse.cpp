@@ -96,7 +96,7 @@ ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponse(QXmlStreamReader &xml)
+void ListObjectParentPathsResponsePrivate::parseListObjectParentPathsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListObjectParentPathsResponse"));
     /// @todo

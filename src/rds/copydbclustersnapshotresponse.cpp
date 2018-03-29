@@ -96,7 +96,7 @@ CopyDBClusterSnapshotResponsePrivate::CopyDBClusterSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyDBClusterSnapshotResponsePrivate::CopyDBClusterSnapshotResponse(QXmlStreamReader &xml)
+void CopyDBClusterSnapshotResponsePrivate::parseCopyDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBClusterSnapshotResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponse(QXmlStreamReader &xml)
+void UpdateDataRetentionResponsePrivate::parseUpdateDataRetentionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDataRetentionResponse"));
     /// @todo

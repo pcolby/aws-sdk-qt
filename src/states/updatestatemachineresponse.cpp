@@ -96,7 +96,7 @@ UpdateStateMachineResponsePrivate::UpdateStateMachineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateStateMachineResponsePrivate::UpdateStateMachineResponse(QXmlStreamReader &xml)
+void UpdateStateMachineResponsePrivate::parseUpdateStateMachineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStateMachineResponse"));
     /// @todo

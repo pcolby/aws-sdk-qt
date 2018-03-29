@@ -96,7 +96,7 @@ DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanResponse(QXmlStreamReader &xml)
+void DeleteProvisionedProductPlanResponsePrivate::parseDeleteProvisionedProductPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProvisionedProductPlanResponse"));
     /// @todo

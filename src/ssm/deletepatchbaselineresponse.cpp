@@ -96,7 +96,7 @@ DeletePatchBaselineResponsePrivate::DeletePatchBaselineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePatchBaselineResponsePrivate::DeletePatchBaselineResponse(QXmlStreamReader &xml)
+void DeletePatchBaselineResponsePrivate::parseDeletePatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePatchBaselineResponse"));
     /// @todo

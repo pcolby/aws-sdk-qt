@@ -96,7 +96,7 @@ ActivatePipelineResponsePrivate::ActivatePipelineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ActivatePipelineResponsePrivate::ActivatePipelineResponse(QXmlStreamReader &xml)
+void ActivatePipelineResponsePrivate::parseActivatePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ActivatePipelineResponse"));
     /// @todo

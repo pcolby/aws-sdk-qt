@@ -96,7 +96,7 @@ CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponse(QXmlStreamReader &xml)
+void CompleteMultipartUploadResponsePrivate::parseCompleteMultipartUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteMultipartUploadResponse"));
     /// @todo

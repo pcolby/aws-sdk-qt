@@ -96,7 +96,7 @@ VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponse(QXmlStreamReader &xml)
+void VerifyDomainIdentityResponsePrivate::parseVerifyDomainIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyDomainIdentityResponse"));
     /// @todo

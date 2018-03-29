@@ -96,7 +96,7 @@ CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponse(QXmlStreamReader &xml)
+void CreateOrUpdateTagsResponsePrivate::parseCreateOrUpdateTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOrUpdateTagsResponse"));
     /// @todo

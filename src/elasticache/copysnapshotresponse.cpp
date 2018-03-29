@@ -96,7 +96,7 @@ CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopySnapshotResponsePrivate::CopySnapshotResponse(QXmlStreamReader &xml)
+void CopySnapshotResponsePrivate::parseCopySnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopySnapshotResponse"));
     /// @todo

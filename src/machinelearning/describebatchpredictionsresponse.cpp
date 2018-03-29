@@ -96,7 +96,7 @@ DescribeBatchPredictionsResponsePrivate::DescribeBatchPredictionsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeBatchPredictionsResponsePrivate::DescribeBatchPredictionsResponse(QXmlStreamReader &xml)
+void DescribeBatchPredictionsResponsePrivate::parseDescribeBatchPredictionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBatchPredictionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponse(QXmlStreamReader &xml)
+void DiscoverInputSchemaResponsePrivate::parseDiscoverInputSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DiscoverInputSchemaResponse"));
     /// @todo

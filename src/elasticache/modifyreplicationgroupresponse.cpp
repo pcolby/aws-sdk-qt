@@ -96,7 +96,7 @@ ModifyReplicationGroupResponsePrivate::ModifyReplicationGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyReplicationGroupResponsePrivate::ModifyReplicationGroupResponse(QXmlStreamReader &xml)
+void ModifyReplicationGroupResponsePrivate::parseModifyReplicationGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationGroupResponse"));
     /// @todo

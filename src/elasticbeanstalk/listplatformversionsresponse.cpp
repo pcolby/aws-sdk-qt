@@ -96,7 +96,7 @@ ListPlatformVersionsResponsePrivate::ListPlatformVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListPlatformVersionsResponsePrivate::ListPlatformVersionsResponse(QXmlStreamReader &xml)
+void ListPlatformVersionsResponsePrivate::parseListPlatformVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPlatformVersionsResponse"));
     /// @todo

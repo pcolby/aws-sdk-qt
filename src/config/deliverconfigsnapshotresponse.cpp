@@ -96,7 +96,7 @@ DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponse(QXmlStreamReader &xml)
+void DeliverConfigSnapshotResponsePrivate::parseDeliverConfigSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeliverConfigSnapshotResponse"));
     /// @todo

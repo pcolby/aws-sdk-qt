@@ -96,7 +96,7 @@ DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachRolePolicyResponsePrivate::DetachRolePolicyResponse(QXmlStreamReader &xml)
+void DetachRolePolicyResponsePrivate::parseDetachRolePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachRolePolicyResponse"));
     /// @todo

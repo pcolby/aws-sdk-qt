@@ -96,7 +96,7 @@ ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialRes
  *
  * @param  xml  XML stream to parse.
  */
-void ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialResponse(QXmlStreamReader &xml)
+void ResetServiceSpecificCredentialResponsePrivate::parseResetServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetServiceSpecificCredentialResponse"));
     /// @todo

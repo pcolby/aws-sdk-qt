@@ -96,7 +96,7 @@ StartLoggingResponsePrivate::StartLoggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartLoggingResponsePrivate::StartLoggingResponse(QXmlStreamReader &xml)
+void StartLoggingResponsePrivate::parseStartLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartLoggingResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AddApplicationInputResponsePrivate::AddApplicationInputResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddApplicationInputResponsePrivate::AddApplicationInputResponse(QXmlStreamReader &xml)
+void AddApplicationInputResponsePrivate::parseAddApplicationInputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationInputResponse"));
     /// @todo

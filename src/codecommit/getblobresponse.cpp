@@ -96,7 +96,7 @@ GetBlobResponsePrivate::GetBlobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBlobResponsePrivate::GetBlobResponse(QXmlStreamReader &xml)
+void GetBlobResponsePrivate::parseGetBlobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBlobResponse"));
     /// @todo

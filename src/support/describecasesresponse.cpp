@@ -96,7 +96,7 @@ DescribeCasesResponsePrivate::DescribeCasesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCasesResponsePrivate::DescribeCasesResponse(QXmlStreamReader &xml)
+void DescribeCasesResponsePrivate::parseDescribeCasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCasesResponse"));
     /// @todo

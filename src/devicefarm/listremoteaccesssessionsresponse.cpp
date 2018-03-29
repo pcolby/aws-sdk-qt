@@ -96,7 +96,7 @@ ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponse(QXmlStreamReader &xml)
+void ListRemoteAccessSessionsResponsePrivate::parseListRemoteAccessSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRemoteAccessSessionsResponse"));
     /// @todo

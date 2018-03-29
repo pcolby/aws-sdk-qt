@@ -96,7 +96,7 @@ StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponse(QXmlStreamReader &xml)
+void StopCrawlerScheduleResponsePrivate::parseStopCrawlerScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopCrawlerScheduleResponse"));
     /// @todo

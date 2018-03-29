@@ -96,7 +96,7 @@ DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponse(QXmlStreamReader &xml)
+void DeleteTrafficPolicyResponsePrivate::parseDeleteTrafficPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrafficPolicyResponse"));
     /// @todo

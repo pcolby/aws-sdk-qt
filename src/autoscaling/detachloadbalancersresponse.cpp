@@ -96,7 +96,7 @@ DetachLoadBalancersResponsePrivate::DetachLoadBalancersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachLoadBalancersResponsePrivate::DetachLoadBalancersResponse(QXmlStreamReader &xml)
+void DetachLoadBalancersResponsePrivate::parseDetachLoadBalancersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancersResponse"));
     /// @todo

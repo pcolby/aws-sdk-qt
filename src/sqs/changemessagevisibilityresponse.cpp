@@ -96,7 +96,7 @@ ChangeMessageVisibilityResponsePrivate::ChangeMessageVisibilityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ChangeMessageVisibilityResponsePrivate::ChangeMessageVisibilityResponse(QXmlStreamReader &xml)
+void ChangeMessageVisibilityResponsePrivate::parseChangeMessageVisibilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangeMessageVisibilityResponse"));
     /// @todo

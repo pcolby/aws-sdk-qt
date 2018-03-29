@@ -96,7 +96,7 @@ GetUploadResponsePrivate::GetUploadResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetUploadResponsePrivate::GetUploadResponse(QXmlStreamReader &xml)
+void GetUploadResponsePrivate::parseGetUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUploadResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
+void DeregisterOnPremisesInstanceResponsePrivate::parseDeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterOnPremisesInstanceResponse"));
     /// @todo

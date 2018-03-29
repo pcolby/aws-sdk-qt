@@ -96,7 +96,7 @@ CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponse(QXmlStreamReader &xml)
+void CreateCustomerGatewayResponsePrivate::parseCreateCustomerGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomerGatewayResponse"));
     /// @todo

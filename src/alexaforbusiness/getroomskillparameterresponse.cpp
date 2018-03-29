@@ -96,7 +96,7 @@ GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponse(QXmlStreamReader &xml)
+void GetRoomSkillParameterResponsePrivate::parseGetRoomSkillParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRoomSkillParameterResponse"));
     /// @todo

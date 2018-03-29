@@ -96,7 +96,7 @@ ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesRes
  *
  * @param  xml  XML stream to parse.
  */
-void ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesResponse(QXmlStreamReader &xml)
+void ListElasticsearchInstanceTypesResponsePrivate::parseListElasticsearchInstanceTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchInstanceTypesResponse"));
     /// @todo

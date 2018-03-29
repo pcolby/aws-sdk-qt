@@ -96,7 +96,7 @@ ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupRespo
  *
  * @param  xml  XML stream to parse.
  */
-void ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupResponse(QXmlStreamReader &xml)
+void ListActivatedRulesInRuleGroupResponsePrivate::parseListActivatedRulesInRuleGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListActivatedRulesInRuleGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponse(QXmlStreamReader &xml)
+void DeleteBandwidthRateLimitResponsePrivate::parseDeleteBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBandwidthRateLimitResponse"));
     /// @todo

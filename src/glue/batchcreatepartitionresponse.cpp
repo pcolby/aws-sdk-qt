@@ -96,7 +96,7 @@ BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponse(QXmlStreamReader &xml)
+void BatchCreatePartitionResponsePrivate::parseBatchCreatePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchCreatePartitionResponse"));
     /// @todo

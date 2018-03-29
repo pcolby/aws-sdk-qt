@@ -96,7 +96,7 @@ SetSMSAttributesResponsePrivate::SetSMSAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetSMSAttributesResponsePrivate::SetSMSAttributesResponse(QXmlStreamReader &xml)
+void SetSMSAttributesResponsePrivate::parseSetSMSAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetSMSAttributesResponse"));
     /// @todo

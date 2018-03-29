@@ -96,7 +96,7 @@ GetGroupQueryResponsePrivate::GetGroupQueryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetGroupQueryResponsePrivate::GetGroupQueryResponse(QXmlStreamReader &xml)
+void GetGroupQueryResponsePrivate::parseGetGroupQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGroupQueryResponse"));
     /// @todo

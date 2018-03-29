@@ -96,7 +96,7 @@ DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponse(QXmlStreamReader &xml)
+void DeregisterContainerInstanceResponsePrivate::parseDeregisterContainerInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterContainerInstanceResponse"));
     /// @todo

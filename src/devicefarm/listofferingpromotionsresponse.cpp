@@ -96,7 +96,7 @@ ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponse(QXmlStreamReader &xml)
+void ListOfferingPromotionsResponsePrivate::parseListOfferingPromotionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingPromotionsResponse"));
     /// @todo

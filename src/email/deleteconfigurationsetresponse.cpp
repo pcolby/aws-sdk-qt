@@ -96,7 +96,7 @@ DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponse(QXmlStreamReader &xml)
+void DeleteConfigurationSetResponsePrivate::parseDeleteConfigurationSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetResponse"));
     /// @todo

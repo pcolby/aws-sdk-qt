@@ -96,7 +96,7 @@ GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponse(QXmlStreamReader &xml)
+void GetHostnameSuggestionResponsePrivate::parseGetHostnameSuggestionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHostnameSuggestionResponse"));
     /// @todo

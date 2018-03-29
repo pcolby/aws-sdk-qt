@@ -96,7 +96,7 @@ CreateSkillGroupResponsePrivate::CreateSkillGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSkillGroupResponsePrivate::CreateSkillGroupResponse(QXmlStreamReader &xml)
+void CreateSkillGroupResponsePrivate::parseCreateSkillGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSkillGroupResponse"));
     /// @todo

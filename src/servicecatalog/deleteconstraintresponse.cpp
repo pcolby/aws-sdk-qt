@@ -96,7 +96,7 @@ DeleteConstraintResponsePrivate::DeleteConstraintResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConstraintResponsePrivate::DeleteConstraintResponse(QXmlStreamReader &xml)
+void DeleteConstraintResponsePrivate::parseDeleteConstraintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConstraintResponse"));
     /// @todo

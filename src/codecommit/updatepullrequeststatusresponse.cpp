@@ -96,7 +96,7 @@ UpdatePullRequestStatusResponsePrivate::UpdatePullRequestStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdatePullRequestStatusResponsePrivate::UpdatePullRequestStatusResponse(QXmlStreamReader &xml)
+void UpdatePullRequestStatusResponsePrivate::parseUpdatePullRequestStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePullRequestStatusResponse"));
     /// @todo

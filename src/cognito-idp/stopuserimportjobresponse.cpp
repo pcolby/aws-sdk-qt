@@ -96,7 +96,7 @@ StopUserImportJobResponsePrivate::StopUserImportJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopUserImportJobResponsePrivate::StopUserImportJobResponse(QXmlStreamReader &xml)
+void StopUserImportJobResponsePrivate::parseStopUserImportJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopUserImportJobResponse"));
     /// @todo

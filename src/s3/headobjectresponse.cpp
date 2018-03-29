@@ -96,7 +96,7 @@ HeadObjectResponsePrivate::HeadObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void HeadObjectResponsePrivate::HeadObjectResponse(QXmlStreamReader &xml)
+void HeadObjectResponsePrivate::parseHeadObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("HeadObjectResponse"));
     /// @todo

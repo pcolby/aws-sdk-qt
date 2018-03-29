@@ -96,7 +96,7 @@ SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesF
  *
  * @param  xml  XML stream to parse.
  */
-void SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml)
+void SetLoadBalancerPoliciesForBackendServerResponsePrivate::parseSetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerPoliciesForBackendServerResponse"));
     /// @todo

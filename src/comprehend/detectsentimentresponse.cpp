@@ -96,7 +96,7 @@ DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetectSentimentResponsePrivate::DetectSentimentResponse(QXmlStreamReader &xml)
+void DetectSentimentResponsePrivate::parseDetectSentimentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectSentimentResponse"));
     /// @todo

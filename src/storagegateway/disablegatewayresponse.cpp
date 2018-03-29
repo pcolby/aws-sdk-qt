@@ -96,7 +96,7 @@ DisableGatewayResponsePrivate::DisableGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableGatewayResponsePrivate::DisableGatewayResponse(QXmlStreamReader &xml)
+void DisableGatewayResponsePrivate::parseDisableGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableGatewayResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponse(QXmlStreamReader &xml)
+void DeleteLifecycleHookResponsePrivate::parseDeleteLifecycleHookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLifecycleHookResponse"));
     /// @todo

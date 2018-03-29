@@ -96,7 +96,7 @@ ContinueDeploymentResponsePrivate::ContinueDeploymentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ContinueDeploymentResponsePrivate::ContinueDeploymentResponse(QXmlStreamReader &xml)
+void ContinueDeploymentResponsePrivate::parseContinueDeploymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ContinueDeploymentResponse"));
     /// @todo

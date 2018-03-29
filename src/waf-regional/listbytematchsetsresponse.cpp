@@ -96,7 +96,7 @@ ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponse(QXmlStreamReader &xml)
+void ListByteMatchSetsResponsePrivate::parseListByteMatchSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListByteMatchSetsResponse"));
     /// @todo

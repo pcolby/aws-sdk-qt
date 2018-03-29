@@ -96,7 +96,7 @@ ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponse(QXmlStreamReader &xml)
+void ListTagsForCertificateResponsePrivate::parseListTagsForCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForCertificateResponse"));
     /// @todo

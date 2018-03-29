@@ -96,7 +96,7 @@ DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponse(QXmlStreamReader &xml)
+void DeleteOrganizationalUnitResponsePrivate::parseDeleteOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOrganizationalUnitResponse"));
     /// @todo

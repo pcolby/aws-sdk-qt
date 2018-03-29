@@ -96,7 +96,7 @@ DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponse(QXmlStreamReader &xml)
+void DeleteRealtimeEndpointResponsePrivate::parseDeleteRealtimeEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRealtimeEndpointResponse"));
     /// @todo

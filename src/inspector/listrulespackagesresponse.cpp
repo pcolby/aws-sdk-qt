@@ -96,7 +96,7 @@ ListRulesPackagesResponsePrivate::ListRulesPackagesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListRulesPackagesResponsePrivate::ListRulesPackagesResponse(QXmlStreamReader &xml)
+void ListRulesPackagesResponsePrivate::parseListRulesPackagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRulesPackagesResponse"));
     /// @todo

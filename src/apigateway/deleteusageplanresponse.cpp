@@ -96,7 +96,7 @@ DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponse(QXmlStreamReader &xml)
+void DeleteUsagePlanResponsePrivate::parseDeleteUsagePlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUsagePlanResponse"));
     /// @todo

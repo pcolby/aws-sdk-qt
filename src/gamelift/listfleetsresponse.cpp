@@ -96,7 +96,7 @@ ListFleetsResponsePrivate::ListFleetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListFleetsResponsePrivate::ListFleetsResponse(QXmlStreamReader &xml)
+void ListFleetsResponsePrivate::parseListFleetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFleetsResponse"));
     /// @todo

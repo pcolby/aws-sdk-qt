@@ -96,7 +96,7 @@ DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponse(QXmlStreamReader &xml)
+void DisassociateDeviceFromRoomResponsePrivate::parseDisassociateDeviceFromRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDeviceFromRoomResponse"));
     /// @todo

@@ -96,7 +96,7 @@ TagResponsePrivate::TagResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TagResponsePrivate::TagResponse(QXmlStreamReader &xml)
+void TagResponsePrivate::parseTagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagResponse"));
     /// @todo

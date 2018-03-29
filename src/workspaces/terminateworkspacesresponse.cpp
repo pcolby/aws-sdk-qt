@@ -96,7 +96,7 @@ TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponse(QXmlStreamReader &xml)
+void TerminateWorkspacesResponsePrivate::parseTerminateWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateWorkspacesResponse"));
     /// @todo

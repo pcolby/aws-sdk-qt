@@ -96,7 +96,7 @@ UpdateApiKeyResponsePrivate::UpdateApiKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateApiKeyResponsePrivate::UpdateApiKeyResponse(QXmlStreamReader &xml)
+void UpdateApiKeyResponsePrivate::parseUpdateApiKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateApiKeyResponse"));
     /// @todo

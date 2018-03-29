@@ -96,7 +96,7 @@ DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponse(QXmlStreamReader &xml)
+void DeleteXssMatchSetResponsePrivate::parseDeleteXssMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteXssMatchSetResponse"));
     /// @todo

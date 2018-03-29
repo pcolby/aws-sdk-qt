@@ -96,7 +96,7 @@ UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponse(QXmlStreamReader &xml)
+void UnlinkDeveloperIdentityResponsePrivate::parseUnlinkDeveloperIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnlinkDeveloperIdentityResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponse(QXmlStreamReader &xml)
+void SimulatePrincipalPolicyResponsePrivate::parseSimulatePrincipalPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SimulatePrincipalPolicyResponse"));
     /// @todo

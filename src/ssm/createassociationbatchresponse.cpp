@@ -96,7 +96,7 @@ CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponse(QXmlStreamReader &xml)
+void CreateAssociationBatchResponsePrivate::parseCreateAssociationBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAssociationBatchResponse"));
     /// @todo

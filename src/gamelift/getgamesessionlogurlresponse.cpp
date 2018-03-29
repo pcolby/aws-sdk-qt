@@ -96,7 +96,7 @@ GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponse(QXmlStreamReader &xml)
+void GetGameSessionLogUrlResponsePrivate::parseGetGameSessionLogUrlResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGameSessionLogUrlResponse"));
     /// @todo

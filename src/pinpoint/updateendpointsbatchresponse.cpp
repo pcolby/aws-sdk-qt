@@ -96,7 +96,7 @@ UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponse(QXmlStreamReader &xml)
+void UpdateEndpointsBatchResponsePrivate::parseUpdateEndpointsBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointsBatchResponse"));
     /// @todo

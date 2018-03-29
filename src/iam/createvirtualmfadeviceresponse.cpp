@@ -96,7 +96,7 @@ CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponse(QXmlStreamReader &xml)
+void CreateVirtualMFADeviceResponsePrivate::parseCreateVirtualMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVirtualMFADeviceResponse"));
     /// @todo

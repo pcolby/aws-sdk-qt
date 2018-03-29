@@ -96,7 +96,7 @@ LeaveOrganizationResponsePrivate::LeaveOrganizationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void LeaveOrganizationResponsePrivate::LeaveOrganizationResponse(QXmlStreamReader &xml)
+void LeaveOrganizationResponsePrivate::parseLeaveOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LeaveOrganizationResponse"));
     /// @todo

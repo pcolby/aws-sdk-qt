@@ -96,7 +96,7 @@ TestFailoverResponsePrivate::TestFailoverResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestFailoverResponsePrivate::TestFailoverResponse(QXmlStreamReader &xml)
+void TestFailoverResponsePrivate::parseTestFailoverResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestFailoverResponse"));
     /// @todo

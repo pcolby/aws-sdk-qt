@@ -96,7 +96,7 @@ AssociateWebACLResponsePrivate::AssociateWebACLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateWebACLResponsePrivate::AssociateWebACLResponse(QXmlStreamReader &xml)
+void AssociateWebACLResponsePrivate::parseAssociateWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateWebACLResponse"));
     /// @todo

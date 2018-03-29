@@ -96,7 +96,7 @@ GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponse(QXmlStreamReader &xml)
+void GetDiscoverySummaryResponsePrivate::parseGetDiscoverySummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDiscoverySummaryResponse"));
     /// @todo

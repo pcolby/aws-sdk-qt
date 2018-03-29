@@ -96,7 +96,7 @@ AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponse(QXmlStreamReader &xml)
+void AssociateDelegateToResourceResponsePrivate::parseAssociateDelegateToResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDelegateToResourceResponse"));
     /// @todo

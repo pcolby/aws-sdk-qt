@@ -96,7 +96,7 @@ UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponse(QXmlStreamReader &xml)
+void UpdateAccountPasswordPolicyResponsePrivate::parseUpdateAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccountPasswordPolicyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeTopicsDetectionJobResponsePrivate::DescribeTopicsDetectionJobResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTopicsDetectionJobResponsePrivate::DescribeTopicsDetectionJobResponse(QXmlStreamReader &xml)
+void DescribeTopicsDetectionJobResponsePrivate::parseDescribeTopicsDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTopicsDetectionJobResponse"));
     /// @todo

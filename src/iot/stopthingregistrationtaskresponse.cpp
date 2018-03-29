@@ -96,7 +96,7 @@ StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponse(QXmlStreamReader &xml)
+void StopThingRegistrationTaskResponsePrivate::parseStopThingRegistrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopThingRegistrationTaskResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateOrganizationResponsePrivate::CreateOrganizationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateOrganizationResponsePrivate::CreateOrganizationResponse(QXmlStreamReader &xml)
+void CreateOrganizationResponsePrivate::parseCreateOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOrganizationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PutFileResponsePrivate::PutFileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutFileResponsePrivate::PutFileResponse(QXmlStreamReader &xml)
+void PutFileResponsePrivate::parsePutFileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutFileResponse"));
     /// @todo

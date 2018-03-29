@@ -96,7 +96,7 @@ CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSnapshotResponsePrivate::CreateSnapshotResponse(QXmlStreamReader &xml)
+void CreateSnapshotResponsePrivate::parseCreateSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotResponse"));
     /// @todo

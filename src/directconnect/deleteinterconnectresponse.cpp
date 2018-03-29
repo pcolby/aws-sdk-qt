@@ -96,7 +96,7 @@ DeleteInterconnectResponsePrivate::DeleteInterconnectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteInterconnectResponsePrivate::DeleteInterconnectResponse(QXmlStreamReader &xml)
+void DeleteInterconnectResponsePrivate::parseDeleteInterconnectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInterconnectResponse"));
     /// @todo

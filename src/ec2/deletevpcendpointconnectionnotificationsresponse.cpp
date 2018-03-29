@@ -96,7 +96,7 @@ DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointConnec
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml)
+void DeleteVpcEndpointConnectionNotificationsResponsePrivate::parseDeleteVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointConnectionNotificationsResponse"));
     /// @todo

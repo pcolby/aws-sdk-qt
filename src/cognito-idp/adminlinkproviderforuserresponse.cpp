@@ -96,7 +96,7 @@ AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponse(QXmlStreamReader &xml)
+void AdminLinkProviderForUserResponsePrivate::parseAdminLinkProviderForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminLinkProviderForUserResponse"));
     /// @todo

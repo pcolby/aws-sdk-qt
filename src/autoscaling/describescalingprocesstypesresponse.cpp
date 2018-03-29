@@ -96,7 +96,7 @@ DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponse(QXmlStreamReader &xml)
+void DescribeScalingProcessTypesResponsePrivate::parseDescribeScalingProcessTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingProcessTypesResponse"));
     /// @todo

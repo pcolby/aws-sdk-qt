@@ -96,7 +96,7 @@ ListFunctionDefinitionsResponsePrivate::ListFunctionDefinitionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListFunctionDefinitionsResponsePrivate::ListFunctionDefinitionsResponse(QXmlStreamReader &xml)
+void ListFunctionDefinitionsResponsePrivate::parseListFunctionDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFunctionDefinitionsResponse"));
     /// @todo

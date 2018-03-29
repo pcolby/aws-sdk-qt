@@ -96,7 +96,7 @@ GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetReservationCoverageResponsePrivate::GetReservationCoverageResponse(QXmlStreamReader &xml)
+void GetReservationCoverageResponsePrivate::parseGetReservationCoverageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservationCoverageResponse"));
     /// @todo

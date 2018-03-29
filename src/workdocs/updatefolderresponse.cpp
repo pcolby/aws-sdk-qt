@@ -96,7 +96,7 @@ UpdateFolderResponsePrivate::UpdateFolderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateFolderResponsePrivate::UpdateFolderResponse(QXmlStreamReader &xml)
+void UpdateFolderResponsePrivate::parseUpdateFolderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFolderResponse"));
     /// @todo

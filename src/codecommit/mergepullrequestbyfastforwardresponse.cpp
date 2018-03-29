@@ -96,7 +96,7 @@ MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardRespo
  *
  * @param  xml  XML stream to parse.
  */
-void MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardResponse(QXmlStreamReader &xml)
+void MergePullRequestByFastForwardResponsePrivate::parseMergePullRequestByFastForwardResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MergePullRequestByFastForwardResponse"));
     /// @todo

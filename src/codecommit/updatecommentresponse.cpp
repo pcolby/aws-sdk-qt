@@ -96,7 +96,7 @@ UpdateCommentResponsePrivate::UpdateCommentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateCommentResponsePrivate::UpdateCommentResponse(QXmlStreamReader &xml)
+void UpdateCommentResponsePrivate::parseUpdateCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCommentResponse"));
     /// @todo

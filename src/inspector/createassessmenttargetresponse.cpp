@@ -96,7 +96,7 @@ CreateAssessmentTargetResponsePrivate::CreateAssessmentTargetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAssessmentTargetResponsePrivate::CreateAssessmentTargetResponse(QXmlStreamReader &xml)
+void CreateAssessmentTargetResponsePrivate::parseCreateAssessmentTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAssessmentTargetResponse"));
     /// @todo

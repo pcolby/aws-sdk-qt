@@ -96,7 +96,7 @@ SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponse(QXmlStreamReader &xml)
+void SetDefaultAuthorizerResponsePrivate::parseSetDefaultAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetDefaultAuthorizerResponse"));
     /// @todo

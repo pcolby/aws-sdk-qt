@@ -96,7 +96,7 @@ StopDeploymentResponsePrivate::StopDeploymentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopDeploymentResponsePrivate::StopDeploymentResponse(QXmlStreamReader &xml)
+void StopDeploymentResponsePrivate::parseStopDeploymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDeploymentResponse"));
     /// @todo

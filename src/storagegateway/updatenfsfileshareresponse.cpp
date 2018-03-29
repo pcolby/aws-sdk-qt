@@ -96,7 +96,7 @@ UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponse(QXmlStreamReader &xml)
+void UpdateNFSFileShareResponsePrivate::parseUpdateNFSFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNFSFileShareResponse"));
     /// @todo

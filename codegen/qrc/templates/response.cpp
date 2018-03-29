@@ -78,7 +78,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
  *
  * @param  xml  XML stream to parse.
  */
-void {{ClassName}}Private::{{ClassName}}(QXmlStreamReader &xml)
+void {{ClassName}}Private::parse{{ClassName}}(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("{{ClassName}}"));
     /// @todo

@@ -96,7 +96,7 @@ SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponse(QXmlStreamReader &xml)
+void SetDefaultPolicyVersionResponsePrivate::parseSetDefaultPolicyVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetDefaultPolicyVersionResponse"));
     /// @todo

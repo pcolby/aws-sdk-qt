@@ -96,7 +96,7 @@ GetSlotTypeVersionsResponsePrivate::GetSlotTypeVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSlotTypeVersionsResponsePrivate::GetSlotTypeVersionsResponse(QXmlStreamReader &xml)
+void GetSlotTypeVersionsResponsePrivate::parseGetSlotTypeVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSlotTypeVersionsResponse"));
     /// @todo

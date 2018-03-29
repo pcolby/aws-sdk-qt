@@ -96,7 +96,7 @@ DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponse(QXmlStreamReader &xml)
+void DescribeVirtualInterfacesResponsePrivate::parseDescribeVirtualInterfacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualInterfacesResponse"));
     /// @todo

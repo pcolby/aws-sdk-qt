@@ -96,7 +96,7 @@ DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesResponse(QXmlStreamReader &xml)
+void DescribeWorkspaceDirectoriesResponsePrivate::parseDescribeWorkspaceDirectoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspaceDirectoriesResponse"));
     /// @todo

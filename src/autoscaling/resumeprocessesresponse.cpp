@@ -96,7 +96,7 @@ ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResumeProcessesResponsePrivate::ResumeProcessesResponse(QXmlStreamReader &xml)
+void ResumeProcessesResponsePrivate::parseResumeProcessesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResumeProcessesResponse"));
     /// @todo

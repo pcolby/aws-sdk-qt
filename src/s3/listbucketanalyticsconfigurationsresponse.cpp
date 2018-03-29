@@ -96,7 +96,7 @@ ListBucketAnalyticsConfigurationsResponsePrivate::ListBucketAnalyticsConfigurati
  *
  * @param  xml  XML stream to parse.
  */
-void ListBucketAnalyticsConfigurationsResponsePrivate::ListBucketAnalyticsConfigurationsResponse(QXmlStreamReader &xml)
+void ListBucketAnalyticsConfigurationsResponsePrivate::parseListBucketAnalyticsConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBucketAnalyticsConfigurationsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateGrantResponsePrivate::CreateGrantResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateGrantResponsePrivate::CreateGrantResponse(QXmlStreamReader &xml)
+void CreateGrantResponsePrivate::parseCreateGrantResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGrantResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationRespons
  *
  * @param  xml  XML stream to parse.
  */
-void GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationResponse(QXmlStreamReader &xml)
+void GetTypedLinkFacetInformationResponsePrivate::parseGetTypedLinkFacetInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTypedLinkFacetInformationResponse"));
     /// @todo

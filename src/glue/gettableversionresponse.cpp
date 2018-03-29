@@ -96,7 +96,7 @@ GetTableVersionResponsePrivate::GetTableVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTableVersionResponsePrivate::GetTableVersionResponse(QXmlStreamReader &xml)
+void GetTableVersionResponsePrivate::parseGetTableVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTableVersionResponse"));
     /// @todo

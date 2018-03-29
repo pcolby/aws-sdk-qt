@@ -96,7 +96,7 @@ PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponse(QXmlStreamReader &xml)
+void PutRoomSkillParameterResponsePrivate::parsePutRoomSkillParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRoomSkillParameterResponse"));
     /// @todo

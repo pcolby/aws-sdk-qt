@@ -96,7 +96,7 @@ CancelConversionTaskResponsePrivate::CancelConversionTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelConversionTaskResponsePrivate::CancelConversionTaskResponse(QXmlStreamReader &xml)
+void CancelConversionTaskResponsePrivate::parseCancelConversionTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelConversionTaskResponse"));
     /// @todo

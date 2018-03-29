@@ -96,7 +96,7 @@ GetResourcesResponsePrivate::GetResourcesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetResourcesResponsePrivate::GetResourcesResponse(QXmlStreamReader &xml)
+void GetResourcesResponsePrivate::parseGetResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResourcesResponse"));
     /// @todo

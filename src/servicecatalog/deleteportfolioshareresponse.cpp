@@ -96,7 +96,7 @@ DeletePortfolioShareResponsePrivate::DeletePortfolioShareResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePortfolioShareResponsePrivate::DeletePortfolioShareResponse(QXmlStreamReader &xml)
+void DeletePortfolioShareResponsePrivate::parseDeletePortfolioShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePortfolioShareResponse"));
     /// @todo

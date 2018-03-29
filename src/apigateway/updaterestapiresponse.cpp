@@ -96,7 +96,7 @@ UpdateRestApiResponsePrivate::UpdateRestApiResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRestApiResponsePrivate::UpdateRestApiResponse(QXmlStreamReader &xml)
+void UpdateRestApiResponsePrivate::parseUpdateRestApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRestApiResponse"));
     /// @todo

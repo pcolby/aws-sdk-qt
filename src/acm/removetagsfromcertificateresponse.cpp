@@ -96,7 +96,7 @@ RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponse(QXmlStreamReader &xml)
+void RemoveTagsFromCertificateResponsePrivate::parseRemoveTagsFromCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromCertificateResponse"));
     /// @todo

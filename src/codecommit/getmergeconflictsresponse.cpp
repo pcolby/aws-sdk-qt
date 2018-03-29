@@ -96,7 +96,7 @@ GetMergeConflictsResponsePrivate::GetMergeConflictsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetMergeConflictsResponsePrivate::GetMergeConflictsResponse(QXmlStreamReader &xml)
+void GetMergeConflictsResponsePrivate::parseGetMergeConflictsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMergeConflictsResponse"));
     /// @todo

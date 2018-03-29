@@ -96,7 +96,7 @@ DescribeChannelResponsePrivate::DescribeChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeChannelResponsePrivate::DescribeChannelResponse(QXmlStreamReader &xml)
+void DescribeChannelResponsePrivate::parseDescribeChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeChannelResponse"));
     /// @todo

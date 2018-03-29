@@ -96,7 +96,7 @@ TestAuthorizationResponsePrivate::TestAuthorizationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestAuthorizationResponsePrivate::TestAuthorizationResponse(QXmlStreamReader &xml)
+void TestAuthorizationResponsePrivate::parseTestAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestAuthorizationResponse"));
     /// @todo

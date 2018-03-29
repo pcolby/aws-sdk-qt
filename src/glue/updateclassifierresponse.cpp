@@ -96,7 +96,7 @@ UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateClassifierResponsePrivate::UpdateClassifierResponse(QXmlStreamReader &xml)
+void UpdateClassifierResponsePrivate::parseUpdateClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateClassifierResponse"));
     /// @todo

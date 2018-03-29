@@ -96,7 +96,7 @@ ListSkillsResponsePrivate::ListSkillsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListSkillsResponsePrivate::ListSkillsResponse(QXmlStreamReader &xml)
+void ListSkillsResponsePrivate::parseListSkillsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSkillsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponse(QXmlStreamReader &xml)
+void DescribeMatchmakingResponsePrivate::parseDescribeMatchmakingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMatchmakingResponse"));
     /// @todo

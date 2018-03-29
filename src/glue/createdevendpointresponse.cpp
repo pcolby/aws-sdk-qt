@@ -96,7 +96,7 @@ CreateDevEndpointResponsePrivate::CreateDevEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDevEndpointResponsePrivate::CreateDevEndpointResponse(QXmlStreamReader &xml)
+void CreateDevEndpointResponsePrivate::parseCreateDevEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDevEndpointResponse"));
     /// @todo

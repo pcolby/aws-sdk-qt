@@ -96,7 +96,7 @@ DescribeHostsResponsePrivate::DescribeHostsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeHostsResponsePrivate::DescribeHostsResponse(QXmlStreamReader &xml)
+void DescribeHostsResponsePrivate::parseDescribeHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostsResponse"));
     /// @todo

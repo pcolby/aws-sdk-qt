@@ -96,7 +96,7 @@ GetVpcLinkResponsePrivate::GetVpcLinkResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetVpcLinkResponsePrivate::GetVpcLinkResponse(QXmlStreamReader &xml)
+void GetVpcLinkResponsePrivate::parseGetVpcLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVpcLinkResponse"));
     /// @todo

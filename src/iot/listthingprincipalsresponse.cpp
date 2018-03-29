@@ -96,7 +96,7 @@ ListThingPrincipalsResponsePrivate::ListThingPrincipalsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListThingPrincipalsResponsePrivate::ListThingPrincipalsResponse(QXmlStreamReader &xml)
+void ListThingPrincipalsResponsePrivate::parseListThingPrincipalsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListThingPrincipalsResponse"));
     /// @todo

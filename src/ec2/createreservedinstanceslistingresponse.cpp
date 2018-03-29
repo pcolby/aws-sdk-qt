@@ -96,7 +96,7 @@ CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingRes
  *
  * @param  xml  XML stream to parse.
  */
-void CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingResponse(QXmlStreamReader &xml)
+void CreateReservedInstancesListingResponsePrivate::parseCreateReservedInstancesListingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReservedInstancesListingResponse"));
     /// @todo

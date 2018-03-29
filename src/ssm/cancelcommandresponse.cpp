@@ -96,7 +96,7 @@ CancelCommandResponsePrivate::CancelCommandResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelCommandResponsePrivate::CancelCommandResponse(QXmlStreamReader &xml)
+void CancelCommandResponsePrivate::parseCancelCommandResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelCommandResponse"));
     /// @todo

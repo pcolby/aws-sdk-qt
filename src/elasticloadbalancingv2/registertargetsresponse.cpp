@@ -96,7 +96,7 @@ RegisterTargetsResponsePrivate::RegisterTargetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterTargetsResponsePrivate::RegisterTargetsResponse(QXmlStreamReader &xml)
+void RegisterTargetsResponsePrivate::parseRegisterTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTargetsResponse"));
     /// @todo

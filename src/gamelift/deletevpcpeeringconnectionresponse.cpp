@@ -96,7 +96,7 @@ DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponse(QXmlStreamReader &xml)
+void DeleteVpcPeeringConnectionResponsePrivate::parseDeleteVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcPeeringConnectionResponse"));
     /// @todo

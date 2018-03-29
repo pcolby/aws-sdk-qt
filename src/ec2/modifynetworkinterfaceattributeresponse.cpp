@@ -96,7 +96,7 @@ ModifyNetworkInterfaceAttributeResponsePrivate::ModifyNetworkInterfaceAttributeR
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyNetworkInterfaceAttributeResponsePrivate::ModifyNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
+void ModifyNetworkInterfaceAttributeResponsePrivate::parseModifyNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyNetworkInterfaceAttributeResponse"));
     /// @todo

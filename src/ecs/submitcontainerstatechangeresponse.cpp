@@ -96,7 +96,7 @@ SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponse(QXmlStreamReader &xml)
+void SubmitContainerStateChangeResponsePrivate::parseSubmitContainerStateChangeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubmitContainerStateChangeResponse"));
     /// @todo

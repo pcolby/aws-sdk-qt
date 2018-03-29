@@ -96,7 +96,7 @@ CreateAppResponsePrivate::CreateAppResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAppResponsePrivate::CreateAppResponse(QXmlStreamReader &xml)
+void CreateAppResponsePrivate::parseCreateAppResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAppResponse"));
     /// @todo

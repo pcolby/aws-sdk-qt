@@ -96,7 +96,7 @@ DeleteVPCAssociationAuthorizationResponsePrivate::DeleteVPCAssociationAuthorizat
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVPCAssociationAuthorizationResponsePrivate::DeleteVPCAssociationAuthorizationResponse(QXmlStreamReader &xml)
+void DeleteVPCAssociationAuthorizationResponsePrivate::parseDeleteVPCAssociationAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVPCAssociationAuthorizationResponse"));
     /// @todo

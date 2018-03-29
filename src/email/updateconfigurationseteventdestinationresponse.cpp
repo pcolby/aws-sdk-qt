@@ -96,7 +96,7 @@ UpdateConfigurationSetEventDestinationResponsePrivate::UpdateConfigurationSetEve
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConfigurationSetEventDestinationResponsePrivate::UpdateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
+void UpdateConfigurationSetEventDestinationResponsePrivate::parseUpdateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetEventDestinationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StopInstanceResponsePrivate::StopInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopInstanceResponsePrivate::StopInstanceResponse(QXmlStreamReader &xml)
+void StopInstanceResponsePrivate::parseStopInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopInstanceResponse"));
     /// @todo

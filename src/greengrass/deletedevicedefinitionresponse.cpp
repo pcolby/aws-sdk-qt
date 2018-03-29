@@ -96,7 +96,7 @@ DeleteDeviceDefinitionResponsePrivate::DeleteDeviceDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDeviceDefinitionResponsePrivate::DeleteDeviceDefinitionResponse(QXmlStreamReader &xml)
+void DeleteDeviceDefinitionResponsePrivate::parseDeleteDeviceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeviceDefinitionResponse"));
     /// @todo

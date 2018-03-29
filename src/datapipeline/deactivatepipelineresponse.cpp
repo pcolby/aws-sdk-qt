@@ -96,7 +96,7 @@ DeactivatePipelineResponsePrivate::DeactivatePipelineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeactivatePipelineResponsePrivate::DeactivatePipelineResponse(QXmlStreamReader &xml)
+void DeactivatePipelineResponsePrivate::parseDeactivatePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeactivatePipelineResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponse(QXmlStreamReader &xml)
+void DescribePullRequestEventsResponsePrivate::parseDescribePullRequestEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePullRequestEventsResponse"));
     /// @todo

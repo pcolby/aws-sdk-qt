@@ -96,7 +96,7 @@ DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVolumesResponsePrivate::DescribeVolumesResponse(QXmlStreamReader &xml)
+void DescribeVolumesResponsePrivate::parseDescribeVolumesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumesResponse"));
     /// @todo

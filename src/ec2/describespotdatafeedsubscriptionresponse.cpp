@@ -96,7 +96,7 @@ DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptio
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
+void DescribeSpotDatafeedSubscriptionResponsePrivate::parseDescribeSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotDatafeedSubscriptionResponse"));
     /// @todo

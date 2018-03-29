@@ -96,7 +96,7 @@ LookupPolicyResponsePrivate::LookupPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void LookupPolicyResponsePrivate::LookupPolicyResponse(QXmlStreamReader &xml)
+void LookupPolicyResponsePrivate::parseLookupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LookupPolicyResponse"));
     /// @todo

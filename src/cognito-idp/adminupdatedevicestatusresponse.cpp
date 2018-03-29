@@ -96,7 +96,7 @@ AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponse(QXmlStreamReader &xml)
+void AdminUpdateDeviceStatusResponsePrivate::parseAdminUpdateDeviceStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateDeviceStatusResponse"));
     /// @todo

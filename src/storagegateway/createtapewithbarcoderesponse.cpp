@@ -96,7 +96,7 @@ CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponse(QXmlStreamReader &xml)
+void CreateTapeWithBarcodeResponsePrivate::parseCreateTapeWithBarcodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTapeWithBarcodeResponse"));
     /// @todo

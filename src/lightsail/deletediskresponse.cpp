@@ -96,7 +96,7 @@ DeleteDiskResponsePrivate::DeleteDiskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDiskResponsePrivate::DeleteDiskResponse(QXmlStreamReader &xml)
+void DeleteDiskResponsePrivate::parseDeleteDiskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDiskResponse"));
     /// @todo

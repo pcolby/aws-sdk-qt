@@ -96,7 +96,7 @@ SearchSkillGroupsResponsePrivate::SearchSkillGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchSkillGroupsResponsePrivate::SearchSkillGroupsResponse(QXmlStreamReader &xml)
+void SearchSkillGroupsResponsePrivate::parseSearchSkillGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchSkillGroupsResponse"));
     /// @todo

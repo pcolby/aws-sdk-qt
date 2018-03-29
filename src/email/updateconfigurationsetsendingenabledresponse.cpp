@@ -96,7 +96,7 @@ UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendi
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendingEnabledResponse(QXmlStreamReader &xml)
+void UpdateConfigurationSetSendingEnabledResponsePrivate::parseUpdateConfigurationSetSendingEnabledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetSendingEnabledResponse"));
     /// @todo

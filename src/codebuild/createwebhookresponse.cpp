@@ -96,7 +96,7 @@ CreateWebhookResponsePrivate::CreateWebhookResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateWebhookResponsePrivate::CreateWebhookResponse(QXmlStreamReader &xml)
+void CreateWebhookResponsePrivate::parseCreateWebhookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateWebhookResponse"));
     /// @todo

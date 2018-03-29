@@ -96,7 +96,7 @@ PutBucketLifecycleResponsePrivate::PutBucketLifecycleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketLifecycleResponsePrivate::PutBucketLifecycleResponse(QXmlStreamReader &xml)
+void PutBucketLifecycleResponsePrivate::parsePutBucketLifecycleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketLifecycleResponse"));
     /// @todo

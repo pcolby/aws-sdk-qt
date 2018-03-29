@@ -96,7 +96,7 @@ CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponse(QXmlStreamReader &xml)
+void CreateDBParameterGroupResponsePrivate::parseCreateDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBParameterGroupResponse"));
     /// @todo

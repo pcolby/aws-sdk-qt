@@ -96,7 +96,7 @@ ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchResponse(QXmlStreamReader &xml)
+void ChangeMessageVisibilityBatchResponsePrivate::parseChangeMessageVisibilityBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangeMessageVisibilityBatchResponse"));
     /// @todo

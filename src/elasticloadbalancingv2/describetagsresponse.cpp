@@ -96,7 +96,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTagsResponsePrivate::DescribeTagsResponse(QXmlStreamReader &xml)
+void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTagsResponse"));
     /// @todo

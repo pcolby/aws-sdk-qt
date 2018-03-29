@@ -96,7 +96,7 @@ RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponse(QXmlStreamReader &xml)
+void RegisterApplicationRevisionResponsePrivate::parseRegisterApplicationRevisionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterApplicationRevisionResponse"));
     /// @todo

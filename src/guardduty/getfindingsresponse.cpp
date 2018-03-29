@@ -96,7 +96,7 @@ GetFindingsResponsePrivate::GetFindingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetFindingsResponsePrivate::GetFindingsResponse(QXmlStreamReader &xml)
+void GetFindingsResponsePrivate::parseGetFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFindingsResponse"));
     /// @todo

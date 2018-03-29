@@ -96,7 +96,7 @@ DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponse(QXmlStreamReader &xml)
+void DeleteFpgaImageResponsePrivate::parseDeleteFpgaImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFpgaImageResponse"));
     /// @todo

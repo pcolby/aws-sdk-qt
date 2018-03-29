@@ -96,7 +96,7 @@ UpdateRadiusResponsePrivate::UpdateRadiusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRadiusResponsePrivate::UpdateRadiusResponse(QXmlStreamReader &xml)
+void UpdateRadiusResponsePrivate::parseUpdateRadiusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRadiusResponse"));
     /// @todo

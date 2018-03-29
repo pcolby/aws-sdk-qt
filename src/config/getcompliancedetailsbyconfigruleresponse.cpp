@@ -96,7 +96,7 @@ GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConfigRul
  *
  * @param  xml  XML stream to parse.
  */
-void GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConfigRuleResponse(QXmlStreamReader &xml)
+void GetComplianceDetailsByConfigRuleResponsePrivate::parseGetComplianceDetailsByConfigRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetComplianceDetailsByConfigRuleResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListIdentityProvidersResponsePrivate::ListIdentityProvidersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListIdentityProvidersResponsePrivate::ListIdentityProvidersResponse(QXmlStreamReader &xml)
+void ListIdentityProvidersResponsePrivate::parseListIdentityProvidersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIdentityProvidersResponse"));
     /// @todo

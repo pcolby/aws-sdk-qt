@@ -96,7 +96,7 @@ StartCelebrityRecognitionResponsePrivate::StartCelebrityRecognitionResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void StartCelebrityRecognitionResponsePrivate::StartCelebrityRecognitionResponse(QXmlStreamReader &xml)
+void StartCelebrityRecognitionResponsePrivate::parseStartCelebrityRecognitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartCelebrityRecognitionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeDatasetResponsePrivate::DescribeDatasetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDatasetResponsePrivate::DescribeDatasetResponse(QXmlStreamReader &xml)
+void DescribeDatasetResponsePrivate::parseDescribeDatasetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDatasetResponse"));
     /// @todo

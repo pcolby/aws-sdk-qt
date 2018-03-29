@@ -96,7 +96,7 @@ ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsRespo
  *
  * @param  xml  XML stream to parse.
  */
-void ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsResponse(QXmlStreamReader &xml)
+void ValidateConfigurationSettingsResponsePrivate::parseValidateConfigurationSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ValidateConfigurationSettingsResponse"));
     /// @todo

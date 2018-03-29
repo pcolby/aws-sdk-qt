@@ -96,7 +96,7 @@ GetQueueResponsePrivate::GetQueueResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetQueueResponsePrivate::GetQueueResponse(QXmlStreamReader &xml)
+void GetQueueResponsePrivate::parseGetQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetQueueResponse"));
     /// @todo

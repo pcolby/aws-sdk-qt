@@ -96,7 +96,7 @@ GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponse(QXmlStreamReader &xml)
+void GetDomainSuggestionsResponsePrivate::parseGetDomainSuggestionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDomainSuggestionsResponse"));
     /// @todo

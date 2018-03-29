@@ -96,7 +96,7 @@ CreateCachediSCSIVolumeResponsePrivate::CreateCachediSCSIVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCachediSCSIVolumeResponsePrivate::CreateCachediSCSIVolumeResponse(QXmlStreamReader &xml)
+void CreateCachediSCSIVolumeResponsePrivate::parseCreateCachediSCSIVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCachediSCSIVolumeResponse"));
     /// @todo

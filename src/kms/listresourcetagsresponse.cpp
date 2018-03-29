@@ -96,7 +96,7 @@ ListResourceTagsResponsePrivate::ListResourceTagsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListResourceTagsResponsePrivate::ListResourceTagsResponse(QXmlStreamReader &xml)
+void ListResourceTagsResponsePrivate::parseListResourceTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceTagsResponse"));
     /// @todo

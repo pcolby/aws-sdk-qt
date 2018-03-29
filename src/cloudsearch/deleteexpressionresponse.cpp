@@ -96,7 +96,7 @@ DeleteExpressionResponsePrivate::DeleteExpressionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteExpressionResponsePrivate::DeleteExpressionResponse(QXmlStreamReader &xml)
+void DeleteExpressionResponsePrivate::parseDeleteExpressionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteExpressionResponse"));
     /// @todo

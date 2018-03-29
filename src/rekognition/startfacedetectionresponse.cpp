@@ -96,7 +96,7 @@ StartFaceDetectionResponsePrivate::StartFaceDetectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartFaceDetectionResponsePrivate::StartFaceDetectionResponse(QXmlStreamReader &xml)
+void StartFaceDetectionResponsePrivate::parseStartFaceDetectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartFaceDetectionResponse"));
     /// @todo

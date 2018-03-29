@@ -96,7 +96,7 @@ RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionRes
  *
  * @param  xml  XML stream to parse.
  */
-void RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml)
+void RequestCancelWorkflowExecutionResponsePrivate::parseRequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestCancelWorkflowExecutionResponse"));
     /// @todo

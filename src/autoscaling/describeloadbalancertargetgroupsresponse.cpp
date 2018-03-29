@@ -96,7 +96,7 @@ DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroup
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
+void DescribeLoadBalancerTargetGroupsResponsePrivate::parseDescribeLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerTargetGroupsResponse"));
     /// @todo

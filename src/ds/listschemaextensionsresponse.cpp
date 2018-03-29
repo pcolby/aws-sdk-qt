@@ -96,7 +96,7 @@ ListSchemaExtensionsResponsePrivate::ListSchemaExtensionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListSchemaExtensionsResponsePrivate::ListSchemaExtensionsResponse(QXmlStreamReader &xml)
+void ListSchemaExtensionsResponsePrivate::parseListSchemaExtensionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSchemaExtensionsResponse"));
     /// @todo

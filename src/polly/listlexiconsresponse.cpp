@@ -96,7 +96,7 @@ ListLexiconsResponsePrivate::ListLexiconsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListLexiconsResponsePrivate::ListLexiconsResponse(QXmlStreamReader &xml)
+void ListLexiconsResponsePrivate::parseListLexiconsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLexiconsResponse"));
     /// @todo

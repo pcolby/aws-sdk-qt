@@ -96,7 +96,7 @@ DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponse(QXmlStreamReader &xml)
+void DeleteIndexFieldResponsePrivate::parseDeleteIndexFieldResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIndexFieldResponse"));
     /// @todo

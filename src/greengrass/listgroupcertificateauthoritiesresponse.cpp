@@ -96,7 +96,7 @@ ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesR
  *
  * @param  xml  XML stream to parse.
  */
-void ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesResponse(QXmlStreamReader &xml)
+void ListGroupCertificateAuthoritiesResponsePrivate::parseListGroupCertificateAuthoritiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupCertificateAuthoritiesResponse"));
     /// @todo

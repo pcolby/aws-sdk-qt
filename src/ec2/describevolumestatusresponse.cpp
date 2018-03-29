@@ -96,7 +96,7 @@ DescribeVolumeStatusResponsePrivate::DescribeVolumeStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVolumeStatusResponsePrivate::DescribeVolumeStatusResponse(QXmlStreamReader &xml)
+void DescribeVolumeStatusResponsePrivate::parseDescribeVolumeStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumeStatusResponse"));
     /// @todo

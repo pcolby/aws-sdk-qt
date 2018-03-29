@@ -96,7 +96,7 @@ ListAccountAliasesResponsePrivate::ListAccountAliasesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAccountAliasesResponsePrivate::ListAccountAliasesResponse(QXmlStreamReader &xml)
+void ListAccountAliasesResponsePrivate::parseListAccountAliasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAccountAliasesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetDeploymentConfigResponsePrivate::GetDeploymentConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDeploymentConfigResponsePrivate::GetDeploymentConfigResponse(QXmlStreamReader &xml)
+void GetDeploymentConfigResponsePrivate::parseGetDeploymentConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeploymentConfigResponse"));
     /// @todo

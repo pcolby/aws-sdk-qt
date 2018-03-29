@@ -96,7 +96,7 @@ CreateVaultResponsePrivate::CreateVaultResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVaultResponsePrivate::CreateVaultResponse(QXmlStreamReader &xml)
+void CreateVaultResponsePrivate::parseCreateVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVaultResponse"));
     /// @todo

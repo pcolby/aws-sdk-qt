@@ -96,7 +96,7 @@ ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorization
  *
  * @param  xml  XML stream to parse.
  */
-void ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml)
+void ListVPCAssociationAuthorizationsResponsePrivate::parseListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVPCAssociationAuthorizationsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListServerNeighborsResponsePrivate::ListServerNeighborsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListServerNeighborsResponsePrivate::ListServerNeighborsResponse(QXmlStreamReader &xml)
+void ListServerNeighborsResponsePrivate::parseListServerNeighborsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListServerNeighborsResponse"));
     /// @todo

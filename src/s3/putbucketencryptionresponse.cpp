@@ -96,7 +96,7 @@ PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponse(QXmlStreamReader &xml)
+void PutBucketEncryptionResponsePrivate::parsePutBucketEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketEncryptionResponse"));
     /// @todo

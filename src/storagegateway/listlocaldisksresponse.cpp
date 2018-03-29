@@ -96,7 +96,7 @@ ListLocalDisksResponsePrivate::ListLocalDisksResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListLocalDisksResponsePrivate::ListLocalDisksResponse(QXmlStreamReader &xml)
+void ListLocalDisksResponsePrivate::parseListLocalDisksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLocalDisksResponse"));
     /// @todo

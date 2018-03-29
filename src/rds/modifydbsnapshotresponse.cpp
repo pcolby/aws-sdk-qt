@@ -96,7 +96,7 @@ ModifyDBSnapshotResponsePrivate::ModifyDBSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDBSnapshotResponsePrivate::ModifyDBSnapshotResponse(QXmlStreamReader &xml)
+void ModifyDBSnapshotResponsePrivate::parseModifyDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBSnapshotResponse"));
     /// @todo

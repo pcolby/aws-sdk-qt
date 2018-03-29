@@ -96,7 +96,7 @@ CreateHsmConfigurationResponsePrivate::CreateHsmConfigurationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateHsmConfigurationResponsePrivate::CreateHsmConfigurationResponse(QXmlStreamReader &xml)
+void CreateHsmConfigurationResponsePrivate::parseCreateHsmConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHsmConfigurationResponse"));
     /// @todo

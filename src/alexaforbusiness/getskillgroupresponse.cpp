@@ -96,7 +96,7 @@ GetSkillGroupResponsePrivate::GetSkillGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSkillGroupResponsePrivate::GetSkillGroupResponse(QXmlStreamReader &xml)
+void GetSkillGroupResponsePrivate::parseGetSkillGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSkillGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SetUserPoolMfaConfigResponsePrivate::SetUserPoolMfaConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetUserPoolMfaConfigResponsePrivate::SetUserPoolMfaConfigResponse(QXmlStreamReader &xml)
+void SetUserPoolMfaConfigResponsePrivate::parseSetUserPoolMfaConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetUserPoolMfaConfigResponse"));
     /// @todo

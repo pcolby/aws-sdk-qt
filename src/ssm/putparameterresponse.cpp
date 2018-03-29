@@ -96,7 +96,7 @@ PutParameterResponsePrivate::PutParameterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutParameterResponsePrivate::PutParameterResponse(QXmlStreamReader &xml)
+void PutParameterResponsePrivate::parsePutParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutParameterResponse"));
     /// @todo

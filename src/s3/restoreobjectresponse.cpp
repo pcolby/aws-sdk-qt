@@ -96,7 +96,7 @@ RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreObjectResponsePrivate::RestoreObjectResponse(QXmlStreamReader &xml)
+void RestoreObjectResponsePrivate::parseRestoreObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreObjectResponse"));
     /// @todo

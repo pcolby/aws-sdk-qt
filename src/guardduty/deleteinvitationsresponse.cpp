@@ -96,7 +96,7 @@ DeleteInvitationsResponsePrivate::DeleteInvitationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteInvitationsResponsePrivate::DeleteInvitationsResponse(QXmlStreamReader &xml)
+void DeleteInvitationsResponsePrivate::parseDeleteInvitationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInvitationsResponse"));
     /// @todo

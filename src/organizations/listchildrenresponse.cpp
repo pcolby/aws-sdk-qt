@@ -96,7 +96,7 @@ ListChildrenResponsePrivate::ListChildrenResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListChildrenResponsePrivate::ListChildrenResponse(QXmlStreamReader &xml)
+void ListChildrenResponsePrivate::parseListChildrenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListChildrenResponse"));
     /// @todo

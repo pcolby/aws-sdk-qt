@@ -96,7 +96,7 @@ VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponse(QXmlStreamReader &xml)
+void VerifyUserAttributeResponsePrivate::parseVerifyUserAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyUserAttributeResponse"));
     /// @todo

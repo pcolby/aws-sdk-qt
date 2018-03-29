@@ -96,7 +96,7 @@ DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponse(QXmlStreamReader &xml)
+void DeletePlacementGroupResponsePrivate::parseDeletePlacementGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePlacementGroupResponse"));
     /// @todo

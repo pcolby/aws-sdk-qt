@@ -96,7 +96,7 @@ DescribeUserProfilesResponsePrivate::DescribeUserProfilesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeUserProfilesResponsePrivate::DescribeUserProfilesResponse(QXmlStreamReader &xml)
+void DescribeUserProfilesResponsePrivate::parseDescribeUserProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserProfilesResponse"));
     /// @todo

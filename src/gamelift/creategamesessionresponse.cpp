@@ -96,7 +96,7 @@ CreateGameSessionResponsePrivate::CreateGameSessionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateGameSessionResponsePrivate::CreateGameSessionResponse(QXmlStreamReader &xml)
+void CreateGameSessionResponsePrivate::parseCreateGameSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGameSessionResponse"));
     /// @todo

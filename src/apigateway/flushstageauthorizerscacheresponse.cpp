@@ -96,7 +96,7 @@ FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponse(QXmlStreamReader &xml)
+void FlushStageAuthorizersCacheResponsePrivate::parseFlushStageAuthorizersCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("FlushStageAuthorizersCacheResponse"));
     /// @todo

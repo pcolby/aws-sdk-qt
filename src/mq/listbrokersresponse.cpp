@@ -96,7 +96,7 @@ ListBrokersResponsePrivate::ListBrokersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBrokersResponsePrivate::ListBrokersResponse(QXmlStreamReader &xml)
+void ListBrokersResponsePrivate::parseListBrokersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBrokersResponse"));
     /// @todo

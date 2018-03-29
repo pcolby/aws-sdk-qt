@@ -96,7 +96,7 @@ DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponse(QXmlStreamReader &xml)
+void DescribeRoleAliasResponsePrivate::parseDescribeRoleAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRoleAliasResponse"));
     /// @todo

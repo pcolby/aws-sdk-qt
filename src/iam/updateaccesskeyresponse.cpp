@@ -96,7 +96,7 @@ UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponse(QXmlStreamReader &xml)
+void UpdateAccessKeyResponsePrivate::parseUpdateAccessKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccessKeyResponse"));
     /// @todo

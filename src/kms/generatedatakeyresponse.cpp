@@ -96,7 +96,7 @@ GenerateDataKeyResponsePrivate::GenerateDataKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GenerateDataKeyResponsePrivate::GenerateDataKeyResponse(QXmlStreamReader &xml)
+void GenerateDataKeyResponsePrivate::parseGenerateDataKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataKeyResponse"));
     /// @todo

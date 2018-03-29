@@ -96,7 +96,7 @@ ListTagsForDomainResponsePrivate::ListTagsForDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTagsForDomainResponsePrivate::ListTagsForDomainResponse(QXmlStreamReader &xml)
+void ListTagsForDomainResponsePrivate::parseListTagsForDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForDomainResponse"));
     /// @todo

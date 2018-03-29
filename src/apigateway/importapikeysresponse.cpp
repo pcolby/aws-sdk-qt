@@ -96,7 +96,7 @@ ImportApiKeysResponsePrivate::ImportApiKeysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportApiKeysResponsePrivate::ImportApiKeysResponse(QXmlStreamReader &xml)
+void ImportApiKeysResponsePrivate::parseImportApiKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportApiKeysResponse"));
     /// @todo

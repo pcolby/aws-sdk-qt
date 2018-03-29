@@ -96,7 +96,7 @@ UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponse(QXmlStreamReader &xml)
+void UpdateHITReviewStatusResponsePrivate::parseUpdateHITReviewStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateHITReviewStatusResponse"));
     /// @todo

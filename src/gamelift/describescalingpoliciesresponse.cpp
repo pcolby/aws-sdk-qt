@@ -96,7 +96,7 @@ DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponse(QXmlStreamReader &xml)
+void DescribeScalingPoliciesResponsePrivate::parseDescribeScalingPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPoliciesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateServiceSpecificCredentialResponsePrivate::CreateServiceSpecificCredentialR
  *
  * @param  xml  XML stream to parse.
  */
-void CreateServiceSpecificCredentialResponsePrivate::CreateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
+void CreateServiceSpecificCredentialResponsePrivate::parseCreateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateServiceSpecificCredentialResponse"));
     /// @todo

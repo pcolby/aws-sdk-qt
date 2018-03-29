@@ -96,7 +96,7 @@ CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationRes
  *
  * @param  xml  XML stream to parse.
  */
-void CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationResponse(QXmlStreamReader &xml)
+void CreateMatchmakingConfigurationResponsePrivate::parseCreateMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMatchmakingConfigurationResponse"));
     /// @todo

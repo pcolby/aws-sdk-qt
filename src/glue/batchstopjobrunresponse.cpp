@@ -96,7 +96,7 @@ BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchStopJobRunResponsePrivate::BatchStopJobRunResponse(QXmlStreamReader &xml)
+void BatchStopJobRunResponsePrivate::parseBatchStopJobRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchStopJobRunResponse"));
     /// @todo

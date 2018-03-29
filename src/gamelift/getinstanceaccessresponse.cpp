@@ -96,7 +96,7 @@ GetInstanceAccessResponsePrivate::GetInstanceAccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInstanceAccessResponsePrivate::GetInstanceAccessResponse(QXmlStreamReader &xml)
+void GetInstanceAccessResponsePrivate::parseGetInstanceAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceAccessResponse"));
     /// @todo

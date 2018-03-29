@@ -96,7 +96,7 @@ ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponse(QXmlStreamReader &xml)
+void ListCreatedArtifactsResponsePrivate::parseListCreatedArtifactsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCreatedArtifactsResponse"));
     /// @todo

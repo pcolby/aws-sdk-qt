@@ -96,7 +96,7 @@ AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadResponse(QXmlStreamReader &xml)
+void AbortDocumentVersionUploadResponsePrivate::parseAbortDocumentVersionUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortDocumentVersionUploadResponse"));
     /// @todo

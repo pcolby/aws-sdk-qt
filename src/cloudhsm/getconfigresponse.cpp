@@ -96,7 +96,7 @@ GetConfigResponsePrivate::GetConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetConfigResponsePrivate::GetConfigResponse(QXmlStreamReader &xml)
+void GetConfigResponsePrivate::parseGetConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConfigResponse"));
     /// @todo

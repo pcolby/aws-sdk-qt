@@ -96,7 +96,7 @@ ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTemplatesResponsePrivate::ListTemplatesResponse(QXmlStreamReader &xml)
+void ListTemplatesResponsePrivate::parseListTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTemplatesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponse(QXmlStreamReader &xml)
+void DeleteFunctionConcurrencyResponsePrivate::parseDeleteFunctionConcurrencyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionConcurrencyResponse"));
     /// @todo

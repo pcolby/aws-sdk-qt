@@ -96,7 +96,7 @@ ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponse(QXmlStreamReader &xml)
+void ListLoggerDefinitionsResponsePrivate::parseListLoggerDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLoggerDefinitionsResponse"));
     /// @todo

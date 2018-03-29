@@ -96,7 +96,7 @@ UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponse(QXmlStreamReader &xml)
+void UpdatePatchBaselineResponsePrivate::parseUpdatePatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePatchBaselineResponse"));
     /// @todo

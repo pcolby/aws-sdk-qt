@@ -96,7 +96,7 @@ AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddFacetToObjectResponsePrivate::AddFacetToObjectResponse(QXmlStreamReader &xml)
+void AddFacetToObjectResponsePrivate::parseAddFacetToObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddFacetToObjectResponse"));
     /// @todo

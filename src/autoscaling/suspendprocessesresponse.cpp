@@ -96,7 +96,7 @@ SuspendProcessesResponsePrivate::SuspendProcessesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SuspendProcessesResponsePrivate::SuspendProcessesResponse(QXmlStreamReader &xml)
+void SuspendProcessesResponsePrivate::parseSuspendProcessesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SuspendProcessesResponse"));
     /// @todo

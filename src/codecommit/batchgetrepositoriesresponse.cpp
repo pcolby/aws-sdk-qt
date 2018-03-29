@@ -96,7 +96,7 @@ BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponse(QXmlStreamReader &xml)
+void BatchGetRepositoriesResponsePrivate::parseBatchGetRepositoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetRepositoriesResponse"));
     /// @todo

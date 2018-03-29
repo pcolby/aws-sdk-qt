@@ -96,7 +96,7 @@ ExpireSessionResponsePrivate::ExpireSessionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExpireSessionResponsePrivate::ExpireSessionResponse(QXmlStreamReader &xml)
+void ExpireSessionResponsePrivate::parseExpireSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExpireSessionResponse"));
     /// @todo

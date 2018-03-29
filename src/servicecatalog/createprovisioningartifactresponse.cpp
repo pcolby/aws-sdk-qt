@@ -96,7 +96,7 @@ CreateProvisioningArtifactResponsePrivate::CreateProvisioningArtifactResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void CreateProvisioningArtifactResponsePrivate::CreateProvisioningArtifactResponse(QXmlStreamReader &xml)
+void CreateProvisioningArtifactResponsePrivate::parseCreateProvisioningArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProvisioningArtifactResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PostCommentReplyResponsePrivate::PostCommentReplyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PostCommentReplyResponsePrivate::PostCommentReplyResponse(QXmlStreamReader &xml)
+void PostCommentReplyResponsePrivate::parsePostCommentReplyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PostCommentReplyResponse"));
     /// @todo

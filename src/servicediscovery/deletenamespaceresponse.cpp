@@ -96,7 +96,7 @@ DeleteNamespaceResponsePrivate::DeleteNamespaceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNamespaceResponsePrivate::DeleteNamespaceResponse(QXmlStreamReader &xml)
+void DeleteNamespaceResponsePrivate::parseDeleteNamespaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNamespaceResponse"));
     /// @todo

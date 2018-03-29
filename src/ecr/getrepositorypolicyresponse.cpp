@@ -96,7 +96,7 @@ GetRepositoryPolicyResponsePrivate::GetRepositoryPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRepositoryPolicyResponsePrivate::GetRepositoryPolicyResponse(QXmlStreamReader &xml)
+void GetRepositoryPolicyResponsePrivate::parseGetRepositoryPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRepositoryPolicyResponse"));
     /// @todo

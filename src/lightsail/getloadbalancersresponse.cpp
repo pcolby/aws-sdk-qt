@@ -96,7 +96,7 @@ GetLoadBalancersResponsePrivate::GetLoadBalancersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLoadBalancersResponsePrivate::GetLoadBalancersResponse(QXmlStreamReader &xml)
+void GetLoadBalancersResponsePrivate::parseGetLoadBalancersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLoadBalancersResponse"));
     /// @todo

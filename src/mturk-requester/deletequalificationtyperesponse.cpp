@@ -96,7 +96,7 @@ DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponse(QXmlStreamReader &xml)
+void DeleteQualificationTypeResponsePrivate::parseDeleteQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteQualificationTypeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponse(QXmlStreamReader &xml)
+void AssignPrivateIpAddressesResponsePrivate::parseAssignPrivateIpAddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssignPrivateIpAddressesResponse"));
     /// @todo

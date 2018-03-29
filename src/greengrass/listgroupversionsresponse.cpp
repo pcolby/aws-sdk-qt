@@ -96,7 +96,7 @@ ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListGroupVersionsResponsePrivate::ListGroupVersionsResponse(QXmlStreamReader &xml)
+void ListGroupVersionsResponsePrivate::parseListGroupVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupVersionsResponse"));
     /// @todo

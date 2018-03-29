@@ -96,7 +96,7 @@ DescribeInternetGatewaysResponsePrivate::DescribeInternetGatewaysResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInternetGatewaysResponsePrivate::DescribeInternetGatewaysResponse(QXmlStreamReader &xml)
+void DescribeInternetGatewaysResponsePrivate::parseDescribeInternetGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInternetGatewaysResponse"));
     /// @todo

@@ -96,7 +96,7 @@ TranslateTextResponsePrivate::TranslateTextResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TranslateTextResponsePrivate::TranslateTextResponse(QXmlStreamReader &xml)
+void TranslateTextResponsePrivate::parseTranslateTextResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TranslateTextResponse"));
     /// @todo

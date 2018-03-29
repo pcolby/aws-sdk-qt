@@ -96,7 +96,7 @@ ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePerm
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml)
+void ModifyVpcEndpointServicePermissionsResponsePrivate::parseModifyVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointServicePermissionsResponse"));
     /// @todo

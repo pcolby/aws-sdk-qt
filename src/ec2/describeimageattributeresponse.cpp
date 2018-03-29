@@ -96,7 +96,7 @@ DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponse(QXmlStreamReader &xml)
+void DescribeImageAttributeResponsePrivate::parseDescribeImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImageAttributeResponse"));
     /// @todo

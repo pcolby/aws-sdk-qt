@@ -96,7 +96,7 @@ PutLexiconResponsePrivate::PutLexiconResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutLexiconResponsePrivate::PutLexiconResponse(QXmlStreamReader &xml)
+void PutLexiconResponsePrivate::parsePutLexiconResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutLexiconResponse"));
     /// @todo

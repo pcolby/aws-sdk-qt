@@ -96,7 +96,7 @@ DescribeTapeRecoveryPointsResponsePrivate::DescribeTapeRecoveryPointsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTapeRecoveryPointsResponsePrivate::DescribeTapeRecoveryPointsResponse(QXmlStreamReader &xml)
+void DescribeTapeRecoveryPointsResponsePrivate::parseDescribeTapeRecoveryPointsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTapeRecoveryPointsResponse"));
     /// @todo

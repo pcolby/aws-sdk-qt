@@ -96,7 +96,7 @@ CreateProfileResponsePrivate::CreateProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateProfileResponsePrivate::CreateProfileResponse(QXmlStreamReader &xml)
+void CreateProfileResponsePrivate::parseCreateProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProfileResponse"));
     /// @todo

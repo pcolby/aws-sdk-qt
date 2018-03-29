@@ -96,7 +96,7 @@ UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponse(QXmlStreamReader &xml)
+void UpdateParameterGroupResponsePrivate::parseUpdateParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateParameterGroupResponse"));
     /// @todo

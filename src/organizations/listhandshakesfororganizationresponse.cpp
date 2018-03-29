@@ -96,7 +96,7 @@ ListHandshakesForOrganizationResponsePrivate::ListHandshakesForOrganizationRespo
  *
  * @param  xml  XML stream to parse.
  */
-void ListHandshakesForOrganizationResponsePrivate::ListHandshakesForOrganizationResponse(QXmlStreamReader &xml)
+void ListHandshakesForOrganizationResponsePrivate::parseListHandshakesForOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHandshakesForOrganizationResponse"));
     /// @todo

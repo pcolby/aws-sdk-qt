@@ -96,7 +96,7 @@ CreateSegmentResponsePrivate::CreateSegmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSegmentResponsePrivate::CreateSegmentResponse(QXmlStreamReader &xml)
+void CreateSegmentResponsePrivate::parseCreateSegmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSegmentResponse"));
     /// @todo

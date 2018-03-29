@@ -96,7 +96,7 @@ UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponse(QXmlStreamReader &xml)
+void UpdateOrganizationalUnitResponsePrivate::parseUpdateOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateOrganizationalUnitResponse"));
     /// @todo

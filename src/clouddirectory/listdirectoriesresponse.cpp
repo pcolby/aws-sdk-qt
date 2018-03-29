@@ -96,7 +96,7 @@ ListDirectoriesResponsePrivate::ListDirectoriesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListDirectoriesResponsePrivate::ListDirectoriesResponse(QXmlStreamReader &xml)
+void ListDirectoriesResponsePrivate::parseListDirectoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDirectoriesResponse"));
     /// @todo

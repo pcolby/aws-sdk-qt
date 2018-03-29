@@ -96,7 +96,7 @@ GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttribu
  *
  * @param  xml  XML stream to parse.
  */
-void GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttributesResponse(QXmlStreamReader &xml)
+void GetIdentityVerificationAttributesResponsePrivate::parseGetIdentityVerificationAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityVerificationAttributesResponse"));
     /// @todo

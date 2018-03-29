@@ -96,7 +96,7 @@ CreateConstraintResponsePrivate::CreateConstraintResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateConstraintResponsePrivate::CreateConstraintResponse(QXmlStreamReader &xml)
+void CreateConstraintResponsePrivate::parseCreateConstraintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConstraintResponse"));
     /// @todo

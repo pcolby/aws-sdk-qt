@@ -96,7 +96,7 @@ GetGroupPolicyResponsePrivate::GetGroupPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetGroupPolicyResponsePrivate::GetGroupPolicyResponse(QXmlStreamReader &xml)
+void GetGroupPolicyResponsePrivate::parseGetGroupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGroupPolicyResponse"));
     /// @todo

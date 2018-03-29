@@ -96,7 +96,7 @@ AttachClassicLinkVpcResponsePrivate::AttachClassicLinkVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachClassicLinkVpcResponsePrivate::AttachClassicLinkVpcResponse(QXmlStreamReader &xml)
+void AttachClassicLinkVpcResponsePrivate::parseAttachClassicLinkVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachClassicLinkVpcResponse"));
     /// @todo

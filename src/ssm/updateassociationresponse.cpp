@@ -96,7 +96,7 @@ UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAssociationResponsePrivate::UpdateAssociationResponse(QXmlStreamReader &xml)
+void UpdateAssociationResponsePrivate::parseUpdateAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAssociationResponse"));
     /// @todo

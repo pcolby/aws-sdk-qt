@@ -96,7 +96,7 @@ GetEmailChannelResponsePrivate::GetEmailChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetEmailChannelResponsePrivate::GetEmailChannelResponse(QXmlStreamReader &xml)
+void GetEmailChannelResponsePrivate::parseGetEmailChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEmailChannelResponse"));
     /// @todo

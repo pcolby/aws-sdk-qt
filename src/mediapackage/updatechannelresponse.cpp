@@ -96,7 +96,7 @@ UpdateChannelResponsePrivate::UpdateChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateChannelResponsePrivate::UpdateChannelResponse(QXmlStreamReader &xml)
+void UpdateChannelResponsePrivate::parseUpdateChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateChannelResponse"));
     /// @todo

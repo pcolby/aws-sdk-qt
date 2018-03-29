@@ -96,7 +96,7 @@ DescribeJobQueuesResponsePrivate::DescribeJobQueuesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeJobQueuesResponsePrivate::DescribeJobQueuesResponse(QXmlStreamReader &xml)
+void DescribeJobQueuesResponsePrivate::parseDescribeJobQueuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobQueuesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetTableResponsePrivate::GetTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTableResponsePrivate::GetTableResponse(QXmlStreamReader &xml)
+void GetTableResponsePrivate::parseGetTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTableResponse"));
     /// @todo

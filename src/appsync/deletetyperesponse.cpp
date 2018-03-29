@@ -96,7 +96,7 @@ DeleteTypeResponsePrivate::DeleteTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTypeResponsePrivate::DeleteTypeResponse(QXmlStreamReader &xml)
+void DeleteTypeResponsePrivate::parseDeleteTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTypeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteSuggesterResponsePrivate::DeleteSuggesterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSuggesterResponsePrivate::DeleteSuggesterResponse(QXmlStreamReader &xml)
+void DeleteSuggesterResponsePrivate::parseDeleteSuggesterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSuggesterResponse"));
     /// @todo

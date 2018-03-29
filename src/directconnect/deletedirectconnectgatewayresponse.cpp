@@ -96,7 +96,7 @@ DeleteDirectConnectGatewayResponsePrivate::DeleteDirectConnectGatewayResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDirectConnectGatewayResponsePrivate::DeleteDirectConnectGatewayResponse(QXmlStreamReader &xml)
+void DeleteDirectConnectGatewayResponsePrivate::parseDeleteDirectConnectGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectConnectGatewayResponse"));
     /// @todo

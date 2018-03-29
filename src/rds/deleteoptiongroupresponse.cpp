@@ -96,7 +96,7 @@ DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponse(QXmlStreamReader &xml)
+void DeleteOptionGroupResponsePrivate::parseDeleteOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOptionGroupResponse"));
     /// @todo

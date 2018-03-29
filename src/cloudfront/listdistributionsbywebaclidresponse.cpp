@@ -96,7 +96,7 @@ ListDistributionsByWebACLIdResponsePrivate::ListDistributionsByWebACLIdResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void ListDistributionsByWebACLIdResponsePrivate::ListDistributionsByWebACLIdResponse(QXmlStreamReader &xml)
+void ListDistributionsByWebACLIdResponsePrivate::parseListDistributionsByWebACLIdResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDistributionsByWebACLIdResponse"));
     /// @todo

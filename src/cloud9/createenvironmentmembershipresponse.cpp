@@ -96,7 +96,7 @@ CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponse(QXmlStreamReader &xml)
+void CreateEnvironmentMembershipResponsePrivate::parseCreateEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentMembershipResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExitStandbyResponsePrivate::ExitStandbyResponse(QXmlStreamReader &xml)
+void ExitStandbyResponsePrivate::parseExitStandbyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExitStandbyResponse"));
     /// @todo

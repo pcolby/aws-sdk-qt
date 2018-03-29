@@ -96,7 +96,7 @@ CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponse(QXmlStreamReader &xml)
+void CancelSchemaExtensionResponsePrivate::parseCancelSchemaExtensionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelSchemaExtensionResponse"));
     /// @todo

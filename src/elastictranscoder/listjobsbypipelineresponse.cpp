@@ -96,7 +96,7 @@ ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponse(QXmlStreamReader &xml)
+void ListJobsByPipelineResponsePrivate::parseListJobsByPipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobsByPipelineResponse"));
     /// @todo

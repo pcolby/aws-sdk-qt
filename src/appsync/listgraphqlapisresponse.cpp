@@ -96,7 +96,7 @@ ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListGraphqlApisResponsePrivate::ListGraphqlApisResponse(QXmlStreamReader &xml)
+void ListGraphqlApisResponsePrivate::parseListGraphqlApisResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGraphqlApisResponse"));
     /// @todo

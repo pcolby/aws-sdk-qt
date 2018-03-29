@@ -96,7 +96,7 @@ RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponse(QXmlStreamReader &xml)
+void RestoreAddressToClassicResponsePrivate::parseRestoreAddressToClassicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreAddressToClassicResponse"));
     /// @todo

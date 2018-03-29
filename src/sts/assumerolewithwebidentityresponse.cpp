@@ -96,7 +96,7 @@ AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml)
+void AssumeRoleWithWebIdentityResponsePrivate::parseAssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithWebIdentityResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateFileSystemResponsePrivate::CreateFileSystemResponse(QXmlStreamReader &xml)
+void CreateFileSystemResponsePrivate::parseCreateFileSystemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFileSystemResponse"));
     /// @todo

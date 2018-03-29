@@ -96,7 +96,7 @@ StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopWorkspacesResponsePrivate::StopWorkspacesResponse(QXmlStreamReader &xml)
+void StopWorkspacesResponsePrivate::parseStopWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopWorkspacesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateCloudFrontOriginAccessIdentityResponsePrivate::CreateCloudFrontOriginAcces
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCloudFrontOriginAccessIdentityResponsePrivate::CreateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
+void CreateCloudFrontOriginAccessIdentityResponsePrivate::parseCreateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCloudFrontOriginAccessIdentityResponse"));
     /// @todo

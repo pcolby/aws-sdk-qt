@@ -96,7 +96,7 @@ ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponse(QXmlStreamReader &xml)
+void ListBootstrapActionsResponsePrivate::parseListBootstrapActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBootstrapActionsResponse"));
     /// @todo

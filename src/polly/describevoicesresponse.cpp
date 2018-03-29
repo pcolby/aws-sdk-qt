@@ -96,7 +96,7 @@ DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVoicesResponsePrivate::DescribeVoicesResponse(QXmlStreamReader &xml)
+void DescribeVoicesResponsePrivate::parseDescribeVoicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVoicesResponse"));
     /// @todo

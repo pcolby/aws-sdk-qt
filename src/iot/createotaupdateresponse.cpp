@@ -96,7 +96,7 @@ CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponse(QXmlStreamReader &xml)
+void CreateOTAUpdateResponsePrivate::parseCreateOTAUpdateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOTAUpdateResponse"));
     /// @todo

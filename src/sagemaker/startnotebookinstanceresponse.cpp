@@ -96,7 +96,7 @@ StartNotebookInstanceResponsePrivate::StartNotebookInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartNotebookInstanceResponsePrivate::StartNotebookInstanceResponse(QXmlStreamReader &xml)
+void StartNotebookInstanceResponsePrivate::parseStartNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartNotebookInstanceResponse"));
     /// @todo

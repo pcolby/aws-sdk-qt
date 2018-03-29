@@ -96,7 +96,7 @@ SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponse(QXmlStreamReader &xml)
+void SwapEnvironmentCNAMEsResponsePrivate::parseSwapEnvironmentCNAMEsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SwapEnvironmentCNAMEsResponse"));
     /// @todo

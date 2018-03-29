@@ -96,7 +96,7 @@ AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
+void AdminSetUserMFAPreferenceResponsePrivate::parseAdminSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminSetUserMFAPreferenceResponse"));
     /// @todo

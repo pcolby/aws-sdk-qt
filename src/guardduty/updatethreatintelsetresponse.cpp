@@ -96,7 +96,7 @@ UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponse(QXmlStreamReader &xml)
+void UpdateThreatIntelSetResponsePrivate::parseUpdateThreatIntelSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateThreatIntelSetResponse"));
     /// @todo

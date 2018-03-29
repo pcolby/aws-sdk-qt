@@ -96,7 +96,7 @@ UpdateFunctionCodeResponsePrivate::UpdateFunctionCodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateFunctionCodeResponsePrivate::UpdateFunctionCodeResponse(QXmlStreamReader &xml)
+void UpdateFunctionCodeResponsePrivate::parseUpdateFunctionCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionCodeResponse"));
     /// @todo

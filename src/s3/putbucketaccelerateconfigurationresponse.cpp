@@ -96,7 +96,7 @@ PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfiguratio
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
+void PutBucketAccelerateConfigurationResponsePrivate::parsePutBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketAccelerateConfigurationResponse"));
     /// @todo

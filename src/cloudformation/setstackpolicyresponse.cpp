@@ -96,7 +96,7 @@ SetStackPolicyResponsePrivate::SetStackPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetStackPolicyResponsePrivate::SetStackPolicyResponse(QXmlStreamReader &xml)
+void SetStackPolicyResponsePrivate::parseSetStackPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetStackPolicyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponse(QXmlStreamReader &xml)
+void DeleteDirectoryConfigResponsePrivate::parseDeleteDirectoryConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryConfigResponse"));
     /// @todo

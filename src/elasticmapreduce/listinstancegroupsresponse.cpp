@@ -96,7 +96,7 @@ ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponse(QXmlStreamReader &xml)
+void ListInstanceGroupsResponsePrivate::parseListInstanceGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInstanceGroupsResponse"));
     /// @todo

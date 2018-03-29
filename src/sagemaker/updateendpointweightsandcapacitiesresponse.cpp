@@ -96,7 +96,7 @@ UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAndCapac
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAndCapacitiesResponse(QXmlStreamReader &xml)
+void UpdateEndpointWeightsAndCapacitiesResponsePrivate::parseUpdateEndpointWeightsAndCapacitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointWeightsAndCapacitiesResponse"));
     /// @todo

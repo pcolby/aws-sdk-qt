@@ -96,7 +96,7 @@ PutImageResponsePrivate::PutImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutImageResponsePrivate::PutImageResponse(QXmlStreamReader &xml)
+void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutImageResponse"));
     /// @todo

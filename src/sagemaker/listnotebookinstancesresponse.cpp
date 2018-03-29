@@ -96,7 +96,7 @@ ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponse(QXmlStreamReader &xml)
+void ListNotebookInstancesResponsePrivate::parseListNotebookInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListNotebookInstancesResponse"));
     /// @todo

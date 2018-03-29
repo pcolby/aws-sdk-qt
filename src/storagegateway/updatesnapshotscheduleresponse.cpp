@@ -96,7 +96,7 @@ UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponse(QXmlStreamReader &xml)
+void UpdateSnapshotScheduleResponsePrivate::parseUpdateSnapshotScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSnapshotScheduleResponse"));
     /// @todo

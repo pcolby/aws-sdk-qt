@@ -96,7 +96,7 @@ UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponse(QXmlStreamReader &xml)
+void UpdateGraphqlApiResponsePrivate::parseUpdateGraphqlApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGraphqlApiResponse"));
     /// @todo

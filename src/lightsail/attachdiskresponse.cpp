@@ -96,7 +96,7 @@ AttachDiskResponsePrivate::AttachDiskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachDiskResponsePrivate::AttachDiskResponse(QXmlStreamReader &xml)
+void AttachDiskResponsePrivate::parseAttachDiskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachDiskResponse"));
     /// @todo

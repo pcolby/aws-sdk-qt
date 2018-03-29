@@ -96,7 +96,7 @@ DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachTypedLinkResponsePrivate::DetachTypedLinkResponse(QXmlStreamReader &xml)
+void DetachTypedLinkResponsePrivate::parseDetachTypedLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachTypedLinkResponse"));
     /// @todo

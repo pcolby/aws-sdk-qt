@@ -96,7 +96,7 @@ DescribeLoadBalancerAttributesResponsePrivate::DescribeLoadBalancerAttributesRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLoadBalancerAttributesResponsePrivate::DescribeLoadBalancerAttributesResponse(QXmlStreamReader &xml)
+void DescribeLoadBalancerAttributesResponsePrivate::parseDescribeLoadBalancerAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerAttributesResponse"));
     /// @todo

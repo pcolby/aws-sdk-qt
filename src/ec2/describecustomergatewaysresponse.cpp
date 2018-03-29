@@ -96,7 +96,7 @@ DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponse(QXmlStreamReader &xml)
+void DescribeCustomerGatewaysResponsePrivate::parseDescribeCustomerGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCustomerGatewaysResponse"));
     /// @todo

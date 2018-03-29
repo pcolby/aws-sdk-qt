@@ -96,7 +96,7 @@ CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponse(QXmlStreamReader &xml)
+void CreateInstanceExportTaskResponsePrivate::parseCreateInstanceExportTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInstanceExportTaskResponse"));
     /// @todo

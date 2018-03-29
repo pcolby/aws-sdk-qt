@@ -96,7 +96,7 @@ ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetDeploymentsResponsePrivate::ResetDeploymentsResponse(QXmlStreamReader &xml)
+void ResetDeploymentsResponsePrivate::parseResetDeploymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetDeploymentsResponse"));
     /// @todo

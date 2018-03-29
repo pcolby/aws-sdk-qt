@@ -96,7 +96,7 @@ DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteProjectResponsePrivate::DeleteProjectResponse(QXmlStreamReader &xml)
+void DeleteProjectResponsePrivate::parseDeleteProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProjectResponse"));
     /// @todo

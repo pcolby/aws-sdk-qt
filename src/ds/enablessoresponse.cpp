@@ -96,7 +96,7 @@ EnableSsoResponsePrivate::EnableSsoResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableSsoResponsePrivate::EnableSsoResponse(QXmlStreamReader &xml)
+void EnableSsoResponsePrivate::parseEnableSsoResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableSsoResponse"));
     /// @todo

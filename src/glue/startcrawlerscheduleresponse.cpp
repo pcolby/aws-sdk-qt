@@ -96,7 +96,7 @@ StartCrawlerScheduleResponsePrivate::StartCrawlerScheduleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartCrawlerScheduleResponsePrivate::StartCrawlerScheduleResponse(QXmlStreamReader &xml)
+void StartCrawlerScheduleResponsePrivate::parseStartCrawlerScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartCrawlerScheduleResponse"));
     /// @todo

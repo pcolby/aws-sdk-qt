@@ -96,7 +96,7 @@ GetBucketMetricsConfigurationResponsePrivate::GetBucketMetricsConfigurationRespo
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketMetricsConfigurationResponsePrivate::GetBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
+void GetBucketMetricsConfigurationResponsePrivate::parseGetBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketMetricsConfigurationResponse"));
     /// @todo

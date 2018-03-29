@@ -96,7 +96,7 @@ CancelUpdateStackResponsePrivate::CancelUpdateStackResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelUpdateStackResponsePrivate::CancelUpdateStackResponse(QXmlStreamReader &xml)
+void CancelUpdateStackResponsePrivate::parseCancelUpdateStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelUpdateStackResponse"));
     /// @todo

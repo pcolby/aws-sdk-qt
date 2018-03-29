@@ -96,7 +96,7 @@ UpdateGameSessionQueueResponsePrivate::UpdateGameSessionQueueResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGameSessionQueueResponsePrivate::UpdateGameSessionQueueResponse(QXmlStreamReader &xml)
+void UpdateGameSessionQueueResponsePrivate::parseUpdateGameSessionQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGameSessionQueueResponse"));
     /// @todo

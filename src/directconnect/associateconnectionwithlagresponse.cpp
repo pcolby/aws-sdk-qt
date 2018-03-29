@@ -96,7 +96,7 @@ AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponse(QXmlStreamReader &xml)
+void AssociateConnectionWithLagResponsePrivate::parseAssociateConnectionWithLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateConnectionWithLagResponse"));
     /// @todo

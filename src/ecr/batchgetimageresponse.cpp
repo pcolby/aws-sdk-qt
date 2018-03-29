@@ -96,7 +96,7 @@ BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetImageResponsePrivate::BatchGetImageResponse(QXmlStreamReader &xml)
+void BatchGetImageResponsePrivate::parseBatchGetImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetImageResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RefreshSchemasResponsePrivate::RefreshSchemasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RefreshSchemasResponsePrivate::RefreshSchemasResponse(QXmlStreamReader &xml)
+void RefreshSchemasResponsePrivate::parseRefreshSchemasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RefreshSchemasResponse"));
     /// @todo

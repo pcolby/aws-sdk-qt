@@ -96,7 +96,7 @@ PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecut
  *
  * @param  xml  XML stream to parse.
  */
-void PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml)
+void PutLifecycleEventHookExecutionStatusResponsePrivate::parsePutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutLifecycleEventHookExecutionStatusResponse"));
     /// @todo

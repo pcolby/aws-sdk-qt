@@ -96,7 +96,7 @@ DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponse(QXmlStreamReader &xml)
+void DeleteGitHubAccountTokenResponsePrivate::parseDeleteGitHubAccountTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGitHubAccountTokenResponse"));
     /// @todo

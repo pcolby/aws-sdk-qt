@@ -96,7 +96,7 @@ DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponse(QXmlStreamReader &xml)
+void DescribeGlobalTableResponsePrivate::parseDescribeGlobalTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGlobalTableResponse"));
     /// @todo

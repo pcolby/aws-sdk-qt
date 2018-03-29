@@ -96,7 +96,7 @@ DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponse(QXmlStreamReader &xml)
+void DescribeInputSecurityGroupResponsePrivate::parseDescribeInputSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInputSecurityGroupResponse"));
     /// @todo

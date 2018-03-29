@@ -96,7 +96,7 @@ RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponse(QXmlStreamReader &xml)
+void RemoveUserFromGroupResponsePrivate::parseRemoveUserFromGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveUserFromGroupResponse"));
     /// @todo

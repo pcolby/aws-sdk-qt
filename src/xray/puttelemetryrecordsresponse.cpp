@@ -96,7 +96,7 @@ PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponse(QXmlStreamReader &xml)
+void PutTelemetryRecordsResponsePrivate::parsePutTelemetryRecordsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutTelemetryRecordsResponse"));
     /// @todo

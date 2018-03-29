@@ -96,7 +96,7 @@ GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceRes
  *
  * @param  xml  XML stream to parse.
  */
-void GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceResponse(QXmlStreamReader &xml)
+void GetComplianceDetailsByResourceResponsePrivate::parseGetComplianceDetailsByResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetComplianceDetailsByResourceResponse"));
     /// @todo

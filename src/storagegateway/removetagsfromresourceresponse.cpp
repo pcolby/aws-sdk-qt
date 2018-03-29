@@ -96,7 +96,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponse(QXmlStreamReader &xml)
+void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromResourceResponse"));
     /// @todo

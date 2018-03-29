@@ -96,7 +96,7 @@ DescribeVpcEndpointServiceConfigurationsResponsePrivate::DescribeVpcEndpointServ
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVpcEndpointServiceConfigurationsResponsePrivate::DescribeVpcEndpointServiceConfigurationsResponse(QXmlStreamReader &xml)
+void DescribeVpcEndpointServiceConfigurationsResponsePrivate::parseDescribeVpcEndpointServiceConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointServiceConfigurationsResponse"));
     /// @todo

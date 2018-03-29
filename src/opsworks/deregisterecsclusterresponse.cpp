@@ -96,7 +96,7 @@ DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponse(QXmlStreamReader &xml)
+void DeregisterEcsClusterResponsePrivate::parseDeregisterEcsClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterEcsClusterResponse"));
     /// @todo

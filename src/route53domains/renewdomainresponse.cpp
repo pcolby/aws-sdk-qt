@@ -96,7 +96,7 @@ RenewDomainResponsePrivate::RenewDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RenewDomainResponsePrivate::RenewDomainResponse(QXmlStreamReader &xml)
+void RenewDomainResponsePrivate::parseRenewDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RenewDomainResponse"));
     /// @todo

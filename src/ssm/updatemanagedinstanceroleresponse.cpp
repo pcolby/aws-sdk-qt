@@ -96,7 +96,7 @@ UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponse(QXmlStreamReader &xml)
+void UpdateManagedInstanceRoleResponsePrivate::parseUpdateManagedInstanceRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateManagedInstanceRoleResponse"));
     /// @todo

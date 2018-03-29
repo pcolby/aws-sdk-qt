@@ -96,7 +96,7 @@ DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponse(QXmlStreamReader &xml)
+void DeleteAccountPasswordPolicyResponsePrivate::parseDeleteAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccountPasswordPolicyResponse"));
     /// @todo

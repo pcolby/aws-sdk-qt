@@ -96,7 +96,7 @@ EvaluateExpressionResponsePrivate::EvaluateExpressionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EvaluateExpressionResponsePrivate::EvaluateExpressionResponse(QXmlStreamReader &xml)
+void EvaluateExpressionResponsePrivate::parseEvaluateExpressionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EvaluateExpressionResponse"));
     /// @todo

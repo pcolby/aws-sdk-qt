@@ -96,7 +96,7 @@ SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListe
  *
  * @param  xml  XML stream to parse.
  */
-void SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListenerResponse(QXmlStreamReader &xml)
+void SetLoadBalancerPoliciesOfListenerResponsePrivate::parseSetLoadBalancerPoliciesOfListenerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerPoliciesOfListenerResponse"));
     /// @todo

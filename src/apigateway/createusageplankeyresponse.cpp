@@ -96,7 +96,7 @@ CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponse(QXmlStreamReader &xml)
+void CreateUsagePlanKeyResponsePrivate::parseCreateUsagePlanKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateUsagePlanKeyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SendBounceResponsePrivate::SendBounceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendBounceResponsePrivate::SendBounceResponse(QXmlStreamReader &xml)
+void SendBounceResponsePrivate::parseSendBounceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendBounceResponse"));
     /// @todo

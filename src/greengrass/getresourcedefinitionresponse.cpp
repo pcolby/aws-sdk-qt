@@ -96,7 +96,7 @@ GetResourceDefinitionResponsePrivate::GetResourceDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetResourceDefinitionResponsePrivate::GetResourceDefinitionResponse(QXmlStreamReader &xml)
+void GetResourceDefinitionResponsePrivate::parseGetResourceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResourceDefinitionResponse"));
     /// @todo

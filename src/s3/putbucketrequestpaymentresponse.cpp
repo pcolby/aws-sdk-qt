@@ -96,7 +96,7 @@ PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponse(QXmlStreamReader &xml)
+void PutBucketRequestPaymentResponsePrivate::parsePutBucketRequestPaymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketRequestPaymentResponse"));
     /// @todo

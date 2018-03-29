@@ -96,7 +96,7 @@ CreateActivationResponsePrivate::CreateActivationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateActivationResponsePrivate::CreateActivationResponse(QXmlStreamReader &xml)
+void CreateActivationResponsePrivate::parseCreateActivationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateActivationResponse"));
     /// @todo

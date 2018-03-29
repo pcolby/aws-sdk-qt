@@ -96,7 +96,7 @@ DescribeEndpointTypesResponsePrivate::DescribeEndpointTypesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEndpointTypesResponsePrivate::DescribeEndpointTypesResponse(QXmlStreamReader &xml)
+void DescribeEndpointTypesResponsePrivate::parseDescribeEndpointTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEndpointTypesResponse"));
     /// @todo

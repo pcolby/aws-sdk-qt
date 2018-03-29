@@ -96,7 +96,7 @@ ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationResponse(QXmlStreamReader &xml)
+void ReplaceNetworkAclAssociationResponsePrivate::parseReplaceNetworkAclAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReplaceNetworkAclAssociationResponse"));
     /// @todo

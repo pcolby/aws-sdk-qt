@@ -96,7 +96,7 @@ DeleteSubscriptionResponsePrivate::DeleteSubscriptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSubscriptionResponsePrivate::DeleteSubscriptionResponse(QXmlStreamReader &xml)
+void DeleteSubscriptionResponsePrivate::parseDeleteSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionResponse"));
     /// @todo

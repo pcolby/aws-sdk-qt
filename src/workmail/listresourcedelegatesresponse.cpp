@@ -96,7 +96,7 @@ ListResourceDelegatesResponsePrivate::ListResourceDelegatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListResourceDelegatesResponsePrivate::ListResourceDelegatesResponse(QXmlStreamReader &xml)
+void ListResourceDelegatesResponsePrivate::parseListResourceDelegatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceDelegatesResponse"));
     /// @todo

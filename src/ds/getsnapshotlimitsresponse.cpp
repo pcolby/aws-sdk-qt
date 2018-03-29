@@ -96,7 +96,7 @@ GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponse(QXmlStreamReader &xml)
+void GetSnapshotLimitsResponsePrivate::parseGetSnapshotLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSnapshotLimitsResponse"));
     /// @todo

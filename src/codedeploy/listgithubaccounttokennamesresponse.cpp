@@ -96,7 +96,7 @@ ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponse(QXmlStreamReader &xml)
+void ListGitHubAccountTokenNamesResponsePrivate::parseListGitHubAccountTokenNamesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGitHubAccountTokenNamesResponse"));
     /// @todo

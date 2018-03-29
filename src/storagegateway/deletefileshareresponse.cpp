@@ -96,7 +96,7 @@ DeleteFileShareResponsePrivate::DeleteFileShareResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFileShareResponsePrivate::DeleteFileShareResponse(QXmlStreamReader &xml)
+void DeleteFileShareResponsePrivate::parseDeleteFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFileShareResponse"));
     /// @todo

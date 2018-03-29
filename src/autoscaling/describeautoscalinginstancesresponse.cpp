@@ -96,7 +96,7 @@ DescribeAutoScalingInstancesResponsePrivate::DescribeAutoScalingInstancesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAutoScalingInstancesResponsePrivate::DescribeAutoScalingInstancesResponse(QXmlStreamReader &xml)
+void DescribeAutoScalingInstancesResponsePrivate::parseDescribeAutoScalingInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutoScalingInstancesResponse"));
     /// @todo

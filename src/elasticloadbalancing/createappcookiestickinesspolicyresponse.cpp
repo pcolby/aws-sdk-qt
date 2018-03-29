@@ -96,7 +96,7 @@ CreateAppCookieStickinessPolicyResponsePrivate::CreateAppCookieStickinessPolicyR
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAppCookieStickinessPolicyResponsePrivate::CreateAppCookieStickinessPolicyResponse(QXmlStreamReader &xml)
+void CreateAppCookieStickinessPolicyResponsePrivate::parseCreateAppCookieStickinessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAppCookieStickinessPolicyResponse"));
     /// @todo

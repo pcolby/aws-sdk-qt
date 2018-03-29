@@ -96,7 +96,7 @@ ListEndpointConfigsResponsePrivate::ListEndpointConfigsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListEndpointConfigsResponsePrivate::ListEndpointConfigsResponse(QXmlStreamReader &xml)
+void ListEndpointConfigsResponsePrivate::parseListEndpointConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEndpointConfigsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponse(QXmlStreamReader &xml)
+void DeleteProgressUpdateStreamResponsePrivate::parseDeleteProgressUpdateStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProgressUpdateStreamResponse"));
     /// @todo

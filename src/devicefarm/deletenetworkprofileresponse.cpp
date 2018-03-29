@@ -96,7 +96,7 @@ DeleteNetworkProfileResponsePrivate::DeleteNetworkProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNetworkProfileResponsePrivate::DeleteNetworkProfileResponse(QXmlStreamReader &xml)
+void DeleteNetworkProfileResponsePrivate::parseDeleteNetworkProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkProfileResponse"));
     /// @todo

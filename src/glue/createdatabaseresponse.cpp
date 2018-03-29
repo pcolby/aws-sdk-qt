@@ -96,7 +96,7 @@ CreateDatabaseResponsePrivate::CreateDatabaseResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDatabaseResponsePrivate::CreateDatabaseResponse(QXmlStreamReader &xml)
+void CreateDatabaseResponsePrivate::parseCreateDatabaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDatabaseResponse"));
     /// @todo

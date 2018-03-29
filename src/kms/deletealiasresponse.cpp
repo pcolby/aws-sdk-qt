@@ -96,7 +96,7 @@ DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAliasResponsePrivate::DeleteAliasResponse(QXmlStreamReader &xml)
+void DeleteAliasResponsePrivate::parseDeleteAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAliasResponse"));
     /// @todo

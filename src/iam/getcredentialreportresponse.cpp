@@ -96,7 +96,7 @@ GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCredentialReportResponsePrivate::GetCredentialReportResponse(QXmlStreamReader &xml)
+void GetCredentialReportResponsePrivate::parseGetCredentialReportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCredentialReportResponse"));
     /// @todo

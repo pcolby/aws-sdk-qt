@@ -96,7 +96,7 @@ SetStatusResponsePrivate::SetStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetStatusResponsePrivate::SetStatusResponse(QXmlStreamReader &xml)
+void SetStatusResponsePrivate::parseSetStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetStatusResponse"));
     /// @todo

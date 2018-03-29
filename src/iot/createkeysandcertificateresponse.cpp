@@ -96,7 +96,7 @@ CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponse(QXmlStreamReader &xml)
+void CreateKeysAndCertificateResponsePrivate::parseCreateKeysAndCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateKeysAndCertificateResponse"));
     /// @todo

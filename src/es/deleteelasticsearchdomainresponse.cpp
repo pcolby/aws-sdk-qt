@@ -96,7 +96,7 @@ DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponse(QXmlStreamReader &xml)
+void DeleteElasticsearchDomainResponsePrivate::parseDeleteElasticsearchDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchDomainResponse"));
     /// @todo

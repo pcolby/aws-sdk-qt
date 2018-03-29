@@ -96,7 +96,7 @@ GetBucketTaggingResponsePrivate::GetBucketTaggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketTaggingResponsePrivate::GetBucketTaggingResponse(QXmlStreamReader &xml)
+void GetBucketTaggingResponsePrivate::parseGetBucketTaggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketTaggingResponse"));
     /// @todo

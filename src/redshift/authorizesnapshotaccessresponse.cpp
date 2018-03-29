@@ -96,7 +96,7 @@ AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponse(QXmlStreamReader &xml)
+void AuthorizeSnapshotAccessResponsePrivate::parseAuthorizeSnapshotAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeSnapshotAccessResponse"));
     /// @todo

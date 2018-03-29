@@ -96,7 +96,7 @@ ExecutePolicyResponsePrivate::ExecutePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExecutePolicyResponsePrivate::ExecutePolicyResponse(QXmlStreamReader &xml)
+void ExecutePolicyResponsePrivate::parseExecutePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExecutePolicyResponse"));
     /// @todo

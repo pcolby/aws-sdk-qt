@@ -96,7 +96,7 @@ ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponse(QXmlStreamReader &xml)
+void ImportKeyMaterialResponsePrivate::parseImportKeyMaterialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportKeyMaterialResponse"));
     /// @todo

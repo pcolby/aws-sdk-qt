@@ -96,7 +96,7 @@ GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponse(QXmlStreamReader &xml)
+void GetAccessKeyLastUsedResponsePrivate::parseGetAccessKeyLastUsedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccessKeyLastUsedResponse"));
     /// @todo

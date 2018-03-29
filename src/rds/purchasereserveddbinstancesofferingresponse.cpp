@@ -96,7 +96,7 @@ PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesO
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesOfferingResponse(QXmlStreamReader &xml)
+void PurchaseReservedDBInstancesOfferingResponsePrivate::parsePurchaseReservedDBInstancesOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedDBInstancesOfferingResponse"));
     /// @todo

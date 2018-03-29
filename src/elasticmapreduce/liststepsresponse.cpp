@@ -96,7 +96,7 @@ ListStepsResponsePrivate::ListStepsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListStepsResponsePrivate::ListStepsResponse(QXmlStreamReader &xml)
+void ListStepsResponsePrivate::parseListStepsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStepsResponse"));
     /// @todo

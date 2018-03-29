@@ -96,7 +96,7 @@ AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachInstancesResponsePrivate::AttachInstancesResponse(QXmlStreamReader &xml)
+void AttachInstancesResponsePrivate::parseAttachInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachInstancesResponse"));
     /// @todo

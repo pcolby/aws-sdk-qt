@@ -96,7 +96,7 @@ CreateEgressOnlyInternetGatewayResponsePrivate::CreateEgressOnlyInternetGatewayR
  *
  * @param  xml  XML stream to parse.
  */
-void CreateEgressOnlyInternetGatewayResponsePrivate::CreateEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml)
+void CreateEgressOnlyInternetGatewayResponsePrivate::parseCreateEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEgressOnlyInternetGatewayResponse"));
     /// @todo

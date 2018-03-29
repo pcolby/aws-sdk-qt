@@ -96,7 +96,7 @@ DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponse(QXmlStreamReader &xml)
+void DeleteReceiptRuleResponsePrivate::parseDeleteReceiptRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptRuleResponse"));
     /// @todo

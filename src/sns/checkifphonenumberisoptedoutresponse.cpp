@@ -96,7 +96,7 @@ CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutRespons
  *
  * @param  xml  XML stream to parse.
  */
-void CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml)
+void CheckIfPhoneNumberIsOptedOutResponsePrivate::parseCheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckIfPhoneNumberIsOptedOutResponse"));
     /// @todo

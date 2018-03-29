@@ -96,7 +96,7 @@ DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponse(QXmlStreamReader &xml)
+void DisableVpcClassicLinkResponsePrivate::parseDisableVpcClassicLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableVpcClassicLinkResponse"));
     /// @todo

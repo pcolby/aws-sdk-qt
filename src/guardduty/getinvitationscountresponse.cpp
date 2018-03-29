@@ -96,7 +96,7 @@ GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInvitationsCountResponsePrivate::GetInvitationsCountResponse(QXmlStreamReader &xml)
+void GetInvitationsCountResponsePrivate::parseGetInvitationsCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInvitationsCountResponse"));
     /// @todo

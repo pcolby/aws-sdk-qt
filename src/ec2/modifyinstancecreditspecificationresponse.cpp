@@ -96,7 +96,7 @@ ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificat
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificationResponse(QXmlStreamReader &xml)
+void ModifyInstanceCreditSpecificationResponsePrivate::parseModifyInstanceCreditSpecificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceCreditSpecificationResponse"));
     /// @todo

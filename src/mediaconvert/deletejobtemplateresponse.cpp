@@ -96,7 +96,7 @@ DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponse(QXmlStreamReader &xml)
+void DeleteJobTemplateResponsePrivate::parseDeleteJobTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobTemplateResponse"));
     /// @todo

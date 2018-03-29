@@ -96,7 +96,7 @@ DeleteThingShadowResponsePrivate::DeleteThingShadowResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteThingShadowResponsePrivate::DeleteThingShadowResponse(QXmlStreamReader &xml)
+void DeleteThingShadowResponsePrivate::parseDeleteThingShadowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingShadowResponse"));
     /// @todo

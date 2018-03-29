@@ -96,7 +96,7 @@ DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponse(QXmlStreamReader &xml)
+void DescribeRaidArraysResponsePrivate::parseDescribeRaidArraysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRaidArraysResponse"));
     /// @todo

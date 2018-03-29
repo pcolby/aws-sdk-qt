@@ -96,7 +96,7 @@ DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponse(QXmlStreamReader &xml)
+void DeleteAnalysisSchemeResponsePrivate::parseDeleteAnalysisSchemeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAnalysisSchemeResponse"));
     /// @todo

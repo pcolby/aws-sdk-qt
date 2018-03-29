@@ -96,7 +96,7 @@ DeleteUploadResponsePrivate::DeleteUploadResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteUploadResponsePrivate::DeleteUploadResponse(QXmlStreamReader &xml)
+void DeleteUploadResponsePrivate::parseDeleteUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUploadResponse"));
     /// @todo

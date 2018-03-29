@@ -96,7 +96,7 @@ ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponse(QXmlStreamReader &xml)
+void ResetDBParameterGroupResponsePrivate::parseResetDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetDBParameterGroupResponse"));
     /// @todo

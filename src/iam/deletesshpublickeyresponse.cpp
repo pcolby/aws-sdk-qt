@@ -96,7 +96,7 @@ DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponse(QXmlStreamReader &xml)
+void DeleteSSHPublicKeyResponsePrivate::parseDeleteSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSSHPublicKeyResponse"));
     /// @todo

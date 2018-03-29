@@ -96,7 +96,7 @@ ReportTaskProgressResponsePrivate::ReportTaskProgressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReportTaskProgressResponsePrivate::ReportTaskProgressResponse(QXmlStreamReader &xml)
+void ReportTaskProgressResponsePrivate::parseReportTaskProgressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReportTaskProgressResponse"));
     /// @todo

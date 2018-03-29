@@ -96,7 +96,7 @@ DeleteMembersResponsePrivate::DeleteMembersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteMembersResponsePrivate::DeleteMembersResponse(QXmlStreamReader &xml)
+void DeleteMembersResponsePrivate::parseDeleteMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMembersResponse"));
     /// @todo

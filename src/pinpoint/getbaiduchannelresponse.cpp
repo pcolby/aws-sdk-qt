@@ -96,7 +96,7 @@ GetBaiduChannelResponsePrivate::GetBaiduChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBaiduChannelResponsePrivate::GetBaiduChannelResponse(QXmlStreamReader &xml)
+void GetBaiduChannelResponsePrivate::parseGetBaiduChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBaiduChannelResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteDomainNameResponsePrivate::DeleteDomainNameResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDomainNameResponsePrivate::DeleteDomainNameResponse(QXmlStreamReader &xml)
+void DeleteDomainNameResponsePrivate::parseDeleteDomainNameResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDomainNameResponse"));
     /// @todo

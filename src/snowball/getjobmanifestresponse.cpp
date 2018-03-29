@@ -96,7 +96,7 @@ GetJobManifestResponsePrivate::GetJobManifestResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetJobManifestResponsePrivate::GetJobManifestResponse(QXmlStreamReader &xml)
+void GetJobManifestResponsePrivate::parseGetJobManifestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobManifestResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteCoreDefinitionResponsePrivate::DeleteCoreDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCoreDefinitionResponsePrivate::DeleteCoreDefinitionResponse(QXmlStreamReader &xml)
+void DeleteCoreDefinitionResponsePrivate::parseDeleteCoreDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCoreDefinitionResponse"));
     /// @todo

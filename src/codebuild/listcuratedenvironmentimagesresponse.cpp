@@ -96,7 +96,7 @@ ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml)
+void ListCuratedEnvironmentImagesResponsePrivate::parseListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCuratedEnvironmentImagesResponse"));
     /// @todo

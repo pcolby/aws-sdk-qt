@@ -96,7 +96,7 @@ GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponse(QXmlStreamReader &xml)
+void GetDirectoryLimitsResponsePrivate::parseGetDirectoryLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDirectoryLimitsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponse(QXmlStreamReader &xml)
+void PollForDecisionTaskResponsePrivate::parsePollForDecisionTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PollForDecisionTaskResponse"));
     /// @todo

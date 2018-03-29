@@ -96,7 +96,7 @@ PutRecordBatchResponsePrivate::PutRecordBatchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutRecordBatchResponsePrivate::PutRecordBatchResponse(QXmlStreamReader &xml)
+void PutRecordBatchResponsePrivate::parsePutRecordBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRecordBatchResponse"));
     /// @todo

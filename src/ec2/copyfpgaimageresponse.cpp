@@ -96,7 +96,7 @@ CopyFpgaImageResponsePrivate::CopyFpgaImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyFpgaImageResponsePrivate::CopyFpgaImageResponse(QXmlStreamReader &xml)
+void CopyFpgaImageResponsePrivate::parseCopyFpgaImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyFpgaImageResponse"));
     /// @todo

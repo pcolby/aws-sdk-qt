@@ -96,7 +96,7 @@ DeleteReplicationTaskResponsePrivate::DeleteReplicationTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReplicationTaskResponsePrivate::DeleteReplicationTaskResponse(QXmlStreamReader &xml)
+void DeleteReplicationTaskResponsePrivate::parseDeleteReplicationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationTaskResponse"));
     /// @todo

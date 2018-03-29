@@ -96,7 +96,7 @@ DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteClassifierResponsePrivate::DeleteClassifierResponse(QXmlStreamReader &xml)
+void DeleteClassifierResponsePrivate::parseDeleteClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClassifierResponse"));
     /// @todo

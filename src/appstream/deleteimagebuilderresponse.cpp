@@ -96,7 +96,7 @@ DeleteImageBuilderResponsePrivate::DeleteImageBuilderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteImageBuilderResponsePrivate::DeleteImageBuilderResponse(QXmlStreamReader &xml)
+void DeleteImageBuilderResponsePrivate::parseDeleteImageBuilderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteImageBuilderResponse"));
     /// @todo

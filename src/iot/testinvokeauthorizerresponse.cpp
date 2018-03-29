@@ -96,7 +96,7 @@ TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponse(QXmlStreamReader &xml)
+void TestInvokeAuthorizerResponsePrivate::parseTestInvokeAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestInvokeAuthorizerResponse"));
     /// @todo

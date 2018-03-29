@@ -96,7 +96,7 @@ ResolveAliasResponsePrivate::ResolveAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResolveAliasResponsePrivate::ResolveAliasResponse(QXmlStreamReader &xml)
+void ResolveAliasResponsePrivate::parseResolveAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveAliasResponse"));
     /// @todo

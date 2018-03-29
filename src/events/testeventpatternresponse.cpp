@@ -96,7 +96,7 @@ TestEventPatternResponsePrivate::TestEventPatternResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestEventPatternResponsePrivate::TestEventPatternResponse(QXmlStreamReader &xml)
+void TestEventPatternResponsePrivate::parseTestEventPatternResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestEventPatternResponse"));
     /// @todo

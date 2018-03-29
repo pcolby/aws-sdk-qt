@@ -96,7 +96,7 @@ DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayR
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml)
+void DeleteEgressOnlyInternetGatewayResponsePrivate::parseDeleteEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEgressOnlyInternetGatewayResponse"));
     /// @todo

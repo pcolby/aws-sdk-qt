@@ -96,7 +96,7 @@ TerminateInstancesResponsePrivate::TerminateInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateInstancesResponsePrivate::TerminateInstancesResponse(QXmlStreamReader &xml)
+void TerminateInstancesResponsePrivate::parseTerminateInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateInstancesResponse"));
     /// @todo

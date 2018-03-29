@@ -96,7 +96,7 @@ GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponse(QXmlStreamReader &xml)
+void GetServiceRoleForAccountResponsePrivate::parseGetServiceRoleForAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServiceRoleForAccountResponse"));
     /// @todo

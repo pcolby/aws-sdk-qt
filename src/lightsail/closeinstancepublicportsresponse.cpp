@@ -96,7 +96,7 @@ CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponse(QXmlStreamReader &xml)
+void CloseInstancePublicPortsResponsePrivate::parseCloseInstancePublicPortsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CloseInstancePublicPortsResponse"));
     /// @todo

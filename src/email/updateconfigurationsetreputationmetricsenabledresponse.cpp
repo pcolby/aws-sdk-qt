@@ -96,7 +96,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurati
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurationSetReputationMetricsEnabledResponse(QXmlStreamReader &xml)
+void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::parseUpdateConfigurationSetReputationMetricsEnabledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetReputationMetricsEnabledResponse"));
     /// @todo

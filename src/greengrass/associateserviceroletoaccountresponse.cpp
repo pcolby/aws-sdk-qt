@@ -96,7 +96,7 @@ AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountRespo
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountResponse(QXmlStreamReader &xml)
+void AssociateServiceRoleToAccountResponsePrivate::parseAssociateServiceRoleToAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateServiceRoleToAccountResponse"));
     /// @todo

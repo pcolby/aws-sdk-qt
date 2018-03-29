@@ -96,7 +96,7 @@ DeleteByteMatchSetResponsePrivate::DeleteByteMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteByteMatchSetResponsePrivate::DeleteByteMatchSetResponse(QXmlStreamReader &xml)
+void DeleteByteMatchSetResponsePrivate::parseDeleteByteMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteByteMatchSetResponse"));
     /// @todo

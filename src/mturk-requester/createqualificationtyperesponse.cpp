@@ -96,7 +96,7 @@ CreateQualificationTypeResponsePrivate::CreateQualificationTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateQualificationTypeResponsePrivate::CreateQualificationTypeResponse(QXmlStreamReader &xml)
+void CreateQualificationTypeResponsePrivate::parseCreateQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateQualificationTypeResponse"));
     /// @todo

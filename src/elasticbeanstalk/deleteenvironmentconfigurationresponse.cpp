@@ -96,7 +96,7 @@ DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationRes
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml)
+void DeleteEnvironmentConfigurationResponsePrivate::parseDeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentConfigurationResponse"));
     /// @todo

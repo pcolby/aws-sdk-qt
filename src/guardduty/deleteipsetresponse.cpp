@@ -96,7 +96,7 @@ DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteIPSetResponsePrivate::DeleteIPSetResponse(QXmlStreamReader &xml)
+void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIPSetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponse(QXmlStreamReader &xml)
+void DescribeOperatingSystemsResponsePrivate::parseDescribeOperatingSystemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOperatingSystemsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PublishSchemaResponsePrivate::PublishSchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PublishSchemaResponsePrivate::PublishSchemaResponse(QXmlStreamReader &xml)
+void PublishSchemaResponsePrivate::parsePublishSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PublishSchemaResponse"));
     /// @todo

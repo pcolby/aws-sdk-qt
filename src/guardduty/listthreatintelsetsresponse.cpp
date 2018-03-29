@@ -96,7 +96,7 @@ ListThreatIntelSetsResponsePrivate::ListThreatIntelSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListThreatIntelSetsResponsePrivate::ListThreatIntelSetsResponse(QXmlStreamReader &xml)
+void ListThreatIntelSetsResponsePrivate::parseListThreatIntelSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListThreatIntelSetsResponse"));
     /// @todo

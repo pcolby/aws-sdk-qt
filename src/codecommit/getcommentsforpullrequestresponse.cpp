@@ -96,7 +96,7 @@ GetCommentsForPullRequestResponsePrivate::GetCommentsForPullRequestResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void GetCommentsForPullRequestResponsePrivate::GetCommentsForPullRequestResponse(QXmlStreamReader &xml)
+void GetCommentsForPullRequestResponsePrivate::parseGetCommentsForPullRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCommentsForPullRequestResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponse(QXmlStreamReader &xml)
+void DescribeProductAsAdminResponsePrivate::parseDescribeProductAsAdminResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeProductAsAdminResponse"));
     /// @todo

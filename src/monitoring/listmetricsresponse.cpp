@@ -96,7 +96,7 @@ ListMetricsResponsePrivate::ListMetricsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListMetricsResponsePrivate::ListMetricsResponse(QXmlStreamReader &xml)
+void ListMetricsResponsePrivate::parseListMetricsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListMetricsResponse"));
     /// @todo

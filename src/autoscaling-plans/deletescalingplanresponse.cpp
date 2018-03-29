@@ -96,7 +96,7 @@ DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponse(QXmlStreamReader &xml)
+void DeleteScalingPlanResponsePrivate::parseDeleteScalingPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteScalingPlanResponse"));
     /// @todo

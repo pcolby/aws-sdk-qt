@@ -96,7 +96,7 @@ DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSubnetsResponsePrivate::DescribeSubnetsResponse(QXmlStreamReader &xml)
+void DescribeSubnetsResponsePrivate::parseDescribeSubnetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubnetsResponse"));
     /// @todo

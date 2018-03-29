@@ -96,7 +96,7 @@ CreateBGPPeerResponsePrivate::CreateBGPPeerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBGPPeerResponsePrivate::CreateBGPPeerResponse(QXmlStreamReader &xml)
+void CreateBGPPeerResponsePrivate::parseCreateBGPPeerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBGPPeerResponse"));
     /// @todo

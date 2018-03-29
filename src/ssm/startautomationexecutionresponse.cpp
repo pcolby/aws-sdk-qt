@@ -96,7 +96,7 @@ StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponse(QXmlStreamReader &xml)
+void StartAutomationExecutionResponsePrivate::parseStartAutomationExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartAutomationExecutionResponse"));
     /// @todo

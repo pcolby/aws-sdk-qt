@@ -96,7 +96,7 @@ DeleteAdmChannelResponsePrivate::DeleteAdmChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAdmChannelResponsePrivate::DeleteAdmChannelResponse(QXmlStreamReader &xml)
+void DeleteAdmChannelResponsePrivate::parseDeleteAdmChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAdmChannelResponse"));
     /// @todo

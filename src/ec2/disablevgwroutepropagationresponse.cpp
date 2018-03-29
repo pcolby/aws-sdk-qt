@@ -96,7 +96,7 @@ DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationResponse(QXmlStreamReader &xml)
+void DisableVgwRoutePropagationResponsePrivate::parseDisableVgwRoutePropagationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableVgwRoutePropagationResponse"));
     /// @todo

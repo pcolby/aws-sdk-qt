@@ -96,7 +96,7 @@ ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
+void ListClosedWorkflowExecutionsResponsePrivate::parseListClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListClosedWorkflowExecutionsResponse"));
     /// @todo

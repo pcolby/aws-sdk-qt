@@ -96,7 +96,7 @@ ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponse(QXmlStreamReader &xml)
+void ListAttachedPoliciesResponsePrivate::parseListAttachedPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAttachedPoliciesResponse"));
     /// @todo

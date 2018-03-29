@@ -96,7 +96,7 @@ CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponse(QXmlStreamReader &xml)
+void CreateServiceLinkedRoleResponsePrivate::parseCreateServiceLinkedRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateServiceLinkedRoleResponse"));
     /// @todo

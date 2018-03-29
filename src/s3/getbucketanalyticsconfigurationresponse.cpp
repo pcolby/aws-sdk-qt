@@ -96,7 +96,7 @@ GetBucketAnalyticsConfigurationResponsePrivate::GetBucketAnalyticsConfigurationR
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketAnalyticsConfigurationResponsePrivate::GetBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml)
+void GetBucketAnalyticsConfigurationResponsePrivate::parseGetBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAnalyticsConfigurationResponse"));
     /// @todo

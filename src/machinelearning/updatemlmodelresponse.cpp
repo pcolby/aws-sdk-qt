@@ -96,7 +96,7 @@ UpdateMLModelResponsePrivate::UpdateMLModelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateMLModelResponsePrivate::UpdateMLModelResponse(QXmlStreamReader &xml)
+void UpdateMLModelResponsePrivate::parseUpdateMLModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateMLModelResponse"));
     /// @todo

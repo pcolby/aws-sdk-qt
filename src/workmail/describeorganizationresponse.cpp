@@ -96,7 +96,7 @@ DescribeOrganizationResponsePrivate::DescribeOrganizationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeOrganizationResponsePrivate::DescribeOrganizationResponse(QXmlStreamReader &xml)
+void DescribeOrganizationResponsePrivate::parseDescribeOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrganizationResponse"));
     /// @todo

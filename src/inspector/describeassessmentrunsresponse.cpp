@@ -96,7 +96,7 @@ DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponse(QXmlStreamReader &xml)
+void DescribeAssessmentRunsResponsePrivate::parseDescribeAssessmentRunsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAssessmentRunsResponse"));
     /// @todo

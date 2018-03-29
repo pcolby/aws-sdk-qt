@@ -96,7 +96,7 @@ PutBucketCorsResponsePrivate::PutBucketCorsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketCorsResponsePrivate::PutBucketCorsResponse(QXmlStreamReader &xml)
+void PutBucketCorsResponsePrivate::parsePutBucketCorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketCorsResponse"));
     /// @todo

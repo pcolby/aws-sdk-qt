@@ -96,7 +96,7 @@ DeactivateUserResponsePrivate::DeactivateUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeactivateUserResponsePrivate::DeactivateUserResponse(QXmlStreamReader &xml)
+void DeactivateUserResponsePrivate::parseDeactivateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeactivateUserResponse"));
     /// @todo

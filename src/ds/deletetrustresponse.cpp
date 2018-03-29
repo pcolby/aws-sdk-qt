@@ -96,7 +96,7 @@ DeleteTrustResponsePrivate::DeleteTrustResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTrustResponsePrivate::DeleteTrustResponse(QXmlStreamReader &xml)
+void DeleteTrustResponsePrivate::parseDeleteTrustResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrustResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponse(QXmlStreamReader &xml)
+void DescribeCopyProductStatusResponsePrivate::parseDescribeCopyProductStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCopyProductStatusResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplic
  *
  * @param  xml  XML stream to parse.
  */
-void ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml)
+void ListEndpointsByPlatformApplicationResponsePrivate::parseListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEndpointsByPlatformApplicationResponse"));
     /// @todo

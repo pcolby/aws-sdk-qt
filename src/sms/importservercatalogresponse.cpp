@@ -96,7 +96,7 @@ ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportServerCatalogResponsePrivate::ImportServerCatalogResponse(QXmlStreamReader &xml)
+void ImportServerCatalogResponsePrivate::parseImportServerCatalogResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportServerCatalogResponse"));
     /// @todo

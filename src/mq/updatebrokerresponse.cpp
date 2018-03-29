@@ -96,7 +96,7 @@ UpdateBrokerResponsePrivate::UpdateBrokerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateBrokerResponsePrivate::UpdateBrokerResponse(QXmlStreamReader &xml)
+void UpdateBrokerResponsePrivate::parseUpdateBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBrokerResponse"));
     /// @todo

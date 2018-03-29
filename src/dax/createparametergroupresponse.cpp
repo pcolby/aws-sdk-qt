@@ -96,7 +96,7 @@ CreateParameterGroupResponsePrivate::CreateParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateParameterGroupResponsePrivate::CreateParameterGroupResponse(QXmlStreamReader &xml)
+void CreateParameterGroupResponsePrivate::parseCreateParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateParameterGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ModifyHapgResponsePrivate::ModifyHapgResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyHapgResponsePrivate::ModifyHapgResponse(QXmlStreamReader &xml)
+void ModifyHapgResponsePrivate::parseModifyHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyHapgResponse"));
     /// @todo

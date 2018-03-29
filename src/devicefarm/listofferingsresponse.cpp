@@ -96,7 +96,7 @@ ListOfferingsResponsePrivate::ListOfferingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListOfferingsResponsePrivate::ListOfferingsResponse(QXmlStreamReader &xml)
+void ListOfferingsResponsePrivate::parseListOfferingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingsResponse"));
     /// @todo

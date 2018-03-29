@@ -96,7 +96,7 @@ DescribeTrailsResponsePrivate::DescribeTrailsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTrailsResponsePrivate::DescribeTrailsResponse(QXmlStreamReader &xml)
+void DescribeTrailsResponsePrivate::parseDescribeTrailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrailsResponse"));
     /// @todo

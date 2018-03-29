@@ -96,7 +96,7 @@ ModifyRuleResponsePrivate::ModifyRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyRuleResponsePrivate::ModifyRuleResponse(QXmlStreamReader &xml)
+void ModifyRuleResponsePrivate::parseModifyRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyRuleResponse"));
     /// @todo

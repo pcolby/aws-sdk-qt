@@ -96,7 +96,7 @@ DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponse(QXmlStreamReader &xml)
+void DeregisterFromWorkMailResponsePrivate::parseDeregisterFromWorkMailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterFromWorkMailResponse"));
     /// @todo

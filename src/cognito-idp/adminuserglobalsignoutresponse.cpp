@@ -96,7 +96,7 @@ AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponse(QXmlStreamReader &xml)
+void AdminUserGlobalSignOutResponsePrivate::parseAdminUserGlobalSignOutResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUserGlobalSignOutResponse"));
     /// @todo

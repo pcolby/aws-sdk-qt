@@ -96,7 +96,7 @@ AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponse(QXmlStreamReader &xml)
+void AttachLoadBalancerToSubnetsResponsePrivate::parseAttachLoadBalancerToSubnetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerToSubnetsResponse"));
     /// @todo

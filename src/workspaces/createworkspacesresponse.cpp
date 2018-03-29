@@ -96,7 +96,7 @@ CreateWorkspacesResponsePrivate::CreateWorkspacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateWorkspacesResponsePrivate::CreateWorkspacesResponse(QXmlStreamReader &xml)
+void CreateWorkspacesResponsePrivate::parseCreateWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateWorkspacesResponse"));
     /// @todo

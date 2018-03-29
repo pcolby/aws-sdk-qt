@@ -96,7 +96,7 @@ AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachTypedLinkResponsePrivate::AttachTypedLinkResponse(QXmlStreamReader &xml)
+void AttachTypedLinkResponsePrivate::parseAttachTypedLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachTypedLinkResponse"));
     /// @todo

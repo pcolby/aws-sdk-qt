@@ -96,7 +96,7 @@ RefreshCacheResponsePrivate::RefreshCacheResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RefreshCacheResponsePrivate::RefreshCacheResponse(QXmlStreamReader &xml)
+void RefreshCacheResponsePrivate::parseRefreshCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RefreshCacheResponse"));
     /// @todo

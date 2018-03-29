@@ -96,7 +96,7 @@ ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponse(QXmlStreamReader &xml)
+void ModifyLaunchTemplateResponsePrivate::parseModifyLaunchTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyLaunchTemplateResponse"));
     /// @todo

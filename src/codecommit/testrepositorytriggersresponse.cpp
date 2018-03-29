@@ -96,7 +96,7 @@ TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponse(QXmlStreamReader &xml)
+void TestRepositoryTriggersResponsePrivate::parseTestRepositoryTriggersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestRepositoryTriggersResponse"));
     /// @todo

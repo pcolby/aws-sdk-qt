@@ -96,7 +96,7 @@ RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponse(QXmlStreamReader &xml)
+void RecordActivityTaskHeartbeatResponsePrivate::parseRecordActivityTaskHeartbeatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RecordActivityTaskHeartbeatResponse"));
     /// @todo

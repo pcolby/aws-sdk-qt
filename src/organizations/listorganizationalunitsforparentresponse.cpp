@@ -96,7 +96,7 @@ ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParen
  *
  * @param  xml  XML stream to parse.
  */
-void ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml)
+void ListOrganizationalUnitsForParentResponsePrivate::parseListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOrganizationalUnitsForParentResponse"));
     /// @todo

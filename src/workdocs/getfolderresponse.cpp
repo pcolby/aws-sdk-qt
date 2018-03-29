@@ -96,7 +96,7 @@ GetFolderResponsePrivate::GetFolderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetFolderResponsePrivate::GetFolderResponse(QXmlStreamReader &xml)
+void GetFolderResponsePrivate::parseGetFolderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFolderResponse"));
     /// @todo

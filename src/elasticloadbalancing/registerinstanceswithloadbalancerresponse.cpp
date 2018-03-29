@@ -96,7 +96,7 @@ RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalan
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml)
+void RegisterInstancesWithLoadBalancerResponsePrivate::parseRegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterInstancesWithLoadBalancerResponse"));
     /// @todo

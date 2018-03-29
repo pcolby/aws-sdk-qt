@@ -96,7 +96,7 @@ RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponse(QXmlStreamReader &xml)
+void RegisterJobDefinitionResponsePrivate::parseRegisterJobDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterJobDefinitionResponse"));
     /// @todo

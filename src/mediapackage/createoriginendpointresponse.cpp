@@ -96,7 +96,7 @@ CreateOriginEndpointResponsePrivate::CreateOriginEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateOriginEndpointResponsePrivate::CreateOriginEndpointResponse(QXmlStreamReader &xml)
+void CreateOriginEndpointResponsePrivate::parseCreateOriginEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOriginEndpointResponse"));
     /// @todo

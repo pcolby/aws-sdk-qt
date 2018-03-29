@@ -96,7 +96,7 @@ ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponse(QXmlStreamReader &xml)
+void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRateBasedRulesResponse"));
     /// @todo

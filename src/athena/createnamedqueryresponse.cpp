@@ -96,7 +96,7 @@ CreateNamedQueryResponsePrivate::CreateNamedQueryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNamedQueryResponsePrivate::CreateNamedQueryResponse(QXmlStreamReader &xml)
+void CreateNamedQueryResponsePrivate::parseCreateNamedQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNamedQueryResponse"));
     /// @todo

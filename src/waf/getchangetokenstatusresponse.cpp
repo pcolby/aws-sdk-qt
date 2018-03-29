@@ -96,7 +96,7 @@ GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponse(QXmlStreamReader &xml)
+void GetChangeTokenStatusResponsePrivate::parseGetChangeTokenStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetChangeTokenStatusResponse"));
     /// @todo

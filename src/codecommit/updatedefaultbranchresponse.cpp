@@ -96,7 +96,7 @@ UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponse(QXmlStreamReader &xml)
+void UpdateDefaultBranchResponsePrivate::parseUpdateDefaultBranchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDefaultBranchResponse"));
     /// @todo

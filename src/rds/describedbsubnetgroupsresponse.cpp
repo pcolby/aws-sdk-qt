@@ -96,7 +96,7 @@ DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponse(QXmlStreamReader &xml)
+void DescribeDBSubnetGroupsResponsePrivate::parseDescribeDBSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBSubnetGroupsResponse"));
     /// @todo

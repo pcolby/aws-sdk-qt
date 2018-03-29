@@ -96,7 +96,7 @@ DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponse(QXmlStreamReader &xml)
+void DescribeLoggingStatusResponsePrivate::parseDescribeLoggingStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoggingStatusResponse"));
     /// @todo

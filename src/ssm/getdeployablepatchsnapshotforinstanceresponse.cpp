@@ -96,7 +96,7 @@ GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshot
  *
  * @param  xml  XML stream to parse.
  */
-void GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshotForInstanceResponse(QXmlStreamReader &xml)
+void GetDeployablePatchSnapshotForInstanceResponsePrivate::parseGetDeployablePatchSnapshotForInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeployablePatchSnapshotForInstanceResponse"));
     /// @todo

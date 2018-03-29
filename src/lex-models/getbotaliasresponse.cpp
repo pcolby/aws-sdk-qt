@@ -96,7 +96,7 @@ GetBotAliasResponsePrivate::GetBotAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBotAliasResponsePrivate::GetBotAliasResponse(QXmlStreamReader &xml)
+void GetBotAliasResponsePrivate::parseGetBotAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBotAliasResponse"));
     /// @todo

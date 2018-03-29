@@ -96,7 +96,7 @@ DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusResponse(QXmlStreamReader &xml)
+void DescribeTableRestoreStatusResponsePrivate::parseDescribeTableRestoreStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableRestoreStatusResponse"));
     /// @todo

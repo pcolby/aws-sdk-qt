@@ -96,7 +96,7 @@ DeleteIntegrationResponsePrivate::DeleteIntegrationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteIntegrationResponsePrivate::DeleteIntegrationResponse(QXmlStreamReader &xml)
+void DeleteIntegrationResponsePrivate::parseDeleteIntegrationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntegrationResponse"));
     /// @todo

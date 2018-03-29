@@ -96,7 +96,7 @@ DeleteLunaClientResponsePrivate::DeleteLunaClientResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLunaClientResponsePrivate::DeleteLunaClientResponse(QXmlStreamReader &xml)
+void DeleteLunaClientResponsePrivate::parseDeleteLunaClientResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLunaClientResponse"));
     /// @todo

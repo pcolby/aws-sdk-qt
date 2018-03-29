@@ -96,7 +96,7 @@ DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConnectionResponsePrivate::DeleteConnectionResponse(QXmlStreamReader &xml)
+void DeleteConnectionResponsePrivate::parseDeleteConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConnectionResponse"));
     /// @todo

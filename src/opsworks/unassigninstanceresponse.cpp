@@ -96,7 +96,7 @@ UnassignInstanceResponsePrivate::UnassignInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnassignInstanceResponsePrivate::UnassignInstanceResponse(QXmlStreamReader &xml)
+void UnassignInstanceResponsePrivate::parseUnassignInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnassignInstanceResponse"));
     /// @todo

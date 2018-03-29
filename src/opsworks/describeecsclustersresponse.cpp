@@ -96,7 +96,7 @@ DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponse(QXmlStreamReader &xml)
+void DescribeEcsClustersResponsePrivate::parseDescribeEcsClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEcsClustersResponse"));
     /// @todo

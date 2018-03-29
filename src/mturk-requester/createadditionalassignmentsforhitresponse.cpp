@@ -96,7 +96,7 @@ CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsFor
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsForHITResponse(QXmlStreamReader &xml)
+void CreateAdditionalAssignmentsForHITResponsePrivate::parseCreateAdditionalAssignmentsForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAdditionalAssignmentsForHITResponse"));
     /// @todo

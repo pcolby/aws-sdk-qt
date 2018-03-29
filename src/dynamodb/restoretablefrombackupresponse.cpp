@@ -96,7 +96,7 @@ RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponse(QXmlStreamReader &xml)
+void RestoreTableFromBackupResponsePrivate::parseRestoreTableFromBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableFromBackupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponse(QXmlStreamReader &xml)
+void ListTargetsByRuleResponsePrivate::parseListTargetsByRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTargetsByRuleResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponse(QXmlStreamReader &xml)
+void ListUniqueProblemsResponsePrivate::parseListUniqueProblemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListUniqueProblemsResponse"));
     /// @todo

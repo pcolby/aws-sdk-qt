@@ -96,7 +96,7 @@ SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponse(QXmlStreamReader &xml)
+void SetLocalConsolePasswordResponsePrivate::parseSetLocalConsolePasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLocalConsolePasswordResponse"));
     /// @todo

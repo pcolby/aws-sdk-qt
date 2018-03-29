@@ -96,7 +96,7 @@ DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponse(QXmlStreamReader &xml)
+void DescribePlatformVersionResponsePrivate::parseDescribePlatformVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePlatformVersionResponse"));
     /// @todo

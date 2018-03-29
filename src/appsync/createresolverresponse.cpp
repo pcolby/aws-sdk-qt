@@ -96,7 +96,7 @@ CreateResolverResponsePrivate::CreateResolverResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateResolverResponsePrivate::CreateResolverResponse(QXmlStreamReader &xml)
+void CreateResolverResponsePrivate::parseCreateResolverResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateResolverResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeVpcAttributeResponsePrivate::DescribeVpcAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVpcAttributeResponsePrivate::DescribeVpcAttributeResponse(QXmlStreamReader &xml)
+void DescribeVpcAttributeResponsePrivate::parseDescribeVpcAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcAttributeResponse"));
     /// @todo

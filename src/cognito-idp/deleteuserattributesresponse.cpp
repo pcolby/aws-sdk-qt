@@ -96,7 +96,7 @@ DeleteUserAttributesResponsePrivate::DeleteUserAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteUserAttributesResponsePrivate::DeleteUserAttributesResponse(QXmlStreamReader &xml)
+void DeleteUserAttributesResponsePrivate::parseDeleteUserAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserAttributesResponse"));
     /// @todo

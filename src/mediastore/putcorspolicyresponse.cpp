@@ -96,7 +96,7 @@ PutCorsPolicyResponsePrivate::PutCorsPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutCorsPolicyResponsePrivate::PutCorsPolicyResponse(QXmlStreamReader &xml)
+void PutCorsPolicyResponsePrivate::parsePutCorsPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutCorsPolicyResponse"));
     /// @todo

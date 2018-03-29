@@ -96,7 +96,7 @@ ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponse(QXmlStreamReader &xml)
+void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationSetsResponse"));
     /// @todo

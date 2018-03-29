@@ -96,7 +96,7 @@ CreateLabelsResponsePrivate::CreateLabelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLabelsResponsePrivate::CreateLabelsResponse(QXmlStreamReader &xml)
+void CreateLabelsResponsePrivate::parseCreateLabelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLabelsResponse"));
     /// @todo

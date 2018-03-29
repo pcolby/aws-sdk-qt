@@ -96,7 +96,7 @@ ExportBundleResponsePrivate::ExportBundleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExportBundleResponsePrivate::ExportBundleResponse(QXmlStreamReader &xml)
+void ExportBundleResponsePrivate::parseExportBundleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportBundleResponse"));
     /// @todo

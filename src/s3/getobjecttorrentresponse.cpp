@@ -96,7 +96,7 @@ GetObjectTorrentResponsePrivate::GetObjectTorrentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetObjectTorrentResponsePrivate::GetObjectTorrentResponse(QXmlStreamReader &xml)
+void GetObjectTorrentResponsePrivate::parseGetObjectTorrentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetObjectTorrentResponse"));
     /// @todo

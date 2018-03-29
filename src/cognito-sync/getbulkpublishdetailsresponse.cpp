@@ -96,7 +96,7 @@ GetBulkPublishDetailsResponsePrivate::GetBulkPublishDetailsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBulkPublishDetailsResponsePrivate::GetBulkPublishDetailsResponse(QXmlStreamReader &xml)
+void GetBulkPublishDetailsResponsePrivate::parseGetBulkPublishDetailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBulkPublishDetailsResponse"));
     /// @todo

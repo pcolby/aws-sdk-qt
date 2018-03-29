@@ -96,7 +96,7 @@ GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponse(QXmlStreamReader &xml)
+void GetLaunchTemplateDataResponsePrivate::parseGetLaunchTemplateDataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLaunchTemplateDataResponse"));
     /// @todo

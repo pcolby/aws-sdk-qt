@@ -96,7 +96,7 @@ ResendConfirmationCodeResponsePrivate::ResendConfirmationCodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResendConfirmationCodeResponsePrivate::ResendConfirmationCodeResponse(QXmlStreamReader &xml)
+void ResendConfirmationCodeResponsePrivate::parseResendConfirmationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResendConfirmationCodeResponse"));
     /// @todo

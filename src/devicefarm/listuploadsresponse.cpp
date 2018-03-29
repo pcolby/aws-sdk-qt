@@ -96,7 +96,7 @@ ListUploadsResponsePrivate::ListUploadsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListUploadsResponsePrivate::ListUploadsResponse(QXmlStreamReader &xml)
+void ListUploadsResponsePrivate::parseListUploadsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListUploadsResponse"));
     /// @todo

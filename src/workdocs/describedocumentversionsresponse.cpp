@@ -96,7 +96,7 @@ DescribeDocumentVersionsResponsePrivate::DescribeDocumentVersionsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDocumentVersionsResponsePrivate::DescribeDocumentVersionsResponse(QXmlStreamReader &xml)
+void DescribeDocumentVersionsResponsePrivate::parseDescribeDocumentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentVersionsResponse"));
     /// @todo

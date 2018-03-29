@@ -96,7 +96,7 @@ DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCertificatesResponsePrivate::DescribeCertificatesResponse(QXmlStreamReader &xml)
+void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCertificatesResponse"));
     /// @todo

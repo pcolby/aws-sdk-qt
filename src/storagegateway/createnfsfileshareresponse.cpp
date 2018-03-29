@@ -96,7 +96,7 @@ CreateNFSFileShareResponsePrivate::CreateNFSFileShareResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNFSFileShareResponsePrivate::CreateNFSFileShareResponse(QXmlStreamReader &xml)
+void CreateNFSFileShareResponsePrivate::parseCreateNFSFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNFSFileShareResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PutJobFailureResultResponsePrivate::PutJobFailureResultResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutJobFailureResultResponsePrivate::PutJobFailureResultResponse(QXmlStreamReader &xml)
+void PutJobFailureResultResponsePrivate::parsePutJobFailureResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutJobFailureResultResponse"));
     /// @todo

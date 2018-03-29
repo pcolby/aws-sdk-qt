@@ -96,7 +96,7 @@ UpdateIdentityPoolResponsePrivate::UpdateIdentityPoolResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateIdentityPoolResponsePrivate::UpdateIdentityPoolResponse(QXmlStreamReader &xml)
+void UpdateIdentityPoolResponsePrivate::parseUpdateIdentityPoolResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateIdentityPoolResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeRespo
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml)
+void RestoreDBClusterToPointInTimeResponsePrivate::parseRestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterToPointInTimeResponse"));
     /// @todo

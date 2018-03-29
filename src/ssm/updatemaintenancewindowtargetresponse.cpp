@@ -96,7 +96,7 @@ UpdateMaintenanceWindowTargetResponsePrivate::UpdateMaintenanceWindowTargetRespo
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateMaintenanceWindowTargetResponsePrivate::UpdateMaintenanceWindowTargetResponse(QXmlStreamReader &xml)
+void UpdateMaintenanceWindowTargetResponsePrivate::parseUpdateMaintenanceWindowTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateMaintenanceWindowTargetResponse"));
     /// @todo

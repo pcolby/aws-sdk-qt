@@ -96,7 +96,7 @@ DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponse(QXmlStreamReader &xml)
+void DefineAnalysisSchemeResponsePrivate::parseDefineAnalysisSchemeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineAnalysisSchemeResponse"));
     /// @todo

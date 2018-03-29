@@ -96,7 +96,7 @@ CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResponse(QXmlStreamReader &xml)
+void CreateConfigurationTemplateResponsePrivate::parseCreateConfigurationTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationTemplateResponse"));
     /// @todo

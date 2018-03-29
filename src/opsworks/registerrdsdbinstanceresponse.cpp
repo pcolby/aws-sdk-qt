@@ -96,7 +96,7 @@ RegisterRdsDbInstanceResponsePrivate::RegisterRdsDbInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterRdsDbInstanceResponsePrivate::RegisterRdsDbInstanceResponse(QXmlStreamReader &xml)
+void RegisterRdsDbInstanceResponsePrivate::parseRegisterRdsDbInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterRdsDbInstanceResponse"));
     /// @todo

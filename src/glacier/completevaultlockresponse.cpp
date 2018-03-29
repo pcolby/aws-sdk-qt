@@ -96,7 +96,7 @@ CompleteVaultLockResponsePrivate::CompleteVaultLockResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CompleteVaultLockResponsePrivate::CompleteVaultLockResponse(QXmlStreamReader &xml)
+void CompleteVaultLockResponsePrivate::parseCompleteVaultLockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteVaultLockResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponse(QXmlStreamReader &xml)
+void DeleteApnsVoipChannelResponsePrivate::parseDeleteApnsVoipChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApnsVoipChannelResponse"));
     /// @todo

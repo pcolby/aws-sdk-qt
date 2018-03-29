@@ -96,7 +96,7 @@ DescribeReservedNodesResponsePrivate::DescribeReservedNodesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeReservedNodesResponsePrivate::DescribeReservedNodesResponse(QXmlStreamReader &xml)
+void DescribeReservedNodesResponsePrivate::parseDescribeReservedNodesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedNodesResponse"));
     /// @todo

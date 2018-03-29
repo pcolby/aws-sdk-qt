@@ -96,7 +96,7 @@ GetBuiltinIntentsResponsePrivate::GetBuiltinIntentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBuiltinIntentsResponsePrivate::GetBuiltinIntentsResponse(QXmlStreamReader &xml)
+void GetBuiltinIntentsResponsePrivate::parseGetBuiltinIntentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBuiltinIntentsResponse"));
     /// @todo

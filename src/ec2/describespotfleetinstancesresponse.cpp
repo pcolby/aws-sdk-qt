@@ -96,7 +96,7 @@ DescribeSpotFleetInstancesResponsePrivate::DescribeSpotFleetInstancesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSpotFleetInstancesResponsePrivate::DescribeSpotFleetInstancesResponse(QXmlStreamReader &xml)
+void DescribeSpotFleetInstancesResponsePrivate::parseDescribeSpotFleetInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotFleetInstancesResponse"));
     /// @todo

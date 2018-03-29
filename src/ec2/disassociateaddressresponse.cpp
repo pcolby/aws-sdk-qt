@@ -96,7 +96,7 @@ DisassociateAddressResponsePrivate::DisassociateAddressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateAddressResponsePrivate::DisassociateAddressResponse(QXmlStreamReader &xml)
+void DisassociateAddressResponsePrivate::parseDisassociateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateAddressResponse"));
     /// @todo

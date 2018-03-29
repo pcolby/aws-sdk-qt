@@ -96,7 +96,7 @@ ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponse(QXmlStreamReader &xml)
+void ListAcceptedPortfolioSharesResponsePrivate::parseListAcceptedPortfolioSharesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAcceptedPortfolioSharesResponse"));
     /// @todo

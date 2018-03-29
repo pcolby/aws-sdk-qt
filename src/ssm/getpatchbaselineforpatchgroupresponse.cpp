@@ -96,7 +96,7 @@ GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroupRespo
  *
  * @param  xml  XML stream to parse.
  */
-void GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
+void GetPatchBaselineForPatchGroupResponsePrivate::parseGetPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPatchBaselineForPatchGroupResponse"));
     /// @todo

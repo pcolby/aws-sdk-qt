@@ -96,7 +96,7 @@ AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponse(QXmlStreamReader &xml)
+void AddCommunicationToCaseResponsePrivate::parseAddCommunicationToCaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddCommunicationToCaseResponse"));
     /// @todo

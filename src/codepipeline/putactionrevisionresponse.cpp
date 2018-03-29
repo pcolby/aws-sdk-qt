@@ -96,7 +96,7 @@ PutActionRevisionResponsePrivate::PutActionRevisionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutActionRevisionResponsePrivate::PutActionRevisionResponse(QXmlStreamReader &xml)
+void PutActionRevisionResponsePrivate::parsePutActionRevisionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutActionRevisionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetReservedInstancesExchangeQuoteResponsePrivate::GetReservedInstancesExchangeQu
  *
  * @param  xml  XML stream to parse.
  */
-void GetReservedInstancesExchangeQuoteResponsePrivate::GetReservedInstancesExchangeQuoteResponse(QXmlStreamReader &xml)
+void GetReservedInstancesExchangeQuoteResponsePrivate::parseGetReservedInstancesExchangeQuoteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservedInstancesExchangeQuoteResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponse(QXmlStreamReader &xml)
+void ResyncMFADeviceResponsePrivate::parseResyncMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResyncMFADeviceResponse"));
     /// @todo

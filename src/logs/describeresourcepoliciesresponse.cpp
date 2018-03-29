@@ -96,7 +96,7 @@ DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponse(QXmlStreamReader &xml)
+void DescribeResourcePoliciesResponsePrivate::parseDescribeResourcePoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourcePoliciesResponse"));
     /// @todo

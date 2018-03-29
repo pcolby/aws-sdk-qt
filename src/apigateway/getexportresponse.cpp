@@ -96,7 +96,7 @@ GetExportResponsePrivate::GetExportResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetExportResponsePrivate::GetExportResponse(QXmlStreamReader &xml)
+void GetExportResponsePrivate::parseGetExportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetExportResponse"));
     /// @todo

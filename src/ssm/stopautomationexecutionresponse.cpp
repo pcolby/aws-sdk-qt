@@ -96,7 +96,7 @@ StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponse(QXmlStreamReader &xml)
+void StopAutomationExecutionResponsePrivate::parseStopAutomationExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopAutomationExecutionResponse"));
     /// @todo

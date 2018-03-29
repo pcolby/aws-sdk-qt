@@ -96,7 +96,7 @@ AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachToIndexResponsePrivate::AttachToIndexResponse(QXmlStreamReader &xml)
+void AttachToIndexResponsePrivate::parseAttachToIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachToIndexResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetHealthCheckCountResponsePrivate::GetHealthCheckCountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetHealthCheckCountResponsePrivate::GetHealthCheckCountResponse(QXmlStreamReader &xml)
+void GetHealthCheckCountResponsePrivate::parseGetHealthCheckCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckCountResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponse(QXmlStreamReader &xml)
+void DeleteEmailChannelResponsePrivate::parseDeleteEmailChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEmailChannelResponse"));
     /// @todo

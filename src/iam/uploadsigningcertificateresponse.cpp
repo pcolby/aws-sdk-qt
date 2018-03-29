@@ -96,7 +96,7 @@ UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponse(QXmlStreamReader &xml)
+void UploadSigningCertificateResponsePrivate::parseUploadSigningCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadSigningCertificateResponse"));
     /// @todo

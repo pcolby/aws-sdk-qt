@@ -96,7 +96,7 @@ RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngr
  *
  * @param  xml  XML stream to parse.
  */
-void RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
+void RevokeClusterSecurityGroupIngressResponsePrivate::parseRevokeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeClusterSecurityGroupIngressResponse"));
     /// @todo

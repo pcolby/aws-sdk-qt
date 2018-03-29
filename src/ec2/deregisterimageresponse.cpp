@@ -96,7 +96,7 @@ DeregisterImageResponsePrivate::DeregisterImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterImageResponsePrivate::DeregisterImageResponse(QXmlStreamReader &xml)
+void DeregisterImageResponsePrivate::parseDeregisterImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterImageResponse"));
     /// @todo

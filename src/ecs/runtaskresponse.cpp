@@ -96,7 +96,7 @@ RunTaskResponsePrivate::RunTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RunTaskResponsePrivate::RunTaskResponse(QXmlStreamReader &xml)
+void RunTaskResponsePrivate::parseRunTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunTaskResponse"));
     /// @todo

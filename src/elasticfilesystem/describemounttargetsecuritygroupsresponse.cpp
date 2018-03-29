@@ -96,7 +96,7 @@ DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGro
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGroupsResponse(QXmlStreamReader &xml)
+void DescribeMountTargetSecurityGroupsResponsePrivate::parseDescribeMountTargetSecurityGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMountTargetSecurityGroupsResponse"));
     /// @todo

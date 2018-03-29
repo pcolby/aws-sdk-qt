@@ -96,7 +96,7 @@ UpdateGatewaySoftwareNowResponsePrivate::UpdateGatewaySoftwareNowResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGatewaySoftwareNowResponsePrivate::UpdateGatewaySoftwareNowResponse(QXmlStreamReader &xml)
+void UpdateGatewaySoftwareNowResponsePrivate::parseUpdateGatewaySoftwareNowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGatewaySoftwareNowResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateActivityResponsePrivate::CreateActivityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateActivityResponsePrivate::CreateActivityResponse(QXmlStreamReader &xml)
+void CreateActivityResponsePrivate::parseCreateActivityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateActivityResponse"));
     /// @todo

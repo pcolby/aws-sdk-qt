@@ -96,7 +96,7 @@ CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponse(QXmlStreamReader &xml)
+void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetResponse"));
     /// @todo

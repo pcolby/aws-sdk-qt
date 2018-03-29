@@ -96,7 +96,7 @@ RenewOfferingResponsePrivate::RenewOfferingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RenewOfferingResponsePrivate::RenewOfferingResponse(QXmlStreamReader &xml)
+void RenewOfferingResponsePrivate::parseRenewOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RenewOfferingResponse"));
     /// @todo

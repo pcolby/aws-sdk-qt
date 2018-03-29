@@ -96,7 +96,7 @@ AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponse(QXmlStreamReader &xml)
+void AddRoleToInstanceProfileResponsePrivate::parseAddRoleToInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddRoleToInstanceProfileResponse"));
     /// @todo

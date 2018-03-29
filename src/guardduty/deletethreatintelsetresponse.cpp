@@ -96,7 +96,7 @@ DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponse(QXmlStreamReader &xml)
+void DeleteThreatIntelSetResponsePrivate::parseDeleteThreatIntelSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThreatIntelSetResponse"));
     /// @todo

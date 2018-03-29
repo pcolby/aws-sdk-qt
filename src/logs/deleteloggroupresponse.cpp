@@ -96,7 +96,7 @@ DeleteLogGroupResponsePrivate::DeleteLogGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLogGroupResponsePrivate::DeleteLogGroupResponse(QXmlStreamReader &xml)
+void DeleteLogGroupResponsePrivate::parseDeleteLogGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLogGroupResponse"));
     /// @todo

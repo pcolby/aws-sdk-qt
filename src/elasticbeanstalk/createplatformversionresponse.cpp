@@ -96,7 +96,7 @@ CreatePlatformVersionResponsePrivate::CreatePlatformVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePlatformVersionResponsePrivate::CreatePlatformVersionResponse(QXmlStreamReader &xml)
+void CreatePlatformVersionResponsePrivate::parseCreatePlatformVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformVersionResponse"));
     /// @todo

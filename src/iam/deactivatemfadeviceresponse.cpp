@@ -96,7 +96,7 @@ DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponse(QXmlStreamReader &xml)
+void DeactivateMFADeviceResponsePrivate::parseDeactivateMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeactivateMFADeviceResponse"));
     /// @todo

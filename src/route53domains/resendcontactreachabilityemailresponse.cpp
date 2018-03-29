@@ -96,7 +96,7 @@ ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailRes
  *
  * @param  xml  XML stream to parse.
  */
-void ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailResponse(QXmlStreamReader &xml)
+void ResendContactReachabilityEmailResponsePrivate::parseResendContactReachabilityEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResendContactReachabilityEmailResponse"));
     /// @todo

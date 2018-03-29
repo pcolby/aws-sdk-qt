@@ -96,7 +96,7 @@ ListPublishedSchemaArnsResponsePrivate::ListPublishedSchemaArnsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListPublishedSchemaArnsResponsePrivate::ListPublishedSchemaArnsResponse(QXmlStreamReader &xml)
+void ListPublishedSchemaArnsResponsePrivate::parseListPublishedSchemaArnsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPublishedSchemaArnsResponse"));
     /// @todo

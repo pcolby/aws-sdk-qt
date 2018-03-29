@@ -96,7 +96,7 @@ EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponse(QXmlStreamReader &xml)
+void EnableDomainAutoRenewResponsePrivate::parseEnableDomainAutoRenewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableDomainAutoRenewResponse"));
     /// @todo

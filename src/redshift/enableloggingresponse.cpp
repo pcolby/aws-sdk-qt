@@ -96,7 +96,7 @@ EnableLoggingResponsePrivate::EnableLoggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableLoggingResponsePrivate::EnableLoggingResponse(QXmlStreamReader &xml)
+void EnableLoggingResponsePrivate::parseEnableLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableLoggingResponse"));
     /// @todo

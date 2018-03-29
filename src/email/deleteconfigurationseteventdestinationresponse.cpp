@@ -96,7 +96,7 @@ DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEve
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
+void DeleteConfigurationSetEventDestinationResponsePrivate::parseDeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetEventDestinationResponse"));
     /// @todo

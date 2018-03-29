@@ -96,7 +96,7 @@ RegisterCertificateResponsePrivate::RegisterCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterCertificateResponsePrivate::RegisterCertificateResponse(QXmlStreamReader &xml)
+void RegisterCertificateResponsePrivate::parseRegisterCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterCertificateResponse"));
     /// @todo

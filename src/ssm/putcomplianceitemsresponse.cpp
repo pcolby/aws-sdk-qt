@@ -96,7 +96,7 @@ PutComplianceItemsResponsePrivate::PutComplianceItemsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutComplianceItemsResponsePrivate::PutComplianceItemsResponse(QXmlStreamReader &xml)
+void PutComplianceItemsResponsePrivate::parsePutComplianceItemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutComplianceItemsResponse"));
     /// @todo

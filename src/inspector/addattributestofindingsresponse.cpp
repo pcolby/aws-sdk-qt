@@ -96,7 +96,7 @@ AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponse(QXmlStreamReader &xml)
+void AddAttributesToFindingsResponsePrivate::parseAddAttributesToFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddAttributesToFindingsResponse"));
     /// @todo

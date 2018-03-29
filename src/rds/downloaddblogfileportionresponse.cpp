@@ -96,7 +96,7 @@ DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponse(QXmlStreamReader &xml)
+void DownloadDBLogFilePortionResponsePrivate::parseDownloadDBLogFilePortionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DownloadDBLogFilePortionResponse"));
     /// @todo

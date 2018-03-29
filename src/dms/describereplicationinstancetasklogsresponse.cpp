@@ -96,7 +96,7 @@ DescribeReplicationInstanceTaskLogsResponsePrivate::DescribeReplicationInstanceT
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeReplicationInstanceTaskLogsResponsePrivate::DescribeReplicationInstanceTaskLogsResponse(QXmlStreamReader &xml)
+void DescribeReplicationInstanceTaskLogsResponsePrivate::parseDescribeReplicationInstanceTaskLogsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationInstanceTaskLogsResponse"));
     /// @todo

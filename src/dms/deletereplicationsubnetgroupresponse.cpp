@@ -96,7 +96,7 @@ DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupResponse(QXmlStreamReader &xml)
+void DeleteReplicationSubnetGroupResponsePrivate::parseDeleteReplicationSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationSubnetGroupResponse"));
     /// @todo

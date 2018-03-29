@@ -96,7 +96,7 @@ UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponse(QXmlStreamReader &xml)
+void UnsubscribeFromEventResponsePrivate::parseUnsubscribeFromEventResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromEventResponse"));
     /// @todo

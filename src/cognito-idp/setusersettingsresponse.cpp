@@ -96,7 +96,7 @@ SetUserSettingsResponsePrivate::SetUserSettingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetUserSettingsResponsePrivate::SetUserSettingsResponse(QXmlStreamReader &xml)
+void SetUserSettingsResponsePrivate::parseSetUserSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetUserSettingsResponse"));
     /// @todo

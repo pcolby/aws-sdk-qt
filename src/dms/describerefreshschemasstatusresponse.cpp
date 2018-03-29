@@ -96,7 +96,7 @@ DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml)
+void DescribeRefreshSchemasStatusResponsePrivate::parseDescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRefreshSchemasStatusResponse"));
     /// @todo

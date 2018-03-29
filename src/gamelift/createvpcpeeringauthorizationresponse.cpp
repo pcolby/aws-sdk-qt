@@ -96,7 +96,7 @@ CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorizationRespo
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
+void CreateVpcPeeringAuthorizationResponsePrivate::parseCreateVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcPeeringAuthorizationResponse"));
     /// @todo

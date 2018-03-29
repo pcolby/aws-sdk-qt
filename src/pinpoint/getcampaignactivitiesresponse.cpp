@@ -96,7 +96,7 @@ GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponse(QXmlStreamReader &xml)
+void GetCampaignActivitiesResponsePrivate::parseGetCampaignActivitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCampaignActivitiesResponse"));
     /// @todo

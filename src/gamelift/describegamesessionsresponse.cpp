@@ -96,7 +96,7 @@ DescribeGameSessionsResponsePrivate::DescribeGameSessionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeGameSessionsResponsePrivate::DescribeGameSessionsResponse(QXmlStreamReader &xml)
+void DescribeGameSessionsResponsePrivate::parseDescribeGameSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGameSessionsResponse"));
     /// @todo

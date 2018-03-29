@@ -96,7 +96,7 @@ UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponse(QXmlStreamReader &xml)
+void UpdateContainerAgentResponsePrivate::parseUpdateContainerAgentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContainerAgentResponse"));
     /// @todo

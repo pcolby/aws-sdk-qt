@@ -96,7 +96,7 @@ DisableKeyRotationResponsePrivate::DisableKeyRotationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableKeyRotationResponsePrivate::DisableKeyRotationResponse(QXmlStreamReader &xml)
+void DisableKeyRotationResponsePrivate::parseDisableKeyRotationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableKeyRotationResponse"));
     /// @todo

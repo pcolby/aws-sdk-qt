@@ -96,7 +96,7 @@ GetTrailStatusResponsePrivate::GetTrailStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTrailStatusResponsePrivate::GetTrailStatusResponse(QXmlStreamReader &xml)
+void GetTrailStatusResponsePrivate::parseGetTrailStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTrailStatusResponse"));
     /// @todo

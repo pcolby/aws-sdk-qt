@@ -96,7 +96,7 @@ DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromResourc
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromResourceResponse(QXmlStreamReader &xml)
+void DisassociateDelegateFromResourceResponsePrivate::parseDisassociateDelegateFromResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDelegateFromResourceResponse"));
     /// @todo

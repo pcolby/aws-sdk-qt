@@ -96,7 +96,7 @@ DeleteSkillGroupResponsePrivate::DeleteSkillGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSkillGroupResponsePrivate::DeleteSkillGroupResponse(QXmlStreamReader &xml)
+void DeleteSkillGroupResponsePrivate::parseDeleteSkillGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSkillGroupResponse"));
     /// @todo

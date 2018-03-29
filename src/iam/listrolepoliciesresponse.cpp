@@ -96,7 +96,7 @@ ListRolePoliciesResponsePrivate::ListRolePoliciesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListRolePoliciesResponsePrivate::ListRolePoliciesResponse(QXmlStreamReader &xml)
+void ListRolePoliciesResponsePrivate::parseListRolePoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRolePoliciesResponse"));
     /// @todo

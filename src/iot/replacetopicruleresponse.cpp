@@ -96,7 +96,7 @@ ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponse(QXmlStreamReader &xml)
+void ReplaceTopicRuleResponsePrivate::parseReplaceTopicRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReplaceTopicRuleResponse"));
     /// @todo

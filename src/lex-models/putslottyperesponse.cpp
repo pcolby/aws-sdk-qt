@@ -96,7 +96,7 @@ PutSlotTypeResponsePrivate::PutSlotTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutSlotTypeResponsePrivate::PutSlotTypeResponse(QXmlStreamReader &xml)
+void PutSlotTypeResponsePrivate::parsePutSlotTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutSlotTypeResponse"));
     /// @todo

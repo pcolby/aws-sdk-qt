@@ -96,7 +96,7 @@ CreateStorageLocationResponsePrivate::CreateStorageLocationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateStorageLocationResponsePrivate::CreateStorageLocationResponse(QXmlStreamReader &xml)
+void CreateStorageLocationResponsePrivate::parseCreateStorageLocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStorageLocationResponse"));
     /// @todo

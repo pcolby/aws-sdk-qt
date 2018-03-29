@@ -96,7 +96,7 @@ DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponse(QXmlStreamReader &xml)
+void DescribeNatGatewaysResponsePrivate::parseDescribeNatGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNatGatewaysResponse"));
     /// @todo

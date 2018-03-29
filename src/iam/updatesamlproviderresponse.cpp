@@ -96,7 +96,7 @@ UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponse(QXmlStreamReader &xml)
+void UpdateSAMLProviderResponsePrivate::parseUpdateSAMLProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSAMLProviderResponse"));
     /// @todo

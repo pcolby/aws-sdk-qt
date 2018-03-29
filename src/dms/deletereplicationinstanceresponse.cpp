@@ -96,7 +96,7 @@ DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponse(QXmlStreamReader &xml)
+void DeleteReplicationInstanceResponsePrivate::parseDeleteReplicationInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationInstanceResponse"));
     /// @todo

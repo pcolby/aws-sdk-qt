@@ -96,7 +96,7 @@ ListHostedZonesResponsePrivate::ListHostedZonesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListHostedZonesResponsePrivate::ListHostedZonesResponse(QXmlStreamReader &xml)
+void ListHostedZonesResponsePrivate::parseListHostedZonesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHostedZonesResponse"));
     /// @todo

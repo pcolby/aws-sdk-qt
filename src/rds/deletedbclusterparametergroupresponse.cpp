@@ -96,7 +96,7 @@ DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+void DeleteDBClusterParameterGroupResponsePrivate::parseDeleteDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterParameterGroupResponse"));
     /// @todo

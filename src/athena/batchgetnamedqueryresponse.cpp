@@ -96,7 +96,7 @@ BatchGetNamedQueryResponsePrivate::BatchGetNamedQueryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetNamedQueryResponsePrivate::BatchGetNamedQueryResponse(QXmlStreamReader &xml)
+void BatchGetNamedQueryResponsePrivate::parseBatchGetNamedQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetNamedQueryResponse"));
     /// @todo

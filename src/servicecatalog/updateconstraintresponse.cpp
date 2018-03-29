@@ -96,7 +96,7 @@ UpdateConstraintResponsePrivate::UpdateConstraintResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConstraintResponsePrivate::UpdateConstraintResponse(QXmlStreamReader &xml)
+void UpdateConstraintResponsePrivate::parseUpdateConstraintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConstraintResponse"));
     /// @todo

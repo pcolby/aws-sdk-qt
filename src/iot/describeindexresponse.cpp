@@ -96,7 +96,7 @@ DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeIndexResponsePrivate::DescribeIndexResponse(QXmlStreamReader &xml)
+void DescribeIndexResponsePrivate::parseDescribeIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeIndexResponse"));
     /// @todo

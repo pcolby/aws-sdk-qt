@@ -96,7 +96,7 @@ DescribeGroupsResponsePrivate::DescribeGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeGroupsResponsePrivate::DescribeGroupsResponse(QXmlStreamReader &xml)
+void DescribeGroupsResponsePrivate::parseDescribeGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGroupsResponse"));
     /// @todo

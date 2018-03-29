@@ -96,7 +96,7 @@ DeleteCampaignResponsePrivate::DeleteCampaignResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCampaignResponsePrivate::DeleteCampaignResponse(QXmlStreamReader &xml)
+void DeleteCampaignResponsePrivate::parseDeleteCampaignResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCampaignResponse"));
     /// @todo

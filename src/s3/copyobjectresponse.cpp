@@ -96,7 +96,7 @@ CopyObjectResponsePrivate::CopyObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyObjectResponsePrivate::CopyObjectResponse(QXmlStreamReader &xml)
+void CopyObjectResponsePrivate::parseCopyObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyObjectResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponse(QXmlStreamReader &xml)
+void CreateDataSourceFromRDSResponsePrivate::parseCreateDataSourceFromRDSResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRDSResponse"));
     /// @todo

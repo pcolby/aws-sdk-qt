@@ -96,7 +96,7 @@ DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMainte
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMaintenanceWindowResponse(QXmlStreamReader &xml)
+void DeregisterTargetFromMaintenanceWindowResponsePrivate::parseDeregisterTargetFromMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTargetFromMaintenanceWindowResponse"));
     /// @todo

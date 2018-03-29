@@ -96,7 +96,7 @@ DescribeScheduledInstancesResponsePrivate::DescribeScheduledInstancesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScheduledInstancesResponsePrivate::DescribeScheduledInstancesResponse(QXmlStreamReader &xml)
+void DescribeScheduledInstancesResponsePrivate::parseDescribeScheduledInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledInstancesResponse"));
     /// @todo

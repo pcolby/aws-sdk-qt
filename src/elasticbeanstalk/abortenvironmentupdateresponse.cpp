@@ -96,7 +96,7 @@ AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponse(QXmlStreamReader &xml)
+void AbortEnvironmentUpdateResponsePrivate::parseAbortEnvironmentUpdateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortEnvironmentUpdateResponse"));
     /// @todo

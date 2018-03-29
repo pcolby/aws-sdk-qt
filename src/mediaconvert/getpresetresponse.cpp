@@ -96,7 +96,7 @@ GetPresetResponsePrivate::GetPresetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetPresetResponsePrivate::GetPresetResponse(QXmlStreamReader &xml)
+void GetPresetResponsePrivate::parseGetPresetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPresetResponse"));
     /// @todo

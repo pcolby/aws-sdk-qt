@@ -96,7 +96,7 @@ AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponse(QXmlStreamReader &xml)
+void AddAttachmentsToSetResponsePrivate::parseAddAttachmentsToSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddAttachmentsToSetResponse"));
     /// @todo

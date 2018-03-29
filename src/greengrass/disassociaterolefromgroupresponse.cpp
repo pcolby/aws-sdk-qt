@@ -96,7 +96,7 @@ DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponse(QXmlStreamReader &xml)
+void DisassociateRoleFromGroupResponsePrivate::parseDisassociateRoleFromGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateRoleFromGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SendBonusResponsePrivate::SendBonusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendBonusResponsePrivate::SendBonusResponse(QXmlStreamReader &xml)
+void SendBonusResponsePrivate::parseSendBonusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendBonusResponse"));
     /// @todo

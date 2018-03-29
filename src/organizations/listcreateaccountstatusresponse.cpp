@@ -96,7 +96,7 @@ ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponse(QXmlStreamReader &xml)
+void ListCreateAccountStatusResponsePrivate::parseListCreateAccountStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCreateAccountStatusResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePipelineResponsePrivate::DeletePipelineResponse(QXmlStreamReader &xml)
+void DeletePipelineResponsePrivate::parseDeletePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePipelineResponse"));
     /// @todo

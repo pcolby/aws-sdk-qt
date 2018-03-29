@@ -96,7 +96,7 @@ AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceRes
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceResponse(QXmlStreamReader &xml)
+void AssociateTagOptionWithResourceResponsePrivate::parseAssociateTagOptionWithResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateTagOptionWithResourceResponse"));
     /// @todo

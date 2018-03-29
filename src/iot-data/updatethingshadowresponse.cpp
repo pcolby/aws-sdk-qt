@@ -96,7 +96,7 @@ UpdateThingShadowResponsePrivate::UpdateThingShadowResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateThingShadowResponsePrivate::UpdateThingShadowResponse(QXmlStreamReader &xml)
+void UpdateThingShadowResponsePrivate::parseUpdateThingShadowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingShadowResponse"));
     /// @todo

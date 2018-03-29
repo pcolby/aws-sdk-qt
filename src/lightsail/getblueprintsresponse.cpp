@@ -96,7 +96,7 @@ GetBlueprintsResponsePrivate::GetBlueprintsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBlueprintsResponsePrivate::GetBlueprintsResponse(QXmlStreamReader &xml)
+void GetBlueprintsResponsePrivate::parseGetBlueprintsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBlueprintsResponse"));
     /// @todo

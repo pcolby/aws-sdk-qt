@@ -96,7 +96,7 @@ DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponse(QXmlStreamReader &xml)
+void DeleteVaultNotificationsResponsePrivate::parseDeleteVaultNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultNotificationsResponse"));
     /// @todo

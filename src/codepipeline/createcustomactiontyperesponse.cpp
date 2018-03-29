@@ -96,7 +96,7 @@ CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponse(QXmlStreamReader &xml)
+void CreateCustomActionTypeResponsePrivate::parseCreateCustomActionTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomActionTypeResponse"));
     /// @todo

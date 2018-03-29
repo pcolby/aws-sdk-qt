@@ -96,7 +96,7 @@ CreateSubscriptionResponsePrivate::CreateSubscriptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSubscriptionResponsePrivate::CreateSubscriptionResponse(QXmlStreamReader &xml)
+void CreateSubscriptionResponsePrivate::parseCreateSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSubscriptionResponse"));
     /// @todo

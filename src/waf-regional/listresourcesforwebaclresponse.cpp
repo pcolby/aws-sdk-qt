@@ -96,7 +96,7 @@ ListResourcesForWebACLResponsePrivate::ListResourcesForWebACLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListResourcesForWebACLResponsePrivate::ListResourcesForWebACLResponse(QXmlStreamReader &xml)
+void ListResourcesForWebACLResponsePrivate::parseListResourcesForWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourcesForWebACLResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponse(QXmlStreamReader &xml)
+void AdminSetUserSettingsResponsePrivate::parseAdminSetUserSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminSetUserSettingsResponse"));
     /// @todo

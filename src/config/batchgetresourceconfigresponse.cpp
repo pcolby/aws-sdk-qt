@@ -96,7 +96,7 @@ BatchGetResourceConfigResponsePrivate::BatchGetResourceConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetResourceConfigResponsePrivate::BatchGetResourceConfigResponse(QXmlStreamReader &xml)
+void BatchGetResourceConfigResponsePrivate::parseBatchGetResourceConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetResourceConfigResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponse(QXmlStreamReader &xml)
+void DisassociateVpcCidrBlockResponsePrivate::parseDisassociateVpcCidrBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateVpcCidrBlockResponse"));
     /// @todo

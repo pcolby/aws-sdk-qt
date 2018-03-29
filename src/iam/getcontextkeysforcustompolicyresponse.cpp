@@ -96,7 +96,7 @@ GetContextKeysForCustomPolicyResponsePrivate::GetContextKeysForCustomPolicyRespo
  *
  * @param  xml  XML stream to parse.
  */
-void GetContextKeysForCustomPolicyResponsePrivate::GetContextKeysForCustomPolicyResponse(QXmlStreamReader &xml)
+void GetContextKeysForCustomPolicyResponsePrivate::parseGetContextKeysForCustomPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContextKeysForCustomPolicyResponse"));
     /// @todo

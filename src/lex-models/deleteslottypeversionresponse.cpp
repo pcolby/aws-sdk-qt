@@ -96,7 +96,7 @@ DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponse(QXmlStreamReader &xml)
+void DeleteSlotTypeVersionResponsePrivate::parseDeleteSlotTypeVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSlotTypeVersionResponse"));
     /// @todo

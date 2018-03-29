@@ -96,7 +96,7 @@ ListCollectionsResponsePrivate::ListCollectionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListCollectionsResponsePrivate::ListCollectionsResponse(QXmlStreamReader &xml)
+void ListCollectionsResponsePrivate::parseListCollectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCollectionsResponse"));
     /// @todo

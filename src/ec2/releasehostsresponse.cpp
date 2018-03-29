@@ -96,7 +96,7 @@ ReleaseHostsResponsePrivate::ReleaseHostsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReleaseHostsResponsePrivate::ReleaseHostsResponse(QXmlStreamReader &xml)
+void ReleaseHostsResponsePrivate::parseReleaseHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReleaseHostsResponse"));
     /// @todo

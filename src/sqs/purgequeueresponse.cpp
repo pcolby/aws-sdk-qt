@@ -96,7 +96,7 @@ PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PurgeQueueResponsePrivate::PurgeQueueResponse(QXmlStreamReader &xml)
+void PurgeQueueResponsePrivate::parsePurgeQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurgeQueueResponse"));
     /// @todo

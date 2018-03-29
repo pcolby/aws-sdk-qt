@@ -96,7 +96,7 @@ AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGro
  *
  * @param  xml  XML stream to parse.
  */
-void AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
+void AuthorizeClusterSecurityGroupIngressResponsePrivate::parseAuthorizeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeClusterSecurityGroupIngressResponse"));
     /// @todo

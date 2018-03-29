@@ -96,7 +96,7 @@ UpdateLayerResponsePrivate::UpdateLayerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateLayerResponsePrivate::UpdateLayerResponse(QXmlStreamReader &xml)
+void UpdateLayerResponsePrivate::parseUpdateLayerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLayerResponse"));
     /// @todo

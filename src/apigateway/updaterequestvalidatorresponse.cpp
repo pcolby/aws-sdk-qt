@@ -96,7 +96,7 @@ UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponse(QXmlStreamReader &xml)
+void UpdateRequestValidatorResponsePrivate::parseUpdateRequestValidatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRequestValidatorResponse"));
     /// @todo

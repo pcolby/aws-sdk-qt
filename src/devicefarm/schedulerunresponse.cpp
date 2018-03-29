@@ -96,7 +96,7 @@ ScheduleRunResponsePrivate::ScheduleRunResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ScheduleRunResponsePrivate::ScheduleRunResponse(QXmlStreamReader &xml)
+void ScheduleRunResponsePrivate::parseScheduleRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScheduleRunResponse"));
     /// @todo

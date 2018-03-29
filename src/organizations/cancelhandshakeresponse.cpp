@@ -96,7 +96,7 @@ CancelHandshakeResponsePrivate::CancelHandshakeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelHandshakeResponsePrivate::CancelHandshakeResponse(QXmlStreamReader &xml)
+void CancelHandshakeResponsePrivate::parseCancelHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelHandshakeResponse"));
     /// @todo

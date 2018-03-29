@@ -96,7 +96,7 @@ DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBrokerResponsePrivate::DeleteBrokerResponse(QXmlStreamReader &xml)
+void DeleteBrokerResponsePrivate::parseDeleteBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBrokerResponse"));
     /// @todo

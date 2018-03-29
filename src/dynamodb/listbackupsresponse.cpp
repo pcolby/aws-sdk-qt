@@ -96,7 +96,7 @@ ListBackupsResponsePrivate::ListBackupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBackupsResponsePrivate::ListBackupsResponse(QXmlStreamReader &xml)
+void ListBackupsResponsePrivate::parseListBackupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBackupsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponse(QXmlStreamReader &xml)
+void DescribeGatewayInformationResponsePrivate::parseDescribeGatewayInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGatewayInformationResponse"));
     /// @todo

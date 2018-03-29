@@ -96,7 +96,7 @@ ListThingRegistrationTaskReportsResponsePrivate::ListThingRegistrationTaskReport
  *
  * @param  xml  XML stream to parse.
  */
-void ListThingRegistrationTaskReportsResponsePrivate::ListThingRegistrationTaskReportsResponse(QXmlStreamReader &xml)
+void ListThingRegistrationTaskReportsResponsePrivate::parseListThingRegistrationTaskReportsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListThingRegistrationTaskReportsResponse"));
     /// @todo

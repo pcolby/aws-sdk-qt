@@ -96,7 +96,7 @@ DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponse(QXmlStreamReader &xml)
+void DeleteDBClusterSnapshotResponsePrivate::parseDeleteDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterSnapshotResponse"));
     /// @todo

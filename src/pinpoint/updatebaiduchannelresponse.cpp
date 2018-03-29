@@ -96,7 +96,7 @@ UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponse(QXmlStreamReader &xml)
+void UpdateBaiduChannelResponsePrivate::parseUpdateBaiduChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBaiduChannelResponse"));
     /// @todo

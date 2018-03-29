@@ -96,7 +96,7 @@ ListResolversResponsePrivate::ListResolversResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListResolversResponsePrivate::ListResolversResponse(QXmlStreamReader &xml)
+void ListResolversResponsePrivate::parseListResolversResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResolversResponse"));
     /// @todo

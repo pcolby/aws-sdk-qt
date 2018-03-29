@@ -96,7 +96,7 @@ SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponse(QXmlStreamReader &xml)
+void SearchProductsAsAdminResponsePrivate::parseSearchProductsAsAdminResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchProductsAsAdminResponse"));
     /// @todo

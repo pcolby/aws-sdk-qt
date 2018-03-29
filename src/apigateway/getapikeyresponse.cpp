@@ -96,7 +96,7 @@ GetApiKeyResponsePrivate::GetApiKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetApiKeyResponsePrivate::GetApiKeyResponse(QXmlStreamReader &xml)
+void GetApiKeyResponsePrivate::parseGetApiKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApiKeyResponse"));
     /// @todo

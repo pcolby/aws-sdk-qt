@@ -96,7 +96,7 @@ ListVaultsResponsePrivate::ListVaultsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListVaultsResponsePrivate::ListVaultsResponse(QXmlStreamReader &xml)
+void ListVaultsResponsePrivate::parseListVaultsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVaultsResponse"));
     /// @todo

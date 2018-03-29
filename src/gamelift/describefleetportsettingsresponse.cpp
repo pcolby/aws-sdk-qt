@@ -96,7 +96,7 @@ DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponse(QXmlStreamReader &xml)
+void DescribeFleetPortSettingsResponsePrivate::parseDescribeFleetPortSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetPortSettingsResponse"));
     /// @todo

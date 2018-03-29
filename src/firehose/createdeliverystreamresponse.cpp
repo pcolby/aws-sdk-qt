@@ -96,7 +96,7 @@ CreateDeliveryStreamResponsePrivate::CreateDeliveryStreamResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDeliveryStreamResponsePrivate::CreateDeliveryStreamResponse(QXmlStreamReader &xml)
+void CreateDeliveryStreamResponsePrivate::parseCreateDeliveryStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeliveryStreamResponse"));
     /// @todo

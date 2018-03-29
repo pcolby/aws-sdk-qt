@@ -96,7 +96,7 @@ ListApiKeysResponsePrivate::ListApiKeysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListApiKeysResponsePrivate::ListApiKeysResponse(QXmlStreamReader &xml)
+void ListApiKeysResponsePrivate::parseListApiKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListApiKeysResponse"));
     /// @todo

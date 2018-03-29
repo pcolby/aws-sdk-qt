@@ -96,7 +96,7 @@ ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponse(QXmlStreamReader &xml)
+void ModifyVpcAttributeResponsePrivate::parseModifyVpcAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcAttributeResponse"));
     /// @todo

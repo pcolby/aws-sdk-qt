@@ -96,7 +96,7 @@ TransferDomainResponsePrivate::TransferDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TransferDomainResponsePrivate::TransferDomainResponse(QXmlStreamReader &xml)
+void TransferDomainResponsePrivate::parseTransferDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TransferDomainResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RevokeDBSecurityGroupIngressResponsePrivate::RevokeDBSecurityGroupIngressRespons
  *
  * @param  xml  XML stream to parse.
  */
-void RevokeDBSecurityGroupIngressResponsePrivate::RevokeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
+void RevokeDBSecurityGroupIngressResponsePrivate::parseRevokeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeDBSecurityGroupIngressResponse"));
     /// @todo

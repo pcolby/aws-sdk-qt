@@ -96,7 +96,7 @@ DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesResponse(QXmlStreamReader &xml)
+void DescribeMetricCollectionTypesResponsePrivate::parseDescribeMetricCollectionTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMetricCollectionTypesResponse"));
     /// @todo

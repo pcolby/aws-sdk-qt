@@ -96,7 +96,7 @@ StartContentModerationResponsePrivate::StartContentModerationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartContentModerationResponsePrivate::StartContentModerationResponse(QXmlStreamReader &xml)
+void StartContentModerationResponsePrivate::parseStartContentModerationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartContentModerationResponse"));
     /// @todo

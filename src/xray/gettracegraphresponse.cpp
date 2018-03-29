@@ -96,7 +96,7 @@ GetTraceGraphResponsePrivate::GetTraceGraphResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTraceGraphResponsePrivate::GetTraceGraphResponse(QXmlStreamReader &xml)
+void GetTraceGraphResponsePrivate::parseGetTraceGraphResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTraceGraphResponse"));
     /// @todo

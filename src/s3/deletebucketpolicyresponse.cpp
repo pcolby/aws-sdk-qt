@@ -96,7 +96,7 @@ DeleteBucketPolicyResponsePrivate::DeleteBucketPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketPolicyResponsePrivate::DeleteBucketPolicyResponse(QXmlStreamReader &xml)
+void DeleteBucketPolicyResponsePrivate::parseDeleteBucketPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketPolicyResponse"));
     /// @todo

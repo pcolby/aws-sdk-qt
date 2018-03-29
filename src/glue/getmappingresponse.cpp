@@ -96,7 +96,7 @@ GetMappingResponsePrivate::GetMappingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetMappingResponsePrivate::GetMappingResponse(QXmlStreamReader &xml)
+void GetMappingResponsePrivate::parseGetMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMappingResponse"));
     /// @todo

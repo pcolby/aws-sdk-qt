@@ -96,7 +96,7 @@ CreateComputerResponsePrivate::CreateComputerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateComputerResponsePrivate::CreateComputerResponse(QXmlStreamReader &xml)
+void CreateComputerResponsePrivate::parseCreateComputerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateComputerResponse"));
     /// @todo

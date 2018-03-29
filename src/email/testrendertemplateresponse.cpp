@@ -96,7 +96,7 @@ TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestRenderTemplateResponsePrivate::TestRenderTemplateResponse(QXmlStreamReader &xml)
+void TestRenderTemplateResponsePrivate::parseTestRenderTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestRenderTemplateResponse"));
     /// @todo

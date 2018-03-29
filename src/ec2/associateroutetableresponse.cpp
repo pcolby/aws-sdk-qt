@@ -96,7 +96,7 @@ AssociateRouteTableResponsePrivate::AssociateRouteTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateRouteTableResponsePrivate::AssociateRouteTableResponse(QXmlStreamReader &xml)
+void AssociateRouteTableResponsePrivate::parseAssociateRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateRouteTableResponse"));
     /// @todo

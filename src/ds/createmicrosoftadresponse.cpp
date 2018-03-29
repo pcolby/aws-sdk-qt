@@ -96,7 +96,7 @@ CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponse(QXmlStreamReader &xml)
+void CreateMicrosoftADResponsePrivate::parseCreateMicrosoftADResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMicrosoftADResponse"));
     /// @todo

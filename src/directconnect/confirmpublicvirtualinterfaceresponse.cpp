@@ -96,7 +96,7 @@ ConfirmPublicVirtualInterfaceResponsePrivate::ConfirmPublicVirtualInterfaceRespo
  *
  * @param  xml  XML stream to parse.
  */
-void ConfirmPublicVirtualInterfaceResponsePrivate::ConfirmPublicVirtualInterfaceResponse(QXmlStreamReader &xml)
+void ConfirmPublicVirtualInterfaceResponsePrivate::parseConfirmPublicVirtualInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmPublicVirtualInterfaceResponse"));
     /// @todo

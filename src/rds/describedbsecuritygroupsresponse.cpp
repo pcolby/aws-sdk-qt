@@ -96,7 +96,7 @@ DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponse(QXmlStreamReader &xml)
+void DescribeDBSecurityGroupsResponsePrivate::parseDescribeDBSecurityGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBSecurityGroupsResponse"));
     /// @todo

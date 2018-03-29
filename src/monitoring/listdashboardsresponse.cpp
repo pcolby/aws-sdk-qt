@@ -96,7 +96,7 @@ ListDashboardsResponsePrivate::ListDashboardsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListDashboardsResponsePrivate::ListDashboardsResponse(QXmlStreamReader &xml)
+void ListDashboardsResponsePrivate::parseListDashboardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDashboardsResponse"));
     /// @todo

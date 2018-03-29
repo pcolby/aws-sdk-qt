@@ -96,7 +96,7 @@ ListHITsResponsePrivate::ListHITsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListHITsResponsePrivate::ListHITsResponse(QXmlStreamReader &xml)
+void ListHITsResponsePrivate::parseListHITsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHITsResponse"));
     /// @todo

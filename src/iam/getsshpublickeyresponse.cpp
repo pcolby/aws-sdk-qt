@@ -96,7 +96,7 @@ GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponse(QXmlStreamReader &xml)
+void GetSSHPublicKeyResponsePrivate::parseGetSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSSHPublicKeyResponse"));
     /// @todo

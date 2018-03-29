@@ -96,7 +96,7 @@ DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponse(QXmlStreamReader &xml)
+void DescribeCacheEngineVersionsResponsePrivate::parseDescribeCacheEngineVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheEngineVersionsResponse"));
     /// @todo

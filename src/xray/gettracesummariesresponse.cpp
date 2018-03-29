@@ -96,7 +96,7 @@ GetTraceSummariesResponsePrivate::GetTraceSummariesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTraceSummariesResponsePrivate::GetTraceSummariesResponse(QXmlStreamReader &xml)
+void GetTraceSummariesResponsePrivate::parseGetTraceSummariesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTraceSummariesResponse"));
     /// @todo

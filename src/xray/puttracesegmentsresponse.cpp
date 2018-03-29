@@ -96,7 +96,7 @@ PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponse(QXmlStreamReader &xml)
+void PutTraceSegmentsResponsePrivate::parsePutTraceSegmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutTraceSegmentsResponse"));
     /// @todo

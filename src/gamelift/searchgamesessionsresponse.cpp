@@ -96,7 +96,7 @@ SearchGameSessionsResponsePrivate::SearchGameSessionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchGameSessionsResponsePrivate::SearchGameSessionsResponse(QXmlStreamReader &xml)
+void SearchGameSessionsResponsePrivate::parseSearchGameSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchGameSessionsResponse"));
     /// @todo

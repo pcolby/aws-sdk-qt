@@ -96,7 +96,7 @@ ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponse(QXmlStreamReader &xml)
+void ListWorkflowTypesResponsePrivate::parseListWorkflowTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWorkflowTypesResponse"));
     /// @todo

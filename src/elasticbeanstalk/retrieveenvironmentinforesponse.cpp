@@ -96,7 +96,7 @@ RetrieveEnvironmentInfoResponsePrivate::RetrieveEnvironmentInfoResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RetrieveEnvironmentInfoResponsePrivate::RetrieveEnvironmentInfoResponse(QXmlStreamReader &xml)
+void RetrieveEnvironmentInfoResponsePrivate::parseRetrieveEnvironmentInfoResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetrieveEnvironmentInfoResponse"));
     /// @todo

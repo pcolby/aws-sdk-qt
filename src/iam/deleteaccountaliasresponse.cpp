@@ -96,7 +96,7 @@ DeleteAccountAliasResponsePrivate::DeleteAccountAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAccountAliasResponsePrivate::DeleteAccountAliasResponse(QXmlStreamReader &xml)
+void DeleteAccountAliasResponsePrivate::parseDeleteAccountAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccountAliasResponse"));
     /// @todo

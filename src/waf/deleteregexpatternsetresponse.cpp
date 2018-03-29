@@ -96,7 +96,7 @@ DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponse(QXmlStreamReader &xml)
+void DeleteRegexPatternSetResponsePrivate::parseDeleteRegexPatternSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegexPatternSetResponse"));
     /// @todo

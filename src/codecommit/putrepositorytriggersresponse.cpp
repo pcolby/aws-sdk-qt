@@ -96,7 +96,7 @@ PutRepositoryTriggersResponsePrivate::PutRepositoryTriggersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutRepositoryTriggersResponsePrivate::PutRepositoryTriggersResponse(QXmlStreamReader &xml)
+void PutRepositoryTriggersResponsePrivate::parsePutRepositoryTriggersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRepositoryTriggersResponse"));
     /// @todo

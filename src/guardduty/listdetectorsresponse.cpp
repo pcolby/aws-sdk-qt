@@ -96,7 +96,7 @@ ListDetectorsResponsePrivate::ListDetectorsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListDetectorsResponsePrivate::ListDetectorsResponse(QXmlStreamReader &xml)
+void ListDetectorsResponsePrivate::parseListDetectorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDetectorsResponse"));
     /// @todo

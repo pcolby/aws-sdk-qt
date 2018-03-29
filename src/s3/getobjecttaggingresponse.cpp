@@ -96,7 +96,7 @@ GetObjectTaggingResponsePrivate::GetObjectTaggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetObjectTaggingResponsePrivate::GetObjectTaggingResponse(QXmlStreamReader &xml)
+void GetObjectTaggingResponsePrivate::parseGetObjectTaggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetObjectTaggingResponse"));
     /// @todo

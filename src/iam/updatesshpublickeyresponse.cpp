@@ -96,7 +96,7 @@ UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponse(QXmlStreamReader &xml)
+void UpdateSSHPublicKeyResponsePrivate::parseUpdateSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSSHPublicKeyResponse"));
     /// @todo

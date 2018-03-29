@@ -96,7 +96,7 @@ DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponse(QXmlStreamReader &xml)
+void DeleteMetricFilterResponsePrivate::parseDeleteMetricFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMetricFilterResponse"));
     /// @todo

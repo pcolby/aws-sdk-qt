@@ -96,7 +96,7 @@ DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationI
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml)
+void DeleteApplicationInputProcessingConfigurationResponsePrivate::parseDeleteApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationInputProcessingConfigurationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOp
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml)
+void DescribeOrderableDBInstanceOptionsResponsePrivate::parseDescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableDBInstanceOptionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponse(QXmlStreamReader &xml)
+void PutPermissionPolicyResponsePrivate::parsePutPermissionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutPermissionPolicyResponse"));
     /// @todo

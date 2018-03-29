@@ -96,7 +96,7 @@ RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponse(QXmlStreamReader &xml)
+void RevokeSnapshotAccessResponsePrivate::parseRevokeSnapshotAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeSnapshotAccessResponse"));
     /// @todo

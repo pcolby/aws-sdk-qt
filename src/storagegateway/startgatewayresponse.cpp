@@ -96,7 +96,7 @@ StartGatewayResponsePrivate::StartGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartGatewayResponsePrivate::StartGatewayResponse(QXmlStreamReader &xml)
+void StartGatewayResponsePrivate::parseStartGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartGatewayResponse"));
     /// @todo

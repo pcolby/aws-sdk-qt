@@ -96,7 +96,7 @@ BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponse(QXmlStreamReader &xml)
+void BatchDetectKeyPhrasesResponsePrivate::parseBatchDetectKeyPhrasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectKeyPhrasesResponse"));
     /// @todo

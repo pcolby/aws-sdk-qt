@@ -96,7 +96,7 @@ GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetContentModerationResponsePrivate::GetContentModerationResponse(QXmlStreamReader &xml)
+void GetContentModerationResponsePrivate::parseGetContentModerationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContentModerationResponse"));
     /// @todo

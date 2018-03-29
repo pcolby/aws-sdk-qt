@@ -96,7 +96,7 @@ UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponse(QXmlStreamReader &xml)
+void UpdateNotebookInstanceResponsePrivate::parseUpdateNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotebookInstanceResponse"));
     /// @todo

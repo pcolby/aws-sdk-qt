@@ -96,7 +96,7 @@ NotifyWorkersResponsePrivate::NotifyWorkersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void NotifyWorkersResponsePrivate::NotifyWorkersResponse(QXmlStreamReader &xml)
+void NotifyWorkersResponsePrivate::parseNotifyWorkersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyWorkersResponse"));
     /// @todo

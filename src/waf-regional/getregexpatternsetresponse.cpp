@@ -96,7 +96,7 @@ GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponse(QXmlStreamReader &xml)
+void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegexPatternSetResponse"));
     /// @todo

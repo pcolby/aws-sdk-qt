@@ -96,7 +96,7 @@ DescribeDBParametersResponsePrivate::DescribeDBParametersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBParametersResponsePrivate::DescribeDBParametersResponse(QXmlStreamReader &xml)
+void DescribeDBParametersResponsePrivate::parseDescribeDBParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBParametersResponse"));
     /// @todo

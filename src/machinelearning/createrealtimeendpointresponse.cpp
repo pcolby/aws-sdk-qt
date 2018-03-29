@@ -96,7 +96,7 @@ CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponse(QXmlStreamReader &xml)
+void CreateRealtimeEndpointResponsePrivate::parseCreateRealtimeEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRealtimeEndpointResponse"));
     /// @todo

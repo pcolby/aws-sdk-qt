@@ -96,7 +96,7 @@ BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponse(QXmlStreamReader &xml)
+void BatchDeletePartitionResponsePrivate::parseBatchDeletePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeletePartitionResponse"));
     /// @todo

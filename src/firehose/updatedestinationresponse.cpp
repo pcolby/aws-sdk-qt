@@ -96,7 +96,7 @@ UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDestinationResponsePrivate::UpdateDestinationResponse(QXmlStreamReader &xml)
+void UpdateDestinationResponsePrivate::parseUpdateDestinationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDestinationResponse"));
     /// @todo

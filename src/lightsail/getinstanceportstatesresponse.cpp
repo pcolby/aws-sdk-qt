@@ -96,7 +96,7 @@ GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponse(QXmlStreamReader &xml)
+void GetInstancePortStatesResponsePrivate::parseGetInstancePortStatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstancePortStatesResponse"));
     /// @todo

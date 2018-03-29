@@ -96,7 +96,7 @@ ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponse(QXmlStreamReader &xml)
+void ModifyInstanceFleetResponsePrivate::parseModifyInstanceFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceFleetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponse(QXmlStreamReader &xml)
+void DeleteLoggerDefinitionResponsePrivate::parseDeleteLoggerDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoggerDefinitionResponse"));
     /// @todo

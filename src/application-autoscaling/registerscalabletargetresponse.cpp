@@ -96,7 +96,7 @@ RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponse(QXmlStreamReader &xml)
+void RegisterScalableTargetResponsePrivate::parseRegisterScalableTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterScalableTargetResponse"));
     /// @todo

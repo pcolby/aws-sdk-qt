@@ -96,7 +96,7 @@ ViewBillingResponsePrivate::ViewBillingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ViewBillingResponsePrivate::ViewBillingResponse(QXmlStreamReader &xml)
+void ViewBillingResponsePrivate::parseViewBillingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ViewBillingResponse"));
     /// @todo

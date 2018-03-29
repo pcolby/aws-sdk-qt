@@ -96,7 +96,7 @@ ApplySchemaResponsePrivate::ApplySchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ApplySchemaResponsePrivate::ApplySchemaResponse(QXmlStreamReader &xml)
+void ApplySchemaResponsePrivate::parseApplySchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ApplySchemaResponse"));
     /// @todo

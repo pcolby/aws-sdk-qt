@@ -96,7 +96,7 @@ GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResponse(QXmlStreamReader &xml)
+void GetDiscoveredResourceCountsResponsePrivate::parseGetDiscoveredResourceCountsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDiscoveredResourceCountsResponse"));
     /// @todo

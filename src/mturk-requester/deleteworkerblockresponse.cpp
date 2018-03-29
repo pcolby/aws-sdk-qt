@@ -96,7 +96,7 @@ DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponse(QXmlStreamReader &xml)
+void DeleteWorkerBlockResponsePrivate::parseDeleteWorkerBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteWorkerBlockResponse"));
     /// @todo

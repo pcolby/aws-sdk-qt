@@ -96,7 +96,7 @@ DescribeMLModelsResponsePrivate::DescribeMLModelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMLModelsResponsePrivate::DescribeMLModelsResponse(QXmlStreamReader &xml)
+void DescribeMLModelsResponsePrivate::parseDescribeMLModelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMLModelsResponse"));
     /// @todo

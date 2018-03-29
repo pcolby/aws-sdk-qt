@@ -96,7 +96,7 @@ UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponse(QXmlStreamReader &xml)
+void UpdateSubnetGroupResponsePrivate::parseUpdateSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSubnetGroupResponse"));
     /// @todo

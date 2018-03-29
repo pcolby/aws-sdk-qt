@@ -96,7 +96,7 @@ UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponse(QXmlStreamReader &xml)
+void UpdateJobTemplateResponsePrivate::parseUpdateJobTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobTemplateResponse"));
     /// @todo

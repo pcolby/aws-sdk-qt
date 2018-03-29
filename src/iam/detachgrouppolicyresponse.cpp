@@ -96,7 +96,7 @@ DetachGroupPolicyResponsePrivate::DetachGroupPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachGroupPolicyResponsePrivate::DetachGroupPolicyResponse(QXmlStreamReader &xml)
+void DetachGroupPolicyResponsePrivate::parseDetachGroupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachGroupPolicyResponse"));
     /// @todo

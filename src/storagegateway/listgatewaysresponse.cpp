@@ -96,7 +96,7 @@ ListGatewaysResponsePrivate::ListGatewaysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListGatewaysResponsePrivate::ListGatewaysResponse(QXmlStreamReader &xml)
+void ListGatewaysResponsePrivate::parseListGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGatewaysResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponse(QXmlStreamReader &xml)
+void DisableAlarmActionsResponsePrivate::parseDisableAlarmActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableAlarmActionsResponse"));
     /// @todo

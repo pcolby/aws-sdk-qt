@@ -96,7 +96,7 @@ InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponse(QXmlStreamReader &xml)
+void InviteAccountToOrganizationResponsePrivate::parseInviteAccountToOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InviteAccountToOrganizationResponse"));
     /// @todo

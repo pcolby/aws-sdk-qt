@@ -96,7 +96,7 @@ DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeBrokerResponsePrivate::DescribeBrokerResponse(QXmlStreamReader &xml)
+void DescribeBrokerResponsePrivate::parseDescribeBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBrokerResponse"));
     /// @todo

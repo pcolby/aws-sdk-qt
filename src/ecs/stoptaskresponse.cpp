@@ -96,7 +96,7 @@ StopTaskResponsePrivate::StopTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopTaskResponsePrivate::StopTaskResponse(QXmlStreamReader &xml)
+void StopTaskResponsePrivate::parseStopTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopTaskResponse"));
     /// @todo

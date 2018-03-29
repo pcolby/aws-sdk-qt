@@ -96,7 +96,7 @@ AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponse(QXmlStreamReader &xml)
+void AssociateRoleToGroupResponsePrivate::parseAssociateRoleToGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateRoleToGroupResponse"));
     /// @todo

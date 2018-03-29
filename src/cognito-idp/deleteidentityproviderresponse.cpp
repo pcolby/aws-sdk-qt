@@ -96,7 +96,7 @@ DeleteIdentityProviderResponsePrivate::DeleteIdentityProviderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteIdentityProviderResponsePrivate::DeleteIdentityProviderResponse(QXmlStreamReader &xml)
+void DeleteIdentityProviderResponsePrivate::parseDeleteIdentityProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIdentityProviderResponse"));
     /// @todo

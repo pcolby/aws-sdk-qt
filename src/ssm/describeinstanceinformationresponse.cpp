@@ -96,7 +96,7 @@ DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponse(QXmlStreamReader &xml)
+void DescribeInstanceInformationResponsePrivate::parseDescribeInstanceInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceInformationResponse"));
     /// @todo

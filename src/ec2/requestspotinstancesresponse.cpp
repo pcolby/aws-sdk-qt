@@ -96,7 +96,7 @@ RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponse(QXmlStreamReader &xml)
+void RequestSpotInstancesResponsePrivate::parseRequestSpotInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestSpotInstancesResponse"));
     /// @todo

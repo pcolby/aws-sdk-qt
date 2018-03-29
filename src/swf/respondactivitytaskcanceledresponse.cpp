@@ -96,7 +96,7 @@ RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponse(QXmlStreamReader &xml)
+void RespondActivityTaskCanceledResponsePrivate::parseRespondActivityTaskCanceledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCanceledResponse"));
     /// @todo

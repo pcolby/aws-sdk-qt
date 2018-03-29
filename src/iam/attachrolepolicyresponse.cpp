@@ -96,7 +96,7 @@ AttachRolePolicyResponsePrivate::AttachRolePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachRolePolicyResponsePrivate::AttachRolePolicyResponse(QXmlStreamReader &xml)
+void AttachRolePolicyResponsePrivate::parseAttachRolePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachRolePolicyResponse"));
     /// @todo

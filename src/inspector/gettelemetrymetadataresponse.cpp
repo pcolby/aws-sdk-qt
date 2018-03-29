@@ -96,7 +96,7 @@ GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponse(QXmlStreamReader &xml)
+void GetTelemetryMetadataResponsePrivate::parseGetTelemetryMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTelemetryMetadataResponse"));
     /// @todo

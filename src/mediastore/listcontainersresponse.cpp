@@ -96,7 +96,7 @@ ListContainersResponsePrivate::ListContainersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListContainersResponsePrivate::ListContainersResponse(QXmlStreamReader &xml)
+void ListContainersResponsePrivate::parseListContainersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListContainersResponse"));
     /// @todo

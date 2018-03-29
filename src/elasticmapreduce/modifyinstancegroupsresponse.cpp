@@ -96,7 +96,7 @@ ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponse(QXmlStreamReader &xml)
+void ModifyInstanceGroupsResponsePrivate::parseModifyInstanceGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceGroupsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponse(QXmlStreamReader &xml)
+void DisassociateElasticIpResponsePrivate::parseDisassociateElasticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateElasticIpResponse"));
     /// @todo

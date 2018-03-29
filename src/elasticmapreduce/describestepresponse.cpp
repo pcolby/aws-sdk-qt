@@ -96,7 +96,7 @@ DescribeStepResponsePrivate::DescribeStepResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeStepResponsePrivate::DescribeStepResponse(QXmlStreamReader &xml)
+void DescribeStepResponsePrivate::parseDescribeStepResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStepResponse"));
     /// @todo

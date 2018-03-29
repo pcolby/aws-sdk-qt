@@ -96,7 +96,7 @@ GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponse(QXmlStreamReader &xml)
+void GetPipelineDefinitionResponsePrivate::parseGetPipelineDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPipelineDefinitionResponse"));
     /// @todo

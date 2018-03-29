@@ -96,7 +96,7 @@ GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAtt
  *
  * @param  xml  XML stream to parse.
  */
-void GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml)
+void GetIdentityMailFromDomainAttributesResponsePrivate::parseGetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityMailFromDomainAttributesResponse"));
     /// @todo

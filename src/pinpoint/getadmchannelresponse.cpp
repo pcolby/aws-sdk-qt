@@ -96,7 +96,7 @@ GetAdmChannelResponsePrivate::GetAdmChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAdmChannelResponsePrivate::GetAdmChannelResponse(QXmlStreamReader &xml)
+void GetAdmChannelResponsePrivate::parseGetAdmChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAdmChannelResponse"));
     /// @todo

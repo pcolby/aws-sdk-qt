@@ -96,7 +96,7 @@ AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioR
  *
  * @param  xml  XML stream to parse.
  */
-void AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml)
+void AssociatePrincipalWithPortfolioResponsePrivate::parseAssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociatePrincipalWithPortfolioResponse"));
     /// @todo

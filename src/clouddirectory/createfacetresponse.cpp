@@ -96,7 +96,7 @@ CreateFacetResponsePrivate::CreateFacetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateFacetResponsePrivate::CreateFacetResponse(QXmlStreamReader &xml)
+void CreateFacetResponsePrivate::parseCreateFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFacetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOff
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOfferingResponse(QXmlStreamReader &xml)
+void PurchaseReservedCacheNodesOfferingResponsePrivate::parsePurchaseReservedCacheNodesOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedCacheNodesOfferingResponse"));
     /// @todo

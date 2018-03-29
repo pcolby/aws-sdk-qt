@@ -96,7 +96,7 @@ AcceptInvitationResponsePrivate::AcceptInvitationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AcceptInvitationResponsePrivate::AcceptInvitationResponse(QXmlStreamReader &xml)
+void AcceptInvitationResponsePrivate::parseAcceptInvitationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptInvitationResponse"));
     /// @todo

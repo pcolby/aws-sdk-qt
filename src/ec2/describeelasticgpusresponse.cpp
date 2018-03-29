@@ -96,7 +96,7 @@ DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponse(QXmlStreamReader &xml)
+void DescribeElasticGpusResponsePrivate::parseDescribeElasticGpusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticGpusResponse"));
     /// @todo

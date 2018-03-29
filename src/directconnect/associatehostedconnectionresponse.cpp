@@ -96,7 +96,7 @@ AssociateHostedConnectionResponsePrivate::AssociateHostedConnectionResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateHostedConnectionResponsePrivate::AssociateHostedConnectionResponse(QXmlStreamReader &xml)
+void AssociateHostedConnectionResponsePrivate::parseAssociateHostedConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateHostedConnectionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateLogStreamResponsePrivate::CreateLogStreamResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLogStreamResponsePrivate::CreateLogStreamResponse(QXmlStreamReader &xml)
+void CreateLogStreamResponsePrivate::parseCreateLogStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLogStreamResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListReusableDelegationSetsResponsePrivate::ListReusableDelegationSetsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListReusableDelegationSetsResponsePrivate::ListReusableDelegationSetsResponse(QXmlStreamReader &xml)
+void ListReusableDelegationSetsResponsePrivate::parseListReusableDelegationSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReusableDelegationSetsResponse"));
     /// @todo

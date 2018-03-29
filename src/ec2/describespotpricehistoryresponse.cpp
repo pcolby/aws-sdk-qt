@@ -96,7 +96,7 @@ DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponse(QXmlStreamReader &xml)
+void DescribeSpotPriceHistoryResponsePrivate::parseDescribeSpotPriceHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotPriceHistoryResponse"));
     /// @todo

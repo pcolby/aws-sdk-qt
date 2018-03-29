@@ -96,7 +96,7 @@ GetAssessmentReportResponsePrivate::GetAssessmentReportResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAssessmentReportResponsePrivate::GetAssessmentReportResponse(QXmlStreamReader &xml)
+void GetAssessmentReportResponsePrivate::parseGetAssessmentReportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAssessmentReportResponse"));
     /// @todo

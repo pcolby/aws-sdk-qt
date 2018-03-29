@@ -96,7 +96,7 @@ BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponse(QXmlStreamReader &xml)
+void BatchDeleteTableVersionResponsePrivate::parseBatchDeleteTableVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteTableVersionResponse"));
     /// @todo

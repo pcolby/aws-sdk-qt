@@ -96,7 +96,7 @@ StartPersonTrackingResponsePrivate::StartPersonTrackingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartPersonTrackingResponsePrivate::StartPersonTrackingResponse(QXmlStreamReader &xml)
+void StartPersonTrackingResponsePrivate::parseStartPersonTrackingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartPersonTrackingResponse"));
     /// @todo

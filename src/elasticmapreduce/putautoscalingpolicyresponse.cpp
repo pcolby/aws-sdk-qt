@@ -96,7 +96,7 @@ PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponse(QXmlStreamReader &xml)
+void PutAutoScalingPolicyResponsePrivate::parsePutAutoScalingPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutAutoScalingPolicyResponse"));
     /// @todo

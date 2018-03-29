@@ -96,7 +96,7 @@ AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponse(QXmlStreamReader &xml)
+void AdminListGroupsForUserResponsePrivate::parseAdminListGroupsForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminListGroupsForUserResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartDBInstanceResponsePrivate::StartDBInstanceResponse(QXmlStreamReader &xml)
+void StartDBInstanceResponsePrivate::parseStartDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartDBInstanceResponse"));
     /// @todo

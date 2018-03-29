@@ -96,7 +96,7 @@ ReloadTablesResponsePrivate::ReloadTablesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReloadTablesResponsePrivate::ReloadTablesResponse(QXmlStreamReader &xml)
+void ReloadTablesResponsePrivate::parseReloadTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReloadTablesResponse"));
     /// @todo

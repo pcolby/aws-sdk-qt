@@ -96,7 +96,7 @@ UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponse(QXmlStreamReader &xml)
+void UpdateDocumentVersionResponsePrivate::parseUpdateDocumentVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentVersionResponse"));
     /// @todo

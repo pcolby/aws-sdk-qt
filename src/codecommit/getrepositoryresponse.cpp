@@ -96,7 +96,7 @@ GetRepositoryResponsePrivate::GetRepositoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRepositoryResponsePrivate::GetRepositoryResponse(QXmlStreamReader &xml)
+void GetRepositoryResponsePrivate::parseGetRepositoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRepositoryResponse"));
     /// @todo

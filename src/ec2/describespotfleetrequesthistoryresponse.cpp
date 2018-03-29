@@ -96,7 +96,7 @@ DescribeSpotFleetRequestHistoryResponsePrivate::DescribeSpotFleetRequestHistoryR
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSpotFleetRequestHistoryResponsePrivate::DescribeSpotFleetRequestHistoryResponse(QXmlStreamReader &xml)
+void DescribeSpotFleetRequestHistoryResponsePrivate::parseDescribeSpotFleetRequestHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotFleetRequestHistoryResponse"));
     /// @todo

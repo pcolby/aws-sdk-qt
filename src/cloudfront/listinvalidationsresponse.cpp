@@ -96,7 +96,7 @@ ListInvalidationsResponsePrivate::ListInvalidationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListInvalidationsResponsePrivate::ListInvalidationsResponse(QXmlStreamReader &xml)
+void ListInvalidationsResponsePrivate::parseListInvalidationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInvalidationsResponse"));
     /// @todo

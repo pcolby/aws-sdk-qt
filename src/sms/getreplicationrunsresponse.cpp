@@ -96,7 +96,7 @@ GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetReplicationRunsResponsePrivate::GetReplicationRunsResponse(QXmlStreamReader &xml)
+void GetReplicationRunsResponsePrivate::parseGetReplicationRunsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReplicationRunsResponse"));
     /// @todo

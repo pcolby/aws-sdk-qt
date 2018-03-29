@@ -96,7 +96,7 @@ GetDistributionConfigResponsePrivate::GetDistributionConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDistributionConfigResponsePrivate::GetDistributionConfigResponse(QXmlStreamReader &xml)
+void GetDistributionConfigResponsePrivate::parseGetDistributionConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDistributionConfigResponse"));
     /// @todo

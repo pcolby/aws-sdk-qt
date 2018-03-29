@@ -96,7 +96,7 @@ StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopAssessmentRunResponsePrivate::StopAssessmentRunResponse(QXmlStreamReader &xml)
+void StopAssessmentRunResponsePrivate::parseStopAssessmentRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopAssessmentRunResponse"));
     /// @todo

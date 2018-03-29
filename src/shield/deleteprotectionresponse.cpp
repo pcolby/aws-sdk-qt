@@ -96,7 +96,7 @@ DeleteProtectionResponsePrivate::DeleteProtectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteProtectionResponsePrivate::DeleteProtectionResponse(QXmlStreamReader &xml)
+void DeleteProtectionResponsePrivate::parseDeleteProtectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProtectionResponse"));
     /// @todo

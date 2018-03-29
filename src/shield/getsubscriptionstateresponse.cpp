@@ -96,7 +96,7 @@ GetSubscriptionStateResponsePrivate::GetSubscriptionStateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSubscriptionStateResponsePrivate::GetSubscriptionStateResponse(QXmlStreamReader &xml)
+void GetSubscriptionStateResponsePrivate::parseGetSubscriptionStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSubscriptionStateResponse"));
     /// @todo

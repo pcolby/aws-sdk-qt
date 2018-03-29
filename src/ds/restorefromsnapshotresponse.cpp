@@ -96,7 +96,7 @@ RestoreFromSnapshotResponsePrivate::RestoreFromSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreFromSnapshotResponsePrivate::RestoreFromSnapshotResponse(QXmlStreamReader &xml)
+void RestoreFromSnapshotResponsePrivate::parseRestoreFromSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreFromSnapshotResponse"));
     /// @todo

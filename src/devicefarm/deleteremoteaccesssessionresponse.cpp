@@ -96,7 +96,7 @@ DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponse(QXmlStreamReader &xml)
+void DeleteRemoteAccessSessionResponsePrivate::parseDeleteRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRemoteAccessSessionResponse"));
     /// @todo

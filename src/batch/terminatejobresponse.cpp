@@ -96,7 +96,7 @@ TerminateJobResponsePrivate::TerminateJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateJobResponsePrivate::TerminateJobResponse(QXmlStreamReader &xml)
+void TerminateJobResponsePrivate::parseTerminateJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateJobResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponse(QXmlStreamReader &xml)
+void DeleteEventSourceMappingResponsePrivate::parseDeleteEventSourceMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEventSourceMappingResponse"));
     /// @todo

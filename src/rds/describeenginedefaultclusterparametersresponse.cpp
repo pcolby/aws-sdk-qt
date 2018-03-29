@@ -96,7 +96,7 @@ DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClus
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClusterParametersResponse(QXmlStreamReader &xml)
+void DescribeEngineDefaultClusterParametersResponsePrivate::parseDescribeEngineDefaultClusterParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEngineDefaultClusterParametersResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetQueryExecutionResponsePrivate::GetQueryExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetQueryExecutionResponsePrivate::GetQueryExecutionResponse(QXmlStreamReader &xml)
+void GetQueryExecutionResponsePrivate::parseGetQueryExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetQueryExecutionResponse"));
     /// @todo

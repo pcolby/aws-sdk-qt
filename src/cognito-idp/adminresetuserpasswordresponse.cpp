@@ -96,7 +96,7 @@ AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponse(QXmlStreamReader &xml)
+void AdminResetUserPasswordResponsePrivate::parseAdminResetUserPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminResetUserPasswordResponse"));
     /// @todo

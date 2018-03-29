@@ -96,7 +96,7 @@ CreateScriptResponsePrivate::CreateScriptResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateScriptResponsePrivate::CreateScriptResponse(QXmlStreamReader &xml)
+void CreateScriptResponsePrivate::parseCreateScriptResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateScriptResponse"));
     /// @todo

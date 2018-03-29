@@ -96,7 +96,7 @@ DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponse(QXmlStreamReader &xml)
+void DeleteDBParameterGroupResponsePrivate::parseDeleteDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBParameterGroupResponse"));
     /// @todo

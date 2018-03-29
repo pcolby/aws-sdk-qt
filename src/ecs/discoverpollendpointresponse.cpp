@@ -96,7 +96,7 @@ DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponse(QXmlStreamReader &xml)
+void DiscoverPollEndpointResponsePrivate::parseDiscoverPollEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DiscoverPollEndpointResponse"));
     /// @todo

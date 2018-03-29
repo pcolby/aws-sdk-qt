@@ -96,7 +96,7 @@ DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponse(QXmlStreamReader &xml)
+void DeleteCustomActionTypeResponsePrivate::parseDeleteCustomActionTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomActionTypeResponse"));
     /// @todo

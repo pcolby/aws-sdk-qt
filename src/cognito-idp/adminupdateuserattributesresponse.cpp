@@ -96,7 +96,7 @@ AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponse(QXmlStreamReader &xml)
+void AdminUpdateUserAttributesResponsePrivate::parseAdminUpdateUserAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateUserAttributesResponse"));
     /// @todo

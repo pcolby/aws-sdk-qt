@@ -96,7 +96,7 @@ GetOfferingStatusResponsePrivate::GetOfferingStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetOfferingStatusResponsePrivate::GetOfferingStatusResponse(QXmlStreamReader &xml)
+void GetOfferingStatusResponsePrivate::parseGetOfferingStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOfferingStatusResponse"));
     /// @todo

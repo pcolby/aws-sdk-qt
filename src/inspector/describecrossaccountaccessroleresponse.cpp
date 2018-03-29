@@ -96,7 +96,7 @@ DescribeCrossAccountAccessRoleResponsePrivate::DescribeCrossAccountAccessRoleRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCrossAccountAccessRoleResponsePrivate::DescribeCrossAccountAccessRoleResponse(QXmlStreamReader &xml)
+void DescribeCrossAccountAccessRoleResponsePrivate::parseDescribeCrossAccountAccessRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCrossAccountAccessRoleResponse"));
     /// @todo

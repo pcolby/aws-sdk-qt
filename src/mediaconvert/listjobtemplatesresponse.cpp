@@ -96,7 +96,7 @@ ListJobTemplatesResponsePrivate::ListJobTemplatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListJobTemplatesResponsePrivate::ListJobTemplatesResponse(QXmlStreamReader &xml)
+void ListJobTemplatesResponsePrivate::parseListJobTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobTemplatesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateAddressResponsePrivate::CreateAddressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAddressResponsePrivate::CreateAddressResponse(QXmlStreamReader &xml)
+void CreateAddressResponsePrivate::parseCreateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAddressResponse"));
     /// @todo

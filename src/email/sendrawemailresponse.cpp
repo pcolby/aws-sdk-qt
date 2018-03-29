@@ -96,7 +96,7 @@ SendRawEmailResponsePrivate::SendRawEmailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendRawEmailResponsePrivate::SendRawEmailResponse(QXmlStreamReader &xml)
+void SendRawEmailResponsePrivate::parseSendRawEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendRawEmailResponse"));
     /// @todo

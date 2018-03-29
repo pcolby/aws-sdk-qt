@@ -96,7 +96,7 @@ AssociateProductWithPortfolioResponsePrivate::AssociateProductWithPortfolioRespo
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateProductWithPortfolioResponsePrivate::AssociateProductWithPortfolioResponse(QXmlStreamReader &xml)
+void AssociateProductWithPortfolioResponsePrivate::parseAssociateProductWithPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateProductWithPortfolioResponse"));
     /// @todo

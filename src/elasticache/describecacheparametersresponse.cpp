@@ -96,7 +96,7 @@ DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponse(QXmlStreamReader &xml)
+void DescribeCacheParametersResponsePrivate::parseDescribeCacheParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheParametersResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PutNotificationConfigurationResponsePrivate::PutNotificationConfigurationRespons
  *
  * @param  xml  XML stream to parse.
  */
-void PutNotificationConfigurationResponsePrivate::PutNotificationConfigurationResponse(QXmlStreamReader &xml)
+void PutNotificationConfigurationResponsePrivate::parsePutNotificationConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutNotificationConfigurationResponse"));
     /// @todo

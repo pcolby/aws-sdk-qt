@@ -96,7 +96,7 @@ GetCorsPolicyResponsePrivate::GetCorsPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCorsPolicyResponsePrivate::GetCorsPolicyResponse(QXmlStreamReader &xml)
+void GetCorsPolicyResponsePrivate::parseGetCorsPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCorsPolicyResponse"));
     /// @todo

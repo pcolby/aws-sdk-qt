@@ -96,7 +96,7 @@ StopTriggerResponsePrivate::StopTriggerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopTriggerResponsePrivate::StopTriggerResponse(QXmlStreamReader &xml)
+void StopTriggerResponsePrivate::parseStopTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopTriggerResponse"));
     /// @todo

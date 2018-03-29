@@ -96,7 +96,7 @@ RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponse(QXmlStreamReader &xml)
+void RegisterWorkflowTypeResponsePrivate::parseRegisterWorkflowTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterWorkflowTypeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponse(QXmlStreamReader &xml)
+void CreateReplicationInstanceResponsePrivate::parseCreateReplicationInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationInstanceResponse"));
     /// @todo

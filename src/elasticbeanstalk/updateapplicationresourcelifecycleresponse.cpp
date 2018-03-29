@@ -96,7 +96,7 @@ UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLife
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLifecycleResponse(QXmlStreamReader &xml)
+void UpdateApplicationResourceLifecycleResponsePrivate::parseUpdateApplicationResourceLifecycleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationResourceLifecycleResponse"));
     /// @todo

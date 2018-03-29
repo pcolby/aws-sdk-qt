@@ -96,7 +96,7 @@ ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponse(QXmlStreamReader &xml)
+void ListNetworkProfilesResponsePrivate::parseListNetworkProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListNetworkProfilesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RemoveThingFromThingGroupResponsePrivate::RemoveThingFromThingGroupResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveThingFromThingGroupResponsePrivate::RemoveThingFromThingGroupResponse(QXmlStreamReader &xml)
+void RemoveThingFromThingGroupResponsePrivate::parseRemoveThingFromThingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveThingFromThingGroupResponse"));
     /// @todo

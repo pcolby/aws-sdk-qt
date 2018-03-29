@@ -96,7 +96,7 @@ ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponse(QXmlStreamReader &xml)
+void ListAssessmentRunAgentsResponsePrivate::parseListAssessmentRunAgentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssessmentRunAgentsResponse"));
     /// @todo

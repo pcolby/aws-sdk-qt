@@ -96,7 +96,7 @@ SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponse(QXmlStreamReader &xml)
+void SetRiskConfigurationResponsePrivate::parseSetRiskConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetRiskConfigurationResponse"));
     /// @todo

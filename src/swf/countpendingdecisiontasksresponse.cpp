@@ -96,7 +96,7 @@ CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponse(QXmlStreamReader &xml)
+void CountPendingDecisionTasksResponsePrivate::parseCountPendingDecisionTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CountPendingDecisionTasksResponse"));
     /// @todo

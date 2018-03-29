@@ -96,7 +96,7 @@ ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponse(QXmlStreamReader &xml)
+void ModifyVpcTenancyResponsePrivate::parseModifyVpcTenancyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcTenancyResponse"));
     /// @todo

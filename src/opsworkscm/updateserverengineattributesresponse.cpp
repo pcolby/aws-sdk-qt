@@ -96,7 +96,7 @@ UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesResponse(QXmlStreamReader &xml)
+void UpdateServerEngineAttributesResponsePrivate::parseUpdateServerEngineAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServerEngineAttributesResponse"));
     /// @todo

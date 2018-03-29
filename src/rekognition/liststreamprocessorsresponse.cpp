@@ -96,7 +96,7 @@ ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponse(QXmlStreamReader &xml)
+void ListStreamProcessorsResponsePrivate::parseListStreamProcessorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStreamProcessorsResponse"));
     /// @todo

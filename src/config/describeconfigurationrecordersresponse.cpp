@@ -96,7 +96,7 @@ DescribeConfigurationRecordersResponsePrivate::DescribeConfigurationRecordersRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConfigurationRecordersResponsePrivate::DescribeConfigurationRecordersResponse(QXmlStreamReader &xml)
+void DescribeConfigurationRecordersResponsePrivate::parseDescribeConfigurationRecordersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationRecordersResponse"));
     /// @todo

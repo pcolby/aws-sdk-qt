@@ -96,7 +96,7 @@ ListJobExecutionsForThingResponsePrivate::ListJobExecutionsForThingResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void ListJobExecutionsForThingResponsePrivate::ListJobExecutionsForThingResponse(QXmlStreamReader &xml)
+void ListJobExecutionsForThingResponsePrivate::parseListJobExecutionsForThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobExecutionsForThingResponse"));
     /// @todo

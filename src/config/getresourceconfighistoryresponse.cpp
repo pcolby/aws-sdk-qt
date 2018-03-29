@@ -96,7 +96,7 @@ GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponse(QXmlStreamReader &xml)
+void GetResourceConfigHistoryResponsePrivate::parseGetResourceConfigHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResourceConfigHistoryResponse"));
     /// @todo

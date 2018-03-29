@@ -96,7 +96,7 @@ CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponse(QXmlStreamReader &xml)
+void CreateAutoScalingGroupResponsePrivate::parseCreateAutoScalingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAutoScalingGroupResponse"));
     /// @todo

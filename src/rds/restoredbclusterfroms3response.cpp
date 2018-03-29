@@ -96,7 +96,7 @@ RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3ResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3Response(QXmlStreamReader &xml)
+void RestoreDBClusterFromS3ResponsePrivate::parseRestoreDBClusterFromS3Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterFromS3Response"));
     /// @todo

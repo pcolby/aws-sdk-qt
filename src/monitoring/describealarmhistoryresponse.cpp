@@ -96,7 +96,7 @@ DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponse(QXmlStreamReader &xml)
+void DescribeAlarmHistoryResponsePrivate::parseDescribeAlarmHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmHistoryResponse"));
     /// @todo

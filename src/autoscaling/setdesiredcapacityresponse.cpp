@@ -96,7 +96,7 @@ SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponse(QXmlStreamReader &xml)
+void SetDesiredCapacityResponsePrivate::parseSetDesiredCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetDesiredCapacityResponse"));
     /// @todo

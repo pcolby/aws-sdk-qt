@@ -96,7 +96,7 @@ DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponse(QXmlStreamReader &xml)
+void DescribeScalableTargetsResponsePrivate::parseDescribeScalableTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalableTargetsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponse(QXmlStreamReader &xml)
+void AssociateDhcpOptionsResponsePrivate::parseAssociateDhcpOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDhcpOptionsResponse"));
     /// @todo

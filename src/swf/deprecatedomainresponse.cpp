@@ -96,7 +96,7 @@ DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeprecateDomainResponsePrivate::DeprecateDomainResponse(QXmlStreamReader &xml)
+void DeprecateDomainResponsePrivate::parseDeprecateDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateDomainResponse"));
     /// @todo

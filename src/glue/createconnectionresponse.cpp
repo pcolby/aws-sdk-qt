@@ -96,7 +96,7 @@ CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateConnectionResponsePrivate::CreateConnectionResponse(QXmlStreamReader &xml)
+void CreateConnectionResponsePrivate::parseCreateConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConnectionResponse"));
     /// @todo

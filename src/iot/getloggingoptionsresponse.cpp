@@ -96,7 +96,7 @@ GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponse(QXmlStreamReader &xml)
+void GetLoggingOptionsResponsePrivate::parseGetLoggingOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLoggingOptionsResponse"));
     /// @todo

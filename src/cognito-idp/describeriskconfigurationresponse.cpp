@@ -96,7 +96,7 @@ DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponse(QXmlStreamReader &xml)
+void DescribeRiskConfigurationResponsePrivate::parseDescribeRiskConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRiskConfigurationResponse"));
     /// @todo

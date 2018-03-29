@@ -96,7 +96,7 @@ UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialR
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
+void UpdateServiceSpecificCredentialResponsePrivate::parseUpdateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceSpecificCredentialResponse"));
     /// @todo

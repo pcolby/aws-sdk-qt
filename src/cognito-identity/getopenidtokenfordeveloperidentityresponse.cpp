@@ -96,7 +96,7 @@ GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDeveloperIde
  *
  * @param  xml  XML stream to parse.
  */
-void GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDeveloperIdentityResponse(QXmlStreamReader &xml)
+void GetOpenIdTokenForDeveloperIdentityResponsePrivate::parseGetOpenIdTokenForDeveloperIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIdTokenForDeveloperIdentityResponse"));
     /// @todo

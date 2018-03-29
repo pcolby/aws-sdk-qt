@@ -96,7 +96,7 @@ CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponse(QXmlStreamReader &xml)
+void CreateFunctionDefinitionResponsePrivate::parseCreateFunctionDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFunctionDefinitionResponse"));
     /// @todo

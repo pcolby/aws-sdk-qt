@@ -96,7 +96,7 @@ UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponse(QXmlStreamReader &xml)
+void UpdateTimeToLiveResponsePrivate::parseUpdateTimeToLiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTimeToLiveResponse"));
     /// @todo

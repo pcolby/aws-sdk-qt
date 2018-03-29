@@ -96,7 +96,7 @@ UpgradeAppliedSchemaResponsePrivate::UpgradeAppliedSchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpgradeAppliedSchemaResponsePrivate::UpgradeAppliedSchemaResponse(QXmlStreamReader &xml)
+void UpgradeAppliedSchemaResponsePrivate::parseUpgradeAppliedSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpgradeAppliedSchemaResponse"));
     /// @todo

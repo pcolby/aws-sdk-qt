@@ -96,7 +96,7 @@ ListBranchesResponsePrivate::ListBranchesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBranchesResponsePrivate::ListBranchesResponse(QXmlStreamReader &xml)
+void ListBranchesResponsePrivate::parseListBranchesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBranchesResponse"));
     /// @todo

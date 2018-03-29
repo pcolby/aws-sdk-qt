@@ -96,7 +96,7 @@ DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponse(QXmlStreamReader &xml)
+void DeleteClusterSnapshotResponsePrivate::parseDeleteClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSnapshotResponse"));
     /// @todo

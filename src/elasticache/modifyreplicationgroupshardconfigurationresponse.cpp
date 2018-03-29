@@ -96,7 +96,7 @@ ModifyReplicationGroupShardConfigurationResponsePrivate::ModifyReplicationGroupS
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyReplicationGroupShardConfigurationResponsePrivate::ModifyReplicationGroupShardConfigurationResponse(QXmlStreamReader &xml)
+void ModifyReplicationGroupShardConfigurationResponsePrivate::parseModifyReplicationGroupShardConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationGroupShardConfigurationResponse"));
     /// @todo

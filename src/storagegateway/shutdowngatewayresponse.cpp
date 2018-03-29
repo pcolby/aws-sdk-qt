@@ -96,7 +96,7 @@ ShutdownGatewayResponsePrivate::ShutdownGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ShutdownGatewayResponsePrivate::ShutdownGatewayResponse(QXmlStreamReader &xml)
+void ShutdownGatewayResponsePrivate::parseShutdownGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ShutdownGatewayResponse"));
     /// @todo

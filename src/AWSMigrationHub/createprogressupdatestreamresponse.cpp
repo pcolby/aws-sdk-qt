@@ -96,7 +96,7 @@ CreateProgressUpdateStreamResponsePrivate::CreateProgressUpdateStreamResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void CreateProgressUpdateStreamResponsePrivate::CreateProgressUpdateStreamResponse(QXmlStreamReader &xml)
+void CreateProgressUpdateStreamResponsePrivate::parseCreateProgressUpdateStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProgressUpdateStreamResponse"));
     /// @todo

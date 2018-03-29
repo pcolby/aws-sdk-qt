@@ -96,7 +96,7 @@ StopFleetResponsePrivate::StopFleetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopFleetResponsePrivate::StopFleetResponse(QXmlStreamReader &xml)
+void StopFleetResponsePrivate::parseStopFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopFleetResponse"));
     /// @todo

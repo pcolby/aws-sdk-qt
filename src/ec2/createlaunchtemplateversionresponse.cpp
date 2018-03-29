@@ -96,7 +96,7 @@ CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponse(QXmlStreamReader &xml)
+void CreateLaunchTemplateVersionResponsePrivate::parseCreateLaunchTemplateVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLaunchTemplateVersionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListCommandsResponsePrivate::ListCommandsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListCommandsResponsePrivate::ListCommandsResponse(QXmlStreamReader &xml)
+void ListCommandsResponsePrivate::parseListCommandsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCommandsResponse"));
     /// @todo

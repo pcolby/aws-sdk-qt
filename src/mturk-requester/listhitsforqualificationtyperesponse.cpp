@@ -96,7 +96,7 @@ ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeResponse(QXmlStreamReader &xml)
+void ListHITsForQualificationTypeResponsePrivate::parseListHITsForQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHITsForQualificationTypeResponse"));
     /// @todo

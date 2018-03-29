@@ -96,7 +96,7 @@ PutEventStreamResponsePrivate::PutEventStreamResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutEventStreamResponsePrivate::PutEventStreamResponse(QXmlStreamReader &xml)
+void PutEventStreamResponsePrivate::parsePutEventStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutEventStreamResponse"));
     /// @todo

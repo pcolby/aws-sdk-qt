@@ -96,7 +96,7 @@ DeleteCollectionResponsePrivate::DeleteCollectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCollectionResponsePrivate::DeleteCollectionResponse(QXmlStreamReader &xml)
+void DeleteCollectionResponsePrivate::parseDeleteCollectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCollectionResponse"));
     /// @todo

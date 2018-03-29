@@ -96,7 +96,7 @@ DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResou
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResourceResponse(QXmlStreamReader &xml)
+void DisassociateTagOptionFromResourceResponsePrivate::parseDisassociateTagOptionFromResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateTagOptionFromResourceResponse"));
     /// @todo

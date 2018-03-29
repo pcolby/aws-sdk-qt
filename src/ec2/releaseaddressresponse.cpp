@@ -96,7 +96,7 @@ ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReleaseAddressResponsePrivate::ReleaseAddressResponse(QXmlStreamReader &xml)
+void ReleaseAddressResponsePrivate::parseReleaseAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReleaseAddressResponse"));
     /// @todo

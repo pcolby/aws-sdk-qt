@@ -96,7 +96,7 @@ GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetGeoLocationResponsePrivate::GetGeoLocationResponse(QXmlStreamReader &xml)
+void GetGeoLocationResponsePrivate::parseGetGeoLocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGeoLocationResponse"));
     /// @todo

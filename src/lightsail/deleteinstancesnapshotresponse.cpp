@@ -96,7 +96,7 @@ DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponse(QXmlStreamReader &xml)
+void DeleteInstanceSnapshotResponsePrivate::parseDeleteInstanceSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceSnapshotResponse"));
     /// @todo

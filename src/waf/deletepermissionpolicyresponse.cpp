@@ -96,7 +96,7 @@ DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponse(QXmlStreamReader &xml)
+void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePermissionPolicyResponse"));
     /// @todo

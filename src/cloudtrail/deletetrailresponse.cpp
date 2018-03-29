@@ -96,7 +96,7 @@ DeleteTrailResponsePrivate::DeleteTrailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTrailResponsePrivate::DeleteTrailResponse(QXmlStreamReader &xml)
+void DeleteTrailResponsePrivate::parseDeleteTrailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrailResponse"));
     /// @todo

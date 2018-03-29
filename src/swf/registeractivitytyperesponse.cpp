@@ -96,7 +96,7 @@ RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponse(QXmlStreamReader &xml)
+void RegisterActivityTypeResponsePrivate::parseRegisterActivityTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterActivityTypeResponse"));
     /// @todo

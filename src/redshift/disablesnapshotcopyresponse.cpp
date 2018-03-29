@@ -96,7 +96,7 @@ DisableSnapshotCopyResponsePrivate::DisableSnapshotCopyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableSnapshotCopyResponsePrivate::DisableSnapshotCopyResponse(QXmlStreamReader &xml)
+void DisableSnapshotCopyResponsePrivate::parseDisableSnapshotCopyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableSnapshotCopyResponse"));
     /// @todo

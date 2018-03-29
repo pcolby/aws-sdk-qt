@@ -96,7 +96,7 @@ ListThingGroupsResponsePrivate::ListThingGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListThingGroupsResponsePrivate::ListThingGroupsResponse(QXmlStreamReader &xml)
+void ListThingGroupsResponsePrivate::parseListThingGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListThingGroupsResponse"));
     /// @todo

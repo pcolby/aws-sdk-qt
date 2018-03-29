@@ -96,7 +96,7 @@ DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResponse(QXmlStreamReader &xml)
+void DeleteConfigurationRecorderResponsePrivate::parseDeleteConfigurationRecorderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationRecorderResponse"));
     /// @todo

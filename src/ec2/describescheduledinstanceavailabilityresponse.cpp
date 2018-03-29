@@ -96,7 +96,7 @@ DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceA
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceAvailabilityResponse(QXmlStreamReader &xml)
+void DescribeScheduledInstanceAvailabilityResponsePrivate::parseDescribeScheduledInstanceAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledInstanceAvailabilityResponse"));
     /// @todo

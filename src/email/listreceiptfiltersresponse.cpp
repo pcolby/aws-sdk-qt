@@ -96,7 +96,7 @@ ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponse(QXmlStreamReader &xml)
+void ListReceiptFiltersResponsePrivate::parseListReceiptFiltersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReceiptFiltersResponse"));
     /// @todo

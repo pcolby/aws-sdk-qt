@@ -96,7 +96,7 @@ DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponse(QXmlStreamReader &xml)
+void DeregisterElasticIpResponsePrivate::parseDeregisterElasticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterElasticIpResponse"));
     /// @todo

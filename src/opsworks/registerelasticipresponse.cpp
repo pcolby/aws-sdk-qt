@@ -96,7 +96,7 @@ RegisterElasticIpResponsePrivate::RegisterElasticIpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterElasticIpResponsePrivate::RegisterElasticIpResponse(QXmlStreamReader &xml)
+void RegisterElasticIpResponsePrivate::parseRegisterElasticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterElasticIpResponse"));
     /// @todo

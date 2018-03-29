@@ -96,7 +96,7 @@ RemoveAllResourcePermissionsResponsePrivate::RemoveAllResourcePermissionsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveAllResourcePermissionsResponsePrivate::RemoveAllResourcePermissionsResponse(QXmlStreamReader &xml)
+void RemoveAllResourcePermissionsResponsePrivate::parseRemoveAllResourcePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAllResourcePermissionsResponse"));
     /// @todo

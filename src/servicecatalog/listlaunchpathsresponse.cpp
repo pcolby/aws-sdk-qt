@@ -96,7 +96,7 @@ ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListLaunchPathsResponsePrivate::ListLaunchPathsResponse(QXmlStreamReader &xml)
+void ListLaunchPathsResponsePrivate::parseListLaunchPathsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLaunchPathsResponse"));
     /// @todo

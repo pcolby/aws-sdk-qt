@@ -96,7 +96,7 @@ CreateHapgResponsePrivate::CreateHapgResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateHapgResponsePrivate::CreateHapgResponse(QXmlStreamReader &xml)
+void CreateHapgResponsePrivate::parseCreateHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHapgResponse"));
     /// @todo

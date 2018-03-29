@@ -96,7 +96,7 @@ GetAccountSummaryResponsePrivate::GetAccountSummaryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccountSummaryResponsePrivate::GetAccountSummaryResponse(QXmlStreamReader &xml)
+void GetAccountSummaryResponsePrivate::parseGetAccountSummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountSummaryResponse"));
     /// @todo

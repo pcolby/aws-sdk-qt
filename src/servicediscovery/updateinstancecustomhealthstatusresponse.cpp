@@ -96,7 +96,7 @@ UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatu
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatusResponse(QXmlStreamReader &xml)
+void UpdateInstanceCustomHealthStatusResponsePrivate::parseUpdateInstanceCustomHealthStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceCustomHealthStatusResponse"));
     /// @todo

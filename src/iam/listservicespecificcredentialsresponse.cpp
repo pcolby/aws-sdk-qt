@@ -96,7 +96,7 @@ ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsRes
  *
  * @param  xml  XML stream to parse.
  */
-void ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsResponse(QXmlStreamReader &xml)
+void ListServiceSpecificCredentialsResponsePrivate::parseListServiceSpecificCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListServiceSpecificCredentialsResponse"));
     /// @todo

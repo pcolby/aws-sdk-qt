@@ -96,7 +96,7 @@ CreateCaseResponsePrivate::CreateCaseResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCaseResponsePrivate::CreateCaseResponse(QXmlStreamReader &xml)
+void CreateCaseResponsePrivate::parseCreateCaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCaseResponse"));
     /// @todo

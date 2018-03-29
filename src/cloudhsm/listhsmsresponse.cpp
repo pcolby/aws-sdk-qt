@@ -96,7 +96,7 @@ ListHsmsResponsePrivate::ListHsmsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListHsmsResponsePrivate::ListHsmsResponse(QXmlStreamReader &xml)
+void ListHsmsResponsePrivate::parseListHsmsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHsmsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponse(QXmlStreamReader &xml)
+void AdminDisableProviderForUserResponsePrivate::parseAdminDisableProviderForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminDisableProviderForUserResponse"));
     /// @todo

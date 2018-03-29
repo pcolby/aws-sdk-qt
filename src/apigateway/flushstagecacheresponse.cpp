@@ -96,7 +96,7 @@ FlushStageCacheResponsePrivate::FlushStageCacheResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void FlushStageCacheResponsePrivate::FlushStageCacheResponse(QXmlStreamReader &xml)
+void FlushStageCacheResponsePrivate::parseFlushStageCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("FlushStageCacheResponse"));
     /// @todo

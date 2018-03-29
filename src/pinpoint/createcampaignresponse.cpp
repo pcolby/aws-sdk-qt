@@ -96,7 +96,7 @@ CreateCampaignResponsePrivate::CreateCampaignResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCampaignResponsePrivate::CreateCampaignResponse(QXmlStreamReader &xml)
+void CreateCampaignResponsePrivate::parseCreateCampaignResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCampaignResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateStackInstancesResponsePrivate::CreateStackInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateStackInstancesResponsePrivate::CreateStackInstancesResponse(QXmlStreamReader &xml)
+void CreateStackInstancesResponsePrivate::parseCreateStackInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStackInstancesResponse"));
     /// @todo

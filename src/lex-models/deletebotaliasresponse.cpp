@@ -96,7 +96,7 @@ DeleteBotAliasResponsePrivate::DeleteBotAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBotAliasResponsePrivate::DeleteBotAliasResponse(QXmlStreamReader &xml)
+void DeleteBotAliasResponsePrivate::parseDeleteBotAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotAliasResponse"));
     /// @todo

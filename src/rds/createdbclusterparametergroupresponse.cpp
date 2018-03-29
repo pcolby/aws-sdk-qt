@@ -96,7 +96,7 @@ CreateDBClusterParameterGroupResponsePrivate::CreateDBClusterParameterGroupRespo
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDBClusterParameterGroupResponsePrivate::CreateDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+void CreateDBClusterParameterGroupResponsePrivate::parseCreateDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterParameterGroupResponse"));
     /// @todo

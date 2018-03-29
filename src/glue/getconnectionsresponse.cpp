@@ -96,7 +96,7 @@ GetConnectionsResponsePrivate::GetConnectionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetConnectionsResponsePrivate::GetConnectionsResponse(QXmlStreamReader &xml)
+void GetConnectionsResponsePrivate::parseGetConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConnectionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCostAndUsageResponsePrivate::GetCostAndUsageResponse(QXmlStreamReader &xml)
+void GetCostAndUsageResponsePrivate::parseGetCostAndUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCostAndUsageResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSendQuotaResponsePrivate::GetSendQuotaResponse(QXmlStreamReader &xml)
+void GetSendQuotaResponsePrivate::parseGetSendQuotaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSendQuotaResponse"));
     /// @todo

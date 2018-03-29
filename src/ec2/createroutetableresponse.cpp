@@ -96,7 +96,7 @@ CreateRouteTableResponsePrivate::CreateRouteTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateRouteTableResponsePrivate::CreateRouteTableResponse(QXmlStreamReader &xml)
+void CreateRouteTableResponsePrivate::parseCreateRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRouteTableResponse"));
     /// @todo

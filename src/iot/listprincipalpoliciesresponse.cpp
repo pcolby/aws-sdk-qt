@@ -96,7 +96,7 @@ ListPrincipalPoliciesResponsePrivate::ListPrincipalPoliciesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListPrincipalPoliciesResponsePrivate::ListPrincipalPoliciesResponse(QXmlStreamReader &xml)
+void ListPrincipalPoliciesResponsePrivate::parseListPrincipalPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPrincipalPoliciesResponse"));
     /// @todo

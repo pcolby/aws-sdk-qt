@@ -96,7 +96,7 @@ CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2ResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2Response(QXmlStreamReader &xml)
+void CreateEnvironmentEC2ResponsePrivate::parseCreateEnvironmentEC2Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentEC2Response"));
     /// @todo

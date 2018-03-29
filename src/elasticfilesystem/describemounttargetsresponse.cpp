@@ -96,7 +96,7 @@ DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponse(QXmlStreamReader &xml)
+void DescribeMountTargetsResponsePrivate::parseDescribeMountTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMountTargetsResponse"));
     /// @todo

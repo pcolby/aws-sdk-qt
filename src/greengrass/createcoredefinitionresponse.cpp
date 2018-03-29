@@ -96,7 +96,7 @@ CreateCoreDefinitionResponsePrivate::CreateCoreDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCoreDefinitionResponsePrivate::CreateCoreDefinitionResponse(QXmlStreamReader &xml)
+void CreateCoreDefinitionResponsePrivate::parseCreateCoreDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCoreDefinitionResponse"));
     /// @todo

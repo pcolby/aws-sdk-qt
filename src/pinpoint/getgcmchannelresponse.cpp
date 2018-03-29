@@ -96,7 +96,7 @@ GetGcmChannelResponsePrivate::GetGcmChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetGcmChannelResponsePrivate::GetGcmChannelResponse(QXmlStreamReader &xml)
+void GetGcmChannelResponsePrivate::parseGetGcmChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGcmChannelResponse"));
     /// @todo

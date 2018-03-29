@@ -96,7 +96,7 @@ UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateIPSetResponsePrivate::UpdateIPSetResponse(QXmlStreamReader &xml)
+void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateIPSetResponse"));
     /// @todo

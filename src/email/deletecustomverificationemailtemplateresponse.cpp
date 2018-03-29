@@ -96,7 +96,7 @@ DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificationEm
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
+void DeleteCustomVerificationEmailTemplateResponsePrivate::parseDeleteCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomVerificationEmailTemplateResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListTapesResponsePrivate::ListTapesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTapesResponsePrivate::ListTapesResponse(QXmlStreamReader &xml)
+void ListTapesResponsePrivate::parseListTapesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTapesResponse"));
     /// @todo

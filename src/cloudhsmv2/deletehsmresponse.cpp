@@ -96,7 +96,7 @@ DeleteHsmResponsePrivate::DeleteHsmResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteHsmResponsePrivate::DeleteHsmResponse(QXmlStreamReader &xml)
+void DeleteHsmResponsePrivate::parseDeleteHsmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHsmResponse"));
     /// @todo

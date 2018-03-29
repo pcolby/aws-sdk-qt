@@ -96,7 +96,7 @@ DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponse(QXmlStreamReader &xml)
+void DeleteResourceDefinitionResponsePrivate::parseDeleteResourceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceDefinitionResponse"));
     /// @todo

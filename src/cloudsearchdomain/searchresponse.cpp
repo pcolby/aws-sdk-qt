@@ -96,7 +96,7 @@ SearchResponsePrivate::SearchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchResponsePrivate::SearchResponse(QXmlStreamReader &xml)
+void SearchResponsePrivate::parseSearchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchResponse"));
     /// @todo

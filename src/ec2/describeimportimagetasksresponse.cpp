@@ -96,7 +96,7 @@ DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponse(QXmlStreamReader &xml)
+void DescribeImportImageTasksResponsePrivate::parseDescribeImportImageTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImportImageTasksResponse"));
     /// @todo

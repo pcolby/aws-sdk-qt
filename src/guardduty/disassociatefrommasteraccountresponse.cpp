@@ -96,7 +96,7 @@ DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountResponse(QXmlStreamReader &xml)
+void DisassociateFromMasterAccountResponsePrivate::parseDisassociateFromMasterAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateFromMasterAccountResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetDashboardResponsePrivate::GetDashboardResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDashboardResponsePrivate::GetDashboardResponse(QXmlStreamReader &xml)
+void GetDashboardResponsePrivate::parseGetDashboardResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDashboardResponse"));
     /// @todo

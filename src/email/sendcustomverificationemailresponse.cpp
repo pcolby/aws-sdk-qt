@@ -96,7 +96,7 @@ SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponse(QXmlStreamReader &xml)
+void SendCustomVerificationEmailResponsePrivate::parseSendCustomVerificationEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendCustomVerificationEmailResponse"));
     /// @todo

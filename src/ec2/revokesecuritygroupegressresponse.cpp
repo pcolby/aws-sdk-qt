@@ -96,7 +96,7 @@ RevokeSecurityGroupEgressResponsePrivate::RevokeSecurityGroupEgressResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RevokeSecurityGroupEgressResponsePrivate::RevokeSecurityGroupEgressResponse(QXmlStreamReader &xml)
+void RevokeSecurityGroupEgressResponsePrivate::parseRevokeSecurityGroupEgressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeSecurityGroupEgressResponse"));
     /// @todo

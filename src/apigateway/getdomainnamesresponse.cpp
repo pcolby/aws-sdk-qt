@@ -96,7 +96,7 @@ GetDomainNamesResponsePrivate::GetDomainNamesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDomainNamesResponsePrivate::GetDomainNamesResponse(QXmlStreamReader &xml)
+void GetDomainNamesResponsePrivate::parseGetDomainNamesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDomainNamesResponse"));
     /// @todo

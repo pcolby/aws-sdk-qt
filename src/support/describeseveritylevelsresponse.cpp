@@ -96,7 +96,7 @@ DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponse(QXmlStreamReader &xml)
+void DescribeSeverityLevelsResponsePrivate::parseDescribeSeverityLevelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSeverityLevelsResponse"));
     /// @todo

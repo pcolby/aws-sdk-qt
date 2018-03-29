@@ -96,7 +96,7 @@ CreateEvaluationResponsePrivate::CreateEvaluationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateEvaluationResponsePrivate::CreateEvaluationResponse(QXmlStreamReader &xml)
+void CreateEvaluationResponsePrivate::parseCreateEvaluationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEvaluationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponse(QXmlStreamReader &xml)
+void DeleteGraphqlApiResponsePrivate::parseDeleteGraphqlApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGraphqlApiResponse"));
     /// @todo

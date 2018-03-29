@@ -96,7 +96,7 @@ SetQueueAttributesResponsePrivate::SetQueueAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetQueueAttributesResponsePrivate::SetQueueAttributesResponse(QXmlStreamReader &xml)
+void SetQueueAttributesResponsePrivate::parseSetQueueAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetQueueAttributesResponse"));
     /// @todo

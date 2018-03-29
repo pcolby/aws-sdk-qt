@@ -96,7 +96,7 @@ UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponse(QXmlStreamReader &xml)
+void UnmonitorInstancesResponsePrivate::parseUnmonitorInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnmonitorInstancesResponse"));
     /// @todo

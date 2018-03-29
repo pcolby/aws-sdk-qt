@@ -96,7 +96,7 @@ InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadRespo
  *
  * @param  xml  XML stream to parse.
  */
-void InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadResponse(QXmlStreamReader &xml)
+void InitiateDocumentVersionUploadResponsePrivate::parseInitiateDocumentVersionUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateDocumentVersionUploadResponse"));
     /// @todo

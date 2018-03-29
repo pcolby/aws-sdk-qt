@@ -96,7 +96,7 @@ RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedRespons
  *
  * @param  xml  XML stream to parse.
  */
-void RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedResponse(QXmlStreamReader &xml)
+void RespondDecisionTaskCompletedResponsePrivate::parseRespondDecisionTaskCompletedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondDecisionTaskCompletedResponse"));
     /// @todo

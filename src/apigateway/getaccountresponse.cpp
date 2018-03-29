@@ -96,7 +96,7 @@ GetAccountResponsePrivate::GetAccountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccountResponsePrivate::GetAccountResponse(QXmlStreamReader &xml)
+void GetAccountResponsePrivate::parseGetAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountResponse"));
     /// @todo

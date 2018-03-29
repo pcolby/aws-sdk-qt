@@ -96,7 +96,7 @@ DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponse(QXmlStreamReader &xml)
+void DeregisterRdsDbInstanceResponsePrivate::parseDeregisterRdsDbInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterRdsDbInstanceResponse"));
     /// @todo

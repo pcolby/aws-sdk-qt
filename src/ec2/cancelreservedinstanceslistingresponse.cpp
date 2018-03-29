@@ -96,7 +96,7 @@ CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingRes
  *
  * @param  xml  XML stream to parse.
  */
-void CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingResponse(QXmlStreamReader &xml)
+void CancelReservedInstancesListingResponsePrivate::parseCancelReservedInstancesListingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelReservedInstancesListingResponse"));
     /// @todo

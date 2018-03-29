@@ -96,7 +96,7 @@ DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachVolumeResponsePrivate::DetachVolumeResponse(QXmlStreamReader &xml)
+void DetachVolumeResponsePrivate::parseDetachVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachVolumeResponse"));
     /// @todo

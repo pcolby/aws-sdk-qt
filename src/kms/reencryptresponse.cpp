@@ -96,7 +96,7 @@ ReEncryptResponsePrivate::ReEncryptResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReEncryptResponsePrivate::ReEncryptResponse(QXmlStreamReader &xml)
+void ReEncryptResponsePrivate::parseReEncryptResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReEncryptResponse"));
     /// @todo

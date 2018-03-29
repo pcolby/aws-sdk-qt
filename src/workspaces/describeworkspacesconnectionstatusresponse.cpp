@@ -96,7 +96,7 @@ DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionS
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionStatusResponse(QXmlStreamReader &xml)
+void DescribeWorkspacesConnectionStatusResponsePrivate::parseDescribeWorkspacesConnectionStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspacesConnectionStatusResponse"));
     /// @todo

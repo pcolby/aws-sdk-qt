@@ -96,7 +96,7 @@ PutApprovalResultResponsePrivate::PutApprovalResultResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutApprovalResultResponsePrivate::PutApprovalResultResponse(QXmlStreamReader &xml)
+void PutApprovalResultResponsePrivate::parsePutApprovalResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutApprovalResultResponse"));
     /// @todo

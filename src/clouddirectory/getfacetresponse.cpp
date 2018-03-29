@@ -96,7 +96,7 @@ GetFacetResponsePrivate::GetFacetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetFacetResponsePrivate::GetFacetResponse(QXmlStreamReader &xml)
+void GetFacetResponsePrivate::parseGetFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFacetResponse"));
     /// @todo

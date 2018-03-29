@@ -96,7 +96,7 @@ DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponse(QXmlStreamReader &xml)
+void DeleteVpnGatewayResponsePrivate::parseDeleteVpnGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpnGatewayResponse"));
     /// @todo

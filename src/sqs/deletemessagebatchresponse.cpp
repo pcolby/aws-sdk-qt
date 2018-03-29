@@ -96,7 +96,7 @@ DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponse(QXmlStreamReader &xml)
+void DeleteMessageBatchResponsePrivate::parseDeleteMessageBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMessageBatchResponse"));
     /// @todo

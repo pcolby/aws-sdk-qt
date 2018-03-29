@@ -96,7 +96,7 @@ RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFro
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml)
+void RemoveSourceIdentifierFromSubscriptionResponsePrivate::parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveSourceIdentifierFromSubscriptionResponse"));
     /// @todo

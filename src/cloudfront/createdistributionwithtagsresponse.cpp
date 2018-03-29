@@ -96,7 +96,7 @@ CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsResponse(QXmlStreamReader &xml)
+void CreateDistributionWithTagsResponsePrivate::parseCreateDistributionWithTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDistributionWithTagsResponse"));
     /// @todo

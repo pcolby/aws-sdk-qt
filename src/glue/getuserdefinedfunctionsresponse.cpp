@@ -96,7 +96,7 @@ GetUserDefinedFunctionsResponsePrivate::GetUserDefinedFunctionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetUserDefinedFunctionsResponsePrivate::GetUserDefinedFunctionsResponse(QXmlStreamReader &xml)
+void GetUserDefinedFunctionsResponsePrivate::parseGetUserDefinedFunctionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserDefinedFunctionsResponse"));
     /// @todo

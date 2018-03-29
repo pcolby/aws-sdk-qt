@@ -96,7 +96,7 @@ UpdateStackInstancesResponsePrivate::UpdateStackInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateStackInstancesResponsePrivate::UpdateStackInstancesResponse(QXmlStreamReader &xml)
+void UpdateStackInstancesResponsePrivate::parseUpdateStackInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStackInstancesResponse"));
     /// @todo

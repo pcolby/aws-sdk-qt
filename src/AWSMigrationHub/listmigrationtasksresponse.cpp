@@ -96,7 +96,7 @@ ListMigrationTasksResponsePrivate::ListMigrationTasksResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListMigrationTasksResponsePrivate::ListMigrationTasksResponse(QXmlStreamReader &xml)
+void ListMigrationTasksResponsePrivate::parseListMigrationTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListMigrationTasksResponse"));
     /// @todo

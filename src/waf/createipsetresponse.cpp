@@ -96,7 +96,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateIPSetResponsePrivate::CreateIPSetResponse(QXmlStreamReader &xml)
+void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIPSetResponse"));
     /// @todo

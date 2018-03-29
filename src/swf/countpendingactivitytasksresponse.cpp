@@ -96,7 +96,7 @@ CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponse(QXmlStreamReader &xml)
+void CountPendingActivityTasksResponsePrivate::parseCountPendingActivityTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CountPendingActivityTasksResponse"));
     /// @todo

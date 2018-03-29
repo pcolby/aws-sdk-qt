@@ -96,7 +96,7 @@ ListAssociationsResponsePrivate::ListAssociationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAssociationsResponsePrivate::ListAssociationsResponse(QXmlStreamReader &xml)
+void ListAssociationsResponsePrivate::parseListAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssociationsResponse"));
     /// @todo

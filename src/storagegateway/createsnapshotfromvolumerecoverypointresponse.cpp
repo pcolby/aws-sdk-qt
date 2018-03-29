@@ -96,7 +96,7 @@ CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRe
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml)
+void CreateSnapshotFromVolumeRecoveryPointResponsePrivate::parseCreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotFromVolumeRecoveryPointResponse"));
     /// @todo

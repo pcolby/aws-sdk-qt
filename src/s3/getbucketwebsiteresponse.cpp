@@ -96,7 +96,7 @@ GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponse(QXmlStreamReader &xml)
+void GetBucketWebsiteResponsePrivate::parseGetBucketWebsiteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketWebsiteResponse"));
     /// @todo

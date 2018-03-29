@@ -96,7 +96,7 @@ QueryObjectsResponsePrivate::QueryObjectsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void QueryObjectsResponsePrivate::QueryObjectsResponse(QXmlStreamReader &xml)
+void QueryObjectsResponsePrivate::parseQueryObjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("QueryObjectsResponse"));
     /// @todo

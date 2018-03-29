@@ -96,7 +96,7 @@ RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponse(QXmlStreamReader &xml)
+void RotateEncryptionKeyResponsePrivate::parseRotateEncryptionKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RotateEncryptionKeyResponse"));
     /// @todo

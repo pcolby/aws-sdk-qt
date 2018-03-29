@@ -96,7 +96,7 @@ DescribeImageBuildersResponsePrivate::DescribeImageBuildersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeImageBuildersResponsePrivate::DescribeImageBuildersResponse(QXmlStreamReader &xml)
+void DescribeImageBuildersResponsePrivate::parseDescribeImageBuildersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImageBuildersResponse"));
     /// @todo

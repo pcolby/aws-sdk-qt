@@ -96,7 +96,7 @@ CreateNetworkProfileResponsePrivate::CreateNetworkProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNetworkProfileResponsePrivate::CreateNetworkProfileResponse(QXmlStreamReader &xml)
+void CreateNetworkProfileResponsePrivate::parseCreateNetworkProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkProfileResponse"));
     /// @todo

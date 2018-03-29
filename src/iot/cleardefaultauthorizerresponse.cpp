@@ -96,7 +96,7 @@ ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponse(QXmlStreamReader &xml)
+void ClearDefaultAuthorizerResponsePrivate::parseClearDefaultAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ClearDefaultAuthorizerResponse"));
     /// @todo

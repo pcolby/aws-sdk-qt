@@ -96,7 +96,7 @@ PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfigurationRespo
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
+void PutBucketMetricsConfigurationResponsePrivate::parsePutBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketMetricsConfigurationResponse"));
     /// @todo

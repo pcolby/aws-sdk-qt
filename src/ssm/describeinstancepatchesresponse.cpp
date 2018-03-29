@@ -96,7 +96,7 @@ DescribeInstancePatchesResponsePrivate::DescribeInstancePatchesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInstancePatchesResponsePrivate::DescribeInstancePatchesResponse(QXmlStreamReader &xml)
+void DescribeInstancePatchesResponsePrivate::parseDescribeInstancePatchesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstancePatchesResponse"));
     /// @todo

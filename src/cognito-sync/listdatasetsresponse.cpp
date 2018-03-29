@@ -96,7 +96,7 @@ ListDatasetsResponsePrivate::ListDatasetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListDatasetsResponsePrivate::ListDatasetsResponse(QXmlStreamReader &xml)
+void ListDatasetsResponsePrivate::parseListDatasetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDatasetsResponse"));
     /// @todo

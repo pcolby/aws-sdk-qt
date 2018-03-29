@@ -96,7 +96,7 @@ UntagLogGroupResponsePrivate::UntagLogGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UntagLogGroupResponsePrivate::UntagLogGroupResponse(QXmlStreamReader &xml)
+void UntagLogGroupResponsePrivate::parseUntagLogGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagLogGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AdminCreateUserResponsePrivate::AdminCreateUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminCreateUserResponsePrivate::AdminCreateUserResponse(QXmlStreamReader &xml)
+void AdminCreateUserResponsePrivate::parseAdminCreateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminCreateUserResponse"));
     /// @todo

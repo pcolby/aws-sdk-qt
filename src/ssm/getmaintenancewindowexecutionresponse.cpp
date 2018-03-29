@@ -96,7 +96,7 @@ GetMaintenanceWindowExecutionResponsePrivate::GetMaintenanceWindowExecutionRespo
  *
  * @param  xml  XML stream to parse.
  */
-void GetMaintenanceWindowExecutionResponsePrivate::GetMaintenanceWindowExecutionResponse(QXmlStreamReader &xml)
+void GetMaintenanceWindowExecutionResponsePrivate::parseGetMaintenanceWindowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMaintenanceWindowExecutionResponse"));
     /// @todo

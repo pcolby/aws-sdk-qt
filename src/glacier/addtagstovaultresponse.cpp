@@ -96,7 +96,7 @@ AddTagsToVaultResponsePrivate::AddTagsToVaultResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddTagsToVaultResponsePrivate::AddTagsToVaultResponse(QXmlStreamReader &xml)
+void AddTagsToVaultResponsePrivate::parseAddTagsToVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToVaultResponse"));
     /// @todo

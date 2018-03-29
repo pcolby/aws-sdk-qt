@@ -96,7 +96,7 @@ DeleteIntentResponsePrivate::DeleteIntentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteIntentResponsePrivate::DeleteIntentResponse(QXmlStreamReader &xml)
+void DeleteIntentResponsePrivate::parseDeleteIntentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntentResponse"));
     /// @todo

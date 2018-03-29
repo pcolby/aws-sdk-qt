@@ -96,7 +96,7 @@ GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponse(QXmlStreamReader &xml)
+void GetTemplateSummaryResponsePrivate::parseGetTemplateSummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTemplateSummaryResponse"));
     /// @todo

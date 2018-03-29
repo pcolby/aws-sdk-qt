@@ -96,7 +96,7 @@ RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponse(QXmlStreamReader &xml)
+void RegisterTaskDefinitionResponsePrivate::parseRegisterTaskDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTaskDefinitionResponse"));
     /// @todo

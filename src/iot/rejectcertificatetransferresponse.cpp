@@ -96,7 +96,7 @@ RejectCertificateTransferResponsePrivate::RejectCertificateTransferResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RejectCertificateTransferResponsePrivate::RejectCertificateTransferResponse(QXmlStreamReader &xml)
+void RejectCertificateTransferResponsePrivate::parseRejectCertificateTransferResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RejectCertificateTransferResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateNatGatewayResponsePrivate::CreateNatGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNatGatewayResponsePrivate::CreateNatGatewayResponse(QXmlStreamReader &xml)
+void CreateNatGatewayResponsePrivate::parseCreateNatGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNatGatewayResponse"));
     /// @todo

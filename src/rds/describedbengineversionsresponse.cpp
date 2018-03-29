@@ -96,7 +96,7 @@ DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
+void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBEngineVersionsResponse"));
     /// @todo

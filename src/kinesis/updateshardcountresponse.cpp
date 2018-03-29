@@ -96,7 +96,7 @@ UpdateShardCountResponsePrivate::UpdateShardCountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateShardCountResponsePrivate::UpdateShardCountResponse(QXmlStreamReader &xml)
+void UpdateShardCountResponsePrivate::parseUpdateShardCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateShardCountResponse"));
     /// @todo

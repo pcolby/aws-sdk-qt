@@ -96,7 +96,7 @@ DeleteTableVersionResponsePrivate::DeleteTableVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTableVersionResponsePrivate::DeleteTableVersionResponse(QXmlStreamReader &xml)
+void DeleteTableVersionResponsePrivate::parseDeleteTableVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTableVersionResponse"));
     /// @todo

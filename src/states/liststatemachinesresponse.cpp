@@ -96,7 +96,7 @@ ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListStateMachinesResponsePrivate::ListStateMachinesResponse(QXmlStreamReader &xml)
+void ListStateMachinesResponsePrivate::parseListStateMachinesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStateMachinesResponse"));
     /// @todo

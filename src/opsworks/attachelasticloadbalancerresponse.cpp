@@ -96,7 +96,7 @@ AttachElasticLoadBalancerResponsePrivate::AttachElasticLoadBalancerResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void AttachElasticLoadBalancerResponsePrivate::AttachElasticLoadBalancerResponse(QXmlStreamReader &xml)
+void AttachElasticLoadBalancerResponsePrivate::parseAttachElasticLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachElasticLoadBalancerResponse"));
     /// @todo

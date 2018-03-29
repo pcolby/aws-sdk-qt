@@ -96,7 +96,7 @@ RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RevokeInvitationResponsePrivate::RevokeInvitationResponse(QXmlStreamReader &xml)
+void RevokeInvitationResponsePrivate::parseRevokeInvitationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeInvitationResponse"));
     /// @todo

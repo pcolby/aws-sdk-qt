@@ -96,7 +96,7 @@ GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponse(QXmlStreamReader &xml)
+void GetWorkflowExecutionHistoryResponsePrivate::parseGetWorkflowExecutionHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetWorkflowExecutionHistoryResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListVolumeRecoveryPointsResponsePrivate::ListVolumeRecoveryPointsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ListVolumeRecoveryPointsResponsePrivate::ListVolumeRecoveryPointsResponse(QXmlStreamReader &xml)
+void ListVolumeRecoveryPointsResponsePrivate::parseListVolumeRecoveryPointsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVolumeRecoveryPointsResponse"));
     /// @todo

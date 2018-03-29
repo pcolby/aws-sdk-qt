@@ -96,7 +96,7 @@ PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOffer
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOfferingResponse(QXmlStreamReader &xml)
+void PurchaseReservedInstancesOfferingResponsePrivate::parsePurchaseReservedInstancesOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedInstancesOfferingResponse"));
     /// @todo

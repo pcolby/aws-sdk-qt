@@ -96,7 +96,7 @@ MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponse(QXmlStreamReader &xml)
+void MoveAddressToVpcResponsePrivate::parseMoveAddressToVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MoveAddressToVpcResponse"));
     /// @todo

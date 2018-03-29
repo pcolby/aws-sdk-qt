@@ -96,7 +96,7 @@ CreateBranchResponsePrivate::CreateBranchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBranchResponsePrivate::CreateBranchResponse(QXmlStreamReader &xml)
+void CreateBranchResponsePrivate::parseCreateBranchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBranchResponse"));
     /// @todo

@@ -96,7 +96,7 @@ MonitorInstancesResponsePrivate::MonitorInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void MonitorInstancesResponsePrivate::MonitorInstancesResponse(QXmlStreamReader &xml)
+void MonitorInstancesResponsePrivate::parseMonitorInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MonitorInstancesResponse"));
     /// @todo

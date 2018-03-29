@@ -96,7 +96,7 @@ UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateWebACLResponsePrivate::UpdateWebACLResponse(QXmlStreamReader &xml)
+void UpdateWebACLResponsePrivate::parseUpdateWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateWebACLResponse"));
     /// @todo

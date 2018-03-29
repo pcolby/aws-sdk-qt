@@ -96,7 +96,7 @@ DescribeNotebookInstanceLifecycleConfigResponsePrivate::DescribeNotebookInstance
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNotebookInstanceLifecycleConfigResponsePrivate::DescribeNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
+void DescribeNotebookInstanceLifecycleConfigResponsePrivate::parseDescribeNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotebookInstanceLifecycleConfigResponse"));
     /// @todo

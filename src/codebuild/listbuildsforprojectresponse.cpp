@@ -96,7 +96,7 @@ ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponse(QXmlStreamReader &xml)
+void ListBuildsForProjectResponsePrivate::parseListBuildsForProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBuildsForProjectResponse"));
     /// @todo

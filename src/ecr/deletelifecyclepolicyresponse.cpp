@@ -96,7 +96,7 @@ DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponse(QXmlStreamReader &xml)
+void DeleteLifecyclePolicyResponsePrivate::parseDeleteLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLifecyclePolicyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionRespo
  *
  * @param  xml  XML stream to parse.
  */
-void PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml)
+void PutScheduledUpdateGroupActionResponsePrivate::parsePutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutScheduledUpdateGroupActionResponse"));
     /// @todo

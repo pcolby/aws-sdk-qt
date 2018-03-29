@@ -96,7 +96,7 @@ UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponse(QXmlStreamReader &xml)
+void UpdateObjectAttributesResponsePrivate::parseUpdateObjectAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateObjectAttributesResponse"));
     /// @todo

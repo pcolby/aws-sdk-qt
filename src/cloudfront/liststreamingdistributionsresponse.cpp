@@ -96,7 +96,7 @@ ListStreamingDistributionsResponsePrivate::ListStreamingDistributionsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListStreamingDistributionsResponsePrivate::ListStreamingDistributionsResponse(QXmlStreamReader &xml)
+void ListStreamingDistributionsResponsePrivate::parseListStreamingDistributionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStreamingDistributionsResponse"));
     /// @todo

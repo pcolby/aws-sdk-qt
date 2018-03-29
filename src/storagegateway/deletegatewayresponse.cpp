@@ -96,7 +96,7 @@ DeleteGatewayResponsePrivate::DeleteGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteGatewayResponsePrivate::DeleteGatewayResponse(QXmlStreamReader &xml)
+void DeleteGatewayResponsePrivate::parseDeleteGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGatewayResponse"));
     /// @todo

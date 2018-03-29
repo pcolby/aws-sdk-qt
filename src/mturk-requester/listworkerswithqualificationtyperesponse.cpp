@@ -96,7 +96,7 @@ ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificationTyp
  *
  * @param  xml  XML stream to parse.
  */
-void ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificationTypeResponse(QXmlStreamReader &xml)
+void ListWorkersWithQualificationTypeResponsePrivate::parseListWorkersWithQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWorkersWithQualificationTypeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponse(QXmlStreamReader &xml)
+void DescribeScheduledActionsResponsePrivate::parseDescribeScheduledActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledActionsResponse"));
     /// @todo

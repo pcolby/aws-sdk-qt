@@ -96,7 +96,7 @@ DescribeEnvironmentsResponsePrivate::DescribeEnvironmentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEnvironmentsResponsePrivate::DescribeEnvironmentsResponse(QXmlStreamReader &xml)
+void DescribeEnvironmentsResponsePrivate::parseDescribeEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentsResponse"));
     /// @todo

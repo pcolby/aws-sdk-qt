@@ -96,7 +96,7 @@ DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponse(QXmlStreamReader &xml)
+void DeleteDBInstanceResponsePrivate::parseDeleteDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBInstanceResponse"));
     /// @todo

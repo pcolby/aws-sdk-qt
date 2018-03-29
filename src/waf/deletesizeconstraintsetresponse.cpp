@@ -96,7 +96,7 @@ DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponse(QXmlStreamReader &xml)
+void DeleteSizeConstraintSetResponsePrivate::parseDeleteSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSizeConstraintSetResponse"));
     /// @todo

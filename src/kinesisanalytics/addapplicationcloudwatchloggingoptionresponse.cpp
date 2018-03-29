@@ -96,7 +96,7 @@ AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWatchLo
  *
  * @param  xml  XML stream to parse.
  */
-void AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml)
+void AddApplicationCloudWatchLoggingOptionResponsePrivate::parseAddApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationCloudWatchLoggingOptionResponse"));
     /// @todo

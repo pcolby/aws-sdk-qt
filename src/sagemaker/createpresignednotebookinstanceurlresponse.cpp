@@ -96,7 +96,7 @@ CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookInstan
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookInstanceUrlResponse(QXmlStreamReader &xml)
+void CreatePresignedNotebookInstanceUrlResponsePrivate::parseCreatePresignedNotebookInstanceUrlResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePresignedNotebookInstanceUrlResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetBucketInventoryConfigurationResponsePrivate::GetBucketInventoryConfigurationR
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketInventoryConfigurationResponsePrivate::GetBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
+void GetBucketInventoryConfigurationResponsePrivate::parseGetBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketInventoryConfigurationResponse"));
     /// @todo

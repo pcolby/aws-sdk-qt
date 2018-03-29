@@ -96,7 +96,7 @@ UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponse(QXmlStreamReader &xml)
+void UpdateEnvironmentResponsePrivate::parseUpdateEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEnvironmentResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponse(QXmlStreamReader &xml)
+void UpdateFunctionConfigurationResponsePrivate::parseUpdateFunctionConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionConfigurationResponse"));
     /// @todo

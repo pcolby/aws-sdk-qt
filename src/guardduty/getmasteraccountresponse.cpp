@@ -96,7 +96,7 @@ GetMasterAccountResponsePrivate::GetMasterAccountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetMasterAccountResponsePrivate::GetMasterAccountResponse(QXmlStreamReader &xml)
+void GetMasterAccountResponsePrivate::parseGetMasterAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMasterAccountResponse"));
     /// @todo

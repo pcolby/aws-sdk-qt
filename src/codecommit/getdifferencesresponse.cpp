@@ -96,7 +96,7 @@ GetDifferencesResponsePrivate::GetDifferencesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDifferencesResponsePrivate::GetDifferencesResponse(QXmlStreamReader &xml)
+void GetDifferencesResponsePrivate::parseGetDifferencesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDifferencesResponse"));
     /// @todo

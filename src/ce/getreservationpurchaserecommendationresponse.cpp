@@ -96,7 +96,7 @@ GetReservationPurchaseRecommendationResponsePrivate::GetReservationPurchaseRecom
  *
  * @param  xml  XML stream to parse.
  */
-void GetReservationPurchaseRecommendationResponsePrivate::GetReservationPurchaseRecommendationResponse(QXmlStreamReader &xml)
+void GetReservationPurchaseRecommendationResponsePrivate::parseGetReservationPurchaseRecommendationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservationPurchaseRecommendationResponse"));
     /// @todo

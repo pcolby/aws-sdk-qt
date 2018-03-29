@@ -96,7 +96,7 @@ CreateDeviceDefinitionResponsePrivate::CreateDeviceDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDeviceDefinitionResponsePrivate::CreateDeviceDefinitionResponse(QXmlStreamReader &xml)
+void CreateDeviceDefinitionResponsePrivate::parseCreateDeviceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeviceDefinitionResponse"));
     /// @todo

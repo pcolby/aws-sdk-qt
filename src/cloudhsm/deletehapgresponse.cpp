@@ -96,7 +96,7 @@ DeleteHapgResponsePrivate::DeleteHapgResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteHapgResponsePrivate::DeleteHapgResponse(QXmlStreamReader &xml)
+void DeleteHapgResponsePrivate::parseDeleteHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHapgResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AttachObjectResponsePrivate::AttachObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachObjectResponsePrivate::AttachObjectResponse(QXmlStreamReader &xml)
+void AttachObjectResponsePrivate::parseAttachObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachObjectResponse"));
     /// @todo

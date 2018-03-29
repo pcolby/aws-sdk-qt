@@ -96,7 +96,7 @@ CreateRoleAliasResponsePrivate::CreateRoleAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateRoleAliasResponsePrivate::CreateRoleAliasResponse(QXmlStreamReader &xml)
+void CreateRoleAliasResponsePrivate::parseCreateRoleAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRoleAliasResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ExportProjectResponsePrivate::ExportProjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExportProjectResponsePrivate::ExportProjectResponse(QXmlStreamReader &xml)
+void ExportProjectResponsePrivate::parseExportProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportProjectResponse"));
     /// @todo

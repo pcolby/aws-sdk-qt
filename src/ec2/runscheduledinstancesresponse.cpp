@@ -96,7 +96,7 @@ RunScheduledInstancesResponsePrivate::RunScheduledInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RunScheduledInstancesResponsePrivate::RunScheduledInstancesResponse(QXmlStreamReader &xml)
+void RunScheduledInstancesResponsePrivate::parseRunScheduledInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunScheduledInstancesResponse"));
     /// @todo

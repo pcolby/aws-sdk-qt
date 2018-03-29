@@ -96,7 +96,7 @@ UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateClusterResponsePrivate::UpdateClusterResponse(QXmlStreamReader &xml)
+void UpdateClusterResponsePrivate::parseUpdateClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateClusterResponse"));
     /// @todo

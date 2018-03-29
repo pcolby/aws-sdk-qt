@@ -96,7 +96,7 @@ RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponse(QXmlStreamReader &xml)
+void RemoveAutoScalingPolicyResponsePrivate::parseRemoveAutoScalingPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAutoScalingPolicyResponse"));
     /// @todo

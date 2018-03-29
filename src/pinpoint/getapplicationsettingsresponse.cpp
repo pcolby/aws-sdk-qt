@@ -96,7 +96,7 @@ GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponse(QXmlStreamReader &xml)
+void GetApplicationSettingsResponsePrivate::parseGetApplicationSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApplicationSettingsResponse"));
     /// @todo

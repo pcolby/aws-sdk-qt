@@ -96,7 +96,7 @@ DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteActivationResponsePrivate::DeleteActivationResponse(QXmlStreamReader &xml)
+void DeleteActivationResponsePrivate::parseDeleteActivationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteActivationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StartChannelResponsePrivate::StartChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartChannelResponsePrivate::StartChannelResponse(QXmlStreamReader &xml)
+void StartChannelResponsePrivate::parseStartChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartChannelResponse"));
     /// @todo

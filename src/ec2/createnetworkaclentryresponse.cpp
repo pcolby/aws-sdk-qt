@@ -96,7 +96,7 @@ CreateNetworkAclEntryResponsePrivate::CreateNetworkAclEntryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNetworkAclEntryResponsePrivate::CreateNetworkAclEntryResponse(QXmlStreamReader &xml)
+void CreateNetworkAclEntryResponsePrivate::parseCreateNetworkAclEntryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkAclEntryResponse"));
     /// @todo

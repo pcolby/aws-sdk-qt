@@ -96,7 +96,7 @@ CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+void CopyDBClusterParameterGroupResponsePrivate::parseCopyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBClusterParameterGroupResponse"));
     /// @todo

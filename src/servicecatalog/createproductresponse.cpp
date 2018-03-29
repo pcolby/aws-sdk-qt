@@ -96,7 +96,7 @@ CreateProductResponsePrivate::CreateProductResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateProductResponsePrivate::CreateProductResponse(QXmlStreamReader &xml)
+void CreateProductResponsePrivate::parseCreateProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProductResponse"));
     /// @todo

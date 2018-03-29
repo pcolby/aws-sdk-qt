@@ -96,7 +96,7 @@ PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultRespo
  *
  * @param  xml  XML stream to parse.
  */
-void PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultResponse(QXmlStreamReader &xml)
+void PutThirdPartyJobSuccessResultResponsePrivate::parsePutThirdPartyJobSuccessResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutThirdPartyJobSuccessResultResponse"));
     /// @todo

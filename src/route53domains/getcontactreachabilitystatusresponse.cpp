@@ -96,7 +96,7 @@ GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusRespons
  *
  * @param  xml  XML stream to parse.
  */
-void GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusResponse(QXmlStreamReader &xml)
+void GetContactReachabilityStatusResponsePrivate::parseGetContactReachabilityStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContactReachabilityStatusResponse"));
     /// @todo

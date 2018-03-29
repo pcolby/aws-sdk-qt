@@ -96,7 +96,7 @@ SendMessageResponsePrivate::SendMessageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendMessageResponsePrivate::SendMessageResponse(QXmlStreamReader &xml)
+void SendMessageResponsePrivate::parseSendMessageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendMessageResponse"));
     /// @todo

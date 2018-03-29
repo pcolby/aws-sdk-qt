@@ -96,7 +96,7 @@ ReplaceRouteResponsePrivate::ReplaceRouteResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReplaceRouteResponsePrivate::ReplaceRouteResponse(QXmlStreamReader &xml)
+void ReplaceRouteResponsePrivate::parseReplaceRouteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReplaceRouteResponse"));
     /// @todo

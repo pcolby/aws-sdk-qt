@@ -96,7 +96,7 @@ ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponse(QXmlStreamReader &xml)
+void ModifySubnetAttributeResponsePrivate::parseModifySubnetAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifySubnetAttributeResponse"));
     /// @todo

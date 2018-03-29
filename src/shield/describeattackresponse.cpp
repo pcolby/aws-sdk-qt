@@ -96,7 +96,7 @@ DescribeAttackResponsePrivate::DescribeAttackResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAttackResponsePrivate::DescribeAttackResponse(QXmlStreamReader &xml)
+void DescribeAttackResponsePrivate::parseDescribeAttackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAttackResponse"));
     /// @todo

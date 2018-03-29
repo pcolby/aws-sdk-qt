@@ -96,7 +96,7 @@ ImportImageResponsePrivate::ImportImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportImageResponsePrivate::ImportImageResponse(QXmlStreamReader &xml)
+void ImportImageResponsePrivate::parseImportImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportImageResponse"));
     /// @todo

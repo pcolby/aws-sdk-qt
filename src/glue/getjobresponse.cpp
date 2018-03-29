@@ -96,7 +96,7 @@ GetJobResponsePrivate::GetJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetJobResponsePrivate::GetJobResponse(QXmlStreamReader &xml)
+void GetJobResponsePrivate::parseGetJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobResponse"));
     /// @todo

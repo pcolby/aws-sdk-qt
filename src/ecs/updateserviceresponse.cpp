@@ -96,7 +96,7 @@ UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateServiceResponsePrivate::UpdateServiceResponse(QXmlStreamReader &xml)
+void UpdateServiceResponsePrivate::parseUpdateServiceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceResponse"));
     /// @todo

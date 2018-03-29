@@ -96,7 +96,7 @@ SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponse(QXmlStreamReader &xml)
+void SetSecurityGroupsResponsePrivate::parseSetSecurityGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetSecurityGroupsResponse"));
     /// @todo

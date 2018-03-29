@@ -96,7 +96,7 @@ ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponse(QXmlStreamReader &xml)
+void ListOTAUpdatesResponsePrivate::parseListOTAUpdatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOTAUpdatesResponse"));
     /// @todo

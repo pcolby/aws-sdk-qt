@@ -96,7 +96,7 @@ CreateHostedZoneResponsePrivate::CreateHostedZoneResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateHostedZoneResponsePrivate::CreateHostedZoneResponse(QXmlStreamReader &xml)
+void CreateHostedZoneResponsePrivate::parseCreateHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHostedZoneResponse"));
     /// @todo

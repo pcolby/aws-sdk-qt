@@ -96,7 +96,7 @@ CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponse(QXmlStreamReader &xml)
+void CreateDBSubnetGroupResponsePrivate::parseCreateDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSubnetGroupResponse"));
     /// @todo

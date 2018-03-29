@@ -96,7 +96,7 @@ DescribeAssessmentTemplatesResponsePrivate::DescribeAssessmentTemplatesResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAssessmentTemplatesResponsePrivate::DescribeAssessmentTemplatesResponse(QXmlStreamReader &xml)
+void DescribeAssessmentTemplatesResponsePrivate::parseDescribeAssessmentTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAssessmentTemplatesResponse"));
     /// @todo

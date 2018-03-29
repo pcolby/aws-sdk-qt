@@ -96,7 +96,7 @@ TransferCertificateResponsePrivate::TransferCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TransferCertificateResponsePrivate::TransferCertificateResponse(QXmlStreamReader &xml)
+void TransferCertificateResponsePrivate::parseTransferCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TransferCertificateResponse"));
     /// @todo

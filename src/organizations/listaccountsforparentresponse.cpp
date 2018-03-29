@@ -96,7 +96,7 @@ ListAccountsForParentResponsePrivate::ListAccountsForParentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAccountsForParentResponsePrivate::ListAccountsForParentResponse(QXmlStreamReader &xml)
+void ListAccountsForParentResponsePrivate::parseListAccountsForParentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAccountsForParentResponse"));
     /// @todo

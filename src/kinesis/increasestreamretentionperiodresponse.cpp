@@ -96,7 +96,7 @@ IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodRespo
  *
  * @param  xml  XML stream to parse.
  */
-void IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml)
+void IncreaseStreamRetentionPeriodResponsePrivate::parseIncreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IncreaseStreamRetentionPeriodResponse"));
     /// @todo

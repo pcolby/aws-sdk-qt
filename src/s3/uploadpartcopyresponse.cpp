@@ -96,7 +96,7 @@ UploadPartCopyResponsePrivate::UploadPartCopyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UploadPartCopyResponsePrivate::UploadPartCopyResponse(QXmlStreamReader &xml)
+void UploadPartCopyResponsePrivate::parseUploadPartCopyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadPartCopyResponse"));
     /// @todo

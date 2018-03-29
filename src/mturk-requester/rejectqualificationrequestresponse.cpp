@@ -96,7 +96,7 @@ RejectQualificationRequestResponsePrivate::RejectQualificationRequestResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void RejectQualificationRequestResponsePrivate::RejectQualificationRequestResponse(QXmlStreamReader &xml)
+void RejectQualificationRequestResponsePrivate::parseRejectQualificationRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RejectQualificationRequestResponse"));
     /// @todo

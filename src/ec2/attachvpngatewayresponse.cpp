@@ -96,7 +96,7 @@ AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponse(QXmlStreamReader &xml)
+void AttachVpnGatewayResponsePrivate::parseAttachVpnGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachVpnGatewayResponse"));
     /// @todo

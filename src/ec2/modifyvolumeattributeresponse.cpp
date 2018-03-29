@@ -96,7 +96,7 @@ ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponse(QXmlStreamReader &xml)
+void ModifyVolumeAttributeResponsePrivate::parseModifyVolumeAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVolumeAttributeResponse"));
     /// @todo

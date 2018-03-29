@@ -96,7 +96,7 @@ GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfiguratio
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
+void GetBucketAccelerateConfigurationResponsePrivate::parseGetBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAccelerateConfigurationResponse"));
     /// @todo

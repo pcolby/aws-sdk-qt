@@ -96,7 +96,7 @@ GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponse(QXmlStreamReader &xml)
+void GetIndexingConfigurationResponsePrivate::parseGetIndexingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIndexingConfigurationResponse"));
     /// @todo

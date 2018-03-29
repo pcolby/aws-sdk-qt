@@ -96,7 +96,7 @@ PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml)
+void PromoteReadReplicaDBClusterResponsePrivate::parsePromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaDBClusterResponse"));
     /// @todo

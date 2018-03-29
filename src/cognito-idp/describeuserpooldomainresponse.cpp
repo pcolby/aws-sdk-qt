@@ -96,7 +96,7 @@ DescribeUserPoolDomainResponsePrivate::DescribeUserPoolDomainResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeUserPoolDomainResponsePrivate::DescribeUserPoolDomainResponse(QXmlStreamReader &xml)
+void DescribeUserPoolDomainResponsePrivate::parseDescribeUserPoolDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserPoolDomainResponse"));
     /// @todo

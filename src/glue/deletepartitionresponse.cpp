@@ -96,7 +96,7 @@ DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePartitionResponsePrivate::DeletePartitionResponse(QXmlStreamReader &xml)
+void DeletePartitionResponsePrivate::parseDeletePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePartitionResponse"));
     /// @todo

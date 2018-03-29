@@ -96,7 +96,7 @@ DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAcces
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
+void DeleteCloudFrontOriginAccessIdentityResponsePrivate::parseDeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCloudFrontOriginAccessIdentityResponse"));
     /// @todo

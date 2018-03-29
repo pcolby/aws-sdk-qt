@@ -96,7 +96,7 @@ CreateIndexResponsePrivate::CreateIndexResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateIndexResponsePrivate::CreateIndexResponse(QXmlStreamReader &xml)
+void CreateIndexResponsePrivate::parseCreateIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIndexResponse"));
     /// @todo

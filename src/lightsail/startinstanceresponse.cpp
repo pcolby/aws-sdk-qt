@@ -96,7 +96,7 @@ StartInstanceResponsePrivate::StartInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartInstanceResponsePrivate::StartInstanceResponse(QXmlStreamReader &xml)
+void StartInstanceResponsePrivate::parseStartInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartInstanceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetBundlesResponsePrivate::GetBundlesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBundlesResponsePrivate::GetBundlesResponse(QXmlStreamReader &xml)
+void GetBundlesResponsePrivate::parseGetBundlesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBundlesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListTablesResponsePrivate::ListTablesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTablesResponsePrivate::ListTablesResponse(QXmlStreamReader &xml)
+void ListTablesResponsePrivate::parseListTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTablesResponse"));
     /// @todo

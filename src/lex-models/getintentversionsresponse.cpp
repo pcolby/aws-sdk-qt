@@ -96,7 +96,7 @@ GetIntentVersionsResponsePrivate::GetIntentVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetIntentVersionsResponsePrivate::GetIntentVersionsResponse(QXmlStreamReader &xml)
+void GetIntentVersionsResponsePrivate::parseGetIntentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIntentVersionsResponse"));
     /// @todo

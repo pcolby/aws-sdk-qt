@@ -96,7 +96,7 @@ CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponse(QXmlStreamReader &xml)
+void CreateDhcpOptionsResponsePrivate::parseCreateDhcpOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDhcpOptionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponse(QXmlStreamReader &xml)
+void CreateRequestValidatorResponsePrivate::parseCreateRequestValidatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRequestValidatorResponse"));
     /// @todo

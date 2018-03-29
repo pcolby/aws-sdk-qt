@@ -96,7 +96,7 @@ CreateDBClusterSnapshotResponsePrivate::CreateDBClusterSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDBClusterSnapshotResponsePrivate::CreateDBClusterSnapshotResponse(QXmlStreamReader &xml)
+void CreateDBClusterSnapshotResponsePrivate::parseCreateDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterSnapshotResponse"));
     /// @todo

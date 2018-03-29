@@ -96,7 +96,7 @@ UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersR
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml)
+void UpdateNumberOfDomainControllersResponsePrivate::parseUpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNumberOfDomainControllersResponse"));
     /// @todo

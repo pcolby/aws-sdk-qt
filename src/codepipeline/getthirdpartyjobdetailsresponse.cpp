@@ -96,7 +96,7 @@ GetThirdPartyJobDetailsResponsePrivate::GetThirdPartyJobDetailsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetThirdPartyJobDetailsResponsePrivate::GetThirdPartyJobDetailsResponse(QXmlStreamReader &xml)
+void GetThirdPartyJobDetailsResponsePrivate::parseGetThirdPartyJobDetailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetThirdPartyJobDetailsResponse"));
     /// @todo

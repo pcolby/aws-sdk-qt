@@ -96,7 +96,7 @@ BatchGetProjectsResponsePrivate::BatchGetProjectsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetProjectsResponsePrivate::BatchGetProjectsResponse(QXmlStreamReader &xml)
+void BatchGetProjectsResponsePrivate::parseBatchGetProjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetProjectsResponse"));
     /// @todo

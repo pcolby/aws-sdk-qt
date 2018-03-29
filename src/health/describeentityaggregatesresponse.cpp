@@ -96,7 +96,7 @@ DescribeEntityAggregatesResponsePrivate::DescribeEntityAggregatesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEntityAggregatesResponsePrivate::DescribeEntityAggregatesResponse(QXmlStreamReader &xml)
+void DescribeEntityAggregatesResponsePrivate::parseDescribeEntityAggregatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEntityAggregatesResponse"));
     /// @todo

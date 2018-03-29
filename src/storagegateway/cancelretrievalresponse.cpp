@@ -96,7 +96,7 @@ CancelRetrievalResponsePrivate::CancelRetrievalResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelRetrievalResponsePrivate::CancelRetrievalResponse(QXmlStreamReader &xml)
+void CancelRetrievalResponsePrivate::parseCancelRetrievalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelRetrievalResponse"));
     /// @todo

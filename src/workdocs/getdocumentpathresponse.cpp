@@ -96,7 +96,7 @@ GetDocumentPathResponsePrivate::GetDocumentPathResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDocumentPathResponsePrivate::GetDocumentPathResponse(QXmlStreamReader &xml)
+void GetDocumentPathResponsePrivate::parseGetDocumentPathResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentPathResponse"));
     /// @todo

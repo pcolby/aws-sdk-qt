@@ -96,7 +96,7 @@ GetLabelDetectionResponsePrivate::GetLabelDetectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLabelDetectionResponsePrivate::GetLabelDetectionResponse(QXmlStreamReader &xml)
+void GetLabelDetectionResponsePrivate::parseGetLabelDetectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLabelDetectionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListHapgsResponsePrivate::ListHapgsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListHapgsResponsePrivate::ListHapgsResponse(QXmlStreamReader &xml)
+void ListHapgsResponsePrivate::parseListHapgsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHapgsResponse"));
     /// @todo

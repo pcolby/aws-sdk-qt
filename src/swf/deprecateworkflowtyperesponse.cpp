@@ -96,7 +96,7 @@ DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponse(QXmlStreamReader &xml)
+void DeprecateWorkflowTypeResponsePrivate::parseDeprecateWorkflowTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateWorkflowTypeResponse"));
     /// @todo

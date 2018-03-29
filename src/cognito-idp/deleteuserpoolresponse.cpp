@@ -96,7 +96,7 @@ DeleteUserPoolResponsePrivate::DeleteUserPoolResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteUserPoolResponsePrivate::DeleteUserPoolResponse(QXmlStreamReader &xml)
+void DeleteUserPoolResponsePrivate::parseDeleteUserPoolResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserPoolResponse"));
     /// @todo

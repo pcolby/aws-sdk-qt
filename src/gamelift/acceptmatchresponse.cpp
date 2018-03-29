@@ -96,7 +96,7 @@ AcceptMatchResponsePrivate::AcceptMatchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AcceptMatchResponsePrivate::AcceptMatchResponse(QXmlStreamReader &xml)
+void AcceptMatchResponsePrivate::parseAcceptMatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptMatchResponse"));
     /// @todo

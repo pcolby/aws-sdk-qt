@@ -96,7 +96,7 @@ CreateKeyResponsePrivate::CreateKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateKeyResponsePrivate::CreateKeyResponse(QXmlStreamReader &xml)
+void CreateKeyResponsePrivate::parseCreateKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateKeyResponse"));
     /// @todo

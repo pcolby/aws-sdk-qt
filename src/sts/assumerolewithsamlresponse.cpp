@@ -96,7 +96,7 @@ AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponse(QXmlStreamReader &xml)
+void AssumeRoleWithSAMLResponsePrivate::parseAssumeRoleWithSAMLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithSAMLResponse"));
     /// @todo

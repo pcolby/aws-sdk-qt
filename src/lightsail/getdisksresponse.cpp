@@ -96,7 +96,7 @@ GetDisksResponsePrivate::GetDisksResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDisksResponsePrivate::GetDisksResponse(QXmlStreamReader &xml)
+void GetDisksResponsePrivate::parseGetDisksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDisksResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponse(QXmlStreamReader &xml)
+void ComposeEnvironmentsResponsePrivate::parseComposeEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ComposeEnvironmentsResponse"));
     /// @todo

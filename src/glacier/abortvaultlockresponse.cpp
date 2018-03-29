@@ -96,7 +96,7 @@ AbortVaultLockResponsePrivate::AbortVaultLockResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AbortVaultLockResponsePrivate::AbortVaultLockResponse(QXmlStreamReader &xml)
+void AbortVaultLockResponsePrivate::parseAbortVaultLockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortVaultLockResponse"));
     /// @todo

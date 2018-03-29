@@ -96,7 +96,7 @@ UpdateContinuousBackupsResponsePrivate::UpdateContinuousBackupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateContinuousBackupsResponsePrivate::UpdateContinuousBackupsResponse(QXmlStreamReader &xml)
+void UpdateContinuousBackupsResponsePrivate::parseUpdateContinuousBackupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContinuousBackupsResponse"));
     /// @todo

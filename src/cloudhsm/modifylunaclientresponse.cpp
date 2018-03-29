@@ -96,7 +96,7 @@ ModifyLunaClientResponsePrivate::ModifyLunaClientResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyLunaClientResponsePrivate::ModifyLunaClientResponse(QXmlStreamReader &xml)
+void ModifyLunaClientResponsePrivate::parseModifyLunaClientResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyLunaClientResponse"));
     /// @todo

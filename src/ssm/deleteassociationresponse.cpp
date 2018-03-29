@@ -96,7 +96,7 @@ DeleteAssociationResponsePrivate::DeleteAssociationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAssociationResponsePrivate::DeleteAssociationResponse(QXmlStreamReader &xml)
+void DeleteAssociationResponsePrivate::parseDeleteAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAssociationResponse"));
     /// @todo

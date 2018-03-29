@@ -96,7 +96,7 @@ AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponse(QXmlStreamReader &xml)
+void AssociateSoftwareTokenResponsePrivate::parseAssociateSoftwareTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateSoftwareTokenResponse"));
     /// @todo

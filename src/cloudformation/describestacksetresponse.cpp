@@ -96,7 +96,7 @@ DescribeStackSetResponsePrivate::DescribeStackSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeStackSetResponsePrivate::DescribeStackSetResponse(QXmlStreamReader &xml)
+void DescribeStackSetResponsePrivate::parseDescribeStackSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackSetResponse"));
     /// @todo

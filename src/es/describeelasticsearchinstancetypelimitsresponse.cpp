@@ -96,7 +96,7 @@ DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchIns
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml)
+void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::parseDescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticsearchInstanceTypeLimitsResponse"));
     /// @todo

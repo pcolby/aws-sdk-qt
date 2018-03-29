@@ -96,7 +96,7 @@ AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationI
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml)
+void AssociateConfigurationItemsToApplicationResponsePrivate::parseAssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateConfigurationItemsToApplicationResponse"));
     /// @todo

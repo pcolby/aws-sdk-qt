@@ -96,7 +96,7 @@ DeleteSegmentResponsePrivate::DeleteSegmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSegmentResponsePrivate::DeleteSegmentResponse(QXmlStreamReader &xml)
+void DeleteSegmentResponsePrivate::parseDeleteSegmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSegmentResponse"));
     /// @todo

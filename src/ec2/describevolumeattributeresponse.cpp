@@ -96,7 +96,7 @@ DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponse(QXmlStreamReader &xml)
+void DescribeVolumeAttributeResponsePrivate::parseDescribeVolumeAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumeAttributeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeCommentsResponsePrivate::DescribeCommentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCommentsResponsePrivate::DescribeCommentsResponse(QXmlStreamReader &xml)
+void DescribeCommentsResponsePrivate::parseDescribeCommentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCommentsResponse"));
     /// @todo

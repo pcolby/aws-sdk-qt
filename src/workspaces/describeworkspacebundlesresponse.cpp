@@ -96,7 +96,7 @@ DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponse(QXmlStreamReader &xml)
+void DescribeWorkspaceBundlesResponsePrivate::parseDescribeWorkspaceBundlesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspaceBundlesResponse"));
     /// @todo

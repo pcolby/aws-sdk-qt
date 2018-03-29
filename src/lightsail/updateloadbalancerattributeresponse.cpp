@@ -96,7 +96,7 @@ UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResponse(QXmlStreamReader &xml)
+void UpdateLoadBalancerAttributeResponsePrivate::parseUpdateLoadBalancerAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoadBalancerAttributeResponse"));
     /// @todo

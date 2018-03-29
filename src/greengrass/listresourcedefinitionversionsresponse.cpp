@@ -96,7 +96,7 @@ ListResourceDefinitionVersionsResponsePrivate::ListResourceDefinitionVersionsRes
  *
  * @param  xml  XML stream to parse.
  */
-void ListResourceDefinitionVersionsResponsePrivate::ListResourceDefinitionVersionsResponse(QXmlStreamReader &xml)
+void ListResourceDefinitionVersionsResponsePrivate::parseListResourceDefinitionVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceDefinitionVersionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponse(QXmlStreamReader &xml)
+void CreateApplicationVersionResponsePrivate::parseCreateApplicationVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateApplicationVersionResponse"));
     /// @todo

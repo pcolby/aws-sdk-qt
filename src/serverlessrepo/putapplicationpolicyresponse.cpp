@@ -96,7 +96,7 @@ PutApplicationPolicyResponsePrivate::PutApplicationPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutApplicationPolicyResponsePrivate::PutApplicationPolicyResponse(QXmlStreamReader &xml)
+void PutApplicationPolicyResponsePrivate::parsePutApplicationPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutApplicationPolicyResponse"));
     /// @todo

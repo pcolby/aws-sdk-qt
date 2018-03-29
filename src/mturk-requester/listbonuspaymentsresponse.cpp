@@ -96,7 +96,7 @@ ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponse(QXmlStreamReader &xml)
+void ListBonusPaymentsResponsePrivate::parseListBonusPaymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBonusPaymentsResponse"));
     /// @todo

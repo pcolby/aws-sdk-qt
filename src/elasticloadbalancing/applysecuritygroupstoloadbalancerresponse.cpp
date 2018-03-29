@@ -96,7 +96,7 @@ ApplySecurityGroupsToLoadBalancerResponsePrivate::ApplySecurityGroupsToLoadBalan
  *
  * @param  xml  XML stream to parse.
  */
-void ApplySecurityGroupsToLoadBalancerResponsePrivate::ApplySecurityGroupsToLoadBalancerResponse(QXmlStreamReader &xml)
+void ApplySecurityGroupsToLoadBalancerResponsePrivate::parseApplySecurityGroupsToLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ApplySecurityGroupsToLoadBalancerResponse"));
     /// @todo

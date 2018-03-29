@@ -96,7 +96,7 @@ PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PreviewAgentsResponsePrivate::PreviewAgentsResponse(QXmlStreamReader &xml)
+void PreviewAgentsResponsePrivate::parsePreviewAgentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PreviewAgentsResponse"));
     /// @todo

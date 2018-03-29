@@ -96,7 +96,7 @@ GetDocumentResponsePrivate::GetDocumentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDocumentResponsePrivate::GetDocumentResponse(QXmlStreamReader &xml)
+void GetDocumentResponsePrivate::parseGetDocumentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentResponse"));
     /// @todo

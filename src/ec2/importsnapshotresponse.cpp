@@ -96,7 +96,7 @@ ImportSnapshotResponsePrivate::ImportSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportSnapshotResponsePrivate::ImportSnapshotResponse(QXmlStreamReader &xml)
+void ImportSnapshotResponsePrivate::parseImportSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportSnapshotResponse"));
     /// @todo

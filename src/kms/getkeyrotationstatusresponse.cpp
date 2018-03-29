@@ -96,7 +96,7 @@ GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponse(QXmlStreamReader &xml)
+void GetKeyRotationStatusResponsePrivate::parseGetKeyRotationStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetKeyRotationStatusResponse"));
     /// @todo

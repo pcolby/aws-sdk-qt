@@ -96,7 +96,7 @@ CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponse(QXmlStreamReader &xml)
+void CreateCertificateFromCsrResponsePrivate::parseCreateCertificateFromCsrResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCertificateFromCsrResponse"));
     /// @todo

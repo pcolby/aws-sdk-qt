@@ -96,7 +96,7 @@ DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCrawlerResponsePrivate::DeleteCrawlerResponse(QXmlStreamReader &xml)
+void DeleteCrawlerResponsePrivate::parseDeleteCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCrawlerResponse"));
     /// @todo

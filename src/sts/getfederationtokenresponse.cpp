@@ -96,7 +96,7 @@ GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetFederationTokenResponsePrivate::GetFederationTokenResponse(QXmlStreamReader &xml)
+void GetFederationTokenResponsePrivate::parseGetFederationTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFederationTokenResponse"));
     /// @todo

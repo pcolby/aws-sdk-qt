@@ -96,7 +96,7 @@ PutLifecyclePolicyResponsePrivate::PutLifecyclePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutLifecyclePolicyResponsePrivate::PutLifecyclePolicyResponse(QXmlStreamReader &xml)
+void PutLifecyclePolicyResponsePrivate::parsePutLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutLifecyclePolicyResponse"));
     /// @todo

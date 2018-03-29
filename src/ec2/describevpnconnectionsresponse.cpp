@@ -96,7 +96,7 @@ DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponse(QXmlStreamReader &xml)
+void DescribeVpnConnectionsResponsePrivate::parseDescribeVpnConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpnConnectionsResponse"));
     /// @todo

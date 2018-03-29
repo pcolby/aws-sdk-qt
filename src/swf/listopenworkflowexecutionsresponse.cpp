@@ -96,7 +96,7 @@ ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
+void ListOpenWorkflowExecutionsResponsePrivate::parseListOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOpenWorkflowExecutionsResponse"));
     /// @todo

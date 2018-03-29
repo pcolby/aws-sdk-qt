@@ -96,7 +96,7 @@ ListNamespacesResponsePrivate::ListNamespacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListNamespacesResponsePrivate::ListNamespacesResponse(QXmlStreamReader &xml)
+void ListNamespacesResponsePrivate::parseListNamespacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListNamespacesResponse"));
     /// @todo

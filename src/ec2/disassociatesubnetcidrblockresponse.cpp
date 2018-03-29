@@ -96,7 +96,7 @@ DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
+void DisassociateSubnetCidrBlockResponsePrivate::parseDisassociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateSubnetCidrBlockResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponse(QXmlStreamReader &xml)
+void DeleteLoadBalancerResponsePrivate::parseDeleteLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerResponse"));
     /// @todo

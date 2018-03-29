@@ -96,7 +96,7 @@ ListRootsResponsePrivate::ListRootsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListRootsResponsePrivate::ListRootsResponse(QXmlStreamReader &xml)
+void ListRootsResponsePrivate::parseListRootsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRootsResponse"));
     /// @todo

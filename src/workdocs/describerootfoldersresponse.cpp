@@ -96,7 +96,7 @@ DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponse(QXmlStreamReader &xml)
+void DescribeRootFoldersResponsePrivate::parseDescribeRootFoldersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRootFoldersResponse"));
     /// @todo

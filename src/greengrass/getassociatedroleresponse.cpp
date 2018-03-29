@@ -96,7 +96,7 @@ GetAssociatedRoleResponsePrivate::GetAssociatedRoleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAssociatedRoleResponsePrivate::GetAssociatedRoleResponse(QXmlStreamReader &xml)
+void GetAssociatedRoleResponsePrivate::parseGetAssociatedRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAssociatedRoleResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ExecuteProvisionedProductPlanResponsePrivate::ExecuteProvisionedProductPlanRespo
  *
  * @param  xml  XML stream to parse.
  */
-void ExecuteProvisionedProductPlanResponsePrivate::ExecuteProvisionedProductPlanResponse(QXmlStreamReader &xml)
+void ExecuteProvisionedProductPlanResponsePrivate::parseExecuteProvisionedProductPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExecuteProvisionedProductPlanResponse"));
     /// @todo

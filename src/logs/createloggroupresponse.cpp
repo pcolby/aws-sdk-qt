@@ -96,7 +96,7 @@ CreateLogGroupResponsePrivate::CreateLogGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLogGroupResponsePrivate::CreateLogGroupResponse(QXmlStreamReader &xml)
+void CreateLogGroupResponsePrivate::parseCreateLogGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLogGroupResponse"));
     /// @todo

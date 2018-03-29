@@ -96,7 +96,7 @@ DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DefineIndexFieldResponsePrivate::DefineIndexFieldResponse(QXmlStreamReader &xml)
+void DefineIndexFieldResponsePrivate::parseDefineIndexFieldResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineIndexFieldResponse"));
     /// @todo

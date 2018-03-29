@@ -96,7 +96,7 @@ DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponse(QXmlStreamReader &xml)
+void DeleteNotebookInstanceResponsePrivate::parseDeleteNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotebookInstanceResponse"));
     /// @todo

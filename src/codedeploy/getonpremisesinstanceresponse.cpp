@@ -96,7 +96,7 @@ GetOnPremisesInstanceResponsePrivate::GetOnPremisesInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetOnPremisesInstanceResponsePrivate::GetOnPremisesInstanceResponse(QXmlStreamReader &xml)
+void GetOnPremisesInstanceResponsePrivate::parseGetOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOnPremisesInstanceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListServerCertificatesResponsePrivate::ListServerCertificatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListServerCertificatesResponsePrivate::ListServerCertificatesResponse(QXmlStreamReader &xml)
+void ListServerCertificatesResponsePrivate::parseListServerCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListServerCertificatesResponse"));
     /// @todo

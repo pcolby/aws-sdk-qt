@@ -96,7 +96,7 @@ GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponse(QXmlStreamReader &xml)
+void GetIntrospectionSchemaResponsePrivate::parseGetIntrospectionSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIntrospectionSchemaResponse"));
     /// @todo

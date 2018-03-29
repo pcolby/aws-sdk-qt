@@ -96,7 +96,7 @@ StopStackSetOperationResponsePrivate::StopStackSetOperationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopStackSetOperationResponsePrivate::StopStackSetOperationResponse(QXmlStreamReader &xml)
+void StopStackSetOperationResponsePrivate::parseStopStackSetOperationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopStackSetOperationResponse"));
     /// @todo

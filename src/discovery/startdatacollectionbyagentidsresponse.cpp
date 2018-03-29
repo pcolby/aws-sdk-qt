@@ -96,7 +96,7 @@ StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsRespo
  *
  * @param  xml  XML stream to parse.
  */
-void StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
+void StartDataCollectionByAgentIdsResponsePrivate::parseStartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartDataCollectionByAgentIdsResponse"));
     /// @todo

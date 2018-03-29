@@ -96,7 +96,7 @@ DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationRes
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationResponse(QXmlStreamReader &xml)
+void DeleteMatchmakingConfigurationResponsePrivate::parseDeleteMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMatchmakingConfigurationResponse"));
     /// @todo

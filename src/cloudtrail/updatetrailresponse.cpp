@@ -96,7 +96,7 @@ UpdateTrailResponsePrivate::UpdateTrailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTrailResponsePrivate::UpdateTrailResponse(QXmlStreamReader &xml)
+void UpdateTrailResponsePrivate::parseUpdateTrailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTrailResponse"));
     /// @todo

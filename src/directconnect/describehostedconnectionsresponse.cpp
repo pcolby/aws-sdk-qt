@@ -96,7 +96,7 @@ DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponse(QXmlStreamReader &xml)
+void DescribeHostedConnectionsResponsePrivate::parseDescribeHostedConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostedConnectionsResponse"));
     /// @todo

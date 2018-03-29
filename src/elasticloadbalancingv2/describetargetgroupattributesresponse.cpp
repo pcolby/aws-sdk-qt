@@ -96,7 +96,7 @@ DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributesRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributesResponse(QXmlStreamReader &xml)
+void DescribeTargetGroupAttributesResponsePrivate::parseDescribeTargetGroupAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTargetGroupAttributesResponse"));
     /// @todo

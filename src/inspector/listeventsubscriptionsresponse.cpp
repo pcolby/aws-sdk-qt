@@ -96,7 +96,7 @@ ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponse(QXmlStreamReader &xml)
+void ListEventSubscriptionsResponsePrivate::parseListEventSubscriptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEventSubscriptionsResponse"));
     /// @todo

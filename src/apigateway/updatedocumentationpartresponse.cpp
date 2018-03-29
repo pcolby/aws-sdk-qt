@@ -96,7 +96,7 @@ UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponse(QXmlStreamReader &xml)
+void UpdateDocumentationPartResponsePrivate::parseUpdateDocumentationPartResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentationPartResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponse(QXmlStreamReader &xml)
+void AdminListUserAuthEventsResponsePrivate::parseAdminListUserAuthEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminListUserAuthEventsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteWebhookResponsePrivate::DeleteWebhookResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteWebhookResponsePrivate::DeleteWebhookResponse(QXmlStreamReader &xml)
+void DeleteWebhookResponsePrivate::parseDeleteWebhookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteWebhookResponse"));
     /// @todo

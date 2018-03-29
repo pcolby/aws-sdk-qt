@@ -96,7 +96,7 @@ UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponse(QXmlStreamReader &xml)
+void UpdateRepositoryNameResponsePrivate::parseUpdateRepositoryNameResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRepositoryNameResponse"));
     /// @todo

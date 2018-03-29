@@ -96,7 +96,7 @@ CreateTriggerResponsePrivate::CreateTriggerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTriggerResponsePrivate::CreateTriggerResponse(QXmlStreamReader &xml)
+void CreateTriggerResponsePrivate::parseCreateTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTriggerResponse"));
     /// @todo

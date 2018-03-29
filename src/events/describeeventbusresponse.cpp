@@ -96,7 +96,7 @@ DescribeEventBusResponsePrivate::DescribeEventBusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEventBusResponsePrivate::DescribeEventBusResponse(QXmlStreamReader &xml)
+void DescribeEventBusResponsePrivate::parseDescribeEventBusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventBusResponse"));
     /// @todo

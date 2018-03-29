@@ -96,7 +96,7 @@ DeregisterTargetsResponsePrivate::DeregisterTargetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterTargetsResponsePrivate::DeregisterTargetsResponse(QXmlStreamReader &xml)
+void DeregisterTargetsResponsePrivate::parseDeregisterTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTargetsResponse"));
     /// @todo

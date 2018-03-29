@@ -96,7 +96,7 @@ AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateAddressResponsePrivate::AssociateAddressResponse(QXmlStreamReader &xml)
+void AssociateAddressResponsePrivate::parseAssociateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateAddressResponse"));
     /// @todo

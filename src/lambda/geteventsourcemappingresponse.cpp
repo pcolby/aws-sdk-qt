@@ -96,7 +96,7 @@ GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponse(QXmlStreamReader &xml)
+void GetEventSourceMappingResponsePrivate::parseGetEventSourceMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEventSourceMappingResponse"));
     /// @todo

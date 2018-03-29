@@ -96,7 +96,7 @@ UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponse(QXmlStreamReader &xml)
+void UpdateChapCredentialsResponsePrivate::parseUpdateChapCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateChapCredentialsResponse"));
     /// @todo

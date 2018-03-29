@@ -96,7 +96,7 @@ SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponse(QXmlStreamReader &xml)
+void SetEndpointAttributesResponsePrivate::parseSetEndpointAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetEndpointAttributesResponse"));
     /// @todo

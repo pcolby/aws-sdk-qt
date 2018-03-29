@@ -96,7 +96,7 @@ DisablePolicyTypeResponsePrivate::DisablePolicyTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisablePolicyTypeResponsePrivate::DisablePolicyTypeResponse(QXmlStreamReader &xml)
+void DisablePolicyTypeResponsePrivate::parseDisablePolicyTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisablePolicyTypeResponse"));
     /// @todo

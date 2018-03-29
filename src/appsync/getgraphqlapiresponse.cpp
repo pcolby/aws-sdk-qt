@@ -96,7 +96,7 @@ GetGraphqlApiResponsePrivate::GetGraphqlApiResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetGraphqlApiResponsePrivate::GetGraphqlApiResponse(QXmlStreamReader &xml)
+void GetGraphqlApiResponsePrivate::parseGetGraphqlApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGraphqlApiResponse"));
     /// @todo

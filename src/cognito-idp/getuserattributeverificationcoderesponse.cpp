@@ -96,7 +96,7 @@ GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCod
  *
  * @param  xml  XML stream to parse.
  */
-void GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCodeResponse(QXmlStreamReader &xml)
+void GetUserAttributeVerificationCodeResponsePrivate::parseGetUserAttributeVerificationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserAttributeVerificationCodeResponse"));
     /// @todo

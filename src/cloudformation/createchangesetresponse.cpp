@@ -96,7 +96,7 @@ CreateChangeSetResponsePrivate::CreateChangeSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateChangeSetResponsePrivate::CreateChangeSetResponse(QXmlStreamReader &xml)
+void CreateChangeSetResponsePrivate::parseCreateChangeSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateChangeSetResponse"));
     /// @todo

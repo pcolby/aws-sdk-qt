@@ -96,7 +96,7 @@ PostCommentForComparedCommitResponsePrivate::PostCommentForComparedCommitRespons
  *
  * @param  xml  XML stream to parse.
  */
-void PostCommentForComparedCommitResponsePrivate::PostCommentForComparedCommitResponse(QXmlStreamReader &xml)
+void PostCommentForComparedCommitResponsePrivate::parsePostCommentForComparedCommitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PostCommentForComparedCommitResponse"));
     /// @todo

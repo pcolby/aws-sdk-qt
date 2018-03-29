@@ -96,7 +96,7 @@ ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponse(QXmlStreamReader &xml)
+void ModifyDocumentPermissionResponsePrivate::parseModifyDocumentPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDocumentPermissionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeBackupsResponsePrivate::DescribeBackupsResponse(QXmlStreamReader &xml)
+void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBackupsResponse"));
     /// @todo

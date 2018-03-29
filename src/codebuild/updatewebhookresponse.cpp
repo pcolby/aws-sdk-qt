@@ -96,7 +96,7 @@ UpdateWebhookResponsePrivate::UpdateWebhookResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateWebhookResponsePrivate::UpdateWebhookResponse(QXmlStreamReader &xml)
+void UpdateWebhookResponsePrivate::parseUpdateWebhookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateWebhookResponse"));
     /// @todo

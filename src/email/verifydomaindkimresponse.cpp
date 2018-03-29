@@ -96,7 +96,7 @@ VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponse(QXmlStreamReader &xml)
+void VerifyDomainDkimResponsePrivate::parseVerifyDomainDkimResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyDomainDkimResponse"));
     /// @todo

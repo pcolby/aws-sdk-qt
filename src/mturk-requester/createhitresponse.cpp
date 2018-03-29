@@ -96,7 +96,7 @@ CreateHITResponsePrivate::CreateHITResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateHITResponsePrivate::CreateHITResponse(QXmlStreamReader &xml)
+void CreateHITResponsePrivate::parseCreateHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHITResponse"));
     /// @todo

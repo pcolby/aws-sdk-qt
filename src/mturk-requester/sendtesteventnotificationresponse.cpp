@@ -96,7 +96,7 @@ SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponse(QXmlStreamReader &xml)
+void SendTestEventNotificationResponsePrivate::parseSendTestEventNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendTestEventNotificationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BundleInstanceResponsePrivate::BundleInstanceResponse(QXmlStreamReader &xml)
+void BundleInstanceResponsePrivate::parseBundleInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BundleInstanceResponse"));
     /// @todo

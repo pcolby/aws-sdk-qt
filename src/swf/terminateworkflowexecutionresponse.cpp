@@ -96,7 +96,7 @@ TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponse(QXmlStreamReader &xml)
+void TerminateWorkflowExecutionResponsePrivate::parseTerminateWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateWorkflowExecutionResponse"));
     /// @todo

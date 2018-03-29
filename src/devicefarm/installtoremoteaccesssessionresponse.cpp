@@ -96,7 +96,7 @@ InstallToRemoteAccessSessionResponsePrivate::InstallToRemoteAccessSessionRespons
  *
  * @param  xml  XML stream to parse.
  */
-void InstallToRemoteAccessSessionResponsePrivate::InstallToRemoteAccessSessionResponse(QXmlStreamReader &xml)
+void InstallToRemoteAccessSessionResponsePrivate::parseInstallToRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InstallToRemoteAccessSessionResponse"));
     /// @todo

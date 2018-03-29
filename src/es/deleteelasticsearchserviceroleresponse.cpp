@@ -96,7 +96,7 @@ DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleRes
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml)
+void DeleteElasticsearchServiceRoleResponsePrivate::parseDeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchServiceRoleResponse"));
     /// @todo

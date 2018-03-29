@@ -96,7 +96,7 @@ UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponse(QXmlStreamReader &xml)
+void UpdateNetworkProfileResponsePrivate::parseUpdateNetworkProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNetworkProfileResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeIdentityResponsePrivate::DescribeIdentityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeIdentityResponsePrivate::DescribeIdentityResponse(QXmlStreamReader &xml)
+void DescribeIdentityResponsePrivate::parseDescribeIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityResponse"));
     /// @todo

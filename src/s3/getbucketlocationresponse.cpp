@@ -96,7 +96,7 @@ GetBucketLocationResponsePrivate::GetBucketLocationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketLocationResponsePrivate::GetBucketLocationResponse(QXmlStreamReader &xml)
+void GetBucketLocationResponsePrivate::parseGetBucketLocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLocationResponse"));
     /// @todo

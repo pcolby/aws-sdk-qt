@@ -96,7 +96,7 @@ StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartQueryExecutionResponsePrivate::StartQueryExecutionResponse(QXmlStreamReader &xml)
+void StartQueryExecutionResponsePrivate::parseStartQueryExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartQueryExecutionResponse"));
     /// @todo

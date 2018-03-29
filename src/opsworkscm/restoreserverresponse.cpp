@@ -96,7 +96,7 @@ RestoreServerResponsePrivate::RestoreServerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreServerResponsePrivate::RestoreServerResponse(QXmlStreamReader &xml)
+void RestoreServerResponsePrivate::parseRestoreServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreServerResponse"));
     /// @todo

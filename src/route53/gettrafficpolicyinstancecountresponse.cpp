@@ -96,7 +96,7 @@ GetTrafficPolicyInstanceCountResponsePrivate::GetTrafficPolicyInstanceCountRespo
  *
  * @param  xml  XML stream to parse.
  */
-void GetTrafficPolicyInstanceCountResponsePrivate::GetTrafficPolicyInstanceCountResponse(QXmlStreamReader &xml)
+void GetTrafficPolicyInstanceCountResponsePrivate::parseGetTrafficPolicyInstanceCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTrafficPolicyInstanceCountResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartReplicationTaskResponsePrivate::StartReplicationTaskResponse(QXmlStreamReader &xml)
+void StartReplicationTaskResponsePrivate::parseStartReplicationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartReplicationTaskResponse"));
     /// @todo

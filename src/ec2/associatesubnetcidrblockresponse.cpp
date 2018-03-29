@@ -96,7 +96,7 @@ AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
+void AssociateSubnetCidrBlockResponsePrivate::parseAssociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateSubnetCidrBlockResponse"));
     /// @todo

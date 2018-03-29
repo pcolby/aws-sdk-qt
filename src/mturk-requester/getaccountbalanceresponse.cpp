@@ -96,7 +96,7 @@ GetAccountBalanceResponsePrivate::GetAccountBalanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccountBalanceResponsePrivate::GetAccountBalanceResponse(QXmlStreamReader &xml)
+void GetAccountBalanceResponsePrivate::parseGetAccountBalanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountBalanceResponse"));
     /// @todo

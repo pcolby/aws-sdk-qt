@@ -96,7 +96,7 @@ DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponse(QXmlStreamReader &xml)
+void DetectKeyPhrasesResponsePrivate::parseDetectKeyPhrasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectKeyPhrasesResponse"));
     /// @todo

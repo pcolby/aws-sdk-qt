@@ -96,7 +96,7 @@ CreateNotificationResponsePrivate::CreateNotificationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNotificationResponsePrivate::CreateNotificationResponse(QXmlStreamReader &xml)
+void CreateNotificationResponsePrivate::parseCreateNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNotificationResponse"));
     /// @todo

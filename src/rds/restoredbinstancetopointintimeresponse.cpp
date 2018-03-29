@@ -96,7 +96,7 @@ RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTimeRes
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTimeResponse(QXmlStreamReader &xml)
+void RestoreDBInstanceToPointInTimeResponsePrivate::parseRestoreDBInstanceToPointInTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceToPointInTimeResponse"));
     /// @todo

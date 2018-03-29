@@ -96,7 +96,7 @@ CreatePrivateDnsNamespaceResponsePrivate::CreatePrivateDnsNamespaceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePrivateDnsNamespaceResponsePrivate::CreatePrivateDnsNamespaceResponse(QXmlStreamReader &xml)
+void CreatePrivateDnsNamespaceResponsePrivate::parseCreatePrivateDnsNamespaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePrivateDnsNamespaceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyOptionGroupResponsePrivate::CopyOptionGroupResponse(QXmlStreamReader &xml)
+void CopyOptionGroupResponsePrivate::parseCopyOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyOptionGroupResponse"));
     /// @todo

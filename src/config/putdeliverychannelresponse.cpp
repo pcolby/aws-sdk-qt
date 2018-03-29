@@ -96,7 +96,7 @@ PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponse(QXmlStreamReader &xml)
+void PutDeliveryChannelResponsePrivate::parsePutDeliveryChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutDeliveryChannelResponse"));
     /// @todo

@@ -96,7 +96,7 @@ EnterStandbyResponsePrivate::EnterStandbyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnterStandbyResponsePrivate::EnterStandbyResponse(QXmlStreamReader &xml)
+void EnterStandbyResponsePrivate::parseEnterStandbyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnterStandbyResponse"));
     /// @todo

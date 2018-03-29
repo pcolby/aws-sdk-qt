@@ -96,7 +96,7 @@ DeleteVaultAccessPolicyResponsePrivate::DeleteVaultAccessPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVaultAccessPolicyResponsePrivate::DeleteVaultAccessPolicyResponse(QXmlStreamReader &xml)
+void DeleteVaultAccessPolicyResponsePrivate::parseDeleteVaultAccessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultAccessPolicyResponse"));
     /// @todo

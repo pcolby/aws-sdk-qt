@@ -96,7 +96,7 @@ StopChannelResponsePrivate::StopChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopChannelResponsePrivate::StopChannelResponse(QXmlStreamReader &xml)
+void StopChannelResponsePrivate::parseStopChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopChannelResponse"));
     /// @todo

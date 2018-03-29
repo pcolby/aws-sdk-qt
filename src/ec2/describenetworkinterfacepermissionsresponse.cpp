@@ -96,7 +96,7 @@ DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePerm
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePermissionsResponse(QXmlStreamReader &xml)
+void DescribeNetworkInterfacePermissionsResponsePrivate::parseDescribeNetworkInterfacePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNetworkInterfacePermissionsResponse"));
     /// @todo

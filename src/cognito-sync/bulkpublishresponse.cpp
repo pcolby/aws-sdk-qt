@@ -96,7 +96,7 @@ BulkPublishResponsePrivate::BulkPublishResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BulkPublishResponsePrivate::BulkPublishResponse(QXmlStreamReader &xml)
+void BulkPublishResponsePrivate::parseBulkPublishResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BulkPublishResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetKeyPolicyResponsePrivate::GetKeyPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetKeyPolicyResponsePrivate::GetKeyPolicyResponse(QXmlStreamReader &xml)
+void GetKeyPolicyResponsePrivate::parseGetKeyPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetKeyPolicyResponse"));
     /// @todo

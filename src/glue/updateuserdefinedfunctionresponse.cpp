@@ -96,7 +96,7 @@ UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponse(QXmlStreamReader &xml)
+void UpdateUserDefinedFunctionResponsePrivate::parseUpdateUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserDefinedFunctionResponse"));
     /// @todo

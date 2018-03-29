@@ -96,7 +96,7 @@ EncryptResponsePrivate::EncryptResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EncryptResponsePrivate::EncryptResponse(QXmlStreamReader &xml)
+void EncryptResponsePrivate::parseEncryptResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EncryptResponse"));
     /// @todo

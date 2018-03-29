@@ -96,7 +96,7 @@ EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponse(QXmlStreamReader &xml)
+void EnableSnapshotCopyResponsePrivate::parseEnableSnapshotCopyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableSnapshotCopyResponse"));
     /// @todo

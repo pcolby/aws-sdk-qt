@@ -96,7 +96,7 @@ SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponse(QXmlStreamReader &xml)
+void SetTimeBasedAutoScalingResponsePrivate::parseSetTimeBasedAutoScalingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetTimeBasedAutoScalingResponse"));
     /// @todo

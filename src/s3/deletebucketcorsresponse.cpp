@@ -96,7 +96,7 @@ DeleteBucketCorsResponsePrivate::DeleteBucketCorsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketCorsResponsePrivate::DeleteBucketCorsResponse(QXmlStreamReader &xml)
+void DeleteBucketCorsResponsePrivate::parseDeleteBucketCorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketCorsResponse"));
     /// @todo

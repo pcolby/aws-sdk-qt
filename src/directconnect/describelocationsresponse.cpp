@@ -96,7 +96,7 @@ DescribeLocationsResponsePrivate::DescribeLocationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLocationsResponsePrivate::DescribeLocationsResponse(QXmlStreamReader &xml)
+void DescribeLocationsResponsePrivate::parseDescribeLocationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLocationsResponse"));
     /// @todo

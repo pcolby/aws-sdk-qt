@@ -96,7 +96,7 @@ DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponse(QXmlStreamReader &xml)
+void DeleteRequestValidatorResponsePrivate::parseDeleteRequestValidatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRequestValidatorResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeFindingsResponsePrivate::DescribeFindingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeFindingsResponsePrivate::DescribeFindingsResponse(QXmlStreamReader &xml)
+void DescribeFindingsResponsePrivate::parseDescribeFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFindingsResponse"));
     /// @todo

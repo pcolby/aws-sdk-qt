@@ -96,7 +96,7 @@ DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponse(QXmlStreamReader &xml)
+void DescribeKeyPairsResponsePrivate::parseDescribeKeyPairsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeKeyPairsResponse"));
     /// @todo

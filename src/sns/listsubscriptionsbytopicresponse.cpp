@@ -96,7 +96,7 @@ ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponse(QXmlStreamReader &xml)
+void ListSubscriptionsByTopicResponsePrivate::parseListSubscriptionsByTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionsByTopicResponse"));
     /// @todo

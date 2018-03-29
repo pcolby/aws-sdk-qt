@@ -96,7 +96,7 @@ AdminGetUserResponsePrivate::AdminGetUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminGetUserResponsePrivate::AdminGetUserResponse(QXmlStreamReader &xml)
+void AdminGetUserResponsePrivate::parseAdminGetUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminGetUserResponse"));
     /// @todo

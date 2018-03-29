@@ -96,7 +96,7 @@ MoveAccountResponsePrivate::MoveAccountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void MoveAccountResponsePrivate::MoveAccountResponse(QXmlStreamReader &xml)
+void MoveAccountResponsePrivate::parseMoveAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MoveAccountResponse"));
     /// @todo

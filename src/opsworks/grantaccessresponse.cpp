@@ -96,7 +96,7 @@ GrantAccessResponsePrivate::GrantAccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GrantAccessResponsePrivate::GrantAccessResponse(QXmlStreamReader &xml)
+void GrantAccessResponsePrivate::parseGrantAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GrantAccessResponse"));
     /// @todo

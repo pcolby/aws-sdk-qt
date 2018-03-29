@@ -96,7 +96,7 @@ DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
+void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSqlInjectionMatchSetResponse"));
     /// @todo

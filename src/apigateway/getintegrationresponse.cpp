@@ -96,7 +96,7 @@ GetIntegrationResponsePrivate::GetIntegrationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetIntegrationResponsePrivate::GetIntegrationResponse(QXmlStreamReader &xml)
+void GetIntegrationResponsePrivate::parseGetIntegrationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIntegrationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSessionTokenResponsePrivate::GetSessionTokenResponse(QXmlStreamReader &xml)
+void GetSessionTokenResponsePrivate::parseGetSessionTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSessionTokenResponse"));
     /// @todo

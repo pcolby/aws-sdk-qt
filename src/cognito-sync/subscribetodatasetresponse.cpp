@@ -96,7 +96,7 @@ SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponse(QXmlStreamReader &xml)
+void SubscribeToDatasetResponsePrivate::parseSubscribeToDatasetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubscribeToDatasetResponse"));
     /// @todo

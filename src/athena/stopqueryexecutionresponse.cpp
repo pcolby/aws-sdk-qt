@@ -96,7 +96,7 @@ StopQueryExecutionResponsePrivate::StopQueryExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopQueryExecutionResponsePrivate::StopQueryExecutionResponse(QXmlStreamReader &xml)
+void StopQueryExecutionResponsePrivate::parseStopQueryExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopQueryExecutionResponse"));
     /// @todo

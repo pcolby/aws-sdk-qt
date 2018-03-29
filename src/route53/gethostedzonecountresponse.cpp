@@ -96,7 +96,7 @@ GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponse(QXmlStreamReader &xml)
+void GetHostedZoneCountResponsePrivate::parseGetHostedZoneCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHostedZoneCountResponse"));
     /// @todo

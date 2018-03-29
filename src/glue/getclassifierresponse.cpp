@@ -96,7 +96,7 @@ GetClassifierResponsePrivate::GetClassifierResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetClassifierResponsePrivate::GetClassifierResponse(QXmlStreamReader &xml)
+void GetClassifierResponsePrivate::parseGetClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetClassifierResponse"));
     /// @todo

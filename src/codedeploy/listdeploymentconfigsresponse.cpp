@@ -96,7 +96,7 @@ ListDeploymentConfigsResponsePrivate::ListDeploymentConfigsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListDeploymentConfigsResponsePrivate::ListDeploymentConfigsResponse(QXmlStreamReader &xml)
+void ListDeploymentConfigsResponsePrivate::parseListDeploymentConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentConfigsResponse"));
     /// @todo

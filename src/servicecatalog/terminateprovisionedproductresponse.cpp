@@ -96,7 +96,7 @@ TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponse(QXmlStreamReader &xml)
+void TerminateProvisionedProductResponsePrivate::parseTerminateProvisionedProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateProvisionedProductResponse"));
     /// @todo

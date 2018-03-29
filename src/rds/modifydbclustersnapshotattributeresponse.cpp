@@ -96,7 +96,7 @@ ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttribut
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
+void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterSnapshotAttributeResponse"));
     /// @todo

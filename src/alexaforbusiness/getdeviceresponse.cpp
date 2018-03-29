@@ -96,7 +96,7 @@ GetDeviceResponsePrivate::GetDeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDeviceResponsePrivate::GetDeviceResponse(QXmlStreamReader &xml)
+void GetDeviceResponsePrivate::parseGetDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeviceResponse"));
     /// @todo

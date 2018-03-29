@@ -96,7 +96,7 @@ DescribeConfigurationsResponsePrivate::DescribeConfigurationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConfigurationsResponsePrivate::DescribeConfigurationsResponse(QXmlStreamReader &xml)
+void DescribeConfigurationsResponsePrivate::parseDescribeConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationsResponse"));
     /// @todo

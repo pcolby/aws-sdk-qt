@@ -96,7 +96,7 @@ ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponse(QXmlStreamReader &xml)
+void ListRetirableGrantsResponsePrivate::parseListRetirableGrantsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRetirableGrantsResponse"));
     /// @todo

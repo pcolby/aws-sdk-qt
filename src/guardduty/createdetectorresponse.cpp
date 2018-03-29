@@ -96,7 +96,7 @@ CreateDetectorResponsePrivate::CreateDetectorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDetectorResponsePrivate::CreateDetectorResponse(QXmlStreamReader &xml)
+void CreateDetectorResponsePrivate::parseCreateDetectorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDetectorResponse"));
     /// @todo

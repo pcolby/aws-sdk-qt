@@ -96,7 +96,7 @@ DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponse(QXmlStreamReader &xml)
+void DetectDominantLanguageResponsePrivate::parseDetectDominantLanguageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectDominantLanguageResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResponse(QXmlStreamReader &xml)
+void UpdateTerminationProtectionResponsePrivate::parseUpdateTerminationProtectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTerminationProtectionResponse"));
     /// @todo

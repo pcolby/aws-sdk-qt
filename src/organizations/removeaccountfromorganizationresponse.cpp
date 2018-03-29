@@ -96,7 +96,7 @@ RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationRespo
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationResponse(QXmlStreamReader &xml)
+void RemoveAccountFromOrganizationResponsePrivate::parseRemoveAccountFromOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAccountFromOrganizationResponse"));
     /// @todo

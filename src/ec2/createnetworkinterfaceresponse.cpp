@@ -96,7 +96,7 @@ CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponse(QXmlStreamReader &xml)
+void CreateNetworkInterfaceResponsePrivate::parseCreateNetworkInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkInterfaceResponse"));
     /// @todo

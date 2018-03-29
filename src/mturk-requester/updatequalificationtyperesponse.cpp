@@ -96,7 +96,7 @@ UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponse(QXmlStreamReader &xml)
+void UpdateQualificationTypeResponsePrivate::parseUpdateQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateQualificationTypeResponse"));
     /// @todo

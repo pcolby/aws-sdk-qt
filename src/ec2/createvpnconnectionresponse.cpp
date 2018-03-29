@@ -96,7 +96,7 @@ CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponse(QXmlStreamReader &xml)
+void CreateVpnConnectionResponsePrivate::parseCreateVpnConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpnConnectionResponse"));
     /// @todo

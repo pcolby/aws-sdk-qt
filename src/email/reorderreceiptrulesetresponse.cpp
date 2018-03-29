@@ -96,7 +96,7 @@ ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponse(QXmlStreamReader &xml)
+void ReorderReceiptRuleSetResponsePrivate::parseReorderReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReorderReceiptRuleSetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ModifyVpcEndpointResponsePrivate::ModifyVpcEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyVpcEndpointResponsePrivate::ModifyVpcEndpointResponse(QXmlStreamReader &xml)
+void ModifyVpcEndpointResponsePrivate::parseModifyVpcEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointResponse"));
     /// @todo

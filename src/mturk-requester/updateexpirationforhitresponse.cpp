@@ -96,7 +96,7 @@ UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponse(QXmlStreamReader &xml)
+void UpdateExpirationForHITResponsePrivate::parseUpdateExpirationForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateExpirationForHITResponse"));
     /// @todo

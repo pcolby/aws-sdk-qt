@@ -96,7 +96,7 @@ DeleteThingGroupResponsePrivate::DeleteThingGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteThingGroupResponsePrivate::DeleteThingGroupResponse(QXmlStreamReader &xml)
+void DeleteThingGroupResponsePrivate::parseDeleteThingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateBotVersionResponsePrivate::CreateBotVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBotVersionResponsePrivate::CreateBotVersionResponse(QXmlStreamReader &xml)
+void CreateBotVersionResponsePrivate::parseCreateBotVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBotVersionResponse"));
     /// @todo

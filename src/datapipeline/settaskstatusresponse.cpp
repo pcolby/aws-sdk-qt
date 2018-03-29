@@ -96,7 +96,7 @@ SetTaskStatusResponsePrivate::SetTaskStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetTaskStatusResponsePrivate::SetTaskStatusResponse(QXmlStreamReader &xml)
+void SetTaskStatusResponsePrivate::parseSetTaskStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetTaskStatusResponse"));
     /// @todo

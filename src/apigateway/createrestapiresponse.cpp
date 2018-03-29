@@ -96,7 +96,7 @@ CreateRestApiResponsePrivate::CreateRestApiResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateRestApiResponsePrivate::CreateRestApiResponse(QXmlStreamReader &xml)
+void CreateRestApiResponsePrivate::parseCreateRestApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRestApiResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateDistributionResponsePrivate::CreateDistributionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDistributionResponsePrivate::CreateDistributionResponse(QXmlStreamReader &xml)
+void CreateDistributionResponsePrivate::parseCreateDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDistributionResponse"));
     /// @todo

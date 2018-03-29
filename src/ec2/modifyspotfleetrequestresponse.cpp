@@ -96,7 +96,7 @@ ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponse(QXmlStreamReader &xml)
+void ModifySpotFleetRequestResponsePrivate::parseModifySpotFleetRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifySpotFleetRequestResponse"));
     /// @todo

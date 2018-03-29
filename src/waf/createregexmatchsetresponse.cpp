@@ -96,7 +96,7 @@ CreateRegexMatchSetResponsePrivate::CreateRegexMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateRegexMatchSetResponsePrivate::CreateRegexMatchSetResponse(QXmlStreamReader &xml)
+void CreateRegexMatchSetResponsePrivate::parseCreateRegexMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRegexMatchSetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResolveCustomerResponsePrivate::ResolveCustomerResponse(QXmlStreamReader &xml)
+void ResolveCustomerResponsePrivate::parseResolveCustomerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveCustomerResponse"));
     /// @todo

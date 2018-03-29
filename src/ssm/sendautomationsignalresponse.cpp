@@ -96,7 +96,7 @@ SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendAutomationSignalResponsePrivate::SendAutomationSignalResponse(QXmlStreamReader &xml)
+void SendAutomationSignalResponsePrivate::parseSendAutomationSignalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendAutomationSignalResponse"));
     /// @todo

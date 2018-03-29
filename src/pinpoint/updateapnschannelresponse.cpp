@@ -96,7 +96,7 @@ UpdateApnsChannelResponsePrivate::UpdateApnsChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateApnsChannelResponsePrivate::UpdateApnsChannelResponse(QXmlStreamReader &xml)
+void UpdateApnsChannelResponsePrivate::parseUpdateApnsChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateApnsChannelResponse"));
     /// @todo

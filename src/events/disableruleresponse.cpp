@@ -96,7 +96,7 @@ DisableRuleResponsePrivate::DisableRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableRuleResponsePrivate::DisableRuleResponse(QXmlStreamReader &xml)
+void DisableRuleResponsePrivate::parseDisableRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableRuleResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribePortfolioResponsePrivate::DescribePortfolioResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePortfolioResponsePrivate::DescribePortfolioResponse(QXmlStreamReader &xml)
+void DescribePortfolioResponsePrivate::parseDescribePortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePortfolioResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetCSVHeaderResponsePrivate::GetCSVHeaderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCSVHeaderResponsePrivate::GetCSVHeaderResponse(QXmlStreamReader &xml)
+void GetCSVHeaderResponsePrivate::parseGetCSVHeaderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCSVHeaderResponse"));
     /// @todo

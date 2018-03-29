@@ -96,7 +96,7 @@ GetImportResponsePrivate::GetImportResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetImportResponsePrivate::GetImportResponse(QXmlStreamReader &xml)
+void GetImportResponsePrivate::parseGetImportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetImportResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteVaultResponsePrivate::DeleteVaultResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVaultResponsePrivate::DeleteVaultResponse(QXmlStreamReader &xml)
+void DeleteVaultResponsePrivate::parseDeleteVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultResponse"));
     /// @todo

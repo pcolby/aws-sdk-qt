@@ -96,7 +96,7 @@ GetRegionsResponsePrivate::GetRegionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRegionsResponsePrivate::GetRegionsResponse(QXmlStreamReader &xml)
+void GetRegionsResponsePrivate::parseGetRegionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegionsResponse"));
     /// @todo

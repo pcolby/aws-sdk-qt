@@ -96,7 +96,7 @@ ListFileSharesResponsePrivate::ListFileSharesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListFileSharesResponsePrivate::ListFileSharesResponse(QXmlStreamReader &xml)
+void ListFileSharesResponsePrivate::parseListFileSharesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFileSharesResponse"));
     /// @todo

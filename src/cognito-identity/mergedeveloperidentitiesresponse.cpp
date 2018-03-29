@@ -96,7 +96,7 @@ MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponse(QXmlStreamReader &xml)
+void MergeDeveloperIdentitiesResponsePrivate::parseMergeDeveloperIdentitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MergeDeveloperIdentitiesResponse"));
     /// @todo

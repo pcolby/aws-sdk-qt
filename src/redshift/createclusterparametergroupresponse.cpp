@@ -96,7 +96,7 @@ CreateClusterParameterGroupResponsePrivate::CreateClusterParameterGroupResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CreateClusterParameterGroupResponsePrivate::CreateClusterParameterGroupResponse(QXmlStreamReader &xml)
+void CreateClusterParameterGroupResponsePrivate::parseCreateClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterParameterGroupResponse"));
     /// @todo

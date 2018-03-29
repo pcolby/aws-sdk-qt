@@ -96,7 +96,7 @@ CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsResponse(QXmlStreamReader &xml)
+void CancelSpotInstanceRequestsResponsePrivate::parseCancelSpotInstanceRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelSpotInstanceRequestsResponse"));
     /// @todo

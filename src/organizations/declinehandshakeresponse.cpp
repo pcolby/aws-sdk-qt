@@ -96,7 +96,7 @@ DeclineHandshakeResponsePrivate::DeclineHandshakeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeclineHandshakeResponsePrivate::DeclineHandshakeResponse(QXmlStreamReader &xml)
+void DeclineHandshakeResponsePrivate::parseDeclineHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeclineHandshakeResponse"));
     /// @todo

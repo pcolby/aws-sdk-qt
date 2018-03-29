@@ -96,7 +96,7 @@ DeleteBucketTaggingResponsePrivate::DeleteBucketTaggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketTaggingResponsePrivate::DeleteBucketTaggingResponse(QXmlStreamReader &xml)
+void DeleteBucketTaggingResponsePrivate::parseDeleteBucketTaggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketTaggingResponse"));
     /// @todo

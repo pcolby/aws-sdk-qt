@@ -96,7 +96,7 @@ DeleteApplicationReferenceDataSourceResponsePrivate::DeleteApplicationReferenceD
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteApplicationReferenceDataSourceResponsePrivate::DeleteApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
+void DeleteApplicationReferenceDataSourceResponsePrivate::parseDeleteApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationReferenceDataSourceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetentionPer
  *
  * @param  xml  XML stream to parse.
  */
-void ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetentionPeriodResponse(QXmlStreamReader &xml)
+void ModifySnapshotCopyRetentionPeriodResponsePrivate::parseModifySnapshotCopyRetentionPeriodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifySnapshotCopyRetentionPeriodResponse"));
     /// @todo

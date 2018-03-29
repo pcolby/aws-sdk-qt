@@ -96,7 +96,7 @@ GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInventorySchemaResponsePrivate::GetInventorySchemaResponse(QXmlStreamReader &xml)
+void GetInventorySchemaResponsePrivate::parseGetInventorySchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInventorySchemaResponse"));
     /// @todo

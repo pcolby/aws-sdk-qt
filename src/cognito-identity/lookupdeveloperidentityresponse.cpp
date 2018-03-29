@@ -96,7 +96,7 @@ LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponse(QXmlStreamReader &xml)
+void LookupDeveloperIdentityResponsePrivate::parseLookupDeveloperIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LookupDeveloperIdentityResponse"));
     /// @todo

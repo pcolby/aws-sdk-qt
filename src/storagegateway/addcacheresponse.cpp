@@ -96,7 +96,7 @@ AddCacheResponsePrivate::AddCacheResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddCacheResponsePrivate::AddCacheResponse(QXmlStreamReader &xml)
+void AddCacheResponsePrivate::parseAddCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddCacheResponse"));
     /// @todo

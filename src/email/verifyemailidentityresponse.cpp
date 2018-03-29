@@ -96,7 +96,7 @@ VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponse(QXmlStreamReader &xml)
+void VerifyEmailIdentityResponsePrivate::parseVerifyEmailIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyEmailIdentityResponse"));
     /// @todo

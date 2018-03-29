@@ -96,7 +96,7 @@ ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponse(QXmlStreamReader &xml)
+void ListV2LoggingLevelsResponsePrivate::parseListV2LoggingLevelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListV2LoggingLevelsResponse"));
     /// @todo

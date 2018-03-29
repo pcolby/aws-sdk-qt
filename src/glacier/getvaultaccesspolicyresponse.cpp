@@ -96,7 +96,7 @@ GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponse(QXmlStreamReader &xml)
+void GetVaultAccessPolicyResponsePrivate::parseGetVaultAccessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVaultAccessPolicyResponse"));
     /// @todo

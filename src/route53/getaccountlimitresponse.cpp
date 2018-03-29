@@ -96,7 +96,7 @@ GetAccountLimitResponsePrivate::GetAccountLimitResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccountLimitResponsePrivate::GetAccountLimitResponse(QXmlStreamReader &xml)
+void GetAccountLimitResponsePrivate::parseGetAccountLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountLimitResponse"));
     /// @todo

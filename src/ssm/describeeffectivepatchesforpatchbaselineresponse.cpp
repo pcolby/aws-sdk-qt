@@ -96,7 +96,7 @@ DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatche
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml)
+void DescribeEffectivePatchesForPatchBaselineResponsePrivate::parseDescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEffectivePatchesForPatchBaselineResponse"));
     /// @todo

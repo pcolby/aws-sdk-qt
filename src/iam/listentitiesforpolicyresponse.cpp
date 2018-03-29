@@ -96,7 +96,7 @@ ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponse(QXmlStreamReader &xml)
+void ListEntitiesForPolicyResponsePrivate::parseListEntitiesForPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEntitiesForPolicyResponse"));
     /// @todo

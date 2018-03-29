@@ -96,7 +96,7 @@ CopyProductResponsePrivate::CopyProductResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyProductResponsePrivate::CopyProductResponse(QXmlStreamReader &xml)
+void CopyProductResponsePrivate::parseCopyProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyProductResponse"));
     /// @todo

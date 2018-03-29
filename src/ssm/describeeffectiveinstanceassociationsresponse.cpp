@@ -96,7 +96,7 @@ DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceA
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceAssociationsResponse(QXmlStreamReader &xml)
+void DescribeEffectiveInstanceAssociationsResponsePrivate::parseDescribeEffectiveInstanceAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEffectiveInstanceAssociationsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListBucketsResponsePrivate::ListBucketsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListBucketsResponsePrivate::ListBucketsResponse(QXmlStreamReader &xml)
+void ListBucketsResponsePrivate::parseListBucketsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBucketsResponse"));
     /// @todo

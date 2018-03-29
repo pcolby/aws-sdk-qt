@@ -96,7 +96,7 @@ GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponse(QXmlStreamReader &xml)
+void GetConnectivityInfoResponsePrivate::parseGetConnectivityInfoResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConnectivityInfoResponse"));
     /// @todo

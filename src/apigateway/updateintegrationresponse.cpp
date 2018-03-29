@@ -96,7 +96,7 @@ UpdateIntegrationResponsePrivate::UpdateIntegrationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateIntegrationResponsePrivate::UpdateIntegrationResponse(QXmlStreamReader &xml)
+void UpdateIntegrationResponsePrivate::parseUpdateIntegrationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateIntegrationResponse"));
     /// @todo

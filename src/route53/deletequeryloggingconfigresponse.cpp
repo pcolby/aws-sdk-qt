@@ -96,7 +96,7 @@ DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponse(QXmlStreamReader &xml)
+void DeleteQueryLoggingConfigResponsePrivate::parseDeleteQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteQueryLoggingConfigResponse"));
     /// @todo

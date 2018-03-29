@@ -96,7 +96,7 @@ SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponse(QXmlStreamReader &xml)
+void SetRulePrioritiesResponsePrivate::parseSetRulePrioritiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetRulePrioritiesResponse"));
     /// @todo

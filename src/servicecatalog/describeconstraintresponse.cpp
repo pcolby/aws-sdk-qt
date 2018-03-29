@@ -96,7 +96,7 @@ DescribeConstraintResponsePrivate::DescribeConstraintResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConstraintResponsePrivate::DescribeConstraintResponse(QXmlStreamReader &xml)
+void DescribeConstraintResponsePrivate::parseDescribeConstraintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConstraintResponse"));
     /// @todo

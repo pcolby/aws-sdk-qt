@@ -96,7 +96,7 @@ DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponse(QXmlStreamReader &xml)
+void DescribeOptionGroupsResponsePrivate::parseDescribeOptionGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOptionGroupsResponse"));
     /// @todo

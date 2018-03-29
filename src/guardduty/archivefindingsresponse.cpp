@@ -96,7 +96,7 @@ ArchiveFindingsResponsePrivate::ArchiveFindingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ArchiveFindingsResponsePrivate::ArchiveFindingsResponse(QXmlStreamReader &xml)
+void ArchiveFindingsResponsePrivate::parseArchiveFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ArchiveFindingsResponse"));
     /// @todo

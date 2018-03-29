@@ -96,7 +96,7 @@ ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponse(QXmlStreamReader &xml)
+void ListConfigurationRevisionsResponsePrivate::parseListConfigurationRevisionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationRevisionsResponse"));
     /// @todo

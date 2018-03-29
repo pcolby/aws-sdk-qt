@@ -96,7 +96,7 @@ CreateBuildResponsePrivate::CreateBuildResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBuildResponsePrivate::CreateBuildResponse(QXmlStreamReader &xml)
+void CreateBuildResponsePrivate::parseCreateBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBuildResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponse(QXmlStreamReader &xml)
+void ResetJobBookmarkResponsePrivate::parseResetJobBookmarkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetJobBookmarkResponse"));
     /// @todo

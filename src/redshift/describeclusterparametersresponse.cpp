@@ -96,7 +96,7 @@ DescribeClusterParametersResponsePrivate::DescribeClusterParametersResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeClusterParametersResponsePrivate::DescribeClusterParametersResponse(QXmlStreamReader &xml)
+void DescribeClusterParametersResponsePrivate::parseDescribeClusterParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterParametersResponse"));
     /// @todo

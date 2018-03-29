@@ -96,7 +96,7 @@ SetAlarmStateResponsePrivate::SetAlarmStateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetAlarmStateResponsePrivate::SetAlarmStateResponse(QXmlStreamReader &xml)
+void SetAlarmStateResponsePrivate::parseSetAlarmStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetAlarmStateResponse"));
     /// @todo

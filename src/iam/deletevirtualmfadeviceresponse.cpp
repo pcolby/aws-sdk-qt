@@ -96,7 +96,7 @@ DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponse(QXmlStreamReader &xml)
+void DeleteVirtualMFADeviceResponsePrivate::parseDeleteVirtualMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVirtualMFADeviceResponse"));
     /// @todo

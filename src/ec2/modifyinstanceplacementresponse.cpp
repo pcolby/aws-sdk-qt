@@ -96,7 +96,7 @@ ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponse(QXmlStreamReader &xml)
+void ModifyInstancePlacementResponsePrivate::parseModifyInstancePlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstancePlacementResponse"));
     /// @todo

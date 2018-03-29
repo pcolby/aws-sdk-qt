@@ -96,7 +96,7 @@ DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponse(QXmlStreamReader &xml)
+void DescribeTaskDefinitionResponsePrivate::parseDescribeTaskDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTaskDefinitionResponse"));
     /// @todo

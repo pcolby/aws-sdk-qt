@@ -96,7 +96,7 @@ AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml)
+void AssociateSkillGroupWithRoomResponsePrivate::parseAssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateSkillGroupWithRoomResponse"));
     /// @todo

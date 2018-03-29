@@ -96,7 +96,7 @@ GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponse(QXmlStreamReader &xml)
+void GetDevicePoolCompatibilityResponsePrivate::parseGetDevicePoolCompatibilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDevicePoolCompatibilityResponse"));
     /// @todo

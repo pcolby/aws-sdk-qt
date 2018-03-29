@@ -96,7 +96,7 @@ GetHITResponsePrivate::GetHITResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetHITResponsePrivate::GetHITResponse(QXmlStreamReader &xml)
+void GetHITResponsePrivate::parseGetHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHITResponse"));
     /// @todo

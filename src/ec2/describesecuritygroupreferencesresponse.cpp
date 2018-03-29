@@ -96,7 +96,7 @@ DescribeSecurityGroupReferencesResponsePrivate::DescribeSecurityGroupReferencesR
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSecurityGroupReferencesResponsePrivate::DescribeSecurityGroupReferencesResponse(QXmlStreamReader &xml)
+void DescribeSecurityGroupReferencesResponsePrivate::parseDescribeSecurityGroupReferencesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSecurityGroupReferencesResponse"));
     /// @todo

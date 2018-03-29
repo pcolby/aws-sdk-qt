@@ -96,7 +96,7 @@ ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponse(QXmlStreamReader &xml)
+void ModifyClusterIamRolesResponsePrivate::parseModifyClusterIamRolesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterIamRolesResponse"));
     /// @todo

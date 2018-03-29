@@ -96,7 +96,7 @@ SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponse(QXmlStreamReader &xml)
+void SetInstanceProtectionResponsePrivate::parseSetInstanceProtectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetInstanceProtectionResponse"));
     /// @todo

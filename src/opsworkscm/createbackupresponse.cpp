@@ -96,7 +96,7 @@ CreateBackupResponsePrivate::CreateBackupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBackupResponsePrivate::CreateBackupResponse(QXmlStreamReader &xml)
+void CreateBackupResponsePrivate::parseCreateBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBackupResponse"));
     /// @todo

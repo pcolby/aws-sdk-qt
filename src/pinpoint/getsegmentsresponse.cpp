@@ -96,7 +96,7 @@ GetSegmentsResponsePrivate::GetSegmentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSegmentsResponsePrivate::GetSegmentsResponse(QXmlStreamReader &xml)
+void GetSegmentsResponsePrivate::parseGetSegmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentsResponse"));
     /// @todo

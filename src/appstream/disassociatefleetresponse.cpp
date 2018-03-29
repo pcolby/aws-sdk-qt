@@ -96,7 +96,7 @@ DisassociateFleetResponsePrivate::DisassociateFleetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateFleetResponsePrivate::DisassociateFleetResponse(QXmlStreamReader &xml)
+void DisassociateFleetResponsePrivate::parseDisassociateFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateFleetResponse"));
     /// @todo

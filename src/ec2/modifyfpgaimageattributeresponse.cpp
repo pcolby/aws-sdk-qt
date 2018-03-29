@@ -96,7 +96,7 @@ ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponse(QXmlStreamReader &xml)
+void ModifyFpgaImageAttributeResponsePrivate::parseModifyFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyFpgaImageAttributeResponse"));
     /// @todo

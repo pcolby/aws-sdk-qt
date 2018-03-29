@@ -96,7 +96,7 @@ CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponse(QXmlStreamReader &xml)
+void CopyDBParameterGroupResponsePrivate::parseCopyDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBParameterGroupResponse"));
     /// @todo

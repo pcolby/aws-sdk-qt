@@ -96,7 +96,7 @@ DescribeScalingActivitiesResponsePrivate::DescribeScalingActivitiesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScalingActivitiesResponsePrivate::DescribeScalingActivitiesResponse(QXmlStreamReader &xml)
+void DescribeScalingActivitiesResponsePrivate::parseDescribeScalingActivitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingActivitiesResponse"));
     /// @todo

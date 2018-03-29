@@ -96,7 +96,7 @@ CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsRespo
  *
  * @param  xml  XML stream to parse.
  */
-void CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
+void CountClosedWorkflowExecutionsResponsePrivate::parseCountClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CountClosedWorkflowExecutionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponse(QXmlStreamReader &xml)
+void RemoveRoleFromDBClusterResponsePrivate::parseRemoveRoleFromDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromDBClusterResponse"));
     /// @todo

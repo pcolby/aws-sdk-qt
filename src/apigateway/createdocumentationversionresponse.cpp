@@ -96,7 +96,7 @@ CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionResponse(QXmlStreamReader &xml)
+void CreateDocumentationVersionResponsePrivate::parseCreateDocumentationVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDocumentationVersionResponse"));
     /// @todo

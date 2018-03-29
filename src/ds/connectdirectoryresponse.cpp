@@ -96,7 +96,7 @@ ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ConnectDirectoryResponsePrivate::ConnectDirectoryResponse(QXmlStreamReader &xml)
+void ConnectDirectoryResponsePrivate::parseConnectDirectoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConnectDirectoryResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeLayersResponsePrivate::DescribeLayersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLayersResponsePrivate::DescribeLayersResponse(QXmlStreamReader &xml)
+void DescribeLayersResponsePrivate::parseDescribeLayersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLayersResponse"));
     /// @todo

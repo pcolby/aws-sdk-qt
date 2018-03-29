@@ -96,7 +96,7 @@ StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponse(QXmlStreamReader &xml)
+void StopNotebookInstanceResponsePrivate::parseStopNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopNotebookInstanceResponse"));
     /// @todo

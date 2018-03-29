@@ -96,7 +96,7 @@ GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponse(QXmlStreamReader &xml)
+void GetOpenIDConnectProviderResponsePrivate::parseGetOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIDConnectProviderResponse"));
     /// @todo

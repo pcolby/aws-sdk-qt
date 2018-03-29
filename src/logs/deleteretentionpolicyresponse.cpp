@@ -96,7 +96,7 @@ DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponse(QXmlStreamReader &xml)
+void DeleteRetentionPolicyResponsePrivate::parseDeleteRetentionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRetentionPolicyResponse"));
     /// @todo

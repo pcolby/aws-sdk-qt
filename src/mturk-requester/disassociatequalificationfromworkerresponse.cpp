@@ -96,7 +96,7 @@ DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFro
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml)
+void DisassociateQualificationFromWorkerResponsePrivate::parseDisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateQualificationFromWorkerResponse"));
     /// @todo

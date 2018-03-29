@@ -96,7 +96,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCertificateResponsePrivate::DeleteCertificateResponse(QXmlStreamReader &xml)
+void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCertificateResponse"));
     /// @todo

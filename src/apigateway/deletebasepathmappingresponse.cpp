@@ -96,7 +96,7 @@ DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponse(QXmlStreamReader &xml)
+void DeleteBasePathMappingResponsePrivate::parseDeleteBasePathMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBasePathMappingResponse"));
     /// @todo

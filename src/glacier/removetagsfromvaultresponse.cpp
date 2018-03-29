@@ -96,7 +96,7 @@ RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponse(QXmlStreamReader &xml)
+void RemoveTagsFromVaultResponsePrivate::parseRemoveTagsFromVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromVaultResponse"));
     /// @todo

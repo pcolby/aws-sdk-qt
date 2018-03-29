@@ -96,7 +96,7 @@ DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManag
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml)
+void DescribeEnvironmentManagedActionHistoryResponsePrivate::parseDescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentManagedActionHistoryResponse"));
     /// @todo

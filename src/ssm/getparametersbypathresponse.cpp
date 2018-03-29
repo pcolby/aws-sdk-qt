@@ -96,7 +96,7 @@ GetParametersByPathResponsePrivate::GetParametersByPathResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetParametersByPathResponsePrivate::GetParametersByPathResponse(QXmlStreamReader &xml)
+void GetParametersByPathResponsePrivate::parseGetParametersByPathResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetParametersByPathResponse"));
     /// @todo

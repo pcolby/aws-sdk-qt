@@ -96,7 +96,7 @@ DescribeFleetAttributesResponsePrivate::DescribeFleetAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeFleetAttributesResponsePrivate::DescribeFleetAttributesResponse(QXmlStreamReader &xml)
+void DescribeFleetAttributesResponsePrivate::parseDescribeFleetAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetAttributesResponse"));
     /// @todo

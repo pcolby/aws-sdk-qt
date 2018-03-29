@@ -96,7 +96,7 @@ DescribeHsmResponsePrivate::DescribeHsmResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeHsmResponsePrivate::DescribeHsmResponse(QXmlStreamReader &xml)
+void DescribeHsmResponsePrivate::parseDescribeHsmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmResponse"));
     /// @todo

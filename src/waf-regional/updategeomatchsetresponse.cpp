@@ -96,7 +96,7 @@ UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponse(QXmlStreamReader &xml)
+void UpdateGeoMatchSetResponsePrivate::parseUpdateGeoMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGeoMatchSetResponse"));
     /// @todo

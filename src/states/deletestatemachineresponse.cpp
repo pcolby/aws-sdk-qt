@@ -96,7 +96,7 @@ DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteStateMachineResponsePrivate::DeleteStateMachineResponse(QXmlStreamReader &xml)
+void DeleteStateMachineResponsePrivate::parseDeleteStateMachineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStateMachineResponse"));
     /// @todo

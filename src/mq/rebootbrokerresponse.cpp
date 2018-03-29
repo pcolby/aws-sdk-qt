@@ -96,7 +96,7 @@ RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RebootBrokerResponsePrivate::RebootBrokerResponse(QXmlStreamReader &xml)
+void RebootBrokerResponsePrivate::parseRebootBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootBrokerResponse"));
     /// @todo

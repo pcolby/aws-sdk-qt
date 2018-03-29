@@ -96,7 +96,7 @@ GetClientCertificatesResponsePrivate::GetClientCertificatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetClientCertificatesResponsePrivate::GetClientCertificatesResponse(QXmlStreamReader &xml)
+void GetClientCertificatesResponsePrivate::parseGetClientCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetClientCertificatesResponse"));
     /// @todo

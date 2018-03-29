@@ -96,7 +96,7 @@ BatchWriteResponsePrivate::BatchWriteResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchWriteResponsePrivate::BatchWriteResponse(QXmlStreamReader &xml)
+void BatchWriteResponsePrivate::parseBatchWriteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchWriteResponse"));
     /// @todo

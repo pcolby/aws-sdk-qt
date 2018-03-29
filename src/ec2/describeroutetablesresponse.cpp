@@ -96,7 +96,7 @@ DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponse(QXmlStreamReader &xml)
+void DescribeRouteTablesResponsePrivate::parseDescribeRouteTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRouteTablesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
+void RegisterOnPremisesInstanceResponsePrivate::parseRegisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterOnPremisesInstanceResponse"));
     /// @todo

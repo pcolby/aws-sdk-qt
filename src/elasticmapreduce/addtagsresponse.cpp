@@ -96,7 +96,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddTagsResponsePrivate::AddTagsResponse(QXmlStreamReader &xml)
+void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsResponse"));
     /// @todo

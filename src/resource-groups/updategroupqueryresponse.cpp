@@ -96,7 +96,7 @@ UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponse(QXmlStreamReader &xml)
+void UpdateGroupQueryResponsePrivate::parseUpdateGroupQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGroupQueryResponse"));
     /// @todo

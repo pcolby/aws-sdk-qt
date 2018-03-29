@@ -96,7 +96,7 @@ DescribeSubscribersForNotificationResponsePrivate::DescribeSubscribersForNotific
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSubscribersForNotificationResponsePrivate::DescribeSubscribersForNotificationResponse(QXmlStreamReader &xml)
+void DescribeSubscribersForNotificationResponsePrivate::parseDescribeSubscribersForNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubscribersForNotificationResponse"));
     /// @todo

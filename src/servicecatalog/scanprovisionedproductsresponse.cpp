@@ -96,7 +96,7 @@ ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponse(QXmlStreamReader &xml)
+void ScanProvisionedProductsResponsePrivate::parseScanProvisionedProductsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScanProvisionedProductsResponse"));
     /// @todo

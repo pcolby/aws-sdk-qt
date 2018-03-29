@@ -96,7 +96,7 @@ DeleteIntentVersionResponsePrivate::DeleteIntentVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteIntentVersionResponsePrivate::DeleteIntentVersionResponse(QXmlStreamReader &xml)
+void DeleteIntentVersionResponsePrivate::parseDeleteIntentVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntentVersionResponse"));
     /// @todo

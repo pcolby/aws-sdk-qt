@@ -96,7 +96,7 @@ BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponse(QXmlStreamReader &xml)
+void BatchDetectSentimentResponsePrivate::parseBatchDetectSentimentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectSentimentResponse"));
     /// @todo

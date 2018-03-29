@@ -96,7 +96,7 @@ SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendTaskFailureResponsePrivate::SendTaskFailureResponse(QXmlStreamReader &xml)
+void SendTaskFailureResponsePrivate::parseSendTaskFailureResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendTaskFailureResponse"));
     /// @todo

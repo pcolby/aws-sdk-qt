@@ -96,7 +96,7 @@ UntagResponsePrivate::UntagResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UntagResponsePrivate::UntagResponse(QXmlStreamReader &xml)
+void UntagResponsePrivate::parseUntagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagResponse"));
     /// @todo

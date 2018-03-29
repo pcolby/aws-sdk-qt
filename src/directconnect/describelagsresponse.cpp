@@ -96,7 +96,7 @@ DescribeLagsResponsePrivate::DescribeLagsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLagsResponsePrivate::DescribeLagsResponse(QXmlStreamReader &xml)
+void DescribeLagsResponsePrivate::parseDescribeLagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLagsResponse"));
     /// @todo

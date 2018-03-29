@@ -96,7 +96,7 @@ DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteKeyPairResponsePrivate::DeleteKeyPairResponse(QXmlStreamReader &xml)
+void DeleteKeyPairResponsePrivate::parseDeleteKeyPairResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteKeyPairResponse"));
     /// @todo

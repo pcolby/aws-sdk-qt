@@ -96,7 +96,7 @@ UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponse(QXmlStreamReader &xml)
+void UpdateFindingsFeedbackResponsePrivate::parseUpdateFindingsFeedbackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFindingsFeedbackResponse"));
     /// @todo

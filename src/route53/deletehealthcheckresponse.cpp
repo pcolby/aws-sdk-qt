@@ -96,7 +96,7 @@ DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponse(QXmlStreamReader &xml)
+void DeleteHealthCheckResponsePrivate::parseDeleteHealthCheckResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHealthCheckResponse"));
     /// @todo

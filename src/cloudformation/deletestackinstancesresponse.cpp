@@ -96,7 +96,7 @@ DeleteStackInstancesResponsePrivate::DeleteStackInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteStackInstancesResponsePrivate::DeleteStackInstancesResponse(QXmlStreamReader &xml)
+void DeleteStackInstancesResponsePrivate::parseDeleteStackInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStackInstancesResponse"));
     /// @todo

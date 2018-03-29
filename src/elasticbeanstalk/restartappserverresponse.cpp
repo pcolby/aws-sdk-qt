@@ -96,7 +96,7 @@ RestartAppServerResponsePrivate::RestartAppServerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestartAppServerResponsePrivate::RestartAppServerResponse(QXmlStreamReader &xml)
+void RestartAppServerResponsePrivate::parseRestartAppServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestartAppServerResponse"));
     /// @todo

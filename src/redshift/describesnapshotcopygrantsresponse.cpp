@@ -96,7 +96,7 @@ DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsResponse(QXmlStreamReader &xml)
+void DescribeSnapshotCopyGrantsResponsePrivate::parseDescribeSnapshotCopyGrantsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotCopyGrantsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorizationRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
+void DeleteVpcPeeringAuthorizationResponsePrivate::parseDeleteVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcPeeringAuthorizationResponse"));
     /// @todo

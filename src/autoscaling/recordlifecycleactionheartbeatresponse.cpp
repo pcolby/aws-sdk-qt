@@ -96,7 +96,7 @@ RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatRes
  *
  * @param  xml  XML stream to parse.
  */
-void RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml)
+void RecordLifecycleActionHeartbeatResponsePrivate::parseRecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RecordLifecycleActionHeartbeatResponse"));
     /// @todo

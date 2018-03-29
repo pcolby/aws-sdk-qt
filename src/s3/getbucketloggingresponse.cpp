@@ -96,7 +96,7 @@ GetBucketLoggingResponsePrivate::GetBucketLoggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketLoggingResponsePrivate::GetBucketLoggingResponse(QXmlStreamReader &xml)
+void GetBucketLoggingResponsePrivate::parseGetBucketLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLoggingResponse"));
     /// @todo

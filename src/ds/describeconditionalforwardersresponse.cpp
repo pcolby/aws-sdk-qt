@@ -96,7 +96,7 @@ DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersResponse(QXmlStreamReader &xml)
+void DescribeConditionalForwardersResponsePrivate::parseDescribeConditionalForwardersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConditionalForwardersResponse"));
     /// @todo

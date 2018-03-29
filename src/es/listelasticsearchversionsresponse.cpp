@@ -96,7 +96,7 @@ ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponse(QXmlStreamReader &xml)
+void ListElasticsearchVersionsResponsePrivate::parseListElasticsearchVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchVersionsResponse"));
     /// @todo

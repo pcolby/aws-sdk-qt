@@ -96,7 +96,7 @@ DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponse(QXmlStreamReader &xml)
+void DescribeAvailablePatchesResponsePrivate::parseDescribeAvailablePatchesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailablePatchesResponse"));
     /// @todo

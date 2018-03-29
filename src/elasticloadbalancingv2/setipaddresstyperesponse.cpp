@@ -96,7 +96,7 @@ SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponse(QXmlStreamReader &xml)
+void SetIpAddressTypeResponsePrivate::parseSetIpAddressTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIpAddressTypeResponse"));
     /// @todo

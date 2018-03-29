@@ -96,7 +96,7 @@ DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponse(QXmlStreamReader &xml)
+void DeleteProvisioningArtifactResponsePrivate::parseDeleteProvisioningArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProvisioningArtifactResponse"));
     /// @todo

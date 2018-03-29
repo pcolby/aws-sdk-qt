@@ -96,7 +96,7 @@ ListTeamMembersResponsePrivate::ListTeamMembersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTeamMembersResponsePrivate::ListTeamMembersResponse(QXmlStreamReader &xml)
+void ListTeamMembersResponsePrivate::parseListTeamMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTeamMembersResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ImportRestApiResponsePrivate::ImportRestApiResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ImportRestApiResponsePrivate::ImportRestApiResponse(QXmlStreamReader &xml)
+void ImportRestApiResponsePrivate::parseImportRestApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportRestApiResponse"));
     /// @todo

@@ -96,7 +96,7 @@ TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestInvokeMethodResponsePrivate::TestInvokeMethodResponse(QXmlStreamReader &xml)
+void TestInvokeMethodResponsePrivate::parseTestInvokeMethodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestInvokeMethodResponse"));
     /// @todo

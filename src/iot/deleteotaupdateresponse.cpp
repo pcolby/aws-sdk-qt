@@ -96,7 +96,7 @@ DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponse(QXmlStreamReader &xml)
+void DeleteOTAUpdateResponsePrivate::parseDeleteOTAUpdateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOTAUpdateResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponse(QXmlStreamReader &xml)
+void AttachInternetGatewayResponsePrivate::parseAttachInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachInternetGatewayResponse"));
     /// @todo

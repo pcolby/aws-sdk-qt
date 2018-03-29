@@ -96,7 +96,7 @@ ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponse(QXmlStreamReader &xml)
+void ModifyWorkspacePropertiesResponsePrivate::parseModifyWorkspacePropertiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyWorkspacePropertiesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribePermissionsResponsePrivate::DescribePermissionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePermissionsResponsePrivate::DescribePermissionsResponse(QXmlStreamReader &xml)
+void DescribePermissionsResponsePrivate::parseDescribePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePermissionsResponse"));
     /// @todo

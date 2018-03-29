@@ -96,7 +96,7 @@ DescribeNotificationsForBudgetResponsePrivate::DescribeNotificationsForBudgetRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNotificationsForBudgetResponsePrivate::DescribeNotificationsForBudgetResponse(QXmlStreamReader &xml)
+void DescribeNotificationsForBudgetResponsePrivate::parseDescribeNotificationsForBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotificationsForBudgetResponse"));
     /// @todo

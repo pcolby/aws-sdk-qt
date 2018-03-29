@@ -96,7 +96,7 @@ GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponse(QXmlStreamReader &xml)
+void GetFunctionConfigurationResponsePrivate::parseGetFunctionConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFunctionConfigurationResponse"));
     /// @todo

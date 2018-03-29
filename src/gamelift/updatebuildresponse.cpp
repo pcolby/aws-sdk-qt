@@ -96,7 +96,7 @@ UpdateBuildResponsePrivate::UpdateBuildResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateBuildResponsePrivate::UpdateBuildResponse(QXmlStreamReader &xml)
+void UpdateBuildResponsePrivate::parseUpdateBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBuildResponse"));
     /// @todo

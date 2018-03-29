@@ -96,7 +96,7 @@ GetAuthorizersResponsePrivate::GetAuthorizersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAuthorizersResponsePrivate::GetAuthorizersResponse(QXmlStreamReader &xml)
+void GetAuthorizersResponsePrivate::parseGetAuthorizersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAuthorizersResponse"));
     /// @todo

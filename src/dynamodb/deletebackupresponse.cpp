@@ -96,7 +96,7 @@ DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBackupResponsePrivate::DeleteBackupResponse(QXmlStreamReader &xml)
+void DeleteBackupResponsePrivate::parseDeleteBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBackupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponse(QXmlStreamReader &xml)
+void DescribeLaunchTemplatesResponsePrivate::parseDescribeLaunchTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLaunchTemplatesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponse(QXmlStreamReader &xml)
+void VerifySoftwareTokenResponsePrivate::parseVerifySoftwareTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifySoftwareTokenResponse"));
     /// @todo

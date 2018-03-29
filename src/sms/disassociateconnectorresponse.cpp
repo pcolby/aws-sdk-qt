@@ -96,7 +96,7 @@ DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateConnectorResponsePrivate::DisassociateConnectorResponse(QXmlStreamReader &xml)
+void DisassociateConnectorResponsePrivate::parseDisassociateConnectorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectorResponse"));
     /// @todo

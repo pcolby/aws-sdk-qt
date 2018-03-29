@@ -96,7 +96,7 @@ DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponse(QXmlStreamReader &xml)
+void DescribeRdsDbInstancesResponsePrivate::parseDescribeRdsDbInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRdsDbInstancesResponse"));
     /// @todo

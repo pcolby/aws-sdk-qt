@@ -96,7 +96,7 @@ DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponse(QXmlStreamReader &xml)
+void DeletePlatformApplicationResponsePrivate::parseDeletePlatformApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePlatformApplicationResponse"));
     /// @todo

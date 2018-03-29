@@ -96,7 +96,7 @@ GetServersResponsePrivate::GetServersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetServersResponsePrivate::GetServersResponse(QXmlStreamReader &xml)
+void GetServersResponsePrivate::parseGetServersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServersResponse"));
     /// @todo

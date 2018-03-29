@@ -96,7 +96,7 @@ DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponse(QXmlStreamReader &xml)
+void DeleteNetworkInterfaceResponsePrivate::parseDeleteNetworkInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkInterfaceResponse"));
     /// @todo

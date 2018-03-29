@@ -96,7 +96,7 @@ DeleteBranchResponsePrivate::DeleteBranchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBranchResponsePrivate::DeleteBranchResponse(QXmlStreamReader &xml)
+void DeleteBranchResponsePrivate::parseDeleteBranchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBranchResponse"));
     /// @todo

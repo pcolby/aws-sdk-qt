@@ -96,7 +96,7 @@ UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTemplateResponsePrivate::UpdateTemplateResponse(QXmlStreamReader &xml)
+void UpdateTemplateResponsePrivate::parseUpdateTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTemplateResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetMediaForFragmentListResponsePrivate::GetMediaForFragmentListResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetMediaForFragmentListResponsePrivate::GetMediaForFragmentListResponse(QXmlStreamReader &xml)
+void GetMediaForFragmentListResponsePrivate::parseGetMediaForFragmentListResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMediaForFragmentListResponse"));
     /// @todo

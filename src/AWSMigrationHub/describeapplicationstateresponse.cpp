@@ -96,7 +96,7 @@ DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponse(QXmlStreamReader &xml)
+void DescribeApplicationStateResponsePrivate::parseDescribeApplicationStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationStateResponse"));
     /// @todo

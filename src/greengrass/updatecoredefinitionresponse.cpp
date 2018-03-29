@@ -96,7 +96,7 @@ UpdateCoreDefinitionResponsePrivate::UpdateCoreDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateCoreDefinitionResponsePrivate::UpdateCoreDefinitionResponse(QXmlStreamReader &xml)
+void UpdateCoreDefinitionResponsePrivate::parseUpdateCoreDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCoreDefinitionResponse"));
     /// @todo

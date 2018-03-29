@@ -96,7 +96,7 @@ AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponse(QXmlStreamReader &xml)
+void AssociateVirtualInterfaceResponsePrivate::parseAssociateVirtualInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateVirtualInterfaceResponse"));
     /// @todo

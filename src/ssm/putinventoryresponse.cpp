@@ -96,7 +96,7 @@ PutInventoryResponsePrivate::PutInventoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutInventoryResponsePrivate::PutInventoryResponse(QXmlStreamReader &xml)
+void PutInventoryResponsePrivate::parsePutInventoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutInventoryResponse"));
     /// @todo

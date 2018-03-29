@@ -96,7 +96,7 @@ BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponse(QXmlStreamReader &xml)
+void BatchDetectEntitiesResponsePrivate::parseBatchDetectEntitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectEntitiesResponse"));
     /// @todo

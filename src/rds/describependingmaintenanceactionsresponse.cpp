@@ -96,7 +96,7 @@ DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActi
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
+void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePendingMaintenanceActionsResponse"));
     /// @todo

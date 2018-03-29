@@ -96,7 +96,7 @@ GetDataflowGraphResponsePrivate::GetDataflowGraphResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDataflowGraphResponsePrivate::GetDataflowGraphResponse(QXmlStreamReader &xml)
+void GetDataflowGraphResponsePrivate::parseGetDataflowGraphResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDataflowGraphResponse"));
     /// @todo

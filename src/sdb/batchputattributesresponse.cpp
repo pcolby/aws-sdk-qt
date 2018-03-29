@@ -96,7 +96,7 @@ BatchPutAttributesResponsePrivate::BatchPutAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchPutAttributesResponsePrivate::BatchPutAttributesResponse(QXmlStreamReader &xml)
+void BatchPutAttributesResponsePrivate::parseBatchPutAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchPutAttributesResponse"));
     /// @todo

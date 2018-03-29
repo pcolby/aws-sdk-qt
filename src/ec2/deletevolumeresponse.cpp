@@ -96,7 +96,7 @@ DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVolumeResponsePrivate::DeleteVolumeResponse(QXmlStreamReader &xml)
+void DeleteVolumeResponsePrivate::parseDeleteVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVolumeResponse"));
     /// @todo

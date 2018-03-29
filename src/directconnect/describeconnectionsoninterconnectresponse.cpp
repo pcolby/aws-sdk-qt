@@ -96,7 +96,7 @@ DescribeConnectionsOnInterconnectResponsePrivate::DescribeConnectionsOnInterconn
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConnectionsOnInterconnectResponsePrivate::DescribeConnectionsOnInterconnectResponse(QXmlStreamReader &xml)
+void DescribeConnectionsOnInterconnectResponsePrivate::parseDescribeConnectionsOnInterconnectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConnectionsOnInterconnectResponse"));
     /// @todo

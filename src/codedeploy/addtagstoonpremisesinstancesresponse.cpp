@@ -96,7 +96,7 @@ AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml)
+void AddTagsToOnPremisesInstancesResponsePrivate::parseAddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToOnPremisesInstancesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetUserPolicyResponsePrivate::GetUserPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetUserPolicyResponsePrivate::GetUserPolicyResponse(QXmlStreamReader &xml)
+void GetUserPolicyResponsePrivate::parseGetUserPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserPolicyResponse"));
     /// @todo

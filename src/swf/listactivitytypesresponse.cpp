@@ -96,7 +96,7 @@ ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListActivityTypesResponsePrivate::ListActivityTypesResponse(QXmlStreamReader &xml)
+void ListActivityTypesResponsePrivate::parseListActivityTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListActivityTypesResponse"));
     /// @todo

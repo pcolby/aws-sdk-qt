@@ -96,7 +96,7 @@ SendTaskSuccessResponsePrivate::SendTaskSuccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendTaskSuccessResponsePrivate::SendTaskSuccessResponse(QXmlStreamReader &xml)
+void SendTaskSuccessResponsePrivate::parseSendTaskSuccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendTaskSuccessResponse"));
     /// @todo

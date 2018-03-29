@@ -96,7 +96,7 @@ DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponse(QXmlStreamReader &xml)
+void DescribeDeliveryChannelsResponsePrivate::parseDescribeDeliveryChannelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDeliveryChannelsResponse"));
     /// @todo

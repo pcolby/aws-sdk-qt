@@ -96,7 +96,7 @@ RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponse(QXmlStreamReader &xml)
+void RespondActivityTaskFailedResponsePrivate::parseRespondActivityTaskFailedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskFailedResponse"));
     /// @todo

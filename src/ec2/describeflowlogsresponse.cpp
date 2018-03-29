@@ -96,7 +96,7 @@ DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponse(QXmlStreamReader &xml)
+void DescribeFlowLogsResponsePrivate::parseDescribeFlowLogsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFlowLogsResponse"));
     /// @todo

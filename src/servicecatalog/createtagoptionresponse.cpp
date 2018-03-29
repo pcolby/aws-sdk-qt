@@ -96,7 +96,7 @@ CreateTagOptionResponsePrivate::CreateTagOptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTagOptionResponsePrivate::CreateTagOptionResponse(QXmlStreamReader &xml)
+void CreateTagOptionResponsePrivate::parseCreateTagOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTagOptionResponse"));
     /// @todo

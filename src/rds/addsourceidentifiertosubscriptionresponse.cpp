@@ -96,7 +96,7 @@ AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscript
  *
  * @param  xml  XML stream to parse.
  */
-void AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscriptionResponse(QXmlStreamReader &xml)
+void AddSourceIdentifierToSubscriptionResponsePrivate::parseAddSourceIdentifierToSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddSourceIdentifierToSubscriptionResponse"));
     /// @todo

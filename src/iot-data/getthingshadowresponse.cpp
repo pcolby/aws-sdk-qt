@@ -96,7 +96,7 @@ GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetThingShadowResponsePrivate::GetThingShadowResponse(QXmlStreamReader &xml)
+void GetThingShadowResponsePrivate::parseGetThingShadowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetThingShadowResponse"));
     /// @todo

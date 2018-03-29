@@ -96,7 +96,7 @@ BatchGetDeploymentsResponsePrivate::BatchGetDeploymentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetDeploymentsResponsePrivate::BatchGetDeploymentsResponse(QXmlStreamReader &xml)
+void BatchGetDeploymentsResponsePrivate::parseBatchGetDeploymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetDeploymentsResponse"));
     /// @todo

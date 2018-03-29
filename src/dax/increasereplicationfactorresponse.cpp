@@ -96,7 +96,7 @@ IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponse(QXmlStreamReader &xml)
+void IncreaseReplicationFactorResponsePrivate::parseIncreaseReplicationFactorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IncreaseReplicationFactorResponse"));
     /// @todo

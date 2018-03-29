@@ -96,7 +96,7 @@ DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFleetResponsePrivate::DeleteFleetResponse(QXmlStreamReader &xml)
+void DeleteFleetResponsePrivate::parseDeleteFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFleetResponse"));
     /// @todo

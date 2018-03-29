@@ -96,7 +96,7 @@ StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponse(QXmlStreamReader &xml)
+void StartOnDemandReplicationRunResponsePrivate::parseStartOnDemandReplicationRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartOnDemandReplicationRunResponse"));
     /// @todo

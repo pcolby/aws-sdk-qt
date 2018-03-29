@@ -96,7 +96,7 @@ DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponse(QXmlStreamReader &xml)
+void DeregisterJobDefinitionResponsePrivate::parseDeregisterJobDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterJobDefinitionResponse"));
     /// @todo

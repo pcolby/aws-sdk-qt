@@ -96,7 +96,7 @@ RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
+void RejectVpcEndpointConnectionsResponsePrivate::parseRejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RejectVpcEndpointConnectionsResponse"));
     /// @todo

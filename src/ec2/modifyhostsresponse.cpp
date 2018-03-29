@@ -96,7 +96,7 @@ ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyHostsResponsePrivate::ModifyHostsResponse(QXmlStreamReader &xml)
+void ModifyHostsResponsePrivate::parseModifyHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyHostsResponse"));
     /// @todo

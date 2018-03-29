@@ -96,7 +96,7 @@ RegisterVolumeResponsePrivate::RegisterVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterVolumeResponsePrivate::RegisterVolumeResponse(QXmlStreamReader &xml)
+void RegisterVolumeResponsePrivate::parseRegisterVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterVolumeResponse"));
     /// @todo

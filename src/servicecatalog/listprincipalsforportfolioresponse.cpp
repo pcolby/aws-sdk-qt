@@ -96,7 +96,7 @@ ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponse(QXmlStreamReader &xml)
+void ListPrincipalsForPortfolioResponsePrivate::parseListPrincipalsForPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPrincipalsForPortfolioResponse"));
     /// @todo

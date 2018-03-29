@@ -96,7 +96,7 @@ RegisterEventTopicResponsePrivate::RegisterEventTopicResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterEventTopicResponsePrivate::RegisterEventTopicResponse(QXmlStreamReader &xml)
+void RegisterEventTopicResponsePrivate::parseRegisterEventTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterEventTopicResponse"));
     /// @todo

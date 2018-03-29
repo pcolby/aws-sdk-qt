@@ -96,7 +96,7 @@ DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponse(QXmlStreamReader &xml)
+void DescribeSnapshotsResponsePrivate::parseDescribeSnapshotsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotsResponse"));
     /// @todo

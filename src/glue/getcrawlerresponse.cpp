@@ -96,7 +96,7 @@ GetCrawlerResponsePrivate::GetCrawlerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCrawlerResponsePrivate::GetCrawlerResponse(QXmlStreamReader &xml)
+void GetCrawlerResponsePrivate::parseGetCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCrawlerResponse"));
     /// @todo

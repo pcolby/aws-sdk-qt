@@ -96,7 +96,7 @@ CancelArchivalResponsePrivate::CancelArchivalResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelArchivalResponsePrivate::CancelArchivalResponse(QXmlStreamReader &xml)
+void CancelArchivalResponsePrivate::parseCancelArchivalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelArchivalResponse"));
     /// @todo

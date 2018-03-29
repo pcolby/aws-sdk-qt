@@ -96,7 +96,7 @@ DeleteTagOptionResponsePrivate::DeleteTagOptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTagOptionResponsePrivate::DeleteTagOptionResponse(QXmlStreamReader &xml)
+void DeleteTagOptionResponsePrivate::parseDeleteTagOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTagOptionResponse"));
     /// @todo

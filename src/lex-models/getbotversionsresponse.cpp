@@ -96,7 +96,7 @@ GetBotVersionsResponsePrivate::GetBotVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBotVersionsResponsePrivate::GetBotVersionsResponse(QXmlStreamReader &xml)
+void GetBotVersionsResponsePrivate::parseGetBotVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBotVersionsResponse"));
     /// @todo

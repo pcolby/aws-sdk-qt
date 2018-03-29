@@ -96,7 +96,7 @@ DomainMetadataResponsePrivate::DomainMetadataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DomainMetadataResponsePrivate::DomainMetadataResponse(QXmlStreamReader &xml)
+void DomainMetadataResponsePrivate::parseDomainMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DomainMetadataResponse"));
     /// @todo

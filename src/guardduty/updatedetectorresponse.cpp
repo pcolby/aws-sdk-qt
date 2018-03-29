@@ -96,7 +96,7 @@ UpdateDetectorResponsePrivate::UpdateDetectorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDetectorResponsePrivate::UpdateDetectorResponse(QXmlStreamReader &xml)
+void UpdateDetectorResponsePrivate::parseUpdateDetectorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDetectorResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponse(QXmlStreamReader &xml)
+void UpdateAvailabilityOptionsResponsePrivate::parseUpdateAvailabilityOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAvailabilityOptionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RestoreFromClusterSnapshotResponsePrivate::RestoreFromClusterSnapshotResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreFromClusterSnapshotResponsePrivate::RestoreFromClusterSnapshotResponse(QXmlStreamReader &xml)
+void RestoreFromClusterSnapshotResponsePrivate::parseRestoreFromClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreFromClusterSnapshotResponse"));
     /// @todo

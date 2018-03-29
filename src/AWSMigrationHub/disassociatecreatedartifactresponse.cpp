@@ -96,7 +96,7 @@ DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResponse(QXmlStreamReader &xml)
+void DisassociateCreatedArtifactResponsePrivate::parseDisassociateCreatedArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateCreatedArtifactResponse"));
     /// @todo

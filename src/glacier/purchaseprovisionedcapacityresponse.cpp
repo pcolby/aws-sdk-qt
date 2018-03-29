@@ -96,7 +96,7 @@ PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponse(QXmlStreamReader &xml)
+void PurchaseProvisionedCapacityResponsePrivate::parsePurchaseProvisionedCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseProvisionedCapacityResponse"));
     /// @todo

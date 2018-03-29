@@ -96,7 +96,7 @@ CreateResourceDataSyncResponsePrivate::CreateResourceDataSyncResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateResourceDataSyncResponsePrivate::CreateResourceDataSyncResponse(QXmlStreamReader &xml)
+void CreateResourceDataSyncResponsePrivate::parseCreateResourceDataSyncResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceDataSyncResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponse(QXmlStreamReader &xml)
+void GetPendingJobExecutionsResponsePrivate::parseGetPendingJobExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPendingJobExecutionsResponse"));
     /// @todo

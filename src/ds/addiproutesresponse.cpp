@@ -96,7 +96,7 @@ AddIpRoutesResponsePrivate::AddIpRoutesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddIpRoutesResponsePrivate::AddIpRoutesResponse(QXmlStreamReader &xml)
+void AddIpRoutesResponsePrivate::parseAddIpRoutesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddIpRoutesResponse"));
     /// @todo

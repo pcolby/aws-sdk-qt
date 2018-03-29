@@ -96,7 +96,7 @@ DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponse(QXmlStreamReader &xml)
+void DeleteChapCredentialsResponsePrivate::parseDeleteChapCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteChapCredentialsResponse"));
     /// @todo

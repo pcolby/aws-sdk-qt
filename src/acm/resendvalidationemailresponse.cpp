@@ -96,7 +96,7 @@ ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResendValidationEmailResponsePrivate::ResendValidationEmailResponse(QXmlStreamReader &xml)
+void ResendValidationEmailResponsePrivate::parseResendValidationEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResendValidationEmailResponse"));
     /// @todo

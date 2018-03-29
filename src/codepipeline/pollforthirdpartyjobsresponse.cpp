@@ -96,7 +96,7 @@ PollForThirdPartyJobsResponsePrivate::PollForThirdPartyJobsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PollForThirdPartyJobsResponsePrivate::PollForThirdPartyJobsResponse(QXmlStreamReader &xml)
+void PollForThirdPartyJobsResponsePrivate::parsePollForThirdPartyJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PollForThirdPartyJobsResponse"));
     /// @todo

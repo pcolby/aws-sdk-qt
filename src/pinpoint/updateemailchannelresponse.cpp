@@ -96,7 +96,7 @@ UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponse(QXmlStreamReader &xml)
+void UpdateEmailChannelResponsePrivate::parseUpdateEmailChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEmailChannelResponse"));
     /// @todo

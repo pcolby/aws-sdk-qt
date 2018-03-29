@@ -96,7 +96,7 @@ SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponse(QXmlStreamReader &xml)
+void SetUserMFAPreferenceResponsePrivate::parseSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetUserMFAPreferenceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotR
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotResponse(QXmlStreamReader &xml)
+void RestoreDBInstanceFromDBSnapshotResponsePrivate::parseRestoreDBInstanceFromDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromDBSnapshotResponse"));
     /// @todo

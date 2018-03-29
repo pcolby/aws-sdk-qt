@@ -96,7 +96,7 @@ AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorke
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorkerResponse(QXmlStreamReader &xml)
+void AssociateQualificationWithWorkerResponsePrivate::parseAssociateQualificationWithWorkerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateQualificationWithWorkerResponse"));
     /// @todo

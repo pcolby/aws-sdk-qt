@@ -96,7 +96,7 @@ SignalResourceResponsePrivate::SignalResourceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SignalResourceResponsePrivate::SignalResourceResponse(QXmlStreamReader &xml)
+void SignalResourceResponsePrivate::parseSignalResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SignalResourceResponse"));
     /// @todo

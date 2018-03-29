@@ -96,7 +96,7 @@ CreateCommentResponsePrivate::CreateCommentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCommentResponsePrivate::CreateCommentResponse(QXmlStreamReader &xml)
+void CreateCommentResponsePrivate::parseCreateCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCommentResponse"));
     /// @todo

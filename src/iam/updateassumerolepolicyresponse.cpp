@@ -96,7 +96,7 @@ UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponse(QXmlStreamReader &xml)
+void UpdateAssumeRolePolicyResponsePrivate::parseUpdateAssumeRolePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAssumeRolePolicyResponse"));
     /// @todo

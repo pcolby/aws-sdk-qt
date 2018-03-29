@@ -96,7 +96,7 @@ SelectResponsePrivate::SelectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SelectResponsePrivate::SelectResponse(QXmlStreamReader &xml)
+void SelectResponsePrivate::parseSelectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SelectResponse"));
     /// @todo

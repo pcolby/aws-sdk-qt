@@ -96,7 +96,7 @@ DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml)
+void DescribeEC2InstanceLimitsResponsePrivate::parseDescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEC2InstanceLimitsResponse"));
     /// @todo

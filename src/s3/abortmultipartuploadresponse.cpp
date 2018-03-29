@@ -96,7 +96,7 @@ AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponse(QXmlStreamReader &xml)
+void AbortMultipartUploadResponsePrivate::parseAbortMultipartUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortMultipartUploadResponse"));
     /// @todo

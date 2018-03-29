@@ -96,7 +96,7 @@ DetachPrincipalPolicyResponsePrivate::DetachPrincipalPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachPrincipalPolicyResponsePrivate::DetachPrincipalPolicyResponse(QXmlStreamReader &xml)
+void DetachPrincipalPolicyResponsePrivate::parseDetachPrincipalPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachPrincipalPolicyResponse"));
     /// @todo

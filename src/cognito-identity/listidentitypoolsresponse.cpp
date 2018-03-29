@@ -96,7 +96,7 @@ ListIdentityPoolsResponsePrivate::ListIdentityPoolsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListIdentityPoolsResponsePrivate::ListIdentityPoolsResponse(QXmlStreamReader &xml)
+void ListIdentityPoolsResponsePrivate::parseListIdentityPoolsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIdentityPoolsResponse"));
     /// @todo

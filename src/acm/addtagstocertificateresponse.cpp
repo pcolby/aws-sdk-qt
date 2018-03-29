@@ -96,7 +96,7 @@ AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponse(QXmlStreamReader &xml)
+void AddTagsToCertificateResponsePrivate::parseAddTagsToCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToCertificateResponse"));
     /// @todo

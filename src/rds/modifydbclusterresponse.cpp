@@ -96,7 +96,7 @@ ModifyDBClusterResponsePrivate::ModifyDBClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDBClusterResponsePrivate::ModifyDBClusterResponse(QXmlStreamReader &xml)
+void ModifyDBClusterResponsePrivate::parseModifyDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterResponse"));
     /// @todo

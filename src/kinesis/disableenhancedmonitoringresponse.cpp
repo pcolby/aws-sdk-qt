@@ -96,7 +96,7 @@ DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponse(QXmlStreamReader &xml)
+void DisableEnhancedMonitoringResponsePrivate::parseDisableEnhancedMonitoringResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableEnhancedMonitoringResponse"));
     /// @todo

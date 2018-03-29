@@ -96,7 +96,7 @@ DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponse(QXmlStreamReader &xml)
+void DeleteVpcEndpointsResponsePrivate::parseDeleteVpcEndpointsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotRespons
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml)
+void RestoreDBClusterFromSnapshotResponsePrivate::parseRestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterFromSnapshotResponse"));
     /// @todo

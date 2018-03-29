@@ -96,7 +96,7 @@ StartFaceSearchResponsePrivate::StartFaceSearchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartFaceSearchResponsePrivate::StartFaceSearchResponse(QXmlStreamReader &xml)
+void StartFaceSearchResponsePrivate::parseStartFaceSearchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartFaceSearchResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponse(QXmlStreamReader &xml)
+void StartSchemaExtensionResponsePrivate::parseStartSchemaExtensionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartSchemaExtensionResponse"));
     /// @todo

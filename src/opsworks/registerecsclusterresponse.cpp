@@ -96,7 +96,7 @@ RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponse(QXmlStreamReader &xml)
+void RegisterEcsClusterResponsePrivate::parseRegisterEcsClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterEcsClusterResponse"));
     /// @todo

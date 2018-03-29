@@ -96,7 +96,7 @@ RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileRespo
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml)
+void RemoveRoleFromInstanceProfileResponsePrivate::parseRemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromInstanceProfileResponse"));
     /// @todo

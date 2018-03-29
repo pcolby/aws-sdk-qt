@@ -96,7 +96,7 @@ SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SendMessageBatchResponsePrivate::SendMessageBatchResponse(QXmlStreamReader &xml)
+void SendMessageBatchResponsePrivate::parseSendMessageBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendMessageBatchResponse"));
     /// @todo

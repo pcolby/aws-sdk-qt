@@ -96,7 +96,7 @@ ResolveCaseResponsePrivate::ResolveCaseResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResolveCaseResponsePrivate::ResolveCaseResponse(QXmlStreamReader &xml)
+void ResolveCaseResponsePrivate::parseResolveCaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveCaseResponse"));
     /// @todo

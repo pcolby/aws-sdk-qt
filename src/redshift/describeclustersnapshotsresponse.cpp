@@ -96,7 +96,7 @@ DescribeClusterSnapshotsResponsePrivate::DescribeClusterSnapshotsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeClusterSnapshotsResponsePrivate::DescribeClusterSnapshotsResponse(QXmlStreamReader &xml)
+void DescribeClusterSnapshotsResponsePrivate::parseDescribeClusterSnapshotsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterSnapshotsResponse"));
     /// @todo

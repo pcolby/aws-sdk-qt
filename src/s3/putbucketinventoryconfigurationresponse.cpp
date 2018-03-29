@@ -96,7 +96,7 @@ PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationR
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
+void PutBucketInventoryConfigurationResponsePrivate::parsePutBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketInventoryConfigurationResponse"));
     /// @todo

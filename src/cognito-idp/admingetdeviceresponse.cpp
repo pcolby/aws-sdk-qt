@@ -96,7 +96,7 @@ AdminGetDeviceResponsePrivate::AdminGetDeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminGetDeviceResponsePrivate::AdminGetDeviceResponse(QXmlStreamReader &xml)
+void AdminGetDeviceResponsePrivate::parseAdminGetDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminGetDeviceResponse"));
     /// @todo

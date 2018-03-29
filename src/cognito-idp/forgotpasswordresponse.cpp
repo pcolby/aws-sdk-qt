@@ -96,7 +96,7 @@ ForgotPasswordResponsePrivate::ForgotPasswordResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ForgotPasswordResponsePrivate::ForgotPasswordResponse(QXmlStreamReader &xml)
+void ForgotPasswordResponsePrivate::parseForgotPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ForgotPasswordResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RemoveTargetsResponsePrivate::RemoveTargetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveTargetsResponsePrivate::RemoveTargetsResponse(QXmlStreamReader &xml)
+void RemoveTargetsResponsePrivate::parseRemoveTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTargetsResponse"));
     /// @todo

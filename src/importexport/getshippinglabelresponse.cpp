@@ -96,7 +96,7 @@ GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetShippingLabelResponsePrivate::GetShippingLabelResponse(QXmlStreamReader &xml)
+void GetShippingLabelResponsePrivate::parseGetShippingLabelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetShippingLabelResponse"));
     /// @todo

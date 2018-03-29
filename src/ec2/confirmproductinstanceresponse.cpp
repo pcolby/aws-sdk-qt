@@ -96,7 +96,7 @@ ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponse(QXmlStreamReader &xml)
+void ConfirmProductInstanceResponsePrivate::parseConfirmProductInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmProductInstanceResponse"));
     /// @todo

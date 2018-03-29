@@ -96,7 +96,7 @@ DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponse(QXmlStreamReader &xml)
+void DeregisterManagedInstanceResponsePrivate::parseDeregisterManagedInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterManagedInstanceResponse"));
     /// @todo

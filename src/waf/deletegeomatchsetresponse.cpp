@@ -96,7 +96,7 @@ DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponse(QXmlStreamReader &xml)
+void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGeoMatchSetResponse"));
     /// @todo

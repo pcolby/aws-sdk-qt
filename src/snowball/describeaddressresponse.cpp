@@ -96,7 +96,7 @@ DescribeAddressResponsePrivate::DescribeAddressResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAddressResponsePrivate::DescribeAddressResponse(QXmlStreamReader &xml)
+void DescribeAddressResponsePrivate::parseDescribeAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAddressResponse"));
     /// @todo

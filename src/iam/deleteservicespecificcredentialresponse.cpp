@@ -96,7 +96,7 @@ DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialR
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml)
+void DeleteServiceSpecificCredentialResponsePrivate::parseDeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServiceSpecificCredentialResponse"));
     /// @todo

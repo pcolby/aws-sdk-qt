@@ -96,7 +96,7 @@ DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponse(QXmlStreamReader &xml)
+void DescribeAgentVersionsResponsePrivate::parseDescribeAgentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAgentVersionsResponse"));
     /// @todo

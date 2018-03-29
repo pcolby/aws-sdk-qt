@@ -96,7 +96,7 @@ DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponse(QXmlStreamReader &xml)
+void DeleteOriginEndpointResponsePrivate::parseDeleteOriginEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOriginEndpointResponse"));
     /// @todo

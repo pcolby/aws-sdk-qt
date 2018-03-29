@@ -96,7 +96,7 @@ RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenanceWin
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenanceWindowResponse(QXmlStreamReader &xml)
+void RegisterTaskWithMaintenanceWindowResponsePrivate::parseRegisterTaskWithMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTaskWithMaintenanceWindowResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteProfileResponsePrivate::DeleteProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteProfileResponsePrivate::DeleteProfileResponse(QXmlStreamReader &xml)
+void DeleteProfileResponsePrivate::parseDeleteProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProfileResponse"));
     /// @todo

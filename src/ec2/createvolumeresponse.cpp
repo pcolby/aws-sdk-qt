@@ -96,7 +96,7 @@ CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVolumeResponsePrivate::CreateVolumeResponse(QXmlStreamReader &xml)
+void CreateVolumeResponsePrivate::parseCreateVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVolumeResponse"));
     /// @todo

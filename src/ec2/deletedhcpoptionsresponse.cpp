@@ -96,7 +96,7 @@ DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponse(QXmlStreamReader &xml)
+void DeleteDhcpOptionsResponsePrivate::parseDeleteDhcpOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDhcpOptionsResponse"));
     /// @todo

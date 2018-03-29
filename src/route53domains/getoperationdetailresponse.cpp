@@ -96,7 +96,7 @@ GetOperationDetailResponsePrivate::GetOperationDetailResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetOperationDetailResponsePrivate::GetOperationDetailResponse(QXmlStreamReader &xml)
+void GetOperationDetailResponsePrivate::parseGetOperationDetailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOperationDetailResponse"));
     /// @todo

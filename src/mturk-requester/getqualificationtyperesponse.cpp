@@ -96,7 +96,7 @@ GetQualificationTypeResponsePrivate::GetQualificationTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetQualificationTypeResponsePrivate::GetQualificationTypeResponse(QXmlStreamReader &xml)
+void GetQualificationTypeResponsePrivate::parseGetQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetQualificationTypeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetEndpointResponsePrivate::GetEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetEndpointResponsePrivate::GetEndpointResponse(QXmlStreamReader &xml)
+void GetEndpointResponsePrivate::parseGetEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEndpointResponse"));
     /// @todo

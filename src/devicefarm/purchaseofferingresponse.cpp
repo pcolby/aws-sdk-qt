@@ -96,7 +96,7 @@ PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseOfferingResponsePrivate::PurchaseOfferingResponse(QXmlStreamReader &xml)
+void PurchaseOfferingResponsePrivate::parsePurchaseOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseOfferingResponse"));
     /// @todo

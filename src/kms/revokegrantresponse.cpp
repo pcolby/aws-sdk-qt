@@ -96,7 +96,7 @@ RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RevokeGrantResponsePrivate::RevokeGrantResponse(QXmlStreamReader &xml)
+void RevokeGrantResponsePrivate::parseRevokeGrantResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeGrantResponse"));
     /// @todo

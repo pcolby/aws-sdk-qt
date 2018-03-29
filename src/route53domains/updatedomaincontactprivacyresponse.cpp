@@ -96,7 +96,7 @@ UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponse(QXmlStreamReader &xml)
+void UpdateDomainContactPrivacyResponsePrivate::parseUpdateDomainContactPrivacyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainContactPrivacyResponse"));
     /// @todo

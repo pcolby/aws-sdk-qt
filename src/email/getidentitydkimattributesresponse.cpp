@@ -96,7 +96,7 @@ GetIdentityDkimAttributesResponsePrivate::GetIdentityDkimAttributesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void GetIdentityDkimAttributesResponsePrivate::GetIdentityDkimAttributesResponse(QXmlStreamReader &xml)
+void GetIdentityDkimAttributesResponsePrivate::parseGetIdentityDkimAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityDkimAttributesResponse"));
     /// @todo

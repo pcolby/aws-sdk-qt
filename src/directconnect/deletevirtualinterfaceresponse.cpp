@@ -96,7 +96,7 @@ DeleteVirtualInterfaceResponsePrivate::DeleteVirtualInterfaceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVirtualInterfaceResponsePrivate::DeleteVirtualInterfaceResponse(QXmlStreamReader &xml)
+void DeleteVirtualInterfaceResponsePrivate::parseDeleteVirtualInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVirtualInterfaceResponse"));
     /// @todo

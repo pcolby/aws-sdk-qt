@@ -96,7 +96,7 @@ EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponse(QXmlStreamReader &xml)
+void EnableAWSServiceAccessResponsePrivate::parseEnableAWSServiceAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableAWSServiceAccessResponse"));
     /// @todo

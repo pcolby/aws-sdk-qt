@@ -96,7 +96,7 @@ IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void IsVpcPeeredResponsePrivate::IsVpcPeeredResponse(QXmlStreamReader &xml)
+void IsVpcPeeredResponsePrivate::parseIsVpcPeeredResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IsVpcPeeredResponse"));
     /// @todo

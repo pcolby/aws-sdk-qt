@@ -96,7 +96,7 @@ CreateDiskSnapshotResponsePrivate::CreateDiskSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDiskSnapshotResponsePrivate::CreateDiskSnapshotResponse(QXmlStreamReader &xml)
+void CreateDiskSnapshotResponsePrivate::parseCreateDiskSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDiskSnapshotResponse"));
     /// @todo

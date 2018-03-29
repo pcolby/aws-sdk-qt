@@ -96,7 +96,7 @@ RebootCacheClusterResponsePrivate::RebootCacheClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RebootCacheClusterResponsePrivate::RebootCacheClusterResponse(QXmlStreamReader &xml)
+void RebootCacheClusterResponsePrivate::parseRebootCacheClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootCacheClusterResponse"));
     /// @todo

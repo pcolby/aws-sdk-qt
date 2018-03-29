@@ -96,7 +96,7 @@ ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponse(QXmlStreamReader &xml)
+void ContinueUpdateRollbackResponsePrivate::parseContinueUpdateRollbackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ContinueUpdateRollbackResponse"));
     /// @todo

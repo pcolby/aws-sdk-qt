@@ -96,7 +96,7 @@ UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponse(QXmlStreamReader &xml)
+void UpdateStreamingDistributionResponsePrivate::parseUpdateStreamingDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStreamingDistributionResponse"));
     /// @todo

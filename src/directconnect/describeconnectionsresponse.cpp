@@ -96,7 +96,7 @@ DescribeConnectionsResponsePrivate::DescribeConnectionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConnectionsResponsePrivate::DescribeConnectionsResponse(QXmlStreamReader &xml)
+void DescribeConnectionsResponsePrivate::parseDescribeConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConnectionsResponse"));
     /// @todo

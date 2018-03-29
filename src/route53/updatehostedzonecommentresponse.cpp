@@ -96,7 +96,7 @@ UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponse(QXmlStreamReader &xml)
+void UpdateHostedZoneCommentResponsePrivate::parseUpdateHostedZoneCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateHostedZoneCommentResponse"));
     /// @todo

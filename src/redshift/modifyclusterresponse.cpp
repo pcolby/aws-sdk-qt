@@ -96,7 +96,7 @@ ModifyClusterResponsePrivate::ModifyClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyClusterResponsePrivate::ModifyClusterResponse(QXmlStreamReader &xml)
+void ModifyClusterResponsePrivate::parseModifyClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterResponse"));
     /// @todo

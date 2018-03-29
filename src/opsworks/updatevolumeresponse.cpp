@@ -96,7 +96,7 @@ UpdateVolumeResponsePrivate::UpdateVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateVolumeResponsePrivate::UpdateVolumeResponse(QXmlStreamReader &xml)
+void UpdateVolumeResponsePrivate::parseUpdateVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateVolumeResponse"));
     /// @todo

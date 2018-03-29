@@ -96,7 +96,7 @@ InitializeClusterResponsePrivate::InitializeClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void InitializeClusterResponsePrivate::InitializeClusterResponse(QXmlStreamReader &xml)
+void InitializeClusterResponsePrivate::parseInitializeClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitializeClusterResponse"));
     /// @todo

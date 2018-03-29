@@ -96,7 +96,7 @@ GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetShardIteratorResponsePrivate::GetShardIteratorResponse(QXmlStreamReader &xml)
+void GetShardIteratorResponsePrivate::parseGetShardIteratorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetShardIteratorResponse"));
     /// @todo

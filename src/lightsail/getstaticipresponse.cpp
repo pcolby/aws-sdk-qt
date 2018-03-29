@@ -96,7 +96,7 @@ GetStaticIpResponsePrivate::GetStaticIpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetStaticIpResponsePrivate::GetStaticIpResponse(QXmlStreamReader &xml)
+void GetStaticIpResponsePrivate::parseGetStaticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetStaticIpResponse"));
     /// @todo

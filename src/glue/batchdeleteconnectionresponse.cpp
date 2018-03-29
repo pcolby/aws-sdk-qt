@@ -96,7 +96,7 @@ BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponse(QXmlStreamReader &xml)
+void BatchDeleteConnectionResponsePrivate::parseBatchDeleteConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteConnectionResponse"));
     /// @todo

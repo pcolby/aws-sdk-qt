@@ -96,7 +96,7 @@ ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationResponse(QXmlStreamReader &xml)
+void ReplaceRouteTableAssociationResponsePrivate::parseReplaceRouteTableAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReplaceRouteTableAssociationResponse"));
     /// @todo

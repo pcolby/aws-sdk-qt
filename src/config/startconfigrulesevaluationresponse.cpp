@@ -96,7 +96,7 @@ StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationResponse(QXmlStreamReader &xml)
+void StartConfigRulesEvaluationResponsePrivate::parseStartConfigRulesEvaluationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartConfigRulesEvaluationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponse(QXmlStreamReader &xml)
+void DeleteOpenIDConnectProviderResponsePrivate::parseDeleteOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOpenIDConnectProviderResponse"));
     /// @todo

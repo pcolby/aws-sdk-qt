@@ -96,7 +96,7 @@ DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponse(QXmlStreamReader &xml)
+void DeleteDocumentationVersionResponsePrivate::parseDeleteDocumentationVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentationVersionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponse(QXmlStreamReader &xml)
+void DeleteCacheClusterResponsePrivate::parseDeleteCacheClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheClusterResponse"));
     /// @todo

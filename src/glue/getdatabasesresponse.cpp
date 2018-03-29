@@ -96,7 +96,7 @@ GetDatabasesResponsePrivate::GetDatabasesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDatabasesResponsePrivate::GetDatabasesResponse(QXmlStreamReader &xml)
+void GetDatabasesResponsePrivate::parseGetDatabasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDatabasesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CancelBundleTaskResponsePrivate::CancelBundleTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelBundleTaskResponsePrivate::CancelBundleTaskResponse(QXmlStreamReader &xml)
+void CancelBundleTaskResponsePrivate::parseCancelBundleTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelBundleTaskResponse"));
     /// @todo

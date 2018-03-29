@@ -96,7 +96,7 @@ TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScali
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScalingGroupResponse(QXmlStreamReader &xml)
+void TerminateInstanceInAutoScalingGroupResponsePrivate::parseTerminateInstanceInAutoScalingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateInstanceInAutoScalingGroupResponse"));
     /// @todo

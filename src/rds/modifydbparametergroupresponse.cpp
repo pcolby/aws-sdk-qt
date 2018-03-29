@@ -96,7 +96,7 @@ ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponse(QXmlStreamReader &xml)
+void ModifyDBParameterGroupResponsePrivate::parseModifyDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBParameterGroupResponse"));
     /// @todo

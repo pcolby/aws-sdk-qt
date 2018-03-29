@@ -96,7 +96,7 @@ CreateContainerResponsePrivate::CreateContainerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateContainerResponsePrivate::CreateContainerResponse(QXmlStreamReader &xml)
+void CreateContainerResponsePrivate::parseCreateContainerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateContainerResponse"));
     /// @todo

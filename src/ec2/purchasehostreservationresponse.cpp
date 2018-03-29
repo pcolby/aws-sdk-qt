@@ -96,7 +96,7 @@ PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponse(QXmlStreamReader &xml)
+void PurchaseHostReservationResponsePrivate::parsePurchaseHostReservationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseHostReservationResponse"));
     /// @todo

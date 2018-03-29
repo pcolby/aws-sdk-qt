@@ -96,7 +96,7 @@ DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponse(QXmlStreamReader &xml)
+void DeleteBatchPredictionResponsePrivate::parseDeleteBatchPredictionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBatchPredictionResponse"));
     /// @todo

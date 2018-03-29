@@ -96,7 +96,7 @@ ModifyVpcPeeringConnectionOptionsResponsePrivate::ModifyVpcPeeringConnectionOpti
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyVpcPeeringConnectionOptionsResponsePrivate::ModifyVpcPeeringConnectionOptionsResponse(QXmlStreamReader &xml)
+void ModifyVpcPeeringConnectionOptionsResponsePrivate::parseModifyVpcPeeringConnectionOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcPeeringConnectionOptionsResponse"));
     /// @todo

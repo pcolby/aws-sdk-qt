@@ -96,7 +96,7 @@ CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDBInstanceResponsePrivate::CreateDBInstanceResponse(QXmlStreamReader &xml)
+void CreateDBInstanceResponsePrivate::parseCreateDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBInstanceResponse"));
     /// @todo

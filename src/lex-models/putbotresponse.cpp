@@ -96,7 +96,7 @@ PutBotResponsePrivate::PutBotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBotResponsePrivate::PutBotResponse(QXmlStreamReader &xml)
+void PutBotResponsePrivate::parsePutBotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBotResponse"));
     /// @todo

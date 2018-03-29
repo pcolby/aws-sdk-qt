@@ -96,7 +96,7 @@ UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponse(QXmlStreamReader &xml)
+void UpdateRdsDbInstanceResponsePrivate::parseUpdateRdsDbInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRdsDbInstanceResponse"));
     /// @todo

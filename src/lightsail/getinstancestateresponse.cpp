@@ -96,7 +96,7 @@ GetInstanceStateResponsePrivate::GetInstanceStateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInstanceStateResponsePrivate::GetInstanceStateResponse(QXmlStreamReader &xml)
+void GetInstanceStateResponsePrivate::parseGetInstanceStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceStateResponse"));
     /// @todo

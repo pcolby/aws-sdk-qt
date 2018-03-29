@@ -96,7 +96,7 @@ DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPoliciesRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPoliciesResponse(QXmlStreamReader &xml)
+void DescribeServiceAccessPoliciesResponsePrivate::parseDescribeServiceAccessPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeServiceAccessPoliciesResponse"));
     /// @todo

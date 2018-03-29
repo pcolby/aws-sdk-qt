@@ -96,7 +96,7 @@ GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GenerateDataSetResponsePrivate::GenerateDataSetResponse(QXmlStreamReader &xml)
+void GenerateDataSetResponsePrivate::parseGenerateDataSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataSetResponse"));
     /// @todo

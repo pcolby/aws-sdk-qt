@@ -96,7 +96,7 @@ ListRoleAliasesResponsePrivate::ListRoleAliasesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListRoleAliasesResponsePrivate::ListRoleAliasesResponse(QXmlStreamReader &xml)
+void ListRoleAliasesResponsePrivate::parseListRoleAliasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRoleAliasesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponse(QXmlStreamReader &xml)
+void DescribeNotebookInstanceResponsePrivate::parseDescribeNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotebookInstanceResponse"));
     /// @todo

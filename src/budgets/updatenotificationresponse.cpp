@@ -96,7 +96,7 @@ UpdateNotificationResponsePrivate::UpdateNotificationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateNotificationResponsePrivate::UpdateNotificationResponse(QXmlStreamReader &xml)
+void UpdateNotificationResponsePrivate::parseUpdateNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotificationResponse"));
     /// @todo

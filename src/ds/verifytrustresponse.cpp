@@ -96,7 +96,7 @@ VerifyTrustResponsePrivate::VerifyTrustResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void VerifyTrustResponsePrivate::VerifyTrustResponse(QXmlStreamReader &xml)
+void VerifyTrustResponsePrivate::parseVerifyTrustResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyTrustResponse"));
     /// @todo

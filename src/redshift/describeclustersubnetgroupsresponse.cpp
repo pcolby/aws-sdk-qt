@@ -96,7 +96,7 @@ DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponse(QXmlStreamReader &xml)
+void DescribeClusterSubnetGroupsResponsePrivate::parseDescribeClusterSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterSubnetGroupsResponse"));
     /// @todo

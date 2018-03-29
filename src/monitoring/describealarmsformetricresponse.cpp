@@ -96,7 +96,7 @@ DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponse(QXmlStreamReader &xml)
+void DescribeAlarmsForMetricResponsePrivate::parseDescribeAlarmsForMetricResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmsForMetricResponse"));
     /// @todo

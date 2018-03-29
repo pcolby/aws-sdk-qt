@@ -96,7 +96,7 @@ CreateInvalidationResponsePrivate::CreateInvalidationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateInvalidationResponsePrivate::CreateInvalidationResponse(QXmlStreamReader &xml)
+void CreateInvalidationResponsePrivate::parseCreateInvalidationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInvalidationResponse"));
     /// @todo

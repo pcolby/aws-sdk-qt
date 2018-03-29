@@ -96,7 +96,7 @@ GetPlanResponsePrivate::GetPlanResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetPlanResponsePrivate::GetPlanResponse(QXmlStreamReader &xml)
+void GetPlanResponsePrivate::parseGetPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPlanResponse"));
     /// @todo

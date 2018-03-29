@@ -96,7 +96,7 @@ DeleteUserPolicyResponsePrivate::DeleteUserPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteUserPolicyResponsePrivate::DeleteUserPolicyResponse(QXmlStreamReader &xml)
+void DeleteUserPolicyResponsePrivate::parseDeleteUserPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserPolicyResponse"));
     /// @todo

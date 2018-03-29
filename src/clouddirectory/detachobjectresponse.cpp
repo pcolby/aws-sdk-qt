@@ -96,7 +96,7 @@ DetachObjectResponsePrivate::DetachObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachObjectResponsePrivate::DetachObjectResponse(QXmlStreamReader &xml)
+void DetachObjectResponsePrivate::parseDetachObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachObjectResponse"));
     /// @todo

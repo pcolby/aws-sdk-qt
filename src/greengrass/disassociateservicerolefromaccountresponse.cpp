@@ -96,7 +96,7 @@ DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAc
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml)
+void DisassociateServiceRoleFromAccountResponsePrivate::parseDisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateServiceRoleFromAccountResponse"));
     /// @todo

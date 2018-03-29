@@ -96,7 +96,7 @@ CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponse(QXmlStreamReader &xml)
+void CreateSoftwareUpdateJobResponsePrivate::parseCreateSoftwareUpdateJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSoftwareUpdateJobResponse"));
     /// @todo

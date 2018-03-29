@@ -96,7 +96,7 @@ AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponse(QXmlStreamReader &xml)
+void AssociateKmsKeyResponsePrivate::parseAssociateKmsKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateKmsKeyResponse"));
     /// @todo

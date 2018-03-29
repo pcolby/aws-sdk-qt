@@ -96,7 +96,7 @@ RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponse(QXmlStreamReader &xml)
+void RefreshTrustedAdvisorCheckResponsePrivate::parseRefreshTrustedAdvisorCheckResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RefreshTrustedAdvisorCheckResponse"));
     /// @todo

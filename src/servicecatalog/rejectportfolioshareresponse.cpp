@@ -96,7 +96,7 @@ RejectPortfolioShareResponsePrivate::RejectPortfolioShareResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RejectPortfolioShareResponsePrivate::RejectPortfolioShareResponse(QXmlStreamReader &xml)
+void RejectPortfolioShareResponsePrivate::parseRejectPortfolioShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RejectPortfolioShareResponse"));
     /// @todo

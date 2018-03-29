@@ -96,7 +96,7 @@ EnableKeyRotationResponsePrivate::EnableKeyRotationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableKeyRotationResponsePrivate::EnableKeyRotationResponse(QXmlStreamReader &xml)
+void EnableKeyRotationResponsePrivate::parseEnableKeyRotationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableKeyRotationResponse"));
     /// @todo

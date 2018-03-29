@@ -96,7 +96,7 @@ GetBucketReplicationResponsePrivate::GetBucketReplicationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketReplicationResponsePrivate::GetBucketReplicationResponse(QXmlStreamReader &xml)
+void GetBucketReplicationResponsePrivate::parseGetBucketReplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketReplicationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaintenanc
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaintenanceWindowResponse(QXmlStreamReader &xml)
+void RegisterTargetWithMaintenanceWindowResponsePrivate::parseRegisterTargetWithMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTargetWithMaintenanceWindowResponse"));
     /// @todo

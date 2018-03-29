@@ -96,7 +96,7 @@ GetMediaResponsePrivate::GetMediaResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetMediaResponsePrivate::GetMediaResponse(QXmlStreamReader &xml)
+void GetMediaResponsePrivate::parseGetMediaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMediaResponse"));
     /// @todo

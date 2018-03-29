@@ -96,7 +96,7 @@ DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponse(QXmlStreamReader &xml)
+void DescribeVTLDevicesResponsePrivate::parseDescribeVTLDevicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVTLDevicesResponse"));
     /// @todo

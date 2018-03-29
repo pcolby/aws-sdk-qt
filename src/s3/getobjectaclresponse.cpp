@@ -96,7 +96,7 @@ GetObjectAclResponsePrivate::GetObjectAclResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetObjectAclResponsePrivate::GetObjectAclResponse(QXmlStreamReader &xml)
+void GetObjectAclResponsePrivate::parseGetObjectAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetObjectAclResponse"));
     /// @todo

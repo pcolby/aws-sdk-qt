@@ -96,7 +96,7 @@ DescribeReservedCacheNodesResponsePrivate::DescribeReservedCacheNodesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeReservedCacheNodesResponsePrivate::DescribeReservedCacheNodesResponse(QXmlStreamReader &xml)
+void DescribeReservedCacheNodesResponsePrivate::parseDescribeReservedCacheNodesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedCacheNodesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponse(QXmlStreamReader &xml)
+void GetRegistrationCodeResponsePrivate::parseGetRegistrationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegistrationCodeResponse"));
     /// @todo

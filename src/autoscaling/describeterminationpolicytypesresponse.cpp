@@ -96,7 +96,7 @@ DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesRes
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesResponse(QXmlStreamReader &xml)
+void DescribeTerminationPolicyTypesResponsePrivate::parseDescribeTerminationPolicyTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTerminationPolicyTypesResponse"));
     /// @todo

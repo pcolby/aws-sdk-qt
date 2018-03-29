@@ -96,7 +96,7 @@ CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateOptionGroupResponsePrivate::CreateOptionGroupResponse(QXmlStreamReader &xml)
+void CreateOptionGroupResponsePrivate::parseCreateOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOptionGroupResponse"));
     /// @todo

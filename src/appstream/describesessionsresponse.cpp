@@ -96,7 +96,7 @@ DescribeSessionsResponsePrivate::DescribeSessionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSessionsResponsePrivate::DescribeSessionsResponse(QXmlStreamReader &xml)
+void DescribeSessionsResponsePrivate::parseDescribeSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSessionsResponse"));
     /// @todo

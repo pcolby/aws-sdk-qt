@@ -96,7 +96,7 @@ SearchFacesByImageResponsePrivate::SearchFacesByImageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchFacesByImageResponsePrivate::SearchFacesByImageResponse(QXmlStreamReader &xml)
+void SearchFacesByImageResponsePrivate::parseSearchFacesByImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchFacesByImageResponse"));
     /// @todo

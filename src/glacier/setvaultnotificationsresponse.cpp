@@ -96,7 +96,7 @@ SetVaultNotificationsResponsePrivate::SetVaultNotificationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetVaultNotificationsResponsePrivate::SetVaultNotificationsResponse(QXmlStreamReader &xml)
+void SetVaultNotificationsResponsePrivate::parseSetVaultNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetVaultNotificationsResponse"));
     /// @todo

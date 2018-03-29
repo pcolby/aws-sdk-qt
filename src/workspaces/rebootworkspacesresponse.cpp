@@ -96,7 +96,7 @@ RebootWorkspacesResponsePrivate::RebootWorkspacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RebootWorkspacesResponsePrivate::RebootWorkspacesResponse(QXmlStreamReader &xml)
+void RebootWorkspacesResponsePrivate::parseRebootWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootWorkspacesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GenerateRandomResponsePrivate::GenerateRandomResponse(QXmlStreamReader &xml)
+void GenerateRandomResponsePrivate::parseGenerateRandomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateRandomResponse"));
     /// @todo

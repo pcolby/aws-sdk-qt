@@ -96,7 +96,7 @@ DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNotifica
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNotificationTypesResponse(QXmlStreamReader &xml)
+void DescribeAutoScalingNotificationTypesResponsePrivate::parseDescribeAutoScalingNotificationTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutoScalingNotificationTypesResponse"));
     /// @todo

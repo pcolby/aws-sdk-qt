@@ -96,7 +96,7 @@ RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponse(QXmlStreamReader &xml)
+void RetrieveDomainAuthCodeResponsePrivate::parseRetrieveDomainAuthCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetrieveDomainAuthCodeResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AllocateHostsResponsePrivate::AllocateHostsResponse(QXmlStreamReader &xml)
+void AllocateHostsResponsePrivate::parseAllocateHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateHostsResponse"));
     /// @todo

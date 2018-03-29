@@ -96,7 +96,7 @@ ModifyHsmResponsePrivate::ModifyHsmResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyHsmResponsePrivate::ModifyHsmResponse(QXmlStreamReader &xml)
+void ModifyHsmResponsePrivate::parseModifyHsmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyHsmResponse"));
     /// @todo

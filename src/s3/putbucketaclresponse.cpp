@@ -96,7 +96,7 @@ PutBucketAclResponsePrivate::PutBucketAclResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketAclResponsePrivate::PutBucketAclResponse(QXmlStreamReader &xml)
+void PutBucketAclResponsePrivate::parsePutBucketAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketAclResponse"));
     /// @todo

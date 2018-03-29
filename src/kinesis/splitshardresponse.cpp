@@ -96,7 +96,7 @@ SplitShardResponsePrivate::SplitShardResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SplitShardResponsePrivate::SplitShardResponse(QXmlStreamReader &xml)
+void SplitShardResponsePrivate::parseSplitShardResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SplitShardResponse"));
     /// @todo

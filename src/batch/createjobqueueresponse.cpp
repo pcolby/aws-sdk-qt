@@ -96,7 +96,7 @@ CreateJobQueueResponsePrivate::CreateJobQueueResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateJobQueueResponsePrivate::CreateJobQueueResponse(QXmlStreamReader &xml)
+void CreateJobQueueResponsePrivate::parseCreateJobQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateJobQueueResponse"));
     /// @todo

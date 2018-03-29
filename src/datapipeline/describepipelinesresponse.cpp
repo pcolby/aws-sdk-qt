@@ -96,7 +96,7 @@ DescribePipelinesResponsePrivate::DescribePipelinesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePipelinesResponsePrivate::DescribePipelinesResponse(QXmlStreamReader &xml)
+void DescribePipelinesResponsePrivate::parseDescribePipelinesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePipelinesResponse"));
     /// @todo

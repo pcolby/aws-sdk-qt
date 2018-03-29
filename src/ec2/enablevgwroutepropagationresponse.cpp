@@ -96,7 +96,7 @@ EnableVgwRoutePropagationResponsePrivate::EnableVgwRoutePropagationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void EnableVgwRoutePropagationResponsePrivate::EnableVgwRoutePropagationResponse(QXmlStreamReader &xml)
+void EnableVgwRoutePropagationResponsePrivate::parseEnableVgwRoutePropagationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableVgwRoutePropagationResponse"));
     /// @todo

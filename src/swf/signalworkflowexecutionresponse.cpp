@@ -96,7 +96,7 @@ SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponse(QXmlStreamReader &xml)
+void SignalWorkflowExecutionResponsePrivate::parseSignalWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SignalWorkflowExecutionResponse"));
     /// @todo

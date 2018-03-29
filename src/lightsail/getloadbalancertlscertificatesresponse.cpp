@@ -96,7 +96,7 @@ GetLoadBalancerTlsCertificatesResponsePrivate::GetLoadBalancerTlsCertificatesRes
  *
  * @param  xml  XML stream to parse.
  */
-void GetLoadBalancerTlsCertificatesResponsePrivate::GetLoadBalancerTlsCertificatesResponse(QXmlStreamReader &xml)
+void GetLoadBalancerTlsCertificatesResponsePrivate::parseGetLoadBalancerTlsCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLoadBalancerTlsCertificatesResponse"));
     /// @todo

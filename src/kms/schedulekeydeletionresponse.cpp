@@ -96,7 +96,7 @@ ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponse(QXmlStreamReader &xml)
+void ScheduleKeyDeletionResponsePrivate::parseScheduleKeyDeletionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScheduleKeyDeletionResponse"));
     /// @todo

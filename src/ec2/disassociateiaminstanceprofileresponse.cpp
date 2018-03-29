@@ -96,7 +96,7 @@ DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileRes
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileResponse(QXmlStreamReader &xml)
+void DisassociateIamInstanceProfileResponsePrivate::parseDisassociateIamInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateIamInstanceProfileResponse"));
     /// @todo

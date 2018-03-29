@@ -96,7 +96,7 @@ StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponse(QXmlStreamReader &xml)
+void StopMonitoringMembersResponsePrivate::parseStopMonitoringMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopMonitoringMembersResponse"));
     /// @todo

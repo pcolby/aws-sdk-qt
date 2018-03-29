@@ -96,7 +96,7 @@ ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponse(QXmlStreamReader &xml)
+void ResetFpgaImageAttributeResponsePrivate::parseResetFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetFpgaImageAttributeResponse"));
     /// @todo

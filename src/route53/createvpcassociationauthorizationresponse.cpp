@@ -96,7 +96,7 @@ CreateVPCAssociationAuthorizationResponsePrivate::CreateVPCAssociationAuthorizat
  *
  * @param  xml  XML stream to parse.
  */
-void CreateVPCAssociationAuthorizationResponsePrivate::CreateVPCAssociationAuthorizationResponse(QXmlStreamReader &xml)
+void CreateVPCAssociationAuthorizationResponsePrivate::parseCreateVPCAssociationAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVPCAssociationAuthorizationResponse"));
     /// @todo

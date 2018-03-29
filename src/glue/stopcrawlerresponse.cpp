@@ -96,7 +96,7 @@ StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopCrawlerResponsePrivate::StopCrawlerResponse(QXmlStreamReader &xml)
+void StopCrawlerResponsePrivate::parseStopCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopCrawlerResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetRestApisResponsePrivate::GetRestApisResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRestApisResponsePrivate::GetRestApisResponse(QXmlStreamReader &xml)
+void GetRestApisResponsePrivate::parseGetRestApisResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRestApisResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetSegmentVersionsResponsePrivate::GetSegmentVersionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSegmentVersionsResponsePrivate::GetSegmentVersionsResponse(QXmlStreamReader &xml)
+void GetSegmentVersionsResponsePrivate::parseGetSegmentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentVersionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponse(QXmlStreamReader &xml)
+void DescribeElasticIpsResponsePrivate::parseDescribeElasticIpsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticIpsResponse"));
     /// @todo

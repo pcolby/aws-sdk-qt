@@ -96,7 +96,7 @@ UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateRespo
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateResponse(QXmlStreamReader &xml)
+void UpdateContainerInstancesStateResponsePrivate::parseUpdateContainerInstancesStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContainerInstancesStateResponse"));
     /// @todo

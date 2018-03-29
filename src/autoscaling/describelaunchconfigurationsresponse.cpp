@@ -96,7 +96,7 @@ DescribeLaunchConfigurationsResponsePrivate::DescribeLaunchConfigurationsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLaunchConfigurationsResponsePrivate::DescribeLaunchConfigurationsResponse(QXmlStreamReader &xml)
+void DescribeLaunchConfigurationsResponsePrivate::parseDescribeLaunchConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLaunchConfigurationsResponse"));
     /// @todo

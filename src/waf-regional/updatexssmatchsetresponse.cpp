@@ -96,7 +96,7 @@ UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponse(QXmlStreamReader &xml)
+void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateXssMatchSetResponse"));
     /// @todo

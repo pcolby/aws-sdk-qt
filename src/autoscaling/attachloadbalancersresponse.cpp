@@ -96,7 +96,7 @@ AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponse(QXmlStreamReader &xml)
+void AttachLoadBalancersResponsePrivate::parseAttachLoadBalancersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancersResponse"));
     /// @todo

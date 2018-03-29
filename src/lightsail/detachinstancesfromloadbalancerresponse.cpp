@@ -96,7 +96,7 @@ DetachInstancesFromLoadBalancerResponsePrivate::DetachInstancesFromLoadBalancerR
  *
  * @param  xml  XML stream to parse.
  */
-void DetachInstancesFromLoadBalancerResponsePrivate::DetachInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
+void DetachInstancesFromLoadBalancerResponsePrivate::parseDetachInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachInstancesFromLoadBalancerResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextR
  *
  * @param  xml  XML stream to parse.
  */
-void GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextResponse(QXmlStreamReader &xml)
+void GenerateDataKeyWithoutPlaintextResponsePrivate::parseGenerateDataKeyWithoutPlaintextResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataKeyWithoutPlaintextResponse"));
     /// @todo

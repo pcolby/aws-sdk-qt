@@ -96,7 +96,7 @@ GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitRespo
  *
  * @param  xml  XML stream to parse.
  */
-void GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitResponse(QXmlStreamReader &xml)
+void GetReusableDelegationSetLimitResponsePrivate::parseGetReusableDelegationSetLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReusableDelegationSetLimitResponse"));
     /// @todo

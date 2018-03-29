@@ -96,7 +96,7 @@ SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponse(QXmlStreamReader &xml)
+void SetVisibleToAllUsersResponsePrivate::parseSetVisibleToAllUsersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetVisibleToAllUsersResponse"));
     /// @todo

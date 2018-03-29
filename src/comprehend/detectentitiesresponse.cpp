@@ -96,7 +96,7 @@ DetectEntitiesResponsePrivate::DetectEntitiesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetectEntitiesResponsePrivate::DetectEntitiesResponse(QXmlStreamReader &xml)
+void DetectEntitiesResponsePrivate::parseDetectEntitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectEntitiesResponse"));
     /// @todo

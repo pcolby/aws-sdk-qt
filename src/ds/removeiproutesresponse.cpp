@@ -96,7 +96,7 @@ RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponse(QXmlStreamReader &xml)
+void RemoveIpRoutesResponsePrivate::parseRemoveIpRoutesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveIpRoutesResponse"));
     /// @todo

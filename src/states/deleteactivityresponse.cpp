@@ -96,7 +96,7 @@ DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteActivityResponsePrivate::DeleteActivityResponse(QXmlStreamReader &xml)
+void DeleteActivityResponsePrivate::parseDeleteActivityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteActivityResponse"));
     /// @todo

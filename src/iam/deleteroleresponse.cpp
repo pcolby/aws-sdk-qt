@@ -96,7 +96,7 @@ DeleteRoleResponsePrivate::DeleteRoleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRoleResponsePrivate::DeleteRoleResponse(QXmlStreamReader &xml)
+void DeleteRoleResponsePrivate::parseDeleteRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoleResponse"));
     /// @todo

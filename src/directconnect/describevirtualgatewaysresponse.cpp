@@ -96,7 +96,7 @@ DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponse(QXmlStreamReader &xml)
+void DescribeVirtualGatewaysResponsePrivate::parseDescribeVirtualGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualGatewaysResponse"));
     /// @todo

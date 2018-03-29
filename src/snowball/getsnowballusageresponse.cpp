@@ -96,7 +96,7 @@ GetSnowballUsageResponsePrivate::GetSnowballUsageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSnowballUsageResponsePrivate::GetSnowballUsageResponse(QXmlStreamReader &xml)
+void GetSnowballUsageResponsePrivate::parseGetSnowballUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSnowballUsageResponse"));
     /// @todo

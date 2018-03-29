@@ -96,7 +96,7 @@ CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponse(QXmlStreamReader &xml)
+void CheckDNSAvailabilityResponsePrivate::parseCheckDNSAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckDNSAvailabilityResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponse(QXmlStreamReader &xml)
+void DeleteReportDefinitionResponsePrivate::parseDeleteReportDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReportDefinitionResponse"));
     /// @todo

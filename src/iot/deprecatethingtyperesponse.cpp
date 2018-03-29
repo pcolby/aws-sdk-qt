@@ -96,7 +96,7 @@ DeprecateThingTypeResponsePrivate::DeprecateThingTypeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeprecateThingTypeResponsePrivate::DeprecateThingTypeResponse(QXmlStreamReader &xml)
+void DeprecateThingTypeResponsePrivate::parseDeprecateThingTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateThingTypeResponse"));
     /// @todo

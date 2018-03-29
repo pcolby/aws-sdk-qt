@@ -96,7 +96,7 @@ DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponse(QXmlStreamReader &xml)
+void DescribeComputeEnvironmentsResponsePrivate::parseDescribeComputeEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeComputeEnvironmentsResponse"));
     /// @todo

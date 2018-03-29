@@ -96,7 +96,7 @@ DeleteDatasetResponsePrivate::DeleteDatasetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDatasetResponsePrivate::DeleteDatasetResponse(QXmlStreamReader &xml)
+void DeleteDatasetResponsePrivate::parseDeleteDatasetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDatasetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchMeterUsageResponsePrivate::BatchMeterUsageResponse(QXmlStreamReader &xml)
+void BatchMeterUsageResponsePrivate::parseBatchMeterUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchMeterUsageResponse"));
     /// @todo

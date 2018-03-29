@@ -96,7 +96,7 @@ AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponse(QXmlStreamReader &xml)
+void AcknowledgeThirdPartyJobResponsePrivate::parseAcknowledgeThirdPartyJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcknowledgeThirdPartyJobResponse"));
     /// @todo

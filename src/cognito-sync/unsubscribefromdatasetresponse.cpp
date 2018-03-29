@@ -96,7 +96,7 @@ UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponse(QXmlStreamReader &xml)
+void UnsubscribeFromDatasetResponsePrivate::parseUnsubscribeFromDatasetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromDatasetResponse"));
     /// @todo

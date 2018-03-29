@@ -96,7 +96,7 @@ CreateInternetGatewayResponsePrivate::CreateInternetGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateInternetGatewayResponsePrivate::CreateInternetGatewayResponse(QXmlStreamReader &xml)
+void CreateInternetGatewayResponsePrivate::parseCreateInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInternetGatewayResponse"));
     /// @todo

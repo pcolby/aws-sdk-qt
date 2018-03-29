@@ -96,7 +96,7 @@ EnableStageTransitionResponsePrivate::EnableStageTransitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableStageTransitionResponsePrivate::EnableStageTransitionResponse(QXmlStreamReader &xml)
+void EnableStageTransitionResponsePrivate::parseEnableStageTransitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableStageTransitionResponse"));
     /// @todo

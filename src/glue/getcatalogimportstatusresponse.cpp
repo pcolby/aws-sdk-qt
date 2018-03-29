@@ -96,7 +96,7 @@ GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponse(QXmlStreamReader &xml)
+void GetCatalogImportStatusResponsePrivate::parseGetCatalogImportStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCatalogImportStatusResponse"));
     /// @todo

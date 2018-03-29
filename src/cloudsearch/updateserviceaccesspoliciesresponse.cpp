@@ -96,7 +96,7 @@ UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponse(QXmlStreamReader &xml)
+void UpdateServiceAccessPoliciesResponsePrivate::parseUpdateServiceAccessPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceAccessPoliciesResponse"));
     /// @todo

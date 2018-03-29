@@ -96,7 +96,7 @@ GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponse(QXmlStreamReader &xml)
+void GetConsoleScreenshotResponsePrivate::parseGetConsoleScreenshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConsoleScreenshotResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponse(QXmlStreamReader &xml)
+void DescribeServiceErrorsResponsePrivate::parseDescribeServiceErrorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeServiceErrorsResponse"));
     /// @todo

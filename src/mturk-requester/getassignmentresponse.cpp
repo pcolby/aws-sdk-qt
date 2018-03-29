@@ -96,7 +96,7 @@ GetAssignmentResponsePrivate::GetAssignmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAssignmentResponsePrivate::GetAssignmentResponse(QXmlStreamReader &xml)
+void GetAssignmentResponsePrivate::parseGetAssignmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAssignmentResponse"));
     /// @todo

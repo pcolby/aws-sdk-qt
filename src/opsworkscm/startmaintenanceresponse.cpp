@@ -96,7 +96,7 @@ StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartMaintenanceResponsePrivate::StartMaintenanceResponse(QXmlStreamReader &xml)
+void StartMaintenanceResponsePrivate::parseStartMaintenanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartMaintenanceResponse"));
     /// @todo

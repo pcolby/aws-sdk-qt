@@ -96,7 +96,7 @@ ConfirmConnectionResponsePrivate::ConfirmConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ConfirmConnectionResponsePrivate::ConfirmConnectionResponse(QXmlStreamReader &xml)
+void ConfirmConnectionResponsePrivate::parseConfirmConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmConnectionResponse"));
     /// @todo

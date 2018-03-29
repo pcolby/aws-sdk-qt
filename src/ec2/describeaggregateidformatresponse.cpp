@@ -96,7 +96,7 @@ DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponse(QXmlStreamReader &xml)
+void DescribeAggregateIdFormatResponsePrivate::parseDescribeAggregateIdFormatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAggregateIdFormatResponse"));
     /// @todo

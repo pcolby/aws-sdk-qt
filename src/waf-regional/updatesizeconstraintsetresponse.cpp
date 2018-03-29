@@ -96,7 +96,7 @@ UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponse(QXmlStreamReader &xml)
+void UpdateSizeConstraintSetResponsePrivate::parseUpdateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSizeConstraintSetResponse"));
     /// @todo

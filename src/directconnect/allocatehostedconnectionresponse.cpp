@@ -96,7 +96,7 @@ AllocateHostedConnectionResponsePrivate::AllocateHostedConnectionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void AllocateHostedConnectionResponsePrivate::AllocateHostedConnectionResponse(QXmlStreamReader &xml)
+void AllocateHostedConnectionResponsePrivate::parseAllocateHostedConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateHostedConnectionResponse"));
     /// @todo

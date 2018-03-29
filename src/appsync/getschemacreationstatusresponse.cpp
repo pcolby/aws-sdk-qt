@@ -96,7 +96,7 @@ GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponse(QXmlStreamReader &xml)
+void GetSchemaCreationStatusResponsePrivate::parseGetSchemaCreationStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSchemaCreationStatusResponse"));
     /// @todo

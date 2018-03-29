@@ -96,7 +96,7 @@ DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponse(QXmlStreamReader &xml)
+void DeleteDevicePoolResponsePrivate::parseDeleteDevicePoolResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDevicePoolResponse"));
     /// @todo

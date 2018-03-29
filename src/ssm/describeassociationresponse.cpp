@@ -96,7 +96,7 @@ DescribeAssociationResponsePrivate::DescribeAssociationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAssociationResponsePrivate::DescribeAssociationResponse(QXmlStreamReader &xml)
+void DescribeAssociationResponsePrivate::parseDescribeAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAssociationResponse"));
     /// @todo

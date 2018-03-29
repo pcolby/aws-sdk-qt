@@ -96,7 +96,7 @@ UpdateCrawlerScheduleResponsePrivate::UpdateCrawlerScheduleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateCrawlerScheduleResponsePrivate::UpdateCrawlerScheduleResponse(QXmlStreamReader &xml)
+void UpdateCrawlerScheduleResponsePrivate::parseUpdateCrawlerScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCrawlerScheduleResponse"));
     /// @todo

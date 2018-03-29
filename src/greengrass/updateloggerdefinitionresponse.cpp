@@ -96,7 +96,7 @@ UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponse(QXmlStreamReader &xml)
+void UpdateLoggerDefinitionResponsePrivate::parseUpdateLoggerDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoggerDefinitionResponse"));
     /// @todo

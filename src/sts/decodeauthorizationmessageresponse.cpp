@@ -96,7 +96,7 @@ DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponse(QXmlStreamReader &xml)
+void DecodeAuthorizationMessageResponsePrivate::parseDecodeAuthorizationMessageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DecodeAuthorizationMessageResponse"));
     /// @todo

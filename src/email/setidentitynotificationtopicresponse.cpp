@@ -96,7 +96,7 @@ SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicRespons
  *
  * @param  xml  XML stream to parse.
  */
-void SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicResponse(QXmlStreamReader &xml)
+void SetIdentityNotificationTopicResponsePrivate::parseSetIdentityNotificationTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityNotificationTopicResponse"));
     /// @todo

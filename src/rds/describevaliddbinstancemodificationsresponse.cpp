@@ -96,7 +96,7 @@ DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModi
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml)
+void DescribeValidDBInstanceModificationsResponsePrivate::parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeValidDBInstanceModificationsResponse"));
     /// @todo

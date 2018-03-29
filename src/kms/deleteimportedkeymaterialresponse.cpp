@@ -96,7 +96,7 @@ DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponse(QXmlStreamReader &xml)
+void DeleteImportedKeyMaterialResponsePrivate::parseDeleteImportedKeyMaterialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteImportedKeyMaterialResponse"));
     /// @todo

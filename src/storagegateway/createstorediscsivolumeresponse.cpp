@@ -96,7 +96,7 @@ CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponse(QXmlStreamReader &xml)
+void CreateStorediSCSIVolumeResponsePrivate::parseCreateStorediSCSIVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStorediSCSIVolumeResponse"));
     /// @todo

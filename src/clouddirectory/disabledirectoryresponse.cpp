@@ -96,7 +96,7 @@ DisableDirectoryResponsePrivate::DisableDirectoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableDirectoryResponsePrivate::DisableDirectoryResponse(QXmlStreamReader &xml)
+void DisableDirectoryResponsePrivate::parseDisableDirectoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableDirectoryResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetActiveNamesResponsePrivate::GetActiveNamesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetActiveNamesResponsePrivate::GetActiveNamesResponse(QXmlStreamReader &xml)
+void GetActiveNamesResponsePrivate::parseGetActiveNamesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetActiveNamesResponse"));
     /// @todo

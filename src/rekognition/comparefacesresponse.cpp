@@ -96,7 +96,7 @@ CompareFacesResponsePrivate::CompareFacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CompareFacesResponsePrivate::CompareFacesResponse(QXmlStreamReader &xml)
+void CompareFacesResponsePrivate::parseCompareFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompareFacesResponse"));
     /// @todo

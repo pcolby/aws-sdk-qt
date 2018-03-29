@@ -96,7 +96,7 @@ ListProtectionsResponsePrivate::ListProtectionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListProtectionsResponsePrivate::ListProtectionsResponse(QXmlStreamReader &xml)
+void ListProtectionsResponsePrivate::parseListProtectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListProtectionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponse(QXmlStreamReader &xml)
+void CancelSpotFleetRequestsResponsePrivate::parseCancelSpotFleetRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelSpotFleetRequestsResponse"));
     /// @todo

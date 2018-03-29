@@ -96,7 +96,7 @@ RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponse(QXmlStreamReader &xml)
+void RestoreTableToPointInTimeResponsePrivate::parseRestoreTableToPointInTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableToPointInTimeResponse"));
     /// @todo

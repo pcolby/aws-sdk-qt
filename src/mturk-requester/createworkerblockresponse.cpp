@@ -96,7 +96,7 @@ CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponse(QXmlStreamReader &xml)
+void CreateWorkerBlockResponsePrivate::parseCreateWorkerBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateWorkerBlockResponse"));
     /// @todo

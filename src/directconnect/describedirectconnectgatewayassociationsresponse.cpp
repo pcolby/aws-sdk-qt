@@ -96,7 +96,7 @@ DescribeDirectConnectGatewayAssociationsResponsePrivate::DescribeDirectConnectGa
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDirectConnectGatewayAssociationsResponsePrivate::DescribeDirectConnectGatewayAssociationsResponse(QXmlStreamReader &xml)
+void DescribeDirectConnectGatewayAssociationsResponsePrivate::parseDescribeDirectConnectGatewayAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectConnectGatewayAssociationsResponse"));
     /// @todo

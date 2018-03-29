@@ -96,7 +96,7 @@ ReadJobResponsePrivate::ReadJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReadJobResponsePrivate::ReadJobResponse(QXmlStreamReader &xml)
+void ReadJobResponsePrivate::parseReadJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReadJobResponse"));
     /// @todo

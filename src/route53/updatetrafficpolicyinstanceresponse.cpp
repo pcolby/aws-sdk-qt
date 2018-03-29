@@ -96,7 +96,7 @@ UpdateTrafficPolicyInstanceResponsePrivate::UpdateTrafficPolicyInstanceResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTrafficPolicyInstanceResponsePrivate::UpdateTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
+void UpdateTrafficPolicyInstanceResponsePrivate::parseUpdateTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTrafficPolicyInstanceResponse"));
     /// @todo

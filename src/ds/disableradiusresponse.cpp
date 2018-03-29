@@ -96,7 +96,7 @@ DisableRadiusResponsePrivate::DisableRadiusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableRadiusResponsePrivate::DisableRadiusResponse(QXmlStreamReader &xml)
+void DisableRadiusResponsePrivate::parseDisableRadiusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableRadiusResponse"));
     /// @todo

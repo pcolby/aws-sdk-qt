@@ -96,7 +96,7 @@ GetLexiconResponsePrivate::GetLexiconResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLexiconResponsePrivate::GetLexiconResponse(QXmlStreamReader &xml)
+void GetLexiconResponsePrivate::parseGetLexiconResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLexiconResponse"));
     /// @todo

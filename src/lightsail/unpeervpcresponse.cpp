@@ -96,7 +96,7 @@ UnpeerVpcResponsePrivate::UnpeerVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnpeerVpcResponsePrivate::UnpeerVpcResponse(QXmlStreamReader &xml)
+void UnpeerVpcResponsePrivate::parseUnpeerVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnpeerVpcResponse"));
     /// @todo

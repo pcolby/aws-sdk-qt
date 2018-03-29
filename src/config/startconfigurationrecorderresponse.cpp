@@ -96,7 +96,7 @@ StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponse(QXmlStreamReader &xml)
+void StartConfigurationRecorderResponsePrivate::parseStartConfigurationRecorderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartConfigurationRecorderResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponse(QXmlStreamReader &xml)
+void UpdateTeamMemberResponsePrivate::parseUpdateTeamMemberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTeamMemberResponse"));
     /// @todo

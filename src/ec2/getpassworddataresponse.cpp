@@ -96,7 +96,7 @@ GetPasswordDataResponsePrivate::GetPasswordDataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetPasswordDataResponsePrivate::GetPasswordDataResponse(QXmlStreamReader &xml)
+void GetPasswordDataResponsePrivate::parseGetPasswordDataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPasswordDataResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetAppsResponsePrivate::GetAppsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAppsResponsePrivate::GetAppsResponse(QXmlStreamReader &xml)
+void GetAppsResponsePrivate::parseGetAppsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAppsResponse"));
     /// @todo

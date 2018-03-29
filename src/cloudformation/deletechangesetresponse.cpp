@@ -96,7 +96,7 @@ DeleteChangeSetResponsePrivate::DeleteChangeSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteChangeSetResponsePrivate::DeleteChangeSetResponse(QXmlStreamReader &xml)
+void DeleteChangeSetResponsePrivate::parseDeleteChangeSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteChangeSetResponse"));
     /// @todo

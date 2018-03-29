@@ -96,7 +96,7 @@ UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponse(QXmlStreamReader &xml)
+void UpdateDevEndpointResponsePrivate::parseUpdateDevEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDevEndpointResponse"));
     /// @todo

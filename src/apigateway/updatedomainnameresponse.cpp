@@ -96,7 +96,7 @@ UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDomainNameResponsePrivate::UpdateDomainNameResponse(QXmlStreamReader &xml)
+void UpdateDomainNameResponsePrivate::parseUpdateDomainNameResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainNameResponse"));
     /// @todo

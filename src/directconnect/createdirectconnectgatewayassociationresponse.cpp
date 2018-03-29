@@ -96,7 +96,7 @@ CreateDirectConnectGatewayAssociationResponsePrivate::CreateDirectConnectGateway
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDirectConnectGatewayAssociationResponsePrivate::CreateDirectConnectGatewayAssociationResponse(QXmlStreamReader &xml)
+void CreateDirectConnectGatewayAssociationResponsePrivate::parseCreateDirectConnectGatewayAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDirectConnectGatewayAssociationResponse"));
     /// @todo

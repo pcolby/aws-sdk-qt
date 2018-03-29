@@ -96,7 +96,7 @@ DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponse(QXmlStreamReader &xml)
+void DeleteServerCatalogResponsePrivate::parseDeleteServerCatalogResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerCatalogResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeTrustsResponsePrivate::DescribeTrustsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTrustsResponsePrivate::DescribeTrustsResponse(QXmlStreamReader &xml)
+void DescribeTrustsResponsePrivate::parseDescribeTrustsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrustsResponse"));
     /// @todo

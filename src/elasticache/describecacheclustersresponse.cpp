@@ -96,7 +96,7 @@ DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponse(QXmlStreamReader &xml)
+void DescribeCacheClustersResponsePrivate::parseDescribeCacheClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheClustersResponse"));
     /// @todo

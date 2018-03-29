@@ -96,7 +96,7 @@ PublishResponsePrivate::PublishResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PublishResponsePrivate::PublishResponse(QXmlStreamReader &xml)
+void PublishResponsePrivate::parsePublishResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PublishResponse"));
     /// @todo

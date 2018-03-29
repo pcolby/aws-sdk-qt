@@ -96,7 +96,7 @@ UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponse(QXmlStreamReader &xml)
+void UpdateBandwidthRateLimitResponsePrivate::parseUpdateBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBandwidthRateLimitResponse"));
     /// @todo

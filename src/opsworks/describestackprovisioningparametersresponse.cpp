@@ -96,7 +96,7 @@ DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningPar
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningParametersResponse(QXmlStreamReader &xml)
+void DescribeStackProvisioningParametersResponsePrivate::parseDescribeStackProvisioningParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackProvisioningParametersResponse"));
     /// @todo

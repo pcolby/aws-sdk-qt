@@ -96,7 +96,7 @@ AcknowledgeJobResponsePrivate::AcknowledgeJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AcknowledgeJobResponsePrivate::AcknowledgeJobResponse(QXmlStreamReader &xml)
+void AcknowledgeJobResponsePrivate::parseAcknowledgeJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcknowledgeJobResponse"));
     /// @todo

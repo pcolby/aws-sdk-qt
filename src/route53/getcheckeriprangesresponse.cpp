@@ -96,7 +96,7 @@ GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponse(QXmlStreamReader &xml)
+void GetCheckerIpRangesResponsePrivate::parseGetCheckerIpRangesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCheckerIpRangesResponse"));
     /// @todo

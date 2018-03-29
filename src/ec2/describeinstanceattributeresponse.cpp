@@ -96,7 +96,7 @@ DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponse(QXmlStreamReader &xml)
+void DescribeInstanceAttributeResponsePrivate::parseDescribeInstanceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAttributeResponse"));
     /// @todo

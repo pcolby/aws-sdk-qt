@@ -96,7 +96,7 @@ SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceTermin
  *
  * @param  xml  XML stream to parse.
  */
-void SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceTerminationResponse(QXmlStreamReader &xml)
+void SkipWaitTimeForInstanceTerminationResponsePrivate::parseSkipWaitTimeForInstanceTerminationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SkipWaitTimeForInstanceTerminationResponse"));
     /// @todo

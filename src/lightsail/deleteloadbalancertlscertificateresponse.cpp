@@ -96,7 +96,7 @@ DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificat
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml)
+void DeleteLoadBalancerTlsCertificateResponsePrivate::parseDeleteLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerTlsCertificateResponse"));
     /// @todo

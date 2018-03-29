@@ -96,7 +96,7 @@ DeleteTriggerResponsePrivate::DeleteTriggerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTriggerResponsePrivate::DeleteTriggerResponse(QXmlStreamReader &xml)
+void DeleteTriggerResponsePrivate::parseDeleteTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTriggerResponse"));
     /// @todo

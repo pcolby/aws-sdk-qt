@@ -96,7 +96,7 @@ TestMetricFilterResponsePrivate::TestMetricFilterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestMetricFilterResponsePrivate::TestMetricFilterResponse(QXmlStreamReader &xml)
+void TestMetricFilterResponsePrivate::parseTestMetricFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestMetricFilterResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetInstanceProfileResponsePrivate::GetInstanceProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInstanceProfileResponsePrivate::GetInstanceProfileResponse(QXmlStreamReader &xml)
+void GetInstanceProfileResponsePrivate::parseGetInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceProfileResponse"));
     /// @todo

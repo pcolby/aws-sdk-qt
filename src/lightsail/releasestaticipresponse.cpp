@@ -96,7 +96,7 @@ ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponse(QXmlStreamReader &xml)
+void ReleaseStaticIpResponsePrivate::parseReleaseStaticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReleaseStaticIpResponse"));
     /// @todo

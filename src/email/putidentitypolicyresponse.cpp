@@ -96,7 +96,7 @@ PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponse(QXmlStreamReader &xml)
+void PutIdentityPolicyResponsePrivate::parsePutIdentityPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutIdentityPolicyResponse"));
     /// @todo

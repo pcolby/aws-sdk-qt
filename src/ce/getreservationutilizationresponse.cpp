@@ -96,7 +96,7 @@ GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponse(QXmlStreamReader &xml)
+void GetReservationUtilizationResponsePrivate::parseGetReservationUtilizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservationUtilizationResponse"));
     /// @todo

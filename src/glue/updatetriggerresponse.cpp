@@ -96,7 +96,7 @@ UpdateTriggerResponsePrivate::UpdateTriggerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTriggerResponsePrivate::UpdateTriggerResponse(QXmlStreamReader &xml)
+void UpdateTriggerResponsePrivate::parseUpdateTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTriggerResponse"));
     /// @todo

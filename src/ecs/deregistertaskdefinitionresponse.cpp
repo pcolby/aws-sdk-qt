@@ -96,7 +96,7 @@ DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponse(QXmlStreamReader &xml)
+void DeregisterTaskDefinitionResponsePrivate::parseDeregisterTaskDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTaskDefinitionResponse"));
     /// @todo

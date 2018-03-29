@@ -96,7 +96,7 @@ CreateQueryLoggingConfigResponsePrivate::CreateQueryLoggingConfigResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateQueryLoggingConfigResponsePrivate::CreateQueryLoggingConfigResponse(QXmlStreamReader &xml)
+void CreateQueryLoggingConfigResponsePrivate::parseCreateQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateQueryLoggingConfigResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateEvaluationResponsePrivate::UpdateEvaluationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateEvaluationResponsePrivate::UpdateEvaluationResponse(QXmlStreamReader &xml)
+void UpdateEvaluationResponsePrivate::parseUpdateEvaluationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEvaluationResponse"));
     /// @todo

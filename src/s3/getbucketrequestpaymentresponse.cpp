@@ -96,7 +96,7 @@ GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponse(QXmlStreamReader &xml)
+void GetBucketRequestPaymentResponsePrivate::parseGetBucketRequestPaymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketRequestPaymentResponse"));
     /// @todo

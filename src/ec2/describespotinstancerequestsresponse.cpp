@@ -96,7 +96,7 @@ DescribeSpotInstanceRequestsResponsePrivate::DescribeSpotInstanceRequestsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSpotInstanceRequestsResponsePrivate::DescribeSpotInstanceRequestsResponse(QXmlStreamReader &xml)
+void DescribeSpotInstanceRequestsResponsePrivate::parseDescribeSpotInstanceRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotInstanceRequestsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ExportConfigurationsResponsePrivate::ExportConfigurationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExportConfigurationsResponsePrivate::ExportConfigurationsResponse(QXmlStreamReader &xml)
+void ExportConfigurationsResponsePrivate::parseExportConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportConfigurationsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateMaintenanceWindowResponsePrivate::CreateMaintenanceWindowResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateMaintenanceWindowResponsePrivate::CreateMaintenanceWindowResponse(QXmlStreamReader &xml)
+void CreateMaintenanceWindowResponsePrivate::parseCreateMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMaintenanceWindowResponse"));
     /// @todo

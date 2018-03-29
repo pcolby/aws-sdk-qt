@@ -96,7 +96,7 @@ CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftRespons
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftResponse(QXmlStreamReader &xml)
+void CreateDataSourceFromRedshiftResponsePrivate::parseCreateDataSourceFromRedshiftResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRedshiftResponse"));
     /// @todo

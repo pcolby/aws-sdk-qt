@@ -96,7 +96,7 @@ ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ApproveAssignmentResponsePrivate::ApproveAssignmentResponse(QXmlStreamReader &xml)
+void ApproveAssignmentResponsePrivate::parseApproveAssignmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ApproveAssignmentResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AddWorkingStorageResponsePrivate::AddWorkingStorageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddWorkingStorageResponsePrivate::AddWorkingStorageResponse(QXmlStreamReader &xml)
+void AddWorkingStorageResponsePrivate::parseAddWorkingStorageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddWorkingStorageResponse"));
     /// @todo

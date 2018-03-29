@@ -96,7 +96,7 @@ RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponse(QXmlStreamReader &xml)
+void RotateChannelCredentialsResponsePrivate::parseRotateChannelCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RotateChannelCredentialsResponse"));
     /// @todo

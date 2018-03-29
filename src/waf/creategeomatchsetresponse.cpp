@@ -96,7 +96,7 @@ CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponse(QXmlStreamReader &xml)
+void CreateGeoMatchSetResponsePrivate::parseCreateGeoMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGeoMatchSetResponse"));
     /// @todo

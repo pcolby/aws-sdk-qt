@@ -96,7 +96,7 @@ ListUserPoolsResponsePrivate::ListUserPoolsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListUserPoolsResponsePrivate::ListUserPoolsResponse(QXmlStreamReader &xml)
+void ListUserPoolsResponsePrivate::parseListUserPoolsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListUserPoolsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponse(QXmlStreamReader &xml)
+void DeleteAccessKeyResponsePrivate::parseDeleteAccessKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccessKeyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ConfirmDeviceResponsePrivate::ConfirmDeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ConfirmDeviceResponsePrivate::ConfirmDeviceResponse(QXmlStreamReader &xml)
+void ConfirmDeviceResponsePrivate::parseConfirmDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmDeviceResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsS
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsStatusResponse(QXmlStreamReader &xml)
+void DescribeInstanceAssociationsStatusResponsePrivate::parseDescribeInstanceAssociationsStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAssociationsStatusResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponse(QXmlStreamReader &xml)
+void CreateInstancesFromSnapshotResponsePrivate::parseCreateInstancesFromSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInstancesFromSnapshotResponse"));
     /// @todo

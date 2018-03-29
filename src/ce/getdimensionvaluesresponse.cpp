@@ -96,7 +96,7 @@ GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetDimensionValuesResponsePrivate::GetDimensionValuesResponse(QXmlStreamReader &xml)
+void GetDimensionValuesResponsePrivate::parseGetDimensionValuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDimensionValuesResponse"));
     /// @todo

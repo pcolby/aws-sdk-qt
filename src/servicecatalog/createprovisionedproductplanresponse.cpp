@@ -96,7 +96,7 @@ CreateProvisionedProductPlanResponsePrivate::CreateProvisionedProductPlanRespons
  *
  * @param  xml  XML stream to parse.
  */
-void CreateProvisionedProductPlanResponsePrivate::CreateProvisionedProductPlanResponse(QXmlStreamReader &xml)
+void CreateProvisionedProductPlanResponsePrivate::parseCreateProvisionedProductPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProvisionedProductPlanResponse"));
     /// @todo

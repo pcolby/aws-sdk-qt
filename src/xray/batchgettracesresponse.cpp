@@ -96,7 +96,7 @@ BatchGetTracesResponsePrivate::BatchGetTracesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetTracesResponsePrivate::BatchGetTracesResponse(QXmlStreamReader &xml)
+void BatchGetTracesResponsePrivate::parseBatchGetTracesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetTracesResponse"));
     /// @todo

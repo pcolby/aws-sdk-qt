@@ -96,7 +96,7 @@ DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteMountTargetResponsePrivate::DeleteMountTargetResponse(QXmlStreamReader &xml)
+void DeleteMountTargetResponsePrivate::parseDeleteMountTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMountTargetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateDeploymentConfigResponsePrivate::CreateDeploymentConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDeploymentConfigResponsePrivate::CreateDeploymentConfigResponse(QXmlStreamReader &xml)
+void CreateDeploymentConfigResponsePrivate::parseCreateDeploymentConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentConfigResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeResponse(QXmlStreamReader &xml)
+void DescribeMaintenanceStartTimeResponsePrivate::parseDescribeMaintenanceStartTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceStartTimeResponse"));
     /// @todo

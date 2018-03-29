@@ -96,7 +96,7 @@ DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomRes
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml)
+void DisassociateSkillGroupFromRoomResponsePrivate::parseDisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateSkillGroupFromRoomResponse"));
     /// @todo

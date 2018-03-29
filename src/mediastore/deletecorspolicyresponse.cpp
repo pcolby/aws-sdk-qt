@@ -96,7 +96,7 @@ DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponse(QXmlStreamReader &xml)
+void DeleteCorsPolicyResponsePrivate::parseDeleteCorsPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCorsPolicyResponse"));
     /// @todo

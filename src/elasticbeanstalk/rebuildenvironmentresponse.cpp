@@ -96,7 +96,7 @@ RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponse(QXmlStreamReader &xml)
+void RebuildEnvironmentResponsePrivate::parseRebuildEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebuildEnvironmentResponse"));
     /// @todo

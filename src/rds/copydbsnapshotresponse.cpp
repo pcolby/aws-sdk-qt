@@ -96,7 +96,7 @@ CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponse(QXmlStreamReader &xml)
+void CopyDBSnapshotResponsePrivate::parseCopyDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBSnapshotResponse"));
     /// @todo

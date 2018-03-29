@@ -96,7 +96,7 @@ DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFileSystemResponsePrivate::DeleteFileSystemResponse(QXmlStreamReader &xml)
+void DeleteFileSystemResponsePrivate::parseDeleteFileSystemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFileSystemResponse"));
     /// @todo

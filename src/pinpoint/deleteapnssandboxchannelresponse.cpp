@@ -96,7 +96,7 @@ DeleteApnsSandboxChannelResponsePrivate::DeleteApnsSandboxChannelResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteApnsSandboxChannelResponsePrivate::DeleteApnsSandboxChannelResponse(QXmlStreamReader &xml)
+void DeleteApnsSandboxChannelResponsePrivate::parseDeleteApnsSandboxChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApnsSandboxChannelResponse"));
     /// @todo

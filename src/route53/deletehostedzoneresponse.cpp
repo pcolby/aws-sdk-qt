@@ -96,7 +96,7 @@ DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponse(QXmlStreamReader &xml)
+void DeleteHostedZoneResponsePrivate::parseDeleteHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHostedZoneResponse"));
     /// @todo

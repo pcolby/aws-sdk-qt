@@ -96,7 +96,7 @@ GetConsoleOutputResponsePrivate::GetConsoleOutputResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetConsoleOutputResponsePrivate::GetConsoleOutputResponse(QXmlStreamReader &xml)
+void GetConsoleOutputResponsePrivate::parseGetConsoleOutputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConsoleOutputResponse"));
     /// @todo

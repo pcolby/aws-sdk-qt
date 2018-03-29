@@ -96,7 +96,7 @@ GetIdentityNotificationAttributesResponsePrivate::GetIdentityNotificationAttribu
  *
  * @param  xml  XML stream to parse.
  */
-void GetIdentityNotificationAttributesResponsePrivate::GetIdentityNotificationAttributesResponse(QXmlStreamReader &xml)
+void GetIdentityNotificationAttributesResponsePrivate::parseGetIdentityNotificationAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityNotificationAttributesResponse"));
     /// @todo

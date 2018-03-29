@@ -96,7 +96,7 @@ AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponse(QXmlStreamReader &xml)
+void AddJobFlowStepsResponsePrivate::parseAddJobFlowStepsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddJobFlowStepsResponse"));
     /// @todo

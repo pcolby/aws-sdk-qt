@@ -96,7 +96,7 @@ ScanResponsePrivate::ScanResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ScanResponsePrivate::ScanResponse(QXmlStreamReader &xml)
+void ScanResponsePrivate::parseScanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScanResponse"));
     /// @todo

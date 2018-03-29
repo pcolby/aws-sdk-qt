@@ -96,7 +96,7 @@ OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponse(QXmlStreamReader &xml)
+void OpenInstancePublicPortsResponsePrivate::parseOpenInstancePublicPortsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("OpenInstancePublicPortsResponse"));
     /// @todo

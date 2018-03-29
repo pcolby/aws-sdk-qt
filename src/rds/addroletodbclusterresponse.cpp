@@ -96,7 +96,7 @@ AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponse(QXmlStreamReader &xml)
+void AddRoleToDBClusterResponsePrivate::parseAddRoleToDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddRoleToDBClusterResponse"));
     /// @todo

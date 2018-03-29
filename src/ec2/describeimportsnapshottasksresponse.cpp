@@ -96,7 +96,7 @@ DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResponse(QXmlStreamReader &xml)
+void DescribeImportSnapshotTasksResponsePrivate::parseDescribeImportSnapshotTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImportSnapshotTasksResponse"));
     /// @todo

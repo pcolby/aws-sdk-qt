@@ -96,7 +96,7 @@ GetPlatformApplicationAttributesResponsePrivate::GetPlatformApplicationAttribute
  *
  * @param  xml  XML stream to parse.
  */
-void GetPlatformApplicationAttributesResponsePrivate::GetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
+void GetPlatformApplicationAttributesResponsePrivate::parseGetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPlatformApplicationAttributesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponse(QXmlStreamReader &xml)
+void DisableAWSServiceAccessResponsePrivate::parseDisableAWSServiceAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableAWSServiceAccessResponse"));
     /// @todo

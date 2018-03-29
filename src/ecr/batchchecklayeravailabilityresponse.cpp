@@ -96,7 +96,7 @@ BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml)
+void BatchCheckLayerAvailabilityResponsePrivate::parseBatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchCheckLayerAvailabilityResponse"));
     /// @todo

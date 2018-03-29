@@ -96,7 +96,7 @@ DescribeAccountResponsePrivate::DescribeAccountResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAccountResponsePrivate::DescribeAccountResponse(QXmlStreamReader &xml)
+void DescribeAccountResponsePrivate::parseDescribeAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAccountResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteLaunchTemplateVersionsResponsePrivate::DeleteLaunchTemplateVersionsRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLaunchTemplateVersionsResponsePrivate::DeleteLaunchTemplateVersionsResponse(QXmlStreamReader &xml)
+void DeleteLaunchTemplateVersionsResponsePrivate::parseDeleteLaunchTemplateVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchTemplateVersionsResponse"));
     /// @todo

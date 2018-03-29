@@ -96,7 +96,7 @@ DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponse(QXmlStreamReader &xml)
+void DownloadDefaultKeyPairResponsePrivate::parseDownloadDefaultKeyPairResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DownloadDefaultKeyPairResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RestoreTableFromClusterSnapshotResponsePrivate::RestoreTableFromClusterSnapshotR
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreTableFromClusterSnapshotResponsePrivate::RestoreTableFromClusterSnapshotResponse(QXmlStreamReader &xml)
+void RestoreTableFromClusterSnapshotResponsePrivate::parseRestoreTableFromClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableFromClusterSnapshotResponse"));
     /// @todo

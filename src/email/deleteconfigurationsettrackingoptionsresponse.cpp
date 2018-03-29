@@ -96,7 +96,7 @@ DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrac
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
+void DeleteConfigurationSetTrackingOptionsResponsePrivate::parseDeleteConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetTrackingOptionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetCurrentUserResponsePrivate::GetCurrentUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCurrentUserResponsePrivate::GetCurrentUserResponse(QXmlStreamReader &xml)
+void GetCurrentUserResponsePrivate::parseGetCurrentUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCurrentUserResponse"));
     /// @todo

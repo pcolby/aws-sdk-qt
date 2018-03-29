@@ -96,7 +96,7 @@ ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponse(QXmlStreamReader &xml)
+void ResetCacheParameterGroupResponsePrivate::parseResetCacheParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetCacheParameterGroupResponse"));
     /// @todo

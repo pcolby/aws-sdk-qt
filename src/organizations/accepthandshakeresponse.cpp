@@ -96,7 +96,7 @@ AcceptHandshakeResponsePrivate::AcceptHandshakeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AcceptHandshakeResponsePrivate::AcceptHandshakeResponse(QXmlStreamReader &xml)
+void AcceptHandshakeResponsePrivate::parseAcceptHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptHandshakeResponse"));
     /// @todo

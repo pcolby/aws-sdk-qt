@@ -96,7 +96,7 @@ AdminListDevicesResponsePrivate::AdminListDevicesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AdminListDevicesResponsePrivate::AdminListDevicesResponse(QXmlStreamReader &xml)
+void AdminListDevicesResponsePrivate::parseAdminListDevicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminListDevicesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponse(QXmlStreamReader &xml)
+void ModifyInstanceAttributeResponsePrivate::parseModifyInstanceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceAttributeResponse"));
     /// @todo

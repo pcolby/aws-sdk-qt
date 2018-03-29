@@ -96,7 +96,7 @@ CreatePublicVirtualInterfaceResponsePrivate::CreatePublicVirtualInterfaceRespons
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePublicVirtualInterfaceResponsePrivate::CreatePublicVirtualInterfaceResponse(QXmlStreamReader &xml)
+void CreatePublicVirtualInterfaceResponsePrivate::parseCreatePublicVirtualInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePublicVirtualInterfaceResponse"));
     /// @todo

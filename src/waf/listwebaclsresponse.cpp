@@ -96,7 +96,7 @@ ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListWebACLsResponsePrivate::ListWebACLsResponse(QXmlStreamReader &xml)
+void ListWebACLsResponsePrivate::parseListWebACLsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWebACLsResponse"));
     /// @todo

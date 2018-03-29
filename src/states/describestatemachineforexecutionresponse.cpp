@@ -96,7 +96,7 @@ DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutio
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutionResponse(QXmlStreamReader &xml)
+void DescribeStateMachineForExecutionResponsePrivate::parseDescribeStateMachineForExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStateMachineForExecutionResponse"));
     /// @todo

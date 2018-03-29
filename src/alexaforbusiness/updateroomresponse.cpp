@@ -96,7 +96,7 @@ UpdateRoomResponsePrivate::UpdateRoomResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRoomResponsePrivate::UpdateRoomResponse(QXmlStreamReader &xml)
+void UpdateRoomResponsePrivate::parseUpdateRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRoomResponse"));
     /// @todo

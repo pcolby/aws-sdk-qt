@@ -96,7 +96,7 @@ DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponse(QXmlStreamReader &xml)
+void DetachNetworkInterfaceResponsePrivate::parseDetachNetworkInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachNetworkInterfaceResponse"));
     /// @todo

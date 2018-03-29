@@ -96,7 +96,7 @@ DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLimitsResponsePrivate::DescribeLimitsResponse(QXmlStreamReader &xml)
+void DescribeLimitsResponsePrivate::parseDescribeLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLimitsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SetLoadBasedAutoScalingResponsePrivate::SetLoadBasedAutoScalingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetLoadBasedAutoScalingResponsePrivate::SetLoadBasedAutoScalingResponse(QXmlStreamReader &xml)
+void SetLoadBasedAutoScalingResponsePrivate::parseSetLoadBasedAutoScalingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBasedAutoScalingResponse"));
     /// @todo

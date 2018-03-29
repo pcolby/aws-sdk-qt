@@ -96,7 +96,7 @@ CreateBudgetResponsePrivate::CreateBudgetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBudgetResponsePrivate::CreateBudgetResponse(QXmlStreamReader &xml)
+void CreateBudgetResponsePrivate::parseCreateBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBudgetResponse"));
     /// @todo

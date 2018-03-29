@@ -96,7 +96,7 @@ DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeProjectResponsePrivate::DescribeProjectResponse(QXmlStreamReader &xml)
+void DescribeProjectResponsePrivate::parseDescribeProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeProjectResponse"));
     /// @todo

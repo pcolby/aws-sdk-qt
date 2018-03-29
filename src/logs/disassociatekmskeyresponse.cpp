@@ -96,7 +96,7 @@ DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponse(QXmlStreamReader &xml)
+void DisassociateKmsKeyResponsePrivate::parseDisassociateKmsKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateKmsKeyResponse"));
     /// @todo

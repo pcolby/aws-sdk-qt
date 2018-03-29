@@ -96,7 +96,7 @@ GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponse(QXmlStreamReader &xml)
+void GetBuiltinSlotTypesResponsePrivate::parseGetBuiltinSlotTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBuiltinSlotTypesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ MergeShardsResponsePrivate::MergeShardsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void MergeShardsResponsePrivate::MergeShardsResponse(QXmlStreamReader &xml)
+void MergeShardsResponsePrivate::parseMergeShardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MergeShardsResponse"));
     /// @todo

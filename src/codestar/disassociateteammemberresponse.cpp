@@ -96,7 +96,7 @@ DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponse(QXmlStreamReader &xml)
+void DisassociateTeamMemberResponsePrivate::parseDisassociateTeamMemberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateTeamMemberResponse"));
     /// @todo

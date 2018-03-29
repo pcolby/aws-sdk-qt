@@ -96,7 +96,7 @@ GetAttributeValuesResponsePrivate::GetAttributeValuesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAttributeValuesResponsePrivate::GetAttributeValuesResponse(QXmlStreamReader &xml)
+void GetAttributeValuesResponsePrivate::parseGetAttributeValuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAttributeValuesResponse"));
     /// @todo

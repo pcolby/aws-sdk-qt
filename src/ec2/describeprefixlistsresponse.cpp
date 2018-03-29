@@ -96,7 +96,7 @@ DescribePrefixListsResponsePrivate::DescribePrefixListsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePrefixListsResponsePrivate::DescribePrefixListsResponse(QXmlStreamReader &xml)
+void DescribePrefixListsResponsePrivate::parseDescribePrefixListsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePrefixListsResponse"));
     /// @todo

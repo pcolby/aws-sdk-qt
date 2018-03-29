@@ -96,7 +96,7 @@ PutBucketVersioningResponsePrivate::PutBucketVersioningResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketVersioningResponsePrivate::PutBucketVersioningResponse(QXmlStreamReader &xml)
+void PutBucketVersioningResponsePrivate::parsePutBucketVersioningResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketVersioningResponse"));
     /// @todo

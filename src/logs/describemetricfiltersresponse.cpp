@@ -96,7 +96,7 @@ DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponse(QXmlStreamReader &xml)
+void DescribeMetricFiltersResponsePrivate::parseDescribeMetricFiltersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMetricFiltersResponse"));
     /// @todo

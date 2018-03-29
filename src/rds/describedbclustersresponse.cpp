@@ -96,7 +96,7 @@ DescribeDBClustersResponsePrivate::DescribeDBClustersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDBClustersResponsePrivate::DescribeDBClustersResponse(QXmlStreamReader &xml)
+void DescribeDBClustersResponsePrivate::parseDescribeDBClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBClustersResponse"));
     /// @todo

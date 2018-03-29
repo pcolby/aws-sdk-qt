@@ -96,7 +96,7 @@ EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponse(QXmlStreamReader &xml)
+void EnableAllFeaturesResponsePrivate::parseEnableAllFeaturesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableAllFeaturesResponse"));
     /// @todo

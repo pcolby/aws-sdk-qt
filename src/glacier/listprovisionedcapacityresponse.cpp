@@ -96,7 +96,7 @@ ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponse(QXmlStreamReader &xml)
+void ListProvisionedCapacityResponsePrivate::parseListProvisionedCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListProvisionedCapacityResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListReviewableHITsResponsePrivate::ListReviewableHITsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListReviewableHITsResponsePrivate::ListReviewableHITsResponse(QXmlStreamReader &xml)
+void ListReviewableHITsResponsePrivate::parseListReviewableHITsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReviewableHITsResponse"));
     /// @todo

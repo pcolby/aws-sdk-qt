@@ -96,7 +96,7 @@ GetRoomResponsePrivate::GetRoomResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRoomResponsePrivate::GetRoomResponse(QXmlStreamReader &xml)
+void GetRoomResponsePrivate::parseGetRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRoomResponse"));
     /// @todo

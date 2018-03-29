@@ -96,7 +96,7 @@ RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3Response(QXmlStreamReader &xml)
+void RestoreDBInstanceFromS3ResponsePrivate::parseRestoreDBInstanceFromS3Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromS3Response"));
     /// @todo

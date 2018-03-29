@@ -96,7 +96,7 @@ DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponse(QXmlStreamReader &xml)
+void DescribePlacementGroupsResponsePrivate::parseDescribePlacementGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePlacementGroupsResponse"));
     /// @todo

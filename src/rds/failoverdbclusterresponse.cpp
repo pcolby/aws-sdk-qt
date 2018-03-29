@@ -96,7 +96,7 @@ FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void FailoverDBClusterResponsePrivate::FailoverDBClusterResponse(QXmlStreamReader &xml)
+void FailoverDBClusterResponsePrivate::parseFailoverDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("FailoverDBClusterResponse"));
     /// @todo

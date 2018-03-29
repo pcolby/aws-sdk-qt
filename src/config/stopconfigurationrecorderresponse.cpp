@@ -96,7 +96,7 @@ StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponse(QXmlStreamReader &xml)
+void StopConfigurationRecorderResponsePrivate::parseStopConfigurationRecorderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopConfigurationRecorderResponse"));
     /// @todo

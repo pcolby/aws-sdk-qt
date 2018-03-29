@@ -96,7 +96,7 @@ RebootInstanceResponsePrivate::RebootInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RebootInstanceResponsePrivate::RebootInstanceResponse(QXmlStreamReader &xml)
+void RebootInstanceResponsePrivate::parseRebootInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootInstanceResponse"));
     /// @todo

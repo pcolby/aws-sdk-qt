@@ -96,7 +96,7 @@ UpdatePartitionResponsePrivate::UpdatePartitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdatePartitionResponsePrivate::UpdatePartitionResponse(QXmlStreamReader &xml)
+void UpdatePartitionResponsePrivate::parseUpdatePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePartitionResponse"));
     /// @todo

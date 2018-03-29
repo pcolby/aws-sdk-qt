@@ -96,7 +96,7 @@ ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ChangePasswordResponsePrivate::ChangePasswordResponse(QXmlStreamReader &xml)
+void ChangePasswordResponsePrivate::parseChangePasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangePasswordResponse"));
     /// @todo

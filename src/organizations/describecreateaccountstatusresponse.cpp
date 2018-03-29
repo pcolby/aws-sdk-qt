@@ -96,7 +96,7 @@ DescribeCreateAccountStatusResponsePrivate::DescribeCreateAccountStatusResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeCreateAccountStatusResponsePrivate::DescribeCreateAccountStatusResponse(QXmlStreamReader &xml)
+void DescribeCreateAccountStatusResponsePrivate::parseDescribeCreateAccountStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCreateAccountStatusResponse"));
     /// @todo

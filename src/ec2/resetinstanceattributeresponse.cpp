@@ -96,7 +96,7 @@ ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponse(QXmlStreamReader &xml)
+void ResetInstanceAttributeResponsePrivate::parseResetInstanceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetInstanceAttributeResponse"));
     /// @todo

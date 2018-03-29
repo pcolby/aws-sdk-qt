@@ -96,7 +96,7 @@ DeleteDBSnapshotResponsePrivate::DeleteDBSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDBSnapshotResponsePrivate::DeleteDBSnapshotResponse(QXmlStreamReader &xml)
+void DeleteDBSnapshotResponsePrivate::parseDeleteDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSnapshotResponse"));
     /// @todo

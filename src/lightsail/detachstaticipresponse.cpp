@@ -96,7 +96,7 @@ DetachStaticIpResponsePrivate::DetachStaticIpResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachStaticIpResponsePrivate::DetachStaticIpResponse(QXmlStreamReader &xml)
+void DetachStaticIpResponsePrivate::parseDetachStaticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachStaticIpResponse"));
     /// @todo

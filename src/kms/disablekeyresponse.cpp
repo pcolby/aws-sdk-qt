@@ -96,7 +96,7 @@ DisableKeyResponsePrivate::DisableKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisableKeyResponsePrivate::DisableKeyResponse(QXmlStreamReader &xml)
+void DisableKeyResponsePrivate::parseDisableKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableKeyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponse(QXmlStreamReader &xml)
+void DescribeLifecycleHooksResponsePrivate::parseDescribeLifecycleHooksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLifecycleHooksResponse"));
     /// @todo

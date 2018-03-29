@@ -96,7 +96,7 @@ CreateDomainEntryResponsePrivate::CreateDomainEntryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDomainEntryResponsePrivate::CreateDomainEntryResponse(QXmlStreamReader &xml)
+void CreateDomainEntryResponsePrivate::parseCreateDomainEntryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDomainEntryResponse"));
     /// @todo

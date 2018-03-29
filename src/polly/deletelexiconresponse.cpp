@@ -96,7 +96,7 @@ DeleteLexiconResponsePrivate::DeleteLexiconResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLexiconResponsePrivate::DeleteLexiconResponse(QXmlStreamReader &xml)
+void DeleteLexiconResponsePrivate::parseDeleteLexiconResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLexiconResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponse(QXmlStreamReader &xml)
+void ModifyDBInstanceResponsePrivate::parseModifyDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBInstanceResponse"));
     /// @todo

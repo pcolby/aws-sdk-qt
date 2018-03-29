@@ -96,7 +96,7 @@ GetLogEventsResponsePrivate::GetLogEventsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLogEventsResponsePrivate::GetLogEventsResponse(QXmlStreamReader &xml)
+void GetLogEventsResponsePrivate::parseGetLogEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLogEventsResponse"));
     /// @todo

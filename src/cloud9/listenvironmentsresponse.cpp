@@ -96,7 +96,7 @@ ListEnvironmentsResponsePrivate::ListEnvironmentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListEnvironmentsResponsePrivate::ListEnvironmentsResponse(QXmlStreamReader &xml)
+void ListEnvironmentsResponsePrivate::parseListEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEnvironmentsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartSupportDataExportResponsePrivate::StartSupportDataExportResponse(QXmlStreamReader &xml)
+void StartSupportDataExportResponsePrivate::parseStartSupportDataExportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartSupportDataExportResponse"));
     /// @todo

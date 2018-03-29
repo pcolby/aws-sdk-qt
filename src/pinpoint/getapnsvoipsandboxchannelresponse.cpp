@@ -96,7 +96,7 @@ GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponse(QXmlStreamReader &xml)
+void GetApnsVoipSandboxChannelResponsePrivate::parseGetApnsVoipSandboxChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApnsVoipSandboxChannelResponse"));
     /// @todo

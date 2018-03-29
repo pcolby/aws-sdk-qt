@@ -96,7 +96,7 @@ GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetEntitlementsResponsePrivate::GetEntitlementsResponse(QXmlStreamReader &xml)
+void GetEntitlementsResponsePrivate::parseGetEntitlementsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEntitlementsResponse"));
     /// @todo

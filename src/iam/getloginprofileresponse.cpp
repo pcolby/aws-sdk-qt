@@ -96,7 +96,7 @@ GetLoginProfileResponsePrivate::GetLoginProfileResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetLoginProfileResponsePrivate::GetLoginProfileResponse(QXmlStreamReader &xml)
+void GetLoginProfileResponsePrivate::parseGetLoginProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLoginProfileResponse"));
     /// @todo

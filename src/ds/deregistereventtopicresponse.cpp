@@ -96,7 +96,7 @@ DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponse(QXmlStreamReader &xml)
+void DeregisterEventTopicResponsePrivate::parseDeregisterEventTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterEventTopicResponse"));
     /// @todo

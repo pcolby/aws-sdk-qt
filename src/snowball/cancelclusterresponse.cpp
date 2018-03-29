@@ -96,7 +96,7 @@ CancelClusterResponsePrivate::CancelClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelClusterResponsePrivate::CancelClusterResponse(QXmlStreamReader &xml)
+void CancelClusterResponsePrivate::parseCancelClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelClusterResponse"));
     /// @todo

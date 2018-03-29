@@ -96,7 +96,7 @@ ListShardsResponsePrivate::ListShardsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListShardsResponsePrivate::ListShardsResponse(QXmlStreamReader &xml)
+void ListShardsResponsePrivate::parseListShardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListShardsResponse"));
     /// @todo

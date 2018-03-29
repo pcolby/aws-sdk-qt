@@ -96,7 +96,7 @@ DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponse(QXmlStreamReader &xml)
+void DeleteRuleGroupResponsePrivate::parseDeleteRuleGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRuleGroupResponse"));
     /// @todo

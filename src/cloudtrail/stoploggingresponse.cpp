@@ -96,7 +96,7 @@ StopLoggingResponsePrivate::StopLoggingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopLoggingResponsePrivate::StopLoggingResponse(QXmlStreamReader &xml)
+void StopLoggingResponsePrivate::parseStopLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopLoggingResponse"));
     /// @todo

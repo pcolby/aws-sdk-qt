@@ -96,7 +96,7 @@ CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLRes
  *
  * @param  xml  XML stream to parse.
  */
-void CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml)
+void CreateImageBuilderStreamingURLResponsePrivate::parseCreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateImageBuilderStreamingURLResponse"));
     /// @todo

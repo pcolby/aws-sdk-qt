@@ -96,7 +96,7 @@ GetStageResponsePrivate::GetStageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetStageResponsePrivate::GetStageResponse(QXmlStreamReader &xml)
+void GetStageResponsePrivate::parseGetStageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetStageResponse"));
     /// @todo

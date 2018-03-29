@@ -96,7 +96,7 @@ DeleteFacesResponsePrivate::DeleteFacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFacesResponsePrivate::DeleteFacesResponse(QXmlStreamReader &xml)
+void DeleteFacesResponsePrivate::parseDeleteFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFacesResponse"));
     /// @todo

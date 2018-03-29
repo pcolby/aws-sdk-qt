@@ -96,7 +96,7 @@ StopMatchmakingResponsePrivate::StopMatchmakingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopMatchmakingResponsePrivate::StopMatchmakingResponse(QXmlStreamReader &xml)
+void StopMatchmakingResponsePrivate::parseStopMatchmakingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopMatchmakingResponse"));
     /// @todo

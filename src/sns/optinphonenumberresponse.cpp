@@ -96,7 +96,7 @@ OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponse(QXmlStreamReader &xml)
+void OptInPhoneNumberResponsePrivate::parseOptInPhoneNumberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("OptInPhoneNumberResponse"));
     /// @todo

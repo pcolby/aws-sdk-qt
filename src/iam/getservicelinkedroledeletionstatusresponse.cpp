@@ -96,7 +96,7 @@ GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionS
  *
  * @param  xml  XML stream to parse.
  */
-void GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionStatusResponse(QXmlStreamReader &xml)
+void GetServiceLinkedRoleDeletionStatusResponsePrivate::parseGetServiceLinkedRoleDeletionStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServiceLinkedRoleDeletionStatusResponse"));
     /// @todo

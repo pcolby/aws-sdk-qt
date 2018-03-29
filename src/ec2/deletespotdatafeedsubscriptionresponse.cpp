@@ -96,7 +96,7 @@ DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionRes
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
+void DeleteSpotDatafeedSubscriptionResponsePrivate::parseDeleteSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSpotDatafeedSubscriptionResponse"));
     /// @todo

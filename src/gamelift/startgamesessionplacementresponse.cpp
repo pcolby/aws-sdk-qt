@@ -96,7 +96,7 @@ StartGameSessionPlacementResponsePrivate::StartGameSessionPlacementResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void StartGameSessionPlacementResponsePrivate::StartGameSessionPlacementResponse(QXmlStreamReader &xml)
+void StartGameSessionPlacementResponsePrivate::parseStartGameSessionPlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartGameSessionPlacementResponse"));
     /// @todo

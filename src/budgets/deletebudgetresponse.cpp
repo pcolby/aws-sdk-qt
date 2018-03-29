@@ -96,7 +96,7 @@ DeleteBudgetResponsePrivate::DeleteBudgetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBudgetResponsePrivate::DeleteBudgetResponse(QXmlStreamReader &xml)
+void DeleteBudgetResponsePrivate::parseDeleteBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBudgetResponse"));
     /// @todo

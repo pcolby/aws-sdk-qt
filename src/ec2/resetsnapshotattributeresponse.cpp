@@ -96,7 +96,7 @@ ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponse(QXmlStreamReader &xml)
+void ResetSnapshotAttributeResponsePrivate::parseResetSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetSnapshotAttributeResponse"));
     /// @todo

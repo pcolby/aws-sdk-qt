@@ -96,7 +96,7 @@ ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTagOptionsResponsePrivate::ListTagOptionsResponse(QXmlStreamReader &xml)
+void ListTagOptionsResponsePrivate::parseListTagOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagOptionsResponse"));
     /// @todo

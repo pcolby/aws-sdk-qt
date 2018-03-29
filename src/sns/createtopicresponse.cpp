@@ -96,7 +96,7 @@ CreateTopicResponsePrivate::CreateTopicResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTopicResponsePrivate::CreateTopicResponse(QXmlStreamReader &xml)
+void CreateTopicResponsePrivate::parseCreateTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTopicResponse"));
     /// @todo

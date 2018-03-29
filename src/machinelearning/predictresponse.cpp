@@ -96,7 +96,7 @@ PredictResponsePrivate::PredictResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PredictResponsePrivate::PredictResponse(QXmlStreamReader &xml)
+void PredictResponsePrivate::parsePredictResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PredictResponse"));
     /// @todo

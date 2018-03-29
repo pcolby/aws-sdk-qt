@@ -96,7 +96,7 @@ DescribeSubscriptionFiltersResponsePrivate::DescribeSubscriptionFiltersResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSubscriptionFiltersResponsePrivate::DescribeSubscriptionFiltersResponse(QXmlStreamReader &xml)
+void DescribeSubscriptionFiltersResponsePrivate::parseDescribeSubscriptionFiltersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubscriptionFiltersResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponse(QXmlStreamReader &xml)
+void DescribeRepositoriesResponsePrivate::parseDescribeRepositoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRepositoriesResponse"));
     /// @todo

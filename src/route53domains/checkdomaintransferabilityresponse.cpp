@@ -96,7 +96,7 @@ CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponse(QXmlStreamReader &xml)
+void CheckDomainTransferabilityResponsePrivate::parseCheckDomainTransferabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckDomainTransferabilityResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponse(QXmlStreamReader &xml)
+void DeleteDeploymentGroupResponsePrivate::parseDeleteDeploymentGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentGroupResponse"));
     /// @todo

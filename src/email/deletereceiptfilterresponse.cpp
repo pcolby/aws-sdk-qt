@@ -96,7 +96,7 @@ DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponse(QXmlStreamReader &xml)
+void DeleteReceiptFilterResponsePrivate::parseDeleteReceiptFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptFilterResponse"));
     /// @todo

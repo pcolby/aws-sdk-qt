@@ -96,7 +96,7 @@ ListAttachedIndicesResponsePrivate::ListAttachedIndicesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListAttachedIndicesResponsePrivate::ListAttachedIndicesResponse(QXmlStreamReader &xml)
+void ListAttachedIndicesResponsePrivate::parseListAttachedIndicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAttachedIndicesResponse"));
     /// @todo

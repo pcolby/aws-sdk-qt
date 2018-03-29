@@ -96,7 +96,7 @@ DeleteDirectoryResponsePrivate::DeleteDirectoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDirectoryResponsePrivate::DeleteDirectoryResponse(QXmlStreamReader &xml)
+void DeleteDirectoryResponsePrivate::parseDeleteDirectoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryResponse"));
     /// @todo

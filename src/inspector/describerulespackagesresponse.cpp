@@ -96,7 +96,7 @@ DescribeRulesPackagesResponsePrivate::DescribeRulesPackagesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRulesPackagesResponsePrivate::DescribeRulesPackagesResponse(QXmlStreamReader &xml)
+void DescribeRulesPackagesResponsePrivate::parseDescribeRulesPackagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRulesPackagesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeBudgetsResponsePrivate::DescribeBudgetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeBudgetsResponsePrivate::DescribeBudgetsResponse(QXmlStreamReader &xml)
+void DescribeBudgetsResponsePrivate::parseDescribeBudgetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBudgetsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponse(QXmlStreamReader &xml)
+void GetBucketLifecycleResponsePrivate::parseGetBucketLifecycleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLifecycleResponse"));
     /// @todo

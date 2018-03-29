@@ -96,7 +96,7 @@ CreatePortfolioResponsePrivate::CreatePortfolioResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePortfolioResponsePrivate::CreatePortfolioResponse(QXmlStreamReader &xml)
+void CreatePortfolioResponsePrivate::parseCreatePortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePortfolioResponse"));
     /// @todo

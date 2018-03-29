@@ -96,7 +96,7 @@ StopTrainingJobResponsePrivate::StopTrainingJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopTrainingJobResponsePrivate::StopTrainingJobResponse(QXmlStreamReader &xml)
+void StopTrainingJobResponsePrivate::parseStopTrainingJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopTrainingJobResponse"));
     /// @todo

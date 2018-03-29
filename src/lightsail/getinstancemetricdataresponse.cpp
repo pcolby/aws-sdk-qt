@@ -96,7 +96,7 @@ GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponse(QXmlStreamReader &xml)
+void GetInstanceMetricDataResponsePrivate::parseGetInstanceMetricDataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceMetricDataResponse"));
     /// @todo

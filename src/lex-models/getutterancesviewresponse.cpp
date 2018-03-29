@@ -96,7 +96,7 @@ GetUtterancesViewResponsePrivate::GetUtterancesViewResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetUtterancesViewResponsePrivate::GetUtterancesViewResponse(QXmlStreamReader &xml)
+void GetUtterancesViewResponsePrivate::parseGetUtterancesViewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUtterancesViewResponse"));
     /// @todo

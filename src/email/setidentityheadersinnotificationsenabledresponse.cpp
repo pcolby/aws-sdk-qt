@@ -96,7 +96,7 @@ SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNot
  *
  * @param  xml  XML stream to parse.
  */
-void SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNotificationsEnabledResponse(QXmlStreamReader &xml)
+void SetIdentityHeadersInNotificationsEnabledResponsePrivate::parseSetIdentityHeadersInNotificationsEnabledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityHeadersInNotificationsEnabledResponse"));
     /// @todo

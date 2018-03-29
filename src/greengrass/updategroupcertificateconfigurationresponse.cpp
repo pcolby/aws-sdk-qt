@@ -96,7 +96,7 @@ UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfig
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfigurationResponse(QXmlStreamReader &xml)
+void UpdateGroupCertificateConfigurationResponsePrivate::parseUpdateGroupCertificateConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGroupCertificateConfigurationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSendStatisticsResponsePrivate::GetSendStatisticsResponse(QXmlStreamReader &xml)
+void GetSendStatisticsResponsePrivate::parseGetSendStatisticsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSendStatisticsResponse"));
     /// @todo

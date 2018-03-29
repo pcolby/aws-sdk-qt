@@ -96,7 +96,7 @@ DescribePrincipalIdFormatResponsePrivate::DescribePrincipalIdFormatResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribePrincipalIdFormatResponsePrivate::DescribePrincipalIdFormatResponse(QXmlStreamReader &xml)
+void DescribePrincipalIdFormatResponsePrivate::parseDescribePrincipalIdFormatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePrincipalIdFormatResponse"));
     /// @todo

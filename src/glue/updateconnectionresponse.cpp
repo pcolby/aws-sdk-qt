@@ -96,7 +96,7 @@ UpdateConnectionResponsePrivate::UpdateConnectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConnectionResponsePrivate::UpdateConnectionResponse(QXmlStreamReader &xml)
+void UpdateConnectionResponsePrivate::parseUpdateConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConnectionResponse"));
     /// @todo

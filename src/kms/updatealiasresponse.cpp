@@ -96,7 +96,7 @@ UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAliasResponsePrivate::UpdateAliasResponse(QXmlStreamReader &xml)
+void UpdateAliasResponsePrivate::parseUpdateAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAliasResponse"));
     /// @todo

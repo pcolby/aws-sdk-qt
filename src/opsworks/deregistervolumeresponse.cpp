@@ -96,7 +96,7 @@ DeregisterVolumeResponsePrivate::DeregisterVolumeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterVolumeResponsePrivate::DeregisterVolumeResponse(QXmlStreamReader &xml)
+void DeregisterVolumeResponsePrivate::parseDeregisterVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterVolumeResponse"));
     /// @todo

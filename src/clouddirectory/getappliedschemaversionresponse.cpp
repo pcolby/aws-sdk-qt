@@ -96,7 +96,7 @@ GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponse(QXmlStreamReader &xml)
+void GetAppliedSchemaVersionResponsePrivate::parseGetAppliedSchemaVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAppliedSchemaVersionResponse"));
     /// @todo

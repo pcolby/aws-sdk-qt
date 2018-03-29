@@ -96,7 +96,7 @@ GetTriggerResponsePrivate::GetTriggerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetTriggerResponsePrivate::GetTriggerResponse(QXmlStreamReader &xml)
+void GetTriggerResponsePrivate::parseGetTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTriggerResponse"));
     /// @todo

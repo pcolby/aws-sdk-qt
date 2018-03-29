@@ -96,7 +96,7 @@ DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponse(QXmlStreamReader &xml)
+void DeleteTypedLinkFacetResponsePrivate::parseDeleteTypedLinkFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTypedLinkFacetResponse"));
     /// @todo

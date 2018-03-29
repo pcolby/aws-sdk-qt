@@ -96,7 +96,7 @@ UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::UpdateSecurityGroupRul
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::UpdateSecurityGroupRuleDescriptionsEgressResponse(QXmlStreamReader &xml)
+void UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::parseUpdateSecurityGroupRuleDescriptionsEgressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSecurityGroupRuleDescriptionsEgressResponse"));
     /// @todo

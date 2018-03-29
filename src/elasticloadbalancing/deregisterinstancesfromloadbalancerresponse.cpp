@@ -96,7 +96,7 @@ DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFromLoadB
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
+void DeregisterInstancesFromLoadBalancerResponsePrivate::parseDeregisterInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterInstancesFromLoadBalancerResponse"));
     /// @todo

@@ -96,7 +96,7 @@ SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponse(QXmlStreamReader &xml)
+void SimulateCustomPolicyResponsePrivate::parseSimulateCustomPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SimulateCustomPolicyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponse(QXmlStreamReader &xml)
+void DeregisterScalableTargetResponsePrivate::parseDeregisterScalableTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterScalableTargetResponse"));
     /// @todo

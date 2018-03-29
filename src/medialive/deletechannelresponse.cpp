@@ -96,7 +96,7 @@ DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteChannelResponsePrivate::DeleteChannelResponse(QXmlStreamReader &xml)
+void DeleteChannelResponsePrivate::parseDeleteChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteChannelResponse"));
     /// @todo

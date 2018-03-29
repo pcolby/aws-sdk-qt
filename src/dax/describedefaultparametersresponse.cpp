@@ -96,7 +96,7 @@ DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponse(QXmlStreamReader &xml)
+void DescribeDefaultParametersResponsePrivate::parseDescribeDefaultParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDefaultParametersResponse"));
     /// @todo

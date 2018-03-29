@@ -96,7 +96,7 @@ LookupEventsResponsePrivate::LookupEventsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void LookupEventsResponsePrivate::LookupEventsResponse(QXmlStreamReader &xml)
+void LookupEventsResponsePrivate::parseLookupEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LookupEventsResponse"));
     /// @todo

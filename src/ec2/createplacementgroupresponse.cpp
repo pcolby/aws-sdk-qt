@@ -96,7 +96,7 @@ CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponse(QXmlStreamReader &xml)
+void CreatePlacementGroupResponsePrivate::parseCreatePlacementGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlacementGroupResponse"));
     /// @todo

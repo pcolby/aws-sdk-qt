@@ -96,7 +96,7 @@ AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSou
  *
  * @param  xml  XML stream to parse.
  */
-void AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
+void AddApplicationReferenceDataSourceResponsePrivate::parseAddApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationReferenceDataSourceResponse"));
     /// @todo

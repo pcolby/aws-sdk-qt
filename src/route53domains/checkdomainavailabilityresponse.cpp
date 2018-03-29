@@ -96,7 +96,7 @@ CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponse(QXmlStreamReader &xml)
+void CheckDomainAvailabilityResponsePrivate::parseCheckDomainAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckDomainAvailabilityResponse"));
     /// @todo

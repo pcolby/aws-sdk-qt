@@ -96,7 +96,7 @@ ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListGroupsForUserResponsePrivate::ListGroupsForUserResponse(QXmlStreamReader &xml)
+void ListGroupsForUserResponsePrivate::parseListGroupsForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupsForUserResponse"));
     /// @todo

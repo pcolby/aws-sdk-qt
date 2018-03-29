@@ -96,7 +96,7 @@ AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponse(QXmlStreamReader &xml)
+void AssociateTargetsWithJobResponsePrivate::parseAssociateTargetsWithJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateTargetsWithJobResponse"));
     /// @todo

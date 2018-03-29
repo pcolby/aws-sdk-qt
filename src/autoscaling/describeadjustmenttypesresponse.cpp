@@ -96,7 +96,7 @@ DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponse(QXmlStreamReader &xml)
+void DescribeAdjustmentTypesResponsePrivate::parseDescribeAdjustmentTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAdjustmentTypesResponse"));
     /// @todo

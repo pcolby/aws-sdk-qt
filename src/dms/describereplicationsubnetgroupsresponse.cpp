@@ -96,7 +96,7 @@ DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsR
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml)
+void DescribeReplicationSubnetGroupsResponsePrivate::parseDescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationSubnetGroupsResponse"));
     /// @todo

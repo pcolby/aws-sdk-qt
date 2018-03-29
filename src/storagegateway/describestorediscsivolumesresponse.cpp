@@ -96,7 +96,7 @@ DescribeStorediSCSIVolumesResponsePrivate::DescribeStorediSCSIVolumesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeStorediSCSIVolumesResponsePrivate::DescribeStorediSCSIVolumesResponse(QXmlStreamReader &xml)
+void DescribeStorediSCSIVolumesResponsePrivate::parseDescribeStorediSCSIVolumesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStorediSCSIVolumesResponse"));
     /// @todo

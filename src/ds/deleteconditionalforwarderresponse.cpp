@@ -96,7 +96,7 @@ DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderResponse(QXmlStreamReader &xml)
+void DeleteConditionalForwarderResponsePrivate::parseDeleteConditionalForwarderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConditionalForwarderResponse"));
     /// @todo

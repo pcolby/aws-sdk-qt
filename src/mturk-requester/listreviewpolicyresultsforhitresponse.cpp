@@ -96,7 +96,7 @@ ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITRespo
  *
  * @param  xml  XML stream to parse.
  */
-void ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITResponse(QXmlStreamReader &xml)
+void ListReviewPolicyResultsForHITResponsePrivate::parseListReviewPolicyResultsForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReviewPolicyResultsForHITResponse"));
     /// @todo

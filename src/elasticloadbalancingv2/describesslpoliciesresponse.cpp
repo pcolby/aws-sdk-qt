@@ -96,7 +96,7 @@ DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponse(QXmlStreamReader &xml)
+void DescribeSSLPoliciesResponsePrivate::parseDescribeSSLPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSSLPoliciesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisableMetricsCollectionResponsePrivate::DisableMetricsCollectionResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DisableMetricsCollectionResponsePrivate::DisableMetricsCollectionResponse(QXmlStreamReader &xml)
+void DisableMetricsCollectionResponsePrivate::parseDisableMetricsCollectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableMetricsCollectionResponse"));
     /// @todo

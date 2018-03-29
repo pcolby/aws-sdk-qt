@@ -96,7 +96,7 @@ CreateProtectionResponsePrivate::CreateProtectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateProtectionResponsePrivate::CreateProtectionResponse(QXmlStreamReader &xml)
+void CreateProtectionResponsePrivate::parseCreateProtectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProtectionResponse"));
     /// @todo

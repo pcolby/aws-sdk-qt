@@ -96,7 +96,7 @@ DeleteFolderResponsePrivate::DeleteFolderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteFolderResponsePrivate::DeleteFolderResponse(QXmlStreamReader &xml)
+void DeleteFolderResponsePrivate::parseDeleteFolderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFolderResponse"));
     /// @todo

@@ -96,7 +96,7 @@ MeterUsageResponsePrivate::MeterUsageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void MeterUsageResponsePrivate::MeterUsageResponse(QXmlStreamReader &xml)
+void MeterUsageResponsePrivate::parseMeterUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MeterUsageResponse"));
     /// @todo

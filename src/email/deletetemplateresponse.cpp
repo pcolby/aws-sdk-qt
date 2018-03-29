@@ -96,7 +96,7 @@ DeleteTemplateResponsePrivate::DeleteTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteTemplateResponsePrivate::DeleteTemplateResponse(QXmlStreamReader &xml)
+void DeleteTemplateResponsePrivate::parseDeleteTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTemplateResponse"));
     /// @todo

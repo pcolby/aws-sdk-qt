@@ -96,7 +96,7 @@ RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesInstan
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesInstancesResponse(QXmlStreamReader &xml)
+void RemoveTagsFromOnPremisesInstancesResponsePrivate::parseRemoveTagsFromOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromOnPremisesInstancesResponse"));
     /// @todo

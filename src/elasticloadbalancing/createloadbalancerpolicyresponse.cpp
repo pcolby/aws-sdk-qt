@@ -96,7 +96,7 @@ CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponse(QXmlStreamReader &xml)
+void CreateLoadBalancerPolicyResponsePrivate::parseCreateLoadBalancerPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLoadBalancerPolicyResponse"));
     /// @todo

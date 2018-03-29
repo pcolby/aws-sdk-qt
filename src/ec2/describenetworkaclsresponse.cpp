@@ -96,7 +96,7 @@ DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponse(QXmlStreamReader &xml)
+void DescribeNetworkAclsResponsePrivate::parseDescribeNetworkAclsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNetworkAclsResponse"));
     /// @todo

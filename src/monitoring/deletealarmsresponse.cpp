@@ -96,7 +96,7 @@ DeleteAlarmsResponsePrivate::DeleteAlarmsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAlarmsResponsePrivate::DeleteAlarmsResponse(QXmlStreamReader &xml)
+void DeleteAlarmsResponsePrivate::parseDeleteAlarmsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAlarmsResponse"));
     /// @todo

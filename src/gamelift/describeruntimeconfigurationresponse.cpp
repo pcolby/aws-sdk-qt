@@ -96,7 +96,7 @@ DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationResponse(QXmlStreamReader &xml)
+void DescribeRuntimeConfigurationResponsePrivate::parseDescribeRuntimeConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRuntimeConfigurationResponse"));
     /// @todo

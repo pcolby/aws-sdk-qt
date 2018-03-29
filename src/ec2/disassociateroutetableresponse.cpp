@@ -96,7 +96,7 @@ DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponse(QXmlStreamReader &xml)
+void DisassociateRouteTableResponsePrivate::parseDisassociateRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateRouteTableResponse"));
     /// @todo

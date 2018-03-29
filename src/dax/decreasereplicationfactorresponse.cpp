@@ -96,7 +96,7 @@ DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponse(QXmlStreamReader &xml)
+void DecreaseReplicationFactorResponsePrivate::parseDecreaseReplicationFactorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DecreaseReplicationFactorResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanceLife
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
+void DeleteNotebookInstanceLifecycleConfigResponsePrivate::parseDeleteNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotebookInstanceLifecycleConfigResponse"));
     /// @todo

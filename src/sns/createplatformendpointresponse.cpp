@@ -96,7 +96,7 @@ CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponse(QXmlStreamReader &xml)
+void CreatePlatformEndpointResponsePrivate::parseCreatePlatformEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformEndpointResponse"));
     /// @todo

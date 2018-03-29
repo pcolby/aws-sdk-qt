@@ -96,7 +96,7 @@ RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponse(QXmlStreamReader &xml)
+void RemoveFacetFromObjectResponsePrivate::parseRemoveFacetFromObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveFacetFromObjectResponse"));
     /// @todo

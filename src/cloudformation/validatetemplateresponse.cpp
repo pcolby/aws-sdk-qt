@@ -96,7 +96,7 @@ ValidateTemplateResponsePrivate::ValidateTemplateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ValidateTemplateResponsePrivate::ValidateTemplateResponse(QXmlStreamReader &xml)
+void ValidateTemplateResponsePrivate::parseValidateTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ValidateTemplateResponse"));
     /// @todo

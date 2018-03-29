@@ -96,7 +96,7 @@ ListTopicRulesResponsePrivate::ListTopicRulesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListTopicRulesResponsePrivate::ListTopicRulesResponse(QXmlStreamReader &xml)
+void ListTopicRulesResponsePrivate::parseListTopicRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTopicRulesResponse"));
     /// @todo

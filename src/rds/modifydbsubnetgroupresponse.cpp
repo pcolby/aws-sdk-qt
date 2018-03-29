@@ -96,7 +96,7 @@ ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponse(QXmlStreamReader &xml)
+void ModifyDBSubnetGroupResponsePrivate::parseModifyDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBSubnetGroupResponse"));
     /// @todo

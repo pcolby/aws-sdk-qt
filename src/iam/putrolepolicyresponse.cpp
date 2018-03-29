@@ -96,7 +96,7 @@ PutRolePolicyResponsePrivate::PutRolePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutRolePolicyResponsePrivate::PutRolePolicyResponse(QXmlStreamReader &xml)
+void PutRolePolicyResponsePrivate::parsePutRolePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRolePolicyResponse"));
     /// @todo

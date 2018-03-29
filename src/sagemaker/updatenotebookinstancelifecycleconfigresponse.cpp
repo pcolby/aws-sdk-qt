@@ -96,7 +96,7 @@ UpdateNotebookInstanceLifecycleConfigResponsePrivate::UpdateNotebookInstanceLife
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateNotebookInstanceLifecycleConfigResponsePrivate::UpdateNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
+void UpdateNotebookInstanceLifecycleConfigResponsePrivate::parseUpdateNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotebookInstanceLifecycleConfigResponse"));
     /// @todo

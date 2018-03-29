@@ -96,7 +96,7 @@ DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponse(QXmlStreamReader &xml)
+void DeleteCacheSecurityGroupResponsePrivate::parseDeleteCacheSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheSecurityGroupResponse"));
     /// @todo

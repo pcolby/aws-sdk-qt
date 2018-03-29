@@ -96,7 +96,7 @@ CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponse(QXmlStreamReader &xml)
+void CreateOrganizationalUnitResponsePrivate::parseCreateOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOrganizationalUnitResponse"));
     /// @todo

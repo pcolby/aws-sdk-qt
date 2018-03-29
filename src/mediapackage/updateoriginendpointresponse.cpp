@@ -96,7 +96,7 @@ UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponse(QXmlStreamReader &xml)
+void UpdateOriginEndpointResponsePrivate::parseUpdateOriginEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateOriginEndpointResponse"));
     /// @todo

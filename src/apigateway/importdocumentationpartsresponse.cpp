@@ -96,7 +96,7 @@ ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponse(QXmlStreamReader &xml)
+void ImportDocumentationPartsResponsePrivate::parseImportDocumentationPartsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportDocumentationPartsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ IndexFacesResponsePrivate::IndexFacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void IndexFacesResponsePrivate::IndexFacesResponse(QXmlStreamReader &xml)
+void IndexFacesResponsePrivate::parseIndexFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IndexFacesResponse"));
     /// @todo

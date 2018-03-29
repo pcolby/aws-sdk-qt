@@ -96,7 +96,7 @@ GetV2LoggingOptionsResponsePrivate::GetV2LoggingOptionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetV2LoggingOptionsResponsePrivate::GetV2LoggingOptionsResponse(QXmlStreamReader &xml)
+void GetV2LoggingOptionsResponsePrivate::parseGetV2LoggingOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetV2LoggingOptionsResponse"));
     /// @todo

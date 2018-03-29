@@ -96,7 +96,7 @@ CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePermissio
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
+void CreateNetworkInterfacePermissionResponsePrivate::parseCreateNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkInterfacePermissionResponse"));
     /// @todo

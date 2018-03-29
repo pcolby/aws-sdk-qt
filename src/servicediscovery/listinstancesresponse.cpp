@@ -96,7 +96,7 @@ ListInstancesResponsePrivate::ListInstancesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListInstancesResponsePrivate::ListInstancesResponse(QXmlStreamReader &xml)
+void ListInstancesResponsePrivate::parseListInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInstancesResponse"));
     /// @todo

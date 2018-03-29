@@ -96,7 +96,7 @@ TagLogGroupResponsePrivate::TagLogGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TagLogGroupResponsePrivate::TagLogGroupResponse(QXmlStreamReader &xml)
+void TagLogGroupResponsePrivate::parseTagLogGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagLogGroupResponse"));
     /// @todo

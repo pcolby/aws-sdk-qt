@@ -96,7 +96,7 @@ AdminUpdateAuthEventFeedbackResponsePrivate::AdminUpdateAuthEventFeedbackRespons
  *
  * @param  xml  XML stream to parse.
  */
-void AdminUpdateAuthEventFeedbackResponsePrivate::AdminUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml)
+void AdminUpdateAuthEventFeedbackResponsePrivate::parseAdminUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateAuthEventFeedbackResponse"));
     /// @todo

@@ -96,7 +96,7 @@ NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponse(QXmlStreamReader &xml)
+void NotifyApplicationStateResponsePrivate::parseNotifyApplicationStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyApplicationStateResponse"));
     /// @todo

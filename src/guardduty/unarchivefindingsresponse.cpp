@@ -96,7 +96,7 @@ UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponse(QXmlStreamReader &xml)
+void UnarchiveFindingsResponsePrivate::parseUnarchiveFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnarchiveFindingsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponse(QXmlStreamReader &xml)
+void DescribeAccountLimitsResponsePrivate::parseDescribeAccountLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAccountLimitsResponse"));
     /// @todo

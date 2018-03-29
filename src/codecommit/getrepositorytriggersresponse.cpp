@@ -96,7 +96,7 @@ GetRepositoryTriggersResponsePrivate::GetRepositoryTriggersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRepositoryTriggersResponsePrivate::GetRepositoryTriggersResponse(QXmlStreamReader &xml)
+void GetRepositoryTriggersResponsePrivate::parseGetRepositoryTriggersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRepositoryTriggersResponse"));
     /// @todo

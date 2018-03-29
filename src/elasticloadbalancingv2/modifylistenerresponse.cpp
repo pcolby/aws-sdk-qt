@@ -96,7 +96,7 @@ ModifyListenerResponsePrivate::ModifyListenerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyListenerResponsePrivate::ModifyListenerResponse(QXmlStreamReader &xml)
+void ModifyListenerResponsePrivate::parseModifyListenerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyListenerResponse"));
     /// @todo

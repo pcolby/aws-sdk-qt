@@ -96,7 +96,7 @@ UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponse(QXmlStreamReader &xml)
+void UpdateConfigurationTemplateResponsePrivate::parseUpdateConfigurationTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationTemplateResponse"));
     /// @todo

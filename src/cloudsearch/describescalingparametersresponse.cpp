@@ -96,7 +96,7 @@ DescribeScalingParametersResponsePrivate::DescribeScalingParametersResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScalingParametersResponsePrivate::DescribeScalingParametersResponse(QXmlStreamReader &xml)
+void DescribeScalingParametersResponsePrivate::parseDescribeScalingParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingParametersResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeObjectResponsePrivate::DescribeObjectResponse(QXmlStreamReader &xml)
+void DescribeObjectResponsePrivate::parseDescribeObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeObjectResponse"));
     /// @todo

@@ -96,7 +96,7 @@ GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponse(QXmlStreamReader &xml)
+void GetClusterCredentialsResponsePrivate::parseGetClusterCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetClusterCredentialsResponse"));
     /// @todo

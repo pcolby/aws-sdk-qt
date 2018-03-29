@@ -96,7 +96,7 @@ CreateLBCookieStickinessPolicyResponsePrivate::CreateLBCookieStickinessPolicyRes
  *
  * @param  xml  XML stream to parse.
  */
-void CreateLBCookieStickinessPolicyResponsePrivate::CreateLBCookieStickinessPolicyResponse(QXmlStreamReader &xml)
+void CreateLBCookieStickinessPolicyResponsePrivate::parseCreateLBCookieStickinessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLBCookieStickinessPolicyResponse"));
     /// @todo

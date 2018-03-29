@@ -96,7 +96,7 @@ CreateMembersResponsePrivate::CreateMembersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateMembersResponsePrivate::CreateMembersResponse(QXmlStreamReader &xml)
+void CreateMembersResponsePrivate::parseCreateMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMembersResponse"));
     /// @todo

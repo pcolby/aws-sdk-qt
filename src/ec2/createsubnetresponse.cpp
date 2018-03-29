@@ -96,7 +96,7 @@ CreateSubnetResponsePrivate::CreateSubnetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSubnetResponsePrivate::CreateSubnetResponse(QXmlStreamReader &xml)
+void CreateSubnetResponsePrivate::parseCreateSubnetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSubnetResponse"));
     /// @todo

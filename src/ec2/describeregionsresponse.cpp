@@ -96,7 +96,7 @@ DescribeRegionsResponsePrivate::DescribeRegionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeRegionsResponsePrivate::DescribeRegionsResponse(QXmlStreamReader &xml)
+void DescribeRegionsResponsePrivate::parseDescribeRegionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRegionsResponse"));
     /// @todo

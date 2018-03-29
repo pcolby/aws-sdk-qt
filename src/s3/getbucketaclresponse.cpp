@@ -96,7 +96,7 @@ GetBucketAclResponsePrivate::GetBucketAclResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketAclResponsePrivate::GetBucketAclResponse(QXmlStreamReader &xml)
+void GetBucketAclResponsePrivate::parseGetBucketAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAclResponse"));
     /// @todo

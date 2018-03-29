@@ -96,7 +96,7 @@ PutResourcePolicyResponsePrivate::PutResourcePolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutResourcePolicyResponsePrivate::PutResourcePolicyResponse(QXmlStreamReader &xml)
+void PutResourcePolicyResponsePrivate::parsePutResourcePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutResourcePolicyResponse"));
     /// @todo

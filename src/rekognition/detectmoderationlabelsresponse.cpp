@@ -96,7 +96,7 @@ DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponse(QXmlStreamReader &xml)
+void DetectModerationLabelsResponsePrivate::parseDetectModerationLabelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectModerationLabelsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponse(QXmlStreamReader &xml)
+void CreateClusterSubnetGroupResponsePrivate::parseCreateClusterSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterSubnetGroupResponse"));
     /// @todo

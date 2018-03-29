@@ -96,7 +96,7 @@ CreateBucketResponsePrivate::CreateBucketResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateBucketResponsePrivate::CreateBucketResponse(QXmlStreamReader &xml)
+void CreateBucketResponsePrivate::parseCreateBucketResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBucketResponse"));
     /// @todo

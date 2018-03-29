@@ -96,7 +96,7 @@ DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeclineInvitationsResponsePrivate::DeclineInvitationsResponse(QXmlStreamReader &xml)
+void DeclineInvitationsResponsePrivate::parseDeclineInvitationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeclineInvitationsResponse"));
     /// @todo

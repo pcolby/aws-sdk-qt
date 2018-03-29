@@ -96,7 +96,7 @@ DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponse(QXmlStreamReader &xml)
+void DescribeAvailabilityZonesResponsePrivate::parseDescribeAvailabilityZonesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailabilityZonesResponse"));
     /// @todo

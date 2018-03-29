@@ -96,7 +96,7 @@ UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponse(QXmlStreamReader &xml)
+void UnassignIpv6AddressesResponsePrivate::parseUnassignIpv6AddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnassignIpv6AddressesResponse"));
     /// @todo

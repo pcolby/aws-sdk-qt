@@ -96,7 +96,7 @@ GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponse(QXmlStreamReader &xml)
+void GetExecutionHistoryResponsePrivate::parseGetExecutionHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetExecutionHistoryResponse"));
     /// @todo

@@ -96,7 +96,7 @@ RegisterThingResponsePrivate::RegisterThingResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterThingResponsePrivate::RegisterThingResponse(QXmlStreamReader &xml)
+void RegisterThingResponsePrivate::parseRegisterThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterThingResponse"));
     /// @todo

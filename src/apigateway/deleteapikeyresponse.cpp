@@ -96,7 +96,7 @@ DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteApiKeyResponsePrivate::DeleteApiKeyResponse(QXmlStreamReader &xml)
+void DeleteApiKeyResponsePrivate::parseDeleteApiKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApiKeyResponse"));
     /// @todo

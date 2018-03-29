@@ -96,7 +96,7 @@ CreateSecurityConfigurationResponsePrivate::CreateSecurityConfigurationResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void CreateSecurityConfigurationResponsePrivate::CreateSecurityConfigurationResponse(QXmlStreamReader &xml)
+void CreateSecurityConfigurationResponsePrivate::parseCreateSecurityConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSecurityConfigurationResponse"));
     /// @todo

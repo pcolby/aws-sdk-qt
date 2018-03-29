@@ -96,7 +96,7 @@ DeleteRouteTableResponsePrivate::DeleteRouteTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRouteTableResponsePrivate::DeleteRouteTableResponse(QXmlStreamReader &xml)
+void DeleteRouteTableResponsePrivate::parseDeleteRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRouteTableResponse"));
     /// @todo

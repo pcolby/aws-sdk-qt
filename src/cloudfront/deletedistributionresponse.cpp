@@ -96,7 +96,7 @@ DeleteDistributionResponsePrivate::DeleteDistributionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteDistributionResponsePrivate::DeleteDistributionResponse(QXmlStreamReader &xml)
+void DeleteDistributionResponsePrivate::parseDeleteDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDistributionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisableVpcClassicLinkDnsSupportResponsePrivate::DisableVpcClassicLinkDnsSupportR
  *
  * @param  xml  XML stream to parse.
  */
-void DisableVpcClassicLinkDnsSupportResponsePrivate::DisableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
+void DisableVpcClassicLinkDnsSupportResponsePrivate::parseDisableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableVpcClassicLinkDnsSupportResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponse(QXmlStreamReader &xml)
+void DeleteSAMLProviderResponsePrivate::parseDeleteSAMLProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSAMLProviderResponse"));
     /// @todo

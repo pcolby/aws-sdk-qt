@@ -96,7 +96,7 @@ NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponse(QXmlStreamReader &xml)
+void NotifyWhenUploadedResponsePrivate::parseNotifyWhenUploadedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyWhenUploadedResponse"));
     /// @todo

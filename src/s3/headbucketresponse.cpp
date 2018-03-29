@@ -96,7 +96,7 @@ HeadBucketResponsePrivate::HeadBucketResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void HeadBucketResponsePrivate::HeadBucketResponse(QXmlStreamReader &xml)
+void HeadBucketResponsePrivate::parseHeadBucketResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("HeadBucketResponse"));
     /// @todo

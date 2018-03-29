@@ -96,7 +96,7 @@ ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponse(QXmlStreamReader &xml)
+void ListVerifiedEmailAddressesResponsePrivate::parseListVerifiedEmailAddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVerifiedEmailAddressesResponse"));
     /// @todo

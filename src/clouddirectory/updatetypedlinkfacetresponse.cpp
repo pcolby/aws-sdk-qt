@@ -96,7 +96,7 @@ UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponse(QXmlStreamReader &xml)
+void UpdateTypedLinkFacetResponsePrivate::parseUpdateTypedLinkFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTypedLinkFacetResponse"));
     /// @todo

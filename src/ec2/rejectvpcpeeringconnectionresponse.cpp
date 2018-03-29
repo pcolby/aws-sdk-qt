@@ -96,7 +96,7 @@ RejectVpcPeeringConnectionResponsePrivate::RejectVpcPeeringConnectionResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void RejectVpcPeeringConnectionResponsePrivate::RejectVpcPeeringConnectionResponse(QXmlStreamReader &xml)
+void RejectVpcPeeringConnectionResponsePrivate::parseRejectVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RejectVpcPeeringConnectionResponse"));
     /// @todo

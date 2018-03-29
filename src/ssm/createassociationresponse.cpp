@@ -96,7 +96,7 @@ CreateAssociationResponsePrivate::CreateAssociationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateAssociationResponsePrivate::CreateAssociationResponse(QXmlStreamReader &xml)
+void CreateAssociationResponsePrivate::parseCreateAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAssociationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModification
  *
  * @param  xml  XML stream to parse.
  */
-void ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModificationsResponse(QXmlStreamReader &xml)
+void ListAllowedNodeTypeModificationsResponsePrivate::parseListAllowedNodeTypeModificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAllowedNodeTypeModificationsResponse"));
     /// @todo

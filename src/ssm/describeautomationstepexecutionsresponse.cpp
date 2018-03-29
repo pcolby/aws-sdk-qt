@@ -96,7 +96,7 @@ DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExecution
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExecutionsResponse(QXmlStreamReader &xml)
+void DescribeAutomationStepExecutionsResponsePrivate::parseDescribeAutomationStepExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutomationStepExecutionsResponse"));
     /// @todo

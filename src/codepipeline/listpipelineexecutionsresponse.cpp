@@ -96,7 +96,7 @@ ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponse(QXmlStreamReader &xml)
+void ListPipelineExecutionsResponsePrivate::parseListPipelineExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPipelineExecutionsResponse"));
     /// @todo

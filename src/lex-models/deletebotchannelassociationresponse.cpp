@@ -96,7 +96,7 @@ DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponse(QXmlStreamReader &xml)
+void DeleteBotChannelAssociationResponsePrivate::parseDeleteBotChannelAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotChannelAssociationResponse"));
     /// @todo

@@ -96,7 +96,7 @@ TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponse(QXmlStreamReader &xml)
+void TerminateEnvironmentResponsePrivate::parseTerminateEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateEnvironmentResponse"));
     /// @todo

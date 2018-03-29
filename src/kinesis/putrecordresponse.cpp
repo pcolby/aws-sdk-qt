@@ -96,7 +96,7 @@ PutRecordResponsePrivate::PutRecordResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutRecordResponsePrivate::PutRecordResponse(QXmlStreamReader &xml)
+void PutRecordResponsePrivate::parsePutRecordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRecordResponse"));
     /// @todo

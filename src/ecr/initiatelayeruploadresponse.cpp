@@ -96,7 +96,7 @@ InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponse(QXmlStreamReader &xml)
+void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateLayerUploadResponse"));
     /// @todo

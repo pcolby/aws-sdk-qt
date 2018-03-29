@@ -96,7 +96,7 @@ DescribeVpcClassicLinkDnsSupportResponsePrivate::DescribeVpcClassicLinkDnsSuppor
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeVpcClassicLinkDnsSupportResponsePrivate::DescribeVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
+void DescribeVpcClassicLinkDnsSupportResponsePrivate::parseDescribeVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcClassicLinkDnsSupportResponse"));
     /// @todo

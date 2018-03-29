@@ -96,7 +96,7 @@ DescribeHandshakeResponsePrivate::DescribeHandshakeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeHandshakeResponsePrivate::DescribeHandshakeResponse(QXmlStreamReader &xml)
+void DescribeHandshakeResponsePrivate::parseDescribeHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHandshakeResponse"));
     /// @todo

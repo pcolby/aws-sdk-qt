@@ -96,7 +96,7 @@ PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponse(QXmlStreamReader &xml)
+void PutBucketWebsiteResponsePrivate::parsePutBucketWebsiteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketWebsiteResponse"));
     /// @todo

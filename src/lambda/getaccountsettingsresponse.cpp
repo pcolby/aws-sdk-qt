@@ -96,7 +96,7 @@ GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccountSettingsResponsePrivate::GetAccountSettingsResponse(QXmlStreamReader &xml)
+void GetAccountSettingsResponsePrivate::parseGetAccountSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountSettingsResponse"));
     /// @todo

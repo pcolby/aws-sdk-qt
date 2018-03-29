@@ -96,7 +96,7 @@ ListTrafficPolicyInstancesByHostedZoneResponsePrivate::ListTrafficPolicyInstance
  *
  * @param  xml  XML stream to parse.
  */
-void ListTrafficPolicyInstancesByHostedZoneResponsePrivate::ListTrafficPolicyInstancesByHostedZoneResponse(QXmlStreamReader &xml)
+void ListTrafficPolicyInstancesByHostedZoneResponsePrivate::parseListTrafficPolicyInstancesByHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTrafficPolicyInstancesByHostedZoneResponse"));
     /// @todo

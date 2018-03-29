@@ -96,7 +96,7 @@ DeleteVpcResponsePrivate::DeleteVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteVpcResponsePrivate::DeleteVpcResponse(QXmlStreamReader &xml)
+void DeleteVpcResponsePrivate::parseDeleteVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcResponse"));
     /// @todo

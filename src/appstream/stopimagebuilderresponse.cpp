@@ -96,7 +96,7 @@ StopImageBuilderResponsePrivate::StopImageBuilderResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopImageBuilderResponsePrivate::StopImageBuilderResponse(QXmlStreamReader &xml)
+void StopImageBuilderResponsePrivate::parseStopImageBuilderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopImageBuilderResponse"));
     /// @todo

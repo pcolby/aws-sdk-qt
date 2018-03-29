@@ -96,7 +96,7 @@ DescribeTagOptionResponsePrivate::DescribeTagOptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeTagOptionResponsePrivate::DescribeTagOptionResponse(QXmlStreamReader &xml)
+void DescribeTagOptionResponsePrivate::parseDescribeTagOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTagOptionResponse"));
     /// @todo

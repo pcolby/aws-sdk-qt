@@ -96,7 +96,7 @@ DescribeResizeResponsePrivate::DescribeResizeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeResizeResponsePrivate::DescribeResizeResponse(QXmlStreamReader &xml)
+void DescribeResizeResponsePrivate::parseDescribeResizeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResizeResponse"));
     /// @todo

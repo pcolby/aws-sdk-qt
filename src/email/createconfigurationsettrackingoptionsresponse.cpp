@@ -96,7 +96,7 @@ CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrac
  *
  * @param  xml  XML stream to parse.
  */
-void CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
+void CreateConfigurationSetTrackingOptionsResponsePrivate::parseCreateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetTrackingOptionsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml)
+void BatchGetOnPremisesInstancesResponsePrivate::parseBatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetOnPremisesInstancesResponse"));
     /// @todo

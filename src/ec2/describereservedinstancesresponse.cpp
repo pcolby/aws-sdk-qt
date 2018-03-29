@@ -96,7 +96,7 @@ DescribeReservedInstancesResponsePrivate::DescribeReservedInstancesResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeReservedInstancesResponsePrivate::DescribeReservedInstancesResponse(QXmlStreamReader &xml)
+void DescribeReservedInstancesResponsePrivate::parseDescribeReservedInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedInstancesResponse"));
     /// @todo

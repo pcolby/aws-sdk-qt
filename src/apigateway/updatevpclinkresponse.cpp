@@ -96,7 +96,7 @@ UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponse(QXmlStreamReader &xml)
+void UpdateVpcLinkResponsePrivate::parseUpdateVpcLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateVpcLinkResponse"));
     /// @todo

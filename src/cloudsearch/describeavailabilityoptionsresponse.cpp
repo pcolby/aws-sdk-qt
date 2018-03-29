@@ -96,7 +96,7 @@ DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResponse(QXmlStreamReader &xml)
+void DescribeAvailabilityOptionsResponsePrivate::parseDescribeAvailabilityOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailabilityOptionsResponse"));
     /// @todo

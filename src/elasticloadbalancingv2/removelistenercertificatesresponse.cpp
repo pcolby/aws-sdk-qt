@@ -96,7 +96,7 @@ RemoveListenerCertificatesResponsePrivate::RemoveListenerCertificatesResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void RemoveListenerCertificatesResponsePrivate::RemoveListenerCertificatesResponse(QXmlStreamReader &xml)
+void RemoveListenerCertificatesResponsePrivate::parseRemoveListenerCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveListenerCertificatesResponse"));
     /// @todo

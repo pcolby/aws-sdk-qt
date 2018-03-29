@@ -96,7 +96,7 @@ GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonR
  *
  * @param  xml  XML stream to parse.
  */
-void GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml)
+void GetHealthCheckLastFailureReasonResponsePrivate::parseGetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckLastFailureReasonResponse"));
     /// @todo

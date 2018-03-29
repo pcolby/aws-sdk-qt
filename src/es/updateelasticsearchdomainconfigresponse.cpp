@@ -96,7 +96,7 @@ UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigR
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigResponse(QXmlStreamReader &xml)
+void UpdateElasticsearchDomainConfigResponsePrivate::parseUpdateElasticsearchDomainConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateElasticsearchDomainConfigResponse"));
     /// @todo

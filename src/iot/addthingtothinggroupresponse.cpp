@@ -96,7 +96,7 @@ AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponse(QXmlStreamReader &xml)
+void AddThingToThingGroupResponsePrivate::parseAddThingToThingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddThingToThingGroupResponse"));
     /// @todo

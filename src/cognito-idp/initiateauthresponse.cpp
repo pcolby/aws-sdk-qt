@@ -96,7 +96,7 @@ InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void InitiateAuthResponsePrivate::InitiateAuthResponse(QXmlStreamReader &xml)
+void InitiateAuthResponsePrivate::parseInitiateAuthResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateAuthResponse"));
     /// @todo

@@ -96,7 +96,7 @@ PublishVersionResponsePrivate::PublishVersionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PublishVersionResponsePrivate::PublishVersionResponse(QXmlStreamReader &xml)
+void PublishVersionResponsePrivate::parsePublishVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PublishVersionResponse"));
     /// @todo

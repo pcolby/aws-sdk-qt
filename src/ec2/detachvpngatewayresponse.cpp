@@ -96,7 +96,7 @@ DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponse(QXmlStreamReader &xml)
+void DetachVpnGatewayResponsePrivate::parseDetachVpnGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachVpnGatewayResponse"));
     /// @todo

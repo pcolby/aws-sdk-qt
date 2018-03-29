@@ -96,7 +96,7 @@ DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForP
  *
  * @param  xml  XML stream to parse.
  */
-void DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
+void DeregisterPatchBaselineForPatchGroupResponsePrivate::parseDeregisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterPatchBaselineForPatchGroupResponse"));
     /// @todo

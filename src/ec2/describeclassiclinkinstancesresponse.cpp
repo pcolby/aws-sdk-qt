@@ -96,7 +96,7 @@ DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesResponse(QXmlStreamReader &xml)
+void DescribeClassicLinkInstancesResponsePrivate::parseDescribeClassicLinkInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClassicLinkInstancesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponse(QXmlStreamReader &xml)
+void UpdateDirectoryConfigResponsePrivate::parseUpdateDirectoryConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDirectoryConfigResponse"));
     /// @todo

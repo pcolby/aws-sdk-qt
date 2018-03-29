@@ -96,7 +96,7 @@ CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponse(QXmlStreamReader &xml)
+void CreateElasticsearchDomainResponsePrivate::parseCreateElasticsearchDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateElasticsearchDomainResponse"));
     /// @todo

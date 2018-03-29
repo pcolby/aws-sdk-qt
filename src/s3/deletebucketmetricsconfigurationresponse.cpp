@@ -96,7 +96,7 @@ DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfiguratio
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
+void DeleteBucketMetricsConfigurationResponsePrivate::parseDeleteBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketMetricsConfigurationResponse"));
     /// @todo

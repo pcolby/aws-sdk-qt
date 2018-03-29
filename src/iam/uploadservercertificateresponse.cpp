@@ -96,7 +96,7 @@ UploadServerCertificateResponsePrivate::UploadServerCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UploadServerCertificateResponsePrivate::UploadServerCertificateResponse(QXmlStreamReader &xml)
+void UploadServerCertificateResponsePrivate::parseUploadServerCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadServerCertificateResponse"));
     /// @todo

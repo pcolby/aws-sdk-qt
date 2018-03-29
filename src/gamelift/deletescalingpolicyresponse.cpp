@@ -96,7 +96,7 @@ DeleteScalingPolicyResponsePrivate::DeleteScalingPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteScalingPolicyResponsePrivate::DeleteScalingPolicyResponse(QXmlStreamReader &xml)
+void DeleteScalingPolicyResponsePrivate::parseDeleteScalingPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteScalingPolicyResponse"));
     /// @todo

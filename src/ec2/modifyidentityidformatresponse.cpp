@@ -96,7 +96,7 @@ ModifyIdentityIdFormatResponsePrivate::ModifyIdentityIdFormatResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ModifyIdentityIdFormatResponsePrivate::ModifyIdentityIdFormatResponse(QXmlStreamReader &xml)
+void ModifyIdentityIdFormatResponsePrivate::parseModifyIdentityIdFormatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyIdentityIdFormatResponse"));
     /// @todo

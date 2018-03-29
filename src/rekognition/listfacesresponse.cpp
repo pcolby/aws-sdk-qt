@@ -96,7 +96,7 @@ ListFacesResponsePrivate::ListFacesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListFacesResponsePrivate::ListFacesResponse(QXmlStreamReader &xml)
+void ListFacesResponsePrivate::parseListFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFacesResponse"));
     /// @todo

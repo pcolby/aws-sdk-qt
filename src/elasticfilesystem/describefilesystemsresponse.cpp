@@ -96,7 +96,7 @@ DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponse(QXmlStreamReader &xml)
+void DescribeFileSystemsResponsePrivate::parseDescribeFileSystemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFileSystemsResponse"));
     /// @todo

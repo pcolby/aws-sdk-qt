@@ -96,7 +96,7 @@ UploadArchiveResponsePrivate::UploadArchiveResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UploadArchiveResponsePrivate::UploadArchiveResponse(QXmlStreamReader &xml)
+void UploadArchiveResponsePrivate::parseUploadArchiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadArchiveResponse"));
     /// @todo

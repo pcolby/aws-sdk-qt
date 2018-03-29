@@ -96,7 +96,7 @@ SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponse(QXmlStreamReader &xml)
+void SetReceiptRulePositionResponsePrivate::parseSetReceiptRulePositionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetReceiptRulePositionResponse"));
     /// @todo

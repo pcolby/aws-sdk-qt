@@ -96,7 +96,7 @@ DeleteEnvironmentMembershipResponsePrivate::DeleteEnvironmentMembershipResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteEnvironmentMembershipResponsePrivate::DeleteEnvironmentMembershipResponse(QXmlStreamReader &xml)
+void DeleteEnvironmentMembershipResponsePrivate::parseDeleteEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentMembershipResponse"));
     /// @todo

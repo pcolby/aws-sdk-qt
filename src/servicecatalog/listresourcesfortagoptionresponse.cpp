@@ -96,7 +96,7 @@ ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponse(QXmlStreamReader &xml)
+void ListResourcesForTagOptionResponsePrivate::parseListResourcesForTagOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourcesForTagOptionResponse"));
     /// @todo

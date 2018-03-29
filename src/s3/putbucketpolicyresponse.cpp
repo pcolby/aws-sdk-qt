@@ -96,7 +96,7 @@ PutBucketPolicyResponsePrivate::PutBucketPolicyResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketPolicyResponsePrivate::PutBucketPolicyResponse(QXmlStreamReader &xml)
+void PutBucketPolicyResponsePrivate::parsePutBucketPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketPolicyResponse"));
     /// @todo

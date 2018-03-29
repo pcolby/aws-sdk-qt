@@ -96,7 +96,7 @@ CreateCollectionResponsePrivate::CreateCollectionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCollectionResponsePrivate::CreateCollectionResponse(QXmlStreamReader &xml)
+void CreateCollectionResponsePrivate::parseCreateCollectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCollectionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ InvokeResponsePrivate::InvokeResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void InvokeResponsePrivate::InvokeResponse(QXmlStreamReader &xml)
+void InvokeResponsePrivate::parseInvokeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InvokeResponse"));
     /// @todo

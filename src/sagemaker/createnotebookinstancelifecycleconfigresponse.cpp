@@ -96,7 +96,7 @@ CreateNotebookInstanceLifecycleConfigResponsePrivate::CreateNotebookInstanceLife
  *
  * @param  xml  XML stream to parse.
  */
-void CreateNotebookInstanceLifecycleConfigResponsePrivate::CreateNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
+void CreateNotebookInstanceLifecycleConfigResponsePrivate::parseCreateNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNotebookInstanceLifecycleConfigResponse"));
     /// @todo

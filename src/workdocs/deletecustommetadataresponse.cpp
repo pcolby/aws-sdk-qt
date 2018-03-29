@@ -96,7 +96,7 @@ DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponse(QXmlStreamReader &xml)
+void DeleteCustomMetadataResponsePrivate::parseDeleteCustomMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomMetadataResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResponse(QXmlStreamReader &xml)
+void UpdateAccountSendingEnabledResponsePrivate::parseUpdateAccountSendingEnabledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccountSendingEnabledResponse"));
     /// @todo

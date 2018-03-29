@@ -96,7 +96,7 @@ BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponse(QXmlStreamReader &xml)
+void BatchDeleteAttributesResponsePrivate::parseBatchDeleteAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteAttributesResponse"));
     /// @todo

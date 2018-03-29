@@ -96,7 +96,7 @@ StartFleetResponsePrivate::StartFleetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartFleetResponsePrivate::StartFleetResponse(QXmlStreamReader &xml)
+void StartFleetResponsePrivate::parseStartFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartFleetResponse"));
     /// @todo

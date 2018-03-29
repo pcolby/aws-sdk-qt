@@ -96,7 +96,7 @@ UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponse(QXmlStreamReader &xml)
+void UpdateByteMatchSetResponsePrivate::parseUpdateByteMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateByteMatchSetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeletePresetResponsePrivate::DeletePresetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeletePresetResponsePrivate::DeletePresetResponse(QXmlStreamReader &xml)
+void DeletePresetResponsePrivate::parseDeletePresetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePresetResponse"));
     /// @todo

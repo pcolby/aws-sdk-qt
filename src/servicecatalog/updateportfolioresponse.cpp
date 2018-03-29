@@ -96,7 +96,7 @@ UpdatePortfolioResponsePrivate::UpdatePortfolioResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdatePortfolioResponsePrivate::UpdatePortfolioResponse(QXmlStreamReader &xml)
+void UpdatePortfolioResponsePrivate::parseUpdatePortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePortfolioResponse"));
     /// @todo

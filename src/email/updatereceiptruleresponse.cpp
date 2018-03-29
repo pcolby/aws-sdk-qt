@@ -96,7 +96,7 @@ UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponse(QXmlStreamReader &xml)
+void UpdateReceiptRuleResponsePrivate::parseUpdateReceiptRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateReceiptRuleResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationR
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationResponse(QXmlStreamReader &xml)
+void DeleteNotificationConfigurationResponsePrivate::parseDeleteNotificationConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationConfigurationResponse"));
     /// @todo

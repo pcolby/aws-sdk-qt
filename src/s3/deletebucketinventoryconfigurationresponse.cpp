@@ -96,7 +96,7 @@ DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryConfigur
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
+void DeleteBucketInventoryConfigurationResponsePrivate::parseDeleteBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketInventoryConfigurationResponse"));
     /// @todo

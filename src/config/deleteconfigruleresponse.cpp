@@ -96,7 +96,7 @@ DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponse(QXmlStreamReader &xml)
+void DeleteConfigRuleResponsePrivate::parseDeleteConfigRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigRuleResponse"));
     /// @todo

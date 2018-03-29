@@ -96,7 +96,7 @@ UpdateCertificateResponsePrivate::UpdateCertificateResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateCertificateResponsePrivate::UpdateCertificateResponse(QXmlStreamReader &xml)
+void UpdateCertificateResponsePrivate::parseUpdateCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCertificateResponse"));
     /// @todo

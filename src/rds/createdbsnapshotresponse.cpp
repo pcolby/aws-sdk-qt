@@ -96,7 +96,7 @@ CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponse(QXmlStreamReader &xml)
+void CreateDBSnapshotResponsePrivate::parseCreateDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSnapshotResponse"));
     /// @todo

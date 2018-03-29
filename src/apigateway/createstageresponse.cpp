@@ -96,7 +96,7 @@ CreateStageResponsePrivate::CreateStageResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateStageResponsePrivate::CreateStageResponse(QXmlStreamReader &xml)
+void CreateStageResponsePrivate::parseCreateStageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStageResponse"));
     /// @todo

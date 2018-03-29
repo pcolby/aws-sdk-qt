@@ -96,7 +96,7 @@ DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnetsRespo
  *
  * @param  xml  XML stream to parse.
  */
-void DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnetsResponse(QXmlStreamReader &xml)
+void DetachLoadBalancerFromSubnetsResponsePrivate::parseDetachLoadBalancerFromSubnetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancerFromSubnetsResponse"));
     /// @todo

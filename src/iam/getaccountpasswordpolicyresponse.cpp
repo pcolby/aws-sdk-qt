@@ -96,7 +96,7 @@ GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponse(QXmlStreamReader &xml)
+void GetAccountPasswordPolicyResponsePrivate::parseGetAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountPasswordPolicyResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponse(QXmlStreamReader &xml)
+void CreateDefaultVpcResponsePrivate::parseCreateDefaultVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDefaultVpcResponse"));
     /// @todo

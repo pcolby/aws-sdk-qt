@@ -96,7 +96,7 @@ ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponse(QXmlStreamReader &xml)
+void ExecuteChangeSetResponsePrivate::parseExecuteChangeSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExecuteChangeSetResponse"));
     /// @todo

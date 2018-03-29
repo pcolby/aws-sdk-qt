@@ -96,7 +96,7 @@ CreateTrustResponsePrivate::CreateTrustResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateTrustResponsePrivate::CreateTrustResponse(QXmlStreamReader &xml)
+void CreateTrustResponsePrivate::parseCreateTrustResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTrustResponse"));
     /// @todo

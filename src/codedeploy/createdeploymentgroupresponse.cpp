@@ -96,7 +96,7 @@ CreateDeploymentGroupResponsePrivate::CreateDeploymentGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateDeploymentGroupResponsePrivate::CreateDeploymentGroupResponse(QXmlStreamReader &xml)
+void CreateDeploymentGroupResponsePrivate::parseCreateDeploymentGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentGroupResponse"));
     /// @todo

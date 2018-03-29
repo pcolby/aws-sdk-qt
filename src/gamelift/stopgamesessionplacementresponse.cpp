@@ -96,7 +96,7 @@ StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponse(QXmlStreamReader &xml)
+void StopGameSessionPlacementResponsePrivate::parseStopGameSessionPlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopGameSessionPlacementResponse"));
     /// @todo

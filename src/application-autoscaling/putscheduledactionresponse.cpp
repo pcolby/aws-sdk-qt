@@ -96,7 +96,7 @@ PutScheduledActionResponsePrivate::PutScheduledActionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutScheduledActionResponsePrivate::PutScheduledActionResponse(QXmlStreamReader &xml)
+void PutScheduledActionResponsePrivate::parsePutScheduledActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutScheduledActionResponse"));
     /// @todo

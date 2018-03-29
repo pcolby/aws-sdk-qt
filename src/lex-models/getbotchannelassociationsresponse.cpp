@@ -96,7 +96,7 @@ GetBotChannelAssociationsResponsePrivate::GetBotChannelAssociationsResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void GetBotChannelAssociationsResponsePrivate::GetBotChannelAssociationsResponse(QXmlStreamReader &xml)
+void GetBotChannelAssociationsResponsePrivate::parseGetBotChannelAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBotChannelAssociationsResponse"));
     /// @todo

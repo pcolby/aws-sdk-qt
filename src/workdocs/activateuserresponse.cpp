@@ -96,7 +96,7 @@ ActivateUserResponsePrivate::ActivateUserResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ActivateUserResponsePrivate::ActivateUserResponse(QXmlStreamReader &xml)
+void ActivateUserResponsePrivate::parseActivateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ActivateUserResponse"));
     /// @todo

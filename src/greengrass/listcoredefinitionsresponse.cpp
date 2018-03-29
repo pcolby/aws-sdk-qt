@@ -96,7 +96,7 @@ ListCoreDefinitionsResponsePrivate::ListCoreDefinitionsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListCoreDefinitionsResponsePrivate::ListCoreDefinitionsResponse(QXmlStreamReader &xml)
+void ListCoreDefinitionsResponsePrivate::parseListCoreDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCoreDefinitionsResponse"));
     /// @todo

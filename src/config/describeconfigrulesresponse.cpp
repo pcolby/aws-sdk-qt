@@ -96,7 +96,7 @@ DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponse(QXmlStreamReader &xml)
+void DescribeConfigRulesResponsePrivate::parseDescribeConfigRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigRulesResponse"));
     /// @todo

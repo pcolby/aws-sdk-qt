@@ -96,7 +96,7 @@ CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponse(QXmlStreamReader &xml)
+void CloneReceiptRuleSetResponsePrivate::parseCloneReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CloneReceiptRuleSetResponse"));
     /// @todo

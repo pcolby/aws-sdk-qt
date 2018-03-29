@@ -96,7 +96,7 @@ TestDNSAnswerResponsePrivate::TestDNSAnswerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void TestDNSAnswerResponsePrivate::TestDNSAnswerResponse(QXmlStreamReader &xml)
+void TestDNSAnswerResponsePrivate::parseTestDNSAnswerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestDNSAnswerResponse"));
     /// @todo

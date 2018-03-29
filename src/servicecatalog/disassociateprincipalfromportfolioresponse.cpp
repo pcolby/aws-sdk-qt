@@ -96,7 +96,7 @@ DisassociatePrincipalFromPortfolioResponsePrivate::DisassociatePrincipalFromPort
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociatePrincipalFromPortfolioResponsePrivate::DisassociatePrincipalFromPortfolioResponse(QXmlStreamReader &xml)
+void DisassociatePrincipalFromPortfolioResponsePrivate::parseDisassociatePrincipalFromPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociatePrincipalFromPortfolioResponse"));
     /// @todo

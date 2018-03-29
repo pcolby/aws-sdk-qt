@@ -96,7 +96,7 @@ DescribeExecutionResponsePrivate::DescribeExecutionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeExecutionResponsePrivate::DescribeExecutionResponse(QXmlStreamReader &xml)
+void DescribeExecutionResponsePrivate::parseDescribeExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeExecutionResponse"));
     /// @todo

@@ -96,7 +96,7 @@ AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AddCustomAttributesResponsePrivate::AddCustomAttributesResponse(QXmlStreamReader &xml)
+void AddCustomAttributesResponsePrivate::parseAddCustomAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddCustomAttributesResponse"));
     /// @todo

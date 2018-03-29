@@ -96,7 +96,7 @@ ListJobsByStatusResponsePrivate::ListJobsByStatusResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListJobsByStatusResponsePrivate::ListJobsByStatusResponse(QXmlStreamReader &xml)
+void ListJobsByStatusResponsePrivate::parseListJobsByStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobsByStatusResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateIndexingConfigurationResponsePrivate::UpdateIndexingConfigurationResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateIndexingConfigurationResponsePrivate::UpdateIndexingConfigurationResponse(QXmlStreamReader &xml)
+void UpdateIndexingConfigurationResponsePrivate::parseUpdateIndexingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateIndexingConfigurationResponse"));
     /// @todo

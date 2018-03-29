@@ -96,7 +96,7 @@ CreateClassifierResponsePrivate::CreateClassifierResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateClassifierResponsePrivate::CreateClassifierResponse(QXmlStreamReader &xml)
+void CreateClassifierResponsePrivate::parseCreateClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClassifierResponse"));
     /// @todo

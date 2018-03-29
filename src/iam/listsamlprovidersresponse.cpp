@@ -96,7 +96,7 @@ ListSAMLProvidersResponsePrivate::ListSAMLProvidersResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListSAMLProvidersResponsePrivate::ListSAMLProvidersResponse(QXmlStreamReader &xml)
+void ListSAMLProvidersResponsePrivate::parseListSAMLProvidersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSAMLProvidersResponse"));
     /// @todo

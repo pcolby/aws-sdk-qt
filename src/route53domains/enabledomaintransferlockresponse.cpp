@@ -96,7 +96,7 @@ EnableDomainTransferLockResponsePrivate::EnableDomainTransferLockResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void EnableDomainTransferLockResponsePrivate::EnableDomainTransferLockResponse(QXmlStreamReader &xml)
+void EnableDomainTransferLockResponsePrivate::parseEnableDomainTransferLockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableDomainTransferLockResponse"));
     /// @todo

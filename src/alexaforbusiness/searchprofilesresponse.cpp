@@ -96,7 +96,7 @@ SearchProfilesResponsePrivate::SearchProfilesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void SearchProfilesResponsePrivate::SearchProfilesResponse(QXmlStreamReader &xml)
+void SearchProfilesResponsePrivate::parseSearchProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchProfilesResponse"));
     /// @todo

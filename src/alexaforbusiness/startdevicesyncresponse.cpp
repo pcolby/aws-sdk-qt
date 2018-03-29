@@ -96,7 +96,7 @@ StartDeviceSyncResponsePrivate::StartDeviceSyncResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StartDeviceSyncResponsePrivate::StartDeviceSyncResponse(QXmlStreamReader &xml)
+void StartDeviceSyncResponsePrivate::parseStartDeviceSyncResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartDeviceSyncResponse"));
     /// @todo

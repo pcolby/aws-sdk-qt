@@ -96,7 +96,7 @@ GetCognitoEventsResponsePrivate::GetCognitoEventsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetCognitoEventsResponsePrivate::GetCognitoEventsResponse(QXmlStreamReader &xml)
+void GetCognitoEventsResponsePrivate::parseGetCognitoEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCognitoEventsResponse"));
     /// @todo

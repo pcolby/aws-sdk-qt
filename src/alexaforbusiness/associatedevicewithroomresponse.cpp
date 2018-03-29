@@ -96,7 +96,7 @@ AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponse(QXmlStreamReader &xml)
+void AssociateDeviceWithRoomResponsePrivate::parseAssociateDeviceWithRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDeviceWithRoomResponse"));
     /// @todo

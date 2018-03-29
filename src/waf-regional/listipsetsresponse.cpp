@@ -96,7 +96,7 @@ ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListIPSetsResponsePrivate::ListIPSetsResponse(QXmlStreamReader &xml)
+void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIPSetsResponse"));
     /// @todo

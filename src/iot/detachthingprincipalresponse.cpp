@@ -96,7 +96,7 @@ DetachThingPrincipalResponsePrivate::DetachThingPrincipalResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DetachThingPrincipalResponsePrivate::DetachThingPrincipalResponse(QXmlStreamReader &xml)
+void DetachThingPrincipalResponsePrivate::parseDetachThingPrincipalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachThingPrincipalResponse"));
     /// @todo

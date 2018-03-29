@@ -96,7 +96,7 @@ DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponse(QXmlStreamReader &xml)
+void DeleteParameterGroupResponsePrivate::parseDeleteParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteParameterGroupResponse"));
     /// @todo

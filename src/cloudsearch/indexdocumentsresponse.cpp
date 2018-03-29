@@ -96,7 +96,7 @@ IndexDocumentsResponsePrivate::IndexDocumentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void IndexDocumentsResponsePrivate::IndexDocumentsResponse(QXmlStreamReader &xml)
+void IndexDocumentsResponsePrivate::parseIndexDocumentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IndexDocumentsResponse"));
     /// @todo

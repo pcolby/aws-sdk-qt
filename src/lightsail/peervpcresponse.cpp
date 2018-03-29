@@ -96,7 +96,7 @@ PeerVpcResponsePrivate::PeerVpcResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PeerVpcResponsePrivate::PeerVpcResponse(QXmlStreamReader &xml)
+void PeerVpcResponsePrivate::parsePeerVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PeerVpcResponse"));
     /// @todo

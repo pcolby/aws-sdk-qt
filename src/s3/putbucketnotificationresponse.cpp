@@ -96,7 +96,7 @@ PutBucketNotificationResponsePrivate::PutBucketNotificationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void PutBucketNotificationResponsePrivate::PutBucketNotificationResponse(QXmlStreamReader &xml)
+void PutBucketNotificationResponsePrivate::parsePutBucketNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketNotificationResponse"));
     /// @todo

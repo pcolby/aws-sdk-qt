@@ -96,7 +96,7 @@ DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponse(QXmlStreamReader &xml)
+void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRateBasedRuleResponse"));
     /// @todo

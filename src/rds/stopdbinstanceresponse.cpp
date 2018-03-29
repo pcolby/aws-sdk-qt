@@ -96,7 +96,7 @@ StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void StopDBInstanceResponsePrivate::StopDBInstanceResponse(QXmlStreamReader &xml)
+void StopDBInstanceResponsePrivate::parseStopDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDBInstanceResponse"));
     /// @todo

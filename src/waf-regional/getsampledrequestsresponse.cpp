@@ -96,7 +96,7 @@ GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetSampledRequestsResponsePrivate::GetSampledRequestsResponse(QXmlStreamReader &xml)
+void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSampledRequestsResponse"));
     /// @todo

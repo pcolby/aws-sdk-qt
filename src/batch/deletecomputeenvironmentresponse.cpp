@@ -96,7 +96,7 @@ DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponse(QXmlStreamReader &xml)
+void DeleteComputeEnvironmentResponsePrivate::parseDeleteComputeEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteComputeEnvironmentResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListPullRequestsResponsePrivate::ListPullRequestsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListPullRequestsResponsePrivate::ListPullRequestsResponse(QXmlStreamReader &xml)
+void ListPullRequestsResponsePrivate::parseListPullRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPullRequestsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateInterconnectResponsePrivate::CreateInterconnectResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateInterconnectResponsePrivate::CreateInterconnectResponse(QXmlStreamReader &xml)
+void CreateInterconnectResponsePrivate::parseCreateInterconnectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInterconnectResponse"));
     /// @todo

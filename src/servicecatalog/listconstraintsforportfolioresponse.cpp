@@ -96,7 +96,7 @@ ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponse(QXmlStreamReader &xml)
+void ListConstraintsForPortfolioResponsePrivate::parseListConstraintsForPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConstraintsForPortfolioResponse"));
     /// @todo

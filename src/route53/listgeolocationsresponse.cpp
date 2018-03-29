@@ -96,7 +96,7 @@ ListGeoLocationsResponsePrivate::ListGeoLocationsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListGeoLocationsResponsePrivate::ListGeoLocationsResponse(QXmlStreamReader &xml)
+void ListGeoLocationsResponsePrivate::parseListGeoLocationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGeoLocationsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponse(QXmlStreamReader &xml)
+void DeleteAuthorizerResponsePrivate::parseDeleteAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAuthorizerResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponse(QXmlStreamReader &xml)
+void DescribeInstanceHealthResponsePrivate::parseDescribeInstanceHealthResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceHealthResponse"));
     /// @todo

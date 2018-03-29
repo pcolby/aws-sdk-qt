@@ -96,7 +96,7 @@ UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponse(QXmlStreamReader &xml)
+void UpdateRuntimeConfigurationResponsePrivate::parseUpdateRuntimeConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRuntimeConfigurationResponse"));
     /// @todo

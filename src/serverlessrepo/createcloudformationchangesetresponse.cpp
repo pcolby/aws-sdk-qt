@@ -96,7 +96,7 @@ CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetRespo
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetResponse(QXmlStreamReader &xml)
+void CreateCloudFormationChangeSetResponsePrivate::parseCreateCloudFormationChangeSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCloudFormationChangeSetResponse"));
     /// @todo

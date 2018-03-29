@@ -96,7 +96,7 @@ GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetNamespaceResponsePrivate::GetNamespaceResponse(QXmlStreamReader &xml)
+void GetNamespaceResponsePrivate::parseGetNamespaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetNamespaceResponse"));
     /// @todo

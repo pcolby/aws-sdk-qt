@@ -96,7 +96,7 @@ UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponse(QXmlStreamReader &xml)
+void UpdateSkillGroupResponsePrivate::parseUpdateSkillGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSkillGroupResponse"));
     /// @todo

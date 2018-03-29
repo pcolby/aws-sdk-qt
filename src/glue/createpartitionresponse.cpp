@@ -96,7 +96,7 @@ CreatePartitionResponsePrivate::CreatePartitionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreatePartitionResponsePrivate::CreatePartitionResponse(QXmlStreamReader &xml)
+void CreatePartitionResponsePrivate::parseCreatePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePartitionResponse"));
     /// @todo

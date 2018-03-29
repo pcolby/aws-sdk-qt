@@ -96,7 +96,7 @@ DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponse(QXmlStreamReader &xml)
+void DeleteInputSecurityGroupResponsePrivate::parseDeleteInputSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInputSecurityGroupResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfig
  *
  * @param  xml  XML stream to parse.
  */
-void DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml)
+void DisassociateConfigurationItemsFromApplicationResponsePrivate::parseDisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConfigurationItemsFromApplicationResponse"));
     /// @todo

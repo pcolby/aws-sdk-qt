@@ -96,7 +96,7 @@ DeleteAssessmentRunResponsePrivate::DeleteAssessmentRunResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteAssessmentRunResponsePrivate::DeleteAssessmentRunResponse(QXmlStreamReader &xml)
+void DeleteAssessmentRunResponsePrivate::parseDeleteAssessmentRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAssessmentRunResponse"));
     /// @todo

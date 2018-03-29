@@ -96,7 +96,7 @@ ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponse(QXmlStreamReader &xml)
+void ListPlatformApplicationsResponsePrivate::parseListPlatformApplicationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPlatformApplicationsResponse"));
     /// @todo

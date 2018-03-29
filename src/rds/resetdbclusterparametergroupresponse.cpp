@@ -96,7 +96,7 @@ ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupRespons
  *
  * @param  xml  XML stream to parse.
  */
-void ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+void ResetDBClusterParameterGroupResponsePrivate::parseResetDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetDBClusterParameterGroupResponse"));
     /// @todo

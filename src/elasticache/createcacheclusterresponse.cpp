@@ -96,7 +96,7 @@ CreateCacheClusterResponsePrivate::CreateCacheClusterResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateCacheClusterResponsePrivate::CreateCacheClusterResponse(QXmlStreamReader &xml)
+void CreateCacheClusterResponsePrivate::parseCreateCacheClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCacheClusterResponse"));
     /// @todo

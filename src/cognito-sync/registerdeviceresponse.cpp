@@ -96,7 +96,7 @@ RegisterDeviceResponsePrivate::RegisterDeviceResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RegisterDeviceResponsePrivate::RegisterDeviceResponse(QXmlStreamReader &xml)
+void RegisterDeviceResponsePrivate::parseRegisterDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterDeviceResponse"));
     /// @todo

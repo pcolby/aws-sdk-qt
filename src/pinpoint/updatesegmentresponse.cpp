@@ -96,7 +96,7 @@ UpdateSegmentResponsePrivate::UpdateSegmentResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSegmentResponsePrivate::UpdateSegmentResponse(QXmlStreamReader &xml)
+void UpdateSegmentResponsePrivate::parseUpdateSegmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSegmentResponse"));
     /// @todo

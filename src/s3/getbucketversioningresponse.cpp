@@ -96,7 +96,7 @@ GetBucketVersioningResponsePrivate::GetBucketVersioningResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetBucketVersioningResponsePrivate::GetBucketVersioningResponse(QXmlStreamReader &xml)
+void GetBucketVersioningResponsePrivate::parseGetBucketVersioningResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketVersioningResponse"));
     /// @todo

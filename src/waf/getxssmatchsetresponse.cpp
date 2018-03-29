@@ -96,7 +96,7 @@ GetXssMatchSetResponsePrivate::GetXssMatchSetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetXssMatchSetResponsePrivate::GetXssMatchSetResponse(QXmlStreamReader &xml)
+void GetXssMatchSetResponsePrivate::parseGetXssMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetXssMatchSetResponse"));
     /// @todo

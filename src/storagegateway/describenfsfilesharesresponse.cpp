@@ -96,7 +96,7 @@ DescribeNFSFileSharesResponsePrivate::DescribeNFSFileSharesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeNFSFileSharesResponsePrivate::DescribeNFSFileSharesResponse(QXmlStreamReader &xml)
+void DescribeNFSFileSharesResponsePrivate::parseDescribeNFSFileSharesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNFSFileSharesResponse"));
     /// @todo

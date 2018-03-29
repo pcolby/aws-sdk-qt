@@ -96,7 +96,7 @@ GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponsePriva
  *
  * @param  xml  XML stream to parse.
  */
-void GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponse(QXmlStreamReader &xml)
+void GetCredentialsForIdentityResponsePrivate::parseGetCredentialsForIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCredentialsForIdentityResponse"));
     /// @todo

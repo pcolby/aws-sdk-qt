@@ -96,7 +96,7 @@ AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponseP
  *
  * @param  xml  XML stream to parse.
  */
-void AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponse(QXmlStreamReader &xml)
+void AdminRespondToAuthChallengeResponsePrivate::parseAdminRespondToAuthChallengeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminRespondToAuthChallengeResponse"));
     /// @todo

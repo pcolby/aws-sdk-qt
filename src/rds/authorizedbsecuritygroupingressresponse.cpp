@@ -96,7 +96,7 @@ AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressR
  *
  * @param  xml  XML stream to parse.
  */
-void AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
+void AuthorizeDBSecurityGroupIngressResponsePrivate::parseAuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeDBSecurityGroupIngressResponse"));
     /// @todo

@@ -96,7 +96,7 @@ CreateMountTargetResponsePrivate::CreateMountTargetResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CreateMountTargetResponsePrivate::CreateMountTargetResponse(QXmlStreamReader &xml)
+void CreateMountTargetResponsePrivate::parseCreateMountTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMountTargetResponse"));
     /// @todo

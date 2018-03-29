@@ -96,7 +96,7 @@ ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponse(QXmlStreamReader &xml)
+void ListComplianceSummariesResponsePrivate::parseListComplianceSummariesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListComplianceSummariesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void EnableVolumeIOResponsePrivate::EnableVolumeIOResponse(QXmlStreamReader &xml)
+void EnableVolumeIOResponsePrivate::parseEnableVolumeIOResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableVolumeIOResponse"));
     /// @todo

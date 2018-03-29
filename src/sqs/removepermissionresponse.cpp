@@ -96,7 +96,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void RemovePermissionResponsePrivate::RemovePermissionResponse(QXmlStreamReader &xml)
+void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemovePermissionResponse"));
     /// @todo

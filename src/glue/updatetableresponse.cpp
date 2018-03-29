@@ -96,7 +96,7 @@ UpdateTableResponsePrivate::UpdateTableResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTableResponsePrivate::UpdateTableResponse(QXmlStreamReader &xml)
+void UpdateTableResponsePrivate::parseUpdateTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTableResponse"));
     /// @todo

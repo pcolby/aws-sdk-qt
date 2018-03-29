@@ -96,7 +96,7 @@ UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePri
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
+void UpdateSqlInjectionMatchSetResponsePrivate::parseUpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSqlInjectionMatchSetResponse"));
     /// @todo

@@ -96,7 +96,7 @@ ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListFragmentsResponsePrivate::ListFragmentsResponse(QXmlStreamReader &xml)
+void ListFragmentsResponsePrivate::parseListFragmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFragmentsResponse"));
     /// @todo

@@ -96,7 +96,7 @@ UpdateTagOptionResponsePrivate::UpdateTagOptionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateTagOptionResponsePrivate::UpdateTagOptionResponse(QXmlStreamReader &xml)
+void UpdateTagOptionResponsePrivate::parseUpdateTagOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTagOptionResponse"));
     /// @todo

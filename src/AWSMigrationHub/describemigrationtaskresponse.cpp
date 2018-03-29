@@ -96,7 +96,7 @@ DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponse(QXmlStreamReader &xml)
+void DescribeMigrationTaskResponsePrivate::parseDescribeMigrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMigrationTaskResponse"));
     /// @todo

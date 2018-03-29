@@ -96,7 +96,7 @@ UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAcces
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
+void UpdateCloudFrontOriginAccessIdentityResponsePrivate::parseUpdateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCloudFrontOriginAccessIdentityResponse"));
     /// @todo

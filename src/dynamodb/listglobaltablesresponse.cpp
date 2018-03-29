@@ -96,7 +96,7 @@ ListGlobalTablesResponsePrivate::ListGlobalTablesResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListGlobalTablesResponsePrivate::ListGlobalTablesResponse(QXmlStreamReader &xml)
+void ListGlobalTablesResponsePrivate::parseListGlobalTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGlobalTablesResponse"));
     /// @todo

@@ -96,7 +96,7 @@ DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponse(QXmlStreamReader &xml)
+void DeleteBaiduChannelResponsePrivate::parseDeleteBaiduChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBaiduChannelResponse"));
     /// @todo

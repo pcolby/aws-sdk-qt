@@ -96,7 +96,7 @@ DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesRespons
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesResponse(QXmlStreamReader &xml)
+void DescribeScalingPlanResourcesResponsePrivate::parseDescribeScalingPlanResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPlanResourcesResponse"));
     /// @todo

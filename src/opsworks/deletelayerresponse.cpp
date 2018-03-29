@@ -96,7 +96,7 @@ DeleteLayerResponsePrivate::DeleteLayerResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void DeleteLayerResponsePrivate::DeleteLayerResponse(QXmlStreamReader &xml)
+void DeleteLayerResponsePrivate::parseDeleteLayerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLayerResponse"));
     /// @todo

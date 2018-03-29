@@ -96,7 +96,7 @@ AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponse(QXmlStreamReader &xml)
+void AttachThingPrincipalResponsePrivate::parseAttachThingPrincipalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachThingPrincipalResponse"));
     /// @todo

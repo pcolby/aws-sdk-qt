@@ -96,7 +96,7 @@ UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProvide
  *
  * @param  xml  XML stream to parse.
  */
-void UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProviderThumbprintResponse(QXmlStreamReader &xml)
+void UpdateOpenIDConnectProviderThumbprintResponsePrivate::parseUpdateOpenIDConnectProviderThumbprintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateOpenIDConnectProviderThumbprintResponse"));
     /// @todo

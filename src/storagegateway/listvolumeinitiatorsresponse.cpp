@@ -96,7 +96,7 @@ ListVolumeInitiatorsResponsePrivate::ListVolumeInitiatorsResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void ListVolumeInitiatorsResponsePrivate::ListVolumeInitiatorsResponse(QXmlStreamReader &xml)
+void ListVolumeInitiatorsResponsePrivate::parseListVolumeInitiatorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVolumeInitiatorsResponse"));
     /// @todo

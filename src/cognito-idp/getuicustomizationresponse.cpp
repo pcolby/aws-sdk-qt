@@ -96,7 +96,7 @@ GetUICustomizationResponsePrivate::GetUICustomizationResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetUICustomizationResponsePrivate::GetUICustomizationResponse(QXmlStreamReader &xml)
+void GetUICustomizationResponsePrivate::parseGetUICustomizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUICustomizationResponse"));
     /// @todo

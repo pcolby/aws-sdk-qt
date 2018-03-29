@@ -96,7 +96,7 @@ DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponsePrivate
  *
  * @param  xml  XML stream to parse.
  */
-void DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponse(QXmlStreamReader &xml)
+void DescribeAffectedEntitiesResponsePrivate::parseDescribeAffectedEntitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAffectedEntitiesResponse"));
     /// @todo

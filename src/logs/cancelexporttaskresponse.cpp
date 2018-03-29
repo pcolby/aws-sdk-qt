@@ -96,7 +96,7 @@ CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void CancelExportTaskResponsePrivate::CancelExportTaskResponse(QXmlStreamReader &xml)
+void CancelExportTaskResponsePrivate::parseCancelExportTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelExportTaskResponse"));
     /// @todo

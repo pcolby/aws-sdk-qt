@@ -96,7 +96,7 @@ GetRemoteAccessSessionResponsePrivate::GetRemoteAccessSessionResponsePrivate(
  *
  * @param  xml  XML stream to parse.
  */
-void GetRemoteAccessSessionResponsePrivate::GetRemoteAccessSessionResponse(QXmlStreamReader &xml)
+void GetRemoteAccessSessionResponsePrivate::parseGetRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRemoteAccessSessionResponse"));
     /// @todo
