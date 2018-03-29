@@ -21,6 +21,20 @@
 #include "firehoseclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createdeliverystreamrequest.h"
+#include "createdeliverystreamresponse.h"
+#include "deletedeliverystreamrequest.h"
+#include "deletedeliverystreamresponse.h"
+#include "describedeliverystreamrequest.h"
+#include "describedeliverystreamresponse.h"
+#include "listdeliverystreamsrequest.h"
+#include "listdeliverystreamsresponse.h"
+#include "putrecordrequest.h"
+#include "putrecordresponse.h"
+#include "putrecordbatchrequest.h"
+#include "putrecordbatchresponse.h"
+#include "updatedestinationrequest.h"
+#include "updatedestinationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

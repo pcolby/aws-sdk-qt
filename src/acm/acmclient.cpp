@@ -21,6 +21,28 @@
 #include "acmclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "addtagstocertificaterequest.h"
+#include "addtagstocertificateresponse.h"
+#include "deletecertificaterequest.h"
+#include "deletecertificateresponse.h"
+#include "describecertificaterequest.h"
+#include "describecertificateresponse.h"
+#include "getcertificaterequest.h"
+#include "getcertificateresponse.h"
+#include "importcertificaterequest.h"
+#include "importcertificateresponse.h"
+#include "listcertificatesrequest.h"
+#include "listcertificatesresponse.h"
+#include "listtagsforcertificaterequest.h"
+#include "listtagsforcertificateresponse.h"
+#include "removetagsfromcertificaterequest.h"
+#include "removetagsfromcertificateresponse.h"
+#include "requestcertificaterequest.h"
+#include "requestcertificateresponse.h"
+#include "resendvalidationemailrequest.h"
+#include "resendvalidationemailresponse.h"
+#include "updatecertificateoptionsrequest.h"
+#include "updatecertificateoptionsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

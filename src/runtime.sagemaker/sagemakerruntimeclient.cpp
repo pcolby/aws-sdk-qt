@@ -21,6 +21,8 @@
 #include "sagemakerruntimeclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "invokeendpointrequest.h"
+#include "invokeendpointresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

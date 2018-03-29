@@ -21,6 +21,26 @@
 #include "mediastoreclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createcontainerrequest.h"
+#include "createcontainerresponse.h"
+#include "deletecontainerrequest.h"
+#include "deletecontainerresponse.h"
+#include "deletecontainerpolicyrequest.h"
+#include "deletecontainerpolicyresponse.h"
+#include "deletecorspolicyrequest.h"
+#include "deletecorspolicyresponse.h"
+#include "describecontainerrequest.h"
+#include "describecontainerresponse.h"
+#include "getcontainerpolicyrequest.h"
+#include "getcontainerpolicyresponse.h"
+#include "getcorspolicyrequest.h"
+#include "getcorspolicyresponse.h"
+#include "listcontainersrequest.h"
+#include "listcontainersresponse.h"
+#include "putcontainerpolicyrequest.h"
+#include "putcontainerpolicyresponse.h"
+#include "putcorspolicyrequest.h"
+#include "putcorspolicyresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

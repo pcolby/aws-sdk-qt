@@ -21,6 +21,8 @@
 #include "kinesisvideomediaclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "getmediarequest.h"
+#include "getmediaresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

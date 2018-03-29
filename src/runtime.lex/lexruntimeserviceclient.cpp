@@ -21,6 +21,10 @@
 #include "lexruntimeserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "postcontentrequest.h"
+#include "postcontentresponse.h"
+#include "posttextrequest.h"
+#include "posttextresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

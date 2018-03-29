@@ -21,6 +21,28 @@
 #include "smsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createreplicationjobrequest.h"
+#include "createreplicationjobresponse.h"
+#include "deletereplicationjobrequest.h"
+#include "deletereplicationjobresponse.h"
+#include "deleteservercatalogrequest.h"
+#include "deleteservercatalogresponse.h"
+#include "disassociateconnectorrequest.h"
+#include "disassociateconnectorresponse.h"
+#include "getconnectorsrequest.h"
+#include "getconnectorsresponse.h"
+#include "getreplicationjobsrequest.h"
+#include "getreplicationjobsresponse.h"
+#include "getreplicationrunsrequest.h"
+#include "getreplicationrunsresponse.h"
+#include "getserversrequest.h"
+#include "getserversresponse.h"
+#include "importservercatalogrequest.h"
+#include "importservercatalogresponse.h"
+#include "startondemandreplicationrunrequest.h"
+#include "startondemandreplicationrunresponse.h"
+#include "updatereplicationjobrequest.h"
+#include "updatereplicationjobresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

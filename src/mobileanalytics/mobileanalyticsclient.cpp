@@ -21,6 +21,8 @@
 #include "mobileanalyticsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "puteventsrequest.h"
+#include "puteventsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

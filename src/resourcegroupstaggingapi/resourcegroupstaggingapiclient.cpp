@@ -21,6 +21,16 @@
 #include "resourcegroupstaggingapiclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "getresourcesrequest.h"
+#include "getresourcesresponse.h"
+#include "gettagkeysrequest.h"
+#include "gettagkeysresponse.h"
+#include "gettagvaluesrequest.h"
+#include "gettagvaluesresponse.h"
+#include "tagresourcesrequest.h"
+#include "tagresourcesresponse.h"
+#include "untagresourcesrequest.h"
+#include "untagresourcesresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

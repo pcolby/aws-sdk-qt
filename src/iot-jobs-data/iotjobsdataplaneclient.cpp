@@ -21,6 +21,14 @@
 #include "iotjobsdataplaneclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "describejobexecutionrequest.h"
+#include "describejobexecutionresponse.h"
+#include "getpendingjobexecutionsrequest.h"
+#include "getpendingjobexecutionsresponse.h"
+#include "startnextpendingjobexecutionrequest.h"
+#include "startnextpendingjobexecutionresponse.h"
+#include "updatejobexecutionrequest.h"
+#include "updatejobexecutionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

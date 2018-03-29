@@ -21,6 +21,18 @@
 #include "importexportclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "canceljobrequest.h"
+#include "canceljobresponse.h"
+#include "createjobrequest.h"
+#include "createjobresponse.h"
+#include "getshippinglabelrequest.h"
+#include "getshippinglabelresponse.h"
+#include "getstatusrequest.h"
+#include "getstatusresponse.h"
+#include "listjobsrequest.h"
+#include "listjobsresponse.h"
+#include "updatejobrequest.h"
+#include "updatejobresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

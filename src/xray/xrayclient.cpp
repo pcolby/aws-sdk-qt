@@ -21,6 +21,18 @@
 #include "xrayclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchgettracesrequest.h"
+#include "batchgettracesresponse.h"
+#include "getservicegraphrequest.h"
+#include "getservicegraphresponse.h"
+#include "gettracegraphrequest.h"
+#include "gettracegraphresponse.h"
+#include "gettracesummariesrequest.h"
+#include "gettracesummariesresponse.h"
+#include "puttelemetryrecordsrequest.h"
+#include "puttelemetryrecordsresponse.h"
+#include "puttracesegmentsrequest.h"
+#include "puttracesegmentsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -21,6 +21,26 @@
 #include "serverlessapplicationrepositoryclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createapplicationrequest.h"
+#include "createapplicationresponse.h"
+#include "createapplicationversionrequest.h"
+#include "createapplicationversionresponse.h"
+#include "createcloudformationchangesetrequest.h"
+#include "createcloudformationchangesetresponse.h"
+#include "deleteapplicationrequest.h"
+#include "deleteapplicationresponse.h"
+#include "getapplicationrequest.h"
+#include "getapplicationresponse.h"
+#include "getapplicationpolicyrequest.h"
+#include "getapplicationpolicyresponse.h"
+#include "listapplicationversionsrequest.h"
+#include "listapplicationversionsresponse.h"
+#include "listapplicationsrequest.h"
+#include "listapplicationsresponse.h"
+#include "putapplicationpolicyrequest.h"
+#include "putapplicationpolicyresponse.h"
+#include "updateapplicationrequest.h"
+#include "updateapplicationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

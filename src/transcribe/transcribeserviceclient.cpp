@@ -21,6 +21,12 @@
 #include "transcribeserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "gettranscriptionjobrequest.h"
+#include "gettranscriptionjobresponse.h"
+#include "listtranscriptionjobsrequest.h"
+#include "listtranscriptionjobsresponse.h"
+#include "starttranscriptionjobrequest.h"
+#include "starttranscriptionjobresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -21,6 +21,12 @@
 #include "cloudsearchdomainclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "searchrequest.h"
+#include "searchresponse.h"
+#include "suggestrequest.h"
+#include "suggestresponse.h"
+#include "uploaddocumentsrequest.h"
+#include "uploaddocumentsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

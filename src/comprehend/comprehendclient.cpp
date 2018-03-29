@@ -21,6 +21,28 @@
 #include "comprehendclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchdetectdominantlanguagerequest.h"
+#include "batchdetectdominantlanguageresponse.h"
+#include "batchdetectentitiesrequest.h"
+#include "batchdetectentitiesresponse.h"
+#include "batchdetectkeyphrasesrequest.h"
+#include "batchdetectkeyphrasesresponse.h"
+#include "batchdetectsentimentrequest.h"
+#include "batchdetectsentimentresponse.h"
+#include "describetopicsdetectionjobrequest.h"
+#include "describetopicsdetectionjobresponse.h"
+#include "detectdominantlanguagerequest.h"
+#include "detectdominantlanguageresponse.h"
+#include "detectentitiesrequest.h"
+#include "detectentitiesresponse.h"
+#include "detectkeyphrasesrequest.h"
+#include "detectkeyphrasesresponse.h"
+#include "detectsentimentrequest.h"
+#include "detectsentimentresponse.h"
+#include "listtopicsdetectionjobsrequest.h"
+#include "listtopicsdetectionjobsresponse.h"
+#include "starttopicsdetectionjobrequest.h"
+#include "starttopicsdetectionjobresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

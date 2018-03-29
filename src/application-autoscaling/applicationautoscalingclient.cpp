@@ -21,6 +21,26 @@
 #include "applicationautoscalingclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deletescalingpolicyrequest.h"
+#include "deletescalingpolicyresponse.h"
+#include "deletescheduledactionrequest.h"
+#include "deletescheduledactionresponse.h"
+#include "deregisterscalabletargetrequest.h"
+#include "deregisterscalabletargetresponse.h"
+#include "describescalabletargetsrequest.h"
+#include "describescalabletargetsresponse.h"
+#include "describescalingactivitiesrequest.h"
+#include "describescalingactivitiesresponse.h"
+#include "describescalingpoliciesrequest.h"
+#include "describescalingpoliciesresponse.h"
+#include "describescheduledactionsrequest.h"
+#include "describescheduledactionsresponse.h"
+#include "putscalingpolicyrequest.h"
+#include "putscalingpolicyresponse.h"
+#include "putscheduledactionrequest.h"
+#include "putscheduledactionresponse.h"
+#include "registerscalabletargetrequest.h"
+#include "registerscalabletargetresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

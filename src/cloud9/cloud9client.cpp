@@ -21,6 +21,26 @@
 #include "cloud9client_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createenvironmentec2request.h"
+#include "createenvironmentec2response.h"
+#include "createenvironmentmembershiprequest.h"
+#include "createenvironmentmembershipresponse.h"
+#include "deleteenvironmentrequest.h"
+#include "deleteenvironmentresponse.h"
+#include "deleteenvironmentmembershiprequest.h"
+#include "deleteenvironmentmembershipresponse.h"
+#include "describeenvironmentmembershipsrequest.h"
+#include "describeenvironmentmembershipsresponse.h"
+#include "describeenvironmentstatusrequest.h"
+#include "describeenvironmentstatusresponse.h"
+#include "describeenvironmentsrequest.h"
+#include "describeenvironmentsresponse.h"
+#include "listenvironmentsrequest.h"
+#include "listenvironmentsresponse.h"
+#include "updateenvironmentrequest.h"
+#include "updateenvironmentresponse.h"
+#include "updateenvironmentmembershiprequest.h"
+#include "updateenvironmentmembershipresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

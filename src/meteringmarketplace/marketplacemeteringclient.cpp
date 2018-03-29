@@ -21,6 +21,12 @@
 #include "marketplacemeteringclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchmeterusagerequest.h"
+#include "batchmeterusageresponse.h"
+#include "meterusagerequest.h"
+#include "meterusageresponse.h"
+#include "resolvecustomerrequest.h"
+#include "resolvecustomerresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

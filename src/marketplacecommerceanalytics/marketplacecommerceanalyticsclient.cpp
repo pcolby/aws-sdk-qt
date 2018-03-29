@@ -21,6 +21,10 @@
 #include "marketplacecommerceanalyticsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "generatedatasetrequest.h"
+#include "generatedatasetresponse.h"
+#include "startsupportdataexportrequest.h"
+#include "startsupportdataexportresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -3,6 +3,12 @@
 #include "{{ClassName|lower}}_p.h"
 
 #include "core/awssignaturev4.h"
+{% for name,op in operations.items %}
+{% if op.input.shape %}
+#include "{{name|lower}}request.h"
+{% endif %}
+#include "{{name|lower}}response.h"
+{% endfor %}
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

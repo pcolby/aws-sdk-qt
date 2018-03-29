@@ -21,6 +21,26 @@
 #include "cloudhsmv2client_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createclusterrequest.h"
+#include "createclusterresponse.h"
+#include "createhsmrequest.h"
+#include "createhsmresponse.h"
+#include "deleteclusterrequest.h"
+#include "deleteclusterresponse.h"
+#include "deletehsmrequest.h"
+#include "deletehsmresponse.h"
+#include "describebackupsrequest.h"
+#include "describebackupsresponse.h"
+#include "describeclustersrequest.h"
+#include "describeclustersresponse.h"
+#include "initializeclusterrequest.h"
+#include "initializeclusterresponse.h"
+#include "listtagsrequest.h"
+#include "listtagsresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

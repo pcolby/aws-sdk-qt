@@ -21,6 +21,14 @@
 #include "dynamodbstreamsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "describestreamrequest.h"
+#include "describestreamresponse.h"
+#include "getrecordsrequest.h"
+#include "getrecordsresponse.h"
+#include "getsharditeratorrequest.h"
+#include "getsharditeratorresponse.h"
+#include "liststreamsrequest.h"
+#include "liststreamsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

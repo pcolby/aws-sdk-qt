@@ -21,6 +21,8 @@
 #include "marketplaceentitlementserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "getentitlementsrequest.h"
+#include "getentitlementsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

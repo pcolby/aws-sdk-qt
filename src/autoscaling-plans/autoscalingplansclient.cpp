@@ -21,6 +21,14 @@
 #include "autoscalingplansclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createscalingplanrequest.h"
+#include "createscalingplanresponse.h"
+#include "deletescalingplanrequest.h"
+#include "deletescalingplanresponse.h"
+#include "describescalingplanresourcesrequest.h"
+#include "describescalingplanresourcesresponse.h"
+#include "describescalingplansrequest.h"
+#include "describescalingplansresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -21,6 +21,12 @@
 #include "pricingclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "describeservicesrequest.h"
+#include "describeservicesresponse.h"
+#include "getattributevaluesrequest.h"
+#include "getattributevaluesresponse.h"
+#include "getproductsrequest.h"
+#include "getproductsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

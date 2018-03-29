@@ -21,6 +21,14 @@
 #include "iotdataplaneclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deletethingshadowrequest.h"
+#include "deletethingshadowresponse.h"
+#include "getthingshadowrequest.h"
+#include "getthingshadowresponse.h"
+#include "publishrequest.h"
+#include "publishresponse.h"
+#include "updatethingshadowrequest.h"
+#include "updatethingshadowresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

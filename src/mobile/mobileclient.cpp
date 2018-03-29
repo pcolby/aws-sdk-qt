@@ -21,6 +21,24 @@
 #include "mobileclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createprojectrequest.h"
+#include "createprojectresponse.h"
+#include "deleteprojectrequest.h"
+#include "deleteprojectresponse.h"
+#include "describebundlerequest.h"
+#include "describebundleresponse.h"
+#include "describeprojectrequest.h"
+#include "describeprojectresponse.h"
+#include "exportbundlerequest.h"
+#include "exportbundleresponse.h"
+#include "exportprojectrequest.h"
+#include "exportprojectresponse.h"
+#include "listbundlesrequest.h"
+#include "listbundlesresponse.h"
+#include "listprojectsrequest.h"
+#include "listprojectsresponse.h"
+#include "updateprojectrequest.h"
+#include "updateprojectresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

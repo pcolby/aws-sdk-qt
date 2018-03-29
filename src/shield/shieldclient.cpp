@@ -21,6 +21,26 @@
 #include "shieldclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createprotectionrequest.h"
+#include "createprotectionresponse.h"
+#include "createsubscriptionrequest.h"
+#include "createsubscriptionresponse.h"
+#include "deleteprotectionrequest.h"
+#include "deleteprotectionresponse.h"
+#include "deletesubscriptionrequest.h"
+#include "deletesubscriptionresponse.h"
+#include "describeattackrequest.h"
+#include "describeattackresponse.h"
+#include "describeprotectionrequest.h"
+#include "describeprotectionresponse.h"
+#include "describesubscriptionrequest.h"
+#include "describesubscriptionresponse.h"
+#include "getsubscriptionstaterequest.h"
+#include "getsubscriptionstateresponse.h"
+#include "listattacksrequest.h"
+#include "listattacksresponse.h"
+#include "listprotectionsrequest.h"
+#include "listprotectionsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

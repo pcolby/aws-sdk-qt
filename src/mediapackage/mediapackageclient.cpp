@@ -21,6 +21,28 @@
 #include "mediapackageclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createchannelrequest.h"
+#include "createchannelresponse.h"
+#include "createoriginendpointrequest.h"
+#include "createoriginendpointresponse.h"
+#include "deletechannelrequest.h"
+#include "deletechannelresponse.h"
+#include "deleteoriginendpointrequest.h"
+#include "deleteoriginendpointresponse.h"
+#include "describechannelrequest.h"
+#include "describechannelresponse.h"
+#include "describeoriginendpointrequest.h"
+#include "describeoriginendpointresponse.h"
+#include "listchannelsrequest.h"
+#include "listchannelsresponse.h"
+#include "listoriginendpointsrequest.h"
+#include "listoriginendpointsresponse.h"
+#include "rotatechannelcredentialsrequest.h"
+#include "rotatechannelcredentialsresponse.h"
+#include "updatechannelrequest.h"
+#include "updatechannelresponse.h"
+#include "updateoriginendpointrequest.h"
+#include "updateoriginendpointresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

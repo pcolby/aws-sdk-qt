@@ -21,6 +21,16 @@
 #include "mediastoredataclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deleteobjectrequest.h"
+#include "deleteobjectresponse.h"
+#include "describeobjectrequest.h"
+#include "describeobjectresponse.h"
+#include "getobjectrequest.h"
+#include "getobjectresponse.h"
+#include "listitemsrequest.h"
+#include "listitemsresponse.h"
+#include "putobjectrequest.h"
+#include "putobjectresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

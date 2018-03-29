@@ -21,6 +21,8 @@
 #include "translateclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "translatetextrequest.h"
+#include "translatetextresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

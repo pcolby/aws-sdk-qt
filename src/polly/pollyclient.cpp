@@ -21,6 +21,18 @@
 #include "pollyclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deletelexiconrequest.h"
+#include "deletelexiconresponse.h"
+#include "describevoicesrequest.h"
+#include "describevoicesresponse.h"
+#include "getlexiconrequest.h"
+#include "getlexiconresponse.h"
+#include "listlexiconsrequest.h"
+#include "listlexiconsresponse.h"
+#include "putlexiconrequest.h"
+#include "putlexiconresponse.h"
+#include "synthesizespeechrequest.h"
+#include "synthesizespeechresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

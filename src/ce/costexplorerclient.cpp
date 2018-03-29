@@ -21,6 +21,18 @@
 #include "costexplorerclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "getcostandusagerequest.h"
+#include "getcostandusageresponse.h"
+#include "getdimensionvaluesrequest.h"
+#include "getdimensionvaluesresponse.h"
+#include "getreservationcoveragerequest.h"
+#include "getreservationcoverageresponse.h"
+#include "getreservationpurchaserecommendationrequest.h"
+#include "getreservationpurchaserecommendationresponse.h"
+#include "getreservationutilizationrequest.h"
+#include "getreservationutilizationresponse.h"
+#include "gettagsrequest.h"
+#include "gettagsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -21,6 +21,20 @@
 #include "stsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "assumerolerequest.h"
+#include "assumeroleresponse.h"
+#include "assumerolewithsamlrequest.h"
+#include "assumerolewithsamlresponse.h"
+#include "assumerolewithwebidentityrequest.h"
+#include "assumerolewithwebidentityresponse.h"
+#include "decodeauthorizationmessagerequest.h"
+#include "decodeauthorizationmessageresponse.h"
+#include "getcalleridentityrequest.h"
+#include "getcalleridentityresponse.h"
+#include "getfederationtokenrequest.h"
+#include "getfederationtokenresponse.h"
+#include "getsessiontokenrequest.h"
+#include "getsessiontokenresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

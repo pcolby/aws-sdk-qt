@@ -21,6 +21,12 @@
 #include "costandusagereportserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deletereportdefinitionrequest.h"
+#include "deletereportdefinitionresponse.h"
+#include "describereportdefinitionsrequest.h"
+#include "describereportdefinitionsresponse.h"
+#include "putreportdefinitionrequest.h"
+#include "putreportdefinitionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

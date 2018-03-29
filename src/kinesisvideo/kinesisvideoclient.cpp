@@ -21,6 +21,26 @@
 #include "kinesisvideoclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createstreamrequest.h"
+#include "createstreamresponse.h"
+#include "deletestreamrequest.h"
+#include "deletestreamresponse.h"
+#include "describestreamrequest.h"
+#include "describestreamresponse.h"
+#include "getdataendpointrequest.h"
+#include "getdataendpointresponse.h"
+#include "liststreamsrequest.h"
+#include "liststreamsresponse.h"
+#include "listtagsforstreamrequest.h"
+#include "listtagsforstreamresponse.h"
+#include "tagstreamrequest.h"
+#include "tagstreamresponse.h"
+#include "untagstreamrequest.h"
+#include "untagstreamresponse.h"
+#include "updatedataretentionrequest.h"
+#include "updatedataretentionresponse.h"
+#include "updatestreamrequest.h"
+#include "updatestreamresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

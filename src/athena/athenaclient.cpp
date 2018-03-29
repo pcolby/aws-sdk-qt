@@ -21,6 +21,28 @@
 #include "athenaclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchgetnamedqueryrequest.h"
+#include "batchgetnamedqueryresponse.h"
+#include "batchgetqueryexecutionrequest.h"
+#include "batchgetqueryexecutionresponse.h"
+#include "createnamedqueryrequest.h"
+#include "createnamedqueryresponse.h"
+#include "deletenamedqueryrequest.h"
+#include "deletenamedqueryresponse.h"
+#include "getnamedqueryrequest.h"
+#include "getnamedqueryresponse.h"
+#include "getqueryexecutionrequest.h"
+#include "getqueryexecutionresponse.h"
+#include "getqueryresultsrequest.h"
+#include "getqueryresultsresponse.h"
+#include "listnamedqueriesrequest.h"
+#include "listnamedqueriesresponse.h"
+#include "listqueryexecutionsrequest.h"
+#include "listqueryexecutionsresponse.h"
+#include "startqueryexecutionrequest.h"
+#include "startqueryexecutionresponse.h"
+#include "stopqueryexecutionrequest.h"
+#include "stopqueryexecutionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

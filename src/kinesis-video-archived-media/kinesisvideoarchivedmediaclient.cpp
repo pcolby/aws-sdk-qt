@@ -21,6 +21,10 @@
 #include "kinesisvideoarchivedmediaclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "getmediaforfragmentlistrequest.h"
+#include "getmediaforfragmentlistresponse.h"
+#include "listfragmentsrequest.h"
+#include "listfragmentsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

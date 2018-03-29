@@ -21,6 +21,18 @@
 #include "healthclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "describeaffectedentitiesrequest.h"
+#include "describeaffectedentitiesresponse.h"
+#include "describeentityaggregatesrequest.h"
+#include "describeentityaggregatesresponse.h"
+#include "describeeventaggregatesrequest.h"
+#include "describeeventaggregatesresponse.h"
+#include "describeeventdetailsrequest.h"
+#include "describeeventdetailsresponse.h"
+#include "describeeventtypesrequest.h"
+#include "describeeventtypesresponse.h"
+#include "describeeventsrequest.h"
+#include "describeeventsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

@@ -21,6 +21,28 @@
 #include "efsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createfilesystemrequest.h"
+#include "createfilesystemresponse.h"
+#include "createmounttargetrequest.h"
+#include "createmounttargetresponse.h"
+#include "createtagsrequest.h"
+#include "createtagsresponse.h"
+#include "deletefilesystemrequest.h"
+#include "deletefilesystemresponse.h"
+#include "deletemounttargetrequest.h"
+#include "deletemounttargetresponse.h"
+#include "deletetagsrequest.h"
+#include "deletetagsresponse.h"
+#include "describefilesystemsrequest.h"
+#include "describefilesystemsresponse.h"
+#include "describemounttargetsecuritygroupsrequest.h"
+#include "describemounttargetsecuritygroupsresponse.h"
+#include "describemounttargetsrequest.h"
+#include "describemounttargetsresponse.h"
+#include "describetagsrequest.h"
+#include "describetagsresponse.h"
+#include "modifymounttargetsecuritygroupsrequest.h"
+#include "modifymounttargetsecuritygroupsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

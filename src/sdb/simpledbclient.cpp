@@ -21,6 +21,26 @@
 #include "simpledbclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchdeleteattributesrequest.h"
+#include "batchdeleteattributesresponse.h"
+#include "batchputattributesrequest.h"
+#include "batchputattributesresponse.h"
+#include "createdomainrequest.h"
+#include "createdomainresponse.h"
+#include "deleteattributesrequest.h"
+#include "deleteattributesresponse.h"
+#include "deletedomainrequest.h"
+#include "deletedomainresponse.h"
+#include "domainmetadatarequest.h"
+#include "domainmetadataresponse.h"
+#include "getattributesrequest.h"
+#include "getattributesresponse.h"
+#include "listdomainsrequest.h"
+#include "listdomainsresponse.h"
+#include "putattributesrequest.h"
+#include "putattributesresponse.h"
+#include "selectrequest.h"
+#include "selectresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
