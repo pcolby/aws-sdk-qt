@@ -1,6 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
+    core/core.pro \
     AWSMigrationHub/AWSMigrationHub.pro \
     acm/acm.pro \
     alexaforbusiness/alexaforbusiness.pro \
