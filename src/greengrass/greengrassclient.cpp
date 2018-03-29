@@ -245,7 +245,7 @@ GreengrassClient::GreengrassClient(
 }
 
 /**
- * Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services.
+ * Associates a role with a group. Your AWS Greengrass core will use the role to access AWS cloud services. The role's
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -259,8 +259,8 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
 }
 
 /**
- * Associates a role which is used by AWS Greengrass. AWS Greengrass uses the role to access your Lambda functions and AWS
- * IoT resources. This is necessary for deployments to succeed. It needs to have minimum permissions in policy
+ * Associates a role with your account. AWS Greengrass will use the role to access your Lambda functions and AWS IoT
+ * resources. This is necessary for deployments to succeed. The role must have at least minimum permissions in the policy
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -274,7 +274,8 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
 }
 
 /**
- * Creates a core definition. You may optionally provide the initial version of the core definition or use
+ * Creates a core definition. You may provide the initial version of the core definition now or use
+ * ''CreateCoreDefinitionVersion'' at a later time. AWS Greengrass groups must each contain exactly one AWS Greengrass
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -288,7 +289,7 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
 }
 
 /**
- * Creates a version of a core definition that has already been defined. AWS Greengrass Groups must each contain exactly 1
+ * Creates a version of a core definition that has already been defined. AWS Greengrass groups must each contain exactly
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -315,7 +316,7 @@ CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploy
 }
 
 /**
- * Creates a device definition. You may optinally provide the initial version of the device definition or use
+ * Creates a device definition. You may provide the initial version of the device definition now or use
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -370,7 +371,6 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
 }
 
 /**
- * Creates a group. You may optionally provide the initial version of the group or use ''CreateGroupVersion'' at a later
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -410,7 +410,7 @@ CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGr
 }
 
 /**
- * Creates a logger definition. You may optionally provide the initial version of the logger definition or use
+ * Creates a logger definition. You may provide the initial version of the logger definition now or use
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -464,6 +464,8 @@ CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefini
 }
 
 /**
+ * Creates a software update for a core or group of cores (specified as an IoT thing group.) Use this to update the OTA
+ * Agent as well as the Greengrass core software. It makes use of the IoT Jobs feature which provides additional commands
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -477,7 +479,7 @@ CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(cons
 }
 
 /**
- * Creates a subscription definition. You may optionally provide the initial version of the subscription definition or use
+ * Creates a subscription definition. You may provide the initial version of the subscription definition now or use
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -725,7 +727,7 @@ GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const Ge
 }
 
 /**
- * Retrieves information about a Lambda function definition version, such as which Lambda functions are included in the
+ * Retrieves information about a Lambda function definition version, including which Lambda functions are included in the
  *
  * @param  request Request to send to AWS Greengrass.
  *

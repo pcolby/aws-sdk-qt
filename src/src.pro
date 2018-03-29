@@ -34,6 +34,7 @@ SUBDIRS += \
     cognito-sync/cognito-sync.pro \
     comprehend/comprehend.pro \
     config/config.pro \
+    connect/connect.pro \
     cur/cur.pro \
     datapipeline/datapipeline.pro \
     dax/dax.pro \

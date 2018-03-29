@@ -28,10 +28,22 @@ HEADERS += \
     createdistributionwithtagsrequest_p.h \
     createdistributionwithtagsresponse.h \
     createdistributionwithtagsresponse_p.h \
+    createfieldlevelencryptionconfigrequest.h \
+    createfieldlevelencryptionconfigrequest_p.h \
+    createfieldlevelencryptionconfigresponse.h \
+    createfieldlevelencryptionconfigresponse_p.h \
+    createfieldlevelencryptionprofilerequest.h \
+    createfieldlevelencryptionprofilerequest_p.h \
+    createfieldlevelencryptionprofileresponse.h \
+    createfieldlevelencryptionprofileresponse_p.h \
     createinvalidationrequest.h \
     createinvalidationrequest_p.h \
     createinvalidationresponse.h \
     createinvalidationresponse_p.h \
+    createpublickeyrequest.h \
+    createpublickeyrequest_p.h \
+    createpublickeyresponse.h \
+    createpublickeyresponse_p.h \
     createstreamingdistributionrequest.h \
     createstreamingdistributionrequest_p.h \
     createstreamingdistributionresponse.h \
@@ -48,6 +60,18 @@ HEADERS += \
     deletedistributionrequest_p.h \
     deletedistributionresponse.h \
     deletedistributionresponse_p.h \
+    deletefieldlevelencryptionconfigrequest.h \
+    deletefieldlevelencryptionconfigrequest_p.h \
+    deletefieldlevelencryptionconfigresponse.h \
+    deletefieldlevelencryptionconfigresponse_p.h \
+    deletefieldlevelencryptionprofilerequest.h \
+    deletefieldlevelencryptionprofilerequest_p.h \
+    deletefieldlevelencryptionprofileresponse.h \
+    deletefieldlevelencryptionprofileresponse_p.h \
+    deletepublickeyrequest.h \
+    deletepublickeyrequest_p.h \
+    deletepublickeyresponse.h \
+    deletepublickeyresponse_p.h \
     deleteservicelinkedrolerequest.h \
     deleteservicelinkedrolerequest_p.h \
     deleteservicelinkedroleresponse.h \
@@ -72,10 +96,34 @@ HEADERS += \
     getdistributionrequest_p.h \
     getdistributionresponse.h \
     getdistributionresponse_p.h \
+    getfieldlevelencryptionconfigrequest.h \
+    getfieldlevelencryptionconfigrequest_p.h \
+    getfieldlevelencryptionconfigresponse.h \
+    getfieldlevelencryptionconfigresponse_p.h \
+    getfieldlevelencryptionprofileconfigrequest.h \
+    getfieldlevelencryptionprofileconfigrequest_p.h \
+    getfieldlevelencryptionprofileconfigresponse.h \
+    getfieldlevelencryptionprofileconfigresponse_p.h \
+    getfieldlevelencryptionprofilerequest.h \
+    getfieldlevelencryptionprofilerequest_p.h \
+    getfieldlevelencryptionprofileresponse.h \
+    getfieldlevelencryptionprofileresponse_p.h \
+    getfieldlevelencryptionrequest.h \
+    getfieldlevelencryptionrequest_p.h \
+    getfieldlevelencryptionresponse.h \
+    getfieldlevelencryptionresponse_p.h \
     getinvalidationrequest.h \
     getinvalidationrequest_p.h \
     getinvalidationresponse.h \
     getinvalidationresponse_p.h \
+    getpublickeyconfigrequest.h \
+    getpublickeyconfigrequest_p.h \
+    getpublickeyconfigresponse.h \
+    getpublickeyconfigresponse_p.h \
+    getpublickeyrequest.h \
+    getpublickeyrequest_p.h \
+    getpublickeyresponse.h \
+    getpublickeyresponse_p.h \
     getstreamingdistributionconfigrequest.h \
     getstreamingdistributionconfigrequest_p.h \
     getstreamingdistributionconfigresponse.h \
@@ -96,10 +144,22 @@ HEADERS += \
     listdistributionsrequest_p.h \
     listdistributionsresponse.h \
     listdistributionsresponse_p.h \
+    listfieldlevelencryptionconfigsrequest.h \
+    listfieldlevelencryptionconfigsrequest_p.h \
+    listfieldlevelencryptionconfigsresponse.h \
+    listfieldlevelencryptionconfigsresponse_p.h \
+    listfieldlevelencryptionprofilesrequest.h \
+    listfieldlevelencryptionprofilesrequest_p.h \
+    listfieldlevelencryptionprofilesresponse.h \
+    listfieldlevelencryptionprofilesresponse_p.h \
     listinvalidationsrequest.h \
     listinvalidationsrequest_p.h \
     listinvalidationsresponse.h \
     listinvalidationsresponse_p.h \
+    listpublickeysrequest.h \
+    listpublickeysrequest_p.h \
+    listpublickeysresponse.h \
+    listpublickeysresponse_p.h \
     liststreamingdistributionsrequest.h \
     liststreamingdistributionsrequest_p.h \
     liststreamingdistributionsresponse.h \
@@ -124,6 +184,18 @@ HEADERS += \
     updatedistributionrequest_p.h \
     updatedistributionresponse.h \
     updatedistributionresponse_p.h \
+    updatefieldlevelencryptionconfigrequest.h \
+    updatefieldlevelencryptionconfigrequest_p.h \
+    updatefieldlevelencryptionconfigresponse.h \
+    updatefieldlevelencryptionconfigresponse_p.h \
+    updatefieldlevelencryptionprofilerequest.h \
+    updatefieldlevelencryptionprofilerequest_p.h \
+    updatefieldlevelencryptionprofileresponse.h \
+    updatefieldlevelencryptionprofileresponse_p.h \
+    updatepublickeyrequest.h \
+    updatepublickeyrequest_p.h \
+    updatepublickeyresponse.h \
+    updatepublickeyresponse_p.h \
     updatestreamingdistributionrequest.h \
     updatestreamingdistributionrequest_p.h \
     updatestreamingdistributionresponse.h \
@@ -139,8 +211,14 @@ SOURCES += \
     createdistributionresponse.cpp \
     createdistributionwithtagsrequest.cpp \
     createdistributionwithtagsresponse.cpp \
+    createfieldlevelencryptionconfigrequest.cpp \
+    createfieldlevelencryptionconfigresponse.cpp \
+    createfieldlevelencryptionprofilerequest.cpp \
+    createfieldlevelencryptionprofileresponse.cpp \
     createinvalidationrequest.cpp \
     createinvalidationresponse.cpp \
+    createpublickeyrequest.cpp \
+    createpublickeyresponse.cpp \
     createstreamingdistributionrequest.cpp \
     createstreamingdistributionresponse.cpp \
     createstreamingdistributionwithtagsrequest.cpp \
@@ -149,6 +227,12 @@ SOURCES += \
     deletecloudfrontoriginaccessidentityresponse.cpp \
     deletedistributionrequest.cpp \
     deletedistributionresponse.cpp \
+    deletefieldlevelencryptionconfigrequest.cpp \
+    deletefieldlevelencryptionconfigresponse.cpp \
+    deletefieldlevelencryptionprofilerequest.cpp \
+    deletefieldlevelencryptionprofileresponse.cpp \
+    deletepublickeyrequest.cpp \
+    deletepublickeyresponse.cpp \
     deleteservicelinkedrolerequest.cpp \
     deleteservicelinkedroleresponse.cpp \
     deletestreamingdistributionrequest.cpp \
@@ -161,8 +245,20 @@ SOURCES += \
     getdistributionconfigresponse.cpp \
     getdistributionrequest.cpp \
     getdistributionresponse.cpp \
+    getfieldlevelencryptionconfigrequest.cpp \
+    getfieldlevelencryptionconfigresponse.cpp \
+    getfieldlevelencryptionprofileconfigrequest.cpp \
+    getfieldlevelencryptionprofileconfigresponse.cpp \
+    getfieldlevelencryptionprofilerequest.cpp \
+    getfieldlevelencryptionprofileresponse.cpp \
+    getfieldlevelencryptionrequest.cpp \
+    getfieldlevelencryptionresponse.cpp \
     getinvalidationrequest.cpp \
     getinvalidationresponse.cpp \
+    getpublickeyconfigrequest.cpp \
+    getpublickeyconfigresponse.cpp \
+    getpublickeyrequest.cpp \
+    getpublickeyresponse.cpp \
     getstreamingdistributionconfigrequest.cpp \
     getstreamingdistributionconfigresponse.cpp \
     getstreamingdistributionrequest.cpp \
@@ -173,8 +269,14 @@ SOURCES += \
     listdistributionsbywebaclidresponse.cpp \
     listdistributionsrequest.cpp \
     listdistributionsresponse.cpp \
+    listfieldlevelencryptionconfigsrequest.cpp \
+    listfieldlevelencryptionconfigsresponse.cpp \
+    listfieldlevelencryptionprofilesrequest.cpp \
+    listfieldlevelencryptionprofilesresponse.cpp \
     listinvalidationsrequest.cpp \
     listinvalidationsresponse.cpp \
+    listpublickeysrequest.cpp \
+    listpublickeysresponse.cpp \
     liststreamingdistributionsrequest.cpp \
     liststreamingdistributionsresponse.cpp \
     listtagsforresourcerequest.cpp \
@@ -187,6 +289,12 @@ SOURCES += \
     updatecloudfrontoriginaccessidentityresponse.cpp \
     updatedistributionrequest.cpp \
     updatedistributionresponse.cpp \
+    updatefieldlevelencryptionconfigrequest.cpp \
+    updatefieldlevelencryptionconfigresponse.cpp \
+    updatefieldlevelencryptionprofilerequest.cpp \
+    updatefieldlevelencryptionprofileresponse.cpp \
+    updatepublickeyrequest.cpp \
+    updatepublickeyresponse.cpp \
     updatestreamingdistributionrequest.cpp \
     updatestreamingdistributionresponse.cpp \
 

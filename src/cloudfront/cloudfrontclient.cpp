@@ -27,8 +27,14 @@
 #include "createdistributionresponse.h"
 #include "createdistributionwithtagsrequest.h"
 #include "createdistributionwithtagsresponse.h"
+#include "createfieldlevelencryptionconfigrequest.h"
+#include "createfieldlevelencryptionconfigresponse.h"
+#include "createfieldlevelencryptionprofilerequest.h"
+#include "createfieldlevelencryptionprofileresponse.h"
 #include "createinvalidationrequest.h"
 #include "createinvalidationresponse.h"
+#include "createpublickeyrequest.h"
+#include "createpublickeyresponse.h"
 #include "createstreamingdistributionrequest.h"
 #include "createstreamingdistributionresponse.h"
 #include "createstreamingdistributionwithtagsrequest.h"
@@ -37,6 +43,12 @@
 #include "deletecloudfrontoriginaccessidentityresponse.h"
 #include "deletedistributionrequest.h"
 #include "deletedistributionresponse.h"
+#include "deletefieldlevelencryptionconfigrequest.h"
+#include "deletefieldlevelencryptionconfigresponse.h"
+#include "deletefieldlevelencryptionprofilerequest.h"
+#include "deletefieldlevelencryptionprofileresponse.h"
+#include "deletepublickeyrequest.h"
+#include "deletepublickeyresponse.h"
 #include "deleteservicelinkedrolerequest.h"
 #include "deleteservicelinkedroleresponse.h"
 #include "deletestreamingdistributionrequest.h"
@@ -49,8 +61,20 @@
 #include "getdistributionresponse.h"
 #include "getdistributionconfigrequest.h"
 #include "getdistributionconfigresponse.h"
+#include "getfieldlevelencryptionrequest.h"
+#include "getfieldlevelencryptionresponse.h"
+#include "getfieldlevelencryptionconfigrequest.h"
+#include "getfieldlevelencryptionconfigresponse.h"
+#include "getfieldlevelencryptionprofilerequest.h"
+#include "getfieldlevelencryptionprofileresponse.h"
+#include "getfieldlevelencryptionprofileconfigrequest.h"
+#include "getfieldlevelencryptionprofileconfigresponse.h"
 #include "getinvalidationrequest.h"
 #include "getinvalidationresponse.h"
+#include "getpublickeyrequest.h"
+#include "getpublickeyresponse.h"
+#include "getpublickeyconfigrequest.h"
+#include "getpublickeyconfigresponse.h"
 #include "getstreamingdistributionrequest.h"
 #include "getstreamingdistributionresponse.h"
 #include "getstreamingdistributionconfigrequest.h"
@@ -61,8 +85,14 @@
 #include "listdistributionsresponse.h"
 #include "listdistributionsbywebaclidrequest.h"
 #include "listdistributionsbywebaclidresponse.h"
+#include "listfieldlevelencryptionconfigsrequest.h"
+#include "listfieldlevelencryptionconfigsresponse.h"
+#include "listfieldlevelencryptionprofilesrequest.h"
+#include "listfieldlevelencryptionprofilesresponse.h"
 #include "listinvalidationsrequest.h"
 #include "listinvalidationsresponse.h"
+#include "listpublickeysrequest.h"
+#include "listpublickeysresponse.h"
 #include "liststreamingdistributionsrequest.h"
 #include "liststreamingdistributionsresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -75,6 +105,12 @@
 #include "updatecloudfrontoriginaccessidentityresponse.h"
 #include "updatedistributionrequest.h"
 #include "updatedistributionresponse.h"
+#include "updatefieldlevelencryptionconfigrequest.h"
+#include "updatefieldlevelencryptionconfigresponse.h"
+#include "updatefieldlevelencryptionprofilerequest.h"
+#include "updatefieldlevelencryptionprofileresponse.h"
+#include "updatepublickeyrequest.h"
+#include "updatepublickeyresponse.h"
 #include "updatestreamingdistributionrequest.h"
 #include "updatestreamingdistributionresponse.h"
 
@@ -112,7 +148,7 @@ CloudFrontClient::CloudFrontClient(
 : QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->apiVersion = QStringLiteral("2017-03-25");
+    d->apiVersion = QStringLiteral("2017-10-30");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("cloudfront");
     d->networkAccessManager = manager;
@@ -145,7 +181,7 @@ CloudFrontClient::CloudFrontClient(
 : QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->apiVersion = QStringLiteral("2017-03-25");
+    d->apiVersion = QStringLiteral("2017-10-30");
     d->credentials = credentials;
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("cloudfront");
@@ -202,6 +238,34 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
 }
 
 /**
+ * Create a new field-level encryption
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreateFieldLevelEncryptionConfigResponse * CloudFrontClient::createFieldLevelEncryptionConfig(const CreateFieldLevelEncryptionConfigRequest &request)
+{
+    return qobject_cast<CreateFieldLevelEncryptionConfigResponse *>(send(request));
+}
+
+/**
+ * Create a field-level encryption
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreateFieldLevelEncryptionProfileResponse * CloudFrontClient::createFieldLevelEncryptionProfile(const CreateFieldLevelEncryptionProfileRequest &request)
+{
+    return qobject_cast<CreateFieldLevelEncryptionProfileResponse *>(send(request));
+}
+
+/**
  * Create a new invalidation.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -213,6 +277,21 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
 CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateInvalidationRequest &request)
 {
     return qobject_cast<CreateInvalidationResponse *>(send(request));
+}
+
+/**
+ * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public
+ * keys with one AWS
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKeyRequest &request)
+{
+    return qobject_cast<CreatePublicKeyResponse *>(send(request));
 }
 
 /**
@@ -298,6 +377,48 @@ DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFron
 DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDistributionRequest &request)
 {
     return qobject_cast<DeleteDistributionResponse *>(send(request));
+}
+
+/**
+ * Remove a field-level encryption
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteFieldLevelEncryptionConfigResponse * CloudFrontClient::deleteFieldLevelEncryptionConfig(const DeleteFieldLevelEncryptionConfigRequest &request)
+{
+    return qobject_cast<DeleteFieldLevelEncryptionConfigResponse *>(send(request));
+}
+
+/**
+ * Remove a field-level encryption
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEncryptionProfile(const DeleteFieldLevelEncryptionProfileRequest &request)
+{
+    return qobject_cast<DeleteFieldLevelEncryptionProfileResponse *>(send(request));
+}
+
+/**
+ * Remove a public key you previously added to
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKeyRequest &request)
+{
+    return qobject_cast<DeletePublicKeyResponse *>(send(request));
 }
 
 /**
@@ -436,6 +557,62 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
 }
 
 /**
+ * Get the field-level encryption configuration
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetFieldLevelEncryptionResponse * CloudFrontClient::getFieldLevelEncryption(const GetFieldLevelEncryptionRequest &request)
+{
+    return qobject_cast<GetFieldLevelEncryptionResponse *>(send(request));
+}
+
+/**
+ * Get the field-level encryption configuration
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetFieldLevelEncryptionConfigResponse * CloudFrontClient::getFieldLevelEncryptionConfig(const GetFieldLevelEncryptionConfigRequest &request)
+{
+    return qobject_cast<GetFieldLevelEncryptionConfigResponse *>(send(request));
+}
+
+/**
+ * Get the field-level encryption profile
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetFieldLevelEncryptionProfileResponse * CloudFrontClient::getFieldLevelEncryptionProfile(const GetFieldLevelEncryptionProfileRequest &request)
+{
+    return qobject_cast<GetFieldLevelEncryptionProfileResponse *>(send(request));
+}
+
+/**
+ * Get the field-level encryption profile configuration
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetFieldLevelEncryptionProfileConfigResponse * CloudFrontClient::getFieldLevelEncryptionProfileConfig(const GetFieldLevelEncryptionProfileConfigRequest &request)
+{
+    return qobject_cast<GetFieldLevelEncryptionProfileConfigResponse *>(send(request));
+}
+
+/**
  * Get the information about an invalidation.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -447,6 +624,34 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
 GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidationRequest &request)
 {
     return qobject_cast<GetInvalidationResponse *>(send(request));
+}
+
+/**
+ * Get the public key
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetPublicKeyResponse * CloudFrontClient::getPublicKey(const GetPublicKeyRequest &request)
+{
+    return qobject_cast<GetPublicKeyResponse *>(send(request));
+}
+
+/**
+ * Return public key configuration
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetPublicKeyConfigResponse * CloudFrontClient::getPublicKeyConfig(const GetPublicKeyConfigRequest &request)
+{
+    return qobject_cast<GetPublicKeyConfigResponse *>(send(request));
 }
 
 /**
@@ -520,6 +725,34 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
 }
 
 /**
+ * List all field-level encryption configurations that have been created in CloudFront for this
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListFieldLevelEncryptionConfigsResponse * CloudFrontClient::listFieldLevelEncryptionConfigs(const ListFieldLevelEncryptionConfigsRequest &request)
+{
+    return qobject_cast<ListFieldLevelEncryptionConfigsResponse *>(send(request));
+}
+
+/**
+ * Request a list of field-level encryption profiles that have been created in CloudFront for this
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListFieldLevelEncryptionProfilesResponse * CloudFrontClient::listFieldLevelEncryptionProfiles(const ListFieldLevelEncryptionProfilesRequest &request)
+{
+    return qobject_cast<ListFieldLevelEncryptionProfilesResponse *>(send(request));
+}
+
+/**
  * Lists invalidation batches.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -531,6 +764,20 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
 ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvalidationsRequest &request)
 {
     return qobject_cast<ListInvalidationsResponse *>(send(request));
+}
+
+/**
+ * List all public keys that have been added to CloudFront for this
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListPublicKeysResponse * CloudFrontClient::listPublicKeys(const ListPublicKeysRequest &request)
+{
+    return qobject_cast<ListPublicKeysResponse *>(send(request));
 }
 
 /**
@@ -679,6 +926,48 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
 UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDistributionRequest &request)
 {
     return qobject_cast<UpdateDistributionResponse *>(send(request));
+}
+
+/**
+ * Update a field-level encryption configuration.
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateFieldLevelEncryptionConfigResponse * CloudFrontClient::updateFieldLevelEncryptionConfig(const UpdateFieldLevelEncryptionConfigRequest &request)
+{
+    return qobject_cast<UpdateFieldLevelEncryptionConfigResponse *>(send(request));
+}
+
+/**
+ * Update a field-level encryption profile.
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateFieldLevelEncryptionProfileResponse * CloudFrontClient::updateFieldLevelEncryptionProfile(const UpdateFieldLevelEncryptionProfileRequest &request)
+{
+    return qobject_cast<UpdateFieldLevelEncryptionProfileResponse *>(send(request));
+}
+
+/**
+ * Update public key information. Note that the only value you can change is the
+ *
+ * @param  request Request to send to Amazon CloudFront.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdatePublicKeyResponse * CloudFrontClient::updatePublicKey(const UpdatePublicKeyRequest &request)
+{
+    return qobject_cast<UpdatePublicKeyResponse *>(send(request));
 }
 
 /**

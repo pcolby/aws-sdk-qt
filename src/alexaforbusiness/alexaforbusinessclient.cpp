@@ -21,10 +21,16 @@
 #include "alexaforbusinessclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associatecontactwithaddressbookrequest.h"
+#include "associatecontactwithaddressbookresponse.h"
 #include "associatedevicewithroomrequest.h"
 #include "associatedevicewithroomresponse.h"
 #include "associateskillgroupwithroomrequest.h"
 #include "associateskillgroupwithroomresponse.h"
+#include "createaddressbookrequest.h"
+#include "createaddressbookresponse.h"
+#include "createcontactrequest.h"
+#include "createcontactresponse.h"
 #include "createprofilerequest.h"
 #include "createprofileresponse.h"
 #include "createroomrequest.h"
@@ -33,6 +39,10 @@
 #include "createskillgroupresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
+#include "deleteaddressbookrequest.h"
+#include "deleteaddressbookresponse.h"
+#include "deletecontactrequest.h"
+#include "deletecontactresponse.h"
 #include "deleteprofilerequest.h"
 #include "deleteprofileresponse.h"
 #include "deleteroomrequest.h"
@@ -43,10 +53,16 @@
 #include "deleteskillgroupresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
+#include "disassociatecontactfromaddressbookrequest.h"
+#include "disassociatecontactfromaddressbookresponse.h"
 #include "disassociatedevicefromroomrequest.h"
 #include "disassociatedevicefromroomresponse.h"
 #include "disassociateskillgroupfromroomrequest.h"
 #include "disassociateskillgroupfromroomresponse.h"
+#include "getaddressbookrequest.h"
+#include "getaddressbookresponse.h"
+#include "getcontactrequest.h"
+#include "getcontactresponse.h"
 #include "getdevicerequest.h"
 #include "getdeviceresponse.h"
 #include "getprofilerequest.h"
@@ -67,6 +83,10 @@
 #include "resolveroomresponse.h"
 #include "revokeinvitationrequest.h"
 #include "revokeinvitationresponse.h"
+#include "searchaddressbooksrequest.h"
+#include "searchaddressbooksresponse.h"
+#include "searchcontactsrequest.h"
+#include "searchcontactsresponse.h"
 #include "searchdevicesrequest.h"
 #include "searchdevicesresponse.h"
 #include "searchprofilesrequest.h"
@@ -85,6 +105,10 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateaddressbookrequest.h"
+#include "updateaddressbookresponse.h"
+#include "updatecontactrequest.h"
+#include "updatecontactresponse.h"
 #include "updatedevicerequest.h"
 #include "updatedeviceresponse.h"
 #include "updateprofilerequest.h"
@@ -171,6 +195,20 @@ AlexaForBusinessClient::AlexaForBusinessClient(
 }
 
 /**
+ * Associates a contact to a given address
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+AssociateContactWithAddressBookResponse * AlexaForBusinessClient::associateContactWithAddressBook(const AssociateContactWithAddressBookRequest &request)
+{
+    return qobject_cast<AssociateContactWithAddressBookResponse *>(send(request));
+}
+
+/**
  * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the
  * skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is
  * required.
@@ -198,6 +236,34 @@ AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoo
 AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGroupWithRoom(const AssociateSkillGroupWithRoomRequest &request)
 {
     return qobject_cast<AssociateSkillGroupWithRoomResponse *>(send(request));
+}
+
+/**
+ * Creates an address book with the specified
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreateAddressBookResponse * AlexaForBusinessClient::createAddressBook(const CreateAddressBookRequest &request)
+{
+    return qobject_cast<CreateAddressBookResponse *>(send(request));
+}
+
+/**
+ * Creates a contact with the specified
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreateContactResponse * AlexaForBusinessClient::createContact(const CreateContactRequest &request)
+{
+    return qobject_cast<CreateContactResponse *>(send(request));
 }
 
 /**
@@ -254,6 +320,34 @@ CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const Create
 CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest &request)
 {
     return qobject_cast<CreateUserResponse *>(send(request));
+}
+
+/**
+ * Deletes an address book by the address book
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteAddressBookResponse * AlexaForBusinessClient::deleteAddressBook(const DeleteAddressBookRequest &request)
+{
+    return qobject_cast<DeleteAddressBookResponse *>(send(request));
+}
+
+/**
+ * Deletes a contact by the contact
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteContactResponse * AlexaForBusinessClient::deleteContact(const DeleteContactRequest &request)
+{
+    return qobject_cast<DeleteContactResponse *>(send(request));
 }
 
 /**
@@ -327,6 +421,20 @@ DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest 
 }
 
 /**
+ * Disassociates a contact from a given address
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DisassociateContactFromAddressBookResponse * AlexaForBusinessClient::disassociateContactFromAddressBook(const DisassociateContactFromAddressBookRequest &request)
+{
+    return qobject_cast<DisassociateContactFromAddressBookResponse *>(send(request));
+}
+
+/**
  * Disassociates a device from its current room. The device continues to be connected to the Wi-Fi network and is still
  * registered to the account. The device settings and skills are removed from the
  *
@@ -353,6 +461,34 @@ DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceF
 DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSkillGroupFromRoom(const DisassociateSkillGroupFromRoomRequest &request)
 {
     return qobject_cast<DisassociateSkillGroupFromRoomResponse *>(send(request));
+}
+
+/**
+ * Gets address the book details by the address book
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetAddressBookResponse * AlexaForBusinessClient::getAddressBook(const GetAddressBookRequest &request)
+{
+    return qobject_cast<GetAddressBookResponse *>(send(request));
+}
+
+/**
+ * Gets the contact details by the contact
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetContactResponse * AlexaForBusinessClient::getContact(const GetContactRequest &request)
+{
+    return qobject_cast<GetContactResponse *>(send(request));
 }
 
 /**
@@ -496,6 +632,34 @@ RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const Revoke
 }
 
 /**
+ * Searches address books and lists the ones that meet a set of filter and sort
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SearchAddressBooksResponse * AlexaForBusinessClient::searchAddressBooks(const SearchAddressBooksRequest &request)
+{
+    return qobject_cast<SearchAddressBooksResponse *>(send(request));
+}
+
+/**
+ * Searches contacts and lists the ones that meet a set of filter and sort
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SearchContactsResponse * AlexaForBusinessClient::searchContacts(const SearchContactsRequest &request)
+{
+    return qobject_cast<SearchContactsResponse *>(send(request));
+}
+
+/**
  * Searches devices and lists the ones that meet a set of filter
  *
  * @param  request Request to send to Alexa For Business.
@@ -620,6 +784,34 @@ TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceReque
 UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/**
+ * Updates address book details by the address book
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateAddressBookResponse * AlexaForBusinessClient::updateAddressBook(const UpdateAddressBookRequest &request)
+{
+    return qobject_cast<UpdateAddressBookResponse *>(send(request));
+}
+
+/**
+ * Updates the contact details by the contact
+ *
+ * @param  request Request to send to Alexa For Business.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateContactResponse * AlexaForBusinessClient::updateContact(const UpdateContactRequest &request)
+{
+    return qobject_cast<UpdateContactResponse *>(send(request));
 }
 
 /**

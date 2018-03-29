@@ -1422,7 +1422,7 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 }
 
 /**
- * Gets the Tags collection for a given
+ * Gets the <a>Tags</a> collection for a given
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1660,7 +1660,7 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
 }
 
 /**
- * Adds or updates Tags on a gievn
+ * Adds or updates a tag on a given
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1705,7 +1705,7 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
 }
 
 /**
- * Removes Tags from a given
+ * Removes a tag from a given
  *
  * @param  request Request to send to Amazon API Gateway.
  *

@@ -16,6 +16,10 @@ HEADERS += \
     alexaforbusinessrequest_p.h \
     alexaforbusinessresponse.h \
     alexaforbusinessresponse_p.h \
+    associatecontactwithaddressbookrequest.h \
+    associatecontactwithaddressbookrequest_p.h \
+    associatecontactwithaddressbookresponse.h \
+    associatecontactwithaddressbookresponse_p.h \
     associatedevicewithroomrequest.h \
     associatedevicewithroomrequest_p.h \
     associatedevicewithroomresponse.h \
@@ -24,6 +28,14 @@ HEADERS += \
     associateskillgroupwithroomrequest_p.h \
     associateskillgroupwithroomresponse.h \
     associateskillgroupwithroomresponse_p.h \
+    createaddressbookrequest.h \
+    createaddressbookrequest_p.h \
+    createaddressbookresponse.h \
+    createaddressbookresponse_p.h \
+    createcontactrequest.h \
+    createcontactrequest_p.h \
+    createcontactresponse.h \
+    createcontactresponse_p.h \
     createprofilerequest.h \
     createprofilerequest_p.h \
     createprofileresponse.h \
@@ -40,6 +52,14 @@ HEADERS += \
     createuserrequest_p.h \
     createuserresponse.h \
     createuserresponse_p.h \
+    deleteaddressbookrequest.h \
+    deleteaddressbookrequest_p.h \
+    deleteaddressbookresponse.h \
+    deleteaddressbookresponse_p.h \
+    deletecontactrequest.h \
+    deletecontactrequest_p.h \
+    deletecontactresponse.h \
+    deletecontactresponse_p.h \
     deleteprofilerequest.h \
     deleteprofilerequest_p.h \
     deleteprofileresponse.h \
@@ -60,6 +80,10 @@ HEADERS += \
     deleteuserrequest_p.h \
     deleteuserresponse.h \
     deleteuserresponse_p.h \
+    disassociatecontactfromaddressbookrequest.h \
+    disassociatecontactfromaddressbookrequest_p.h \
+    disassociatecontactfromaddressbookresponse.h \
+    disassociatecontactfromaddressbookresponse_p.h \
     disassociatedevicefromroomrequest.h \
     disassociatedevicefromroomrequest_p.h \
     disassociatedevicefromroomresponse.h \
@@ -68,6 +92,14 @@ HEADERS += \
     disassociateskillgroupfromroomrequest_p.h \
     disassociateskillgroupfromroomresponse.h \
     disassociateskillgroupfromroomresponse_p.h \
+    getaddressbookrequest.h \
+    getaddressbookrequest_p.h \
+    getaddressbookresponse.h \
+    getaddressbookresponse_p.h \
+    getcontactrequest.h \
+    getcontactrequest_p.h \
+    getcontactresponse.h \
+    getcontactresponse_p.h \
     getdevicerequest.h \
     getdevicerequest_p.h \
     getdeviceresponse.h \
@@ -108,6 +140,14 @@ HEADERS += \
     revokeinvitationrequest_p.h \
     revokeinvitationresponse.h \
     revokeinvitationresponse_p.h \
+    searchaddressbooksrequest.h \
+    searchaddressbooksrequest_p.h \
+    searchaddressbooksresponse.h \
+    searchaddressbooksresponse_p.h \
+    searchcontactsrequest.h \
+    searchcontactsrequest_p.h \
+    searchcontactsresponse.h \
+    searchcontactsresponse_p.h \
     searchdevicesrequest.h \
     searchdevicesrequest_p.h \
     searchdevicesresponse.h \
@@ -144,6 +184,14 @@ HEADERS += \
     untagresourcerequest_p.h \
     untagresourceresponse.h \
     untagresourceresponse_p.h \
+    updateaddressbookrequest.h \
+    updateaddressbookrequest_p.h \
+    updateaddressbookresponse.h \
+    updateaddressbookresponse_p.h \
+    updatecontactrequest.h \
+    updatecontactrequest_p.h \
+    updatecontactresponse.h \
+    updatecontactresponse_p.h \
     updatedevicerequest.h \
     updatedevicerequest_p.h \
     updatedeviceresponse.h \
@@ -165,10 +213,16 @@ SOURCES += \
     alexaforbusinessclient.cpp \
     alexaforbusinessrequest.cpp \
     alexaforbusinessresponse.cpp \
+    associatecontactwithaddressbookrequest.cpp \
+    associatecontactwithaddressbookresponse.cpp \
     associatedevicewithroomrequest.cpp \
     associatedevicewithroomresponse.cpp \
     associateskillgroupwithroomrequest.cpp \
     associateskillgroupwithroomresponse.cpp \
+    createaddressbookrequest.cpp \
+    createaddressbookresponse.cpp \
+    createcontactrequest.cpp \
+    createcontactresponse.cpp \
     createprofilerequest.cpp \
     createprofileresponse.cpp \
     createroomrequest.cpp \
@@ -177,6 +231,10 @@ SOURCES += \
     createskillgroupresponse.cpp \
     createuserrequest.cpp \
     createuserresponse.cpp \
+    deleteaddressbookrequest.cpp \
+    deleteaddressbookresponse.cpp \
+    deletecontactrequest.cpp \
+    deletecontactresponse.cpp \
     deleteprofilerequest.cpp \
     deleteprofileresponse.cpp \
     deleteroomrequest.cpp \
@@ -187,10 +245,16 @@ SOURCES += \
     deleteskillgroupresponse.cpp \
     deleteuserrequest.cpp \
     deleteuserresponse.cpp \
+    disassociatecontactfromaddressbookrequest.cpp \
+    disassociatecontactfromaddressbookresponse.cpp \
     disassociatedevicefromroomrequest.cpp \
     disassociatedevicefromroomresponse.cpp \
     disassociateskillgroupfromroomrequest.cpp \
     disassociateskillgroupfromroomresponse.cpp \
+    getaddressbookrequest.cpp \
+    getaddressbookresponse.cpp \
+    getcontactrequest.cpp \
+    getcontactresponse.cpp \
     getdevicerequest.cpp \
     getdeviceresponse.cpp \
     getprofilerequest.cpp \
@@ -211,6 +275,10 @@ SOURCES += \
     resolveroomresponse.cpp \
     revokeinvitationrequest.cpp \
     revokeinvitationresponse.cpp \
+    searchaddressbooksrequest.cpp \
+    searchaddressbooksresponse.cpp \
+    searchcontactsrequest.cpp \
+    searchcontactsresponse.cpp \
     searchdevicesrequest.cpp \
     searchdevicesresponse.cpp \
     searchprofilesrequest.cpp \
@@ -229,6 +297,10 @@ SOURCES += \
     tagresourceresponse.cpp \
     untagresourcerequest.cpp \
     untagresourceresponse.cpp \
+    updateaddressbookrequest.cpp \
+    updateaddressbookresponse.cpp \
+    updatecontactrequest.cpp \
+    updatecontactresponse.cpp \
     updatedevicerequest.cpp \
     updatedeviceresponse.cpp \
     updateprofilerequest.cpp \

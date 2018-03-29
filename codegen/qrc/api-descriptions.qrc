@@ -114,6 +114,7 @@
     <file alias="dax-2017-04-19.normal.json">aws-sdk-cpp/code-generation/api-descriptions/dax-2017-04-19.normal.json</file>
     <file alias="datapipeline-2012-10-29.normal.json">aws-sdk-cpp/code-generation/api-descriptions/datapipeline-2012-10-29.normal.json</file>
     <file alias="cur-2017-01-06.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cur-2017-01-06.normal.json</file>
+    <file alias="connect-2017-08-08.normal.json">aws-sdk-cpp/code-generation/api-descriptions/connect-2017-08-08.normal.json</file>
     <file alias="config-2014-11-12.normal.json">aws-sdk-cpp/code-generation/api-descriptions/config-2014-11-12.normal.json</file>
 <!--<file alias="config-2014-10-17.normal.json">aws-sdk-cpp/code-generation/api-descriptions/config-2014-10-17.normal.json</file>-->
     <file alias="comprehend-2017-11-27.normal.json">aws-sdk-cpp/code-generation/api-descriptions/comprehend-2017-11-27.normal.json</file>
@@ -131,7 +132,8 @@
 <!--<file alias="cloudsearch-2011-02-01.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudsearch-2011-02-01.normal.json</file>-->
     <file alias="cloudhsmv2-2017-04-28.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudhsmv2-2017-04-28.normal.json</file>
     <file alias="cloudhsm-2014-05-30.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudhsm-2014-05-30.normal.json</file>
-    <file alias="cloudfront-2017-03-25.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudfront-2017-03-25.normal.json</file>
+    <file alias="cloudfront-2017-10-30.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudfront-2017-10-30.normal.json</file>
+<!--<file alias="cloudfront-2017-03-25.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudfront-2017-03-25.normal.json</file>-->
 <!--<file alias="cloudfront-2016-11-25.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudfront-2016-11-25.normal.json</file>-->
 <!--<file alias="cloudfront-2016-09-29.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudfront-2016-09-29.normal.json</file>-->
 <!--<file alias="cloudfront-2016-09-07.normal.json">aws-sdk-cpp/code-generation/api-descriptions/cloudfront-2016-09-07.normal.json</file>-->
