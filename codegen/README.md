@@ -20,9 +20,9 @@ code generator has no special requirements.
 While the [AWS SDK for Qt] is made available under the [LGPL], this code
 generator is released under the [GPL].
 
-The [API descriptions](descriptions) are copied verbatim from the [aws-sdk-cpp](
+The [API descriptions](descriptions) are used verbatim from the [aws-sdk-cpp](
 https://github.com/aws/aws-sdk-cpp/tree/master/code-generation/api-descriptions)
-project, which provides those descriptions under the [ASL].
+project (as a git submodule), which provides those descriptions under the [ASL].
 
 [ASL]: http://www.apache.org/licenses/LICENSE-2.0 "Apache License"
 [AWS SDK for Qt]: https://github.com/pcolby/aws-sdk-qt

@@ -1,0 +1,3 @@
+[submodule "codegen/aws-sdk-cpp"]
+	path = codegen/qrc/aws-sdk-cpp
+	url = https://github.com/aws/aws-sdk-cpp.git
