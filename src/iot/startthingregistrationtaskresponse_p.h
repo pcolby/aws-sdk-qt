@@ -34,7 +34,7 @@ public:
 
     StartThingRegistrationTaskResponsePrivate(StartThingRegistrationTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartThingRegistrationTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartThingRegistrationTaskResponse)

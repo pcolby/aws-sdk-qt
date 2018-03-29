@@ -34,7 +34,7 @@ public:
 
     UpdateRegexPatternSetResponsePrivate(UpdateRegexPatternSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRegexPatternSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRegexPatternSetResponse)

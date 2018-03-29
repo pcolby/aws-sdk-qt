@@ -34,7 +34,7 @@ public:
 
     UpdateContinuousBackupsResponsePrivate(UpdateContinuousBackupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateContinuousBackupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateContinuousBackupsResponse)

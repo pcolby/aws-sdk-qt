@@ -34,7 +34,7 @@ public:
 
     PublishSchemaResponsePrivate(PublishSchemaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePublishSchemaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PublishSchemaResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateLayerResponsePrivate(UpdateLayerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateLayerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateLayerResponse)

@@ -34,7 +34,7 @@ public:
 
     GetHostedZoneLimitResponsePrivate(GetHostedZoneLimitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetHostedZoneLimitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetHostedZoneLimitResponse)

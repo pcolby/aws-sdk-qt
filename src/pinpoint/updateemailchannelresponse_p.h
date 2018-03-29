@@ -34,7 +34,7 @@ public:
 
     UpdateEmailChannelResponsePrivate(UpdateEmailChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateEmailChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateEmailChannelResponse)

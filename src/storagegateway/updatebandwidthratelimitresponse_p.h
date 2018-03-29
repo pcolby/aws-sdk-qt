@@ -34,7 +34,7 @@ public:
 
     UpdateBandwidthRateLimitResponsePrivate(UpdateBandwidthRateLimitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateBandwidthRateLimitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateBandwidthRateLimitResponse)

@@ -34,7 +34,7 @@ public:
 
     UploadPartCopyResponsePrivate(UploadPartCopyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUploadPartCopyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UploadPartCopyResponse)

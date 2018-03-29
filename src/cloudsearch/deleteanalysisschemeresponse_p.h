@@ -34,7 +34,7 @@ public:
 
     DeleteAnalysisSchemeResponsePrivate(DeleteAnalysisSchemeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAnalysisSchemeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAnalysisSchemeResponse)

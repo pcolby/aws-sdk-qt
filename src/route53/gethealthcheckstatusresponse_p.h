@@ -34,7 +34,7 @@ public:
 
     GetHealthCheckStatusResponsePrivate(GetHealthCheckStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetHealthCheckStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetHealthCheckStatusResponse)

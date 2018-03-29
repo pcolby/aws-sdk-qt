@@ -34,7 +34,7 @@ public:
 
     DeleteResourceServerResponsePrivate(DeleteResourceServerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteResourceServerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteResourceServerResponse)

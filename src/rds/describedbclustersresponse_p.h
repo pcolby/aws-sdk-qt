@@ -34,7 +34,7 @@ public:
 
     DescribeDBClustersResponsePrivate(DescribeDBClustersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDBClustersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDBClustersResponse)

@@ -34,7 +34,7 @@ public:
 
     PutItemResponsePrivate(PutItemResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutItemResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutItemResponse)

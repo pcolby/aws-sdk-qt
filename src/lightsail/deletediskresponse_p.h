@@ -34,7 +34,7 @@ public:
 
     DeleteDiskResponsePrivate(DeleteDiskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDiskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDiskResponse)

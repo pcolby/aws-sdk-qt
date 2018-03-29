@@ -34,7 +34,7 @@ public:
 
     ListEndpointsByPlatformApplicationResponsePrivate(ListEndpointsByPlatformApplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListEndpointsByPlatformApplicationResponse)

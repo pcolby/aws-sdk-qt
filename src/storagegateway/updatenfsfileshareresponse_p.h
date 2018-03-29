@@ -34,7 +34,7 @@ public:
 
     UpdateNFSFileShareResponsePrivate(UpdateNFSFileShareResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateNFSFileShareResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateNFSFileShareResponse)

@@ -34,7 +34,7 @@ public:
 
     DetachPrincipalPolicyResponsePrivate(DetachPrincipalPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachPrincipalPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachPrincipalPolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     GetTraceSummariesResponsePrivate(GetTraceSummariesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTraceSummariesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTraceSummariesResponse)

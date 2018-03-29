@@ -34,7 +34,7 @@ public:
 
     RestoreTableFromBackupResponsePrivate(RestoreTableFromBackupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreTableFromBackupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreTableFromBackupResponse)

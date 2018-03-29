@@ -34,7 +34,7 @@ public:
 
     RunScheduledInstancesResponsePrivate(RunScheduledInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRunScheduledInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RunScheduledInstancesResponse)

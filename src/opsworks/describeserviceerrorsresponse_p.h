@@ -34,7 +34,7 @@ public:
 
     DescribeServiceErrorsResponsePrivate(DescribeServiceErrorsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeServiceErrorsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeServiceErrorsResponse)

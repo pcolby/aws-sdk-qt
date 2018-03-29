@@ -34,7 +34,7 @@ public:
 
     DiscoverPollEndpointResponsePrivate(DiscoverPollEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDiscoverPollEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DiscoverPollEndpointResponse)

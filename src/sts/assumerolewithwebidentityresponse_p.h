@@ -34,7 +34,7 @@ public:
 
     AssumeRoleWithWebIdentityResponsePrivate(AssumeRoleWithWebIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssumeRoleWithWebIdentityResponse)

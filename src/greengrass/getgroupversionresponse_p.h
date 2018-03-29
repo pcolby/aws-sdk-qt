@@ -34,7 +34,7 @@ public:
 
     GetGroupVersionResponsePrivate(GetGroupVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGroupVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGroupVersionResponse)

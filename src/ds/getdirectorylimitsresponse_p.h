@@ -34,7 +34,7 @@ public:
 
     GetDirectoryLimitsResponsePrivate(GetDirectoryLimitsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDirectoryLimitsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDirectoryLimitsResponse)

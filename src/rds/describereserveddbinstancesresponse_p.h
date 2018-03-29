@@ -34,7 +34,7 @@ public:
 
     DescribeReservedDBInstancesResponsePrivate(DescribeReservedDBInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeReservedDBInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeReservedDBInstancesResponse)

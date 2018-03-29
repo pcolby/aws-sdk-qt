@@ -34,7 +34,7 @@ public:
 
     RegisterOnPremisesInstanceResponsePrivate(RegisterOnPremisesInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterOnPremisesInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterOnPremisesInstanceResponse)

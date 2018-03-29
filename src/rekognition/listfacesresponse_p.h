@@ -34,7 +34,7 @@ public:
 
     ListFacesResponsePrivate(ListFacesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListFacesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListFacesResponse)

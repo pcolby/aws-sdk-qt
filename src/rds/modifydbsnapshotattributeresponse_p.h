@@ -34,7 +34,7 @@ public:
 
     ModifyDBSnapshotAttributeResponsePrivate(ModifyDBSnapshotAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyDBSnapshotAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyDBSnapshotAttributeResponse)

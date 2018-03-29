@@ -34,7 +34,7 @@ public:
 
     StartLifecyclePolicyPreviewResponsePrivate(StartLifecyclePolicyPreviewResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartLifecyclePolicyPreviewResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartLifecyclePolicyPreviewResponse)

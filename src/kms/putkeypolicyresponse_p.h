@@ -34,7 +34,7 @@ public:
 
     PutKeyPolicyResponsePrivate(PutKeyPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutKeyPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutKeyPolicyResponse)

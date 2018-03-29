@@ -34,7 +34,7 @@ public:
 
     AssociateSkillGroupWithRoomResponsePrivate(AssociateSkillGroupWithRoomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateSkillGroupWithRoomResponse)

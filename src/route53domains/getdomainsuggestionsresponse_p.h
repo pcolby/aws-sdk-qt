@@ -34,7 +34,7 @@ public:
 
     GetDomainSuggestionsResponsePrivate(GetDomainSuggestionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDomainSuggestionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDomainSuggestionsResponse)

@@ -34,7 +34,7 @@ public:
 
     ListBucketMetricsConfigurationsResponsePrivate(ListBucketMetricsConfigurationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBucketMetricsConfigurationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBucketMetricsConfigurationsResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateConfigurationResponsePrivate(UpdateConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateConfigurationResponse)

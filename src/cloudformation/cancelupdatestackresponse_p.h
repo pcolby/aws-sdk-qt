@@ -34,7 +34,7 @@ public:
 
     CancelUpdateStackResponsePrivate(CancelUpdateStackResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelUpdateStackResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelUpdateStackResponse)

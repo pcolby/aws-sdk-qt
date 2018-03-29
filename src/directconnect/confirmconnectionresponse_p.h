@@ -34,7 +34,7 @@ public:
 
     ConfirmConnectionResponsePrivate(ConfirmConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseConfirmConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ConfirmConnectionResponse)

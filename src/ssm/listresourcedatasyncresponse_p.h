@@ -34,7 +34,7 @@ public:
 
     ListResourceDataSyncResponsePrivate(ListResourceDataSyncResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListResourceDataSyncResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListResourceDataSyncResponse)

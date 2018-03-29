@@ -34,7 +34,7 @@ public:
 
     GetDevicePoolCompatibilityResponsePrivate(GetDevicePoolCompatibilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDevicePoolCompatibilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDevicePoolCompatibilityResponse)

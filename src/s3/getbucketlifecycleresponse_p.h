@@ -34,7 +34,7 @@ public:
 
     GetBucketLifecycleResponsePrivate(GetBucketLifecycleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketLifecycleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketLifecycleResponse)

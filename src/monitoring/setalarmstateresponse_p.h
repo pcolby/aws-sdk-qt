@@ -34,7 +34,7 @@ public:
 
     SetAlarmStateResponsePrivate(SetAlarmStateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetAlarmStateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetAlarmStateResponse)

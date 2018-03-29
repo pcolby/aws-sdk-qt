@@ -34,7 +34,7 @@ public:
 
     UpdateUserDefinedFunctionResponsePrivate(UpdateUserDefinedFunctionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateUserDefinedFunctionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateUserDefinedFunctionResponse)

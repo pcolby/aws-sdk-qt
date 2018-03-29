@@ -34,7 +34,7 @@ public:
 
     TestRenderTemplateResponsePrivate(TestRenderTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestRenderTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestRenderTemplateResponse)

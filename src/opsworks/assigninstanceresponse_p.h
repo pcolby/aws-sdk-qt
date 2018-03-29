@@ -34,7 +34,7 @@ public:
 
     AssignInstanceResponsePrivate(AssignInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssignInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssignInstanceResponse)

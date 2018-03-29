@@ -34,7 +34,7 @@ public:
 
     DeleteResourceDefinitionResponsePrivate(DeleteResourceDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteResourceDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteResourceDefinitionResponse)

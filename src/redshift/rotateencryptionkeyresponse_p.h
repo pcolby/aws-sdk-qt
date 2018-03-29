@@ -34,7 +34,7 @@ public:
 
     RotateEncryptionKeyResponsePrivate(RotateEncryptionKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRotateEncryptionKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RotateEncryptionKeyResponse)

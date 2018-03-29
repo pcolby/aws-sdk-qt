@@ -34,7 +34,7 @@ public:
 
     GetInstanceMetricDataResponsePrivate(GetInstanceMetricDataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetInstanceMetricDataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetInstanceMetricDataResponse)

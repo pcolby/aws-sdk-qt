@@ -34,7 +34,7 @@ public:
 
     DeleteDashboardsResponsePrivate(DeleteDashboardsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDashboardsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDashboardsResponse)

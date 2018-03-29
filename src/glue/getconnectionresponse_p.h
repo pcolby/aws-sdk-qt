@@ -34,7 +34,7 @@ public:
 
     GetConnectionResponsePrivate(GetConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetConnectionResponse)

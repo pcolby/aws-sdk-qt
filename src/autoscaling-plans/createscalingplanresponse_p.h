@@ -34,7 +34,7 @@ public:
 
     CreateScalingPlanResponsePrivate(CreateScalingPlanResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateScalingPlanResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateScalingPlanResponse)

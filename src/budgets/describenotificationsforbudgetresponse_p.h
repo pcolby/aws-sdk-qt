@@ -34,7 +34,7 @@ public:
 
     DescribeNotificationsForBudgetResponsePrivate(DescribeNotificationsForBudgetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNotificationsForBudgetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNotificationsForBudgetResponse)

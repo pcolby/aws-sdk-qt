@@ -34,7 +34,7 @@ public:
 
     ResetInstanceAttributeResponsePrivate(ResetInstanceAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetInstanceAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetInstanceAttributeResponse)

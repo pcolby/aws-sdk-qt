@@ -34,7 +34,7 @@ public:
 
     CreateVPCAssociationAuthorizationResponsePrivate(CreateVPCAssociationAuthorizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateVPCAssociationAuthorizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateVPCAssociationAuthorizationResponse)

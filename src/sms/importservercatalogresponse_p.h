@@ -34,7 +34,7 @@ public:
 
     ImportServerCatalogResponsePrivate(ImportServerCatalogResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportServerCatalogResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportServerCatalogResponse)

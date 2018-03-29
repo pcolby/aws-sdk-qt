@@ -34,7 +34,7 @@ public:
 
     AllocateAddressResponsePrivate(AllocateAddressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAllocateAddressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AllocateAddressResponse)

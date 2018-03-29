@@ -34,7 +34,7 @@ public:
 
     TestMetricFilterResponsePrivate(TestMetricFilterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestMetricFilterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestMetricFilterResponse)

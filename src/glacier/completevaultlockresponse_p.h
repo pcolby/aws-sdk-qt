@@ -34,7 +34,7 @@ public:
 
     CompleteVaultLockResponsePrivate(CompleteVaultLockResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCompleteVaultLockResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CompleteVaultLockResponse)

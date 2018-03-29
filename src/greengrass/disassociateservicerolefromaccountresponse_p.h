@@ -34,7 +34,7 @@ public:
 
     DisassociateServiceRoleFromAccountResponsePrivate(DisassociateServiceRoleFromAccountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateServiceRoleFromAccountResponse)

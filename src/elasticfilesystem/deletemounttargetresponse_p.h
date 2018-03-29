@@ -34,7 +34,7 @@ public:
 
     DeleteMountTargetResponsePrivate(DeleteMountTargetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteMountTargetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteMountTargetResponse)

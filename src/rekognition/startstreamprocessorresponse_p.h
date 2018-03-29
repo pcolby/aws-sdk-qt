@@ -34,7 +34,7 @@ public:
 
     StartStreamProcessorResponsePrivate(StartStreamProcessorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartStreamProcessorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartStreamProcessorResponse)

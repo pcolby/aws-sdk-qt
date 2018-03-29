@@ -34,7 +34,7 @@ public:
 
     UpdateHITReviewStatusResponsePrivate(UpdateHITReviewStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateHITReviewStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateHITReviewStatusResponse)

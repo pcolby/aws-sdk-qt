@@ -34,7 +34,7 @@ public:
 
     DeleteLifecyclePolicyResponsePrivate(DeleteLifecyclePolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLifecyclePolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLifecyclePolicyResponse)

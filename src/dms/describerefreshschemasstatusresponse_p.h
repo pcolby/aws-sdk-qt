@@ -34,7 +34,7 @@ public:
 
     DescribeRefreshSchemasStatusResponsePrivate(DescribeRefreshSchemasStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeRefreshSchemasStatusResponse)

@@ -34,7 +34,7 @@ public:
 
     DeletePartitionResponsePrivate(DeletePartitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePartitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePartitionResponse)

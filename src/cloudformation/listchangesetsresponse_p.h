@@ -34,7 +34,7 @@ public:
 
     ListChangeSetsResponsePrivate(ListChangeSetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListChangeSetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListChangeSetsResponse)

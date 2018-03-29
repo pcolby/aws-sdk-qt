@@ -34,7 +34,7 @@ public:
 
     EnableRadiusResponsePrivate(EnableRadiusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableRadiusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableRadiusResponse)

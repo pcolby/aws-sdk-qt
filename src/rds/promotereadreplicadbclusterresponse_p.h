@@ -34,7 +34,7 @@ public:
 
     PromoteReadReplicaDBClusterResponsePrivate(PromoteReadReplicaDBClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PromoteReadReplicaDBClusterResponse)

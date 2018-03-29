@@ -34,7 +34,7 @@ public:
 
     DeleteFileSystemResponsePrivate(DeleteFileSystemResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteFileSystemResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteFileSystemResponse)

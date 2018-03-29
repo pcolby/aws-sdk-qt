@@ -34,7 +34,7 @@ public:
 
     CreateDataSourceFromRDSResponsePrivate(CreateDataSourceFromRDSResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDataSourceFromRDSResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDataSourceFromRDSResponse)

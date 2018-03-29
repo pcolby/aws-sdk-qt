@@ -34,7 +34,7 @@ public:
 
     StopWorkspacesResponsePrivate(StopWorkspacesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopWorkspacesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopWorkspacesResponse)

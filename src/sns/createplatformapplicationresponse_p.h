@@ -34,7 +34,7 @@ public:
 
     CreatePlatformApplicationResponsePrivate(CreatePlatformApplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreatePlatformApplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreatePlatformApplicationResponse)

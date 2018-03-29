@@ -34,7 +34,7 @@ public:
 
     ListVerifiedEmailAddressesResponsePrivate(ListVerifiedEmailAddressesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListVerifiedEmailAddressesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListVerifiedEmailAddressesResponse)

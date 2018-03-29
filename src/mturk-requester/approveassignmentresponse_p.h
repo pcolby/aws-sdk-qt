@@ -34,7 +34,7 @@ public:
 
     ApproveAssignmentResponsePrivate(ApproveAssignmentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseApproveAssignmentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ApproveAssignmentResponse)

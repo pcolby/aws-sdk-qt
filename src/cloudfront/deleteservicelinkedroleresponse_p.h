@@ -34,7 +34,7 @@ public:
 
     DeleteServiceLinkedRoleResponsePrivate(DeleteServiceLinkedRoleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteServiceLinkedRoleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteServiceLinkedRoleResponse)

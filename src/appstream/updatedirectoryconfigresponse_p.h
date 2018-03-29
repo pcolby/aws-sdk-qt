@@ -34,7 +34,7 @@ public:
 
     UpdateDirectoryConfigResponsePrivate(UpdateDirectoryConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDirectoryConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDirectoryConfigResponse)

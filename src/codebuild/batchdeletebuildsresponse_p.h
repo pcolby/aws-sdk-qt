@@ -34,7 +34,7 @@ public:
 
     BatchDeleteBuildsResponsePrivate(BatchDeleteBuildsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDeleteBuildsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDeleteBuildsResponse)

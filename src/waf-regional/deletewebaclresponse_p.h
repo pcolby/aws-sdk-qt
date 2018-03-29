@@ -34,7 +34,7 @@ public:
 
     DeleteWebACLResponsePrivate(DeleteWebACLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteWebACLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteWebACLResponse)

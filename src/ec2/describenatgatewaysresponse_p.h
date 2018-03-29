@@ -34,7 +34,7 @@ public:
 
     DescribeNatGatewaysResponsePrivate(DescribeNatGatewaysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNatGatewaysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNatGatewaysResponse)

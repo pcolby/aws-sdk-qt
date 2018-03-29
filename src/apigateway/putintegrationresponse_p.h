@@ -34,7 +34,7 @@ public:
 
     PutIntegrationResponsePrivate(PutIntegrationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutIntegrationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutIntegrationResponse)

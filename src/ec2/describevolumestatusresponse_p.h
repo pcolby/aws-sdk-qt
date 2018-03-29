@@ -34,7 +34,7 @@ public:
 
     DescribeVolumeStatusResponsePrivate(DescribeVolumeStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVolumeStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVolumeStatusResponse)

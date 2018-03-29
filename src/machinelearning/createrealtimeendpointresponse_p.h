@@ -34,7 +34,7 @@ public:
 
     CreateRealtimeEndpointResponsePrivate(CreateRealtimeEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateRealtimeEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateRealtimeEndpointResponse)

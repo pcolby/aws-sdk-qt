@@ -34,7 +34,7 @@ public:
 
     CreateProgressUpdateStreamResponsePrivate(CreateProgressUpdateStreamResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateProgressUpdateStreamResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateProgressUpdateStreamResponse)

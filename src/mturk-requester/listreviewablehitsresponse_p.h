@@ -34,7 +34,7 @@ public:
 
     ListReviewableHITsResponsePrivate(ListReviewableHITsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListReviewableHITsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListReviewableHITsResponse)

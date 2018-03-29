@@ -34,7 +34,7 @@ public:
 
     DisableSnapshotCopyResponsePrivate(DisableSnapshotCopyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableSnapshotCopyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableSnapshotCopyResponse)

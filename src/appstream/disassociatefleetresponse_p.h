@@ -34,7 +34,7 @@ public:
 
     DisassociateFleetResponsePrivate(DisassociateFleetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateFleetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateFleetResponse)

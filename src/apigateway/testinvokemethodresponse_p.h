@@ -34,7 +34,7 @@ public:
 
     TestInvokeMethodResponsePrivate(TestInvokeMethodResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestInvokeMethodResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestInvokeMethodResponse)

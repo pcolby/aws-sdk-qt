@@ -34,7 +34,7 @@ public:
 
     DeleteHsmConfigurationResponsePrivate(DeleteHsmConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteHsmConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteHsmConfigurationResponse)

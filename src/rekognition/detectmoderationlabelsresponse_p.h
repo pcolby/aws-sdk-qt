@@ -34,7 +34,7 @@ public:
 
     DetectModerationLabelsResponsePrivate(DetectModerationLabelsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetectModerationLabelsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetectModerationLabelsResponse)

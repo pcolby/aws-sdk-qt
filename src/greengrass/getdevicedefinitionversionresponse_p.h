@@ -34,7 +34,7 @@ public:
 
     GetDeviceDefinitionVersionResponsePrivate(GetDeviceDefinitionVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDeviceDefinitionVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDeviceDefinitionVersionResponse)

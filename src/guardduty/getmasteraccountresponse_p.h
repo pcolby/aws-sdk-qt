@@ -34,7 +34,7 @@ public:
 
     GetMasterAccountResponsePrivate(GetMasterAccountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetMasterAccountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetMasterAccountResponse)

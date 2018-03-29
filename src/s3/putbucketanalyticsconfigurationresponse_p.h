@@ -34,7 +34,7 @@ public:
 
     PutBucketAnalyticsConfigurationResponsePrivate(PutBucketAnalyticsConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketAnalyticsConfigurationResponse)

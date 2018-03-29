@@ -34,7 +34,7 @@ public:
 
     DeleteLexiconResponsePrivate(DeleteLexiconResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLexiconResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLexiconResponse)

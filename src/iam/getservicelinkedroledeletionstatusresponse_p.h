@@ -34,7 +34,7 @@ public:
 
     GetServiceLinkedRoleDeletionStatusResponsePrivate(GetServiceLinkedRoleDeletionStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetServiceLinkedRoleDeletionStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetServiceLinkedRoleDeletionStatusResponse)

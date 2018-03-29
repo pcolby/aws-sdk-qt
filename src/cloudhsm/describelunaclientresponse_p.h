@@ -34,7 +34,7 @@ public:
 
     DescribeLunaClientResponsePrivate(DescribeLunaClientResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLunaClientResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLunaClientResponse)

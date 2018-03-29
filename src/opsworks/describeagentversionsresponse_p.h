@@ -34,7 +34,7 @@ public:
 
     DescribeAgentVersionsResponsePrivate(DescribeAgentVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAgentVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAgentVersionsResponse)

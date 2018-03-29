@@ -34,7 +34,7 @@ public:
 
     ReadJobResponsePrivate(ReadJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReadJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReadJobResponse)

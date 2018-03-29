@@ -34,7 +34,7 @@ public:
 
     DescribeWorkflowTypeResponsePrivate(DescribeWorkflowTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeWorkflowTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeWorkflowTypeResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateOpenIDConnectProviderThumbprintResponsePrivate(UpdateOpenIDConnectProviderThumbprintResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateOpenIDConnectProviderThumbprintResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateOpenIDConnectProviderThumbprintResponse)

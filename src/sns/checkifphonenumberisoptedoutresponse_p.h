@@ -34,7 +34,7 @@ public:
 
     CheckIfPhoneNumberIsOptedOutResponsePrivate(CheckIfPhoneNumberIsOptedOutResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CheckIfPhoneNumberIsOptedOutResponse)

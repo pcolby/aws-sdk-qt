@@ -34,7 +34,7 @@ public:
 
     ResetServiceSpecificCredentialResponsePrivate(ResetServiceSpecificCredentialResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetServiceSpecificCredentialResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetServiceSpecificCredentialResponse)

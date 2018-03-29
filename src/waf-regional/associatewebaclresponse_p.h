@@ -34,7 +34,7 @@ public:
 
     AssociateWebACLResponsePrivate(AssociateWebACLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateWebACLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateWebACLResponse)

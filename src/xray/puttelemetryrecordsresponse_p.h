@@ -34,7 +34,7 @@ public:
 
     PutTelemetryRecordsResponsePrivate(PutTelemetryRecordsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutTelemetryRecordsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutTelemetryRecordsResponse)

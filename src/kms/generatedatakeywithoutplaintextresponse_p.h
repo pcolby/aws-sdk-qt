@@ -34,7 +34,7 @@ public:
 
     GenerateDataKeyWithoutPlaintextResponsePrivate(GenerateDataKeyWithoutPlaintextResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGenerateDataKeyWithoutPlaintextResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GenerateDataKeyWithoutPlaintextResponse)

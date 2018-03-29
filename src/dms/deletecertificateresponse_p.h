@@ -34,7 +34,7 @@ public:
 
     DeleteCertificateResponsePrivate(DeleteCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCertificateResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeIndexFieldsResponsePrivate(DescribeIndexFieldsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeIndexFieldsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeIndexFieldsResponse)

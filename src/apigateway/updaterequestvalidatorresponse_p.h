@@ -34,7 +34,7 @@ public:
 
     UpdateRequestValidatorResponsePrivate(UpdateRequestValidatorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRequestValidatorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRequestValidatorResponse)

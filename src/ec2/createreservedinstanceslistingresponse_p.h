@@ -34,7 +34,7 @@ public:
 
     CreateReservedInstancesListingResponsePrivate(CreateReservedInstancesListingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateReservedInstancesListingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateReservedInstancesListingResponse)

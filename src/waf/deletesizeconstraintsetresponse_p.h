@@ -34,7 +34,7 @@ public:
 
     DeleteSizeConstraintSetResponsePrivate(DeleteSizeConstraintSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSizeConstraintSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSizeConstraintSetResponse)

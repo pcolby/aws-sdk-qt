@@ -34,7 +34,7 @@ public:
 
     GetSnowballUsageResponsePrivate(GetSnowballUsageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSnowballUsageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSnowballUsageResponse)

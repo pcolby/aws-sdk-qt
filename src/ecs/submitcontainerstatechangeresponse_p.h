@@ -34,7 +34,7 @@ public:
 
     SubmitContainerStateChangeResponsePrivate(SubmitContainerStateChangeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSubmitContainerStateChangeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SubmitContainerStateChangeResponse)

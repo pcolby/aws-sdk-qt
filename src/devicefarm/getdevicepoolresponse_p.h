@@ -34,7 +34,7 @@ public:
 
     GetDevicePoolResponsePrivate(GetDevicePoolResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDevicePoolResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDevicePoolResponse)

@@ -34,7 +34,7 @@ public:
 
     TerminateJobFlowsResponsePrivate(TerminateJobFlowsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTerminateJobFlowsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TerminateJobFlowsResponse)

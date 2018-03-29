@@ -34,7 +34,7 @@ public:
 
     ListOfferingPromotionsResponsePrivate(ListOfferingPromotionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListOfferingPromotionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListOfferingPromotionsResponse)

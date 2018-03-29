@@ -34,7 +34,7 @@ public:
 
     DescribeAvailabilityOptionsResponsePrivate(DescribeAvailabilityOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAvailabilityOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAvailabilityOptionsResponse)

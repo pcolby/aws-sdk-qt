@@ -34,7 +34,7 @@ public:
 
     RejectAssignmentResponsePrivate(RejectAssignmentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRejectAssignmentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RejectAssignmentResponse)

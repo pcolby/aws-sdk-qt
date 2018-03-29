@@ -34,7 +34,7 @@ public:
 
     DeleteDevicePoolResponsePrivate(DeleteDevicePoolResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDevicePoolResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDevicePoolResponse)

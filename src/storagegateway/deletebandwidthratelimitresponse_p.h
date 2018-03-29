@@ -34,7 +34,7 @@ public:
 
     DeleteBandwidthRateLimitResponsePrivate(DeleteBandwidthRateLimitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBandwidthRateLimitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBandwidthRateLimitResponse)

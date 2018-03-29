@@ -34,7 +34,7 @@ public:
 
     UpdateTerminationProtectionResponsePrivate(UpdateTerminationProtectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateTerminationProtectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateTerminationProtectionResponse)

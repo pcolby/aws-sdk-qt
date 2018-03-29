@@ -34,7 +34,7 @@ public:
 
     DeleteProtectionResponsePrivate(DeleteProtectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteProtectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteProtectionResponse)

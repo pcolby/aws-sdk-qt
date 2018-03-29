@@ -34,7 +34,7 @@ public:
 
     DeleteEnvironmentConfigurationResponsePrivate(DeleteEnvironmentConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteEnvironmentConfigurationResponse)

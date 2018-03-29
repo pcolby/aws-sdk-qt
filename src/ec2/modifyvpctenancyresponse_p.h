@@ -34,7 +34,7 @@ public:
 
     ModifyVpcTenancyResponsePrivate(ModifyVpcTenancyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyVpcTenancyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyVpcTenancyResponse)

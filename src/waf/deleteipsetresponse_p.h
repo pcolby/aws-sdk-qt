@@ -34,7 +34,7 @@ public:
 
     DeleteIPSetResponsePrivate(DeleteIPSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteIPSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteIPSetResponse)

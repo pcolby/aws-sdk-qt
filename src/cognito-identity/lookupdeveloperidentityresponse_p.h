@@ -34,7 +34,7 @@ public:
 
     LookupDeveloperIdentityResponsePrivate(LookupDeveloperIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseLookupDeveloperIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(LookupDeveloperIdentityResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateVpcLinkResponsePrivate(UpdateVpcLinkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateVpcLinkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateVpcLinkResponse)

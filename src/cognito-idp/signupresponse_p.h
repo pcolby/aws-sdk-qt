@@ -34,7 +34,7 @@ public:
 
     SignUpResponsePrivate(SignUpResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSignUpResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SignUpResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteExpressionResponsePrivate(DeleteExpressionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteExpressionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteExpressionResponse)

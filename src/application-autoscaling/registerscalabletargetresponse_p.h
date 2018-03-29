@@ -34,7 +34,7 @@ public:
 
     RegisterScalableTargetResponsePrivate(RegisterScalableTargetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterScalableTargetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterScalableTargetResponse)

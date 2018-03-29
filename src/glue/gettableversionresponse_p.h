@@ -34,7 +34,7 @@ public:
 
     GetTableVersionResponsePrivate(GetTableVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTableVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTableVersionResponse)

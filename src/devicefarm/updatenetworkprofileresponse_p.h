@@ -34,7 +34,7 @@ public:
 
     UpdateNetworkProfileResponsePrivate(UpdateNetworkProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateNetworkProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateNetworkProfileResponse)

@@ -34,7 +34,7 @@ public:
 
     GetQueueUrlResponsePrivate(GetQueueUrlResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetQueueUrlResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetQueueUrlResponse)

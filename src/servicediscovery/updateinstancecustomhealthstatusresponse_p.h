@@ -34,7 +34,7 @@ public:
 
     UpdateInstanceCustomHealthStatusResponsePrivate(UpdateInstanceCustomHealthStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateInstanceCustomHealthStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateInstanceCustomHealthStatusResponse)

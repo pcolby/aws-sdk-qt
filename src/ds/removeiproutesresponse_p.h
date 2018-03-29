@@ -34,7 +34,7 @@ public:
 
     RemoveIpRoutesResponsePrivate(RemoveIpRoutesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveIpRoutesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveIpRoutesResponse)

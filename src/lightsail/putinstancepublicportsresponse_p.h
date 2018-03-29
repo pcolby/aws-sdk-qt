@@ -34,7 +34,7 @@ public:
 
     PutInstancePublicPortsResponsePrivate(PutInstancePublicPortsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutInstancePublicPortsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutInstancePublicPortsResponse)

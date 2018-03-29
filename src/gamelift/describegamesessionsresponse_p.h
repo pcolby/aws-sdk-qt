@@ -34,7 +34,7 @@ public:
 
     DescribeGameSessionsResponsePrivate(DescribeGameSessionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeGameSessionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeGameSessionsResponse)

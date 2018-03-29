@@ -34,7 +34,7 @@ public:
 
     GetPipelineResponsePrivate(GetPipelineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPipelineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPipelineResponse)

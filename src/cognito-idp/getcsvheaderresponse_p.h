@@ -34,7 +34,7 @@ public:
 
     GetCSVHeaderResponsePrivate(GetCSVHeaderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCSVHeaderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCSVHeaderResponse)

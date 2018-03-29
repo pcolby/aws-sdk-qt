@@ -34,7 +34,7 @@ public:
 
     StartConfigRulesEvaluationResponsePrivate(StartConfigRulesEvaluationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartConfigRulesEvaluationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartConfigRulesEvaluationResponse)

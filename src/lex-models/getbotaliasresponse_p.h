@@ -34,7 +34,7 @@ public:
 
     GetBotAliasResponsePrivate(GetBotAliasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBotAliasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBotAliasResponse)

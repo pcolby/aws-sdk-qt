@@ -34,7 +34,7 @@ public:
 
     UnassignPrivateIpAddressesResponsePrivate(UnassignPrivateIpAddressesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnassignPrivateIpAddressesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnassignPrivateIpAddressesResponse)

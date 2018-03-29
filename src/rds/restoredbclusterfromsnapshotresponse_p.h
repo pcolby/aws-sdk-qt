@@ -34,7 +34,7 @@ public:
 
     RestoreDBClusterFromSnapshotResponsePrivate(RestoreDBClusterFromSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreDBClusterFromSnapshotResponse)

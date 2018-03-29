@@ -34,7 +34,7 @@ public:
 
     DeleteCacheSubnetGroupResponsePrivate(DeleteCacheSubnetGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCacheSubnetGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCacheSubnetGroupResponse)

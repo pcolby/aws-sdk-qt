@@ -34,7 +34,7 @@ public:
 
     DescribeCacheResponsePrivate(DescribeCacheResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeCacheResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeCacheResponse)

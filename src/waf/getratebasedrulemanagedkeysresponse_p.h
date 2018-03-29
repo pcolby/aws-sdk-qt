@@ -34,7 +34,7 @@ public:
 
     GetRateBasedRuleManagedKeysResponsePrivate(GetRateBasedRuleManagedKeysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRateBasedRuleManagedKeysResponse)

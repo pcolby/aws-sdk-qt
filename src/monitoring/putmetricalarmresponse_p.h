@@ -34,7 +34,7 @@ public:
 
     PutMetricAlarmResponsePrivate(PutMetricAlarmResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutMetricAlarmResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutMetricAlarmResponse)

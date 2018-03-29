@@ -34,7 +34,7 @@ public:
 
     DeleteBasePathMappingResponsePrivate(DeleteBasePathMappingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBasePathMappingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBasePathMappingResponse)

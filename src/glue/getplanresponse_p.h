@@ -34,7 +34,7 @@ public:
 
     GetPlanResponsePrivate(GetPlanResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPlanResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPlanResponse)

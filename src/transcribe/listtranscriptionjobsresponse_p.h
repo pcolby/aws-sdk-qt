@@ -34,7 +34,7 @@ public:
 
     ListTranscriptionJobsResponsePrivate(ListTranscriptionJobsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTranscriptionJobsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTranscriptionJobsResponse)

@@ -34,7 +34,7 @@ public:
 
     GetGcmChannelResponsePrivate(GetGcmChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGcmChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGcmChannelResponse)

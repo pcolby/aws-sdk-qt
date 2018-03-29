@@ -34,7 +34,7 @@ public:
 
     GetVaultAccessPolicyResponsePrivate(GetVaultAccessPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetVaultAccessPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetVaultAccessPolicyResponse)

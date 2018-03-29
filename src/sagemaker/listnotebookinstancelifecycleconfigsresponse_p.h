@@ -34,7 +34,7 @@ public:
 
     ListNotebookInstanceLifecycleConfigsResponsePrivate(ListNotebookInstanceLifecycleConfigsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListNotebookInstanceLifecycleConfigsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListNotebookInstanceLifecycleConfigsResponse)

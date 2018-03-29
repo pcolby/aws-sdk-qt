@@ -34,7 +34,7 @@ public:
 
     OptInPhoneNumberResponsePrivate(OptInPhoneNumberResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseOptInPhoneNumberResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(OptInPhoneNumberResponse)

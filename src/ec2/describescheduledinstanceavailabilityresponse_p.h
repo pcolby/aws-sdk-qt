@@ -34,7 +34,7 @@ public:
 
     DescribeScheduledInstanceAvailabilityResponsePrivate(DescribeScheduledInstanceAvailabilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeScheduledInstanceAvailabilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeScheduledInstanceAvailabilityResponse)

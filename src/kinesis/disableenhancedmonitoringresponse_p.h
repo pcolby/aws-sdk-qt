@@ -34,7 +34,7 @@ public:
 
     DisableEnhancedMonitoringResponsePrivate(DisableEnhancedMonitoringResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableEnhancedMonitoringResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableEnhancedMonitoringResponse)

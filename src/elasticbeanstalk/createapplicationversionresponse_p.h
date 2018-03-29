@@ -34,7 +34,7 @@ public:
 
     CreateApplicationVersionResponsePrivate(CreateApplicationVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateApplicationVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateApplicationVersionResponse)

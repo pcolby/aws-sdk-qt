@@ -34,7 +34,7 @@ public:
 
     AssociateDeviceWithRoomResponsePrivate(AssociateDeviceWithRoomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateDeviceWithRoomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateDeviceWithRoomResponse)

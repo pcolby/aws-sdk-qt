@@ -34,7 +34,7 @@ public:
 
     CreateVaultResponsePrivate(CreateVaultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateVaultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateVaultResponse)

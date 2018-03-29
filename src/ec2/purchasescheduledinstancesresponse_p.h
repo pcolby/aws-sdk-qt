@@ -34,7 +34,7 @@ public:
 
     PurchaseScheduledInstancesResponsePrivate(PurchaseScheduledInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurchaseScheduledInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurchaseScheduledInstancesResponse)

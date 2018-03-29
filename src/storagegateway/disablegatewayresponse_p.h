@@ -34,7 +34,7 @@ public:
 
     DisableGatewayResponsePrivate(DisableGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableGatewayResponse)

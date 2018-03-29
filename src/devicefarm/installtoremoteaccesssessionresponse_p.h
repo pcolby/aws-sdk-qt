@@ -34,7 +34,7 @@ public:
 
     InstallToRemoteAccessSessionResponsePrivate(InstallToRemoteAccessSessionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInstallToRemoteAccessSessionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InstallToRemoteAccessSessionResponse)

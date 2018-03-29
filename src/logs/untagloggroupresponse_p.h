@@ -34,7 +34,7 @@ public:
 
     UntagLogGroupResponsePrivate(UntagLogGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUntagLogGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UntagLogGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     ModifyClusterResponsePrivate(ModifyClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyClusterResponse)

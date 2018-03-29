@@ -34,7 +34,7 @@ public:
 
     ListOfferingTransactionsResponsePrivate(ListOfferingTransactionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListOfferingTransactionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListOfferingTransactionsResponse)

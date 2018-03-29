@@ -34,7 +34,7 @@ public:
 
     DisassociateConfigurationItemsFromApplicationResponsePrivate(DisassociateConfigurationItemsFromApplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateConfigurationItemsFromApplicationResponse)

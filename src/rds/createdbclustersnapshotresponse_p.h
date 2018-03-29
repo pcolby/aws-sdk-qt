@@ -34,7 +34,7 @@ public:
 
     CreateDBClusterSnapshotResponsePrivate(CreateDBClusterSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDBClusterSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDBClusterSnapshotResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteEvaluationResponsePrivate(DeleteEvaluationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteEvaluationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteEvaluationResponse)

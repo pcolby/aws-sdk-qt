@@ -34,7 +34,7 @@ public:
 
     CreateOpenIDConnectProviderResponsePrivate(CreateOpenIDConnectProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateOpenIDConnectProviderResponse)

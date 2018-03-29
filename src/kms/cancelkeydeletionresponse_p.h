@@ -34,7 +34,7 @@ public:
 
     CancelKeyDeletionResponsePrivate(CancelKeyDeletionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelKeyDeletionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelKeyDeletionResponse)

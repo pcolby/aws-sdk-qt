@@ -34,7 +34,7 @@ public:
 
     GetLabelDetectionResponsePrivate(GetLabelDetectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetLabelDetectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetLabelDetectionResponse)

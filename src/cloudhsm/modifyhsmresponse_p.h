@@ -34,7 +34,7 @@ public:
 
     ModifyHsmResponsePrivate(ModifyHsmResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyHsmResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyHsmResponse)

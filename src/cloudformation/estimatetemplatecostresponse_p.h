@@ -34,7 +34,7 @@ public:
 
     EstimateTemplateCostResponsePrivate(EstimateTemplateCostResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEstimateTemplateCostResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EstimateTemplateCostResponse)

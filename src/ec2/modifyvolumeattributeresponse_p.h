@@ -34,7 +34,7 @@ public:
 
     ModifyVolumeAttributeResponsePrivate(ModifyVolumeAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyVolumeAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyVolumeAttributeResponse)

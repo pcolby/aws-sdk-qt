@@ -34,7 +34,7 @@ public:
 
     ListOrganizationalUnitsForParentResponsePrivate(ListOrganizationalUnitsForParentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListOrganizationalUnitsForParentResponse)

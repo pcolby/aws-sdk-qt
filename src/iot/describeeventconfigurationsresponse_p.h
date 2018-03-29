@@ -34,7 +34,7 @@ public:
 
     DescribeEventConfigurationsResponsePrivate(DescribeEventConfigurationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEventConfigurationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEventConfigurationsResponse)

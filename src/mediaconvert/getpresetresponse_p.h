@@ -34,7 +34,7 @@ public:
 
     GetPresetResponsePrivate(GetPresetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPresetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPresetResponse)

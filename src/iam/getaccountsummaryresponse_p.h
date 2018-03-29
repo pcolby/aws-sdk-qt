@@ -34,7 +34,7 @@ public:
 
     GetAccountSummaryResponsePrivate(GetAccountSummaryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAccountSummaryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAccountSummaryResponse)

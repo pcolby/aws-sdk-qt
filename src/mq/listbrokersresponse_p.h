@@ -34,7 +34,7 @@ public:
 
     ListBrokersResponsePrivate(ListBrokersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBrokersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBrokersResponse)

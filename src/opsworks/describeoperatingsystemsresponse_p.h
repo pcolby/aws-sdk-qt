@@ -34,7 +34,7 @@ public:
 
     DescribeOperatingSystemsResponsePrivate(DescribeOperatingSystemsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeOperatingSystemsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeOperatingSystemsResponse)

@@ -34,7 +34,7 @@ public:
 
     SendEmailResponsePrivate(SendEmailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendEmailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendEmailResponse)

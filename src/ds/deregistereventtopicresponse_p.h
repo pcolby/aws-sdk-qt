@@ -34,7 +34,7 @@ public:
 
     DeregisterEventTopicResponsePrivate(DeregisterEventTopicResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterEventTopicResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterEventTopicResponse)

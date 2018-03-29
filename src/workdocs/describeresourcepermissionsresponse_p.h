@@ -34,7 +34,7 @@ public:
 
     DescribeResourcePermissionsResponsePrivate(DescribeResourcePermissionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeResourcePermissionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeResourcePermissionsResponse)

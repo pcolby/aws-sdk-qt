@@ -34,7 +34,7 @@ public:
 
     DeleteAssociationResponsePrivate(DeleteAssociationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAssociationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAssociationResponse)

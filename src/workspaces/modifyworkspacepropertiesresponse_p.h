@@ -34,7 +34,7 @@ public:
 
     ModifyWorkspacePropertiesResponsePrivate(ModifyWorkspacePropertiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyWorkspacePropertiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyWorkspacePropertiesResponse)

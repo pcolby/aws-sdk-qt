@@ -34,7 +34,7 @@ public:
 
     CreateDBClusterParameterGroupResponsePrivate(CreateDBClusterParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDBClusterParameterGroupResponse)

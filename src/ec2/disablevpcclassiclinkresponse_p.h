@@ -34,7 +34,7 @@ public:
 
     DisableVpcClassicLinkResponsePrivate(DisableVpcClassicLinkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableVpcClassicLinkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableVpcClassicLinkResponse)

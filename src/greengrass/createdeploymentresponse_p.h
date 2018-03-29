@@ -34,7 +34,7 @@ public:
 
     CreateDeploymentResponsePrivate(CreateDeploymentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDeploymentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDeploymentResponse)

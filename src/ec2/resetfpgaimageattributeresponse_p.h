@@ -34,7 +34,7 @@ public:
 
     ResetFpgaImageAttributeResponsePrivate(ResetFpgaImageAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetFpgaImageAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetFpgaImageAttributeResponse)

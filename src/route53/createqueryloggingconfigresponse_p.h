@@ -34,7 +34,7 @@ public:
 
     CreateQueryLoggingConfigResponsePrivate(CreateQueryLoggingConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateQueryLoggingConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateQueryLoggingConfigResponse)

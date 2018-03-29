@@ -34,7 +34,7 @@ public:
 
     GetConsoleOutputResponsePrivate(GetConsoleOutputResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetConsoleOutputResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetConsoleOutputResponse)

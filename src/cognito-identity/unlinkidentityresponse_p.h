@@ -34,7 +34,7 @@ public:
 
     UnlinkIdentityResponsePrivate(UnlinkIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnlinkIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnlinkIdentityResponse)

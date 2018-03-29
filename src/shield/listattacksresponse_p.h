@@ -34,7 +34,7 @@ public:
 
     ListAttacksResponsePrivate(ListAttacksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAttacksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAttacksResponse)

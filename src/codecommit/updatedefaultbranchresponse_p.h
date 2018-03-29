@@ -34,7 +34,7 @@ public:
 
     UpdateDefaultBranchResponsePrivate(UpdateDefaultBranchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDefaultBranchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDefaultBranchResponse)

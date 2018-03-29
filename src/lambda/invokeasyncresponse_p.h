@@ -34,7 +34,7 @@ public:
 
     InvokeAsyncResponsePrivate(InvokeAsyncResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInvokeAsyncResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InvokeAsyncResponse)

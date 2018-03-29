@@ -34,7 +34,7 @@ public:
 
     DescribeAutoScalingNotificationTypesResponsePrivate(DescribeAutoScalingNotificationTypesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAutoScalingNotificationTypesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAutoScalingNotificationTypesResponse)

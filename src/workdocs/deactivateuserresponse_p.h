@@ -34,7 +34,7 @@ public:
 
     DeactivateUserResponsePrivate(DeactivateUserResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeactivateUserResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeactivateUserResponse)

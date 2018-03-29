@@ -34,7 +34,7 @@ public:
 
     GetConsoleScreenshotResponsePrivate(GetConsoleScreenshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetConsoleScreenshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetConsoleScreenshotResponse)

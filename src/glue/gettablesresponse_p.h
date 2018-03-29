@@ -34,7 +34,7 @@ public:
 
     GetTablesResponsePrivate(GetTablesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTablesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTablesResponse)

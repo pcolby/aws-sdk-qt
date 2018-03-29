@@ -34,7 +34,7 @@ public:
 
     GetDistributionResponsePrivate(GetDistributionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDistributionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDistributionResponse)

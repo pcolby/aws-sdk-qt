@@ -34,7 +34,7 @@ public:
 
     GetFederationTokenResponsePrivate(GetFederationTokenResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetFederationTokenResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetFederationTokenResponse)

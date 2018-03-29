@@ -34,7 +34,7 @@ public:
 
     PutSubscriptionFilterResponsePrivate(PutSubscriptionFilterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutSubscriptionFilterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutSubscriptionFilterResponse)

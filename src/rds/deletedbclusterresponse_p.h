@@ -34,7 +34,7 @@ public:
 
     DeleteDBClusterResponsePrivate(DeleteDBClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDBClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDBClusterResponse)

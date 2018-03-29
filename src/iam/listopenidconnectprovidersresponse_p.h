@@ -34,7 +34,7 @@ public:
 
     ListOpenIDConnectProvidersResponsePrivate(ListOpenIDConnectProvidersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListOpenIDConnectProvidersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListOpenIDConnectProvidersResponse)

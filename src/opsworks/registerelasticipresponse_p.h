@@ -34,7 +34,7 @@ public:
 
     RegisterElasticIpResponsePrivate(RegisterElasticIpResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterElasticIpResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterElasticIpResponse)

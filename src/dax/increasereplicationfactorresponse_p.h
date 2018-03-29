@@ -34,7 +34,7 @@ public:
 
     IncreaseReplicationFactorResponsePrivate(IncreaseReplicationFactorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseIncreaseReplicationFactorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(IncreaseReplicationFactorResponse)

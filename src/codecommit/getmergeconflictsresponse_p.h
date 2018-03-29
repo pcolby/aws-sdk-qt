@@ -34,7 +34,7 @@ public:
 
     GetMergeConflictsResponsePrivate(GetMergeConflictsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetMergeConflictsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetMergeConflictsResponse)

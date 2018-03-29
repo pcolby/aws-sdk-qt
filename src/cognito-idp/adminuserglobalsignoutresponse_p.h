@@ -34,7 +34,7 @@ public:
 
     AdminUserGlobalSignOutResponsePrivate(AdminUserGlobalSignOutResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminUserGlobalSignOutResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminUserGlobalSignOutResponse)

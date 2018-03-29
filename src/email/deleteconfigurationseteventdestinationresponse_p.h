@@ -34,7 +34,7 @@ public:
 
     DeleteConfigurationSetEventDestinationResponsePrivate(DeleteConfigurationSetEventDestinationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConfigurationSetEventDestinationResponse)

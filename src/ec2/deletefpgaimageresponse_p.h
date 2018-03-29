@@ -34,7 +34,7 @@ public:
 
     DeleteFpgaImageResponsePrivate(DeleteFpgaImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteFpgaImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteFpgaImageResponse)

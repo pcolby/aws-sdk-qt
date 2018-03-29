@@ -34,7 +34,7 @@ public:
 
     DeleteLaunchConfigurationResponsePrivate(DeleteLaunchConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLaunchConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLaunchConfigurationResponse)

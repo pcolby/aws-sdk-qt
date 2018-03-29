@@ -34,7 +34,7 @@ public:
 
     CompareFacesResponsePrivate(CompareFacesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCompareFacesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CompareFacesResponse)

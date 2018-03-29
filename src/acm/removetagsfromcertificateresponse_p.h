@@ -34,7 +34,7 @@ public:
 
     RemoveTagsFromCertificateResponsePrivate(RemoveTagsFromCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveTagsFromCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveTagsFromCertificateResponse)

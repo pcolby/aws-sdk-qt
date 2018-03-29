@@ -34,7 +34,7 @@ public:
 
     DeleteLoadBalancerTlsCertificateResponsePrivate(DeleteLoadBalancerTlsCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLoadBalancerTlsCertificateResponse)

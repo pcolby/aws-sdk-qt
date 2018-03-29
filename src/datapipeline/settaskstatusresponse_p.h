@@ -34,7 +34,7 @@ public:
 
     SetTaskStatusResponsePrivate(SetTaskStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetTaskStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetTaskStatusResponse)

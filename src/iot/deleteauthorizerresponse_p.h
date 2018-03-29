@@ -34,7 +34,7 @@ public:
 
     DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAuthorizerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAuthorizerResponse)

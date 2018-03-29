@@ -34,7 +34,7 @@ public:
 
     SearchRoomsResponsePrivate(SearchRoomsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSearchRoomsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SearchRoomsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteCloudFrontOriginAccessIdentityResponsePrivate(DeleteCloudFrontOriginAccessIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCloudFrontOriginAccessIdentityResponse)

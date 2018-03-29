@@ -34,7 +34,7 @@ public:
 
     DeleteTrafficPolicyInstanceResponsePrivate(DeleteTrafficPolicyInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTrafficPolicyInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTrafficPolicyInstanceResponse)

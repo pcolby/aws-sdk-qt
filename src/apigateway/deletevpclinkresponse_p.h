@@ -34,7 +34,7 @@ public:
 
     DeleteVpcLinkResponsePrivate(DeleteVpcLinkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVpcLinkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVpcLinkResponse)

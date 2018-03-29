@@ -34,7 +34,7 @@ public:
 
     DeleteBudgetResponsePrivate(DeleteBudgetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBudgetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBudgetResponse)

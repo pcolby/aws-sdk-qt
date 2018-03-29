@@ -34,7 +34,7 @@ public:
 
     ListNamespacesResponsePrivate(ListNamespacesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListNamespacesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListNamespacesResponse)

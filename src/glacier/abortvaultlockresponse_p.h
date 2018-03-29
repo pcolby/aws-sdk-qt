@@ -34,7 +34,7 @@ public:
 
     AbortVaultLockResponsePrivate(AbortVaultLockResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAbortVaultLockResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AbortVaultLockResponse)

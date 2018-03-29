@@ -34,7 +34,7 @@ public:
 
     AddRoleToInstanceProfileResponsePrivate(AddRoleToInstanceProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddRoleToInstanceProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddRoleToInstanceProfileResponse)

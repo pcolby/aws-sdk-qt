@@ -34,7 +34,7 @@ public:
 
     DeleteThingShadowResponsePrivate(DeleteThingShadowResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteThingShadowResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteThingShadowResponse)

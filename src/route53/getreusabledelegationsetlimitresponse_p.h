@@ -34,7 +34,7 @@ public:
 
     GetReusableDelegationSetLimitResponsePrivate(GetReusableDelegationSetLimitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReusableDelegationSetLimitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReusableDelegationSetLimitResponse)

@@ -34,7 +34,7 @@ public:
 
     AssociateRoleToGroupResponsePrivate(AssociateRoleToGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateRoleToGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateRoleToGroupResponse)

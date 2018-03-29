@@ -34,7 +34,7 @@ public:
 
     DeleteDBSubnetGroupResponsePrivate(DeleteDBSubnetGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDBSubnetGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDBSubnetGroupResponse)

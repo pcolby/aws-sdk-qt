@@ -34,7 +34,7 @@ public:
 
     UpdateQualificationTypeResponsePrivate(UpdateQualificationTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateQualificationTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateQualificationTypeResponse)

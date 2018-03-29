@@ -34,7 +34,7 @@ public:
 
     CreatePortfolioResponsePrivate(CreatePortfolioResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreatePortfolioResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreatePortfolioResponse)

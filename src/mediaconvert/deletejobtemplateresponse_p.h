@@ -34,7 +34,7 @@ public:
 
     DeleteJobTemplateResponsePrivate(DeleteJobTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteJobTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteJobTemplateResponse)

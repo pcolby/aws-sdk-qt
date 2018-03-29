@@ -34,7 +34,7 @@ public:
 
     BatchGetNamedQueryResponsePrivate(BatchGetNamedQueryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetNamedQueryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetNamedQueryResponse)

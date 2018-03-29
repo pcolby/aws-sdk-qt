@@ -34,7 +34,7 @@ public:
 
     ListNamedQueriesResponsePrivate(ListNamedQueriesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListNamedQueriesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListNamedQueriesResponse)

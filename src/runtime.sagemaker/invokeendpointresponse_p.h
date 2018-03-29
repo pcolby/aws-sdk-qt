@@ -34,7 +34,7 @@ public:
 
     InvokeEndpointResponsePrivate(InvokeEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInvokeEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InvokeEndpointResponse)

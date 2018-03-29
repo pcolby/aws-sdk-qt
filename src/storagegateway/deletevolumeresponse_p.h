@@ -34,7 +34,7 @@ public:
 
     DeleteVolumeResponsePrivate(DeleteVolumeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVolumeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVolumeResponse)

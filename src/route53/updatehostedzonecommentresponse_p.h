@@ -34,7 +34,7 @@ public:
 
     UpdateHostedZoneCommentResponsePrivate(UpdateHostedZoneCommentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateHostedZoneCommentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateHostedZoneCommentResponse)

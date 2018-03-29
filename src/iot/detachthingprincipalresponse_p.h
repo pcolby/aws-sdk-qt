@@ -34,7 +34,7 @@ public:
 
     DetachThingPrincipalResponsePrivate(DetachThingPrincipalResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachThingPrincipalResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachThingPrincipalResponse)

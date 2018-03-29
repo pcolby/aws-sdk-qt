@@ -34,7 +34,7 @@ public:
 
     GetSnapshotLimitsResponsePrivate(GetSnapshotLimitsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSnapshotLimitsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSnapshotLimitsResponse)

@@ -34,7 +34,7 @@ public:
 
     ListSkillsResponsePrivate(ListSkillsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListSkillsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListSkillsResponse)

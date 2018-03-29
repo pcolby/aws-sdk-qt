@@ -34,7 +34,7 @@ public:
 
     DetachClassicLinkVpcResponsePrivate(DetachClassicLinkVpcResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachClassicLinkVpcResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachClassicLinkVpcResponse)

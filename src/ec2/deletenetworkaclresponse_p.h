@@ -34,7 +34,7 @@ public:
 
     DeleteNetworkAclResponsePrivate(DeleteNetworkAclResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNetworkAclResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNetworkAclResponse)

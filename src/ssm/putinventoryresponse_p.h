@@ -34,7 +34,7 @@ public:
 
     PutInventoryResponsePrivate(PutInventoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutInventoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutInventoryResponse)

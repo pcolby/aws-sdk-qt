@@ -34,7 +34,7 @@ public:
 
     ModifyFpgaImageAttributeResponsePrivate(ModifyFpgaImageAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyFpgaImageAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyFpgaImageAttributeResponse)

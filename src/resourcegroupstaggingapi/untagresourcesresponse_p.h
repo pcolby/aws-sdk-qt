@@ -34,7 +34,7 @@ public:
 
     UntagResourcesResponsePrivate(UntagResourcesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUntagResourcesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UntagResourcesResponse)

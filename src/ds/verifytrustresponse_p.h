@@ -34,7 +34,7 @@ public:
 
     VerifyTrustResponsePrivate(VerifyTrustResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseVerifyTrustResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(VerifyTrustResponse)

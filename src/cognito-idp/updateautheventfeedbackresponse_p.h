@@ -34,7 +34,7 @@ public:
 
     UpdateAuthEventFeedbackResponsePrivate(UpdateAuthEventFeedbackResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateAuthEventFeedbackResponse)

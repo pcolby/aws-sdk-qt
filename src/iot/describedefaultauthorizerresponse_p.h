@@ -34,7 +34,7 @@ public:
 
     DescribeDefaultAuthorizerResponsePrivate(DescribeDefaultAuthorizerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDefaultAuthorizerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDefaultAuthorizerResponse)

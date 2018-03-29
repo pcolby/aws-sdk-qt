@@ -34,7 +34,7 @@ public:
 
     RenewDomainResponsePrivate(RenewDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRenewDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RenewDomainResponse)

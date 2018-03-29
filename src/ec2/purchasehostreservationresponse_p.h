@@ -34,7 +34,7 @@ public:
 
     PurchaseHostReservationResponsePrivate(PurchaseHostReservationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurchaseHostReservationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurchaseHostReservationResponse)

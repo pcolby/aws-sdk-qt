@@ -34,7 +34,7 @@ public:
 
     DescribeThingGroupResponsePrivate(DescribeThingGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeThingGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeThingGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     GetSdkTypesResponsePrivate(GetSdkTypesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSdkTypesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSdkTypesResponse)

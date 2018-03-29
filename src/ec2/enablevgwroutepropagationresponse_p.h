@@ -34,7 +34,7 @@ public:
 
     EnableVgwRoutePropagationResponsePrivate(EnableVgwRoutePropagationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableVgwRoutePropagationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableVgwRoutePropagationResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeHandshakeResponsePrivate(DescribeHandshakeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeHandshakeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeHandshakeResponse)

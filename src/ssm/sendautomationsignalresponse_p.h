@@ -34,7 +34,7 @@ public:
 
     SendAutomationSignalResponsePrivate(SendAutomationSignalResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendAutomationSignalResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendAutomationSignalResponse)

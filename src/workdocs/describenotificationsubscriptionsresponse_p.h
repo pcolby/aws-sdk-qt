@@ -34,7 +34,7 @@ public:
 
     DescribeNotificationSubscriptionsResponsePrivate(DescribeNotificationSubscriptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNotificationSubscriptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNotificationSubscriptionsResponse)

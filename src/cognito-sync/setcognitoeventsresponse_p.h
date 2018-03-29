@@ -34,7 +34,7 @@ public:
 
     SetCognitoEventsResponsePrivate(SetCognitoEventsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetCognitoEventsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetCognitoEventsResponse)

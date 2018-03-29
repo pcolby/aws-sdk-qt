@@ -34,7 +34,7 @@ public:
 
     GetComplianceSummaryByConfigRuleResponsePrivate(GetComplianceSummaryByConfigRuleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetComplianceSummaryByConfigRuleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetComplianceSummaryByConfigRuleResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteStateMachineResponsePrivate(DeleteStateMachineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteStateMachineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteStateMachineResponse)

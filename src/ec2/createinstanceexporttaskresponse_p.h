@@ -34,7 +34,7 @@ public:
 
     CreateInstanceExportTaskResponsePrivate(CreateInstanceExportTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateInstanceExportTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateInstanceExportTaskResponse)

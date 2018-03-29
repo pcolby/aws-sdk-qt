@@ -34,7 +34,7 @@ public:
 
     DescribeEC2InstanceLimitsResponsePrivate(DescribeEC2InstanceLimitsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEC2InstanceLimitsResponse)

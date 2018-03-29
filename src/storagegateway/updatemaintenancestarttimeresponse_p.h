@@ -34,7 +34,7 @@ public:
 
     UpdateMaintenanceStartTimeResponsePrivate(UpdateMaintenanceStartTimeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateMaintenanceStartTimeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateMaintenanceStartTimeResponse)

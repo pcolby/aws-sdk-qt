@@ -34,7 +34,7 @@ public:
 
     AdminDeleteUserAttributesResponsePrivate(AdminDeleteUserAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminDeleteUserAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminDeleteUserAttributesResponse)

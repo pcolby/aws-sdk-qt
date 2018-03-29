@@ -34,7 +34,7 @@ public:
 
     AddIpRoutesResponsePrivate(AddIpRoutesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddIpRoutesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddIpRoutesResponse)

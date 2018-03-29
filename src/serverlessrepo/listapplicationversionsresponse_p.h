@@ -34,7 +34,7 @@ public:
 
     ListApplicationVersionsResponsePrivate(ListApplicationVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListApplicationVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListApplicationVersionsResponse)

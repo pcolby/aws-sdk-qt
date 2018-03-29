@@ -34,7 +34,7 @@ public:
 
     DeleteIndexFieldResponsePrivate(DeleteIndexFieldResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteIndexFieldResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteIndexFieldResponse)

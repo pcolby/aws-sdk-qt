@@ -34,7 +34,7 @@ public:
 
     ListConfigurationSetsResponsePrivate(ListConfigurationSetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListConfigurationSetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListConfigurationSetsResponse)

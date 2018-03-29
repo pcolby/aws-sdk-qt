@@ -34,7 +34,7 @@ public:
 
     AdminListUserAuthEventsResponsePrivate(AdminListUserAuthEventsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminListUserAuthEventsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminListUserAuthEventsResponse)

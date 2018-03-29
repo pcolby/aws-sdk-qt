@@ -34,7 +34,7 @@ public:
 
     DeleteElasticsearchServiceRoleResponsePrivate(DeleteElasticsearchServiceRoleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteElasticsearchServiceRoleResponse)

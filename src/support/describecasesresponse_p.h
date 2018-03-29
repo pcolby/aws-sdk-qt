@@ -34,7 +34,7 @@ public:
 
     DescribeCasesResponsePrivate(DescribeCasesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeCasesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeCasesResponse)

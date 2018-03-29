@@ -34,7 +34,7 @@ public:
 
     DescribeLayersResponsePrivate(DescribeLayersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLayersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLayersResponse)

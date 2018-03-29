@@ -34,7 +34,7 @@ public:
 
     GetStageResponsePrivate(GetStageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetStageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetStageResponse)

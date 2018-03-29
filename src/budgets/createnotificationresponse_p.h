@@ -34,7 +34,7 @@ public:
 
     CreateNotificationResponsePrivate(CreateNotificationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateNotificationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateNotificationResponse)

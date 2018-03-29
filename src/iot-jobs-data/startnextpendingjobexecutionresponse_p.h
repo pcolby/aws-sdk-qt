@@ -34,7 +34,7 @@ public:
 
     StartNextPendingJobExecutionResponsePrivate(StartNextPendingJobExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartNextPendingJobExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartNextPendingJobExecutionResponse)

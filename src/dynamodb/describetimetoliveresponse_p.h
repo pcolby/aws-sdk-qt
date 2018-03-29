@@ -34,7 +34,7 @@ public:
 
     DescribeTimeToLiveResponsePrivate(DescribeTimeToLiveResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeTimeToLiveResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeTimeToLiveResponse)

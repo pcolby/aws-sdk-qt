@@ -34,7 +34,7 @@ public:
 
     RevokeCacheSecurityGroupIngressResponsePrivate(RevokeCacheSecurityGroupIngressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRevokeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RevokeCacheSecurityGroupIngressResponse)

@@ -34,7 +34,7 @@ public:
 
     StartMonitoringMembersResponsePrivate(StartMonitoringMembersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartMonitoringMembersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartMonitoringMembersResponse)

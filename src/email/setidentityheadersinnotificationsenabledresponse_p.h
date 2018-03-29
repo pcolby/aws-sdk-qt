@@ -34,7 +34,7 @@ public:
 
     SetIdentityHeadersInNotificationsEnabledResponsePrivate(SetIdentityHeadersInNotificationsEnabledResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetIdentityHeadersInNotificationsEnabledResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetIdentityHeadersInNotificationsEnabledResponse)

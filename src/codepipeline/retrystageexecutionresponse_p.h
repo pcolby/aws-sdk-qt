@@ -34,7 +34,7 @@ public:
 
     RetryStageExecutionResponsePrivate(RetryStageExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRetryStageExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RetryStageExecutionResponse)

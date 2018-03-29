@@ -34,7 +34,7 @@ public:
 
     DeleteStreamProcessorResponsePrivate(DeleteStreamProcessorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteStreamProcessorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteStreamProcessorResponse)

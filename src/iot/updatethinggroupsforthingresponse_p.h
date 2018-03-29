@@ -34,7 +34,7 @@ public:
 
     UpdateThingGroupsForThingResponsePrivate(UpdateThingGroupsForThingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateThingGroupsForThingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateThingGroupsForThingResponse)

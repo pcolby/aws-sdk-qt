@@ -34,7 +34,7 @@ public:
 
     ListMigrationTasksResponsePrivate(ListMigrationTasksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListMigrationTasksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListMigrationTasksResponse)

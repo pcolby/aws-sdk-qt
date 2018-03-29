@@ -34,7 +34,7 @@ public:
 
     DeleteVpcEndpointsResponsePrivate(DeleteVpcEndpointsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVpcEndpointsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVpcEndpointsResponse)

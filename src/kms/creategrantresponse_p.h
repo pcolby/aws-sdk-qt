@@ -34,7 +34,7 @@ public:
 
     CreateGrantResponsePrivate(CreateGrantResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateGrantResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateGrantResponse)

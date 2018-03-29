@@ -34,7 +34,7 @@ public:
 
     DeleteConnectionResponsePrivate(DeleteConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConnectionResponse)

@@ -34,7 +34,7 @@ public:
 
     ChangeMessageVisibilityBatchResponsePrivate(ChangeMessageVisibilityBatchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseChangeMessageVisibilityBatchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ChangeMessageVisibilityBatchResponse)

@@ -34,7 +34,7 @@ public:
 
     SetUserPoolMfaConfigResponsePrivate(SetUserPoolMfaConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetUserPoolMfaConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetUserPoolMfaConfigResponse)

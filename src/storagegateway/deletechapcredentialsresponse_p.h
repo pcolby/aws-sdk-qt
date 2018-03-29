@@ -34,7 +34,7 @@ public:
 
     DeleteChapCredentialsResponsePrivate(DeleteChapCredentialsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteChapCredentialsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteChapCredentialsResponse)

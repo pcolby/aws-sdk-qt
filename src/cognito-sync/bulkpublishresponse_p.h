@@ -34,7 +34,7 @@ public:
 
     BulkPublishResponsePrivate(BulkPublishResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBulkPublishResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BulkPublishResponse)

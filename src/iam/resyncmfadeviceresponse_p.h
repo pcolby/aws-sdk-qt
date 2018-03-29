@@ -34,7 +34,7 @@ public:
 
     ResyncMFADeviceResponsePrivate(ResyncMFADeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResyncMFADeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResyncMFADeviceResponse)

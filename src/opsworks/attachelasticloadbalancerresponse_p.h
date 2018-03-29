@@ -34,7 +34,7 @@ public:
 
     AttachElasticLoadBalancerResponsePrivate(AttachElasticLoadBalancerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachElasticLoadBalancerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachElasticLoadBalancerResponse)

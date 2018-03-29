@@ -34,7 +34,7 @@ public:
 
     ListMFADevicesResponsePrivate(ListMFADevicesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListMFADevicesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListMFADevicesResponse)

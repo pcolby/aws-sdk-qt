@@ -34,7 +34,7 @@ public:
 
     GetBucketAccelerateConfigurationResponsePrivate(GetBucketAccelerateConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketAccelerateConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketAccelerateConfigurationResponse)

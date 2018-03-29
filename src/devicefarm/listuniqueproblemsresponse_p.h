@@ -34,7 +34,7 @@ public:
 
     ListUniqueProblemsResponsePrivate(ListUniqueProblemsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListUniqueProblemsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListUniqueProblemsResponse)

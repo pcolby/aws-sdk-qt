@@ -34,7 +34,7 @@ public:
 
     AssociateHostedConnectionResponsePrivate(AssociateHostedConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateHostedConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateHostedConnectionResponse)

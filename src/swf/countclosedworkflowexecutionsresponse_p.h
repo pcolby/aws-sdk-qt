@@ -34,7 +34,7 @@ public:
 
     CountClosedWorkflowExecutionsResponsePrivate(CountClosedWorkflowExecutionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCountClosedWorkflowExecutionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CountClosedWorkflowExecutionsResponse)

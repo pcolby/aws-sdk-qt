@@ -34,7 +34,7 @@ public:
 
     GetRegistrationCodeResponsePrivate(GetRegistrationCodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRegistrationCodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRegistrationCodeResponse)

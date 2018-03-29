@@ -34,7 +34,7 @@ public:
 
     StartOnDemandReplicationRunResponsePrivate(StartOnDemandReplicationRunResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartOnDemandReplicationRunResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartOnDemandReplicationRunResponse)

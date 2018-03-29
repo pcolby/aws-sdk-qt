@@ -34,7 +34,7 @@ public:
 
     RegisterVolumeResponsePrivate(RegisterVolumeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterVolumeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterVolumeResponse)

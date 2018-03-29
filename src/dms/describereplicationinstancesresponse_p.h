@@ -34,7 +34,7 @@ public:
 
     DescribeReplicationInstancesResponsePrivate(DescribeReplicationInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeReplicationInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeReplicationInstancesResponse)

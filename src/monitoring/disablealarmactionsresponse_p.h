@@ -34,7 +34,7 @@ public:
 
     DisableAlarmActionsResponsePrivate(DisableAlarmActionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableAlarmActionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableAlarmActionsResponse)

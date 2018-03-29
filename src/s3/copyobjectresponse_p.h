@@ -34,7 +34,7 @@ public:
 
     CopyObjectResponsePrivate(CopyObjectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyObjectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyObjectResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateParameterGroupResponsePrivate(CreateParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateParameterGroupResponse)

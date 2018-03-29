@@ -34,7 +34,7 @@ public:
 
     BatchDetectEntitiesResponsePrivate(BatchDetectEntitiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDetectEntitiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDetectEntitiesResponse)

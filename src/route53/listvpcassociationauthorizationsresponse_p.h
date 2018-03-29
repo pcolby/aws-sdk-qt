@@ -34,7 +34,7 @@ public:
 
     ListVPCAssociationAuthorizationsResponsePrivate(ListVPCAssociationAuthorizationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListVPCAssociationAuthorizationsResponse)

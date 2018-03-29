@@ -34,7 +34,7 @@ public:
 
     GetDatabaseResponsePrivate(GetDatabaseResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDatabaseResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDatabaseResponse)

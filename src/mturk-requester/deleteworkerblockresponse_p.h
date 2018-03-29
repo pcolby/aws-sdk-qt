@@ -34,7 +34,7 @@ public:
 
     DeleteWorkerBlockResponsePrivate(DeleteWorkerBlockResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteWorkerBlockResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteWorkerBlockResponse)

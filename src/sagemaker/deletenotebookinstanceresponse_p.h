@@ -34,7 +34,7 @@ public:
 
     DeleteNotebookInstanceResponsePrivate(DeleteNotebookInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNotebookInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNotebookInstanceResponse)

@@ -34,7 +34,7 @@ public:
 
     GetTelemetryMetadataResponsePrivate(GetTelemetryMetadataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTelemetryMetadataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTelemetryMetadataResponse)

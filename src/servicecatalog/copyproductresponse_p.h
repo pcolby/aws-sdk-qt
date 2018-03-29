@@ -34,7 +34,7 @@ public:
 
     CopyProductResponsePrivate(CopyProductResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyProductResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyProductResponse)

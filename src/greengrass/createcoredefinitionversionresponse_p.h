@@ -34,7 +34,7 @@ public:
 
     CreateCoreDefinitionVersionResponsePrivate(CreateCoreDefinitionVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCoreDefinitionVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCoreDefinitionVersionResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeClassicLinkInstancesResponsePrivate(DescribeClassicLinkInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeClassicLinkInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeClassicLinkInstancesResponse)

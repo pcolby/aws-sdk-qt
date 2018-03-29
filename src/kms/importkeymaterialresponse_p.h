@@ -34,7 +34,7 @@ public:
 
     ImportKeyMaterialResponsePrivate(ImportKeyMaterialResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportKeyMaterialResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportKeyMaterialResponse)

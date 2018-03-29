@@ -34,7 +34,7 @@ public:
 
     DescribeActiveReceiptRuleSetResponsePrivate(DescribeActiveReceiptRuleSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeActiveReceiptRuleSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeActiveReceiptRuleSetResponse)

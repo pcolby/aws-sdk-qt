@@ -34,7 +34,7 @@ public:
 
     GetLoginProfileResponsePrivate(GetLoginProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetLoginProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetLoginProfileResponse)

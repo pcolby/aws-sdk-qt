@@ -34,7 +34,7 @@ public:
 
     PutActionRevisionResponsePrivate(PutActionRevisionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutActionRevisionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutActionRevisionResponse)

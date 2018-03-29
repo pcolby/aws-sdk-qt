@@ -34,7 +34,7 @@ public:
 
     DeleteVpcPeeringConnectionResponsePrivate(DeleteVpcPeeringConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVpcPeeringConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVpcPeeringConnectionResponse)

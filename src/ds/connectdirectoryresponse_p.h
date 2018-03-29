@@ -34,7 +34,7 @@ public:
 
     ConnectDirectoryResponsePrivate(ConnectDirectoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseConnectDirectoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ConnectDirectoryResponse)

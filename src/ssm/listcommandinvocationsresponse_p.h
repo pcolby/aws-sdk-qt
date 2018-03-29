@@ -34,7 +34,7 @@ public:
 
     ListCommandInvocationsResponsePrivate(ListCommandInvocationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListCommandInvocationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListCommandInvocationsResponse)

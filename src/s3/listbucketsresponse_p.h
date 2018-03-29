@@ -34,7 +34,7 @@ public:
 
     ListBucketsResponsePrivate(ListBucketsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBucketsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBucketsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteIdentityProviderResponsePrivate(DeleteIdentityProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteIdentityProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteIdentityProviderResponse)

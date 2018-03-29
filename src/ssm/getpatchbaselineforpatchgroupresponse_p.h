@@ -34,7 +34,7 @@ public:
 
     GetPatchBaselineForPatchGroupResponsePrivate(GetPatchBaselineForPatchGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPatchBaselineForPatchGroupResponse)

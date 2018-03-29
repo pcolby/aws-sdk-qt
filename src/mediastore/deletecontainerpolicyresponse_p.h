@@ -34,7 +34,7 @@ public:
 
     DeleteContainerPolicyResponsePrivate(DeleteContainerPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteContainerPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteContainerPolicyResponse)

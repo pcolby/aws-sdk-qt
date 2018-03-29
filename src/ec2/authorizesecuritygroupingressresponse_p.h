@@ -34,7 +34,7 @@ public:
 
     AuthorizeSecurityGroupIngressResponsePrivate(AuthorizeSecurityGroupIngressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAuthorizeSecurityGroupIngressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AuthorizeSecurityGroupIngressResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeTapeArchivesResponsePrivate(DescribeTapeArchivesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeTapeArchivesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeTapeArchivesResponse)

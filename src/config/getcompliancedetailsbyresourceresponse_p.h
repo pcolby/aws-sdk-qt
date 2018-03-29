@@ -34,7 +34,7 @@ public:
 
     GetComplianceDetailsByResourceResponsePrivate(GetComplianceDetailsByResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetComplianceDetailsByResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetComplianceDetailsByResourceResponse)

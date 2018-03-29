@@ -34,7 +34,7 @@ public:
 
     ListAWSServiceAccessForOrganizationResponsePrivate(ListAWSServiceAccessForOrganizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAWSServiceAccessForOrganizationResponse)

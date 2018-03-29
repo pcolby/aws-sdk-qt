@@ -34,7 +34,7 @@ public:
 
     DeleteGeoMatchSetResponsePrivate(DeleteGeoMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteGeoMatchSetResponse)

@@ -34,7 +34,7 @@ public:
 
     TerminateWorkflowExecutionResponsePrivate(TerminateWorkflowExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTerminateWorkflowExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TerminateWorkflowExecutionResponse)

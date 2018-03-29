@@ -34,7 +34,7 @@ public:
 
     AssociateSoftwareTokenResponsePrivate(AssociateSoftwareTokenResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateSoftwareTokenResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateSoftwareTokenResponse)

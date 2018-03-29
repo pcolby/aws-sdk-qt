@@ -34,7 +34,7 @@ public:
 
     PutMethodResponsePrivate(PutMethodResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutMethodResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutMethodResponse)

@@ -34,7 +34,7 @@ public:
 
     ListTagsForResourcesResponsePrivate(ListTagsForResourcesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTagsForResourcesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTagsForResourcesResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteInternetGatewayResponsePrivate(DeleteInternetGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteInternetGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteInternetGatewayResponse)

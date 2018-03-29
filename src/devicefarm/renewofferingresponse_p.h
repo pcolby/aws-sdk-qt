@@ -34,7 +34,7 @@ public:
 
     RenewOfferingResponsePrivate(RenewOfferingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRenewOfferingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RenewOfferingResponse)

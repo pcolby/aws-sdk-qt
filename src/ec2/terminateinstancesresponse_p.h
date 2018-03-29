@@ -34,7 +34,7 @@ public:
 
     TerminateInstancesResponsePrivate(TerminateInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTerminateInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TerminateInstancesResponse)

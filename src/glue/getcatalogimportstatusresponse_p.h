@@ -34,7 +34,7 @@ public:
 
     GetCatalogImportStatusResponsePrivate(GetCatalogImportStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCatalogImportStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCatalogImportStatusResponse)

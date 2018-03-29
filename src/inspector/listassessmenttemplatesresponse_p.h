@@ -34,7 +34,7 @@ public:
 
     ListAssessmentTemplatesResponsePrivate(ListAssessmentTemplatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAssessmentTemplatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAssessmentTemplatesResponse)

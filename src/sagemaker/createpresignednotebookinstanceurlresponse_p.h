@@ -34,7 +34,7 @@ public:
 
     CreatePresignedNotebookInstanceUrlResponsePrivate(CreatePresignedNotebookInstanceUrlResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreatePresignedNotebookInstanceUrlResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreatePresignedNotebookInstanceUrlResponse)

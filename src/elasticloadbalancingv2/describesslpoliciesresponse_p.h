@@ -34,7 +34,7 @@ public:
 
     DescribeSSLPoliciesResponsePrivate(DescribeSSLPoliciesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSSLPoliciesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSSLPoliciesResponse)

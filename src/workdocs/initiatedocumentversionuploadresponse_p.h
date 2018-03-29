@@ -34,7 +34,7 @@ public:
 
     InitiateDocumentVersionUploadResponsePrivate(InitiateDocumentVersionUploadResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInitiateDocumentVersionUploadResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InitiateDocumentVersionUploadResponse)

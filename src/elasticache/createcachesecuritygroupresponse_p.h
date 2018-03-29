@@ -34,7 +34,7 @@ public:
 
     CreateCacheSecurityGroupResponsePrivate(CreateCacheSecurityGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCacheSecurityGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCacheSecurityGroupResponse)

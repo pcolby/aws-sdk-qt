@@ -34,7 +34,7 @@ public:
 
     ListAssignmentsForHITResponsePrivate(ListAssignmentsForHITResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAssignmentsForHITResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAssignmentsForHITResponse)

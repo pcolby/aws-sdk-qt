@@ -34,7 +34,7 @@ public:
 
     ReplaceNetworkAclEntryResponsePrivate(ReplaceNetworkAclEntryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReplaceNetworkAclEntryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReplaceNetworkAclEntryResponse)

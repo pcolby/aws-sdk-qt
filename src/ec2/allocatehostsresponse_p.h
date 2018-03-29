@@ -34,7 +34,7 @@ public:
 
     AllocateHostsResponsePrivate(AllocateHostsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAllocateHostsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AllocateHostsResponse)

@@ -34,7 +34,7 @@ public:
 
     StartChannelResponsePrivate(StartChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartChannelResponse)

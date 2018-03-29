@@ -34,7 +34,7 @@ public:
 
     AssociateTargetsWithJobResponsePrivate(AssociateTargetsWithJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateTargetsWithJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateTargetsWithJobResponse)

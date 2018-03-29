@@ -34,7 +34,7 @@ public:
 
     DeregisterScalableTargetResponsePrivate(DeregisterScalableTargetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterScalableTargetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterScalableTargetResponse)

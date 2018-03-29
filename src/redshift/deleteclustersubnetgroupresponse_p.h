@@ -34,7 +34,7 @@ public:
 
     DeleteClusterSubnetGroupResponsePrivate(DeleteClusterSubnetGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteClusterSubnetGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteClusterSubnetGroupResponse)

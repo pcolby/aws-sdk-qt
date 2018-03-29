@@ -34,7 +34,7 @@ public:
 
     UpdateTimeToLiveResponsePrivate(UpdateTimeToLiveResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateTimeToLiveResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateTimeToLiveResponse)

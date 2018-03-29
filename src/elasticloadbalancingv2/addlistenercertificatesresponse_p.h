@@ -34,7 +34,7 @@ public:
 
     AddListenerCertificatesResponsePrivate(AddListenerCertificatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddListenerCertificatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddListenerCertificatesResponse)

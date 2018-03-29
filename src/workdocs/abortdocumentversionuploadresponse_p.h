@@ -34,7 +34,7 @@ public:
 
     AbortDocumentVersionUploadResponsePrivate(AbortDocumentVersionUploadResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAbortDocumentVersionUploadResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AbortDocumentVersionUploadResponse)

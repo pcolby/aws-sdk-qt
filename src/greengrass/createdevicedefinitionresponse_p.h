@@ -34,7 +34,7 @@ public:
 
     CreateDeviceDefinitionResponsePrivate(CreateDeviceDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDeviceDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDeviceDefinitionResponse)

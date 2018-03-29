@@ -34,7 +34,7 @@ public:
 
     ListLaunchPathsResponsePrivate(ListLaunchPathsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListLaunchPathsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListLaunchPathsResponse)

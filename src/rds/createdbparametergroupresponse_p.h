@@ -34,7 +34,7 @@ public:
 
     CreateDBParameterGroupResponsePrivate(CreateDBParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDBParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDBParameterGroupResponse)

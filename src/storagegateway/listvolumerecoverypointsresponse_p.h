@@ -34,7 +34,7 @@ public:
 
     ListVolumeRecoveryPointsResponsePrivate(ListVolumeRecoveryPointsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListVolumeRecoveryPointsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListVolumeRecoveryPointsResponse)

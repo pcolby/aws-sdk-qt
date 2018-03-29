@@ -34,7 +34,7 @@ public:
 
     UpdateKeyDescriptionResponsePrivate(UpdateKeyDescriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateKeyDescriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateKeyDescriptionResponse)

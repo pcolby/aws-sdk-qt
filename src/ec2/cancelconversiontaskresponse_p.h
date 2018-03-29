@@ -34,7 +34,7 @@ public:
 
     CancelConversionTaskResponsePrivate(CancelConversionTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelConversionTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelConversionTaskResponse)

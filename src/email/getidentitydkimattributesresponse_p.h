@@ -34,7 +34,7 @@ public:
 
     GetIdentityDkimAttributesResponsePrivate(GetIdentityDkimAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIdentityDkimAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIdentityDkimAttributesResponse)

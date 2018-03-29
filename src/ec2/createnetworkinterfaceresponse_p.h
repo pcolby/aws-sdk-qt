@@ -34,7 +34,7 @@ public:
 
     CreateNetworkInterfaceResponsePrivate(CreateNetworkInterfaceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateNetworkInterfaceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateNetworkInterfaceResponse)

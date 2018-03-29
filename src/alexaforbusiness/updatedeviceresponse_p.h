@@ -34,7 +34,7 @@ public:
 
     UpdateDeviceResponsePrivate(UpdateDeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDeviceResponse)

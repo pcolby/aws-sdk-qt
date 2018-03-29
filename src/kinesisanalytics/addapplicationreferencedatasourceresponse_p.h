@@ -34,7 +34,7 @@ public:
 
     AddApplicationReferenceDataSourceResponsePrivate(AddApplicationReferenceDataSourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddApplicationReferenceDataSourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddApplicationReferenceDataSourceResponse)

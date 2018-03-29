@@ -34,7 +34,7 @@ public:
 
     GetBucketPolicyResponsePrivate(GetBucketPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketPolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     StartAssessmentRunResponsePrivate(StartAssessmentRunResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartAssessmentRunResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartAssessmentRunResponse)

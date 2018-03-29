@@ -34,7 +34,7 @@ public:
 
     GetHostedZoneCountResponsePrivate(GetHostedZoneCountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetHostedZoneCountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetHostedZoneCountResponse)

@@ -34,7 +34,7 @@ public:
 
     CloneReceiptRuleSetResponsePrivate(CloneReceiptRuleSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCloneReceiptRuleSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CloneReceiptRuleSetResponse)

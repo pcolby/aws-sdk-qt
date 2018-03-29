@@ -34,7 +34,7 @@ public:
 
     GetCampaignsResponsePrivate(GetCampaignsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCampaignsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCampaignsResponse)

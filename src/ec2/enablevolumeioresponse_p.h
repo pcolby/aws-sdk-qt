@@ -34,7 +34,7 @@ public:
 
     EnableVolumeIOResponsePrivate(EnableVolumeIOResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableVolumeIOResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableVolumeIOResponse)

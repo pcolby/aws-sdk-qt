@@ -34,7 +34,7 @@ public:
 
     GetGeoLocationResponsePrivate(GetGeoLocationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGeoLocationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGeoLocationResponse)

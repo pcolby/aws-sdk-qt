@@ -34,7 +34,7 @@ public:
 
     CancelSpotFleetRequestsResponsePrivate(CancelSpotFleetRequestsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelSpotFleetRequestsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelSpotFleetRequestsResponse)

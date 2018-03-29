@@ -34,7 +34,7 @@ public:
 
     CreateHapgResponsePrivate(CreateHapgResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateHapgResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateHapgResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteIntentResponsePrivate(DeleteIntentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteIntentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteIntentResponse)

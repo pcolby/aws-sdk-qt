@@ -34,7 +34,7 @@ public:
 
     DescribeStateMachineForExecutionResponsePrivate(DescribeStateMachineForExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeStateMachineForExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeStateMachineForExecutionResponse)

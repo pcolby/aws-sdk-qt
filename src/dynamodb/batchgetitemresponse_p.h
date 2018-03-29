@@ -34,7 +34,7 @@ public:
 
     BatchGetItemResponsePrivate(BatchGetItemResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetItemResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetItemResponse)

@@ -34,7 +34,7 @@ public:
 
     CancelClusterResponsePrivate(CancelClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelClusterResponse)

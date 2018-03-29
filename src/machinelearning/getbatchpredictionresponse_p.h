@@ -34,7 +34,7 @@ public:
 
     GetBatchPredictionResponsePrivate(GetBatchPredictionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBatchPredictionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBatchPredictionResponse)

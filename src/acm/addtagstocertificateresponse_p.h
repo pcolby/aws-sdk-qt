@@ -34,7 +34,7 @@ public:
 
     AddTagsToCertificateResponsePrivate(AddTagsToCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddTagsToCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddTagsToCertificateResponse)

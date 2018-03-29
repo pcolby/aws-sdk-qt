@@ -34,7 +34,7 @@ public:
 
     StopStreamEncryptionResponsePrivate(StopStreamEncryptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopStreamEncryptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopStreamEncryptionResponse)

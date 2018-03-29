@@ -34,7 +34,7 @@ public:
 
     SelectResponsePrivate(SelectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSelectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SelectResponse)

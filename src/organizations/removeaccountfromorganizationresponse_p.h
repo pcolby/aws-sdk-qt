@@ -34,7 +34,7 @@ public:
 
     RemoveAccountFromOrganizationResponsePrivate(RemoveAccountFromOrganizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveAccountFromOrganizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveAccountFromOrganizationResponse)

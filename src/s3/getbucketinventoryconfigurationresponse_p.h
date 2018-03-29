@@ -34,7 +34,7 @@ public:
 
     GetBucketInventoryConfigurationResponsePrivate(GetBucketInventoryConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketInventoryConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketInventoryConfigurationResponse)

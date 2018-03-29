@@ -34,7 +34,7 @@ public:
 
     UpdateRoomResponsePrivate(UpdateRoomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRoomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRoomResponse)

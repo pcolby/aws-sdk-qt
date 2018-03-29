@@ -34,7 +34,7 @@ public:
 
     DeleteSkillGroupResponsePrivate(DeleteSkillGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSkillGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSkillGroupResponse)

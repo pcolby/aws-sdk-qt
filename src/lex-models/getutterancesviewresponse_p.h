@@ -34,7 +34,7 @@ public:
 
     GetUtterancesViewResponsePrivate(GetUtterancesViewResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetUtterancesViewResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetUtterancesViewResponse)

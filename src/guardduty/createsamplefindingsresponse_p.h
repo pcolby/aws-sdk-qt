@@ -34,7 +34,7 @@ public:
 
     CreateSampleFindingsResponsePrivate(CreateSampleFindingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSampleFindingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSampleFindingsResponse)

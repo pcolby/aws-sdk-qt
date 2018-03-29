@@ -34,7 +34,7 @@ public:
 
     MonitorInstancesResponsePrivate(MonitorInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseMonitorInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(MonitorInstancesResponse)

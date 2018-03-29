@@ -34,7 +34,7 @@ public:
 
     CancelReservedInstancesListingResponsePrivate(CancelReservedInstancesListingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelReservedInstancesListingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelReservedInstancesListingResponse)

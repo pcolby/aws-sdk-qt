@@ -34,7 +34,7 @@ public:
 
     EnableKeyResponsePrivate(EnableKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableKeyResponse)

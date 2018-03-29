@@ -34,7 +34,7 @@ public:
 
     GetSigningCertificateResponsePrivate(GetSigningCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSigningCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSigningCertificateResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteNotificationSubscriptionResponsePrivate(DeleteNotificationSubscriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNotificationSubscriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNotificationSubscriptionResponse)

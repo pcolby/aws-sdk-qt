@@ -34,7 +34,7 @@ public:
 
     BatchMeterUsageResponsePrivate(BatchMeterUsageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchMeterUsageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchMeterUsageResponse)

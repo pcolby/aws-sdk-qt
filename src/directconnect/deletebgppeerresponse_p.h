@@ -34,7 +34,7 @@ public:
 
     DeleteBGPPeerResponsePrivate(DeleteBGPPeerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBGPPeerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBGPPeerResponse)

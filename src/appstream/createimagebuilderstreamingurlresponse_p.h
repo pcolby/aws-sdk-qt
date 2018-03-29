@@ -34,7 +34,7 @@ public:
 
     CreateImageBuilderStreamingURLResponsePrivate(CreateImageBuilderStreamingURLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateImageBuilderStreamingURLResponse)

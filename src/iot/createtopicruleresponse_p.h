@@ -34,7 +34,7 @@ public:
 
     CreateTopicRuleResponsePrivate(CreateTopicRuleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateTopicRuleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateTopicRuleResponse)

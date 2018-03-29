@@ -34,7 +34,7 @@ public:
 
     DeleteResourcePolicyResponsePrivate(DeleteResourcePolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteResourcePolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteResourcePolicyResponse)

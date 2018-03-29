@@ -34,7 +34,7 @@ public:
 
     ModifyDBInstanceResponsePrivate(ModifyDBInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyDBInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyDBInstanceResponse)

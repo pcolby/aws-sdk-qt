@@ -34,7 +34,7 @@ public:
 
     DescribeBackupsResponsePrivate(DescribeBackupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeBackupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeBackupsResponse)

@@ -34,7 +34,7 @@ public:
 
     RemoveTagsResponsePrivate(RemoveTagsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveTagsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveTagsResponse)

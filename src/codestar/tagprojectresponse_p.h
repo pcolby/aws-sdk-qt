@@ -34,7 +34,7 @@ public:
 
     TagProjectResponsePrivate(TagProjectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTagProjectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TagProjectResponse)

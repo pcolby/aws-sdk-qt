@@ -34,7 +34,7 @@ public:
 
     CreateIdentityProviderResponsePrivate(CreateIdentityProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateIdentityProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateIdentityProviderResponse)

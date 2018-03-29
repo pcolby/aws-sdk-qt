@@ -34,7 +34,7 @@ public:
 
     CreateInstanceProfileResponsePrivate(CreateInstanceProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateInstanceProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateInstanceProfileResponse)

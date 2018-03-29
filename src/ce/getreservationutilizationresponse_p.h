@@ -34,7 +34,7 @@ public:
 
     GetReservationUtilizationResponsePrivate(GetReservationUtilizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReservationUtilizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReservationUtilizationResponse)

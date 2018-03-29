@@ -34,7 +34,7 @@ public:
 
     BatchGetImageResponsePrivate(BatchGetImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetImageResponse)

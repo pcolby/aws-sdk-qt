@@ -34,7 +34,7 @@ public:
 
     CreateSnapshotResponsePrivate(CreateSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSnapshotResponse)

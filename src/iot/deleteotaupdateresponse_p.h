@@ -34,7 +34,7 @@ public:
 
     DeleteOTAUpdateResponsePrivate(DeleteOTAUpdateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteOTAUpdateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteOTAUpdateResponse)

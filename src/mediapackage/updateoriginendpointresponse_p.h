@@ -34,7 +34,7 @@ public:
 
     UpdateOriginEndpointResponsePrivate(UpdateOriginEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateOriginEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateOriginEndpointResponse)

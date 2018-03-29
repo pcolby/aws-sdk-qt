@@ -34,7 +34,7 @@ public:
 
     CreateDiskFromSnapshotResponsePrivate(CreateDiskFromSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDiskFromSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDiskFromSnapshotResponse)

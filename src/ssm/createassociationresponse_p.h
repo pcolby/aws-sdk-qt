@@ -34,7 +34,7 @@ public:
 
     CreateAssociationResponsePrivate(CreateAssociationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateAssociationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateAssociationResponse)

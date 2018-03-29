@@ -34,7 +34,7 @@ public:
 
     DescribeReplicationGroupsResponsePrivate(DescribeReplicationGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeReplicationGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeReplicationGroupsResponse)

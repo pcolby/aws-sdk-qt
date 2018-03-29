@@ -34,7 +34,7 @@ public:
 
     DeleteBaiduChannelResponsePrivate(DeleteBaiduChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBaiduChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBaiduChannelResponse)

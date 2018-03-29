@@ -34,7 +34,7 @@ public:
 
     GetEventSelectorsResponsePrivate(GetEventSelectorsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetEventSelectorsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetEventSelectorsResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateNatGatewayResponsePrivate(CreateNatGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateNatGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateNatGatewayResponse)

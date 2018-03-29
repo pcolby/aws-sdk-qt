@@ -34,7 +34,7 @@ public:
 
     ListAssociatedStacksResponsePrivate(ListAssociatedStacksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAssociatedStacksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAssociatedStacksResponse)

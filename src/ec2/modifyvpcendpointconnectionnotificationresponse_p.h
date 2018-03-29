@@ -34,7 +34,7 @@ public:
 
     ModifyVpcEndpointConnectionNotificationResponsePrivate(ModifyVpcEndpointConnectionNotificationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyVpcEndpointConnectionNotificationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyVpcEndpointConnectionNotificationResponse)

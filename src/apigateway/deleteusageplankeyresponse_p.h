@@ -34,7 +34,7 @@ public:
 
     DeleteUsagePlanKeyResponsePrivate(DeleteUsagePlanKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteUsagePlanKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteUsagePlanKeyResponse)

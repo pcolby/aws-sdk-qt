@@ -34,7 +34,7 @@ public:
 
     ResetCacheParameterGroupResponsePrivate(ResetCacheParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetCacheParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetCacheParameterGroupResponse)

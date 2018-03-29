@@ -34,7 +34,7 @@ public:
 
     GetTraceGraphResponsePrivate(GetTraceGraphResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTraceGraphResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTraceGraphResponse)

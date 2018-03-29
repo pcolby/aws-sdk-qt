@@ -34,7 +34,7 @@ public:
 
     DisassociatePrincipalFromPortfolioResponsePrivate(DisassociatePrincipalFromPortfolioResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociatePrincipalFromPortfolioResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociatePrincipalFromPortfolioResponse)

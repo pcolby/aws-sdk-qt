@@ -34,7 +34,7 @@ public:
 
     GetBucketTaggingResponsePrivate(GetBucketTaggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketTaggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketTaggingResponse)

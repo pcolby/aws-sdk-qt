@@ -34,7 +34,7 @@ public:
 
     DeleteBucketInventoryConfigurationResponsePrivate(DeleteBucketInventoryConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBucketInventoryConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBucketInventoryConfigurationResponse)

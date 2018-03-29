@@ -34,7 +34,7 @@ public:
 
     DisassociateRoleFromGroupResponsePrivate(DisassociateRoleFromGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateRoleFromGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateRoleFromGroupResponse)

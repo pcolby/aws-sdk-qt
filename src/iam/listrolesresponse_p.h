@@ -34,7 +34,7 @@ public:
 
     ListRolesResponsePrivate(ListRolesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListRolesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListRolesResponse)

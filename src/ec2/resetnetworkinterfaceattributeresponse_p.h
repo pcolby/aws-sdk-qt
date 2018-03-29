@@ -34,7 +34,7 @@ public:
 
     ResetNetworkInterfaceAttributeResponsePrivate(ResetNetworkInterfaceAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetNetworkInterfaceAttributeResponse)

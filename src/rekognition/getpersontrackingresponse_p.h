@@ -34,7 +34,7 @@ public:
 
     GetPersonTrackingResponsePrivate(GetPersonTrackingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPersonTrackingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPersonTrackingResponse)

@@ -34,7 +34,7 @@ public:
 
     ListVersionsByFunctionResponsePrivate(ListVersionsByFunctionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListVersionsByFunctionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListVersionsByFunctionResponse)

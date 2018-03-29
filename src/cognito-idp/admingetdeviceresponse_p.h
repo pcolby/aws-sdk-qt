@@ -34,7 +34,7 @@ public:
 
     AdminGetDeviceResponsePrivate(AdminGetDeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminGetDeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminGetDeviceResponse)

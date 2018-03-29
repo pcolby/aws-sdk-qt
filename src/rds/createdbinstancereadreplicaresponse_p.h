@@ -34,7 +34,7 @@ public:
 
     CreateDBInstanceReadReplicaResponsePrivate(CreateDBInstanceReadReplicaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDBInstanceReadReplicaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDBInstanceReadReplicaResponse)

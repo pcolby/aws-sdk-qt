@@ -34,7 +34,7 @@ public:
 
     GetOfferingStatusResponsePrivate(GetOfferingStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetOfferingStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetOfferingStatusResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeElasticsearchInstanceTypeLimitsResponsePrivate(DescribeElasticsearchInstanceTypeLimitsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeElasticsearchInstanceTypeLimitsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteMaintenanceWindowResponsePrivate(DeleteMaintenanceWindowResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteMaintenanceWindowResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteMaintenanceWindowResponse)

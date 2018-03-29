@@ -34,7 +34,7 @@ public:
 
     DeleteNotebookInstanceLifecycleConfigResponsePrivate(DeleteNotebookInstanceLifecycleConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNotebookInstanceLifecycleConfigResponse)

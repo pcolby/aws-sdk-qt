@@ -34,7 +34,7 @@ public:
 
     ForgetDeviceResponsePrivate(ForgetDeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseForgetDeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ForgetDeviceResponse)

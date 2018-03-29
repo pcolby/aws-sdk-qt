@@ -34,7 +34,7 @@ public:
 
     DescribeDeliveryChannelStatusResponsePrivate(DescribeDeliveryChannelStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDeliveryChannelStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDeliveryChannelStatusResponse)

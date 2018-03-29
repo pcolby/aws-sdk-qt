@@ -34,7 +34,7 @@ public:
 
     DeleteRetentionPolicyResponsePrivate(DeleteRetentionPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRetentionPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRetentionPolicyResponse)

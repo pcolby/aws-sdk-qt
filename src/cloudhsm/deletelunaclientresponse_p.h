@@ -34,7 +34,7 @@ public:
 
     DeleteLunaClientResponsePrivate(DeleteLunaClientResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLunaClientResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLunaClientResponse)

@@ -34,7 +34,7 @@ public:
 
     AddUserToGroupResponsePrivate(AddUserToGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddUserToGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddUserToGroupResponse)

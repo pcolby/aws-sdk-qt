@@ -34,7 +34,7 @@ public:
 
     DescribeKeyPairsResponsePrivate(DescribeKeyPairsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeKeyPairsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeKeyPairsResponse)

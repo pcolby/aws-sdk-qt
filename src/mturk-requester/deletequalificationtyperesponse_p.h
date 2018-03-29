@@ -34,7 +34,7 @@ public:
 
     DeleteQualificationTypeResponsePrivate(DeleteQualificationTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteQualificationTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteQualificationTypeResponse)

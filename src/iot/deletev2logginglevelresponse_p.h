@@ -34,7 +34,7 @@ public:
 
     DeleteV2LoggingLevelResponsePrivate(DeleteV2LoggingLevelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteV2LoggingLevelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteV2LoggingLevelResponse)

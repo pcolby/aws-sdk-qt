@@ -34,7 +34,7 @@ public:
 
     CreateSecurityConfigurationResponsePrivate(CreateSecurityConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSecurityConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSecurityConfigurationResponse)

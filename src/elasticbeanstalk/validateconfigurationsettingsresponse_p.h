@@ -34,7 +34,7 @@ public:
 
     ValidateConfigurationSettingsResponsePrivate(ValidateConfigurationSettingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseValidateConfigurationSettingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ValidateConfigurationSettingsResponse)

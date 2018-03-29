@@ -34,7 +34,7 @@ public:
 
     DeleteDhcpOptionsResponsePrivate(DeleteDhcpOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDhcpOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDhcpOptionsResponse)

@@ -34,7 +34,7 @@ public:
 
     DisassociateNodeResponsePrivate(DisassociateNodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateNodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateNodeResponse)

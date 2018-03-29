@@ -34,7 +34,7 @@ public:
 
     DeleteLayerResponsePrivate(DeleteLayerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLayerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLayerResponse)

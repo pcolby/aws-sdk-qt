@@ -34,7 +34,7 @@ public:
 
     GetAdmChannelResponsePrivate(GetAdmChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAdmChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAdmChannelResponse)

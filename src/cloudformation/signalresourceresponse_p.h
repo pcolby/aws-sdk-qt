@@ -34,7 +34,7 @@ public:
 
     SignalResourceResponsePrivate(SignalResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSignalResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SignalResourceResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateSkillGroupResponsePrivate(UpdateSkillGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateSkillGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateSkillGroupResponse)

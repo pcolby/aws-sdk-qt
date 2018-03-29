@@ -34,7 +34,7 @@ public:
 
     DeleteInstanceProfileResponsePrivate(DeleteInstanceProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteInstanceProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteInstanceProfileResponse)

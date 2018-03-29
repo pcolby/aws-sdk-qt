@@ -34,7 +34,7 @@ public:
 
     GetLaunchTemplateDataResponsePrivate(GetLaunchTemplateDataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetLaunchTemplateDataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetLaunchTemplateDataResponse)

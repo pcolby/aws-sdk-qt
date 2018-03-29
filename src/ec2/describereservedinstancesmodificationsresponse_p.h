@@ -34,7 +34,7 @@ public:
 
     DescribeReservedInstancesModificationsResponsePrivate(DescribeReservedInstancesModificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeReservedInstancesModificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeReservedInstancesModificationsResponse)

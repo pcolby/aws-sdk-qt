@@ -34,7 +34,7 @@ public:
 
     DeleteServerCatalogResponsePrivate(DeleteServerCatalogResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteServerCatalogResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteServerCatalogResponse)

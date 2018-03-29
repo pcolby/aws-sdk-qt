@@ -34,7 +34,7 @@ public:
 
     UpdateFolderResponsePrivate(UpdateFolderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateFolderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateFolderResponse)

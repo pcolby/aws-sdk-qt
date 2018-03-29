@@ -34,7 +34,7 @@ public:
 
     GetContentModerationResponsePrivate(GetContentModerationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetContentModerationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetContentModerationResponse)

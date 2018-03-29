@@ -34,7 +34,7 @@ public:
 
     ListCreateAccountStatusResponsePrivate(ListCreateAccountStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListCreateAccountStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListCreateAccountStatusResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteDirectConnectGatewayResponsePrivate(DeleteDirectConnectGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDirectConnectGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDirectConnectGatewayResponse)

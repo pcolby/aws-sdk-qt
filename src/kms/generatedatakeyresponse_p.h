@@ -34,7 +34,7 @@ public:
 
     GenerateDataKeyResponsePrivate(GenerateDataKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGenerateDataKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GenerateDataKeyResponse)

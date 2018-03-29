@@ -34,7 +34,7 @@ public:
 
     CreateDataSourceFromRedshiftResponsePrivate(CreateDataSourceFromRedshiftResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDataSourceFromRedshiftResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDataSourceFromRedshiftResponse)

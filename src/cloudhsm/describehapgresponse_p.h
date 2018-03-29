@@ -34,7 +34,7 @@ public:
 
     DescribeHapgResponsePrivate(DescribeHapgResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeHapgResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeHapgResponse)

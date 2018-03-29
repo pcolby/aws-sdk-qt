@@ -34,7 +34,7 @@ public:
 
     DescribeAlarmsForMetricResponsePrivate(DescribeAlarmsForMetricResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAlarmsForMetricResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAlarmsForMetricResponse)

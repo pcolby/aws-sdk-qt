@@ -34,7 +34,7 @@ public:
 
     BatchGetTracesResponsePrivate(BatchGetTracesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetTracesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetTracesResponse)

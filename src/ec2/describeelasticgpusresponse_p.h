@@ -34,7 +34,7 @@ public:
 
     DescribeElasticGpusResponsePrivate(DescribeElasticGpusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeElasticGpusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeElasticGpusResponse)

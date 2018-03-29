@@ -34,7 +34,7 @@ public:
 
     DeleteSlotTypeResponsePrivate(DeleteSlotTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSlotTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSlotTypeResponse)

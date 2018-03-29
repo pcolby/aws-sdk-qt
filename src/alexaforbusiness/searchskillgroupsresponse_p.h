@@ -34,7 +34,7 @@ public:
 
     SearchSkillGroupsResponsePrivate(SearchSkillGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSearchSkillGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SearchSkillGroupsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteTagOptionResponsePrivate(DeleteTagOptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTagOptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTagOptionResponse)

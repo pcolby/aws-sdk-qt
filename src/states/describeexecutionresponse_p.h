@@ -34,7 +34,7 @@ public:
 
     DescribeExecutionResponsePrivate(DescribeExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeExecutionResponse)

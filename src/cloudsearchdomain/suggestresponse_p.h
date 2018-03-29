@@ -34,7 +34,7 @@ public:
 
     SuggestResponsePrivate(SuggestResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSuggestResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SuggestResponse)

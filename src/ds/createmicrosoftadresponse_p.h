@@ -34,7 +34,7 @@ public:
 
     CreateMicrosoftADResponsePrivate(CreateMicrosoftADResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateMicrosoftADResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateMicrosoftADResponse)

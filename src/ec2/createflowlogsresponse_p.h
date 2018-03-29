@@ -34,7 +34,7 @@ public:
 
     CreateFlowLogsResponsePrivate(CreateFlowLogsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateFlowLogsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateFlowLogsResponse)

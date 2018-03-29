@@ -34,7 +34,7 @@ public:
 
     DeleteBackupResponsePrivate(DeleteBackupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBackupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBackupResponse)

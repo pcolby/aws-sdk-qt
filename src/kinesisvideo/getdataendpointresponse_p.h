@@ -34,7 +34,7 @@ public:
 
     GetDataEndpointResponsePrivate(GetDataEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDataEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDataEndpointResponse)

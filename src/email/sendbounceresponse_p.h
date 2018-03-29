@@ -34,7 +34,7 @@ public:
 
     SendBounceResponsePrivate(SendBounceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendBounceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendBounceResponse)

@@ -34,7 +34,7 @@ public:
 
     MergeDeveloperIdentitiesResponsePrivate(MergeDeveloperIdentitiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseMergeDeveloperIdentitiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(MergeDeveloperIdentitiesResponse)

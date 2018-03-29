@@ -34,7 +34,7 @@ public:
 
     DescribeFleetPortSettingsResponsePrivate(DescribeFleetPortSettingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeFleetPortSettingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeFleetPortSettingsResponse)

@@ -34,7 +34,7 @@ public:
 
     AuthorizeSnapshotAccessResponsePrivate(AuthorizeSnapshotAccessResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAuthorizeSnapshotAccessResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AuthorizeSnapshotAccessResponse)

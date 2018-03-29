@@ -34,7 +34,7 @@ public:
 
     UpdateFleetCapacityResponsePrivate(UpdateFleetCapacityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateFleetCapacityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateFleetCapacityResponse)

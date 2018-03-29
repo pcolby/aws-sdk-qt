@@ -34,7 +34,7 @@ public:
 
     DescribeScalableTargetsResponsePrivate(DescribeScalableTargetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeScalableTargetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeScalableTargetsResponse)

@@ -34,7 +34,7 @@ public:
 
     RemoveFacetFromObjectResponsePrivate(RemoveFacetFromObjectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveFacetFromObjectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveFacetFromObjectResponse)

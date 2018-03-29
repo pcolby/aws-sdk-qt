@@ -34,7 +34,7 @@ public:
 
     RunInstancesResponsePrivate(RunInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRunInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RunInstancesResponse)

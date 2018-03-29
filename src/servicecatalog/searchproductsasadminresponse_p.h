@@ -34,7 +34,7 @@ public:
 
     SearchProductsAsAdminResponsePrivate(SearchProductsAsAdminResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSearchProductsAsAdminResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SearchProductsAsAdminResponse)

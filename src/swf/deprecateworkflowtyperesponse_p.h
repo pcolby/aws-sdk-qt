@@ -34,7 +34,7 @@ public:
 
     DeprecateWorkflowTypeResponsePrivate(DeprecateWorkflowTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeprecateWorkflowTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeprecateWorkflowTypeResponse)

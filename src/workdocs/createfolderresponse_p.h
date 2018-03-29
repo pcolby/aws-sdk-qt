@@ -34,7 +34,7 @@ public:
 
     CreateFolderResponsePrivate(CreateFolderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateFolderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateFolderResponse)

@@ -34,7 +34,7 @@ public:
 
     ResetDBClusterParameterGroupResponsePrivate(ResetDBClusterParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetDBClusterParameterGroupResponse)

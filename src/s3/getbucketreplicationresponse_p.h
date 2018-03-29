@@ -34,7 +34,7 @@ public:
 
     GetBucketReplicationResponsePrivate(GetBucketReplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketReplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketReplicationResponse)

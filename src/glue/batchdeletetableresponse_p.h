@@ -34,7 +34,7 @@ public:
 
     BatchDeleteTableResponsePrivate(BatchDeleteTableResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDeleteTableResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDeleteTableResponse)

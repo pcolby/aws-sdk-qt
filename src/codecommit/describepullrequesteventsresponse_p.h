@@ -34,7 +34,7 @@ public:
 
     DescribePullRequestEventsResponsePrivate(DescribePullRequestEventsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribePullRequestEventsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribePullRequestEventsResponse)

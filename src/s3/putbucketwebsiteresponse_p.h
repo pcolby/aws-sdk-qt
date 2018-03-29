@@ -34,7 +34,7 @@ public:
 
     PutBucketWebsiteResponsePrivate(PutBucketWebsiteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketWebsiteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketWebsiteResponse)

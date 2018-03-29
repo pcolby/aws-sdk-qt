@@ -34,7 +34,7 @@ public:
 
     CreateDataSourceFromS3ResponsePrivate(CreateDataSourceFromS3Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDataSourceFromS3Response(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDataSourceFromS3Response)

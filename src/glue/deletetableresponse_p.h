@@ -34,7 +34,7 @@ public:
 
     DeleteTableResponsePrivate(DeleteTableResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTableResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTableResponse)

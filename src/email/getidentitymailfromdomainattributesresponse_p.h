@@ -34,7 +34,7 @@ public:
 
     GetIdentityMailFromDomainAttributesResponsePrivate(GetIdentityMailFromDomainAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIdentityMailFromDomainAttributesResponse)

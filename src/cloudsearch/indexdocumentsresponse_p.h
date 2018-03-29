@@ -34,7 +34,7 @@ public:
 
     IndexDocumentsResponsePrivate(IndexDocumentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseIndexDocumentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(IndexDocumentsResponse)

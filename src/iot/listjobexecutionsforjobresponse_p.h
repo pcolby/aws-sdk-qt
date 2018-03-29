@@ -34,7 +34,7 @@ public:
 
     ListJobExecutionsForJobResponsePrivate(ListJobExecutionsForJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListJobExecutionsForJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListJobExecutionsForJobResponse)

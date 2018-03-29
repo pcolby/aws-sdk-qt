@@ -34,7 +34,7 @@ public:
 
     GetObjectTorrentResponsePrivate(GetObjectTorrentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetObjectTorrentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetObjectTorrentResponse)

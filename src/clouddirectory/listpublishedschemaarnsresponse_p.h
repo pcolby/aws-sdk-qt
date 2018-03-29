@@ -34,7 +34,7 @@ public:
 
     ListPublishedSchemaArnsResponsePrivate(ListPublishedSchemaArnsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListPublishedSchemaArnsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListPublishedSchemaArnsResponse)

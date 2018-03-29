@@ -34,7 +34,7 @@ public:
 
     DeleteLagResponsePrivate(DeleteLagResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLagResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLagResponse)

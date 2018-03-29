@@ -34,7 +34,7 @@ public:
 
     UpdateTagsForDomainResponsePrivate(UpdateTagsForDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateTagsForDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateTagsForDomainResponse)

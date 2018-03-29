@@ -34,7 +34,7 @@ public:
 
     PutLifecycleEventHookExecutionStatusResponsePrivate(PutLifecycleEventHookExecutionStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutLifecycleEventHookExecutionStatusResponse)

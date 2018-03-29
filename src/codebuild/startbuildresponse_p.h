@@ -34,7 +34,7 @@ public:
 
     StartBuildResponsePrivate(StartBuildResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartBuildResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartBuildResponse)

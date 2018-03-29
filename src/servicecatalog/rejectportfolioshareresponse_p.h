@@ -34,7 +34,7 @@ public:
 
     RejectPortfolioShareResponsePrivate(RejectPortfolioShareResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRejectPortfolioShareResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RejectPortfolioShareResponse)

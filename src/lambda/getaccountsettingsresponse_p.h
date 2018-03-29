@@ -34,7 +34,7 @@ public:
 
     GetAccountSettingsResponsePrivate(GetAccountSettingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAccountSettingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAccountSettingsResponse)

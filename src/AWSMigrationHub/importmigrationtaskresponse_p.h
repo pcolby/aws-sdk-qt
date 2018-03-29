@@ -34,7 +34,7 @@ public:
 
     ImportMigrationTaskResponsePrivate(ImportMigrationTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportMigrationTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportMigrationTaskResponse)

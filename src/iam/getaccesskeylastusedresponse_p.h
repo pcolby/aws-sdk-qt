@@ -34,7 +34,7 @@ public:
 
     GetAccessKeyLastUsedResponsePrivate(GetAccessKeyLastUsedResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAccessKeyLastUsedResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAccessKeyLastUsedResponse)

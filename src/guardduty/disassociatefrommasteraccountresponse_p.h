@@ -34,7 +34,7 @@ public:
 
     DisassociateFromMasterAccountResponsePrivate(DisassociateFromMasterAccountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateFromMasterAccountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateFromMasterAccountResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteBucketLifecycleResponsePrivate(DeleteBucketLifecycleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBucketLifecycleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBucketLifecycleResponse)

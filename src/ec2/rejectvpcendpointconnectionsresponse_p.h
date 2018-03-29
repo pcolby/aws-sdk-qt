@@ -34,7 +34,7 @@ public:
 
     RejectVpcEndpointConnectionsResponsePrivate(RejectVpcEndpointConnectionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RejectVpcEndpointConnectionsResponse)

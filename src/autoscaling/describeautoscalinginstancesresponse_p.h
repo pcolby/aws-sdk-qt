@@ -34,7 +34,7 @@ public:
 
     DescribeAutoScalingInstancesResponsePrivate(DescribeAutoScalingInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAutoScalingInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAutoScalingInstancesResponse)

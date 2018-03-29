@@ -34,7 +34,7 @@ public:
 
     UpdateContainerInstancesStateResponsePrivate(UpdateContainerInstancesStateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateContainerInstancesStateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateContainerInstancesStateResponse)

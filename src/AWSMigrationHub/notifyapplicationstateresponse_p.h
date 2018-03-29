@@ -34,7 +34,7 @@ public:
 
     NotifyApplicationStateResponsePrivate(NotifyApplicationStateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseNotifyApplicationStateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(NotifyApplicationStateResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeOriginEndpointResponsePrivate(DescribeOriginEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeOriginEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeOriginEndpointResponse)

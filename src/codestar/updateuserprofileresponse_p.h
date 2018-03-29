@@ -34,7 +34,7 @@ public:
 
     UpdateUserProfileResponsePrivate(UpdateUserProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateUserProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateUserProfileResponse)

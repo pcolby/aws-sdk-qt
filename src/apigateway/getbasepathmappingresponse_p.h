@@ -34,7 +34,7 @@ public:
 
     GetBasePathMappingResponsePrivate(GetBasePathMappingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBasePathMappingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBasePathMappingResponse)

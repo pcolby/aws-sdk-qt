@@ -34,7 +34,7 @@ public:
 
     SetRulePrioritiesResponsePrivate(SetRulePrioritiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetRulePrioritiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetRulePrioritiesResponse)

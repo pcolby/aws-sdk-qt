@@ -34,7 +34,7 @@ public:
 
     StopDeploymentResponsePrivate(StopDeploymentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopDeploymentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopDeploymentResponse)

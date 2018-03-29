@@ -34,7 +34,7 @@ public:
 
     CreateDhcpOptionsResponsePrivate(CreateDhcpOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDhcpOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDhcpOptionsResponse)

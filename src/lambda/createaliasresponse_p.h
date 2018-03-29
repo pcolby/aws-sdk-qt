@@ -34,7 +34,7 @@ public:
 
     CreateAliasResponsePrivate(CreateAliasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateAliasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateAliasResponse)

@@ -34,7 +34,7 @@ public:
 
     RegisterContainerInstanceResponsePrivate(RegisterContainerInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterContainerInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterContainerInstanceResponse)

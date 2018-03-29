@@ -34,7 +34,7 @@ public:
 
     UnassignVolumeResponsePrivate(UnassignVolumeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnassignVolumeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnassignVolumeResponse)

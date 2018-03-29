@@ -34,7 +34,7 @@ public:
 
     DeleteConstraintResponsePrivate(DeleteConstraintResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConstraintResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConstraintResponse)

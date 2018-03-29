@@ -34,7 +34,7 @@ public:
 
     GetInvitationsCountResponsePrivate(GetInvitationsCountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetInvitationsCountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetInvitationsCountResponse)

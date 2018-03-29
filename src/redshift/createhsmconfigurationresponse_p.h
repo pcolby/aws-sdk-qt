@@ -34,7 +34,7 @@ public:
 
     CreateHsmConfigurationResponsePrivate(CreateHsmConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateHsmConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateHsmConfigurationResponse)

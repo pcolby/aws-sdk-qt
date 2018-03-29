@@ -34,7 +34,7 @@ public:
 
     RebootNodeResponsePrivate(RebootNodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRebootNodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RebootNodeResponse)

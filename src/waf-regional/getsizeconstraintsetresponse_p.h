@@ -34,7 +34,7 @@ public:
 
     GetSizeConstraintSetResponsePrivate(GetSizeConstraintSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSizeConstraintSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSizeConstraintSetResponse)

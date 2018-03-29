@@ -34,7 +34,7 @@ public:
 
     ResumeProcessesResponsePrivate(ResumeProcessesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResumeProcessesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResumeProcessesResponse)

@@ -34,7 +34,7 @@ public:
 
     GetByteMatchSetResponsePrivate(GetByteMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetByteMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetByteMatchSetResponse)

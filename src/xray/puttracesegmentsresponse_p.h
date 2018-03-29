@@ -34,7 +34,7 @@ public:
 
     PutTraceSegmentsResponsePrivate(PutTraceSegmentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutTraceSegmentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutTraceSegmentsResponse)

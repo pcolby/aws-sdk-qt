@@ -34,7 +34,7 @@ public:
 
     DeleteElasticsearchDomainResponsePrivate(DeleteElasticsearchDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteElasticsearchDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteElasticsearchDomainResponse)

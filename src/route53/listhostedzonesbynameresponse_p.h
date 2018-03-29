@@ -34,7 +34,7 @@ public:
 
     ListHostedZonesByNameResponsePrivate(ListHostedZonesByNameResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListHostedZonesByNameResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListHostedZonesByNameResponse)

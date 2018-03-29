@@ -34,7 +34,7 @@ public:
 
     DescribeInterconnectLoaResponsePrivate(DescribeInterconnectLoaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeInterconnectLoaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeInterconnectLoaResponse)

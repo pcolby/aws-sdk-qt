@@ -34,7 +34,7 @@ public:
 
     DeleteClusterSnapshotResponsePrivate(DeleteClusterSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteClusterSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteClusterSnapshotResponse)

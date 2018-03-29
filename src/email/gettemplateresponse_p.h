@@ -34,7 +34,7 @@ public:
 
     GetTemplateResponsePrivate(GetTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTemplateResponse)

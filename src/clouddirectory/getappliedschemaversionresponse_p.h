@@ -34,7 +34,7 @@ public:
 
     GetAppliedSchemaVersionResponsePrivate(GetAppliedSchemaVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAppliedSchemaVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAppliedSchemaVersionResponse)

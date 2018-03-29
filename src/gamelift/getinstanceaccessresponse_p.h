@@ -34,7 +34,7 @@ public:
 
     GetInstanceAccessResponsePrivate(GetInstanceAccessResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetInstanceAccessResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetInstanceAccessResponse)

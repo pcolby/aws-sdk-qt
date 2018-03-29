@@ -34,7 +34,7 @@ public:
 
     GetInstanceSnapshotsResponsePrivate(GetInstanceSnapshotsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetInstanceSnapshotsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetInstanceSnapshotsResponse)

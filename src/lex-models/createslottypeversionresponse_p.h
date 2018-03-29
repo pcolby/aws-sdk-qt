@@ -34,7 +34,7 @@ public:
 
     CreateSlotTypeVersionResponsePrivate(CreateSlotTypeVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSlotTypeVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSlotTypeVersionResponse)

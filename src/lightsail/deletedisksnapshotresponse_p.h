@@ -34,7 +34,7 @@ public:
 
     DeleteDiskSnapshotResponsePrivate(DeleteDiskSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDiskSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDiskSnapshotResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteConfigurationRecorderResponsePrivate(DeleteConfigurationRecorderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConfigurationRecorderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConfigurationRecorderResponse)

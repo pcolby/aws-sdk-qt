@@ -34,7 +34,7 @@ public:
 
     GetBlobResponsePrivate(GetBlobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBlobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBlobResponse)

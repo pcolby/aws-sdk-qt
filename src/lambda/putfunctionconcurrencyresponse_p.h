@@ -34,7 +34,7 @@ public:
 
     PutFunctionConcurrencyResponsePrivate(PutFunctionConcurrencyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutFunctionConcurrencyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutFunctionConcurrencyResponse)

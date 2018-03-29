@@ -34,7 +34,7 @@ public:
 
     CreateDirectoryConfigResponsePrivate(CreateDirectoryConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDirectoryConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDirectoryConfigResponse)

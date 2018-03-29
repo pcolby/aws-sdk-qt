@@ -34,7 +34,7 @@ public:
 
     ListOpenWorkflowExecutionsResponsePrivate(ListOpenWorkflowExecutionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListOpenWorkflowExecutionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListOpenWorkflowExecutionsResponse)

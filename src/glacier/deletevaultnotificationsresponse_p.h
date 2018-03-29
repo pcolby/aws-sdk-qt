@@ -34,7 +34,7 @@ public:
 
     DeleteVaultNotificationsResponsePrivate(DeleteVaultNotificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVaultNotificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVaultNotificationsResponse)

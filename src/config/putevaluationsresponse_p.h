@@ -34,7 +34,7 @@ public:
 
     PutEvaluationsResponsePrivate(PutEvaluationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutEvaluationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutEvaluationsResponse)

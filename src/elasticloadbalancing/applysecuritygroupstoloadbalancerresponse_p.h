@@ -34,7 +34,7 @@ public:
 
     ApplySecurityGroupsToLoadBalancerResponsePrivate(ApplySecurityGroupsToLoadBalancerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseApplySecurityGroupsToLoadBalancerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ApplySecurityGroupsToLoadBalancerResponse)

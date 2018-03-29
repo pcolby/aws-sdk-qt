@@ -34,7 +34,7 @@ public:
 
     UpdateServiceSpecificCredentialResponsePrivate(UpdateServiceSpecificCredentialResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateServiceSpecificCredentialResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateServiceSpecificCredentialResponse)

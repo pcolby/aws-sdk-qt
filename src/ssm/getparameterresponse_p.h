@@ -34,7 +34,7 @@ public:
 
     GetParameterResponsePrivate(GetParameterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetParameterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetParameterResponse)

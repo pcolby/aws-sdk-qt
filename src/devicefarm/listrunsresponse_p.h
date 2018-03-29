@@ -34,7 +34,7 @@ public:
 
     ListRunsResponsePrivate(ListRunsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListRunsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListRunsResponse)

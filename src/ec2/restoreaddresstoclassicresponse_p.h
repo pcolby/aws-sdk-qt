@@ -34,7 +34,7 @@ public:
 
     RestoreAddressToClassicResponsePrivate(RestoreAddressToClassicResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreAddressToClassicResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreAddressToClassicResponse)

@@ -34,7 +34,7 @@ public:
 
     AdminConfirmSignUpResponsePrivate(AdminConfirmSignUpResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminConfirmSignUpResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminConfirmSignUpResponse)

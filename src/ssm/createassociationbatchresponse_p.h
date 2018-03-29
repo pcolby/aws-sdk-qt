@@ -34,7 +34,7 @@ public:
 
     CreateAssociationBatchResponsePrivate(CreateAssociationBatchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateAssociationBatchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateAssociationBatchResponse)

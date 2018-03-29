@@ -34,7 +34,7 @@ public:
 
     DescribeEffectivePatchesForPatchBaselineResponsePrivate(DescribeEffectivePatchesForPatchBaselineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEffectivePatchesForPatchBaselineResponse)

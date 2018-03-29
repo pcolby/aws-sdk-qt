@@ -34,7 +34,7 @@ public:
 
     StopAutomationExecutionResponsePrivate(StopAutomationExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopAutomationExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopAutomationExecutionResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateUsagePlanKeyResponsePrivate(CreateUsagePlanKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateUsagePlanKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateUsagePlanKeyResponse)

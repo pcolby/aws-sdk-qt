@@ -34,7 +34,7 @@ public:
 
     DeleteScalingPolicyResponsePrivate(DeleteScalingPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteScalingPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteScalingPolicyResponse)

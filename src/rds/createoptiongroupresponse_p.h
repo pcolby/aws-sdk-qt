@@ -34,7 +34,7 @@ public:
 
     CreateOptionGroupResponsePrivate(CreateOptionGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateOptionGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateOptionGroupResponse)

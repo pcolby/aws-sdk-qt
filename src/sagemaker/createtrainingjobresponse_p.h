@@ -34,7 +34,7 @@ public:
 
     CreateTrainingJobResponsePrivate(CreateTrainingJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateTrainingJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateTrainingJobResponse)

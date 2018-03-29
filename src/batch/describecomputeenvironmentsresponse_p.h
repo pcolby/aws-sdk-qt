@@ -34,7 +34,7 @@ public:
 
     DescribeComputeEnvironmentsResponsePrivate(DescribeComputeEnvironmentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeComputeEnvironmentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeComputeEnvironmentsResponse)

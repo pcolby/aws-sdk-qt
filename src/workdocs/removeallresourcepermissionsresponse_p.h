@@ -34,7 +34,7 @@ public:
 
     RemoveAllResourcePermissionsResponsePrivate(RemoveAllResourcePermissionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveAllResourcePermissionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveAllResourcePermissionsResponse)

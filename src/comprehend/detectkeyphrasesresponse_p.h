@@ -34,7 +34,7 @@ public:
 
     DetectKeyPhrasesResponsePrivate(DetectKeyPhrasesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetectKeyPhrasesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetectKeyPhrasesResponse)

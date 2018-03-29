@@ -34,7 +34,7 @@ public:
 
     GetBucketLoggingResponsePrivate(GetBucketLoggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketLoggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketLoggingResponse)

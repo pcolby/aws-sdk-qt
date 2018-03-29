@@ -34,7 +34,7 @@ public:
 
     TerminateProvisionedProductResponsePrivate(TerminateProvisionedProductResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTerminateProvisionedProductResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TerminateProvisionedProductResponse)

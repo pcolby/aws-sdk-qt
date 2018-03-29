@@ -34,7 +34,7 @@ public:
 
     CreateSnapshotFromVolumeRecoveryPointResponsePrivate(CreateSnapshotFromVolumeRecoveryPointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSnapshotFromVolumeRecoveryPointResponse)

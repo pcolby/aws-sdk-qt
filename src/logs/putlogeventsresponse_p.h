@@ -34,7 +34,7 @@ public:
 
     PutLogEventsResponsePrivate(PutLogEventsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutLogEventsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutLogEventsResponse)

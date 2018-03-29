@@ -34,7 +34,7 @@ public:
 
     DescribeHsmClientCertificatesResponsePrivate(DescribeHsmClientCertificatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeHsmClientCertificatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeHsmClientCertificatesResponse)

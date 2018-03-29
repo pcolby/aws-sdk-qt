@@ -34,7 +34,7 @@ public:
 
     ListBootstrapActionsResponsePrivate(ListBootstrapActionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBootstrapActionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBootstrapActionsResponse)

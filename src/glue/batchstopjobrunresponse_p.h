@@ -34,7 +34,7 @@ public:
 
     BatchStopJobRunResponsePrivate(BatchStopJobRunResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchStopJobRunResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchStopJobRunResponse)

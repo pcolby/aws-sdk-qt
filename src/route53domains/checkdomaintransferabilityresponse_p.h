@@ -34,7 +34,7 @@ public:
 
     CheckDomainTransferabilityResponsePrivate(CheckDomainTransferabilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCheckDomainTransferabilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CheckDomainTransferabilityResponse)

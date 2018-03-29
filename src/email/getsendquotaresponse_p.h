@@ -34,7 +34,7 @@ public:
 
     GetSendQuotaResponsePrivate(GetSendQuotaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSendQuotaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSendQuotaResponse)

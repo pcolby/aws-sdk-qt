@@ -34,7 +34,7 @@ public:
 
     PutReportDefinitionResponsePrivate(PutReportDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutReportDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutReportDefinitionResponse)

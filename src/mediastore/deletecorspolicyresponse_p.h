@@ -34,7 +34,7 @@ public:
 
     DeleteCorsPolicyResponsePrivate(DeleteCorsPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCorsPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCorsPolicyResponse)

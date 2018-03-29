@@ -34,7 +34,7 @@ public:
 
     ListTypedLinkFacetNamesResponsePrivate(ListTypedLinkFacetNamesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTypedLinkFacetNamesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTypedLinkFacetNamesResponse)

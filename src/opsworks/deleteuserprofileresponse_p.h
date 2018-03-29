@@ -34,7 +34,7 @@ public:
 
     DeleteUserProfileResponsePrivate(DeleteUserProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteUserProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteUserProfileResponse)

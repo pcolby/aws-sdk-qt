@@ -34,7 +34,7 @@ public:
 
     UpdateStreamingDistributionResponsePrivate(UpdateStreamingDistributionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateStreamingDistributionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateStreamingDistributionResponse)

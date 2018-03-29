@@ -34,7 +34,7 @@ public:
 
     CancelHandshakeResponsePrivate(CancelHandshakeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelHandshakeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelHandshakeResponse)

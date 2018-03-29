@@ -34,7 +34,7 @@ public:
 
     EnableAllFeaturesResponsePrivate(EnableAllFeaturesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableAllFeaturesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableAllFeaturesResponse)

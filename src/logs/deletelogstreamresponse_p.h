@@ -34,7 +34,7 @@ public:
 
     DeleteLogStreamResponsePrivate(DeleteLogStreamResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLogStreamResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLogStreamResponse)

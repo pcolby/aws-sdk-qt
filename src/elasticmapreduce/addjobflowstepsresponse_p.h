@@ -34,7 +34,7 @@ public:
 
     AddJobFlowStepsResponsePrivate(AddJobFlowStepsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddJobFlowStepsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddJobFlowStepsResponse)

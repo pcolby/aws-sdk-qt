@@ -34,7 +34,7 @@ public:
 
     DeleteDBInstanceResponsePrivate(DeleteDBInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDBInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDBInstanceResponse)

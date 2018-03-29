@@ -34,7 +34,7 @@ public:
 
     CancelSpotInstanceRequestsResponsePrivate(CancelSpotInstanceRequestsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelSpotInstanceRequestsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelSpotInstanceRequestsResponse)

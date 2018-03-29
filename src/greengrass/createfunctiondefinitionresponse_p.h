@@ -34,7 +34,7 @@ public:
 
     CreateFunctionDefinitionResponsePrivate(CreateFunctionDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateFunctionDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateFunctionDefinitionResponse)

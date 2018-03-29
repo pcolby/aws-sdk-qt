@@ -34,7 +34,7 @@ public:
 
     RestoreTableFromClusterSnapshotResponsePrivate(RestoreTableFromClusterSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreTableFromClusterSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreTableFromClusterSnapshotResponse)

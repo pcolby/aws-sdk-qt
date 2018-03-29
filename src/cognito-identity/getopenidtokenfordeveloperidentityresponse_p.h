@@ -34,7 +34,7 @@ public:
 
     GetOpenIdTokenForDeveloperIdentityResponsePrivate(GetOpenIdTokenForDeveloperIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetOpenIdTokenForDeveloperIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetOpenIdTokenForDeveloperIdentityResponse)

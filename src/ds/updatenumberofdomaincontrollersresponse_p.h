@@ -34,7 +34,7 @@ public:
 
     UpdateNumberOfDomainControllersResponsePrivate(UpdateNumberOfDomainControllersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateNumberOfDomainControllersResponse)

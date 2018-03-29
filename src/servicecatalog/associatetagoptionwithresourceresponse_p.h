@@ -34,7 +34,7 @@ public:
 
     AssociateTagOptionWithResourceResponsePrivate(AssociateTagOptionWithResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateTagOptionWithResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateTagOptionWithResourceResponse)

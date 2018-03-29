@@ -34,7 +34,7 @@ public:
 
     DescribeConstraintResponsePrivate(DescribeConstraintResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeConstraintResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeConstraintResponse)

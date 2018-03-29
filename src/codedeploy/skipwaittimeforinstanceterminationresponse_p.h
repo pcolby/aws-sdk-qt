@@ -34,7 +34,7 @@ public:
 
     SkipWaitTimeForInstanceTerminationResponsePrivate(SkipWaitTimeForInstanceTerminationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSkipWaitTimeForInstanceTerminationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SkipWaitTimeForInstanceTerminationResponse)

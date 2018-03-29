@@ -34,7 +34,7 @@ public:
 
     ListIncomingTypedLinksResponsePrivate(ListIncomingTypedLinksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListIncomingTypedLinksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListIncomingTypedLinksResponse)

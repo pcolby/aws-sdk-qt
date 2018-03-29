@@ -34,7 +34,7 @@ public:
 
     EnableDirectoryResponsePrivate(EnableDirectoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableDirectoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableDirectoryResponse)

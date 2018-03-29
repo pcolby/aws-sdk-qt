@@ -34,7 +34,7 @@ public:
 
     FlushStageAuthorizersCacheResponsePrivate(FlushStageAuthorizersCacheResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseFlushStageAuthorizersCacheResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(FlushStageAuthorizersCacheResponse)

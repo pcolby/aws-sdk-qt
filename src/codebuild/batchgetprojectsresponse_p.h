@@ -34,7 +34,7 @@ public:
 
     BatchGetProjectsResponsePrivate(BatchGetProjectsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetProjectsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetProjectsResponse)

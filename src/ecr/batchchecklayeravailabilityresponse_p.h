@@ -34,7 +34,7 @@ public:
 
     BatchCheckLayerAvailabilityResponsePrivate(BatchCheckLayerAvailabilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchCheckLayerAvailabilityResponse)

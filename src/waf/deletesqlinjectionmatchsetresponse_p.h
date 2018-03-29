@@ -34,7 +34,7 @@ public:
 
     DeleteSqlInjectionMatchSetResponsePrivate(DeleteSqlInjectionMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSqlInjectionMatchSetResponse)

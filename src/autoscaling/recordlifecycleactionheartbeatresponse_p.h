@@ -34,7 +34,7 @@ public:
 
     RecordLifecycleActionHeartbeatResponsePrivate(RecordLifecycleActionHeartbeatResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RecordLifecycleActionHeartbeatResponse)

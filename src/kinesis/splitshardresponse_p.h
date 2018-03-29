@@ -34,7 +34,7 @@ public:
 
     SplitShardResponsePrivate(SplitShardResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSplitShardResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SplitShardResponse)

@@ -34,7 +34,7 @@ public:
 
     AddAttachmentsToSetResponsePrivate(AddAttachmentsToSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddAttachmentsToSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddAttachmentsToSetResponse)

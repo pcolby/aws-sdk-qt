@@ -34,7 +34,7 @@ public:
 
     GetFileUploadURLResponsePrivate(GetFileUploadURLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetFileUploadURLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetFileUploadURLResponse)

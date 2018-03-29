@@ -34,7 +34,7 @@ public:
 
     GetLexiconResponsePrivate(GetLexiconResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetLexiconResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetLexiconResponse)

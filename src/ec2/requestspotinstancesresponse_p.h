@@ -34,7 +34,7 @@ public:
 
     RequestSpotInstancesResponsePrivate(RequestSpotInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRequestSpotInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RequestSpotInstancesResponse)

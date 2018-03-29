@@ -34,7 +34,7 @@ public:
 
     DeleteAssessmentRunResponsePrivate(DeleteAssessmentRunResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAssessmentRunResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAssessmentRunResponse)

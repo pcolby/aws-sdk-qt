@@ -34,7 +34,7 @@ public:
 
     EnableKeyRotationResponsePrivate(EnableKeyRotationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableKeyRotationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableKeyRotationResponse)

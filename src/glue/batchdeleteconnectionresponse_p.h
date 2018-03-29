@@ -34,7 +34,7 @@ public:
 
     BatchDeleteConnectionResponsePrivate(BatchDeleteConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDeleteConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDeleteConnectionResponse)

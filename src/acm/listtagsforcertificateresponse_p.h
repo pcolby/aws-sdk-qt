@@ -34,7 +34,7 @@ public:
 
     ListTagsForCertificateResponsePrivate(ListTagsForCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTagsForCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTagsForCertificateResponse)

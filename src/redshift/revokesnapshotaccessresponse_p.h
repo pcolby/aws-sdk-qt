@@ -34,7 +34,7 @@ public:
 
     RevokeSnapshotAccessResponsePrivate(RevokeSnapshotAccessResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRevokeSnapshotAccessResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RevokeSnapshotAccessResponse)

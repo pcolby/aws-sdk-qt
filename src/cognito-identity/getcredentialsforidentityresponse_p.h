@@ -34,7 +34,7 @@ public:
 
     GetCredentialsForIdentityResponsePrivate(GetCredentialsForIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCredentialsForIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCredentialsForIdentityResponse)

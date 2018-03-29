@@ -34,7 +34,7 @@ public:
 
     DisassociateQualificationFromWorkerResponsePrivate(DisassociateQualificationFromWorkerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateQualificationFromWorkerResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeAdjustmentTypesResponsePrivate(DescribeAdjustmentTypesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAdjustmentTypesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAdjustmentTypesResponse)

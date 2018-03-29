@@ -34,7 +34,7 @@ public:
 
     DeleteBrokerResponsePrivate(DeleteBrokerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBrokerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBrokerResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteReplicationTaskResponsePrivate(DeleteReplicationTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReplicationTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReplicationTaskResponse)

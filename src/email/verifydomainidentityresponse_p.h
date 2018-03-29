@@ -34,7 +34,7 @@ public:
 
     VerifyDomainIdentityResponsePrivate(VerifyDomainIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseVerifyDomainIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(VerifyDomainIdentityResponse)

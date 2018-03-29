@@ -34,7 +34,7 @@ public:
 
     ListSizeConstraintSetsResponsePrivate(ListSizeConstraintSetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListSizeConstraintSetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListSizeConstraintSetsResponse)

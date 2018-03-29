@@ -34,7 +34,7 @@ public:
 
     TranslateTextResponsePrivate(TranslateTextResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTranslateTextResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TranslateTextResponse)

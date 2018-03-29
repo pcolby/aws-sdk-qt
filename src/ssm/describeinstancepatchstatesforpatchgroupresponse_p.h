@@ -34,7 +34,7 @@ public:
 
     DescribeInstancePatchStatesForPatchGroupResponsePrivate(DescribeInstancePatchStatesForPatchGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeInstancePatchStatesForPatchGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeInstancePatchStatesForPatchGroupResponse)

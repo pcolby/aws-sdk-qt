@@ -34,7 +34,7 @@ public:
 
     ListIdentityPoolUsageResponsePrivate(ListIdentityPoolUsageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListIdentityPoolUsageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListIdentityPoolUsageResponse)

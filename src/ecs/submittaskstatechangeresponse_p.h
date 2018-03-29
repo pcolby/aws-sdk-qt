@@ -34,7 +34,7 @@ public:
 
     SubmitTaskStateChangeResponsePrivate(SubmitTaskStateChangeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSubmitTaskStateChangeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SubmitTaskStateChangeResponse)

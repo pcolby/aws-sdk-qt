@@ -34,7 +34,7 @@ public:
 
     BundleInstanceResponsePrivate(BundleInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBundleInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BundleInstanceResponse)

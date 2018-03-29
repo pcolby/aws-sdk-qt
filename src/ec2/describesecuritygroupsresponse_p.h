@@ -34,7 +34,7 @@ public:
 
     DescribeSecurityGroupsResponsePrivate(DescribeSecurityGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSecurityGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSecurityGroupsResponse)

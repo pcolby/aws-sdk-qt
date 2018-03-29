@@ -34,7 +34,7 @@ public:
 
     DeleteConfigRuleResponsePrivate(DeleteConfigRuleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConfigRuleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConfigRuleResponse)

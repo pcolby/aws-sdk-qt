@@ -34,7 +34,7 @@ public:
 
     DeleteXssMatchSetResponsePrivate(DeleteXssMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteXssMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteXssMatchSetResponse)

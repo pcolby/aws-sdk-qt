@@ -34,7 +34,7 @@ public:
 
     ListElasticsearchVersionsResponsePrivate(ListElasticsearchVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListElasticsearchVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListElasticsearchVersionsResponse)

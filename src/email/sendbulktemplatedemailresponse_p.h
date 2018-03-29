@@ -34,7 +34,7 @@ public:
 
     SendBulkTemplatedEmailResponsePrivate(SendBulkTemplatedEmailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendBulkTemplatedEmailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendBulkTemplatedEmailResponse)

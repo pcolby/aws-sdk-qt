@@ -34,7 +34,7 @@ public:
 
     ListAccessKeysResponsePrivate(ListAccessKeysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAccessKeysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAccessKeysResponse)

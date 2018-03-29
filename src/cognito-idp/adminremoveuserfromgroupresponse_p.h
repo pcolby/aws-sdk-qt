@@ -34,7 +34,7 @@ public:
 
     AdminRemoveUserFromGroupResponsePrivate(AdminRemoveUserFromGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminRemoveUserFromGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminRemoveUserFromGroupResponse)

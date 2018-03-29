@@ -34,7 +34,7 @@ public:
 
     UpdateThingShadowResponsePrivate(UpdateThingShadowResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateThingShadowResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateThingShadowResponse)

@@ -34,7 +34,7 @@ public:
 
     PutRestApiResponsePrivate(PutRestApiResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutRestApiResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutRestApiResponse)

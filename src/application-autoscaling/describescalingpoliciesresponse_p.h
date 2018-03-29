@@ -34,7 +34,7 @@ public:
 
     DescribeScalingPoliciesResponsePrivate(DescribeScalingPoliciesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeScalingPoliciesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeScalingPoliciesResponse)

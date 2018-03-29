@@ -34,7 +34,7 @@ public:
 
     CreateDirectConnectGatewayResponsePrivate(CreateDirectConnectGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDirectConnectGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDirectConnectGatewayResponse)

@@ -34,7 +34,7 @@ public:
 
     StartWorkflowExecutionResponsePrivate(StartWorkflowExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartWorkflowExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartWorkflowExecutionResponse)

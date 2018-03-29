@@ -34,7 +34,7 @@ public:
 
     CreateDBSnapshotResponsePrivate(CreateDBSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDBSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDBSnapshotResponse)

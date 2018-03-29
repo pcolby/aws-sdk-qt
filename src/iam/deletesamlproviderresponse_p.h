@@ -34,7 +34,7 @@ public:
 
     DeleteSAMLProviderResponsePrivate(DeleteSAMLProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSAMLProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSAMLProviderResponse)

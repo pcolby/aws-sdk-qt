@@ -34,7 +34,7 @@ public:
 
     DeleteStackSetResponsePrivate(DeleteStackSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteStackSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteStackSetResponse)

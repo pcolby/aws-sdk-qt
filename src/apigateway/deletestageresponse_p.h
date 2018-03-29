@@ -34,7 +34,7 @@ public:
 
     DeleteStageResponsePrivate(DeleteStageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteStageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteStageResponse)

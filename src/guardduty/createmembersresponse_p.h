@@ -34,7 +34,7 @@ public:
 
     CreateMembersResponsePrivate(CreateMembersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateMembersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateMembersResponse)

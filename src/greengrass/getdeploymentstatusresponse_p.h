@@ -34,7 +34,7 @@ public:
 
     GetDeploymentStatusResponsePrivate(GetDeploymentStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDeploymentStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDeploymentStatusResponse)

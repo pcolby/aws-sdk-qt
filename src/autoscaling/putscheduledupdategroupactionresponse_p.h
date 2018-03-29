@@ -34,7 +34,7 @@ public:
 
     PutScheduledUpdateGroupActionResponsePrivate(PutScheduledUpdateGroupActionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutScheduledUpdateGroupActionResponse)

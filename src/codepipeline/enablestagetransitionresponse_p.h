@@ -34,7 +34,7 @@ public:
 
     EnableStageTransitionResponsePrivate(EnableStageTransitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableStageTransitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableStageTransitionResponse)

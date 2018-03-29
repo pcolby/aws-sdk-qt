@@ -34,7 +34,7 @@ public:
 
     ScheduleRunResponsePrivate(ScheduleRunResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseScheduleRunResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ScheduleRunResponse)

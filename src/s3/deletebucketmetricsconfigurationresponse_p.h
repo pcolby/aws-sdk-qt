@@ -34,7 +34,7 @@ public:
 
     DeleteBucketMetricsConfigurationResponsePrivate(DeleteBucketMetricsConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBucketMetricsConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBucketMetricsConfigurationResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateCustomMetadataResponsePrivate(CreateCustomMetadataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCustomMetadataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCustomMetadataResponse)

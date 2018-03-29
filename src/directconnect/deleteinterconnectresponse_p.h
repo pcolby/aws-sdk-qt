@@ -34,7 +34,7 @@ public:
 
     DeleteInterconnectResponsePrivate(DeleteInterconnectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteInterconnectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteInterconnectResponse)

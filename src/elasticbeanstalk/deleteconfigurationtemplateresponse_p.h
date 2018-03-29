@@ -34,7 +34,7 @@ public:
 
     DeleteConfigurationTemplateResponsePrivate(DeleteConfigurationTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConfigurationTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConfigurationTemplateResponse)

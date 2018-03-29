@@ -34,7 +34,7 @@ public:
 
     DescribeDBLogFilesResponsePrivate(DescribeDBLogFilesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDBLogFilesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDBLogFilesResponse)

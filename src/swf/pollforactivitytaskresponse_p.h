@@ -34,7 +34,7 @@ public:
 
     PollForActivityTaskResponsePrivate(PollForActivityTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePollForActivityTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PollForActivityTaskResponse)

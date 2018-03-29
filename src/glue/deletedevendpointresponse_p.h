@@ -34,7 +34,7 @@ public:
 
     DeleteDevEndpointResponsePrivate(DeleteDevEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDevEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDevEndpointResponse)

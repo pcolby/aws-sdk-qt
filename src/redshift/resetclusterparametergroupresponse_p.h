@@ -34,7 +34,7 @@ public:
 
     ResetClusterParameterGroupResponsePrivate(ResetClusterParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetClusterParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetClusterParameterGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     GetAccountAuthorizationDetailsResponsePrivate(GetAccountAuthorizationDetailsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAccountAuthorizationDetailsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAccountAuthorizationDetailsResponse)

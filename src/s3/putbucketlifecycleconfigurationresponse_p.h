@@ -34,7 +34,7 @@ public:
 
     PutBucketLifecycleConfigurationResponsePrivate(PutBucketLifecycleConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketLifecycleConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketLifecycleConfigurationResponse)

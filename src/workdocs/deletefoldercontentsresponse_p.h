@@ -34,7 +34,7 @@ public:
 
     DeleteFolderContentsResponsePrivate(DeleteFolderContentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteFolderContentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteFolderContentsResponse)

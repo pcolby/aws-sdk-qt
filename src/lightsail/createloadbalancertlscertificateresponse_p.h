@@ -34,7 +34,7 @@ public:
 
     CreateLoadBalancerTlsCertificateResponsePrivate(CreateLoadBalancerTlsCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateLoadBalancerTlsCertificateResponse)

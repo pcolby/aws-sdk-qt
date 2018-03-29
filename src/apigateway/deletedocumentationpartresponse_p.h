@@ -34,7 +34,7 @@ public:
 
     DeleteDocumentationPartResponsePrivate(DeleteDocumentationPartResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDocumentationPartResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDocumentationPartResponse)

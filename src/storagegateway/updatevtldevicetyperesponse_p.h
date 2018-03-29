@@ -34,7 +34,7 @@ public:
 
     UpdateVTLDeviceTypeResponsePrivate(UpdateVTLDeviceTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateVTLDeviceTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateVTLDeviceTypeResponse)

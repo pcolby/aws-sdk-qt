@@ -34,7 +34,7 @@ public:
 
     DescribeEventTopicsResponsePrivate(DescribeEventTopicsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEventTopicsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEventTopicsResponse)

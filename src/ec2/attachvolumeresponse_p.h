@@ -34,7 +34,7 @@ public:
 
     AttachVolumeResponsePrivate(AttachVolumeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachVolumeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachVolumeResponse)

@@ -34,7 +34,7 @@ public:
 
     UnsubscribeFromEventResponsePrivate(UnsubscribeFromEventResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnsubscribeFromEventResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnsubscribeFromEventResponse)

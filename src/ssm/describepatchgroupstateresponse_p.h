@@ -34,7 +34,7 @@ public:
 
     DescribePatchGroupStateResponsePrivate(DescribePatchGroupStateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribePatchGroupStateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribePatchGroupStateResponse)

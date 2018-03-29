@@ -34,7 +34,7 @@ public:
 
     ReportTaskRunnerHeartbeatResponsePrivate(ReportTaskRunnerHeartbeatResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReportTaskRunnerHeartbeatResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReportTaskRunnerHeartbeatResponse)

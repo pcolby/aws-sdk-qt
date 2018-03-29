@@ -34,7 +34,7 @@ public:
 
     ListDistributionsByWebACLIdResponsePrivate(ListDistributionsByWebACLIdResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListDistributionsByWebACLIdResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListDistributionsByWebACLIdResponse)

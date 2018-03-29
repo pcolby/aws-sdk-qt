@@ -34,7 +34,7 @@ public:
 
     ReceiveMessageResponsePrivate(ReceiveMessageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReceiveMessageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReceiveMessageResponse)

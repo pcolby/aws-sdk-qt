@@ -34,7 +34,7 @@ public:
 
     AdminLinkProviderForUserResponsePrivate(AdminLinkProviderForUserResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminLinkProviderForUserResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminLinkProviderForUserResponse)

@@ -34,7 +34,7 @@ public:
 
     DeregisterTaskDefinitionResponsePrivate(DeregisterTaskDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterTaskDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterTaskDefinitionResponse)

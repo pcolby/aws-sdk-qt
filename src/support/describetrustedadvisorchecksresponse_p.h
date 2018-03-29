@@ -34,7 +34,7 @@ public:
 
     DescribeTrustedAdvisorChecksResponsePrivate(DescribeTrustedAdvisorChecksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeTrustedAdvisorChecksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeTrustedAdvisorChecksResponse)

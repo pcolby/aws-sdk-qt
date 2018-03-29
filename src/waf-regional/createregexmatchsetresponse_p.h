@@ -34,7 +34,7 @@ public:
 
     CreateRegexMatchSetResponsePrivate(CreateRegexMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateRegexMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateRegexMatchSetResponse)

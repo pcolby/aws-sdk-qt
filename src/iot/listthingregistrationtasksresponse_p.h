@@ -34,7 +34,7 @@ public:
 
     ListThingRegistrationTasksResponsePrivate(ListThingRegistrationTasksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListThingRegistrationTasksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListThingRegistrationTasksResponse)

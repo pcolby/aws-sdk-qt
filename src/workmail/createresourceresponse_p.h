@@ -34,7 +34,7 @@ public:
 
     CreateResourceResponsePrivate(CreateResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateResourceResponse)

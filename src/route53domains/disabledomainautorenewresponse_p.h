@@ -34,7 +34,7 @@ public:
 
     DisableDomainAutoRenewResponsePrivate(DisableDomainAutoRenewResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableDomainAutoRenewResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableDomainAutoRenewResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteStackInstancesResponsePrivate(DeleteStackInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteStackInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteStackInstancesResponse)

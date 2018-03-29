@@ -34,7 +34,7 @@ public:
 
     DetachInternetGatewayResponsePrivate(DetachInternetGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachInternetGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachInternetGatewayResponse)

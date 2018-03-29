@@ -34,7 +34,7 @@ public:
 
     GetCallerIdentityResponsePrivate(GetCallerIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCallerIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCallerIdentityResponse)

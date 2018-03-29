@@ -34,7 +34,7 @@ public:
 
     GetAccountLimitResponsePrivate(GetAccountLimitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAccountLimitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAccountLimitResponse)

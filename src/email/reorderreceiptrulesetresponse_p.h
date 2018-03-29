@@ -34,7 +34,7 @@ public:
 
     ReorderReceiptRuleSetResponsePrivate(ReorderReceiptRuleSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReorderReceiptRuleSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReorderReceiptRuleSetResponse)

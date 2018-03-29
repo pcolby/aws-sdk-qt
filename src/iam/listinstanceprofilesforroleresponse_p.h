@@ -34,7 +34,7 @@ public:
 
     ListInstanceProfilesForRoleResponsePrivate(ListInstanceProfilesForRoleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListInstanceProfilesForRoleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListInstanceProfilesForRoleResponse)

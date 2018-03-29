@@ -34,7 +34,7 @@ public:
 
     ListEventSourceMappingsResponsePrivate(ListEventSourceMappingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListEventSourceMappingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListEventSourceMappingsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteByteMatchSetResponsePrivate(DeleteByteMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteByteMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteByteMatchSetResponse)

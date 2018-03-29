@@ -34,7 +34,7 @@ public:
 
     RebootReplicationInstanceResponsePrivate(RebootReplicationInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRebootReplicationInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RebootReplicationInstanceResponse)

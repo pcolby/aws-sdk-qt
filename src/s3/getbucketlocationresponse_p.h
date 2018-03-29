@@ -34,7 +34,7 @@ public:
 
     GetBucketLocationResponsePrivate(GetBucketLocationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketLocationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketLocationResponse)

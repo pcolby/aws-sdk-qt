@@ -34,7 +34,7 @@ public:
 
     DeleteCrawlerResponsePrivate(DeleteCrawlerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCrawlerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCrawlerResponse)

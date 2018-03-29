@@ -34,7 +34,7 @@ public:
 
     GetSegmentExportJobsResponsePrivate(GetSegmentExportJobsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSegmentExportJobsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSegmentExportJobsResponse)

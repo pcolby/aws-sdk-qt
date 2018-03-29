@@ -34,7 +34,7 @@ public:
 
     ResetJobBookmarkResponsePrivate(ResetJobBookmarkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetJobBookmarkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetJobBookmarkResponse)

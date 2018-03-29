@@ -34,7 +34,7 @@ public:
 
     CreateAppCookieStickinessPolicyResponsePrivate(CreateAppCookieStickinessPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateAppCookieStickinessPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateAppCookieStickinessPolicyResponse)

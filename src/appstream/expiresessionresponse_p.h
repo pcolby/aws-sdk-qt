@@ -34,7 +34,7 @@ public:
 
     ExpireSessionResponsePrivate(ExpireSessionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseExpireSessionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ExpireSessionResponse)

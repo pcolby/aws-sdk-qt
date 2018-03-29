@@ -34,7 +34,7 @@ public:
 
     SetLoadBasedAutoScalingResponsePrivate(SetLoadBasedAutoScalingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetLoadBasedAutoScalingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetLoadBasedAutoScalingResponse)

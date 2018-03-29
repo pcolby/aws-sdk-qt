@@ -34,7 +34,7 @@ public:
 
     CopyDBParameterGroupResponsePrivate(CopyDBParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyDBParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyDBParameterGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateAccountPasswordPolicyResponsePrivate(UpdateAccountPasswordPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateAccountPasswordPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateAccountPasswordPolicyResponse)

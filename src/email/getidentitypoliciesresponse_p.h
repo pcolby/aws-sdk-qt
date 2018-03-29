@@ -34,7 +34,7 @@ public:
 
     GetIdentityPoliciesResponsePrivate(GetIdentityPoliciesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIdentityPoliciesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIdentityPoliciesResponse)

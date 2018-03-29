@@ -34,7 +34,7 @@ public:
 
     GetSessionTokenResponsePrivate(GetSessionTokenResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSessionTokenResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSessionTokenResponse)

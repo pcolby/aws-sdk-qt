@@ -34,7 +34,7 @@ public:
 
     AssociateConfigurationItemsToApplicationResponsePrivate(AssociateConfigurationItemsToApplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateConfigurationItemsToApplicationResponse)

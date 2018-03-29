@@ -34,7 +34,7 @@ public:
 
     DescribeAttachmentResponsePrivate(DescribeAttachmentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAttachmentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAttachmentResponse)

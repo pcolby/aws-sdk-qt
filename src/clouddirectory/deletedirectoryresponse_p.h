@@ -34,7 +34,7 @@ public:
 
     DeleteDirectoryResponsePrivate(DeleteDirectoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDirectoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDirectoryResponse)

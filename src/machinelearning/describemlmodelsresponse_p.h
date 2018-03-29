@@ -34,7 +34,7 @@ public:
 
     DescribeMLModelsResponsePrivate(DescribeMLModelsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeMLModelsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeMLModelsResponse)

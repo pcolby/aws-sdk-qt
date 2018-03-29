@@ -34,7 +34,7 @@ public:
 
     SendRawEmailResponsePrivate(SendRawEmailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendRawEmailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendRawEmailResponse)

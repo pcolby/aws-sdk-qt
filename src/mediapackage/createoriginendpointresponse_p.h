@@ -34,7 +34,7 @@ public:
 
     CreateOriginEndpointResponsePrivate(CreateOriginEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateOriginEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateOriginEndpointResponse)

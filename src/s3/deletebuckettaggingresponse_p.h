@@ -34,7 +34,7 @@ public:
 
     DeleteBucketTaggingResponsePrivate(DeleteBucketTaggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBucketTaggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBucketTaggingResponse)

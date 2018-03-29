@@ -34,7 +34,7 @@ public:
 
     CreateEnvironmentMembershipResponsePrivate(CreateEnvironmentMembershipResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateEnvironmentMembershipResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateEnvironmentMembershipResponse)

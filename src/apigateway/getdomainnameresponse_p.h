@@ -34,7 +34,7 @@ public:
 
     GetDomainNameResponsePrivate(GetDomainNameResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDomainNameResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDomainNameResponse)

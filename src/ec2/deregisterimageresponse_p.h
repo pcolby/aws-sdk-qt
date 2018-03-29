@@ -34,7 +34,7 @@ public:
 
     DeregisterImageResponsePrivate(DeregisterImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterImageResponse)

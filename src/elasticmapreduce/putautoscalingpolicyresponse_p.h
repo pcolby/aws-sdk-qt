@@ -34,7 +34,7 @@ public:
 
     PutAutoScalingPolicyResponsePrivate(PutAutoScalingPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutAutoScalingPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutAutoScalingPolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteProgressUpdateStreamResponsePrivate(DeleteProgressUpdateStreamResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteProgressUpdateStreamResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteProgressUpdateStreamResponse)

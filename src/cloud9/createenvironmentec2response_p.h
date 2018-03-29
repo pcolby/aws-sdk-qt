@@ -34,7 +34,7 @@ public:
 
     CreateEnvironmentEC2ResponsePrivate(CreateEnvironmentEC2Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateEnvironmentEC2Response(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateEnvironmentEC2Response)

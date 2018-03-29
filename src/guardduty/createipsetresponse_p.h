@@ -34,7 +34,7 @@ public:
 
     CreateIPSetResponsePrivate(CreateIPSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateIPSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateIPSetResponse)

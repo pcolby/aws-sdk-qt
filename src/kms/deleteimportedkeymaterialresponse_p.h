@@ -34,7 +34,7 @@ public:
 
     DeleteImportedKeyMaterialResponsePrivate(DeleteImportedKeyMaterialResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteImportedKeyMaterialResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteImportedKeyMaterialResponse)

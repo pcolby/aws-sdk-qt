@@ -34,7 +34,7 @@ public:
 
     CreateFileSystemResponsePrivate(CreateFileSystemResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateFileSystemResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateFileSystemResponse)

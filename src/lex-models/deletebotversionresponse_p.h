@@ -34,7 +34,7 @@ public:
 
     DeleteBotVersionResponsePrivate(DeleteBotVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBotVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBotVersionResponse)

@@ -34,7 +34,7 @@ public:
 
     ListServerNeighborsResponsePrivate(ListServerNeighborsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListServerNeighborsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListServerNeighborsResponse)

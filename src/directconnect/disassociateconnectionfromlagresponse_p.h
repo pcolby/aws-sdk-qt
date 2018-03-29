@@ -34,7 +34,7 @@ public:
 
     DisassociateConnectionFromLagResponsePrivate(DisassociateConnectionFromLagResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateConnectionFromLagResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateConnectionFromLagResponse)

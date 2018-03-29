@@ -34,7 +34,7 @@ public:
 
     ImportVolumeResponsePrivate(ImportVolumeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportVolumeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportVolumeResponse)

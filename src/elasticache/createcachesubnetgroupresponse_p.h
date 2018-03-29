@@ -34,7 +34,7 @@ public:
 
     CreateCacheSubnetGroupResponsePrivate(CreateCacheSubnetGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCacheSubnetGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCacheSubnetGroupResponse)

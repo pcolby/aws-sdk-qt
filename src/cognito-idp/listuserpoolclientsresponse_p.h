@@ -34,7 +34,7 @@ public:
 
     ListUserPoolClientsResponsePrivate(ListUserPoolClientsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListUserPoolClientsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListUserPoolClientsResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeClusterSecurityGroupsResponsePrivate(DescribeClusterSecurityGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeClusterSecurityGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeClusterSecurityGroupsResponse)

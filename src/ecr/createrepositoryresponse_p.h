@@ -34,7 +34,7 @@ public:
 
     CreateRepositoryResponsePrivate(CreateRepositoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateRepositoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateRepositoryResponse)

@@ -34,7 +34,7 @@ public:
 
     CountPendingDecisionTasksResponsePrivate(CountPendingDecisionTasksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCountPendingDecisionTasksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CountPendingDecisionTasksResponse)

@@ -34,7 +34,7 @@ public:
 
     GetBucketEncryptionResponsePrivate(GetBucketEncryptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketEncryptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketEncryptionResponse)

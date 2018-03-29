@@ -34,7 +34,7 @@ public:
 
     StopImageBuilderResponsePrivate(StopImageBuilderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopImageBuilderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopImageBuilderResponse)

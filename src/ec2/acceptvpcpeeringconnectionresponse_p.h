@@ -34,7 +34,7 @@ public:
 
     AcceptVpcPeeringConnectionResponsePrivate(AcceptVpcPeeringConnectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AcceptVpcPeeringConnectionResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateRoleAliasResponsePrivate(CreateRoleAliasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateRoleAliasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateRoleAliasResponse)

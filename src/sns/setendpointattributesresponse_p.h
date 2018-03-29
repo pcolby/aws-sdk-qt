@@ -34,7 +34,7 @@ public:
 
     SetEndpointAttributesResponsePrivate(SetEndpointAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetEndpointAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetEndpointAttributesResponse)

@@ -34,7 +34,7 @@ public:
 
     GetServiceGraphResponsePrivate(GetServiceGraphResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetServiceGraphResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetServiceGraphResponse)

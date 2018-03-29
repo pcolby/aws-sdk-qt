@@ -34,7 +34,7 @@ public:
 
     DescribeReservedNodeOfferingsResponsePrivate(DescribeReservedNodeOfferingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeReservedNodeOfferingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeReservedNodeOfferingsResponse)

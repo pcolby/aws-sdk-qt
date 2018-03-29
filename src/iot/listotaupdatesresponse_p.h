@@ -34,7 +34,7 @@ public:
 
     ListOTAUpdatesResponsePrivate(ListOTAUpdatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListOTAUpdatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListOTAUpdatesResponse)

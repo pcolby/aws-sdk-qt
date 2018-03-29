@@ -34,7 +34,7 @@ public:
 
     DescribeExpressionsResponsePrivate(DescribeExpressionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeExpressionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeExpressionsResponse)

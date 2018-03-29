@@ -34,7 +34,7 @@ public:
 
     DescribeReplicationTaskAssessmentResultsResponsePrivate(DescribeReplicationTaskAssessmentResultsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeReplicationTaskAssessmentResultsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeReplicationTaskAssessmentResultsResponse)

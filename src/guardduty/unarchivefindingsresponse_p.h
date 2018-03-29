@@ -34,7 +34,7 @@ public:
 
     UnarchiveFindingsResponsePrivate(UnarchiveFindingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnarchiveFindingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnarchiveFindingsResponse)

@@ -34,7 +34,7 @@ public:
 
     StopCrawlerScheduleResponsePrivate(StopCrawlerScheduleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopCrawlerScheduleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopCrawlerScheduleResponse)

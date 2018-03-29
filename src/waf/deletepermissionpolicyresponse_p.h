@@ -34,7 +34,7 @@ public:
 
     DeletePermissionPolicyResponsePrivate(DeletePermissionPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePermissionPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePermissionPolicyResponse)

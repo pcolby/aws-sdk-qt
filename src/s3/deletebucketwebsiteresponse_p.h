@@ -34,7 +34,7 @@ public:
 
     DeleteBucketWebsiteResponsePrivate(DeleteBucketWebsiteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBucketWebsiteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBucketWebsiteResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteApnsChannelResponsePrivate(DeleteApnsChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteApnsChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteApnsChannelResponse)

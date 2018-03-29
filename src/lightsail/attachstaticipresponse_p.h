@@ -34,7 +34,7 @@ public:
 
     AttachStaticIpResponsePrivate(AttachStaticIpResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachStaticIpResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachStaticIpResponse)

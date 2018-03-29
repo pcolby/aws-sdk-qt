@@ -34,7 +34,7 @@ public:
 
     GetUserDefinedFunctionResponsePrivate(GetUserDefinedFunctionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetUserDefinedFunctionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetUserDefinedFunctionResponse)

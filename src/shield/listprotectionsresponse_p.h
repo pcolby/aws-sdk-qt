@@ -34,7 +34,7 @@ public:
 
     ListProtectionsResponsePrivate(ListProtectionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListProtectionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListProtectionsResponse)

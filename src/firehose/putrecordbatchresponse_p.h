@@ -34,7 +34,7 @@ public:
 
     PutRecordBatchResponsePrivate(PutRecordBatchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutRecordBatchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutRecordBatchResponse)

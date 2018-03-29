@@ -34,7 +34,7 @@ public:
 
     SetLoadBalancerPoliciesForBackendServerResponsePrivate(SetLoadBalancerPoliciesForBackendServerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetLoadBalancerPoliciesForBackendServerResponse)

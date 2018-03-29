@@ -34,7 +34,7 @@ public:
 
     DescribeAvailablePatchesResponsePrivate(DescribeAvailablePatchesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAvailablePatchesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAvailablePatchesResponse)

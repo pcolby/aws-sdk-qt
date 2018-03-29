@@ -34,7 +34,7 @@ public:
 
     UpdateAssociationResponsePrivate(UpdateAssociationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateAssociationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateAssociationResponse)

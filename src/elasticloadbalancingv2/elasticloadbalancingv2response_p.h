@@ -34,7 +34,8 @@ public:
 
     ElasticLoadBalancingv2ResponsePrivate(ElasticLoadBalancingv2Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseErrorResponse(QXmlStreamReader &xml);
+    void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ElasticLoadBalancingv2Response)

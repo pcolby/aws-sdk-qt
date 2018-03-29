@@ -34,7 +34,7 @@ public:
 
     DeleteCustomMetadataResponsePrivate(DeleteCustomMetadataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCustomMetadataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCustomMetadataResponse)

@@ -34,7 +34,7 @@ public:
 
     RegisterTargetWithMaintenanceWindowResponsePrivate(RegisterTargetWithMaintenanceWindowResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterTargetWithMaintenanceWindowResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterTargetWithMaintenanceWindowResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteRestApiResponsePrivate(DeleteRestApiResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRestApiResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRestApiResponse)

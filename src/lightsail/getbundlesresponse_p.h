@@ -34,7 +34,7 @@ public:
 
     GetBundlesResponsePrivate(GetBundlesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBundlesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBundlesResponse)

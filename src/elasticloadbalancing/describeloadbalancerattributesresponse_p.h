@@ -34,7 +34,7 @@ public:
 
     DescribeLoadBalancerAttributesResponsePrivate(DescribeLoadBalancerAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLoadBalancerAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLoadBalancerAttributesResponse)

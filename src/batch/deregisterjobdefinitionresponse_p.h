@@ -34,7 +34,7 @@ public:
 
     DeregisterJobDefinitionResponsePrivate(DeregisterJobDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterJobDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterJobDefinitionResponse)

@@ -34,7 +34,7 @@ public:
 
     StopUserImportJobResponsePrivate(StopUserImportJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopUserImportJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopUserImportJobResponse)

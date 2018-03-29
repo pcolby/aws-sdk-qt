@@ -34,7 +34,7 @@ public:
 
     DescribeSpotPriceHistoryResponsePrivate(DescribeSpotPriceHistoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSpotPriceHistoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSpotPriceHistoryResponse)

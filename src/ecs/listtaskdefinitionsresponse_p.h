@@ -34,7 +34,7 @@ public:
 
     ListTaskDefinitionsResponsePrivate(ListTaskDefinitionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTaskDefinitionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTaskDefinitionsResponse)

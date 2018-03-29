@@ -34,7 +34,7 @@ public:
 
     ModifyClusterParameterGroupResponsePrivate(ModifyClusterParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyClusterParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyClusterParameterGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     GetRoomSkillParameterResponsePrivate(GetRoomSkillParameterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRoomSkillParameterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRoomSkillParameterResponse)

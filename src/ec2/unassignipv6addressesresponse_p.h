@@ -34,7 +34,7 @@ public:
 
     UnassignIpv6AddressesResponsePrivate(UnassignIpv6AddressesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnassignIpv6AddressesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnassignIpv6AddressesResponse)

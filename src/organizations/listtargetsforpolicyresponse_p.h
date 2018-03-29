@@ -34,7 +34,7 @@ public:
 
     ListTargetsForPolicyResponsePrivate(ListTargetsForPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTargetsForPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTargetsForPolicyResponse)

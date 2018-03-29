@@ -34,7 +34,7 @@ public:
 
     RegisterCertificateResponsePrivate(RegisterCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterCertificateResponse)

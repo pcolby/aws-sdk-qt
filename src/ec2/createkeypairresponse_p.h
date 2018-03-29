@@ -34,7 +34,7 @@ public:
 
     CreateKeyPairResponsePrivate(CreateKeyPairResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateKeyPairResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateKeyPairResponse)

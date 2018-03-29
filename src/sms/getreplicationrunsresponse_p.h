@@ -34,7 +34,7 @@ public:
 
     GetReplicationRunsResponsePrivate(GetReplicationRunsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReplicationRunsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReplicationRunsResponse)

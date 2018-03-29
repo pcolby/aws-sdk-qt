@@ -34,7 +34,7 @@ public:
 
     ListFileSharesResponsePrivate(ListFileSharesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListFileSharesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListFileSharesResponse)

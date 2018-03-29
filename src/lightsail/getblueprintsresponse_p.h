@@ -34,7 +34,7 @@ public:
 
     GetBlueprintsResponsePrivate(GetBlueprintsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBlueprintsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBlueprintsResponse)

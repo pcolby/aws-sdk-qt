@@ -34,7 +34,7 @@ public:
 
     DescribeNodeAssociationStatusResponsePrivate(DescribeNodeAssociationStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNodeAssociationStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNodeAssociationStatusResponse)

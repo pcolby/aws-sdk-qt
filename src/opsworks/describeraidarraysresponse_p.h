@@ -34,7 +34,7 @@ public:
 
     DescribeRaidArraysResponsePrivate(DescribeRaidArraysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeRaidArraysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeRaidArraysResponse)

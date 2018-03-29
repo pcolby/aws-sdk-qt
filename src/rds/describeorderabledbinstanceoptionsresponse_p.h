@@ -34,7 +34,7 @@ public:
 
     DescribeOrderableDBInstanceOptionsResponsePrivate(DescribeOrderableDBInstanceOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeOrderableDBInstanceOptionsResponse)

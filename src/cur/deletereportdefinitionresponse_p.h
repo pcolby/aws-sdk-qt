@@ -34,7 +34,7 @@ public:
 
     DeleteReportDefinitionResponsePrivate(DeleteReportDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReportDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReportDefinitionResponse)

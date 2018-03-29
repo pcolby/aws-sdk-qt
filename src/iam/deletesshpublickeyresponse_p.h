@@ -34,7 +34,7 @@ public:
 
     DeleteSSHPublicKeyResponsePrivate(DeleteSSHPublicKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSSHPublicKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSSHPublicKeyResponse)

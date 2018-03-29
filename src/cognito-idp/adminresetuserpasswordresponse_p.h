@@ -34,7 +34,7 @@ public:
 
     AdminResetUserPasswordResponsePrivate(AdminResetUserPasswordResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminResetUserPasswordResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminResetUserPasswordResponse)

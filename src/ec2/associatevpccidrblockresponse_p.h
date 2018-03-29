@@ -34,7 +34,7 @@ public:
 
     AssociateVpcCidrBlockResponsePrivate(AssociateVpcCidrBlockResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateVpcCidrBlockResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateVpcCidrBlockResponse)

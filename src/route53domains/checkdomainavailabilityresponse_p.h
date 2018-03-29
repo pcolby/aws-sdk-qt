@@ -34,7 +34,7 @@ public:
 
     CheckDomainAvailabilityResponsePrivate(CheckDomainAvailabilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCheckDomainAvailabilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CheckDomainAvailabilityResponse)

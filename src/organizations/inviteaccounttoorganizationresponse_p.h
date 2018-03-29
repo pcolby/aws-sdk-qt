@@ -34,7 +34,7 @@ public:
 
     InviteAccountToOrganizationResponsePrivate(InviteAccountToOrganizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInviteAccountToOrganizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InviteAccountToOrganizationResponse)

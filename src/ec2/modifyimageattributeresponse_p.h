@@ -34,7 +34,7 @@ public:
 
     ModifyImageAttributeResponsePrivate(ModifyImageAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyImageAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyImageAttributeResponse)

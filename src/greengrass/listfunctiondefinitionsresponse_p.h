@@ -34,7 +34,7 @@ public:
 
     ListFunctionDefinitionsResponsePrivate(ListFunctionDefinitionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListFunctionDefinitionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListFunctionDefinitionsResponse)

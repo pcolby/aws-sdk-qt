@@ -34,7 +34,7 @@ public:
 
     RebootBrokerResponsePrivate(RebootBrokerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRebootBrokerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RebootBrokerResponse)

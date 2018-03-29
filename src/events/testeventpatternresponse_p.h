@@ -34,7 +34,7 @@ public:
 
     TestEventPatternResponsePrivate(TestEventPatternResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestEventPatternResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestEventPatternResponse)

@@ -34,7 +34,7 @@ public:
 
     BatchWriteResponsePrivate(BatchWriteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchWriteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchWriteResponse)

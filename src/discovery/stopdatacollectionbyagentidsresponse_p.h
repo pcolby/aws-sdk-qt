@@ -34,7 +34,7 @@ public:
 
     StopDataCollectionByAgentIdsResponsePrivate(StopDataCollectionByAgentIdsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopDataCollectionByAgentIdsResponse)

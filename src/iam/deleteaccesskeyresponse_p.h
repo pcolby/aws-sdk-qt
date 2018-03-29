@@ -34,7 +34,7 @@ public:
 
     DeleteAccessKeyResponsePrivate(DeleteAccessKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAccessKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAccessKeyResponse)

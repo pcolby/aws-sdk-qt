@@ -34,7 +34,7 @@ public:
 
     RestoreDBClusterToPointInTimeResponsePrivate(RestoreDBClusterToPointInTimeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreDBClusterToPointInTimeResponse)

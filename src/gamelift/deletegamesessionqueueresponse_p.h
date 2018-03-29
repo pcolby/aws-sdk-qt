@@ -34,7 +34,7 @@ public:
 
     DeleteGameSessionQueueResponsePrivate(DeleteGameSessionQueueResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteGameSessionQueueResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteGameSessionQueueResponse)

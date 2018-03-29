@@ -34,7 +34,7 @@ public:
 
     ListInstanceGroupsResponsePrivate(ListInstanceGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListInstanceGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListInstanceGroupsResponse)

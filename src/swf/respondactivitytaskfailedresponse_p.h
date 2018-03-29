@@ -34,7 +34,7 @@ public:
 
     RespondActivityTaskFailedResponsePrivate(RespondActivityTaskFailedResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRespondActivityTaskFailedResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RespondActivityTaskFailedResponse)

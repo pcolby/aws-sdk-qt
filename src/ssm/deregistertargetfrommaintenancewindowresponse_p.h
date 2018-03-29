@@ -34,7 +34,7 @@ public:
 
     DeregisterTargetFromMaintenanceWindowResponsePrivate(DeregisterTargetFromMaintenanceWindowResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterTargetFromMaintenanceWindowResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterTargetFromMaintenanceWindowResponse)

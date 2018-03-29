@@ -34,7 +34,7 @@ public:
 
     ListPortfoliosForProductResponsePrivate(ListPortfoliosForProductResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListPortfoliosForProductResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListPortfoliosForProductResponse)

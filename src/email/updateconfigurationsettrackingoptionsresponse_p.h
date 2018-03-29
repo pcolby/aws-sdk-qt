@@ -34,7 +34,7 @@ public:
 
     UpdateConfigurationSetTrackingOptionsResponsePrivate(UpdateConfigurationSetTrackingOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateConfigurationSetTrackingOptionsResponse)

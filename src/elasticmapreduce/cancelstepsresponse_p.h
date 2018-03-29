@@ -34,7 +34,7 @@ public:
 
     CancelStepsResponsePrivate(CancelStepsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelStepsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelStepsResponse)

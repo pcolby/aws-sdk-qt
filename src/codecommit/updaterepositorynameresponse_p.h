@@ -34,7 +34,7 @@ public:
 
     UpdateRepositoryNameResponsePrivate(UpdateRepositoryNameResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRepositoryNameResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRepositoryNameResponse)

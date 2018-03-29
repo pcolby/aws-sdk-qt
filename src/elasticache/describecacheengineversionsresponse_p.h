@@ -34,7 +34,7 @@ public:
 
     DescribeCacheEngineVersionsResponsePrivate(DescribeCacheEngineVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeCacheEngineVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeCacheEngineVersionsResponse)

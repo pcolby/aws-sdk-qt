@@ -34,7 +34,7 @@ public:
 
     PurgeQueueResponsePrivate(PurgeQueueResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurgeQueueResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurgeQueueResponse)

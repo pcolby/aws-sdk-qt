@@ -34,7 +34,7 @@ public:
 
     AllocateStaticIpResponsePrivate(AllocateStaticIpResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAllocateStaticIpResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AllocateStaticIpResponse)

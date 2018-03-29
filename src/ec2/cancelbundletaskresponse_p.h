@@ -34,7 +34,7 @@ public:
 
     CancelBundleTaskResponsePrivate(CancelBundleTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelBundleTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelBundleTaskResponse)

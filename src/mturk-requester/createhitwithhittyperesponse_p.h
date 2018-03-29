@@ -34,7 +34,7 @@ public:
 
     CreateHITWithHITTypeResponsePrivate(CreateHITWithHITTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateHITWithHITTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateHITWithHITTypeResponse)

@@ -34,7 +34,7 @@ public:
 
     ModifyDBClusterResponsePrivate(ModifyDBClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyDBClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyDBClusterResponse)

@@ -34,7 +34,7 @@ public:
 
     RetireGrantResponsePrivate(RetireGrantResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRetireGrantResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RetireGrantResponse)

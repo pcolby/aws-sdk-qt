@@ -34,7 +34,7 @@ public:
 
     StartMatchBackfillResponsePrivate(StartMatchBackfillResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartMatchBackfillResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartMatchBackfillResponse)

@@ -34,7 +34,7 @@ public:
 
     PutComplianceItemsResponsePrivate(PutComplianceItemsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutComplianceItemsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutComplianceItemsResponse)

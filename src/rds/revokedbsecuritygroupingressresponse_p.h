@@ -34,7 +34,7 @@ public:
 
     RevokeDBSecurityGroupIngressResponsePrivate(RevokeDBSecurityGroupIngressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRevokeDBSecurityGroupIngressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RevokeDBSecurityGroupIngressResponse)

@@ -34,7 +34,7 @@ public:
 
     GetProductsResponsePrivate(GetProductsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetProductsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetProductsResponse)

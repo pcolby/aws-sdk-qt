@@ -34,7 +34,7 @@ public:
 
     DescribeTargetHealthResponsePrivate(DescribeTargetHealthResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeTargetHealthResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeTargetHealthResponse)

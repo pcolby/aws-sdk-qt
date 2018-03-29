@@ -34,7 +34,7 @@ public:
 
     CancelArchivalResponsePrivate(CancelArchivalResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelArchivalResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelArchivalResponse)

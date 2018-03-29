@@ -34,7 +34,7 @@ public:
 
     DeleteCacheParameterGroupResponsePrivate(DeleteCacheParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCacheParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCacheParameterGroupResponse)

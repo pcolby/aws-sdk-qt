@@ -34,7 +34,8 @@ public:
 
     Cloud9ResponsePrivate(Cloud9Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseErrorResponse(QXmlStreamReader &xml);
+    void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(Cloud9Response)

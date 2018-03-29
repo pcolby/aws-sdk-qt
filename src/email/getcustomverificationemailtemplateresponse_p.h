@@ -34,7 +34,7 @@ public:
 
     GetCustomVerificationEmailTemplateResponsePrivate(GetCustomVerificationEmailTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCustomVerificationEmailTemplateResponse)

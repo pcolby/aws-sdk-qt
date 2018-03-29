@@ -34,7 +34,7 @@ public:
 
     GetBucketAnalyticsConfigurationResponsePrivate(GetBucketAnalyticsConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketAnalyticsConfigurationResponse)

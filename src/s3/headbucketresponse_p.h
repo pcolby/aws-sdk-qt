@@ -34,7 +34,7 @@ public:
 
     HeadBucketResponsePrivate(HeadBucketResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseHeadBucketResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(HeadBucketResponse)

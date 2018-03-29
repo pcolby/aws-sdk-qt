@@ -34,7 +34,7 @@ public:
 
     DisableVpcClassicLinkDnsSupportResponsePrivate(DisableVpcClassicLinkDnsSupportResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableVpcClassicLinkDnsSupportResponse)

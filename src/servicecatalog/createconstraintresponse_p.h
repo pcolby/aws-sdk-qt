@@ -34,7 +34,7 @@ public:
 
     CreateConstraintResponsePrivate(CreateConstraintResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateConstraintResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateConstraintResponse)

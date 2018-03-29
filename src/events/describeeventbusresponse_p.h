@@ -34,7 +34,7 @@ public:
 
     DescribeEventBusResponsePrivate(DescribeEventBusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEventBusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEventBusResponse)

@@ -34,7 +34,7 @@ public:
 
     StopApplicationResponsePrivate(StopApplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopApplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopApplicationResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateApplicationSettingsResponsePrivate(UpdateApplicationSettingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateApplicationSettingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateApplicationSettingsResponse)

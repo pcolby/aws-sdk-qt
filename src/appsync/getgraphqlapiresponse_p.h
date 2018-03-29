@@ -34,7 +34,7 @@ public:
 
     GetGraphqlApiResponsePrivate(GetGraphqlApiResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGraphqlApiResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGraphqlApiResponse)

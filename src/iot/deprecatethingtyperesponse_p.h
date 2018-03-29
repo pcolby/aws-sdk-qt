@@ -34,7 +34,7 @@ public:
 
     DeprecateThingTypeResponsePrivate(DeprecateThingTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeprecateThingTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeprecateThingTypeResponse)

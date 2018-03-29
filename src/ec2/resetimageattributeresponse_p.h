@@ -34,7 +34,7 @@ public:
 
     ResetImageAttributeResponsePrivate(ResetImageAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetImageAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetImageAttributeResponse)

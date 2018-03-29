@@ -34,7 +34,7 @@ public:
 
     DeleteSnapshotCopyGrantResponsePrivate(DeleteSnapshotCopyGrantResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSnapshotCopyGrantResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSnapshotCopyGrantResponse)

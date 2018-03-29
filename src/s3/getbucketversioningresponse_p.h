@@ -34,7 +34,7 @@ public:
 
     GetBucketVersioningResponsePrivate(GetBucketVersioningResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketVersioningResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketVersioningResponse)

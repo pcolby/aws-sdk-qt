@@ -34,7 +34,7 @@ public:
 
     DescribeNetworkAclsResponsePrivate(DescribeNetworkAclsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNetworkAclsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNetworkAclsResponse)

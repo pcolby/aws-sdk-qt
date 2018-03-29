@@ -34,7 +34,7 @@ public:
 
     GetBotChannelAssociationsResponsePrivate(GetBotChannelAssociationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBotChannelAssociationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBotChannelAssociationsResponse)

@@ -34,7 +34,7 @@ public:
 
     DomainMetadataResponsePrivate(DomainMetadataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDomainMetadataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DomainMetadataResponse)

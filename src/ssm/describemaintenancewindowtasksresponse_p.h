@@ -34,7 +34,7 @@ public:
 
     DescribeMaintenanceWindowTasksResponsePrivate(DescribeMaintenanceWindowTasksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeMaintenanceWindowTasksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeMaintenanceWindowTasksResponse)

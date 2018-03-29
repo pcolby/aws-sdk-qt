@@ -34,7 +34,7 @@ public:
 
     DeleteVerifiedEmailAddressResponsePrivate(DeleteVerifiedEmailAddressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVerifiedEmailAddressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVerifiedEmailAddressResponse)

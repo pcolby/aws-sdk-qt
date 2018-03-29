@@ -34,7 +34,7 @@ public:
 
     RegisterRdsDbInstanceResponsePrivate(RegisterRdsDbInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterRdsDbInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterRdsDbInstanceResponse)

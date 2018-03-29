@@ -34,7 +34,7 @@ public:
 
     BatchGetOnPremisesInstancesResponsePrivate(BatchGetOnPremisesInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetOnPremisesInstancesResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateReplicationInstanceResponsePrivate(CreateReplicationInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateReplicationInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateReplicationInstanceResponse)

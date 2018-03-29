@@ -34,7 +34,7 @@ public:
 
     GetHealthCheckLastFailureReasonResponsePrivate(GetHealthCheckLastFailureReasonResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetHealthCheckLastFailureReasonResponse)

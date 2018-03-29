@@ -34,7 +34,7 @@ public:
 
     DescribeVirtualGatewaysResponsePrivate(DescribeVirtualGatewaysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVirtualGatewaysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVirtualGatewaysResponse)

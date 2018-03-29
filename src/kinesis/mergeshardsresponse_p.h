@@ -34,7 +34,7 @@ public:
 
     MergeShardsResponsePrivate(MergeShardsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseMergeShardsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(MergeShardsResponse)

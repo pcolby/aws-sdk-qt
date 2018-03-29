@@ -34,7 +34,7 @@ public:
 
     RegisterInstancesWithLoadBalancerResponsePrivate(RegisterInstancesWithLoadBalancerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterInstancesWithLoadBalancerResponse)

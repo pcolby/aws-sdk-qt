@@ -34,7 +34,7 @@ public:
 
     DetachDiskResponsePrivate(DetachDiskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachDiskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachDiskResponse)

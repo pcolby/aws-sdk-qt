@@ -34,7 +34,7 @@ public:
 
     SendTaskHeartbeatResponsePrivate(SendTaskHeartbeatResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendTaskHeartbeatResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendTaskHeartbeatResponse)

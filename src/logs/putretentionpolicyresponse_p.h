@@ -34,7 +34,7 @@ public:
 
     PutRetentionPolicyResponsePrivate(PutRetentionPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutRetentionPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutRetentionPolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteEventSourceMappingResponsePrivate(DeleteEventSourceMappingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteEventSourceMappingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteEventSourceMappingResponse)

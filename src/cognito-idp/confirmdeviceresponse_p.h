@@ -34,7 +34,7 @@ public:
 
     ConfirmDeviceResponsePrivate(ConfirmDeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseConfirmDeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ConfirmDeviceResponse)

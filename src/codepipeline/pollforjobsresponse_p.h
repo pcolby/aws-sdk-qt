@@ -34,7 +34,7 @@ public:
 
     PollForJobsResponsePrivate(PollForJobsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePollForJobsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PollForJobsResponse)

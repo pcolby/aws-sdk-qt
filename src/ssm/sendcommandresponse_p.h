@@ -34,7 +34,7 @@ public:
 
     SendCommandResponsePrivate(SendCommandResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendCommandResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendCommandResponse)

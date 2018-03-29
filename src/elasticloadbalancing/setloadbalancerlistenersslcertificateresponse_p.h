@@ -34,7 +34,7 @@ public:
 
     SetLoadBalancerListenerSSLCertificateResponsePrivate(SetLoadBalancerListenerSSLCertificateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetLoadBalancerListenerSSLCertificateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetLoadBalancerListenerSSLCertificateResponse)

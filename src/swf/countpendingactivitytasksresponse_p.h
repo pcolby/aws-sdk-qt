@@ -34,7 +34,7 @@ public:
 
     CountPendingActivityTasksResponsePrivate(CountPendingActivityTasksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCountPendingActivityTasksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CountPendingActivityTasksResponse)

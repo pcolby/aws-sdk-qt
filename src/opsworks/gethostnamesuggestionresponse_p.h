@@ -34,7 +34,7 @@ public:
 
     GetHostnameSuggestionResponsePrivate(GetHostnameSuggestionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetHostnameSuggestionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetHostnameSuggestionResponse)

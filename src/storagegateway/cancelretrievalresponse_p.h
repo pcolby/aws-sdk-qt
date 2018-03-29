@@ -34,7 +34,7 @@ public:
 
     CancelRetrievalResponsePrivate(CancelRetrievalResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelRetrievalResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelRetrievalResponse)

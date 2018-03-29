@@ -34,7 +34,7 @@ public:
 
     DescribeDefaultParametersResponsePrivate(DescribeDefaultParametersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDefaultParametersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDefaultParametersResponse)

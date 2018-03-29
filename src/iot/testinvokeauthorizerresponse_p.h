@@ -34,7 +34,7 @@ public:
 
     TestInvokeAuthorizerResponsePrivate(TestInvokeAuthorizerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestInvokeAuthorizerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestInvokeAuthorizerResponse)

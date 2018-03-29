@@ -34,7 +34,7 @@ public:
 
     ApplyEnvironmentManagedActionResponsePrivate(ApplyEnvironmentManagedActionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseApplyEnvironmentManagedActionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ApplyEnvironmentManagedActionResponse)

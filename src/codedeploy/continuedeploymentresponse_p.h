@@ -34,7 +34,7 @@ public:
 
     ContinueDeploymentResponsePrivate(ContinueDeploymentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseContinueDeploymentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ContinueDeploymentResponse)

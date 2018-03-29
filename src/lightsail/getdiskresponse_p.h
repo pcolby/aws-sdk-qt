@@ -34,7 +34,7 @@ public:
 
     GetDiskResponsePrivate(GetDiskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDiskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDiskResponse)

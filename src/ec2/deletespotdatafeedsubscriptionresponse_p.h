@@ -34,7 +34,7 @@ public:
 
     DeleteSpotDatafeedSubscriptionResponsePrivate(DeleteSpotDatafeedSubscriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSpotDatafeedSubscriptionResponse)

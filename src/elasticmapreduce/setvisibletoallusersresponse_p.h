@@ -34,7 +34,7 @@ public:
 
     SetVisibleToAllUsersResponsePrivate(SetVisibleToAllUsersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetVisibleToAllUsersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetVisibleToAllUsersResponse)

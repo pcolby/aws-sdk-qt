@@ -34,7 +34,7 @@ public:
 
     PutJobFailureResultResponsePrivate(PutJobFailureResultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutJobFailureResultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutJobFailureResultResponse)

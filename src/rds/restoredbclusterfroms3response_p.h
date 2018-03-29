@@ -34,7 +34,7 @@ public:
 
     RestoreDBClusterFromS3ResponsePrivate(RestoreDBClusterFromS3Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreDBClusterFromS3Response(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreDBClusterFromS3Response)

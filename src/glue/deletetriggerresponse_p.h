@@ -34,7 +34,7 @@ public:
 
     DeleteTriggerResponsePrivate(DeleteTriggerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTriggerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTriggerResponse)

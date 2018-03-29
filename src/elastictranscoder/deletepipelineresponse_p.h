@@ -34,7 +34,7 @@ public:
 
     DeletePipelineResponsePrivate(DeletePipelineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePipelineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePipelineResponse)

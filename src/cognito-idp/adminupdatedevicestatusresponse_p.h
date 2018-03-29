@@ -34,7 +34,7 @@ public:
 
     AdminUpdateDeviceStatusResponsePrivate(AdminUpdateDeviceStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminUpdateDeviceStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminUpdateDeviceStatusResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateStreamingURLResponsePrivate(CreateStreamingURLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateStreamingURLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateStreamingURLResponse)

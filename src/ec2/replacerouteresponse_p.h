@@ -34,7 +34,7 @@ public:
 
     ReplaceRouteResponsePrivate(ReplaceRouteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReplaceRouteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReplaceRouteResponse)

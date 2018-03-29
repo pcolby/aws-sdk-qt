@@ -34,7 +34,7 @@ public:
 
     GetDiscoveredResourceCountsResponsePrivate(GetDiscoveredResourceCountsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDiscoveredResourceCountsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDiscoveredResourceCountsResponse)

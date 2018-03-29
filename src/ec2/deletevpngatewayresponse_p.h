@@ -34,7 +34,7 @@ public:
 
     DeleteVpnGatewayResponsePrivate(DeleteVpnGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVpnGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVpnGatewayResponse)

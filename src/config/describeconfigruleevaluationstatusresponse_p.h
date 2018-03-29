@@ -34,7 +34,7 @@ public:
 
     DescribeConfigRuleEvaluationStatusResponsePrivate(DescribeConfigRuleEvaluationStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeConfigRuleEvaluationStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeConfigRuleEvaluationStatusResponse)

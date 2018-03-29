@@ -34,7 +34,7 @@ public:
 
     ListEntitiesForPolicyResponsePrivate(ListEntitiesForPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListEntitiesForPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListEntitiesForPolicyResponse)

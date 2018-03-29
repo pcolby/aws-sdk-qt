@@ -34,7 +34,7 @@ public:
 
     AssociateQualificationWithWorkerResponsePrivate(AssociateQualificationWithWorkerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateQualificationWithWorkerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateQualificationWithWorkerResponse)

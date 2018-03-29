@@ -34,7 +34,7 @@ public:
 
     DescribeEntityAggregatesResponsePrivate(DescribeEntityAggregatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEntityAggregatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEntityAggregatesResponse)

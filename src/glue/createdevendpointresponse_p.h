@@ -34,7 +34,7 @@ public:
 
     CreateDevEndpointResponsePrivate(CreateDevEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDevEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDevEndpointResponse)

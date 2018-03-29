@@ -34,7 +34,7 @@ public:
 
     ChangeTagsForResourceResponsePrivate(ChangeTagsForResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseChangeTagsForResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ChangeTagsForResourceResponse)

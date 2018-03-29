@@ -34,7 +34,7 @@ public:
 
     DescribeSessionsResponsePrivate(DescribeSessionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSessionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSessionsResponse)

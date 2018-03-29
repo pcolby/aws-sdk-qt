@@ -34,7 +34,7 @@ public:
 
     ListDeploymentGroupsResponsePrivate(ListDeploymentGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListDeploymentGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListDeploymentGroupsResponse)

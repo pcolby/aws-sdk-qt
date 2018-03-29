@@ -34,7 +34,7 @@ public:
 
     RemoveRoleFromInstanceProfileResponsePrivate(RemoveRoleFromInstanceProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveRoleFromInstanceProfileResponse)

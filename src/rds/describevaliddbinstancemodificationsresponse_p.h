@@ -34,7 +34,7 @@ public:
 
     DescribeValidDBInstanceModificationsResponsePrivate(DescribeValidDBInstanceModificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeValidDBInstanceModificationsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteBuildResponsePrivate(DeleteBuildResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBuildResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBuildResponse)

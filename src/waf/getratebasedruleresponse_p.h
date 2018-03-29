@@ -34,7 +34,7 @@ public:
 
     GetRateBasedRuleResponsePrivate(GetRateBasedRuleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRateBasedRuleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRateBasedRuleResponse)

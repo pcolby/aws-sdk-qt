@@ -34,7 +34,7 @@ public:
 
     GrantAccessResponsePrivate(GrantAccessResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGrantAccessResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GrantAccessResponse)

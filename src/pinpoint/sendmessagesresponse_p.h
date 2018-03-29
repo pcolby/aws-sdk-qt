@@ -34,7 +34,7 @@ public:
 
     SendMessagesResponsePrivate(SendMessagesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendMessagesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendMessagesResponse)

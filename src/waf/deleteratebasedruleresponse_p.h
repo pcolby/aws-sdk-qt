@@ -34,7 +34,7 @@ public:
 
     DeleteRateBasedRuleResponsePrivate(DeleteRateBasedRuleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRateBasedRuleResponse)

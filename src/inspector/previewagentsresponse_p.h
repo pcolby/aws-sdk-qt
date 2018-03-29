@@ -34,7 +34,7 @@ public:
 
     PreviewAgentsResponsePrivate(PreviewAgentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePreviewAgentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PreviewAgentsResponse)

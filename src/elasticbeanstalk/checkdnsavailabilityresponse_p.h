@@ -34,7 +34,7 @@ public:
 
     CheckDNSAvailabilityResponsePrivate(CheckDNSAvailabilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCheckDNSAvailabilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CheckDNSAvailabilityResponse)

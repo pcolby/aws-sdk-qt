@@ -34,7 +34,7 @@ public:
 
     ListEnvironmentsResponsePrivate(ListEnvironmentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListEnvironmentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListEnvironmentsResponse)

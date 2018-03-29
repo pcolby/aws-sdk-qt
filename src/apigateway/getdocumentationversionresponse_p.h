@@ -34,7 +34,7 @@ public:
 
     GetDocumentationVersionResponsePrivate(GetDocumentationVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDocumentationVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDocumentationVersionResponse)

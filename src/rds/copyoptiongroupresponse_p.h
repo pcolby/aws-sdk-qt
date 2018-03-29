@@ -34,7 +34,7 @@ public:
 
     CopyOptionGroupResponsePrivate(CopyOptionGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyOptionGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyOptionGroupResponse)

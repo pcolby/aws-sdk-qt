@@ -34,7 +34,7 @@ public:
 
     ListComplianceItemsResponsePrivate(ListComplianceItemsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListComplianceItemsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListComplianceItemsResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeConnectionLoaResponsePrivate(DescribeConnectionLoaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeConnectionLoaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeConnectionLoaResponse)

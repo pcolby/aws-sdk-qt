@@ -34,7 +34,7 @@ public:
 
     DescribeUserImportJobResponsePrivate(DescribeUserImportJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeUserImportJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeUserImportJobResponse)

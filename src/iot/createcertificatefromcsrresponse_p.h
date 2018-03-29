@@ -34,7 +34,7 @@ public:
 
     CreateCertificateFromCsrResponsePrivate(CreateCertificateFromCsrResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCertificateFromCsrResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCertificateFromCsrResponse)

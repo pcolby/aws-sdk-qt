@@ -34,7 +34,7 @@ public:
 
     ChangeMessageVisibilityResponsePrivate(ChangeMessageVisibilityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseChangeMessageVisibilityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ChangeMessageVisibilityResponse)

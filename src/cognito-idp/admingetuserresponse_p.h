@@ -34,7 +34,7 @@ public:
 
     AdminGetUserResponsePrivate(AdminGetUserResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminGetUserResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminGetUserResponse)

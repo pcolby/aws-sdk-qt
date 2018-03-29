@@ -34,7 +34,7 @@ public:
 
     ListAllowedNodeTypeModificationsResponsePrivate(ListAllowedNodeTypeModificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAllowedNodeTypeModificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAllowedNodeTypeModificationsResponse)

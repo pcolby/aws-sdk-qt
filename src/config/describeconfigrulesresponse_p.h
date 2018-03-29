@@ -34,7 +34,7 @@ public:
 
     DescribeConfigRulesResponsePrivate(DescribeConfigRulesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeConfigRulesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeConfigRulesResponse)

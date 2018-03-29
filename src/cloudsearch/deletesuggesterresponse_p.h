@@ -34,7 +34,7 @@ public:
 
     DeleteSuggesterResponsePrivate(DeleteSuggesterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSuggesterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSuggesterResponse)

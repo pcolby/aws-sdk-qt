@@ -34,7 +34,7 @@ public:
 
     DisassociateSkillGroupFromRoomResponsePrivate(DisassociateSkillGroupFromRoomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateSkillGroupFromRoomResponse)

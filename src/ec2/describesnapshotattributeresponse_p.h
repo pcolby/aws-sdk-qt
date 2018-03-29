@@ -34,7 +34,7 @@ public:
 
     DescribeSnapshotAttributeResponsePrivate(DescribeSnapshotAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSnapshotAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSnapshotAttributeResponse)

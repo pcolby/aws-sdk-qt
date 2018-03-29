@@ -34,7 +34,7 @@ public:
 
     DisassociateWebACLResponsePrivate(DisassociateWebACLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateWebACLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateWebACLResponse)

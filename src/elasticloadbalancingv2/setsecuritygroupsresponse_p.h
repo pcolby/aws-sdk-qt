@@ -34,7 +34,7 @@ public:
 
     SetSecurityGroupsResponsePrivate(SetSecurityGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetSecurityGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetSecurityGroupsResponse)

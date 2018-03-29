@@ -34,7 +34,7 @@ public:
 
     GetActivityTaskResponsePrivate(GetActivityTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetActivityTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetActivityTaskResponse)

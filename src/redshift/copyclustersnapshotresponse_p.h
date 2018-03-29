@@ -34,7 +34,7 @@ public:
 
     CopyClusterSnapshotResponsePrivate(CopyClusterSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyClusterSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyClusterSnapshotResponse)

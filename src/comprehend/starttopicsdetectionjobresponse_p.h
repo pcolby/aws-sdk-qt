@@ -34,7 +34,7 @@ public:
 
     StartTopicsDetectionJobResponsePrivate(StartTopicsDetectionJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartTopicsDetectionJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartTopicsDetectionJobResponse)

@@ -34,7 +34,7 @@ public:
 
     BatchPutAttributesResponsePrivate(BatchPutAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchPutAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchPutAttributesResponse)

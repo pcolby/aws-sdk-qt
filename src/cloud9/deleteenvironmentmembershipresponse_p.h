@@ -34,7 +34,7 @@ public:
 
     DeleteEnvironmentMembershipResponsePrivate(DeleteEnvironmentMembershipResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteEnvironmentMembershipResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteEnvironmentMembershipResponse)

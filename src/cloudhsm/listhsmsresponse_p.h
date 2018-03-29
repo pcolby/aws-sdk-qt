@@ -34,7 +34,7 @@ public:
 
     ListHsmsResponsePrivate(ListHsmsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListHsmsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListHsmsResponse)

@@ -34,7 +34,7 @@ public:
 
     GetGroupQueryResponsePrivate(GetGroupQueryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGroupQueryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGroupQueryResponse)

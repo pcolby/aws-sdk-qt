@@ -34,7 +34,7 @@ public:
 
     CreateStackInstancesResponsePrivate(CreateStackInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateStackInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateStackInstancesResponse)

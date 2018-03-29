@@ -34,7 +34,7 @@ public:
 
     DisassociateCreatedArtifactResponsePrivate(DisassociateCreatedArtifactResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateCreatedArtifactResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateCreatedArtifactResponse)

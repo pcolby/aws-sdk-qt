@@ -34,7 +34,7 @@ public:
 
     PutSlotTypeResponsePrivate(PutSlotTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutSlotTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutSlotTypeResponse)

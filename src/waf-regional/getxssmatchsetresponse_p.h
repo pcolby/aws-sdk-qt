@@ -34,7 +34,7 @@ public:
 
     GetXssMatchSetResponsePrivate(GetXssMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetXssMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetXssMatchSetResponse)

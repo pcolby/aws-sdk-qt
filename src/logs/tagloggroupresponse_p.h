@@ -34,7 +34,7 @@ public:
 
     TagLogGroupResponsePrivate(TagLogGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTagLogGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TagLogGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateVpnConnectionRouteResponsePrivate(CreateVpnConnectionRouteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateVpnConnectionRouteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateVpnConnectionRouteResponse)

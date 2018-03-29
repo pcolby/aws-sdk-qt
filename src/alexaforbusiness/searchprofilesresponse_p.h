@@ -34,7 +34,7 @@ public:
 
     SearchProfilesResponsePrivate(SearchProfilesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSearchProfilesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SearchProfilesResponse)

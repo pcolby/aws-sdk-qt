@@ -34,7 +34,7 @@ public:
 
     RemoveRoleFromDBClusterResponsePrivate(RemoveRoleFromDBClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveRoleFromDBClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveRoleFromDBClusterResponse)

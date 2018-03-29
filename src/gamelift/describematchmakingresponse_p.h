@@ -34,7 +34,7 @@ public:
 
     DescribeMatchmakingResponsePrivate(DescribeMatchmakingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeMatchmakingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeMatchmakingResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateCacheParameterGroupResponsePrivate(CreateCacheParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCacheParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCacheParameterGroupResponse)

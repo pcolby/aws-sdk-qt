@@ -34,7 +34,7 @@ public:
 
     GetReusableDelegationSetResponsePrivate(GetReusableDelegationSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReusableDelegationSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReusableDelegationSetResponse)

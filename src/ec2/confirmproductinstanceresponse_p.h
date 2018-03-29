@@ -34,7 +34,7 @@ public:
 
     ConfirmProductInstanceResponsePrivate(ConfirmProductInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseConfirmProductInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ConfirmProductInstanceResponse)

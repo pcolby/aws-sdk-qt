@@ -34,7 +34,7 @@ public:
 
     UpdateRdsDbInstanceResponsePrivate(UpdateRdsDbInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRdsDbInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRdsDbInstanceResponse)

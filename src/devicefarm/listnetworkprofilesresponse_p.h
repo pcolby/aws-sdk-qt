@@ -34,7 +34,7 @@ public:
 
     ListNetworkProfilesResponsePrivate(ListNetworkProfilesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListNetworkProfilesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListNetworkProfilesResponse)

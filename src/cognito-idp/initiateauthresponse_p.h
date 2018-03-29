@@ -34,7 +34,7 @@ public:
 
     InitiateAuthResponsePrivate(InitiateAuthResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInitiateAuthResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InitiateAuthResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeStackProvisioningParametersResponsePrivate(DescribeStackProvisioningParametersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeStackProvisioningParametersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeStackProvisioningParametersResponse)

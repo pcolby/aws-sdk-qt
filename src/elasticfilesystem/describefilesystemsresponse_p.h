@@ -34,7 +34,7 @@ public:
 
     DescribeFileSystemsResponsePrivate(DescribeFileSystemsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeFileSystemsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeFileSystemsResponse)

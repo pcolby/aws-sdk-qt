@@ -34,7 +34,7 @@ public:
 
     GetAccountBalanceResponsePrivate(GetAccountBalanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetAccountBalanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetAccountBalanceResponse)

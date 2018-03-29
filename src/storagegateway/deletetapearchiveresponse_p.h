@@ -34,7 +34,7 @@ public:
 
     DeleteTapeArchiveResponsePrivate(DeleteTapeArchiveResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTapeArchiveResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTapeArchiveResponse)

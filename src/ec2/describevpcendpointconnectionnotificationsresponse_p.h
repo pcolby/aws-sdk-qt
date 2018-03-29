@@ -34,7 +34,7 @@ public:
 
     DescribeVpcEndpointConnectionNotificationsResponsePrivate(DescribeVpcEndpointConnectionNotificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVpcEndpointConnectionNotificationsResponse)

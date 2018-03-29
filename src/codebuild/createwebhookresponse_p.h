@@ -34,7 +34,7 @@ public:
 
     CreateWebhookResponsePrivate(CreateWebhookResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateWebhookResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateWebhookResponse)

@@ -34,7 +34,7 @@ public:
 
     StopRemoteAccessSessionResponsePrivate(StopRemoteAccessSessionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopRemoteAccessSessionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopRemoteAccessSessionResponse)

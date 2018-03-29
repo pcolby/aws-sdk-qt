@@ -34,7 +34,7 @@ public:
 
     ImportInstanceResponsePrivate(ImportInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportInstanceResponse)

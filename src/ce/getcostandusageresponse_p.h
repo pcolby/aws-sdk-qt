@@ -34,7 +34,7 @@ public:
 
     GetCostAndUsageResponsePrivate(GetCostAndUsageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCostAndUsageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCostAndUsageResponse)

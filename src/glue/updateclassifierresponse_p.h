@@ -34,7 +34,7 @@ public:
 
     UpdateClassifierResponsePrivate(UpdateClassifierResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateClassifierResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateClassifierResponse)

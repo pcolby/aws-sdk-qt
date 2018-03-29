@@ -34,7 +34,7 @@ public:
 
     DeleteApplicationVersionResponsePrivate(DeleteApplicationVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteApplicationVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteApplicationVersionResponse)

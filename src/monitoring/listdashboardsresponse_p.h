@@ -34,7 +34,7 @@ public:
 
     ListDashboardsResponsePrivate(ListDashboardsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListDashboardsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListDashboardsResponse)

@@ -34,7 +34,7 @@ public:
 
     SetQueueAttributesResponsePrivate(SetQueueAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetQueueAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetQueueAttributesResponse)

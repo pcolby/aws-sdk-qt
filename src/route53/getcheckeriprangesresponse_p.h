@@ -34,7 +34,7 @@ public:
 
     GetCheckerIpRangesResponsePrivate(GetCheckerIpRangesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCheckerIpRangesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCheckerIpRangesResponse)

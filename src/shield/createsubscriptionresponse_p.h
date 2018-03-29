@@ -34,7 +34,7 @@ public:
 
     CreateSubscriptionResponsePrivate(CreateSubscriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSubscriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSubscriptionResponse)

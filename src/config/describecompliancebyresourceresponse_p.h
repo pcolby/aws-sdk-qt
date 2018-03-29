@@ -34,7 +34,7 @@ public:
 
     DescribeComplianceByResourceResponsePrivate(DescribeComplianceByResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeComplianceByResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeComplianceByResourceResponse)

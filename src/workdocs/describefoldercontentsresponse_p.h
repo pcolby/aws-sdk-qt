@@ -34,7 +34,7 @@ public:
 
     DescribeFolderContentsResponsePrivate(DescribeFolderContentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeFolderContentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeFolderContentsResponse)

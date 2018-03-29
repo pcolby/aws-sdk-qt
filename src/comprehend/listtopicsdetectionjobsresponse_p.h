@@ -34,7 +34,7 @@ public:
 
     ListTopicsDetectionJobsResponsePrivate(ListTopicsDetectionJobsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTopicsDetectionJobsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTopicsDetectionJobsResponse)

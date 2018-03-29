@@ -34,7 +34,7 @@ public:
 
     DeleteIntegrationResponseResponsePrivate(DeleteIntegrationResponseResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteIntegrationResponseResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteIntegrationResponseResponse)

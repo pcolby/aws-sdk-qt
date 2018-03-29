@@ -34,7 +34,7 @@ public:
 
     DeleteCampaignResponsePrivate(DeleteCampaignResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCampaignResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCampaignResponse)

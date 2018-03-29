@@ -34,7 +34,7 @@ public:
 
     StartDataCollectionByAgentIdsResponsePrivate(StartDataCollectionByAgentIdsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartDataCollectionByAgentIdsResponse)

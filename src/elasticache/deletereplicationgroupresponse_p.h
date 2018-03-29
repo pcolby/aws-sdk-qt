@@ -34,7 +34,7 @@ public:
 
     DeleteReplicationGroupResponsePrivate(DeleteReplicationGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReplicationGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReplicationGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeLogStreamsResponsePrivate(DescribeLogStreamsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLogStreamsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLogStreamsResponse)

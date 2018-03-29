@@ -34,7 +34,7 @@ public:
 
     StopConfigurationRecorderResponsePrivate(StopConfigurationRecorderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopConfigurationRecorderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopConfigurationRecorderResponse)

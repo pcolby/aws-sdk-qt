@@ -34,7 +34,7 @@ public:
 
     DescribeLoggingStatusResponsePrivate(DescribeLoggingStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLoggingStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLoggingStatusResponse)

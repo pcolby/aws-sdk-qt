@@ -34,7 +34,7 @@ public:
 
     DeletePlatformApplicationResponsePrivate(DeletePlatformApplicationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePlatformApplicationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePlatformApplicationResponse)

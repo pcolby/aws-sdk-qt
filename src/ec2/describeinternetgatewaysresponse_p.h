@@ -34,7 +34,7 @@ public:
 
     DescribeInternetGatewaysResponsePrivate(DescribeInternetGatewaysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeInternetGatewaysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeInternetGatewaysResponse)

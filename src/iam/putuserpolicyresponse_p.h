@@ -34,7 +34,7 @@ public:
 
     PutUserPolicyResponsePrivate(PutUserPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutUserPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutUserPolicyResponse)

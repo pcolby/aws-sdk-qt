@@ -34,7 +34,7 @@ public:
 
     AssociateConnectionWithLagResponsePrivate(AssociateConnectionWithLagResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateConnectionWithLagResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateConnectionWithLagResponse)

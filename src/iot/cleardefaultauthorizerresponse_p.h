@@ -34,7 +34,7 @@ public:
 
     ClearDefaultAuthorizerResponsePrivate(ClearDefaultAuthorizerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseClearDefaultAuthorizerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ClearDefaultAuthorizerResponse)

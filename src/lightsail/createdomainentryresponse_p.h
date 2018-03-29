@@ -34,7 +34,7 @@ public:
 
     CreateDomainEntryResponsePrivate(CreateDomainEntryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDomainEntryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDomainEntryResponse)

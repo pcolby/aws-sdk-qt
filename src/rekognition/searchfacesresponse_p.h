@@ -34,7 +34,7 @@ public:
 
     SearchFacesResponsePrivate(SearchFacesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSearchFacesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SearchFacesResponse)

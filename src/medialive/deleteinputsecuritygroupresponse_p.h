@@ -34,7 +34,7 @@ public:
 
     DeleteInputSecurityGroupResponsePrivate(DeleteInputSecurityGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteInputSecurityGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteInputSecurityGroupResponse)

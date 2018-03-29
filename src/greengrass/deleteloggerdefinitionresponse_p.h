@@ -34,7 +34,7 @@ public:
 
     DeleteLoggerDefinitionResponsePrivate(DeleteLoggerDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLoggerDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLoggerDefinitionResponse)

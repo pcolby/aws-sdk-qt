@@ -34,7 +34,7 @@ public:
 
     ModifyInstanceGroupsResponsePrivate(ModifyInstanceGroupsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyInstanceGroupsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyInstanceGroupsResponse)

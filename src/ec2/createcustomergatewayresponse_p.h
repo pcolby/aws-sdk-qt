@@ -34,7 +34,7 @@ public:
 
     CreateCustomerGatewayResponsePrivate(CreateCustomerGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCustomerGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCustomerGatewayResponse)

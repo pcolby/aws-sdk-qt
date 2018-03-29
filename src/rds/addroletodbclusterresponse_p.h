@@ -34,7 +34,7 @@ public:
 
     AddRoleToDBClusterResponsePrivate(AddRoleToDBClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddRoleToDBClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddRoleToDBClusterResponse)

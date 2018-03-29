@@ -34,7 +34,7 @@ public:
 
     ListClusterJobsResponsePrivate(ListClusterJobsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListClusterJobsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListClusterJobsResponse)

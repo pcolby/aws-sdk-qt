@@ -34,7 +34,7 @@ public:
 
     ListPartsResponsePrivate(ListPartsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListPartsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListPartsResponse)

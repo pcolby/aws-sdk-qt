@@ -34,7 +34,7 @@ public:
 
     CreateOrganizationResponsePrivate(CreateOrganizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateOrganizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateOrganizationResponse)

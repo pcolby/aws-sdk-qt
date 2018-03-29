@@ -34,7 +34,7 @@ public:
 
     UpdateChapCredentialsResponsePrivate(UpdateChapCredentialsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateChapCredentialsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateChapCredentialsResponse)

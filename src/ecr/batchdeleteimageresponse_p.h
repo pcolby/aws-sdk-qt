@@ -34,7 +34,7 @@ public:
 
     BatchDeleteImageResponsePrivate(BatchDeleteImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDeleteImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDeleteImageResponse)

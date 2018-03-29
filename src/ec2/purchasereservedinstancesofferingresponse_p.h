@@ -34,7 +34,7 @@ public:
 
     PurchaseReservedInstancesOfferingResponsePrivate(PurchaseReservedInstancesOfferingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurchaseReservedInstancesOfferingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurchaseReservedInstancesOfferingResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeEnvironmentManagedActionHistoryResponsePrivate(DescribeEnvironmentManagedActionHistoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEnvironmentManagedActionHistoryResponse)

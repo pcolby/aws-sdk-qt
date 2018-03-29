@@ -34,7 +34,7 @@ public:
 
     DescribeSpotFleetInstancesResponsePrivate(DescribeSpotFleetInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSpotFleetInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSpotFleetInstancesResponse)

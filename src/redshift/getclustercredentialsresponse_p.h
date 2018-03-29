@@ -34,7 +34,7 @@ public:
 
     GetClusterCredentialsResponsePrivate(GetClusterCredentialsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetClusterCredentialsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetClusterCredentialsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteCustomVerificationEmailTemplateResponsePrivate(DeleteCustomVerificationEmailTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCustomVerificationEmailTemplateResponse)

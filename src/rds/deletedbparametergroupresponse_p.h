@@ -34,7 +34,7 @@ public:
 
     DeleteDBParameterGroupResponsePrivate(DeleteDBParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDBParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDBParameterGroupResponse)

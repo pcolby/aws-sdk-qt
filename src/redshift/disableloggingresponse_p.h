@@ -34,7 +34,7 @@ public:
 
     DisableLoggingResponsePrivate(DisableLoggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableLoggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableLoggingResponse)

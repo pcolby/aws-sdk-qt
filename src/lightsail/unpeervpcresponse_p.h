@@ -34,7 +34,7 @@ public:
 
     UnpeerVpcResponsePrivate(UnpeerVpcResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnpeerVpcResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnpeerVpcResponse)

@@ -34,7 +34,7 @@ public:
 
     StartExportTaskResponsePrivate(StartExportTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartExportTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartExportTaskResponse)

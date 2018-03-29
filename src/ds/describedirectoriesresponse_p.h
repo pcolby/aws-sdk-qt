@@ -34,7 +34,7 @@ public:
 
     DescribeDirectoriesResponsePrivate(DescribeDirectoriesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDirectoriesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDirectoriesResponse)

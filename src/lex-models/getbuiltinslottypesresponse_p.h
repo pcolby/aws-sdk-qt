@@ -34,7 +34,7 @@ public:
 
     GetBuiltinSlotTypesResponsePrivate(GetBuiltinSlotTypesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBuiltinSlotTypesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBuiltinSlotTypesResponse)

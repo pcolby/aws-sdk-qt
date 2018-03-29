@@ -34,7 +34,7 @@ public:
 
     CreateClusterSubnetGroupResponsePrivate(CreateClusterSubnetGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateClusterSubnetGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateClusterSubnetGroupResponse)

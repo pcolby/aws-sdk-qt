@@ -34,7 +34,7 @@ public:
 
     OpenInstancePublicPortsResponsePrivate(OpenInstancePublicPortsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseOpenInstancePublicPortsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(OpenInstancePublicPortsResponse)

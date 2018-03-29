@@ -34,7 +34,7 @@ public:
 
     UpdateScalingParametersResponsePrivate(UpdateScalingParametersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateScalingParametersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateScalingParametersResponse)

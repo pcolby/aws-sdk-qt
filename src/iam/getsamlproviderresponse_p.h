@@ -34,7 +34,7 @@ public:
 
     GetSAMLProviderResponsePrivate(GetSAMLProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSAMLProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSAMLProviderResponse)

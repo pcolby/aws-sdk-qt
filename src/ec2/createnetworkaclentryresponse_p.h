@@ -34,7 +34,7 @@ public:
 
     CreateNetworkAclEntryResponsePrivate(CreateNetworkAclEntryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateNetworkAclEntryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateNetworkAclEntryResponse)

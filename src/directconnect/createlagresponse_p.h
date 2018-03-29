@@ -34,7 +34,7 @@ public:
 
     CreateLagResponsePrivate(CreateLagResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateLagResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateLagResponse)

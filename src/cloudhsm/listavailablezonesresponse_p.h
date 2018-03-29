@@ -34,7 +34,7 @@ public:
 
     ListAvailableZonesResponsePrivate(ListAvailableZonesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAvailableZonesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAvailableZonesResponse)

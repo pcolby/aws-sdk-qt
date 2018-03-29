@@ -34,7 +34,7 @@ public:
 
     CreateSpotDatafeedSubscriptionResponsePrivate(CreateSpotDatafeedSubscriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSpotDatafeedSubscriptionResponse)

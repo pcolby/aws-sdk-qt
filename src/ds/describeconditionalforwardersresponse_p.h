@@ -34,7 +34,7 @@ public:
 
     DescribeConditionalForwardersResponsePrivate(DescribeConditionalForwardersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeConditionalForwardersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeConditionalForwardersResponse)

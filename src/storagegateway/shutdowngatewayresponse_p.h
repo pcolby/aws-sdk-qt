@@ -34,7 +34,7 @@ public:
 
     ShutdownGatewayResponsePrivate(ShutdownGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseShutdownGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ShutdownGatewayResponse)

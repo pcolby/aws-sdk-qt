@@ -34,7 +34,7 @@ public:
 
     UpdateFunctionDefinitionResponsePrivate(UpdateFunctionDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateFunctionDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateFunctionDefinitionResponse)

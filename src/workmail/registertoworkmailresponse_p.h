@@ -34,7 +34,7 @@ public:
 
     RegisterToWorkMailResponsePrivate(RegisterToWorkMailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterToWorkMailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterToWorkMailResponse)

@@ -34,7 +34,7 @@ public:
 
     GetSendStatisticsResponsePrivate(GetSendStatisticsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSendStatisticsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSendStatisticsResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateCloudFormationChangeSetResponsePrivate(CreateCloudFormationChangeSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCloudFormationChangeSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCloudFormationChangeSetResponse)

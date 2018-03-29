@@ -34,7 +34,7 @@ public:
 
     GetRegexPatternSetResponsePrivate(GetRegexPatternSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRegexPatternSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRegexPatternSetResponse)

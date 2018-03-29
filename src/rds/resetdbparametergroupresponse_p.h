@@ -34,7 +34,7 @@ public:
 
     ResetDBParameterGroupResponsePrivate(ResetDBParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetDBParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetDBParameterGroupResponse)

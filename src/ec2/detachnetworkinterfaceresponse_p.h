@@ -34,7 +34,7 @@ public:
 
     DetachNetworkInterfaceResponsePrivate(DetachNetworkInterfaceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachNetworkInterfaceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachNetworkInterfaceResponse)

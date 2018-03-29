@@ -34,7 +34,7 @@ public:
 
     SetIdentityFeedbackForwardingEnabledResponsePrivate(SetIdentityFeedbackForwardingEnabledResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetIdentityFeedbackForwardingEnabledResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetIdentityFeedbackForwardingEnabledResponse)

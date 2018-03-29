@@ -34,7 +34,7 @@ public:
 
     UpdateContainerAgentResponsePrivate(UpdateContainerAgentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateContainerAgentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateContainerAgentResponse)

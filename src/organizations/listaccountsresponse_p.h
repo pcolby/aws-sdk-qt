@@ -34,7 +34,7 @@ public:
 
     ListAccountsResponsePrivate(ListAccountsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAccountsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAccountsResponse)

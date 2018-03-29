@@ -34,7 +34,7 @@ public:
 
     DescribeAffectedEntitiesResponsePrivate(DescribeAffectedEntitiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAffectedEntitiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAffectedEntitiesResponse)

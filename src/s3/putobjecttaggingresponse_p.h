@@ -34,7 +34,7 @@ public:
 
     PutObjectTaggingResponsePrivate(PutObjectTaggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutObjectTaggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutObjectTaggingResponse)

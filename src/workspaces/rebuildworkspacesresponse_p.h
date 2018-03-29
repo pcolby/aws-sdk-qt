@@ -34,7 +34,7 @@ public:
 
     RebuildWorkspacesResponsePrivate(RebuildWorkspacesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRebuildWorkspacesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RebuildWorkspacesResponse)

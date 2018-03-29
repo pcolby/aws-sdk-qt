@@ -34,7 +34,7 @@ public:
 
     UpdateParameterGroupResponsePrivate(UpdateParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateParameterGroupResponse)

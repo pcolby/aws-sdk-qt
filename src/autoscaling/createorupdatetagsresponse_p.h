@@ -34,7 +34,7 @@ public:
 
     CreateOrUpdateTagsResponsePrivate(CreateOrUpdateTagsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateOrUpdateTagsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateOrUpdateTagsResponse)

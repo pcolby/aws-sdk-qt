@@ -34,7 +34,7 @@ public:
 
     ReplaceRouteTableAssociationResponsePrivate(ReplaceRouteTableAssociationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReplaceRouteTableAssociationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReplaceRouteTableAssociationResponse)

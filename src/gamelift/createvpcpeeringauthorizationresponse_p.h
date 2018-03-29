@@ -34,7 +34,7 @@ public:
 
     CreateVpcPeeringAuthorizationResponsePrivate(CreateVpcPeeringAuthorizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateVpcPeeringAuthorizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateVpcPeeringAuthorizationResponse)

@@ -34,7 +34,7 @@ public:
 
     RequestEnvironmentInfoResponsePrivate(RequestEnvironmentInfoResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRequestEnvironmentInfoResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RequestEnvironmentInfoResponse)

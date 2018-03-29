@@ -34,7 +34,7 @@ public:
 
     PutBucketNotificationConfigurationResponsePrivate(PutBucketNotificationConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketNotificationConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketNotificationConfigurationResponse)

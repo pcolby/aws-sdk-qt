@@ -34,7 +34,7 @@ public:
 
     SimulatePrincipalPolicyResponsePrivate(SimulatePrincipalPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSimulatePrincipalPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SimulatePrincipalPolicyResponse)

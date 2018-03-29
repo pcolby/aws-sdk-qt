@@ -34,7 +34,7 @@ public:
 
     ListGeoLocationsResponsePrivate(ListGeoLocationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListGeoLocationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListGeoLocationsResponse)

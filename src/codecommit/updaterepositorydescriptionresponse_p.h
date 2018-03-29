@@ -34,7 +34,7 @@ public:
 
     UpdateRepositoryDescriptionResponsePrivate(UpdateRepositoryDescriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRepositoryDescriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRepositoryDescriptionResponse)

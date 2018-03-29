@@ -34,7 +34,7 @@ public:
 
     GetQueryLoggingConfigResponsePrivate(GetQueryLoggingConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetQueryLoggingConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetQueryLoggingConfigResponse)

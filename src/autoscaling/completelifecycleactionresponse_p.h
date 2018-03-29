@@ -34,7 +34,7 @@ public:
 
     CompleteLifecycleActionResponsePrivate(CompleteLifecycleActionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCompleteLifecycleActionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CompleteLifecycleActionResponse)

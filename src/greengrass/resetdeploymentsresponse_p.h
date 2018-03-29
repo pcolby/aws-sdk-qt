@@ -34,7 +34,7 @@ public:
 
     ResetDeploymentsResponsePrivate(ResetDeploymentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetDeploymentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetDeploymentsResponse)

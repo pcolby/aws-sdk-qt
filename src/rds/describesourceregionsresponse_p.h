@@ -34,7 +34,7 @@ public:
 
     DescribeSourceRegionsResponsePrivate(DescribeSourceRegionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSourceRegionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSourceRegionsResponse)

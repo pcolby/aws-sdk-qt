@@ -34,7 +34,7 @@ public:
 
     DeleteRegexMatchSetResponsePrivate(DeleteRegexMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRegexMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRegexMatchSetResponse)

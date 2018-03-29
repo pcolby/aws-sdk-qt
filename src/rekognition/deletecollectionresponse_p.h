@@ -34,7 +34,7 @@ public:
 
     DeleteCollectionResponsePrivate(DeleteCollectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCollectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCollectionResponse)

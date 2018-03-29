@@ -34,7 +34,7 @@ public:
 
     DeletePortfolioResponsePrivate(DeletePortfolioResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePortfolioResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePortfolioResponse)

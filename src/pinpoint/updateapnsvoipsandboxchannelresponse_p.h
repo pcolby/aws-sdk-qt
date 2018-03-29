@@ -34,7 +34,7 @@ public:
 
     UpdateApnsVoipSandboxChannelResponsePrivate(UpdateApnsVoipSandboxChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateApnsVoipSandboxChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateApnsVoipSandboxChannelResponse)

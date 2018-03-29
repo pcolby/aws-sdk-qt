@@ -34,7 +34,7 @@ public:
 
     CreateLoadBalancerResponsePrivate(CreateLoadBalancerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateLoadBalancerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateLoadBalancerResponse)

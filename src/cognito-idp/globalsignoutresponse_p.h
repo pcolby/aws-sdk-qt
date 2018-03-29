@@ -34,7 +34,7 @@ public:
 
     GlobalSignOutResponsePrivate(GlobalSignOutResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGlobalSignOutResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GlobalSignOutResponse)

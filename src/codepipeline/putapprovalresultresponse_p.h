@@ -34,7 +34,7 @@ public:
 
     PutApprovalResultResponsePrivate(PutApprovalResultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutApprovalResultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutApprovalResultResponse)

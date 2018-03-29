@@ -34,7 +34,7 @@ public:
 
     SignalWorkflowExecutionResponsePrivate(SignalWorkflowExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSignalWorkflowExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SignalWorkflowExecutionResponse)

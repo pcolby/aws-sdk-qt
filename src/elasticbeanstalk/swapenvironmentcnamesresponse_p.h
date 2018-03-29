@@ -34,7 +34,7 @@ public:
 
     SwapEnvironmentCNAMEsResponsePrivate(SwapEnvironmentCNAMEsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSwapEnvironmentCNAMEsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SwapEnvironmentCNAMEsResponse)

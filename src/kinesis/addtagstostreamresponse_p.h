@@ -34,7 +34,7 @@ public:
 
     AddTagsToStreamResponsePrivate(AddTagsToStreamResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddTagsToStreamResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddTagsToStreamResponse)

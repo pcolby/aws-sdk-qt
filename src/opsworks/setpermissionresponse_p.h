@@ -34,7 +34,7 @@ public:
 
     SetPermissionResponsePrivate(SetPermissionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetPermissionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetPermissionResponse)

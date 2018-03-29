@@ -34,7 +34,7 @@ public:
 
     DeleteRequestValidatorResponsePrivate(DeleteRequestValidatorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRequestValidatorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRequestValidatorResponse)

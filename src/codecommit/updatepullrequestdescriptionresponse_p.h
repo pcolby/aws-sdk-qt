@@ -34,7 +34,7 @@ public:
 
     UpdatePullRequestDescriptionResponsePrivate(UpdatePullRequestDescriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdatePullRequestDescriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdatePullRequestDescriptionResponse)

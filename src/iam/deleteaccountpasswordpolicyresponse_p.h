@@ -34,7 +34,7 @@ public:
 
     DeleteAccountPasswordPolicyResponsePrivate(DeleteAccountPasswordPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAccountPasswordPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAccountPasswordPolicyResponse)

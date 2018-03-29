@@ -34,7 +34,7 @@ public:
 
     UpdateEndpointWeightsAndCapacitiesResponsePrivate(UpdateEndpointWeightsAndCapacitiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateEndpointWeightsAndCapacitiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateEndpointWeightsAndCapacitiesResponse)

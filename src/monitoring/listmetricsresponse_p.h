@@ -34,7 +34,7 @@ public:
 
     ListMetricsResponsePrivate(ListMetricsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListMetricsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListMetricsResponse)

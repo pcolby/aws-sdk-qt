@@ -34,7 +34,7 @@ public:
 
     AssociatePrincipalWithPortfolioResponsePrivate(AssociatePrincipalWithPortfolioResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociatePrincipalWithPortfolioResponse)

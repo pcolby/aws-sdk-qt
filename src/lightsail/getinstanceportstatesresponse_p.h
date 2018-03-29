@@ -34,7 +34,7 @@ public:
 
     GetInstancePortStatesResponsePrivate(GetInstancePortStatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetInstancePortStatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetInstancePortStatesResponse)

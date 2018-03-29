@@ -34,7 +34,7 @@ public:
 
     CreateIntentVersionResponsePrivate(CreateIntentVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateIntentVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateIntentVersionResponse)

@@ -34,7 +34,7 @@ public:
 
     IsVpcPeeredResponsePrivate(IsVpcPeeredResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseIsVpcPeeredResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(IsVpcPeeredResponse)

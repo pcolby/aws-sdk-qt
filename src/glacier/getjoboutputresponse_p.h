@@ -34,7 +34,7 @@ public:
 
     GetJobOutputResponsePrivate(GetJobOutputResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetJobOutputResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetJobOutputResponse)

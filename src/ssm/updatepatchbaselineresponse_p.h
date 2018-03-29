@@ -34,7 +34,7 @@ public:
 
     UpdatePatchBaselineResponsePrivate(UpdatePatchBaselineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdatePatchBaselineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdatePatchBaselineResponse)

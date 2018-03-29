@@ -34,7 +34,7 @@ public:
 
     StartConfigurationRecorderResponsePrivate(StartConfigurationRecorderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartConfigurationRecorderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartConfigurationRecorderResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeLaunchTemplatesResponsePrivate(DescribeLaunchTemplatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLaunchTemplatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLaunchTemplatesResponse)

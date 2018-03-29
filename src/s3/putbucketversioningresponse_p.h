@@ -34,7 +34,7 @@ public:
 
     PutBucketVersioningResponsePrivate(PutBucketVersioningResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketVersioningResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketVersioningResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateGeoMatchSetResponsePrivate(UpdateGeoMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateGeoMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateGeoMatchSetResponse)

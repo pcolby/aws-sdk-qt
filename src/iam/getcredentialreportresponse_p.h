@@ -34,7 +34,7 @@ public:
 
     GetCredentialReportResponsePrivate(GetCredentialReportResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCredentialReportResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCredentialReportResponse)

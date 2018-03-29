@@ -34,7 +34,7 @@ public:
 
     GetShippingLabelResponsePrivate(GetShippingLabelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetShippingLabelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetShippingLabelResponse)

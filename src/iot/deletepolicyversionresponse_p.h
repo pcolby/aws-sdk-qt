@@ -34,7 +34,7 @@ public:
 
     DeletePolicyVersionResponsePrivate(DeletePolicyVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePolicyVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePolicyVersionResponse)

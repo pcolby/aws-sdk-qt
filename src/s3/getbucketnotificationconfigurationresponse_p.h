@@ -34,7 +34,7 @@ public:
 
     GetBucketNotificationConfigurationResponsePrivate(GetBucketNotificationConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketNotificationConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketNotificationConfigurationResponse)

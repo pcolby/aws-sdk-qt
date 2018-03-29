@@ -34,7 +34,7 @@ public:
 
     DescribeInstanceAssociationsStatusResponsePrivate(DescribeInstanceAssociationsStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeInstanceAssociationsStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeInstanceAssociationsStatusResponse)

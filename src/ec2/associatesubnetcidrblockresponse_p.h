@@ -34,7 +34,7 @@ public:
 
     AssociateSubnetCidrBlockResponsePrivate(AssociateSubnetCidrBlockResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateSubnetCidrBlockResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateSubnetCidrBlockResponse)

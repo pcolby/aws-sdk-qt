@@ -34,7 +34,7 @@ public:
 
     RestoreFromSnapshotResponsePrivate(RestoreFromSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreFromSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreFromSnapshotResponse)

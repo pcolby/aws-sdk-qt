@@ -34,7 +34,7 @@ public:
 
     ListBuildsForProjectResponsePrivate(ListBuildsForProjectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBuildsForProjectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBuildsForProjectResponse)

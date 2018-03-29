@@ -34,7 +34,7 @@ public:
 
     ScheduleKeyDeletionResponsePrivate(ScheduleKeyDeletionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseScheduleKeyDeletionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ScheduleKeyDeletionResponse)

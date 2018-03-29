@@ -34,7 +34,7 @@ public:
 
     BatchDetectDominantLanguageResponsePrivate(BatchDetectDominantLanguageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDetectDominantLanguageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDetectDominantLanguageResponse)

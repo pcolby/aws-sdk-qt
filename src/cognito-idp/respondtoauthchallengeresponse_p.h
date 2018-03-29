@@ -34,7 +34,7 @@ public:
 
     RespondToAuthChallengeResponsePrivate(RespondToAuthChallengeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRespondToAuthChallengeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RespondToAuthChallengeResponse)

@@ -34,7 +34,7 @@ public:
 
     GetFaceDetectionResponsePrivate(GetFaceDetectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetFaceDetectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetFaceDetectionResponse)

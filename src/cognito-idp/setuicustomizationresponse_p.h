@@ -34,7 +34,7 @@ public:
 
     SetUICustomizationResponsePrivate(SetUICustomizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetUICustomizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetUICustomizationResponse)

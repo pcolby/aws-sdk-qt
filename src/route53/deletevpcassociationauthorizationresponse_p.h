@@ -34,7 +34,7 @@ public:
 
     DeleteVPCAssociationAuthorizationResponsePrivate(DeleteVPCAssociationAuthorizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVPCAssociationAuthorizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVPCAssociationAuthorizationResponse)

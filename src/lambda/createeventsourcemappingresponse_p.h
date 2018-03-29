@@ -34,7 +34,7 @@ public:
 
     CreateEventSourceMappingResponsePrivate(CreateEventSourceMappingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateEventSourceMappingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateEventSourceMappingResponse)

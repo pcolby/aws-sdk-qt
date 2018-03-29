@@ -34,7 +34,7 @@ public:
 
     UpdateTeamMemberResponsePrivate(UpdateTeamMemberResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateTeamMemberResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateTeamMemberResponse)

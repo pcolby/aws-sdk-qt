@@ -34,7 +34,7 @@ public:
 
     RegisterApplicationRevisionResponsePrivate(RegisterApplicationRevisionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterApplicationRevisionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterApplicationRevisionResponse)

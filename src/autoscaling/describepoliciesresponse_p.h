@@ -34,7 +34,7 @@ public:
 
     DescribePoliciesResponsePrivate(DescribePoliciesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribePoliciesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribePoliciesResponse)

@@ -34,7 +34,7 @@ public:
 
     GetChangeTokenResponsePrivate(GetChangeTokenResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetChangeTokenResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetChangeTokenResponse)

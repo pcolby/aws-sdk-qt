@@ -34,7 +34,7 @@ public:
 
     CreateSoftwareUpdateJobResponsePrivate(CreateSoftwareUpdateJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateSoftwareUpdateJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateSoftwareUpdateJobResponse)

@@ -34,7 +34,7 @@ public:
 
     ListBundlesResponsePrivate(ListBundlesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBundlesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBundlesResponse)

@@ -34,7 +34,7 @@ public:
 
     AddInstanceFleetResponsePrivate(AddInstanceFleetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddInstanceFleetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddInstanceFleetResponse)

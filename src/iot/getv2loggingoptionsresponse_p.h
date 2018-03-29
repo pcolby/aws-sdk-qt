@@ -34,7 +34,7 @@ public:
 
     GetV2LoggingOptionsResponsePrivate(GetV2LoggingOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetV2LoggingOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetV2LoggingOptionsResponse)

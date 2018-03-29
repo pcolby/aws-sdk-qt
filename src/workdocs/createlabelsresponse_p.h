@@ -34,7 +34,7 @@ public:
 
     CreateLabelsResponsePrivate(CreateLabelsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateLabelsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateLabelsResponse)

@@ -34,7 +34,7 @@ public:
 
     ListUserProfilesResponsePrivate(ListUserProfilesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListUserProfilesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListUserProfilesResponse)

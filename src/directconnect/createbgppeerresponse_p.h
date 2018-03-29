@@ -34,7 +34,7 @@ public:
 
     CreateBGPPeerResponsePrivate(CreateBGPPeerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateBGPPeerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateBGPPeerResponse)

@@ -34,7 +34,7 @@ public:
 
     BatchDeleteAttributesResponsePrivate(BatchDeleteAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDeleteAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDeleteAttributesResponse)

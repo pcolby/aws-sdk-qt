@@ -34,7 +34,7 @@ public:
 
     DeleteVaultResponsePrivate(DeleteVaultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVaultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVaultResponse)

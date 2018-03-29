@@ -34,7 +34,7 @@ public:
 
     DeleteVaultAccessPolicyResponsePrivate(DeleteVaultAccessPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVaultAccessPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVaultAccessPolicyResponse)

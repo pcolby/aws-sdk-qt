@@ -34,7 +34,7 @@ public:
 
     DetectDominantLanguageResponsePrivate(DetectDominantLanguageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetectDominantLanguageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetectDominantLanguageResponse)

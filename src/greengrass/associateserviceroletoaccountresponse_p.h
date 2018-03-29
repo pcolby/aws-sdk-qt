@@ -34,7 +34,7 @@ public:
 
     AssociateServiceRoleToAccountResponsePrivate(AssociateServiceRoleToAccountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateServiceRoleToAccountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateServiceRoleToAccountResponse)

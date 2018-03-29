@@ -34,7 +34,7 @@ public:
 
     AddAttributesToFindingsResponsePrivate(AddAttributesToFindingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddAttributesToFindingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddAttributesToFindingsResponse)

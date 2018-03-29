@@ -34,7 +34,7 @@ public:
 
     RestartAppServerResponsePrivate(RestartAppServerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestartAppServerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestartAppServerResponse)

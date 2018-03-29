@@ -34,7 +34,7 @@ public:
 
     CreateStreamingDistributionWithTagsResponsePrivate(CreateStreamingDistributionWithTagsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateStreamingDistributionWithTagsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateStreamingDistributionWithTagsResponse)

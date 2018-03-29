@@ -34,7 +34,7 @@ public:
 
     CreateMountTargetResponsePrivate(CreateMountTargetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateMountTargetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateMountTargetResponse)

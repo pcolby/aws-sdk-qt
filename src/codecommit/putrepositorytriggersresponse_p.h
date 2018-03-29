@@ -34,7 +34,7 @@ public:
 
     PutRepositoryTriggersResponsePrivate(PutRepositoryTriggersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutRepositoryTriggersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutRepositoryTriggersResponse)

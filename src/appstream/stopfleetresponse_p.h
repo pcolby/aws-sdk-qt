@@ -34,7 +34,7 @@ public:
 
     StopFleetResponsePrivate(StopFleetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStopFleetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StopFleetResponse)

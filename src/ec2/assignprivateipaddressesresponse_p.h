@@ -34,7 +34,7 @@ public:
 
     AssignPrivateIpAddressesResponsePrivate(AssignPrivateIpAddressesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssignPrivateIpAddressesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssignPrivateIpAddressesResponse)

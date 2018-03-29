@@ -34,7 +34,7 @@ public:
 
     DisassociateAddressResponsePrivate(DisassociateAddressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateAddressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateAddressResponse)

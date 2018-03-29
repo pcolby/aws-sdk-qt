@@ -34,7 +34,7 @@ public:
 
     DescribeProductAsAdminResponsePrivate(DescribeProductAsAdminResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeProductAsAdminResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeProductAsAdminResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateProvisioningArtifactResponsePrivate(CreateProvisioningArtifactResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateProvisioningArtifactResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateProvisioningArtifactResponse)

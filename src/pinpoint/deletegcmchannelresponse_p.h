@@ -34,7 +34,7 @@ public:
 
     DeleteGcmChannelResponsePrivate(DeleteGcmChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteGcmChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteGcmChannelResponse)

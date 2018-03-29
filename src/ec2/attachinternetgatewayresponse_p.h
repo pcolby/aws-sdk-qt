@@ -34,7 +34,7 @@ public:
 
     AttachInternetGatewayResponsePrivate(AttachInternetGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachInternetGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachInternetGatewayResponse)

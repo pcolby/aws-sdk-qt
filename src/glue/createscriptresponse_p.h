@@ -34,7 +34,7 @@ public:
 
     CreateScriptResponsePrivate(CreateScriptResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateScriptResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateScriptResponse)

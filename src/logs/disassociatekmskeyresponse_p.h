@@ -34,7 +34,7 @@ public:
 
     DisassociateKmsKeyResponsePrivate(DisassociateKmsKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateKmsKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateKmsKeyResponse)

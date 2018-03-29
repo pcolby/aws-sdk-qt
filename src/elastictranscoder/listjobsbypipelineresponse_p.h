@@ -34,7 +34,7 @@ public:
 
     ListJobsByPipelineResponsePrivate(ListJobsByPipelineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListJobsByPipelineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListJobsByPipelineResponse)

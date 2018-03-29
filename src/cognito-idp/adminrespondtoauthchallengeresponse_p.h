@@ -34,7 +34,7 @@ public:
 
     AdminRespondToAuthChallengeResponsePrivate(AdminRespondToAuthChallengeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminRespondToAuthChallengeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminRespondToAuthChallengeResponse)

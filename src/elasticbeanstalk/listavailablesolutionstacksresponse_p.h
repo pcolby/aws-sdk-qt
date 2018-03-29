@@ -34,7 +34,7 @@ public:
 
     ListAvailableSolutionStacksResponsePrivate(ListAvailableSolutionStacksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAvailableSolutionStacksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAvailableSolutionStacksResponse)

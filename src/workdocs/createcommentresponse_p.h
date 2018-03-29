@@ -34,7 +34,7 @@ public:
 
     CreateCommentResponsePrivate(CreateCommentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCommentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCommentResponse)

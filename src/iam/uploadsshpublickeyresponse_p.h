@@ -34,7 +34,7 @@ public:
 
     UploadSSHPublicKeyResponsePrivate(UploadSSHPublicKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUploadSSHPublicKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UploadSSHPublicKeyResponse)

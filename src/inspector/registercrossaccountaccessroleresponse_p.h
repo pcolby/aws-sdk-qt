@@ -34,7 +34,7 @@ public:
 
     RegisterCrossAccountAccessRoleResponsePrivate(RegisterCrossAccountAccessRoleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterCrossAccountAccessRoleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterCrossAccountAccessRoleResponse)

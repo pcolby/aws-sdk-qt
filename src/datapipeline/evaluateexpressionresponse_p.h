@@ -34,7 +34,7 @@ public:
 
     EvaluateExpressionResponsePrivate(EvaluateExpressionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEvaluateExpressionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EvaluateExpressionResponse)

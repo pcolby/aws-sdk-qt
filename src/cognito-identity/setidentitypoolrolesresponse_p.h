@@ -34,7 +34,7 @@ public:
 
     SetIdentityPoolRolesResponsePrivate(SetIdentityPoolRolesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetIdentityPoolRolesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetIdentityPoolRolesResponse)

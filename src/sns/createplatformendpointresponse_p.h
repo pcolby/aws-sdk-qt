@@ -34,7 +34,7 @@ public:
 
     CreatePlatformEndpointResponsePrivate(CreatePlatformEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreatePlatformEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreatePlatformEndpointResponse)

@@ -34,7 +34,7 @@ public:
 
     AdminDeleteUserResponsePrivate(AdminDeleteUserResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminDeleteUserResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminDeleteUserResponse)

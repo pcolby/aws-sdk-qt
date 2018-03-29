@@ -34,7 +34,7 @@ public:
 
     DeleteObjectTaggingResponsePrivate(DeleteObjectTaggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteObjectTaggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteObjectTaggingResponse)

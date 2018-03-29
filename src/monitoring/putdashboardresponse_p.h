@@ -34,7 +34,7 @@ public:
 
     PutDashboardResponsePrivate(PutDashboardResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutDashboardResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutDashboardResponse)

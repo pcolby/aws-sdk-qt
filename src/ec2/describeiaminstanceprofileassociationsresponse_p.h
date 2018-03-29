@@ -34,7 +34,7 @@ public:
 
     DescribeIamInstanceProfileAssociationsResponsePrivate(DescribeIamInstanceProfileAssociationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeIamInstanceProfileAssociationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeIamInstanceProfileAssociationsResponse)

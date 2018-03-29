@@ -34,7 +34,7 @@ public:
 
     DescribeEndpointResponsePrivate(DescribeEndpointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEndpointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEndpointResponse)

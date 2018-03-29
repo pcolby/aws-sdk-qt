@@ -34,7 +34,7 @@ public:
 
     UpdateEndpointsBatchResponsePrivate(UpdateEndpointsBatchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateEndpointsBatchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateEndpointsBatchResponse)

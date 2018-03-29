@@ -34,7 +34,7 @@ public:
 
     DeleteScheduledActionResponsePrivate(DeleteScheduledActionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteScheduledActionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteScheduledActionResponse)

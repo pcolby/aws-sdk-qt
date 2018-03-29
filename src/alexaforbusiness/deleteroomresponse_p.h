@@ -34,7 +34,7 @@ public:
 
     DeleteRoomResponsePrivate(DeleteRoomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRoomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRoomResponse)

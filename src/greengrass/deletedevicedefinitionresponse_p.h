@@ -34,7 +34,7 @@ public:
 
     DeleteDeviceDefinitionResponsePrivate(DeleteDeviceDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDeviceDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDeviceDefinitionResponse)

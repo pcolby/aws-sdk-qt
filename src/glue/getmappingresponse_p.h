@@ -34,7 +34,7 @@ public:
 
     GetMappingResponsePrivate(GetMappingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetMappingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetMappingResponse)

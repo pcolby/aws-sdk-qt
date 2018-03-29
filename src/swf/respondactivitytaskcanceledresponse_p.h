@@ -34,7 +34,7 @@ public:
 
     RespondActivityTaskCanceledResponsePrivate(RespondActivityTaskCanceledResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRespondActivityTaskCanceledResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RespondActivityTaskCanceledResponse)

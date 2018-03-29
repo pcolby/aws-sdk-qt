@@ -34,7 +34,7 @@ public:
 
     ModifyInstanceAttributeResponsePrivate(ModifyInstanceAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyInstanceAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyInstanceAttributeResponse)

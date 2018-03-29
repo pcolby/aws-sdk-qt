@@ -34,7 +34,7 @@ public:
 
     RemoveSourceIdentifierFromSubscriptionResponsePrivate(RemoveSourceIdentifierFromSubscriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveSourceIdentifierFromSubscriptionResponse)

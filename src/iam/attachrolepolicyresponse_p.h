@@ -34,7 +34,7 @@ public:
 
     AttachRolePolicyResponsePrivate(AttachRolePolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachRolePolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachRolePolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     ImportSnapshotResponsePrivate(ImportSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportSnapshotResponse)

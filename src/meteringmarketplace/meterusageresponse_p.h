@@ -34,7 +34,7 @@ public:
 
     MeterUsageResponsePrivate(MeterUsageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseMeterUsageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(MeterUsageResponse)

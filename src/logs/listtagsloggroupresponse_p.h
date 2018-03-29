@@ -34,7 +34,7 @@ public:
 
     ListTagsLogGroupResponsePrivate(ListTagsLogGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTagsLogGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTagsLogGroupResponse)

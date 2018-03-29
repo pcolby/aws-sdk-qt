@@ -34,7 +34,7 @@ public:
 
     DetectTextResponsePrivate(DetectTextResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetectTextResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetectTextResponse)

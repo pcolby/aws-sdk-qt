@@ -34,7 +34,7 @@ public:
 
     CreatePrivateDnsNamespaceResponsePrivate(CreatePrivateDnsNamespaceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreatePrivateDnsNamespaceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreatePrivateDnsNamespaceResponse)

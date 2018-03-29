@@ -34,7 +34,7 @@ public:
 
     DisassociateDeviceFromRoomResponsePrivate(DisassociateDeviceFromRoomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateDeviceFromRoomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateDeviceFromRoomResponse)

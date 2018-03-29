@@ -34,7 +34,7 @@ public:
 
     DeleteApiKeyResponsePrivate(DeleteApiKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteApiKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteApiKeyResponse)

@@ -34,7 +34,7 @@ public:
 
     GetMediaResponsePrivate(GetMediaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetMediaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetMediaResponse)

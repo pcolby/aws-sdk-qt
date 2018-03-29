@@ -34,7 +34,7 @@ public:
 
     CreateGameSessionQueueResponsePrivate(CreateGameSessionQueueResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateGameSessionQueueResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateGameSessionQueueResponse)

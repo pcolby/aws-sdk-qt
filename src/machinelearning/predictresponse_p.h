@@ -34,7 +34,7 @@ public:
 
     PredictResponsePrivate(PredictResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePredictResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PredictResponse)

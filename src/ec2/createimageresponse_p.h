@@ -34,7 +34,7 @@ public:
 
     CreateImageResponsePrivate(CreateImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateImageResponse)

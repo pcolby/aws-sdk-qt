@@ -34,7 +34,7 @@ public:
 
     GetGroupCertificateAuthorityResponsePrivate(GetGroupCertificateAuthorityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGroupCertificateAuthorityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGroupCertificateAuthorityResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeUserPoolDomainResponsePrivate(DescribeUserPoolDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeUserPoolDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeUserPoolDomainResponse)

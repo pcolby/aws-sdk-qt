@@ -34,7 +34,7 @@ public:
 
     ListRuleNamesByTargetResponsePrivate(ListRuleNamesByTargetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListRuleNamesByTargetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListRuleNamesByTargetResponse)

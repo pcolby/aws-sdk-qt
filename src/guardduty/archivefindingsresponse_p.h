@@ -34,7 +34,7 @@ public:
 
     ArchiveFindingsResponsePrivate(ArchiveFindingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseArchiveFindingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ArchiveFindingsResponse)

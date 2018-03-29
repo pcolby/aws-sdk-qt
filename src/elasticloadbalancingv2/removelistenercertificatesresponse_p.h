@@ -34,7 +34,7 @@ public:
 
     RemoveListenerCertificatesResponsePrivate(RemoveListenerCertificatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveListenerCertificatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveListenerCertificatesResponse)

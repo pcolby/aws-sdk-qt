@@ -34,7 +34,7 @@ public:
 
     DeregisterRdsDbInstanceResponsePrivate(DeregisterRdsDbInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterRdsDbInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterRdsDbInstanceResponse)

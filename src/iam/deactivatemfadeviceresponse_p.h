@@ -34,7 +34,7 @@ public:
 
     DeactivateMFADeviceResponsePrivate(DeactivateMFADeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeactivateMFADeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeactivateMFADeviceResponse)

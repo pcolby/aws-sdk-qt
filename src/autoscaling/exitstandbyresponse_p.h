@@ -34,7 +34,7 @@ public:
 
     ExitStandbyResponsePrivate(ExitStandbyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseExitStandbyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ExitStandbyResponse)

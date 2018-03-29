@@ -34,7 +34,7 @@ public:
 
     SetReceiptRulePositionResponsePrivate(SetReceiptRulePositionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetReceiptRulePositionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetReceiptRulePositionResponse)

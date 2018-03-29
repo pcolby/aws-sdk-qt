@@ -34,7 +34,7 @@ public:
 
     UpdateInputSecurityGroupResponsePrivate(UpdateInputSecurityGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateInputSecurityGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateInputSecurityGroupResponse)

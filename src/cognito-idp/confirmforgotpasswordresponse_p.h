@@ -34,7 +34,7 @@ public:
 
     ConfirmForgotPasswordResponsePrivate(ConfirmForgotPasswordResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseConfirmForgotPasswordResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ConfirmForgotPasswordResponse)

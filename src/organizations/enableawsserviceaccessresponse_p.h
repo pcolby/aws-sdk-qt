@@ -34,7 +34,7 @@ public:
 
     EnableAWSServiceAccessResponsePrivate(EnableAWSServiceAccessResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableAWSServiceAccessResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableAWSServiceAccessResponse)

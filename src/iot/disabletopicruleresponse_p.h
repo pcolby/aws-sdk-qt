@@ -34,7 +34,7 @@ public:
 
     DisableTopicRuleResponsePrivate(DisableTopicRuleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableTopicRuleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableTopicRuleResponse)

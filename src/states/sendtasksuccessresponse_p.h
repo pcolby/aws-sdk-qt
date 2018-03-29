@@ -34,7 +34,7 @@ public:
 
     SendTaskSuccessResponsePrivate(SendTaskSuccessResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendTaskSuccessResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendTaskSuccessResponse)

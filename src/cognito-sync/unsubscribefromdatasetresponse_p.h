@@ -34,7 +34,7 @@ public:
 
     UnsubscribeFromDatasetResponsePrivate(UnsubscribeFromDatasetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnsubscribeFromDatasetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnsubscribeFromDatasetResponse)

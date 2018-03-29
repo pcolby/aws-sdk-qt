@@ -34,7 +34,7 @@ public:
 
     ModifyHostsResponsePrivate(ModifyHostsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyHostsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyHostsResponse)

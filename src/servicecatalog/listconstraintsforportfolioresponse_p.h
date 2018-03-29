@@ -34,7 +34,7 @@ public:
 
     ListConstraintsForPortfolioResponsePrivate(ListConstraintsForPortfolioResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListConstraintsForPortfolioResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListConstraintsForPortfolioResponse)

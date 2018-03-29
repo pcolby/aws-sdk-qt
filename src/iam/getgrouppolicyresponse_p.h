@@ -34,7 +34,7 @@ public:
 
     GetGroupPolicyResponsePrivate(GetGroupPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetGroupPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetGroupPolicyResponse)

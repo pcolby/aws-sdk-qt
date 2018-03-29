@@ -34,7 +34,7 @@ public:
 
     CreateCollectionResponsePrivate(CreateCollectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCollectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCollectionResponse)

@@ -34,7 +34,7 @@ public:
 
     ChangePasswordResponsePrivate(ChangePasswordResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseChangePasswordResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ChangePasswordResponse)

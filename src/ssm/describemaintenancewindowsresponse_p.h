@@ -34,7 +34,7 @@ public:
 
     DescribeMaintenanceWindowsResponsePrivate(DescribeMaintenanceWindowsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeMaintenanceWindowsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeMaintenanceWindowsResponse)

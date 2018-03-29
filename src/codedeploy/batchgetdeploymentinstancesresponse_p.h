@@ -34,7 +34,7 @@ public:
 
     BatchGetDeploymentInstancesResponsePrivate(BatchGetDeploymentInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetDeploymentInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetDeploymentInstancesResponse)

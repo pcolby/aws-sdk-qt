@@ -34,7 +34,7 @@ public:
 
     UpdateDomainNameserversResponsePrivate(UpdateDomainNameserversResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDomainNameserversResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDomainNameserversResponse)

@@ -34,7 +34,7 @@ public:
 
     RevokeSecurityGroupEgressResponsePrivate(RevokeSecurityGroupEgressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRevokeSecurityGroupEgressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RevokeSecurityGroupEgressResponse)

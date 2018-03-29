@@ -34,7 +34,7 @@ public:
 
     UpgradeAppliedSchemaResponsePrivate(UpgradeAppliedSchemaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpgradeAppliedSchemaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpgradeAppliedSchemaResponse)

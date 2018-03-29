@@ -34,7 +34,7 @@ public:
 
     EnableAvailabilityZonesForLoadBalancerResponsePrivate(EnableAvailabilityZonesForLoadBalancerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableAvailabilityZonesForLoadBalancerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableAvailabilityZonesForLoadBalancerResponse)

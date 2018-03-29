@@ -34,7 +34,7 @@ public:
 
     DeleteMLModelResponsePrivate(DeleteMLModelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteMLModelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteMLModelResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateTriggerResponsePrivate(UpdateTriggerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateTriggerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateTriggerResponse)

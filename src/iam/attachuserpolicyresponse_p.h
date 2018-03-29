@@ -34,7 +34,7 @@ public:
 
     AttachUserPolicyResponsePrivate(AttachUserPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachUserPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachUserPolicyResponse)

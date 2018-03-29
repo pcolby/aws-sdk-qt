@@ -34,7 +34,7 @@ public:
 
     ModifyReplicationGroupShardConfigurationResponsePrivate(ModifyReplicationGroupShardConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyReplicationGroupShardConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyReplicationGroupShardConfigurationResponse)

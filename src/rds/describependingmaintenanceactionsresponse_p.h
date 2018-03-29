@@ -34,7 +34,7 @@ public:
 
     DescribePendingMaintenanceActionsResponsePrivate(DescribePendingMaintenanceActionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribePendingMaintenanceActionsResponse)

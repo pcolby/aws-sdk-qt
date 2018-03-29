@@ -34,7 +34,7 @@ public:
 
     GetCoreDefinitionResponsePrivate(GetCoreDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCoreDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCoreDefinitionResponse)

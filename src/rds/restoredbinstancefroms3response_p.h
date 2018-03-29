@@ -34,7 +34,7 @@ public:
 
     RestoreDBInstanceFromS3ResponsePrivate(RestoreDBInstanceFromS3Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreDBInstanceFromS3Response(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreDBInstanceFromS3Response)

@@ -34,7 +34,7 @@ public:
 
     ListHandshakesForOrganizationResponsePrivate(ListHandshakesForOrganizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListHandshakesForOrganizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListHandshakesForOrganizationResponse)

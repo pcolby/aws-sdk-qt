@@ -34,7 +34,7 @@ public:
 
     ListLoggerDefinitionVersionsResponsePrivate(ListLoggerDefinitionVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListLoggerDefinitionVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListLoggerDefinitionVersionsResponse)

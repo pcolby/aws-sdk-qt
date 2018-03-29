@@ -34,7 +34,7 @@ public:
 
     DescribeInstanceCreditSpecificationsResponsePrivate(DescribeInstanceCreditSpecificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeInstanceCreditSpecificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeInstanceCreditSpecificationsResponse)

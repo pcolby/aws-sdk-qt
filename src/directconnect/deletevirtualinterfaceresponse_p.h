@@ -34,7 +34,7 @@ public:
 
     DeleteVirtualInterfaceResponsePrivate(DeleteVirtualInterfaceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVirtualInterfaceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVirtualInterfaceResponse)

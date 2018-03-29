@@ -34,7 +34,7 @@ public:
 
     UpdatePrimaryEmailAddressResponsePrivate(UpdatePrimaryEmailAddressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdatePrimaryEmailAddressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdatePrimaryEmailAddressResponse)

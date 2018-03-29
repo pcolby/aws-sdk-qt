@@ -34,7 +34,7 @@ public:
 
     CreateTapesResponsePrivate(CreateTapesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateTapesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateTapesResponse)

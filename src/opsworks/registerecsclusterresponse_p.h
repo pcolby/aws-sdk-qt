@@ -34,7 +34,7 @@ public:
 
     RegisterEcsClusterResponsePrivate(RegisterEcsClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterEcsClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterEcsClusterResponse)

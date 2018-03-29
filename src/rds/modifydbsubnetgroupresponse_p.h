@@ -34,7 +34,7 @@ public:
 
     ModifyDBSubnetGroupResponsePrivate(ModifyDBSubnetGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyDBSubnetGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyDBSubnetGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateBranchResponsePrivate(CreateBranchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateBranchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateBranchResponse)

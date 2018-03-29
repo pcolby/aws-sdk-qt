@@ -34,7 +34,7 @@ public:
 
     AssociateVirtualInterfaceResponsePrivate(AssociateVirtualInterfaceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateVirtualInterfaceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateVirtualInterfaceResponse)

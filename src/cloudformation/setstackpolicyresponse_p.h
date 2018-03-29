@@ -34,7 +34,7 @@ public:
 
     SetStackPolicyResponsePrivate(SetStackPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetStackPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetStackPolicyResponse)

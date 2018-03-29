@@ -34,7 +34,7 @@ public:
 
     GetOTAUpdateResponsePrivate(GetOTAUpdateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetOTAUpdateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetOTAUpdateResponse)

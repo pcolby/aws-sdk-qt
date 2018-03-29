@@ -34,7 +34,7 @@ public:
 
     ListActivatedRulesInRuleGroupResponsePrivate(ListActivatedRulesInRuleGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListActivatedRulesInRuleGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListActivatedRulesInRuleGroupResponse)

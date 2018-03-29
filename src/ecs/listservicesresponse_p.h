@@ -34,7 +34,7 @@ public:
 
     ListServicesResponsePrivate(ListServicesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListServicesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListServicesResponse)

@@ -34,7 +34,7 @@ public:
 
     AddCustomAttributesResponsePrivate(AddCustomAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddCustomAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddCustomAttributesResponse)

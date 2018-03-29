@@ -34,7 +34,7 @@ public:
 
     UpdateAccountSendingEnabledResponsePrivate(UpdateAccountSendingEnabledResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateAccountSendingEnabledResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateAccountSendingEnabledResponse)

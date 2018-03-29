@@ -34,7 +34,7 @@ public:
 
     UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(UpdateSecurityGroupRuleDescriptionsIngressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateSecurityGroupRuleDescriptionsIngressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateSecurityGroupRuleDescriptionsIngressResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateCaseResponsePrivate(CreateCaseResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCaseResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCaseResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateFindingsFeedbackResponsePrivate(UpdateFindingsFeedbackResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateFindingsFeedbackResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateFindingsFeedbackResponse)

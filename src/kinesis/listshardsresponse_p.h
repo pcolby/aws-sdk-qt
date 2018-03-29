@@ -34,7 +34,7 @@ public:
 
     ListShardsResponsePrivate(ListShardsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListShardsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListShardsResponse)

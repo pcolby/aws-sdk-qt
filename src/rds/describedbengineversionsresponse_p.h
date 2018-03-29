@@ -34,7 +34,7 @@ public:
 
     DescribeDBEngineVersionsResponsePrivate(DescribeDBEngineVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDBEngineVersionsResponse)

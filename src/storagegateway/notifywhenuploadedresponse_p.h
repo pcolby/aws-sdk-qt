@@ -34,7 +34,7 @@ public:
 
     NotifyWhenUploadedResponsePrivate(NotifyWhenUploadedResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseNotifyWhenUploadedResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(NotifyWhenUploadedResponse)

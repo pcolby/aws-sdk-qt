@@ -34,7 +34,7 @@ public:
 
     AssociateCreatedArtifactResponsePrivate(AssociateCreatedArtifactResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateCreatedArtifactResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateCreatedArtifactResponse)

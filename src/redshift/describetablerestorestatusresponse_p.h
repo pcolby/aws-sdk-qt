@@ -34,7 +34,7 @@ public:
 
     DescribeTableRestoreStatusResponsePrivate(DescribeTableRestoreStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeTableRestoreStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeTableRestoreStatusResponse)

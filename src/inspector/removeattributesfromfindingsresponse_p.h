@@ -34,7 +34,7 @@ public:
 
     RemoveAttributesFromFindingsResponsePrivate(RemoveAttributesFromFindingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveAttributesFromFindingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveAttributesFromFindingsResponse)

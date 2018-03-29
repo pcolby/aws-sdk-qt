@@ -34,7 +34,7 @@ public:
 
     UpdateBrokerResponsePrivate(UpdateBrokerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateBrokerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateBrokerResponse)

@@ -34,7 +34,7 @@ public:
 
     ListInputsResponsePrivate(ListInputsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListInputsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListInputsResponse)

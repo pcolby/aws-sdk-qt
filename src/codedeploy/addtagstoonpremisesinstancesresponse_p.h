@@ -34,7 +34,7 @@ public:
 
     AddTagsToOnPremisesInstancesResponsePrivate(AddTagsToOnPremisesInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddTagsToOnPremisesInstancesResponse)

@@ -34,7 +34,7 @@ public:
 
     ScanProvisionedProductsResponsePrivate(ScanProvisionedProductsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseScanProvisionedProductsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ScanProvisionedProductsResponse)

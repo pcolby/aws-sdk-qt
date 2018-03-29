@@ -34,7 +34,7 @@ public:
 
     GetOperationResponsePrivate(GetOperationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetOperationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetOperationResponse)

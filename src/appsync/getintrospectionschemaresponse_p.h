@@ -34,7 +34,7 @@ public:
 
     GetIntrospectionSchemaResponsePrivate(GetIntrospectionSchemaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIntrospectionSchemaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIntrospectionSchemaResponse)

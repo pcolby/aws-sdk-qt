@@ -34,7 +34,7 @@ public:
 
     GetDataRetrievalPolicyResponsePrivate(GetDataRetrievalPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDataRetrievalPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDataRetrievalPolicyResponse)

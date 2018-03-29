@@ -34,7 +34,7 @@ public:
 
     GetPartitionsResponsePrivate(GetPartitionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPartitionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPartitionsResponse)

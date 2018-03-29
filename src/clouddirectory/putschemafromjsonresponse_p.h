@@ -34,7 +34,7 @@ public:
 
     PutSchemaFromJsonResponsePrivate(PutSchemaFromJsonResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutSchemaFromJsonResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutSchemaFromJsonResponse)

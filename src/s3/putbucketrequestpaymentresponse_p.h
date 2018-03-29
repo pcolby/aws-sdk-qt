@@ -34,7 +34,7 @@ public:
 
     PutBucketRequestPaymentResponsePrivate(PutBucketRequestPaymentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketRequestPaymentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketRequestPaymentResponse)

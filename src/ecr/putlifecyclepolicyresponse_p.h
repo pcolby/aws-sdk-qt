@@ -34,7 +34,7 @@ public:
 
     PutLifecyclePolicyResponsePrivate(PutLifecyclePolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutLifecyclePolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutLifecyclePolicyResponse)

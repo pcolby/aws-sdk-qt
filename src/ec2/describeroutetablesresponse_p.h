@@ -34,7 +34,7 @@ public:
 
     DescribeRouteTablesResponsePrivate(DescribeRouteTablesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeRouteTablesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeRouteTablesResponse)

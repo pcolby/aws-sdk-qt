@@ -34,7 +34,7 @@ public:
 
     CreateOrganizationalUnitResponsePrivate(CreateOrganizationalUnitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateOrganizationalUnitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateOrganizationalUnitResponse)

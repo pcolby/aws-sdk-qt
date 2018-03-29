@@ -34,7 +34,7 @@ public:
 
     DeleteConfigurationSetResponsePrivate(DeleteConfigurationSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConfigurationSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConfigurationSetResponse)

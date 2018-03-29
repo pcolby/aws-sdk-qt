@@ -34,7 +34,7 @@ public:
 
     DescribeConfigurationRecordersResponsePrivate(DescribeConfigurationRecordersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeConfigurationRecordersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeConfigurationRecordersResponse)

@@ -34,7 +34,7 @@ public:
 
     PutBucketPolicyResponsePrivate(PutBucketPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketPolicyResponse)

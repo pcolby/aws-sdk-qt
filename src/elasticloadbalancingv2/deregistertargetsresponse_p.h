@@ -34,7 +34,7 @@ public:
 
     DeregisterTargetsResponsePrivate(DeregisterTargetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterTargetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterTargetsResponse)

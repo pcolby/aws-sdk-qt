@@ -34,7 +34,7 @@ public:
 
     DescribeVpcClassicLinkDnsSupportResponsePrivate(DescribeVpcClassicLinkDnsSupportResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVpcClassicLinkDnsSupportResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteBucketAnalyticsConfigurationResponsePrivate(DeleteBucketAnalyticsConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBucketAnalyticsConfigurationResponse)

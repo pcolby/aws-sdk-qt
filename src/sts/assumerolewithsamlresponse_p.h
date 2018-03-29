@@ -34,7 +34,7 @@ public:
 
     AssumeRoleWithSAMLResponsePrivate(AssumeRoleWithSAMLResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssumeRoleWithSAMLResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssumeRoleWithSAMLResponse)

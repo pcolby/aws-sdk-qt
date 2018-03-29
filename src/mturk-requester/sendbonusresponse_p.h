@@ -34,7 +34,7 @@ public:
 
     SendBonusResponsePrivate(SendBonusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendBonusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendBonusResponse)

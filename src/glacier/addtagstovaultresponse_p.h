@@ -34,7 +34,7 @@ public:
 
     AddTagsToVaultResponsePrivate(AddTagsToVaultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddTagsToVaultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddTagsToVaultResponse)

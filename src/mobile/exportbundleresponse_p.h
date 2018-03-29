@@ -34,7 +34,7 @@ public:
 
     ExportBundleResponsePrivate(ExportBundleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseExportBundleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ExportBundleResponse)

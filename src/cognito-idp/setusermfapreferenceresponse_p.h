@@ -34,7 +34,7 @@ public:
 
     SetUserMFAPreferenceResponsePrivate(SetUserMFAPreferenceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetUserMFAPreferenceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetUserMFAPreferenceResponse)

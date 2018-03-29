@@ -34,7 +34,7 @@ public:
 
     DescribeVaultResponsePrivate(DescribeVaultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVaultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVaultResponse)

@@ -34,7 +34,7 @@ public:
 
     BatchGetResourceConfigResponsePrivate(BatchGetResourceConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchGetResourceConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchGetResourceConfigResponse)

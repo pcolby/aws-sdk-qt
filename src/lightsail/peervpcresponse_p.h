@@ -34,7 +34,7 @@ public:
 
     PeerVpcResponsePrivate(PeerVpcResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePeerVpcResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PeerVpcResponse)

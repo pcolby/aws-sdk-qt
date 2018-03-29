@@ -34,7 +34,7 @@ public:
 
     ListInvitationsResponsePrivate(ListInvitationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListInvitationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListInvitationsResponse)

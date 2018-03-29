@@ -34,7 +34,7 @@ public:
 
     GetSqlInjectionMatchSetResponsePrivate(GetSqlInjectionMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSqlInjectionMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSqlInjectionMatchSetResponse)

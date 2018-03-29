@@ -34,7 +34,7 @@ public:
 
     DeleteNatGatewayResponsePrivate(DeleteNatGatewayResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNatGatewayResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNatGatewayResponse)

@@ -34,7 +34,7 @@ public:
 
     RefreshSchemasResponsePrivate(RefreshSchemasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRefreshSchemasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RefreshSchemasResponse)

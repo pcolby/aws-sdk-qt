@@ -34,7 +34,7 @@ public:
 
     UpdateElasticsearchDomainConfigResponsePrivate(UpdateElasticsearchDomainConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateElasticsearchDomainConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateElasticsearchDomainConfigResponse)

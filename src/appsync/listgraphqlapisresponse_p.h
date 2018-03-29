@@ -34,7 +34,7 @@ public:
 
     ListGraphqlApisResponsePrivate(ListGraphqlApisResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListGraphqlApisResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListGraphqlApisResponse)

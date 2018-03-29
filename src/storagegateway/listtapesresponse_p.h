@@ -34,7 +34,7 @@ public:
 
     ListTapesResponsePrivate(ListTapesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTapesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTapesResponse)

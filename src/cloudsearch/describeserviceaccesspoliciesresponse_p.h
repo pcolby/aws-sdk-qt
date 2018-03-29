@@ -34,7 +34,7 @@ public:
 
     DescribeServiceAccessPoliciesResponsePrivate(DescribeServiceAccessPoliciesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeServiceAccessPoliciesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeServiceAccessPoliciesResponse)

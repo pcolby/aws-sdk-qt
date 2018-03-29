@@ -34,7 +34,7 @@ public:
 
     GetEntitlementsResponsePrivate(GetEntitlementsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetEntitlementsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetEntitlementsResponse)

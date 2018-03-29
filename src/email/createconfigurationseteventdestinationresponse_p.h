@@ -34,7 +34,7 @@ public:
 
     CreateConfigurationSetEventDestinationResponsePrivate(CreateConfigurationSetEventDestinationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateConfigurationSetEventDestinationResponse)

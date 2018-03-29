@@ -34,7 +34,7 @@ public:
 
     GetVaultNotificationsResponsePrivate(GetVaultNotificationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetVaultNotificationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetVaultNotificationsResponse)

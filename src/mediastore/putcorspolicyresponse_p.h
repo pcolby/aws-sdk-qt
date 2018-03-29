@@ -34,7 +34,7 @@ public:
 
     PutCorsPolicyResponsePrivate(PutCorsPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutCorsPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutCorsPolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeNetworkInterfaceAttributeResponsePrivate(DescribeNetworkInterfaceAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNetworkInterfaceAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNetworkInterfaceAttributeResponse)

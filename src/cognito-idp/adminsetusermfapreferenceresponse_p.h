@@ -34,7 +34,7 @@ public:
 
     AdminSetUserMFAPreferenceResponsePrivate(AdminSetUserMFAPreferenceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminSetUserMFAPreferenceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminSetUserMFAPreferenceResponse)

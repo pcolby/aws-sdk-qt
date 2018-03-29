@@ -34,7 +34,7 @@ public:
 
     PurchaseOfferingResponsePrivate(PurchaseOfferingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurchaseOfferingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurchaseOfferingResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateSmsChannelResponsePrivate(UpdateSmsChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateSmsChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateSmsChannelResponse)

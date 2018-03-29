@@ -34,7 +34,7 @@ public:
 
     CreateTapeWithBarcodeResponsePrivate(CreateTapeWithBarcodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateTapeWithBarcodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateTapeWithBarcodeResponse)

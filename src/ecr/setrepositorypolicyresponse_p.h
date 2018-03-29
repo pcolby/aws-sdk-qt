@@ -34,7 +34,7 @@ public:
 
     SetRepositoryPolicyResponsePrivate(SetRepositoryPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetRepositoryPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetRepositoryPolicyResponse)

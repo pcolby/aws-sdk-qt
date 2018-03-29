@@ -34,7 +34,7 @@ public:
 
     UpdateMaintenanceWindowResponsePrivate(UpdateMaintenanceWindowResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateMaintenanceWindowResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateMaintenanceWindowResponse)

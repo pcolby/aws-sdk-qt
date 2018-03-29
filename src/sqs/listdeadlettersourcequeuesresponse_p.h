@@ -34,7 +34,7 @@ public:
 
     ListDeadLetterSourceQueuesResponsePrivate(ListDeadLetterSourceQueuesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListDeadLetterSourceQueuesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListDeadLetterSourceQueuesResponse)

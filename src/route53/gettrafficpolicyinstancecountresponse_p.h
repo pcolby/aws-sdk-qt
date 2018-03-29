@@ -34,7 +34,7 @@ public:
 
     GetTrafficPolicyInstanceCountResponsePrivate(GetTrafficPolicyInstanceCountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTrafficPolicyInstanceCountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTrafficPolicyInstanceCountResponse)

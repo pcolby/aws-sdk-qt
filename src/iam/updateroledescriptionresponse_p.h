@@ -34,7 +34,7 @@ public:
 
     UpdateRoleDescriptionResponsePrivate(UpdateRoleDescriptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRoleDescriptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRoleDescriptionResponse)

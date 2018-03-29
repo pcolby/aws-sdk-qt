@@ -34,7 +34,7 @@ public:
 
     AbortEnvironmentUpdateResponsePrivate(AbortEnvironmentUpdateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAbortEnvironmentUpdateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AbortEnvironmentUpdateResponse)

@@ -34,7 +34,7 @@ public:
 
     ListNotebookInstancesResponsePrivate(ListNotebookInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListNotebookInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListNotebookInstancesResponse)

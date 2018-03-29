@@ -34,7 +34,7 @@ public:
 
     ResendContactReachabilityEmailResponsePrivate(ResendContactReachabilityEmailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResendContactReachabilityEmailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResendContactReachabilityEmailResponse)

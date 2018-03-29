@@ -34,7 +34,7 @@ public:
 
     CreateInstancesFromSnapshotResponsePrivate(CreateInstancesFromSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateInstancesFromSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateInstancesFromSnapshotResponse)

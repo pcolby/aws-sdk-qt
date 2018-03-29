@@ -34,7 +34,7 @@ public:
 
     ImportImageResponsePrivate(ImportImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseImportImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ImportImageResponse)

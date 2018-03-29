@@ -34,7 +34,7 @@ public:
 
     CopyFpgaImageResponsePrivate(CopyFpgaImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyFpgaImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyFpgaImageResponse)

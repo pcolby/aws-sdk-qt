@@ -34,7 +34,7 @@ public:
 
     SendTestEventNotificationResponsePrivate(SendTestEventNotificationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSendTestEventNotificationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SendTestEventNotificationResponse)

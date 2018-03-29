@@ -34,7 +34,7 @@ public:
 
     DisableDirectoryResponsePrivate(DisableDirectoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableDirectoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableDirectoryResponse)

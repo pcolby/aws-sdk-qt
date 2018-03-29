@@ -34,7 +34,7 @@ public:
 
     SuspendProcessesResponsePrivate(SuspendProcessesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSuspendProcessesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SuspendProcessesResponse)

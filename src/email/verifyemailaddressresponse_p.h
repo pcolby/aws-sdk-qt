@@ -34,7 +34,7 @@ public:
 
     VerifyEmailAddressResponsePrivate(VerifyEmailAddressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseVerifyEmailAddressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(VerifyEmailAddressResponse)

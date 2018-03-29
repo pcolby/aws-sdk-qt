@@ -34,7 +34,7 @@ public:
 
     RemoveTargetsResponsePrivate(RemoveTargetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveTargetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveTargetsResponse)

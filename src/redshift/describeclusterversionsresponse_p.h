@@ -34,7 +34,7 @@ public:
 
     DescribeClusterVersionsResponsePrivate(DescribeClusterVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeClusterVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeClusterVersionsResponse)

@@ -34,7 +34,7 @@ public:
 
     StartNotebookInstanceResponsePrivate(StartNotebookInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartNotebookInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartNotebookInstanceResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeEgressOnlyInternetGatewaysResponsePrivate(DescribeEgressOnlyInternetGatewaysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEgressOnlyInternetGatewaysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEgressOnlyInternetGatewaysResponse)

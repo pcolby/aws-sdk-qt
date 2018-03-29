@@ -34,7 +34,7 @@ public:
 
     PutBucketCorsResponsePrivate(PutBucketCorsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketCorsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketCorsResponse)

@@ -34,7 +34,7 @@ public:
 
     ListDeploymentInstancesResponsePrivate(ListDeploymentInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListDeploymentInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListDeploymentInstancesResponse)

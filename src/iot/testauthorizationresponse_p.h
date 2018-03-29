@@ -34,7 +34,7 @@ public:
 
     TestAuthorizationResponsePrivate(TestAuthorizationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestAuthorizationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestAuthorizationResponse)

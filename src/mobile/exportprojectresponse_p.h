@@ -34,7 +34,7 @@ public:
 
     ExportProjectResponsePrivate(ExportProjectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseExportProjectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ExportProjectResponse)

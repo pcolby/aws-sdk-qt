@@ -34,7 +34,7 @@ public:
 
     RestoreDBInstanceToPointInTimeResponsePrivate(RestoreDBInstanceToPointInTimeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreDBInstanceToPointInTimeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreDBInstanceToPointInTimeResponse)

@@ -34,7 +34,7 @@ public:
 
     GetPasswordDataResponsePrivate(GetPasswordDataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetPasswordDataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetPasswordDataResponse)

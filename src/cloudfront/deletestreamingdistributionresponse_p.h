@@ -34,7 +34,7 @@ public:
 
     DeleteStreamingDistributionResponsePrivate(DeleteStreamingDistributionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteStreamingDistributionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteStreamingDistributionResponse)

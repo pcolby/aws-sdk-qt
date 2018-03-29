@@ -34,7 +34,7 @@ public:
 
     DescribeAutomationStepExecutionsResponsePrivate(DescribeAutomationStepExecutionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAutomationStepExecutionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAutomationStepExecutionsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeregisterOnPremisesInstanceResponsePrivate(DeregisterOnPremisesInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterOnPremisesInstanceResponse)

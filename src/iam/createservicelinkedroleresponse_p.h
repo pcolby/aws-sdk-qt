@@ -34,7 +34,7 @@ public:
 
     CreateServiceLinkedRoleResponsePrivate(CreateServiceLinkedRoleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateServiceLinkedRoleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateServiceLinkedRoleResponse)

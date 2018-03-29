@@ -34,7 +34,7 @@ public:
 
     DeleteSnapshotScheduleResponsePrivate(DeleteSnapshotScheduleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteSnapshotScheduleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteSnapshotScheduleResponse)

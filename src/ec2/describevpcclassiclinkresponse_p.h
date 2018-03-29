@@ -34,7 +34,7 @@ public:
 
     DescribeVpcClassicLinkResponsePrivate(DescribeVpcClassicLinkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVpcClassicLinkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVpcClassicLinkResponse)

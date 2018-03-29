@@ -34,7 +34,7 @@ public:
 
     DeleteTypedLinkFacetResponsePrivate(DeleteTypedLinkFacetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTypedLinkFacetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTypedLinkFacetResponse)

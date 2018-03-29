@@ -34,7 +34,7 @@ public:
 
     PutResourcePolicyResponsePrivate(PutResourcePolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutResourcePolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutResourcePolicyResponse)

@@ -34,7 +34,7 @@ public:
 
     SetLocalConsolePasswordResponsePrivate(SetLocalConsolePasswordResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetLocalConsolePasswordResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetLocalConsolePasswordResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateCloudFrontOriginAccessIdentityResponsePrivate(CreateCloudFrontOriginAccessIdentityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCloudFrontOriginAccessIdentityResponse)

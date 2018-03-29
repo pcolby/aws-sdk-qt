@@ -34,7 +34,7 @@ public:
 
     UpdateGatewayResponseResponsePrivate(UpdateGatewayResponseResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateGatewayResponseResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateGatewayResponseResponse)

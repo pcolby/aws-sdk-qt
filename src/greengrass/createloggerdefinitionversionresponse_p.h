@@ -34,7 +34,7 @@ public:
 
     CreateLoggerDefinitionVersionResponsePrivate(CreateLoggerDefinitionVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateLoggerDefinitionVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateLoggerDefinitionVersionResponse)

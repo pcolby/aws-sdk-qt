@@ -34,7 +34,7 @@ public:
 
     DescribeStackSummaryResponsePrivate(DescribeStackSummaryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeStackSummaryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeStackSummaryResponse)

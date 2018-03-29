@@ -34,7 +34,7 @@ public:
 
     ListEventSubscriptionsResponsePrivate(ListEventSubscriptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListEventSubscriptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListEventSubscriptionsResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteCustomActionTypeResponsePrivate(DeleteCustomActionTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCustomActionTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCustomActionTypeResponse)

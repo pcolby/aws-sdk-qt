@@ -34,7 +34,7 @@ public:
 
     ListProvisionedCapacityResponsePrivate(ListProvisionedCapacityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListProvisionedCapacityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListProvisionedCapacityResponse)

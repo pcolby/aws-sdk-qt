@@ -34,7 +34,7 @@ public:
 
     ListServiceSpecificCredentialsResponsePrivate(ListServiceSpecificCredentialsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListServiceSpecificCredentialsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListServiceSpecificCredentialsResponse)

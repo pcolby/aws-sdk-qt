@@ -34,7 +34,7 @@ public:
 
     CreateTypedLinkFacetResponsePrivate(CreateTypedLinkFacetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateTypedLinkFacetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateTypedLinkFacetResponse)

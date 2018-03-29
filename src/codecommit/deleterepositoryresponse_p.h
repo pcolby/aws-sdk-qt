@@ -34,7 +34,7 @@ public:
 
     DeleteRepositoryResponsePrivate(DeleteRepositoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRepositoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRepositoryResponse)

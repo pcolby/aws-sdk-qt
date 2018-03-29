@@ -34,7 +34,7 @@ public:
 
     CreateAccountAliasResponsePrivate(CreateAccountAliasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateAccountAliasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateAccountAliasResponse)

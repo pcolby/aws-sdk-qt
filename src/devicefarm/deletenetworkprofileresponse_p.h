@@ -34,7 +34,7 @@ public:
 
     DeleteNetworkProfileResponsePrivate(DeleteNetworkProfileResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNetworkProfileResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNetworkProfileResponse)

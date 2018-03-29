@@ -34,7 +34,7 @@ public:
 
     RequestCancelWorkflowExecutionResponsePrivate(RequestCancelWorkflowExecutionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RequestCancelWorkflowExecutionResponse)

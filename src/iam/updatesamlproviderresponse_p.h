@@ -34,7 +34,7 @@ public:
 
     UpdateSAMLProviderResponsePrivate(UpdateSAMLProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateSAMLProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateSAMLProviderResponse)

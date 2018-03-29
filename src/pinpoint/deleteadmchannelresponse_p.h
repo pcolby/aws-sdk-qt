@@ -34,7 +34,7 @@ public:
 
     DeleteAdmChannelResponsePrivate(DeleteAdmChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAdmChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAdmChannelResponse)

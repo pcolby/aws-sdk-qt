@@ -34,7 +34,7 @@ public:
 
     PutBucketEncryptionResponsePrivate(PutBucketEncryptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketEncryptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketEncryptionResponse)

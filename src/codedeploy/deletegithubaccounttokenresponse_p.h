@@ -34,7 +34,7 @@ public:
 
     DeleteGitHubAccountTokenResponsePrivate(DeleteGitHubAccountTokenResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteGitHubAccountTokenResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteGitHubAccountTokenResponse)

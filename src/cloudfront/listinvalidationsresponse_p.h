@@ -34,7 +34,7 @@ public:
 
     ListInvalidationsResponsePrivate(ListInvalidationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListInvalidationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListInvalidationsResponse)

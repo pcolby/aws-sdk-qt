@@ -34,7 +34,7 @@ public:
 
     DescribeEffectiveInstanceAssociationsResponsePrivate(DescribeEffectiveInstanceAssociationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeEffectiveInstanceAssociationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeEffectiveInstanceAssociationsResponse)

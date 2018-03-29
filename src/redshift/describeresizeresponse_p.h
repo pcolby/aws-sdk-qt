@@ -34,7 +34,7 @@ public:
 
     DescribeResizeResponsePrivate(DescribeResizeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeResizeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeResizeResponse)

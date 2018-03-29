@@ -34,7 +34,7 @@ public:
 
     AttachToIndexResponsePrivate(AttachToIndexResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAttachToIndexResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AttachToIndexResponse)

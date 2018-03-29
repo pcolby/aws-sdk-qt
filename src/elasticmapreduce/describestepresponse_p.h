@@ -34,7 +34,7 @@ public:
 
     DescribeStepResponsePrivate(DescribeStepResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeStepResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeStepResponse)

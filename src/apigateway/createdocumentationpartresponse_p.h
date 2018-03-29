@@ -34,7 +34,7 @@ public:
 
     CreateDocumentationPartResponsePrivate(CreateDocumentationPartResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDocumentationPartResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDocumentationPartResponse)

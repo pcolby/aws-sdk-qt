@@ -34,7 +34,7 @@ public:
 
     DescribeDatasetResponsePrivate(DescribeDatasetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDatasetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDatasetResponse)

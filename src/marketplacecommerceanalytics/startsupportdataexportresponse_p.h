@@ -34,7 +34,7 @@ public:
 
     StartSupportDataExportResponsePrivate(StartSupportDataExportResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartSupportDataExportResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartSupportDataExportResponse)

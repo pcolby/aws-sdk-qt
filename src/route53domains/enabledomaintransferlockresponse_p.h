@@ -34,7 +34,7 @@ public:
 
     EnableDomainTransferLockResponsePrivate(EnableDomainTransferLockResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableDomainTransferLockResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableDomainTransferLockResponse)

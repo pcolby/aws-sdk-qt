@@ -34,7 +34,7 @@ public:
 
     GetCommentsForComparedCommitResponsePrivate(GetCommentsForComparedCommitResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCommentsForComparedCommitResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCommentsForComparedCommitResponse)

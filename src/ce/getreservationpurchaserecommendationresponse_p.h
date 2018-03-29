@@ -34,7 +34,7 @@ public:
 
     GetReservationPurchaseRecommendationResponsePrivate(GetReservationPurchaseRecommendationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReservationPurchaseRecommendationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReservationPurchaseRecommendationResponse)

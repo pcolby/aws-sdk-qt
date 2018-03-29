@@ -34,7 +34,7 @@ public:
 
     DeleteActivityResponsePrivate(DeleteActivityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteActivityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteActivityResponse)

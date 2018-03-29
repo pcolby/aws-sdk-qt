@@ -34,7 +34,7 @@ public:
 
     AddApplicationInputResponsePrivate(AddApplicationInputResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAddApplicationInputResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AddApplicationInputResponse)

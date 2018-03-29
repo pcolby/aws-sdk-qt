@@ -34,7 +34,7 @@ public:
 
     VerifyDomainDkimResponsePrivate(VerifyDomainDkimResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseVerifyDomainDkimResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(VerifyDomainDkimResponse)

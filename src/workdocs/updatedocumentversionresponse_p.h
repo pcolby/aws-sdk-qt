@@ -34,7 +34,7 @@ public:
 
     UpdateDocumentVersionResponsePrivate(UpdateDocumentVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDocumentVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDocumentVersionResponse)

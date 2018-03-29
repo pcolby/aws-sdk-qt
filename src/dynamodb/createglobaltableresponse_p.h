@@ -34,7 +34,7 @@ public:
 
     CreateGlobalTableResponsePrivate(CreateGlobalTableResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateGlobalTableResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateGlobalTableResponse)

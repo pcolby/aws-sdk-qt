@@ -34,7 +34,7 @@ public:
 
     StartMatchmakingResponsePrivate(StartMatchmakingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartMatchmakingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartMatchmakingResponse)

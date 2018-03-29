@@ -34,7 +34,7 @@ public:
 
     DisassociateTeamMemberResponsePrivate(DisassociateTeamMemberResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateTeamMemberResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateTeamMemberResponse)

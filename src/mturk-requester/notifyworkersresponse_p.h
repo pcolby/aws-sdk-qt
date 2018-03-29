@@ -34,7 +34,7 @@ public:
 
     NotifyWorkersResponsePrivate(NotifyWorkersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseNotifyWorkersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(NotifyWorkersResponse)

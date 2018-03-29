@@ -34,7 +34,7 @@ public:
 
     AcceptReservedInstancesExchangeQuoteResponsePrivate(AcceptReservedInstancesExchangeQuoteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAcceptReservedInstancesExchangeQuoteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AcceptReservedInstancesExchangeQuoteResponse)

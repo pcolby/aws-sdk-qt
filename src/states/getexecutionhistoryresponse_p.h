@@ -34,7 +34,7 @@ public:
 
     GetExecutionHistoryResponsePrivate(GetExecutionHistoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetExecutionHistoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetExecutionHistoryResponse)

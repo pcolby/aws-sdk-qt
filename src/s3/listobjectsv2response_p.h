@@ -34,7 +34,7 @@ public:
 
     ListObjectsV2ResponsePrivate(ListObjectsV2Response * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListObjectsV2Response(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListObjectsV2Response)

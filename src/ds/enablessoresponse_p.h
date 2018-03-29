@@ -34,7 +34,7 @@ public:
 
     EnableSsoResponsePrivate(EnableSsoResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableSsoResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableSsoResponse)

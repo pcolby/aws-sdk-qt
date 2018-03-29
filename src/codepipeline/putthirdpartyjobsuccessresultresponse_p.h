@@ -34,7 +34,7 @@ public:
 
     PutThirdPartyJobSuccessResultResponsePrivate(PutThirdPartyJobSuccessResultResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutThirdPartyJobSuccessResultResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutThirdPartyJobSuccessResultResponse)

@@ -34,7 +34,7 @@ public:
 
     GetResourceConfigHistoryResponsePrivate(GetResourceConfigHistoryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetResourceConfigHistoryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetResourceConfigHistoryResponse)

@@ -34,7 +34,7 @@ public:
 
     GetSegmentVersionsResponsePrivate(GetSegmentVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSegmentVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSegmentVersionsResponse)

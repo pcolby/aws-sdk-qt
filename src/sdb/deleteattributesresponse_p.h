@@ -34,7 +34,7 @@ public:
 
     DeleteAttributesResponsePrivate(DeleteAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAttributesResponse)

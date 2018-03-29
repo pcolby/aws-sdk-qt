@@ -34,7 +34,7 @@ public:
 
     PutIntentResponsePrivate(PutIntentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutIntentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutIntentResponse)

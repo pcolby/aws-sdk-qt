@@ -34,7 +34,7 @@ public:
 
     DeleteCacheClusterResponsePrivate(DeleteCacheClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteCacheClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteCacheClusterResponse)

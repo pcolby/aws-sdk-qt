@@ -34,7 +34,7 @@ public:
 
     AssociateNodeResponsePrivate(AssociateNodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateNodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateNodeResponse)

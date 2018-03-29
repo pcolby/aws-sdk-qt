@@ -34,7 +34,7 @@ public:
 
     AuthorizeDBSecurityGroupIngressResponsePrivate(AuthorizeDBSecurityGroupIngressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AuthorizeDBSecurityGroupIngressResponse)

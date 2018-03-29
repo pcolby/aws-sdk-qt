@@ -34,7 +34,7 @@ public:
 
     CreateActivationResponsePrivate(CreateActivationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateActivationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateActivationResponse)

@@ -34,7 +34,7 @@ public:
 
     AdminListGroupsForUserResponsePrivate(AdminListGroupsForUserResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminListGroupsForUserResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminListGroupsForUserResponse)

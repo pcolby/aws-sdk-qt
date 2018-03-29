@@ -34,7 +34,7 @@ public:
 
     DescribeDBClusterSnapshotsResponsePrivate(DescribeDBClusterSnapshotsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeDBClusterSnapshotsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeDBClusterSnapshotsResponse)

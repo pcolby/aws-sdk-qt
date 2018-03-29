@@ -34,7 +34,7 @@ public:
 
     EnableMetricsCollectionResponsePrivate(EnableMetricsCollectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseEnableMetricsCollectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(EnableMetricsCollectionResponse)

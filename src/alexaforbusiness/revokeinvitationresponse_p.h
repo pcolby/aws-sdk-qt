@@ -34,7 +34,7 @@ public:
 
     RevokeInvitationResponsePrivate(RevokeInvitationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRevokeInvitationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RevokeInvitationResponse)

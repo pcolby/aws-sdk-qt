@@ -34,7 +34,7 @@ public:
 
     GetActiveNamesResponsePrivate(GetActiveNamesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetActiveNamesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetActiveNamesResponse)

@@ -34,7 +34,7 @@ public:
 
     SimulateCustomPolicyResponsePrivate(SimulateCustomPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSimulateCustomPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SimulateCustomPolicyResponse)

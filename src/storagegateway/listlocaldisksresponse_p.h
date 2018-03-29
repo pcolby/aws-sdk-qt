@@ -34,7 +34,7 @@ public:
 
     ListLocalDisksResponsePrivate(ListLocalDisksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListLocalDisksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListLocalDisksResponse)

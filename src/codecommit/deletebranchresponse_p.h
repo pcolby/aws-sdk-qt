@@ -34,7 +34,7 @@ public:
 
     DeleteBranchResponsePrivate(DeleteBranchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBranchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBranchResponse)

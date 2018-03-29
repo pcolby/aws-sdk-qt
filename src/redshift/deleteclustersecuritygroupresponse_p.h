@@ -34,7 +34,7 @@ public:
 
     DeleteClusterSecurityGroupResponsePrivate(DeleteClusterSecurityGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteClusterSecurityGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteClusterSecurityGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     ListDataSourcesResponsePrivate(ListDataSourcesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListDataSourcesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListDataSourcesResponse)

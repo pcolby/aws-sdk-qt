@@ -34,7 +34,7 @@ public:
 
     DisassociateConnectorResponsePrivate(DisassociateConnectorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateConnectorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateConnectorResponse)

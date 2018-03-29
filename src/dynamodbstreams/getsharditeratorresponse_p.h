@@ -34,7 +34,7 @@ public:
 
     GetShardIteratorResponsePrivate(GetShardIteratorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetShardIteratorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetShardIteratorResponse)

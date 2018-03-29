@@ -34,7 +34,7 @@ public:
 
     RestoreObjectResponsePrivate(RestoreObjectResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRestoreObjectResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RestoreObjectResponse)

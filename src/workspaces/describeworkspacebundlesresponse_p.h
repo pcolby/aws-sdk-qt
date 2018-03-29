@@ -34,7 +34,7 @@ public:
 
     DescribeWorkspaceBundlesResponsePrivate(DescribeWorkspaceBundlesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeWorkspaceBundlesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeWorkspaceBundlesResponse)

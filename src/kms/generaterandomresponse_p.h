@@ -34,7 +34,7 @@ public:
 
     GenerateRandomResponsePrivate(GenerateRandomResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGenerateRandomResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GenerateRandomResponse)

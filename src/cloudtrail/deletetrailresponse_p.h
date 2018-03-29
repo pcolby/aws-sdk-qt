@@ -34,7 +34,7 @@ public:
 
     DeleteTrailResponsePrivate(DeleteTrailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTrailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTrailResponse)

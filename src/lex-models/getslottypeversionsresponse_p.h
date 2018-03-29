@@ -34,7 +34,7 @@ public:
 
     GetSlotTypeVersionsResponsePrivate(GetSlotTypeVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSlotTypeVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSlotTypeVersionsResponse)

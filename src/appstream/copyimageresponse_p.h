@@ -34,7 +34,7 @@ public:
 
     CopyImageResponsePrivate(CopyImageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCopyImageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CopyImageResponse)

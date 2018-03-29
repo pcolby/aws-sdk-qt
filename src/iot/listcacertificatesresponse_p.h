@@ -34,7 +34,7 @@ public:
 
     ListCACertificatesResponsePrivate(ListCACertificatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListCACertificatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListCACertificatesResponse)

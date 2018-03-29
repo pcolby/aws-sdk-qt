@@ -34,7 +34,7 @@ public:
 
     RemoveClientIDFromOpenIDConnectProviderResponsePrivate(RemoveClientIDFromOpenIDConnectProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRemoveClientIDFromOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RemoveClientIDFromOpenIDConnectProviderResponse)

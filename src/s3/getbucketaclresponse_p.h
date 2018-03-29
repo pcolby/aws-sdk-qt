@@ -34,7 +34,7 @@ public:
 
     GetBucketAclResponsePrivate(GetBucketAclResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBucketAclResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBucketAclResponse)

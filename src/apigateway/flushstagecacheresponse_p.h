@@ -34,7 +34,7 @@ public:
 
     FlushStageCacheResponsePrivate(FlushStageCacheResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseFlushStageCacheResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(FlushStageCacheResponse)

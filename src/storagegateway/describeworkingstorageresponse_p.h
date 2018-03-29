@@ -34,7 +34,7 @@ public:
 
     DescribeWorkingStorageResponsePrivate(DescribeWorkingStorageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeWorkingStorageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeWorkingStorageResponse)

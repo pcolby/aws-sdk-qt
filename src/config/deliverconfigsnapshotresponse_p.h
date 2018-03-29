@@ -34,7 +34,7 @@ public:
 
     DeliverConfigSnapshotResponsePrivate(DeliverConfigSnapshotResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeliverConfigSnapshotResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeliverConfigSnapshotResponse)

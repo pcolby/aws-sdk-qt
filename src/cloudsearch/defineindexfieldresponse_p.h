@@ -34,7 +34,7 @@ public:
 
     DefineIndexFieldResponsePrivate(DefineIndexFieldResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDefineIndexFieldResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DefineIndexFieldResponse)

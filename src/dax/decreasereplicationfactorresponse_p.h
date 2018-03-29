@@ -34,7 +34,7 @@ public:
 
     DecreaseReplicationFactorResponsePrivate(DecreaseReplicationFactorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDecreaseReplicationFactorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DecreaseReplicationFactorResponse)

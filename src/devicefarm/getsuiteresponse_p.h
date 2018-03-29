@@ -34,7 +34,7 @@ public:
 
     GetSuiteResponsePrivate(GetSuiteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSuiteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSuiteResponse)

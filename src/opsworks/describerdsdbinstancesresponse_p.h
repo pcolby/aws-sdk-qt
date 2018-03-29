@@ -34,7 +34,7 @@ public:
 
     DescribeRdsDbInstancesResponsePrivate(DescribeRdsDbInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeRdsDbInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeRdsDbInstancesResponse)

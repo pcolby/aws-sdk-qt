@@ -34,7 +34,7 @@ public:
 
     GetContactReachabilityStatusResponsePrivate(GetContactReachabilityStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetContactReachabilityStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetContactReachabilityStatusResponse)

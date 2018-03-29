@@ -34,7 +34,7 @@ public:
 
     PutDeliveryChannelResponsePrivate(PutDeliveryChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutDeliveryChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutDeliveryChannelResponse)

@@ -34,7 +34,7 @@ public:
 
     ListRateBasedRulesResponsePrivate(ListRateBasedRulesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListRateBasedRulesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListRateBasedRulesResponse)

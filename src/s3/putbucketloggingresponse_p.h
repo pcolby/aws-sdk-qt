@@ -34,7 +34,7 @@ public:
 
     PutBucketLoggingResponsePrivate(PutBucketLoggingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketLoggingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketLoggingResponse)

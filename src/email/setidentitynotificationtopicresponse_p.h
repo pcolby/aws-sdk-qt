@@ -34,7 +34,7 @@ public:
 
     SetIdentityNotificationTopicResponsePrivate(SetIdentityNotificationTopicResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetIdentityNotificationTopicResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetIdentityNotificationTopicResponse)

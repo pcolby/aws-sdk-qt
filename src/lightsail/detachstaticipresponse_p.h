@@ -34,7 +34,7 @@ public:
 
     DetachStaticIpResponsePrivate(DetachStaticIpResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachStaticIpResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachStaticIpResponse)

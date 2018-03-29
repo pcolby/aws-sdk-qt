@@ -34,7 +34,7 @@ public:
 
     DeregisterContainerInstanceResponsePrivate(DeregisterContainerInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeregisterContainerInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeregisterContainerInstanceResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteConditionalForwarderResponsePrivate(DeleteConditionalForwarderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteConditionalForwarderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteConditionalForwarderResponse)

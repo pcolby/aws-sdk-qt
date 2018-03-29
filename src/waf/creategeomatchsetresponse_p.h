@@ -34,7 +34,7 @@ public:
 
     CreateGeoMatchSetResponsePrivate(CreateGeoMatchSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateGeoMatchSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateGeoMatchSetResponse)

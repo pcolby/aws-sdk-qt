@@ -34,7 +34,7 @@ public:
 
     DescribeVpnConnectionsResponsePrivate(DescribeVpnConnectionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeVpnConnectionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeVpnConnectionsResponse)

@@ -34,7 +34,7 @@ public:
 
     SetTerminationProtectionResponsePrivate(SetTerminationProtectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetTerminationProtectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetTerminationProtectionResponse)

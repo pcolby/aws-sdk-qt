@@ -34,7 +34,7 @@ public:
 
     GetCorsPolicyResponsePrivate(GetCorsPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetCorsPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetCorsPolicyResponse)

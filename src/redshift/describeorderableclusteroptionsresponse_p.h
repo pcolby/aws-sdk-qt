@@ -34,7 +34,7 @@ public:
 
     DescribeOrderableClusterOptionsResponsePrivate(DescribeOrderableClusterOptionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeOrderableClusterOptionsResponse)

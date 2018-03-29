@@ -34,7 +34,7 @@ public:
 
     DeleteEmailChannelResponsePrivate(DeleteEmailChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteEmailChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteEmailChannelResponse)

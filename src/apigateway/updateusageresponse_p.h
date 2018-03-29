@@ -34,7 +34,7 @@ public:
 
     UpdateUsageResponsePrivate(UpdateUsageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateUsageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateUsageResponse)

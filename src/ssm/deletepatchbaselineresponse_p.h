@@ -34,7 +34,7 @@ public:
 
     DeletePatchBaselineResponsePrivate(DeletePatchBaselineResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeletePatchBaselineResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeletePatchBaselineResponse)

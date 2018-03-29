@@ -34,7 +34,7 @@ public:
 
     DeleteUploadResponsePrivate(DeleteUploadResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteUploadResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteUploadResponse)

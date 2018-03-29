@@ -34,7 +34,7 @@ public:
 
     AssociateMemberToGroupResponsePrivate(AssociateMemberToGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateMemberToGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateMemberToGroupResponse)

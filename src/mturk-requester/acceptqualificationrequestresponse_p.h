@@ -34,7 +34,7 @@ public:
 
     AcceptQualificationRequestResponsePrivate(AcceptQualificationRequestResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAcceptQualificationRequestResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AcceptQualificationRequestResponse)

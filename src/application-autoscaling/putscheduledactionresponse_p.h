@@ -34,7 +34,7 @@ public:
 
     PutScheduledActionResponsePrivate(PutScheduledActionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutScheduledActionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutScheduledActionResponse)

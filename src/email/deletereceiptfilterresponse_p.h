@@ -34,7 +34,7 @@ public:
 
     DeleteReceiptFilterResponsePrivate(DeleteReceiptFilterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReceiptFilterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReceiptFilterResponse)

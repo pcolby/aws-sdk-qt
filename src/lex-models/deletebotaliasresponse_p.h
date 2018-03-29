@@ -34,7 +34,7 @@ public:
 
     DeleteBotAliasResponsePrivate(DeleteBotAliasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteBotAliasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteBotAliasResponse)

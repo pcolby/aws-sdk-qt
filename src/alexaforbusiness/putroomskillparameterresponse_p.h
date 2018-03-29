@@ -34,7 +34,7 @@ public:
 
     PutRoomSkillParameterResponsePrivate(PutRoomSkillParameterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutRoomSkillParameterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutRoomSkillParameterResponse)

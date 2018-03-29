@@ -34,7 +34,7 @@ public:
 
     AcknowledgeThirdPartyJobResponsePrivate(AcknowledgeThirdPartyJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAcknowledgeThirdPartyJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AcknowledgeThirdPartyJobResponse)

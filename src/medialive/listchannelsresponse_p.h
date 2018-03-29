@@ -34,7 +34,7 @@ public:
 
     ListChannelsResponsePrivate(ListChannelsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListChannelsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListChannelsResponse)

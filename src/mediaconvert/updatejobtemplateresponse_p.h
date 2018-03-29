@@ -34,7 +34,7 @@ public:
 
     UpdateJobTemplateResponsePrivate(UpdateJobTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateJobTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateJobTemplateResponse)

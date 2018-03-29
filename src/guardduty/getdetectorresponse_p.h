@@ -34,7 +34,7 @@ public:
 
     GetDetectorResponsePrivate(GetDetectorResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDetectorResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDetectorResponse)

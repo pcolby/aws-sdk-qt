@@ -34,7 +34,7 @@ public:
 
     ResendValidationEmailResponsePrivate(ResendValidationEmailResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResendValidationEmailResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResendValidationEmailResponse)

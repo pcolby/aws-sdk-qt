@@ -34,7 +34,7 @@ public:
 
     DeleteMessageBatchResponsePrivate(DeleteMessageBatchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteMessageBatchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteMessageBatchResponse)

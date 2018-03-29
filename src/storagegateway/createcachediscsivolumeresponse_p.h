@@ -34,7 +34,7 @@ public:
 
     CreateCachediSCSIVolumeResponsePrivate(CreateCachediSCSIVolumeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateCachediSCSIVolumeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateCachediSCSIVolumeResponse)

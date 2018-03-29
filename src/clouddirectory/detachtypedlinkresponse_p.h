@@ -34,7 +34,7 @@ public:
 
     DetachTypedLinkResponsePrivate(DetachTypedLinkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachTypedLinkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachTypedLinkResponse)

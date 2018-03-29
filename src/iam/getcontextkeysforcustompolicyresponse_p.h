@@ -34,7 +34,7 @@ public:
 
     GetContextKeysForCustomPolicyResponsePrivate(GetContextKeysForCustomPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetContextKeysForCustomPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetContextKeysForCustomPolicyResponse)

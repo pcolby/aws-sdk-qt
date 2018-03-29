@@ -34,7 +34,7 @@ public:
 
     GetSegmentsResponsePrivate(GetSegmentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetSegmentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetSegmentsResponse)

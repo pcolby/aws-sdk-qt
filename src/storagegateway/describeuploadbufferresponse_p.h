@@ -34,7 +34,7 @@ public:
 
     DescribeUploadBufferResponsePrivate(DescribeUploadBufferResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeUploadBufferResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeUploadBufferResponse)

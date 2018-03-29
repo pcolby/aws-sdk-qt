@@ -34,7 +34,7 @@ public:
 
     UpdateNotificationSettingsResponsePrivate(UpdateNotificationSettingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateNotificationSettingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateNotificationSettingsResponse)

@@ -34,7 +34,7 @@ public:
 
     ResendConfirmationCodeResponsePrivate(ResendConfirmationCodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResendConfirmationCodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResendConfirmationCodeResponse)

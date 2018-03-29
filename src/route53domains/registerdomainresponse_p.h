@@ -34,7 +34,7 @@ public:
 
     RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterDomainResponse)

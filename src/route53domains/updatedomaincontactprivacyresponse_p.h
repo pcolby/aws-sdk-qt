@@ -34,7 +34,7 @@ public:
 
     UpdateDomainContactPrivacyResponsePrivate(UpdateDomainContactPrivacyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDomainContactPrivacyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDomainContactPrivacyResponse)

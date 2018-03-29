@@ -34,7 +34,7 @@ public:
 
     DeleteNamedQueryResponsePrivate(DeleteNamedQueryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNamedQueryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNamedQueryResponse)

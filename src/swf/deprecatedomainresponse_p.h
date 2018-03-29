@@ -34,7 +34,7 @@ public:
 
     DeprecateDomainResponsePrivate(DeprecateDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeprecateDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeprecateDomainResponse)

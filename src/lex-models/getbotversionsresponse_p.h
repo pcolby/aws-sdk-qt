@@ -34,7 +34,7 @@ public:
 
     GetBotVersionsResponsePrivate(GetBotVersionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBotVersionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBotVersionsResponse)

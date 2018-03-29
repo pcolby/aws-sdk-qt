@@ -34,7 +34,7 @@ public:
 
     CompleteMultipartUploadResponsePrivate(CompleteMultipartUploadResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCompleteMultipartUploadResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CompleteMultipartUploadResponse)

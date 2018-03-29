@@ -34,7 +34,7 @@ public:
 
     ListPullRequestsResponsePrivate(ListPullRequestsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListPullRequestsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListPullRequestsResponse)

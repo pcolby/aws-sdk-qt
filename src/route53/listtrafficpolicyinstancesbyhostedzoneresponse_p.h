@@ -34,7 +34,7 @@ public:
 
     ListTrafficPolicyInstancesByHostedZoneResponsePrivate(ListTrafficPolicyInstancesByHostedZoneResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListTrafficPolicyInstancesByHostedZoneResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListTrafficPolicyInstancesByHostedZoneResponse)

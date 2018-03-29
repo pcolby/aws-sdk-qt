@@ -34,7 +34,7 @@ public:
 
     SearchProvisionedProductsResponsePrivate(SearchProvisionedProductsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSearchProvisionedProductsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SearchProvisionedProductsResponse)

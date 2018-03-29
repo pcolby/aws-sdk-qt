@@ -34,7 +34,7 @@ public:
 
     PutContainerPolicyResponsePrivate(PutContainerPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutContainerPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutContainerPolicyResponse)

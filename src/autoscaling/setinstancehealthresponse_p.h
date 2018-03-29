@@ -34,7 +34,7 @@ public:
 
     SetInstanceHealthResponsePrivate(SetInstanceHealthResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetInstanceHealthResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetInstanceHealthResponse)

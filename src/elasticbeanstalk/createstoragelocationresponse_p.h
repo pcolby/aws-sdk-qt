@@ -34,7 +34,7 @@ public:
 
     CreateStorageLocationResponsePrivate(CreateStorageLocationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateStorageLocationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateStorageLocationResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteApplicationCloudWatchLoggingOptionResponsePrivate(DeleteApplicationCloudWatchLoggingOptionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteApplicationCloudWatchLoggingOptionResponse)

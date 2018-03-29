@@ -34,7 +34,7 @@ public:
 
     ReleaseAddressResponsePrivate(ReleaseAddressResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReleaseAddressResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReleaseAddressResponse)

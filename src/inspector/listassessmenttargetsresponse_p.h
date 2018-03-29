@@ -34,7 +34,7 @@ public:
 
     ListAssessmentTargetsResponsePrivate(ListAssessmentTargetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAssessmentTargetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAssessmentTargetsResponse)

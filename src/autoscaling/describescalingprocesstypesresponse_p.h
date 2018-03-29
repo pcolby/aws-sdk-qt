@@ -34,7 +34,7 @@ public:
 
     DescribeScalingProcessTypesResponsePrivate(DescribeScalingProcessTypesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeScalingProcessTypesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeScalingProcessTypesResponse)

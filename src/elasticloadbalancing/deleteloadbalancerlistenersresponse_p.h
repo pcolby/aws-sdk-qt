@@ -34,7 +34,7 @@ public:
 
     DeleteLoadBalancerListenersResponsePrivate(DeleteLoadBalancerListenersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteLoadBalancerListenersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteLoadBalancerListenersResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateNamedQueryResponsePrivate(CreateNamedQueryResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateNamedQueryResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateNamedQueryResponse)

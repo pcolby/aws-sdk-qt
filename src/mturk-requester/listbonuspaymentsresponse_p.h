@@ -34,7 +34,7 @@ public:
 
     ListBonusPaymentsResponsePrivate(ListBonusPaymentsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBonusPaymentsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBonusPaymentsResponse)

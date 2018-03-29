@@ -34,7 +34,7 @@ public:
 
     SynthesizeSpeechResponsePrivate(SynthesizeSpeechResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSynthesizeSpeechResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SynthesizeSpeechResponse)

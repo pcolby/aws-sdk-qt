@@ -34,7 +34,7 @@ public:
 
     GetReservationCoverageResponsePrivate(GetReservationCoverageResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReservationCoverageResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReservationCoverageResponse)

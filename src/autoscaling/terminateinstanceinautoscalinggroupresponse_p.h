@@ -34,7 +34,7 @@ public:
 
     TerminateInstanceInAutoScalingGroupResponsePrivate(TerminateInstanceInAutoScalingGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTerminateInstanceInAutoScalingGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TerminateInstanceInAutoScalingGroupResponse)

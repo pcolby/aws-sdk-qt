@@ -34,7 +34,7 @@ public:
 
     SetInstanceProtectionResponsePrivate(SetInstanceProtectionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetInstanceProtectionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetInstanceProtectionResponse)

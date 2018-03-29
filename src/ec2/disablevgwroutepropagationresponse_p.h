@@ -34,7 +34,7 @@ public:
 
     DisableVgwRoutePropagationResponsePrivate(DisableVgwRoutePropagationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisableVgwRoutePropagationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisableVgwRoutePropagationResponse)

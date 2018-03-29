@@ -34,7 +34,7 @@ public:
 
     DescribeMountTargetsResponsePrivate(DescribeMountTargetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeMountTargetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeMountTargetsResponse)

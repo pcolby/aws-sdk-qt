@@ -34,7 +34,7 @@ public:
 
     UpdateServerEngineAttributesResponsePrivate(UpdateServerEngineAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateServerEngineAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateServerEngineAttributesResponse)

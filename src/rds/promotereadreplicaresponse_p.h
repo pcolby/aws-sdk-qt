@@ -34,7 +34,7 @@ public:
 
     PromoteReadReplicaResponsePrivate(PromoteReadReplicaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePromoteReadReplicaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PromoteReadReplicaResponse)

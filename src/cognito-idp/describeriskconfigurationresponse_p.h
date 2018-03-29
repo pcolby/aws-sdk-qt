@@ -34,7 +34,7 @@ public:
 
     DescribeRiskConfigurationResponsePrivate(DescribeRiskConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeRiskConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeRiskConfigurationResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteParameterResponsePrivate(DeleteParameterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteParameterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteParameterResponse)

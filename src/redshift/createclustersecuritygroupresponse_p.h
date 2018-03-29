@@ -34,7 +34,7 @@ public:
 
     CreateClusterSecurityGroupResponsePrivate(CreateClusterSecurityGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateClusterSecurityGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateClusterSecurityGroupResponse)

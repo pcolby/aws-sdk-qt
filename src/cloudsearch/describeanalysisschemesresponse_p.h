@@ -34,7 +34,7 @@ public:
 
     DescribeAnalysisSchemesResponsePrivate(DescribeAnalysisSchemesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAnalysisSchemesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAnalysisSchemesResponse)

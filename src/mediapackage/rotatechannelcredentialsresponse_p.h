@@ -34,7 +34,7 @@ public:
 
     RotateChannelCredentialsResponsePrivate(RotateChannelCredentialsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRotateChannelCredentialsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RotateChannelCredentialsResponse)

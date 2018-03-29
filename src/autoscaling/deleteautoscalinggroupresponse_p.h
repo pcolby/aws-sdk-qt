@@ -34,7 +34,7 @@ public:
 
     DeleteAutoScalingGroupResponsePrivate(DeleteAutoScalingGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAutoScalingGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAutoScalingGroupResponse)

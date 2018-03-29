@@ -34,7 +34,7 @@ public:
 
     CreateVirtualMFADeviceResponsePrivate(CreateVirtualMFADeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateVirtualMFADeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateVirtualMFADeviceResponse)

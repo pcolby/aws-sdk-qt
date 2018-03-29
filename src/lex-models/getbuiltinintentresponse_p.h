@@ -34,7 +34,7 @@ public:
 
     GetBuiltinIntentResponsePrivate(GetBuiltinIntentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetBuiltinIntentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetBuiltinIntentResponse)

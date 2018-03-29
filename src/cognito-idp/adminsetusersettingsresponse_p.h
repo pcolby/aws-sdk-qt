@@ -34,7 +34,7 @@ public:
 
     AdminSetUserSettingsResponsePrivate(AdminSetUserSettingsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminSetUserSettingsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminSetUserSettingsResponse)

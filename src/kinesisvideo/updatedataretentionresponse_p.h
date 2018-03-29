@@ -34,7 +34,7 @@ public:
 
     UpdateDataRetentionResponsePrivate(UpdateDataRetentionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateDataRetentionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateDataRetentionResponse)

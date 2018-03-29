@@ -34,7 +34,7 @@ public:
 
     GetIndexingConfigurationResponsePrivate(GetIndexingConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIndexingConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIndexingConfigurationResponse)

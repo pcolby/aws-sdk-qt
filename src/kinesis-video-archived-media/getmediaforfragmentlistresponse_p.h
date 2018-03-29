@@ -34,7 +34,7 @@ public:
 
     GetMediaForFragmentListResponsePrivate(GetMediaForFragmentListResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetMediaForFragmentListResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetMediaForFragmentListResponse)

@@ -34,7 +34,7 @@ public:
 
     DescribeSnapshotScheduleResponsePrivate(DescribeSnapshotScheduleResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSnapshotScheduleResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSnapshotScheduleResponse)

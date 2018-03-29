@@ -34,7 +34,7 @@ public:
 
     DeleteApplicationReferenceDataSourceResponsePrivate(DeleteApplicationReferenceDataSourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteApplicationReferenceDataSourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteApplicationReferenceDataSourceResponse)

@@ -34,7 +34,7 @@ public:
 
     GetVpcLinkResponsePrivate(GetVpcLinkResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetVpcLinkResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetVpcLinkResponse)

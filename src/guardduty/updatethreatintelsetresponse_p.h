@@ -34,7 +34,7 @@ public:
 
     UpdateThreatIntelSetResponsePrivate(UpdateThreatIntelSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateThreatIntelSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateThreatIntelSetResponse)

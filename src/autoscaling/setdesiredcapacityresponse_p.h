@@ -34,7 +34,7 @@ public:
 
     SetDesiredCapacityResponsePrivate(SetDesiredCapacityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSetDesiredCapacityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SetDesiredCapacityResponse)

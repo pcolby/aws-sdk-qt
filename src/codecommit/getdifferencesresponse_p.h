@@ -34,7 +34,7 @@ public:
 
     GetDifferencesResponsePrivate(GetDifferencesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDifferencesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDifferencesResponse)

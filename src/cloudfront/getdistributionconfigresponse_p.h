@@ -34,7 +34,7 @@ public:
 
     GetDistributionConfigResponsePrivate(GetDistributionConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDistributionConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDistributionConfigResponse)

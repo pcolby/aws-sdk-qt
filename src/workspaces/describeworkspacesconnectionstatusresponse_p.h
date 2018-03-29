@@ -34,7 +34,7 @@ public:
 
     DescribeWorkspacesConnectionStatusResponsePrivate(DescribeWorkspacesConnectionStatusResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeWorkspacesConnectionStatusResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeWorkspacesConnectionStatusResponse)

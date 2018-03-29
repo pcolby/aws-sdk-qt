@@ -34,7 +34,7 @@ public:
 
     CreateDBClusterResponsePrivate(CreateDBClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateDBClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateDBClusterResponse)

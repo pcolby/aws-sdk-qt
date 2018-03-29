@@ -34,7 +34,7 @@ public:
 
     UpdateRuntimeConfigurationResponsePrivate(UpdateRuntimeConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateRuntimeConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateRuntimeConfigurationResponse)

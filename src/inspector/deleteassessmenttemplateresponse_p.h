@@ -34,7 +34,7 @@ public:
 
     DeleteAssessmentTemplateResponsePrivate(DeleteAssessmentTemplateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAssessmentTemplateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAssessmentTemplateResponse)

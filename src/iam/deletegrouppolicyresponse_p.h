@@ -34,7 +34,7 @@ public:
 
     DeleteGroupPolicyResponsePrivate(DeleteGroupPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteGroupPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteGroupPolicyResponse)

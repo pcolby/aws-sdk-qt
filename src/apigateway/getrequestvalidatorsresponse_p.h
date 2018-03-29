@@ -34,7 +34,7 @@ public:
 
     GetRequestValidatorsResponsePrivate(GetRequestValidatorsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRequestValidatorsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRequestValidatorsResponse)

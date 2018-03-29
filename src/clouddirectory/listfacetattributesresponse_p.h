@@ -34,7 +34,7 @@ public:
 
     ListFacetAttributesResponsePrivate(ListFacetAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListFacetAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListFacetAttributesResponse)

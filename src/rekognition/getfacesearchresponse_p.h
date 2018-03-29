@@ -34,7 +34,7 @@ public:
 
     GetFaceSearchResponsePrivate(GetFaceSearchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetFaceSearchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetFaceSearchResponse)

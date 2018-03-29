@@ -34,7 +34,7 @@ public:
 
     DescribeMovingAddressesResponsePrivate(DescribeMovingAddressesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeMovingAddressesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeMovingAddressesResponse)

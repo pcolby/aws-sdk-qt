@@ -34,7 +34,7 @@ public:
 
     GetIdentityVerificationAttributesResponsePrivate(GetIdentityVerificationAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIdentityVerificationAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIdentityVerificationAttributesResponse)

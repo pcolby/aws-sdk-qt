@@ -34,7 +34,7 @@ public:
 
     CreateApiKeyResponsePrivate(CreateApiKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateApiKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateApiKeyResponse)

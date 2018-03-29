@@ -34,7 +34,7 @@ public:
 
     UpdateIdentityProviderResponsePrivate(UpdateIdentityProviderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateIdentityProviderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateIdentityProviderResponse)

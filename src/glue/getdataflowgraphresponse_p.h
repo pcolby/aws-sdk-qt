@@ -34,7 +34,7 @@ public:
 
     GetDataflowGraphResponsePrivate(GetDataflowGraphResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetDataflowGraphResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetDataflowGraphResponse)

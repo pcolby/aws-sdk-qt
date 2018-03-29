@@ -34,7 +34,7 @@ public:
 
     ResetPasswordResponsePrivate(ResetPasswordResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseResetPasswordResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ResetPasswordResponse)

@@ -34,7 +34,7 @@ public:
 
     PurchaseReservedCacheNodesOfferingResponsePrivate(PurchaseReservedCacheNodesOfferingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurchaseReservedCacheNodesOfferingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurchaseReservedCacheNodesOfferingResponse)

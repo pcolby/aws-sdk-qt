@@ -34,7 +34,7 @@ public:
 
     DeleteChangeSetResponsePrivate(DeleteChangeSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteChangeSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteChangeSetResponse)

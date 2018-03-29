@@ -34,7 +34,7 @@ public:
 
     PutBucketAclResponsePrivate(PutBucketAclResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutBucketAclResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutBucketAclResponse)

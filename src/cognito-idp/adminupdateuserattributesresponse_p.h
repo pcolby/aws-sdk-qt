@@ -34,7 +34,7 @@ public:
 
     AdminUpdateUserAttributesResponsePrivate(AdminUpdateUserAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAdminUpdateUserAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AdminUpdateUserAttributesResponse)

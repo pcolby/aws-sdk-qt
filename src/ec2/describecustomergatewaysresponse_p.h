@@ -34,7 +34,7 @@ public:
 
     DescribeCustomerGatewaysResponsePrivate(DescribeCustomerGatewaysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeCustomerGatewaysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeCustomerGatewaysResponse)

@@ -34,7 +34,7 @@ public:
 
     ReEncryptResponsePrivate(ReEncryptResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReEncryptResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReEncryptResponse)

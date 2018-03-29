@@ -34,7 +34,7 @@ public:
 
     DescribeAccountResponsePrivate(DescribeAccountResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAccountResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAccountResponse)

@@ -34,7 +34,7 @@ public:
 
     BatchDetectKeyPhrasesResponsePrivate(BatchDetectKeyPhrasesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDetectKeyPhrasesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDetectKeyPhrasesResponse)

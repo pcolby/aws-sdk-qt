@@ -34,7 +34,7 @@ public:
 
     GetReplicationJobsResponsePrivate(GetReplicationJobsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetReplicationJobsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetReplicationJobsResponse)

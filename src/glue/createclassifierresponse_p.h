@@ -34,7 +34,7 @@ public:
 
     CreateClassifierResponsePrivate(CreateClassifierResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateClassifierResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateClassifierResponse)

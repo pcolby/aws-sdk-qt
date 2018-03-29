@@ -34,7 +34,7 @@ public:
 
     DescribeNetworkInterfacePermissionsResponsePrivate(DescribeNetworkInterfacePermissionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeNetworkInterfacePermissionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeNetworkInterfacePermissionsResponse)

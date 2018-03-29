@@ -34,7 +34,7 @@ public:
 
     SubscribeResponsePrivate(SubscribeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSubscribeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SubscribeResponse)

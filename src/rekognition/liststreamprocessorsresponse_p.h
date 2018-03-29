@@ -34,7 +34,7 @@ public:
 
     ListStreamProcessorsResponsePrivate(ListStreamProcessorsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListStreamProcessorsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListStreamProcessorsResponse)

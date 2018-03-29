@@ -34,7 +34,7 @@ public:
 
     StartImageBuilderResponsePrivate(StartImageBuilderResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartImageBuilderResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartImageBuilderResponse)

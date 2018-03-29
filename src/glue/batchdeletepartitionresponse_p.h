@@ -34,7 +34,7 @@ public:
 
     BatchDeletePartitionResponsePrivate(BatchDeletePartitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseBatchDeletePartitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(BatchDeletePartitionResponse)

@@ -34,7 +34,7 @@ public:
 
     ListAuthorizersResponsePrivate(ListAuthorizersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListAuthorizersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListAuthorizersResponse)

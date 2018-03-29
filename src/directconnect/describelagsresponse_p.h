@@ -34,7 +34,7 @@ public:
 
     DescribeLagsResponsePrivate(DescribeLagsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeLagsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeLagsResponse)

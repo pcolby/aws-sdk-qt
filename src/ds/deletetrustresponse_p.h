@@ -34,7 +34,7 @@ public:
 
     DeleteTrustResponsePrivate(DeleteTrustResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteTrustResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteTrustResponse)

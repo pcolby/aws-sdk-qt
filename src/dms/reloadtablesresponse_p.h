@@ -34,7 +34,7 @@ public:
 
     ReloadTablesResponsePrivate(ReloadTablesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseReloadTablesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ReloadTablesResponse)

@@ -34,7 +34,7 @@ public:
 
     ValidatePipelineDefinitionResponsePrivate(ValidatePipelineDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseValidatePipelineDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ValidatePipelineDefinitionResponse)

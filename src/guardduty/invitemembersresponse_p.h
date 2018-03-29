@@ -34,7 +34,7 @@ public:
 
     InviteMembersResponsePrivate(InviteMembersResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseInviteMembersResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(InviteMembersResponse)

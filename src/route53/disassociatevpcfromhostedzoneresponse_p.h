@@ -34,7 +34,7 @@ public:
 
     DisassociateVPCFromHostedZoneResponsePrivate(DisassociateVPCFromHostedZoneResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateVPCFromHostedZoneResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateVPCFromHostedZoneResponse)

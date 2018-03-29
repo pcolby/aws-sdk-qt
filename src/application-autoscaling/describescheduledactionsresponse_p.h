@@ -34,7 +34,7 @@ public:
 
     DescribeScheduledActionsResponsePrivate(DescribeScheduledActionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeScheduledActionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeScheduledActionsResponse)

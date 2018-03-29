@@ -34,7 +34,7 @@ public:
 
     DeleteFunctionConcurrencyResponsePrivate(DeleteFunctionConcurrencyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteFunctionConcurrencyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteFunctionConcurrencyResponse)

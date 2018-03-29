@@ -34,7 +34,7 @@ public:
 
     DescribeSecurityGroupReferencesResponsePrivate(DescribeSecurityGroupReferencesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSecurityGroupReferencesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSecurityGroupReferencesResponse)

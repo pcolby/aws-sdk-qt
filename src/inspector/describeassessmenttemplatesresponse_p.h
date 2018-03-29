@@ -34,7 +34,7 @@ public:
 
     DescribeAssessmentTemplatesResponsePrivate(DescribeAssessmentTemplatesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeAssessmentTemplatesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeAssessmentTemplatesResponse)

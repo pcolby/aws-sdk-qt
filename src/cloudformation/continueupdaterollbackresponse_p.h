@@ -34,7 +34,7 @@ public:
 
     ContinueUpdateRollbackResponsePrivate(ContinueUpdateRollbackResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseContinueUpdateRollbackResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ContinueUpdateRollbackResponse)

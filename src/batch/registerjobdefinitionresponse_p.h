@@ -34,7 +34,7 @@ public:
 
     RegisterJobDefinitionResponsePrivate(RegisterJobDefinitionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterJobDefinitionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterJobDefinitionResponse)

@@ -34,7 +34,7 @@ public:
 
     ListBucketInventoryConfigurationsResponsePrivate(ListBucketInventoryConfigurationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListBucketInventoryConfigurationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListBucketInventoryConfigurationsResponse)

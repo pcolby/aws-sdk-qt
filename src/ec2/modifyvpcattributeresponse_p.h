@@ -34,7 +34,7 @@ public:
 
     ModifyVpcAttributeResponsePrivate(ModifyVpcAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseModifyVpcAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ModifyVpcAttributeResponse)

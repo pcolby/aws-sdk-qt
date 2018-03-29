@@ -34,7 +34,7 @@ public:
 
     GetFacetResponsePrivate(GetFacetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetFacetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetFacetResponse)

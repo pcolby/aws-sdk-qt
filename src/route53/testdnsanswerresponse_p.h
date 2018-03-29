@@ -34,7 +34,7 @@ public:
 
     TestDNSAnswerResponsePrivate(TestDNSAnswerResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTestDNSAnswerResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TestDNSAnswerResponse)

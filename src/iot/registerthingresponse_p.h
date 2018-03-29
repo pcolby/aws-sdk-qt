@@ -34,7 +34,7 @@ public:
 
     RegisterThingResponsePrivate(RegisterThingResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRegisterThingResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RegisterThingResponse)

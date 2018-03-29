@@ -34,7 +34,7 @@ public:
 
     DeleteInvitationsResponsePrivate(DeleteInvitationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteInvitationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteInvitationsResponse)

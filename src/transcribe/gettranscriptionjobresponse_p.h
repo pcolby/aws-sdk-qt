@@ -34,7 +34,7 @@ public:
 
     GetTranscriptionJobResponsePrivate(GetTranscriptionJobResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetTranscriptionJobResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetTranscriptionJobResponse)

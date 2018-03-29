@@ -34,7 +34,7 @@ public:
 
     DisassociateDelegateFromResourceResponsePrivate(DisassociateDelegateFromResourceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisassociateDelegateFromResourceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisassociateDelegateFromResourceResponse)

@@ -34,7 +34,7 @@ public:
 
     ListWorkerBlocksResponsePrivate(ListWorkerBlocksResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListWorkerBlocksResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListWorkerBlocksResponse)

@@ -34,7 +34,7 @@ public:
 
     DeleteVirtualMFADeviceResponsePrivate(DeleteVirtualMFADeviceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteVirtualMFADeviceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteVirtualMFADeviceResponse)

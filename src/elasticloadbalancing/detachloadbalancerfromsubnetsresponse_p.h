@@ -34,7 +34,7 @@ public:
 
     DetachLoadBalancerFromSubnetsResponsePrivate(DetachLoadBalancerFromSubnetsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetachLoadBalancerFromSubnetsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetachLoadBalancerFromSubnetsResponse)

@@ -34,7 +34,7 @@ public:
 
     ListCuratedEnvironmentImagesResponsePrivate(ListCuratedEnvironmentImagesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListCuratedEnvironmentImagesResponse)

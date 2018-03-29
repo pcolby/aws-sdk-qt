@@ -34,7 +34,7 @@ public:
 
     ListVaultsResponsePrivate(ListVaultsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListVaultsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListVaultsResponse)

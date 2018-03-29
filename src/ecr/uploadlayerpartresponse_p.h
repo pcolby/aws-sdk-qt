@@ -34,7 +34,7 @@ public:
 
     UploadLayerPartResponsePrivate(UploadLayerPartResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUploadLayerPartResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UploadLayerPartResponse)

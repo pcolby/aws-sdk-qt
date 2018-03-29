@@ -34,7 +34,7 @@ public:
 
     CreateProductResponsePrivate(CreateProductResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateProductResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateProductResponse)

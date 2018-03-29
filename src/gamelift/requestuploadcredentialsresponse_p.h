@@ -34,7 +34,7 @@ public:
 
     RequestUploadCredentialsResponsePrivate(RequestUploadCredentialsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRequestUploadCredentialsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RequestUploadCredentialsResponse)

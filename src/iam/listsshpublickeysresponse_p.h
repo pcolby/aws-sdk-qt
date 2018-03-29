@@ -34,7 +34,7 @@ public:
 
     ListSSHPublicKeysResponsePrivate(ListSSHPublicKeysResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListSSHPublicKeysResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListSSHPublicKeysResponse)

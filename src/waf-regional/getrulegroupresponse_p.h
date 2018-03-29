@@ -34,7 +34,7 @@ public:
 
     GetRuleGroupResponsePrivate(GetRuleGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetRuleGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetRuleGroupResponse)

@@ -34,7 +34,7 @@ public:
 
     CreateTrafficPolicyInstanceResponsePrivate(CreateTrafficPolicyInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateTrafficPolicyInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateTrafficPolicyInstanceResponse)

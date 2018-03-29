@@ -34,7 +34,7 @@ public:
 
     UnmonitorInstancesResponsePrivate(UnmonitorInstancesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUnmonitorInstancesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UnmonitorInstancesResponse)

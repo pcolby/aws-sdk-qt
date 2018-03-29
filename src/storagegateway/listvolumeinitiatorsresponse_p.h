@@ -34,7 +34,7 @@ public:
 
     ListVolumeInitiatorsResponsePrivate(ListVolumeInitiatorsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListVolumeInitiatorsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListVolumeInitiatorsResponse)

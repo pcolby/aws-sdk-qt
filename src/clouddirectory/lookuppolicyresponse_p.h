@@ -34,7 +34,7 @@ public:
 
     LookupPolicyResponsePrivate(LookupPolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseLookupPolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(LookupPolicyResponse)

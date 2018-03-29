@@ -34,7 +34,7 @@ public:
 
     DeleteDomainNameResponsePrivate(DeleteDomainNameResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteDomainNameResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteDomainNameResponse)

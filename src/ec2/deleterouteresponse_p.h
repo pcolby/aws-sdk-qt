@@ -34,7 +34,7 @@ public:
 
     DeleteRouteResponsePrivate(DeleteRouteResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRouteResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRouteResponse)

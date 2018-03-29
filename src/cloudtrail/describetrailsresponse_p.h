@@ -34,7 +34,7 @@ public:
 
     DescribeTrailsResponsePrivate(DescribeTrailsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeTrailsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeTrailsResponse)

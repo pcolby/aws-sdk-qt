@@ -34,7 +34,7 @@ public:
 
     ListFacetNamesResponsePrivate(ListFacetNamesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListFacetNamesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListFacetNamesResponse)

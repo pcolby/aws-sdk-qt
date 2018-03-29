@@ -34,7 +34,7 @@ public:
 
     DeleteReceiptRuleSetResponsePrivate(DeleteReceiptRuleSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReceiptRuleSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReceiptRuleSetResponse)

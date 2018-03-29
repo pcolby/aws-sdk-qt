@@ -34,7 +34,7 @@ public:
 
     AcceptMatchResponsePrivate(AcceptMatchResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAcceptMatchResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AcceptMatchResponse)

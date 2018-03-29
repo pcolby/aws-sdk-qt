@@ -34,7 +34,7 @@ public:
 
     SubscribeToDatasetResponsePrivate(SubscribeToDatasetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseSubscribeToDatasetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(SubscribeToDatasetResponse)

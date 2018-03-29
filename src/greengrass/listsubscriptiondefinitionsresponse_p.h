@@ -34,7 +34,7 @@ public:
 
     ListSubscriptionDefinitionsResponsePrivate(ListSubscriptionDefinitionsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseListSubscriptionDefinitionsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(ListSubscriptionDefinitionsResponse)

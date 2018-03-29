@@ -34,7 +34,7 @@ public:
 
     DeleteNamespaceResponsePrivate(DeleteNamespaceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteNamespaceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteNamespaceResponse)

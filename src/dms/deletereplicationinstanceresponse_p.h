@@ -34,7 +34,7 @@ public:
 
     DeleteReplicationInstanceResponsePrivate(DeleteReplicationInstanceResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReplicationInstanceResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReplicationInstanceResponse)

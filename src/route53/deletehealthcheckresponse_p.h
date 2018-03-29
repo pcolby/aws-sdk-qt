@@ -34,7 +34,7 @@ public:
 
     DeleteHealthCheckResponsePrivate(DeleteHealthCheckResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteHealthCheckResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteHealthCheckResponse)

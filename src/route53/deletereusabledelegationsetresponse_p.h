@@ -34,7 +34,7 @@ public:
 
     DeleteReusableDelegationSetResponsePrivate(DeleteReusableDelegationSetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteReusableDelegationSetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteReusableDelegationSetResponse)

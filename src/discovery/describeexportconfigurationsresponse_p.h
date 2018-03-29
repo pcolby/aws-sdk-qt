@@ -34,7 +34,7 @@ public:
 
     DescribeExportConfigurationsResponsePrivate(DescribeExportConfigurationsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeExportConfigurationsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeExportConfigurationsResponse)

@@ -34,7 +34,7 @@ public:
 
     RebootCacheClusterResponsePrivate(RebootCacheClusterResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRebootCacheClusterResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RebootCacheClusterResponse)

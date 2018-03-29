@@ -34,7 +34,7 @@ public:
 
     StartSchemaExtensionResponsePrivate(StartSchemaExtensionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseStartSchemaExtensionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(StartSchemaExtensionResponse)

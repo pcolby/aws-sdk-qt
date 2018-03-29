@@ -34,7 +34,7 @@ public:
 
     DescribeElasticsearchDomainResponsePrivate(DescribeElasticsearchDomainResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeElasticsearchDomainResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeElasticsearchDomainResponse)

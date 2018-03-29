@@ -34,7 +34,7 @@ public:
 
     DisablePolicyTypeResponsePrivate(DisablePolicyTypeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDisablePolicyTypeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DisablePolicyTypeResponse)

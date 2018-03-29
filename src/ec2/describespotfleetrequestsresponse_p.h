@@ -34,7 +34,7 @@ public:
 
     DescribeSpotFleetRequestsResponsePrivate(DescribeSpotFleetRequestsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribeSpotFleetRequestsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribeSpotFleetRequestsResponse)

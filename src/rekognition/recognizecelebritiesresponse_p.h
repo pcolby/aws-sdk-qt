@@ -34,7 +34,7 @@ public:
 
     RecognizeCelebritiesResponsePrivate(RecognizeCelebritiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRecognizeCelebritiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RecognizeCelebritiesResponse)

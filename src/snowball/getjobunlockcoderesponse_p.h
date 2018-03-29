@@ -34,7 +34,7 @@ public:
 
     GetJobUnlockCodeResponsePrivate(GetJobUnlockCodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetJobUnlockCodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetJobUnlockCodeResponse)

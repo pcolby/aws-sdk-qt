@@ -34,7 +34,7 @@ public:
 
     GetInventorySchemaResponsePrivate(GetInventorySchemaResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetInventorySchemaResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetInventorySchemaResponse)

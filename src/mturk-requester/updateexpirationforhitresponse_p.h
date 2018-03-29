@@ -34,7 +34,7 @@ public:
 
     UpdateExpirationForHITResponsePrivate(UpdateExpirationForHITResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateExpirationForHITResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateExpirationForHITResponse)

@@ -34,7 +34,7 @@ public:
 
     GetFolderPathResponsePrivate(GetFolderPathResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetFolderPathResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetFolderPathResponse)

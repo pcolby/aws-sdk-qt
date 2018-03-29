@@ -34,7 +34,7 @@ public:
 
     DeleteQueryLoggingConfigResponsePrivate(DeleteQueryLoggingConfigResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteQueryLoggingConfigResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteQueryLoggingConfigResponse)

@@ -34,7 +34,7 @@ public:
 
     UpdateFleetAttributesResponsePrivate(UpdateFleetAttributesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateFleetAttributesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateFleetAttributesResponse)

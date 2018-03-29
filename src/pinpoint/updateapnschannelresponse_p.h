@@ -34,7 +34,7 @@ public:
 
     UpdateApnsChannelResponsePrivate(UpdateApnsChannelResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateApnsChannelResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateApnsChannelResponse)

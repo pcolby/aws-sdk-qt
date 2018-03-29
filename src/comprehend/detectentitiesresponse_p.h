@@ -34,7 +34,7 @@ public:
 
     DetectEntitiesResponsePrivate(DetectEntitiesResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDetectEntitiesResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DetectEntitiesResponse)

@@ -34,7 +34,7 @@ public:
 
     NotifyMigrationTaskStateResponsePrivate(NotifyMigrationTaskStateResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseNotifyMigrationTaskStateResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(NotifyMigrationTaskStateResponse)

@@ -34,7 +34,7 @@ public:
 
     CancelExportTaskResponsePrivate(CancelExportTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCancelExportTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CancelExportTaskResponse)

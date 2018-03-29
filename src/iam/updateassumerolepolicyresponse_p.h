@@ -34,7 +34,7 @@ public:
 
     UpdateAssumeRolePolicyResponsePrivate(UpdateAssumeRolePolicyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateAssumeRolePolicyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateAssumeRolePolicyResponse)

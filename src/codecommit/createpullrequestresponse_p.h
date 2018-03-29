@@ -34,7 +34,7 @@ public:
 
     CreatePullRequestResponsePrivate(CreatePullRequestResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreatePullRequestResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreatePullRequestResponse)

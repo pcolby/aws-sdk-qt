@@ -34,7 +34,7 @@ public:
 
     GetIdentityPoolConfigurationResponsePrivate(GetIdentityPoolConfigurationResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseGetIdentityPoolConfigurationResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(GetIdentityPoolConfigurationResponse)

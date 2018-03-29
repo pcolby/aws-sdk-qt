@@ -34,7 +34,7 @@ public:
 
     RunTaskResponsePrivate(RunTaskResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRunTaskResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RunTaskResponse)

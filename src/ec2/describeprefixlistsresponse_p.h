@@ -34,7 +34,7 @@ public:
 
     DescribePrefixListsResponsePrivate(DescribePrefixListsResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDescribePrefixListsResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DescribePrefixListsResponse)

@@ -34,7 +34,7 @@ public:
 
     TerminateEnvironmentResponsePrivate(TerminateEnvironmentResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseTerminateEnvironmentResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(TerminateEnvironmentResponse)

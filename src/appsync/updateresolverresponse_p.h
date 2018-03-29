@@ -34,7 +34,7 @@ public:
 
     UpdateResolverResponsePrivate(UpdateResolverResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseUpdateResolverResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(UpdateResolverResponse)

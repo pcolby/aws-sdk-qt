@@ -34,7 +34,7 @@ public:
 
     DeleteOptionGroupResponsePrivate(DeleteOptionGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteOptionGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteOptionGroupResponse)

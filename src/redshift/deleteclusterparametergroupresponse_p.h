@@ -34,7 +34,7 @@ public:
 
     DeleteClusterParameterGroupResponsePrivate(DeleteClusterParameterGroupResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteClusterParameterGroupResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteClusterParameterGroupResponse)

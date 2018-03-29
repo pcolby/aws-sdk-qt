@@ -34,7 +34,7 @@ public:
 
     AssociateKmsKeyResponsePrivate(AssociateKmsKeyResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseAssociateKmsKeyResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(AssociateKmsKeyResponse)

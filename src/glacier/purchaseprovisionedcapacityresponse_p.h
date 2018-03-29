@@ -34,7 +34,7 @@ public:
 
     PurchaseProvisionedCapacityResponsePrivate(PurchaseProvisionedCapacityResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePurchaseProvisionedCapacityResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PurchaseProvisionedCapacityResponse)

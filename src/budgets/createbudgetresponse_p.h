@@ -34,7 +34,7 @@ public:
 
     CreateBudgetResponsePrivate(CreateBudgetResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateBudgetResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateBudgetResponse)

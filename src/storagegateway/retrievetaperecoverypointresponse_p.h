@@ -34,7 +34,7 @@ public:
 
     RetrieveTapeRecoveryPointResponsePrivate(RetrieveTapeRecoveryPointResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseRetrieveTapeRecoveryPointResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(RetrieveTapeRecoveryPointResponse)

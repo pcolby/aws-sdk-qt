@@ -34,7 +34,7 @@ public:
 
     DeleteIntentVersionResponsePrivate(DeleteIntentVersionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteIntentVersionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteIntentVersionResponse)

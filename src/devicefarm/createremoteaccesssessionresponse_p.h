@@ -34,7 +34,7 @@ public:
 
     CreateRemoteAccessSessionResponsePrivate(CreateRemoteAccessSessionResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseCreateRemoteAccessSessionResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(CreateRemoteAccessSessionResponse)

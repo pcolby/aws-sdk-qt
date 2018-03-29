@@ -34,7 +34,7 @@ public:
 
     DeleteRegistrationCodeResponsePrivate(DeleteRegistrationCodeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteRegistrationCodeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteRegistrationCodeResponse)

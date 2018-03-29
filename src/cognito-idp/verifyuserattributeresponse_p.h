@@ -34,7 +34,7 @@ public:
 
     VerifyUserAttributeResponsePrivate(VerifyUserAttributeResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseVerifyUserAttributeResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(VerifyUserAttributeResponse)

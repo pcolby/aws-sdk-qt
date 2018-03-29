@@ -34,7 +34,7 @@ public:
 
     PutMetricDataResponsePrivate(PutMetricDataResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parsePutMetricDataResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(PutMetricDataResponse)

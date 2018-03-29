@@ -34,7 +34,7 @@ public:
 
     DeleteWebhookResponsePrivate(DeleteWebhookResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteWebhookResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteWebhookResponse)

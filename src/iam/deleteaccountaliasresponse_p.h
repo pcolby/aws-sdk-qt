@@ -34,7 +34,7 @@ public:
 
     DeleteAccountAliasResponsePrivate(DeleteAccountAliasResponse * const q);
 
-    void parseResponse(QXmlStreamReader &xml);
+    void parseDeleteAccountAliasResponse(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(DeleteAccountAliasResponse)
