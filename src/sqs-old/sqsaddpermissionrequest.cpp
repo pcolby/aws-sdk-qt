@@ -29,7 +29,8 @@
 #define LABEL                   QLatin1String("Label")
 #define QUEUE_URL               QLatin1String("QueueUrl")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsAddPermissionRequest
@@ -298,4 +299,5 @@ QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const
     return query;
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

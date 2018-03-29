@@ -30,7 +30,8 @@
 #include <QXmlStreamReader>
 #include <QVariant>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsEndpoint;
 
@@ -92,6 +93,7 @@ private:
     friend class TestAwsSignatureV4;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

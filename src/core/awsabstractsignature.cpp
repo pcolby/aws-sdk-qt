@@ -23,7 +23,8 @@
 #include <QDebug>
 #include <QDir>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsAbstractSignature
@@ -271,4 +272,5 @@ bool AwsAbstractSignaturePrivate::setQueryItem(QUrlQuery &query, const QString &
  * @return The AWS Signature version implemented by this class.
  */
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

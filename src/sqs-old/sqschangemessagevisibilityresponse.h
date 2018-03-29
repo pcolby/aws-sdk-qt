@@ -23,7 +23,8 @@
 #include "sqschangemessagevisibilityrequest.h"
 #include "sqsresponse.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsChangeMessageVisibilityResponsePrivate;
 
@@ -45,6 +46,7 @@ private:
     friend class TestSqsChangeMessageVisibilityResponse;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

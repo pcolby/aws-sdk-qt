@@ -22,7 +22,8 @@
 
 #include "sqsrequest.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsDeleteQueueRequestPrivate;
 
@@ -47,6 +48,7 @@ private:
     friend class TestSqsDeleteQueueRequest;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

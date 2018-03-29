@@ -28,7 +28,8 @@
 class QUrl;
 class QUrlQuery;
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
@@ -50,6 +51,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

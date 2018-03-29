@@ -23,7 +23,8 @@
 #include "sqsreceivemessagerequest.h"
 #include "sqsrequest_p.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsReceiveMessageRequest;
 
@@ -40,6 +41,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

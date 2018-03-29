@@ -24,7 +24,8 @@
 
 #define QUEUE_NAME_PREFIX QLatin1String("QueueNamePrefix")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsListQueuesRequest
@@ -146,4 +147,5 @@ SqsListQueuesRequestPrivate::SqsListQueuesRequestPrivate(
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

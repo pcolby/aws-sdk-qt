@@ -29,7 +29,8 @@
 #include <QUrl>
 #include <QUrlQuery>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsSignatureV4;
 
@@ -79,6 +80,7 @@ private:
     friend class TestAwsSignatureV4;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

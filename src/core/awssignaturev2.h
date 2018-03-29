@@ -25,7 +25,8 @@
 
 #include <QCryptographicHash>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsSignatureV2Private;
 
@@ -45,6 +46,7 @@ private:
     friend class TestAwsSignatureV2;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

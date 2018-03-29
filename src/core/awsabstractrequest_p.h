@@ -28,7 +28,8 @@
 class QByteArray;
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsAbstractRequest;
 class AwsAbstractResponse;
@@ -59,6 +60,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

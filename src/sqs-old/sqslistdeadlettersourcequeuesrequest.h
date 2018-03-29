@@ -22,7 +22,8 @@
 
 #include "sqsrequest.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsListDeadLetterSourceQueuesRequestPrivate;
 
@@ -47,6 +48,7 @@ private:
     friend class TestSqsListDeadLetterSourceQueuesRequest;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

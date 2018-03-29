@@ -23,7 +23,8 @@
 #include "sqslistqueuesrequest.h"
 #include "sqsresponse.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsListQueuesResponsePrivate;
 
@@ -47,6 +48,7 @@ private:
     friend class TestSqsListQueuesResponse;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

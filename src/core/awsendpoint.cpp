@@ -24,7 +24,8 @@
 #include <QFile>
 #include <QMutexLocker>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsEndpoint
@@ -698,4 +699,5 @@ void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
     }
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

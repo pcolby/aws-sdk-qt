@@ -22,7 +22,8 @@
 
 #include "awsabstractcredentials.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsBasicCredentialsPrivate;
 
@@ -54,6 +55,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

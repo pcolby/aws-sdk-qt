@@ -23,7 +23,8 @@
 #include "sqssendmessagebatchrequest.h"
 #include "sqsresponse.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsSendMessageBatchResponsePrivate;
 
@@ -47,6 +48,7 @@ private:
     friend class TestSqsSendMessageBatchResponse;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,8 @@
 
 #include "sqsrequest.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsChangeMessageVisibilityRequestPrivate;
 
@@ -53,6 +54,7 @@ private:
     friend class TestSqsChangeMessageVisibilityRequest;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

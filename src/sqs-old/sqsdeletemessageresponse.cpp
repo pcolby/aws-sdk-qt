@@ -24,7 +24,8 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsDeleteMessageResponse
@@ -144,4 +145,5 @@ void SqsDeleteMessageResponsePrivate::parseDeleteMessageResponse(QXmlStreamReade
     }
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

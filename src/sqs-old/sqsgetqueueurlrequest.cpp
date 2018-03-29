@@ -25,7 +25,8 @@
 #define QUEUE_NAME                 QLatin1String("QueueName")
 #define QUEUE_OWNER_AWS_ACCOUNT_ID QLatin1String("QueueOwnerAWSAccountId")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsGetQueueUrlRequest
@@ -180,4 +181,5 @@ SqsGetQueueUrlRequestPrivate::SqsGetQueueUrlRequestPrivate(
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

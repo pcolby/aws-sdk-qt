@@ -24,7 +24,8 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsPurgeQueueResponse
@@ -144,4 +145,5 @@ void SqsPurgeQueueResponsePrivate::parsePurgeQueueResponse(QXmlStreamReader &xml
     }
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

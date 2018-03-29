@@ -19,7 +19,8 @@
 
 #include "awsanonymouscredentials.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsAnonymousCredentials
@@ -53,4 +54,5 @@ QString AwsAnonymousCredentials::token() const
     return QString();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

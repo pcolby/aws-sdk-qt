@@ -22,7 +22,8 @@
 
 #include <QDebug>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsAbstractCredentials
@@ -237,4 +238,5 @@ AwsAbstractCredentialsPrivate::~AwsAbstractCredentialsPrivate()
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

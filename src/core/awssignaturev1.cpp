@@ -26,7 +26,8 @@
 #include <QNetworkRequest>
 #include <QUrl>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsSignatureV1
@@ -160,4 +161,5 @@ bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &pair1, co
     return (pair1.second.toLower() < pair2.second.toLower());
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

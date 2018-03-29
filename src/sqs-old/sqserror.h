@@ -28,7 +28,8 @@
 class QIODevice;
 class QXmlStreamReader;
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsErrorPrivate;
 
@@ -99,6 +100,7 @@ private:
 
 typedef QList<SqsError> SqsErrorList;
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

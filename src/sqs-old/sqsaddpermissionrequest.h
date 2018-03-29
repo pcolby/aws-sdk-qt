@@ -22,7 +22,8 @@
 
 #include "sqsrequest.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsAddPermissionRequestPrivate;
 
@@ -74,6 +75,7 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(SqsAddPermissionRequest::PermissibleActions)
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

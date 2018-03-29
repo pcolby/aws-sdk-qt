@@ -25,7 +25,8 @@
 #include <QNetworkRequest>
 #include <QUrl>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsSignatureV2
@@ -214,4 +215,5 @@ QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algo
     }
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

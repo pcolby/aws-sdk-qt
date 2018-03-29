@@ -20,7 +20,8 @@
 #include "awsbasiccredentials.h"
 #include "awsbasiccredentials_p.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsBasicCredentials
@@ -150,4 +151,5 @@ AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * con
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

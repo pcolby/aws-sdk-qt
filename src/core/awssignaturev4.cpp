@@ -25,7 +25,8 @@
 #include <QDebug>
 #include <QMessageAuthenticationCode>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsSignatureV4
@@ -384,4 +385,5 @@ QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &algorithmDesign
            QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

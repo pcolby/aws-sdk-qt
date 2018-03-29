@@ -24,7 +24,8 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsResponse
@@ -263,4 +264,5 @@ void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader &xml)
     }
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

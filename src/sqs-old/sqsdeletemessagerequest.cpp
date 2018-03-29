@@ -25,7 +25,8 @@
 #define QUEUE_URL      QLatin1String("QueueUrl")
 #define RECEIPT_HANDLE QLatin1String("ReceiptHandle")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsDeleteMessageRequest
@@ -173,4 +174,5 @@ SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

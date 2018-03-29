@@ -30,7 +30,8 @@
 #define RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS QLatin1String("ReceiveMessageWaitTimeSeconds")
 #define VISIBILITY_TIMEOUT                   QLatin1String("VisibilityTimeout")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsCreateQueueRequest
@@ -371,4 +372,5 @@ SqsCreateQueueRequestPrivate::SqsCreateQueueRequestPrivate(
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

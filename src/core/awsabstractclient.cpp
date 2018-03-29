@@ -28,7 +28,8 @@
 #include <QDebug>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsAbstractClient
@@ -364,4 +365,5 @@ AwsAbstractClientPrivate::~AwsAbstractClientPrivate()
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

@@ -23,7 +23,8 @@
 #include "sqsremovepermissionrequest.h"
 #include "sqsresponse.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsRemovePermissionResponsePrivate;
 
@@ -45,6 +46,7 @@ private:
     friend class TestSqsRemovePermissionResponse;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

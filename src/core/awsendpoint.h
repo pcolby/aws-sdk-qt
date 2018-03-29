@@ -26,7 +26,8 @@
 #include <QStringList>
 #include <QUrl>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsEndpointPrivate;
 
@@ -83,6 +84,7 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(AwsEndpoint::Transports)
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

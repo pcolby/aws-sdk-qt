@@ -28,7 +28,8 @@
 #include <QUrlQuery>
 #include <QXmlStreamReader>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsRequest
@@ -388,4 +389,5 @@ QString SqsRequestPrivate::toString(const SqsRequest::Action &action)
     return QString();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

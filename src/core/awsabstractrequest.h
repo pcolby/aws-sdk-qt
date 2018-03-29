@@ -29,7 +29,8 @@
 class QNetworkReply;
 class QNetworkRequest;
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsAbstractCredentials;
 class AwsAbstractRequestPrivate;
@@ -79,6 +80,7 @@ private:
     friend class TestAwsAbstractRequest;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,8 @@
 
 #define QUEUE_URL QLatin1String("QueueUrl")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsDeleteQueueRequest
@@ -146,4 +147,5 @@ SqsDeleteQueueRequestPrivate::SqsDeleteQueueRequestPrivate(
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

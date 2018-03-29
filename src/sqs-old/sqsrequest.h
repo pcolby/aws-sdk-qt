@@ -27,7 +27,8 @@
 
 class QNetworkRequest;
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class AwsAbstractClient;
 class SqsRequestPrivate;
@@ -93,6 +94,7 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(SqsRequest::Actions)
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,8 @@
 
 #include "sqserror.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class QTAWS_EXPORT SqsErrorPrivate {
 
@@ -51,6 +52,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

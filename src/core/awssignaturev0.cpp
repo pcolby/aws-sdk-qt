@@ -26,7 +26,8 @@
 #include <QNetworkRequest>
 #include <QUrl>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsSignatureV0
@@ -223,4 +224,5 @@ QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &query) const
                 (query.hasQueryItem(QLatin1String("Timestamp"))) ? "Timestamp" : "Expires"))).toUtf8();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

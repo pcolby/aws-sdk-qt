@@ -26,7 +26,8 @@
 #include <QVariantMap>
 #include <QXmlStreamReader>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsResponsePrivate;
 
@@ -58,6 +59,7 @@ private:
     friend class TestSqsResponse;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

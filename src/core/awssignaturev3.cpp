@@ -26,7 +26,8 @@
 #include <QMessageAuthenticationCode>
 #include <QUuid>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsSignatureV3
@@ -358,4 +359,5 @@ void AwsSignatureV3Private::setDateHeader(QNetworkRequest &request, const QDateT
     }
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

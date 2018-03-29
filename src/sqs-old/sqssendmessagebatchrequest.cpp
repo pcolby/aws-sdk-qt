@@ -22,7 +22,8 @@
 #include "sqssendmessagebatchresponse.h"
 #include "sqsrequest_p.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsSendMessageBatchRequest
@@ -128,4 +129,5 @@ SqsSendMessageBatchRequestPrivate::SqsSendMessageBatchRequestPrivate(
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

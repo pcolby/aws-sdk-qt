@@ -26,7 +26,8 @@
 #include <QFlags>
 #include <QStringList>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsRegionPrivate;
 
@@ -109,6 +110,7 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(AwsRegion::Regions)
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

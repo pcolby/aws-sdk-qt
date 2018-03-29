@@ -26,7 +26,8 @@
 #define RECEIPT_HANDLE     QLatin1String("ReceiptHandle")
 #define VISIBILITY_TIMEOUT QLatin1String("VisibilityTimeout")
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsChangeMessageVisibilityRequest
@@ -199,4 +200,5 @@ SqsChangeMessageVisibilityRequestPrivate::SqsChangeMessageVisibilityRequestPriva
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

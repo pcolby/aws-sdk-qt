@@ -26,7 +26,8 @@
 #include <QDebug>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsAbstractRequest
@@ -397,4 +398,5 @@ QNetworkReply *AwsAbstractRequestPrivate::put(QNetworkAccessManager &manager,
     return manager.put(request, q->data());
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

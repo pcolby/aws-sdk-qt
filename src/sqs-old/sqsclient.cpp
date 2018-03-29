@@ -61,7 +61,8 @@
 
 #define SQS_SERVICE_NAME QLatin1String("sqs") // As used in endpoints.xml
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 /**
  * @class  SqsClient
@@ -464,4 +465,5 @@ SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws

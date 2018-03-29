@@ -22,7 +22,8 @@
 
 #include <QDebug>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 /**
  * @class  AwsRegion
@@ -299,4 +300,5 @@ AwsRegionPrivate::AwsRegionPrivate(const int region, AwsRegion * const q)
 
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws

@@ -23,7 +23,8 @@
 #include "sqslistdeadlettersourcequeuesrequest.h"
 #include "sqsresponse.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace SqsOld {
 
 class SqsListDeadLetterSourceQueuesResponsePrivate;
 
@@ -47,6 +48,7 @@ private:
     friend class TestSqsListDeadLetterSourceQueuesResponse;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SqsOld
+} // namespace QtAws
 
 #endif

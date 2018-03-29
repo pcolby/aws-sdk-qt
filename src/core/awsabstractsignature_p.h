@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QUrlQuery>
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsAbstractSignature;
 
@@ -54,6 +55,7 @@ private:
     friend class TestAwsAbstractSignature;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif

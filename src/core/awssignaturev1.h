@@ -23,7 +23,8 @@
 #include "qtawsglobal.h"
 #include "awssignaturev0.h"
 
-QTAWS_BEGIN_NAMESPACE
+namespace QtAws {
+namespace Client {
 
 class AwsSignatureV1Private;
 
@@ -40,6 +41,7 @@ private:
     friend class TestAwsSignatureV1;
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Client
+} // namespace QtAws
 
 #endif
