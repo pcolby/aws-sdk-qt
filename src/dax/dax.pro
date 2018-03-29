@@ -24,10 +24,10 @@ HEADERS += \
     createsubnetgroupresponse_p.h \
     daxclient.h \
     daxclient_p.h \
-    daxclientrequest.h \
-    daxclientrequest_p.h \
-    daxclientresponse.h \
-    daxclientresponse_p.h \
+    daxrequest.h \
+    daxrequest_p.h \
+    daxresponse.h \
+    daxresponse_p.h \
     decreasereplicationfactorrequest.h \
     decreasereplicationfactorrequest_p.h \
     decreasereplicationfactorresponse.h \
@@ -109,8 +109,8 @@ SOURCES += \
     createsubnetgrouprequest.cpp \
     createsubnetgroupresponse.cpp \
     daxclient.cpp \
-    daxclientrequest.cpp \
-    daxclientresponse.cpp \
+    daxrequest.cpp \
+    daxresponse.cpp \
     decreasereplicationfactorrequest.cpp \
     decreasereplicationfactorresponse.cpp \
     deleteclusterrequest.cpp \

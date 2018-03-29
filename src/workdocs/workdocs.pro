@@ -172,10 +172,10 @@ HEADERS += \
     updateuserresponse_p.h \
     workdocsclient.h \
     workdocsclient_p.h \
-    workdocsclientrequest.h \
-    workdocsclientrequest_p.h \
-    workdocsclientresponse.h \
-    workdocsclientresponse_p.h \
+    workdocsrequest.h \
+    workdocsrequest_p.h \
+    workdocsresponse.h \
+    workdocsresponse_p.h \
 
 SOURCES += \
     abortdocumentversionuploadrequest.cpp \
@@ -259,7 +259,7 @@ SOURCES += \
     updateuserrequest.cpp \
     updateuserresponse.cpp \
     workdocsclient.cpp \
-    workdocsclientrequest.cpp \
-    workdocsclientresponse.cpp \
+    workdocsrequest.cpp \
+    workdocsresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

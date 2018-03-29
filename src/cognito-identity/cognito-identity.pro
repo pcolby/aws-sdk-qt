@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cognitoidentityclient.h \
     cognitoidentityclient_p.h \
-    cognitoidentityclientrequest.h \
-    cognitoidentityclientrequest_p.h \
-    cognitoidentityclientresponse.h \
-    cognitoidentityclientresponse_p.h \
+    cognitoidentityrequest.h \
+    cognitoidentityrequest_p.h \
+    cognitoidentityresponse.h \
+    cognitoidentityresponse_p.h \
     createidentitypoolrequest.h \
     createidentitypoolrequest_p.h \
     createidentitypoolresponse.h \
@@ -91,8 +91,8 @@ HEADERS += \
 
 SOURCES += \
     cognitoidentityclient.cpp \
-    cognitoidentityclientrequest.cpp \
-    cognitoidentityclientresponse.cpp \
+    cognitoidentityrequest.cpp \
+    cognitoidentityresponse.cpp \
     createidentitypoolrequest.cpp \
     createidentitypoolresponse.cpp \
     deleteidentitiesrequest.cpp \

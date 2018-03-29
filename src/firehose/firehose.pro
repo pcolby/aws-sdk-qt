@@ -24,10 +24,10 @@ HEADERS += \
     describedeliverystreamresponse_p.h \
     firehoseclient.h \
     firehoseclient_p.h \
-    firehoseclientrequest.h \
-    firehoseclientrequest_p.h \
-    firehoseclientresponse.h \
-    firehoseclientresponse_p.h \
+    firehoserequest.h \
+    firehoserequest_p.h \
+    firehoseresponse.h \
+    firehoseresponse_p.h \
     listdeliverystreamsrequest.h \
     listdeliverystreamsrequest_p.h \
     listdeliverystreamsresponse.h \
@@ -53,8 +53,8 @@ SOURCES += \
     describedeliverystreamrequest.cpp \
     describedeliverystreamresponse.cpp \
     firehoseclient.cpp \
-    firehoseclientrequest.cpp \
-    firehoseclientresponse.cpp \
+    firehoserequest.cpp \
+    firehoseresponse.cpp \
     listdeliverystreamsrequest.cpp \
     listdeliverystreamsresponse.cpp \
     putrecordbatchrequest.cpp \

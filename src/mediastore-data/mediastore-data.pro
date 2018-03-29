@@ -28,10 +28,10 @@ HEADERS += \
     listitemsresponse_p.h \
     mediastoredataclient.h \
     mediastoredataclient_p.h \
-    mediastoredataclientrequest.h \
-    mediastoredataclientrequest_p.h \
-    mediastoredataclientresponse.h \
-    mediastoredataclientresponse_p.h \
+    mediastoredatarequest.h \
+    mediastoredatarequest_p.h \
+    mediastoredataresponse.h \
+    mediastoredataresponse_p.h \
     putobjectrequest.h \
     putobjectrequest_p.h \
     putobjectresponse.h \
@@ -47,8 +47,8 @@ SOURCES += \
     listitemsrequest.cpp \
     listitemsresponse.cpp \
     mediastoredataclient.cpp \
-    mediastoredataclientrequest.cpp \
-    mediastoredataclientresponse.cpp \
+    mediastoredatarequest.cpp \
+    mediastoredataresponse.cpp \
     putobjectrequest.cpp \
     putobjectresponse.cpp \
 

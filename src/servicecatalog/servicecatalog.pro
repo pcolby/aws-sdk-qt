@@ -224,10 +224,10 @@ HEADERS += \
     searchprovisionedproductsresponse_p.h \
     servicecatalogclient.h \
     servicecatalogclient_p.h \
-    servicecatalogclientrequest.h \
-    servicecatalogclientrequest_p.h \
-    servicecatalogclientresponse.h \
-    servicecatalogclientresponse_p.h \
+    servicecatalogrequest.h \
+    servicecatalogrequest_p.h \
+    servicecatalogresponse.h \
+    servicecatalogresponse_p.h \
     terminateprovisionedproductrequest.h \
     terminateprovisionedproductrequest_p.h \
     terminateprovisionedproductresponse.h \
@@ -365,8 +365,8 @@ SOURCES += \
     searchprovisionedproductsrequest.cpp \
     searchprovisionedproductsresponse.cpp \
     servicecatalogclient.cpp \
-    servicecatalogclientrequest.cpp \
-    servicecatalogclientresponse.cpp \
+    servicecatalogrequest.cpp \
+    servicecatalogresponse.cpp \
     terminateprovisionedproductrequest.cpp \
     terminateprovisionedproductresponse.cpp \
     updateconstraintrequest.cpp \

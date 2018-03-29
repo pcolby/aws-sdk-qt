@@ -20,10 +20,10 @@ HEADERS += \
     acknowledgethirdpartyjobresponse_p.h \
     codepipelineclient.h \
     codepipelineclient_p.h \
-    codepipelineclientrequest.h \
-    codepipelineclientrequest_p.h \
-    codepipelineclientresponse.h \
-    codepipelineclientresponse_p.h \
+    codepipelinerequest.h \
+    codepipelinerequest_p.h \
+    codepipelineresponse.h \
+    codepipelineresponse_p.h \
     createcustomactiontyperequest.h \
     createcustomactiontyperequest_p.h \
     createcustomactiontyperesponse.h \
@@ -131,8 +131,8 @@ SOURCES += \
     acknowledgethirdpartyjobrequest.cpp \
     acknowledgethirdpartyjobresponse.cpp \
     codepipelineclient.cpp \
-    codepipelineclientrequest.cpp \
-    codepipelineclientresponse.cpp \
+    codepipelinerequest.cpp \
+    codepipelineresponse.cpp \
     createcustomactiontyperequest.cpp \
     createcustomactiontyperesponse.cpp \
     createpipelinerequest.cpp \

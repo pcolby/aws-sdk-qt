@@ -28,10 +28,10 @@ HEADERS += \
     getstatusresponse_p.h \
     importexportclient.h \
     importexportclient_p.h \
-    importexportclientrequest.h \
-    importexportclientrequest_p.h \
-    importexportclientresponse.h \
-    importexportclientresponse_p.h \
+    importexportrequest.h \
+    importexportrequest_p.h \
+    importexportresponse.h \
+    importexportresponse_p.h \
     listjobsrequest.h \
     listjobsrequest_p.h \
     listjobsresponse.h \
@@ -51,8 +51,8 @@ SOURCES += \
     getstatusrequest.cpp \
     getstatusresponse.cpp \
     importexportclient.cpp \
-    importexportclientrequest.cpp \
-    importexportclientresponse.cpp \
+    importexportrequest.cpp \
+    importexportresponse.cpp \
     listjobsrequest.cpp \
     listjobsresponse.cpp \
     updatejobrequest.cpp \

@@ -16,10 +16,10 @@ HEADERS += \
     generatedatasetresponse_p.h \
     marketplacecommerceanalyticsclient.h \
     marketplacecommerceanalyticsclient_p.h \
-    marketplacecommerceanalyticsclientrequest.h \
-    marketplacecommerceanalyticsclientrequest_p.h \
-    marketplacecommerceanalyticsclientresponse.h \
-    marketplacecommerceanalyticsclientresponse_p.h \
+    marketplacecommerceanalyticsrequest.h \
+    marketplacecommerceanalyticsrequest_p.h \
+    marketplacecommerceanalyticsresponse.h \
+    marketplacecommerceanalyticsresponse_p.h \
     startsupportdataexportrequest.h \
     startsupportdataexportrequest_p.h \
     startsupportdataexportresponse.h \
@@ -29,8 +29,8 @@ SOURCES += \
     generatedatasetrequest.cpp \
     generatedatasetresponse.cpp \
     marketplacecommerceanalyticsclient.cpp \
-    marketplacecommerceanalyticsclientrequest.cpp \
-    marketplacecommerceanalyticsclientresponse.cpp \
+    marketplacecommerceanalyticsrequest.cpp \
+    marketplacecommerceanalyticsresponse.cpp \
     startsupportdataexportrequest.cpp \
     startsupportdataexportresponse.cpp \
 

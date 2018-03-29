@@ -40,10 +40,10 @@ HEADERS += \
     batchgetonpremisesinstancesresponse_p.h \
     codedeployclient.h \
     codedeployclient_p.h \
-    codedeployclientrequest.h \
-    codedeployclientrequest_p.h \
-    codedeployclientresponse.h \
-    codedeployclientresponse_p.h \
+    codedeployrequest.h \
+    codedeployrequest_p.h \
+    codedeployresponse.h \
+    codedeployresponse_p.h \
     continuedeploymentrequest.h \
     continuedeploymentrequest_p.h \
     continuedeploymentresponse.h \
@@ -193,8 +193,8 @@ SOURCES += \
     batchgetonpremisesinstancesrequest.cpp \
     batchgetonpremisesinstancesresponse.cpp \
     codedeployclient.cpp \
-    codedeployclientrequest.cpp \
-    codedeployclientresponse.cpp \
+    codedeployrequest.cpp \
+    codedeployresponse.cpp \
     continuedeploymentrequest.cpp \
     continuedeploymentresponse.cpp \
     createapplicationrequest.cpp \

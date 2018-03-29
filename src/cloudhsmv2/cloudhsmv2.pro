@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cloudhsmv2client.h \
     cloudhsmv2client_p.h \
-    cloudhsmv2clientrequest.h \
-    cloudhsmv2clientrequest_p.h \
-    cloudhsmv2clientresponse.h \
-    cloudhsmv2clientresponse_p.h \
+    cloudhsmv2request.h \
+    cloudhsmv2request_p.h \
+    cloudhsmv2response.h \
+    cloudhsmv2response_p.h \
     createclusterrequest.h \
     createclusterrequest_p.h \
     createclusterresponse.h \
@@ -59,8 +59,8 @@ HEADERS += \
 
 SOURCES += \
     cloudhsmv2client.cpp \
-    cloudhsmv2clientrequest.cpp \
-    cloudhsmv2clientresponse.cpp \
+    cloudhsmv2request.cpp \
+    cloudhsmv2response.cpp \
     createclusterrequest.cpp \
     createclusterresponse.cpp \
     createhsmrequest.cpp \

@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     lexruntimeserviceclient.h \
     lexruntimeserviceclient_p.h \
-    lexruntimeserviceclientrequest.h \
-    lexruntimeserviceclientrequest_p.h \
-    lexruntimeserviceclientresponse.h \
-    lexruntimeserviceclientresponse_p.h \
+    lexruntimeservicerequest.h \
+    lexruntimeservicerequest_p.h \
+    lexruntimeserviceresponse.h \
+    lexruntimeserviceresponse_p.h \
     postcontentrequest.h \
     postcontentrequest_p.h \
     postcontentresponse.h \
@@ -27,8 +27,8 @@ HEADERS += \
 
 SOURCES += \
     lexruntimeserviceclient.cpp \
-    lexruntimeserviceclientrequest.cpp \
-    lexruntimeserviceclientresponse.cpp \
+    lexruntimeservicerequest.cpp \
+    lexruntimeserviceresponse.cpp \
     postcontentrequest.cpp \
     postcontentresponse.cpp \
     posttextrequest.cpp \

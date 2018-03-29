@@ -104,10 +104,10 @@ HEADERS += \
     getthreatintelsetresponse_p.h \
     guarddutyclient.h \
     guarddutyclient_p.h \
-    guarddutyclientrequest.h \
-    guarddutyclientrequest_p.h \
-    guarddutyclientresponse.h \
-    guarddutyclientresponse_p.h \
+    guarddutyrequest.h \
+    guarddutyrequest_p.h \
+    guarddutyresponse.h \
+    guarddutyresponse_p.h \
     invitemembersrequest.h \
     invitemembersrequest_p.h \
     invitemembersresponse.h \
@@ -213,8 +213,8 @@ SOURCES += \
     getthreatintelsetrequest.cpp \
     getthreatintelsetresponse.cpp \
     guarddutyclient.cpp \
-    guarddutyclientrequest.cpp \
-    guarddutyclientresponse.cpp \
+    guarddutyrequest.cpp \
+    guarddutyresponse.cpp \
     invitemembersrequest.cpp \
     invitemembersresponse.cpp \
     listdetectorsrequest.cpp \

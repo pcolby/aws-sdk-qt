@@ -74,10 +74,10 @@ HEADERS += \
     gettelemetrymetadataresponse_p.h \
     inspectorclient.h \
     inspectorclient_p.h \
-    inspectorclientrequest.h \
-    inspectorclientrequest_p.h \
-    inspectorclientresponse.h \
-    inspectorclientresponse_p.h \
+    inspectorrequest.h \
+    inspectorrequest_p.h \
+    inspectorresponse.h \
+    inspectorresponse_p.h \
     listassessmentrunagentsrequest.h \
     listassessmentrunagentsrequest_p.h \
     listassessmentrunagentsresponse.h \
@@ -180,8 +180,8 @@ SOURCES += \
     gettelemetrymetadatarequest.cpp \
     gettelemetrymetadataresponse.cpp \
     inspectorclient.cpp \
-    inspectorclientrequest.cpp \
-    inspectorclientresponse.cpp \
+    inspectorrequest.cpp \
+    inspectorresponse.cpp \
     listassessmentrunagentsrequest.cpp \
     listassessmentrunagentsresponse.cpp \
     listassessmentrunsrequest.cpp \

@@ -16,10 +16,10 @@ HEADERS += \
     batchgetresourceconfigresponse_p.h \
     configserviceclient.h \
     configserviceclient_p.h \
-    configserviceclientrequest.h \
-    configserviceclientrequest_p.h \
-    configserviceclientresponse.h \
-    configserviceclientresponse_p.h \
+    configservicerequest.h \
+    configservicerequest_p.h \
+    configserviceresponse.h \
+    configserviceresponse_p.h \
     deleteconfigrulerequest.h \
     deleteconfigrulerequest_p.h \
     deleteconfigruleresponse.h \
@@ -131,8 +131,8 @@ SOURCES += \
     batchgetresourceconfigrequest.cpp \
     batchgetresourceconfigresponse.cpp \
     configserviceclient.cpp \
-    configserviceclientrequest.cpp \
-    configserviceclientresponse.cpp \
+    configservicerequest.cpp \
+    configserviceresponse.cpp \
     deleteconfigrulerequest.cpp \
     deleteconfigruleresponse.cpp \
     deleteconfigurationrecorderrequest.cpp \

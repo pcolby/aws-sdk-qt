@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     translateclient.h \
     translateclient_p.h \
-    translateclientrequest.h \
-    translateclientrequest_p.h \
-    translateclientresponse.h \
-    translateclientresponse_p.h \
+    translaterequest.h \
+    translaterequest_p.h \
+    translateresponse.h \
+    translateresponse_p.h \
     translatetextrequest.h \
     translatetextrequest_p.h \
     translatetextresponse.h \
@@ -23,8 +23,8 @@ HEADERS += \
 
 SOURCES += \
     translateclient.cpp \
-    translateclientrequest.cpp \
-    translateclientresponse.cpp \
+    translaterequest.cpp \
+    translateresponse.cpp \
     translatetextrequest.cpp \
     translatetextresponse.cpp \
 

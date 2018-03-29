@@ -36,10 +36,10 @@ HEADERS += \
     deletepresetresponse_p.h \
     elastictranscoderclient.h \
     elastictranscoderclient_p.h \
-    elastictranscoderclientrequest.h \
-    elastictranscoderclientrequest_p.h \
-    elastictranscoderclientresponse.h \
-    elastictranscoderclientresponse_p.h \
+    elastictranscoderrequest.h \
+    elastictranscoderrequest_p.h \
+    elastictranscoderresponse.h \
+    elastictranscoderresponse_p.h \
     listjobsbypipelinerequest.h \
     listjobsbypipelinerequest_p.h \
     listjobsbypipelineresponse.h \
@@ -99,8 +99,8 @@ SOURCES += \
     deletepresetrequest.cpp \
     deletepresetresponse.cpp \
     elastictranscoderclient.cpp \
-    elastictranscoderclientrequest.cpp \
-    elastictranscoderclientresponse.cpp \
+    elastictranscoderrequest.cpp \
+    elastictranscoderresponse.cpp \
     listjobsbypipelinerequest.cpp \
     listjobsbypipelineresponse.cpp \
     listjobsbystatusrequest.cpp \

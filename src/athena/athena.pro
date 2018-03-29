@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     athenaclient.h \
     athenaclient_p.h \
-    athenaclientrequest.h \
-    athenaclientrequest_p.h \
-    athenaclientresponse.h \
-    athenaclientresponse_p.h \
+    athenarequest.h \
+    athenarequest_p.h \
+    athenaresponse.h \
+    athenaresponse_p.h \
     batchgetnamedqueryrequest.h \
     batchgetnamedqueryrequest_p.h \
     batchgetnamedqueryresponse.h \
@@ -63,8 +63,8 @@ HEADERS += \
 
 SOURCES += \
     athenaclient.cpp \
-    athenaclientrequest.cpp \
-    athenaclientresponse.cpp \
+    athenarequest.cpp \
+    athenaresponse.cpp \
     batchgetnamedqueryrequest.cpp \
     batchgetnamedqueryresponse.cpp \
     batchgetqueryexecutionrequest.cpp \

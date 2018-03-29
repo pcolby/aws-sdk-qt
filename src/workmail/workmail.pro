@@ -124,10 +124,10 @@ HEADERS += \
     updateresourceresponse_p.h \
     workmailclient.h \
     workmailclient_p.h \
-    workmailclientrequest.h \
-    workmailclientrequest_p.h \
-    workmailclientresponse.h \
-    workmailclientresponse_p.h \
+    workmailrequest.h \
+    workmailrequest_p.h \
+    workmailresponse.h \
+    workmailresponse_p.h \
 
 SOURCES += \
     associatedelegatetoresourcerequest.cpp \
@@ -187,7 +187,7 @@ SOURCES += \
     updateresourcerequest.cpp \
     updateresourceresponse.cpp \
     workmailclient.cpp \
-    workmailclientrequest.cpp \
-    workmailclientresponse.cpp \
+    workmailrequest.cpp \
+    workmailresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

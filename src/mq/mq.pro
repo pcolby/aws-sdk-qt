@@ -64,10 +64,10 @@ HEADERS += \
     listusersresponse_p.h \
     mqclient.h \
     mqclient_p.h \
-    mqclientrequest.h \
-    mqclientrequest_p.h \
-    mqclientresponse.h \
-    mqclientresponse_p.h \
+    mqrequest.h \
+    mqrequest_p.h \
+    mqresponse.h \
+    mqresponse_p.h \
     rebootbrokerrequest.h \
     rebootbrokerrequest_p.h \
     rebootbrokerresponse.h \
@@ -113,8 +113,8 @@ SOURCES += \
     listusersrequest.cpp \
     listusersresponse.cpp \
     mqclient.cpp \
-    mqclientrequest.cpp \
-    mqclientresponse.cpp \
+    mqrequest.cpp \
+    mqresponse.cpp \
     rebootbrokerrequest.cpp \
     rebootbrokerresponse.cpp \
     updatebrokerrequest.cpp \

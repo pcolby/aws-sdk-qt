@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     acmclient.h \
     acmclient_p.h \
-    acmclientrequest.h \
-    acmclientrequest_p.h \
-    acmclientresponse.h \
-    acmclientresponse_p.h \
+    acmrequest.h \
+    acmrequest_p.h \
+    acmresponse.h \
+    acmresponse_p.h \
     addtagstocertificaterequest.h \
     addtagstocertificaterequest_p.h \
     addtagstocertificateresponse.h \
@@ -63,8 +63,8 @@ HEADERS += \
 
 SOURCES += \
     acmclient.cpp \
-    acmclientrequest.cpp \
-    acmclientresponse.cpp \
+    acmrequest.cpp \
+    acmresponse.cpp \
     addtagstocertificaterequest.cpp \
     addtagstocertificateresponse.cpp \
     deletecertificaterequest.cpp \

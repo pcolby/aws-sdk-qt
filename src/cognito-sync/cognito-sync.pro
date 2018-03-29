@@ -16,10 +16,10 @@ HEADERS += \
     bulkpublishresponse_p.h \
     cognitosyncclient.h \
     cognitosyncclient_p.h \
-    cognitosyncclientrequest.h \
-    cognitosyncclientrequest_p.h \
-    cognitosyncclientresponse.h \
-    cognitosyncclientresponse_p.h \
+    cognitosyncrequest.h \
+    cognitosyncrequest_p.h \
+    cognitosyncresponse.h \
+    cognitosyncresponse_p.h \
     deletedatasetrequest.h \
     deletedatasetrequest_p.h \
     deletedatasetresponse.h \
@@ -89,8 +89,8 @@ SOURCES += \
     bulkpublishrequest.cpp \
     bulkpublishresponse.cpp \
     cognitosyncclient.cpp \
-    cognitosyncclientrequest.cpp \
-    cognitosyncclientresponse.cpp \
+    cognitosyncrequest.cpp \
+    cognitosyncresponse.cpp \
     deletedatasetrequest.cpp \
     deletedatasetresponse.cpp \
     describedatasetrequest.cpp \

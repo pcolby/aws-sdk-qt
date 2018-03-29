@@ -44,10 +44,10 @@ HEADERS += \
     listcontainersresponse_p.h \
     mediastoreclient.h \
     mediastoreclient_p.h \
-    mediastoreclientrequest.h \
-    mediastoreclientrequest_p.h \
-    mediastoreclientresponse.h \
-    mediastoreclientresponse_p.h \
+    mediastorerequest.h \
+    mediastorerequest_p.h \
+    mediastoreresponse.h \
+    mediastoreresponse_p.h \
     putcontainerpolicyrequest.h \
     putcontainerpolicyrequest_p.h \
     putcontainerpolicyresponse.h \
@@ -75,8 +75,8 @@ SOURCES += \
     listcontainersrequest.cpp \
     listcontainersresponse.cpp \
     mediastoreclient.cpp \
-    mediastoreclientrequest.cpp \
-    mediastoreclientresponse.cpp \
+    mediastorerequest.cpp \
+    mediastoreresponse.cpp \
     putcontainerpolicyrequest.cpp \
     putcontainerpolicyresponse.cpp \
     putcorspolicyrequest.cpp \

@@ -24,10 +24,10 @@ HEADERS += \
     attachloadbalancertargetgroupsresponse_p.h \
     autoscalingclient.h \
     autoscalingclient_p.h \
-    autoscalingclientrequest.h \
-    autoscalingclientrequest_p.h \
-    autoscalingclientresponse.h \
-    autoscalingclientresponse_p.h \
+    autoscalingrequest.h \
+    autoscalingrequest_p.h \
+    autoscalingresponse.h \
+    autoscalingresponse_p.h \
     completelifecycleactionrequest.h \
     completelifecycleactionrequest_p.h \
     completelifecycleactionresponse.h \
@@ -219,8 +219,8 @@ SOURCES += \
     attachloadbalancertargetgroupsrequest.cpp \
     attachloadbalancertargetgroupsresponse.cpp \
     autoscalingclient.cpp \
-    autoscalingclientrequest.cpp \
-    autoscalingclientresponse.cpp \
+    autoscalingrequest.cpp \
+    autoscalingresponse.cpp \
     completelifecycleactionrequest.cpp \
     completelifecycleactionresponse.cpp \
     createautoscalinggrouprequest.cpp \

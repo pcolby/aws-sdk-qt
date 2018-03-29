@@ -80,10 +80,10 @@ HEADERS += \
     getvaultnotificationsresponse_p.h \
     glacierclient.h \
     glacierclient_p.h \
-    glacierclientrequest.h \
-    glacierclientrequest_p.h \
-    glacierclientresponse.h \
-    glacierclientresponse_p.h \
+    glacierrequest.h \
+    glacierrequest_p.h \
+    glacierresponse.h \
+    glacierresponse_p.h \
     initiatejobrequest.h \
     initiatejobrequest_p.h \
     initiatejobresponse.h \
@@ -185,8 +185,8 @@ SOURCES += \
     getvaultnotificationsrequest.cpp \
     getvaultnotificationsresponse.cpp \
     glacierclient.cpp \
-    glacierclientrequest.cpp \
-    glacierclientresponse.cpp \
+    glacierrequest.cpp \
+    glacierresponse.cpp \
     initiatejobrequest.cpp \
     initiatejobresponse.cpp \
     initiatemultipartuploadrequest.cpp \

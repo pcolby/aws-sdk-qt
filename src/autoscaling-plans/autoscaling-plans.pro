@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     autoscalingplansclient.h \
     autoscalingplansclient_p.h \
-    autoscalingplansclientrequest.h \
-    autoscalingplansclientrequest_p.h \
-    autoscalingplansclientresponse.h \
-    autoscalingplansclientresponse_p.h \
+    autoscalingplansrequest.h \
+    autoscalingplansrequest_p.h \
+    autoscalingplansresponse.h \
+    autoscalingplansresponse_p.h \
     createscalingplanrequest.h \
     createscalingplanrequest_p.h \
     createscalingplanresponse.h \
@@ -35,8 +35,8 @@ HEADERS += \
 
 SOURCES += \
     autoscalingplansclient.cpp \
-    autoscalingplansclientrequest.cpp \
-    autoscalingplansclientresponse.cpp \
+    autoscalingplansrequest.cpp \
+    autoscalingplansresponse.cpp \
     createscalingplanrequest.cpp \
     createscalingplanresponse.cpp \
     deletescalingplanrequest.cpp \

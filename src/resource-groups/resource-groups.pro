@@ -40,10 +40,10 @@ HEADERS += \
     listgroupsresponse_p.h \
     resourcegroupsclient.h \
     resourcegroupsclient_p.h \
-    resourcegroupsclientrequest.h \
-    resourcegroupsclientrequest_p.h \
-    resourcegroupsclientresponse.h \
-    resourcegroupsclientresponse_p.h \
+    resourcegroupsrequest.h \
+    resourcegroupsrequest_p.h \
+    resourcegroupsresponse.h \
+    resourcegroupsresponse_p.h \
     searchresourcesrequest.h \
     searchresourcesrequest_p.h \
     searchresourcesresponse.h \
@@ -81,8 +81,8 @@ SOURCES += \
     listgroupsrequest.cpp \
     listgroupsresponse.cpp \
     resourcegroupsclient.cpp \
-    resourcegroupsclientrequest.cpp \
-    resourcegroupsclientresponse.cpp \
+    resourcegroupsrequest.cpp \
+    resourcegroupsresponse.cpp \
     searchresourcesrequest.cpp \
     searchresourcesresponse.cpp \
     tagrequest.cpp \

@@ -120,10 +120,10 @@ HEADERS += \
     describesnapshotsresponse_p.h \
     elasticacheclient.h \
     elasticacheclient_p.h \
-    elasticacheclientrequest.h \
-    elasticacheclientrequest_p.h \
-    elasticacheclientresponse.h \
-    elasticacheclientresponse_p.h \
+    elasticacherequest.h \
+    elasticacherequest_p.h \
+    elasticacheresponse.h \
+    elasticacheresponse_p.h \
     listallowednodetypemodificationsrequest.h \
     listallowednodetypemodificationsrequest_p.h \
     listallowednodetypemodificationsresponse.h \
@@ -233,8 +233,8 @@ SOURCES += \
     describesnapshotsrequest.cpp \
     describesnapshotsresponse.cpp \
     elasticacheclient.cpp \
-    elasticacheclientrequest.cpp \
-    elasticacheclientresponse.cpp \
+    elasticacherequest.cpp \
+    elasticacheresponse.cpp \
     listallowednodetypemodificationsrequest.cpp \
     listallowednodetypemodificationsresponse.cpp \
     listtagsforresourcerequest.cpp \

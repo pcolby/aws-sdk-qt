@@ -16,10 +16,10 @@ HEADERS += \
     batchgetrepositoriesresponse_p.h \
     codecommitclient.h \
     codecommitclient_p.h \
-    codecommitclientrequest.h \
-    codecommitclientrequest_p.h \
-    codecommitclientresponse.h \
-    codecommitclientresponse_p.h \
+    codecommitrequest.h \
+    codecommitrequest_p.h \
+    codecommitresponse.h \
+    codecommitresponse_p.h \
     createbranchrequest.h \
     createbranchrequest_p.h \
     createbranchresponse.h \
@@ -165,8 +165,8 @@ SOURCES += \
     batchgetrepositoriesrequest.cpp \
     batchgetrepositoriesresponse.cpp \
     codecommitclient.cpp \
-    codecommitclientrequest.cpp \
-    codecommitclientresponse.cpp \
+    codecommitrequest.cpp \
+    codecommitresponse.cpp \
     createbranchrequest.cpp \
     createbranchresponse.cpp \
     createpullrequestrequest.cpp \

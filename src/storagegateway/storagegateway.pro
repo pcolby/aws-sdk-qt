@@ -232,10 +232,10 @@ HEADERS += \
     startgatewayresponse_p.h \
     storagegatewayclient.h \
     storagegatewayclient_p.h \
-    storagegatewayclientrequest.h \
-    storagegatewayclientrequest_p.h \
-    storagegatewayclientresponse.h \
-    storagegatewayclientresponse_p.h \
+    storagegatewayrequest.h \
+    storagegatewayrequest_p.h \
+    storagegatewayresponse.h \
+    storagegatewayresponse_p.h \
     updatebandwidthratelimitrequest.h \
     updatebandwidthratelimitrequest_p.h \
     updatebandwidthratelimitresponse.h \
@@ -381,8 +381,8 @@ SOURCES += \
     startgatewayrequest.cpp \
     startgatewayresponse.cpp \
     storagegatewayclient.cpp \
-    storagegatewayclientrequest.cpp \
-    storagegatewayclientresponse.cpp \
+    storagegatewayrequest.cpp \
+    storagegatewayresponse.cpp \
     updatebandwidthratelimitrequest.cpp \
     updatebandwidthratelimitresponse.cpp \
     updatechapcredentialsrequest.cpp \

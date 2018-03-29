@@ -124,10 +124,10 @@ HEADERS += \
     changepasswordresponse_p.h \
     cognitoidentityproviderclient.h \
     cognitoidentityproviderclient_p.h \
-    cognitoidentityproviderclientrequest.h \
-    cognitoidentityproviderclientrequest_p.h \
-    cognitoidentityproviderclientresponse.h \
-    cognitoidentityproviderclientresponse_p.h \
+    cognitoidentityproviderrequest.h \
+    cognitoidentityproviderrequest_p.h \
+    cognitoidentityproviderresponse.h \
+    cognitoidentityproviderresponse_p.h \
     confirmdevicerequest.h \
     confirmdevicerequest_p.h \
     confirmdeviceresponse.h \
@@ -455,8 +455,8 @@ SOURCES += \
     changepasswordrequest.cpp \
     changepasswordresponse.cpp \
     cognitoidentityproviderclient.cpp \
-    cognitoidentityproviderclientrequest.cpp \
-    cognitoidentityproviderclientresponse.cpp \
+    cognitoidentityproviderrequest.cpp \
+    cognitoidentityproviderresponse.cpp \
     confirmdevicerequest.cpp \
     confirmdeviceresponse.cpp \
     confirmforgotpasswordrequest.cpp \

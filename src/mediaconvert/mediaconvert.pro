@@ -80,10 +80,10 @@ HEADERS += \
     listqueuesresponse_p.h \
     mediaconvertclient.h \
     mediaconvertclient_p.h \
-    mediaconvertclientrequest.h \
-    mediaconvertclientrequest_p.h \
-    mediaconvertclientresponse.h \
-    mediaconvertclientresponse_p.h \
+    mediaconvertrequest.h \
+    mediaconvertrequest_p.h \
+    mediaconvertresponse.h \
+    mediaconvertresponse_p.h \
     updatejobtemplaterequest.h \
     updatejobtemplaterequest_p.h \
     updatejobtemplateresponse.h \
@@ -133,8 +133,8 @@ SOURCES += \
     listqueuesrequest.cpp \
     listqueuesresponse.cpp \
     mediaconvertclient.cpp \
-    mediaconvertclientrequest.cpp \
-    mediaconvertclientresponse.cpp \
+    mediaconvertrequest.cpp \
+    mediaconvertresponse.cpp \
     updatejobtemplaterequest.cpp \
     updatejobtemplateresponse.cpp \
     updatepresetrequest.cpp \

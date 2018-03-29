@@ -316,10 +316,10 @@ HEADERS += \
     purchasereserveddbinstancesofferingresponse_p.h \
     rdsclient.h \
     rdsclient_p.h \
-    rdsclientrequest.h \
-    rdsclientrequest_p.h \
-    rdsclientresponse.h \
-    rdsclientresponse_p.h \
+    rdsrequest.h \
+    rdsrequest_p.h \
+    rdsresponse.h \
+    rdsresponse_p.h \
     rebootdbinstancerequest.h \
     rebootdbinstancerequest_p.h \
     rebootdbinstanceresponse.h \
@@ -535,8 +535,8 @@ SOURCES += \
     purchasereserveddbinstancesofferingrequest.cpp \
     purchasereserveddbinstancesofferingresponse.cpp \
     rdsclient.cpp \
-    rdsclientrequest.cpp \
-    rdsclientresponse.cpp \
+    rdsrequest.cpp \
+    rdsresponse.cpp \
     rebootdbinstancerequest.cpp \
     rebootdbinstanceresponse.cpp \
     removerolefromdbclusterrequest.cpp \

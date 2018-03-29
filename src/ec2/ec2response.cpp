@@ -1,0 +1,70 @@
+/*
+    Copyright 2013-2018 Paul Colby
+
+    This file is part of the AWS SDK for Qt.
+
+    AWS SDK for Qt is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    AWS SDK for Qt is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the AWS SDK for Qt.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "ec2response.h"
+#include "ec2response_p.h"
+
+#include <QDebug>
+#include <QXmlStreamReader>
+
+namespace QtAws {
+namespace EC2 {
+
+/**
+ * @class  EC2Response
+ *
+ * @brief  Handles EC2 EC2 responses.
+ *
+ * @see    EC2Client::eC2
+ */
+
+/**
+ * @brief  Constructs a new EC2Response object.
+ *
+ * @param  parent   This object's parent.
+ */
+EC2Response::EC2Response(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new EC2ResponsePrivate(this), parent)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @class  EC2ResponsePrivate
+ *
+ * @brief  Private implementation for EC2Response.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EC2ResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EC2Response instance.
+ */
+EC2ResponsePrivate::EC2ResponsePrivate(
+    EC2QueueResponse * const q) : EC2Private(q)
+{
+
+}
+
+} // namespace EC2
+} // namespace QtAws

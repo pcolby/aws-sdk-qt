@@ -1,0 +1,49 @@
+/*
+    Copyright 2013-2018 Paul Colby
+
+    This file is part of the AWS SDK for Qt.
+
+    AWS SDK for Qt is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    AWS SDK for Qt is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the AWS SDK for Qt.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#ifndef QTAWS_CLOUDWATCHEVENTSRESPONSE_P_H
+#define QTAWS_CLOUDWATCHEVENTSRESPONSE_P_H
+
+#include "cloudwatcheventsresponse.h"
+#include "cloudwatcheventsrequest.h"
+
+namespace QtAws {
+namespace CloudWatchEvents {
+
+class CloudWatchEventsResponse;
+
+class QTAWS_EXPORT CloudWatchEventsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CloudWatchEventsResponsePrivate(CloudWatchEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CloudWatchEventsResponse)
+    Q_DISABLE_COPY(CloudWatchEventsResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace QtAws
+
+#endif

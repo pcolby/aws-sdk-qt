@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cloudsearchdomainclient.h \
     cloudsearchdomainclient_p.h \
-    cloudsearchdomainclientrequest.h \
-    cloudsearchdomainclientrequest_p.h \
-    cloudsearchdomainclientresponse.h \
-    cloudsearchdomainclientresponse_p.h \
+    cloudsearchdomainrequest.h \
+    cloudsearchdomainrequest_p.h \
+    cloudsearchdomainresponse.h \
+    cloudsearchdomainresponse_p.h \
     searchrequest.h \
     searchrequest_p.h \
     searchresponse.h \
@@ -31,8 +31,8 @@ HEADERS += \
 
 SOURCES += \
     cloudsearchdomainclient.cpp \
-    cloudsearchdomainclientrequest.cpp \
-    cloudsearchdomainclientresponse.cpp \
+    cloudsearchdomainrequest.cpp \
+    cloudsearchdomainresponse.cpp \
     searchrequest.cpp \
     searchresponse.cpp \
     suggestrequest.cpp \

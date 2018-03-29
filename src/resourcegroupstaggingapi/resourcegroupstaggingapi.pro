@@ -24,10 +24,10 @@ HEADERS += \
     gettagvaluesresponse_p.h \
     resourcegroupstaggingapiclient.h \
     resourcegroupstaggingapiclient_p.h \
-    resourcegroupstaggingapiclientrequest.h \
-    resourcegroupstaggingapiclientrequest_p.h \
-    resourcegroupstaggingapiclientresponse.h \
-    resourcegroupstaggingapiclientresponse_p.h \
+    resourcegroupstaggingapirequest.h \
+    resourcegroupstaggingapirequest_p.h \
+    resourcegroupstaggingapiresponse.h \
+    resourcegroupstaggingapiresponse_p.h \
     tagresourcesrequest.h \
     tagresourcesrequest_p.h \
     tagresourcesresponse.h \
@@ -45,8 +45,8 @@ SOURCES += \
     gettagvaluesrequest.cpp \
     gettagvaluesresponse.cpp \
     resourcegroupstaggingapiclient.cpp \
-    resourcegroupstaggingapiclientrequest.cpp \
-    resourcegroupstaggingapiclientresponse.cpp \
+    resourcegroupstaggingapirequest.cpp \
+    resourcegroupstaggingapiresponse.cpp \
     tagresourcesrequest.cpp \
     tagresourcesresponse.cpp \
     untagresourcesrequest.cpp \

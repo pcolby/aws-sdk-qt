@@ -95,8 +95,8 @@ bool Generator::generate(const QString &serviceFileName,
 
     // Generate model classes.
     context.push();
-    renderClassFiles(QSL("requestbase"),  context, projectDir, className + QSL("Request"));
-    renderClassFiles(QSL("responsebase"), context, projectDir, className + QSL("Response"));
+    renderClassFiles(QSL("requestbase"),  context, projectDir, classNamePrefix + QSL("Request"));
+    renderClassFiles(QSL("responsebase"), context, projectDir, classNamePrefix + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
         generateModelClasses(context, projectDir, operationName, description);
     }

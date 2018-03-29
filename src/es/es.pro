@@ -42,10 +42,10 @@ HEADERS += \
     describeelasticsearchinstancetypelimitsresponse_p.h \
     elasticsearchserviceclient.h \
     elasticsearchserviceclient_p.h \
-    elasticsearchserviceclientrequest.h \
-    elasticsearchserviceclientrequest_p.h \
-    elasticsearchserviceclientresponse.h \
-    elasticsearchserviceclientresponse_p.h \
+    elasticsearchservicerequest.h \
+    elasticsearchservicerequest_p.h \
+    elasticsearchserviceresponse.h \
+    elasticsearchserviceresponse_p.h \
     listdomainnamesresponse.h \
     listdomainnamesresponse_p.h \
     listelasticsearchinstancetypesrequest.h \
@@ -86,8 +86,8 @@ SOURCES += \
     describeelasticsearchinstancetypelimitsrequest.cpp \
     describeelasticsearchinstancetypelimitsresponse.cpp \
     elasticsearchserviceclient.cpp \
-    elasticsearchserviceclientrequest.cpp \
-    elasticsearchserviceclientresponse.cpp \
+    elasticsearchservicerequest.cpp \
+    elasticsearchserviceresponse.cpp \
     listdomainnamesresponse.cpp \
     listelasticsearchinstancetypesrequest.cpp \
     listelasticsearchinstancetypesresponse.cpp \

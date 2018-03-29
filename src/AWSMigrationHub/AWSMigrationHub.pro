@@ -64,10 +64,10 @@ HEADERS += \
     listprogressupdatestreamsresponse_p.h \
     migrationhubclient.h \
     migrationhubclient_p.h \
-    migrationhubclientrequest.h \
-    migrationhubclientrequest_p.h \
-    migrationhubclientresponse.h \
-    migrationhubclientresponse_p.h \
+    migrationhubrequest.h \
+    migrationhubrequest_p.h \
+    migrationhubresponse.h \
+    migrationhubresponse_p.h \
     notifyapplicationstaterequest.h \
     notifyapplicationstaterequest_p.h \
     notifyapplicationstateresponse.h \
@@ -109,8 +109,8 @@ SOURCES += \
     listprogressupdatestreamsrequest.cpp \
     listprogressupdatestreamsresponse.cpp \
     migrationhubclient.cpp \
-    migrationhubclientrequest.cpp \
-    migrationhubclientresponse.cpp \
+    migrationhubrequest.cpp \
+    migrationhubresponse.cpp \
     notifyapplicationstaterequest.cpp \
     notifyapplicationstateresponse.cpp \
     notifymigrationtaskstaterequest.cpp \

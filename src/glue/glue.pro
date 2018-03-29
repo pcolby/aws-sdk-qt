@@ -244,10 +244,10 @@ HEADERS += \
     getuserdefinedfunctionsresponse_p.h \
     glueclient.h \
     glueclient_p.h \
-    glueclientrequest.h \
-    glueclientrequest_p.h \
-    glueclientresponse.h \
-    glueclientresponse_p.h \
+    gluerequest.h \
+    gluerequest_p.h \
+    glueresponse.h \
+    glueresponse_p.h \
     importcatalogtogluerequest.h \
     importcatalogtogluerequest_p.h \
     importcatalogtoglueresponse.h \
@@ -447,8 +447,8 @@ SOURCES += \
     getuserdefinedfunctionsrequest.cpp \
     getuserdefinedfunctionsresponse.cpp \
     glueclient.cpp \
-    glueclientrequest.cpp \
-    glueclientresponse.cpp \
+    gluerequest.cpp \
+    glueresponse.cpp \
     importcatalogtogluerequest.cpp \
     importcatalogtoglueresponse.cpp \
     resetjobbookmarkrequest.cpp \

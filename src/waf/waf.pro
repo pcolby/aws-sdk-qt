@@ -288,10 +288,10 @@ HEADERS += \
     updatexssmatchsetresponse_p.h \
     wafclient.h \
     wafclient_p.h \
-    wafclientrequest.h \
-    wafclientrequest_p.h \
-    wafclientresponse.h \
-    wafclientresponse_p.h \
+    wafrequest.h \
+    wafrequest_p.h \
+    wafresponse.h \
+    wafresponse_p.h \
 
 SOURCES += \
     createbytematchsetrequest.cpp \
@@ -433,7 +433,7 @@ SOURCES += \
     updatexssmatchsetrequest.cpp \
     updatexssmatchsetresponse.cpp \
     wafclient.cpp \
-    wafclientrequest.cpp \
-    wafclientresponse.cpp \
+    wafrequest.cpp \
+    wafresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

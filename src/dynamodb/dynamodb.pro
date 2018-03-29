@@ -68,10 +68,10 @@ HEADERS += \
     describetimetoliveresponse_p.h \
     dynamodbclient.h \
     dynamodbclient_p.h \
-    dynamodbclientrequest.h \
-    dynamodbclientrequest_p.h \
-    dynamodbclientresponse.h \
-    dynamodbclientresponse_p.h \
+    dynamodbrequest.h \
+    dynamodbrequest_p.h \
+    dynamodbresponse.h \
+    dynamodbresponse_p.h \
     getitemrequest.h \
     getitemrequest_p.h \
     getitemresponse.h \
@@ -171,8 +171,8 @@ SOURCES += \
     describetimetoliverequest.cpp \
     describetimetoliveresponse.cpp \
     dynamodbclient.cpp \
-    dynamodbclientrequest.cpp \
-    dynamodbclientresponse.cpp \
+    dynamodbrequest.cpp \
+    dynamodbresponse.cpp \
     getitemrequest.cpp \
     getitemresponse.cpp \
     listbackupsrequest.cpp \

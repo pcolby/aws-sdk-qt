@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cloudwatcheventsclient.h \
     cloudwatcheventsclient_p.h \
-    cloudwatcheventsclientrequest.h \
-    cloudwatcheventsclientrequest_p.h \
-    cloudwatcheventsclientresponse.h \
-    cloudwatcheventsclientresponse_p.h \
+    cloudwatcheventsrequest.h \
+    cloudwatcheventsrequest_p.h \
+    cloudwatcheventsresponse.h \
+    cloudwatcheventsresponse_p.h \
     deleterulerequest.h \
     deleterulerequest_p.h \
     deleteruleresponse.h \
@@ -79,8 +79,8 @@ HEADERS += \
 
 SOURCES += \
     cloudwatcheventsclient.cpp \
-    cloudwatcheventsclientrequest.cpp \
-    cloudwatcheventsclientresponse.cpp \
+    cloudwatcheventsrequest.cpp \
+    cloudwatcheventsresponse.cpp \
     deleterulerequest.cpp \
     deleteruleresponse.cpp \
     describeeventbusrequest.cpp \

@@ -16,10 +16,10 @@ HEADERS += \
     getmediaforfragmentlistresponse_p.h \
     kinesisvideoarchivedmediaclient.h \
     kinesisvideoarchivedmediaclient_p.h \
-    kinesisvideoarchivedmediaclientrequest.h \
-    kinesisvideoarchivedmediaclientrequest_p.h \
-    kinesisvideoarchivedmediaclientresponse.h \
-    kinesisvideoarchivedmediaclientresponse_p.h \
+    kinesisvideoarchivedmediarequest.h \
+    kinesisvideoarchivedmediarequest_p.h \
+    kinesisvideoarchivedmediaresponse.h \
+    kinesisvideoarchivedmediaresponse_p.h \
     listfragmentsrequest.h \
     listfragmentsrequest_p.h \
     listfragmentsresponse.h \
@@ -29,8 +29,8 @@ SOURCES += \
     getmediaforfragmentlistrequest.cpp \
     getmediaforfragmentlistresponse.cpp \
     kinesisvideoarchivedmediaclient.cpp \
-    kinesisvideoarchivedmediaclientrequest.cpp \
-    kinesisvideoarchivedmediaclientresponse.cpp \
+    kinesisvideoarchivedmediarequest.cpp \
+    kinesisvideoarchivedmediaresponse.cpp \
     listfragmentsrequest.cpp \
     listfragmentsresponse.cpp \
 

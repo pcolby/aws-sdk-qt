@@ -12,10 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     batchclient.h \
     batchclient_p.h \
-    batchclientrequest.h \
-    batchclientrequest_p.h \
-    batchclientresponse.h \
-    batchclientresponse_p.h \
+    batchrequest.h \
+    batchrequest_p.h \
+    batchresponse.h \
+    batchresponse_p.h \
     canceljobrequest.h \
     canceljobrequest_p.h \
     canceljobresponse.h \
@@ -83,8 +83,8 @@ HEADERS += \
 
 SOURCES += \
     batchclient.cpp \
-    batchclientrequest.cpp \
-    batchclientresponse.cpp \
+    batchrequest.cpp \
+    batchresponse.cpp \
     canceljobrequest.cpp \
     canceljobresponse.cpp \
     createcomputeenvironmentrequest.cpp \

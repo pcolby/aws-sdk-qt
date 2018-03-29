@@ -16,10 +16,10 @@ HEADERS += \
     batchmeterusageresponse_p.h \
     marketplacemeteringclient.h \
     marketplacemeteringclient_p.h \
-    marketplacemeteringclientrequest.h \
-    marketplacemeteringclientrequest_p.h \
-    marketplacemeteringclientresponse.h \
-    marketplacemeteringclientresponse_p.h \
+    marketplacemeteringrequest.h \
+    marketplacemeteringrequest_p.h \
+    marketplacemeteringresponse.h \
+    marketplacemeteringresponse_p.h \
     meterusagerequest.h \
     meterusagerequest_p.h \
     meterusageresponse.h \
@@ -33,8 +33,8 @@ SOURCES += \
     batchmeterusagerequest.cpp \
     batchmeterusageresponse.cpp \
     marketplacemeteringclient.cpp \
-    marketplacemeteringclientrequest.cpp \
-    marketplacemeteringclientresponse.cpp \
+    marketplacemeteringrequest.cpp \
+    marketplacemeteringresponse.cpp \
     meterusagerequest.cpp \
     meterusageresponse.cpp \
     resolvecustomerrequest.cpp \

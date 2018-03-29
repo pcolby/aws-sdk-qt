@@ -48,10 +48,10 @@ HEADERS += \
     putapplicationpolicyresponse_p.h \
     serverlessapplicationrepositoryclient.h \
     serverlessapplicationrepositoryclient_p.h \
-    serverlessapplicationrepositoryclientrequest.h \
-    serverlessapplicationrepositoryclientrequest_p.h \
-    serverlessapplicationrepositoryclientresponse.h \
-    serverlessapplicationrepositoryclientresponse_p.h \
+    serverlessapplicationrepositoryrequest.h \
+    serverlessapplicationrepositoryrequest_p.h \
+    serverlessapplicationrepositoryresponse.h \
+    serverlessapplicationrepositoryresponse_p.h \
     updateapplicationrequest.h \
     updateapplicationrequest_p.h \
     updateapplicationresponse.h \
@@ -77,8 +77,8 @@ SOURCES += \
     putapplicationpolicyrequest.cpp \
     putapplicationpolicyresponse.cpp \
     serverlessapplicationrepositoryclient.cpp \
-    serverlessapplicationrepositoryclientrequest.cpp \
-    serverlessapplicationrepositoryclientresponse.cpp \
+    serverlessapplicationrepositoryrequest.cpp \
+    serverlessapplicationrepositoryresponse.cpp \
     updateapplicationrequest.cpp \
     updateapplicationresponse.cpp \
 

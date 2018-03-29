@@ -356,10 +356,10 @@ HEADERS += \
     sendcommandresponse_p.h \
     ssmclient.h \
     ssmclient_p.h \
-    ssmclientrequest.h \
-    ssmclientrequest_p.h \
-    ssmclientresponse.h \
-    ssmclientresponse_p.h \
+    ssmrequest.h \
+    ssmrequest_p.h \
+    ssmresponse.h \
+    ssmresponse_p.h \
     startautomationexecutionrequest.h \
     startautomationexecutionrequest_p.h \
     startautomationexecutionresponse.h \
@@ -579,8 +579,8 @@ SOURCES += \
     sendcommandrequest.cpp \
     sendcommandresponse.cpp \
     ssmclient.cpp \
-    ssmclientrequest.cpp \
-    ssmclientresponse.cpp \
+    ssmrequest.cpp \
+    ssmresponse.cpp \
     startautomationexecutionrequest.cpp \
     startautomationexecutionresponse.cpp \
     stopautomationexecutionrequest.cpp \

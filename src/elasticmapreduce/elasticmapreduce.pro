@@ -56,10 +56,10 @@ HEADERS += \
     describestepresponse_p.h \
     emrclient.h \
     emrclient_p.h \
-    emrclientrequest.h \
-    emrclientrequest_p.h \
-    emrclientresponse.h \
-    emrclientresponse_p.h \
+    emrrequest.h \
+    emrrequest_p.h \
+    emrresponse.h \
+    emrresponse_p.h \
     listbootstrapactionsrequest.h \
     listbootstrapactionsrequest_p.h \
     listbootstrapactionsresponse.h \
@@ -149,8 +149,8 @@ SOURCES += \
     describesteprequest.cpp \
     describestepresponse.cpp \
     emrclient.cpp \
-    emrclientrequest.cpp \
-    emrclientresponse.cpp \
+    emrrequest.cpp \
+    emrresponse.cpp \
     listbootstrapactionsrequest.cpp \
     listbootstrapactionsresponse.cpp \
     listclustersrequest.cpp \

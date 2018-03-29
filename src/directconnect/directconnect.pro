@@ -168,10 +168,10 @@ HEADERS += \
     describevirtualinterfacesresponse_p.h \
     directconnectclient.h \
     directconnectclient_p.h \
-    directconnectclientrequest.h \
-    directconnectclientrequest_p.h \
-    directconnectclientresponse.h \
-    directconnectclientresponse_p.h \
+    directconnectrequest.h \
+    directconnectrequest_p.h \
+    directconnectresponse.h \
+    directconnectresponse_p.h \
     disassociateconnectionfromlagrequest.h \
     disassociateconnectionfromlagrequest_p.h \
     disassociateconnectionfromlagresponse.h \
@@ -269,8 +269,8 @@ SOURCES += \
     describevirtualinterfacesrequest.cpp \
     describevirtualinterfacesresponse.cpp \
     directconnectclient.cpp \
-    directconnectclientrequest.cpp \
-    directconnectclientresponse.cpp \
+    directconnectrequest.cpp \
+    directconnectresponse.cpp \
     disassociateconnectionfromlagrequest.cpp \
     disassociateconnectionfromlagresponse.cpp \
     tagresourcerequest.cpp \

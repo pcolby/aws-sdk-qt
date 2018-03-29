@@ -52,10 +52,10 @@ HEADERS += \
     describetagsresponse_p.h \
     efsclient.h \
     efsclient_p.h \
-    efsclientrequest.h \
-    efsclientrequest_p.h \
-    efsclientresponse.h \
-    efsclientresponse_p.h \
+    efsrequest.h \
+    efsrequest_p.h \
+    efsresponse.h \
+    efsresponse_p.h \
     modifymounttargetsecuritygroupsrequest.h \
     modifymounttargetsecuritygroupsrequest_p.h \
     modifymounttargetsecuritygroupsresponse.h \
@@ -83,8 +83,8 @@ SOURCES += \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
     efsclient.cpp \
-    efsclientrequest.cpp \
-    efsclientresponse.cpp \
+    efsrequest.cpp \
+    efsresponse.cpp \
     modifymounttargetsecuritygroupsrequest.cpp \
     modifymounttargetsecuritygroupsresponse.cpp \
 

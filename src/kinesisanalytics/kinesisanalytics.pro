@@ -64,10 +64,10 @@ HEADERS += \
     discoverinputschemaresponse_p.h \
     kinesisanalyticsclient.h \
     kinesisanalyticsclient_p.h \
-    kinesisanalyticsclientrequest.h \
-    kinesisanalyticsclientrequest_p.h \
-    kinesisanalyticsclientresponse.h \
-    kinesisanalyticsclientresponse_p.h \
+    kinesisanalyticsrequest.h \
+    kinesisanalyticsrequest_p.h \
+    kinesisanalyticsresponse.h \
+    kinesisanalyticsresponse_p.h \
     listapplicationsrequest.h \
     listapplicationsrequest_p.h \
     listapplicationsresponse.h \
@@ -113,8 +113,8 @@ SOURCES += \
     discoverinputschemarequest.cpp \
     discoverinputschemaresponse.cpp \
     kinesisanalyticsclient.cpp \
-    kinesisanalyticsclientrequest.cpp \
-    kinesisanalyticsclientresponse.cpp \
+    kinesisanalyticsrequest.cpp \
+    kinesisanalyticsresponse.cpp \
     listapplicationsrequest.cpp \
     listapplicationsresponse.cpp \
     startapplicationrequest.cpp \

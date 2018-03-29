@@ -282,10 +282,10 @@ HEADERS += \
     getuserresponse_p.h \
     iamclient.h \
     iamclient_p.h \
-    iamclientrequest.h \
-    iamclientrequest_p.h \
-    iamclientresponse.h \
-    iamclientresponse_p.h \
+    iamrequest.h \
+    iamrequest_p.h \
+    iamresponse.h \
+    iamresponse_p.h \
     listaccesskeysrequest.h \
     listaccesskeysrequest_p.h \
     listaccesskeysresponse.h \
@@ -636,8 +636,8 @@ SOURCES += \
     getuserrequest.cpp \
     getuserresponse.cpp \
     iamclient.cpp \
-    iamclientrequest.cpp \
-    iamclientresponse.cpp \
+    iamrequest.cpp \
+    iamresponse.cpp \
     listaccesskeysrequest.cpp \
     listaccesskeysresponse.cpp \
     listaccountaliasesrequest.cpp \

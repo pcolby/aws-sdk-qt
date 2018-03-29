@@ -52,10 +52,10 @@ HEADERS += \
     listprotectionsresponse_p.h \
     shieldclient.h \
     shieldclient_p.h \
-    shieldclientrequest.h \
-    shieldclientrequest_p.h \
-    shieldclientresponse.h \
-    shieldclientresponse_p.h \
+    shieldrequest.h \
+    shieldrequest_p.h \
+    shieldresponse.h \
+    shieldresponse_p.h \
 
 SOURCES += \
     createprotectionrequest.cpp \
@@ -79,7 +79,7 @@ SOURCES += \
     listprotectionsrequest.cpp \
     listprotectionsresponse.cpp \
     shieldclient.cpp \
-    shieldclientrequest.cpp \
-    shieldclientresponse.cpp \
+    shieldrequest.cpp \
+    shieldresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

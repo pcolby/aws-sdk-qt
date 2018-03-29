@@ -100,10 +100,10 @@ HEADERS += \
     disableavailabilityzonesforloadbalancerresponse_p.h \
     elasticloadbalancingclient.h \
     elasticloadbalancingclient_p.h \
-    elasticloadbalancingclientrequest.h \
-    elasticloadbalancingclientrequest_p.h \
-    elasticloadbalancingclientresponse.h \
-    elasticloadbalancingclientresponse_p.h \
+    elasticloadbalancingrequest.h \
+    elasticloadbalancingrequest_p.h \
+    elasticloadbalancingresponse.h \
+    elasticloadbalancingresponse_p.h \
     enableavailabilityzonesforloadbalancerrequest.h \
     enableavailabilityzonesforloadbalancerrequest_p.h \
     enableavailabilityzonesforloadbalancerresponse.h \
@@ -179,8 +179,8 @@ SOURCES += \
     disableavailabilityzonesforloadbalancerrequest.cpp \
     disableavailabilityzonesforloadbalancerresponse.cpp \
     elasticloadbalancingclient.cpp \
-    elasticloadbalancingclientrequest.cpp \
-    elasticloadbalancingclientresponse.cpp \
+    elasticloadbalancingrequest.cpp \
+    elasticloadbalancingresponse.cpp \
     enableavailabilityzonesforloadbalancerrequest.cpp \
     enableavailabilityzonesforloadbalancerresponse.cpp \
     modifyloadbalancerattributesrequest.cpp \

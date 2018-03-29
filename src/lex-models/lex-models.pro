@@ -136,10 +136,10 @@ HEADERS += \
     getutterancesviewresponse_p.h \
     lexmodelbuildingserviceclient.h \
     lexmodelbuildingserviceclient_p.h \
-    lexmodelbuildingserviceclientrequest.h \
-    lexmodelbuildingserviceclientrequest_p.h \
-    lexmodelbuildingserviceclientresponse.h \
-    lexmodelbuildingserviceclientresponse_p.h \
+    lexmodelbuildingservicerequest.h \
+    lexmodelbuildingservicerequest_p.h \
+    lexmodelbuildingserviceresponse.h \
+    lexmodelbuildingserviceresponse_p.h \
     putbotaliasrequest.h \
     putbotaliasrequest_p.h \
     putbotaliasresponse.h \
@@ -225,8 +225,8 @@ SOURCES += \
     getutterancesviewrequest.cpp \
     getutterancesviewresponse.cpp \
     lexmodelbuildingserviceclient.cpp \
-    lexmodelbuildingserviceclientrequest.cpp \
-    lexmodelbuildingserviceclientresponse.cpp \
+    lexmodelbuildingservicerequest.cpp \
+    lexmodelbuildingserviceresponse.cpp \
     putbotaliasrequest.cpp \
     putbotaliasresponse.cpp \
     putbotrequest.cpp \

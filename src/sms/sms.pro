@@ -48,10 +48,10 @@ HEADERS += \
     importservercatalogresponse_p.h \
     smsclient.h \
     smsclient_p.h \
-    smsclientrequest.h \
-    smsclientrequest_p.h \
-    smsclientresponse.h \
-    smsclientresponse_p.h \
+    smsrequest.h \
+    smsrequest_p.h \
+    smsresponse.h \
+    smsresponse_p.h \
     startondemandreplicationrunrequest.h \
     startondemandreplicationrunrequest_p.h \
     startondemandreplicationrunresponse.h \
@@ -81,8 +81,8 @@ SOURCES += \
     importservercatalogrequest.cpp \
     importservercatalogresponse.cpp \
     smsclient.cpp \
-    smsclientrequest.cpp \
-    smsclientresponse.cpp \
+    smsrequest.cpp \
+    smsresponse.cpp \
     startondemandreplicationrunrequest.cpp \
     startondemandreplicationrunresponse.cpp \
     updatereplicationjobrequest.cpp \
