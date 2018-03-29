@@ -119,7 +119,7 @@ class QTAWS_EXPORT ElasticBeanstalkClient : public QtAws::Core::AwsAbstractClien
 
 public:
     ElasticBeanstalkClient(
-        const AwsRegion::Region region = AwsRegion::InvalidRegion,
+        const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);

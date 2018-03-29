@@ -60,7 +60,7 @@ namespace SWF {
  * @param  parent       This object's parent.
  */
 SwfClient::SwfClient(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)

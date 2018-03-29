@@ -44,7 +44,7 @@ namespace KinesisAnalytics {
  * @param  parent       This object's parent.
  */
 KinesisAnalyticsClient::KinesisAnalyticsClient(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)

@@ -45,7 +45,7 @@ namespace Route53Domains {
  * @param  parent       This object's parent.
  */
 Route53DomainsClient::Route53DomainsClient(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)

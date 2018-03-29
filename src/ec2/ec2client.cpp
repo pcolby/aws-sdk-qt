@@ -48,7 +48,7 @@ namespace EC2 {
  * @param  parent       This object's parent.
  */
 Ec2Client::Ec2Client(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)

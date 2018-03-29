@@ -44,7 +44,7 @@ namespace S3 {
  * @param  parent       This object's parent.
  */
 S3Client::S3Client(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)

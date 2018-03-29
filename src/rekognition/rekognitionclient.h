@@ -100,7 +100,7 @@ class QTAWS_EXPORT RekognitionClient : public QtAws::Core::AwsAbstractClient {
 
 public:
     RekognitionClient(
-        const AwsRegion::Region region = AwsRegion::InvalidRegion,
+        const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);

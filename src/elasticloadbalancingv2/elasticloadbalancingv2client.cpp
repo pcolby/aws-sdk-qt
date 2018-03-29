@@ -112,7 +112,7 @@ namespace ElasticLoadBalancingv2 {
  * @param  parent       This object's parent.
  */
 ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)

@@ -60,7 +60,7 @@ namespace Lightsail {
  * @param  parent       This object's parent.
  */
 LightsailClient::LightsailClient(
-    const AwsRegion::Region region,
+    const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
