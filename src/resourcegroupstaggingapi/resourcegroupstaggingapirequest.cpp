@@ -265,7 +265,7 @@ QNetworkRequest ResourceGroupsTaggingAPIRequest::unsignedRequest(const QUrl &end
 {
     Q_D(const ResourceGroupsTaggingAPIRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

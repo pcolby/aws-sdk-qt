@@ -265,7 +265,7 @@ QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) co
 {
     Q_D(const MachineLearningRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

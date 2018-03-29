@@ -265,7 +265,7 @@ QNetworkRequest TranscribeServiceRequest::unsignedRequest(const QUrl &endpoint) 
 {
     Q_D(const TranscribeServiceRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

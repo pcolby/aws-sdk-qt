@@ -265,7 +265,7 @@ QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) cons
 {
     Q_D(const ConfigServiceRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

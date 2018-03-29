@@ -265,7 +265,7 @@ QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QU
 {
     Q_D(const ServerlessApplicationRepositoryRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

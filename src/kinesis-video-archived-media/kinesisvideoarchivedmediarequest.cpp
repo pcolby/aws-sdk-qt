@@ -265,7 +265,7 @@ QNetworkRequest KinesisVideoArchivedMediaRequest::unsignedRequest(const QUrl &en
 {
     Q_D(const KinesisVideoArchivedMediaRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

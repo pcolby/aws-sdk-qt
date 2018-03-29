@@ -265,7 +265,7 @@ QNetworkRequest MarketplaceEntitlementServiceRequest::unsignedRequest(const QUrl
 {
     Q_D(const MarketplaceEntitlementServiceRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

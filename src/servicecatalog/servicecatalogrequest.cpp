@@ -265,7 +265,7 @@ QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) con
 {
     Q_D(const ServiceCatalogRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

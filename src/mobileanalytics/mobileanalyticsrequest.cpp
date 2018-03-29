@@ -265,7 +265,7 @@ QNetworkRequest MobileAnalyticsRequest::unsignedRequest(const QUrl &endpoint) co
 {
     Q_D(const MobileAnalyticsRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

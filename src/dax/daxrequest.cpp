@@ -265,7 +265,7 @@ QNetworkRequest DAXRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const DAXRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

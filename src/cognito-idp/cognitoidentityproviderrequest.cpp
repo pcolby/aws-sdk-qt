@@ -265,7 +265,7 @@ QNetworkRequest CognitoIdentityProviderRequest::unsignedRequest(const QUrl &endp
 {
     Q_D(const CognitoIdentityProviderRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

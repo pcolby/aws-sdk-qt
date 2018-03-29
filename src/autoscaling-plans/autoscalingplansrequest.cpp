@@ -265,7 +265,7 @@ QNetworkRequest AutoScalingPlansRequest::unsignedRequest(const QUrl &endpoint) c
 {
     Q_D(const AutoScalingPlansRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

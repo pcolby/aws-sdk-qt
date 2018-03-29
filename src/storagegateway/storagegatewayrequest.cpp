@@ -265,7 +265,7 @@ QNetworkRequest StorageGatewayRequest::unsignedRequest(const QUrl &endpoint) con
 {
     Q_D(const StorageGatewayRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

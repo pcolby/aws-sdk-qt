@@ -265,7 +265,7 @@ QNetworkRequest MTurkRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const MTurkRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

@@ -265,7 +265,7 @@ QNetworkRequest ElasticTranscoderRequest::unsignedRequest(const QUrl &endpoint) 
 {
     Q_D(const ElasticTranscoderRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

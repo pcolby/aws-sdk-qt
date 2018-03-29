@@ -265,7 +265,7 @@ QNetworkRequest CloudWatchLogsRequest::unsignedRequest(const QUrl &endpoint) con
 {
     Q_D(const CloudWatchLogsRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

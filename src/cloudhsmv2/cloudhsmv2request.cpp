@@ -265,7 +265,7 @@ QNetworkRequest CloudHSMV2Request::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const CloudHSMV2Request);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

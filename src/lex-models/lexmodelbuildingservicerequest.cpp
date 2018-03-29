@@ -265,7 +265,7 @@ QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endp
 {
     Q_D(const LexModelBuildingServiceRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

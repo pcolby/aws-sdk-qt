@@ -265,7 +265,7 @@ QNetworkRequest CostandUsageReportServiceRequest::unsignedRequest(const QUrl &en
 {
     Q_D(const CostandUsageReportServiceRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

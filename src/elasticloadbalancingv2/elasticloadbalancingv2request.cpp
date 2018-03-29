@@ -265,7 +265,7 @@ QNetworkRequest ElasticLoadBalancingv2Request::unsignedRequest(const QUrl &endpo
 {
     Q_D(const ElasticLoadBalancingv2Request);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

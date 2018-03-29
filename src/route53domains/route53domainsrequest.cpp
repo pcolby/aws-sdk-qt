@@ -265,7 +265,7 @@ QNetworkRequest Route53DomainsRequest::unsignedRequest(const QUrl &endpoint) con
 {
     Q_D(const Route53DomainsRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

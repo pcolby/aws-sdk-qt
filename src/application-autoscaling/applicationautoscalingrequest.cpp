@@ -265,7 +265,7 @@ QNetworkRequest ApplicationAutoScalingRequest::unsignedRequest(const QUrl &endpo
 {
     Q_D(const ApplicationAutoScalingRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

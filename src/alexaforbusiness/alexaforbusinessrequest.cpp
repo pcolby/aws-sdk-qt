@@ -265,7 +265,7 @@ QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) c
 {
     Q_D(const AlexaForBusinessRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

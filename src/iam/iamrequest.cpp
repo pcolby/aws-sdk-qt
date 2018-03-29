@@ -265,7 +265,7 @@ QNetworkRequest IAMRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const IAMRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

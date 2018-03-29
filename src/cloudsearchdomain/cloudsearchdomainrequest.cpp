@@ -265,7 +265,7 @@ QNetworkRequest CloudSearchDomainRequest::unsignedRequest(const QUrl &endpoint) 
 {
     Q_D(const CloudSearchDomainRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

@@ -265,7 +265,7 @@ QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const S3Request);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 

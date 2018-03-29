@@ -265,7 +265,7 @@ QNetworkRequest MQRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const MQRequest);
     QUrl url(endpoint);
-    url.setQuery(d->urlQuery());
+    /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
