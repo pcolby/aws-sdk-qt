@@ -35,7 +35,7 @@ public:
     AppStreamResponse(QObject * const parent = 0);
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseFailure(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(AppStreamResponse)

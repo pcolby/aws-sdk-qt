@@ -46,6 +46,27 @@ KinesisVideoArchivedMediaResponse::KinesisVideoArchivedMediaResponse(QObject * c
 }
 
 /**
+ * @brief  Parse a failure response.
+ *
+ * @param  response  Response to parse.
+ */
+void KinesisVideoArchivedMediaResponse::parseFailure(QIODevice &response)
+{
+    Q_D(SqsResponse);
+    Q_UNUSED(response);
+    /*QXmlStreamReader xml(&response);
+    if (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("ErrorResponse")) {
+            d->parseErrorResponse(xml);
+        } else {
+            qWarning() << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+    setXmlError(xml);*/
+}
+
+/**
  * @internal
  *
  * @class  KinesisVideoArchivedMediaResponsePrivate

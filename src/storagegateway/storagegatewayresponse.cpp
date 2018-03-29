@@ -46,6 +46,27 @@ StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
 }
 
 /**
+ * @brief  Parse a failure response.
+ *
+ * @param  response  Response to parse.
+ */
+void StorageGatewayResponse::parseFailure(QIODevice &response)
+{
+    Q_D(SqsResponse);
+    Q_UNUSED(response);
+    /*QXmlStreamReader xml(&response);
+    if (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("ErrorResponse")) {
+            d->parseErrorResponse(xml);
+        } else {
+            qWarning() << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+    setXmlError(xml);*/
+}
+
+/**
  * @internal
  *
  * @class  StorageGatewayResponsePrivate
