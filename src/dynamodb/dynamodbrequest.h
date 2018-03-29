@@ -37,7 +37,37 @@ class QTAWS_EXPORT DynamoDBRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by DynamoDB.
     enum Action {
-        // todo
+        BatchGetItemAction,
+        BatchWriteItemAction,
+        CreateBackupAction,
+        CreateGlobalTableAction,
+        CreateTableAction,
+        DeleteBackupAction,
+        DeleteItemAction,
+        DeleteTableAction,
+        DescribeBackupAction,
+        DescribeContinuousBackupsAction,
+        DescribeGlobalTableAction,
+        DescribeLimitsAction,
+        DescribeTableAction,
+        DescribeTimeToLiveAction,
+        GetItemAction,
+        ListBackupsAction,
+        ListGlobalTablesAction,
+        ListTablesAction,
+        ListTagsOfResourceAction,
+        PutItemAction,
+        QueryAction,
+        RestoreTableFromBackupAction,
+        RestoreTableToPointInTimeAction,
+        ScanAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateContinuousBackupsAction,
+        UpdateGlobalTableAction,
+        UpdateItemAction,
+        UpdateTableAction,
+        UpdateTimeToLiveAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

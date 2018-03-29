@@ -37,7 +37,34 @@ class QTAWS_EXPORT MachineLearningRequest : public QtAws::Core::AwsAbstractReque
 public:
     /// Actions supported by MachineLearning.
     enum Action {
-        // todo
+        AddTagsAction,
+        CreateBatchPredictionAction,
+        CreateDataSourceFromRDSAction,
+        CreateDataSourceFromRedshiftAction,
+        CreateDataSourceFromS3Action,
+        CreateEvaluationAction,
+        CreateMLModelAction,
+        CreateRealtimeEndpointAction,
+        DeleteBatchPredictionAction,
+        DeleteDataSourceAction,
+        DeleteEvaluationAction,
+        DeleteMLModelAction,
+        DeleteRealtimeEndpointAction,
+        DeleteTagsAction,
+        DescribeBatchPredictionsAction,
+        DescribeDataSourcesAction,
+        DescribeEvaluationsAction,
+        DescribeMLModelsAction,
+        DescribeTagsAction,
+        GetBatchPredictionAction,
+        GetDataSourceAction,
+        GetEvaluationAction,
+        GetMLModelAction,
+        PredictAction,
+        UpdateBatchPredictionAction,
+        UpdateDataSourceAction,
+        UpdateEvaluationAction,
+        UpdateMLModelAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,39 @@ class QTAWS_EXPORT GlacierRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Glacier.
     enum Action {
-        // todo
+        AbortMultipartUploadAction,
+        AbortVaultLockAction,
+        AddTagsToVaultAction,
+        CompleteMultipartUploadAction,
+        CompleteVaultLockAction,
+        CreateVaultAction,
+        DeleteArchiveAction,
+        DeleteVaultAction,
+        DeleteVaultAccessPolicyAction,
+        DeleteVaultNotificationsAction,
+        DescribeJobAction,
+        DescribeVaultAction,
+        GetDataRetrievalPolicyAction,
+        GetJobOutputAction,
+        GetVaultAccessPolicyAction,
+        GetVaultLockAction,
+        GetVaultNotificationsAction,
+        InitiateJobAction,
+        InitiateMultipartUploadAction,
+        InitiateVaultLockAction,
+        ListJobsAction,
+        ListMultipartUploadsAction,
+        ListPartsAction,
+        ListProvisionedCapacityAction,
+        ListTagsForVaultAction,
+        ListVaultsAction,
+        PurchaseProvisionedCapacityAction,
+        RemoveTagsFromVaultAction,
+        SetDataRetrievalPolicyAction,
+        SetVaultAccessPolicyAction,
+        SetVaultNotificationsAction,
+        UploadArchiveAction,
+        UploadMultipartPartAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

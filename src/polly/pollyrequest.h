@@ -37,7 +37,12 @@ class QTAWS_EXPORT PollyRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Polly.
     enum Action {
-        // todo
+        DeleteLexiconAction,
+        DescribeVoicesAction,
+        GetLexiconAction,
+        ListLexiconsAction,
+        PutLexiconAction,
+        SynthesizeSpeechAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

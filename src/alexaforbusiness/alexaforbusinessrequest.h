@@ -37,7 +37,42 @@ class QTAWS_EXPORT AlexaForBusinessRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by AlexaForBusiness.
     enum Action {
-        // todo
+        AssociateDeviceWithRoomAction,
+        AssociateSkillGroupWithRoomAction,
+        CreateProfileAction,
+        CreateRoomAction,
+        CreateSkillGroupAction,
+        CreateUserAction,
+        DeleteProfileAction,
+        DeleteRoomAction,
+        DeleteRoomSkillParameterAction,
+        DeleteSkillGroupAction,
+        DeleteUserAction,
+        DisassociateDeviceFromRoomAction,
+        DisassociateSkillGroupFromRoomAction,
+        GetDeviceAction,
+        GetProfileAction,
+        GetRoomAction,
+        GetRoomSkillParameterAction,
+        GetSkillGroupAction,
+        ListSkillsAction,
+        ListTagsAction,
+        PutRoomSkillParameterAction,
+        ResolveRoomAction,
+        RevokeInvitationAction,
+        SearchDevicesAction,
+        SearchProfilesAction,
+        SearchRoomsAction,
+        SearchSkillGroupsAction,
+        SearchUsersAction,
+        SendInvitationAction,
+        StartDeviceSyncAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateDeviceAction,
+        UpdateProfileAction,
+        UpdateRoomAction,
+        UpdateSkillGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

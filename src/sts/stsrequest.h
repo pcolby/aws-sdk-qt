@@ -37,7 +37,13 @@ class QTAWS_EXPORT STSRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by STS.
     enum Action {
-        // todo
+        AssumeRoleAction,
+        AssumeRoleWithSAMLAction,
+        AssumeRoleWithWebIdentityAction,
+        DecodeAuthorizationMessageAction,
+        GetCallerIdentityAction,
+        GetFederationTokenAction,
+        GetSessionTokenAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

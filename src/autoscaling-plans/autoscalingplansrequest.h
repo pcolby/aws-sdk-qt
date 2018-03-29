@@ -37,7 +37,10 @@ class QTAWS_EXPORT AutoScalingPlansRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by AutoScalingPlans.
     enum Action {
-        // todo
+        CreateScalingPlanAction,
+        DeleteScalingPlanAction,
+        DescribeScalingPlanResourcesAction,
+        DescribeScalingPlansAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

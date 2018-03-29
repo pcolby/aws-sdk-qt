@@ -37,7 +37,20 @@ class QTAWS_EXPORT CloudTrailRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CloudTrail.
     enum Action {
-        // todo
+        AddTagsAction,
+        CreateTrailAction,
+        DeleteTrailAction,
+        DescribeTrailsAction,
+        GetEventSelectorsAction,
+        GetTrailStatusAction,
+        ListPublicKeysAction,
+        ListTagsAction,
+        LookupEventsAction,
+        PutEventSelectorsAction,
+        RemoveTagsAction,
+        StartLoggingAction,
+        StopLoggingAction,
+        UpdateTrailAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

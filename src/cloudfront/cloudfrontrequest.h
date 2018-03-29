@@ -37,7 +37,34 @@ class QTAWS_EXPORT CloudFrontRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CloudFront.
     enum Action {
-        // todo
+        CreateCloudFrontOriginAccessIdentityAction,
+        CreateDistributionAction,
+        CreateDistributionWithTagsAction,
+        CreateInvalidationAction,
+        CreateStreamingDistributionAction,
+        CreateStreamingDistributionWithTagsAction,
+        DeleteCloudFrontOriginAccessIdentityAction,
+        DeleteDistributionAction,
+        DeleteServiceLinkedRoleAction,
+        DeleteStreamingDistributionAction,
+        GetCloudFrontOriginAccessIdentityAction,
+        GetCloudFrontOriginAccessIdentityConfigAction,
+        GetDistributionAction,
+        GetDistributionConfigAction,
+        GetInvalidationAction,
+        GetStreamingDistributionAction,
+        GetStreamingDistributionConfigAction,
+        ListCloudFrontOriginAccessIdentitiesAction,
+        ListDistributionsAction,
+        ListDistributionsByWebACLIdAction,
+        ListInvalidationsAction,
+        ListStreamingDistributionsAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateCloudFrontOriginAccessIdentityAction,
+        UpdateDistributionAction,
+        UpdateStreamingDistributionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

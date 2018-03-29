@@ -37,7 +37,16 @@ class QTAWS_EXPORT ShieldRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Shield.
     enum Action {
-        // todo
+        CreateProtectionAction,
+        CreateSubscriptionAction,
+        DeleteProtectionAction,
+        DeleteSubscriptionAction,
+        DescribeAttackAction,
+        DescribeProtectionAction,
+        DescribeSubscriptionAction,
+        GetSubscriptionStateAction,
+        ListAttacksAction,
+        ListProtectionsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

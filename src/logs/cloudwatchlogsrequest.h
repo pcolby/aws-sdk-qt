@@ -37,7 +37,39 @@ class QTAWS_EXPORT CloudWatchLogsRequest : public QtAws::Core::AwsAbstractReques
 public:
     /// Actions supported by CloudWatchLogs.
     enum Action {
-        // todo
+        AssociateKmsKeyAction,
+        CancelExportTaskAction,
+        CreateExportTaskAction,
+        CreateLogGroupAction,
+        CreateLogStreamAction,
+        DeleteDestinationAction,
+        DeleteLogGroupAction,
+        DeleteLogStreamAction,
+        DeleteMetricFilterAction,
+        DeleteResourcePolicyAction,
+        DeleteRetentionPolicyAction,
+        DeleteSubscriptionFilterAction,
+        DescribeDestinationsAction,
+        DescribeExportTasksAction,
+        DescribeLogGroupsAction,
+        DescribeLogStreamsAction,
+        DescribeMetricFiltersAction,
+        DescribeResourcePoliciesAction,
+        DescribeSubscriptionFiltersAction,
+        DisassociateKmsKeyAction,
+        FilterLogEventsAction,
+        GetLogEventsAction,
+        ListTagsLogGroupAction,
+        PutDestinationAction,
+        PutDestinationPolicyAction,
+        PutLogEventsAction,
+        PutMetricFilterAction,
+        PutResourcePolicyAction,
+        PutRetentionPolicyAction,
+        PutSubscriptionFilterAction,
+        TagLogGroupAction,
+        TestMetricFilterAction,
+        UntagLogGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,11 @@ class QTAWS_EXPORT MediaStoreDataRequest : public QtAws::Core::AwsAbstractReques
 public:
     /// Actions supported by MediaStoreData.
     enum Action {
-        // todo
+        DeleteObjectAction,
+        DescribeObjectAction,
+        GetObjectAction,
+        ListItemsAction,
+        PutObjectAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

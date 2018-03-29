@@ -37,7 +37,7 @@ class QTAWS_EXPORT MobileAnalyticsRequest : public QtAws::Core::AwsAbstractReque
 public:
     /// Actions supported by MobileAnalytics.
     enum Action {
-        // todo
+        PutEventsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

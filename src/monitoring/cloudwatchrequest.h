@@ -37,7 +37,21 @@ class QTAWS_EXPORT CloudWatchRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CloudWatch.
     enum Action {
-        // todo
+        DeleteAlarmsAction,
+        DeleteDashboardsAction,
+        DescribeAlarmHistoryAction,
+        DescribeAlarmsAction,
+        DescribeAlarmsForMetricAction,
+        DisableAlarmActionsAction,
+        EnableAlarmActionsAction,
+        GetDashboardAction,
+        GetMetricStatisticsAction,
+        ListDashboardsAction,
+        ListMetricsAction,
+        PutDashboardAction,
+        PutMetricAlarmAction,
+        PutMetricDataAction,
+        SetAlarmStateAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

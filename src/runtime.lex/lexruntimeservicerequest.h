@@ -37,7 +37,8 @@ class QTAWS_EXPORT LexRuntimeServiceRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by LexRuntimeService.
     enum Action {
-        // todo
+        PostContentAction,
+        PostTextAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

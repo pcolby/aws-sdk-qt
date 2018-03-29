@@ -37,7 +37,30 @@ class QTAWS_EXPORT Route53DomainsRequest : public QtAws::Core::AwsAbstractReques
 public:
     /// Actions supported by Route53Domains.
     enum Action {
-        // todo
+        CheckDomainAvailabilityAction,
+        CheckDomainTransferabilityAction,
+        DeleteTagsForDomainAction,
+        DisableDomainAutoRenewAction,
+        DisableDomainTransferLockAction,
+        EnableDomainAutoRenewAction,
+        EnableDomainTransferLockAction,
+        GetContactReachabilityStatusAction,
+        GetDomainDetailAction,
+        GetDomainSuggestionsAction,
+        GetOperationDetailAction,
+        ListDomainsAction,
+        ListOperationsAction,
+        ListTagsForDomainAction,
+        RegisterDomainAction,
+        RenewDomainAction,
+        ResendContactReachabilityEmailAction,
+        RetrieveDomainAuthCodeAction,
+        TransferDomainAction,
+        UpdateDomainContactAction,
+        UpdateDomainContactPrivacyAction,
+        UpdateDomainNameserversAction,
+        UpdateTagsForDomainAction,
+        ViewBillingAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

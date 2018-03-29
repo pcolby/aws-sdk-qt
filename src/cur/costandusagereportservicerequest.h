@@ -37,7 +37,9 @@ class QTAWS_EXPORT CostandUsageReportServiceRequest : public QtAws::Core::AwsAbs
 public:
     /// Actions supported by CostandUsageReportService.
     enum Action {
-        // todo
+        DeleteReportDefinitionAction,
+        DescribeReportDefinitionsAction,
+        PutReportDefinitionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

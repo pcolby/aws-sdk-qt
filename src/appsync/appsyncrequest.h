@@ -37,7 +37,33 @@ class QTAWS_EXPORT AppSyncRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by AppSync.
     enum Action {
-        // todo
+        CreateApiKeyAction,
+        CreateDataSourceAction,
+        CreateGraphqlApiAction,
+        CreateResolverAction,
+        CreateTypeAction,
+        DeleteApiKeyAction,
+        DeleteDataSourceAction,
+        DeleteGraphqlApiAction,
+        DeleteResolverAction,
+        DeleteTypeAction,
+        GetDataSourceAction,
+        GetGraphqlApiAction,
+        GetIntrospectionSchemaAction,
+        GetResolverAction,
+        GetSchemaCreationStatusAction,
+        GetTypeAction,
+        ListApiKeysAction,
+        ListDataSourcesAction,
+        ListGraphqlApisAction,
+        ListResolversAction,
+        ListTypesAction,
+        StartSchemaCreationAction,
+        UpdateApiKeyAction,
+        UpdateDataSourceAction,
+        UpdateGraphqlApiAction,
+        UpdateResolverAction,
+        UpdateTypeAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

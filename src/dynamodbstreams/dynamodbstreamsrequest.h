@@ -37,7 +37,10 @@ class QTAWS_EXPORT DynamoDBStreamsRequest : public QtAws::Core::AwsAbstractReque
 public:
     /// Actions supported by DynamoDBStreams.
     enum Action {
-        // todo
+        DescribeStreamAction,
+        GetRecordsAction,
+        GetShardIteratorAction,
+        ListStreamsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

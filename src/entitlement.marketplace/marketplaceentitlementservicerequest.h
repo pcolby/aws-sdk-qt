@@ -37,7 +37,7 @@ class QTAWS_EXPORT MarketplaceEntitlementServiceRequest : public QtAws::Core::Aw
 public:
     /// Actions supported by MarketplaceEntitlementService.
     enum Action {
-        // todo
+        GetEntitlementsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,17 @@ class QTAWS_EXPORT ACMRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by ACM.
     enum Action {
-        // todo
+        AddTagsToCertificateAction,
+        DeleteCertificateAction,
+        DescribeCertificateAction,
+        GetCertificateAction,
+        ImportCertificateAction,
+        ListCertificatesAction,
+        ListTagsForCertificateAction,
+        RemoveTagsFromCertificateAction,
+        RequestCertificateAction,
+        ResendValidationEmailAction,
+        UpdateCertificateOptionsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,28 @@ class QTAWS_EXPORT ECRRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by ECR.
     enum Action {
-        // todo
+        BatchCheckLayerAvailabilityAction,
+        BatchDeleteImageAction,
+        BatchGetImageAction,
+        CompleteLayerUploadAction,
+        CreateRepositoryAction,
+        DeleteLifecyclePolicyAction,
+        DeleteRepositoryAction,
+        DeleteRepositoryPolicyAction,
+        DescribeImagesAction,
+        DescribeRepositoriesAction,
+        GetAuthorizationTokenAction,
+        GetDownloadUrlForLayerAction,
+        GetLifecyclePolicyAction,
+        GetLifecyclePolicyPreviewAction,
+        GetRepositoryPolicyAction,
+        InitiateLayerUploadAction,
+        ListImagesAction,
+        PutImageAction,
+        PutLifecyclePolicyAction,
+        SetRepositoryPolicyAction,
+        StartLifecyclePolicyPreviewAction,
+        UploadLayerPartAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

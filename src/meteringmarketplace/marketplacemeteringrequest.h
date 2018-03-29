@@ -37,7 +37,9 @@ class QTAWS_EXPORT MarketplaceMeteringRequest : public QtAws::Core::AwsAbstractR
 public:
     /// Actions supported by MarketplaceMetering.
     enum Action {
-        // todo
+        BatchMeterUsageAction,
+        MeterUsageAction,
+        ResolveCustomerAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,16 @@ class QTAWS_EXPORT SimpleDBRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SimpleDB.
     enum Action {
-        // todo
+        BatchDeleteAttributesAction,
+        BatchPutAttributesAction,
+        CreateDomainAction,
+        DeleteAttributesAction,
+        DeleteDomainAction,
+        DomainMetadataAction,
+        GetAttributesAction,
+        ListDomainsAction,
+        PutAttributesAction,
+        SelectAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

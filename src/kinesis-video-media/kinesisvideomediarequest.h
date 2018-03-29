@@ -37,7 +37,7 @@ class QTAWS_EXPORT KinesisVideoMediaRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by KinesisVideoMedia.
     enum Action {
-        // todo
+        GetMediaAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

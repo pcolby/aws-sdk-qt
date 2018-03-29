@@ -37,7 +37,24 @@ class QTAWS_EXPORT CognitoIdentityRequest : public QtAws::Core::AwsAbstractReque
 public:
     /// Actions supported by CognitoIdentity.
     enum Action {
-        // todo
+        CreateIdentityPoolAction,
+        DeleteIdentitiesAction,
+        DeleteIdentityPoolAction,
+        DescribeIdentityAction,
+        DescribeIdentityPoolAction,
+        GetCredentialsForIdentityAction,
+        GetIdAction,
+        GetIdentityPoolRolesAction,
+        GetOpenIdTokenAction,
+        GetOpenIdTokenForDeveloperIdentityAction,
+        ListIdentitiesAction,
+        ListIdentityPoolsAction,
+        LookupDeveloperIdentityAction,
+        MergeDeveloperIdentitiesAction,
+        SetIdentityPoolRolesAction,
+        UnlinkDeveloperIdentityAction,
+        UnlinkIdentityAction,
+        UpdateIdentityPoolAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

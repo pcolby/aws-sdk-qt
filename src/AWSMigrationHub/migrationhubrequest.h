@@ -37,7 +37,22 @@ class QTAWS_EXPORT MigrationHubRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by MigrationHub.
     enum Action {
-        // todo
+        AssociateCreatedArtifactAction,
+        AssociateDiscoveredResourceAction,
+        CreateProgressUpdateStreamAction,
+        DeleteProgressUpdateStreamAction,
+        DescribeApplicationStateAction,
+        DescribeMigrationTaskAction,
+        DisassociateCreatedArtifactAction,
+        DisassociateDiscoveredResourceAction,
+        ImportMigrationTaskAction,
+        ListCreatedArtifactsAction,
+        ListDiscoveredResourcesAction,
+        ListMigrationTasksAction,
+        ListProgressUpdateStreamsAction,
+        NotifyApplicationStateAction,
+        NotifyMigrationTaskStateAction,
+        PutResourceAttributesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,40 @@ class QTAWS_EXPORT SageMakerRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SageMaker.
     enum Action {
-        // todo
+        AddTagsAction,
+        CreateEndpointAction,
+        CreateEndpointConfigAction,
+        CreateModelAction,
+        CreateNotebookInstanceAction,
+        CreateNotebookInstanceLifecycleConfigAction,
+        CreatePresignedNotebookInstanceUrlAction,
+        CreateTrainingJobAction,
+        DeleteEndpointAction,
+        DeleteEndpointConfigAction,
+        DeleteModelAction,
+        DeleteNotebookInstanceAction,
+        DeleteNotebookInstanceLifecycleConfigAction,
+        DeleteTagsAction,
+        DescribeEndpointAction,
+        DescribeEndpointConfigAction,
+        DescribeModelAction,
+        DescribeNotebookInstanceAction,
+        DescribeNotebookInstanceLifecycleConfigAction,
+        DescribeTrainingJobAction,
+        ListEndpointConfigsAction,
+        ListEndpointsAction,
+        ListModelsAction,
+        ListNotebookInstanceLifecycleConfigsAction,
+        ListNotebookInstancesAction,
+        ListTagsAction,
+        ListTrainingJobsAction,
+        StartNotebookInstanceAction,
+        StopNotebookInstanceAction,
+        StopTrainingJobAction,
+        UpdateEndpointAction,
+        UpdateEndpointWeightsAndCapacitiesAction,
+        UpdateNotebookInstanceAction,
+        UpdateNotebookInstanceLifecycleConfigAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,37 @@ class QTAWS_EXPORT SWFRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SWF.
     enum Action {
-        // todo
+        CountClosedWorkflowExecutionsAction,
+        CountOpenWorkflowExecutionsAction,
+        CountPendingActivityTasksAction,
+        CountPendingDecisionTasksAction,
+        DeprecateActivityTypeAction,
+        DeprecateDomainAction,
+        DeprecateWorkflowTypeAction,
+        DescribeActivityTypeAction,
+        DescribeDomainAction,
+        DescribeWorkflowExecutionAction,
+        DescribeWorkflowTypeAction,
+        GetWorkflowExecutionHistoryAction,
+        ListActivityTypesAction,
+        ListClosedWorkflowExecutionsAction,
+        ListDomainsAction,
+        ListOpenWorkflowExecutionsAction,
+        ListWorkflowTypesAction,
+        PollForActivityTaskAction,
+        PollForDecisionTaskAction,
+        RecordActivityTaskHeartbeatAction,
+        RegisterActivityTypeAction,
+        RegisterDomainAction,
+        RegisterWorkflowTypeAction,
+        RequestCancelWorkflowExecutionAction,
+        RespondActivityTaskCanceledAction,
+        RespondActivityTaskCompletedAction,
+        RespondActivityTaskFailedAction,
+        RespondDecisionTaskCompletedAction,
+        SignalWorkflowExecutionAction,
+        StartWorkflowExecutionAction,
+        TerminateWorkflowExecutionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

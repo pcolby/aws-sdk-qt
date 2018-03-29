@@ -37,7 +37,23 @@ class QTAWS_EXPORT MQRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by MQ.
     enum Action {
-        // todo
+        CreateBrokerAction,
+        CreateConfigurationAction,
+        CreateUserAction,
+        DeleteBrokerAction,
+        DeleteUserAction,
+        DescribeBrokerAction,
+        DescribeConfigurationAction,
+        DescribeConfigurationRevisionAction,
+        DescribeUserAction,
+        ListBrokersAction,
+        ListConfigurationRevisionsAction,
+        ListConfigurationsAction,
+        ListUsersAction,
+        RebootBrokerAction,
+        UpdateBrokerAction,
+        UpdateConfigurationAction,
+        UpdateUserAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

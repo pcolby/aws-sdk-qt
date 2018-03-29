@@ -37,7 +37,12 @@ class QTAWS_EXPORT HealthRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Health.
     enum Action {
-        // todo
+        DescribeAffectedEntitiesAction,
+        DescribeEntityAggregatesAction,
+        DescribeEventAggregatesAction,
+        DescribeEventDetailsAction,
+        DescribeEventTypesAction,
+        DescribeEventsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

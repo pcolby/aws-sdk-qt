@@ -37,7 +37,42 @@ class QTAWS_EXPORT LexModelBuildingServiceRequest : public QtAws::Core::AwsAbstr
 public:
     /// Actions supported by LexModelBuildingService.
     enum Action {
-        // todo
+        CreateBotVersionAction,
+        CreateIntentVersionAction,
+        CreateSlotTypeVersionAction,
+        DeleteBotAction,
+        DeleteBotAliasAction,
+        DeleteBotChannelAssociationAction,
+        DeleteBotVersionAction,
+        DeleteIntentAction,
+        DeleteIntentVersionAction,
+        DeleteSlotTypeAction,
+        DeleteSlotTypeVersionAction,
+        DeleteUtterancesAction,
+        GetBotAction,
+        GetBotAliasAction,
+        GetBotAliasesAction,
+        GetBotChannelAssociationAction,
+        GetBotChannelAssociationsAction,
+        GetBotVersionsAction,
+        GetBotsAction,
+        GetBuiltinIntentAction,
+        GetBuiltinIntentsAction,
+        GetBuiltinSlotTypesAction,
+        GetExportAction,
+        GetImportAction,
+        GetIntentAction,
+        GetIntentVersionsAction,
+        GetIntentsAction,
+        GetSlotTypeAction,
+        GetSlotTypeVersionsAction,
+        GetSlotTypesAction,
+        GetUtterancesViewAction,
+        PutBotAction,
+        PutBotAliasAction,
+        PutIntentAction,
+        PutSlotTypeAction,
+        StartImportAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

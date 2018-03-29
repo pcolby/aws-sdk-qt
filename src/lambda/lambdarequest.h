@@ -37,7 +37,36 @@ class QTAWS_EXPORT LambdaRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Lambda.
     enum Action {
-        // todo
+        AddPermissionAction,
+        CreateAliasAction,
+        CreateEventSourceMappingAction,
+        CreateFunctionAction,
+        DeleteAliasAction,
+        DeleteEventSourceMappingAction,
+        DeleteFunctionAction,
+        DeleteFunctionConcurrencyAction,
+        GetAccountSettingsAction,
+        GetAliasAction,
+        GetEventSourceMappingAction,
+        GetFunctionAction,
+        GetFunctionConfigurationAction,
+        GetPolicyAction,
+        InvokeAction,
+        InvokeAsyncAction,
+        ListAliasesAction,
+        ListEventSourceMappingsAction,
+        ListFunctionsAction,
+        ListTagsAction,
+        ListVersionsByFunctionAction,
+        PublishVersionAction,
+        PutFunctionConcurrencyAction,
+        RemovePermissionAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateAliasAction,
+        UpdateEventSourceMappingAction,
+        UpdateFunctionCodeAction,
+        UpdateFunctionConfigurationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

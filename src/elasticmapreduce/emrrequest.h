@@ -37,7 +37,33 @@ class QTAWS_EXPORT EMRRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by EMR.
     enum Action {
-        // todo
+        AddInstanceFleetAction,
+        AddInstanceGroupsAction,
+        AddJobFlowStepsAction,
+        AddTagsAction,
+        CancelStepsAction,
+        CreateSecurityConfigurationAction,
+        DeleteSecurityConfigurationAction,
+        DescribeClusterAction,
+        DescribeJobFlowsAction,
+        DescribeSecurityConfigurationAction,
+        DescribeStepAction,
+        ListBootstrapActionsAction,
+        ListClustersAction,
+        ListInstanceFleetsAction,
+        ListInstanceGroupsAction,
+        ListInstancesAction,
+        ListSecurityConfigurationsAction,
+        ListStepsAction,
+        ModifyInstanceFleetAction,
+        ModifyInstanceGroupsAction,
+        PutAutoScalingPolicyAction,
+        RemoveAutoScalingPolicyAction,
+        RemoveTagsAction,
+        RunJobFlowAction,
+        SetTerminationProtectionAction,
+        SetVisibleToAllUsersAction,
+        TerminateJobFlowsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

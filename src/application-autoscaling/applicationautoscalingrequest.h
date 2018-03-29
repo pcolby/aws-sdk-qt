@@ -37,7 +37,16 @@ class QTAWS_EXPORT ApplicationAutoScalingRequest : public QtAws::Core::AwsAbstra
 public:
     /// Actions supported by ApplicationAutoScaling.
     enum Action {
-        // todo
+        DeleteScalingPolicyAction,
+        DeleteScheduledActionAction,
+        DeregisterScalableTargetAction,
+        DescribeScalableTargetsAction,
+        DescribeScalingActivitiesAction,
+        DescribeScalingPoliciesAction,
+        DescribeScheduledActionsAction,
+        PutScalingPolicyAction,
+        PutScheduledActionAction,
+        RegisterScalableTargetAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

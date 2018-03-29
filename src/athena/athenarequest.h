@@ -37,7 +37,17 @@ class QTAWS_EXPORT AthenaRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Athena.
     enum Action {
-        // todo
+        BatchGetNamedQueryAction,
+        BatchGetQueryExecutionAction,
+        CreateNamedQueryAction,
+        DeleteNamedQueryAction,
+        GetNamedQueryAction,
+        GetQueryExecutionAction,
+        GetQueryResultsAction,
+        ListNamedQueriesAction,
+        ListQueryExecutionsAction,
+        StartQueryExecutionAction,
+        StopQueryExecutionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

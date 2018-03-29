@@ -37,7 +37,16 @@ class QTAWS_EXPORT ServerlessApplicationRepositoryRequest : public QtAws::Core::
 public:
     /// Actions supported by ServerlessApplicationRepository.
     enum Action {
-        // todo
+        CreateApplicationAction,
+        CreateApplicationVersionAction,
+        CreateCloudFormationChangeSetAction,
+        DeleteApplicationAction,
+        GetApplicationAction,
+        GetApplicationPolicyAction,
+        ListApplicationVersionsAction,
+        ListApplicationsAction,
+        PutApplicationPolicyAction,
+        UpdateApplicationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,12 @@ class QTAWS_EXPORT CostExplorerRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by CostExplorer.
     enum Action {
-        // todo
+        GetCostAndUsageAction,
+        GetDimensionValuesAction,
+        GetReservationCoverageAction,
+        GetReservationPurchaseRecommendationAction,
+        GetReservationUtilizationAction,
+        GetTagsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

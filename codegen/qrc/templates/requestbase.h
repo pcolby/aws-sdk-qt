@@ -19,7 +19,9 @@ class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by {{ServiceName}}.
     enum Action {
-        // todo
+        {% for name in operations.keys %}
+        {{name}}Action,
+        {% endfor %}
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

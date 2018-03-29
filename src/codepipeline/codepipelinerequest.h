@@ -37,7 +37,33 @@ class QTAWS_EXPORT CodePipelineRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by CodePipeline.
     enum Action {
-        // todo
+        AcknowledgeJobAction,
+        AcknowledgeThirdPartyJobAction,
+        CreateCustomActionTypeAction,
+        CreatePipelineAction,
+        DeleteCustomActionTypeAction,
+        DeletePipelineAction,
+        DisableStageTransitionAction,
+        EnableStageTransitionAction,
+        GetJobDetailsAction,
+        GetPipelineAction,
+        GetPipelineExecutionAction,
+        GetPipelineStateAction,
+        GetThirdPartyJobDetailsAction,
+        ListActionTypesAction,
+        ListPipelineExecutionsAction,
+        ListPipelinesAction,
+        PollForJobsAction,
+        PollForThirdPartyJobsAction,
+        PutActionRevisionAction,
+        PutApprovalResultAction,
+        PutJobFailureResultAction,
+        PutJobSuccessResultAction,
+        PutThirdPartyJobFailureResultAction,
+        PutThirdPartyJobSuccessResultAction,
+        RetryStageExecutionAction,
+        StartPipelineExecutionAction,
+        UpdatePipelineAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,26 @@ class QTAWS_EXPORT SQSRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SQS.
     enum Action {
-        // todo
+        AddPermissionAction,
+        ChangeMessageVisibilityAction,
+        ChangeMessageVisibilityBatchAction,
+        CreateQueueAction,
+        DeleteMessageAction,
+        DeleteMessageBatchAction,
+        DeleteQueueAction,
+        GetQueueAttributesAction,
+        GetQueueUrlAction,
+        ListDeadLetterSourceQueuesAction,
+        ListQueueTagsAction,
+        ListQueuesAction,
+        PurgeQueueAction,
+        ReceiveMessageAction,
+        RemovePermissionAction,
+        SendMessageAction,
+        SendMessageBatchAction,
+        SetQueueAttributesAction,
+        TagQueueAction,
+        UntagQueueAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

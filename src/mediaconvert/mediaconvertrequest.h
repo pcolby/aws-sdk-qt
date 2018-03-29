@@ -37,7 +37,26 @@ class QTAWS_EXPORT MediaConvertRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by MediaConvert.
     enum Action {
-        // todo
+        CancelJobAction,
+        CreateJobAction,
+        CreateJobTemplateAction,
+        CreatePresetAction,
+        CreateQueueAction,
+        DeleteJobTemplateAction,
+        DeletePresetAction,
+        DeleteQueueAction,
+        DescribeEndpointsAction,
+        GetJobAction,
+        GetJobTemplateAction,
+        GetPresetAction,
+        GetQueueAction,
+        ListJobTemplatesAction,
+        ListJobsAction,
+        ListPresetsAction,
+        ListQueuesAction,
+        UpdateJobTemplateAction,
+        UpdatePresetAction,
+        UpdateQueueAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

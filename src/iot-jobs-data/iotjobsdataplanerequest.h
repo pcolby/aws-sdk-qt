@@ -37,7 +37,10 @@ class QTAWS_EXPORT IoTJobsDataPlaneRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by IoTJobsDataPlane.
     enum Action {
-        // todo
+        DescribeJobExecutionAction,
+        GetPendingJobExecutionsAction,
+        StartNextPendingJobExecutionAction,
+        UpdateJobExecutionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

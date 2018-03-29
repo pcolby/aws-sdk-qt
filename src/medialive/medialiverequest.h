@@ -37,7 +37,23 @@ class QTAWS_EXPORT MediaLiveRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by MediaLive.
     enum Action {
-        // todo
+        CreateChannelAction,
+        CreateInputAction,
+        CreateInputSecurityGroupAction,
+        DeleteChannelAction,
+        DeleteInputAction,
+        DeleteInputSecurityGroupAction,
+        DescribeChannelAction,
+        DescribeInputAction,
+        DescribeInputSecurityGroupAction,
+        ListChannelsAction,
+        ListInputSecurityGroupsAction,
+        ListInputsAction,
+        StartChannelAction,
+        StopChannelAction,
+        UpdateChannelAction,
+        UpdateInputAction,
+        UpdateInputSecurityGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

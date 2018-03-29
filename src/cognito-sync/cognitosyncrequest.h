@@ -37,7 +37,23 @@ class QTAWS_EXPORT CognitoSyncRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CognitoSync.
     enum Action {
-        // todo
+        BulkPublishAction,
+        DeleteDatasetAction,
+        DescribeDatasetAction,
+        DescribeIdentityPoolUsageAction,
+        DescribeIdentityUsageAction,
+        GetBulkPublishDetailsAction,
+        GetCognitoEventsAction,
+        GetIdentityPoolConfigurationAction,
+        ListDatasetsAction,
+        ListIdentityPoolUsageAction,
+        ListRecordsAction,
+        RegisterDeviceAction,
+        SetCognitoEventsAction,
+        SetIdentityPoolConfigurationAction,
+        SubscribeToDatasetAction,
+        UnsubscribeFromDatasetAction,
+        UpdateRecordsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

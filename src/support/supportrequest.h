@@ -37,7 +37,20 @@ class QTAWS_EXPORT SupportRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Support.
     enum Action {
-        // todo
+        AddAttachmentsToSetAction,
+        AddCommunicationToCaseAction,
+        CreateCaseAction,
+        DescribeAttachmentAction,
+        DescribeCasesAction,
+        DescribeCommunicationsAction,
+        DescribeServicesAction,
+        DescribeSeverityLevelsAction,
+        DescribeTrustedAdvisorCheckRefreshStatusesAction,
+        DescribeTrustedAdvisorCheckResultAction,
+        DescribeTrustedAdvisorCheckSummariesAction,
+        DescribeTrustedAdvisorChecksAction,
+        RefreshTrustedAdvisorCheckAction,
+        ResolveCaseAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

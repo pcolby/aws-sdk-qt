@@ -37,7 +37,22 @@ class QTAWS_EXPORT BatchRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Batch.
     enum Action {
-        // todo
+        CancelJobAction,
+        CreateComputeEnvironmentAction,
+        CreateJobQueueAction,
+        DeleteComputeEnvironmentAction,
+        DeleteJobQueueAction,
+        DeregisterJobDefinitionAction,
+        DescribeComputeEnvironmentsAction,
+        DescribeJobDefinitionsAction,
+        DescribeJobQueuesAction,
+        DescribeJobsAction,
+        ListJobsAction,
+        RegisterJobDefinitionAction,
+        SubmitJobAction,
+        TerminateJobAction,
+        UpdateComputeEnvironmentAction,
+        UpdateJobQueueAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

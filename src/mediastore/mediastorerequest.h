@@ -37,7 +37,16 @@ class QTAWS_EXPORT MediaStoreRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by MediaStore.
     enum Action {
-        // todo
+        CreateContainerAction,
+        DeleteContainerAction,
+        DeleteContainerPolicyAction,
+        DeleteCorsPolicyAction,
+        DescribeContainerAction,
+        GetContainerPolicyAction,
+        GetCorsPolicyAction,
+        ListContainersAction,
+        PutContainerPolicyAction,
+        PutCorsPolicyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

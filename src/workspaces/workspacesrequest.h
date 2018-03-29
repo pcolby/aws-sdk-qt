@@ -37,7 +37,20 @@ class QTAWS_EXPORT WorkSpacesRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by WorkSpaces.
     enum Action {
-        // todo
+        CreateTagsAction,
+        CreateWorkspacesAction,
+        DeleteTagsAction,
+        DescribeTagsAction,
+        DescribeWorkspaceBundlesAction,
+        DescribeWorkspaceDirectoriesAction,
+        DescribeWorkspacesAction,
+        DescribeWorkspacesConnectionStatusAction,
+        ModifyWorkspacePropertiesAction,
+        RebootWorkspacesAction,
+        RebuildWorkspacesAction,
+        StartWorkspacesAction,
+        StopWorkspacesAction,
+        TerminateWorkspacesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

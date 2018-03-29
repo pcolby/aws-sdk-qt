@@ -37,7 +37,35 @@ class QTAWS_EXPORT ElasticLoadBalancingRequest : public QtAws::Core::AwsAbstract
 public:
     /// Actions supported by ElasticLoadBalancing.
     enum Action {
-        // todo
+        AddTagsAction,
+        ApplySecurityGroupsToLoadBalancerAction,
+        AttachLoadBalancerToSubnetsAction,
+        ConfigureHealthCheckAction,
+        CreateAppCookieStickinessPolicyAction,
+        CreateLBCookieStickinessPolicyAction,
+        CreateLoadBalancerAction,
+        CreateLoadBalancerListenersAction,
+        CreateLoadBalancerPolicyAction,
+        DeleteLoadBalancerAction,
+        DeleteLoadBalancerListenersAction,
+        DeleteLoadBalancerPolicyAction,
+        DeregisterInstancesFromLoadBalancerAction,
+        DescribeAccountLimitsAction,
+        DescribeInstanceHealthAction,
+        DescribeLoadBalancerAttributesAction,
+        DescribeLoadBalancerPoliciesAction,
+        DescribeLoadBalancerPolicyTypesAction,
+        DescribeLoadBalancersAction,
+        DescribeTagsAction,
+        DetachLoadBalancerFromSubnetsAction,
+        DisableAvailabilityZonesForLoadBalancerAction,
+        EnableAvailabilityZonesForLoadBalancerAction,
+        ModifyLoadBalancerAttributesAction,
+        RegisterInstancesWithLoadBalancerAction,
+        RemoveTagsAction,
+        SetLoadBalancerListenerSSLCertificateAction,
+        SetLoadBalancerPoliciesForBackendServerAction,
+        SetLoadBalancerPoliciesOfListenerAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

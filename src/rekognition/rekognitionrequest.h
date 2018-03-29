@@ -37,7 +37,39 @@ class QTAWS_EXPORT RekognitionRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Rekognition.
     enum Action {
-        // todo
+        CompareFacesAction,
+        CreateCollectionAction,
+        CreateStreamProcessorAction,
+        DeleteCollectionAction,
+        DeleteFacesAction,
+        DeleteStreamProcessorAction,
+        DescribeStreamProcessorAction,
+        DetectFacesAction,
+        DetectLabelsAction,
+        DetectModerationLabelsAction,
+        DetectTextAction,
+        GetCelebrityInfoAction,
+        GetCelebrityRecognitionAction,
+        GetContentModerationAction,
+        GetFaceDetectionAction,
+        GetFaceSearchAction,
+        GetLabelDetectionAction,
+        GetPersonTrackingAction,
+        IndexFacesAction,
+        ListCollectionsAction,
+        ListFacesAction,
+        ListStreamProcessorsAction,
+        RecognizeCelebritiesAction,
+        SearchFacesAction,
+        SearchFacesByImageAction,
+        StartCelebrityRecognitionAction,
+        StartContentModerationAction,
+        StartFaceDetectionAction,
+        StartFaceSearchAction,
+        StartLabelDetectionAction,
+        StartPersonTrackingAction,
+        StartStreamProcessorAction,
+        StopStreamProcessorAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

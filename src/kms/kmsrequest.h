@@ -37,7 +37,41 @@ class QTAWS_EXPORT KMSRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by KMS.
     enum Action {
-        // todo
+        CancelKeyDeletionAction,
+        CreateAliasAction,
+        CreateGrantAction,
+        CreateKeyAction,
+        DecryptAction,
+        DeleteAliasAction,
+        DeleteImportedKeyMaterialAction,
+        DescribeKeyAction,
+        DisableKeyAction,
+        DisableKeyRotationAction,
+        EnableKeyAction,
+        EnableKeyRotationAction,
+        EncryptAction,
+        GenerateDataKeyAction,
+        GenerateDataKeyWithoutPlaintextAction,
+        GenerateRandomAction,
+        GetKeyPolicyAction,
+        GetKeyRotationStatusAction,
+        GetParametersForImportAction,
+        ImportKeyMaterialAction,
+        ListAliasesAction,
+        ListGrantsAction,
+        ListKeyPoliciesAction,
+        ListKeysAction,
+        ListResourceTagsAction,
+        ListRetirableGrantsAction,
+        PutKeyPolicyAction,
+        ReEncryptAction,
+        RetireGrantAction,
+        RevokeGrantAction,
+        ScheduleKeyDeletionAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateAliasAction,
+        UpdateKeyDescriptionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

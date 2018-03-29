@@ -37,7 +37,16 @@ class QTAWS_EXPORT CloudHSMV2Request : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CloudHSMV2.
     enum Action {
-        // todo
+        CreateClusterAction,
+        CreateHsmAction,
+        DeleteClusterAction,
+        DeleteHsmAction,
+        DescribeBackupsAction,
+        DescribeClustersAction,
+        InitializeClusterAction,
+        ListTagsAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

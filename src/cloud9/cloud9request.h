@@ -37,7 +37,16 @@ class QTAWS_EXPORT Cloud9Request : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Cloud9.
     enum Action {
-        // todo
+        CreateEnvironmentEC2Action,
+        CreateEnvironmentMembershipAction,
+        DeleteEnvironmentAction,
+        DeleteEnvironmentMembershipAction,
+        DescribeEnvironmentMembershipsAction,
+        DescribeEnvironmentStatusAction,
+        DescribeEnvironmentsAction,
+        ListEnvironmentsAction,
+        UpdateEnvironmentAction,
+        UpdateEnvironmentMembershipAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

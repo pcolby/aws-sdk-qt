@@ -37,7 +37,7 @@ class QTAWS_EXPORT TranslateRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Translate.
     enum Action {
-        // todo
+        TranslateTextAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

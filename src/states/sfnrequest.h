@@ -37,7 +37,25 @@ class QTAWS_EXPORT SFNRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SFN.
     enum Action {
-        // todo
+        CreateActivityAction,
+        CreateStateMachineAction,
+        DeleteActivityAction,
+        DeleteStateMachineAction,
+        DescribeActivityAction,
+        DescribeExecutionAction,
+        DescribeStateMachineAction,
+        DescribeStateMachineForExecutionAction,
+        GetActivityTaskAction,
+        GetExecutionHistoryAction,
+        ListActivitiesAction,
+        ListExecutionsAction,
+        ListStateMachinesAction,
+        SendTaskFailureAction,
+        SendTaskHeartbeatAction,
+        SendTaskSuccessAction,
+        StartExecutionAction,
+        StopExecutionAction,
+        UpdateStateMachineAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

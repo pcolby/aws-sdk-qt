@@ -37,7 +37,10 @@ class QTAWS_EXPORT IoTDataPlaneRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by IoTDataPlane.
     enum Action {
-        // todo
+        DeleteThingShadowAction,
+        GetThingShadowAction,
+        PublishAction,
+        UpdateThingShadowAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

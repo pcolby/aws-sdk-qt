@@ -37,7 +37,34 @@ class QTAWS_EXPORT ConfigServiceRequest : public QtAws::Core::AwsAbstractRequest
 public:
     /// Actions supported by ConfigService.
     enum Action {
-        // todo
+        BatchGetResourceConfigAction,
+        DeleteConfigRuleAction,
+        DeleteConfigurationRecorderAction,
+        DeleteDeliveryChannelAction,
+        DeleteEvaluationResultsAction,
+        DeliverConfigSnapshotAction,
+        DescribeComplianceByConfigRuleAction,
+        DescribeComplianceByResourceAction,
+        DescribeConfigRuleEvaluationStatusAction,
+        DescribeConfigRulesAction,
+        DescribeConfigurationRecorderStatusAction,
+        DescribeConfigurationRecordersAction,
+        DescribeDeliveryChannelStatusAction,
+        DescribeDeliveryChannelsAction,
+        GetComplianceDetailsByConfigRuleAction,
+        GetComplianceDetailsByResourceAction,
+        GetComplianceSummaryByConfigRuleAction,
+        GetComplianceSummaryByResourceTypeAction,
+        GetDiscoveredResourceCountsAction,
+        GetResourceConfigHistoryAction,
+        ListDiscoveredResourcesAction,
+        PutConfigRuleAction,
+        PutConfigurationRecorderAction,
+        PutDeliveryChannelAction,
+        PutEvaluationsAction,
+        StartConfigRulesEvaluationAction,
+        StartConfigurationRecorderAction,
+        StopConfigurationRecorderAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

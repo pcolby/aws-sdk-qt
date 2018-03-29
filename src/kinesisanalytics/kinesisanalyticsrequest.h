@@ -37,7 +37,23 @@ class QTAWS_EXPORT KinesisAnalyticsRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by KinesisAnalytics.
     enum Action {
-        // todo
+        AddApplicationCloudWatchLoggingOptionAction,
+        AddApplicationInputAction,
+        AddApplicationInputProcessingConfigurationAction,
+        AddApplicationOutputAction,
+        AddApplicationReferenceDataSourceAction,
+        CreateApplicationAction,
+        DeleteApplicationAction,
+        DeleteApplicationCloudWatchLoggingOptionAction,
+        DeleteApplicationInputProcessingConfigurationAction,
+        DeleteApplicationOutputAction,
+        DeleteApplicationReferenceDataSourceAction,
+        DescribeApplicationAction,
+        DiscoverInputSchemaAction,
+        ListApplicationsAction,
+        StartApplicationAction,
+        StopApplicationAction,
+        UpdateApplicationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

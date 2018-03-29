@@ -37,7 +37,39 @@ class QTAWS_EXPORT AppStreamRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by AppStream.
     enum Action {
-        // todo
+        AssociateFleetAction,
+        CopyImageAction,
+        CreateDirectoryConfigAction,
+        CreateFleetAction,
+        CreateImageBuilderAction,
+        CreateImageBuilderStreamingURLAction,
+        CreateStackAction,
+        CreateStreamingURLAction,
+        DeleteDirectoryConfigAction,
+        DeleteFleetAction,
+        DeleteImageAction,
+        DeleteImageBuilderAction,
+        DeleteStackAction,
+        DescribeDirectoryConfigsAction,
+        DescribeFleetsAction,
+        DescribeImageBuildersAction,
+        DescribeImagesAction,
+        DescribeSessionsAction,
+        DescribeStacksAction,
+        DisassociateFleetAction,
+        ExpireSessionAction,
+        ListAssociatedFleetsAction,
+        ListAssociatedStacksAction,
+        ListTagsForResourceAction,
+        StartFleetAction,
+        StartImageBuilderAction,
+        StopFleetAction,
+        StopImageBuilderAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateDirectoryConfigAction,
+        UpdateFleetAction,
+        UpdateStackAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

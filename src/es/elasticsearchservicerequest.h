@@ -37,7 +37,20 @@ class QTAWS_EXPORT ElasticsearchServiceRequest : public QtAws::Core::AwsAbstract
 public:
     /// Actions supported by ElasticsearchService.
     enum Action {
-        // todo
+        AddTagsAction,
+        CreateElasticsearchDomainAction,
+        DeleteElasticsearchDomainAction,
+        DeleteElasticsearchServiceRoleAction,
+        DescribeElasticsearchDomainAction,
+        DescribeElasticsearchDomainConfigAction,
+        DescribeElasticsearchDomainsAction,
+        DescribeElasticsearchInstanceTypeLimitsAction,
+        ListDomainNamesAction,
+        ListElasticsearchInstanceTypesAction,
+        ListElasticsearchVersionsAction,
+        ListTagsAction,
+        RemoveTagsAction,
+        UpdateElasticsearchDomainConfigAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

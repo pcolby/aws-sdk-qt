@@ -37,7 +37,17 @@ class QTAWS_EXPORT ComprehendRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Comprehend.
     enum Action {
-        // todo
+        BatchDetectDominantLanguageAction,
+        BatchDetectEntitiesAction,
+        BatchDetectKeyPhrasesAction,
+        BatchDetectSentimentAction,
+        DescribeTopicsDetectionJobAction,
+        DetectDominantLanguageAction,
+        DetectEntitiesAction,
+        DetectKeyPhrasesAction,
+        DetectSentimentAction,
+        ListTopicsDetectionJobsAction,
+        StartTopicsDetectionJobAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

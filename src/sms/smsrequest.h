@@ -37,7 +37,17 @@ class QTAWS_EXPORT SMSRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SMS.
     enum Action {
-        // todo
+        CreateReplicationJobAction,
+        DeleteReplicationJobAction,
+        DeleteServerCatalogAction,
+        DisassociateConnectorAction,
+        GetConnectorsAction,
+        GetReplicationJobsAction,
+        GetReplicationRunsAction,
+        GetServersAction,
+        ImportServerCatalogAction,
+        StartOnDemandReplicationRunAction,
+        UpdateReplicationJobAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

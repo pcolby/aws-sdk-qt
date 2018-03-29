@@ -37,7 +37,13 @@ class QTAWS_EXPORT FirehoseRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Firehose.
     enum Action {
-        // todo
+        CreateDeliveryStreamAction,
+        DeleteDeliveryStreamAction,
+        DescribeDeliveryStreamAction,
+        ListDeliveryStreamsAction,
+        PutRecordAction,
+        PutRecordBatchAction,
+        UpdateDestinationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,17 @@ class QTAWS_EXPORT MediaPackageRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by MediaPackage.
     enum Action {
-        // todo
+        CreateChannelAction,
+        CreateOriginEndpointAction,
+        DeleteChannelAction,
+        DeleteOriginEndpointAction,
+        DescribeChannelAction,
+        DescribeOriginEndpointAction,
+        ListChannelsAction,
+        ListOriginEndpointsAction,
+        RotateChannelCredentialsAction,
+        UpdateChannelAction,
+        UpdateOriginEndpointAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

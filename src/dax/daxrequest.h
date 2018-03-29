@@ -37,7 +37,27 @@ class QTAWS_EXPORT DAXRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by DAX.
     enum Action {
-        // todo
+        CreateClusterAction,
+        CreateParameterGroupAction,
+        CreateSubnetGroupAction,
+        DecreaseReplicationFactorAction,
+        DeleteClusterAction,
+        DeleteParameterGroupAction,
+        DeleteSubnetGroupAction,
+        DescribeClustersAction,
+        DescribeDefaultParametersAction,
+        DescribeEventsAction,
+        DescribeParameterGroupsAction,
+        DescribeParametersAction,
+        DescribeSubnetGroupsAction,
+        IncreaseReplicationFactorAction,
+        ListTagsAction,
+        RebootNodeAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateClusterAction,
+        UpdateParameterGroupAction,
+        UpdateSubnetGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,12 @@ class QTAWS_EXPORT ImportExportRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by ImportExport.
     enum Action {
-        // todo
+        CancelJobAction,
+        CreateJobAction,
+        GetShippingLabelAction,
+        GetStatusAction,
+        ListJobsAction,
+        UpdateJobAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

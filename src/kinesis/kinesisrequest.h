@@ -37,7 +37,29 @@ class QTAWS_EXPORT KinesisRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Kinesis.
     enum Action {
-        // todo
+        AddTagsToStreamAction,
+        CreateStreamAction,
+        DecreaseStreamRetentionPeriodAction,
+        DeleteStreamAction,
+        DescribeLimitsAction,
+        DescribeStreamAction,
+        DescribeStreamSummaryAction,
+        DisableEnhancedMonitoringAction,
+        EnableEnhancedMonitoringAction,
+        GetRecordsAction,
+        GetShardIteratorAction,
+        IncreaseStreamRetentionPeriodAction,
+        ListShardsAction,
+        ListStreamsAction,
+        ListTagsForStreamAction,
+        MergeShardsAction,
+        PutRecordAction,
+        PutRecordsAction,
+        RemoveTagsFromStreamAction,
+        SplitShardAction,
+        StartStreamEncryptionAction,
+        StopStreamEncryptionAction,
+        UpdateShardCountAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

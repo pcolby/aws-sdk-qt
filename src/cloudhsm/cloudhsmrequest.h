@@ -37,7 +37,26 @@ class QTAWS_EXPORT CloudHSMRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CloudHSM.
     enum Action {
-        // todo
+        AddTagsToResourceAction,
+        CreateHapgAction,
+        CreateHsmAction,
+        CreateLunaClientAction,
+        DeleteHapgAction,
+        DeleteHsmAction,
+        DeleteLunaClientAction,
+        DescribeHapgAction,
+        DescribeHsmAction,
+        DescribeLunaClientAction,
+        GetConfigAction,
+        ListAvailableZonesAction,
+        ListHapgsAction,
+        ListHsmsAction,
+        ListLunaClientsAction,
+        ListTagsForResourceAction,
+        ModifyHapgAction,
+        ModifyHsmAction,
+        ModifyLunaClientAction,
+        RemoveTagsFromResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,19 @@ class QTAWS_EXPORT BudgetsRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Budgets.
     enum Action {
-        // todo
+        CreateBudgetAction,
+        CreateNotificationAction,
+        CreateSubscriberAction,
+        DeleteBudgetAction,
+        DeleteNotificationAction,
+        DeleteSubscriberAction,
+        DescribeBudgetAction,
+        DescribeBudgetsAction,
+        DescribeNotificationsForBudgetAction,
+        DescribeSubscribersForNotificationAction,
+        UpdateBudgetAction,
+        UpdateNotificationAction,
+        UpdateSubscriberAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

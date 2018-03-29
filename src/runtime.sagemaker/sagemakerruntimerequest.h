@@ -37,7 +37,7 @@ class QTAWS_EXPORT SageMakerRuntimeRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by SageMakerRuntime.
     enum Action {
-        // todo
+        InvokeEndpointAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,21 @@ class QTAWS_EXPORT OpsWorksCMRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by OpsWorksCM.
     enum Action {
-        // todo
+        AssociateNodeAction,
+        CreateBackupAction,
+        CreateServerAction,
+        DeleteBackupAction,
+        DeleteServerAction,
+        DescribeAccountAttributesAction,
+        DescribeBackupsAction,
+        DescribeEventsAction,
+        DescribeNodeAssociationStatusAction,
+        DescribeServersAction,
+        DisassociateNodeAction,
+        RestoreServerAction,
+        StartMaintenanceAction,
+        UpdateServerAction,
+        UpdateServerEngineAttributesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

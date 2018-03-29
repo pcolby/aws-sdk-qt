@@ -37,7 +37,39 @@ class QTAWS_EXPORT InspectorRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Inspector.
     enum Action {
-        // todo
+        AddAttributesToFindingsAction,
+        CreateAssessmentTargetAction,
+        CreateAssessmentTemplateAction,
+        CreateResourceGroupAction,
+        DeleteAssessmentRunAction,
+        DeleteAssessmentTargetAction,
+        DeleteAssessmentTemplateAction,
+        DescribeAssessmentRunsAction,
+        DescribeAssessmentTargetsAction,
+        DescribeAssessmentTemplatesAction,
+        DescribeCrossAccountAccessRoleAction,
+        DescribeFindingsAction,
+        DescribeResourceGroupsAction,
+        DescribeRulesPackagesAction,
+        GetAssessmentReportAction,
+        GetTelemetryMetadataAction,
+        ListAssessmentRunAgentsAction,
+        ListAssessmentRunsAction,
+        ListAssessmentTargetsAction,
+        ListAssessmentTemplatesAction,
+        ListEventSubscriptionsAction,
+        ListFindingsAction,
+        ListRulesPackagesAction,
+        ListTagsForResourceAction,
+        PreviewAgentsAction,
+        RegisterCrossAccountAccessRoleAction,
+        RemoveAttributesFromFindingsAction,
+        SetTagsForResourceAction,
+        StartAssessmentRunAction,
+        StopAssessmentRunAction,
+        SubscribeToEventAction,
+        UnsubscribeFromEventAction,
+        UpdateAssessmentTargetAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

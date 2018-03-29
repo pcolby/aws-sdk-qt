@@ -37,7 +37,30 @@ class QTAWS_EXPORT CloudSearchRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CloudSearch.
     enum Action {
-        // todo
+        BuildSuggestersAction,
+        CreateDomainAction,
+        DefineAnalysisSchemeAction,
+        DefineExpressionAction,
+        DefineIndexFieldAction,
+        DefineSuggesterAction,
+        DeleteAnalysisSchemeAction,
+        DeleteDomainAction,
+        DeleteExpressionAction,
+        DeleteIndexFieldAction,
+        DeleteSuggesterAction,
+        DescribeAnalysisSchemesAction,
+        DescribeAvailabilityOptionsAction,
+        DescribeDomainsAction,
+        DescribeExpressionsAction,
+        DescribeIndexFieldsAction,
+        DescribeScalingParametersAction,
+        DescribeServiceAccessPoliciesAction,
+        DescribeSuggestersAction,
+        IndexDocumentsAction,
+        ListDomainNamesAction,
+        UpdateAvailabilityOptionsAction,
+        UpdateScalingParametersAction,
+        UpdateServiceAccessPoliciesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

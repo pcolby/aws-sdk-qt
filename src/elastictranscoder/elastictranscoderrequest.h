@@ -37,7 +37,23 @@ class QTAWS_EXPORT ElasticTranscoderRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by ElasticTranscoder.
     enum Action {
-        // todo
+        CancelJobAction,
+        CreateJobAction,
+        CreatePipelineAction,
+        CreatePresetAction,
+        DeletePipelineAction,
+        DeletePresetAction,
+        ListJobsByPipelineAction,
+        ListJobsByStatusAction,
+        ListPipelinesAction,
+        ListPresetsAction,
+        ReadJobAction,
+        ReadPipelineAction,
+        ReadPresetAction,
+        TestRoleAction,
+        UpdatePipelineAction,
+        UpdatePipelineNotificationsAction,
+        UpdatePipelineStatusAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

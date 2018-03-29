@@ -37,7 +37,24 @@ class QTAWS_EXPORT CodeStarRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CodeStar.
     enum Action {
-        // todo
+        AssociateTeamMemberAction,
+        CreateProjectAction,
+        CreateUserProfileAction,
+        DeleteProjectAction,
+        DeleteUserProfileAction,
+        DescribeProjectAction,
+        DescribeUserProfileAction,
+        DisassociateTeamMemberAction,
+        ListProjectsAction,
+        ListResourcesAction,
+        ListTagsForProjectAction,
+        ListTeamMembersAction,
+        ListUserProfilesAction,
+        TagProjectAction,
+        UntagProjectAction,
+        UpdateProjectAction,
+        UpdateTeamMemberAction,
+        UpdateUserProfileAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

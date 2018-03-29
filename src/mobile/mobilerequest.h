@@ -37,7 +37,15 @@ class QTAWS_EXPORT MobileRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Mobile.
     enum Action {
-        // todo
+        CreateProjectAction,
+        DeleteProjectAction,
+        DescribeBundleAction,
+        DescribeProjectAction,
+        ExportBundleAction,
+        ExportProjectAction,
+        ListBundlesAction,
+        ListProjectsAction,
+        UpdateProjectAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

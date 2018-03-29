@@ -37,7 +37,22 @@ class QTAWS_EXPORT CodeBuildRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CodeBuild.
     enum Action {
-        // todo
+        BatchDeleteBuildsAction,
+        BatchGetBuildsAction,
+        BatchGetProjectsAction,
+        CreateProjectAction,
+        CreateWebhookAction,
+        DeleteProjectAction,
+        DeleteWebhookAction,
+        InvalidateProjectCacheAction,
+        ListBuildsAction,
+        ListBuildsForProjectAction,
+        ListCuratedEnvironmentImagesAction,
+        ListProjectsAction,
+        StartBuildAction,
+        StopBuildAction,
+        UpdateProjectAction,
+        UpdateWebhookAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

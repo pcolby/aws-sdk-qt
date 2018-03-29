@@ -37,7 +37,25 @@ class QTAWS_EXPORT ApplicationDiscoveryServiceRequest : public QtAws::Core::AwsA
 public:
     /// Actions supported by ApplicationDiscoveryService.
     enum Action {
-        // todo
+        AssociateConfigurationItemsToApplicationAction,
+        CreateApplicationAction,
+        CreateTagsAction,
+        DeleteApplicationsAction,
+        DeleteTagsAction,
+        DescribeAgentsAction,
+        DescribeConfigurationsAction,
+        DescribeExportConfigurationsAction,
+        DescribeExportTasksAction,
+        DescribeTagsAction,
+        DisassociateConfigurationItemsFromApplicationAction,
+        ExportConfigurationsAction,
+        GetDiscoverySummaryAction,
+        ListConfigurationsAction,
+        ListServerNeighborsAction,
+        StartDataCollectionByAgentIdsAction,
+        StartExportTaskAction,
+        StopDataCollectionByAgentIdsAction,
+        UpdateApplicationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

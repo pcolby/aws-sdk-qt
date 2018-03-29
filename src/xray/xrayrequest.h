@@ -37,7 +37,12 @@ class QTAWS_EXPORT XRayRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by XRay.
     enum Action {
-        // todo
+        BatchGetTracesAction,
+        GetServiceGraphAction,
+        GetTraceGraphAction,
+        GetTraceSummariesAction,
+        PutTelemetryRecordsAction,
+        PutTraceSegmentsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

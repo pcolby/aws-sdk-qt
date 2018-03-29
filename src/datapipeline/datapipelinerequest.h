@@ -37,7 +37,25 @@ class QTAWS_EXPORT DataPipelineRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by DataPipeline.
     enum Action {
-        // todo
+        ActivatePipelineAction,
+        AddTagsAction,
+        CreatePipelineAction,
+        DeactivatePipelineAction,
+        DeletePipelineAction,
+        DescribeObjectsAction,
+        DescribePipelinesAction,
+        EvaluateExpressionAction,
+        GetPipelineDefinitionAction,
+        ListPipelinesAction,
+        PollForTaskAction,
+        PutPipelineDefinitionAction,
+        QueryObjectsAction,
+        RemoveTagsAction,
+        ReportTaskProgressAction,
+        ReportTaskRunnerHeartbeatAction,
+        SetStatusAction,
+        SetTaskStatusAction,
+        ValidatePipelineDefinitionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,9 @@ class QTAWS_EXPORT CloudSearchDomainRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by CloudSearchDomain.
     enum Action {
-        // todo
+        SearchAction,
+        SuggestAction,
+        UploadDocumentsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

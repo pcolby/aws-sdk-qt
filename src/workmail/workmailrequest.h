@@ -37,7 +37,34 @@ class QTAWS_EXPORT WorkMailRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by WorkMail.
     enum Action {
-        // todo
+        AssociateDelegateToResourceAction,
+        AssociateMemberToGroupAction,
+        CreateAliasAction,
+        CreateGroupAction,
+        CreateResourceAction,
+        CreateUserAction,
+        DeleteAliasAction,
+        DeleteGroupAction,
+        DeleteResourceAction,
+        DeleteUserAction,
+        DeregisterFromWorkMailAction,
+        DescribeGroupAction,
+        DescribeOrganizationAction,
+        DescribeResourceAction,
+        DescribeUserAction,
+        DisassociateDelegateFromResourceAction,
+        DisassociateMemberFromGroupAction,
+        ListAliasesAction,
+        ListGroupMembersAction,
+        ListGroupsAction,
+        ListOrganizationsAction,
+        ListResourceDelegatesAction,
+        ListResourcesAction,
+        ListUsersAction,
+        RegisterToWorkMailAction,
+        ResetPasswordAction,
+        UpdatePrimaryEmailAddressAction,
+        UpdateResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

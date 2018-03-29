@@ -37,7 +37,18 @@ class QTAWS_EXPORT ResourceGroupsRequest : public QtAws::Core::AwsAbstractReques
 public:
     /// Actions supported by ResourceGroups.
     enum Action {
-        // todo
+        CreateGroupAction,
+        DeleteGroupAction,
+        GetGroupAction,
+        GetGroupQueryAction,
+        GetTagsAction,
+        ListGroupResourcesAction,
+        ListGroupsAction,
+        SearchResourcesAction,
+        TagAction,
+        UntagAction,
+        UpdateGroupAction,
+        UpdateGroupQueryAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

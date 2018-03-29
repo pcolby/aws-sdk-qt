@@ -37,7 +37,36 @@ class QTAWS_EXPORT SNSRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by SNS.
     enum Action {
-        // todo
+        AddPermissionAction,
+        CheckIfPhoneNumberIsOptedOutAction,
+        ConfirmSubscriptionAction,
+        CreatePlatformApplicationAction,
+        CreatePlatformEndpointAction,
+        CreateTopicAction,
+        DeleteEndpointAction,
+        DeletePlatformApplicationAction,
+        DeleteTopicAction,
+        GetEndpointAttributesAction,
+        GetPlatformApplicationAttributesAction,
+        GetSMSAttributesAction,
+        GetSubscriptionAttributesAction,
+        GetTopicAttributesAction,
+        ListEndpointsByPlatformApplicationAction,
+        ListPhoneNumbersOptedOutAction,
+        ListPlatformApplicationsAction,
+        ListSubscriptionsAction,
+        ListSubscriptionsByTopicAction,
+        ListTopicsAction,
+        OptInPhoneNumberAction,
+        PublishAction,
+        RemovePermissionAction,
+        SetEndpointAttributesAction,
+        SetPlatformApplicationAttributesAction,
+        SetSMSAttributesAction,
+        SetSubscriptionAttributesAction,
+        SetTopicAttributesAction,
+        SubscribeAction,
+        UnsubscribeAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

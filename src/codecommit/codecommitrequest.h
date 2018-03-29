@@ -37,7 +37,42 @@ class QTAWS_EXPORT CodeCommitRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by CodeCommit.
     enum Action {
-        // todo
+        BatchGetRepositoriesAction,
+        CreateBranchAction,
+        CreatePullRequestAction,
+        CreateRepositoryAction,
+        DeleteBranchAction,
+        DeleteCommentContentAction,
+        DeleteRepositoryAction,
+        DescribePullRequestEventsAction,
+        GetBlobAction,
+        GetBranchAction,
+        GetCommentAction,
+        GetCommentsForComparedCommitAction,
+        GetCommentsForPullRequestAction,
+        GetCommitAction,
+        GetDifferencesAction,
+        GetMergeConflictsAction,
+        GetPullRequestAction,
+        GetRepositoryAction,
+        GetRepositoryTriggersAction,
+        ListBranchesAction,
+        ListPullRequestsAction,
+        ListRepositoriesAction,
+        MergePullRequestByFastForwardAction,
+        PostCommentForComparedCommitAction,
+        PostCommentForPullRequestAction,
+        PostCommentReplyAction,
+        PutFileAction,
+        PutRepositoryTriggersAction,
+        TestRepositoryTriggersAction,
+        UpdateCommentAction,
+        UpdateDefaultBranchAction,
+        UpdatePullRequestDescriptionAction,
+        UpdatePullRequestStatusAction,
+        UpdatePullRequestTitleAction,
+        UpdateRepositoryDescriptionAction,
+        UpdateRepositoryNameAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

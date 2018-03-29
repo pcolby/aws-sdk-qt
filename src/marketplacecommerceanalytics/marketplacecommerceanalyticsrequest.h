@@ -37,7 +37,8 @@ class QTAWS_EXPORT MarketplaceCommerceAnalyticsRequest : public QtAws::Core::Aws
 public:
     /// Actions supported by MarketplaceCommerceAnalytics.
     enum Action {
-        // todo
+        GenerateDataSetAction,
+        StartSupportDataExportAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

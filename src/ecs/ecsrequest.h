@@ -37,7 +37,37 @@ class QTAWS_EXPORT ECSRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by ECS.
     enum Action {
-        // todo
+        CreateClusterAction,
+        CreateServiceAction,
+        DeleteAttributesAction,
+        DeleteClusterAction,
+        DeleteServiceAction,
+        DeregisterContainerInstanceAction,
+        DeregisterTaskDefinitionAction,
+        DescribeClustersAction,
+        DescribeContainerInstancesAction,
+        DescribeServicesAction,
+        DescribeTaskDefinitionAction,
+        DescribeTasksAction,
+        DiscoverPollEndpointAction,
+        ListAttributesAction,
+        ListClustersAction,
+        ListContainerInstancesAction,
+        ListServicesAction,
+        ListTaskDefinitionFamiliesAction,
+        ListTaskDefinitionsAction,
+        ListTasksAction,
+        PutAttributesAction,
+        RegisterContainerInstanceAction,
+        RegisterTaskDefinitionAction,
+        RunTaskAction,
+        StartTaskAction,
+        StopTaskAction,
+        SubmitContainerStateChangeAction,
+        SubmitTaskStateChangeAction,
+        UpdateContainerAgentAction,
+        UpdateContainerInstancesStateAction,
+        UpdateServiceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -37,7 +37,23 @@ class QTAWS_EXPORT SnowballRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Snowball.
     enum Action {
-        // todo
+        CancelClusterAction,
+        CancelJobAction,
+        CreateAddressAction,
+        CreateClusterAction,
+        CreateJobAction,
+        DescribeAddressAction,
+        DescribeAddressesAction,
+        DescribeClusterAction,
+        DescribeJobAction,
+        GetJobManifestAction,
+        GetJobUnlockCodeAction,
+        GetSnowballUsageAction,
+        ListClusterJobsAction,
+        ListClustersAction,
+        ListJobsAction,
+        UpdateClusterAction,
+        UpdateJobAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
