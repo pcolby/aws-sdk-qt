@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetwor
  */
 EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
     const CloudFormationRequest::Action action, EstimateTemplateCostRequest * const q)
-    : EstimateTemplateCostPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
  */
 EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
     const EstimateTemplateCostRequestPrivate &other, EstimateTemplateCostRequest * const q)
-    : EstimateTemplateCostPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

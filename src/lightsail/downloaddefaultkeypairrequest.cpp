@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DownloadDefaultKeyPairRequest::response(QNetw
  */
 DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
     const LightsailRequest::Action action, DownloadDefaultKeyPairRequest * const q)
-    : DownloadDefaultKeyPairPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
  */
 DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
     const DownloadDefaultKeyPairRequestPrivate &other, DownloadDefaultKeyPairRequest * const q)
-    : DownloadDefaultKeyPairPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

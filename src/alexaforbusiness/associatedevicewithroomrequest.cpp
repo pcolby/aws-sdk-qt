@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDeviceWithRoomRequest::response(QNet
  */
 AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateDeviceWithRoomRequest * const q)
-    : AssociateDeviceWithRoomPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
  */
 AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
     const AssociateDeviceWithRoomRequestPrivate &other, AssociateDeviceWithRoomRequest * const q)
-    : AssociateDeviceWithRoomPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

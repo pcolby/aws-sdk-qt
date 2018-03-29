@@ -86,7 +86,7 @@ void DeleteNetworkProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNetworkProfileResponse instance.
  */
 DeleteNetworkProfileResponsePrivate::DeleteNetworkProfileResponsePrivate(
-    DeleteNetworkProfileQueueResponse * const q) : DeleteNetworkProfilePrivate(q)
+    DeleteNetworkProfileResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

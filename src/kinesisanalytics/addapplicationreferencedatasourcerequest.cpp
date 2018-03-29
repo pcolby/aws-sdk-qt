@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationReferenceDataSourceRequest::res
  */
 AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSourceRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationReferenceDataSourceRequest * const q)
-    : AddApplicationReferenceDataSourcePrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSour
  */
 AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSourceRequestPrivate(
     const AddApplicationReferenceDataSourceRequestPrivate &other, AddApplicationReferenceDataSourceRequest * const q)
-    : AddApplicationReferenceDataSourcePrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

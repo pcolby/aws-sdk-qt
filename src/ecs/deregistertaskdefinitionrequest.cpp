@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNe
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, DeregisterTaskDefinitionRequest * const q)
-    : DeregisterTaskDefinitionPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
     const DeregisterTaskDefinitionRequestPrivate &other, DeregisterTaskDefinitionRequest * const q)
-    : DeregisterTaskDefinitionPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

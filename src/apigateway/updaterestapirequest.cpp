@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRestApiRequest::response(QNetworkReply 
  */
 UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
     const APIGatewayRequest::Action action, UpdateRestApiRequest * const q)
-    : UpdateRestApiPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
  */
 UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
     const UpdateRestApiRequestPrivate &other, UpdateRestApiRequest * const q)
-    : UpdateRestApiPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRoomSkillParameterRequest::response(QNetwo
  */
 GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetRoomSkillParameterRequest * const q)
-    : GetRoomSkillParameterPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
  */
 GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
     const GetRoomSkillParameterRequestPrivate &other, GetRoomSkillParameterRequest * const q)
-    : GetRoomSkillParameterPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

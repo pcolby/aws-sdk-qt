@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMatchmakingConfigurationRequest::respon
  */
 DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequestPrivate(
     const GameLiftRequest::Action action, DeleteMatchmakingConfigurationRequest * const q)
-    : DeleteMatchmakingConfigurationPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequ
  */
 DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequestPrivate(
     const DeleteMatchmakingConfigurationRequestPrivate &other, DeleteMatchmakingConfigurationRequest * const q)
-    : DeleteMatchmakingConfigurationPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

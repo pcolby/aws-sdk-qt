@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AbortVaultLockRequest::response(QNetworkReply
  */
 AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
     const GlacierRequest::Action action, AbortVaultLockRequest * const q)
-    : AbortVaultLockPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
  */
 AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
     const AbortVaultLockRequestPrivate &other, AbortVaultLockRequest * const q)
-    : AbortVaultLockPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetwork
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, PutReportDefinitionRequest * const q)
-    : PutReportDefinitionPrivate(action, q)
+    : CostandUsageReportServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
     const PutReportDefinitionRequestPrivate &other, PutReportDefinitionRequest * const q)
-    : PutReportDefinitionPrivate(other, q)
+    : CostandUsageReportServiceRequestPrivate(other, q)
 {
 
 }

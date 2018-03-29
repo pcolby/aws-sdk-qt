@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply 
  */
 DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
     const GlueRequest::Action action, DeleteTriggerRequest * const q)
-    : DeleteTriggerPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
  */
 DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
     const DeleteTriggerRequestPrivate &other, DeleteTriggerRequest * const q)
-    : DeleteTriggerPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

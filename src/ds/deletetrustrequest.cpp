@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrustRequest::response(QNetworkReply * 
  */
 DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteTrustRequest * const q)
-    : DeleteTrustPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
  */
 DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
     const DeleteTrustRequestPrivate &other, DeleteTrustRequest * const q)
-    : DeleteTrustPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

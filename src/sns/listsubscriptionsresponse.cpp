@@ -86,7 +86,7 @@ void ListSubscriptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSubscriptionsResponse instance.
  */
 ListSubscriptionsResponsePrivate::ListSubscriptionsResponsePrivate(
-    ListSubscriptionsQueueResponse * const q) : ListSubscriptionsPrivate(q)
+    ListSubscriptionsResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

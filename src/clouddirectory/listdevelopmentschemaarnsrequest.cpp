@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QN
  */
 ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListDevelopmentSchemaArnsRequest * const q)
-    : ListDevelopmentSchemaArnsPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate
  */
 ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate(
     const ListDevelopmentSchemaArnsRequestPrivate &other, ListDevelopmentSchemaArnsRequest * const q)
-    : ListDevelopmentSchemaArnsPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

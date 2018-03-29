@@ -86,7 +86,7 @@ void ListLunaClientsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListLunaClientsResponse instance.
  */
 ListLunaClientsResponsePrivate::ListLunaClientsResponsePrivate(
-    ListLunaClientsQueueResponse * const q) : ListLunaClientsPrivate(q)
+    ListLunaClientsResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

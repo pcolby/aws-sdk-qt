@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkRep
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const ECSRequest::Action action, DeleteAttributesRequest * const q)
-    : DeleteAttributesPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const DeleteAttributesRequestPrivate &other, DeleteAttributesRequest * const q)
-    : DeleteAttributesPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

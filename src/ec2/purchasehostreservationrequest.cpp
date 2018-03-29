@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNet
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
     const EC2Request::Action action, PurchaseHostReservationRequest * const q)
-    : PurchaseHostReservationPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
     const PurchaseHostReservationRequestPrivate &other, PurchaseHostReservationRequest * const q)
-    : PurchaseHostReservationPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

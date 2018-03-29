@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetwo
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBSecurityGroupRequest * const q)
-    : DeleteDBSecurityGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
     const DeleteDBSecurityGroupRequestPrivate &other, DeleteDBSecurityGroupRequest * const q)
-    : DeleteDBSecurityGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

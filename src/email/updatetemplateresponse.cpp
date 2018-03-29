@@ -86,7 +86,7 @@ void UpdateTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTemplateResponse instance.
  */
 UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
-    UpdateTemplateQueueResponse * const q) : UpdateTemplatePrivate(q)
+    UpdateTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

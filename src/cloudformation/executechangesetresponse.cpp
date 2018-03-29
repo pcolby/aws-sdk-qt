@@ -86,7 +86,7 @@ void ExecuteChangeSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ExecuteChangeSetResponse instance.
  */
 ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponsePrivate(
-    ExecuteChangeSetQueueResponse * const q) : ExecuteChangeSetPrivate(q)
+    ExecuteChangeSetResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

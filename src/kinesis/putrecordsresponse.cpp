@@ -86,7 +86,7 @@ void PutRecordsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutRecordsResponse instance.
  */
 PutRecordsResponsePrivate::PutRecordsResponsePrivate(
-    PutRecordsQueueResponse * const q) : PutRecordsPrivate(q)
+    PutRecordsResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

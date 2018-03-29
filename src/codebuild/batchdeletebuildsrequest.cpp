@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteBuildsRequest::response(QNetworkRe
  */
 BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
     const CodeBuildRequest::Action action, BatchDeleteBuildsRequest * const q)
-    : BatchDeleteBuildsPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
  */
 BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
     const BatchDeleteBuildsRequestPrivate &other, BatchDeleteBuildsRequest * const q)
-    : BatchDeleteBuildsPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListMetricsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListMetricsResponse instance.
  */
 ListMetricsResponsePrivate::ListMetricsResponsePrivate(
-    ListMetricsQueueResponse * const q) : ListMetricsPrivate(q)
+    ListMetricsResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

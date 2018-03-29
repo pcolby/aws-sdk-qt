@@ -86,7 +86,7 @@ void PutThirdPartyJobSuccessResultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutThirdPartyJobSuccessResultResponse instance.
  */
 PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultResponsePrivate(
-    PutThirdPartyJobSuccessResultQueueResponse * const q) : PutThirdPartyJobSuccessResultPrivate(q)
+    PutThirdPartyJobSuccessResultResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

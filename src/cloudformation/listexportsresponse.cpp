@@ -86,7 +86,7 @@ void ListExportsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListExportsResponse instance.
  */
 ListExportsResponsePrivate::ListExportsResponsePrivate(
-    ListExportsQueueResponse * const q) : ListExportsPrivate(q)
+    ListExportsResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

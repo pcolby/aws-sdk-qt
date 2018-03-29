@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * 
  */
 VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, VerifyTrustRequest * const q)
-    : VerifyTrustPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
  */
 VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
     const VerifyTrustRequestPrivate &other, VerifyTrustRequest * const q)
-    : VerifyTrustPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

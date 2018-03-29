@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectConnectGatewayAssociationRequest:
  */
 CreateDirectConnectGatewayAssociationRequestPrivate::CreateDirectConnectGatewayAssociationRequestPrivate(
     const DirectConnectRequest::Action action, CreateDirectConnectGatewayAssociationRequest * const q)
-    : CreateDirectConnectGatewayAssociationPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDirectConnectGatewayAssociationRequestPrivate::CreateDirectConnectGatewayA
  */
 CreateDirectConnectGatewayAssociationRequestPrivate::CreateDirectConnectGatewayAssociationRequestPrivate(
     const CreateDirectConnectGatewayAssociationRequestPrivate &other, CreateDirectConnectGatewayAssociationRequest * const q)
-    : CreateDirectConnectGatewayAssociationPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

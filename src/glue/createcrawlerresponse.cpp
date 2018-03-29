@@ -86,7 +86,7 @@ void CreateCrawlerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCrawlerResponse instance.
  */
 CreateCrawlerResponsePrivate::CreateCrawlerResponsePrivate(
-    CreateCrawlerQueueResponse * const q) : CreateCrawlerPrivate(q)
+    CreateCrawlerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateGameSessionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateGameSessionResponse instance.
  */
 UpdateGameSessionResponsePrivate::UpdateGameSessionResponsePrivate(
-    UpdateGameSessionQueueResponse * const q) : UpdateGameSessionPrivate(q)
+    UpdateGameSessionResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

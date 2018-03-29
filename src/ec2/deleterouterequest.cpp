@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteRequest::response(QNetworkReply * 
  */
 DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
     const EC2Request::Action action, DeleteRouteRequest * const q)
-    : DeleteRoutePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
  */
 DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
     const DeleteRouteRequestPrivate &other, DeleteRouteRequest * const q)
-    : DeleteRoutePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

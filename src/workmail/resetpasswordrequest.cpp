@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply 
  */
 ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
     const WorkMailRequest::Action action, ResetPasswordRequest * const q)
-    : ResetPasswordPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
  */
 ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
     const ResetPasswordRequestPrivate &other, ResetPasswordRequest * const q)
-    : ResetPasswordPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

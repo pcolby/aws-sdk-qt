@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOpenIdTokenForDeveloperIdentityRequest::re
  */
 GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, GetOpenIdTokenForDeveloperIdentityRequest * const q)
-    : GetOpenIdTokenForDeveloperIdentityPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIden
  */
 GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIdentityRequestPrivate(
     const GetOpenIdTokenForDeveloperIdentityRequestPrivate &other, GetOpenIdTokenForDeveloperIdentityRequest * const q)
-    : GetOpenIdTokenForDeveloperIdentityPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

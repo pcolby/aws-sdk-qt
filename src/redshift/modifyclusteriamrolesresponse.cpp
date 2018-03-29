@@ -86,7 +86,7 @@ void ModifyClusterIamRolesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyClusterIamRolesResponse instance.
  */
 ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponsePrivate(
-    ModifyClusterIamRolesQueueResponse * const q) : ModifyClusterIamRolesPrivate(q)
+    ModifyClusterIamRolesResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

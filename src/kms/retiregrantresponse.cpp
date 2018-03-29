@@ -86,7 +86,7 @@ void RetireGrantResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RetireGrantResponse instance.
  */
 RetireGrantResponsePrivate::RetireGrantResponsePrivate(
-    RetireGrantQueueResponse * const q) : RetireGrantPrivate(q)
+    RetireGrantResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetApiKeysRequest::response(QNetworkReply * c
  */
 GetApiKeysRequestPrivate::GetApiKeysRequestPrivate(
     const APIGatewayRequest::Action action, GetApiKeysRequest * const q)
-    : GetApiKeysPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetApiKeysRequestPrivate::GetApiKeysRequestPrivate(
  */
 GetApiKeysRequestPrivate::GetApiKeysRequestPrivate(
     const GetApiKeysRequestPrivate &other, GetApiKeysRequest * const q)
-    : GetApiKeysPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

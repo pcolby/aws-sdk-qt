@@ -86,7 +86,7 @@ void ImportServerCatalogResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportServerCatalogResponse instance.
  */
 ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
-    ImportServerCatalogQueueResponse * const q) : ImportServerCatalogPrivate(q)
+    ImportServerCatalogResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

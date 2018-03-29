@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetwork
  */
 VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, VerifySoftwareTokenRequest * const q)
-    : VerifySoftwareTokenPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
  */
 VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
     const VerifySoftwareTokenRequestPrivate &other, VerifySoftwareTokenRequest * const q)
-    : VerifySoftwareTokenPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutLifecycleEventHookExecutionStatusResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public PutLifecycleEventHookExecutionStatusResponse instance.
  */
 PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecutionStatusResponsePrivate(
-    PutLifecycleEventHookExecutionStatusQueueResponse * const q) : PutLifecycleEventHookExecutionStatusPrivate(q)
+    PutLifecycleEventHookExecutionStatusResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

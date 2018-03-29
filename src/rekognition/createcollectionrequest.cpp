@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkRep
  */
 CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
     const RekognitionRequest::Action action, CreateCollectionRequest * const q)
-    : CreateCollectionPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
  */
 CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
     const CreateCollectionRequestPrivate &other, CreateCollectionRequest * const q)
-    : CreateCollectionPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

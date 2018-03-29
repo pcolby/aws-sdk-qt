@@ -86,7 +86,7 @@ void StartQueryExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartQueryExecutionResponse instance.
  */
 StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
-    StartQueryExecutionQueueResponse * const q) : StartQueryExecutionPrivate(q)
+    StartQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

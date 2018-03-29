@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const APIGatewayRequest::Action action, GetExportRequest * const q)
-    : GetExportPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetExportRequestPrivate::GetExportRequestPrivate(
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const GetExportRequestPrivate &other, GetExportRequest * const q)
-    : GetExportPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

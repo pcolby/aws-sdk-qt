@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetwo
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
     const ACMRequest::Action action, ResendValidationEmailRequest * const q)
-    : ResendValidationEmailPrivate(action, q)
+    : ACMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
     const ResendValidationEmailRequestPrivate &other, ResendValidationEmailRequest * const q)
-    : ResendValidationEmailPrivate(other, q)
+    : ACMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeDirectoryConfigsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDirectoryConfigsResponse instance.
  */
 DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate(
-    DescribeDirectoryConfigsQueueResponse * const q) : DescribeDirectoryConfigsPrivate(q)
+    DescribeDirectoryConfigsResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

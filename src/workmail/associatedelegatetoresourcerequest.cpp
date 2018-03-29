@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDelegateToResourceRequest::response(
  */
 AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
     const WorkMailRequest::Action action, AssociateDelegateToResourceRequest * const q)
-    : AssociateDelegateToResourcePrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPri
  */
 AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
     const AssociateDelegateToResourceRequestPrivate &other, AssociateDelegateToResourceRequest * const q)
-    : AssociateDelegateToResourcePrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

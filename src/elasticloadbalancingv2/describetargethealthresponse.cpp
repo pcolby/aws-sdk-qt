@@ -86,7 +86,7 @@ void DescribeTargetHealthResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTargetHealthResponse instance.
  */
 DescribeTargetHealthResponsePrivate::DescribeTargetHealthResponsePrivate(
-    DescribeTargetHealthQueueResponse * const q) : DescribeTargetHealthPrivate(q)
+    DescribeTargetHealthResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

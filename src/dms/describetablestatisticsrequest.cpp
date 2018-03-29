@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTableStatisticsRequest::response(QNet
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeTableStatisticsRequest * const q)
-    : DescribeTableStatisticsPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
     const DescribeTableStatisticsRequestPrivate &other, DescribeTableStatisticsRequest * const q)
-    : DescribeTableStatisticsPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

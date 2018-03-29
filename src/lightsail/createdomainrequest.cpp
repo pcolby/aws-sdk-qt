@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const LightsailRequest::Action action, CreateDomainRequest * const q)
-    : CreateDomainPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDomainRequestPrivate::CreateDomainRequestPrivate(
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const CreateDomainRequestPrivate &other, CreateDomainRequest * const q)
-    : CreateDomainPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

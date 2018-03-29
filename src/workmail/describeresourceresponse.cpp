@@ -86,7 +86,7 @@ void DescribeResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeResourceResponse instance.
  */
 DescribeResourceResponsePrivate::DescribeResourceResponsePrivate(
-    DescribeResourceQueueResponse * const q) : DescribeResourcePrivate(q)
+    DescribeResourceResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

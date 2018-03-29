@@ -86,7 +86,7 @@ void DeleteOrganizationalUnitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteOrganizationalUnitResponse instance.
  */
 DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponsePrivate(
-    DeleteOrganizationalUnitQueueResponse * const q) : DeleteOrganizationalUnitPrivate(q)
+    DeleteOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

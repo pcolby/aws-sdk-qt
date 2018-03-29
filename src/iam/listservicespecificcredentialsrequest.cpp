@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListServiceSpecificCredentialsRequest::respon
  */
 ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
     const IAMRequest::Action action, ListServiceSpecificCredentialsRequest * const q)
-    : ListServiceSpecificCredentialsPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequ
  */
 ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
     const ListServiceSpecificCredentialsRequestPrivate &other, ListServiceSpecificCredentialsRequest * const q)
-    : ListServiceSpecificCredentialsPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

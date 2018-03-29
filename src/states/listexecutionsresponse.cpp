@@ -86,7 +86,7 @@ void ListExecutionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListExecutionsResponse instance.
  */
 ListExecutionsResponsePrivate::ListExecutionsResponsePrivate(
-    ListExecutionsQueueResponse * const q) : ListExecutionsPrivate(q)
+    ListExecutionsResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

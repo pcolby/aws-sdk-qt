@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReservedInstancesExchangeQuoteRequest::res
  */
 GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuoteRequestPrivate(
     const EC2Request::Action action, GetReservedInstancesExchangeQuoteRequest * const q)
-    : GetReservedInstancesExchangeQuotePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuo
  */
 GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuoteRequestPrivate(
     const GetReservedInstancesExchangeQuoteRequestPrivate &other, GetReservedInstancesExchangeQuoteRequest * const q)
-    : GetReservedInstancesExchangeQuotePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

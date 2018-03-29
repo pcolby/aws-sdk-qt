@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBaiduChannelRequest::response(QNetworkRepl
  */
 GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, GetBaiduChannelRequest * const q)
-    : GetBaiduChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
  */
 GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
     const GetBaiduChannelRequestPrivate &other, GetBaiduChannelRequest * const q)
-    : GetBaiduChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

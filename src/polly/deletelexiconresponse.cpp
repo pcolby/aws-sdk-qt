@@ -86,7 +86,7 @@ void DeleteLexiconResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLexiconResponse instance.
  */
 DeleteLexiconResponsePrivate::DeleteLexiconResponsePrivate(
-    DeleteLexiconQueueResponse * const q) : DeleteLexiconPrivate(q)
+    DeleteLexiconResponse * const q) : PollyResponsePrivate(q)
 {
 
 }

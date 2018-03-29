@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QN
  */
 ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate(
     const WorkSpacesRequest::Action action, ModifyWorkspacePropertiesRequest * const q)
-    : ModifyWorkspacePropertiesPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate
  */
 ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate(
     const ModifyWorkspacePropertiesRequestPrivate &other, ModifyWorkspacePropertiesRequest * const q)
-    : ModifyWorkspacePropertiesPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

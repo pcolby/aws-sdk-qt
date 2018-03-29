@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
     const RDSRequest::Action action, RevokeDBSecurityGroupIngressRequest * const q)
-    : RevokeDBSecurityGroupIngressPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestP
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
     const RevokeDBSecurityGroupIngressRequestPrivate &other, RevokeDBSecurityGroupIngressRequest * const q)
-    : RevokeDBSecurityGroupIngressPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNe
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const RDSRequest::Action action, DescribeDBEngineVersionsRequest * const q)
-    : DescribeDBEngineVersionsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const DescribeDBEngineVersionsRequestPrivate &other, DescribeDBEngineVersionsRequest * const q)
-    : DescribeDBEngineVersionsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

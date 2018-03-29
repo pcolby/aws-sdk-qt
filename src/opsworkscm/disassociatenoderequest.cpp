@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkRep
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
     const OpsWorksCMRequest::Action action, DisassociateNodeRequest * const q)
-    : DisassociateNodePrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
     const DisassociateNodeRequestPrivate &other, DisassociateNodeRequest * const q)
-    : DisassociateNodePrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

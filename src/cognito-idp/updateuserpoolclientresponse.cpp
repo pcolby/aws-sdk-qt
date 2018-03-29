@@ -86,7 +86,7 @@ void UpdateUserPoolClientResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateUserPoolClientResponse instance.
  */
 UpdateUserPoolClientResponsePrivate::UpdateUserPoolClientResponsePrivate(
-    UpdateUserPoolClientQueueResponse * const q) : UpdateUserPoolClientPrivate(q)
+    UpdateUserPoolClientResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

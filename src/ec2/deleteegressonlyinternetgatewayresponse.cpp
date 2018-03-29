@@ -86,7 +86,7 @@ void DeleteEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEgressOnlyInternetGatewayResponse instance.
  */
 DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayResponsePrivate(
-    DeleteEgressOnlyInternetGatewayQueueResponse * const q) : DeleteEgressOnlyInternetGatewayPrivate(q)
+    DeleteEgressOnlyInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

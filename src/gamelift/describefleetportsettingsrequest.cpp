@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetPortSettingsRequest::response(QN
  */
 DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetPortSettingsRequest * const q)
-    : DescribeFleetPortSettingsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate
  */
 DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate(
     const DescribeFleetPortSettingsRequestPrivate &other, DescribeFleetPortSettingsRequest * const q)
-    : DescribeFleetPortSettingsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

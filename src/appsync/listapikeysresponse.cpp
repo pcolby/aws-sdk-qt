@@ -86,7 +86,7 @@ void ListApiKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListApiKeysResponse instance.
  */
 ListApiKeysResponsePrivate::ListApiKeysResponsePrivate(
-    ListApiKeysQueueResponse * const q) : ListApiKeysPrivate(q)
+    ListApiKeysResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

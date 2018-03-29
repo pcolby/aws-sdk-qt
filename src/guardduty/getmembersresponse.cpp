@@ -86,7 +86,7 @@ void GetMembersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetMembersResponse instance.
  */
 GetMembersResponsePrivate::GetMembersResponsePrivate(
-    GetMembersQueueResponse * const q) : GetMembersPrivate(q)
+    GetMembersResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNetworkProfileRequest::response(QNetwor
  */
 UpdateNetworkProfileRequestPrivate::UpdateNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateNetworkProfileRequest * const q)
-    : UpdateNetworkProfilePrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateNetworkProfileRequestPrivate::UpdateNetworkProfileRequestPrivate(
  */
 UpdateNetworkProfileRequestPrivate::UpdateNetworkProfileRequestPrivate(
     const UpdateNetworkProfileRequestPrivate &other, UpdateNetworkProfileRequest * const q)
-    : UpdateNetworkProfilePrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListElasticsearchVersionsResponse instance.
  */
 ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePrivate(
-    ListElasticsearchVersionsQueueResponse * const q) : ListElasticsearchVersionsPrivate(q)
+    ListElasticsearchVersionsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

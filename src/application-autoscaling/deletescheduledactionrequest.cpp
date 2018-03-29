@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetwo
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeleteScheduledActionRequest * const q)
-    : DeleteScheduledActionPrivate(action, q)
+    : ApplicationAutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const DeleteScheduledActionRequestPrivate &other, DeleteScheduledActionRequest * const q)
-    : DeleteScheduledActionPrivate(other, q)
+    : ApplicationAutoScalingRequestPrivate(other, q)
 {
 
 }

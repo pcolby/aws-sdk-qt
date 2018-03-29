@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const DataPipelineRequest::Action action, AddTagsRequest * const q)
-    : AddTagsPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const AddTagsRequestPrivate &other, AddTagsRequest * const q)
-    : AddTagsPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

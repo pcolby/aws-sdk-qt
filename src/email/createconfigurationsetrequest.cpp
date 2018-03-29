@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetRequest * const q)
-    : CreateConfigurationSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const CreateConfigurationSetRequestPrivate &other, CreateConfigurationSetRequest * const q)
-    : CreateConfigurationSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

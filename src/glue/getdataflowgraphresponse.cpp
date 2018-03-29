@@ -86,7 +86,7 @@ void GetDataflowGraphResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDataflowGraphResponse instance.
  */
 GetDataflowGraphResponsePrivate::GetDataflowGraphResponsePrivate(
-    GetDataflowGraphQueueResponse * const q) : GetDataflowGraphPrivate(q)
+    GetDataflowGraphResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

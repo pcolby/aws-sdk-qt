@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCheckerIpRangesRequest::response(QNetworkR
  */
 GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
     const Route53Request::Action action, GetCheckerIpRangesRequest * const q)
-    : GetCheckerIpRangesPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
  */
 GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
     const GetCheckerIpRangesRequestPrivate &other, GetCheckerIpRangesRequest * const q)
-    : GetCheckerIpRangesPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

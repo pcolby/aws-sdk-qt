@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStackInstancesRequest::response(QNetwor
  */
 CreateStackInstancesRequestPrivate::CreateStackInstancesRequestPrivate(
     const CloudFormationRequest::Action action, CreateStackInstancesRequest * const q)
-    : CreateStackInstancesPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStackInstancesRequestPrivate::CreateStackInstancesRequestPrivate(
  */
 CreateStackInstancesRequestPrivate::CreateStackInstancesRequestPrivate(
     const CreateStackInstancesRequestPrivate &other, CreateStackInstancesRequest * const q)
-    : CreateStackInstancesPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

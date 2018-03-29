@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationReq
  */
 AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputProcessingConfigurationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationInputProcessingConfigurationRequest * const q)
-    : AddApplicationInputProcessingConfigurationPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputPro
  */
 AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputProcessingConfigurationRequestPrivate(
     const AddApplicationInputProcessingConfigurationRequestPrivate &other, AddApplicationInputProcessingConfigurationRequest * const q)
-    : AddApplicationInputProcessingConfigurationPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

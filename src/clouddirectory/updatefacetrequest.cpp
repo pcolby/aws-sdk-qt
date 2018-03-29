@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * 
  */
 UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateFacetRequest * const q)
-    : UpdateFacetPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
  */
 UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
     const UpdateFacetRequestPrivate &other, UpdateFacetRequest * const q)
-    : UpdateFacetPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

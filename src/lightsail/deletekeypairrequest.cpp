@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const LightsailRequest::Action action, DeleteKeyPairRequest * const q)
-    : DeleteKeyPairPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const DeleteKeyPairRequestPrivate &other, DeleteKeyPairRequest * const q)
-    : DeleteKeyPairPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

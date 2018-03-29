@@ -86,7 +86,7 @@ void GetAttributeValuesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAttributeValuesResponse instance.
  */
 GetAttributeValuesResponsePrivate::GetAttributeValuesResponsePrivate(
-    GetAttributeValuesQueueResponse * const q) : GetAttributeValuesPrivate(q)
+    GetAttributeValuesResponse * const q) : PricingResponsePrivate(q)
 {
 
 }

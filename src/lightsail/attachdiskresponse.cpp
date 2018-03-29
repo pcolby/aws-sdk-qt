@@ -86,7 +86,7 @@ void AttachDiskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachDiskResponse instance.
  */
 AttachDiskResponsePrivate::AttachDiskResponsePrivate(
-    AttachDiskQueueResponse * const q) : AttachDiskPrivate(q)
+    AttachDiskResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

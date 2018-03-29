@@ -86,7 +86,7 @@ void GetReservationCoverageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetReservationCoverageResponse instance.
  */
 GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
-    GetReservationCoverageQueueResponse * const q) : GetReservationCoveragePrivate(q)
+    GetReservationCoverageResponse * const q) : CostExplorerResponsePrivate(q)
 {
 
 }

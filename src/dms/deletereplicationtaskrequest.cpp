@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationTaskRequest::response(QNetwo
  */
 DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationTaskRequest * const q)
-    : DeleteReplicationTaskPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
  */
 DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
     const DeleteReplicationTaskRequestPrivate &other, DeleteReplicationTaskRequest * const q)
-    : DeleteReplicationTaskPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

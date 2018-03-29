@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkRepl
  */
 AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
     const KinesisRequest::Action action, AddTagsToStreamRequest * const q)
-    : AddTagsToStreamPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
  */
 AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
     const AddTagsToStreamRequestPrivate &other, AddTagsToStreamRequest * const q)
-    : AddTagsToStreamPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

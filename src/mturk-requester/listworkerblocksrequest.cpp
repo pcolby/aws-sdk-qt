@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkRep
  */
 ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
     const MTurkRequest::Action action, ListWorkerBlocksRequest * const q)
-    : ListWorkerBlocksPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
  */
 ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
     const ListWorkerBlocksRequestPrivate &other, ListWorkerBlocksRequest * const q)
-    : ListWorkerBlocksPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

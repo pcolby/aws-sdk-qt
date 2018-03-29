@@ -86,7 +86,7 @@ void DeleteExpressionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteExpressionResponse instance.
  */
 DeleteExpressionResponsePrivate::DeleteExpressionResponsePrivate(
-    DeleteExpressionQueueResponse * const q) : DeleteExpressionPrivate(q)
+    DeleteExpressionResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

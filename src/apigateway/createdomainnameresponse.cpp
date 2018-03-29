@@ -86,7 +86,7 @@ void CreateDomainNameResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDomainNameResponse instance.
  */
 CreateDomainNameResponsePrivate::CreateDomainNameResponsePrivate(
-    CreateDomainNameQueueResponse * const q) : CreateDomainNamePrivate(q)
+    CreateDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

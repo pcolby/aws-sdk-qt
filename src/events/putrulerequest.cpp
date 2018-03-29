@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRuleRequest::response(QNetworkReply * cons
  */
 PutRuleRequestPrivate::PutRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutRuleRequest * const q)
-    : PutRulePrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutRuleRequestPrivate::PutRuleRequestPrivate(
  */
 PutRuleRequestPrivate::PutRuleRequestPrivate(
     const PutRuleRequestPrivate &other, PutRuleRequest * const q)
-    : PutRulePrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

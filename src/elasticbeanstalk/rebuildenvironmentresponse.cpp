@@ -86,7 +86,7 @@ void RebuildEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebuildEnvironmentResponse instance.
  */
 RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponsePrivate(
-    RebuildEnvironmentQueueResponse * const q) : RebuildEnvironmentPrivate(q)
+    RebuildEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

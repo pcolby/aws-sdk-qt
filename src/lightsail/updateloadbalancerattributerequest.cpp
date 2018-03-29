@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(
  */
 UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
     const LightsailRequest::Action action, UpdateLoadBalancerAttributeRequest * const q)
-    : UpdateLoadBalancerAttributePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPri
  */
 UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
     const UpdateLoadBalancerAttributeRequestPrivate &other, UpdateLoadBalancerAttributeRequest * const q)
-    : UpdateLoadBalancerAttributePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIdRequest::response(QNetworkReply * const 
  */
 GetIdRequestPrivate::GetIdRequestPrivate(
     const CognitoIdentityRequest::Action action, GetIdRequest * const q)
-    : GetIdPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdRequestPrivate::GetIdRequestPrivate(
  */
 GetIdRequestPrivate::GetIdRequestPrivate(
     const GetIdRequestPrivate &other, GetIdRequest * const q)
-    : GetIdPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeConditionalForwardersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeConditionalForwardersResponse instance.
  */
 DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersResponsePrivate(
-    DescribeConditionalForwardersQueueResponse * const q) : DescribeConditionalForwardersPrivate(q)
+    DescribeConditionalForwardersResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

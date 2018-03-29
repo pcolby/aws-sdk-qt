@@ -86,7 +86,7 @@ void GetDimensionValuesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDimensionValuesResponse instance.
  */
 GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
-    GetDimensionValuesQueueResponse * const q) : GetDimensionValuesPrivate(q)
+    GetDimensionValuesResponse * const q) : CostExplorerResponsePrivate(q)
 {
 
 }

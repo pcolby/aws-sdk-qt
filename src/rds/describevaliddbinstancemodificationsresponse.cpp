@@ -86,7 +86,7 @@ void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DescribeValidDBInstanceModificationsResponse instance.
  */
 DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModificationsResponsePrivate(
-    DescribeValidDBInstanceModificationsQueueResponse * const q) : DescribeValidDBInstanceModificationsPrivate(q)
+    DescribeValidDBInstanceModificationsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

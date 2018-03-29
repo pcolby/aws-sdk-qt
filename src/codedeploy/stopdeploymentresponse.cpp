@@ -86,7 +86,7 @@ void StopDeploymentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopDeploymentResponse instance.
  */
 StopDeploymentResponsePrivate::StopDeploymentResponsePrivate(
-    StopDeploymentQueueResponse * const q) : StopDeploymentPrivate(q)
+    StopDeploymentResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

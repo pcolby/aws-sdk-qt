@@ -86,7 +86,7 @@ void DescribeEC2InstanceLimitsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEC2InstanceLimitsResponse instance.
  */
 DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponsePrivate(
-    DescribeEC2InstanceLimitsQueueResponse * const q) : DescribeEC2InstanceLimitsPrivate(q)
+    DescribeEC2InstanceLimitsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

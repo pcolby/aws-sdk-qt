@@ -86,7 +86,7 @@ void UpdateDatabaseResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDatabaseResponse instance.
  */
 UpdateDatabaseResponsePrivate::UpdateDatabaseResponsePrivate(
-    UpdateDatabaseQueueResponse * const q) : UpdateDatabasePrivate(q)
+    UpdateDatabaseResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

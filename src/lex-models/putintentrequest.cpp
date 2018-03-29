@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutIntentRequest::response(QNetworkReply * co
  */
 PutIntentRequestPrivate::PutIntentRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutIntentRequest * const q)
-    : PutIntentPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutIntentRequestPrivate::PutIntentRequestPrivate(
  */
 PutIntentRequestPrivate::PutIntentRequestPrivate(
     const PutIntentRequestPrivate &other, PutIntentRequest * const q)
-    : PutIntentPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

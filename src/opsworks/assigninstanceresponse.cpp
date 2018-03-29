@@ -86,7 +86,7 @@ void AssignInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssignInstanceResponse instance.
  */
 AssignInstanceResponsePrivate::AssignInstanceResponsePrivate(
-    AssignInstanceQueueResponse * const q) : AssignInstancePrivate(q)
+    AssignInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromInstanceProfileRequest::respons
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
     const IAMRequest::Action action, RemoveRoleFromInstanceProfileRequest * const q)
-    : RemoveRoleFromInstanceProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileReques
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
     const RemoveRoleFromInstanceProfileRequestPrivate &other, RemoveRoleFromInstanceProfileRequest * const q)
-    : RemoveRoleFromInstanceProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

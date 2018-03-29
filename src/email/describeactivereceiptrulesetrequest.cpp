@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeActiveReceiptRuleSetRequest::response
  */
 DescribeActiveReceiptRuleSetRequestPrivate::DescribeActiveReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, DescribeActiveReceiptRuleSetRequest * const q)
-    : DescribeActiveReceiptRuleSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeActiveReceiptRuleSetRequestPrivate::DescribeActiveReceiptRuleSetRequestP
  */
 DescribeActiveReceiptRuleSetRequestPrivate::DescribeActiveReceiptRuleSetRequestPrivate(
     const DescribeActiveReceiptRuleSetRequestPrivate &other, DescribeActiveReceiptRuleSetRequest * const q)
-    : DescribeActiveReceiptRuleSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

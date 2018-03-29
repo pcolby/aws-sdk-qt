@@ -86,7 +86,7 @@ void DescribeTrustsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTrustsResponse instance.
  */
 DescribeTrustsResponsePrivate::DescribeTrustsResponsePrivate(
-    DescribeTrustsQueueResponse * const q) : DescribeTrustsPrivate(q)
+    DescribeTrustsResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveUserFromGroupRequest::response(QNetwork
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
     const IAMRequest::Action action, RemoveUserFromGroupRequest * const q)
-    : RemoveUserFromGroupPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
     const RemoveUserFromGroupRequestPrivate &other, RemoveUserFromGroupRequest * const q)
-    : RemoveUserFromGroupPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

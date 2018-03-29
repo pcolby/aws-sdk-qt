@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkRe
  */
 SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
     const AutoScalingRequest::Action action, SetInstanceHealthRequest * const q)
-    : SetInstanceHealthPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
  */
 SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
     const SetInstanceHealthRequestPrivate &other, SetInstanceHealthRequest * const q)
-    : SetInstanceHealthPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

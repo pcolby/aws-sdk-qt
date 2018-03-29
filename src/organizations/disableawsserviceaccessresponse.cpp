@@ -86,7 +86,7 @@ void DisableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableAWSServiceAccessResponse instance.
  */
 DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponsePrivate(
-    DisableAWSServiceAccessQueueResponse * const q) : DisableAWSServiceAccessPrivate(q)
+    DisableAWSServiceAccessResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

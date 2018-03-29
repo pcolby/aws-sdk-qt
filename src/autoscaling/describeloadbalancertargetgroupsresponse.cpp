@@ -86,7 +86,7 @@ void DescribeLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLoadBalancerTargetGroupsResponse instance.
  */
 DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroupsResponsePrivate(
-    DescribeLoadBalancerTargetGroupsQueueResponse * const q) : DescribeLoadBalancerTargetGroupsPrivate(q)
+    DescribeLoadBalancerTargetGroupsResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

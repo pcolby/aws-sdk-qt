@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachPolicyRequest * const q)
-    : DetachPolicyPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const DetachPolicyRequestPrivate &other, DetachPolicyRequest * const q)
-    : DetachPolicyPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

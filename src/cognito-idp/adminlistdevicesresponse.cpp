@@ -86,7 +86,7 @@ void AdminListDevicesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminListDevicesResponse instance.
  */
 AdminListDevicesResponsePrivate::AdminListDevicesResponsePrivate(
-    AdminListDevicesQueueResponse * const q) : AdminListDevicesPrivate(q)
+    AdminListDevicesResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

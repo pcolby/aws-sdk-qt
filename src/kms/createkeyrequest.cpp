@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeyRequest::response(QNetworkReply * co
  */
 CreateKeyRequestPrivate::CreateKeyRequestPrivate(
     const KMSRequest::Action action, CreateKeyRequest * const q)
-    : CreateKeyPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateKeyRequestPrivate::CreateKeyRequestPrivate(
  */
 CreateKeyRequestPrivate::CreateKeyRequestPrivate(
     const CreateKeyRequestPrivate &other, CreateKeyRequest * const q)
-    : CreateKeyPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

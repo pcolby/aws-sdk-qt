@@ -86,7 +86,7 @@ void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRateBasedRuleResponse instance.
  */
 UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
-    UpdateRateBasedRuleQueueResponse * const q) : UpdateRateBasedRulePrivate(q)
+    UpdateRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

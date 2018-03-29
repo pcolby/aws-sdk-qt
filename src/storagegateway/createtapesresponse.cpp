@@ -86,7 +86,7 @@ void CreateTapesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTapesResponse instance.
  */
 CreateTapesResponsePrivate::CreateTapesResponsePrivate(
-    CreateTapesQueueResponse * const q) : CreateTapesPrivate(q)
+    CreateTapesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

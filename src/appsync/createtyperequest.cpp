@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTypeRequest::response(QNetworkReply * c
  */
 CreateTypeRequestPrivate::CreateTypeRequestPrivate(
     const AppSyncRequest::Action action, CreateTypeRequest * const q)
-    : CreateTypePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTypeRequestPrivate::CreateTypeRequestPrivate(
  */
 CreateTypeRequestPrivate::CreateTypeRequestPrivate(
     const CreateTypeRequestPrivate &other, CreateTypeRequest * const q)
-    : CreateTypePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSessionsRequest::response(QNetworkRep
  */
 DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
     const AppStreamRequest::Action action, DescribeSessionsRequest * const q)
-    : DescribeSessionsPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
  */
 DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
     const DescribeSessionsRequestPrivate &other, DescribeSessionsRequest * const q)
-    : DescribeSessionsPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointConfigRequest::response(QNetwor
  */
 DeleteEndpointConfigRequestPrivate::DeleteEndpointConfigRequestPrivate(
     const SageMakerRequest::Action action, DeleteEndpointConfigRequest * const q)
-    : DeleteEndpointConfigPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEndpointConfigRequestPrivate::DeleteEndpointConfigRequestPrivate(
  */
 DeleteEndpointConfigRequestPrivate::DeleteEndpointConfigRequestPrivate(
     const DeleteEndpointConfigRequestPrivate &other, DeleteEndpointConfigRequest * const q)
-    : DeleteEndpointConfigPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

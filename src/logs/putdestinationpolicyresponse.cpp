@@ -86,7 +86,7 @@ void PutDestinationPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutDestinationPolicyResponse instance.
  */
 PutDestinationPolicyResponsePrivate::PutDestinationPolicyResponsePrivate(
-    PutDestinationPolicyQueueResponse * const q) : PutDestinationPolicyPrivate(q)
+    PutDestinationPolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

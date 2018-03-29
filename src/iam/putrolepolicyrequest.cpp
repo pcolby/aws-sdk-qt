@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply 
  */
 PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
     const IAMRequest::Action action, PutRolePolicyRequest * const q)
-    : PutRolePolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
  */
 PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
     const PutRolePolicyRequestPrivate &other, PutRolePolicyRequest * const q)
-    : PutRolePolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateTeamMemberResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTeamMemberResponse instance.
  */
 UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponsePrivate(
-    UpdateTeamMemberQueueResponse * const q) : UpdateTeamMemberPrivate(q)
+    UpdateTeamMemberResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

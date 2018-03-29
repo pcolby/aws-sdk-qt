@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventBusRequest::response(QNetworkRep
  */
 DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
     const CloudWatchEventsRequest::Action action, DescribeEventBusRequest * const q)
-    : DescribeEventBusPrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
  */
 DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
     const DescribeEventBusRequestPrivate &other, DescribeEventBusRequest * const q)
-    : DescribeEventBusPrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

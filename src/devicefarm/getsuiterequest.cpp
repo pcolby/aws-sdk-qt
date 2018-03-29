@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * con
  */
 GetSuiteRequestPrivate::GetSuiteRequestPrivate(
     const DeviceFarmRequest::Action action, GetSuiteRequest * const q)
-    : GetSuitePrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSuiteRequestPrivate::GetSuiteRequestPrivate(
  */
 GetSuiteRequestPrivate::GetSuiteRequestPrivate(
     const GetSuiteRequestPrivate &other, GetSuiteRequest * const q)
-    : GetSuitePrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAuthorizerResponse instance.
  */
 CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
-    CreateAuthorizerQueueResponse * const q) : CreateAuthorizerPrivate(q)
+    CreateAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

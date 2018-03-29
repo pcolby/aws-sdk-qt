@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestRepositoryTriggersRequest::response(QNetw
  */
 TestRepositoryTriggersRequestPrivate::TestRepositoryTriggersRequestPrivate(
     const CodeCommitRequest::Action action, TestRepositoryTriggersRequest * const q)
-    : TestRepositoryTriggersPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestRepositoryTriggersRequestPrivate::TestRepositoryTriggersRequestPrivate(
  */
 TestRepositoryTriggersRequestPrivate::TestRepositoryTriggersRequestPrivate(
     const TestRepositoryTriggersRequestPrivate &other, TestRepositoryTriggersRequest * const q)
-    : TestRepositoryTriggersPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

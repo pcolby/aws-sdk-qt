@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateIPSetRequest * const q)
-    : CreateIPSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const CreateIPSetRequestPrivate &other, CreateIPSetRequest * const q)
-    : CreateIPSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

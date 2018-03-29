@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply
  */
 DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
     const PinpointRequest::Action action, DeleteCampaignRequest * const q)
-    : DeleteCampaignPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
  */
 DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
     const DeleteCampaignRequestPrivate &other, DeleteCampaignRequest * const q)
-    : DeleteCampaignPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

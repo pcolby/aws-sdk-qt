@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QN
  */
 DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeReplicationGroupsRequest * const q)
-    : DescribeReplicationGroupsPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate
  */
 DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
     const DescribeReplicationGroupsRequestPrivate &other, DescribeReplicationGroupsRequest * const q)
-    : DescribeReplicationGroupsPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CountClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CountClosedWorkflowExecutionsResponse instance.
  */
 CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsResponsePrivate(
-    CountClosedWorkflowExecutionsQueueResponse * const q) : CountClosedWorkflowExecutionsPrivate(q)
+    CountClosedWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

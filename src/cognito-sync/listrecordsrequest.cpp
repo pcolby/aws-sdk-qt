@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRecordsRequest::response(QNetworkReply * 
  */
 ListRecordsRequestPrivate::ListRecordsRequestPrivate(
     const CognitoSyncRequest::Action action, ListRecordsRequest * const q)
-    : ListRecordsPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRecordsRequestPrivate::ListRecordsRequestPrivate(
  */
 ListRecordsRequestPrivate::ListRecordsRequestPrivate(
     const ListRecordsRequestPrivate &other, ListRecordsRequest * const q)
-    : ListRecordsPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

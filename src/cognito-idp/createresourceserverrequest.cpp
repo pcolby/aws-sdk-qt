@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceServerRequest::response(QNetwor
  */
 CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateResourceServerRequest * const q)
-    : CreateResourceServerPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
  */
 CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
     const CreateResourceServerRequestPrivate &other, CreateResourceServerRequest * const q)
-    : CreateResourceServerPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply 
  */
 ListResourcesRequestPrivate::ListResourcesRequestPrivate(
     const WorkMailRequest::Action action, ListResourcesRequest * const q)
-    : ListResourcesPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourcesRequestPrivate::ListResourcesRequestPrivate(
  */
 ListResourcesRequestPrivate::ListResourcesRequestPrivate(
     const ListResourcesRequestPrivate &other, ListResourcesRequest * const q)
-    : ListResourcesPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

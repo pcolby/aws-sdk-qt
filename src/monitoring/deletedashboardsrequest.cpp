@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkRep
  */
 DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
     const CloudWatchRequest::Action action, DeleteDashboardsRequest * const q)
-    : DeleteDashboardsPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
  */
 DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
     const DeleteDashboardsRequestPrivate &other, DeleteDashboardsRequest * const q)
-    : DeleteDashboardsPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

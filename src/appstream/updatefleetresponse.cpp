@@ -86,7 +86,7 @@ void UpdateFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFleetResponse instance.
  */
 UpdateFleetResponsePrivate::UpdateFleetResponsePrivate(
-    UpdateFleetQueueResponse * const q) : UpdateFleetPrivate(q)
+    UpdateFleetResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

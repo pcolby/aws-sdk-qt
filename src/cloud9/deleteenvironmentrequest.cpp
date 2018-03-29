@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentRequest::response(QNetworkRe
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
     const Cloud9Request::Action action, DeleteEnvironmentRequest * const q)
-    : DeleteEnvironmentPrivate(action, q)
+    : Cloud9RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
     const DeleteEnvironmentRequestPrivate &other, DeleteEnvironmentRequest * const q)
-    : DeleteEnvironmentPrivate(other, q)
+    : Cloud9RequestPrivate(other, q)
 {
 
 }

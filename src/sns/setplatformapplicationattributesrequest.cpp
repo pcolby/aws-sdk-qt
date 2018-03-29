@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetPlatformApplicationAttributesRequest::resp
  */
 SetPlatformApplicationAttributesRequestPrivate::SetPlatformApplicationAttributesRequestPrivate(
     const SNSRequest::Action action, SetPlatformApplicationAttributesRequest * const q)
-    : SetPlatformApplicationAttributesPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetPlatformApplicationAttributesRequestPrivate::SetPlatformApplicationAttributes
  */
 SetPlatformApplicationAttributesRequestPrivate::SetPlatformApplicationAttributesRequestPrivate(
     const SetPlatformApplicationAttributesRequestPrivate &other, SetPlatformApplicationAttributesRequest * const q)
-    : SetPlatformApplicationAttributesPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

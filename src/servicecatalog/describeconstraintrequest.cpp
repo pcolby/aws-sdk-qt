@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkR
  */
 DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeConstraintRequest * const q)
-    : DescribeConstraintPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
  */
 DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
     const DescribeConstraintRequestPrivate &other, DescribeConstraintRequest * const q)
-    : DescribeConstraintPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDisksRequest::response(QNetworkReply * con
  */
 GetDisksRequestPrivate::GetDisksRequestPrivate(
     const LightsailRequest::Action action, GetDisksRequest * const q)
-    : GetDisksPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDisksRequestPrivate::GetDisksRequestPrivate(
  */
 GetDisksRequestPrivate::GetDisksRequestPrivate(
     const GetDisksRequestPrivate &other, GetDisksRequest * const q)
-    : GetDisksPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

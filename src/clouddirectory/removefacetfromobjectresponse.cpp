@@ -86,7 +86,7 @@ void RemoveFacetFromObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveFacetFromObjectResponse instance.
  */
 RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponsePrivate(
-    RemoveFacetFromObjectQueueResponse * const q) : RemoveFacetFromObjectPrivate(q)
+    RemoveFacetFromObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

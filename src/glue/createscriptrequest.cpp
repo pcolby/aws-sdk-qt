@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply *
  */
 CreateScriptRequestPrivate::CreateScriptRequestPrivate(
     const GlueRequest::Action action, CreateScriptRequest * const q)
-    : CreateScriptPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateScriptRequestPrivate::CreateScriptRequestPrivate(
  */
 CreateScriptRequestPrivate::CreateScriptRequestPrivate(
     const CreateScriptRequestPrivate &other, CreateScriptRequest * const q)
-    : CreateScriptPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

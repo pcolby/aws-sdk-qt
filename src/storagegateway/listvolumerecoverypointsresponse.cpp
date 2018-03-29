@@ -86,7 +86,7 @@ void ListVolumeRecoveryPointsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListVolumeRecoveryPointsResponse instance.
  */
 ListVolumeRecoveryPointsResponsePrivate::ListVolumeRecoveryPointsResponsePrivate(
-    ListVolumeRecoveryPointsQueueResponse * const q) : ListVolumeRecoveryPointsPrivate(q)
+    ListVolumeRecoveryPointsResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetLoggingOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLoggingOptionsResponse instance.
  */
 GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponsePrivate(
-    GetLoggingOptionsQueueResponse * const q) : GetLoggingOptionsPrivate(q)
+    GetLoggingOptionsResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

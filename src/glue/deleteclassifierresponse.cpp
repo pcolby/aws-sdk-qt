@@ -86,7 +86,7 @@ void DeleteClassifierResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteClassifierResponse instance.
  */
 DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
-    DeleteClassifierQueueResponse * const q) : DeleteClassifierPrivate(q)
+    DeleteClassifierResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

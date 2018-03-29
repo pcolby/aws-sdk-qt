@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
  */
 CreateHsmRequestPrivate::CreateHsmRequestPrivate(
     const CloudHSMV2Request::Action action, CreateHsmRequest * const q)
-    : CreateHsmPrivate(action, q)
+    : CloudHSMV2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateHsmRequestPrivate::CreateHsmRequestPrivate(
  */
 CreateHsmRequestPrivate::CreateHsmRequestPrivate(
     const CreateHsmRequestPrivate &other, CreateHsmRequest * const q)
-    : CreateHsmPrivate(other, q)
+    : CloudHSMV2RequestPrivate(other, q)
 {
 
 }

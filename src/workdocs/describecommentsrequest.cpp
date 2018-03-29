@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkRep
  */
 DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeCommentsRequest * const q)
-    : DescribeCommentsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
  */
 DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
     const DescribeCommentsRequestPrivate &other, DescribeCommentsRequest * const q)
-    : DescribeCommentsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

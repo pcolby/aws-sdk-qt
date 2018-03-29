@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkR
  */
 StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
     const GameLiftRequest::Action action, StartMatchBackfillRequest * const q)
-    : StartMatchBackfillPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
  */
 StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
     const StartMatchBackfillRequestPrivate &other, StartMatchBackfillRequest * const q)
-    : StartMatchBackfillPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

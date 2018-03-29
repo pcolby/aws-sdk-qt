@@ -86,7 +86,7 @@ void SendMessageBatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendMessageBatchResponse instance.
  */
 SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
-    SendMessageBatchQueueResponse * const q) : SendMessageBatchPrivate(q)
+    SendMessageBatchResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

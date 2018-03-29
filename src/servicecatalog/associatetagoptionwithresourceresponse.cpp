@@ -86,7 +86,7 @@ void AssociateTagOptionWithResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateTagOptionWithResourceResponse instance.
  */
 AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceResponsePrivate(
-    AssociateTagOptionWithResourceQueueResponse * const q) : AssociateTagOptionWithResourcePrivate(q)
+    AssociateTagOptionWithResourceResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

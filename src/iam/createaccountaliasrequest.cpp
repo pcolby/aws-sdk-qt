@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAccountAliasRequest::response(QNetworkR
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
     const IAMRequest::Action action, CreateAccountAliasRequest * const q)
-    : CreateAccountAliasPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
     const CreateAccountAliasRequestPrivate &other, CreateAccountAliasRequest * const q)
-    : CreateAccountAliasPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

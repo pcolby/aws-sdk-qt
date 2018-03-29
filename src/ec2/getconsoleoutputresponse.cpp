@@ -86,7 +86,7 @@ void GetConsoleOutputResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetConsoleOutputResponse instance.
  */
 GetConsoleOutputResponsePrivate::GetConsoleOutputResponsePrivate(
-    GetConsoleOutputQueueResponse * const q) : GetConsoleOutputPrivate(q)
+    GetConsoleOutputResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * 
  */
 GetEndpointRequestPrivate::GetEndpointRequestPrivate(
     const PinpointRequest::Action action, GetEndpointRequest * const q)
-    : GetEndpointPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetEndpointRequestPrivate::GetEndpointRequestPrivate(
  */
 GetEndpointRequestPrivate::GetEndpointRequestPrivate(
     const GetEndpointRequestPrivate &other, GetEndpointRequest * const q)
-    : GetEndpointPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

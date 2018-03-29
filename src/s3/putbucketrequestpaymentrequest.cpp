@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNet
  */
 PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
     const S3Request::Action action, PutBucketRequestPaymentRequest * const q)
-    : PutBucketRequestPaymentPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
  */
 PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
     const PutBucketRequestPaymentRequestPrivate &other, PutBucketRequestPaymentRequest * const q)
-    : PutBucketRequestPaymentPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

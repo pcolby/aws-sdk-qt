@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ClearDefaultAuthorizerRequest::response(QNetw
  */
 ClearDefaultAuthorizerRequestPrivate::ClearDefaultAuthorizerRequestPrivate(
     const IoTRequest::Action action, ClearDefaultAuthorizerRequest * const q)
-    : ClearDefaultAuthorizerPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ClearDefaultAuthorizerRequestPrivate::ClearDefaultAuthorizerRequestPrivate(
  */
 ClearDefaultAuthorizerRequestPrivate::ClearDefaultAuthorizerRequestPrivate(
     const ClearDefaultAuthorizerRequestPrivate &other, ClearDefaultAuthorizerRequest * const q)
-    : ClearDefaultAuthorizerPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

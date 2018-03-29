@@ -86,7 +86,7 @@ void ListDocumentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDocumentsResponse instance.
  */
 ListDocumentsResponsePrivate::ListDocumentsResponsePrivate(
-    ListDocumentsQueueResponse * const q) : ListDocumentsPrivate(q)
+    ListDocumentsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

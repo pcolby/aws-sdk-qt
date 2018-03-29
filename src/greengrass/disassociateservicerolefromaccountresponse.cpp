@@ -86,7 +86,7 @@ void DisassociateServiceRoleFromAccountResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DisassociateServiceRoleFromAccountResponse instance.
  */
 DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAccountResponsePrivate(
-    DisassociateServiceRoleFromAccountQueueResponse * const q) : DisassociateServiceRoleFromAccountPrivate(q)
+    DisassociateServiceRoleFromAccountResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

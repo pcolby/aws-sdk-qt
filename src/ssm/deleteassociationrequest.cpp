@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkRe
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
     const SSMRequest::Action action, DeleteAssociationRequest * const q)
-    : DeleteAssociationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
     const DeleteAssociationRequestPrivate &other, DeleteAssociationRequest * const q)
-    : DeleteAssociationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

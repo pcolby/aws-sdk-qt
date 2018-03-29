@@ -86,7 +86,7 @@ void AttachStaticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachStaticIpResponse instance.
  */
 AttachStaticIpResponsePrivate::AttachStaticIpResponsePrivate(
-    AttachStaticIpQueueResponse * const q) : AttachStaticIpPrivate(q)
+    AttachStaticIpResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

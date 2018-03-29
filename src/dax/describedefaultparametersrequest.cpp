@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QN
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
     const DAXRequest::Action action, DescribeDefaultParametersRequest * const q)
-    : DescribeDefaultParametersPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
     const DescribeDefaultParametersRequestPrivate &other, DescribeDefaultParametersRequest * const q)
-    : DescribeDefaultParametersPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

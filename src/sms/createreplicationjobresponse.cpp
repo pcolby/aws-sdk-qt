@@ -86,7 +86,7 @@ void CreateReplicationJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReplicationJobResponse instance.
  */
 CreateReplicationJobResponsePrivate::CreateReplicationJobResponsePrivate(
-    CreateReplicationJobQueueResponse * const q) : CreateReplicationJobPrivate(q)
+    CreateReplicationJobResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

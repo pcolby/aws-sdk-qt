@@ -86,7 +86,7 @@ void AddCustomAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddCustomAttributesResponse instance.
  */
 AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
-    AddCustomAttributesQueueResponse * const q) : AddCustomAttributesPrivate(q)
+    AddCustomAttributesResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeInstancePatchStatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeInstancePatchStatesResponse instance.
  */
 DescribeInstancePatchStatesResponsePrivate::DescribeInstancePatchStatesResponsePrivate(
-    DescribeInstancePatchStatesQueueResponse * const q) : DescribeInstancePatchStatesPrivate(q)
+    DescribeInstancePatchStatesResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

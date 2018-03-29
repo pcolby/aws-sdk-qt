@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InviteAccountToOrganizationRequest::response(
  */
 InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, InviteAccountToOrganizationRequest * const q)
-    : InviteAccountToOrganizationPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPri
  */
 InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPrivate(
     const InviteAccountToOrganizationRequestPrivate &other, InviteAccountToOrganizationRequest * const q)
-    : InviteAccountToOrganizationPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

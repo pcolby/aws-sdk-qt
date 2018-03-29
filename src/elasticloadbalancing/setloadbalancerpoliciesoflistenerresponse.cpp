@@ -86,7 +86,7 @@ void SetLoadBalancerPoliciesOfListenerResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public SetLoadBalancerPoliciesOfListenerResponse instance.
  */
 SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListenerResponsePrivate(
-    SetLoadBalancerPoliciesOfListenerQueueResponse * const q) : SetLoadBalancerPoliciesOfListenerPrivate(q)
+    SetLoadBalancerPoliciesOfListenerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteProfileResponse instance.
  */
 DeleteProfileResponsePrivate::DeleteProfileResponsePrivate(
-    DeleteProfileQueueResponse * const q) : DeleteProfilePrivate(q)
+    DeleteProfileResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

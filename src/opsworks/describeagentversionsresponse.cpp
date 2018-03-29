@@ -86,7 +86,7 @@ void DescribeAgentVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAgentVersionsResponse instance.
  */
 DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponsePrivate(
-    DescribeAgentVersionsQueueResponse * const q) : DescribeAgentVersionsPrivate(q)
+    DescribeAgentVersionsResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

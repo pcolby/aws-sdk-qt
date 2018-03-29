@@ -86,7 +86,7 @@ void AttachLoadBalancersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachLoadBalancersResponse instance.
  */
 AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
-    AttachLoadBalancersQueueResponse * const q) : AttachLoadBalancersPrivate(q)
+    AttachLoadBalancersResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

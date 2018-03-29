@@ -86,7 +86,7 @@ void CreateCloudFormationChangeSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCloudFormationChangeSetResponse instance.
  */
 CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetResponsePrivate(
-    CreateCloudFormationChangeSetQueueResponse * const q) : CreateCloudFormationChangeSetPrivate(q)
+    CreateCloudFormationChangeSetResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
 {
 
 }

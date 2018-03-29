@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCommentRequest::response(QNetworkReply 
  */
 DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
     const WorkDocsRequest::Action action, DeleteCommentRequest * const q)
-    : DeleteCommentPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
  */
 DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
     const DeleteCommentRequestPrivate &other, DeleteCommentRequest * const q)
-    : DeleteCommentPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

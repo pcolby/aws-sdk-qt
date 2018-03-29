@@ -86,7 +86,7 @@ void UpdateAdmChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAdmChannelResponse instance.
  */
 UpdateAdmChannelResponsePrivate::UpdateAdmChannelResponsePrivate(
-    UpdateAdmChannelQueueResponse * const q) : UpdateAdmChannelPrivate(q)
+    UpdateAdmChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

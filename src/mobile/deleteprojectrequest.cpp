@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const MobileRequest::Action action, DeleteProjectRequest * const q)
-    : DeleteProjectPrivate(action, q)
+    : MobileRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const DeleteProjectRequestPrivate &other, DeleteProjectRequest * const q)
-    : DeleteProjectPrivate(other, q)
+    : MobileRequestPrivate(other, q)
 {
 
 }

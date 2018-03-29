@@ -86,7 +86,7 @@ void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAccountLimitsResponse instance.
  */
 DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
-    DescribeAccountLimitsQueueResponse * const q) : DescribeAccountLimitsPrivate(q)
+    DescribeAccountLimitsResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

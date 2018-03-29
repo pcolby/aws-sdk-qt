@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadSigningCertificateRequest::response(QNe
  */
 UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
     const IAMRequest::Action action, UploadSigningCertificateRequest * const q)
-    : UploadSigningCertificatePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
  */
 UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
     const UploadSigningCertificateRequestPrivate &other, UploadSigningCertificateRequest * const q)
-    : UploadSigningCertificatePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

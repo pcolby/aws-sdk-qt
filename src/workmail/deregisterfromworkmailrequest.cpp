@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterFromWorkMailRequest::response(QNetw
  */
 DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
     const WorkMailRequest::Action action, DeregisterFromWorkMailRequest * const q)
-    : DeregisterFromWorkMailPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
  */
 DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
     const DeregisterFromWorkMailRequestPrivate &other, DeregisterFromWorkMailRequest * const q)
-    : DeregisterFromWorkMailPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

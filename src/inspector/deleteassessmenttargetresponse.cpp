@@ -86,7 +86,7 @@ void DeleteAssessmentTargetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAssessmentTargetResponse instance.
  */
 DeleteAssessmentTargetResponsePrivate::DeleteAssessmentTargetResponsePrivate(
-    DeleteAssessmentTargetQueueResponse * const q) : DeleteAssessmentTargetPrivate(q)
+    DeleteAssessmentTargetResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

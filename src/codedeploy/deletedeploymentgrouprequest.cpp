@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentGroupRequest::response(QNetwo
  */
 DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
     const CodeDeployRequest::Action action, DeleteDeploymentGroupRequest * const q)
-    : DeleteDeploymentGroupPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
  */
 DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
     const DeleteDeploymentGroupRequestPrivate &other, DeleteDeploymentGroupRequest * const q)
-    : DeleteDeploymentGroupPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

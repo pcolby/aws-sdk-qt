@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * 
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutSlotTypeRequest * const q)
-    : PutSlotTypePrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
     const PutSlotTypeRequestPrivate &other, PutSlotTypeRequest * const q)
-    : PutSlotTypePrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

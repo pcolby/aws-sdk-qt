@@ -86,7 +86,7 @@ void DeleteConfigurationTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteConfigurationTemplateResponse instance.
  */
 DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponsePrivate(
-    DeleteConfigurationTemplateQueueResponse * const q) : DeleteConfigurationTemplatePrivate(q)
+    DeleteConfigurationTemplateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

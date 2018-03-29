@@ -86,7 +86,7 @@ void GetRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRoleResponse instance.
  */
 GetRoleResponsePrivate::GetRoleResponsePrivate(
-    GetRoleQueueResponse * const q) : GetRolePrivate(q)
+    GetRoleResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

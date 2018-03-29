@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply *
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const LightsailRequest::Action action, StopInstanceRequest * const q)
-    : StopInstancePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopInstanceRequestPrivate::StopInstanceRequestPrivate(
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const StopInstanceRequestPrivate &other, StopInstanceRequest * const q)
-    : StopInstancePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

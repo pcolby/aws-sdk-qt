@@ -86,7 +86,7 @@ void DescribeRulesPackagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRulesPackagesResponse instance.
  */
 DescribeRulesPackagesResponsePrivate::DescribeRulesPackagesResponsePrivate(
-    DescribeRulesPackagesQueueResponse * const q) : DescribeRulesPackagesPrivate(q)
+    DescribeRulesPackagesResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

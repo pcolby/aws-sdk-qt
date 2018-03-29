@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeComputeEnvironmentsRequest::response(
  */
 DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPrivate(
     const BatchRequest::Action action, DescribeComputeEnvironmentsRequest * const q)
-    : DescribeComputeEnvironmentsPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPri
  */
 DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPrivate(
     const DescribeComputeEnvironmentsRequestPrivate &other, DescribeComputeEnvironmentsRequest * const q)
-    : DescribeComputeEnvironmentsPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

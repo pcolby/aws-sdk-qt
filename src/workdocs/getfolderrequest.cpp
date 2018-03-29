@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFolderRequest::response(QNetworkReply * co
  */
 GetFolderRequestPrivate::GetFolderRequestPrivate(
     const WorkDocsRequest::Action action, GetFolderRequest * const q)
-    : GetFolderPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFolderRequestPrivate::GetFolderRequestPrivate(
  */
 GetFolderRequestPrivate::GetFolderRequestPrivate(
     const GetFolderRequestPrivate &other, GetFolderRequest * const q)
-    : GetFolderPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

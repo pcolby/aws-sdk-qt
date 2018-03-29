@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetwor
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
     const SMSRequest::Action action, UpdateReplicationJobRequest * const q)
-    : UpdateReplicationJobPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
     const UpdateReplicationJobRequestPrivate &other, UpdateReplicationJobRequest * const q)
-    : UpdateReplicationJobPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

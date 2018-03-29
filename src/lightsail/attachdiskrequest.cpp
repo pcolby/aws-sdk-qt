@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachDiskRequest::response(QNetworkReply * c
  */
 AttachDiskRequestPrivate::AttachDiskRequestPrivate(
     const LightsailRequest::Action action, AttachDiskRequest * const q)
-    : AttachDiskPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachDiskRequestPrivate::AttachDiskRequestPrivate(
  */
 AttachDiskRequestPrivate::AttachDiskRequestPrivate(
     const AttachDiskRequestPrivate &other, AttachDiskRequest * const q)
-    : AttachDiskPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

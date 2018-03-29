@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
  */
 DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteObjectRequest * const q)
-    : DeleteObjectPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
  */
 DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
     const DeleteObjectRequestPrivate &other, DeleteObjectRequest * const q)
-    : DeleteObjectPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

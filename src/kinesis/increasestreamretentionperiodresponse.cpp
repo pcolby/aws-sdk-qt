@@ -86,7 +86,7 @@ void IncreaseStreamRetentionPeriodResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public IncreaseStreamRetentionPeriodResponse instance.
  */
 IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodResponsePrivate(
-    IncreaseStreamRetentionPeriodQueueResponse * const q) : IncreaseStreamRetentionPeriodPrivate(q)
+    IncreaseStreamRetentionPeriodResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

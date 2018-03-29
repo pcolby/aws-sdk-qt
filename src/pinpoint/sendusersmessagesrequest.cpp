@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkRe
  */
 SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
     const PinpointRequest::Action action, SendUsersMessagesRequest * const q)
-    : SendUsersMessagesPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
  */
 SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
     const SendUsersMessagesRequestPrivate &other, SendUsersMessagesRequest * const q)
-    : SendUsersMessagesPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

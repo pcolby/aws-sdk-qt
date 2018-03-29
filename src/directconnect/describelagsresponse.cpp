@@ -86,7 +86,7 @@ void DescribeLagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLagsResponse instance.
  */
 DescribeLagsResponsePrivate::DescribeLagsResponsePrivate(
-    DescribeLagsQueueResponse * const q) : DescribeLagsPrivate(q)
+    DescribeLagsResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

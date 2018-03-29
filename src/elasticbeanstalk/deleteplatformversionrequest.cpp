@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetwo
  */
 DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeletePlatformVersionRequest * const q)
-    : DeletePlatformVersionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
  */
 DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
     const DeletePlatformVersionRequestPrivate &other, DeletePlatformVersionRequest * const q)
-    : DeletePlatformVersionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

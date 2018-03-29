@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeleteServiceRequest * const q)
-    : DeleteServicePrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const DeleteServiceRequestPrivate &other, DeleteServiceRequest * const q)
-    : DeleteServicePrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

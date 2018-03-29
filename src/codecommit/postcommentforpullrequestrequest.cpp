@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PostCommentForPullRequestRequest::response(QN
  */
 PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentForPullRequestRequest * const q)
-    : PostCommentForPullRequestPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate
  */
 PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
     const PostCommentForPullRequestRequestPrivate &other, PostCommentForPullRequestRequest * const q)
-    : PostCommentForPullRequestPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SelectRequest::response(QNetworkReply * const
  */
 SelectRequestPrivate::SelectRequestPrivate(
     const SimpleDBRequest::Action action, SelectRequest * const q)
-    : SelectPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SelectRequestPrivate::SelectRequestPrivate(
  */
 SelectRequestPrivate::SelectRequestPrivate(
     const SelectRequestPrivate &other, SelectRequest * const q)
-    : SelectPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

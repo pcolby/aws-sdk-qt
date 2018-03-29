@@ -86,7 +86,7 @@ void ScheduleRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ScheduleRunResponse instance.
  */
 ScheduleRunResponsePrivate::ScheduleRunResponsePrivate(
-    ScheduleRunQueueResponse * const q) : ScheduleRunPrivate(q)
+    ScheduleRunResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

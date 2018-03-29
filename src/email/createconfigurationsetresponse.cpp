@@ -86,7 +86,7 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateConfigurationSetResponse instance.
  */
 CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
-    CreateConfigurationSetQueueResponse * const q) : CreateConfigurationSetPrivate(q)
+    CreateConfigurationSetResponse * const q) : SESResponsePrivate(q)
 {
 
 }

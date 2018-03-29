@@ -86,7 +86,7 @@ void GetClassifierResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetClassifierResponse instance.
  */
 GetClassifierResponsePrivate::GetClassifierResponsePrivate(
-    GetClassifierQueueResponse * const q) : GetClassifierPrivate(q)
+    GetClassifierResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

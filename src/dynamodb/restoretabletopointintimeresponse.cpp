@@ -86,7 +86,7 @@ void RestoreTableToPointInTimeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreTableToPointInTimeResponse instance.
  */
 RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponsePrivate(
-    RestoreTableToPointInTimeQueueResponse * const q) : RestoreTableToPointInTimePrivate(q)
+    RestoreTableToPointInTimeResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

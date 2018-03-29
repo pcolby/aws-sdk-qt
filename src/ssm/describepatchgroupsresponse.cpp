@@ -86,7 +86,7 @@ void DescribePatchGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribePatchGroupsResponse instance.
  */
 DescribePatchGroupsResponsePrivate::DescribePatchGroupsResponsePrivate(
-    DescribePatchGroupsQueueResponse * const q) : DescribePatchGroupsPrivate(q)
+    DescribePatchGroupsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

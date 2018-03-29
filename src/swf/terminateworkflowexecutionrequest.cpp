@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, TerminateWorkflowExecutionRequest * const q)
-    : TerminateWorkflowExecutionPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPriva
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
     const TerminateWorkflowExecutionRequestPrivate &other, TerminateWorkflowExecutionRequest * const q)
-    : TerminateWorkflowExecutionPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

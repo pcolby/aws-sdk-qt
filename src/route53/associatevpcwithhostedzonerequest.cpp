@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(Q
  */
 AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPrivate(
     const Route53Request::Action action, AssociateVPCWithHostedZoneRequest * const q)
-    : AssociateVPCWithHostedZonePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPriva
  */
 AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPrivate(
     const AssociateVPCWithHostedZoneRequestPrivate &other, AssociateVPCWithHostedZoneRequest * const q)
-    : AssociateVPCWithHostedZonePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

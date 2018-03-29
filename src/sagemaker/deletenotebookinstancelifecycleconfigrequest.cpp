@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceLifecycleConfigRequest:
  */
 DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, DeleteNotebookInstanceLifecycleConfigRequest * const q)
-    : DeleteNotebookInstanceLifecycleConfigPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifec
  */
 DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifecycleConfigRequestPrivate(
     const DeleteNotebookInstanceLifecycleConfigRequestPrivate &other, DeleteNotebookInstanceLifecycleConfigRequest * const q)
-    : DeleteNotebookInstanceLifecycleConfigPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

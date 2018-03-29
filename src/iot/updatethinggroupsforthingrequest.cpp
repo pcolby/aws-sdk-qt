@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingGroupsForThingRequest::response(QN
  */
 UpdateThingGroupsForThingRequestPrivate::UpdateThingGroupsForThingRequestPrivate(
     const IoTRequest::Action action, UpdateThingGroupsForThingRequest * const q)
-    : UpdateThingGroupsForThingPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateThingGroupsForThingRequestPrivate::UpdateThingGroupsForThingRequestPrivate
  */
 UpdateThingGroupsForThingRequestPrivate::UpdateThingGroupsForThingRequestPrivate(
     const UpdateThingGroupsForThingRequestPrivate &other, UpdateThingGroupsForThingRequest * const q)
-    : UpdateThingGroupsForThingPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * 
  */
 ListExportsRequestPrivate::ListExportsRequestPrivate(
     const CloudFormationRequest::Action action, ListExportsRequest * const q)
-    : ListExportsPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListExportsRequestPrivate::ListExportsRequestPrivate(
  */
 ListExportsRequestPrivate::ListExportsRequestPrivate(
     const ListExportsRequestPrivate &other, ListExportsRequest * const q)
-    : ListExportsPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

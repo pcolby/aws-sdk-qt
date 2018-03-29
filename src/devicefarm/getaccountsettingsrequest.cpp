@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const DeviceFarmRequest::Action action, GetAccountSettingsRequest * const q)
-    : GetAccountSettingsPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const GetAccountSettingsRequestPrivate &other, GetAccountSettingsRequest * const q)
-    : GetAccountSettingsPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

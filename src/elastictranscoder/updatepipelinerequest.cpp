@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, UpdatePipelineRequest * const q)
-    : UpdatePipelinePrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const UpdatePipelineRequestPrivate &other, UpdatePipelineRequest * const q)
-    : UpdatePipelinePrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

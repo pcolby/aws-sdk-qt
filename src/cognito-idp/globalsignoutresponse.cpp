@@ -86,7 +86,7 @@ void GlobalSignOutResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GlobalSignOutResponse instance.
  */
 GlobalSignOutResponsePrivate::GlobalSignOutResponsePrivate(
-    GlobalSignOutQueueResponse * const q) : GlobalSignOutPrivate(q)
+    GlobalSignOutResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

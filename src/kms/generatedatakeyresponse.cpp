@@ -86,7 +86,7 @@ void GenerateDataKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GenerateDataKeyResponse instance.
  */
 GenerateDataKeyResponsePrivate::GenerateDataKeyResponsePrivate(
-    GenerateDataKeyQueueResponse * const q) : GenerateDataKeyPrivate(q)
+    GenerateDataKeyResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

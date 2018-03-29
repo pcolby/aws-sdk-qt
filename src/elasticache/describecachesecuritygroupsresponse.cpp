@@ -86,7 +86,7 @@ void DescribeCacheSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCacheSecurityGroupsResponse instance.
  */
 DescribeCacheSecurityGroupsResponsePrivate::DescribeCacheSecurityGroupsResponsePrivate(
-    DescribeCacheSecurityGroupsQueueResponse * const q) : DescribeCacheSecurityGroupsPrivate(q)
+    DescribeCacheSecurityGroupsResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

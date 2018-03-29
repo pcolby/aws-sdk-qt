@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterScalableTargetRequest::response(QNetw
  */
 RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, RegisterScalableTargetRequest * const q)
-    : RegisterScalableTargetPrivate(action, q)
+    : ApplicationAutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
  */
 RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
     const RegisterScalableTargetRequestPrivate &other, RegisterScalableTargetRequest * const q)
-    : RegisterScalableTargetPrivate(other, q)
+    : ApplicationAutoScalingRequestPrivate(other, q)
 {
 
 }

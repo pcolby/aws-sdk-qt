@@ -86,7 +86,7 @@ void GetTelemetryMetadataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTelemetryMetadataResponse instance.
  */
 GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
-    GetTelemetryMetadataQueueResponse * const q) : GetTelemetryMetadataPrivate(q)
+    GetTelemetryMetadataResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

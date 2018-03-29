@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply 
  */
 PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
     const InspectorRequest::Action action, PreviewAgentsRequest * const q)
-    : PreviewAgentsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
  */
 PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
     const PreviewAgentsRequestPrivate &other, PreviewAgentsRequest * const q)
-    : PreviewAgentsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePullRequestEventsRequest::response(QN
  */
 DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
     const CodeCommitRequest::Action action, DescribePullRequestEventsRequest * const q)
-    : DescribePullRequestEventsPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate
  */
 DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
     const DescribePullRequestEventsRequestPrivate &other, DescribePullRequestEventsRequest * const q)
-    : DescribePullRequestEventsPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::re
  */
 AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
     const ElastiCacheRequest::Action action, AuthorizeCacheSecurityGroupIngressRequest * const q)
-    : AuthorizeCacheSecurityGroupIngressPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIng
  */
 AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
     const AuthorizeCacheSecurityGroupIngressRequestPrivate &other, AuthorizeCacheSecurityGroupIngressRequest * const q)
-    : AuthorizeCacheSecurityGroupIngressPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

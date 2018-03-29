@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionRequest::response(QNetwor
  */
 CreateCoreDefinitionRequestPrivate::CreateCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateCoreDefinitionRequest * const q)
-    : CreateCoreDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCoreDefinitionRequestPrivate::CreateCoreDefinitionRequestPrivate(
  */
 CreateCoreDefinitionRequestPrivate::CreateCoreDefinitionRequestPrivate(
     const CreateCoreDefinitionRequestPrivate &other, CreateCoreDefinitionRequest * const q)
-    : CreateCoreDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

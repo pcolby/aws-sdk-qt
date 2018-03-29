@@ -86,7 +86,7 @@ void GetAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountPasswordPolicyResponse instance.
  */
 GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponsePrivate(
-    GetAccountPasswordPolicyQueueResponse * const q) : GetAccountPasswordPolicyPrivate(q)
+    GetAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

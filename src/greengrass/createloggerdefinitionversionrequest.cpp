@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionVersionRequest::respons
  */
 CreateLoggerDefinitionVersionRequestPrivate::CreateLoggerDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateLoggerDefinitionVersionRequest * const q)
-    : CreateLoggerDefinitionVersionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLoggerDefinitionVersionRequestPrivate::CreateLoggerDefinitionVersionReques
  */
 CreateLoggerDefinitionVersionRequestPrivate::CreateLoggerDefinitionVersionRequestPrivate(
     const CreateLoggerDefinitionVersionRequestPrivate &other, CreateLoggerDefinitionVersionRequest * const q)
-    : CreateLoggerDefinitionVersionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

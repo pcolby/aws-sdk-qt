@@ -86,7 +86,7 @@ void DeleteCustomerGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCustomerGatewayResponse instance.
  */
 DeleteCustomerGatewayResponsePrivate::DeleteCustomerGatewayResponsePrivate(
-    DeleteCustomerGatewayQueueResponse * const q) : DeleteCustomerGatewayPrivate(q)
+    DeleteCustomerGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeCacheResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCacheResponse instance.
  */
 DescribeCacheResponsePrivate::DescribeCacheResponsePrivate(
-    DescribeCacheQueueResponse * const q) : DescribeCachePrivate(q)
+    DescribeCacheResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

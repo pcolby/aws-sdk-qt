@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrailRequest::response(QNetworkReply * 
  */
 CreateTrailRequestPrivate::CreateTrailRequestPrivate(
     const CloudTrailRequest::Action action, CreateTrailRequest * const q)
-    : CreateTrailPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTrailRequestPrivate::CreateTrailRequestPrivate(
  */
 CreateTrailRequestPrivate::CreateTrailRequestPrivate(
     const CreateTrailRequestPrivate &other, CreateTrailRequest * const q)
-    : CreateTrailPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

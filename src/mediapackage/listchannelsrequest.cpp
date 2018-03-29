@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply *
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const MediaPackageRequest::Action action, ListChannelsRequest * const q)
-    : ListChannelsPrivate(action, q)
+    : MediaPackageRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListChannelsRequestPrivate::ListChannelsRequestPrivate(
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const ListChannelsRequestPrivate &other, ListChannelsRequest * const q)
-    : ListChannelsPrivate(other, q)
+    : MediaPackageRequestPrivate(other, q)
 {
 
 }

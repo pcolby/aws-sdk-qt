@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::respo
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
     const KMSRequest::Action action, GenerateDataKeyWithoutPlaintextRequest * const q)
-    : GenerateDataKeyWithoutPlaintextPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRe
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
     const GenerateDataKeyWithoutPlaintextRequestPrivate &other, GenerateDataKeyWithoutPlaintextRequest * const q)
-    : GenerateDataKeyWithoutPlaintextPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

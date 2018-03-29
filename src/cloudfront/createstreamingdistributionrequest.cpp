@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionRequest::response(
  */
 CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, CreateStreamingDistributionRequest * const q)
-    : CreateStreamingDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPri
  */
 CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPrivate(
     const CreateStreamingDistributionRequestPrivate &other, CreateStreamingDistributionRequest * const q)
-    : CreateStreamingDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void StopWorkspacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopWorkspacesResponse instance.
  */
 StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
-    StopWorkspacesQueueResponse * const q) : StopWorkspacesPrivate(q)
+    StopWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
 {
 
 }

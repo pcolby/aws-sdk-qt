@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkRe
  */
 DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteApnsChannelRequest * const q)
-    : DeleteApnsChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
  */
 DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
     const DeleteApnsChannelRequestPrivate &other, DeleteApnsChannelRequest * const q)
-    : DeleteApnsChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

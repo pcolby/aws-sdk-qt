@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLagsRequest::response(QNetworkReply *
  */
 DescribeLagsRequestPrivate::DescribeLagsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeLagsRequest * const q)
-    : DescribeLagsPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLagsRequestPrivate::DescribeLagsRequestPrivate(
  */
 DescribeLagsRequestPrivate::DescribeLagsRequestPrivate(
     const DescribeLagsRequestPrivate &other, DescribeLagsRequest * const q)
-    : DescribeLagsPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

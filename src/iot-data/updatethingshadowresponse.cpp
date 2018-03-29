@@ -86,7 +86,7 @@ void UpdateThingShadowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateThingShadowResponse instance.
  */
 UpdateThingShadowResponsePrivate::UpdateThingShadowResponsePrivate(
-    UpdateThingShadowQueueResponse * const q) : UpdateThingShadowPrivate(q)
+    UpdateThingShadowResponse * const q) : IoTDataPlaneResponsePrivate(q)
 {
 
 }

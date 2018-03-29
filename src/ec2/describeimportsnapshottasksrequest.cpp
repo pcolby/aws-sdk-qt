@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
     const EC2Request::Action action, DescribeImportSnapshotTasksRequest * const q)
-    : DescribeImportSnapshotTasksPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPri
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
     const DescribeImportSnapshotTasksRequestPrivate &other, DescribeImportSnapshotTasksRequest * const q)
-    : DescribeImportSnapshotTasksPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetwo
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteRegexPatternSetRequest * const q)
-    : DeleteRegexPatternSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const DeleteRegexPatternSetRequestPrivate &other, DeleteRegexPatternSetRequest * const q)
-    : DeleteRegexPatternSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

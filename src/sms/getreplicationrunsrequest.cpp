@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkR
  */
 GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
     const SMSRequest::Action action, GetReplicationRunsRequest * const q)
-    : GetReplicationRunsPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
  */
 GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
     const GetReplicationRunsRequestPrivate &other, GetReplicationRunsRequest * const q)
-    : GetReplicationRunsPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

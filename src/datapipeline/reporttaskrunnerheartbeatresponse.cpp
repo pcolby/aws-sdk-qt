@@ -86,7 +86,7 @@ void ReportTaskRunnerHeartbeatResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReportTaskRunnerHeartbeatResponse instance.
  */
 ReportTaskRunnerHeartbeatResponsePrivate::ReportTaskRunnerHeartbeatResponsePrivate(
-    ReportTaskRunnerHeartbeatQueueResponse * const q) : ReportTaskRunnerHeartbeatPrivate(q)
+    ReportTaskRunnerHeartbeatResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnlinkIdentityRequest::response(QNetworkReply
  */
 UnlinkIdentityRequestPrivate::UnlinkIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, UnlinkIdentityRequest * const q)
-    : UnlinkIdentityPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnlinkIdentityRequestPrivate::UnlinkIdentityRequestPrivate(
  */
 UnlinkIdentityRequestPrivate::UnlinkIdentityRequestPrivate(
     const UnlinkIdentityRequestPrivate &other, UnlinkIdentityRequest * const q)
-    : UnlinkIdentityPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

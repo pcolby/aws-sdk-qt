@@ -86,7 +86,7 @@ void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPermissionPolicyResponse instance.
  */
 GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponsePrivate(
-    GetPermissionPolicyQueueResponse * const q) : GetPermissionPolicyPrivate(q)
+    GetPermissionPolicyResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

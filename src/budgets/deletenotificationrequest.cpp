@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationRequest::response(QNetworkR
  */
 DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
     const BudgetsRequest::Action action, DeleteNotificationRequest * const q)
-    : DeleteNotificationPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
  */
 DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
     const DeleteNotificationRequestPrivate &other, DeleteNotificationRequest * const q)
-    : DeleteNotificationPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

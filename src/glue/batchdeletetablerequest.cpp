@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteTableRequest::response(QNetworkRep
  */
 BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
     const GlueRequest::Action action, BatchDeleteTableRequest * const q)
-    : BatchDeleteTablePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
  */
 BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
     const BatchDeleteTableRequestPrivate &other, BatchDeleteTableRequest * const q)
-    : BatchDeleteTablePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

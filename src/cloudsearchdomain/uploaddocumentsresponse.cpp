@@ -86,7 +86,7 @@ void UploadDocumentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadDocumentsResponse instance.
  */
 UploadDocumentsResponsePrivate::UploadDocumentsResponsePrivate(
-    UploadDocumentsQueueResponse * const q) : UploadDocumentsPrivate(q)
+    UploadDocumentsResponse * const q) : CloudSearchDomainResponsePrivate(q)
 {
 
 }

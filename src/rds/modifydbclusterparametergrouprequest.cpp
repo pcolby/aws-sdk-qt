@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterParameterGroupRequest::respons
  */
 ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBClusterParameterGroupRequest * const q)
-    : ModifyDBClusterParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupReques
  */
 ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupRequestPrivate(
     const ModifyDBClusterParameterGroupRequestPrivate &other, ModifyDBClusterParameterGroupRequest * const q)
-    : ModifyDBClusterParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeCacheClustersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCacheClustersResponse instance.
  */
 DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponsePrivate(
-    DescribeCacheClustersQueueResponse * const q) : DescribeCacheClustersPrivate(q)
+    DescribeCacheClustersResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

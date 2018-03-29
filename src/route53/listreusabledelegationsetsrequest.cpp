@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListReusableDelegationSetsRequest::response(Q
  */
 ListReusableDelegationSetsRequestPrivate::ListReusableDelegationSetsRequestPrivate(
     const Route53Request::Action action, ListReusableDelegationSetsRequest * const q)
-    : ListReusableDelegationSetsPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListReusableDelegationSetsRequestPrivate::ListReusableDelegationSetsRequestPriva
  */
 ListReusableDelegationSetsRequestPrivate::ListReusableDelegationSetsRequestPrivate(
     const ListReusableDelegationSetsRequestPrivate &other, ListReusableDelegationSetsRequest * const q)
-    : ListReusableDelegationSetsPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

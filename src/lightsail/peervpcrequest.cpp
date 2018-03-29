@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PeerVpcRequest::response(QNetworkReply * cons
  */
 PeerVpcRequestPrivate::PeerVpcRequestPrivate(
     const LightsailRequest::Action action, PeerVpcRequest * const q)
-    : PeerVpcPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PeerVpcRequestPrivate::PeerVpcRequestPrivate(
  */
 PeerVpcRequestPrivate::PeerVpcRequestPrivate(
     const PeerVpcRequestPrivate &other, PeerVpcRequest * const q)
-    : PeerVpcPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

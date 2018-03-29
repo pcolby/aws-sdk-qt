@@ -86,7 +86,7 @@ void RecordLifecycleActionHeartbeatResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RecordLifecycleActionHeartbeatResponse instance.
  */
 RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatResponsePrivate(
-    RecordLifecycleActionHeartbeatQueueResponse * const q) : RecordLifecycleActionHeartbeatPrivate(q)
+    RecordLifecycleActionHeartbeatResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

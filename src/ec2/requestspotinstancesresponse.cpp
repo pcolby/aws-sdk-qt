@@ -86,7 +86,7 @@ void RequestSpotInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RequestSpotInstancesResponse instance.
  */
 RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
-    RequestSpotInstancesQueueResponse * const q) : RequestSpotInstancesPrivate(q)
+    RequestSpotInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

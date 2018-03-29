@@ -86,7 +86,7 @@ void SetIdentityPoolConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetIdentityPoolConfigurationResponse instance.
  */
 SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationResponsePrivate(
-    SetIdentityPoolConfigurationQueueResponse * const q) : SetIdentityPoolConfigurationPrivate(q)
+    SetIdentityPoolConfigurationResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

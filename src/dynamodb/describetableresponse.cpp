@@ -86,7 +86,7 @@ void DescribeTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTableResponse instance.
  */
 DescribeTableResponsePrivate::DescribeTableResponsePrivate(
-    DescribeTableQueueResponse * const q) : DescribeTablePrivate(q)
+    DescribeTableResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

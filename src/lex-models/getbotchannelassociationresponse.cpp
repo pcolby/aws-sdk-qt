@@ -86,7 +86,7 @@ void GetBotChannelAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBotChannelAssociationResponse instance.
  */
 GetBotChannelAssociationResponsePrivate::GetBotChannelAssociationResponsePrivate(
-    GetBotChannelAssociationQueueResponse * const q) : GetBotChannelAssociationPrivate(q)
+    GetBotChannelAssociationResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

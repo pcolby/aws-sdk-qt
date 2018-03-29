@@ -86,7 +86,7 @@ void PutBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketInventoryConfigurationResponse instance.
  */
 PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationResponsePrivate(
-    PutBucketInventoryConfigurationQueueResponse * const q) : PutBucketInventoryConfigurationPrivate(q)
+    PutBucketInventoryConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

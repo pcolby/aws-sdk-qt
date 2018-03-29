@@ -86,7 +86,7 @@ void DescribeElasticGpusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeElasticGpusResponse instance.
  */
 DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
-    DescribeElasticGpusQueueResponse * const q) : DescribeElasticGpusPrivate(q)
+    DescribeElasticGpusResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

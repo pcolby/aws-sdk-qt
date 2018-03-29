@@ -86,7 +86,7 @@ void CreatePipelineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePipelineResponse instance.
  */
 CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
-    CreatePipelineQueueResponse * const q) : CreatePipelinePrivate(q)
+    CreatePipelineResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

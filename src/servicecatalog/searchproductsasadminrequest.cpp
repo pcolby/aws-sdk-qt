@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchProductsAsAdminRequest::response(QNetwo
  */
 SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
     const ServiceCatalogRequest::Action action, SearchProductsAsAdminRequest * const q)
-    : SearchProductsAsAdminPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
  */
 SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
     const SearchProductsAsAdminRequestPrivate &other, SearchProductsAsAdminRequest * const q)
-    : SearchProductsAsAdminPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

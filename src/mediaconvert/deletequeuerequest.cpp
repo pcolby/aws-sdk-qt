@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const MediaConvertRequest::Action action, DeleteQueueRequest * const q)
-    : DeleteQueuePrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const DeleteQueueRequestPrivate &other, DeleteQueueRequest * const q)
-    : DeleteQueuePrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

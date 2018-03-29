@@ -86,7 +86,7 @@ void DescribeConnectionLoaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeConnectionLoaResponse instance.
  */
 DescribeConnectionLoaResponsePrivate::DescribeConnectionLoaResponsePrivate(
-    DescribeConnectionLoaQueueResponse * const q) : DescribeConnectionLoaPrivate(q)
+    DescribeConnectionLoaResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeRequest::response(QNetworkReply
  */
 DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeRequest * const q)
-    : DeleteSlotTypePrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
  */
 DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
     const DeleteSlotTypeRequestPrivate &other, DeleteSlotTypeRequest * const q)
-    : DeleteSlotTypePrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

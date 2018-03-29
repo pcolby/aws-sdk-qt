@@ -86,7 +86,7 @@ void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListVerifiedEmailAddressesResponse instance.
  */
 ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePrivate(
-    ListVerifiedEmailAddressesQueueResponse * const q) : ListVerifiedEmailAddressesPrivate(q)
+    ListVerifiedEmailAddressesResponse * const q) : SESResponsePrivate(q)
 {
 
 }

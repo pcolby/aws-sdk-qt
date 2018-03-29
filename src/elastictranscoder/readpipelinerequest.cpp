@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply *
  */
 ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadPipelineRequest * const q)
-    : ReadPipelinePrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
  */
 ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
     const ReadPipelineRequestPrivate &other, ReadPipelineRequest * const q)
-    : ReadPipelinePrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTargetGroupRequest::response(QNetworkRe
  */
 DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteTargetGroupRequest * const q)
-    : DeleteTargetGroupPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
  */
 DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
     const DeleteTargetGroupRequestPrivate &other, DeleteTargetGroupRequest * const q)
-    : DeleteTargetGroupPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

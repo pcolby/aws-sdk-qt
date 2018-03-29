@@ -86,7 +86,7 @@ void GetBaiduChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBaiduChannelResponse instance.
  */
 GetBaiduChannelResponsePrivate::GetBaiduChannelResponsePrivate(
-    GetBaiduChannelQueueResponse * const q) : GetBaiduChannelPrivate(q)
+    GetBaiduChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

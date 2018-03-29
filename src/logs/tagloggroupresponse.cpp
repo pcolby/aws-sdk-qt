@@ -86,7 +86,7 @@ void TagLogGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TagLogGroupResponse instance.
  */
 TagLogGroupResponsePrivate::TagLogGroupResponsePrivate(
-    TagLogGroupQueueResponse * const q) : TagLogGroupPrivate(q)
+    TagLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

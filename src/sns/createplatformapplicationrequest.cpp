@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformApplicationRequest::response(QN
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
     const SNSRequest::Action action, CreatePlatformApplicationRequest * const q)
-    : CreatePlatformApplicationPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
     const CreatePlatformApplicationRequestPrivate &other, CreatePlatformApplicationRequest * const q)
-    : CreatePlatformApplicationPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

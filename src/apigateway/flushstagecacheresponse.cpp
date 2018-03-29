@@ -86,7 +86,7 @@ void FlushStageCacheResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public FlushStageCacheResponse instance.
  */
 FlushStageCacheResponsePrivate::FlushStageCacheResponsePrivate(
-    FlushStageCacheQueueResponse * const q) : FlushStageCachePrivate(q)
+    FlushStageCacheResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

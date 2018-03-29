@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkRe
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutResourcePolicyRequest * const q)
-    : PutResourcePolicyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
     const PutResourcePolicyRequestPrivate &other, PutResourcePolicyRequest * const q)
-    : PutResourcePolicyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

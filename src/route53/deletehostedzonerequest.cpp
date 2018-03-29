@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkRep
  */
 DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
     const Route53Request::Action action, DeleteHostedZoneRequest * const q)
-    : DeleteHostedZonePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
  */
 DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
     const DeleteHostedZoneRequestPrivate &other, DeleteHostedZoneRequest * const q)
-    : DeleteHostedZonePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const AppSyncRequest::Action action, GetDataSourceRequest * const q)
-    : GetDataSourcePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const GetDataSourceRequestPrivate &other, GetDataSourceRequest * const q)
-    : GetDataSourcePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

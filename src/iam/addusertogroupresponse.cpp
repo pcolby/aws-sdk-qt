@@ -86,7 +86,7 @@ void AddUserToGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddUserToGroupResponse instance.
  */
 AddUserToGroupResponsePrivate::AddUserToGroupResponsePrivate(
-    AddUserToGroupQueueResponse * const q) : AddUserToGroupPrivate(q)
+    AddUserToGroupResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

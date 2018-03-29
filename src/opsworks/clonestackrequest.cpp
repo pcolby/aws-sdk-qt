@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CloneStackRequest::response(QNetworkReply * c
  */
 CloneStackRequestPrivate::CloneStackRequestPrivate(
     const OpsWorksRequest::Action action, CloneStackRequest * const q)
-    : CloneStackPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CloneStackRequestPrivate::CloneStackRequestPrivate(
  */
 CloneStackRequestPrivate::CloneStackRequestPrivate(
     const CloneStackRequestPrivate &other, CloneStackRequest * const q)
-    : CloneStackPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

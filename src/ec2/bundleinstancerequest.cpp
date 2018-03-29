@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
     const EC2Request::Action action, BundleInstanceRequest * const q)
-    : BundleInstancePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
     const BundleInstanceRequestPrivate &other, BundleInstanceRequest * const q)
-    : BundleInstancePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

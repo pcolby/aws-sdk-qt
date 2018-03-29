@@ -86,7 +86,7 @@ void DeleteBucketPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBucketPolicyResponse instance.
  */
 DeleteBucketPolicyResponsePrivate::DeleteBucketPolicyResponsePrivate(
-    DeleteBucketPolicyQueueResponse * const q) : DeleteBucketPolicyPrivate(q)
+    DeleteBucketPolicyResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

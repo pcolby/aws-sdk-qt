@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkR
  */
 DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
     const IAMRequest::Action action, DeleteLoginProfileRequest * const q)
-    : DeleteLoginProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
  */
 DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
     const DeleteLoginProfileRequestPrivate &other, DeleteLoginProfileRequest * const q)
-    : DeleteLoginProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

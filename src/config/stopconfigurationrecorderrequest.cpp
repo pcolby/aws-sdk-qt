@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopConfigurationRecorderRequest::response(QN
  */
 StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, StopConfigurationRecorderRequest * const q)
-    : StopConfigurationRecorderPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate
  */
 StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
     const StopConfigurationRecorderRequestPrivate &other, StopConfigurationRecorderRequest * const q)
-    : StopConfigurationRecorderPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void EnableVolumeIOResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableVolumeIOResponse instance.
  */
 EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
-    EnableVolumeIOQueueResponse * const q) : EnableVolumeIOPrivate(q)
+    EnableVolumeIOResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

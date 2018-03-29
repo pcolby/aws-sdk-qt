@@ -86,7 +86,7 @@ void UpdateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAutoScalingGroupResponse instance.
  */
 UpdateAutoScalingGroupResponsePrivate::UpdateAutoScalingGroupResponsePrivate(
-    UpdateAutoScalingGroupQueueResponse * const q) : UpdateAutoScalingGroupPrivate(q)
+    UpdateAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

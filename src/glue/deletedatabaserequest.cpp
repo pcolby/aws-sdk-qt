@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDatabaseRequest::response(QNetworkReply
  */
 DeleteDatabaseRequestPrivate::DeleteDatabaseRequestPrivate(
     const GlueRequest::Action action, DeleteDatabaseRequest * const q)
-    : DeleteDatabasePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDatabaseRequestPrivate::DeleteDatabaseRequestPrivate(
  */
 DeleteDatabaseRequestPrivate::DeleteDatabaseRequestPrivate(
     const DeleteDatabaseRequestPrivate &other, DeleteDatabaseRequest * const q)
-    : DeleteDatabasePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

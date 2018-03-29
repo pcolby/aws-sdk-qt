@@ -86,7 +86,7 @@ void CreateTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTypeResponse instance.
  */
 CreateTypeResponsePrivate::CreateTypeResponsePrivate(
-    CreateTypeQueueResponse * const q) : CreateTypePrivate(q)
+    CreateTypeResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

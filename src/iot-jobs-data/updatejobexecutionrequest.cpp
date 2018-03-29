@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkR
  */
 UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, UpdateJobExecutionRequest * const q)
-    : UpdateJobExecutionPrivate(action, q)
+    : IoTJobsDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
  */
 UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
     const UpdateJobExecutionRequestPrivate &other, UpdateJobExecutionRequest * const q)
-    : UpdateJobExecutionPrivate(other, q)
+    : IoTJobsDataPlaneRequestPrivate(other, q)
 {
 
 }

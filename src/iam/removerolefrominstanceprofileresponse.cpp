@@ -86,7 +86,7 @@ void RemoveRoleFromInstanceProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveRoleFromInstanceProfileResponse instance.
  */
 RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileResponsePrivate(
-    RemoveRoleFromInstanceProfileQueueResponse * const q) : RemoveRoleFromInstanceProfilePrivate(q)
+    RemoveRoleFromInstanceProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

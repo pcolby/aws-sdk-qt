@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::respons
  */
 PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
     const CodePipelineRequest::Action action, PutThirdPartyJobFailureResultRequest * const q)
-    : PutThirdPartyJobFailureResultPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultReques
  */
 PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
     const PutThirdPartyJobFailureResultRequestPrivate &other, PutThirdPartyJobFailureResultRequest * const q)
-    : PutThirdPartyJobFailureResultPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

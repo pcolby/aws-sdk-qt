@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply *
  */
 GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
     const S3Request::Action action, GetObjectAclRequest * const q)
-    : GetObjectAclPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
  */
 GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
     const GetObjectAclRequestPrivate &other, GetObjectAclRequest * const q)
-    : GetObjectAclPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

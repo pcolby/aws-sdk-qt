@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::resp
  */
 DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketMetricsConfigurationRequest * const q)
-    : DeleteBucketMetricsConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfiguration
  */
 DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfigurationRequestPrivate(
     const DeleteBucketMetricsConfigurationRequestPrivate &other, DeleteBucketMetricsConfigurationRequest * const q)
-    : DeleteBucketMetricsConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

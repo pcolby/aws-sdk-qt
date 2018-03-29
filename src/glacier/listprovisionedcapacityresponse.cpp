@@ -86,7 +86,7 @@ void ListProvisionedCapacityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListProvisionedCapacityResponse instance.
  */
 ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponsePrivate(
-    ListProvisionedCapacityQueueResponse * const q) : ListProvisionedCapacityPrivate(q)
+    ListProvisionedCapacityResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

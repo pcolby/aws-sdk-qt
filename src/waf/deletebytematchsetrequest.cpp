@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkR
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteByteMatchSetRequest * const q)
-    : DeleteByteMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const DeleteByteMatchSetRequestPrivate &other, DeleteByteMatchSetRequest * const q)
-    : DeleteByteMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

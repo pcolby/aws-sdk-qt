@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateChannelRequest::response(QNetworkReply 
  */
 CreateChannelRequestPrivate::CreateChannelRequestPrivate(
     const MediaLiveRequest::Action action, CreateChannelRequest * const q)
-    : CreateChannelPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateChannelRequestPrivate::CreateChannelRequestPrivate(
  */
 CreateChannelRequestPrivate::CreateChannelRequestPrivate(
     const CreateChannelRequestPrivate &other, CreateChannelRequest * const q)
-    : CreateChannelPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

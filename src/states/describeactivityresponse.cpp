@@ -86,7 +86,7 @@ void DescribeActivityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeActivityResponse instance.
  */
 DescribeActivityResponsePrivate::DescribeActivityResponsePrivate(
-    DescribeActivityQueueResponse * const q) : DescribeActivityPrivate(q)
+    DescribeActivityResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

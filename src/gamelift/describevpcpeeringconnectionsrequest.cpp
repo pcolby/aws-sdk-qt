@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const GameLiftRequest::Action action, DescribeVpcPeeringConnectionsRequest * const q)
-    : DescribeVpcPeeringConnectionsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const DescribeVpcPeeringConnectionsRequestPrivate &other, DescribeVpcPeeringConnectionsRequest * const q)
-    : DescribeVpcPeeringConnectionsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

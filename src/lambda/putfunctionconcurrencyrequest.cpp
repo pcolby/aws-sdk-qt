@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetw
  */
 PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
     const LambdaRequest::Action action, PutFunctionConcurrencyRequest * const q)
-    : PutFunctionConcurrencyPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
  */
 PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
     const PutFunctionConcurrencyRequestPrivate &other, PutFunctionConcurrencyRequest * const q)
-    : PutFunctionConcurrencyPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

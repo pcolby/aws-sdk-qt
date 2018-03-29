@@ -86,7 +86,7 @@ void RebootClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootClusterResponse instance.
  */
 RebootClusterResponsePrivate::RebootClusterResponsePrivate(
-    RebootClusterQueueResponse * const q) : RebootClusterPrivate(q)
+    RebootClusterResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

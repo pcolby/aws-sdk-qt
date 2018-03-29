@@ -86,7 +86,7 @@ void DeleteServiceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteServiceResponse instance.
  */
 DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
-    DeleteServiceQueueResponse * const q) : DeleteServicePrivate(q)
+    DeleteServiceResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetMergeConflictsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetMergeConflictsResponse instance.
  */
 GetMergeConflictsResponsePrivate::GetMergeConflictsResponsePrivate(
-    GetMergeConflictsQueueResponse * const q) : GetMergeConflictsPrivate(q)
+    GetMergeConflictsResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

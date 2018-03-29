@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply 
  */
 CancelClusterRequestPrivate::CancelClusterRequestPrivate(
     const SnowballRequest::Action action, CancelClusterRequest * const q)
-    : CancelClusterPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelClusterRequestPrivate::CancelClusterRequestPrivate(
  */
 CancelClusterRequestPrivate::CancelClusterRequestPrivate(
     const CancelClusterRequestPrivate &other, CancelClusterRequest * const q)
-    : CancelClusterPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void RotateEncryptionKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RotateEncryptionKeyResponse instance.
  */
 RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponsePrivate(
-    RotateEncryptionKeyQueueResponse * const q) : RotateEncryptionKeyPrivate(q)
+    RotateEncryptionKeyResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

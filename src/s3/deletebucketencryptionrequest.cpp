@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketEncryptionRequest::response(QNetw
  */
 DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
     const S3Request::Action action, DeleteBucketEncryptionRequest * const q)
-    : DeleteBucketEncryptionPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
  */
 DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
     const DeleteBucketEncryptionRequestPrivate &other, DeleteBucketEncryptionRequest * const q)
-    : DeleteBucketEncryptionPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

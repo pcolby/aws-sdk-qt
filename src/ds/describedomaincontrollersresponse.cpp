@@ -86,7 +86,7 @@ void DescribeDomainControllersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDomainControllersResponse instance.
  */
 DescribeDomainControllersResponsePrivate::DescribeDomainControllersResponsePrivate(
-    DescribeDomainControllersQueueResponse * const q) : DescribeDomainControllersPrivate(q)
+    DescribeDomainControllersResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

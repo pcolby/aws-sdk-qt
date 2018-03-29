@@ -86,7 +86,7 @@ void DeleteNetworkAclEntryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNetworkAclEntryResponse instance.
  */
 DeleteNetworkAclEntryResponsePrivate::DeleteNetworkAclEntryResponsePrivate(
-    DeleteNetworkAclEntryQueueResponse * const q) : DeleteNetworkAclEntryPrivate(q)
+    DeleteNetworkAclEntryResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

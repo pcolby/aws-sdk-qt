@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectivityInfoRequest::response(QNetwork
  */
 GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
     const GreengrassRequest::Action action, GetConnectivityInfoRequest * const q)
-    : GetConnectivityInfoPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
  */
 GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
     const GetConnectivityInfoRequestPrivate &other, GetConnectivityInfoRequest * const q)
-    : GetConnectivityInfoPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

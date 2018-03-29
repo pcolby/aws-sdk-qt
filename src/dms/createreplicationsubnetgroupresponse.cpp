@@ -86,7 +86,7 @@ void CreateReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReplicationSubnetGroupResponse instance.
  */
 CreateReplicationSubnetGroupResponsePrivate::CreateReplicationSubnetGroupResponsePrivate(
-    CreateReplicationSubnetGroupQueueResponse * const q) : CreateReplicationSubnetGroupPrivate(q)
+    CreateReplicationSubnetGroupResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

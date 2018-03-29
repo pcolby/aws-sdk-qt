@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(Q
  */
 DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
     const RedshiftRequest::Action action, DescribeTableRestoreStatusRequest * const q)
-    : DescribeTableRestoreStatusPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPriva
  */
 DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
     const DescribeTableRestoreStatusRequestPrivate &other, DescribeTableRestoreStatusRequest * const q)
-    : DescribeTableRestoreStatusPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

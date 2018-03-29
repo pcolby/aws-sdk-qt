@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const ImportExportRequest::Action action, UpdateJobRequest * const q)
-    : UpdateJobPrivate(action, q)
+    : ImportExportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const UpdateJobRequestPrivate &other, UpdateJobRequest * const q)
-    : UpdateJobPrivate(other, q)
+    : ImportExportRequestPrivate(other, q)
 {
 
 }

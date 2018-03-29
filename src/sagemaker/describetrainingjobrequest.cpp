@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTrainingJobRequest::response(QNetwork
  */
 DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
     const SageMakerRequest::Action action, DescribeTrainingJobRequest * const q)
-    : DescribeTrainingJobPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
  */
 DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
     const DescribeTrainingJobRequestPrivate &other, DescribeTrainingJobRequest * const q)
-    : DescribeTrainingJobPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

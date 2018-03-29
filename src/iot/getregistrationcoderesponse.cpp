@@ -86,7 +86,7 @@ void GetRegistrationCodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRegistrationCodeResponse instance.
  */
 GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponsePrivate(
-    GetRegistrationCodeQueueResponse * const q) : GetRegistrationCodePrivate(q)
+    GetRegistrationCodeResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

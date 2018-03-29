@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListProvisionedCapacityRequest::response(QNet
  */
 ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
     const GlacierRequest::Action action, ListProvisionedCapacityRequest * const q)
-    : ListProvisionedCapacityPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
  */
 ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
     const ListProvisionedCapacityRequestPrivate &other, ListProvisionedCapacityRequest * const q)
-    : ListProvisionedCapacityPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

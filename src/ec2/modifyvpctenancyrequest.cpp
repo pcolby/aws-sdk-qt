@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkRep
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
     const EC2Request::Action action, ModifyVpcTenancyRequest * const q)
-    : ModifyVpcTenancyPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
     const ModifyVpcTenancyRequestPrivate &other, ModifyVpcTenancyRequest * const q)
-    : ModifyVpcTenancyPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

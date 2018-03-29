@@ -86,7 +86,7 @@ void DeleteAlarmsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAlarmsResponse instance.
  */
 DeleteAlarmsResponsePrivate::DeleteAlarmsResponsePrivate(
-    DeleteAlarmsQueueResponse * const q) : DeleteAlarmsPrivate(q)
+    DeleteAlarmsResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateSoftwareUpdateJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSoftwareUpdateJobResponse instance.
  */
 CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponsePrivate(
-    CreateSoftwareUpdateJobQueueResponse * const q) : CreateSoftwareUpdateJobPrivate(q)
+    CreateSoftwareUpdateJobResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

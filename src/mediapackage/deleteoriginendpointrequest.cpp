@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetwor
  */
 DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, DeleteOriginEndpointRequest * const q)
-    : DeleteOriginEndpointPrivate(action, q)
+    : MediaPackageRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
  */
 DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
     const DeleteOriginEndpointRequestPrivate &other, DeleteOriginEndpointRequest * const q)
-    : DeleteOriginEndpointPrivate(other, q)
+    : MediaPackageRequestPrivate(other, q)
 {
 
 }

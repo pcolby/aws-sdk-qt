@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkRep
  */
 UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
     const KinesisRequest::Action action, UpdateShardCountRequest * const q)
-    : UpdateShardCountPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
  */
 UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
     const UpdateShardCountRequestPrivate &other, UpdateShardCountRequest * const q)
-    : UpdateShardCountPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

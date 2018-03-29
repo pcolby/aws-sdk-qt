@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromSnapshotRequest::response
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterFromSnapshotRequest * const q)
-    : RestoreDBClusterFromSnapshotPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestP
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
     const RestoreDBClusterFromSnapshotRequestPrivate &other, RestoreDBClusterFromSnapshotRequest * const q)
-    : RestoreDBClusterFromSnapshotPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

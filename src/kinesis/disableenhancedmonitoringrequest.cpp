@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableEnhancedMonitoringRequest::response(QN
  */
 DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate(
     const KinesisRequest::Action action, DisableEnhancedMonitoringRequest * const q)
-    : DisableEnhancedMonitoringPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate
  */
 DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate(
     const DisableEnhancedMonitoringRequestPrivate &other, DisableEnhancedMonitoringRequest * const q)
-    : DisableEnhancedMonitoringPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::respons
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)
-    : RestoreDBClusterToPointInTimePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RestoreDBClusterToPointInTimeRequestPrivate &other, RestoreDBClusterToPointInTimeRequest * const q)
-    : RestoreDBClusterToPointInTimePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

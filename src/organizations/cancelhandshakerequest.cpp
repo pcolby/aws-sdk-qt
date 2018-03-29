@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelHandshakeRequest::response(QNetworkRepl
  */
 CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, CancelHandshakeRequest * const q)
-    : CancelHandshakePrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
  */
 CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
     const CancelHandshakeRequestPrivate &other, CancelHandshakeRequest * const q)
-    : CancelHandshakePrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

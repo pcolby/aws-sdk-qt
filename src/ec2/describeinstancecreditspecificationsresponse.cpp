@@ -86,7 +86,7 @@ void DescribeInstanceCreditSpecificationsResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DescribeInstanceCreditSpecificationsResponse instance.
  */
 DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCreditSpecificationsResponsePrivate(
-    DescribeInstanceCreditSpecificationsQueueResponse * const q) : DescribeInstanceCreditSpecificationsPrivate(q)
+    DescribeInstanceCreditSpecificationsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

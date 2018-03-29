@@ -86,7 +86,7 @@ void ConfirmForgotPasswordResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConfirmForgotPasswordResponse instance.
  */
 ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
-    ConfirmForgotPasswordQueueResponse * const q) : ConfirmForgotPasswordPrivate(q)
+    ConfirmForgotPasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

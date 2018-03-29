@@ -86,7 +86,7 @@ void GetTrafficPolicyInstanceCountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTrafficPolicyInstanceCountResponse instance.
  */
 GetTrafficPolicyInstanceCountResponsePrivate::GetTrafficPolicyInstanceCountResponsePrivate(
-    GetTrafficPolicyInstanceCountQueueResponse * const q) : GetTrafficPolicyInstanceCountPrivate(q)
+    GetTrafficPolicyInstanceCountResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

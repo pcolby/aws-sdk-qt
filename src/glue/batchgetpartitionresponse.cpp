@@ -86,7 +86,7 @@ void BatchGetPartitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetPartitionResponse instance.
  */
 BatchGetPartitionResponsePrivate::BatchGetPartitionResponsePrivate(
-    BatchGetPartitionQueueResponse * const q) : BatchGetPartitionPrivate(q)
+    BatchGetPartitionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

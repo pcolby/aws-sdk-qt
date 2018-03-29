@@ -86,7 +86,7 @@ void DeleteAutoScalingGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAutoScalingGroupResponse instance.
  */
 DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponsePrivate(
-    DeleteAutoScalingGroupQueueResponse * const q) : DeleteAutoScalingGroupPrivate(q)
+    DeleteAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

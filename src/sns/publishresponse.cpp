@@ -86,7 +86,7 @@ void PublishResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PublishResponse instance.
  */
 PublishResponsePrivate::PublishResponsePrivate(
-    PublishQueueResponse * const q) : PublishPrivate(q)
+    PublishResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

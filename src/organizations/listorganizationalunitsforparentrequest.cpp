@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::resp
  */
 ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
     const OrganizationsRequest::Action action, ListOrganizationalUnitsForParentRequest * const q)
-    : ListOrganizationalUnitsForParentPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParent
  */
 ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
     const ListOrganizationalUnitsForParentRequestPrivate &other, ListOrganizationalUnitsForParentRequest * const q)
-    : ListOrganizationalUnitsForParentPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

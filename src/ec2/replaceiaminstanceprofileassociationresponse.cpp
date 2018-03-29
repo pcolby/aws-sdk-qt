@@ -86,7 +86,7 @@ void ReplaceIamInstanceProfileAssociationResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public ReplaceIamInstanceProfileAssociationResponse instance.
  */
 ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAssociationResponsePrivate(
-    ReplaceIamInstanceProfileAssociationQueueResponse * const q) : ReplaceIamInstanceProfileAssociationPrivate(q)
+    ReplaceIamInstanceProfileAssociationResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

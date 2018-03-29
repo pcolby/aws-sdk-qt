@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcknowledgeThirdPartyJobRequest::response(QNe
  */
 AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
     const CodePipelineRequest::Action action, AcknowledgeThirdPartyJobRequest * const q)
-    : AcknowledgeThirdPartyJobPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
  */
 AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
     const AcknowledgeThirdPartyJobRequestPrivate &other, AcknowledgeThirdPartyJobRequest * const q)
-    : AcknowledgeThirdPartyJobPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

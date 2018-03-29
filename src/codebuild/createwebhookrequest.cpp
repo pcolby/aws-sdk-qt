@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateWebhookRequest::response(QNetworkReply 
  */
 CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
     const CodeBuildRequest::Action action, CreateWebhookRequest * const q)
-    : CreateWebhookPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
  */
 CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
     const CreateWebhookRequestPrivate &other, CreateWebhookRequest * const q)
-    : CreateWebhookPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

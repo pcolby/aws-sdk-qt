@@ -86,7 +86,7 @@ void GetRecordsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRecordsResponse instance.
  */
 GetRecordsResponsePrivate::GetRecordsResponsePrivate(
-    GetRecordsQueueResponse * const q) : GetRecordsPrivate(q)
+    GetRecordsResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

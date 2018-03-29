@@ -86,7 +86,7 @@ void RespondDecisionTaskCompletedResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RespondDecisionTaskCompletedResponse instance.
  */
 RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedResponsePrivate(
-    RespondDecisionTaskCompletedQueueResponse * const q) : RespondDecisionTaskCompletedPrivate(q)
+    RespondDecisionTaskCompletedResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

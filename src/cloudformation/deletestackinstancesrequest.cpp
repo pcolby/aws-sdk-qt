@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStackInstancesRequest::response(QNetwor
  */
 DeleteStackInstancesRequestPrivate::DeleteStackInstancesRequestPrivate(
     const CloudFormationRequest::Action action, DeleteStackInstancesRequest * const q)
-    : DeleteStackInstancesPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteStackInstancesRequestPrivate::DeleteStackInstancesRequestPrivate(
  */
 DeleteStackInstancesRequestPrivate::DeleteStackInstancesRequestPrivate(
     const DeleteStackInstancesRequestPrivate &other, DeleteStackInstancesRequest * const q)
-    : DeleteStackInstancesPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

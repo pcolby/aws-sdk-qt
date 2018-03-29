@@ -86,7 +86,7 @@ void CreateInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateInstancesResponse instance.
  */
 CreateInstancesResponsePrivate::CreateInstancesResponsePrivate(
-    CreateInstancesQueueResponse * const q) : CreateInstancesPrivate(q)
+    CreateInstancesResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

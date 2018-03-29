@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
     const EMRRequest::Action action, DescribeJobFlowsRequest * const q)
-    : DescribeJobFlowsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
     const DescribeJobFlowsRequestPrivate &other, DescribeJobFlowsRequest * const q)
-    : DescribeJobFlowsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AcknowledgeThirdPartyJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcknowledgeThirdPartyJobResponse instance.
  */
 AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponsePrivate(
-    AcknowledgeThirdPartyJobQueueResponse * const q) : AcknowledgeThirdPartyJobPrivate(q)
+    AcknowledgeThirdPartyJobResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

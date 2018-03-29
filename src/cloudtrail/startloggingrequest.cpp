@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply *
  */
 StartLoggingRequestPrivate::StartLoggingRequestPrivate(
     const CloudTrailRequest::Action action, StartLoggingRequest * const q)
-    : StartLoggingPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartLoggingRequestPrivate::StartLoggingRequestPrivate(
  */
 StartLoggingRequestPrivate::StartLoggingRequestPrivate(
     const StartLoggingRequestPrivate &other, StartLoggingRequest * const q)
-    : StartLoggingPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

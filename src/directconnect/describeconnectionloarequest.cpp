@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionLoaRequest::response(QNetwo
  */
 DescribeConnectionLoaRequestPrivate::DescribeConnectionLoaRequestPrivate(
     const DirectConnectRequest::Action action, DescribeConnectionLoaRequest * const q)
-    : DescribeConnectionLoaPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConnectionLoaRequestPrivate::DescribeConnectionLoaRequestPrivate(
  */
 DescribeConnectionLoaRequestPrivate::DescribeConnectionLoaRequestPrivate(
     const DescribeConnectionLoaRequestPrivate &other, DescribeConnectionLoaRequest * const q)
-    : DescribeConnectionLoaPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

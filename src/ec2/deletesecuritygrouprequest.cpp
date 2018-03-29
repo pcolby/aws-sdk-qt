@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityGroupRequest::response(QNetwork
  */
 DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
     const EC2Request::Action action, DeleteSecurityGroupRequest * const q)
-    : DeleteSecurityGroupPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
  */
 DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
     const DeleteSecurityGroupRequestPrivate &other, DeleteSecurityGroupRequest * const q)
-    : DeleteSecurityGroupPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

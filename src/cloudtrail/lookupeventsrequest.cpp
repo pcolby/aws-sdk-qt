@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply *
  */
 LookupEventsRequestPrivate::LookupEventsRequestPrivate(
     const CloudTrailRequest::Action action, LookupEventsRequest * const q)
-    : LookupEventsPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ LookupEventsRequestPrivate::LookupEventsRequestPrivate(
  */
 LookupEventsRequestPrivate::LookupEventsRequestPrivate(
     const LookupEventsRequestPrivate &other, LookupEventsRequest * const q)
-    : LookupEventsPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

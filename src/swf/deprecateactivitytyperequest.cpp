@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
     const SWFRequest::Action action, DeprecateActivityTypeRequest * const q)
-    : DeprecateActivityTypePrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
     const DeprecateActivityTypeRequestPrivate &other, DeprecateActivityTypeRequest * const q)
-    : DeprecateActivityTypePrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

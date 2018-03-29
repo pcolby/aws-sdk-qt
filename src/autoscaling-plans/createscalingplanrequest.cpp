@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkRe
  */
 CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
     const AutoScalingPlansRequest::Action action, CreateScalingPlanRequest * const q)
-    : CreateScalingPlanPrivate(action, q)
+    : AutoScalingPlansRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
  */
 CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
     const CreateScalingPlanRequestPrivate &other, CreateScalingPlanRequest * const q)
-    : CreateScalingPlanPrivate(other, q)
+    : AutoScalingPlansRequestPrivate(other, q)
 {
 
 }

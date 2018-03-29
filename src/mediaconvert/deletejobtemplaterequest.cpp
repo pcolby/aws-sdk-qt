@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkRe
  */
 DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, DeleteJobTemplateRequest * const q)
-    : DeleteJobTemplatePrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
  */
 DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
     const DeleteJobTemplateRequestPrivate &other, DeleteJobTemplateRequest * const q)
-    : DeleteJobTemplatePrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

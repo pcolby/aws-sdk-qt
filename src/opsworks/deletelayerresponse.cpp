@@ -86,7 +86,7 @@ void DeleteLayerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLayerResponse instance.
  */
 DeleteLayerResponsePrivate::DeleteLayerResponsePrivate(
-    DeleteLayerQueueResponse * const q) : DeleteLayerPrivate(q)
+    DeleteLayerResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRemoteAccessSessionResponse instance.
  */
 DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponsePrivate(
-    DeleteRemoteAccessSessionQueueResponse * const q) : DeleteRemoteAccessSessionPrivate(q)
+    DeleteRemoteAccessSessionResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

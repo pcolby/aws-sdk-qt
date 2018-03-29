@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOrganizationalUnitRequest::response(Q
  */
 DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, DescribeOrganizationalUnitRequest * const q)
-    : DescribeOrganizationalUnitPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPriva
  */
 DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPrivate(
     const DescribeOrganizationalUnitRequestPrivate &other, DescribeOrganizationalUnitRequest * const q)
-    : DescribeOrganizationalUnitPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

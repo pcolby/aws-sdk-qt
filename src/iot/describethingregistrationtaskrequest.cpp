@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRegistrationTaskRequest::respons
  */
 DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskRequestPrivate(
     const IoTRequest::Action action, DescribeThingRegistrationTaskRequest * const q)
-    : DescribeThingRegistrationTaskPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskReques
  */
 DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskRequestPrivate(
     const DescribeThingRegistrationTaskRequestPrivate &other, DescribeThingRegistrationTaskRequest * const q)
-    : DescribeThingRegistrationTaskPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

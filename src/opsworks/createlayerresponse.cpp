@@ -86,7 +86,7 @@ void CreateLayerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLayerResponse instance.
  */
 CreateLayerResponsePrivate::CreateLayerResponsePrivate(
-    CreateLayerQueueResponse * const q) : CreateLayerPrivate(q)
+    CreateLayerResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

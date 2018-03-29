@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHealthChecksRequest::response(QNetworkRep
  */
 ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
     const Route53Request::Action action, ListHealthChecksRequest * const q)
-    : ListHealthChecksPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
  */
 ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
     const ListHealthChecksRequestPrivate &other, ListHealthChecksRequest * const q)
-    : ListHealthChecksPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

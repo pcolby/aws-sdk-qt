@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCrawlersRequest::response(QNetworkReply * 
  */
 GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
     const GlueRequest::Action action, GetCrawlersRequest * const q)
-    : GetCrawlersPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
  */
 GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
     const GetCrawlersRequestPrivate &other, GetCrawlersRequest * const q)
-    : GetCrawlersPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

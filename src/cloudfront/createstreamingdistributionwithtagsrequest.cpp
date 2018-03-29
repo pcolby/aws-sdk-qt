@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::r
  */
 CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWithTagsRequestPrivate(
     const CloudFrontRequest::Action action, CreateStreamingDistributionWithTagsRequest * const q)
-    : CreateStreamingDistributionWithTagsPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWi
  */
 CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWithTagsRequestPrivate(
     const CreateStreamingDistributionWithTagsRequestPrivate &other, CreateStreamingDistributionWithTagsRequest * const q)
-    : CreateStreamingDistributionWithTagsPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

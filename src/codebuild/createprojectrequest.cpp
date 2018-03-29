@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply 
  */
 CreateProjectRequestPrivate::CreateProjectRequestPrivate(
     const CodeBuildRequest::Action action, CreateProjectRequest * const q)
-    : CreateProjectPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateProjectRequestPrivate::CreateProjectRequestPrivate(
  */
 CreateProjectRequestPrivate::CreateProjectRequestPrivate(
     const CreateProjectRequestPrivate &other, CreateProjectRequest * const q)
-    : CreateProjectPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

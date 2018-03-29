@@ -86,7 +86,7 @@ void MergePullRequestByFastForwardResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MergePullRequestByFastForwardResponse instance.
  */
 MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardResponsePrivate(
-    MergePullRequestByFastForwardQueueResponse * const q) : MergePullRequestByFastForwardPrivate(q)
+    MergePullRequestByFastForwardResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

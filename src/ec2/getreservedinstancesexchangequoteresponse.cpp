@@ -86,7 +86,7 @@ void GetReservedInstancesExchangeQuoteResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public GetReservedInstancesExchangeQuoteResponse instance.
  */
 GetReservedInstancesExchangeQuoteResponsePrivate::GetReservedInstancesExchangeQuoteResponsePrivate(
-    GetReservedInstancesExchangeQuoteQueueResponse * const q) : GetReservedInstancesExchangeQuotePrivate(q)
+    GetReservedInstancesExchangeQuoteResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

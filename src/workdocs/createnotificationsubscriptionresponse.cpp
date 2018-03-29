@@ -86,7 +86,7 @@ void CreateNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateNotificationSubscriptionResponse instance.
  */
 CreateNotificationSubscriptionResponsePrivate::CreateNotificationSubscriptionResponsePrivate(
-    CreateNotificationSubscriptionQueueResponse * const q) : CreateNotificationSubscriptionPrivate(q)
+    CreateNotificationSubscriptionResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

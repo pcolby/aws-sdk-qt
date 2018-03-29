@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(
  */
 AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminRespondToAuthChallengeRequest * const q)
-    : AdminRespondToAuthChallengePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPri
  */
 AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPrivate(
     const AdminRespondToAuthChallengeRequestPrivate &other, AdminRespondToAuthChallengeRequest * const q)
-    : AdminRespondToAuthChallengePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

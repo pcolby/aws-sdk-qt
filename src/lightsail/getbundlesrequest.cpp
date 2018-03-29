@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * c
  */
 GetBundlesRequestPrivate::GetBundlesRequestPrivate(
     const LightsailRequest::Action action, GetBundlesRequest * const q)
-    : GetBundlesPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBundlesRequestPrivate::GetBundlesRequestPrivate(
  */
 GetBundlesRequestPrivate::GetBundlesRequestPrivate(
     const GetBundlesRequestPrivate &other, GetBundlesRequest * const q)
-    : GetBundlesPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

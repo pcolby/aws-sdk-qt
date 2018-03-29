@@ -86,7 +86,7 @@ void ListFunctionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFunctionsResponse instance.
  */
 ListFunctionsResponsePrivate::ListFunctionsResponsePrivate(
-    ListFunctionsQueueResponse * const q) : ListFunctionsPrivate(q)
+    ListFunctionsResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

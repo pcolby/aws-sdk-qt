@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomActionTypeRequest::response(QNetw
  */
 DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
     const CodePipelineRequest::Action action, DeleteCustomActionTypeRequest * const q)
-    : DeleteCustomActionTypePrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
  */
 DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
     const DeleteCustomActionTypeRequestPrivate &other, DeleteCustomActionTypeRequest * const q)
-    : DeleteCustomActionTypePrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

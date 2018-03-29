@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetwork
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
     const EC2Request::Action action, DescribeElasticGpusRequest * const q)
-    : DescribeElasticGpusPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
     const DescribeElasticGpusRequestPrivate &other, DescribeElasticGpusRequest * const q)
-    : DescribeElasticGpusPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

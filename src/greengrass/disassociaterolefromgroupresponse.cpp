@@ -86,7 +86,7 @@ void DisassociateRoleFromGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateRoleFromGroupResponse instance.
  */
 DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePrivate(
-    DisassociateRoleFromGroupQueueResponse * const q) : DisassociateRoleFromGroupPrivate(q)
+    DisassociateRoleFromGroupResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

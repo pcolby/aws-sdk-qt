@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceSnapshotRequest::response(QNetw
  */
 CreateInstanceSnapshotRequestPrivate::CreateInstanceSnapshotRequestPrivate(
     const LightsailRequest::Action action, CreateInstanceSnapshotRequest * const q)
-    : CreateInstanceSnapshotPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInstanceSnapshotRequestPrivate::CreateInstanceSnapshotRequestPrivate(
  */
 CreateInstanceSnapshotRequestPrivate::CreateInstanceSnapshotRequestPrivate(
     const CreateInstanceSnapshotRequestPrivate &other, CreateInstanceSnapshotRequest * const q)
-    : CreateInstanceSnapshotPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

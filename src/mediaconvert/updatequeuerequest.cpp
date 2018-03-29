@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * 
  */
 UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
     const MediaConvertRequest::Action action, UpdateQueueRequest * const q)
-    : UpdateQueuePrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
  */
 UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
     const UpdateQueueRequestPrivate &other, UpdateQueueRequest * const q)
-    : UpdateQueuePrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

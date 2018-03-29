@@ -86,7 +86,7 @@ void DisassociateDelegateFromResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateDelegateFromResourceResponse instance.
  */
 DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromResourceResponsePrivate(
-    DisassociateDelegateFromResourceQueueResponse * const q) : DisassociateDelegateFromResourcePrivate(q)
+    DisassociateDelegateFromResourceResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

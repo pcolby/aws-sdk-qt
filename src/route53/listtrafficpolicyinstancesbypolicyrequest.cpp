@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByPolicyRequest::re
  */
 ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPolicyRequestPrivate(
     const Route53Request::Action action, ListTrafficPolicyInstancesByPolicyRequest * const q)
-    : ListTrafficPolicyInstancesByPolicyPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPo
  */
 ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPolicyRequestPrivate(
     const ListTrafficPolicyInstancesByPolicyRequestPrivate &other, ListTrafficPolicyInstancesByPolicyRequest * const q)
-    : ListTrafficPolicyInstancesByPolicyPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

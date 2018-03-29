@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateActivationRequest::response(QNetworkRep
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
     const SSMRequest::Action action, CreateActivationRequest * const q)
-    : CreateActivationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateActivationRequestPrivate::CreateActivationRequestPrivate(
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
     const CreateActivationRequestPrivate &other, CreateActivationRequest * const q)
-    : CreateActivationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

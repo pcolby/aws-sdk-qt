@@ -86,7 +86,7 @@ void CreateCertificateFromCsrResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCertificateFromCsrResponse instance.
  */
 CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponsePrivate(
-    CreateCertificateFromCsrQueueResponse * const q) : CreateCertificateFromCsrPrivate(q)
+    CreateCertificateFromCsrResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

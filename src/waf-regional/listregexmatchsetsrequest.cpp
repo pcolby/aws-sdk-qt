@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkR
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListRegexMatchSetsRequest * const q)
-    : ListRegexMatchSetsPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const ListRegexMatchSetsRequestPrivate &other, ListRegexMatchSetsRequest * const q)
-    : ListRegexMatchSetsPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListSigningCertificatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSigningCertificatesResponse instance.
  */
 ListSigningCertificatesResponsePrivate::ListSigningCertificatesResponsePrivate(
-    ListSigningCertificatesQueueResponse * const q) : ListSigningCertificatesPrivate(q)
+    ListSigningCertificatesResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

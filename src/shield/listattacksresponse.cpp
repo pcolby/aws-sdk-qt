@@ -86,7 +86,7 @@ void ListAttacksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAttacksResponse instance.
  */
 ListAttacksResponsePrivate::ListAttacksResponsePrivate(
-    ListAttacksQueueResponse * const q) : ListAttacksPrivate(q)
+    ListAttacksResponse * const q) : ShieldResponsePrivate(q)
 {
 
 }

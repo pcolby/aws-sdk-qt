@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const RedshiftRequest::Action action, CreateTagsRequest * const q)
-    : CreateTagsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)
-    : CreateTagsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

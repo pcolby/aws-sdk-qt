@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNet
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const CloudFrontRequest::Action action, DeleteServiceLinkedRoleRequest * const q)
-    : DeleteServiceLinkedRolePrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const DeleteServiceLinkedRoleRequestPrivate &other, DeleteServiceLinkedRoleRequest * const q)
-    : DeleteServiceLinkedRolePrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

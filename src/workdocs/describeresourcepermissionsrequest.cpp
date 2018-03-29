@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourcePermissionsRequest::response(
  */
 DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeResourcePermissionsRequest * const q)
-    : DescribeResourcePermissionsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPri
  */
 DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
     const DescribeResourcePermissionsRequestPrivate &other, DescribeResourcePermissionsRequest * const q)
-    : DescribeResourcePermissionsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

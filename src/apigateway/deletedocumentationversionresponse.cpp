@@ -86,7 +86,7 @@ void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDocumentationVersionResponse instance.
  */
 DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePrivate(
-    DeleteDocumentationVersionQueueResponse * const q) : DeleteDocumentationVersionPrivate(q)
+    DeleteDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateConfigurationTemplateResponse instance.
  */
 CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResponsePrivate(
-    CreateConfigurationTemplateQueueResponse * const q) : CreateConfigurationTemplatePrivate(q)
+    CreateConfigurationTemplateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

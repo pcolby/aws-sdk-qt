@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPartitionRequest::response(QNetworkReply *
  */
 GetPartitionRequestPrivate::GetPartitionRequestPrivate(
     const GlueRequest::Action action, GetPartitionRequest * const q)
-    : GetPartitionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPartitionRequestPrivate::GetPartitionRequestPrivate(
  */
 GetPartitionRequestPrivate::GetPartitionRequestPrivate(
     const GetPartitionRequestPrivate &other, GetPartitionRequest * const q)
-    : GetPartitionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

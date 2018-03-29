@@ -86,7 +86,7 @@ void DeleteClusterSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteClusterSnapshotResponse instance.
  */
 DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponsePrivate(
-    DeleteClusterSnapshotQueueResponse * const q) : DeleteClusterSnapshotPrivate(q)
+    DeleteClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

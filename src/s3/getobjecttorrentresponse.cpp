@@ -86,7 +86,7 @@ void GetObjectTorrentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetObjectTorrentResponse instance.
  */
 GetObjectTorrentResponsePrivate::GetObjectTorrentResponsePrivate(
-    GetObjectTorrentQueueResponse * const q) : GetObjectTorrentPrivate(q)
+    GetObjectTorrentResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutFunctionConcurrencyResponse instance.
  */
 PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponsePrivate(
-    PutFunctionConcurrencyQueueResponse * const q) : PutFunctionConcurrencyPrivate(q)
+    PutFunctionConcurrencyResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

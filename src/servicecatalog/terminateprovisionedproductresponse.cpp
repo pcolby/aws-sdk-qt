@@ -86,7 +86,7 @@ void TerminateProvisionedProductResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TerminateProvisionedProductResponse instance.
  */
 TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponsePrivate(
-    TerminateProvisionedProductQueueResponse * const q) : TerminateProvisionedProductPrivate(q)
+    TerminateProvisionedProductResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

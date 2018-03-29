@@ -86,7 +86,7 @@ void PutLogEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutLogEventsResponse instance.
  */
 PutLogEventsResponsePrivate::PutLogEventsResponsePrivate(
-    PutLogEventsQueueResponse * const q) : PutLogEventsPrivate(q)
+    PutLogEventsResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

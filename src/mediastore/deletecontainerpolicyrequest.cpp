@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetwo
  */
 DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
     const MediaStoreRequest::Action action, DeleteContainerPolicyRequest * const q)
-    : DeleteContainerPolicyPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
  */
 DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
     const DeleteContainerPolicyRequestPrivate &other, DeleteContainerPolicyRequest * const q)
-    : DeleteContainerPolicyPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

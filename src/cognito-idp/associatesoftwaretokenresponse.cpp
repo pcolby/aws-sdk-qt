@@ -86,7 +86,7 @@ void AssociateSoftwareTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateSoftwareTokenResponse instance.
  */
 AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponsePrivate(
-    AssociateSoftwareTokenQueueResponse * const q) : AssociateSoftwareTokenPrivate(q)
+    AssociateSoftwareTokenResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

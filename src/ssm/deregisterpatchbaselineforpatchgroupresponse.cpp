@@ -86,7 +86,7 @@ void DeregisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DeregisterPatchBaselineForPatchGroupResponse instance.
  */
 DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForPatchGroupResponsePrivate(
-    DeregisterPatchBaselineForPatchGroupQueueResponse * const q) : DeregisterPatchBaselineForPatchGroupPrivate(q)
+    DeregisterPatchBaselineForPatchGroupResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

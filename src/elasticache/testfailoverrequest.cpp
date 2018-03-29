@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply *
  */
 TestFailoverRequestPrivate::TestFailoverRequestPrivate(
     const ElastiCacheRequest::Action action, TestFailoverRequest * const q)
-    : TestFailoverPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestFailoverRequestPrivate::TestFailoverRequestPrivate(
  */
 TestFailoverRequestPrivate::TestFailoverRequestPrivate(
     const TestFailoverRequestPrivate &other, TestFailoverRequest * const q)
-    : TestFailoverPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

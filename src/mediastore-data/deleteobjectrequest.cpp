@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
  */
 DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, DeleteObjectRequest * const q)
-    : DeleteObjectPrivate(action, q)
+    : MediaStoreDataRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
  */
 DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
     const DeleteObjectRequestPrivate &other, DeleteObjectRequest * const q)
-    : DeleteObjectPrivate(other, q)
+    : MediaStoreDataRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateApplicationResourceLifecycleResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public UpdateApplicationResourceLifecycleResponse instance.
  */
 UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLifecycleResponsePrivate(
-    UpdateApplicationResourceLifecycleQueueResponse * const q) : UpdateApplicationResourceLifecyclePrivate(q)
+    UpdateApplicationResourceLifecycleResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

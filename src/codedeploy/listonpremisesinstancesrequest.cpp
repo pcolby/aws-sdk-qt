@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNet
  */
 ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, ListOnPremisesInstancesRequest * const q)
-    : ListOnPremisesInstancesPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
  */
 ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
     const ListOnPremisesInstancesRequestPrivate &other, ListOnPremisesInstancesRequest * const q)
-    : ListOnPremisesInstancesPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

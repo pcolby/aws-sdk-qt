@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ContinueUpdateRollbackRequest::response(QNetw
  */
 ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
     const CloudFormationRequest::Action action, ContinueUpdateRollbackRequest * const q)
-    : ContinueUpdateRollbackPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
  */
 ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
     const ContinueUpdateRollbackRequestPrivate &other, ContinueUpdateRollbackRequest * const q)
-    : ContinueUpdateRollbackPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkRep
  */
 DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterVolumeRequest * const q)
-    : DeregisterVolumePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
  */
 DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
     const DeregisterVolumeRequestPrivate &other, DeregisterVolumeRequest * const q)
-    : DeregisterVolumePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateDefaultBranchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDefaultBranchResponse instance.
  */
 UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponsePrivate(
-    UpdateDefaultBranchQueueResponse * const q) : UpdateDefaultBranchPrivate(q)
+    UpdateDefaultBranchResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

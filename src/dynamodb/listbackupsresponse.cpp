@@ -86,7 +86,7 @@ void ListBackupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBackupsResponse instance.
  */
 ListBackupsResponsePrivate::ListBackupsResponsePrivate(
-    ListBackupsQueueResponse * const q) : ListBackupsPrivate(q)
+    ListBackupsResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

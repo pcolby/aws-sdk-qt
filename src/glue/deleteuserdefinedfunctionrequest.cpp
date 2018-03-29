@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserDefinedFunctionRequest::response(QN
  */
 DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, DeleteUserDefinedFunctionRequest * const q)
-    : DeleteUserDefinedFunctionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate
  */
 DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate(
     const DeleteUserDefinedFunctionRequestPrivate &other, DeleteUserDefinedFunctionRequest * const q)
-    : DeleteUserDefinedFunctionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

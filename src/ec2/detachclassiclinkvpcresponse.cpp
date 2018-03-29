@@ -86,7 +86,7 @@ void DetachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachClassicLinkVpcResponse instance.
  */
 DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
-    DetachClassicLinkVpcQueueResponse * const q) : DetachClassicLinkVpcPrivate(q)
+    DetachClassicLinkVpcResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

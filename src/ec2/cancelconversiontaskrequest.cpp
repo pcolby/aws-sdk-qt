@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetwor
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
     const EC2Request::Action action, CancelConversionTaskRequest * const q)
-    : CancelConversionTaskPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
     const CancelConversionTaskRequestPrivate &other, CancelConversionTaskRequest * const q)
-    : CancelConversionTaskPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

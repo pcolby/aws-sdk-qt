@@ -86,7 +86,7 @@ void UpdateConnectivityInfoResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateConnectivityInfoResponse instance.
  */
 UpdateConnectivityInfoResponsePrivate::UpdateConnectivityInfoResponsePrivate(
-    UpdateConnectivityInfoQueueResponse * const q) : UpdateConnectivityInfoPrivate(q)
+    UpdateConnectivityInfoResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkR
  */
 UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateBaiduChannelRequest * const q)
-    : UpdateBaiduChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
  */
 UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
     const UpdateBaiduChannelRequestPrivate &other, UpdateBaiduChannelRequest * const q)
-    : UpdateBaiduChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

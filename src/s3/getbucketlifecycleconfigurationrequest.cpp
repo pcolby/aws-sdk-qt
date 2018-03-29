@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLifecycleConfigurationRequest::respo
  */
 GetBucketLifecycleConfigurationRequestPrivate::GetBucketLifecycleConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketLifecycleConfigurationRequest * const q)
-    : GetBucketLifecycleConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketLifecycleConfigurationRequestPrivate::GetBucketLifecycleConfigurationRe
  */
 GetBucketLifecycleConfigurationRequestPrivate::GetBucketLifecycleConfigurationRequestPrivate(
     const GetBucketLifecycleConfigurationRequestPrivate &other, GetBucketLifecycleConfigurationRequest * const q)
-    : GetBucketLifecycleConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

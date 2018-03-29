@@ -86,7 +86,7 @@ void ModifyDBSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyDBSnapshotResponse instance.
  */
 ModifyDBSnapshotResponsePrivate::ModifyDBSnapshotResponsePrivate(
-    ModifyDBSnapshotQueueResponse * const q) : ModifyDBSnapshotPrivate(q)
+    ModifyDBSnapshotResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

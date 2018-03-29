@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const DynamoDBRequest::Action action, CreateTableRequest * const q)
-    : CreateTablePrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTableRequestPrivate::CreateTableRequestPrivate(
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const CreateTableRequestPrivate &other, CreateTableRequest * const q)
-    : CreateTablePrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

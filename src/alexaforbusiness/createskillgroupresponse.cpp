@@ -86,7 +86,7 @@ void CreateSkillGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSkillGroupResponse instance.
  */
 CreateSkillGroupResponsePrivate::CreateSkillGroupResponsePrivate(
-    CreateSkillGroupQueueResponse * const q) : CreateSkillGroupPrivate(q)
+    CreateSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

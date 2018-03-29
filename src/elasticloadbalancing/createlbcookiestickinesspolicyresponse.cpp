@@ -86,7 +86,7 @@ void CreateLBCookieStickinessPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLBCookieStickinessPolicyResponse instance.
  */
 CreateLBCookieStickinessPolicyResponsePrivate::CreateLBCookieStickinessPolicyResponsePrivate(
-    CreateLBCookieStickinessPolicyQueueResponse * const q) : CreateLBCookieStickinessPolicyPrivate(q)
+    CreateLBCookieStickinessPolicyResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

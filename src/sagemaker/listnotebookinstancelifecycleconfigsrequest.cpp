@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListNotebookInstanceLifecycleConfigsRequest::
  */
 ListNotebookInstanceLifecycleConfigsRequestPrivate::ListNotebookInstanceLifecycleConfigsRequestPrivate(
     const SageMakerRequest::Action action, ListNotebookInstanceLifecycleConfigsRequest * const q)
-    : ListNotebookInstanceLifecycleConfigsPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListNotebookInstanceLifecycleConfigsRequestPrivate::ListNotebookInstanceLifecycl
  */
 ListNotebookInstanceLifecycleConfigsRequestPrivate::ListNotebookInstanceLifecycleConfigsRequestPrivate(
     const ListNotebookInstanceLifecycleConfigsRequestPrivate &other, ListNotebookInstanceLifecycleConfigsRequest * const q)
-    : ListNotebookInstanceLifecycleConfigsPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

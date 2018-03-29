@@ -86,7 +86,7 @@ void BatchDeletePartitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDeletePartitionResponse instance.
  */
 BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponsePrivate(
-    BatchDeletePartitionQueueResponse * const q) : BatchDeletePartitionPrivate(q)
+    BatchDeletePartitionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

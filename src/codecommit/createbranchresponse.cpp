@@ -86,7 +86,7 @@ void CreateBranchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateBranchResponse instance.
  */
 CreateBranchResponsePrivate::CreateBranchResponsePrivate(
-    CreateBranchQueueResponse * const q) : CreateBranchPrivate(q)
+    CreateBranchResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

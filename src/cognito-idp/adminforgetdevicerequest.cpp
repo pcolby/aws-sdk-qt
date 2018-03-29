@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkRe
  */
 AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminForgetDeviceRequest * const q)
-    : AdminForgetDevicePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
  */
 AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
     const AdminForgetDeviceRequestPrivate &other, AdminForgetDeviceRequest * const q)
-    : AdminForgetDevicePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

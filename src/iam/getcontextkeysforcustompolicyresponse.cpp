@@ -86,7 +86,7 @@ void GetContextKeysForCustomPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetContextKeysForCustomPolicyResponse instance.
  */
 GetContextKeysForCustomPolicyResponsePrivate::GetContextKeysForCustomPolicyResponsePrivate(
-    GetContextKeysForCustomPolicyQueueResponse * const q) : GetContextKeysForCustomPolicyPrivate(q)
+    GetContextKeysForCustomPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

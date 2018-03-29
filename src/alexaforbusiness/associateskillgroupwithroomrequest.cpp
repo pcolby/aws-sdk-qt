@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSkillGroupWithRoomRequest::response(
  */
 AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateSkillGroupWithRoomRequest * const q)
-    : AssociateSkillGroupWithRoomPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPri
  */
 AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPrivate(
     const AssociateSkillGroupWithRoomRequestPrivate &other, AssociateSkillGroupWithRoomRequest * const q)
-    : AssociateSkillGroupWithRoomPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

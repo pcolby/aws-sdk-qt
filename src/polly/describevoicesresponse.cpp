@@ -86,7 +86,7 @@ void DescribeVoicesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVoicesResponse instance.
  */
 DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
-    DescribeVoicesQueueResponse * const q) : DescribeVoicesPrivate(q)
+    DescribeVoicesResponse * const q) : PollyResponsePrivate(q)
 {
 
 }

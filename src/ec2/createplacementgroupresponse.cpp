@@ -86,7 +86,7 @@ void CreatePlacementGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePlacementGroupResponse instance.
  */
 CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponsePrivate(
-    CreatePlacementGroupQueueResponse * const q) : CreatePlacementGroupPrivate(q)
+    CreatePlacementGroupResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestRenderTemplateResponse instance.
  */
 TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
-    TestRenderTemplateQueueResponse * const q) : TestRenderTemplatePrivate(q)
+    TestRenderTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

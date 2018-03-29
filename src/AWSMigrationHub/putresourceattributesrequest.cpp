@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetwo
  */
 PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
     const MigrationHubRequest::Action action, PutResourceAttributesRequest * const q)
-    : PutResourceAttributesPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
  */
 PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
     const PutResourceAttributesRequestPrivate &other, PutResourceAttributesRequest * const q)
-    : PutResourceAttributesPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

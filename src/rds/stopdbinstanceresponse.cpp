@@ -86,7 +86,7 @@ void StopDBInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopDBInstanceResponse instance.
  */
 StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
-    StopDBInstanceQueueResponse * const q) : StopDBInstancePrivate(q)
+    StopDBInstanceResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

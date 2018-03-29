@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::res
  */
 RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
     const RedshiftRequest::Action action, RevokeClusterSecurityGroupIngressRequest * const q)
-    : RevokeClusterSecurityGroupIngressPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngre
  */
 RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
     const RevokeClusterSecurityGroupIngressRequestPrivate &other, RevokeClusterSecurityGroupIngressRequest * const q)
-    : RevokeClusterSecurityGroupIngressPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

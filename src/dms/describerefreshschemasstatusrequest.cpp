@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRefreshSchemasStatusRequest::response
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeRefreshSchemasStatusRequest * const q)
-    : DescribeRefreshSchemasStatusPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestP
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
     const DescribeRefreshSchemasStatusRequestPrivate &other, DescribeRefreshSchemasStatusRequest * const q)
-    : DescribeRefreshSchemasStatusPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

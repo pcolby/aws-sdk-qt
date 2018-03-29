@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociationsRequest::response(QNetworkRep
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
     const SSMRequest::Action action, ListAssociationsRequest * const q)
-    : ListAssociationsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
     const ListAssociationsRequestPrivate &other, ListAssociationsRequest * const q)
-    : ListAssociationsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

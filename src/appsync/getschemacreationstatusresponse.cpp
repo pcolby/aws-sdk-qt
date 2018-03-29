@@ -86,7 +86,7 @@ void GetSchemaCreationStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSchemaCreationStatusResponse instance.
  */
 GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
-    GetSchemaCreationStatusQueueResponse * const q) : GetSchemaCreationStatusPrivate(q)
+    GetSchemaCreationStatusResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

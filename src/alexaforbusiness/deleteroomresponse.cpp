@@ -86,7 +86,7 @@ void DeleteRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRoomResponse instance.
  */
 DeleteRoomResponsePrivate::DeleteRoomResponsePrivate(
-    DeleteRoomQueueResponse * const q) : DeleteRoomPrivate(q)
+    DeleteRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

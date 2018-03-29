@@ -86,7 +86,7 @@ void ListStreamsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListStreamsResponse instance.
  */
 ListStreamsResponsePrivate::ListStreamsResponsePrivate(
-    ListStreamsQueueResponse * const q) : ListStreamsPrivate(q)
+    ListStreamsResponse * const q) : KinesisVideoResponsePrivate(q)
 {
 
 }

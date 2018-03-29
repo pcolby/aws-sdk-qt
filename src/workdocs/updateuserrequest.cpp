@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const WorkDocsRequest::Action action, UpdateUserRequest * const q)
-    : UpdateUserPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const UpdateUserRequestPrivate &other, UpdateUserRequest * const q)
-    : UpdateUserPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetKeyPairResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetKeyPairResponse instance.
  */
 GetKeyPairResponsePrivate::GetKeyPairResponsePrivate(
-    GetKeyPairQueueResponse * const q) : GetKeyPairPrivate(q)
+    GetKeyPairResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

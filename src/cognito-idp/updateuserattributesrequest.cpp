@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetwor
  */
 UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateUserAttributesRequest * const q)
-    : UpdateUserAttributesPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
  */
 UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
     const UpdateUserAttributesRequestPrivate &other, UpdateUserAttributesRequest * const q)
-    : UpdateUserAttributesPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

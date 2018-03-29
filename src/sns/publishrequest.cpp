@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const SNSRequest::Action action, PublishRequest * const q)
-    : PublishPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PublishRequestPrivate::PublishRequestPrivate(
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const PublishRequestPrivate &other, PublishRequest * const q)
-    : PublishPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkRep
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotVersionRequest * const q)
-    : DeleteBotVersionPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
     const DeleteBotVersionRequestPrivate &other, DeleteBotVersionRequest * const q)
-    : DeleteBotVersionPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

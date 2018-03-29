@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMethodRequest::response(QNetworkReply * co
  */
 GetMethodRequestPrivate::GetMethodRequestPrivate(
     const APIGatewayRequest::Action action, GetMethodRequest * const q)
-    : GetMethodPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMethodRequestPrivate::GetMethodRequestPrivate(
  */
 GetMethodRequestPrivate::GetMethodRequestPrivate(
     const GetMethodRequestPrivate &other, GetMethodRequest * const q)
-    : GetMethodPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

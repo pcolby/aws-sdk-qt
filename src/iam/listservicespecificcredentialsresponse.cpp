@@ -86,7 +86,7 @@ void ListServiceSpecificCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListServiceSpecificCredentialsResponse instance.
  */
 ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsResponsePrivate(
-    ListServiceSpecificCredentialsQueueResponse * const q) : ListServiceSpecificCredentialsPrivate(q)
+    ListServiceSpecificCredentialsResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

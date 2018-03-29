@@ -86,7 +86,7 @@ void DescribeGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeGroupResponse instance.
  */
 DescribeGroupResponsePrivate::DescribeGroupResponsePrivate(
-    DescribeGroupQueueResponse * const q) : DescribeGroupPrivate(q)
+    DescribeGroupResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

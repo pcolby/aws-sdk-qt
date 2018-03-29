@@ -86,7 +86,7 @@ void NotifyWhenUploadedResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public NotifyWhenUploadedResponse instance.
  */
 NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponsePrivate(
-    NotifyWhenUploadedQueueResponse * const q) : NotifyWhenUploadedPrivate(q)
+    NotifyWhenUploadedResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFileSystemsResponse instance.
  */
 DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
-    DescribeFileSystemsQueueResponse * const q) : DescribeFileSystemsPrivate(q)
+    DescribeFileSystemsResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

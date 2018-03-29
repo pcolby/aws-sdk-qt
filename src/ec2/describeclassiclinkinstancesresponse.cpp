@@ -86,7 +86,7 @@ void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeClassicLinkInstancesResponse instance.
  */
 DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesResponsePrivate(
-    DescribeClassicLinkInstancesQueueResponse * const q) : DescribeClassicLinkInstancesPrivate(q)
+    DescribeClassicLinkInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsOfResourceRequest::response(QNetworkR
  */
 ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
     const DynamoDBRequest::Action action, ListTagsOfResourceRequest * const q)
-    : ListTagsOfResourcePrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
  */
 ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
     const ListTagsOfResourceRequestPrivate &other, ListTagsOfResourceRequest * const q)
-    : ListTagsOfResourcePrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

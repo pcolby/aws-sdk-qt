@@ -86,7 +86,7 @@ void UpdateStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateStreamResponse instance.
  */
 UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
-    UpdateStreamQueueResponse * const q) : UpdateStreamPrivate(q)
+    UpdateStreamResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

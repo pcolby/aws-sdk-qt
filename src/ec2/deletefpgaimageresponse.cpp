@@ -86,7 +86,7 @@ void DeleteFpgaImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFpgaImageResponse instance.
  */
 DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
-    DeleteFpgaImageQueueResponse * const q) : DeleteFpgaImagePrivate(q)
+    DeleteFpgaImageResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

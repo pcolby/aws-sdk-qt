@@ -86,7 +86,7 @@ void UpdateFolderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFolderResponse instance.
  */
 UpdateFolderResponsePrivate::UpdateFolderResponsePrivate(
-    UpdateFolderQueueResponse * const q) : UpdateFolderPrivate(q)
+    UpdateFolderResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

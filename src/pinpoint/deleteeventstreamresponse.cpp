@@ -86,7 +86,7 @@ void DeleteEventStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEventStreamResponse instance.
  */
 DeleteEventStreamResponsePrivate::DeleteEventStreamResponsePrivate(
-    DeleteEventStreamQueueResponse * const q) : DeleteEventStreamPrivate(q)
+    DeleteEventStreamResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

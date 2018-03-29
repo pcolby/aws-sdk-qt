@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const RDSRequest::Action action, DeleteEventSubscriptionRequest * const q)
-    : DeleteEventSubscriptionPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)
-    : DeleteEventSubscriptionPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

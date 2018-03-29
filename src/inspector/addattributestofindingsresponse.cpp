@@ -86,7 +86,7 @@ void AddAttributesToFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddAttributesToFindingsResponse instance.
  */
 AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponsePrivate(
-    AddAttributesToFindingsQueueResponse * const q) : AddAttributesToFindingsPrivate(q)
+    AddAttributesToFindingsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

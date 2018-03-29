@@ -86,7 +86,7 @@ void ModifySpotFleetRequestResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifySpotFleetRequestResponse instance.
  */
 ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponsePrivate(
-    ModifySpotFleetRequestQueueResponse * const q) : ModifySpotFleetRequestPrivate(q)
+    ModifySpotFleetRequestResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

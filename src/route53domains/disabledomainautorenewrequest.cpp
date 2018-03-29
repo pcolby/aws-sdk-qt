@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableDomainAutoRenewRequest::response(QNetw
  */
 DisableDomainAutoRenewRequestPrivate::DisableDomainAutoRenewRequestPrivate(
     const Route53DomainsRequest::Action action, DisableDomainAutoRenewRequest * const q)
-    : DisableDomainAutoRenewPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableDomainAutoRenewRequestPrivate::DisableDomainAutoRenewRequestPrivate(
  */
 DisableDomainAutoRenewRequestPrivate::DisableDomainAutoRenewRequestPrivate(
     const DisableDomainAutoRenewRequestPrivate &other, DisableDomainAutoRenewRequest * const q)
-    : DisableDomainAutoRenewPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetwor
  */
 GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
     const ShieldRequest::Action action, GetSubscriptionStateRequest * const q)
-    : GetSubscriptionStatePrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
  */
 GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
     const GetSubscriptionStateRequestPrivate &other, GetSubscriptionStateRequest * const q)
-    : GetSubscriptionStatePrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

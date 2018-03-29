@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStateMachineRequest::response(QNetwor
  */
 DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
     const SFNRequest::Action action, DescribeStateMachineRequest * const q)
-    : DescribeStateMachinePrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
  */
 DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
     const DescribeStateMachineRequestPrivate &other, DescribeStateMachineRequest * const q)
-    : DescribeStateMachinePrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

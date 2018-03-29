@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceInformationRequest::response(
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
     const SSMRequest::Action action, DescribeInstanceInformationRequest * const q)
-    : DescribeInstanceInformationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPri
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
     const DescribeInstanceInformationRequestPrivate &other, DescribeInstanceInformationRequest * const q)
-    : DescribeInstanceInformationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

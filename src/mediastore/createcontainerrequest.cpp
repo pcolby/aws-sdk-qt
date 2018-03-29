@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateContainerRequest::response(QNetworkRepl
  */
 CreateContainerRequestPrivate::CreateContainerRequestPrivate(
     const MediaStoreRequest::Action action, CreateContainerRequest * const q)
-    : CreateContainerPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateContainerRequestPrivate::CreateContainerRequestPrivate(
  */
 CreateContainerRequestPrivate::CreateContainerRequestPrivate(
     const CreateContainerRequestPrivate &other, CreateContainerRequest * const q)
-    : CreateContainerPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ApplySchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ApplySchemaResponse instance.
  */
 ApplySchemaResponsePrivate::ApplySchemaResponsePrivate(
-    ApplySchemaQueueResponse * const q) : ApplySchemaPrivate(q)
+    ApplySchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartMatchmakingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartMatchmakingResponse instance.
  */
 StartMatchmakingResponsePrivate::StartMatchmakingResponsePrivate(
-    StartMatchmakingQueueResponse * const q) : StartMatchmakingPrivate(q)
+    StartMatchmakingResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

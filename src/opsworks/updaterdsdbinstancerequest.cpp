@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRdsDbInstanceRequest::response(QNetwork
  */
 UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UpdateRdsDbInstanceRequest * const q)
-    : UpdateRdsDbInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
  */
 UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
     const UpdateRdsDbInstanceRequestPrivate &other, UpdateRdsDbInstanceRequest * const q)
-    : UpdateRdsDbInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

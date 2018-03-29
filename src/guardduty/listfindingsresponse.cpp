@@ -86,7 +86,7 @@ void ListFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFindingsResponse instance.
  */
 ListFindingsResponsePrivate::ListFindingsResponsePrivate(
-    ListFindingsQueueResponse * const q) : ListFindingsPrivate(q)
+    ListFindingsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

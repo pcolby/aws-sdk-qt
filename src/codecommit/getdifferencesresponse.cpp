@@ -86,7 +86,7 @@ void GetDifferencesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDifferencesResponse instance.
  */
 GetDifferencesResponsePrivate::GetDifferencesResponsePrivate(
-    GetDifferencesQueueResponse * const q) : GetDifferencesPrivate(q)
+    GetDifferencesResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ExpireSessionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ExpireSessionResponse instance.
  */
 ExpireSessionResponsePrivate::ExpireSessionResponsePrivate(
-    ExpireSessionQueueResponse * const q) : ExpireSessionPrivate(q)
+    ExpireSessionResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

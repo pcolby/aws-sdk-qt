@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
     const EC2Request::Action action, EnableVolumeIORequest * const q)
-    : EnableVolumeIOPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
     const EnableVolumeIORequestPrivate &other, EnableVolumeIORequest * const q)
-    : EnableVolumeIOPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

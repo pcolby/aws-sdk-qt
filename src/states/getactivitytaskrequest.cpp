@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkRepl
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
     const SFNRequest::Action action, GetActivityTaskRequest * const q)
-    : GetActivityTaskPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
     const GetActivityTaskRequestPrivate &other, GetActivityTaskRequest * const q)
-    : GetActivityTaskPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

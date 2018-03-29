@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetApnsChannelRequest::response(QNetworkReply
  */
 GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
     const PinpointRequest::Action action, GetApnsChannelRequest * const q)
-    : GetApnsChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
  */
 GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
     const GetApnsChannelRequestPrivate &other, GetApnsChannelRequest * const q)
-    : GetApnsChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationSubnetGroupRequest * const q)
-    : DeleteReplicationSubnetGroupPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestP
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
     const DeleteReplicationSubnetGroupRequestPrivate &other, DeleteReplicationSubnetGroupRequest * const q)
-    : DeleteReplicationSubnetGroupPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

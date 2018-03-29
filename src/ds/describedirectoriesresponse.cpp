@@ -86,7 +86,7 @@ void DescribeDirectoriesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDirectoriesResponse instance.
  */
 DescribeDirectoriesResponsePrivate::DescribeDirectoriesResponsePrivate(
-    DescribeDirectoriesQueueResponse * const q) : DescribeDirectoriesPrivate(q)
+    DescribeDirectoriesResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

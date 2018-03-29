@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetwo
  */
 DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, DisassociateElasticIpRequest * const q)
-    : DisassociateElasticIpPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
  */
 DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
     const DisassociateElasticIpRequestPrivate &other, DisassociateElasticIpRequest * const q)
-    : DisassociateElasticIpPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

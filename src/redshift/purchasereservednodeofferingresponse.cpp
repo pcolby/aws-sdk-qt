@@ -86,7 +86,7 @@ void PurchaseReservedNodeOfferingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PurchaseReservedNodeOfferingResponse instance.
  */
 PurchaseReservedNodeOfferingResponsePrivate::PurchaseReservedNodeOfferingResponsePrivate(
-    PurchaseReservedNodeOfferingQueueResponse * const q) : PurchaseReservedNodeOfferingPrivate(q)
+    PurchaseReservedNodeOfferingResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

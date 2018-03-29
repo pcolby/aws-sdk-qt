@@ -86,7 +86,7 @@ void CreateAssociationBatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAssociationBatchResponse instance.
  */
 CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponsePrivate(
-    CreateAssociationBatchQueueResponse * const q) : CreateAssociationBatchPrivate(q)
+    CreateAssociationBatchResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

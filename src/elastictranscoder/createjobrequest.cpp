@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
  */
 CreateJobRequestPrivate::CreateJobRequestPrivate(
     const ElasticTranscoderRequest::Action action, CreateJobRequest * const q)
-    : CreateJobPrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateJobRequestPrivate::CreateJobRequestPrivate(
  */
 CreateJobRequestPrivate::CreateJobRequestPrivate(
     const CreateJobRequestPrivate &other, CreateJobRequest * const q)
-    : CreateJobPrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

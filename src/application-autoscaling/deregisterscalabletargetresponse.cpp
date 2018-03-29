@@ -86,7 +86,7 @@ void DeregisterScalableTargetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterScalableTargetResponse instance.
  */
 DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponsePrivate(
-    DeregisterScalableTargetQueueResponse * const q) : DeregisterScalableTargetPrivate(q)
+    DeregisterScalableTargetResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
 {
 
 }

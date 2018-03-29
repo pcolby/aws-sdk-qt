@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableKeyRequest::response(QNetworkReply * c
  */
 DisableKeyRequestPrivate::DisableKeyRequestPrivate(
     const KMSRequest::Action action, DisableKeyRequest * const q)
-    : DisableKeyPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableKeyRequestPrivate::DisableKeyRequestPrivate(
  */
 DisableKeyRequestPrivate::DisableKeyRequestPrivate(
     const DisableKeyRequestPrivate &other, DisableKeyRequest * const q)
-    : DisableKeyPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

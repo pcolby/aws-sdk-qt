@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkRe
  */
 PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
     const CodePipelineRequest::Action action, PutApprovalResultRequest * const q)
-    : PutApprovalResultPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
  */
 PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
     const PutApprovalResultRequestPrivate &other, PutApprovalResultRequest * const q)
-    : PutApprovalResultPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::respo
  */
 GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRequestPrivate(
     const Route53Request::Action action, GetHealthCheckLastFailureReasonRequest * const q)
-    : GetHealthCheckLastFailureReasonPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRe
  */
 GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRequestPrivate(
     const GetHealthCheckLastFailureReasonRequestPrivate &other, GetHealthCheckLastFailureReasonRequest * const q)
-    : GetHealthCheckLastFailureReasonPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

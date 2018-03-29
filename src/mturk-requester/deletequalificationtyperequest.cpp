@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQualificationTypeRequest::response(QNet
  */
 DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, DeleteQualificationTypeRequest * const q)
-    : DeleteQualificationTypePrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
  */
 DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
     const DeleteQualificationTypeRequestPrivate &other, DeleteQualificationTypeRequest * const q)
-    : DeleteQualificationTypePrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

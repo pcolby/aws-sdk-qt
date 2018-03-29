@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpcPeeringConnectionsRequest * const q)
-    : DescribeVpcPeeringConnectionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const DescribeVpcPeeringConnectionsRequestPrivate &other, DescribeVpcPeeringConnectionsRequest * const q)
-    : DescribeVpcPeeringConnectionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

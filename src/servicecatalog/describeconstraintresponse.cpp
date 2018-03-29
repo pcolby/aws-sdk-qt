@@ -86,7 +86,7 @@ void DescribeConstraintResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeConstraintResponse instance.
  */
 DescribeConstraintResponsePrivate::DescribeConstraintResponsePrivate(
-    DescribeConstraintQueueResponse * const q) : DescribeConstraintPrivate(q)
+    DescribeConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

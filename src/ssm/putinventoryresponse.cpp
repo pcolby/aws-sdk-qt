@@ -86,7 +86,7 @@ void PutInventoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutInventoryResponse instance.
  */
 PutInventoryResponsePrivate::PutInventoryResponsePrivate(
-    PutInventoryQueueResponse * const q) : PutInventoryPrivate(q)
+    PutInventoryResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

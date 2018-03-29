@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLexiconRequest::response(QNetworkReply * c
  */
 GetLexiconRequestPrivate::GetLexiconRequestPrivate(
     const PollyRequest::Action action, GetLexiconRequest * const q)
-    : GetLexiconPrivate(action, q)
+    : PollyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetLexiconRequestPrivate::GetLexiconRequestPrivate(
  */
 GetLexiconRequestPrivate::GetLexiconRequestPrivate(
     const GetLexiconRequestPrivate &other, GetLexiconRequest * const q)
-    : GetLexiconPrivate(other, q)
+    : PollyRequestPrivate(other, q)
 {
 
 }

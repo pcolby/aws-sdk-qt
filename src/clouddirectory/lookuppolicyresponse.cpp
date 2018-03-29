@@ -86,7 +86,7 @@ void LookupPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public LookupPolicyResponse instance.
  */
 LookupPolicyResponsePrivate::LookupPolicyResponsePrivate(
-    LookupPolicyQueueResponse * const q) : LookupPolicyPrivate(q)
+    LookupPolicyResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

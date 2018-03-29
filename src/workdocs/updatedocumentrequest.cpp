@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const WorkDocsRequest::Action action, UpdateDocumentRequest * const q)
-    : UpdateDocumentPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const UpdateDocumentRequestPrivate &other, UpdateDocumentRequest * const q)
-    : UpdateDocumentPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

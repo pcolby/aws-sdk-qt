@@ -86,7 +86,7 @@ void CreateImageBuilderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateImageBuilderResponse instance.
  */
 CreateImageBuilderResponsePrivate::CreateImageBuilderResponsePrivate(
-    CreateImageBuilderQueueResponse * const q) : CreateImageBuilderPrivate(q)
+    CreateImageBuilderResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

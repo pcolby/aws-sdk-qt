@@ -86,7 +86,7 @@ void DescribeNetworkInterfacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeNetworkInterfacesResponse instance.
  */
 DescribeNetworkInterfacesResponsePrivate::DescribeNetworkInterfacesResponsePrivate(
-    DescribeNetworkInterfacesQueueResponse * const q) : DescribeNetworkInterfacesPrivate(q)
+    DescribeNetworkInterfacesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

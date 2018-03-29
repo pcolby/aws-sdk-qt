@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionFilterRequest::response(QNe
  */
 DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteSubscriptionFilterRequest * const q)
-    : DeleteSubscriptionFilterPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
  */
 DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
     const DeleteSubscriptionFilterRequestPrivate &other, DeleteSubscriptionFilterRequest * const q)
-    : DeleteSubscriptionFilterPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

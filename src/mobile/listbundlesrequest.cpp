@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * 
  */
 ListBundlesRequestPrivate::ListBundlesRequestPrivate(
     const MobileRequest::Action action, ListBundlesRequest * const q)
-    : ListBundlesPrivate(action, q)
+    : MobileRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBundlesRequestPrivate::ListBundlesRequestPrivate(
  */
 ListBundlesRequestPrivate::ListBundlesRequestPrivate(
     const ListBundlesRequestPrivate &other, ListBundlesRequest * const q)
-    : ListBundlesPrivate(other, q)
+    : MobileRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListFunctionDefinitionVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFunctionDefinitionVersionsResponse instance.
  */
 ListFunctionDefinitionVersionsResponsePrivate::ListFunctionDefinitionVersionsResponsePrivate(
-    ListFunctionDefinitionVersionsQueueResponse * const q) : ListFunctionDefinitionVersionsPrivate(q)
+    ListFunctionDefinitionVersionsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

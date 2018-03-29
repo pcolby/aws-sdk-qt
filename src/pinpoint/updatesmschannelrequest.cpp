@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkRep
  */
 UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateSmsChannelRequest * const q)
-    : UpdateSmsChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
  */
 UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
     const UpdateSmsChannelRequestPrivate &other, UpdateSmsChannelRequest * const q)
-    : UpdateSmsChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

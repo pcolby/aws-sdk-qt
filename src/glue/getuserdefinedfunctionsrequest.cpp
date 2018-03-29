@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUserDefinedFunctionsRequest::response(QNet
  */
 GetUserDefinedFunctionsRequestPrivate::GetUserDefinedFunctionsRequestPrivate(
     const GlueRequest::Action action, GetUserDefinedFunctionsRequest * const q)
-    : GetUserDefinedFunctionsPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUserDefinedFunctionsRequestPrivate::GetUserDefinedFunctionsRequestPrivate(
  */
 GetUserDefinedFunctionsRequestPrivate::GetUserDefinedFunctionsRequestPrivate(
     const GetUserDefinedFunctionsRequestPrivate &other, GetUserDefinedFunctionsRequest * const q)
-    : GetUserDefinedFunctionsPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

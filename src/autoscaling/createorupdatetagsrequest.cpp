@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateOrUpdateTagsRequest::response(QNetworkR
  */
 CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
     const AutoScalingRequest::Action action, CreateOrUpdateTagsRequest * const q)
-    : CreateOrUpdateTagsPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
  */
 CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
     const CreateOrUpdateTagsRequestPrivate &other, CreateOrUpdateTagsRequest * const q)
-    : CreateOrUpdateTagsPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

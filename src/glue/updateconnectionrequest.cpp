@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectionRequest::response(QNetworkRep
  */
 UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
     const GlueRequest::Action action, UpdateConnectionRequest * const q)
-    : UpdateConnectionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
  */
 UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
     const UpdateConnectionRequestPrivate &other, UpdateConnectionRequest * const q)
-    : UpdateConnectionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

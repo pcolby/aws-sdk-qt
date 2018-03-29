@@ -86,7 +86,7 @@ void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyDBClusterParameterGroupResponse instance.
  */
 CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponsePrivate(
-    CopyDBClusterParameterGroupQueueResponse * const q) : CopyDBClusterParameterGroupPrivate(q)
+    CopyDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

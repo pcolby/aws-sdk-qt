@@ -86,7 +86,7 @@ void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddRoleToDBClusterResponse instance.
  */
 AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
-    AddRoleToDBClusterQueueResponse * const q) : AddRoleToDBClusterPrivate(q)
+    AddRoleToDBClusterResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

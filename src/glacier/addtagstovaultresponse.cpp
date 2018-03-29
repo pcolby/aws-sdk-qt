@@ -86,7 +86,7 @@ void AddTagsToVaultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddTagsToVaultResponse instance.
  */
 AddTagsToVaultResponsePrivate::AddTagsToVaultResponsePrivate(
-    AddTagsToVaultQueueResponse * const q) : AddTagsToVaultPrivate(q)
+    AddTagsToVaultResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

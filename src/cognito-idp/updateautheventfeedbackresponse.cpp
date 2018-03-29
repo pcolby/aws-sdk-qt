@@ -86,7 +86,7 @@ void UpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAuthEventFeedbackResponse instance.
  */
 UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponsePrivate(
-    UpdateAuthEventFeedbackQueueResponse * const q) : UpdateAuthEventFeedbackPrivate(q)
+    UpdateAuthEventFeedbackResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetwo
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const CloudFormationRequest::Action action, DescribeAccountLimitsRequest * const q)
-    : DescribeAccountLimitsPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const DescribeAccountLimitsRequestPrivate &other, DescribeAccountLimitsRequest * const q)
-    : DescribeAccountLimitsPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

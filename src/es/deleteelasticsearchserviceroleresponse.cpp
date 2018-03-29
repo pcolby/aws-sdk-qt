@@ -86,7 +86,7 @@ void DeleteElasticsearchServiceRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteElasticsearchServiceRoleResponse instance.
  */
 DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleResponsePrivate(
-    DeleteElasticsearchServiceRoleQueueResponse * const q) : DeleteElasticsearchServiceRolePrivate(q)
+    DeleteElasticsearchServiceRoleResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

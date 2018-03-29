@@ -86,7 +86,7 @@ void DescribeIndexResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeIndexResponse instance.
  */
 DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
-    DescribeIndexQueueResponse * const q) : DescribeIndexPrivate(q)
+    DescribeIndexResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

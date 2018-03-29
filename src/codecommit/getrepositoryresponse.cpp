@@ -86,7 +86,7 @@ void GetRepositoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRepositoryResponse instance.
  */
 GetRepositoryResponsePrivate::GetRepositoryResponsePrivate(
-    GetRepositoryQueueResponse * const q) : GetRepositoryPrivate(q)
+    GetRepositoryResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

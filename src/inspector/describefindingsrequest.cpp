@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkRep
  */
 DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
     const InspectorRequest::Action action, DescribeFindingsRequest * const q)
-    : DescribeFindingsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
  */
 DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
     const DescribeFindingsRequestPrivate &other, DescribeFindingsRequest * const q)
-    : DescribeFindingsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

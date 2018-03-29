@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkRe
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const OpsWorksRequest::Action action, CreateUserProfileRequest * const q)
-    : CreateUserProfilePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const CreateUserProfileRequestPrivate &other, CreateUserProfileRequest * const q)
-    : CreateUserProfilePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

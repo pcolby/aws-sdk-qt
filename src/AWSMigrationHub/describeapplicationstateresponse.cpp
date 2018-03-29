@@ -86,7 +86,7 @@ void DescribeApplicationStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeApplicationStateResponse instance.
  */
 DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate(
-    DescribeApplicationStateQueueResponse * const q) : DescribeApplicationStatePrivate(q)
+    DescribeApplicationStateResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

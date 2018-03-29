@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * 
  */
 GetProductsRequestPrivate::GetProductsRequestPrivate(
     const PricingRequest::Action action, GetProductsRequest * const q)
-    : GetProductsPrivate(action, q)
+    : PricingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetProductsRequestPrivate::GetProductsRequestPrivate(
  */
 GetProductsRequestPrivate::GetProductsRequestPrivate(
     const GetProductsRequestPrivate &other, GetProductsRequest * const q)
-    : GetProductsPrivate(other, q)
+    : PricingRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTagOptionWithResourceRequest::respon
  */
 AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequestPrivate(
     const ServiceCatalogRequest::Action action, AssociateTagOptionWithResourceRequest * const q)
-    : AssociateTagOptionWithResourcePrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequ
  */
 AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequestPrivate(
     const AssociateTagOptionWithResourceRequestPrivate &other, AssociateTagOptionWithResourceRequest * const q)
-    : AssociateTagOptionWithResourcePrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void RestartAppServerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestartAppServerResponse instance.
  */
 RestartAppServerResponsePrivate::RestartAppServerResponsePrivate(
-    RestartAppServerQueueResponse * const q) : RestartAppServerPrivate(q)
+    RestartAppServerResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

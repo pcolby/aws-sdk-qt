@@ -86,7 +86,7 @@ void GetReplicationRunsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetReplicationRunsResponse instance.
  */
 GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
-    GetReplicationRunsQueueResponse * const q) : GetReplicationRunsPrivate(q)
+    GetReplicationRunsResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

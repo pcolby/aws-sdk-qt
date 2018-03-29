@@ -86,7 +86,7 @@ void AdminDisableProviderForUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminDisableProviderForUserResponse instance.
  */
 AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponsePrivate(
-    AdminDisableProviderForUserQueueResponse * const q) : AdminDisableProviderForUserPrivate(q)
+    AdminDisableProviderForUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

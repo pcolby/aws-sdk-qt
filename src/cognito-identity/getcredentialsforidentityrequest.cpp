@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCredentialsForIdentityRequest::response(QN
  */
 GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, GetCredentialsForIdentityRequest * const q)
-    : GetCredentialsForIdentityPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate
  */
 GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate(
     const GetCredentialsForIdentityRequestPrivate &other, GetCredentialsForIdentityRequest * const q)
-    : GetCredentialsForIdentityPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateThingTypeRequest::response(QNetworkR
  */
 DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
     const IoTRequest::Action action, DeprecateThingTypeRequest * const q)
-    : DeprecateThingTypePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
  */
 DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
     const DeprecateThingTypeRequestPrivate &other, DeprecateThingTypeRequest * const q)
-    : DeprecateThingTypePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

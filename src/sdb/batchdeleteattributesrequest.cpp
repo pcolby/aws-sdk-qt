@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetwo
  */
 BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
     const SimpleDBRequest::Action action, BatchDeleteAttributesRequest * const q)
-    : BatchDeleteAttributesPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
  */
 BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
     const BatchDeleteAttributesRequestPrivate &other, BatchDeleteAttributesRequest * const q)
-    : BatchDeleteAttributesPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketMetricsConfigurationRequest::respons
  */
 PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketMetricsConfigurationRequest * const q)
-    : PutBucketMetricsConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationReques
  */
 PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationRequestPrivate(
     const PutBucketMetricsConfigurationRequestPrivate &other, PutBucketMetricsConfigurationRequest * const q)
-    : PutBucketMetricsConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdatePrimaryEmailAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePrimaryEmailAddressResponse instance.
  */
 UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponsePrivate(
-    UpdatePrimaryEmailAddressQueueResponse * const q) : UpdatePrimaryEmailAddressPrivate(q)
+    UpdatePrimaryEmailAddressResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

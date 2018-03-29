@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstancesRequest::response(QNetworkRepl
  */
 CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
     const LightsailRequest::Action action, CreateInstancesRequest * const q)
-    : CreateInstancesPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
  */
 CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
     const CreateInstancesRequestPrivate &other, CreateInstancesRequest * const q)
-    : CreateInstancesPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

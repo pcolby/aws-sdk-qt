@@ -86,7 +86,7 @@ void DescribeAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAvailabilityOptionsResponse instance.
  */
 DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResponsePrivate(
-    DescribeAvailabilityOptionsQueueResponse * const q) : DescribeAvailabilityOptionsPrivate(q)
+    DescribeAvailabilityOptionsResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

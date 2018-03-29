@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCloudFrontOriginAccessIdentityRequest::
  */
 UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccessIdentityRequestPrivate(
     const CloudFrontRequest::Action action, UpdateCloudFrontOriginAccessIdentityRequest * const q)
-    : UpdateCloudFrontOriginAccessIdentityPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccess
  */
 UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccessIdentityRequestPrivate(
     const UpdateCloudFrontOriginAccessIdentityRequestPrivate &other, UpdateCloudFrontOriginAccessIdentityRequest * const q)
-    : UpdateCloudFrontOriginAccessIdentityPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

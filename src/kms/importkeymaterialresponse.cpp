@@ -86,7 +86,7 @@ void ImportKeyMaterialResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportKeyMaterialResponse instance.
  */
 ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponsePrivate(
-    ImportKeyMaterialQueueResponse * const q) : ImportKeyMaterialPrivate(q)
+    ImportKeyMaterialResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

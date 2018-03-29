@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectsRequest::response(QNetworkReply 
  */
 DeleteObjectsRequestPrivate::DeleteObjectsRequestPrivate(
     const S3Request::Action action, DeleteObjectsRequest * const q)
-    : DeleteObjectsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteObjectsRequestPrivate::DeleteObjectsRequestPrivate(
  */
 DeleteObjectsRequestPrivate::DeleteObjectsRequestPrivate(
     const DeleteObjectsRequestPrivate &other, DeleteObjectsRequest * const q)
-    : DeleteObjectsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectionFromLagRequest::respons
  */
 DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagRequestPrivate(
     const DirectConnectRequest::Action action, DisassociateConnectionFromLagRequest * const q)
-    : DisassociateConnectionFromLagPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagReques
  */
 DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagRequestPrivate(
     const DisassociateConnectionFromLagRequestPrivate &other, DisassociateConnectionFromLagRequest * const q)
-    : DisassociateConnectionFromLagPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

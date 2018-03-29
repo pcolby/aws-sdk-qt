@@ -86,7 +86,7 @@ void GetJobsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetJobsResponse instance.
  */
 GetJobsResponsePrivate::GetJobsResponsePrivate(
-    GetJobsQueueResponse * const q) : GetJobsPrivate(q)
+    GetJobsResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

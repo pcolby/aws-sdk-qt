@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkR
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
     const STSRequest::Action action, GetFederationTokenRequest * const q)
-    : GetFederationTokenPrivate(action, q)
+    : STSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
     const GetFederationTokenRequestPrivate &other, GetFederationTokenRequest * const q)
-    : GetFederationTokenPrivate(other, q)
+    : STSRequestPrivate(other, q)
 {
 
 }

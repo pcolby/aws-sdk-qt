@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::respons
  */
 GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
     const SSMRequest::Action action, GetPatchBaselineForPatchGroupRequest * const q)
-    : GetPatchBaselineForPatchGroupPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupReques
  */
 GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
     const GetPatchBaselineForPatchGroupRequestPrivate &other, GetPatchBaselineForPatchGroupRequest * const q)
-    : GetPatchBaselineForPatchGroupPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

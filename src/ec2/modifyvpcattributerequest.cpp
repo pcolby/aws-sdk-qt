@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkR
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
     const EC2Request::Action action, ModifyVpcAttributeRequest * const q)
-    : ModifyVpcAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
     const ModifyVpcAttributeRequestPrivate &other, ModifyVpcAttributeRequest * const q)
-    : ModifyVpcAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

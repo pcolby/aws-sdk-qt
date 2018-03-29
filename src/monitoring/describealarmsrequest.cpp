@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmsRequest::response(QNetworkReply
  */
 DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmsRequest * const q)
-    : DescribeAlarmsPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
  */
 DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
     const DescribeAlarmsRequestPrivate &other, DescribeAlarmsRequest * const q)
-    : DescribeAlarmsPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

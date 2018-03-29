@@ -86,7 +86,7 @@ void UpdateSkillGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSkillGroupResponse instance.
  */
 UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponsePrivate(
-    UpdateSkillGroupQueueResponse * const q) : UpdateSkillGroupPrivate(q)
+    UpdateSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

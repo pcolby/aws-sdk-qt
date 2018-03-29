@@ -86,7 +86,7 @@ void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootDBInstanceResponse instance.
  */
 RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
-    RebootDBInstanceQueueResponse * const q) : RebootDBInstancePrivate(q)
+    RebootDBInstanceResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

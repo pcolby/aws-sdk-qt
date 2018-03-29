@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * co
  */
 GetChangeRequestPrivate::GetChangeRequestPrivate(
     const Route53Request::Action action, GetChangeRequest * const q)
-    : GetChangePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetChangeRequestPrivate::GetChangeRequestPrivate(
  */
 GetChangeRequestPrivate::GetChangeRequestPrivate(
     const GetChangeRequestPrivate &other, GetChangeRequest * const q)
-    : GetChangePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

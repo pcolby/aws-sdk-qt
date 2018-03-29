@@ -86,7 +86,7 @@ void GetCredentialsForIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCredentialsForIdentityResponse instance.
  */
 GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponsePrivate(
-    GetCredentialsForIdentityQueueResponse * const q) : GetCredentialsForIdentityPrivate(q)
+    GetCredentialsForIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

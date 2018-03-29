@@ -86,7 +86,7 @@ void CreateComputerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateComputerResponse instance.
  */
 CreateComputerResponsePrivate::CreateComputerResponsePrivate(
-    CreateComputerQueueResponse * const q) : CreateComputerPrivate(q)
+    CreateComputerResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAppCookieStickinessPolicyRequest::respo
  */
 CreateAppCookieStickinessPolicyRequestPrivate::CreateAppCookieStickinessPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateAppCookieStickinessPolicyRequest * const q)
-    : CreateAppCookieStickinessPolicyPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAppCookieStickinessPolicyRequestPrivate::CreateAppCookieStickinessPolicyRe
  */
 CreateAppCookieStickinessPolicyRequestPrivate::CreateAppCookieStickinessPolicyRequestPrivate(
     const CreateAppCookieStickinessPolicyRequestPrivate &other, CreateAppCookieStickinessPolicyRequest * const q)
-    : CreateAppCookieStickinessPolicyPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

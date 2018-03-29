@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply
  */
 SendInvitationRequestPrivate::SendInvitationRequestPrivate(
     const AlexaForBusinessRequest::Action action, SendInvitationRequest * const q)
-    : SendInvitationPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendInvitationRequestPrivate::SendInvitationRequestPrivate(
  */
 SendInvitationRequestPrivate::SendInvitationRequestPrivate(
     const SendInvitationRequestPrivate &other, SendInvitationRequest * const q)
-    : SendInvitationPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

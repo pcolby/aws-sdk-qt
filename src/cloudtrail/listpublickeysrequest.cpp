@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply
  */
 ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
     const CloudTrailRequest::Action action, ListPublicKeysRequest * const q)
-    : ListPublicKeysPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
  */
 ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
     const ListPublicKeysRequestPrivate &other, ListPublicKeysRequest * const q)
-    : ListPublicKeysPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

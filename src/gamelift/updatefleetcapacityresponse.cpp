@@ -86,7 +86,7 @@ void UpdateFleetCapacityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFleetCapacityResponse instance.
  */
 UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponsePrivate(
-    UpdateFleetCapacityQueueResponse * const q) : UpdateFleetCapacityPrivate(q)
+    UpdateFleetCapacityResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

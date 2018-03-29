@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PollForJobsRequest::response(QNetworkReply * 
  */
 PollForJobsRequestPrivate::PollForJobsRequestPrivate(
     const CodePipelineRequest::Action action, PollForJobsRequest * const q)
-    : PollForJobsPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PollForJobsRequestPrivate::PollForJobsRequestPrivate(
  */
 PollForJobsRequestPrivate::PollForJobsRequestPrivate(
     const PollForJobsRequestPrivate &other, PollForJobsRequest * const q)
-    : PollForJobsPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

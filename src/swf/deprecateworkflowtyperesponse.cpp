@@ -86,7 +86,7 @@ void DeprecateWorkflowTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeprecateWorkflowTypeResponse instance.
  */
 DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
-    DeprecateWorkflowTypeQueueResponse * const q) : DeprecateWorkflowTypePrivate(q)
+    DeprecateWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

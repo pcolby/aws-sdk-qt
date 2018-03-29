@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetwo
  */
 ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectParentPathsRequest * const q)
-    : ListObjectParentPathsPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
  */
 ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
     const ListObjectParentPathsRequestPrivate &other, ListObjectParentPathsRequest * const q)
-    : ListObjectParentPathsPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

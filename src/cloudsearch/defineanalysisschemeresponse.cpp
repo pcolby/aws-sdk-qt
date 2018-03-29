@@ -86,7 +86,7 @@ void DefineAnalysisSchemeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DefineAnalysisSchemeResponse instance.
  */
 DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
-    DefineAnalysisSchemeQueueResponse * const q) : DefineAnalysisSchemePrivate(q)
+    DefineAnalysisSchemeResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

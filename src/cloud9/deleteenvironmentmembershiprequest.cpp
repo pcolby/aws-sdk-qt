@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentMembershipRequest::response(
  */
 DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, DeleteEnvironmentMembershipRequest * const q)
-    : DeleteEnvironmentMembershipPrivate(action, q)
+    : Cloud9RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPri
  */
 DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
     const DeleteEnvironmentMembershipRequestPrivate &other, DeleteEnvironmentMembershipRequest * const q)
-    : DeleteEnvironmentMembershipPrivate(other, q)
+    : Cloud9RequestPrivate(other, q)
 {
 
 }

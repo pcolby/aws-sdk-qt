@@ -86,7 +86,7 @@ void UpdateNetworkProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateNetworkProfileResponse instance.
  */
 UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponsePrivate(
-    UpdateNetworkProfileQueueResponse * const q) : UpdateNetworkProfilePrivate(q)
+    UpdateNetworkProfileResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

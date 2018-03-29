@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SubscribeToDatasetRequest::response(QNetworkR
  */
 SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, SubscribeToDatasetRequest * const q)
-    : SubscribeToDatasetPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
  */
 SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
     const SubscribeToDatasetRequestPrivate &other, SubscribeToDatasetRequest * const q)
-    : SubscribeToDatasetPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePermissionPolicyResponse instance.
  */
 DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
-    DeletePermissionPolicyQueueResponse * const q) : DeletePermissionPolicyPrivate(q)
+    DeletePermissionPolicyResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

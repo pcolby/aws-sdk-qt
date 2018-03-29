@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetwo
  */
 ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListPolicyAttachmentsRequest * const q)
-    : ListPolicyAttachmentsPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
  */
 ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
     const ListPolicyAttachmentsRequestPrivate &other, ListPolicyAttachmentsRequest * const q)
-    : ListPolicyAttachmentsPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

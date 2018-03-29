@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBGPPeerRequest::response(QNetworkReply 
  */
 DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
     const DirectConnectRequest::Action action, DeleteBGPPeerRequest * const q)
-    : DeleteBGPPeerPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
  */
 DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
     const DeleteBGPPeerRequestPrivate &other, DeleteBGPPeerRequest * const q)
-    : DeleteBGPPeerPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationRequest::response(QNetwo
  */
 GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
     const S3Request::Action action, GetBucketNotificationRequest * const q)
-    : GetBucketNotificationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
  */
 GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
     const GetBucketNotificationRequestPrivate &other, GetBucketNotificationRequest * const q)
-    : GetBucketNotificationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

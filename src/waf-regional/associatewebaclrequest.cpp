@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateWebACLRequest::response(QNetworkRepl
  */
 AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, AssociateWebACLRequest * const q)
-    : AssociateWebACLPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
  */
 AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
     const AssociateWebACLRequestPrivate &other, AssociateWebACLRequest * const q)
-    : AssociateWebACLPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

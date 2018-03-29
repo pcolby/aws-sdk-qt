@@ -86,7 +86,7 @@ void AbortEnvironmentUpdateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AbortEnvironmentUpdateResponse instance.
  */
 AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponsePrivate(
-    AbortEnvironmentUpdateQueueResponse * const q) : AbortEnvironmentUpdatePrivate(q)
+    AbortEnvironmentUpdateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

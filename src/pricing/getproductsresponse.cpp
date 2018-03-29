@@ -86,7 +86,7 @@ void GetProductsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetProductsResponse instance.
  */
 GetProductsResponsePrivate::GetProductsResponsePrivate(
-    GetProductsQueueResponse * const q) : GetProductsPrivate(q)
+    GetProductsResponse * const q) : PricingResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDashboardRequest::response(QNetworkReply *
  */
 GetDashboardRequestPrivate::GetDashboardRequestPrivate(
     const CloudWatchRequest::Action action, GetDashboardRequest * const q)
-    : GetDashboardPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDashboardRequestPrivate::GetDashboardRequestPrivate(
  */
 GetDashboardRequestPrivate::GetDashboardRequestPrivate(
     const GetDashboardRequestPrivate &other, GetDashboardRequest * const q)
-    : GetDashboardPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

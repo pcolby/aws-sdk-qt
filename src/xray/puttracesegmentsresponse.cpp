@@ -86,7 +86,7 @@ void PutTraceSegmentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutTraceSegmentsResponse instance.
  */
 PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
-    PutTraceSegmentsQueueResponse * const q) : PutTraceSegmentsPrivate(q)
+    PutTraceSegmentsResponse * const q) : XRayResponsePrivate(q)
 {
 
 }

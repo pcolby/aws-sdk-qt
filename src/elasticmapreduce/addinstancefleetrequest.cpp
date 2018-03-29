@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddInstanceFleetRequest::response(QNetworkRep
  */
 AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
     const EMRRequest::Action action, AddInstanceFleetRequest * const q)
-    : AddInstanceFleetPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
  */
 AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
     const AddInstanceFleetRequestPrivate &other, AddInstanceFleetRequest * const q)
-    : AddInstanceFleetPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

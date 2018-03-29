@@ -86,7 +86,7 @@ void UpdateHITReviewStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateHITReviewStatusResponse instance.
  */
 UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponsePrivate(
-    UpdateHITReviewStatusQueueResponse * const q) : UpdateHITReviewStatusPrivate(q)
+    UpdateHITReviewStatusResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

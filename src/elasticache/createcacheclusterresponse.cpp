@@ -86,7 +86,7 @@ void CreateCacheClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCacheClusterResponse instance.
  */
 CreateCacheClusterResponsePrivate::CreateCacheClusterResponsePrivate(
-    CreateCacheClusterQueueResponse * const q) : CreateCacheClusterPrivate(q)
+    CreateCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationInputProcessingConfiguration
  */
 DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationInputProcessingConfigurationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationInputProcessingConfigurationRequest * const q)
-    : DeleteApplicationInputProcessingConfigurationPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationIn
  */
 DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationInputProcessingConfigurationRequestPrivate(
     const DeleteApplicationInputProcessingConfigurationRequestPrivate &other, DeleteApplicationInputProcessingConfigurationRequest * const q)
-    : DeleteApplicationInputProcessingConfigurationPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

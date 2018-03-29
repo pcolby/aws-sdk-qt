@@ -86,7 +86,7 @@ void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDomainNameResponse instance.
  */
 UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
-    UpdateDomainNameQueueResponse * const q) : UpdateDomainNamePrivate(q)
+    UpdateDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

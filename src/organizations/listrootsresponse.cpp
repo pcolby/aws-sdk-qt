@@ -86,7 +86,7 @@ void ListRootsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRootsResponse instance.
  */
 ListRootsResponsePrivate::ListRootsResponsePrivate(
-    ListRootsQueueResponse * const q) : ListRootsPrivate(q)
+    ListRootsResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

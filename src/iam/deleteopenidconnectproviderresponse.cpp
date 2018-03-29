@@ -86,7 +86,7 @@ void DeleteOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteOpenIDConnectProviderResponse instance.
  */
 DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponsePrivate(
-    DeleteOpenIDConnectProviderQueueResponse * const q) : DeleteOpenIDConnectProviderPrivate(q)
+    DeleteOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetEndpointAttributesResponse instance.
  */
 SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
-    SetEndpointAttributesQueueResponse * const q) : SetEndpointAttributesPrivate(q)
+    SetEndpointAttributesResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionsRequest::response(QNetworkRe
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
     const SNSRequest::Action action, ListSubscriptionsRequest * const q)
-    : ListSubscriptionsPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
     const ListSubscriptionsRequestPrivate &other, ListSubscriptionsRequest * const q)
-    : ListSubscriptionsPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

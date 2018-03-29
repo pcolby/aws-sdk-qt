@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceNetworkAclAssociationRequest * const q)
-    : ReplaceNetworkAclAssociationPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestP
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
     const ReplaceNetworkAclAssociationRequestPrivate &other, ReplaceNetworkAclAssociationRequest * const q)
-    : ReplaceNetworkAclAssociationPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

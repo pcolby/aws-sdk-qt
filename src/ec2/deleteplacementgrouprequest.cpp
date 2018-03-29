@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetwor
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
     const EC2Request::Action action, DeletePlacementGroupRequest * const q)
-    : DeletePlacementGroupPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
     const DeletePlacementGroupRequestPrivate &other, DeletePlacementGroupRequest * const q)
-    : DeletePlacementGroupPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

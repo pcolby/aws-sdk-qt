@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetw
  */
 DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteLoggerDefinitionRequest * const q)
-    : DeleteLoggerDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
  */
 DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
     const DeleteLoggerDefinitionRequestPrivate &other, DeleteLoggerDefinitionRequest * const q)
-    : DeleteLoggerDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

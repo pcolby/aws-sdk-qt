@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingRequest::response(QNetworkReply * 
  */
 UpdateThingRequestPrivate::UpdateThingRequestPrivate(
     const IoTRequest::Action action, UpdateThingRequest * const q)
-    : UpdateThingPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateThingRequestPrivate::UpdateThingRequestPrivate(
  */
 UpdateThingRequestPrivate::UpdateThingRequestPrivate(
     const UpdateThingRequestPrivate &other, UpdateThingRequest * const q)
-    : UpdateThingPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

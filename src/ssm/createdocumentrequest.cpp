@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentRequest::response(QNetworkReply
  */
 CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
     const SSMRequest::Action action, CreateDocumentRequest * const q)
-    : CreateDocumentPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
  */
 CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
     const CreateDocumentRequestPrivate &other, CreateDocumentRequest * const q)
-    : CreateDocumentPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNe
  */
 UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateBandwidthRateLimitRequest * const q)
-    : UpdateBandwidthRateLimitPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
  */
 UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
     const UpdateBandwidthRateLimitRequestPrivate &other, UpdateBandwidthRateLimitRequest * const q)
-    : UpdateBandwidthRateLimitPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

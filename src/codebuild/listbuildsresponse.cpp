@@ -86,7 +86,7 @@ void ListBuildsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBuildsResponse instance.
  */
 ListBuildsResponsePrivate::ListBuildsResponsePrivate(
-    ListBuildsQueueResponse * const q) : ListBuildsPrivate(q)
+    ListBuildsResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

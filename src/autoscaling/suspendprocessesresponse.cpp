@@ -86,7 +86,7 @@ void SuspendProcessesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SuspendProcessesResponse instance.
  */
 SuspendProcessesResponsePrivate::SuspendProcessesResponsePrivate(
-    SuspendProcessesQueueResponse * const q) : SuspendProcessesPrivate(q)
+    SuspendProcessesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

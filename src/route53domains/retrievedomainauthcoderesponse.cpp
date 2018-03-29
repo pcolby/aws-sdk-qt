@@ -86,7 +86,7 @@ void RetrieveDomainAuthCodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RetrieveDomainAuthCodeResponse instance.
  */
 RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponsePrivate(
-    RetrieveDomainAuthCodeQueueResponse * const q) : RetrieveDomainAuthCodePrivate(q)
+    RetrieveDomainAuthCodeResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

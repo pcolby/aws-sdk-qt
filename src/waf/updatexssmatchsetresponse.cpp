@@ -86,7 +86,7 @@ void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateXssMatchSetResponse instance.
  */
 UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
-    UpdateXssMatchSetQueueResponse * const q) : UpdateXssMatchSetPrivate(q)
+    UpdateXssMatchSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

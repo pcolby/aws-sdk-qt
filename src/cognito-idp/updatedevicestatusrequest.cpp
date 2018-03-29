@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceStatusRequest::response(QNetworkR
  */
 UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateDeviceStatusRequest * const q)
-    : UpdateDeviceStatusPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
  */
 UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
     const UpdateDeviceStatusRequestPrivate &other, UpdateDeviceStatusRequest * const q)
-    : UpdateDeviceStatusPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

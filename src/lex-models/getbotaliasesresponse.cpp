@@ -86,7 +86,7 @@ void GetBotAliasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBotAliasesResponse instance.
  */
 GetBotAliasesResponsePrivate::GetBotAliasesResponsePrivate(
-    GetBotAliasesQueueResponse * const q) : GetBotAliasesPrivate(q)
+    GetBotAliasesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

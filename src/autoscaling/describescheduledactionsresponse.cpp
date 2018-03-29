@@ -86,7 +86,7 @@ void DescribeScheduledActionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeScheduledActionsResponse instance.
  */
 DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponsePrivate(
-    DescribeScheduledActionsQueueResponse * const q) : DescribeScheduledActionsPrivate(q)
+    DescribeScheduledActionsResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

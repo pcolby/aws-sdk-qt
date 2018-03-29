@@ -86,7 +86,7 @@ void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InitiateLayerUploadResponse instance.
  */
 InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
-    InitiateLayerUploadQueueResponse * const q) : InitiateLayerUploadPrivate(q)
+    InitiateLayerUploadResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

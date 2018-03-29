@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetV2LoggingOptionsRequest::response(QNetwork
  */
 SetV2LoggingOptionsRequestPrivate::SetV2LoggingOptionsRequestPrivate(
     const IoTRequest::Action action, SetV2LoggingOptionsRequest * const q)
-    : SetV2LoggingOptionsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetV2LoggingOptionsRequestPrivate::SetV2LoggingOptionsRequestPrivate(
  */
 SetV2LoggingOptionsRequestPrivate::SetV2LoggingOptionsRequestPrivate(
     const SetV2LoggingOptionsRequestPrivate &other, SetV2LoggingOptionsRequest * const q)
-    : SetV2LoggingOptionsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

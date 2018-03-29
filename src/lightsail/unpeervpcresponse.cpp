@@ -86,7 +86,7 @@ void UnpeerVpcResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnpeerVpcResponse instance.
  */
 UnpeerVpcResponsePrivate::UnpeerVpcResponsePrivate(
-    UnpeerVpcQueueResponse * const q) : UnpeerVpcPrivate(q)
+    UnpeerVpcResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

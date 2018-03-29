@@ -86,7 +86,7 @@ void CancelBundleTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelBundleTaskResponse instance.
  */
 CancelBundleTaskResponsePrivate::CancelBundleTaskResponsePrivate(
-    CancelBundleTaskQueueResponse * const q) : CancelBundleTaskPrivate(q)
+    CancelBundleTaskResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

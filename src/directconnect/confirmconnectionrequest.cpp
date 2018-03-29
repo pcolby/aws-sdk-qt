@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmConnectionRequest::response(QNetworkRe
  */
 ConfirmConnectionRequestPrivate::ConfirmConnectionRequestPrivate(
     const DirectConnectRequest::Action action, ConfirmConnectionRequest * const q)
-    : ConfirmConnectionPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ConfirmConnectionRequestPrivate::ConfirmConnectionRequestPrivate(
  */
 ConfirmConnectionRequestPrivate::ConfirmConnectionRequestPrivate(
     const ConfirmConnectionRequestPrivate &other, ConfirmConnectionRequest * const q)
-    : ConfirmConnectionPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

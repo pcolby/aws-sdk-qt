@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const S3Request::Action action, ListPartsRequest * const q)
-    : ListPartsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const ListPartsRequestPrivate &other, ListPartsRequest * const q)
-    : ListPartsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

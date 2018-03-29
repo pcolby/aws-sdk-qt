@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAttributesRequest::response(QNetworkReply
  */
 ListAttributesRequestPrivate::ListAttributesRequestPrivate(
     const ECSRequest::Action action, ListAttributesRequest * const q)
-    : ListAttributesPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAttributesRequestPrivate::ListAttributesRequestPrivate(
  */
 ListAttributesRequestPrivate::ListAttributesRequestPrivate(
     const ListAttributesRequestPrivate &other, ListAttributesRequest * const q)
-    : ListAttributesPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

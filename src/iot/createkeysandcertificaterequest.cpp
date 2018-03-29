@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNe
  */
 CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
     const IoTRequest::Action action, CreateKeysAndCertificateRequest * const q)
-    : CreateKeysAndCertificatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
  */
 CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
     const CreateKeysAndCertificateRequestPrivate &other, CreateKeysAndCertificateRequest * const q)
-    : CreateKeysAndCertificatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

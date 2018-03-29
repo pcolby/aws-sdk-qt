@@ -86,7 +86,7 @@ void ReportInstanceStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReportInstanceStatusResponse instance.
  */
 ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponsePrivate(
-    ReportInstanceStatusQueueResponse * const q) : ReportInstanceStatusPrivate(q)
+    ReportInstanceStatusResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

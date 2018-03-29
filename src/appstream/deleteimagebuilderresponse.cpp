@@ -86,7 +86,7 @@ void DeleteImageBuilderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteImageBuilderResponse instance.
  */
 DeleteImageBuilderResponsePrivate::DeleteImageBuilderResponsePrivate(
-    DeleteImageBuilderQueueResponse * const q) : DeleteImageBuilderPrivate(q)
+    DeleteImageBuilderResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

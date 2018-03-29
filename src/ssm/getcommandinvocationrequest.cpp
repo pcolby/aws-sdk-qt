@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCommandInvocationRequest::response(QNetwor
  */
 GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
     const SSMRequest::Action action, GetCommandInvocationRequest * const q)
-    : GetCommandInvocationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
  */
 GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
     const GetCommandInvocationRequestPrivate &other, GetCommandInvocationRequest * const q)
-    : GetCommandInvocationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

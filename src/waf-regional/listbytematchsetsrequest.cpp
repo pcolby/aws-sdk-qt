@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListByteMatchSetsRequest * const q)
-    : ListByteMatchSetsPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const ListByteMatchSetsRequestPrivate &other, ListByteMatchSetsRequest * const q)
-    : ListByteMatchSetsPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

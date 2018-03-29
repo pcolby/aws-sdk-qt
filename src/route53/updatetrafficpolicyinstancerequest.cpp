@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyInstanceRequest::response(
  */
 UpdateTrafficPolicyInstanceRequestPrivate::UpdateTrafficPolicyInstanceRequestPrivate(
     const Route53Request::Action action, UpdateTrafficPolicyInstanceRequest * const q)
-    : UpdateTrafficPolicyInstancePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTrafficPolicyInstanceRequestPrivate::UpdateTrafficPolicyInstanceRequestPri
  */
 UpdateTrafficPolicyInstanceRequestPrivate::UpdateTrafficPolicyInstanceRequestPrivate(
     const UpdateTrafficPolicyInstanceRequestPrivate &other, UpdateTrafficPolicyInstanceRequest * const q)
-    : UpdateTrafficPolicyInstancePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

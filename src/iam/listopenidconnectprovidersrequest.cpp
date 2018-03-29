@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOpenIDConnectProvidersRequest::response(Q
  */
 ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
     const IAMRequest::Action action, ListOpenIDConnectProvidersRequest * const q)
-    : ListOpenIDConnectProvidersPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPriva
  */
 ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
     const ListOpenIDConnectProvidersRequestPrivate &other, ListOpenIDConnectProvidersRequest * const q)
-    : ListOpenIDConnectProvidersPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

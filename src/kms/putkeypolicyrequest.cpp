@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutKeyPolicyRequest::response(QNetworkReply *
  */
 PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
     const KMSRequest::Action action, PutKeyPolicyRequest * const q)
-    : PutKeyPolicyPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
  */
 PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
     const PutKeyPolicyRequestPrivate &other, PutKeyPolicyRequest * const q)
-    : PutKeyPolicyPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

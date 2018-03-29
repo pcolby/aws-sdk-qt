@@ -86,7 +86,7 @@ void DescribeCommentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCommentsResponse instance.
  */
 DescribeCommentsResponsePrivate::DescribeCommentsResponsePrivate(
-    DescribeCommentsQueueResponse * const q) : DescribeCommentsPrivate(q)
+    DescribeCommentsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

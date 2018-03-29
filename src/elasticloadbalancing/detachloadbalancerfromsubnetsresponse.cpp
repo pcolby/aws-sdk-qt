@@ -86,7 +86,7 @@ void DetachLoadBalancerFromSubnetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachLoadBalancerFromSubnetsResponse instance.
  */
 DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnetsResponsePrivate(
-    DetachLoadBalancerFromSubnetsQueueResponse * const q) : DetachLoadBalancerFromSubnetsPrivate(q)
+    DetachLoadBalancerFromSubnetsResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

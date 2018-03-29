@@ -86,7 +86,7 @@ void EnableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableAWSServiceAccessResponse instance.
  */
 EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponsePrivate(
-    EnableAWSServiceAccessQueueResponse * const q) : EnableAWSServiceAccessPrivate(q)
+    EnableAWSServiceAccessResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

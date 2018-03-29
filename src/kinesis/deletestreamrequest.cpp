@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply *
  */
 DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
     const KinesisRequest::Action action, DeleteStreamRequest * const q)
-    : DeleteStreamPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
  */
 DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
     const DeleteStreamRequestPrivate &other, DeleteStreamRequest * const q)
-    : DeleteStreamPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

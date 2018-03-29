@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response
  */
 DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspaceDirectoriesRequest * const q)
-    : DescribeWorkspaceDirectoriesPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestP
  */
 DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
     const DescribeWorkspaceDirectoriesRequestPrivate &other, DescribeWorkspaceDirectoriesRequest * const q)
-    : DescribeWorkspaceDirectoriesPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

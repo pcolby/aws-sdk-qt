@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const Route53DomainsRequest::Action action, ListOperationsRequest * const q)
-    : ListOperationsPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const ListOperationsRequestPrivate &other, ListOperationsRequest * const q)
-    : ListOperationsPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

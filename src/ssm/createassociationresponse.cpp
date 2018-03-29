@@ -86,7 +86,7 @@ void CreateAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAssociationResponse instance.
  */
 CreateAssociationResponsePrivate::CreateAssociationResponsePrivate(
-    CreateAssociationQueueResponse * const q) : CreateAssociationPrivate(q)
+    CreateAssociationResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

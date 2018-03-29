@@ -86,7 +86,7 @@ void ListChannelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListChannelsResponse instance.
  */
 ListChannelsResponsePrivate::ListChannelsResponsePrivate(
-    ListChannelsQueueResponse * const q) : ListChannelsPrivate(q)
+    ListChannelsResponse * const q) : MediaPackageResponsePrivate(q)
 {
 
 }

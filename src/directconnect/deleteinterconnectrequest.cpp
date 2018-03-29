@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInterconnectRequest::response(QNetworkR
  */
 DeleteInterconnectRequestPrivate::DeleteInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, DeleteInterconnectRequest * const q)
-    : DeleteInterconnectPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInterconnectRequestPrivate::DeleteInterconnectRequestPrivate(
  */
 DeleteInterconnectRequestPrivate::DeleteInterconnectRequestPrivate(
     const DeleteInterconnectRequestPrivate &other, DeleteInterconnectRequest * const q)
-    : DeleteInterconnectPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

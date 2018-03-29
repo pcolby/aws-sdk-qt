@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutFileRequest::response(QNetworkReply * cons
  */
 PutFileRequestPrivate::PutFileRequestPrivate(
     const CodeCommitRequest::Action action, PutFileRequest * const q)
-    : PutFilePrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutFileRequestPrivate::PutFileRequestPrivate(
  */
 PutFileRequestPrivate::PutFileRequestPrivate(
     const PutFileRequestPrivate &other, PutFileRequest * const q)
-    : PutFilePrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

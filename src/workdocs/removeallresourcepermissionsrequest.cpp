@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response
  */
 RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, RemoveAllResourcePermissionsRequest * const q)
-    : RemoveAllResourcePermissionsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestP
  */
 RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
     const RemoveAllResourcePermissionsRequestPrivate &other, RemoveAllResourcePermissionsRequest * const q)
-    : RemoveAllResourcePermissionsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

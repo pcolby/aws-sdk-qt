@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinIntentsRequest::response(QNetworkRe
  */
 GetBuiltinIntentsRequestPrivate::GetBuiltinIntentsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBuiltinIntentsRequest * const q)
-    : GetBuiltinIntentsPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBuiltinIntentsRequestPrivate::GetBuiltinIntentsRequestPrivate(
  */
 GetBuiltinIntentsRequestPrivate::GetBuiltinIntentsRequestPrivate(
     const GetBuiltinIntentsRequestPrivate &other, GetBuiltinIntentsRequest * const q)
-    : GetBuiltinIntentsPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

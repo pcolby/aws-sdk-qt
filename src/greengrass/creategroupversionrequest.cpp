@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkR
  */
 CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateGroupVersionRequest * const q)
-    : CreateGroupVersionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
  */
 CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
     const CreateGroupVersionRequestPrivate &other, CreateGroupVersionRequest * const q)
-    : CreateGroupVersionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

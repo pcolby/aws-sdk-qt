@@ -86,7 +86,7 @@ void ListGitHubAccountTokenNamesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGitHubAccountTokenNamesResponse instance.
  */
 ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponsePrivate(
-    ListGitHubAccountTokenNamesQueueResponse * const q) : ListGitHubAccountTokenNamesPrivate(q)
+    ListGitHubAccountTokenNamesResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

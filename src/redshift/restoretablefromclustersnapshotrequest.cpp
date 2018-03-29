@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreTableFromClusterSnapshotRequest::respo
  */
 RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, RestoreTableFromClusterSnapshotRequest * const q)
-    : RestoreTableFromClusterSnapshotPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRe
  */
 RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRequestPrivate(
     const RestoreTableFromClusterSnapshotRequestPrivate &other, RestoreTableFromClusterSnapshotRequest * const q)
-    : RestoreTableFromClusterSnapshotPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

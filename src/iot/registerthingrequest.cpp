@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterThingRequest::response(QNetworkReply 
  */
 RegisterThingRequestPrivate::RegisterThingRequestPrivate(
     const IoTRequest::Action action, RegisterThingRequest * const q)
-    : RegisterThingPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterThingRequestPrivate::RegisterThingRequestPrivate(
  */
 RegisterThingRequestPrivate::RegisterThingRequestPrivate(
     const RegisterThingRequestPrivate &other, RegisterThingRequest * const q)
-    : RegisterThingPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

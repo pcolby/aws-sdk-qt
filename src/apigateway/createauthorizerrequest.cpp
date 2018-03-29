@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
  */
 CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
     const APIGatewayRequest::Action action, CreateAuthorizerRequest * const q)
-    : CreateAuthorizerPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
  */
 CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
     const CreateAuthorizerRequestPrivate &other, CreateAuthorizerRequest * const q)
-    : CreateAuthorizerPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

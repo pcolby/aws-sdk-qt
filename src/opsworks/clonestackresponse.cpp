@@ -86,7 +86,7 @@ void CloneStackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CloneStackResponse instance.
  */
 CloneStackResponsePrivate::CloneStackResponsePrivate(
-    CloneStackQueueResponse * const q) : CloneStackPrivate(q)
+    CloneStackResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

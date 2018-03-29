@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetwork
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBuiltinSlotTypesRequest * const q)
-    : GetBuiltinSlotTypesPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
     const GetBuiltinSlotTypesRequestPrivate &other, GetBuiltinSlotTypesRequest * const q)
-    : GetBuiltinSlotTypesPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

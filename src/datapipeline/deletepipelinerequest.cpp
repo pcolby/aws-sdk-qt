@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const DataPipelineRequest::Action action, DeletePipelineRequest * const q)
-    : DeletePipelinePrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const DeletePipelineRequestPrivate &other, DeletePipelineRequest * const q)
-    : DeletePipelinePrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSAMLProvidersRequest::response(QNetworkRe
  */
 ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
     const IAMRequest::Action action, ListSAMLProvidersRequest * const q)
-    : ListSAMLProvidersPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
  */
 ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
     const ListSAMLProvidersRequestPrivate &other, ListSAMLProvidersRequest * const q)
-    : ListSAMLProvidersPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

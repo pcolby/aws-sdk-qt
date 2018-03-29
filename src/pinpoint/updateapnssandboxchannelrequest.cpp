@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsSandboxChannelRequest::response(QNe
  */
 UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsSandboxChannelRequest * const q)
-    : UpdateApnsSandboxChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
  */
 UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
     const UpdateApnsSandboxChannelRequestPrivate &other, UpdateApnsSandboxChannelRequest * const q)
-    : UpdateApnsSandboxChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply 
  */
 SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
     const CloudWatchRequest::Action action, SetAlarmStateRequest * const q)
-    : SetAlarmStatePrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
  */
 SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
     const SetAlarmStateRequestPrivate &other, SetAlarmStateRequest * const q)
-    : SetAlarmStatePrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

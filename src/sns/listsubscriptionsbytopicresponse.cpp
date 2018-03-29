@@ -86,7 +86,7 @@ void ListSubscriptionsByTopicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSubscriptionsByTopicResponse instance.
  */
 ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponsePrivate(
-    ListSubscriptionsByTopicQueueResponse * const q) : ListSubscriptionsByTopicPrivate(q)
+    ListSubscriptionsByTopicResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

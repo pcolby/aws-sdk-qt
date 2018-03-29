@@ -86,7 +86,7 @@ void TerminateInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TerminateInstancesResponse instance.
  */
 TerminateInstancesResponsePrivate::TerminateInstancesResponsePrivate(
-    TerminateInstancesQueueResponse * const q) : TerminateInstancesPrivate(q)
+    TerminateInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

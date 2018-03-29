@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceDataSyncRequest::response(QNetwor
  */
 ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, ListResourceDataSyncRequest * const q)
-    : ListResourceDataSyncPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
  */
 ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
     const ListResourceDataSyncRequestPrivate &other, ListResourceDataSyncRequest * const q)
-    : ListResourceDataSyncPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

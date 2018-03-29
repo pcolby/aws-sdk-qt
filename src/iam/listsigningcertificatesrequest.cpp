@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSigningCertificatesRequest::response(QNet
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
     const IAMRequest::Action action, ListSigningCertificatesRequest * const q)
-    : ListSigningCertificatesPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
     const ListSigningCertificatesRequestPrivate &other, ListSigningCertificatesRequest * const q)
-    : ListSigningCertificatesPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

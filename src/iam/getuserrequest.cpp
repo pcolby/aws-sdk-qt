@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const IAMRequest::Action action, GetUserRequest * const q)
-    : GetUserPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUserRequestPrivate::GetUserRequestPrivate(
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const GetUserRequestPrivate &other, GetUserRequest * const q)
-    : GetUserPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

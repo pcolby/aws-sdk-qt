@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetwork
  */
 GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
     const GreengrassRequest::Action action, GetDeploymentStatusRequest * const q)
-    : GetDeploymentStatusPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
  */
 GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
     const GetDeploymentStatusRequestPrivate &other, GetDeploymentStatusRequest * const q)
-    : GetDeploymentStatusPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

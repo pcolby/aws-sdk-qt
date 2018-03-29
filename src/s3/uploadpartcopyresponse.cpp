@@ -86,7 +86,7 @@ void UploadPartCopyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadPartCopyResponse instance.
  */
 UploadPartCopyResponsePrivate::UploadPartCopyResponsePrivate(
-    UploadPartCopyQueueResponse * const q) : UploadPartCopyPrivate(q)
+    UploadPartCopyResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

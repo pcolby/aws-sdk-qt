@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const GreengrassRequest::Action action, ListGroupsRequest * const q)
-    : ListGroupsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGroupsRequestPrivate::ListGroupsRequestPrivate(
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const ListGroupsRequestPrivate &other, ListGroupsRequest * const q)
-    : ListGroupsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

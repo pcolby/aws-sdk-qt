@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::respons
  */
 AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountRequestPrivate(
     const GreengrassRequest::Action action, AssociateServiceRoleToAccountRequest * const q)
-    : AssociateServiceRoleToAccountPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountReques
  */
 AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountRequestPrivate(
     const AssociateServiceRoleToAccountRequestPrivate &other, AssociateServiceRoleToAccountRequest * const q)
-    : AssociateServiceRoleToAccountPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

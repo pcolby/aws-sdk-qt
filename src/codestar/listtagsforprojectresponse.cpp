@@ -86,7 +86,7 @@ void ListTagsForProjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsForProjectResponse instance.
  */
 ListTagsForProjectResponsePrivate::ListTagsForProjectResponsePrivate(
-    ListTagsForProjectQueueResponse * const q) : ListTagsForProjectPrivate(q)
+    ListTagsForProjectResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

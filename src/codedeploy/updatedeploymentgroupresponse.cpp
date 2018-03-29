@@ -86,7 +86,7 @@ void UpdateDeploymentGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDeploymentGroupResponse instance.
  */
 UpdateDeploymentGroupResponsePrivate::UpdateDeploymentGroupResponsePrivate(
-    UpdateDeploymentGroupQueueResponse * const q) : UpdateDeploymentGroupPrivate(q)
+    UpdateDeploymentGroupResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

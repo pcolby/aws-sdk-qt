@@ -86,7 +86,7 @@ void CreateImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateImageResponse instance.
  */
 CreateImageResponsePrivate::CreateImageResponsePrivate(
-    CreateImageQueueResponse * const q) : CreateImagePrivate(q)
+    CreateImageResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

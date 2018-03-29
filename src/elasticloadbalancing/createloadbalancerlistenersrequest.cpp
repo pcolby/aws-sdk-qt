@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoadBalancerListenersRequest::response(
  */
 CreateLoadBalancerListenersRequestPrivate::CreateLoadBalancerListenersRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLoadBalancerListenersRequest * const q)
-    : CreateLoadBalancerListenersPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLoadBalancerListenersRequestPrivate::CreateLoadBalancerListenersRequestPri
  */
 CreateLoadBalancerListenersRequestPrivate::CreateLoadBalancerListenersRequestPrivate(
     const CreateLoadBalancerListenersRequestPrivate &other, CreateLoadBalancerListenersRequest * const q)
-    : CreateLoadBalancerListenersPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

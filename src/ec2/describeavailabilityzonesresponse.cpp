@@ -86,7 +86,7 @@ void DescribeAvailabilityZonesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAvailabilityZonesResponse instance.
  */
 DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePrivate(
-    DescribeAvailabilityZonesQueueResponse * const q) : DescribeAvailabilityZonesPrivate(q)
+    DescribeAvailabilityZonesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

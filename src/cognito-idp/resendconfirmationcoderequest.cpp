@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResendConfirmationCodeRequest::response(QNetw
  */
 ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ResendConfirmationCodeRequest * const q)
-    : ResendConfirmationCodePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
  */
 ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
     const ResendConfirmationCodeRequestPrivate &other, ResendConfirmationCodeRequest * const q)
-    : ResendConfirmationCodePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

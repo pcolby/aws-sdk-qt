@@ -86,7 +86,7 @@ void DeleteChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteChannelResponse instance.
  */
 DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
-    DeleteChannelQueueResponse * const q) : DeleteChannelPrivate(q)
+    DeleteChannelResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

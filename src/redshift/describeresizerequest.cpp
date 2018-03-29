@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply
  */
 DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
     const RedshiftRequest::Action action, DescribeResizeRequest * const q)
-    : DescribeResizePrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
  */
 DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
     const DescribeResizeRequestPrivate &other, DescribeResizeRequest * const q)
-    : DescribeResizePrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

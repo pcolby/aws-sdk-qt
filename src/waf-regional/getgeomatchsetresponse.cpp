@@ -86,7 +86,7 @@ void GetGeoMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGeoMatchSetResponse instance.
  */
 GetGeoMatchSetResponsePrivate::GetGeoMatchSetResponsePrivate(
-    GetGeoMatchSetQueueResponse * const q) : GetGeoMatchSetPrivate(q)
+    GetGeoMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkR
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
     const DynamoDBRequest::Action action, DescribeTimeToLiveRequest * const q)
-    : DescribeTimeToLivePrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
     const DescribeTimeToLiveRequestPrivate &other, DescribeTimeToLiveRequest * const q)
-    : DescribeTimeToLivePrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

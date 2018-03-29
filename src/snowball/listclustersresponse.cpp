@@ -86,7 +86,7 @@ void ListClustersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListClustersResponse instance.
  */
 ListClustersResponsePrivate::ListClustersResponsePrivate(
-    ListClustersQueueResponse * const q) : ListClustersPrivate(q)
+    ListClustersResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

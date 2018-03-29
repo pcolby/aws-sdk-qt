@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateMatchmakingRuleSetRequest::response(QNe
  */
 CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
     const GameLiftRequest::Action action, CreateMatchmakingRuleSetRequest * const q)
-    : CreateMatchmakingRuleSetPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
  */
 CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
     const CreateMatchmakingRuleSetRequestPrivate &other, CreateMatchmakingRuleSetRequest * const q)
-    : CreateMatchmakingRuleSetPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

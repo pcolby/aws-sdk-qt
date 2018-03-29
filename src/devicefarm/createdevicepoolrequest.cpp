@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDevicePoolRequest::response(QNetworkRep
  */
 CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, CreateDevicePoolRequest * const q)
-    : CreateDevicePoolPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
  */
 CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
     const CreateDevicePoolRequestPrivate &other, CreateDevicePoolRequest * const q)
-    : CreateDevicePoolPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

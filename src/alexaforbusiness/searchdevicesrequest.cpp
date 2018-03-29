@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply 
  */
 SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchDevicesRequest * const q)
-    : SearchDevicesPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
  */
 SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
     const SearchDevicesRequestPrivate &other, SearchDevicesRequest * const q)
-    : SearchDevicesPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAssociationResponse instance.
  */
 UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
-    UpdateAssociationQueueResponse * const q) : UpdateAssociationPrivate(q)
+    UpdateAssociationResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

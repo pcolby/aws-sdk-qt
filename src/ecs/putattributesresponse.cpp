@@ -86,7 +86,7 @@ void PutAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutAttributesResponse instance.
  */
 PutAttributesResponsePrivate::PutAttributesResponsePrivate(
-    PutAttributesQueueResponse * const q) : PutAttributesPrivate(q)
+    PutAttributesResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

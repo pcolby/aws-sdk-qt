@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentPermissionRequest::response(Q
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
     const SSMRequest::Action action, DescribeDocumentPermissionRequest * const q)
-    : DescribeDocumentPermissionPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPriva
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
     const DescribeDocumentPermissionRequestPrivate &other, DescribeDocumentPermissionRequest * const q)
-    : DescribeDocumentPermissionPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

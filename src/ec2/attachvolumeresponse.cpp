@@ -86,7 +86,7 @@ void AttachVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachVolumeResponse instance.
  */
 AttachVolumeResponsePrivate::AttachVolumeResponsePrivate(
-    AttachVolumeQueueResponse * const q) : AttachVolumePrivate(q)
+    AttachVolumeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

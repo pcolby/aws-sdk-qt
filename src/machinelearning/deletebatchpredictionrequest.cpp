@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetwo
  */
 DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, DeleteBatchPredictionRequest * const q)
-    : DeleteBatchPredictionPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
  */
 DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
     const DeleteBatchPredictionRequestPrivate &other, DeleteBatchPredictionRequest * const q)
-    : DeleteBatchPredictionPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

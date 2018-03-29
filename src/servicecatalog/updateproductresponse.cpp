@@ -86,7 +86,7 @@ void UpdateProductResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateProductResponse instance.
  */
 UpdateProductResponsePrivate::UpdateProductResponsePrivate(
-    UpdateProductQueueResponse * const q) : UpdateProductPrivate(q)
+    UpdateProductResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

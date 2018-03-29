@@ -86,7 +86,7 @@ void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSecurityConfigurationResponse instance.
  */
 DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResponsePrivate(
-    DeleteSecurityConfigurationQueueResponse * const q) : DeleteSecurityConfigurationPrivate(q)
+    DeleteSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

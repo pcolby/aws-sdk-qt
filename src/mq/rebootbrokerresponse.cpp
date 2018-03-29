@@ -86,7 +86,7 @@ void RebootBrokerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootBrokerResponse instance.
  */
 RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
-    RebootBrokerQueueResponse * const q) : RebootBrokerPrivate(q)
+    RebootBrokerResponse * const q) : MQResponsePrivate(q)
 {
 
 }

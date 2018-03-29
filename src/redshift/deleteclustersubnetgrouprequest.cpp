@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSubnetGroupRequest::response(QNe
  */
 DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSubnetGroupRequest * const q)
-    : DeleteClusterSubnetGroupPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
  */
 DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
     const DeleteClusterSubnetGroupRequestPrivate &other, DeleteClusterSubnetGroupRequest * const q)
-    : DeleteClusterSubnetGroupPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTemplateRequest::response(QNetworkReply
  */
 CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
     const SESRequest::Action action, CreateTemplateRequest * const q)
-    : CreateTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
  */
 CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
     const CreateTemplateRequestPrivate &other, CreateTemplateRequest * const q)
-    : CreateTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

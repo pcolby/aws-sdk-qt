@@ -86,7 +86,7 @@ void GetIdentityPoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIdentityPoliciesResponse instance.
  */
 GetIdentityPoliciesResponsePrivate::GetIdentityPoliciesResponsePrivate(
-    GetIdentityPoliciesQueueResponse * const q) : GetIdentityPoliciesPrivate(q)
+    GetIdentityPoliciesResponse * const q) : SESResponsePrivate(q)
 {
 
 }

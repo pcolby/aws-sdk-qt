@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProtectionRequest::response(QNetworkRep
  */
 DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
     const ShieldRequest::Action action, DeleteProtectionRequest * const q)
-    : DeleteProtectionPrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
  */
 DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
     const DeleteProtectionRequestPrivate &other, DeleteProtectionRequest * const q)
-    : DeleteProtectionPrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

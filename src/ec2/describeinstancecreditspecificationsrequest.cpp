@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceCreditSpecificationsRequest::
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
     const EC2Request::Action action, DescribeInstanceCreditSpecificationsRequest * const q)
-    : DescribeInstanceCreditSpecificationsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecif
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
     const DescribeInstanceCreditSpecificationsRequestPrivate &other, DescribeInstanceCreditSpecificationsRequest * const q)
-    : DescribeInstanceCreditSpecificationsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

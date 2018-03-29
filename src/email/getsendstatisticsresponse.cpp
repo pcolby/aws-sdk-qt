@@ -86,7 +86,7 @@ void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSendStatisticsResponse instance.
  */
 GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
-    GetSendStatisticsQueueResponse * const q) : GetSendStatisticsPrivate(q)
+    GetSendStatisticsResponse * const q) : SESResponsePrivate(q)
 {
 
 }

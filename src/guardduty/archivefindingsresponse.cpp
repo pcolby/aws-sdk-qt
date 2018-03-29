@@ -86,7 +86,7 @@ void ArchiveFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ArchiveFindingsResponse instance.
  */
 ArchiveFindingsResponsePrivate::ArchiveFindingsResponsePrivate(
-    ArchiveFindingsQueueResponse * const q) : ArchiveFindingsPrivate(q)
+    ArchiveFindingsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

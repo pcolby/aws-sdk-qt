@@ -86,7 +86,7 @@ void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &res
  * @param  q  Pointer to this object's public RemoveSourceIdentifierFromSubscriptionResponse instance.
  */
 RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponsePrivate(
-    RemoveSourceIdentifierFromSubscriptionQueueResponse * const q) : RemoveSourceIdentifierFromSubscriptionPrivate(q)
+    RemoveSourceIdentifierFromSubscriptionResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

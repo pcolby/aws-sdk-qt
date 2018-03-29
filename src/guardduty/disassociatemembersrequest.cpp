@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateMembersRequest::response(QNetwork
  */
 DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
     const GuardDutyRequest::Action action, DisassociateMembersRequest * const q)
-    : DisassociateMembersPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
  */
 DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
     const DisassociateMembersRequestPrivate &other, DisassociateMembersRequest * const q)
-    : DisassociateMembersPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifySnapshotAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifySnapshotAttributeResponse instance.
  */
 ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponsePrivate(
-    ModifySnapshotAttributeQueueResponse * const q) : ModifySnapshotAttributePrivate(q)
+    ModifySnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSqlInjectionMatchSetResponse instance.
  */
 UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePrivate(
-    UpdateSqlInjectionMatchSetQueueResponse * const q) : UpdateSqlInjectionMatchSetPrivate(q)
+    UpdateSqlInjectionMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

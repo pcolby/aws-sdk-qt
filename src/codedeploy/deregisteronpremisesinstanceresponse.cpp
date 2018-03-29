@@ -86,7 +86,7 @@ void DeregisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterOnPremisesInstanceResponse instance.
  */
 DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceResponsePrivate(
-    DeregisterOnPremisesInstanceQueueResponse * const q) : DeregisterOnPremisesInstancePrivate(q)
+    DeregisterOnPremisesInstanceResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

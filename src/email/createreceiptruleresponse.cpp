@@ -86,7 +86,7 @@ void CreateReceiptRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReceiptRuleResponse instance.
  */
 CreateReceiptRuleResponsePrivate::CreateReceiptRuleResponsePrivate(
-    CreateReceiptRuleQueueResponse * const q) : CreateReceiptRulePrivate(q)
+    CreateReceiptRuleResponse * const q) : SESResponsePrivate(q)
 {
 
 }

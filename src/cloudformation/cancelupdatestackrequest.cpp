@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelUpdateStackRequest::response(QNetworkRe
  */
 CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
     const CloudFormationRequest::Action action, CancelUpdateStackRequest * const q)
-    : CancelUpdateStackPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
  */
 CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
     const CancelUpdateStackRequestPrivate &other, CancelUpdateStackRequest * const q)
-    : CancelUpdateStackPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

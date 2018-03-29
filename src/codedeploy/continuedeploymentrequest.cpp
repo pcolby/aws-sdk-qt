@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ContinueDeploymentRequest::response(QNetworkR
  */
 ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, ContinueDeploymentRequest * const q)
-    : ContinueDeploymentPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
  */
 ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
     const ContinueDeploymentRequestPrivate &other, ContinueDeploymentRequest * const q)
-    : ContinueDeploymentPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

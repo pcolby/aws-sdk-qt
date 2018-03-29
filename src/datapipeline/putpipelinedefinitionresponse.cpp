@@ -86,7 +86,7 @@ void PutPipelineDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutPipelineDefinitionResponse instance.
  */
 PutPipelineDefinitionResponsePrivate::PutPipelineDefinitionResponsePrivate(
-    PutPipelineDefinitionQueueResponse * const q) : PutPipelineDefinitionPrivate(q)
+    PutPipelineDefinitionResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

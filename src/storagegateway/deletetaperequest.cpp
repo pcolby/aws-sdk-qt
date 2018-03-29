@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTapeRequest::response(QNetworkReply * c
  */
 DeleteTapeRequestPrivate::DeleteTapeRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteTapeRequest * const q)
-    : DeleteTapePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTapeRequestPrivate::DeleteTapeRequestPrivate(
  */
 DeleteTapeRequestPrivate::DeleteTapeRequestPrivate(
     const DeleteTapeRequestPrivate &other, DeleteTapeRequest * const q)
-    : DeleteTapePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

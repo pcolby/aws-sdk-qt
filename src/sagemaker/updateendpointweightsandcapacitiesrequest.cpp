@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::re
  */
 UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
     const SageMakerRequest::Action action, UpdateEndpointWeightsAndCapacitiesRequest * const q)
-    : UpdateEndpointWeightsAndCapacitiesPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapaci
  */
 UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
     const UpdateEndpointWeightsAndCapacitiesRequestPrivate &other, UpdateEndpointWeightsAndCapacitiesRequest * const q)
-    : UpdateEndpointWeightsAndCapacitiesPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

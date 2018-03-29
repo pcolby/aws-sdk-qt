@@ -86,7 +86,7 @@ void CreateQueueResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateQueueResponse instance.
  */
 CreateQueueResponsePrivate::CreateQueueResponsePrivate(
-    CreateQueueQueueResponse * const q) : CreateQueuePrivate(q)
+    CreateQueueResponse * const q) : MediaConvertResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateBasePathMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateBasePathMappingResponse instance.
  */
 CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponsePrivate(
-    CreateBasePathMappingQueueResponse * const q) : CreateBasePathMappingPrivate(q)
+    CreateBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

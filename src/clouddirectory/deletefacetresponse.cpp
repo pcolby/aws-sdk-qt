@@ -86,7 +86,7 @@ void DeleteFacetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFacetResponse instance.
  */
 DeleteFacetResponsePrivate::DeleteFacetResponsePrivate(
-    DeleteFacetQueueResponse * const q) : DeleteFacetPrivate(q)
+    DeleteFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

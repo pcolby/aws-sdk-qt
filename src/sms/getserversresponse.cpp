@@ -86,7 +86,7 @@ void GetServersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetServersResponse instance.
  */
 GetServersResponsePrivate::GetServersResponsePrivate(
-    GetServersQueueResponse * const q) : GetServersPrivate(q)
+    GetServersResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SetUserSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetUserSettingsResponse instance.
  */
 SetUserSettingsResponsePrivate::SetUserSettingsResponsePrivate(
-    SetUserSettingsQueueResponse * const q) : SetUserSettingsPrivate(q)
+    SetUserSettingsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

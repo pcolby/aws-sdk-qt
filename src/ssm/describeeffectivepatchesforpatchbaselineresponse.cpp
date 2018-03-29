@@ -86,7 +86,7 @@ void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &r
  * @param  q  Pointer to this object's public DescribeEffectivePatchesForPatchBaselineResponse instance.
  */
 DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatchesForPatchBaselineResponsePrivate(
-    DescribeEffectivePatchesForPatchBaselineQueueResponse * const q) : DescribeEffectivePatchesForPatchBaselinePrivate(q)
+    DescribeEffectivePatchesForPatchBaselineResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

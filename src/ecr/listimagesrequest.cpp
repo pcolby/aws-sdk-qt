@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ECRRequest::Action action, ListImagesRequest * const q)
-    : ListImagesPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ListImagesRequestPrivate &other, ListImagesRequest * const q)
-    : ListImagesPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

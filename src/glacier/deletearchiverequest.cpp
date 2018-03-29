@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteArchiveRequest::response(QNetworkReply 
  */
 DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
     const GlacierRequest::Action action, DeleteArchiveRequest * const q)
-    : DeleteArchivePrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
  */
 DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
     const DeleteArchiveRequestPrivate &other, DeleteArchiveRequest * const q)
-    : DeleteArchivePrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateApplicationVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateApplicationVersionResponse instance.
  */
 UpdateApplicationVersionResponsePrivate::UpdateApplicationVersionResponsePrivate(
-    UpdateApplicationVersionQueueResponse * const q) : UpdateApplicationVersionPrivate(q)
+    UpdateApplicationVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

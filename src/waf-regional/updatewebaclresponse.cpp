@@ -86,7 +86,7 @@ void UpdateWebACLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateWebACLResponse instance.
  */
 UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
-    UpdateWebACLQueueResponse * const q) : UpdateWebACLPrivate(q)
+    UpdateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

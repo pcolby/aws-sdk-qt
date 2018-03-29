@@ -86,7 +86,7 @@ void SimulatePrincipalPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SimulatePrincipalPolicyResponse instance.
  */
 SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponsePrivate(
-    SimulatePrincipalPolicyQueueResponse * const q) : SimulatePrincipalPolicyPrivate(q)
+    SimulatePrincipalPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::respons
  */
 GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
     const Route53Request::Action action, GetTrafficPolicyInstanceCountRequest * const q)
-    : GetTrafficPolicyInstanceCountPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountReques
  */
 GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
     const GetTrafficPolicyInstanceCountRequestPrivate &other, GetTrafficPolicyInstanceCountRequest * const q)
-    : GetTrafficPolicyInstanceCountPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

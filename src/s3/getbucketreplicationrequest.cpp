@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketReplicationRequest::response(QNetwor
  */
 GetBucketReplicationRequestPrivate::GetBucketReplicationRequestPrivate(
     const S3Request::Action action, GetBucketReplicationRequest * const q)
-    : GetBucketReplicationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketReplicationRequestPrivate::GetBucketReplicationRequestPrivate(
  */
 GetBucketReplicationRequestPrivate::GetBucketReplicationRequestPrivate(
     const GetBucketReplicationRequestPrivate &other, GetBucketReplicationRequest * const q)
-    : GetBucketReplicationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

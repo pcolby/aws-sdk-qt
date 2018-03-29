@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkRe
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
     const RDSRequest::Action action, DeleteOptionGroupRequest * const q)
-    : DeleteOptionGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
     const DeleteOptionGroupRequestPrivate &other, DeleteOptionGroupRequest * const q)
-    : DeleteOptionGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

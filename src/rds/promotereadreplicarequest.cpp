@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkR
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
     const RDSRequest::Action action, PromoteReadReplicaRequest * const q)
-    : PromoteReadReplicaPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
     const PromoteReadReplicaRequestPrivate &other, PromoteReadReplicaRequest * const q)
-    : PromoteReadReplicaPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

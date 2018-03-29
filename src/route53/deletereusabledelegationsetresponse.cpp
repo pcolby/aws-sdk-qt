@@ -86,7 +86,7 @@ void DeleteReusableDelegationSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteReusableDelegationSetResponse instance.
  */
 DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponsePrivate(
-    DeleteReusableDelegationSetQueueResponse * const q) : DeleteReusableDelegationSetPrivate(q)
+    DeleteReusableDelegationSetResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

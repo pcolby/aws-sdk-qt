@@ -86,7 +86,7 @@ void CreateAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAddressResponse instance.
  */
 CreateAddressResponsePrivate::CreateAddressResponsePrivate(
-    CreateAddressQueueResponse * const q) : CreateAddressPrivate(q)
+    CreateAddressResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

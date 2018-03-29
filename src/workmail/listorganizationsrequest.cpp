@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOrganizationsRequest::response(QNetworkRe
  */
 ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
     const WorkMailRequest::Action action, ListOrganizationsRequest * const q)
-    : ListOrganizationsPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
  */
 ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
     const ListOrganizationsRequestPrivate &other, ListOrganizationsRequest * const q)
-    : ListOrganizationsPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

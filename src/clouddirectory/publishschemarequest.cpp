@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply 
  */
 PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, PublishSchemaRequest * const q)
-    : PublishSchemaPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
  */
 PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
     const PublishSchemaRequestPrivate &other, PublishSchemaRequest * const q)
-    : PublishSchemaPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

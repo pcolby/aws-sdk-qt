@@ -86,7 +86,7 @@ void GetSendQuotaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSendQuotaResponse instance.
  */
 GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
-    GetSendQuotaQueueResponse * const q) : GetSendQuotaPrivate(q)
+    GetSendQuotaResponse * const q) : SESResponsePrivate(q)
 {
 
 }

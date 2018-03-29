@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::re
  */
 DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurationsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeNotificationConfigurationsRequest * const q)
-    : DescribeNotificationConfigurationsPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurat
  */
 DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurationsRequestPrivate(
     const DescribeNotificationConfigurationsRequestPrivate &other, DescribeNotificationConfigurationsRequest * const q)
-    : DescribeNotificationConfigurationsPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

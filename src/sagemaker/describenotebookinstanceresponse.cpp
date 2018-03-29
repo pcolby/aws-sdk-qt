@@ -86,7 +86,7 @@ void DescribeNotebookInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeNotebookInstanceResponse instance.
  */
 DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponsePrivate(
-    DescribeNotebookInstanceQueueResponse * const q) : DescribeNotebookInstancePrivate(q)
+    DescribeNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

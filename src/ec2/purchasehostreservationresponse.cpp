@@ -86,7 +86,7 @@ void PurchaseHostReservationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PurchaseHostReservationResponse instance.
  */
 PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponsePrivate(
-    PurchaseHostReservationQueueResponse * const q) : PurchaseHostReservationPrivate(q)
+    PurchaseHostReservationResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

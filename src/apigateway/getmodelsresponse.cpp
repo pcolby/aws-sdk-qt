@@ -86,7 +86,7 @@ void GetModelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetModelsResponse instance.
  */
 GetModelsResponsePrivate::GetModelsResponsePrivate(
-    GetModelsQueueResponse * const q) : GetModelsPrivate(q)
+    GetModelsResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

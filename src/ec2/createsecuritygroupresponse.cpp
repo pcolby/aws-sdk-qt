@@ -86,7 +86,7 @@ void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSecurityGroupResponse instance.
  */
 CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
-    CreateSecurityGroupQueueResponse * const q) : CreateSecurityGroupPrivate(q)
+    CreateSecurityGroupResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

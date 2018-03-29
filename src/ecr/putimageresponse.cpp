@@ -86,7 +86,7 @@ void PutImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutImageResponse instance.
  */
 PutImageResponsePrivate::PutImageResponsePrivate(
-    PutImageQueueResponse * const q) : PutImagePrivate(q)
+    PutImageResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

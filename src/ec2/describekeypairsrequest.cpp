@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkRep
  */
 DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
     const EC2Request::Action action, DescribeKeyPairsRequest * const q)
-    : DescribeKeyPairsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
  */
 DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
     const DescribeKeyPairsRequestPrivate &other, DescribeKeyPairsRequest * const q)
-    : DescribeKeyPairsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

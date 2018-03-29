@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * 
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
     const GlueRequest::Action action, StartJobRunRequest * const q)
-    : StartJobRunPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartJobRunRequestPrivate::StartJobRunRequestPrivate(
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
     const StartJobRunRequestPrivate &other, StartJobRunRequest * const q)
-    : StartJobRunPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

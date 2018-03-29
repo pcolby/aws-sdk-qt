@@ -86,7 +86,7 @@ void ListProgressUpdateStreamsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListProgressUpdateStreamsResponse instance.
  */
 ListProgressUpdateStreamsResponsePrivate::ListProgressUpdateStreamsResponsePrivate(
-    ListProgressUpdateStreamsQueueResponse * const q) : ListProgressUpdateStreamsPrivate(q)
+    ListProgressUpdateStreamsResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

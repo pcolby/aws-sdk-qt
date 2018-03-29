@@ -86,7 +86,7 @@ void DeleteConditionalForwarderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteConditionalForwarderResponse instance.
  */
 DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderResponsePrivate(
-    DeleteConditionalForwarderQueueResponse * const q) : DeleteConditionalForwarderPrivate(q)
+    DeleteConditionalForwarderResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

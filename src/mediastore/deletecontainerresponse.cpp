@@ -86,7 +86,7 @@ void DeleteContainerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteContainerResponse instance.
  */
 DeleteContainerResponsePrivate::DeleteContainerResponsePrivate(
-    DeleteContainerQueueResponse * const q) : DeleteContainerPrivate(q)
+    DeleteContainerResponse * const q) : MediaStoreResponsePrivate(q)
 {
 
 }

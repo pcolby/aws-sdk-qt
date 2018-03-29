@@ -86,7 +86,7 @@ void DeleteGraphqlApiResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteGraphqlApiResponse instance.
  */
 DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponsePrivate(
-    DeleteGraphqlApiQueueResponse * const q) : DeleteGraphqlApiPrivate(q)
+    DeleteGraphqlApiResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

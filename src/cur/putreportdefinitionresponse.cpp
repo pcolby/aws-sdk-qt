@@ -86,7 +86,7 @@ void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutReportDefinitionResponse instance.
  */
 PutReportDefinitionResponsePrivate::PutReportDefinitionResponsePrivate(
-    PutReportDefinitionQueueResponse * const q) : PutReportDefinitionPrivate(q)
+    PutReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
 {
 
 }

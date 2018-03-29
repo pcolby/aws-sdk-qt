@@ -86,7 +86,7 @@ void DescribeNetworkInterfacePermissionsResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public DescribeNetworkInterfacePermissionsResponse instance.
  */
 DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePermissionsResponsePrivate(
-    DescribeNetworkInterfacePermissionsQueueResponse * const q) : DescribeNetworkInterfacePermissionsPrivate(q)
+    DescribeNetworkInterfacePermissionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

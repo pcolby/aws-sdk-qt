@@ -86,7 +86,7 @@ void DescribeConfigurationSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeConfigurationSettingsResponse instance.
  */
 DescribeConfigurationSettingsResponsePrivate::DescribeConfigurationSettingsResponsePrivate(
-    DescribeConfigurationSettingsQueueResponse * const q) : DescribeConfigurationSettingsPrivate(q)
+    DescribeConfigurationSettingsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

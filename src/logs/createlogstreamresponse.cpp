@@ -86,7 +86,7 @@ void CreateLogStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLogStreamResponse instance.
  */
 CreateLogStreamResponsePrivate::CreateLogStreamResponsePrivate(
-    CreateLogStreamQueueResponse * const q) : CreateLogStreamPrivate(q)
+    CreateLogStreamResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

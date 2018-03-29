@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetDataRetrievalPolicyRequest::response(QNetw
  */
 SetDataRetrievalPolicyRequestPrivate::SetDataRetrievalPolicyRequestPrivate(
     const GlacierRequest::Action action, SetDataRetrievalPolicyRequest * const q)
-    : SetDataRetrievalPolicyPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetDataRetrievalPolicyRequestPrivate::SetDataRetrievalPolicyRequestPrivate(
  */
 SetDataRetrievalPolicyRequestPrivate::SetDataRetrievalPolicyRequestPrivate(
     const SetDataRetrievalPolicyRequestPrivate &other, SetDataRetrievalPolicyRequest * const q)
-    : SetDataRetrievalPolicyPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

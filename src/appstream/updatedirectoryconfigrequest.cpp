@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDirectoryConfigRequest::response(QNetwo
  */
 UpdateDirectoryConfigRequestPrivate::UpdateDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, UpdateDirectoryConfigRequest * const q)
-    : UpdateDirectoryConfigPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDirectoryConfigRequestPrivate::UpdateDirectoryConfigRequestPrivate(
  */
 UpdateDirectoryConfigRequestPrivate::UpdateDirectoryConfigRequestPrivate(
     const UpdateDirectoryConfigRequestPrivate &other, UpdateDirectoryConfigRequest * const q)
-    : UpdateDirectoryConfigPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

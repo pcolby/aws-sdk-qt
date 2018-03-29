@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanKeyRequest::response(QNetworkR
  */
 DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
     const APIGatewayRequest::Action action, DeleteUsagePlanKeyRequest * const q)
-    : DeleteUsagePlanKeyPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
  */
 DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
     const DeleteUsagePlanKeyRequestPrivate &other, DeleteUsagePlanKeyRequest * const q)
-    : DeleteUsagePlanKeyPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

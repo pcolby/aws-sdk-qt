@@ -86,7 +86,7 @@ void ListComplianceSummariesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListComplianceSummariesResponse instance.
  */
 ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponsePrivate(
-    ListComplianceSummariesQueueResponse * const q) : ListComplianceSummariesPrivate(q)
+    ListComplianceSummariesResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

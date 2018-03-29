@@ -86,7 +86,7 @@ void ResolveCustomerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResolveCustomerResponse instance.
  */
 ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
-    ResolveCustomerQueueResponse * const q) : ResolveCustomerPrivate(q)
+    ResolveCustomerResponse * const q) : MarketplaceMeteringResponsePrivate(q)
 {
 
 }

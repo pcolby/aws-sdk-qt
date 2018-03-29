@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountRequest::response(QNetworkRepl
  */
 DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
     const OrganizationsRequest::Action action, DescribeAccountRequest * const q)
-    : DescribeAccountPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
  */
 DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
     const DescribeAccountRequestPrivate &other, DescribeAccountRequest * const q)
-    : DescribeAccountPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

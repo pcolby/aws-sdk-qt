@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDestinationRequest::response(QNetworkRe
  */
 DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteDestinationRequest * const q)
-    : DeleteDestinationPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
  */
 DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
     const DeleteDestinationRequestPrivate &other, DeleteDestinationRequest * const q)
-    : DeleteDestinationPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

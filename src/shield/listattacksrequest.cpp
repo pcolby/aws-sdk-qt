@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAttacksRequest::response(QNetworkReply * 
  */
 ListAttacksRequestPrivate::ListAttacksRequestPrivate(
     const ShieldRequest::Action action, ListAttacksRequest * const q)
-    : ListAttacksPrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAttacksRequestPrivate::ListAttacksRequestPrivate(
  */
 ListAttacksRequestPrivate::ListAttacksRequestPrivate(
     const ListAttacksRequestPrivate &other, ListAttacksRequest * const q)
-    : ListAttacksPrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

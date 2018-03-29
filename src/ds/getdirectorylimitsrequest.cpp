@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDirectoryLimitsRequest::response(QNetworkR
  */
 GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
     const DirectoryServiceRequest::Action action, GetDirectoryLimitsRequest * const q)
-    : GetDirectoryLimitsPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
  */
 GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
     const GetDirectoryLimitsRequestPrivate &other, GetDirectoryLimitsRequest * const q)
-    : GetDirectoryLimitsPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBasePathMappingRequest::response(QNetworkR
  */
 GetBasePathMappingRequestPrivate::GetBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, GetBasePathMappingRequest * const q)
-    : GetBasePathMappingPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBasePathMappingRequestPrivate::GetBasePathMappingRequestPrivate(
  */
 GetBasePathMappingRequestPrivate::GetBasePathMappingRequestPrivate(
     const GetBasePathMappingRequestPrivate &other, GetBasePathMappingRequest * const q)
-    : GetBasePathMappingPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

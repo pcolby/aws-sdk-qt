@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPublishedSchemaArnsRequest::response(QNet
  */
 ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListPublishedSchemaArnsRequest * const q)
-    : ListPublishedSchemaArnsPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
  */
 ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
     const ListPublishedSchemaArnsRequestPrivate &other, ListPublishedSchemaArnsRequest * const q)
-    : ListPublishedSchemaArnsPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

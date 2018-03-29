@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ApplySchemaRequest::response(QNetworkReply * 
  */
 ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, ApplySchemaRequest * const q)
-    : ApplySchemaPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
  */
 ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
     const ApplySchemaRequestPrivate &other, ApplySchemaRequest * const q)
-    : ApplySchemaPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

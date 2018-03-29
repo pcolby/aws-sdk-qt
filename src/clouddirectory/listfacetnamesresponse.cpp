@@ -86,7 +86,7 @@ void ListFacetNamesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFacetNamesResponse instance.
  */
 ListFacetNamesResponsePrivate::ListFacetNamesResponsePrivate(
-    ListFacetNamesQueueResponse * const q) : ListFacetNamesPrivate(q)
+    ListFacetNamesResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutActionRevisionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutActionRevisionResponse instance.
  */
 PutActionRevisionResponsePrivate::PutActionRevisionResponsePrivate(
-    PutActionRevisionQueueResponse * const q) : PutActionRevisionPrivate(q)
+    PutActionRevisionResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

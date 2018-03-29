@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetw
  */
 RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
     const Route53DomainsRequest::Action action, RetrieveDomainAuthCodeRequest * const q)
-    : RetrieveDomainAuthCodePrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
  */
 RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
     const RetrieveDomainAuthCodeRequestPrivate &other, RetrieveDomainAuthCodeRequest * const q)
-    : RetrieveDomainAuthCodePrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

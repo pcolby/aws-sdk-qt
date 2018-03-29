@@ -86,7 +86,7 @@ void DescribeGlobalTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeGlobalTableResponse instance.
  */
 DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponsePrivate(
-    DescribeGlobalTableQueueResponse * const q) : DescribeGlobalTablePrivate(q)
+    DescribeGlobalTableResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

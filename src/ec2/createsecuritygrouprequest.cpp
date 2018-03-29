@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetwork
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
     const EC2Request::Action action, CreateSecurityGroupRequest * const q)
-    : CreateSecurityGroupPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
     const CreateSecurityGroupRequestPrivate &other, CreateSecurityGroupRequest * const q)
-    : CreateSecurityGroupPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

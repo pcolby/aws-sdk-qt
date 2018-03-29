@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateProvisionedProductRequest::response(
  */
 TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, TerminateProvisionedProductRequest * const q)
-    : TerminateProvisionedProductPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPri
  */
 TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPrivate(
     const TerminateProvisionedProductRequestPrivate &other, TerminateProvisionedProductRequest * const q)
-    : TerminateProvisionedProductPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

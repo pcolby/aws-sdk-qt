@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply 
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const EC2Request::Action action, CreateKeyPairRequest * const q)
-    : CreateKeyPairPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const CreateKeyPairRequestPrivate &other, CreateKeyPairRequest * const q)
-    : CreateKeyPairPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

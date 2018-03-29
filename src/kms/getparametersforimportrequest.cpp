@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetParametersForImportRequest::response(QNetw
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
     const KMSRequest::Action action, GetParametersForImportRequest * const q)
-    : GetParametersForImportPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
     const GetParametersForImportRequestPrivate &other, GetParametersForImportRequest * const q)
-    : GetParametersForImportPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

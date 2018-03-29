@@ -86,7 +86,7 @@ void ListPortfolioAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPortfolioAccessResponse instance.
  */
 ListPortfolioAccessResponsePrivate::ListPortfolioAccessResponsePrivate(
-    ListPortfolioAccessQueueResponse * const q) : ListPortfolioAccessPrivate(q)
+    ListPortfolioAccessResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

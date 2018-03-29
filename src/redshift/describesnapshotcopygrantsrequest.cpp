@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotCopyGrantsRequest::response(Q
  */
 DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPrivate(
     const RedshiftRequest::Action action, DescribeSnapshotCopyGrantsRequest * const q)
-    : DescribeSnapshotCopyGrantsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPriva
  */
 DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPrivate(
     const DescribeSnapshotCopyGrantsRequestPrivate &other, DescribeSnapshotCopyGrantsRequest * const q)
-    : DescribeSnapshotCopyGrantsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

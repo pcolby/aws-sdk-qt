@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNe
  */
 DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspaceBundlesRequest * const q)
-    : DescribeWorkspaceBundlesPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
  */
 DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
     const DescribeWorkspaceBundlesRequestPrivate &other, DescribeWorkspaceBundlesRequest * const q)
-    : DescribeWorkspaceBundlesPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

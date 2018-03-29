@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupIngressRequest::respons
  */
 AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
     const EC2Request::Action action, AuthorizeSecurityGroupIngressRequest * const q)
-    : AuthorizeSecurityGroupIngressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressReques
  */
 AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
     const AuthorizeSecurityGroupIngressRequestPrivate &other, AuthorizeSecurityGroupIngressRequest * const q)
-    : AuthorizeSecurityGroupIngressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

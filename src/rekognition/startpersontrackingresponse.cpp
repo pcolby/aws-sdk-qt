@@ -86,7 +86,7 @@ void StartPersonTrackingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartPersonTrackingResponse instance.
  */
 StartPersonTrackingResponsePrivate::StartPersonTrackingResponsePrivate(
-    StartPersonTrackingQueueResponse * const q) : StartPersonTrackingPrivate(q)
+    StartPersonTrackingResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetw
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, AttachNetworkInterfaceRequest * const q)
-    : AttachNetworkInterfacePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
     const AttachNetworkInterfaceRequestPrivate &other, AttachNetworkInterfaceRequest * const q)
-    : AttachNetworkInterfacePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

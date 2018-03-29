@@ -86,7 +86,7 @@ void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRepositoriesResponse instance.
  */
 DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
-    DescribeRepositoriesQueueResponse * const q) : DescribeRepositoriesPrivate(q)
+    DescribeRepositoriesResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

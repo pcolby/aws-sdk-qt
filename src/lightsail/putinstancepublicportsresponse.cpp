@@ -86,7 +86,7 @@ void PutInstancePublicPortsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutInstancePublicPortsResponse instance.
  */
 PutInstancePublicPortsResponsePrivate::PutInstancePublicPortsResponsePrivate(
-    PutInstancePublicPortsQueueResponse * const q) : PutInstancePublicPortsPrivate(q)
+    PutInstancePublicPortsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

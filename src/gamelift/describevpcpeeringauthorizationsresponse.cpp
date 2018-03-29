@@ -86,7 +86,7 @@ void DescribeVpcPeeringAuthorizationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVpcPeeringAuthorizationsResponse instance.
  */
 DescribeVpcPeeringAuthorizationsResponsePrivate::DescribeVpcPeeringAuthorizationsResponsePrivate(
-    DescribeVpcPeeringAuthorizationsQueueResponse * const q) : DescribeVpcPeeringAuthorizationsPrivate(q)
+    DescribeVpcPeeringAuthorizationsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeObjectsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeObjectsResponse instance.
  */
 DescribeObjectsResponsePrivate::DescribeObjectsResponsePrivate(
-    DescribeObjectsQueueResponse * const q) : DescribeObjectsPrivate(q)
+    DescribeObjectsResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

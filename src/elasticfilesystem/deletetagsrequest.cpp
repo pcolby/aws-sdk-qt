@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const EFSRequest::Action action, DeleteTagsRequest * const q)
-    : DeleteTagsPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)
-    : DeleteTagsPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

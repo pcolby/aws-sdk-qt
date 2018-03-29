@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetwo
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, DeprecateWorkflowTypeRequest * const q)
-    : DeprecateWorkflowTypePrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
     const DeprecateWorkflowTypeRequestPrivate &other, DeprecateWorkflowTypeRequest * const q)
-    : DeprecateWorkflowTypePrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

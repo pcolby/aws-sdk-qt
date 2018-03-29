@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetwor
  */
 CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CheckDNSAvailabilityRequest * const q)
-    : CheckDNSAvailabilityPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
  */
 CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
     const CheckDNSAvailabilityRequestPrivate &other, CheckDNSAvailabilityRequest * const q)
-    : CheckDNSAvailabilityPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

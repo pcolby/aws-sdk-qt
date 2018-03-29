@@ -86,7 +86,7 @@ void StartTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartTaskResponse instance.
  */
 StartTaskResponsePrivate::StartTaskResponsePrivate(
-    StartTaskQueueResponse * const q) : StartTaskPrivate(q)
+    StartTaskResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

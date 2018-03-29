@@ -86,7 +86,7 @@ void CreateLagResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLagResponse instance.
  */
 CreateLagResponsePrivate::CreateLagResponsePrivate(
-    CreateLagQueueResponse * const q) : CreateLagPrivate(q)
+    CreateLagResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

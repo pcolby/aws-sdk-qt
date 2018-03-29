@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectivePatchesForPatchBaselineReque
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
     const SSMRequest::Action action, DescribeEffectivePatchesForPatchBaselineRequest * const q)
-    : DescribeEffectivePatchesForPatchBaselinePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatches
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
     const DescribeEffectivePatchesForPatchBaselineRequestPrivate &other, DescribeEffectivePatchesForPatchBaselineRequest * const q)
-    : DescribeEffectivePatchesForPatchBaselinePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

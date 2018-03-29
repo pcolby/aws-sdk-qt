@@ -86,7 +86,7 @@ void StopInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopInstancesResponse instance.
  */
 StopInstancesResponsePrivate::StopInstancesResponsePrivate(
-    StopInstancesQueueResponse * const q) : StopInstancesPrivate(q)
+    StopInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

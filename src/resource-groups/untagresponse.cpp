@@ -86,7 +86,7 @@ void UntagResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UntagResponse instance.
  */
 UntagResponsePrivate::UntagResponsePrivate(
-    UntagQueueResponse * const q) : UntagPrivate(q)
+    UntagResponse * const q) : ResourceGroupsResponsePrivate(q)
 {
 
 }

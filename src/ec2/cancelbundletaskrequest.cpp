@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelBundleTaskRequest::response(QNetworkRep
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
     const EC2Request::Action action, CancelBundleTaskRequest * const q)
-    : CancelBundleTaskPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
     const CancelBundleTaskRequestPrivate &other, CancelBundleTaskRequest * const q)
-    : CancelBundleTaskPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

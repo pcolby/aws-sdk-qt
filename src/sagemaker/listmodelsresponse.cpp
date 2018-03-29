@@ -86,7 +86,7 @@ void ListModelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListModelsResponse instance.
  */
 ListModelsResponsePrivate::ListModelsResponsePrivate(
-    ListModelsQueueResponse * const q) : ListModelsPrivate(q)
+    ListModelsResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const r
  */
 ScanRequestPrivate::ScanRequestPrivate(
     const DynamoDBRequest::Action action, ScanRequest * const q)
-    : ScanPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ScanRequestPrivate::ScanRequestPrivate(
  */
 ScanRequestPrivate::ScanRequestPrivate(
     const ScanRequestPrivate &other, ScanRequest * const q)
-    : ScanPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

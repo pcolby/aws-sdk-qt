@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsLogGroupRequest::response(QNetworkRep
  */
 ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, ListTagsLogGroupRequest * const q)
-    : ListTagsLogGroupPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
  */
 ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
     const ListTagsLogGroupRequestPrivate &other, ListTagsLogGroupRequest * const q)
-    : ListTagsLogGroupPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

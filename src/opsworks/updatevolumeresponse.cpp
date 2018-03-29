@@ -86,7 +86,7 @@ void UpdateVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateVolumeResponse instance.
  */
 UpdateVolumeResponsePrivate::UpdateVolumeResponsePrivate(
-    UpdateVolumeQueueResponse * const q) : UpdateVolumePrivate(q)
+    UpdateVolumeResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

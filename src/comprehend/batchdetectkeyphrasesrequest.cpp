@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetwo
  */
 BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectKeyPhrasesRequest * const q)
-    : BatchDetectKeyPhrasesPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
  */
 BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
     const BatchDetectKeyPhrasesRequestPrivate &other, BatchDetectKeyPhrasesRequest * const q)
-    : BatchDetectKeyPhrasesPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

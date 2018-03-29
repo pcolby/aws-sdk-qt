@@ -86,7 +86,7 @@ void DescribeDatasetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDatasetResponse instance.
  */
 DescribeDatasetResponsePrivate::DescribeDatasetResponsePrivate(
-    DescribeDatasetQueueResponse * const q) : DescribeDatasetPrivate(q)
+    DescribeDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

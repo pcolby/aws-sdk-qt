@@ -86,7 +86,7 @@ void CreateDefaultSubnetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDefaultSubnetResponse instance.
  */
 CreateDefaultSubnetResponsePrivate::CreateDefaultSubnetResponsePrivate(
-    CreateDefaultSubnetQueueResponse * const q) : CreateDefaultSubnetPrivate(q)
+    CreateDefaultSubnetResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

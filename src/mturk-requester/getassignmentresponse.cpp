@@ -86,7 +86,7 @@ void GetAssignmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAssignmentResponse instance.
  */
 GetAssignmentResponsePrivate::GetAssignmentResponsePrivate(
-    GetAssignmentQueueResponse * const q) : GetAssignmentPrivate(q)
+    GetAssignmentResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

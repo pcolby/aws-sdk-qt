@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartConfigRulesEvaluationRequest::response(Q
  */
 StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
     const ConfigServiceRequest::Action action, StartConfigRulesEvaluationRequest * const q)
-    : StartConfigRulesEvaluationPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPriva
  */
 StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
     const StartConfigRulesEvaluationRequestPrivate &other, StartConfigRulesEvaluationRequest * const q)
-    : StartConfigRulesEvaluationPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

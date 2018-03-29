@@ -86,7 +86,7 @@ void ValidateConfigurationSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ValidateConfigurationSettingsResponse instance.
  */
 ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsResponsePrivate(
-    ValidateConfigurationSettingsQueueResponse * const q) : ValidateConfigurationSettingsPrivate(q)
+    ValidateConfigurationSettingsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

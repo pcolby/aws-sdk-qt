@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListVolumeInitiatorsRequest::response(QNetwor
  */
 ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumeInitiatorsRequest * const q)
-    : ListVolumeInitiatorsPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
  */
 ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
     const ListVolumeInitiatorsRequestPrivate &other, ListVolumeInitiatorsRequest * const q)
-    : ListVolumeInitiatorsPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

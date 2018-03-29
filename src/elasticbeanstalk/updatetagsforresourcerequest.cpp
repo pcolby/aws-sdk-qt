@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForResourceRequest::response(QNetwo
  */
 UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateTagsForResourceRequest * const q)
-    : UpdateTagsForResourcePrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
  */
 UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
     const UpdateTagsForResourceRequestPrivate &other, UpdateTagsForResourceRequest * const q)
-    : UpdateTagsForResourcePrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

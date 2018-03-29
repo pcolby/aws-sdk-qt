@@ -86,7 +86,7 @@ void DescribeHostReservationOfferingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHostReservationOfferingsResponse instance.
  */
 DescribeHostReservationOfferingsResponsePrivate::DescribeHostReservationOfferingsResponsePrivate(
-    DescribeHostReservationOfferingsQueueResponse * const q) : DescribeHostReservationOfferingsPrivate(q)
+    DescribeHostReservationOfferingsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

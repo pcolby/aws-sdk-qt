@@ -86,7 +86,7 @@ void RefreshTrustedAdvisorCheckResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RefreshTrustedAdvisorCheckResponse instance.
  */
 RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponsePrivate(
-    RefreshTrustedAdvisorCheckQueueResponse * const q) : RefreshTrustedAdvisorCheckPrivate(q)
+    RefreshTrustedAdvisorCheckResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

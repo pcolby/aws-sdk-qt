@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const LambdaRequest::Action action, GetPolicyRequest * const q)
-    : GetPolicyPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const GetPolicyRequestPrivate &other, GetPolicyRequest * const q)
-    : GetPolicyPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

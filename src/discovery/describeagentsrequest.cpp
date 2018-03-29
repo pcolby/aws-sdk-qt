@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentsRequest::response(QNetworkReply
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeAgentsRequest * const q)
-    : DescribeAgentsPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
     const DescribeAgentsRequestPrivate &other, DescribeAgentsRequest * const q)
-    : DescribeAgentsPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

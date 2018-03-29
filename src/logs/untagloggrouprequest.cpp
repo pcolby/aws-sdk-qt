@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagLogGroupRequest::response(QNetworkReply 
  */
 UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, UntagLogGroupRequest * const q)
-    : UntagLogGroupPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
  */
 UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
     const UntagLogGroupRequestPrivate &other, UntagLogGroupRequest * const q)
-    : UntagLogGroupPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

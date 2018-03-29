@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServerCertificateRequest::response(QNetwor
  */
 GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
     const IAMRequest::Action action, GetServerCertificateRequest * const q)
-    : GetServerCertificatePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
  */
 GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
     const GetServerCertificateRequestPrivate &other, GetServerCertificateRequest * const q)
-    : GetServerCertificatePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

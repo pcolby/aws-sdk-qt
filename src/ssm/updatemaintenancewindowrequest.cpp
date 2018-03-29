@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowRequest::response(QNet
  */
 UpdateMaintenanceWindowRequestPrivate::UpdateMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, UpdateMaintenanceWindowRequest * const q)
-    : UpdateMaintenanceWindowPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateMaintenanceWindowRequestPrivate::UpdateMaintenanceWindowRequestPrivate(
  */
 UpdateMaintenanceWindowRequestPrivate::UpdateMaintenanceWindowRequestPrivate(
     const UpdateMaintenanceWindowRequestPrivate &other, UpdateMaintenanceWindowRequest * const q)
-    : UpdateMaintenanceWindowPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

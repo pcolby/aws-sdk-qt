@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetTrackingOptionsRequest:
  */
 UpdateConfigurationSetTrackingOptionsRequestPrivate::UpdateConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetTrackingOptionsRequest * const q)
-    : UpdateConfigurationSetTrackingOptionsPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationSetTrackingOptionsRequestPrivate::UpdateConfigurationSetTrack
  */
 UpdateConfigurationSetTrackingOptionsRequestPrivate::UpdateConfigurationSetTrackingOptionsRequestPrivate(
     const UpdateConfigurationSetTrackingOptionsRequestPrivate &other, UpdateConfigurationSetTrackingOptionsRequest * const q)
-    : UpdateConfigurationSetTrackingOptionsPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

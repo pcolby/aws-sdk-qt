@@ -86,7 +86,7 @@ void ListNamespacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListNamespacesResponse instance.
  */
 ListNamespacesResponsePrivate::ListNamespacesResponsePrivate(
-    ListNamespacesQueueResponse * const q) : ListNamespacesPrivate(q)
+    ListNamespacesResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

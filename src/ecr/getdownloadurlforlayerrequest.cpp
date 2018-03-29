@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetw
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
     const ECRRequest::Action action, GetDownloadUrlForLayerRequest * const q)
-    : GetDownloadUrlForLayerPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
     const GetDownloadUrlForLayerRequestPrivate &other, GetDownloadUrlForLayerRequest * const q)
-    : GetDownloadUrlForLayerPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QN
  */
 CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, CreatePrivateDnsNamespaceRequest * const q)
-    : CreatePrivateDnsNamespacePrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate
  */
 CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
     const CreatePrivateDnsNamespaceRequestPrivate &other, CreatePrivateDnsNamespaceRequest * const q)
-    : CreatePrivateDnsNamespacePrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

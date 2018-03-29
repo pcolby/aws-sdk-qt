@@ -86,7 +86,7 @@ void SetAlarmStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetAlarmStateResponse instance.
  */
 SetAlarmStateResponsePrivate::SetAlarmStateResponsePrivate(
-    SetAlarmStateQueueResponse * const q) : SetAlarmStatePrivate(q)
+    SetAlarmStateResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

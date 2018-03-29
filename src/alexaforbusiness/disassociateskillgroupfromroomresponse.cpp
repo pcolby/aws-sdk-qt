@@ -86,7 +86,7 @@ void DisassociateSkillGroupFromRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateSkillGroupFromRoomResponse instance.
  */
 DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomResponsePrivate(
-    DisassociateSkillGroupFromRoomQueueResponse * const q) : DisassociateSkillGroupFromRoomPrivate(q)
+    DisassociateSkillGroupFromRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

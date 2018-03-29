@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetwor
  */
 UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
     const InspectorRequest::Action action, UnsubscribeFromEventRequest * const q)
-    : UnsubscribeFromEventPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
  */
 UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
     const UnsubscribeFromEventRequestPrivate &other, UnsubscribeFromEventRequest * const q)
-    : UnsubscribeFromEventPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

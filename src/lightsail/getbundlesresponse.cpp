@@ -86,7 +86,7 @@ void GetBundlesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBundlesResponse instance.
  */
 GetBundlesResponsePrivate::GetBundlesResponsePrivate(
-    GetBundlesQueueResponse * const q) : GetBundlesPrivate(q)
+    GetBundlesResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

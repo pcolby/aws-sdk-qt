@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteActivationRequest::response(QNetworkRep
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
     const SSMRequest::Action action, DeleteActivationRequest * const q)
-    : DeleteActivationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
     const DeleteActivationRequestPrivate &other, DeleteActivationRequest * const q)
-    : DeleteActivationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

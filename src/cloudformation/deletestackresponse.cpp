@@ -86,7 +86,7 @@ void DeleteStackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteStackResponse instance.
  */
 DeleteStackResponsePrivate::DeleteStackResponsePrivate(
-    DeleteStackQueueResponse * const q) : DeleteStackPrivate(q)
+    DeleteStackResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

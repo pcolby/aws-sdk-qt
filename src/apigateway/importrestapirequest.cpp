@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply 
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
     const APIGatewayRequest::Action action, ImportRestApiRequest * const q)
-    : ImportRestApiPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
     const ImportRestApiRequestPrivate &other, ImportRestApiRequest * const q)
-    : ImportRestApiPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

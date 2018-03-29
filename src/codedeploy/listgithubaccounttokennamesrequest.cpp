@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGitHubAccountTokenNamesRequest::response(
  */
 ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPrivate(
     const CodeDeployRequest::Action action, ListGitHubAccountTokenNamesRequest * const q)
-    : ListGitHubAccountTokenNamesPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPri
  */
 ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPrivate(
     const ListGitHubAccountTokenNamesRequestPrivate &other, ListGitHubAccountTokenNamesRequest * const q)
-    : ListGitHubAccountTokenNamesPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

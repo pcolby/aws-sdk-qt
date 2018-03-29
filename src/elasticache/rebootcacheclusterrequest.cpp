@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkR
  */
 RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, RebootCacheClusterRequest * const q)
-    : RebootCacheClusterPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
  */
 RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
     const RebootCacheClusterRequestPrivate &other, RebootCacheClusterRequest * const q)
-    : RebootCacheClusterPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

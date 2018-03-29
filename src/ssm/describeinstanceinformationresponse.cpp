@@ -86,7 +86,7 @@ void DescribeInstanceInformationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeInstanceInformationResponse instance.
  */
 DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponsePrivate(
-    DescribeInstanceInformationQueueResponse * const q) : DescribeInstanceInformationPrivate(q)
+    DescribeInstanceInformationResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

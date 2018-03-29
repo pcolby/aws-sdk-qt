@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNe
  */
 GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
     const GreengrassRequest::Action action, GetServiceRoleForAccountRequest * const q)
-    : GetServiceRoleForAccountPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
  */
 GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
     const GetServiceRoleForAccountRequestPrivate &other, GetServiceRoleForAccountRequest * const q)
-    : GetServiceRoleForAccountPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

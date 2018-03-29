@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QN
  */
 AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminSetUserMFAPreferenceRequest * const q)
-    : AdminSetUserMFAPreferencePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate
  */
 AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
     const AdminSetUserMFAPreferenceRequestPrivate &other, AdminSetUserMFAPreferenceRequest * const q)
-    : AdminSetUserMFAPreferencePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

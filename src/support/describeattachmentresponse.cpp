@@ -86,7 +86,7 @@ void DescribeAttachmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAttachmentResponse instance.
  */
 DescribeAttachmentResponsePrivate::DescribeAttachmentResponsePrivate(
-    DescribeAttachmentQueueResponse * const q) : DescribeAttachmentPrivate(q)
+    DescribeAttachmentResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

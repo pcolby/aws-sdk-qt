@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PostCommentForComparedCommitRequest::response
  */
 PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentForComparedCommitRequest * const q)
-    : PostCommentForComparedCommitPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestP
  */
 PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
     const PostCommentForComparedCommitRequestPrivate &other, PostCommentForComparedCommitRequest * const q)
-    : PostCommentForComparedCommitPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

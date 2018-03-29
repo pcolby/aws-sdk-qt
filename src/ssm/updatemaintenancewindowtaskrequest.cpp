@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowTaskRequest::response(
  */
 UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPrivate(
     const SSMRequest::Action action, UpdateMaintenanceWindowTaskRequest * const q)
-    : UpdateMaintenanceWindowTaskPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPri
  */
 UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPrivate(
     const UpdateMaintenanceWindowTaskRequestPrivate &other, UpdateMaintenanceWindowTaskRequest * const q)
-    : UpdateMaintenanceWindowTaskPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeMaintenanceWindowTasksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMaintenanceWindowTasksResponse instance.
  */
 DescribeMaintenanceWindowTasksResponsePrivate::DescribeMaintenanceWindowTasksResponsePrivate(
-    DescribeMaintenanceWindowTasksQueueResponse * const q) : DescribeMaintenanceWindowTasksPrivate(q)
+    DescribeMaintenanceWindowTasksResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

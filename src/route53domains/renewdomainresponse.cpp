@@ -86,7 +86,7 @@ void RenewDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RenewDomainResponse instance.
  */
 RenewDomainResponsePrivate::RenewDomainResponsePrivate(
-    RenewDomainQueueResponse * const q) : RenewDomainPrivate(q)
+    RenewDomainResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

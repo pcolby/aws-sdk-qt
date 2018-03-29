@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTableRequest::response(QNetworkReply * con
  */
 GetTableRequestPrivate::GetTableRequestPrivate(
     const GlueRequest::Action action, GetTableRequest * const q)
-    : GetTablePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTableRequestPrivate::GetTableRequestPrivate(
  */
 GetTableRequestPrivate::GetTableRequestPrivate(
     const GetTableRequestPrivate &other, GetTableRequest * const q)
-    : GetTablePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

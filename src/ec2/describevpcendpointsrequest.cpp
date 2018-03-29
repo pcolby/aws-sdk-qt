@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointsRequest::response(QNetwor
  */
 DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointsRequest * const q)
-    : DescribeVpcEndpointsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
  */
 DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
     const DescribeVpcEndpointsRequestPrivate &other, DescribeVpcEndpointsRequest * const q)
-    : DescribeVpcEndpointsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

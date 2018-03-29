@@ -86,7 +86,7 @@ void DescribeTableRestoreStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTableRestoreStatusResponse instance.
  */
 DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusResponsePrivate(
-    DescribeTableRestoreStatusQueueResponse * const q) : DescribeTableRestoreStatusPrivate(q)
+    DescribeTableRestoreStatusResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

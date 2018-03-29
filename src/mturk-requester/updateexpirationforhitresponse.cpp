@@ -86,7 +86,7 @@ void UpdateExpirationForHITResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateExpirationForHITResponse instance.
  */
 UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
-    UpdateExpirationForHITQueueResponse * const q) : UpdateExpirationForHITPrivate(q)
+    UpdateExpirationForHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

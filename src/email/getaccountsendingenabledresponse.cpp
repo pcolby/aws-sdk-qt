@@ -86,7 +86,7 @@ void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountSendingEnabledResponse instance.
  */
 GetAccountSendingEnabledResponsePrivate::GetAccountSendingEnabledResponsePrivate(
-    GetAccountSendingEnabledQueueResponse * const q) : GetAccountSendingEnabledPrivate(q)
+    GetAccountSendingEnabledResponse * const q) : SESResponsePrivate(q)
 {
 
 }

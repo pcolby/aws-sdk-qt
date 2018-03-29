@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QN
  */
 DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
     const DAXRequest::Action action, DecreaseReplicationFactorRequest * const q)
-    : DecreaseReplicationFactorPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate
  */
 DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
     const DecreaseReplicationFactorRequestPrivate &other, DecreaseReplicationFactorRequest * const q)
-    : DecreaseReplicationFactorPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

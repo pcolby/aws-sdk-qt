@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply
  */
 CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
     const EC2Request::Action action, CreateFlowLogsRequest * const q)
-    : CreateFlowLogsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
  */
 CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
     const CreateFlowLogsRequestPrivate &other, CreateFlowLogsRequest * const q)
-    : CreateFlowLogsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

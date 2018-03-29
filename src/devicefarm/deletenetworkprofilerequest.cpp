@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkProfileRequest::response(QNetwor
  */
 DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteNetworkProfileRequest * const q)
-    : DeleteNetworkProfilePrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
  */
 DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
     const DeleteNetworkProfileRequestPrivate &other, DeleteNetworkProfileRequest * const q)
-    : DeleteNetworkProfilePrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetDocumentationVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDocumentationVersionResponse instance.
  */
 GetDocumentationVersionResponsePrivate::GetDocumentationVersionResponsePrivate(
-    GetDocumentationVersionQueueResponse * const q) : GetDocumentationVersionPrivate(q)
+    GetDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

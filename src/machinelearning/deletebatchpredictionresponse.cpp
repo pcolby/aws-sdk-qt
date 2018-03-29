@@ -86,7 +86,7 @@ void DeleteBatchPredictionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBatchPredictionResponse instance.
  */
 DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponsePrivate(
-    DeleteBatchPredictionQueueResponse * const q) : DeleteBatchPredictionPrivate(q)
+    DeleteBatchPredictionResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

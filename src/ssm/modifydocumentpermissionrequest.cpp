@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNe
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
     const SSMRequest::Action action, ModifyDocumentPermissionRequest * const q)
-    : ModifyDocumentPermissionPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
     const ModifyDocumentPermissionRequestPrivate &other, ModifyDocumentPermissionRequest * const q)
-    : ModifyDocumentPermissionPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

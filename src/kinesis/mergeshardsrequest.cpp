@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * 
  */
 MergeShardsRequestPrivate::MergeShardsRequestPrivate(
     const KinesisRequest::Action action, MergeShardsRequest * const q)
-    : MergeShardsPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MergeShardsRequestPrivate::MergeShardsRequestPrivate(
  */
 MergeShardsRequestPrivate::MergeShardsRequestPrivate(
     const MergeShardsRequestPrivate &other, MergeShardsRequest * const q)
-    : MergeShardsPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkRepl
  */
 DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
     const SnowballRequest::Action action, DescribeAddressRequest * const q)
-    : DescribeAddressPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
  */
 DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
     const DescribeAddressRequestPrivate &other, DescribeAddressRequest * const q)
-    : DescribeAddressPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

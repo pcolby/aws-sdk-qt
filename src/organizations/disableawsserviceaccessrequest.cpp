@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNet
  */
 DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
     const OrganizationsRequest::Action action, DisableAWSServiceAccessRequest * const q)
-    : DisableAWSServiceAccessPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
  */
 DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
     const DisableAWSServiceAccessRequestPrivate &other, DisableAWSServiceAccessRequest * const q)
-    : DisableAWSServiceAccessPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateStackInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateStackInstancesResponse instance.
  */
 UpdateStackInstancesResponsePrivate::UpdateStackInstancesResponsePrivate(
-    UpdateStackInstancesQueueResponse * const q) : UpdateStackInstancesPrivate(q)
+    UpdateStackInstancesResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

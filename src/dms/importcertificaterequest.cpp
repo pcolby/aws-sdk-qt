@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ImportCertificateRequest * const q)
-    : ImportCertificatePrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)
-    : ImportCertificatePrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

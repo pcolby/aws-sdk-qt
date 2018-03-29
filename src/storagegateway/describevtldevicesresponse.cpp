@@ -86,7 +86,7 @@ void DescribeVTLDevicesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVTLDevicesResponse instance.
  */
 DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponsePrivate(
-    DescribeVTLDevicesQueueResponse * const q) : DescribeVTLDevicesPrivate(q)
+    DescribeVTLDevicesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

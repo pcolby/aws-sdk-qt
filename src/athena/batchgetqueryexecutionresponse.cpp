@@ -86,7 +86,7 @@ void BatchGetQueryExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetQueryExecutionResponse instance.
  */
 BatchGetQueryExecutionResponsePrivate::BatchGetQueryExecutionResponsePrivate(
-    BatchGetQueryExecutionQueueResponse * const q) : BatchGetQueryExecutionPrivate(q)
+    BatchGetQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

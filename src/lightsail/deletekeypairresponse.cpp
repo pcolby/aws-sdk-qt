@@ -86,7 +86,7 @@ void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteKeyPairResponse instance.
  */
 DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
-    DeleteKeyPairQueueResponse * const q) : DeleteKeyPairPrivate(q)
+    DeleteKeyPairResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

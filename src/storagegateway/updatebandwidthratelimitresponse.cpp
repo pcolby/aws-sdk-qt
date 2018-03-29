@@ -86,7 +86,7 @@ void UpdateBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBandwidthRateLimitResponse instance.
  */
 UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponsePrivate(
-    UpdateBandwidthRateLimitQueueResponse * const q) : UpdateBandwidthRateLimitPrivate(q)
+    UpdateBandwidthRateLimitResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

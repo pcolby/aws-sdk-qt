@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriberRequest::response(QNetworkRep
  */
 UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
     const BudgetsRequest::Action action, UpdateSubscriberRequest * const q)
-    : UpdateSubscriberPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
  */
 UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
     const UpdateSubscriberRequestPrivate &other, UpdateSubscriberRequest * const q)
-    : UpdateSubscriberPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

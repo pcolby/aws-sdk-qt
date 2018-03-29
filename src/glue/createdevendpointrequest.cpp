@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDevEndpointRequest::response(QNetworkRe
  */
 CreateDevEndpointRequestPrivate::CreateDevEndpointRequestPrivate(
     const GlueRequest::Action action, CreateDevEndpointRequest * const q)
-    : CreateDevEndpointPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDevEndpointRequestPrivate::CreateDevEndpointRequestPrivate(
  */
 CreateDevEndpointRequestPrivate::CreateDevEndpointRequestPrivate(
     const CreateDevEndpointRequestPrivate &other, CreateDevEndpointRequest * const q)
-    : CreateDevEndpointPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

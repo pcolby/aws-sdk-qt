@@ -86,7 +86,7 @@ void DeleteBackupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBackupResponse instance.
  */
 DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
-    DeleteBackupQueueResponse * const q) : DeleteBackupPrivate(q)
+    DeleteBackupResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

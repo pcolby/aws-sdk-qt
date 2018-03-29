@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QN
  */
 ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, ListResourcesForTagOptionRequest * const q)
-    : ListResourcesForTagOptionPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate
  */
 ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
     const ListResourcesForTagOptionRequestPrivate &other, ListResourcesForTagOptionRequest * const q)
-    : ListResourcesForTagOptionPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

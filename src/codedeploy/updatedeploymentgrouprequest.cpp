@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentGroupRequest::response(QNetwo
  */
 UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
     const CodeDeployRequest::Action action, UpdateDeploymentGroupRequest * const q)
-    : UpdateDeploymentGroupPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
  */
 UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
     const UpdateDeploymentGroupRequestPrivate &other, UpdateDeploymentGroupRequest * const q)
-    : UpdateDeploymentGroupPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

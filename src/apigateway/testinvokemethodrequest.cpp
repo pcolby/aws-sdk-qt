@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkRep
  */
 TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
     const APIGatewayRequest::Action action, TestInvokeMethodRequest * const q)
-    : TestInvokeMethodPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
  */
 TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
     const TestInvokeMethodRequestPrivate &other, TestInvokeMethodRequest * const q)
-    : TestInvokeMethodPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

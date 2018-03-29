@@ -86,7 +86,7 @@ void DeleteVpcEndpointServiceConfigurationsResponse::parseSuccess(QIODevice &res
  * @param  q  Pointer to this object's public DeleteVpcEndpointServiceConfigurationsResponse instance.
  */
 DeleteVpcEndpointServiceConfigurationsResponsePrivate::DeleteVpcEndpointServiceConfigurationsResponsePrivate(
-    DeleteVpcEndpointServiceConfigurationsQueueResponse * const q) : DeleteVpcEndpointServiceConfigurationsPrivate(q)
+    DeleteVpcEndpointServiceConfigurationsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

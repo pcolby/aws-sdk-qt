@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationVersionsRequest::response(
  */
 DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeApplicationVersionsRequest * const q)
-    : DescribeApplicationVersionsPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPri
  */
 DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPrivate(
     const DescribeApplicationVersionsRequestPrivate &other, DescribeApplicationVersionsRequest * const q)
-    : DescribeApplicationVersionsPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

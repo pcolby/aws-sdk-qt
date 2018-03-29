@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetwor
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
     const EC2Request::Action action, ModifyImageAttributeRequest * const q)
-    : ModifyImageAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
     const ModifyImageAttributeRequestPrivate &other, ModifyImageAttributeRequest * const q)
-    : ModifyImageAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

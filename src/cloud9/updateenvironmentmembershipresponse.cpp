@@ -86,7 +86,7 @@ void UpdateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEnvironmentMembershipResponse instance.
  */
 UpdateEnvironmentMembershipResponsePrivate::UpdateEnvironmentMembershipResponsePrivate(
-    UpdateEnvironmentMembershipQueueResponse * const q) : UpdateEnvironmentMembershipPrivate(q)
+    UpdateEnvironmentMembershipResponse * const q) : Cloud9ResponsePrivate(q)
 {
 
 }

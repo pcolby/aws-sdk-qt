@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * con
  */
 GetMediaRequestPrivate::GetMediaRequestPrivate(
     const KinesisVideoMediaRequest::Action action, GetMediaRequest * const q)
-    : GetMediaPrivate(action, q)
+    : KinesisVideoMediaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMediaRequestPrivate::GetMediaRequestPrivate(
  */
 GetMediaRequestPrivate::GetMediaRequestPrivate(
     const GetMediaRequestPrivate &other, GetMediaRequest * const q)
-    : GetMediaPrivate(other, q)
+    : KinesisVideoMediaRequestPrivate(other, q)
 {
 
 }

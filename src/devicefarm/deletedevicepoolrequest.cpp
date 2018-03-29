@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDevicePoolRequest::response(QNetworkRep
  */
 DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteDevicePoolRequest * const q)
-    : DeleteDevicePoolPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
  */
 DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
     const DeleteDevicePoolRequestPrivate &other, DeleteDevicePoolRequest * const q)
-    : DeleteDevicePoolPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

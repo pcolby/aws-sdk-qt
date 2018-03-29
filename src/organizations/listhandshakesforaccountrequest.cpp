@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHandshakesForAccountRequest::response(QNe
  */
 ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
     const OrganizationsRequest::Action action, ListHandshakesForAccountRequest * const q)
-    : ListHandshakesForAccountPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
  */
 ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
     const ListHandshakesForAccountRequestPrivate &other, ListHandshakesForAccountRequest * const q)
-    : ListHandshakesForAccountPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

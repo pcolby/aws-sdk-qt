@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * c
  */
 ListSkillsRequestPrivate::ListSkillsRequestPrivate(
     const AlexaForBusinessRequest::Action action, ListSkillsRequest * const q)
-    : ListSkillsPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSkillsRequestPrivate::ListSkillsRequestPrivate(
  */
 ListSkillsRequestPrivate::ListSkillsRequestPrivate(
     const ListSkillsRequestPrivate &other, ListSkillsRequest * const q)
-    : ListSkillsPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

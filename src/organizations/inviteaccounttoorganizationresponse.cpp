@@ -86,7 +86,7 @@ void InviteAccountToOrganizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InviteAccountToOrganizationResponse instance.
  */
 InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponsePrivate(
-    InviteAccountToOrganizationQueueResponse * const q) : InviteAccountToOrganizationPrivate(q)
+    InviteAccountToOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetwork
  */
 GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
     const GuardDutyRequest::Action action, GetInvitationsCountRequest * const q)
-    : GetInvitationsCountPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
  */
 GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
     const GetInvitationsCountRequestPrivate &other, GetInvitationsCountRequest * const q)
-    : GetInvitationsCountPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

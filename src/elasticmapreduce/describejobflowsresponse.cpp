@@ -86,7 +86,7 @@ void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeJobFlowsResponse instance.
  */
 DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
-    DescribeJobFlowsQueueResponse * const q) : DescribeJobFlowsPrivate(q)
+    DescribeJobFlowsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

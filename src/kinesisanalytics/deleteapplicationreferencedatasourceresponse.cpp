@@ -86,7 +86,7 @@ void DeleteApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DeleteApplicationReferenceDataSourceResponse instance.
  */
 DeleteApplicationReferenceDataSourceResponsePrivate::DeleteApplicationReferenceDataSourceResponsePrivate(
-    DeleteApplicationReferenceDataSourceQueueResponse * const q) : DeleteApplicationReferenceDataSourcePrivate(q)
+    DeleteApplicationReferenceDataSourceResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLogStreamRequest::response(QNetworkRepl
  */
 DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteLogStreamRequest * const q)
-    : DeleteLogStreamPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
  */
 DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
     const DeleteLogStreamRequestPrivate &other, DeleteLogStreamRequest * const q)
-    : DeleteLogStreamPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkRep
  */
 RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
     const AlexaForBusinessRequest::Action action, RevokeInvitationRequest * const q)
-    : RevokeInvitationPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
  */
 RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
     const RevokeInvitationRequestPrivate &other, RevokeInvitationRequest * const q)
-    : RevokeInvitationPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

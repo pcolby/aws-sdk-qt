@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::respo
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationSubnetGroupsRequest * const q)
-    : DescribeReplicationSubnetGroupsPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRe
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
     const DescribeReplicationSubnetGroupsRequestPrivate &other, DescribeReplicationSubnetGroupsRequest * const q)
-    : DescribeReplicationSubnetGroupsPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

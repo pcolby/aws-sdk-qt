@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkRe
  */
 ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
     const MTurkRequest::Action action, ApproveAssignmentRequest * const q)
-    : ApproveAssignmentPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
  */
 ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
     const ApproveAssignmentRequestPrivate &other, ApproveAssignmentRequest * const q)
-    : ApproveAssignmentPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

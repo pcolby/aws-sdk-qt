@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateOpenIDConnectProviderRequest::response(
  */
 CreateOpenIDConnectProviderRequestPrivate::CreateOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, CreateOpenIDConnectProviderRequest * const q)
-    : CreateOpenIDConnectProviderPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateOpenIDConnectProviderRequestPrivate::CreateOpenIDConnectProviderRequestPri
  */
 CreateOpenIDConnectProviderRequestPrivate::CreateOpenIDConnectProviderRequestPrivate(
     const CreateOpenIDConnectProviderRequestPrivate &other, CreateOpenIDConnectProviderRequest * const q)
-    : CreateOpenIDConnectProviderPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

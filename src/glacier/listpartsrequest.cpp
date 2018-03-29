@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const GlacierRequest::Action action, ListPartsRequest * const q)
-    : ListPartsPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const ListPartsRequestPrivate &other, ListPartsRequest * const q)
-    : ListPartsPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

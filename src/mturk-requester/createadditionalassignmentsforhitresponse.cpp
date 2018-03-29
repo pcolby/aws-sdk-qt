@@ -86,7 +86,7 @@ void CreateAdditionalAssignmentsForHITResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public CreateAdditionalAssignmentsForHITResponse instance.
  */
 CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsForHITResponsePrivate(
-    CreateAdditionalAssignmentsForHITQueueResponse * const q) : CreateAdditionalAssignmentsForHITPrivate(q)
+    CreateAdditionalAssignmentsForHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

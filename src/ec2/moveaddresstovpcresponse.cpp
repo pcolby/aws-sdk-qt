@@ -86,7 +86,7 @@ void MoveAddressToVpcResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MoveAddressToVpcResponse instance.
  */
 MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponsePrivate(
-    MoveAddressToVpcQueueResponse * const q) : MoveAddressToVpcPrivate(q)
+    MoveAddressToVpcResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

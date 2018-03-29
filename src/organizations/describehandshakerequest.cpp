@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHandshakeRequest::response(QNetworkRe
  */
 DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, DescribeHandshakeRequest * const q)
-    : DescribeHandshakePrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
  */
 DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
     const DescribeHandshakeRequestPrivate &other, DescribeHandshakeRequest * const q)
-    : DescribeHandshakePrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

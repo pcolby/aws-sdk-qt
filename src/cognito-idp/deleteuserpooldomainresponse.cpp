@@ -86,7 +86,7 @@ void DeleteUserPoolDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteUserPoolDomainResponse instance.
  */
 DeleteUserPoolDomainResponsePrivate::DeleteUserPoolDomainResponsePrivate(
-    DeleteUserPoolDomainQueueResponse * const q) : DeleteUserPoolDomainPrivate(q)
+    DeleteUserPoolDomainResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

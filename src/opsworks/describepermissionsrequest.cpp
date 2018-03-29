@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePermissionsRequest::response(QNetwork
  */
 DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
     const OpsWorksRequest::Action action, DescribePermissionsRequest * const q)
-    : DescribePermissionsPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
  */
 DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
     const DescribePermissionsRequestPrivate &other, DescribePermissionsRequest * const q)
-    : DescribePermissionsPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

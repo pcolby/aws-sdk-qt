@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetSubnetsRequest::response(QNetworkReply * c
  */
 SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetSubnetsRequest * const q)
-    : SetSubnetsPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
  */
 SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
     const SetSubnetsRequestPrivate &other, SetSubnetsRequest * const q)
-    : SetSubnetsPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

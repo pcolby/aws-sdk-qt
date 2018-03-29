@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetw
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, DeleteReportDefinitionRequest * const q)
-    : DeleteReportDefinitionPrivate(action, q)
+    : CostandUsageReportServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
     const DeleteReportDefinitionRequestPrivate &other, DeleteReportDefinitionRequest * const q)
-    : DeleteReportDefinitionPrivate(other, q)
+    : CostandUsageReportServiceRequestPrivate(other, q)
 {
 
 }

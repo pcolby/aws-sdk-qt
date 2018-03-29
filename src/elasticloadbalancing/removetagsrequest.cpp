@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, RemoveTagsRequest * const q)
-    : RemoveTagsPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)
-    : RemoveTagsPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

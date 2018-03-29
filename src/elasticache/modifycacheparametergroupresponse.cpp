@@ -86,7 +86,7 @@ void ModifyCacheParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyCacheParameterGroupResponse instance.
  */
 ModifyCacheParameterGroupResponsePrivate::ModifyCacheParameterGroupResponsePrivate(
-    ModifyCacheParameterGroupQueueResponse * const q) : ModifyCacheParameterGroupPrivate(q)
+    ModifyCacheParameterGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

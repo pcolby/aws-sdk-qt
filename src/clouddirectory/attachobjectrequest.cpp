@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply *
  */
 AttachObjectRequestPrivate::AttachObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachObjectRequest * const q)
-    : AttachObjectPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachObjectRequestPrivate::AttachObjectRequestPrivate(
  */
 AttachObjectRequestPrivate::AttachObjectRequestPrivate(
     const AttachObjectRequestPrivate &other, AttachObjectRequest * const q)
-    : AttachObjectPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

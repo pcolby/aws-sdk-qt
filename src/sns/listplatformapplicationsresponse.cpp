@@ -86,7 +86,7 @@ void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPlatformApplicationsResponse instance.
  */
 ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate(
-    ListPlatformApplicationsQueueResponse * const q) : ListPlatformApplicationsPrivate(q)
+    ListPlatformApplicationsResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

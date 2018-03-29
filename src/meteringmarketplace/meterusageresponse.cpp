@@ -86,7 +86,7 @@ void MeterUsageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MeterUsageResponse instance.
  */
 MeterUsageResponsePrivate::MeterUsageResponsePrivate(
-    MeterUsageQueueResponse * const q) : MeterUsagePrivate(q)
+    MeterUsageResponse * const q) : MarketplaceMeteringResponsePrivate(q)
 {
 
 }

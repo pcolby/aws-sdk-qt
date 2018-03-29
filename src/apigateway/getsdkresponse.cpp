@@ -86,7 +86,7 @@ void GetSdkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSdkResponse instance.
  */
 GetSdkResponsePrivate::GetSdkResponsePrivate(
-    GetSdkQueueResponse * const q) : GetSdkPrivate(q)
+    GetSdkResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagProjectRequest::response(QNetworkReply *
  */
 UntagProjectRequestPrivate::UntagProjectRequestPrivate(
     const CodeStarRequest::Action action, UntagProjectRequest * const q)
-    : UntagProjectPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UntagProjectRequestPrivate::UntagProjectRequestPrivate(
  */
 UntagProjectRequestPrivate::UntagProjectRequestPrivate(
     const UntagProjectRequestPrivate &other, UntagProjectRequest * const q)
-    : UntagProjectPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

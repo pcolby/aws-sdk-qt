@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootClusterRequest::response(QNetworkReply 
  */
 RebootClusterRequestPrivate::RebootClusterRequestPrivate(
     const RedshiftRequest::Action action, RebootClusterRequest * const q)
-    : RebootClusterPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootClusterRequestPrivate::RebootClusterRequestPrivate(
  */
 RebootClusterRequestPrivate::RebootClusterRequestPrivate(
     const RebootClusterRequestPrivate &other, RebootClusterRequest * const q)
-    : RebootClusterPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

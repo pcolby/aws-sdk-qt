@@ -86,7 +86,7 @@ void ListPublicKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPublicKeysResponse instance.
  */
 ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
-    ListPublicKeysQueueResponse * const q) : ListPublicKeysPrivate(q)
+    ListPublicKeysResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

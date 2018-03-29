@@ -86,7 +86,7 @@ void DeleteRuleGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRuleGroupResponse instance.
  */
 DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponsePrivate(
-    DeleteRuleGroupQueueResponse * const q) : DeleteRuleGroupPrivate(q)
+    DeleteRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

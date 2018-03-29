@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const RDSRequest::Action action, DescribeAccountAttributesRequest * const q)
-    : DescribeAccountAttributesPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)
-    : DescribeAccountAttributesPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

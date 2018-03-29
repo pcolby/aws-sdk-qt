@@ -86,7 +86,7 @@ void UnsubscribeFromEventResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnsubscribeFromEventResponse instance.
  */
 UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
-    UnsubscribeFromEventQueueResponse * const q) : UnsubscribeFromEventPrivate(q)
+    UnsubscribeFromEventResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

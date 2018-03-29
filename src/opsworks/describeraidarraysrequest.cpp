@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRaidArraysRequest::response(QNetworkR
  */
 DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
     const OpsWorksRequest::Action action, DescribeRaidArraysRequest * const q)
-    : DescribeRaidArraysPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
  */
 DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
     const DescribeRaidArraysRequestPrivate &other, DescribeRaidArraysRequest * const q)
-    : DescribeRaidArraysPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

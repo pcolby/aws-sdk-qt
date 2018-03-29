@@ -86,7 +86,7 @@ void UnassignInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnassignInstanceResponse instance.
  */
 UnassignInstanceResponsePrivate::UnassignInstanceResponsePrivate(
-    UnassignInstanceQueueResponse * const q) : UnassignInstancePrivate(q)
+    UnassignInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

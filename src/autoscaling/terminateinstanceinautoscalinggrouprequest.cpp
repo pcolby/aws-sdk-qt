@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::r
  */
 TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, TerminateInstanceInAutoScalingGroupRequest * const q)
-    : TerminateInstanceInAutoScalingGroupPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalin
  */
 TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
     const TerminateInstanceInAutoScalingGroupRequestPrivate &other, TerminateInstanceInAutoScalingGroupRequest * const q)
-    : TerminateInstanceInAutoScalingGroupPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

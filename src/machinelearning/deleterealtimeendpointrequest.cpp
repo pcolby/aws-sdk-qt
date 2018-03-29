@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetw
  */
 DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
     const MachineLearningRequest::Action action, DeleteRealtimeEndpointRequest * const q)
-    : DeleteRealtimeEndpointPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
  */
 DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
     const DeleteRealtimeEndpointRequestPrivate &other, DeleteRealtimeEndpointRequest * const q)
-    : DeleteRealtimeEndpointPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

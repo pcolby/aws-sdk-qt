@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetTrackingOptionsRequest:
  */
 CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetTrackingOptionsRequest * const q)
-    : CreateConfigurationSetTrackingOptionsPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrack
  */
 CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrackingOptionsRequestPrivate(
     const CreateConfigurationSetTrackingOptionsRequestPrivate &other, CreateConfigurationSetTrackingOptionsRequest * const q)
-    : CreateConfigurationSetTrackingOptionsPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

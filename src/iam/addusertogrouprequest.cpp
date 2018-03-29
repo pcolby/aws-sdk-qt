@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
     const IAMRequest::Action action, AddUserToGroupRequest * const q)
-    : AddUserToGroupPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
     const AddUserToGroupRequestPrivate &other, AddUserToGroupRequest * const q)
-    : AddUserToGroupPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

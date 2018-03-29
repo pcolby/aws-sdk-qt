@@ -86,7 +86,7 @@ void CreateDevEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDevEndpointResponse instance.
  */
 CreateDevEndpointResponsePrivate::CreateDevEndpointResponsePrivate(
-    CreateDevEndpointQueueResponse * const q) : CreateDevEndpointPrivate(q)
+    CreateDevEndpointResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

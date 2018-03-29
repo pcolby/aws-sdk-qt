@@ -86,7 +86,7 @@ void UpdateSegmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSegmentResponse instance.
  */
 UpdateSegmentResponsePrivate::UpdateSegmentResponsePrivate(
-    UpdateSegmentQueueResponse * const q) : UpdateSegmentPrivate(q)
+    UpdateSegmentResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

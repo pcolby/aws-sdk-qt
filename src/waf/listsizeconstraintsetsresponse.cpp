@@ -86,7 +86,7 @@ void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSizeConstraintSetsResponse instance.
  */
 ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
-    ListSizeConstraintSetsQueueResponse * const q) : ListSizeConstraintSetsPrivate(q)
+    ListSizeConstraintSetsResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

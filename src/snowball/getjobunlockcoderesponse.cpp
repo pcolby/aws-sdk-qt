@@ -86,7 +86,7 @@ void GetJobUnlockCodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetJobUnlockCodeResponse instance.
  */
 GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
-    GetJobUnlockCodeQueueResponse * const q) : GetJobUnlockCodePrivate(q)
+    GetJobUnlockCodeResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

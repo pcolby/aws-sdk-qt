@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableAlarmActionsRequest::response(QNetwork
  */
 DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
     const CloudWatchRequest::Action action, DisableAlarmActionsRequest * const q)
-    : DisableAlarmActionsPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
  */
 DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
     const DisableAlarmActionsRequestPrivate &other, DisableAlarmActionsRequest * const q)
-    : DisableAlarmActionsPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

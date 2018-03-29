@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::re
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
     const SNSRequest::Action action, ListEndpointsByPlatformApplicationRequest * const q)
-    : ListEndpointsByPlatformApplicationPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplica
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
     const ListEndpointsByPlatformApplicationRequestPrivate &other, ListEndpointsByPlatformApplicationRequest * const q)
-    : ListEndpointsByPlatformApplicationPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

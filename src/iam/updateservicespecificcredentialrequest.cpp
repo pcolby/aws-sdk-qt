@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::respo
  */
 UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, UpdateServiceSpecificCredentialRequest * const q)
-    : UpdateServiceSpecificCredentialPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRe
  */
 UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
     const UpdateServiceSpecificCredentialRequestPrivate &other, UpdateServiceSpecificCredentialRequest * const q)
-    : UpdateServiceSpecificCredentialPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

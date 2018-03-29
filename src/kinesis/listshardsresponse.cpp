@@ -86,7 +86,7 @@ void ListShardsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListShardsResponse instance.
  */
 ListShardsResponsePrivate::ListShardsResponsePrivate(
-    ListShardsQueueResponse * const q) : ListShardsPrivate(q)
+    ListShardsResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

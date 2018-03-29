@@ -86,7 +86,7 @@ void UpdateServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateServiceAccessPoliciesResponse instance.
  */
 UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponsePrivate(
-    UpdateServiceAccessPoliciesQueueResponse * const q) : UpdateServiceAccessPoliciesPrivate(q)
+    UpdateServiceAccessPoliciesResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

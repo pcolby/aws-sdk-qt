@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkRep
  */
 SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
     const AutoScalingRequest::Action action, SuspendProcessesRequest * const q)
-    : SuspendProcessesPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
  */
 SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
     const SuspendProcessesRequestPrivate &other, SuspendProcessesRequest * const q)
-    : SuspendProcessesPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

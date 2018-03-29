@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingTypeRequest::response(QNetworkRepl
  */
 DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
     const IoTRequest::Action action, DeleteThingTypeRequest * const q)
-    : DeleteThingTypePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
  */
 DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
     const DeleteThingTypeRequestPrivate &other, DeleteThingTypeRequest * const q)
-    : DeleteThingTypePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

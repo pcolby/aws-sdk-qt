@@ -86,7 +86,7 @@ void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteUsagePlanKeyResponse instance.
  */
 DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponsePrivate(
-    DeleteUsagePlanKeyQueueResponse * const q) : DeleteUsagePlanKeyPrivate(q)
+    DeleteUsagePlanKeyResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

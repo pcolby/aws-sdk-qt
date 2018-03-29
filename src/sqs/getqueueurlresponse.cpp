@@ -86,7 +86,7 @@ void GetQueueUrlResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetQueueUrlResponse instance.
  */
 GetQueueUrlResponsePrivate::GetQueueUrlResponsePrivate(
-    GetQueueUrlQueueResponse * const q) : GetQueueUrlPrivate(q)
+    GetQueueUrlResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

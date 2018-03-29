@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterEventTopicRequest::response(QNetworkR
  */
 RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
     const DirectoryServiceRequest::Action action, RegisterEventTopicRequest * const q)
-    : RegisterEventTopicPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
  */
 RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
     const RegisterEventTopicRequestPrivate &other, RegisterEventTopicRequest * const q)
-    : RegisterEventTopicPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

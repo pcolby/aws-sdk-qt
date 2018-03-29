@@ -86,7 +86,7 @@ void DescribeSessionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSessionsResponse instance.
  */
 DescribeSessionsResponsePrivate::DescribeSessionsResponsePrivate(
-    DescribeSessionsQueueResponse * const q) : DescribeSessionsPrivate(q)
+    DescribeSessionsResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

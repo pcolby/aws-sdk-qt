@@ -86,7 +86,7 @@ void SignalResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SignalResourceResponse instance.
  */
 SignalResourceResponsePrivate::SignalResourceResponsePrivate(
-    SignalResourceQueueResponse * const q) : SignalResourcePrivate(q)
+    SignalResourceResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

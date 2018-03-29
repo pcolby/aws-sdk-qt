@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTemplateRequest::response(QNetworkReply
  */
 UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
     const SESRequest::Action action, UpdateTemplateRequest * const q)
-    : UpdateTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
  */
 UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
     const UpdateTemplateRequestPrivate &other, UpdateTemplateRequest * const q)
-    : UpdateTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

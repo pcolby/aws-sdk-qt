@@ -86,7 +86,7 @@ void CreateProjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateProjectResponse instance.
  */
 CreateProjectResponsePrivate::CreateProjectResponsePrivate(
-    CreateProjectQueueResponse * const q) : CreateProjectPrivate(q)
+    CreateProjectResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

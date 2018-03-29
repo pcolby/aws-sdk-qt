@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterDefaultPatchBaselineRequest::response
  */
 RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestPrivate(
     const SSMRequest::Action action, RegisterDefaultPatchBaselineRequest * const q)
-    : RegisterDefaultPatchBaselinePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestP
  */
 RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestPrivate(
     const RegisterDefaultPatchBaselineRequestPrivate &other, RegisterDefaultPatchBaselineRequest * const q)
-    : RegisterDefaultPatchBaselinePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

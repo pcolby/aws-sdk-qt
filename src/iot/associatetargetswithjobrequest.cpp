@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNet
  */
 AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
     const IoTRequest::Action action, AssociateTargetsWithJobRequest * const q)
-    : AssociateTargetsWithJobPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
  */
 AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
     const AssociateTargetsWithJobRequestPrivate &other, AssociateTargetsWithJobRequest * const q)
-    : AssociateTargetsWithJobPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

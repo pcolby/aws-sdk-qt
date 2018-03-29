@@ -86,7 +86,7 @@ void GetCorsPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCorsPolicyResponse instance.
  */
 GetCorsPolicyResponsePrivate::GetCorsPolicyResponsePrivate(
-    GetCorsPolicyQueueResponse * const q) : GetCorsPolicyPrivate(q)
+    GetCorsPolicyResponse * const q) : MediaStoreResponsePrivate(q)
 {
 
 }

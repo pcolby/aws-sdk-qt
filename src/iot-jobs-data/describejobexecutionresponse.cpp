@@ -86,7 +86,7 @@ void DescribeJobExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeJobExecutionResponse instance.
  */
 DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
-    DescribeJobExecutionQueueResponse * const q) : DescribeJobExecutionPrivate(q)
+    DescribeJobExecutionResponse * const q) : IoTJobsDataPlaneResponsePrivate(q)
 {
 
 }

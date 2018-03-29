@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceStartTimeRequest::response
  */
 DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeMaintenanceStartTimeRequest * const q)
-    : DescribeMaintenanceStartTimePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestP
  */
 DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestPrivate(
     const DescribeMaintenanceStartTimeRequestPrivate &other, DescribeMaintenanceStartTimeRequest * const q)
-    : DescribeMaintenanceStartTimePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

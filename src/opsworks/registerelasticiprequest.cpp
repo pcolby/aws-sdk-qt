@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterElasticIpRequest::response(QNetworkRe
  */
 RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, RegisterElasticIpRequest * const q)
-    : RegisterElasticIpPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
  */
 RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
     const RegisterElasticIpRequestPrivate &other, RegisterElasticIpRequest * const q)
-    : RegisterElasticIpPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

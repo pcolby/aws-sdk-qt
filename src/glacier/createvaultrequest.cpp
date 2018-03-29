@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVaultRequest::response(QNetworkReply * 
  */
 CreateVaultRequestPrivate::CreateVaultRequestPrivate(
     const GlacierRequest::Action action, CreateVaultRequest * const q)
-    : CreateVaultPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVaultRequestPrivate::CreateVaultRequestPrivate(
  */
 CreateVaultRequestPrivate::CreateVaultRequestPrivate(
     const CreateVaultRequestPrivate &other, CreateVaultRequest * const q)
-    : CreateVaultPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListIncomingTypedLinksRequest::response(QNetw
  */
 ListIncomingTypedLinksRequestPrivate::ListIncomingTypedLinksRequestPrivate(
     const CloudDirectoryRequest::Action action, ListIncomingTypedLinksRequest * const q)
-    : ListIncomingTypedLinksPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListIncomingTypedLinksRequestPrivate::ListIncomingTypedLinksRequestPrivate(
  */
 ListIncomingTypedLinksRequestPrivate::ListIncomingTypedLinksRequestPrivate(
     const ListIncomingTypedLinksRequestPrivate &other, ListIncomingTypedLinksRequest * const q)
-    : ListIncomingTypedLinksPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

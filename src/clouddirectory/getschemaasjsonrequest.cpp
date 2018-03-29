@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSchemaAsJsonRequest::response(QNetworkRepl
  */
 GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
     const CloudDirectoryRequest::Action action, GetSchemaAsJsonRequest * const q)
-    : GetSchemaAsJsonPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
  */
 GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
     const GetSchemaAsJsonRequestPrivate &other, GetSchemaAsJsonRequest * const q)
-    : GetSchemaAsJsonPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

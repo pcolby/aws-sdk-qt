@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceToPointInTimeRequest::respon
  */
 RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceToPointInTimeRequest * const q)
-    : RestoreDBInstanceToPointInTimePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequ
  */
 RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequestPrivate(
     const RestoreDBInstanceToPointInTimeRequestPrivate &other, RestoreDBInstanceToPointInTimeRequest * const q)
-    : RestoreDBInstanceToPointInTimePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

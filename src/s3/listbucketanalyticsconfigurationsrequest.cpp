@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::res
  */
 ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfigurationsRequestPrivate(
     const S3Request::Action action, ListBucketAnalyticsConfigurationsRequest * const q)
-    : ListBucketAnalyticsConfigurationsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfiguratio
  */
 ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfigurationsRequestPrivate(
     const ListBucketAnalyticsConfigurationsRequestPrivate &other, ListBucketAnalyticsConfigurationsRequest * const q)
-    : ListBucketAnalyticsConfigurationsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

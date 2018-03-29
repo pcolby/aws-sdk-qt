@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetwork
  */
 AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
     const SupportRequest::Action action, AddAttachmentsToSetRequest * const q)
-    : AddAttachmentsToSetPrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
  */
 AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
     const AddAttachmentsToSetRequestPrivate &other, AddAttachmentsToSetRequest * const q)
-    : AddAttachmentsToSetPrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

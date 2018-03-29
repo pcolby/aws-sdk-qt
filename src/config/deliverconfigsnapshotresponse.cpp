@@ -86,7 +86,7 @@ void DeliverConfigSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeliverConfigSnapshotResponse instance.
  */
 DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponsePrivate(
-    DeliverConfigSnapshotQueueResponse * const q) : DeliverConfigSnapshotPrivate(q)
+    DeliverConfigSnapshotResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

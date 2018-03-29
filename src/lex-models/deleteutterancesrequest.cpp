@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkRep
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteUtterancesRequest * const q)
-    : DeleteUtterancesPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
     const DeleteUtterancesRequestPrivate &other, DeleteUtterancesRequest * const q)
-    : DeleteUtterancesPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

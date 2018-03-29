@@ -86,7 +86,7 @@ void UpdatePatchBaselineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePatchBaselineResponse instance.
  */
 UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
-    UpdatePatchBaselineQueueResponse * const q) : UpdatePatchBaselinePrivate(q)
+    UpdatePatchBaselineResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

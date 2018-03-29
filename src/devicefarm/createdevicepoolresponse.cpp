@@ -86,7 +86,7 @@ void CreateDevicePoolResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDevicePoolResponse instance.
  */
 CreateDevicePoolResponsePrivate::CreateDevicePoolResponsePrivate(
-    CreateDevicePoolQueueResponse * const q) : CreateDevicePoolPrivate(q)
+    CreateDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

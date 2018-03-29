@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
-    : UpdateConfigurationSetReputationMetricsEnabledPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfiguratio
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
     const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
-    : UpdateConfigurationSetReputationMetricsEnabledPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

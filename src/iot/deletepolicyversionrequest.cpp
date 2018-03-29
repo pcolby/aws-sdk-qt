@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetwork
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const IoTRequest::Action action, DeletePolicyVersionRequest * const q)
-    : DeletePolicyVersionPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const DeletePolicyVersionRequestPrivate &other, DeletePolicyVersionRequest * const q)
-    : DeletePolicyVersionPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

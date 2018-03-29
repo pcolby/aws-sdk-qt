@@ -86,7 +86,7 @@ void StartConfigRulesEvaluationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartConfigRulesEvaluationResponse instance.
  */
 StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationResponsePrivate(
-    StartConfigRulesEvaluationQueueResponse * const q) : StartConfigRulesEvaluationPrivate(q)
+    StartConfigRulesEvaluationResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

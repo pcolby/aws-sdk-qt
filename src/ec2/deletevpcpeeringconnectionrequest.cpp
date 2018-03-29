@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const EC2Request::Action action, DeleteVpcPeeringConnectionRequest * const q)
-    : DeleteVpcPeeringConnectionPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const DeleteVpcPeeringConnectionRequestPrivate &other, DeleteVpcPeeringConnectionRequest * const q)
-    : DeleteVpcPeeringConnectionPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

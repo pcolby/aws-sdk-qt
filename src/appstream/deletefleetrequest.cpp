@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * 
  */
 DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
     const AppStreamRequest::Action action, DeleteFleetRequest * const q)
-    : DeleteFleetPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
  */
 DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
     const DeleteFleetRequestPrivate &other, DeleteFleetRequest * const q)
-    : DeleteFleetPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

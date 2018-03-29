@@ -86,7 +86,7 @@ void CheckDomainTransferabilityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CheckDomainTransferabilityResponse instance.
  */
 CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePrivate(
-    CheckDomainTransferabilityQueueResponse * const q) : CheckDomainTransferabilityPrivate(q)
+    CheckDomainTransferabilityResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

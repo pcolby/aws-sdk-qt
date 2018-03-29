@@ -86,7 +86,7 @@ void DeleteLagResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLagResponse instance.
  */
 DeleteLagResponsePrivate::DeleteLagResponsePrivate(
-    DeleteLagQueueResponse * const q) : DeleteLagPrivate(q)
+    DeleteLagResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetDistributionConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDistributionConfigResponse instance.
  */
 GetDistributionConfigResponsePrivate::GetDistributionConfigResponsePrivate(
-    GetDistributionConfigQueueResponse * const q) : GetDistributionConfigPrivate(q)
+    GetDistributionConfigResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

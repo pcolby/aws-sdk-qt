@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QN
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DescribeScalingActivitiesRequest * const q)
-    : DescribeScalingActivitiesPrivate(action, q)
+    : ApplicationAutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const DescribeScalingActivitiesRequestPrivate &other, DescribeScalingActivitiesRequest * const q)
-    : DescribeScalingActivitiesPrivate(other, q)
+    : ApplicationAutoScalingRequestPrivate(other, q)
 {
 
 }

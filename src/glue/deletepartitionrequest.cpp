@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePartitionRequest::response(QNetworkRepl
  */
 DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
     const GlueRequest::Action action, DeletePartitionRequest * const q)
-    : DeletePartitionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
  */
 DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
     const DeletePartitionRequestPrivate &other, DeletePartitionRequest * const q)
-    : DeletePartitionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

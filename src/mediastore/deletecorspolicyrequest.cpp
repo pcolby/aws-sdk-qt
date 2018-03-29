@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCorsPolicyRequest::response(QNetworkRep
  */
 DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, DeleteCorsPolicyRequest * const q)
-    : DeleteCorsPolicyPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
  */
 DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
     const DeleteCorsPolicyRequestPrivate &other, DeleteCorsPolicyRequest * const q)
-    : DeleteCorsPolicyPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

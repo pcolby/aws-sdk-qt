@@ -86,7 +86,7 @@ void GetWebACLForResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetWebACLForResourceResponse instance.
  */
 GetWebACLForResourceResponsePrivate::GetWebACLForResourceResponsePrivate(
-    GetWebACLForResourceQueueResponse * const q) : GetWebACLForResourcePrivate(q)
+    GetWebACLForResourceResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

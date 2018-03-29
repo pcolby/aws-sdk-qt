@@ -86,7 +86,7 @@ void CreateStreamingURLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateStreamingURLResponse instance.
  */
 CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
-    CreateStreamingURLQueueResponse * const q) : CreateStreamingURLPrivate(q)
+    CreateStreamingURLResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

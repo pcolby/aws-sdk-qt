@@ -86,7 +86,7 @@ void DisableRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableRuleResponse instance.
  */
 DisableRuleResponsePrivate::DisableRuleResponsePrivate(
-    DisableRuleQueueResponse * const q) : DisableRulePrivate(q)
+    DisableRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

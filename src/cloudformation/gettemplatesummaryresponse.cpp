@@ -86,7 +86,7 @@ void GetTemplateSummaryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTemplateSummaryResponse instance.
  */
 GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponsePrivate(
-    GetTemplateSummaryQueueResponse * const q) : GetTemplateSummaryPrivate(q)
+    GetTemplateSummaryResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

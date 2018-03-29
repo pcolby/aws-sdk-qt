@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServerRequest::response(QNetworkReply *
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
     const OpsWorksCMRequest::Action action, UpdateServerRequest * const q)
-    : UpdateServerPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateServerRequestPrivate::UpdateServerRequestPrivate(
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
     const UpdateServerRequestPrivate &other, UpdateServerRequest * const q)
-    : UpdateServerPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

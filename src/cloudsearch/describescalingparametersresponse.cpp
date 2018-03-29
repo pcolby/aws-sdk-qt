@@ -86,7 +86,7 @@ void DescribeScalingParametersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeScalingParametersResponse instance.
  */
 DescribeScalingParametersResponsePrivate::DescribeScalingParametersResponsePrivate(
-    DescribeScalingParametersQueueResponse * const q) : DescribeScalingParametersPrivate(q)
+    DescribeScalingParametersResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

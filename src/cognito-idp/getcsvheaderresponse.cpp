@@ -86,7 +86,7 @@ void GetCSVHeaderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCSVHeaderResponse instance.
  */
 GetCSVHeaderResponsePrivate::GetCSVHeaderResponsePrivate(
-    GetCSVHeaderQueueResponse * const q) : GetCSVHeaderPrivate(q)
+    GetCSVHeaderResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

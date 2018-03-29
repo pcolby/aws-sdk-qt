@@ -86,7 +86,7 @@ void ExportProjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ExportProjectResponse instance.
  */
 ExportProjectResponsePrivate::ExportProjectResponsePrivate(
-    ExportProjectQueueResponse * const q) : ExportProjectPrivate(q)
+    ExportProjectResponse * const q) : MobileResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateDBSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBSnapshotResponse instance.
  */
 CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
-    CreateDBSnapshotQueueResponse * const q) : CreateDBSnapshotPrivate(q)
+    CreateDBSnapshotResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

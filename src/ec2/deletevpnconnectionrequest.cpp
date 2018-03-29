@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetwork
  */
 DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
     const EC2Request::Action action, DeleteVpnConnectionRequest * const q)
-    : DeleteVpnConnectionPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
  */
 DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
     const DeleteVpnConnectionRequestPrivate &other, DeleteVpnConnectionRequest * const q)
-    : DeleteVpnConnectionPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

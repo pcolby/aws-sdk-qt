@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNe
  */
 StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
     const GameLiftRequest::Action action, StopGameSessionPlacementRequest * const q)
-    : StopGameSessionPlacementPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
  */
 StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
     const StopGameSessionPlacementRequestPrivate &other, StopGameSessionPlacementRequest * const q)
-    : StopGameSessionPlacementPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

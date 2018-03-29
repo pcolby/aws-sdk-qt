@@ -86,7 +86,7 @@ void RetryStageExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RetryStageExecutionResponse instance.
  */
 RetryStageExecutionResponsePrivate::RetryStageExecutionResponsePrivate(
-    RetryStageExecutionQueueResponse * const q) : RetryStageExecutionPrivate(q)
+    RetryStageExecutionResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

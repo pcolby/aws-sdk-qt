@@ -86,7 +86,7 @@ void DeleteAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAliasResponse instance.
  */
 DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
-    DeleteAliasQueueResponse * const q) : DeleteAliasPrivate(q)
+    DeleteAliasResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

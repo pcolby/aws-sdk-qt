@@ -86,7 +86,7 @@ void UpdateBaiduChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBaiduChannelResponse instance.
  */
 UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponsePrivate(
-    UpdateBaiduChannelQueueResponse * const q) : UpdateBaiduChannelPrivate(q)
+    UpdateBaiduChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

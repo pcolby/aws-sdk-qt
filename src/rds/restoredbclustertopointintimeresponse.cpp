@@ -86,7 +86,7 @@ void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreDBClusterToPointInTimeResponse instance.
  */
 RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponsePrivate(
-    RestoreDBClusterToPointInTimeQueueResponse * const q) : RestoreDBClusterToPointInTimePrivate(q)
+    RestoreDBClusterToPointInTimeResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

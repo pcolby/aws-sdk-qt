@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationVersionRequest::response(Q
  */
 CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, CreateDocumentationVersionRequest * const q)
-    : CreateDocumentationVersionPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPriva
  */
 CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPrivate(
     const CreateDocumentationVersionRequestPrivate &other, CreateDocumentationVersionRequest * const q)
-    : CreateDocumentationVersionPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

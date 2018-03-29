@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const DAXRequest::Action action, ListTagsRequest * const q)
-    : ListTagsPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)
-    : ListTagsPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

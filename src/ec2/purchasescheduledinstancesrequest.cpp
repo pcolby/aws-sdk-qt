@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(Q
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
     const EC2Request::Action action, PurchaseScheduledInstancesRequest * const q)
-    : PurchaseScheduledInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPriva
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
     const PurchaseScheduledInstancesRequestPrivate &other, PurchaseScheduledInstancesRequest * const q)
-    : PurchaseScheduledInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

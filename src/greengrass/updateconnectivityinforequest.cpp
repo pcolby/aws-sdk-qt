@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetw
  */
 UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
     const GreengrassRequest::Action action, UpdateConnectivityInfoRequest * const q)
-    : UpdateConnectivityInfoPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
  */
 UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
     const UpdateConnectivityInfoRequestPrivate &other, UpdateConnectivityInfoRequest * const q)
-    : UpdateConnectivityInfoPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

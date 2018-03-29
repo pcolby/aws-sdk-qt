@@ -86,7 +86,7 @@ void UpdateTerminationProtectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTerminationProtectionResponse instance.
  */
 UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResponsePrivate(
-    UpdateTerminationProtectionQueueResponse * const q) : UpdateTerminationProtectionPrivate(q)
+    UpdateTerminationProtectionResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

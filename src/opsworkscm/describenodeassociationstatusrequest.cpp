@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNodeAssociationStatusRequest::respons
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeNodeAssociationStatusRequest * const q)
-    : DescribeNodeAssociationStatusPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusReques
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
     const DescribeNodeAssociationStatusRequestPrivate &other, DescribeNodeAssociationStatusRequest * const q)
-    : DescribeNodeAssociationStatusPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

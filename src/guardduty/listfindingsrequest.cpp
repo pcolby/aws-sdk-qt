@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply *
  */
 ListFindingsRequestPrivate::ListFindingsRequestPrivate(
     const GuardDutyRequest::Action action, ListFindingsRequest * const q)
-    : ListFindingsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFindingsRequestPrivate::ListFindingsRequestPrivate(
  */
 ListFindingsRequestPrivate::ListFindingsRequestPrivate(
     const ListFindingsRequestPrivate &other, ListFindingsRequest * const q)
-    : ListFindingsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetIntrospectionSchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIntrospectionSchemaResponse instance.
  */
 GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponsePrivate(
-    GetIntrospectionSchemaQueueResponse * const q) : GetIntrospectionSchemaPrivate(q)
+    GetIntrospectionSchemaResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

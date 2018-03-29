@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkRepl
  */
 ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
     const LightsailRequest::Action action, ReleaseStaticIpRequest * const q)
-    : ReleaseStaticIpPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
  */
 ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
     const ReleaseStaticIpRequestPrivate &other, ReleaseStaticIpRequest * const q)
-    : ReleaseStaticIpPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

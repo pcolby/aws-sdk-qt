@@ -86,7 +86,7 @@ void DescribeRegionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRegionsResponse instance.
  */
 DescribeRegionsResponsePrivate::DescribeRegionsResponsePrivate(
-    DescribeRegionsQueueResponse * const q) : DescribeRegionsPrivate(q)
+    DescribeRegionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

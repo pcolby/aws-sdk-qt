@@ -86,7 +86,7 @@ void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSourceRegionsResponse instance.
  */
 DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponsePrivate(
-    DescribeSourceRegionsQueueResponse * const q) : DescribeSourceRegionsPrivate(q)
+    DescribeSourceRegionsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

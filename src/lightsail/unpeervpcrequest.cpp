@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnpeerVpcRequest::response(QNetworkReply * co
  */
 UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
     const LightsailRequest::Action action, UnpeerVpcRequest * const q)
-    : UnpeerVpcPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
  */
 UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
     const UnpeerVpcRequestPrivate &other, UnpeerVpcRequest * const q)
-    : UnpeerVpcPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

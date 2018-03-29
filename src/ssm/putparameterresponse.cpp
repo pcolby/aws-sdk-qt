@@ -86,7 +86,7 @@ void PutParameterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutParameterResponse instance.
  */
 PutParameterResponsePrivate::PutParameterResponsePrivate(
-    PutParameterQueueResponse * const q) : PutParameterPrivate(q)
+    PutParameterResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

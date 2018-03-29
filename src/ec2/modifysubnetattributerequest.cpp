@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetwo
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
     const EC2Request::Action action, ModifySubnetAttributeRequest * const q)
-    : ModifySubnetAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
     const ModifySubnetAttributeRequestPrivate &other, ModifySubnetAttributeRequest * const q)
-    : ModifySubnetAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

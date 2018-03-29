@@ -86,7 +86,7 @@ void PutRolePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutRolePolicyResponse instance.
  */
 PutRolePolicyResponsePrivate::PutRolePolicyResponsePrivate(
-    PutRolePolicyQueueResponse * const q) : PutRolePolicyPrivate(q)
+    PutRolePolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

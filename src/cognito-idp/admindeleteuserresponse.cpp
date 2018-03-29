@@ -86,7 +86,7 @@ void AdminDeleteUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminDeleteUserResponse instance.
  */
 AdminDeleteUserResponsePrivate::AdminDeleteUserResponsePrivate(
-    AdminDeleteUserQueueResponse * const q) : AdminDeleteUserPrivate(q)
+    AdminDeleteUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

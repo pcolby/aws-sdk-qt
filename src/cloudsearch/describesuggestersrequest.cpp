@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSuggestersRequest::response(QNetworkR
  */
 DescribeSuggestersRequestPrivate::DescribeSuggestersRequestPrivate(
     const CloudSearchRequest::Action action, DescribeSuggestersRequest * const q)
-    : DescribeSuggestersPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSuggestersRequestPrivate::DescribeSuggestersRequestPrivate(
  */
 DescribeSuggestersRequestPrivate::DescribeSuggestersRequestPrivate(
     const DescribeSuggestersRequestPrivate &other, DescribeSuggestersRequest * const q)
-    : DescribeSuggestersPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

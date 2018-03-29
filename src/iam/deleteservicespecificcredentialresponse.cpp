@@ -86,7 +86,7 @@ void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteServiceSpecificCredentialResponse instance.
  */
 DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialResponsePrivate(
-    DeleteServiceSpecificCredentialQueueResponse * const q) : DeleteServiceSpecificCredentialPrivate(q)
+    DeleteServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNe
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateApplicationVersionRequest * const q)
-    : CreateApplicationVersionPrivate(action, q)
+    : ServerlessApplicationRepositoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const CreateApplicationVersionRequestPrivate &other, CreateApplicationVersionRequest * const q)
-    : CreateApplicationVersionPrivate(other, q)
+    : ServerlessApplicationRepositoryRequestPrivate(other, q)
 {
 
 }

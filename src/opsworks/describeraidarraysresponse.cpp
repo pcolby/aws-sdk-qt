@@ -86,7 +86,7 @@ void DescribeRaidArraysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRaidArraysResponse instance.
  */
 DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponsePrivate(
-    DescribeRaidArraysQueueResponse * const q) : DescribeRaidArraysPrivate(q)
+    DescribeRaidArraysResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

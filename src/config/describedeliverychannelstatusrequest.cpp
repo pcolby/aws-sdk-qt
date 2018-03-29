@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryChannelStatusRequest::respons
  */
 DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeDeliveryChannelStatusRequest * const q)
-    : DescribeDeliveryChannelStatusPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusReques
  */
 DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusRequestPrivate(
     const DescribeDeliveryChannelStatusRequestPrivate &other, DescribeDeliveryChannelStatusRequest * const q)
-    : DescribeDeliveryChannelStatusPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

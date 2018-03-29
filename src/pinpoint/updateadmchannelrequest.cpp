@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkRep
  */
 UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateAdmChannelRequest * const q)
-    : UpdateAdmChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
  */
 UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
     const UpdateAdmChannelRequestPrivate &other, UpdateAdmChannelRequest * const q)
-    : UpdateAdmChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

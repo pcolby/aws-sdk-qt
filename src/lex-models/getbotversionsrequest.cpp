@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply
  */
 GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotVersionsRequest * const q)
-    : GetBotVersionsPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
  */
 GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
     const GetBotVersionsRequestPrivate &other, GetBotVersionsRequest * const q)
-    : GetBotVersionsPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

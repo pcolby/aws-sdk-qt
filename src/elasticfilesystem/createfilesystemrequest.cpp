@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkRep
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
     const EFSRequest::Action action, CreateFileSystemRequest * const q)
-    : CreateFileSystemPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
     const CreateFileSystemRequestPrivate &other, CreateFileSystemRequest * const q)
-    : CreateFileSystemPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

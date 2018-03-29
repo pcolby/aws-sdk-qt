@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::respo
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const RDSRequest::Action action, DescribeEngineDefaultParametersRequest * const q)
-    : DescribeEngineDefaultParametersPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRe
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const DescribeEngineDefaultParametersRequestPrivate &other, DescribeEngineDefaultParametersRequest * const q)
-    : DescribeEngineDefaultParametersPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkRep
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
     const EFSRequest::Action action, DeleteFileSystemRequest * const q)
-    : DeleteFileSystemPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
     const DeleteFileSystemRequestPrivate &other, DeleteFileSystemRequest * const q)
-    : DeleteFileSystemPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

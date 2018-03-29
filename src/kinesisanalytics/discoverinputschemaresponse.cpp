@@ -86,7 +86,7 @@ void DiscoverInputSchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DiscoverInputSchemaResponse instance.
  */
 DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
-    DiscoverInputSchemaQueueResponse * const q) : DiscoverInputSchemaPrivate(q)
+    DiscoverInputSchemaResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifyCacheClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyCacheClusterResponse instance.
  */
 ModifyCacheClusterResponsePrivate::ModifyCacheClusterResponsePrivate(
-    ModifyCacheClusterQueueResponse * const q) : ModifyCacheClusterPrivate(q)
+    ModifyCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

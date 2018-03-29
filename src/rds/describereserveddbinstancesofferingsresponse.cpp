@@ -86,7 +86,7 @@ void DescribeReservedDBInstancesOfferingsResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DescribeReservedDBInstancesOfferingsResponse instance.
  */
 DescribeReservedDBInstancesOfferingsResponsePrivate::DescribeReservedDBInstancesOfferingsResponsePrivate(
-    DescribeReservedDBInstancesOfferingsQueueResponse * const q) : DescribeReservedDBInstancesOfferingsPrivate(q)
+    DescribeReservedDBInstancesOfferingsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

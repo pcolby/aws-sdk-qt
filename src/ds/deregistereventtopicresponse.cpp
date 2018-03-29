@@ -86,7 +86,7 @@ void DeregisterEventTopicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterEventTopicResponse instance.
  */
 DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponsePrivate(
-    DeregisterEventTopicQueueResponse * const q) : DeregisterEventTopicPrivate(q)
+    DeregisterEventTopicResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

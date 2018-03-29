@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetw
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
     const EC2Request::Action action, DisassociateRouteTableRequest * const q)
-    : DisassociateRouteTablePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
     const DisassociateRouteTableRequestPrivate &other, DisassociateRouteTableRequest * const q)
-    : DisassociateRouteTablePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void InitiateDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InitiateDocumentVersionUploadResponse instance.
  */
 InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadResponsePrivate(
-    InitiateDocumentVersionUploadQueueResponse * const q) : InitiateDocumentVersionUploadPrivate(q)
+    InitiateDocumentVersionUploadResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

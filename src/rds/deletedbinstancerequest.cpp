@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkRep
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const RDSRequest::Action action, DeleteDBInstanceRequest * const q)
-    : DeleteDBInstancePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const DeleteDBInstanceRequestPrivate &other, DeleteDBInstanceRequest * const q)
-    : DeleteDBInstancePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

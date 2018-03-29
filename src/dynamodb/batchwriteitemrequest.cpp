@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchWriteItemRequest::response(QNetworkReply
  */
 BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
     const DynamoDBRequest::Action action, BatchWriteItemRequest * const q)
-    : BatchWriteItemPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
  */
 BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
     const BatchWriteItemRequestPrivate &other, BatchWriteItemRequest * const q)
-    : BatchWriteItemPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

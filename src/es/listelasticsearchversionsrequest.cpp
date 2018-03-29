@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QN
  */
 ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, ListElasticsearchVersionsRequest * const q)
-    : ListElasticsearchVersionsPrivate(action, q)
+    : ElasticsearchServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate
  */
 ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
     const ListElasticsearchVersionsRequestPrivate &other, ListElasticsearchVersionsRequest * const q)
-    : ListElasticsearchVersionsPrivate(other, q)
+    : ElasticsearchServiceRequestPrivate(other, q)
 {
 
 }

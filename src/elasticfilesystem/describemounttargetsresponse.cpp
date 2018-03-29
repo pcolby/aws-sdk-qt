@@ -86,7 +86,7 @@ void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMountTargetsResponse instance.
  */
 DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
-    DescribeMountTargetsQueueResponse * const q) : DescribeMountTargetsPrivate(q)
+    DescribeMountTargetsResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

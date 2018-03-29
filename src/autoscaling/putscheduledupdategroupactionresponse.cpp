@@ -86,7 +86,7 @@ void PutScheduledUpdateGroupActionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutScheduledUpdateGroupActionResponse instance.
  */
 PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionResponsePrivate(
-    PutScheduledUpdateGroupActionQueueResponse * const q) : PutScheduledUpdateGroupActionPrivate(q)
+    PutScheduledUpdateGroupActionResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

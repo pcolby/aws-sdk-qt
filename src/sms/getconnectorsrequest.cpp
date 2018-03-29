@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply 
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
     const SMSRequest::Action action, GetConnectorsRequest * const q)
-    : GetConnectorsPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
     const GetConnectorsRequestPrivate &other, GetConnectorsRequest * const q)
-    : GetConnectorsPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

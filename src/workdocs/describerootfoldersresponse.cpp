@@ -86,7 +86,7 @@ void DescribeRootFoldersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRootFoldersResponse instance.
  */
 DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponsePrivate(
-    DescribeRootFoldersQueueResponse * const q) : DescribeRootFoldersPrivate(q)
+    DescribeRootFoldersResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

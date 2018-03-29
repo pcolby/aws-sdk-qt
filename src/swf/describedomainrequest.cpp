@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
     const SWFRequest::Action action, DescribeDomainRequest * const q)
-    : DescribeDomainPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
     const DescribeDomainRequestPrivate &other, DescribeDomainRequest * const q)
-    : DescribeDomainPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

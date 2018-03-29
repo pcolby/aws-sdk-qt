@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::
  */
 DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
     const SupportRequest::Action action, DescribeTrustedAdvisorCheckSummariesRequest * const q)
-    : DescribeTrustedAdvisorCheckSummariesPrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckS
  */
 DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
     const DescribeTrustedAdvisorCheckSummariesRequestPrivate &other, DescribeTrustedAdvisorCheckSummariesRequest * const q)
-    : DescribeTrustedAdvisorCheckSummariesPrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

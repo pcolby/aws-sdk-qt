@@ -86,7 +86,7 @@ void DescribeAvailablePatchesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAvailablePatchesResponse instance.
  */
 DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate(
-    DescribeAvailablePatchesQueueResponse * const q) : DescribeAvailablePatchesPrivate(q)
+    DescribeAvailablePatchesResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTargetHealthRequest::response(QNetwor
  */
 DescribeTargetHealthRequestPrivate::DescribeTargetHealthRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeTargetHealthRequest * const q)
-    : DescribeTargetHealthPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTargetHealthRequestPrivate::DescribeTargetHealthRequestPrivate(
  */
 DescribeTargetHealthRequestPrivate::DescribeTargetHealthRequestPrivate(
     const DescribeTargetHealthRequestPrivate &other, DescribeTargetHealthRequest * const q)
-    : DescribeTargetHealthPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

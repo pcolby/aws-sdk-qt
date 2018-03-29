@@ -86,7 +86,7 @@ void GetApplicationPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetApplicationPolicyResponse instance.
  */
 GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponsePrivate(
-    GetApplicationPolicyQueueResponse * const q) : GetApplicationPolicyPrivate(q)
+    GetApplicationPolicyResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
 {
 
 }

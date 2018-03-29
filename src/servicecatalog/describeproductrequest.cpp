@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductRequest::response(QNetworkRepl
  */
 DescribeProductRequestPrivate::DescribeProductRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProductRequest * const q)
-    : DescribeProductPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeProductRequestPrivate::DescribeProductRequestPrivate(
  */
 DescribeProductRequestPrivate::DescribeProductRequestPrivate(
     const DescribeProductRequestPrivate &other, DescribeProductRequest * const q)
-    : DescribeProductPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

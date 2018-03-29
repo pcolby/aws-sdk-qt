@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNFSFileSharesRequest::response(QNetwo
  */
 DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeNFSFileSharesRequest * const q)
-    : DescribeNFSFileSharesPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
  */
 DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
     const DescribeNFSFileSharesRequestPrivate &other, DescribeNFSFileSharesRequest * const q)
-    : DescribeNFSFileSharesPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

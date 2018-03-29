@@ -86,7 +86,7 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeClustersResponse instance.
  */
 DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
-    DescribeClustersQueueResponse * const q) : DescribeClustersPrivate(q)
+    DescribeClustersResponse * const q) : CloudHSMV2ResponsePrivate(q)
 {
 
 }

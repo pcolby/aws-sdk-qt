@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const EC2Request::Action action, DescribeTagsRequest * const q)
-    : DescribeTagsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)
-    : DescribeTagsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

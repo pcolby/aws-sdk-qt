@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceHealthRequest::response(QNetw
  */
 DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeInstanceHealthRequest * const q)
-    : DescribeInstanceHealthPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
  */
 DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
     const DescribeInstanceHealthRequestPrivate &other, DescribeInstanceHealthRequest * const q)
-    : DescribeInstanceHealthPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

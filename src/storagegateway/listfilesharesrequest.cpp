@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFileSharesRequest::response(QNetworkReply
  */
 ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
     const StorageGatewayRequest::Action action, ListFileSharesRequest * const q)
-    : ListFileSharesPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
  */
 ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
     const ListFileSharesRequestPrivate &other, ListFileSharesRequest * const q)
-    : ListFileSharesPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

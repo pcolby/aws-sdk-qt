@@ -86,7 +86,7 @@ void ListAssociatedStacksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAssociatedStacksResponse instance.
  */
 ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponsePrivate(
-    ListAssociatedStacksQueueResponse * const q) : ListAssociatedStacksPrivate(q)
+    ListAssociatedStacksResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AbortEnvironmentUpdateRequest::response(QNetw
  */
 AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, AbortEnvironmentUpdateRequest * const q)
-    : AbortEnvironmentUpdatePrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
  */
 AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
     const AbortEnvironmentUpdateRequestPrivate &other, AbortEnvironmentUpdateRequest * const q)
-    : AbortEnvironmentUpdatePrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

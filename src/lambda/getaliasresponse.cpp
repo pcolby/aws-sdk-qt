@@ -86,7 +86,7 @@ void GetAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAliasResponse instance.
  */
 GetAliasResponsePrivate::GetAliasResponsePrivate(
-    GetAliasQueueResponse * const q) : GetAliasPrivate(q)
+    GetAliasResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListInputSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInputSecurityGroupsResponse instance.
  */
 ListInputSecurityGroupsResponsePrivate::ListInputSecurityGroupsResponsePrivate(
-    ListInputSecurityGroupsQueueResponse * const q) : ListInputSecurityGroupsPrivate(q)
+    ListInputSecurityGroupsResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeBackupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBackupsResponse instance.
  */
 DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
-    DescribeBackupsQueueResponse * const q) : DescribeBackupsPrivate(q)
+    DescribeBackupsResponse * const q) : CloudHSMV2ResponsePrivate(q)
 {
 
 }

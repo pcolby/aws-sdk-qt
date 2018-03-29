@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutJobSuccessResultRequest::response(QNetwork
  */
 PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
     const CodePipelineRequest::Action action, PutJobSuccessResultRequest * const q)
-    : PutJobSuccessResultPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
  */
 PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
     const PutJobSuccessResultRequestPrivate &other, PutJobSuccessResultRequest * const q)
-    : PutJobSuccessResultPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * 
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
     const EC2Request::Action action, ModifyHostsRequest * const q)
-    : ModifyHostsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
     const ModifyHostsRequestPrivate &other, ModifyHostsRequest * const q)
-    : ModifyHostsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateShardCountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateShardCountResponse instance.
  */
 UpdateShardCountResponsePrivate::UpdateShardCountResponsePrivate(
-    UpdateShardCountQueueResponse * const q) : UpdateShardCountPrivate(q)
+    UpdateShardCountResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

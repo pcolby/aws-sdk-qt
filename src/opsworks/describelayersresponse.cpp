@@ -86,7 +86,7 @@ void DescribeLayersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLayersResponse instance.
  */
 DescribeLayersResponsePrivate::DescribeLayersResponsePrivate(
-    DescribeLayersQueueResponse * const q) : DescribeLayersPrivate(q)
+    DescribeLayersResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSnapshotRequest::response(QNetworkRep
  */
 DeleteDBSnapshotRequestPrivate::DeleteDBSnapshotRequestPrivate(
     const RDSRequest::Action action, DeleteDBSnapshotRequest * const q)
-    : DeleteDBSnapshotPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBSnapshotRequestPrivate::DeleteDBSnapshotRequestPrivate(
  */
 DeleteDBSnapshotRequestPrivate::DeleteDBSnapshotRequestPrivate(
     const DeleteDBSnapshotRequestPrivate &other, DeleteDBSnapshotRequest * const q)
-    : DeleteDBSnapshotPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

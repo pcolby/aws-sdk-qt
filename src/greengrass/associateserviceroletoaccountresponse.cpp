@@ -86,7 +86,7 @@ void AssociateServiceRoleToAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateServiceRoleToAccountResponse instance.
  */
 AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountResponsePrivate(
-    AssociateServiceRoleToAccountQueueResponse * const q) : AssociateServiceRoleToAccountPrivate(q)
+    AssociateServiceRoleToAccountResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

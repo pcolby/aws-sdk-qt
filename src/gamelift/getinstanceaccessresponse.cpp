@@ -86,7 +86,7 @@ void GetInstanceAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInstanceAccessResponse instance.
  */
 GetInstanceAccessResponsePrivate::GetInstanceAccessResponsePrivate(
-    GetInstanceAccessQueueResponse * const q) : GetInstanceAccessPrivate(q)
+    GetInstanceAccessResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

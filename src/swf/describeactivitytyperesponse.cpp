@@ -86,7 +86,7 @@ void DescribeActivityTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeActivityTypeResponse instance.
  */
 DescribeActivityTypeResponsePrivate::DescribeActivityTypeResponsePrivate(
-    DescribeActivityTypeQueueResponse * const q) : DescribeActivityTypePrivate(q)
+    DescribeActivityTypeResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

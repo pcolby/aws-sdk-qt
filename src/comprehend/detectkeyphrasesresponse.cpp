@@ -86,7 +86,7 @@ void DetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetectKeyPhrasesResponse instance.
  */
 DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponsePrivate(
-    DetectKeyPhrasesQueueResponse * const q) : DetectKeyPhrasesPrivate(q)
+    DetectKeyPhrasesResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

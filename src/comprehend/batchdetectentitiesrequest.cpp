@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetwork
  */
 BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectEntitiesRequest * const q)
-    : BatchDetectEntitiesPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
  */
 BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
     const BatchDetectEntitiesRequestPrivate &other, BatchDetectEntitiesRequest * const q)
-    : BatchDetectEntitiesPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

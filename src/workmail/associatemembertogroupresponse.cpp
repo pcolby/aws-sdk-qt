@@ -86,7 +86,7 @@ void AssociateMemberToGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateMemberToGroupResponse instance.
  */
 AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponsePrivate(
-    AssociateMemberToGroupQueueResponse * const q) : AssociateMemberToGroupPrivate(q)
+    AssociateMemberToGroupResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

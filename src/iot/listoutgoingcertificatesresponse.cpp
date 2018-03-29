@@ -86,7 +86,7 @@ void ListOutgoingCertificatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListOutgoingCertificatesResponse instance.
  */
 ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponsePrivate(
-    ListOutgoingCertificatesQueueResponse * const q) : ListOutgoingCertificatesPrivate(q)
+    ListOutgoingCertificatesResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

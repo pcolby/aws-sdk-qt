@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceReadReplicaRequest::response(
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
     const RDSRequest::Action action, CreateDBInstanceReadReplicaRequest * const q)
-    : CreateDBInstanceReadReplicaPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPri
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
     const CreateDBInstanceReadReplicaRequestPrivate &other, CreateDBInstanceReadReplicaRequest * const q)
-    : CreateDBInstanceReadReplicaPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

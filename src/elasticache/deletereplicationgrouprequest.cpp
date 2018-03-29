@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetw
  */
 DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteReplicationGroupRequest * const q)
-    : DeleteReplicationGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
  */
 DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
     const DeleteReplicationGroupRequestPrivate &other, DeleteReplicationGroupRequest * const q)
-    : DeleteReplicationGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

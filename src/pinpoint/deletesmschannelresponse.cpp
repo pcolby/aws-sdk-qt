@@ -86,7 +86,7 @@ void DeleteSmsChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSmsChannelResponse instance.
  */
 DeleteSmsChannelResponsePrivate::DeleteSmsChannelResponsePrivate(
-    DeleteSmsChannelQueueResponse * const q) : DeleteSmsChannelPrivate(q)
+    DeleteSmsChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

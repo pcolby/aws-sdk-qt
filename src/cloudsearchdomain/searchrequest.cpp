@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const
  */
 SearchRequestPrivate::SearchRequestPrivate(
     const CloudSearchDomainRequest::Action action, SearchRequest * const q)
-    : SearchPrivate(action, q)
+    : CloudSearchDomainRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchRequestPrivate::SearchRequestPrivate(
  */
 SearchRequestPrivate::SearchRequestPrivate(
     const SearchRequestPrivate &other, SearchRequest * const q)
-    : SearchPrivate(other, q)
+    : CloudSearchDomainRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ConnectDirectoryRequest::response(QNetworkRep
  */
 ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
     const DirectoryServiceRequest::Action action, ConnectDirectoryRequest * const q)
-    : ConnectDirectoryPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
  */
 ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
     const ConnectDirectoryRequestPrivate &other, ConnectDirectoryRequest * const q)
-    : ConnectDirectoryPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

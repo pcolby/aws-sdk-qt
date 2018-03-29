@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableMetricsCollectionRequest::response(QNet
  */
 EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
     const AutoScalingRequest::Action action, EnableMetricsCollectionRequest * const q)
-    : EnableMetricsCollectionPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
  */
 EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
     const EnableMetricsCollectionRequestPrivate &other, EnableMetricsCollectionRequest * const q)
-    : EnableMetricsCollectionPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

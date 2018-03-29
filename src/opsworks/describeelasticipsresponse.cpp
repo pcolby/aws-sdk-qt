@@ -86,7 +86,7 @@ void DescribeElasticIpsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeElasticIpsResponse instance.
  */
 DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponsePrivate(
-    DescribeElasticIpsQueueResponse * const q) : DescribeElasticIpsPrivate(q)
+    DescribeElasticIpsResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

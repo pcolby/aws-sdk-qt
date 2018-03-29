@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationPartRequest::response(QNetwor
  */
 GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, GetDocumentationPartRequest * const q)
-    : GetDocumentationPartPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
  */
 GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
     const GetDocumentationPartRequestPrivate &other, GetDocumentationPartRequest * const q)
-    : GetDocumentationPartPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

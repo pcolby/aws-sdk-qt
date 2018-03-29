@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkR
  */
 ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
     const DeviceFarmRequest::Action action, ListUniqueProblemsRequest * const q)
-    : ListUniqueProblemsPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
  */
 ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
     const ListUniqueProblemsRequestPrivate &other, ListUniqueProblemsRequest * const q)
-    : ListUniqueProblemsPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

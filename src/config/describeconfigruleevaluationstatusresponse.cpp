@@ -86,7 +86,7 @@ void DescribeConfigRuleEvaluationStatusResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DescribeConfigRuleEvaluationStatusResponse instance.
  */
 DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvaluationStatusResponsePrivate(
-    DescribeConfigRuleEvaluationStatusQueueResponse * const q) : DescribeConfigRuleEvaluationStatusPrivate(q)
+    DescribeConfigRuleEvaluationStatusResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

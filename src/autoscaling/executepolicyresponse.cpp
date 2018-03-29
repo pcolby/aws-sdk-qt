@@ -86,7 +86,7 @@ void ExecutePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ExecutePolicyResponse instance.
  */
 ExecutePolicyResponsePrivate::ExecutePolicyResponsePrivate(
-    ExecutePolicyQueueResponse * const q) : ExecutePolicyPrivate(q)
+    ExecutePolicyResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

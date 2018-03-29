@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkRe
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
     const DAXRequest::Action action, UpdateSubnetGroupRequest * const q)
-    : UpdateSubnetGroupPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
     const UpdateSubnetGroupRequestPrivate &other, UpdateSubnetGroupRequest * const q)
-    : UpdateSubnetGroupPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

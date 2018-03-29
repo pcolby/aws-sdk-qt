@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::respo
  */
 DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, DeleteNotificationConfigurationRequest * const q)
-    : DeleteNotificationConfigurationPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRe
  */
 DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
     const DeleteNotificationConfigurationRequestPrivate &other, DeleteNotificationConfigurationRequest * const q)
-    : DeleteNotificationConfigurationPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

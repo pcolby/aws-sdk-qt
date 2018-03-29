@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetwo
  */
 DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeAgentVersionsRequest * const q)
-    : DescribeAgentVersionsPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
  */
 DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
     const DescribeAgentVersionsRequestPrivate &other, DescribeAgentVersionsRequest * const q)
-    : DescribeAgentVersionsPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

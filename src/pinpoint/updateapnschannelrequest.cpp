@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkRe
  */
 UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsChannelRequest * const q)
-    : UpdateApnsChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
  */
 UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
     const UpdateApnsChannelRequestPrivate &other, UpdateApnsChannelRequest * const q)
-    : UpdateApnsChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

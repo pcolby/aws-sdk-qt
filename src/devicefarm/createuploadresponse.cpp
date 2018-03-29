@@ -86,7 +86,7 @@ void CreateUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateUploadResponse instance.
  */
 CreateUploadResponsePrivate::CreateUploadResponsePrivate(
-    CreateUploadQueueResponse * const q) : CreateUploadPrivate(q)
+    CreateUploadResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

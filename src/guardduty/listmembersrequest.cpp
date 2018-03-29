@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * 
  */
 ListMembersRequestPrivate::ListMembersRequestPrivate(
     const GuardDutyRequest::Action action, ListMembersRequest * const q)
-    : ListMembersPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListMembersRequestPrivate::ListMembersRequestPrivate(
  */
 ListMembersRequestPrivate::ListMembersRequestPrivate(
     const ListMembersRequestPrivate &other, ListMembersRequest * const q)
-    : ListMembersPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

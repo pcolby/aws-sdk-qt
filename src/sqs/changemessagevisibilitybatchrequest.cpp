@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityBatchRequest::response
  */
 ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestPrivate(
     const SQSRequest::Action action, ChangeMessageVisibilityBatchRequest * const q)
-    : ChangeMessageVisibilityBatchPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestP
  */
 ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestPrivate(
     const ChangeMessageVisibilityBatchRequestPrivate &other, ChangeMessageVisibilityBatchRequest * const q)
-    : ChangeMessageVisibilityBatchPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

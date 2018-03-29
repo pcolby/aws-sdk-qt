@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const MediaConvertRequest::Action action, DeletePresetRequest * const q)
-    : DeletePresetPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const DeletePresetRequestPrivate &other, DeletePresetRequest * const q)
-    : DeletePresetPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

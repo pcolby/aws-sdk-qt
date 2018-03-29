@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response
  */
 ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListLoggerDefinitionVersionsRequest * const q)
-    : ListLoggerDefinitionVersionsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestP
  */
 ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
     const ListLoggerDefinitionVersionsRequestPrivate &other, ListLoggerDefinitionVersionsRequest * const q)
-    : ListLoggerDefinitionVersionsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

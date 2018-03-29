@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNet
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
     const EC2Request::Action action, DescribeConversionTasksRequest * const q)
-    : DescribeConversionTasksPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
     const DescribeConversionTasksRequestPrivate &other, DescribeConversionTasksRequest * const q)
-    : DescribeConversionTasksPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetDomainNamesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDomainNamesResponse instance.
  */
 GetDomainNamesResponsePrivate::GetDomainNamesResponsePrivate(
-    GetDomainNamesQueueResponse * const q) : GetDomainNamesPrivate(q)
+    GetDomainNamesResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

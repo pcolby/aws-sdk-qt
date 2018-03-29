@@ -86,7 +86,7 @@ void CreateBrokerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateBrokerResponse instance.
  */
 CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
-    CreateBrokerQueueResponse * const q) : CreateBrokerPrivate(q)
+    CreateBrokerResponse * const q) : MQResponsePrivate(q)
 {
 
 }

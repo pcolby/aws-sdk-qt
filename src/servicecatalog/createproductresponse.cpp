@@ -86,7 +86,7 @@ void CreateProductResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateProductResponse instance.
  */
 CreateProductResponsePrivate::CreateProductResponsePrivate(
-    CreateProductQueueResponse * const q) : CreateProductPrivate(q)
+    CreateProductResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

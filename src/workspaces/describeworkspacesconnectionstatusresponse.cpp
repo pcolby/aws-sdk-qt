@@ -86,7 +86,7 @@ void DescribeWorkspacesConnectionStatusResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DescribeWorkspacesConnectionStatusResponse instance.
  */
 DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionStatusResponsePrivate(
-    DescribeWorkspacesConnectionStatusQueueResponse * const q) : DescribeWorkspacesConnectionStatusPrivate(q)
+    DescribeWorkspacesConnectionStatusResponse * const q) : WorkSpacesResponsePrivate(q)
 {
 
 }

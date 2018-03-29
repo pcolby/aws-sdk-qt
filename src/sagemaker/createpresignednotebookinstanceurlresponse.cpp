@@ -86,7 +86,7 @@ void CreatePresignedNotebookInstanceUrlResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public CreatePresignedNotebookInstanceUrlResponse instance.
  */
 CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookInstanceUrlResponsePrivate(
-    CreatePresignedNotebookInstanceUrlQueueResponse * const q) : CreatePresignedNotebookInstanceUrlPrivate(q)
+    CreatePresignedNotebookInstanceUrlResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartOnDemandReplicationRunRequest::response(
  */
 StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPrivate(
     const SMSRequest::Action action, StartOnDemandReplicationRunRequest * const q)
-    : StartOnDemandReplicationRunPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPri
  */
 StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPrivate(
     const StartOnDemandReplicationRunRequestPrivate &other, StartOnDemandReplicationRunRequest * const q)
-    : StartOnDemandReplicationRunPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

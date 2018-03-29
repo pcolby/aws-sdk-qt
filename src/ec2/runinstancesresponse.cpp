@@ -86,7 +86,7 @@ void RunInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RunInstancesResponse instance.
  */
 RunInstancesResponsePrivate::RunInstancesResponsePrivate(
-    RunInstancesQueueResponse * const q) : RunInstancesPrivate(q)
+    RunInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void RebootNodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootNodeResponse instance.
  */
 RebootNodeResponsePrivate::RebootNodeResponsePrivate(
-    RebootNodeQueueResponse * const q) : RebootNodePrivate(q)
+    RebootNodeResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

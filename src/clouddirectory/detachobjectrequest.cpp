@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply *
  */
 DetachObjectRequestPrivate::DetachObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachObjectRequest * const q)
-    : DetachObjectPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachObjectRequestPrivate::DetachObjectRequestPrivate(
  */
 DetachObjectRequestPrivate::DetachObjectRequestPrivate(
     const DetachObjectRequestPrivate &other, DetachObjectRequest * const q)
-    : DetachObjectPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

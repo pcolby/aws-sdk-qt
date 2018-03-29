@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MeterUsageRequest::response(QNetworkReply * c
  */
 MeterUsageRequestPrivate::MeterUsageRequestPrivate(
     const MarketplaceMeteringRequest::Action action, MeterUsageRequest * const q)
-    : MeterUsagePrivate(action, q)
+    : MarketplaceMeteringRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MeterUsageRequestPrivate::MeterUsageRequestPrivate(
  */
 MeterUsageRequestPrivate::MeterUsageRequestPrivate(
     const MeterUsageRequestPrivate &other, MeterUsageRequest * const q)
-    : MeterUsagePrivate(other, q)
+    : MarketplaceMeteringRequestPrivate(other, q)
 {
 
 }

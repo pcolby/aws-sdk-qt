@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListThingsRequest::response(QNetworkReply * c
  */
 ListThingsRequestPrivate::ListThingsRequestPrivate(
     const IoTRequest::Action action, ListThingsRequest * const q)
-    : ListThingsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListThingsRequestPrivate::ListThingsRequestPrivate(
  */
 ListThingsRequestPrivate::ListThingsRequestPrivate(
     const ListThingsRequestPrivate &other, ListThingsRequest * const q)
-    : ListThingsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

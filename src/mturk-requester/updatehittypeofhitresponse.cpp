@@ -86,7 +86,7 @@ void UpdateHITTypeOfHITResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateHITTypeOfHITResponse instance.
  */
 UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponsePrivate(
-    UpdateHITTypeOfHITQueueResponse * const q) : UpdateHITTypeOfHITPrivate(q)
+    UpdateHITTypeOfHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

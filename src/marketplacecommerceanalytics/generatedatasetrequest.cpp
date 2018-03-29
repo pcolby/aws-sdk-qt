@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkRepl
  */
 GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
     const MarketplaceCommerceAnalyticsRequest::Action action, GenerateDataSetRequest * const q)
-    : GenerateDataSetPrivate(action, q)
+    : MarketplaceCommerceAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
  */
 GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
     const GenerateDataSetRequestPrivate &other, GenerateDataSetRequest * const q)
-    : GenerateDataSetPrivate(other, q)
+    : MarketplaceCommerceAnalyticsRequestPrivate(other, q)
 {
 
 }

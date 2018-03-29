@@ -86,7 +86,7 @@ void ResetPasswordResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetPasswordResponse instance.
  */
 ResetPasswordResponsePrivate::ResetPasswordResponsePrivate(
-    ResetPasswordQueueResponse * const q) : ResetPasswordPrivate(q)
+    ResetPasswordResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

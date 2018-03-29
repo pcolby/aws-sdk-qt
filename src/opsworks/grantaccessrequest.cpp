@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * 
  */
 GrantAccessRequestPrivate::GrantAccessRequestPrivate(
     const OpsWorksRequest::Action action, GrantAccessRequest * const q)
-    : GrantAccessPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GrantAccessRequestPrivate::GrantAccessRequestPrivate(
  */
 GrantAccessRequestPrivate::GrantAccessRequestPrivate(
     const GrantAccessRequestPrivate &other, GrantAccessRequest * const q)
-    : GrantAccessPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

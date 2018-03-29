@@ -86,7 +86,7 @@ void SetDefaultPolicyVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetDefaultPolicyVersionResponse instance.
  */
 SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
-    SetDefaultPolicyVersionQueueResponse * const q) : SetDefaultPolicyVersionPrivate(q)
+    SetDefaultPolicyVersionResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

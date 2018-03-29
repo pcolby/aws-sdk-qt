@@ -86,7 +86,7 @@ void UpdateQualificationTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateQualificationTypeResponse instance.
  */
 UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
-    UpdateQualificationTypeQueueResponse * const q) : UpdateQualificationTypePrivate(q)
+    UpdateQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

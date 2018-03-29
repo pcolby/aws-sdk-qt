@@ -86,7 +86,7 @@ void DescribeThingTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeThingTypeResponse instance.
  */
 DescribeThingTypeResponsePrivate::DescribeThingTypeResponsePrivate(
-    DescribeThingTypeQueueResponse * const q) : DescribeThingTypePrivate(q)
+    DescribeThingTypeResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

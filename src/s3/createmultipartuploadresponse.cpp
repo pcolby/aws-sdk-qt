@@ -86,7 +86,7 @@ void CreateMultipartUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMultipartUploadResponse instance.
  */
 CreateMultipartUploadResponsePrivate::CreateMultipartUploadResponsePrivate(
-    CreateMultipartUploadQueueResponse * const q) : CreateMultipartUploadPrivate(q)
+    CreateMultipartUploadResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

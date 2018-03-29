@@ -86,7 +86,7 @@ void DescribeTargetGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTargetGroupsResponse instance.
  */
 DescribeTargetGroupsResponsePrivate::DescribeTargetGroupsResponsePrivate(
-    DescribeTargetGroupsQueueResponse * const q) : DescribeTargetGroupsPrivate(q)
+    DescribeTargetGroupsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

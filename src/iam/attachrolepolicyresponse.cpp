@@ -86,7 +86,7 @@ void AttachRolePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachRolePolicyResponse instance.
  */
 AttachRolePolicyResponsePrivate::AttachRolePolicyResponsePrivate(
-    AttachRolePolicyQueueResponse * const q) : AttachRolePolicyPrivate(q)
+    AttachRolePolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

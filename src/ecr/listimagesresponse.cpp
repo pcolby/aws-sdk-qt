@@ -86,7 +86,7 @@ void ListImagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListImagesResponse instance.
  */
 ListImagesResponsePrivate::ListImagesResponsePrivate(
-    ListImagesQueueResponse * const q) : ListImagesPrivate(q)
+    ListImagesResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterParameterGroupRequest::respons
  */
 DeleteDBClusterParameterGroupRequestPrivate::DeleteDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBClusterParameterGroupRequest * const q)
-    : DeleteDBClusterParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBClusterParameterGroupRequestPrivate::DeleteDBClusterParameterGroupReques
  */
 DeleteDBClusterParameterGroupRequestPrivate::DeleteDBClusterParameterGroupRequestPrivate(
     const DeleteDBClusterParameterGroupRequestPrivate &other, DeleteDBClusterParameterGroupRequest * const q)
-    : DeleteDBClusterParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

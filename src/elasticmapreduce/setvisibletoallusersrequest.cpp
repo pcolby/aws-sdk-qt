@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
     const EMRRequest::Action action, SetVisibleToAllUsersRequest * const q)
-    : SetVisibleToAllUsersPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
     const SetVisibleToAllUsersRequestPrivate &other, SetVisibleToAllUsersRequest * const q)
-    : SetVisibleToAllUsersPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

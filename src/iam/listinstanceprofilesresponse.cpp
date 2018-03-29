@@ -86,7 +86,7 @@ void ListInstanceProfilesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInstanceProfilesResponse instance.
  */
 ListInstanceProfilesResponsePrivate::ListInstanceProfilesResponsePrivate(
-    ListInstanceProfilesQueueResponse * const q) : ListInstanceProfilesPrivate(q)
+    ListInstanceProfilesResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

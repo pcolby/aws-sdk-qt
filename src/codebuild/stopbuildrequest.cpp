@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * co
  */
 StopBuildRequestPrivate::StopBuildRequestPrivate(
     const CodeBuildRequest::Action action, StopBuildRequest * const q)
-    : StopBuildPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopBuildRequestPrivate::StopBuildRequestPrivate(
  */
 StopBuildRequestPrivate::StopBuildRequestPrivate(
     const StopBuildRequestPrivate &other, StopBuildRequest * const q)
-    : StopBuildPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

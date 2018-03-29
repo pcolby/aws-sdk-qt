@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLayerRequest::response(QNetworkReply * 
  */
 CreateLayerRequestPrivate::CreateLayerRequestPrivate(
     const OpsWorksRequest::Action action, CreateLayerRequest * const q)
-    : CreateLayerPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLayerRequestPrivate::CreateLayerRequestPrivate(
  */
 CreateLayerRequestPrivate::CreateLayerRequestPrivate(
     const CreateLayerRequestPrivate &other, CreateLayerRequest * const q)
-    : CreateLayerPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

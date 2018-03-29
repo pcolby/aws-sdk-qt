@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNe
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
     const EC2Request::Action action, DescribeImportImageTasksRequest * const q)
-    : DescribeImportImageTasksPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
     const DescribeImportImageTasksRequestPrivate &other, DescribeImportImageTasksRequest * const q)
-    : DescribeImportImageTasksPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

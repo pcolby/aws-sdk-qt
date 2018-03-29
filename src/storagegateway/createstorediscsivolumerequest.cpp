@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStorediSCSIVolumeRequest::response(QNet
  */
 CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateStorediSCSIVolumeRequest * const q)
-    : CreateStorediSCSIVolumePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
  */
 CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
     const CreateStorediSCSIVolumeRequestPrivate &other, CreateStorediSCSIVolumeRequest * const q)
-    : CreateStorediSCSIVolumePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

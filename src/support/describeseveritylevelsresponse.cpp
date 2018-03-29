@@ -86,7 +86,7 @@ void DescribeSeverityLevelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSeverityLevelsResponse instance.
  */
 DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponsePrivate(
-    DescribeSeverityLevelsQueueResponse * const q) : DescribeSeverityLevelsPrivate(q)
+    DescribeSeverityLevelsResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartLabelDetectionRequest::response(QNetwork
  */
 StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
     const RekognitionRequest::Action action, StartLabelDetectionRequest * const q)
-    : StartLabelDetectionPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
  */
 StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
     const StartLabelDetectionRequestPrivate &other, StartLabelDetectionRequest * const q)
-    : StartLabelDetectionPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

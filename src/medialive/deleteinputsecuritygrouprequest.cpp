@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInputSecurityGroupRequest::response(QNe
  */
 DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, DeleteInputSecurityGroupRequest * const q)
-    : DeleteInputSecurityGroupPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
  */
 DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
     const DeleteInputSecurityGroupRequestPrivate &other, DeleteInputSecurityGroupRequest * const q)
-    : DeleteInputSecurityGroupPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

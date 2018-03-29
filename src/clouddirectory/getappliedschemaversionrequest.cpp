@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNet
  */
 GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
     const CloudDirectoryRequest::Action action, GetAppliedSchemaVersionRequest * const q)
-    : GetAppliedSchemaVersionPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
  */
 GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
     const GetAppliedSchemaVersionRequestPrivate &other, GetAppliedSchemaVersionRequest * const q)
-    : GetAppliedSchemaVersionPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

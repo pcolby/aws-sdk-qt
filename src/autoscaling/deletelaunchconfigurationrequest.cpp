@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QN
  */
 DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, DeleteLaunchConfigurationRequest * const q)
-    : DeleteLaunchConfigurationPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate
  */
 DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate(
     const DeleteLaunchConfigurationRequestPrivate &other, DeleteLaunchConfigurationRequest * const q)
-    : DeleteLaunchConfigurationPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

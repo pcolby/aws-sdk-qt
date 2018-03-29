@@ -86,7 +86,7 @@ void DisassociateWebACLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateWebACLResponse instance.
  */
 DisassociateWebACLResponsePrivate::DisassociateWebACLResponsePrivate(
-    DisassociateWebACLQueueResponse * const q) : DisassociateWebACLPrivate(q)
+    DisassociateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

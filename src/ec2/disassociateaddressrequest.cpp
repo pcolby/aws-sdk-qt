@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetwork
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
     const EC2Request::Action action, DisassociateAddressRequest * const q)
-    : DisassociateAddressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
     const DisassociateAddressRequestPrivate &other, DisassociateAddressRequest * const q)
-    : DisassociateAddressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

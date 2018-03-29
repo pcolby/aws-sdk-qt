@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterJobDefinitionRequest::response(QNetwo
  */
 RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
     const BatchRequest::Action action, RegisterJobDefinitionRequest * const q)
-    : RegisterJobDefinitionPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
  */
 RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
     const RegisterJobDefinitionRequestPrivate &other, RegisterJobDefinitionRequest * const q)
-    : RegisterJobDefinitionPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

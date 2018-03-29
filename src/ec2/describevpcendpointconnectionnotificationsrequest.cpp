@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionNotificationsReq
  */
 DescribeVpcEndpointConnectionNotificationsRequestPrivate::DescribeVpcEndpointConnectionNotificationsRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointConnectionNotificationsRequest * const q)
-    : DescribeVpcEndpointConnectionNotificationsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVpcEndpointConnectionNotificationsRequestPrivate::DescribeVpcEndpointCon
  */
 DescribeVpcEndpointConnectionNotificationsRequestPrivate::DescribeVpcEndpointConnectionNotificationsRequestPrivate(
     const DescribeVpcEndpointConnectionNotificationsRequestPrivate &other, DescribeVpcEndpointConnectionNotificationsRequest * const q)
-    : DescribeVpcEndpointConnectionNotificationsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

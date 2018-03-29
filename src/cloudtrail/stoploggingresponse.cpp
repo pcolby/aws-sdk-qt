@@ -86,7 +86,7 @@ void StopLoggingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopLoggingResponse instance.
  */
 StopLoggingResponsePrivate::StopLoggingResponsePrivate(
-    StopLoggingQueueResponse * const q) : StopLoggingPrivate(q)
+    StopLoggingResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

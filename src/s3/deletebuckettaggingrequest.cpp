@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketTaggingRequest::response(QNetwork
  */
 DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
     const S3Request::Action action, DeleteBucketTaggingRequest * const q)
-    : DeleteBucketTaggingPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
  */
 DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
     const DeleteBucketTaggingRequestPrivate &other, DeleteBucketTaggingRequest * const q)
-    : DeleteBucketTaggingPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartGameSessionPlacementRequest::response(QN
  */
 StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate(
     const GameLiftRequest::Action action, StartGameSessionPlacementRequest * const q)
-    : StartGameSessionPlacementPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate
  */
 StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate(
     const StartGameSessionPlacementRequestPrivate &other, StartGameSessionPlacementRequest * const q)
-    : StartGameSessionPlacementPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

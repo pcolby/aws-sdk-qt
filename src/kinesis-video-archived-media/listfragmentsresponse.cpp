@@ -86,7 +86,7 @@ void ListFragmentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFragmentsResponse instance.
  */
 ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
-    ListFragmentsQueueResponse * const q) : ListFragmentsPrivate(q)
+    ListFragmentsResponse * const q) : KinesisVideoArchivedMediaResponsePrivate(q)
 {
 
 }

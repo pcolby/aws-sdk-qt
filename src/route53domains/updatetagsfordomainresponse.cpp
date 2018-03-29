@@ -86,7 +86,7 @@ void UpdateTagsForDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTagsForDomainResponse instance.
  */
 UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponsePrivate(
-    UpdateTagsForDomainQueueResponse * const q) : UpdateTagsForDomainPrivate(q)
+    UpdateTagsForDomainResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

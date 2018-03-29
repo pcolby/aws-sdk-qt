@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUserPoolMfaConfigRequest::response(QNetwor
  */
 GetUserPoolMfaConfigRequestPrivate::GetUserPoolMfaConfigRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUserPoolMfaConfigRequest * const q)
-    : GetUserPoolMfaConfigPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUserPoolMfaConfigRequestPrivate::GetUserPoolMfaConfigRequestPrivate(
  */
 GetUserPoolMfaConfigRequestPrivate::GetUserPoolMfaConfigRequestPrivate(
     const GetUserPoolMfaConfigRequestPrivate &other, GetUserPoolMfaConfigRequest * const q)
-    : GetUserPoolMfaConfigPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

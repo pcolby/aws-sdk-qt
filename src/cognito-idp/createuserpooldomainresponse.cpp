@@ -86,7 +86,7 @@ void CreateUserPoolDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateUserPoolDomainResponse instance.
  */
 CreateUserPoolDomainResponsePrivate::CreateUserPoolDomainResponsePrivate(
-    CreateUserPoolDomainQueueResponse * const q) : CreateUserPoolDomainPrivate(q)
+    CreateUserPoolDomainResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

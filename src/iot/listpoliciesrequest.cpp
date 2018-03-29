@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPoliciesRequest::response(QNetworkReply *
  */
 ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
     const IoTRequest::Action action, ListPoliciesRequest * const q)
-    : ListPoliciesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
  */
 ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
     const ListPoliciesRequestPrivate &other, ListPoliciesRequest * const q)
-    : ListPoliciesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

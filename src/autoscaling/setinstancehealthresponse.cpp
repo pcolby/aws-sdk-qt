@@ -86,7 +86,7 @@ void SetInstanceHealthResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetInstanceHealthResponse instance.
  */
 SetInstanceHealthResponsePrivate::SetInstanceHealthResponsePrivate(
-    SetInstanceHealthQueueResponse * const q) : SetInstanceHealthPrivate(q)
+    SetInstanceHealthResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

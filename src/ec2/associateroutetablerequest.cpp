@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetwork
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
     const EC2Request::Action action, AssociateRouteTableRequest * const q)
-    : AssociateRouteTablePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
     const AssociateRouteTableRequestPrivate &other, AssociateRouteTableRequest * const q)
-    : AssociateRouteTablePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

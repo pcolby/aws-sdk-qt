@@ -86,7 +86,7 @@ void ListUserImportJobsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListUserImportJobsResponse instance.
  */
 ListUserImportJobsResponsePrivate::ListUserImportJobsResponsePrivate(
-    ListUserImportJobsQueueResponse * const q) : ListUserImportJobsPrivate(q)
+    ListUserImportJobsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

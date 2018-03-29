@@ -86,7 +86,7 @@ void DescribeDestinationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDestinationsResponse instance.
  */
 DescribeDestinationsResponsePrivate::DescribeDestinationsResponsePrivate(
-    DescribeDestinationsQueueResponse * const q) : DescribeDestinationsPrivate(q)
+    DescribeDestinationsResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

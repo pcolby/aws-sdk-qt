@@ -86,7 +86,7 @@ void DescribeTrustedAdvisorChecksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTrustedAdvisorChecksResponse instance.
  */
 DescribeTrustedAdvisorChecksResponsePrivate::DescribeTrustedAdvisorChecksResponsePrivate(
-    DescribeTrustedAdvisorChecksQueueResponse * const q) : DescribeTrustedAdvisorChecksPrivate(q)
+    DescribeTrustedAdvisorChecksResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

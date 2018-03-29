@@ -86,7 +86,7 @@ void RegisterScalableTargetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterScalableTargetResponse instance.
  */
 RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponsePrivate(
-    RegisterScalableTargetQueueResponse * const q) : RegisterScalableTargetPrivate(q)
+    RegisterScalableTargetResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
 {
 
 }

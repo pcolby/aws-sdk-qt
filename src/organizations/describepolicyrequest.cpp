@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePolicyRequest::response(QNetworkReply
  */
 DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
     const OrganizationsRequest::Action action, DescribePolicyRequest * const q)
-    : DescribePolicyPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
  */
 DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
     const DescribePolicyRequestPrivate &other, DescribePolicyRequest * const q)
-    : DescribePolicyPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

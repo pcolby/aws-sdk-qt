@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QN
  */
 StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate(
     const RekognitionRequest::Action action, StartCelebrityRecognitionRequest * const q)
-    : StartCelebrityRecognitionPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate
  */
 StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate(
     const StartCelebrityRecognitionRequestPrivate &other, StartCelebrityRecognitionRequest * const q)
-    : StartCelebrityRecognitionPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

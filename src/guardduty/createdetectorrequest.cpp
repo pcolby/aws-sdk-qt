@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDetectorRequest::response(QNetworkReply
  */
 CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
     const GuardDutyRequest::Action action, CreateDetectorRequest * const q)
-    : CreateDetectorPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
  */
 CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
     const CreateDetectorRequestPrivate &other, CreateDetectorRequest * const q)
-    : CreateDetectorPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

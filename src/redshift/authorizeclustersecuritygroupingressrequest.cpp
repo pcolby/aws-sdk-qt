@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeClusterSecurityGroupIngressRequest::
  */
 AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGroupIngressRequestPrivate(
     const RedshiftRequest::Action action, AuthorizeClusterSecurityGroupIngressRequest * const q)
-    : AuthorizeClusterSecurityGroupIngressPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGrou
  */
 AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGroupIngressRequestPrivate(
     const AuthorizeClusterSecurityGroupIngressRequestPrivate &other, AuthorizeClusterSecurityGroupIngressRequest * const q)
-    : AuthorizeClusterSecurityGroupIngressPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

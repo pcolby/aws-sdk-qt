@@ -86,7 +86,7 @@ void ImportApiKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportApiKeysResponse instance.
  */
 ImportApiKeysResponsePrivate::ImportApiKeysResponsePrivate(
-    ImportApiKeysQueueResponse * const q) : ImportApiKeysPrivate(q)
+    ImportApiKeysResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

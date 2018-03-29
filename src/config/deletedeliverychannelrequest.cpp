@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryChannelRequest::response(QNetwo
  */
 DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteDeliveryChannelRequest * const q)
-    : DeleteDeliveryChannelPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
  */
 DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
     const DeleteDeliveryChannelRequestPrivate &other, DeleteDeliveryChannelRequest * const q)
-    : DeleteDeliveryChannelPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNe
  */
 GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
     const ConfigServiceRequest::Action action, GetResourceConfigHistoryRequest * const q)
-    : GetResourceConfigHistoryPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
  */
 GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
     const GetResourceConfigHistoryRequestPrivate &other, GetResourceConfigHistoryRequest * const q)
-    : GetResourceConfigHistoryPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

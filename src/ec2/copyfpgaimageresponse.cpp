@@ -86,7 +86,7 @@ void CopyFpgaImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyFpgaImageResponse instance.
  */
 CopyFpgaImageResponsePrivate::CopyFpgaImageResponsePrivate(
-    CopyFpgaImageQueueResponse * const q) : CopyFpgaImagePrivate(q)
+    CopyFpgaImageResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

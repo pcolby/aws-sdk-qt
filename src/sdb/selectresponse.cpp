@@ -86,7 +86,7 @@ void SelectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SelectResponse instance.
  */
 SelectResponsePrivate::SelectResponsePrivate(
-    SelectQueueResponse * const q) : SelectPrivate(q)
+    SelectResponse * const q) : SimpleDBResponsePrivate(q)
 {
 
 }

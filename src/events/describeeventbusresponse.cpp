@@ -86,7 +86,7 @@ void DescribeEventBusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEventBusResponse instance.
  */
 DescribeEventBusResponsePrivate::DescribeEventBusResponsePrivate(
-    DescribeEventBusQueueResponse * const q) : DescribeEventBusPrivate(q)
+    DescribeEventBusResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

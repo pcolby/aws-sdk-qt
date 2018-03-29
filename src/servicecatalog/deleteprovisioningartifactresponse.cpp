@@ -86,7 +86,7 @@ void DeleteProvisioningArtifactResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteProvisioningArtifactResponse instance.
  */
 DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponsePrivate(
-    DeleteProvisioningArtifactQueueResponse * const q) : DeleteProvisioningArtifactPrivate(q)
+    DeleteProvisioningArtifactResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

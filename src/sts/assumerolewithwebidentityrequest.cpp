@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QN
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
     const STSRequest::Action action, AssumeRoleWithWebIdentityRequest * const q)
-    : AssumeRoleWithWebIdentityPrivate(action, q)
+    : STSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
     const AssumeRoleWithWebIdentityRequestPrivate &other, AssumeRoleWithWebIdentityRequest * const q)
-    : AssumeRoleWithWebIdentityPrivate(other, q)
+    : STSRequestPrivate(other, q)
 {
 
 }

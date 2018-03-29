@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkR
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
     const SFNRequest::Action action, UpdateStateMachineRequest * const q)
-    : UpdateStateMachinePrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
     const UpdateStateMachineRequestPrivate &other, UpdateStateMachineRequest * const q)
-    : UpdateStateMachinePrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkRep
  */
 DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
     const CloudDirectoryRequest::Action action, DisableDirectoryRequest * const q)
-    : DisableDirectoryPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
  */
 DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
     const DisableDirectoryRequestPrivate &other, DisableDirectoryRequest * const q)
-    : DisableDirectoryPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

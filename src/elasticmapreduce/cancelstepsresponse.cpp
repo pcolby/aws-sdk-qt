@@ -86,7 +86,7 @@ void CancelStepsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelStepsResponse instance.
  */
 CancelStepsResponsePrivate::CancelStepsResponsePrivate(
-    CancelStepsQueueResponse * const q) : CancelStepsPrivate(q)
+    CancelStepsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

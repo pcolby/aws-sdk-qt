@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply 
  */
 ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
     const LambdaRequest::Action action, ListFunctionsRequest * const q)
-    : ListFunctionsPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
  */
 ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
     const ListFunctionsRequestPrivate &other, ListFunctionsRequest * const q)
-    : ListFunctionsPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

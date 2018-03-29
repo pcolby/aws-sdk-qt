@@ -86,7 +86,7 @@ void DescribeNetworkAclsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeNetworkAclsResponse instance.
  */
 DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponsePrivate(
-    DescribeNetworkAclsQueueResponse * const q) : DescribeNetworkAclsPrivate(q)
+    DescribeNetworkAclsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

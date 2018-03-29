@@ -86,7 +86,7 @@ void StartFaceDetectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartFaceDetectionResponse instance.
  */
 StartFaceDetectionResponsePrivate::StartFaceDetectionResponsePrivate(
-    StartFaceDetectionQueueResponse * const q) : StartFaceDetectionPrivate(q)
+    StartFaceDetectionResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

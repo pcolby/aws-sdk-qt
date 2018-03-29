@@ -86,7 +86,7 @@ void GetEntitlementsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetEntitlementsResponse instance.
  */
 GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
-    GetEntitlementsQueueResponse * const q) : GetEntitlementsPrivate(q)
+    GetEntitlementsResponse * const q) : MarketplaceEntitlementServiceResponsePrivate(q)
 {
 
 }

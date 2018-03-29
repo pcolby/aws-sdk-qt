@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRepositoriesRequest::response(QNetworkRep
  */
 ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
     const CodeCommitRequest::Action action, ListRepositoriesRequest * const q)
-    : ListRepositoriesPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
  */
 ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
     const ListRepositoriesRequestPrivate &other, ListRepositoriesRequest * const q)
-    : ListRepositoriesPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

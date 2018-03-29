@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetQueueAttributesRequest::response(QNetworkR
  */
 SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
     const SQSRequest::Action action, SetQueueAttributesRequest * const q)
-    : SetQueueAttributesPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
  */
 SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
     const SetQueueAttributesRequestPrivate &other, SetQueueAttributesRequest * const q)
-    : SetQueueAttributesPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

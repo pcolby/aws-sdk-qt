@@ -86,7 +86,7 @@ void ListGatewaysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGatewaysResponse instance.
  */
 ListGatewaysResponsePrivate::ListGatewaysResponsePrivate(
-    ListGatewaysQueueResponse * const q) : ListGatewaysPrivate(q)
+    ListGatewaysResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

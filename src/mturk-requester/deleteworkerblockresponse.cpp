@@ -86,7 +86,7 @@ void DeleteWorkerBlockResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteWorkerBlockResponse instance.
  */
 DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponsePrivate(
-    DeleteWorkerBlockQueueResponse * const q) : DeleteWorkerBlockPrivate(q)
+    DeleteWorkerBlockResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

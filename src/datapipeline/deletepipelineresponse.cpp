@@ -86,7 +86,7 @@ void DeletePipelineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePipelineResponse instance.
  */
 DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
-    DeletePipelineQueueResponse * const q) : DeletePipelinePrivate(q)
+    DeletePipelineResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

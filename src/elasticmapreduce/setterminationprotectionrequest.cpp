@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
     const EMRRequest::Action action, SetTerminationProtectionRequest * const q)
-    : SetTerminationProtectionPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
     const SetTerminationProtectionRequestPrivate &other, SetTerminationProtectionRequest * const q)
-    : SetTerminationProtectionPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

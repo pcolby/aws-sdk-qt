@@ -86,7 +86,7 @@ void RemoveIpRoutesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveIpRoutesResponse instance.
  */
 RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponsePrivate(
-    RemoveIpRoutesQueueResponse * const q) : RemoveIpRoutesPrivate(q)
+    RemoveIpRoutesResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

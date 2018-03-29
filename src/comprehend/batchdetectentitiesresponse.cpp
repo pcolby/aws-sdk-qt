@@ -86,7 +86,7 @@ void BatchDetectEntitiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDetectEntitiesResponse instance.
  */
 BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponsePrivate(
-    BatchDetectEntitiesQueueResponse * const q) : BatchDetectEntitiesPrivate(q)
+    BatchDetectEntitiesResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

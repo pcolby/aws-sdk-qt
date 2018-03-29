@@ -86,7 +86,7 @@ void PutApprovalResultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutApprovalResultResponse instance.
  */
 PutApprovalResultResponsePrivate::PutApprovalResultResponsePrivate(
-    PutApprovalResultQueueResponse * const q) : PutApprovalResultPrivate(q)
+    PutApprovalResultResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

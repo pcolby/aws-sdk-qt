@@ -86,7 +86,7 @@ void ModifyHsmResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyHsmResponse instance.
  */
 ModifyHsmResponsePrivate::ModifyHsmResponsePrivate(
-    ModifyHsmQueueResponse * const q) : ModifyHsmPrivate(q)
+    ModifyHsmResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

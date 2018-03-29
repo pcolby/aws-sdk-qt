@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetwor
  */
 DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteCoreDefinitionRequest * const q)
-    : DeleteCoreDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
  */
 DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
     const DeleteCoreDefinitionRequestPrivate &other, DeleteCoreDefinitionRequest * const q)
-    : DeleteCoreDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

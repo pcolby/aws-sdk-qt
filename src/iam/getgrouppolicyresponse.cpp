@@ -86,7 +86,7 @@ void GetGroupPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGroupPolicyResponse instance.
  */
 GetGroupPolicyResponsePrivate::GetGroupPolicyResponsePrivate(
-    GetGroupPolicyQueueResponse * const q) : GetGroupPolicyPrivate(q)
+    GetGroupPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

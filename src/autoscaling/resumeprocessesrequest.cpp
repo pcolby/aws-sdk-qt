@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkRepl
  */
 ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
     const AutoScalingRequest::Action action, ResumeProcessesRequest * const q)
-    : ResumeProcessesPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
  */
 ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
     const ResumeProcessesRequestPrivate &other, ResumeProcessesRequest * const q)
-    : ResumeProcessesPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

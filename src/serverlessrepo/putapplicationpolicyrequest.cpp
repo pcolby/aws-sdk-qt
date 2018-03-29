@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutApplicationPolicyRequest::response(QNetwor
  */
 PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, PutApplicationPolicyRequest * const q)
-    : PutApplicationPolicyPrivate(action, q)
+    : ServerlessApplicationRepositoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
  */
 PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
     const PutApplicationPolicyRequestPrivate &other, PutApplicationPolicyRequest * const q)
-    : PutApplicationPolicyPrivate(other, q)
+    : ServerlessApplicationRepositoryRequestPrivate(other, q)
 {
 
 }

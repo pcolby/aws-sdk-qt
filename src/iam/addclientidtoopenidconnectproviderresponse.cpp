@@ -86,7 +86,7 @@ void AddClientIDToOpenIDConnectProviderResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public AddClientIDToOpenIDConnectProviderResponse instance.
  */
 AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConnectProviderResponsePrivate(
-    AddClientIDToOpenIDConnectProviderQueueResponse * const q) : AddClientIDToOpenIDConnectProviderPrivate(q)
+    AddClientIDToOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

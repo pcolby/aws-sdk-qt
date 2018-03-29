@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadDocumentsRequest::response(QNetworkRepl
  */
 UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
     const CloudSearchDomainRequest::Action action, UploadDocumentsRequest * const q)
-    : UploadDocumentsPrivate(action, q)
+    : CloudSearchDomainRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
  */
 UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
     const UploadDocumentsRequestPrivate &other, UploadDocumentsRequest * const q)
-    : UploadDocumentsPrivate(other, q)
+    : CloudSearchDomainRequestPrivate(other, q)
 {
 
 }

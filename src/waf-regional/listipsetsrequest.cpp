@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListIPSetsRequest * const q)
-    : ListIPSetsPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const ListIPSetsRequestPrivate &other, ListIPSetsRequest * const q)
-    : ListIPSetsPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

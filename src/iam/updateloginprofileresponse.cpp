@@ -86,7 +86,7 @@ void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateLoginProfileResponse instance.
  */
 UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
-    UpdateLoginProfileQueueResponse * const q) : UpdateLoginProfilePrivate(q)
+    UpdateLoginProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

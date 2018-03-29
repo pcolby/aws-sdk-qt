@@ -86,7 +86,7 @@ void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public VerifyEmailIdentityResponse instance.
  */
 VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
-    VerifyEmailIdentityQueueResponse * const q) : VerifyEmailIdentityPrivate(q)
+    VerifyEmailIdentityResponse * const q) : SESResponsePrivate(q)
 {
 
 }

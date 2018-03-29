@@ -86,7 +86,7 @@ void StopTrainingJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopTrainingJobResponse instance.
  */
 StopTrainingJobResponsePrivate::StopTrainingJobResponsePrivate(
-    StopTrainingJobQueueResponse * const q) : StopTrainingJobPrivate(q)
+    StopTrainingJobResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

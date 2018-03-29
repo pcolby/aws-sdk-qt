@@ -86,7 +86,7 @@ void SearchIndexResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchIndexResponse instance.
  */
 SearchIndexResponsePrivate::SearchIndexResponsePrivate(
-    SearchIndexQueueResponse * const q) : SearchIndexPrivate(q)
+    SearchIndexResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

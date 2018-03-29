@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetw
  */
 StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
     const MarketplaceCommerceAnalyticsRequest::Action action, StartSupportDataExportRequest * const q)
-    : StartSupportDataExportPrivate(action, q)
+    : MarketplaceCommerceAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
  */
 StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
     const StartSupportDataExportRequestPrivate &other, StartSupportDataExportRequest * const q)
-    : StartSupportDataExportPrivate(other, q)
+    : MarketplaceCommerceAnalyticsRequestPrivate(other, q)
 {
 
 }

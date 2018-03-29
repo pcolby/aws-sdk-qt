@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkRe
  */
 UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, UpdateThingShadowRequest * const q)
-    : UpdateThingShadowPrivate(action, q)
+    : IoTDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
  */
 UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
     const UpdateThingShadowRequestPrivate &other, UpdateThingShadowRequest * const q)
-    : UpdateThingShadowPrivate(other, q)
+    : IoTDataPlaneRequestPrivate(other, q)
 {
 
 }

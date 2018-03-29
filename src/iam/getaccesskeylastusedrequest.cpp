@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetwor
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
     const IAMRequest::Action action, GetAccessKeyLastUsedRequest * const q)
-    : GetAccessKeyLastUsedPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
     const GetAccessKeyLastUsedRequestPrivate &other, GetAccessKeyLastUsedRequest * const q)
-    : GetAccessKeyLastUsedPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

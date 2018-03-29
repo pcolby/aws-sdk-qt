@@ -86,7 +86,7 @@ void CreateNetworkInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateNetworkInterfaceResponse instance.
  */
 CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
-    CreateNetworkInterfaceQueueResponse * const q) : CreateNetworkInterfacePrivate(q)
+    CreateNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

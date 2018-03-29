@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(Q
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
     const APIGatewayRequest::Action action, FlushStageAuthorizersCacheRequest * const q)
-    : FlushStageAuthorizersCachePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPriva
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
     const FlushStageAuthorizersCacheRequestPrivate &other, FlushStageAuthorizersCacheRequest * const q)
-    : FlushStageAuthorizersCachePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

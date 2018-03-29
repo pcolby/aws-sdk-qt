@@ -86,7 +86,7 @@ void DescribeStreamSummaryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStreamSummaryResponse instance.
  */
 DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponsePrivate(
-    DescribeStreamSummaryQueueResponse * const q) : DescribeStreamSummaryPrivate(q)
+    DescribeStreamSummaryResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

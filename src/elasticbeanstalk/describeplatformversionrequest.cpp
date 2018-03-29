@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePlatformVersionRequest::response(QNet
  */
 DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribePlatformVersionRequest * const q)
-    : DescribePlatformVersionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
  */
 DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
     const DescribePlatformVersionRequestPrivate &other, DescribePlatformVersionRequest * const q)
-    : DescribePlatformVersionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

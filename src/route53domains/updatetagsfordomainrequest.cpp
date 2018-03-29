@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetwork
  */
 UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateTagsForDomainRequest * const q)
-    : UpdateTagsForDomainPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
  */
 UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
     const UpdateTagsForDomainRequestPrivate &other, UpdateTagsForDomainRequest * const q)
-    : UpdateTagsForDomainPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

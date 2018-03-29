@@ -86,7 +86,7 @@ void AcceptHandshakeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcceptHandshakeResponse instance.
  */
 AcceptHandshakeResponsePrivate::AcceptHandshakeResponsePrivate(
-    AcceptHandshakeQueueResponse * const q) : AcceptHandshakePrivate(q)
+    AcceptHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

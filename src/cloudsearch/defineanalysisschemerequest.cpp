@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DefineAnalysisSchemeRequest::response(QNetwor
  */
 DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
     const CloudSearchRequest::Action action, DefineAnalysisSchemeRequest * const q)
-    : DefineAnalysisSchemePrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
  */
 DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
     const DefineAnalysisSchemeRequestPrivate &other, DefineAnalysisSchemeRequest * const q)
-    : DefineAnalysisSchemePrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

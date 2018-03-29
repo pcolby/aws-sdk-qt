@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListApplicationRevisionsRequest::response(QNe
  */
 ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
     const CodeDeployRequest::Action action, ListApplicationRevisionsRequest * const q)
-    : ListApplicationRevisionsPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
  */
 ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
     const ListApplicationRevisionsRequestPrivate &other, ListApplicationRevisionsRequest * const q)
-    : ListApplicationRevisionsPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

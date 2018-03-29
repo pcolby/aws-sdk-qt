@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply 
  */
 DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
     const GuardDutyRequest::Action action, DeleteMembersRequest * const q)
-    : DeleteMembersPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
  */
 DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
     const DeleteMembersRequestPrivate &other, DeleteMembersRequest * const q)
-    : DeleteMembersPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

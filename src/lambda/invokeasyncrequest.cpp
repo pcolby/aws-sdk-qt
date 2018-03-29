@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InvokeAsyncRequest::response(QNetworkReply * 
  */
 InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
     const LambdaRequest::Action action, InvokeAsyncRequest * const q)
-    : InvokeAsyncPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
  */
 InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
     const InvokeAsyncRequestPrivate &other, InvokeAsyncRequest * const q)
-    : InvokeAsyncPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

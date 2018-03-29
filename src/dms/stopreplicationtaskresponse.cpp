@@ -86,7 +86,7 @@ void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopReplicationTaskResponse instance.
  */
 StopReplicationTaskResponsePrivate::StopReplicationTaskResponsePrivate(
-    StopReplicationTaskQueueResponse * const q) : StopReplicationTaskPrivate(q)
+    StopReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleRequest::response(QNetworkReply * c
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
     const IAMRequest::Action action, DeleteRoleRequest * const q)
-    : DeleteRolePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
     const DeleteRoleRequestPrivate &other, DeleteRoleRequest * const q)
-    : DeleteRolePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

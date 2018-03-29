@@ -86,7 +86,7 @@ void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyInstanceGroupsResponse instance.
  */
 ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
-    ModifyInstanceGroupsQueueResponse * const q) : ModifyInstanceGroupsPrivate(q)
+    ModifyInstanceGroupsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

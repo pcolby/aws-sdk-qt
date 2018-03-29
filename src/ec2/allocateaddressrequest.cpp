@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkRepl
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
     const EC2Request::Action action, AllocateAddressRequest * const q)
-    : AllocateAddressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
     const AllocateAddressRequestPrivate &other, AllocateAddressRequest * const q)
-    : AllocateAddressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

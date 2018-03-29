@@ -86,7 +86,7 @@ void DeleteQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteQueryLoggingConfigResponse instance.
  */
 DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate(
-    DeleteQueryLoggingConfigQueueResponse * const q) : DeleteQueryLoggingConfigPrivate(q)
+    DeleteQueryLoggingConfigResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void VerifyTrustResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public VerifyTrustResponse instance.
  */
 VerifyTrustResponsePrivate::VerifyTrustResponsePrivate(
-    VerifyTrustQueueResponse * const q) : VerifyTrustPrivate(q)
+    VerifyTrustResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

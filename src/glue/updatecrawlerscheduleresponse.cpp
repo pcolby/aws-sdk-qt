@@ -86,7 +86,7 @@ void UpdateCrawlerScheduleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateCrawlerScheduleResponse instance.
  */
 UpdateCrawlerScheduleResponsePrivate::UpdateCrawlerScheduleResponsePrivate(
-    UpdateCrawlerScheduleQueueResponse * const q) : UpdateCrawlerSchedulePrivate(q)
+    UpdateCrawlerScheduleResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AttachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachClassicLinkVpcResponse instance.
  */
 AttachClassicLinkVpcResponsePrivate::AttachClassicLinkVpcResponsePrivate(
-    AttachClassicLinkVpcQueueResponse * const q) : AttachClassicLinkVpcPrivate(q)
+    AttachClassicLinkVpcResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

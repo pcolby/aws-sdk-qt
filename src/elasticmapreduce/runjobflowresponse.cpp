@@ -86,7 +86,7 @@ void RunJobFlowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RunJobFlowResponse instance.
  */
 RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
-    RunJobFlowQueueResponse * const q) : RunJobFlowPrivate(q)
+    RunJobFlowResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

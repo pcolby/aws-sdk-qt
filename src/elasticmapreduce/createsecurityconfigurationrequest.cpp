@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityConfigurationRequest::response(
  */
 CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPrivate(
     const EMRRequest::Action action, CreateSecurityConfigurationRequest * const q)
-    : CreateSecurityConfigurationPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPri
  */
 CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPrivate(
     const CreateSecurityConfigurationRequestPrivate &other, CreateSecurityConfigurationRequest * const q)
-    : CreateSecurityConfigurationPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

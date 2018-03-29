@@ -86,7 +86,7 @@ void CreateLogGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLogGroupResponse instance.
  */
 CreateLogGroupResponsePrivate::CreateLogGroupResponsePrivate(
-    CreateLogGroupQueueResponse * const q) : CreateLogGroupPrivate(q)
+    CreateLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

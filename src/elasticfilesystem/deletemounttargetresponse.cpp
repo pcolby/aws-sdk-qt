@@ -86,7 +86,7 @@ void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteMountTargetResponse instance.
  */
 DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
-    DeleteMountTargetQueueResponse * const q) : DeleteMountTargetPrivate(q)
+    DeleteMountTargetResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

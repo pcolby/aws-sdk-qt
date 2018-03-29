@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationRequest::response(QNetwork
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
     const MQRequest::Action action, UpdateConfigurationRequest * const q)
-    : UpdateConfigurationPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
     const UpdateConfigurationRequestPrivate &other, UpdateConfigurationRequest * const q)
-    : UpdateConfigurationPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

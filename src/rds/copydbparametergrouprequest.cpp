@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetwor
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, CopyDBParameterGroupRequest * const q)
-    : CopyDBParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
     const CopyDBParameterGroupRequestPrivate &other, CopyDBParameterGroupRequest * const q)
-    : CopyDBParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

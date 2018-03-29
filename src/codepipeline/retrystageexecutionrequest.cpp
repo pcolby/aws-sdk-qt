@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RetryStageExecutionRequest::response(QNetwork
  */
 RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
     const CodePipelineRequest::Action action, RetryStageExecutionRequest * const q)
-    : RetryStageExecutionPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
  */
 RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
     const RetryStageExecutionRequestPrivate &other, RetryStageExecutionRequest * const q)
-    : RetryStageExecutionPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

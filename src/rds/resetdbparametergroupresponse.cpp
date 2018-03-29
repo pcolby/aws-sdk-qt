@@ -86,7 +86,7 @@ void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetDBParameterGroupResponse instance.
  */
 ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
-    ResetDBParameterGroupQueueResponse * const q) : ResetDBParameterGroupPrivate(q)
+    ResetDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

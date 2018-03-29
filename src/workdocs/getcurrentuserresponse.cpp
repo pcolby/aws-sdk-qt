@@ -86,7 +86,7 @@ void GetCurrentUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCurrentUserResponse instance.
  */
 GetCurrentUserResponsePrivate::GetCurrentUserResponsePrivate(
-    GetCurrentUserQueueResponse * const q) : GetCurrentUserPrivate(q)
+    GetCurrentUserResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

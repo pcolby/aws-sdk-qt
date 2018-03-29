@@ -86,7 +86,7 @@ void DescribeRoleAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRoleAliasResponse instance.
  */
 DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponsePrivate(
-    DescribeRoleAliasQueueResponse * const q) : DescribeRoleAliasPrivate(q)
+    DescribeRoleAliasResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

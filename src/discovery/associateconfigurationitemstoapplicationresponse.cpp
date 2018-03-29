@@ -86,7 +86,7 @@ void AssociateConfigurationItemsToApplicationResponse::parseSuccess(QIODevice &r
  * @param  q  Pointer to this object's public AssociateConfigurationItemsToApplicationResponse instance.
  */
 AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationItemsToApplicationResponsePrivate(
-    AssociateConfigurationItemsToApplicationQueueResponse * const q) : AssociateConfigurationItemsToApplicationPrivate(q)
+    AssociateConfigurationItemsToApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

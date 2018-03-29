@@ -86,7 +86,7 @@ void DeleteObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteObjectResponse instance.
  */
 DeleteObjectResponsePrivate::DeleteObjectResponsePrivate(
-    DeleteObjectQueueResponse * const q) : DeleteObjectPrivate(q)
+    DeleteObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

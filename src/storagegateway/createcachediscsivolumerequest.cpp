@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCachediSCSIVolumeRequest::response(QNet
  */
 CreateCachediSCSIVolumeRequestPrivate::CreateCachediSCSIVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateCachediSCSIVolumeRequest * const q)
-    : CreateCachediSCSIVolumePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCachediSCSIVolumeRequestPrivate::CreateCachediSCSIVolumeRequestPrivate(
  */
 CreateCachediSCSIVolumeRequestPrivate::CreateCachediSCSIVolumeRequestPrivate(
     const CreateCachediSCSIVolumeRequestPrivate &other, CreateCachediSCSIVolumeRequest * const q)
-    : CreateCachediSCSIVolumePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

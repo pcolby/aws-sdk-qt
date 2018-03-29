@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const WAFRequest::Action action, GetChangeTokenRequest * const q)
-    : GetChangeTokenPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const GetChangeTokenRequestPrivate &other, GetChangeTokenRequest * const q)
-    : GetChangeTokenPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

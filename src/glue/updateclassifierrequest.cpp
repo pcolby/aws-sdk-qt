@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClassifierRequest::response(QNetworkRep
  */
 UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
     const GlueRequest::Action action, UpdateClassifierRequest * const q)
-    : UpdateClassifierPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
  */
 UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
     const UpdateClassifierRequestPrivate &other, UpdateClassifierRequest * const q)
-    : UpdateClassifierPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

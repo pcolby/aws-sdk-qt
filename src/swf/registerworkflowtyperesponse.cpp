@@ -86,7 +86,7 @@ void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterWorkflowTypeResponse instance.
  */
 RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
-    RegisterWorkflowTypeQueueResponse * const q) : RegisterWorkflowTypePrivate(q)
+    RegisterWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

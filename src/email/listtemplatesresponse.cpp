@@ -86,7 +86,7 @@ void ListTemplatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTemplatesResponse instance.
  */
 ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
-    ListTemplatesQueueResponse * const q) : ListTemplatesPrivate(q)
+    ListTemplatesResponse * const q) : SESResponsePrivate(q)
 {
 
 }

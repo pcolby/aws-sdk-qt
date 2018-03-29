@@ -86,7 +86,7 @@ void DeleteLogStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLogStreamResponse instance.
  */
 DeleteLogStreamResponsePrivate::DeleteLogStreamResponsePrivate(
-    DeleteLogStreamQueueResponse * const q) : DeleteLogStreamPrivate(q)
+    DeleteLogStreamResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

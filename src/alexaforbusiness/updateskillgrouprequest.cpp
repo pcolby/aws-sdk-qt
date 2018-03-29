@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkRep
  */
 UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateSkillGroupRequest * const q)
-    : UpdateSkillGroupPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
  */
 UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
     const UpdateSkillGroupRequestPrivate &other, UpdateSkillGroupRequest * const q)
-    : UpdateSkillGroupPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

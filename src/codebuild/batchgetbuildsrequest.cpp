@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetBuildsRequest::response(QNetworkReply
  */
 BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
     const CodeBuildRequest::Action action, BatchGetBuildsRequest * const q)
-    : BatchGetBuildsPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
  */
 BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
     const BatchGetBuildsRequestPrivate &other, BatchGetBuildsRequest * const q)
-    : BatchGetBuildsPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

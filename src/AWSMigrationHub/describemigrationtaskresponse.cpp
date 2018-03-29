@@ -86,7 +86,7 @@ void DescribeMigrationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMigrationTaskResponse instance.
  */
 DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponsePrivate(
-    DescribeMigrationTaskQueueResponse * const q) : DescribeMigrationTaskPrivate(q)
+    DescribeMigrationTaskResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

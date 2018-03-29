@@ -86,7 +86,7 @@ void DeregisterInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public DeregisterInstancesFromLoadBalancerResponse instance.
  */
 DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFromLoadBalancerResponsePrivate(
-    DeregisterInstancesFromLoadBalancerQueueResponse * const q) : DeregisterInstancesFromLoadBalancerPrivate(q)
+    DeregisterInstancesFromLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLogEventsRequest::response(QNetworkReply *
  */
 GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
     const CloudWatchLogsRequest::Action action, GetLogEventsRequest * const q)
-    : GetLogEventsPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
  */
 GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
     const GetLogEventsRequestPrivate &other, GetLogEventsRequest * const q)
-    : GetLogEventsPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

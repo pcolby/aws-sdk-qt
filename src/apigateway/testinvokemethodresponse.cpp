@@ -86,7 +86,7 @@ void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestInvokeMethodResponse instance.
  */
 TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
-    TestInvokeMethodQueueResponse * const q) : TestInvokeMethodPrivate(q)
+    TestInvokeMethodResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

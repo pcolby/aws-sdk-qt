@@ -86,7 +86,7 @@ void ListAccessKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAccessKeysResponse instance.
  */
 ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
-    ListAccessKeysQueueResponse * const q) : ListAccessKeysPrivate(q)
+    ListAccessKeysResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

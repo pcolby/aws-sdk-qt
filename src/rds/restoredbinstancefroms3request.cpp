@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromS3Request::response(QNet
  */
 RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceFromS3Request * const q)
-    : RestoreDBInstanceFromS3Private(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
  */
 RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
     const RestoreDBInstanceFromS3RequestPrivate &other, RestoreDBInstanceFromS3Request * const q)
-    : RestoreDBInstanceFromS3Private(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListImportsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListImportsResponse instance.
  */
 ListImportsResponsePrivate::ListImportsResponsePrivate(
-    ListImportsQueueResponse * const q) : ListImportsPrivate(q)
+    ListImportsResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateIPSetResponse instance.
  */
 CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
-    CreateIPSetQueueResponse * const q) : CreateIPSetPrivate(q)
+    CreateIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

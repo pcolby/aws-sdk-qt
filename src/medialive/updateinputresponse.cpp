@@ -86,7 +86,7 @@ void UpdateInputResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateInputResponse instance.
  */
 UpdateInputResponsePrivate::UpdateInputResponsePrivate(
-    UpdateInputQueueResponse * const q) : UpdateInputPrivate(q)
+    UpdateInputResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, GetApplicationRequest * const q)
-    : GetApplicationPrivate(action, q)
+    : ServerlessApplicationRepositoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetApplicationRequestPrivate::GetApplicationRequestPrivate(
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const GetApplicationRequestPrivate &other, GetApplicationRequest * const q)
-    : GetApplicationPrivate(other, q)
+    : ServerlessApplicationRepositoryRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultNotificationsRequest::response(QNe
  */
 DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultNotificationsRequest * const q)
-    : DeleteVaultNotificationsPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
  */
 DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
     const DeleteVaultNotificationsRequestPrivate &other, DeleteVaultNotificationsRequest * const q)
-    : DeleteVaultNotificationsPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

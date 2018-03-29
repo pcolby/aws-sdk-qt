@@ -86,7 +86,7 @@ void DisableTopicRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableTopicRuleResponse instance.
  */
 DisableTopicRuleResponsePrivate::DisableTopicRuleResponsePrivate(
-    DisableTopicRuleQueueResponse * const q) : DisableTopicRulePrivate(q)
+    DisableTopicRuleResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

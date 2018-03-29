@@ -86,7 +86,7 @@ void DescribeEcsClustersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEcsClustersResponse instance.
  */
 DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponsePrivate(
-    DescribeEcsClustersQueueResponse * const q) : DescribeEcsClustersPrivate(q)
+    DescribeEcsClustersResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectiveInstanceAssociationsRequest:
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
     const SSMRequest::Action action, DescribeEffectiveInstanceAssociationsRequest * const q)
-    : DescribeEffectiveInstanceAssociationsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAs
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
     const DescribeEffectiveInstanceAssociationsRequestPrivate &other, DescribeEffectiveInstanceAssociationsRequest * const q)
-    : DescribeEffectiveInstanceAssociationsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

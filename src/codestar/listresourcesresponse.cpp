@@ -86,7 +86,7 @@ void ListResourcesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListResourcesResponse instance.
  */
 ListResourcesResponsePrivate::ListResourcesResponsePrivate(
-    ListResourcesQueueResponse * const q) : ListResourcesPrivate(q)
+    ListResourcesResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

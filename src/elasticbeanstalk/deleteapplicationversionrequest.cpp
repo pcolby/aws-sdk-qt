@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationVersionRequest::response(QNe
  */
 DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteApplicationVersionRequest * const q)
-    : DeleteApplicationVersionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
  */
 DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
     const DeleteApplicationVersionRequestPrivate &other, DeleteApplicationVersionRequest * const q)
-    : DeleteApplicationVersionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

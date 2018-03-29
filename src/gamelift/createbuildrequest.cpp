@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * 
  */
 CreateBuildRequestPrivate::CreateBuildRequestPrivate(
     const GameLiftRequest::Action action, CreateBuildRequest * const q)
-    : CreateBuildPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBuildRequestPrivate::CreateBuildRequestPrivate(
  */
 CreateBuildRequestPrivate::CreateBuildRequestPrivate(
     const CreateBuildRequestPrivate &other, CreateBuildRequest * const q)
-    : CreateBuildPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

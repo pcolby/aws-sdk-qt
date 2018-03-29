@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryRequest::response(QNetworkReply 
  */
 GetRepositoryRequestPrivate::GetRepositoryRequestPrivate(
     const CodeCommitRequest::Action action, GetRepositoryRequest * const q)
-    : GetRepositoryPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRepositoryRequestPrivate::GetRepositoryRequestPrivate(
  */
 GetRepositoryRequestPrivate::GetRepositoryRequestPrivate(
     const GetRepositoryRequestPrivate &other, GetRepositoryRequest * const q)
-    : GetRepositoryPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

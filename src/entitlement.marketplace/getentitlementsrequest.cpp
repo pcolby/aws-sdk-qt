@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkRepl
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
     const MarketplaceEntitlementServiceRequest::Action action, GetEntitlementsRequest * const q)
-    : GetEntitlementsPrivate(action, q)
+    : MarketplaceEntitlementServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
     const GetEntitlementsRequestPrivate &other, GetEntitlementsRequest * const q)
-    : GetEntitlementsPrivate(other, q)
+    : MarketplaceEntitlementServiceRequestPrivate(other, q)
 {
 
 }

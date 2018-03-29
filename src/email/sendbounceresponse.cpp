@@ -86,7 +86,7 @@ void SendBounceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendBounceResponse instance.
  */
 SendBounceResponsePrivate::SendBounceResponsePrivate(
-    SendBounceQueueResponse * const q) : SendBouncePrivate(q)
+    SendBounceResponse * const q) : SESResponsePrivate(q)
 {
 
 }

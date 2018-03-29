@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const StorageGatewayRequest::Action action, RemoveTagsFromResourceRequest * const q)
-    : RemoveTagsFromResourcePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)
-    : RemoveTagsFromResourcePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

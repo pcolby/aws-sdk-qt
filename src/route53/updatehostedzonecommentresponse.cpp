@@ -86,7 +86,7 @@ void UpdateHostedZoneCommentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateHostedZoneCommentResponse instance.
  */
 UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
-    UpdateHostedZoneCommentQueueResponse * const q) : UpdateHostedZoneCommentPrivate(q)
+    UpdateHostedZoneCommentResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

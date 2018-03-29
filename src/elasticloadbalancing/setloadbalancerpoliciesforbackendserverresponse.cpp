@@ -86,7 +86,7 @@ void SetLoadBalancerPoliciesForBackendServerResponse::parseSuccess(QIODevice &re
  * @param  q  Pointer to this object's public SetLoadBalancerPoliciesForBackendServerResponse instance.
  */
 SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesForBackendServerResponsePrivate(
-    SetLoadBalancerPoliciesForBackendServerQueueResponse * const q) : SetLoadBalancerPoliciesForBackendServerPrivate(q)
+    SetLoadBalancerPoliciesForBackendServerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

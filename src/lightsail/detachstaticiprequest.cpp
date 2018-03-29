@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply
  */
 DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
     const LightsailRequest::Action action, DetachStaticIpRequest * const q)
-    : DetachStaticIpPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
  */
 DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
     const DetachStaticIpRequestPrivate &other, DetachStaticIpRequest * const q)
-    : DetachStaticIpPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

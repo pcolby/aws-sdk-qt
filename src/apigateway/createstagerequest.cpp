@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStageRequest::response(QNetworkReply * 
  */
 CreateStageRequestPrivate::CreateStageRequestPrivate(
     const APIGatewayRequest::Action action, CreateStageRequest * const q)
-    : CreateStagePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStageRequestPrivate::CreateStageRequestPrivate(
  */
 CreateStageRequestPrivate::CreateStageRequestPrivate(
     const CreateStageRequestPrivate &other, CreateStageRequest * const q)
-    : CreateStagePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

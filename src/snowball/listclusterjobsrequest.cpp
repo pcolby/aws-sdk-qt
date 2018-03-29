@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkRepl
  */
 ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
     const SnowballRequest::Action action, ListClusterJobsRequest * const q)
-    : ListClusterJobsPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
  */
 ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
     const ListClusterJobsRequestPrivate &other, ListClusterJobsRequest * const q)
-    : ListClusterJobsPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

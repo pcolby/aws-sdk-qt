@@ -86,7 +86,7 @@ void ListInstanceGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInstanceGroupsResponse instance.
  */
 ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponsePrivate(
-    ListInstanceGroupsQueueResponse * const q) : ListInstanceGroupsPrivate(q)
+    ListInstanceGroupsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

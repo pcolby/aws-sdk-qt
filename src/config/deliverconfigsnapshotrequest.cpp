@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetwo
  */
 DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
     const ConfigServiceRequest::Action action, DeliverConfigSnapshotRequest * const q)
-    : DeliverConfigSnapshotPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
  */
 DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
     const DeliverConfigSnapshotRequestPrivate &other, DeliverConfigSnapshotRequest * const q)
-    : DeliverConfigSnapshotPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteHsmResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHsmResponse instance.
  */
 DeleteHsmResponsePrivate::DeleteHsmResponsePrivate(
-    DeleteHsmQueueResponse * const q) : DeleteHsmPrivate(q)
+    DeleteHsmResponse * const q) : CloudHSMV2ResponsePrivate(q)
 {
 
 }

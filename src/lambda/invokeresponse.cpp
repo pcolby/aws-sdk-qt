@@ -86,7 +86,7 @@ void InvokeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InvokeResponse instance.
  */
 InvokeResponsePrivate::InvokeResponsePrivate(
-    InvokeQueueResponse * const q) : InvokePrivate(q)
+    InvokeResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * cons
  */
 PredictRequestPrivate::PredictRequestPrivate(
     const MachineLearningRequest::Action action, PredictRequest * const q)
-    : PredictPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PredictRequestPrivate::PredictRequestPrivate(
  */
 PredictRequestPrivate::PredictRequestPrivate(
     const PredictRequestPrivate &other, PredictRequest * const q)
-    : PredictPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

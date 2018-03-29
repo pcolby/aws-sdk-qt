@@ -86,7 +86,7 @@ void ListTagsForCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsForCertificateResponse instance.
  */
 ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponsePrivate(
-    ListTagsForCertificateQueueResponse * const q) : ListTagsForCertificatePrivate(q)
+    ListTagsForCertificateResponse * const q) : ACMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeBundleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBundleResponse instance.
  */
 DescribeBundleResponsePrivate::DescribeBundleResponsePrivate(
-    DescribeBundleQueueResponse * const q) : DescribeBundlePrivate(q)
+    DescribeBundleResponse * const q) : MobileResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNe
  */
 GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
     const LightsailRequest::Action action, GetInstanceAccessDetailsRequest * const q)
-    : GetInstanceAccessDetailsPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
  */
 GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
     const GetInstanceAccessDetailsRequestPrivate &other, GetInstanceAccessDetailsRequest * const q)
-    : GetInstanceAccessDetailsPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

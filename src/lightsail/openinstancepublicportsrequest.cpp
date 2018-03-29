@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * OpenInstancePublicPortsRequest::response(QNet
  */
 OpenInstancePublicPortsRequestPrivate::OpenInstancePublicPortsRequestPrivate(
     const LightsailRequest::Action action, OpenInstancePublicPortsRequest * const q)
-    : OpenInstancePublicPortsPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ OpenInstancePublicPortsRequestPrivate::OpenInstancePublicPortsRequestPrivate(
  */
 OpenInstancePublicPortsRequestPrivate::OpenInstancePublicPortsRequestPrivate(
     const OpenInstancePublicPortsRequestPrivate &other, OpenInstancePublicPortsRequest * const q)
-    : OpenInstancePublicPortsPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkRepl
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
     const EC2Request::Action action, DeregisterImageRequest * const q)
-    : DeregisterImagePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
     const DeregisterImageRequestPrivate &other, DeregisterImageRequest * const q)
-    : DeregisterImagePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

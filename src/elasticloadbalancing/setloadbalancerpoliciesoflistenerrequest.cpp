@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesOfListenerRequest::res
  */
 SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListenerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesOfListenerRequest * const q)
-    : SetLoadBalancerPoliciesOfListenerPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListen
  */
 SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListenerRequestPrivate(
     const SetLoadBalancerPoliciesOfListenerRequestPrivate &other, SetLoadBalancerPoliciesOfListenerRequest * const q)
-    : SetLoadBalancerPoliciesOfListenerPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

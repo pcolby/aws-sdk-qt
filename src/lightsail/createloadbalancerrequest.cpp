@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoadBalancerRequest::response(QNetworkR
  */
 CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, CreateLoadBalancerRequest * const q)
-    : CreateLoadBalancerPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
  */
 CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
     const CreateLoadBalancerRequestPrivate &other, CreateLoadBalancerRequest * const q)
-    : CreateLoadBalancerPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

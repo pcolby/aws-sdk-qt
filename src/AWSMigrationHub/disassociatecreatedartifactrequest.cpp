@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(
  */
 DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPrivate(
     const MigrationHubRequest::Action action, DisassociateCreatedArtifactRequest * const q)
-    : DisassociateCreatedArtifactPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPri
  */
 DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPrivate(
     const DisassociateCreatedArtifactRequestPrivate &other, DisassociateCreatedArtifactRequest * const q)
-    : DisassociateCreatedArtifactPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

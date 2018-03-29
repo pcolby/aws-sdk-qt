@@ -86,7 +86,7 @@ void EnableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableVpcClassicLinkResponse instance.
  */
 EnableVpcClassicLinkResponsePrivate::EnableVpcClassicLinkResponsePrivate(
-    EnableVpcClassicLinkQueueResponse * const q) : EnableVpcClassicLinkPrivate(q)
+    EnableVpcClassicLinkResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetFunctionConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFunctionConfigurationResponse instance.
  */
 GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponsePrivate(
-    GetFunctionConfigurationQueueResponse * const q) : GetFunctionConfigurationPrivate(q)
+    GetFunctionConfigurationResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisionedProductPlanRequest::response
  */
 DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProvisionedProductPlanRequest * const q)
-    : DeleteProvisionedProductPlanPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestP
  */
 DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestPrivate(
     const DeleteProvisionedProductPlanRequestPrivate &other, DeleteProvisionedProductPlanRequest * const q)
-    : DeleteProvisionedProductPlanPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

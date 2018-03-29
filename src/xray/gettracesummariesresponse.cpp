@@ -86,7 +86,7 @@ void GetTraceSummariesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTraceSummariesResponse instance.
  */
 GetTraceSummariesResponsePrivate::GetTraceSummariesResponsePrivate(
-    GetTraceSummariesQueueResponse * const q) : GetTraceSummariesPrivate(q)
+    GetTraceSummariesResponse * const q) : XRayResponsePrivate(q)
 {
 
 }

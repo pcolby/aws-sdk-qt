@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationsRequest::response(QNetw
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeConfigurationsRequest * const q)
-    : DescribeConfigurationsPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
     const DescribeConfigurationsRequestPrivate &other, DescribeConfigurationsRequest * const q)
-    : DescribeConfigurationsPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

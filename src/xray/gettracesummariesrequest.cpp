@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTraceSummariesRequest::response(QNetworkRe
  */
 GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
     const XRayRequest::Action action, GetTraceSummariesRequest * const q)
-    : GetTraceSummariesPrivate(action, q)
+    : XRayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
  */
 GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
     const GetTraceSummariesRequestPrivate &other, GetTraceSummariesRequest * const q)
-    : GetTraceSummariesPrivate(other, q)
+    : XRayRequestPrivate(other, q)
 {
 
 }

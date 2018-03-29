@@ -86,7 +86,7 @@ void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBSubnetGroupResponse instance.
  */
 CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
-    CreateDBSubnetGroupQueueResponse * const q) : CreateDBSubnetGroupPrivate(q)
+    CreateDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

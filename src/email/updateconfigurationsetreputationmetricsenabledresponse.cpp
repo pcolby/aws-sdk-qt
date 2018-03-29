@@ -86,7 +86,7 @@ void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODev
  * @param  q  Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledResponse instance.
  */
 UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(
-    UpdateConfigurationSetReputationMetricsEnabledQueueResponse * const q) : UpdateConfigurationSetReputationMetricsEnabledPrivate(q)
+    UpdateConfigurationSetReputationMetricsEnabledResponse * const q) : SESResponsePrivate(q)
 {
 
 }

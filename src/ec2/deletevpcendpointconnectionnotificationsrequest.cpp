@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsReque
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointConnectionNotificationsRequest * const q)
-    : DeleteVpcEndpointConnectionNotificationsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnect
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
     const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other, DeleteVpcEndpointConnectionNotificationsRequest * const q)
-    : DeleteVpcEndpointConnectionNotificationsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

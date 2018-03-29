@@ -86,7 +86,7 @@ void DisassociateTagOptionFromResourceResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public DisassociateTagOptionFromResourceResponse instance.
  */
 DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResourceResponsePrivate(
-    DisassociateTagOptionFromResourceQueueResponse * const q) : DisassociateTagOptionFromResourcePrivate(q)
+    DisassociateTagOptionFromResourceResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

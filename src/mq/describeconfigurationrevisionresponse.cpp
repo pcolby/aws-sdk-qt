@@ -86,7 +86,7 @@ void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeConfigurationRevisionResponse instance.
  */
 DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionResponsePrivate(
-    DescribeConfigurationRevisionQueueResponse * const q) : DescribeConfigurationRevisionPrivate(q)
+    DescribeConfigurationRevisionResponse * const q) : MQResponsePrivate(q)
 {
 
 }

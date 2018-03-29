@@ -86,7 +86,7 @@ void GetObjectInformationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetObjectInformationResponse instance.
  */
 GetObjectInformationResponsePrivate::GetObjectInformationResponsePrivate(
-    GetObjectInformationQueueResponse * const q) : GetObjectInformationPrivate(q)
+    GetObjectInformationResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(Q
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)
-    : DeleteSqlInjectionMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPriva
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const DeleteSqlInjectionMatchSetRequestPrivate &other, DeleteSqlInjectionMatchSetRequest * const q)
-    : DeleteSqlInjectionMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

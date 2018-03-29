@@ -86,7 +86,7 @@ void DescribeEffectiveInstanceAssociationsResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public DescribeEffectiveInstanceAssociationsResponse instance.
  */
 DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceAssociationsResponsePrivate(
-    DescribeEffectiveInstanceAssociationsQueueResponse * const q) : DescribeEffectiveInstanceAssociationsPrivate(q)
+    DescribeEffectiveInstanceAssociationsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

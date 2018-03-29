@@ -86,7 +86,7 @@ void ListRemoteAccessSessionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRemoteAccessSessionsResponse instance.
  */
 ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponsePrivate(
-    ListRemoteAccessSessionsQueueResponse * const q) : ListRemoteAccessSessionsPrivate(q)
+    ListRemoteAccessSessionsResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateGeoMatchSetResponse instance.
  */
 CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
-    CreateGeoMatchSetQueueResponse * const q) : CreateGeoMatchSetPrivate(q)
+    CreateGeoMatchSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteCommentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCommentResponse instance.
  */
 DeleteCommentResponsePrivate::DeleteCommentResponsePrivate(
-    DeleteCommentQueueResponse * const q) : DeleteCommentPrivate(q)
+    DeleteCommentResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

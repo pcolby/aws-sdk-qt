@@ -86,7 +86,7 @@ void RegisterTaskWithMaintenanceWindowResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public RegisterTaskWithMaintenanceWindowResponse instance.
  */
 RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenanceWindowResponsePrivate(
-    RegisterTaskWithMaintenanceWindowQueueResponse * const q) : RegisterTaskWithMaintenanceWindowPrivate(q)
+    RegisterTaskWithMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

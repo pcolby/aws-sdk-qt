@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateRequest::response(QNetworkRe
  */
 UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
     const IoTRequest::Action action, UpdateCertificateRequest * const q)
-    : UpdateCertificatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
  */
 UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
     const UpdateCertificateRequestPrivate &other, UpdateCertificateRequest * const q)
-    : UpdateCertificatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

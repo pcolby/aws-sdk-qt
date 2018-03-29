@@ -86,7 +86,7 @@ void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEnvironmentResponse instance.
  */
 UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
-    UpdateEnvironmentQueueResponse * const q) : UpdateEnvironmentPrivate(q)
+    UpdateEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

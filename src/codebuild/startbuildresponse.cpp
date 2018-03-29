@@ -86,7 +86,7 @@ void StartBuildResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartBuildResponse instance.
  */
 StartBuildResponsePrivate::StartBuildResponsePrivate(
-    StartBuildQueueResponse * const q) : StartBuildPrivate(q)
+    StartBuildResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

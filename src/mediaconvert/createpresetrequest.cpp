@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply *
  */
 CreatePresetRequestPrivate::CreatePresetRequestPrivate(
     const MediaConvertRequest::Action action, CreatePresetRequest * const q)
-    : CreatePresetPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePresetRequestPrivate::CreatePresetRequestPrivate(
  */
 CreatePresetRequestPrivate::CreatePresetRequestPrivate(
     const CreatePresetRequestPrivate &other, CreatePresetRequest * const q)
-    : CreatePresetPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

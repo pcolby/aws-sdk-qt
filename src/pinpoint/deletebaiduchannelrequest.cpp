@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkR
  */
 DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteBaiduChannelRequest * const q)
-    : DeleteBaiduChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
  */
 DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
     const DeleteBaiduChannelRequestPrivate &other, DeleteBaiduChannelRequest * const q)
-    : DeleteBaiduChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

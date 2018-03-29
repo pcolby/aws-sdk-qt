@@ -86,7 +86,7 @@ void CreateWebACLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateWebACLResponse instance.
  */
 CreateWebACLResponsePrivate::CreateWebACLResponsePrivate(
-    CreateWebACLQueueResponse * const q) : CreateWebACLPrivate(q)
+    CreateWebACLResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

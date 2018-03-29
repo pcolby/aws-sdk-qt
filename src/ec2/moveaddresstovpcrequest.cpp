@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkRep
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
     const EC2Request::Action action, MoveAddressToVpcRequest * const q)
-    : MoveAddressToVpcPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
     const MoveAddressToVpcRequestPrivate &other, MoveAddressToVpcRequest * const q)
-    : MoveAddressToVpcPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

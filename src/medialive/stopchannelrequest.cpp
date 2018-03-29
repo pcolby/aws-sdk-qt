@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * 
  */
 StopChannelRequestPrivate::StopChannelRequestPrivate(
     const MediaLiveRequest::Action action, StopChannelRequest * const q)
-    : StopChannelPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopChannelRequestPrivate::StopChannelRequestPrivate(
  */
 StopChannelRequestPrivate::StopChannelRequestPrivate(
     const StopChannelRequestPrivate &other, StopChannelRequest * const q)
-    : StopChannelPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

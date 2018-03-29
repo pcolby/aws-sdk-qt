@@ -86,7 +86,7 @@ void GetCommentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCommentResponse instance.
  */
 GetCommentResponsePrivate::GetCommentResponsePrivate(
-    GetCommentQueueResponse * const q) : GetCommentPrivate(q)
+    GetCommentResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

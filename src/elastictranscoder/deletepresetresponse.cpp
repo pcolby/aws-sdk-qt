@@ -86,7 +86,7 @@ void DeletePresetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePresetResponse instance.
  */
 DeletePresetResponsePrivate::DeletePresetResponsePrivate(
-    DeletePresetQueueResponse * const q) : DeletePresetPrivate(q)
+    DeletePresetResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

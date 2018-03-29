@@ -86,7 +86,7 @@ void PutResourcePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutResourcePolicyResponse instance.
  */
 PutResourcePolicyResponsePrivate::PutResourcePolicyResponsePrivate(
-    PutResourcePolicyQueueResponse * const q) : PutResourcePolicyPrivate(q)
+    PutResourcePolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

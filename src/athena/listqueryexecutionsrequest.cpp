@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListQueryExecutionsRequest::response(QNetwork
  */
 ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
     const AthenaRequest::Action action, ListQueryExecutionsRequest * const q)
-    : ListQueryExecutionsPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
  */
 ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
     const ListQueryExecutionsRequestPrivate &other, ListQueryExecutionsRequest * const q)
-    : ListQueryExecutionsPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

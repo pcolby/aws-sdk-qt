@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPoliciesRequest::response(QNet
  */
 DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
     const GameLiftRequest::Action action, DescribeScalingPoliciesRequest * const q)
-    : DescribeScalingPoliciesPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
  */
 DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
     const DescribeScalingPoliciesRequestPrivate &other, DescribeScalingPoliciesRequest * const q)
-    : DescribeScalingPoliciesPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

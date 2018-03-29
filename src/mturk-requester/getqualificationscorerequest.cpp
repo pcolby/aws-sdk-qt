@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetQualificationScoreRequest::response(QNetwo
  */
 GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
     const MTurkRequest::Action action, GetQualificationScoreRequest * const q)
-    : GetQualificationScorePrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
  */
 GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
     const GetQualificationScoreRequestPrivate &other, GetQualificationScoreRequest * const q)
-    : GetQualificationScorePrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

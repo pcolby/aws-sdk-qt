@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectorRequest::response(QNetwo
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
     const SMSRequest::Action action, DisassociateConnectorRequest * const q)
-    : DisassociateConnectorPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
     const DisassociateConnectorRequestPrivate &other, DisassociateConnectorRequest * const q)
-    : DisassociateConnectorPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

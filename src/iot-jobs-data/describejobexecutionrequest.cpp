@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobExecutionRequest::response(QNetwor
  */
 DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, DescribeJobExecutionRequest * const q)
-    : DescribeJobExecutionPrivate(action, q)
+    : IoTJobsDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
  */
 DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
     const DescribeJobExecutionRequestPrivate &other, DescribeJobExecutionRequest * const q)
-    : DescribeJobExecutionPrivate(other, q)
+    : IoTJobsDataPlaneRequestPrivate(other, q)
 {
 
 }

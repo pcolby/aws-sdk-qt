@@ -86,7 +86,7 @@ void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateServiceLinkedRoleResponse instance.
  */
 CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
-    CreateServiceLinkedRoleQueueResponse * const q) : CreateServiceLinkedRolePrivate(q)
+    CreateServiceLinkedRoleResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void BatchDeleteBuildsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDeleteBuildsResponse instance.
  */
 BatchDeleteBuildsResponsePrivate::BatchDeleteBuildsResponsePrivate(
-    BatchDeleteBuildsQueueResponse * const q) : BatchDeleteBuildsPrivate(q)
+    BatchDeleteBuildsResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

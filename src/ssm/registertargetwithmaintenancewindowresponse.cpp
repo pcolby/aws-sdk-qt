@@ -86,7 +86,7 @@ void RegisterTargetWithMaintenanceWindowResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public RegisterTargetWithMaintenanceWindowResponse instance.
  */
 RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaintenanceWindowResponsePrivate(
-    RegisterTargetWithMaintenanceWindowQueueResponse * const q) : RegisterTargetWithMaintenanceWindowPrivate(q)
+    RegisterTargetWithMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

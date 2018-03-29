@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamProcessorRequest::response(QNetwo
  */
 CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, CreateStreamProcessorRequest * const q)
-    : CreateStreamProcessorPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
  */
 CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
     const CreateStreamProcessorRequestPrivate &other, CreateStreamProcessorRequest * const q)
-    : CreateStreamProcessorPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

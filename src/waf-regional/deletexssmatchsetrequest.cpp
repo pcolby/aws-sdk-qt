@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteXssMatchSetRequest * const q)
-    : DeleteXssMatchSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
     const DeleteXssMatchSetRequestPrivate &other, DeleteXssMatchSetRequest * const q)
-    : DeleteXssMatchSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

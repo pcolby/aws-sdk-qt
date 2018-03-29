@@ -86,7 +86,7 @@ void GetExportJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetExportJobResponse instance.
  */
 GetExportJobResponsePrivate::GetExportJobResponsePrivate(
-    GetExportJobQueueResponse * const q) : GetExportJobPrivate(q)
+    GetExportJobResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

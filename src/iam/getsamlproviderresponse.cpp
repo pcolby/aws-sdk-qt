@@ -86,7 +86,7 @@ void GetSAMLProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSAMLProviderResponse instance.
  */
 GetSAMLProviderResponsePrivate::GetSAMLProviderResponsePrivate(
-    GetSAMLProviderQueueResponse * const q) : GetSAMLProviderPrivate(q)
+    GetSAMLProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

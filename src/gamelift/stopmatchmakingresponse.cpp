@@ -86,7 +86,7 @@ void StopMatchmakingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopMatchmakingResponse instance.
  */
 StopMatchmakingResponsePrivate::StopMatchmakingResponsePrivate(
-    StopMatchmakingQueueResponse * const q) : StopMatchmakingPrivate(q)
+    StopMatchmakingResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

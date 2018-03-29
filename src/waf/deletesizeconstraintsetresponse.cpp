@@ -86,7 +86,7 @@ void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSizeConstraintSetResponse instance.
  */
 DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponsePrivate(
-    DeleteSizeConstraintSetQueueResponse * const q) : DeleteSizeConstraintSetPrivate(q)
+    DeleteSizeConstraintSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

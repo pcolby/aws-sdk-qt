@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAutoScalingGroupRequest::response(QNetw
  */
 CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, CreateAutoScalingGroupRequest * const q)
-    : CreateAutoScalingGroupPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
  */
 CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
     const CreateAutoScalingGroupRequestPrivate &other, CreateAutoScalingGroupRequest * const q)
-    : CreateAutoScalingGroupPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

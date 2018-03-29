@@ -86,7 +86,7 @@ void GetActivityTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetActivityTaskResponse instance.
  */
 GetActivityTaskResponsePrivate::GetActivityTaskResponsePrivate(
-    GetActivityTaskQueueResponse * const q) : GetActivityTaskPrivate(q)
+    GetActivityTaskResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

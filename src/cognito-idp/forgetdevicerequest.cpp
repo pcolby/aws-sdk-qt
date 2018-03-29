@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply *
  */
 ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ForgetDeviceRequest * const q)
-    : ForgetDevicePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
  */
 ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
     const ForgetDeviceRequestPrivate &other, ForgetDeviceRequest * const q)
-    : ForgetDevicePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDistributionRequest::response(QNetworkRepl
  */
 GetDistributionRequestPrivate::GetDistributionRequestPrivate(
     const CloudFrontRequest::Action action, GetDistributionRequest * const q)
-    : GetDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDistributionRequestPrivate::GetDistributionRequestPrivate(
  */
 GetDistributionRequestPrivate::GetDistributionRequestPrivate(
     const GetDistributionRequestPrivate &other, GetDistributionRequest * const q)
-    : GetDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

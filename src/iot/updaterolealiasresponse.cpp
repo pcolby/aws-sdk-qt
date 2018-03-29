@@ -86,7 +86,7 @@ void UpdateRoleAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRoleAliasResponse instance.
  */
 UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponsePrivate(
-    UpdateRoleAliasQueueResponse * const q) : UpdateRoleAliasPrivate(q)
+    UpdateRoleAliasResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

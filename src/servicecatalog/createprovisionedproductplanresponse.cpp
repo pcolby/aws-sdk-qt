@@ -86,7 +86,7 @@ void CreateProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateProvisionedProductPlanResponse instance.
  */
 CreateProvisionedProductPlanResponsePrivate::CreateProvisionedProductPlanResponsePrivate(
-    CreateProvisionedProductPlanQueueResponse * const q) : CreateProvisionedProductPlanPrivate(q)
+    CreateProvisionedProductPlanResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

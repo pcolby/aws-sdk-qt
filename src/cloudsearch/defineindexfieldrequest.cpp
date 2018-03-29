@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkRep
  */
 DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
     const CloudSearchRequest::Action action, DefineIndexFieldRequest * const q)
-    : DefineIndexFieldPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
  */
 DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
     const DefineIndexFieldRequestPrivate &other, DefineIndexFieldRequest * const q)
-    : DefineIndexFieldPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

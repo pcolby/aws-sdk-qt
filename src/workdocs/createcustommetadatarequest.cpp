@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCustomMetadataRequest::response(QNetwor
  */
 CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
     const WorkDocsRequest::Action action, CreateCustomMetadataRequest * const q)
-    : CreateCustomMetadataPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
  */
 CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
     const CreateCustomMetadataRequestPrivate &other, CreateCustomMetadataRequest * const q)
-    : CreateCustomMetadataPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

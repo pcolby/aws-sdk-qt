@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetw
  */
 UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, UpgradePublishedSchemaRequest * const q)
-    : UpgradePublishedSchemaPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
  */
 UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
     const UpgradePublishedSchemaRequestPrivate &other, UpgradePublishedSchemaRequest * const q)
-    : UpgradePublishedSchemaPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

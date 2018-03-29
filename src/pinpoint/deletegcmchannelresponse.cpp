@@ -86,7 +86,7 @@ void DeleteGcmChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteGcmChannelResponse instance.
  */
 DeleteGcmChannelResponsePrivate::DeleteGcmChannelResponsePrivate(
-    DeleteGcmChannelQueueResponse * const q) : DeleteGcmChannelPrivate(q)
+    DeleteGcmChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutPermissionPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutPermissionPolicyResponse instance.
  */
 PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponsePrivate(
-    PutPermissionPolicyQueueResponse * const q) : PutPermissionPolicyPrivate(q)
+    PutPermissionPolicyResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

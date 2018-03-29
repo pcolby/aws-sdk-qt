@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentVersionRequest::response(QNetwork
  */
 DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteIntentVersionRequest * const q)
-    : DeleteIntentVersionPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
  */
 DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
     const DeleteIntentVersionRequestPrivate &other, DeleteIntentVersionRequest * const q)
-    : DeleteIntentVersionPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartConfigurationRecorderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartConfigurationRecorderResponse instance.
  */
 StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponsePrivate(
-    StartConfigurationRecorderQueueResponse * const q) : StartConfigurationRecorderPrivate(q)
+    StartConfigurationRecorderResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

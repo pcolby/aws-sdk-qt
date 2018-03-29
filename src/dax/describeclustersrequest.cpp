@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DAXRequest::Action action, DescribeClustersRequest * const q)
-    : DescribeClustersPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)
-    : DescribeClustersPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

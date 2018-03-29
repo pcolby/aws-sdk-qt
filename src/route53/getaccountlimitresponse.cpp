@@ -86,7 +86,7 @@ void GetAccountLimitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountLimitResponse instance.
  */
 GetAccountLimitResponsePrivate::GetAccountLimitResponsePrivate(
-    GetAccountLimitQueueResponse * const q) : GetAccountLimitPrivate(q)
+    GetAccountLimitResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

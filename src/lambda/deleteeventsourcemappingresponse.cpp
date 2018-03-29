@@ -86,7 +86,7 @@ void DeleteEventSourceMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEventSourceMappingResponse instance.
  */
 DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate(
-    DeleteEventSourceMappingQueueResponse * const q) : DeleteEventSourceMappingPrivate(q)
+    DeleteEventSourceMappingResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

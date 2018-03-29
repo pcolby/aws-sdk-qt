@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply 
  */
 CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
     const APIGatewayRequest::Action action, CreateRestApiRequest * const q)
-    : CreateRestApiPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
  */
 CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
     const CreateRestApiRequestPrivate &other, CreateRestApiRequest * const q)
-    : CreateRestApiPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::respons
  */
 DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
     const Route53Request::Action action, DisassociateVPCFromHostedZoneRequest * const q)
-    : DisassociateVPCFromHostedZonePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneReques
  */
 DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
     const DisassociateVPCFromHostedZoneRequestPrivate &other, DisassociateVPCFromHostedZoneRequest * const q)
-    : DisassociateVPCFromHostedZonePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public PurchaseReservedDBInstancesOfferingResponse instance.
  */
 PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesOfferingResponsePrivate(
-    PurchaseReservedDBInstancesOfferingQueueResponse * const q) : PurchaseReservedDBInstancesOfferingPrivate(q)
+    PurchaseReservedDBInstancesOfferingResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

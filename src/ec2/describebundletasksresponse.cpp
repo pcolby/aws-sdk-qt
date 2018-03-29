@@ -86,7 +86,7 @@ void DescribeBundleTasksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBundleTasksResponse instance.
  */
 DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
-    DescribeBundleTasksQueueResponse * const q) : DescribeBundleTasksPrivate(q)
+    DescribeBundleTasksResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetw
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
     const EC2Request::Action action, ResetInstanceAttributeRequest * const q)
-    : ResetInstanceAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
     const ResetInstanceAttributeRequestPrivate &other, ResetInstanceAttributeRequest * const q)
-    : ResetInstanceAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

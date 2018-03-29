@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutScheduledUpdateGroupActionRequest::respons
  */
 PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionRequestPrivate(
     const AutoScalingRequest::Action action, PutScheduledUpdateGroupActionRequest * const q)
-    : PutScheduledUpdateGroupActionPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionReques
  */
 PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionRequestPrivate(
     const PutScheduledUpdateGroupActionRequestPrivate &other, PutScheduledUpdateGroupActionRequest * const q)
-    : PutScheduledUpdateGroupActionPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

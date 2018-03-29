@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkRepl
  */
 DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
     const MediaLiveRequest::Action action, DescribeChannelRequest * const q)
-    : DescribeChannelPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
  */
 DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
     const DescribeChannelRequestPrivate &other, DescribeChannelRequest * const q)
-    : DescribeChannelPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

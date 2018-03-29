@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkRepl
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
     const EC2Request::Action action, DescribeSubnetsRequest * const q)
-    : DescribeSubnetsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
     const DescribeSubnetsRequestPrivate &other, DescribeSubnetsRequest * const q)
-    : DescribeSubnetsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

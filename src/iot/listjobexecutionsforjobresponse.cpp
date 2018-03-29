@@ -86,7 +86,7 @@ void ListJobExecutionsForJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListJobExecutionsForJobResponse instance.
  */
 ListJobExecutionsForJobResponsePrivate::ListJobExecutionsForJobResponsePrivate(
-    ListJobExecutionsForJobQueueResponse * const q) : ListJobExecutionsForJobPrivate(q)
+    ListJobExecutionsForJobResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

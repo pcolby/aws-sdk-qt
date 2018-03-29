@@ -86,7 +86,7 @@ void PeerVpcResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PeerVpcResponse instance.
  */
 PeerVpcResponsePrivate::PeerVpcResponsePrivate(
-    PeerVpcQueueResponse * const q) : PeerVpcPrivate(q)
+    PeerVpcResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

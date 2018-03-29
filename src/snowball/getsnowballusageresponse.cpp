@@ -86,7 +86,7 @@ void GetSnowballUsageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSnowballUsageResponse instance.
  */
 GetSnowballUsageResponsePrivate::GetSnowballUsageResponsePrivate(
-    GetSnowballUsageQueueResponse * const q) : GetSnowballUsagePrivate(q)
+    GetSnowballUsageResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

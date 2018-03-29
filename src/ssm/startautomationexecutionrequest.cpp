@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartAutomationExecutionRequest::response(QNe
  */
 StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, StartAutomationExecutionRequest * const q)
-    : StartAutomationExecutionPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
  */
 StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
     const StartAutomationExecutionRequestPrivate &other, StartAutomationExecutionRequest * const q)
-    : StartAutomationExecutionPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNet
  */
 AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListUserAuthEventsRequest * const q)
-    : AdminListUserAuthEventsPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
  */
 AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
     const AdminListUserAuthEventsRequestPrivate &other, AdminListUserAuthEventsRequest * const q)
-    : AdminListUserAuthEventsPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

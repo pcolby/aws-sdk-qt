@@ -86,7 +86,7 @@ void UpdateChapCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateChapCredentialsResponse instance.
  */
 UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponsePrivate(
-    UpdateChapCredentialsQueueResponse * const q) : UpdateChapCredentialsPrivate(q)
+    UpdateChapCredentialsResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

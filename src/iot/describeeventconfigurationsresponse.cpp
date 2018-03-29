@@ -86,7 +86,7 @@ void DescribeEventConfigurationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEventConfigurationsResponse instance.
  */
 DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResponsePrivate(
-    DescribeEventConfigurationsQueueResponse * const q) : DescribeEventConfigurationsPrivate(q)
+    DescribeEventConfigurationsResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

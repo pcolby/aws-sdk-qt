@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * c
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
     const DynamoDBStreamsRequest::Action action, GetRecordsRequest * const q)
-    : GetRecordsPrivate(action, q)
+    : DynamoDBStreamsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRecordsRequestPrivate::GetRecordsRequestPrivate(
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
     const GetRecordsRequestPrivate &other, GetRecordsRequest * const q)
-    : GetRecordsPrivate(other, q)
+    : DynamoDBStreamsRequestPrivate(other, q)
 {
 
 }

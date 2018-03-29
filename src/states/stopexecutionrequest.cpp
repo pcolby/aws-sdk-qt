@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply 
  */
 StopExecutionRequestPrivate::StopExecutionRequestPrivate(
     const SFNRequest::Action action, StopExecutionRequest * const q)
-    : StopExecutionPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopExecutionRequestPrivate::StopExecutionRequestPrivate(
  */
 StopExecutionRequestPrivate::StopExecutionRequestPrivate(
     const StopExecutionRequestPrivate &other, StopExecutionRequest * const q)
-    : StopExecutionPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

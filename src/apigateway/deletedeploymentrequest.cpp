@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkRep
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDeploymentRequest * const q)
-    : DeleteDeploymentPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
     const DeleteDeploymentRequestPrivate &other, DeleteDeploymentRequest * const q)
-    : DeleteDeploymentPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

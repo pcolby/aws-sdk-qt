@@ -86,7 +86,7 @@ void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public SetIdentityFeedbackForwardingEnabledResponse instance.
  */
 SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardingEnabledResponsePrivate(
-    SetIdentityFeedbackForwardingEnabledQueueResponse * const q) : SetIdentityFeedbackForwardingEnabledPrivate(q)
+    SetIdentityFeedbackForwardingEnabledResponse * const q) : SESResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetPlanResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPlanResponse instance.
  */
 GetPlanResponsePrivate::GetPlanResponsePrivate(
-    GetPlanQueueResponse * const q) : GetPlanPrivate(q)
+    GetPlanResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, AddTagsToResourceRequest * const q)
-    : AddTagsToResourcePrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : AddTagsToResourcePrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

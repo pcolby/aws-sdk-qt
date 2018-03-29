@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRouteRequest::response(QNe
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
     const EC2Request::Action action, CreateVpnConnectionRouteRequest * const q)
-    : CreateVpnConnectionRoutePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
     const CreateVpnConnectionRouteRequestPrivate &other, CreateVpnConnectionRouteRequest * const q)
-    : CreateVpnConnectionRoutePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

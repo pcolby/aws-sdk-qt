@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResolveCustomerRequest::response(QNetworkRepl
  */
 ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
     const MarketplaceMeteringRequest::Action action, ResolveCustomerRequest * const q)
-    : ResolveCustomerPrivate(action, q)
+    : MarketplaceMeteringRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
  */
 ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
     const ResolveCustomerRequestPrivate &other, ResolveCustomerRequest * const q)
-    : ResolveCustomerPrivate(other, q)
+    : MarketplaceMeteringRequestPrivate(other, q)
 {
 
 }

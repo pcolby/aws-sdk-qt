@@ -86,7 +86,7 @@ void ListTagsForVaultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsForVaultResponse instance.
  */
 ListTagsForVaultResponsePrivate::ListTagsForVaultResponsePrivate(
-    ListTagsForVaultQueueResponse * const q) : ListTagsForVaultPrivate(q)
+    ListTagsForVaultResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

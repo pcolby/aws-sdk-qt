@@ -86,7 +86,7 @@ void UpdateDevicePoolResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDevicePoolResponse instance.
  */
 UpdateDevicePoolResponsePrivate::UpdateDevicePoolResponsePrivate(
-    UpdateDevicePoolQueueResponse * const q) : UpdateDevicePoolPrivate(q)
+    UpdateDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

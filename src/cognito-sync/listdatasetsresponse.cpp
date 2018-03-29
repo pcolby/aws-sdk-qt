@@ -86,7 +86,7 @@ void ListDatasetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDatasetsResponse instance.
  */
 ListDatasetsResponsePrivate::ListDatasetsResponsePrivate(
-    ListDatasetsQueueResponse * const q) : ListDatasetsPrivate(q)
+    ListDatasetsResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

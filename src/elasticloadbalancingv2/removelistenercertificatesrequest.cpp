@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveListenerCertificatesRequest::response(Q
  */
 RemoveListenerCertificatesRequestPrivate::RemoveListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, RemoveListenerCertificatesRequest * const q)
-    : RemoveListenerCertificatesPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveListenerCertificatesRequestPrivate::RemoveListenerCertificatesRequestPriva
  */
 RemoveListenerCertificatesRequestPrivate::RemoveListenerCertificatesRequestPrivate(
     const RemoveListenerCertificatesRequestPrivate &other, RemoveListenerCertificatesRequest * const q)
-    : RemoveListenerCertificatesPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

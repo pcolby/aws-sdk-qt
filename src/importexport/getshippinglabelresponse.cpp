@@ -86,7 +86,7 @@ void GetShippingLabelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetShippingLabelResponse instance.
  */
 GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
-    GetShippingLabelQueueResponse * const q) : GetShippingLabelPrivate(q)
+    GetShippingLabelResponse * const q) : ImportExportResponsePrivate(q)
 {
 
 }

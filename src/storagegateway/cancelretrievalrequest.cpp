@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelRetrievalRequest::response(QNetworkRepl
  */
 CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
     const StorageGatewayRequest::Action action, CancelRetrievalRequest * const q)
-    : CancelRetrievalPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
  */
 CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
     const CancelRetrievalRequestPrivate &other, CancelRetrievalRequest * const q)
-    : CancelRetrievalPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

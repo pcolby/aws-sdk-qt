@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::respo
  */
 ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRequestPrivate(
     const GreengrassRequest::Action action, ListGroupCertificateAuthoritiesRequest * const q)
-    : ListGroupCertificateAuthoritiesPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRe
  */
 ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRequestPrivate(
     const ListGroupCertificateAuthoritiesRequestPrivate &other, ListGroupCertificateAuthoritiesRequest * const q)
-    : ListGroupCertificateAuthoritiesPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

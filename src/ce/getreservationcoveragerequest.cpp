@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetw
  */
 GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationCoverageRequest * const q)
-    : GetReservationCoveragePrivate(action, q)
+    : CostExplorerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
  */
 GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
     const GetReservationCoverageRequestPrivate &other, GetReservationCoverageRequest * const q)
-    : GetReservationCoveragePrivate(other, q)
+    : CostExplorerRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetw
  */
 GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
     const PinpointRequest::Action action, GetApplicationSettingsRequest * const q)
-    : GetApplicationSettingsPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
  */
 GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
     const GetApplicationSettingsRequestPrivate &other, GetApplicationSettingsRequest * const q)
-    : GetApplicationSettingsPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

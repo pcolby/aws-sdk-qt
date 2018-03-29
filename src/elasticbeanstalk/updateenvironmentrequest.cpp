@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateEnvironmentRequest * const q)
-    : UpdateEnvironmentPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const UpdateEnvironmentRequestPrivate &other, UpdateEnvironmentRequest * const q)
-    : UpdateEnvironmentPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

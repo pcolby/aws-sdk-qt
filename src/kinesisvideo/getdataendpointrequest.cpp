@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkRepl
  */
 GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
     const KinesisVideoRequest::Action action, GetDataEndpointRequest * const q)
-    : GetDataEndpointPrivate(action, q)
+    : KinesisVideoRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
  */
 GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
     const GetDataEndpointRequestPrivate &other, GetDataEndpointRequest * const q)
-    : GetDataEndpointPrivate(other, q)
+    : KinesisVideoRequestPrivate(other, q)
 {
 
 }

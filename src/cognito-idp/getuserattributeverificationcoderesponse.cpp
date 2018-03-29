@@ -86,7 +86,7 @@ void GetUserAttributeVerificationCodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetUserAttributeVerificationCodeResponse instance.
  */
 GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCodeResponsePrivate(
-    GetUserAttributeVerificationCodeQueueResponse * const q) : GetUserAttributeVerificationCodePrivate(q)
+    GetUserAttributeVerificationCodeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

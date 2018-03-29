@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkRe
  */
 GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
     const MTurkRequest::Action action, GetAccountBalanceRequest * const q)
-    : GetAccountBalancePrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
  */
 GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
     const GetAccountBalanceRequestPrivate &other, GetAccountBalanceRequest * const q)
-    : GetAccountBalancePrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply 
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
     const ECRRequest::Action action, BatchGetImageRequest * const q)
-    : BatchGetImagePrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
     const BatchGetImageRequestPrivate &other, BatchGetImageRequest * const q)
-    : BatchGetImagePrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

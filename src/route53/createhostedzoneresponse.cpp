@@ -86,7 +86,7 @@ void CreateHostedZoneResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateHostedZoneResponse instance.
  */
 CreateHostedZoneResponsePrivate::CreateHostedZoneResponsePrivate(
-    CreateHostedZoneQueueResponse * const q) : CreateHostedZonePrivate(q)
+    CreateHostedZoneResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

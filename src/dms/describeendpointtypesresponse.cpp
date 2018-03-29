@@ -86,7 +86,7 @@ void DescribeEndpointTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEndpointTypesResponse instance.
  */
 DescribeEndpointTypesResponsePrivate::DescribeEndpointTypesResponsePrivate(
-    DescribeEndpointTypesQueueResponse * const q) : DescribeEndpointTypesPrivate(q)
+    DescribeEndpointTypesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

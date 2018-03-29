@@ -86,7 +86,7 @@ void ListInventoryEntriesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInventoryEntriesResponse instance.
  */
 ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponsePrivate(
-    ListInventoryEntriesQueueResponse * const q) : ListInventoryEntriesPrivate(q)
+    ListInventoryEntriesResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

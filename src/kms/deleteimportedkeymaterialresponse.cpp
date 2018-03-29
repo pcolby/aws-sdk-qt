@@ -86,7 +86,7 @@ void DeleteImportedKeyMaterialResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteImportedKeyMaterialResponse instance.
  */
 DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponsePrivate(
-    DeleteImportedKeyMaterialQueueResponse * const q) : DeleteImportedKeyMaterialPrivate(q)
+    DeleteImportedKeyMaterialResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

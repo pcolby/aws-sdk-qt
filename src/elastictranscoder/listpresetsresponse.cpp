@@ -86,7 +86,7 @@ void ListPresetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPresetsResponse instance.
  */
 ListPresetsResponsePrivate::ListPresetsResponsePrivate(
-    ListPresetsQueueResponse * const q) : ListPresetsPrivate(q)
+    ListPresetsResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

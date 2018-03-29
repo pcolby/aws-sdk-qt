@@ -86,7 +86,7 @@ void GetRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRuleResponse instance.
  */
 GetRuleResponsePrivate::GetRuleResponsePrivate(
-    GetRuleQueueResponse * const q) : GetRulePrivate(q)
+    GetRuleResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

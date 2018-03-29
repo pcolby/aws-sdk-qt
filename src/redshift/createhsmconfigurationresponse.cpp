@@ -86,7 +86,7 @@ void CreateHsmConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateHsmConfigurationResponse instance.
  */
 CreateHsmConfigurationResponsePrivate::CreateHsmConfigurationResponsePrivate(
-    CreateHsmConfigurationQueueResponse * const q) : CreateHsmConfigurationPrivate(q)
+    CreateHsmConfigurationResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

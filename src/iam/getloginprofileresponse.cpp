@@ -86,7 +86,7 @@ void GetLoginProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLoginProfileResponse instance.
  */
 GetLoginProfileResponsePrivate::GetLoginProfileResponsePrivate(
-    GetLoginProfileQueueResponse * const q) : GetLoginProfilePrivate(q)
+    GetLoginProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

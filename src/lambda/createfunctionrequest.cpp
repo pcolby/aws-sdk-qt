@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply
  */
 CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
     const LambdaRequest::Action action, CreateFunctionRequest * const q)
-    : CreateFunctionPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
  */
 CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
     const CreateFunctionRequestPrivate &other, CreateFunctionRequest * const q)
-    : CreateFunctionPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

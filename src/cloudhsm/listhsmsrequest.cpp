@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * con
  */
 ListHsmsRequestPrivate::ListHsmsRequestPrivate(
     const CloudHSMRequest::Action action, ListHsmsRequest * const q)
-    : ListHsmsPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListHsmsRequestPrivate::ListHsmsRequestPrivate(
  */
 ListHsmsRequestPrivate::ListHsmsRequestPrivate(
     const ListHsmsRequestPrivate &other, ListHsmsRequest * const q)
-    : ListHsmsPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void RotateChannelCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RotateChannelCredentialsResponse instance.
  */
 RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponsePrivate(
-    RotateChannelCredentialsQueueResponse * const q) : RotateChannelCredentialsPrivate(q)
+    RotateChannelCredentialsResponse * const q) : MediaPackageResponsePrivate(q)
 {
 
 }

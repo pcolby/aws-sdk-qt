@@ -86,7 +86,7 @@ void EnableLoggingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableLoggingResponse instance.
  */
 EnableLoggingResponsePrivate::EnableLoggingResponsePrivate(
-    EnableLoggingQueueResponse * const q) : EnableLoggingPrivate(q)
+    EnableLoggingResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

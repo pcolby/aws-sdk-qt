@@ -86,7 +86,7 @@ void AssignVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssignVolumeResponse instance.
  */
 AssignVolumeResponsePrivate::AssignVolumeResponsePrivate(
-    AssignVolumeQueueResponse * const q) : AssignVolumePrivate(q)
+    AssignVolumeResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

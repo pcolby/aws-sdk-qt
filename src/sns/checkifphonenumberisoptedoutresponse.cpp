@@ -86,7 +86,7 @@ void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CheckIfPhoneNumberIsOptedOutResponse instance.
  */
 CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutResponsePrivate(
-    CheckIfPhoneNumberIsOptedOutQueueResponse * const q) : CheckIfPhoneNumberIsOptedOutPrivate(q)
+    CheckIfPhoneNumberIsOptedOutResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

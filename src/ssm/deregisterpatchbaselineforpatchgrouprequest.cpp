@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
     const SSMRequest::Action action, DeregisterPatchBaselineForPatchGroupRequest * const q)
-    : DeregisterPatchBaselineForPatchGroupPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPa
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
     const DeregisterPatchBaselineForPatchGroupRequestPrivate &other, DeregisterPatchBaselineForPatchGroupRequest * const q)
-    : DeregisterPatchBaselineForPatchGroupPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

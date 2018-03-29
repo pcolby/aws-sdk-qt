@@ -86,7 +86,7 @@ void DescribeOrganizationalUnitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeOrganizationalUnitResponse instance.
  */
 DescribeOrganizationalUnitResponsePrivate::DescribeOrganizationalUnitResponsePrivate(
-    DescribeOrganizationalUnitQueueResponse * const q) : DescribeOrganizationalUnitPrivate(q)
+    DescribeOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

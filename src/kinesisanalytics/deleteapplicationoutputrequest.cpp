@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationOutputRequest::response(QNet
  */
 DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationOutputRequest * const q)
-    : DeleteApplicationOutputPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
  */
 DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
     const DeleteApplicationOutputRequestPrivate &other, DeleteApplicationOutputRequest * const q)
-    : DeleteApplicationOutputPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

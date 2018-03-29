@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBucketRequest::response(QNetworkReply *
  */
 CreateBucketRequestPrivate::CreateBucketRequestPrivate(
     const S3Request::Action action, CreateBucketRequest * const q)
-    : CreateBucketPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBucketRequestPrivate::CreateBucketRequestPrivate(
  */
 CreateBucketRequestPrivate::CreateBucketRequestPrivate(
     const CreateBucketRequestPrivate &other, CreateBucketRequest * const q)
-    : CreateBucketPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

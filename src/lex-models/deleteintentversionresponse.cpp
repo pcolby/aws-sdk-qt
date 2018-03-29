@@ -86,7 +86,7 @@ void DeleteIntentVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteIntentVersionResponse instance.
  */
 DeleteIntentVersionResponsePrivate::DeleteIntentVersionResponsePrivate(
-    DeleteIntentVersionQueueResponse * const q) : DeleteIntentVersionPrivate(q)
+    DeleteIntentVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

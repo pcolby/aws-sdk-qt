@@ -86,7 +86,7 @@ void CreateStorediSCSIVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateStorediSCSIVolumeResponse instance.
  */
 CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponsePrivate(
-    CreateStorediSCSIVolumeQueueResponse * const q) : CreateStorediSCSIVolumePrivate(q)
+    CreateStorediSCSIVolumeResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

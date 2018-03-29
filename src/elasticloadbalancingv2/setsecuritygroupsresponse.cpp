@@ -86,7 +86,7 @@ void SetSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetSecurityGroupsResponse instance.
  */
 SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponsePrivate(
-    SetSecurityGroupsQueueResponse * const q) : SetSecurityGroupsPrivate(q)
+    SetSecurityGroupsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

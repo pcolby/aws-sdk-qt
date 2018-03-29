@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentGroupRequest::response(QNetworkR
  */
 GetDeploymentGroupRequestPrivate::GetDeploymentGroupRequestPrivate(
     const CodeDeployRequest::Action action, GetDeploymentGroupRequest * const q)
-    : GetDeploymentGroupPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDeploymentGroupRequestPrivate::GetDeploymentGroupRequestPrivate(
  */
 GetDeploymentGroupRequestPrivate::GetDeploymentGroupRequestPrivate(
     const GetDeploymentGroupRequestPrivate &other, GetDeploymentGroupRequest * const q)
-    : GetDeploymentGroupPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

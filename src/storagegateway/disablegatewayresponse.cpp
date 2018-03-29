@@ -86,7 +86,7 @@ void DisableGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableGatewayResponse instance.
  */
 DisableGatewayResponsePrivate::DisableGatewayResponsePrivate(
-    DisableGatewayQueueResponse * const q) : DisableGatewayPrivate(q)
+    DisableGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

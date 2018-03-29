@@ -86,7 +86,7 @@ void DescribeTapesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTapesResponse instance.
  */
 DescribeTapesResponsePrivate::DescribeTapesResponsePrivate(
-    DescribeTapesQueueResponse * const q) : DescribeTapesPrivate(q)
+    DescribeTapesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

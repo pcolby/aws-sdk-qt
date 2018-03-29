@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCommitRequest::response(QNetworkReply * co
  */
 GetCommitRequestPrivate::GetCommitRequestPrivate(
     const CodeCommitRequest::Action action, GetCommitRequest * const q)
-    : GetCommitPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCommitRequestPrivate::GetCommitRequestPrivate(
  */
 GetCommitRequestPrivate::GetCommitRequestPrivate(
     const GetCommitRequestPrivate &other, GetCommitRequest * const q)
-    : GetCommitPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

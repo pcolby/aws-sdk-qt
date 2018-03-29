@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendAutomationSignalRequest::response(QNetwor
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
     const SSMRequest::Action action, SendAutomationSignalRequest * const q)
-    : SendAutomationSignalPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
     const SendAutomationSignalRequestPrivate &other, SendAutomationSignalRequest * const q)
-    : SendAutomationSignalPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLBCookieStickinessPolicyRequest::respon
  */
 CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLBCookieStickinessPolicyRequest * const q)
-    : CreateLBCookieStickinessPolicyPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequ
  */
 CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequestPrivate(
     const CreateLBCookieStickinessPolicyRequestPrivate &other, CreateLBCookieStickinessPolicyRequest * const q)
-    : CreateLBCookieStickinessPolicyPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

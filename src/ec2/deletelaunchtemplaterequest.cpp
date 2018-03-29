@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateRequest::response(QNetwor
  */
 DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
     const EC2Request::Action action, DeleteLaunchTemplateRequest * const q)
-    : DeleteLaunchTemplatePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
  */
 DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
     const DeleteLaunchTemplateRequestPrivate &other, DeleteLaunchTemplateRequest * const q)
-    : DeleteLaunchTemplatePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

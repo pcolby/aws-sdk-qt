@@ -86,7 +86,7 @@ void ReplaceRouteResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReplaceRouteResponse instance.
  */
 ReplaceRouteResponsePrivate::ReplaceRouteResponsePrivate(
-    ReplaceRouteQueueResponse * const q) : ReplaceRoutePrivate(q)
+    ReplaceRouteResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

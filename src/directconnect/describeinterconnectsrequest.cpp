@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInterconnectsRequest::response(QNetwo
  */
 DescribeInterconnectsRequestPrivate::DescribeInterconnectsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeInterconnectsRequest * const q)
-    : DescribeInterconnectsPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInterconnectsRequestPrivate::DescribeInterconnectsRequestPrivate(
  */
 DescribeInterconnectsRequestPrivate::DescribeInterconnectsRequestPrivate(
     const DescribeInterconnectsRequestPrivate &other, DescribeInterconnectsRequest * const q)
-    : DescribeInterconnectsPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

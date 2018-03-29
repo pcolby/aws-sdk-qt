@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply
  */
 AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
     const CodePipelineRequest::Action action, AcknowledgeJobRequest * const q)
-    : AcknowledgeJobPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
  */
 AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
     const AcknowledgeJobRequestPrivate &other, AcknowledgeJobRequest * const q)
-    : AcknowledgeJobPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteComputeEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteComputeEnvironmentResponse instance.
  */
 DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponsePrivate(
-    DeleteComputeEnvironmentQueueResponse * const q) : DeleteComputeEnvironmentPrivate(q)
+    DeleteComputeEnvironmentResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

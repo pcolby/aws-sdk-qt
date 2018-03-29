@@ -86,7 +86,7 @@ void StopNotebookInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopNotebookInstanceResponse instance.
  */
 StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
-    StopNotebookInstanceQueueResponse * const q) : StopNotebookInstancePrivate(q)
+    StopNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

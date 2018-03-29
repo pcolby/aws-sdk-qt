@@ -86,7 +86,7 @@ void SetDesiredCapacityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetDesiredCapacityResponse instance.
  */
 SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
-    SetDesiredCapacityQueueResponse * const q) : SetDesiredCapacityPrivate(q)
+    SetDesiredCapacityResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

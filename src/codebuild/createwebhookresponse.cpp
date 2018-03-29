@@ -86,7 +86,7 @@ void CreateWebhookResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateWebhookResponse instance.
  */
 CreateWebhookResponsePrivate::CreateWebhookResponsePrivate(
-    CreateWebhookQueueResponse * const q) : CreateWebhookPrivate(q)
+    CreateWebhookResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

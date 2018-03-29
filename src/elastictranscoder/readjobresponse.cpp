@@ -86,7 +86,7 @@ void ReadJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReadJobResponse instance.
  */
 ReadJobResponsePrivate::ReadJobResponsePrivate(
-    ReadJobQueueResponse * const q) : ReadJobPrivate(q)
+    ReadJobResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

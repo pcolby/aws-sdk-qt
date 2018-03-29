@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetw
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, StartWorkflowExecutionRequest * const q)
-    : StartWorkflowExecutionPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
     const StartWorkflowExecutionRequestPrivate &other, StartWorkflowExecutionRequest * const q)
-    : StartWorkflowExecutionPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateConfigurationItemsFromApplication
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DisassociateConfigurationItemsFromApplicationRequest * const q)
-    : DisassociateConfigurationItemsFromApplicationPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigu
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
     const DisassociateConfigurationItemsFromApplicationRequestPrivate &other, DisassociateConfigurationItemsFromApplicationRequest * const q)
-    : DisassociateConfigurationItemsFromApplicationPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

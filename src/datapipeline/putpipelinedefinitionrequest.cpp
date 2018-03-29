@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutPipelineDefinitionRequest::response(QNetwo
  */
 PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, PutPipelineDefinitionRequest * const q)
-    : PutPipelineDefinitionPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
  */
 PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
     const PutPipelineDefinitionRequestPrivate &other, PutPipelineDefinitionRequest * const q)
-    : PutPipelineDefinitionPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

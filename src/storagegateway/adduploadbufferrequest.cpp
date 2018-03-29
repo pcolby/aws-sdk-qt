@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddUploadBufferRequest::response(QNetworkRepl
  */
 AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
     const StorageGatewayRequest::Action action, AddUploadBufferRequest * const q)
-    : AddUploadBufferPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
  */
 AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
     const AddUploadBufferRequestPrivate &other, AddUploadBufferRequest * const q)
-    : AddUploadBufferPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

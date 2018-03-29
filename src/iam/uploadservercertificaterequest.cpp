@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadServerCertificateRequest::response(QNet
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
     const IAMRequest::Action action, UploadServerCertificateRequest * const q)
-    : UploadServerCertificatePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
     const UploadServerCertificateRequestPrivate &other, UploadServerCertificateRequest * const q)
-    : UploadServerCertificatePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

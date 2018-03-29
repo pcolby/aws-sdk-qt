@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkRep
  */
 DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
     const AthenaRequest::Action action, DeleteNamedQueryRequest * const q)
-    : DeleteNamedQueryPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
  */
 DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
     const DeleteNamedQueryRequestPrivate &other, DeleteNamedQueryRequest * const q)
-    : DeleteNamedQueryPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetwor
  */
 UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
     const DAXRequest::Action action, UpdateParameterGroupRequest * const q)
-    : UpdateParameterGroupPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
  */
 UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
     const UpdateParameterGroupRequestPrivate &other, UpdateParameterGroupRequest * const q)
-    : UpdateParameterGroupPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateIntentVersionRequest::response(QNetwork
  */
 CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateIntentVersionRequest * const q)
-    : CreateIntentVersionPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
  */
 CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
     const CreateIntentVersionRequestPrivate &other, CreateIntentVersionRequest * const q)
-    : CreateIntentVersionPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

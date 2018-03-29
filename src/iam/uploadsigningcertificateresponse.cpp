@@ -86,7 +86,7 @@ void UploadSigningCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadSigningCertificateResponse instance.
  */
 UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponsePrivate(
-    UploadSigningCertificateQueueResponse * const q) : UploadSigningCertificatePrivate(q)
+    UploadSigningCertificateResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

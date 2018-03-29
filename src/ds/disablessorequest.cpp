@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * c
  */
 DisableSsoRequestPrivate::DisableSsoRequestPrivate(
     const DirectoryServiceRequest::Action action, DisableSsoRequest * const q)
-    : DisableSsoPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableSsoRequestPrivate::DisableSsoRequestPrivate(
  */
 DisableSsoRequestPrivate::DisableSsoRequestPrivate(
     const DisableSsoRequestPrivate &other, DisableSsoRequest * const q)
-    : DisableSsoPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

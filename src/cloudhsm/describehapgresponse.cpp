@@ -86,7 +86,7 @@ void DescribeHapgResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHapgResponse instance.
  */
 DescribeHapgResponsePrivate::DescribeHapgResponsePrivate(
-    DescribeHapgQueueResponse * const q) : DescribeHapgPrivate(q)
+    DescribeHapgResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

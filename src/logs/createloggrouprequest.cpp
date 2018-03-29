@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLogGroupRequest::response(QNetworkReply
  */
 CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, CreateLogGroupRequest * const q)
-    : CreateLogGroupPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
  */
 CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
     const CreateLogGroupRequestPrivate &other, CreateLogGroupRequest * const q)
-    : CreateLogGroupPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

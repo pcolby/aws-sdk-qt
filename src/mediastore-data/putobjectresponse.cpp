@@ -86,7 +86,7 @@ void PutObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutObjectResponse instance.
  */
 PutObjectResponsePrivate::PutObjectResponsePrivate(
-    PutObjectQueueResponse * const q) : PutObjectPrivate(q)
+    PutObjectResponse * const q) : MediaStoreDataResponsePrivate(q)
 {
 
 }

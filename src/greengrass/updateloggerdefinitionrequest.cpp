@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetw
  */
 UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateLoggerDefinitionRequest * const q)
-    : UpdateLoggerDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
  */
 UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
     const UpdateLoggerDefinitionRequestPrivate &other, UpdateLoggerDefinitionRequest * const q)
-    : UpdateLoggerDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

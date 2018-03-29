@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::
  */
 DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationReferenceDataSourceRequest * const q)
-    : DeleteApplicationReferenceDataSourcePrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDa
  */
 DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
     const DeleteApplicationReferenceDataSourceRequestPrivate &other, DeleteApplicationReferenceDataSourceRequest * const q)
-    : DeleteApplicationReferenceDataSourcePrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

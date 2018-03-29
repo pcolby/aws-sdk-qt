@@ -86,7 +86,7 @@ void RegisterContainerInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterContainerInstanceResponse instance.
  */
 RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePrivate(
-    RegisterContainerInstanceQueueResponse * const q) : RegisterContainerInstancePrivate(q)
+    RegisterContainerInstanceResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupQueryRequest::response(QNetworkRep
  */
 UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
     const ResourceGroupsRequest::Action action, UpdateGroupQueryRequest * const q)
-    : UpdateGroupQueryPrivate(action, q)
+    : ResourceGroupsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
  */
 UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
     const UpdateGroupQueryRequestPrivate &other, UpdateGroupQueryRequest * const q)
-    : UpdateGroupQueryPrivate(other, q)
+    : ResourceGroupsRequestPrivate(other, q)
 {
 
 }

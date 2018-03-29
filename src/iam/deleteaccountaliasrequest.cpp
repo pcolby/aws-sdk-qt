@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkR
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
     const IAMRequest::Action action, DeleteAccountAliasRequest * const q)
-    : DeleteAccountAliasPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
     const DeleteAccountAliasRequestPrivate &other, DeleteAccountAliasRequest * const q)
-    : DeleteAccountAliasPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReadPresetRequest::response(QNetworkReply * c
  */
 ReadPresetRequestPrivate::ReadPresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadPresetRequest * const q)
-    : ReadPresetPrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReadPresetRequestPrivate::ReadPresetRequestPrivate(
  */
 ReadPresetRequestPrivate::ReadPresetRequestPrivate(
     const ReadPresetRequestPrivate &other, ReadPresetRequest * const q)
-    : ReadPresetPrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

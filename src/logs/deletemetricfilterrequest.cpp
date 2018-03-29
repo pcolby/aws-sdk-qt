@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMetricFilterRequest::response(QNetworkR
  */
 DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteMetricFilterRequest * const q)
-    : DeleteMetricFilterPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
  */
 DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
     const DeleteMetricFilterRequestPrivate &other, DeleteMetricFilterRequest * const q)
-    : DeleteMetricFilterPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

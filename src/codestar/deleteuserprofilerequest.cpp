@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserProfileRequest::response(QNetworkRe
  */
 DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
     const CodeStarRequest::Action action, DeleteUserProfileRequest * const q)
-    : DeleteUserProfilePrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
  */
 DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
     const DeleteUserProfileRequestPrivate &other, DeleteUserProfileRequest * const q)
-    : DeleteUserProfilePrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

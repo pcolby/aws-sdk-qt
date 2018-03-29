@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAnalysisSchemeRequest::response(QNetwor
  */
 DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
     const CloudSearchRequest::Action action, DeleteAnalysisSchemeRequest * const q)
-    : DeleteAnalysisSchemePrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
  */
 DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
     const DeleteAnalysisSchemeRequestPrivate &other, DeleteAnalysisSchemeRequest * const q)
-    : DeleteAnalysisSchemePrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::res
  */
 CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizationRequestPrivate(
     const Route53Request::Action action, CreateVPCAssociationAuthorizationRequest * const q)
-    : CreateVPCAssociationAuthorizationPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizati
  */
 CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizationRequestPrivate(
     const CreateVPCAssociationAuthorizationRequestPrivate &other, CreateVPCAssociationAuthorizationRequest * const q)
-    : CreateVPCAssociationAuthorizationPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreServerRequest::response(QNetworkReply 
  */
 RestoreServerRequestPrivate::RestoreServerRequestPrivate(
     const OpsWorksCMRequest::Action action, RestoreServerRequest * const q)
-    : RestoreServerPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreServerRequestPrivate::RestoreServerRequestPrivate(
  */
 RestoreServerRequestPrivate::RestoreServerRequestPrivate(
     const RestoreServerRequestPrivate &other, RestoreServerRequest * const q)
-    : RestoreServerPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

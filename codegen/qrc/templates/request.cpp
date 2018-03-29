@@ -75,7 +75,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ServiceName}}Request::Action action, {{ClassName}} * const q)
-    : {{OperationName}}Private(action, q)
+    : {{ServiceName}}RequestPrivate(action, q)
 {
 
 }
@@ -93,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ClassName}}Private &other, {{ClassName}} * const q)
-    : {{OperationName}}Private(other, q)
+    : {{ServiceName}}RequestPrivate(other, q)
 {
 
 }

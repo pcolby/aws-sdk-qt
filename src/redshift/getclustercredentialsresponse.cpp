@@ -86,7 +86,7 @@ void GetClusterCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetClusterCredentialsResponse instance.
  */
 GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponsePrivate(
-    GetClusterCredentialsQueueResponse * const q) : GetClusterCredentialsPrivate(q)
+    GetClusterCredentialsResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

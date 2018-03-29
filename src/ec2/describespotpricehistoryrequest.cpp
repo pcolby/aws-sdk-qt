@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNe
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
     const EC2Request::Action action, DescribeSpotPriceHistoryRequest * const q)
-    : DescribeSpotPriceHistoryPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
     const DescribeSpotPriceHistoryRequestPrivate &other, DescribeSpotPriceHistoryRequest * const q)
-    : DescribeSpotPriceHistoryPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

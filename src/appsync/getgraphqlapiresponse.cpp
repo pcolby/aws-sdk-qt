@@ -86,7 +86,7 @@ void GetGraphqlApiResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGraphqlApiResponse instance.
  */
 GetGraphqlApiResponsePrivate::GetGraphqlApiResponsePrivate(
-    GetGraphqlApiQueueResponse * const q) : GetGraphqlApiPrivate(q)
+    GetGraphqlApiResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

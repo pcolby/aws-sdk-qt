@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationSubscriptionRequest::respon
  */
 DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequestPrivate(
     const WorkDocsRequest::Action action, DeleteNotificationSubscriptionRequest * const q)
-    : DeleteNotificationSubscriptionPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequ
  */
 DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequestPrivate(
     const DeleteNotificationSubscriptionRequestPrivate &other, DeleteNotificationSubscriptionRequest * const q)
-    : DeleteNotificationSubscriptionPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetwork
  */
 RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
     const RedshiftRequest::Action action, RotateEncryptionKeyRequest * const q)
-    : RotateEncryptionKeyPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
  */
 RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
     const RotateEncryptionKeyRequestPrivate &other, RotateEncryptionKeyRequest * const q)
-    : RotateEncryptionKeyPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * c
  */
 ListModelsRequestPrivate::ListModelsRequestPrivate(
     const SageMakerRequest::Action action, ListModelsRequest * const q)
-    : ListModelsPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListModelsRequestPrivate::ListModelsRequestPrivate(
  */
 ListModelsRequestPrivate::ListModelsRequestPrivate(
     const ListModelsRequestPrivate &other, ListModelsRequest * const q)
-    : ListModelsPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

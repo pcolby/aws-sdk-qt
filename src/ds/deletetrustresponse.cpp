@@ -86,7 +86,7 @@ void DeleteTrustResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTrustResponse instance.
  */
 DeleteTrustResponsePrivate::DeleteTrustResponsePrivate(
-    DeleteTrustQueueResponse * const q) : DeleteTrustPrivate(q)
+    DeleteTrustResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

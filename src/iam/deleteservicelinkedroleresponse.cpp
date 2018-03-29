@@ -86,7 +86,7 @@ void DeleteServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteServiceLinkedRoleResponse instance.
  */
 DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponsePrivate(
-    DeleteServiceLinkedRoleQueueResponse * const q) : DeleteServiceLinkedRolePrivate(q)
+    DeleteServiceLinkedRoleResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

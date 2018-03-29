@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCasesRequest::response(QNetworkReply 
  */
 DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
     const SupportRequest::Action action, DescribeCasesRequest * const q)
-    : DescribeCasesPrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
  */
 DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
     const DescribeCasesRequestPrivate &other, DescribeCasesRequest * const q)
-    : DescribeCasesPrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

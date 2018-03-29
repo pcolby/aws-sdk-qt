@@ -86,7 +86,7 @@ void DescribeDocumentPermissionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDocumentPermissionResponse instance.
  */
 DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponsePrivate(
-    DescribeDocumentPermissionQueueResponse * const q) : DescribeDocumentPermissionPrivate(q)
+    DescribeDocumentPermissionResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

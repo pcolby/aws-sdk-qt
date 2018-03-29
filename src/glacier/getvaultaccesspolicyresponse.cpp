@@ -86,7 +86,7 @@ void GetVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetVaultAccessPolicyResponse instance.
  */
 GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponsePrivate(
-    GetVaultAccessPolicyQueueResponse * const q) : GetVaultAccessPolicyPrivate(q)
+    GetVaultAccessPolicyResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
     const IAMRequest::Action action, ListInstanceProfilesForRoleRequest * const q)
-    : ListInstanceProfilesForRolePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPri
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
     const ListInstanceProfilesForRoleRequestPrivate &other, ListInstanceProfilesForRoleRequest * const q)
-    : ListInstanceProfilesForRolePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

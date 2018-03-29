@@ -86,7 +86,7 @@ void ListDeadLetterSourceQueuesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDeadLetterSourceQueuesResponse instance.
  */
 ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponsePrivate(
-    ListDeadLetterSourceQueuesQueueResponse * const q) : ListDeadLetterSourceQueuesPrivate(q)
+    ListDeadLetterSourceQueuesResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

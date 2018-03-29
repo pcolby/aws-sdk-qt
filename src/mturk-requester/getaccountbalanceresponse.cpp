@@ -86,7 +86,7 @@ void GetAccountBalanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountBalanceResponse instance.
  */
 GetAccountBalanceResponsePrivate::GetAccountBalanceResponsePrivate(
-    GetAccountBalanceQueueResponse * const q) : GetAccountBalancePrivate(q)
+    GetAccountBalanceResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

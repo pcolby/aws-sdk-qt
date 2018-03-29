@@ -86,7 +86,7 @@ void GetDeploymentStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDeploymentStatusResponse instance.
  */
 GetDeploymentStatusResponsePrivate::GetDeploymentStatusResponsePrivate(
-    GetDeploymentStatusQueueResponse * const q) : GetDeploymentStatusPrivate(q)
+    GetDeploymentStatusResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

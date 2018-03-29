@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigRuleEvaluationStatusRequest::re
  */
 DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigRuleEvaluationStatusRequest * const q)
-    : DescribeConfigRuleEvaluationStatusPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationSt
  */
 DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
     const DescribeConfigRuleEvaluationStatusRequestPrivate &other, DescribeConfigRuleEvaluationStatusRequest * const q)
-    : DescribeConfigRuleEvaluationStatusPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

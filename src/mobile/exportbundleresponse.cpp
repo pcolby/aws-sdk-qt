@@ -86,7 +86,7 @@ void ExportBundleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ExportBundleResponse instance.
  */
 ExportBundleResponsePrivate::ExportBundleResponsePrivate(
-    ExportBundleQueueResponse * const q) : ExportBundlePrivate(q)
+    ExportBundleResponse * const q) : MobileResponsePrivate(q)
 {
 
 }

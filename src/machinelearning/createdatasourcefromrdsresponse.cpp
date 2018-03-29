@@ -86,7 +86,7 @@ void CreateDataSourceFromRDSResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDataSourceFromRDSResponse instance.
  */
 CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
-    CreateDataSourceFromRDSQueueResponse * const q) : CreateDataSourceFromRDSPrivate(q)
+    CreateDataSourceFromRDSResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

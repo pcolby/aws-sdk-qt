@@ -86,7 +86,7 @@ void GetDiscoverySummaryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDiscoverySummaryResponse instance.
  */
 GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponsePrivate(
-    GetDiscoverySummaryQueueResponse * const q) : GetDiscoverySummaryPrivate(q)
+    GetDiscoverySummaryResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

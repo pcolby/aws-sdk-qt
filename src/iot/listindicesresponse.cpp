@@ -86,7 +86,7 @@ void ListIndicesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListIndicesResponse instance.
  */
 ListIndicesResponsePrivate::ListIndicesResponsePrivate(
-    ListIndicesQueueResponse * const q) : ListIndicesPrivate(q)
+    ListIndicesResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteClusterParameterGroupResponse instance.
  */
 DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResponsePrivate(
-    DeleteClusterParameterGroupQueueResponse * const q) : DeleteClusterParameterGroupPrivate(q)
+    DeleteClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EvaluateExpressionRequest::response(QNetworkR
  */
 EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
     const DataPipelineRequest::Action action, EvaluateExpressionRequest * const q)
-    : EvaluateExpressionPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
  */
 EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
     const EvaluateExpressionRequestPrivate &other, EvaluateExpressionRequest * const q)
-    : EvaluateExpressionPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CancelSchemaExtensionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelSchemaExtensionResponse instance.
  */
 CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponsePrivate(
-    CancelSchemaExtensionQueueResponse * const q) : CancelSchemaExtensionPrivate(q)
+    CancelSchemaExtensionResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

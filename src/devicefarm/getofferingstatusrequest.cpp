@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOfferingStatusRequest::response(QNetworkRe
  */
 GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
     const DeviceFarmRequest::Action action, GetOfferingStatusRequest * const q)
-    : GetOfferingStatusPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
  */
 GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
     const GetOfferingStatusRequestPrivate &other, GetOfferingStatusRequest * const q)
-    : GetOfferingStatusPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

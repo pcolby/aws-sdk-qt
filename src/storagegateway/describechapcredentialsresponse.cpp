@@ -86,7 +86,7 @@ void DescribeChapCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeChapCredentialsResponse instance.
  */
 DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponsePrivate(
-    DescribeChapCredentialsQueueResponse * const q) : DescribeChapCredentialsPrivate(q)
+    DescribeChapCredentialsResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

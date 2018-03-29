@@ -86,7 +86,7 @@ void ListStepsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListStepsResponse instance.
  */
 ListStepsResponsePrivate::ListStepsResponsePrivate(
-    ListStepsQueueResponse * const q) : ListStepsPrivate(q)
+    ListStepsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

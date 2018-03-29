@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply *
  */
 CreateStreamRequestPrivate::CreateStreamRequestPrivate(
     const KinesisVideoRequest::Action action, CreateStreamRequest * const q)
-    : CreateStreamPrivate(action, q)
+    : KinesisVideoRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStreamRequestPrivate::CreateStreamRequestPrivate(
  */
 CreateStreamRequestPrivate::CreateStreamRequestPrivate(
     const CreateStreamRequestPrivate &other, CreateStreamRequest * const q)
-    : CreateStreamPrivate(other, q)
+    : KinesisVideoRequestPrivate(other, q)
 {
 
 }

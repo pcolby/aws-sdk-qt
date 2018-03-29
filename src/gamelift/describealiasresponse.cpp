@@ -86,7 +86,7 @@ void DescribeAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAliasResponse instance.
  */
 DescribeAliasResponsePrivate::DescribeAliasResponsePrivate(
-    DescribeAliasQueueResponse * const q) : DescribeAliasPrivate(q)
+    DescribeAliasResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

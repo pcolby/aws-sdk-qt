@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkRep
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
     const SSMRequest::Action action, DescribeDocumentRequest * const q)
-    : DescribeDocumentPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
     const DescribeDocumentRequestPrivate &other, DescribeDocumentRequest * const q)
-    : DescribeDocumentPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

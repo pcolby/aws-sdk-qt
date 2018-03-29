@@ -86,7 +86,7 @@ void GetServiceRoleForAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetServiceRoleForAccountResponse instance.
  */
 GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponsePrivate(
-    GetServiceRoleForAccountQueueResponse * const q) : GetServiceRoleForAccountPrivate(q)
+    GetServiceRoleForAccountResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

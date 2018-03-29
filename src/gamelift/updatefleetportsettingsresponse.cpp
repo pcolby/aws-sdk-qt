@@ -86,7 +86,7 @@ void UpdateFleetPortSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFleetPortSettingsResponse instance.
  */
 UpdateFleetPortSettingsResponsePrivate::UpdateFleetPortSettingsResponsePrivate(
-    UpdateFleetPortSettingsQueueResponse * const q) : UpdateFleetPortSettingsPrivate(q)
+    UpdateFleetPortSettingsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SimulatePrincipalPolicyRequest::response(QNet
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
     const IAMRequest::Action action, SimulatePrincipalPolicyRequest * const q)
-    : SimulatePrincipalPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
     const SimulatePrincipalPolicyRequestPrivate &other, SimulatePrincipalPolicyRequest * const q)
-    : SimulatePrincipalPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

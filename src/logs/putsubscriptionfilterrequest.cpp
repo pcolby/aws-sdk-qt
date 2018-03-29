@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutSubscriptionFilterRequest::response(QNetwo
  */
 PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutSubscriptionFilterRequest * const q)
-    : PutSubscriptionFilterPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
  */
 PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
     const PutSubscriptionFilterRequestPrivate &other, PutSubscriptionFilterRequest * const q)
-    : PutSubscriptionFilterPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

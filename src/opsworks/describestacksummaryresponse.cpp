@@ -86,7 +86,7 @@ void DescribeStackSummaryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStackSummaryResponse instance.
  */
 DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponsePrivate(
-    DescribeStackSummaryQueueResponse * const q) : DescribeStackSummaryPrivate(q)
+    DescribeStackSummaryResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

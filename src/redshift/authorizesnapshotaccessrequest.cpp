@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSnapshotAccessRequest::response(QNet
  */
 AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
     const RedshiftRequest::Action action, AuthorizeSnapshotAccessRequest * const q)
-    : AuthorizeSnapshotAccessPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
  */
 AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
     const AuthorizeSnapshotAccessRequestPrivate &other, AuthorizeSnapshotAccessRequest * const q)
-    : AuthorizeSnapshotAccessPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

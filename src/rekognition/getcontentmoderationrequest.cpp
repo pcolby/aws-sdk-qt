@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetwor
  */
 GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
     const RekognitionRequest::Action action, GetContentModerationRequest * const q)
-    : GetContentModerationPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
  */
 GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
     const GetContentModerationRequestPrivate &other, GetContentModerationRequest * const q)
-    : GetContentModerationPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

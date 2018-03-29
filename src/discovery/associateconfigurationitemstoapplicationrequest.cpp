@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateConfigurationItemsToApplicationReque
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, AssociateConfigurationItemsToApplicationRequest * const q)
-    : AssociateConfigurationItemsToApplicationPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationIt
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
     const AssociateConfigurationItemsToApplicationRequestPrivate &other, AssociateConfigurationItemsToApplicationRequest * const q)
-    : AssociateConfigurationItemsToApplicationPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

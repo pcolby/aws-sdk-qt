@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancerTargetGroupsRequest::respon
  */
 DetachLoadBalancerTargetGroupsRequestPrivate::DetachLoadBalancerTargetGroupsRequestPrivate(
     const AutoScalingRequest::Action action, DetachLoadBalancerTargetGroupsRequest * const q)
-    : DetachLoadBalancerTargetGroupsPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachLoadBalancerTargetGroupsRequestPrivate::DetachLoadBalancerTargetGroupsRequ
  */
 DetachLoadBalancerTargetGroupsRequestPrivate::DetachLoadBalancerTargetGroupsRequestPrivate(
     const DetachLoadBalancerTargetGroupsRequestPrivate &other, DetachLoadBalancerTargetGroupsRequest * const q)
-    : DetachLoadBalancerTargetGroupsPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ConfigServiceRequest::Action action, ListDiscoveredResourcesRequest * const q)
-    : ListDiscoveredResourcesPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ListDiscoveredResourcesRequestPrivate &other, ListDiscoveredResourcesRequest * const q)
-    : ListDiscoveredResourcesPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

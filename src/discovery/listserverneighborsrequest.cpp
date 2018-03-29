@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListServerNeighborsRequest::response(QNetwork
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, ListServerNeighborsRequest * const q)
-    : ListServerNeighborsPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
     const ListServerNeighborsRequestPrivate &other, ListServerNeighborsRequest * const q)
-    : ListServerNeighborsPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

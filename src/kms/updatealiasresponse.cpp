@@ -86,7 +86,7 @@ void UpdateAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAliasResponse instance.
  */
 UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
-    UpdateAliasQueueResponse * const q) : UpdateAliasPrivate(q)
+    UpdateAliasResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

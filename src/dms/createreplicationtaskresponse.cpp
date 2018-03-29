@@ -86,7 +86,7 @@ void CreateReplicationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReplicationTaskResponse instance.
  */
 CreateReplicationTaskResponsePrivate::CreateReplicationTaskResponsePrivate(
-    CreateReplicationTaskQueueResponse * const q) : CreateReplicationTaskPrivate(q)
+    CreateReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

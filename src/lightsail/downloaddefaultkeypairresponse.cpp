@@ -86,7 +86,7 @@ void DownloadDefaultKeyPairResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DownloadDefaultKeyPairResponse instance.
  */
 DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponsePrivate(
-    DownloadDefaultKeyPairQueueResponse * const q) : DownloadDefaultKeyPairPrivate(q)
+    DownloadDefaultKeyPairResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

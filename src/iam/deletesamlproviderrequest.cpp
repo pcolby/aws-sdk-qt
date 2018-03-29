@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkR
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
     const IAMRequest::Action action, DeleteSAMLProviderRequest * const q)
-    : DeleteSAMLProviderPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
     const DeleteSAMLProviderRequestPrivate &other, DeleteSAMLProviderRequest * const q)
-    : DeleteSAMLProviderPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

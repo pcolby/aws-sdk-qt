@@ -86,7 +86,7 @@ void GetTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTemplateResponse instance.
  */
 GetTemplateResponsePrivate::GetTemplateResponsePrivate(
-    GetTemplateQueueResponse * const q) : GetTemplatePrivate(q)
+    GetTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

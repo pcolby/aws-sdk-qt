@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const RDSRequest::Action action, ModifyEventSubscriptionRequest * const q)
-    : ModifyEventSubscriptionPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)
-    : ModifyEventSubscriptionPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

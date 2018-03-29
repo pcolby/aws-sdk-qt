@@ -86,7 +86,7 @@ void DetectDominantLanguageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetectDominantLanguageResponse instance.
  */
 DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponsePrivate(
-    DetectDominantLanguageQueueResponse * const q) : DetectDominantLanguagePrivate(q)
+    DetectDominantLanguageResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

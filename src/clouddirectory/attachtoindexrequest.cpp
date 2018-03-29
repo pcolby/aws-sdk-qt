@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachToIndexRequest::response(QNetworkReply 
  */
 AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachToIndexRequest * const q)
-    : AttachToIndexPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
  */
 AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
     const AttachToIndexRequestPrivate &other, AttachToIndexRequest * const q)
-    : AttachToIndexPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

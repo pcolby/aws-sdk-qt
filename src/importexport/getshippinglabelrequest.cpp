@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkRep
  */
 GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
     const ImportExportRequest::Action action, GetShippingLabelRequest * const q)
-    : GetShippingLabelPrivate(action, q)
+    : ImportExportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
  */
 GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
     const GetShippingLabelRequestPrivate &other, GetShippingLabelRequest * const q)
-    : GetShippingLabelPrivate(other, q)
+    : ImportExportRequestPrivate(other, q)
 {
 
 }

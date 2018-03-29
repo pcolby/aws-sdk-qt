@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateObjectAttributesRequest::response(QNetw
  */
 UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateObjectAttributesRequest * const q)
-    : UpdateObjectAttributesPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
  */
 UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
     const UpdateObjectAttributesRequestPrivate &other, UpdateObjectAttributesRequest * const q)
-    : UpdateObjectAttributesPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const ECRRequest::Action action, BatchDeleteImageRequest * const q)
-    : BatchDeleteImagePrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const BatchDeleteImageRequestPrivate &other, BatchDeleteImageRequest * const q)
-    : BatchDeleteImagePrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void EnableRadiusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableRadiusResponse instance.
  */
 EnableRadiusResponsePrivate::EnableRadiusResponsePrivate(
-    EnableRadiusQueueResponse * const q) : EnableRadiusPrivate(q)
+    EnableRadiusResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

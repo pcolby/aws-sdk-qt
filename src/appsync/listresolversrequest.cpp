@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply 
  */
 ListResolversRequestPrivate::ListResolversRequestPrivate(
     const AppSyncRequest::Action action, ListResolversRequest * const q)
-    : ListResolversPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResolversRequestPrivate::ListResolversRequestPrivate(
  */
 ListResolversRequestPrivate::ListResolversRequestPrivate(
     const ListResolversRequestPrivate &other, ListResolversRequest * const q)
-    : ListResolversPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

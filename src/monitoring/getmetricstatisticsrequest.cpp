@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMetricStatisticsRequest::response(QNetwork
  */
 GetMetricStatisticsRequestPrivate::GetMetricStatisticsRequestPrivate(
     const CloudWatchRequest::Action action, GetMetricStatisticsRequest * const q)
-    : GetMetricStatisticsPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMetricStatisticsRequestPrivate::GetMetricStatisticsRequestPrivate(
  */
 GetMetricStatisticsRequestPrivate::GetMetricStatisticsRequestPrivate(
     const GetMetricStatisticsRequestPrivate &other, GetMetricStatisticsRequest * const q)
-    : GetMetricStatisticsPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagOptionRequest::response(QNetworkRepl
  */
 CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateTagOptionRequest * const q)
-    : CreateTagOptionPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
  */
 CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
     const CreateTagOptionRequestPrivate &other, CreateTagOptionRequest * const q)
-    : CreateTagOptionPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

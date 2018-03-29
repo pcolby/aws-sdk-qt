@@ -86,7 +86,7 @@ void ListAssociationVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAssociationVersionsResponse instance.
  */
 ListAssociationVersionsResponsePrivate::ListAssociationVersionsResponsePrivate(
-    ListAssociationVersionsQueueResponse * const q) : ListAssociationVersionsPrivate(q)
+    ListAssociationVersionsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateFacetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFacetResponse instance.
  */
 UpdateFacetResponsePrivate::UpdateFacetResponsePrivate(
-    UpdateFacetQueueResponse * const q) : UpdateFacetPrivate(q)
+    UpdateFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

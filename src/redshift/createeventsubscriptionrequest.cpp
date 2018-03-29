@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const RedshiftRequest::Action action, CreateEventSubscriptionRequest * const q)
-    : CreateEventSubscriptionPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const CreateEventSubscriptionRequestPrivate &other, CreateEventSubscriptionRequest * const q)
-    : CreateEventSubscriptionPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

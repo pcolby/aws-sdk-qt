@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNumberOfDomainControllersRequest::respo
  */
 UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateNumberOfDomainControllersRequest * const q)
-    : UpdateNumberOfDomainControllersPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRe
  */
 UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
     const UpdateNumberOfDomainControllersRequestPrivate &other, UpdateNumberOfDomainControllersRequest * const q)
-    : UpdateNumberOfDomainControllersPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

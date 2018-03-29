@@ -86,7 +86,7 @@ void ModifyTargetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyTargetGroupResponse instance.
  */
 ModifyTargetGroupResponsePrivate::ModifyTargetGroupResponsePrivate(
-    ModifyTargetGroupQueueResponse * const q) : ModifyTargetGroupPrivate(q)
+    ModifyTargetGroupResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

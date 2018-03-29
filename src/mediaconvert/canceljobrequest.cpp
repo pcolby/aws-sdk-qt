@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const MediaConvertRequest::Action action, CancelJobRequest * const q)
-    : CancelJobPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const CancelJobRequestPrivate &other, CancelJobRequest * const q)
-    : CancelJobPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

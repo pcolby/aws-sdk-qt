@@ -86,7 +86,7 @@ void MergeShardsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MergeShardsResponse instance.
  */
 MergeShardsResponsePrivate::MergeShardsResponsePrivate(
-    MergeShardsQueueResponse * const q) : MergeShardsPrivate(q)
+    MergeShardsResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

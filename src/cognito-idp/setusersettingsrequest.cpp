@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkRepl
  */
 SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserSettingsRequest * const q)
-    : SetUserSettingsPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
  */
 SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
     const SetUserSettingsRequestPrivate &other, SetUserSettingsRequest * const q)
-    : SetUserSettingsPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

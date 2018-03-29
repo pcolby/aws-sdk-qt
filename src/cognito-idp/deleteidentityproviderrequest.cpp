@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityProviderRequest::response(QNetw
  */
 DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteIdentityProviderRequest * const q)
-    : DeleteIdentityProviderPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
  */
 DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
     const DeleteIdentityProviderRequestPrivate &other, DeleteIdentityProviderRequest * const q)
-    : DeleteIdentityProviderPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

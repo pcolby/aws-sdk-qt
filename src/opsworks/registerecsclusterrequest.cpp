@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkR
  */
 RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
     const OpsWorksRequest::Action action, RegisterEcsClusterRequest * const q)
-    : RegisterEcsClusterPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
  */
 RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
     const RegisterEcsClusterRequestPrivate &other, RegisterEcsClusterRequest * const q)
-    : RegisterEcsClusterPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

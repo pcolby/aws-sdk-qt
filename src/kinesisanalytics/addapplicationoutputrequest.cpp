@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetwor
  */
 AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationOutputRequest * const q)
-    : AddApplicationOutputPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
  */
 AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
     const AddApplicationOutputRequestPrivate &other, AddApplicationOutputRequest * const q)
-    : AddApplicationOutputPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

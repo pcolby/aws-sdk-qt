@@ -86,7 +86,7 @@ void UpdateSecurityGroupRuleDescriptionsEgressResponse::parseSuccess(QIODevice &
  * @param  q  Pointer to this object's public UpdateSecurityGroupRuleDescriptionsEgressResponse instance.
  */
 UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate(
-    UpdateSecurityGroupRuleDescriptionsEgressQueueResponse * const q) : UpdateSecurityGroupRuleDescriptionsEgressPrivate(q)
+    UpdateSecurityGroupRuleDescriptionsEgressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

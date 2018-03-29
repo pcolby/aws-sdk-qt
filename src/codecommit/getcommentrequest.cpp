@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCommentRequest::response(QNetworkReply * c
  */
 GetCommentRequestPrivate::GetCommentRequestPrivate(
     const CodeCommitRequest::Action action, GetCommentRequest * const q)
-    : GetCommentPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCommentRequestPrivate::GetCommentRequestPrivate(
  */
 GetCommentRequestPrivate::GetCommentRequestPrivate(
     const GetCommentRequestPrivate &other, GetCommentRequest * const q)
-    : GetCommentPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

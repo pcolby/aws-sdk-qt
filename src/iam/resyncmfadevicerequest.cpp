@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkRepl
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
     const IAMRequest::Action action, ResyncMFADeviceRequest * const q)
-    : ResyncMFADevicePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
     const ResyncMFADeviceRequestPrivate &other, ResyncMFADeviceRequest * const q)
-    : ResyncMFADevicePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSubnetGroupsResponse instance.
  */
 DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponsePrivate(
-    DescribeSubnetGroupsQueueResponse * const q) : DescribeSubnetGroupsPrivate(q)
+    DescribeSubnetGroupsResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

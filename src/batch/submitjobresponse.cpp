@@ -86,7 +86,7 @@ void SubmitJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SubmitJobResponse instance.
  */
 SubmitJobResponsePrivate::SubmitJobResponsePrivate(
-    SubmitJobQueueResponse * const q) : SubmitJobPrivate(q)
+    SubmitJobResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

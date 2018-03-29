@@ -86,7 +86,7 @@ void DescribeClusterParametersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeClusterParametersResponse instance.
  */
 DescribeClusterParametersResponsePrivate::DescribeClusterParametersResponsePrivate(
-    DescribeClusterParametersQueueResponse * const q) : DescribeClusterParametersPrivate(q)
+    DescribeClusterParametersResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

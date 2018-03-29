@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const EC2Request::Action action, DescribeAccountAttributesRequest * const q)
-    : DescribeAccountAttributesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)
-    : DescribeAccountAttributesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

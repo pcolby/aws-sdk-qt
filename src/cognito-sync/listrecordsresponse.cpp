@@ -86,7 +86,7 @@ void ListRecordsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRecordsResponse instance.
  */
 ListRecordsResponsePrivate::ListRecordsResponsePrivate(
-    ListRecordsQueueResponse * const q) : ListRecordsPrivate(q)
+    ListRecordsResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

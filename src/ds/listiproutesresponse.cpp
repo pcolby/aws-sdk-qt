@@ -86,7 +86,7 @@ void ListIpRoutesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListIpRoutesResponse instance.
  */
 ListIpRoutesResponsePrivate::ListIpRoutesResponsePrivate(
-    ListIpRoutesQueueResponse * const q) : ListIpRoutesPrivate(q)
+    ListIpRoutesResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateIamInstanceProfileResponse instance.
  */
 DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileResponsePrivate(
-    DisassociateIamInstanceProfileQueueResponse * const q) : DisassociateIamInstanceProfilePrivate(q)
+    DisassociateIamInstanceProfileResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteResolverResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteResolverResponse instance.
  */
 DeleteResolverResponsePrivate::DeleteResolverResponsePrivate(
-    DeleteResolverQueueResponse * const q) : DeleteResolverPrivate(q)
+    DeleteResolverResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

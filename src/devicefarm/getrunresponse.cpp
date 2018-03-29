@@ -86,7 +86,7 @@ void GetRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRunResponse instance.
  */
 GetRunResponsePrivate::GetRunResponsePrivate(
-    GetRunQueueResponse * const q) : GetRunPrivate(q)
+    GetRunResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

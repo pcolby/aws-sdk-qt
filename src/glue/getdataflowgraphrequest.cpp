@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkRep
  */
 GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
     const GlueRequest::Action action, GetDataflowGraphRequest * const q)
-    : GetDataflowGraphPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
  */
 GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
     const GetDataflowGraphRequestPrivate &other, GetDataflowGraphRequest * const q)
-    : GetDataflowGraphPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

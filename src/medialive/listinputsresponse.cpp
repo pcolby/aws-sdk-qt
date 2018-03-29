@@ -86,7 +86,7 @@ void ListInputsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInputsResponse instance.
  */
 ListInputsResponsePrivate::ListInputsResponsePrivate(
-    ListInputsQueueResponse * const q) : ListInputsPrivate(q)
+    ListInputsResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

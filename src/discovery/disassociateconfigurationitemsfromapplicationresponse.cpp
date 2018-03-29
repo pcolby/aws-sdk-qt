@@ -86,7 +86,7 @@ void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevi
  * @param  q  Pointer to this object's public DisassociateConfigurationItemsFromApplicationResponse instance.
  */
 DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfigurationItemsFromApplicationResponsePrivate(
-    DisassociateConfigurationItemsFromApplicationQueueResponse * const q) : DisassociateConfigurationItemsFromApplicationPrivate(q)
+    DisassociateConfigurationItemsFromApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

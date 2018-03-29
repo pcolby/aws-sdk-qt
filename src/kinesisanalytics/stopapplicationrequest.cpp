@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkRepl
  */
 StopApplicationRequestPrivate::StopApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, StopApplicationRequest * const q)
-    : StopApplicationPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopApplicationRequestPrivate::StopApplicationRequestPrivate(
  */
 StopApplicationRequestPrivate::StopApplicationRequestPrivate(
     const StopApplicationRequestPrivate &other, StopApplicationRequest * const q)
-    : StopApplicationPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

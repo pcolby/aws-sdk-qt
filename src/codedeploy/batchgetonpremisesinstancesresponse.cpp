@@ -86,7 +86,7 @@ void BatchGetOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetOnPremisesInstancesResponse instance.
  */
 BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponsePrivate(
-    BatchGetOnPremisesInstancesQueueResponse * const q) : BatchGetOnPremisesInstancesPrivate(q)
+    BatchGetOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

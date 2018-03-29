@@ -86,7 +86,7 @@ void DescribeAssessmentRunsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAssessmentRunsResponse instance.
  */
 DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponsePrivate(
-    DescribeAssessmentRunsQueueResponse * const q) : DescribeAssessmentRunsPrivate(q)
+    DescribeAssessmentRunsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

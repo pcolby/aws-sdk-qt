@@ -86,7 +86,7 @@ void GetReservationPurchaseRecommendationResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public GetReservationPurchaseRecommendationResponse instance.
  */
 GetReservationPurchaseRecommendationResponsePrivate::GetReservationPurchaseRecommendationResponsePrivate(
-    GetReservationPurchaseRecommendationQueueResponse * const q) : GetReservationPurchaseRecommendationPrivate(q)
+    GetReservationPurchaseRecommendationResponse * const q) : CostExplorerResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartMonitoringMembersRequest::response(QNetw
  */
 StartMonitoringMembersRequestPrivate::StartMonitoringMembersRequestPrivate(
     const GuardDutyRequest::Action action, StartMonitoringMembersRequest * const q)
-    : StartMonitoringMembersPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartMonitoringMembersRequestPrivate::StartMonitoringMembersRequestPrivate(
  */
 StartMonitoringMembersRequestPrivate::StartMonitoringMembersRequestPrivate(
     const StartMonitoringMembersRequestPrivate &other, StartMonitoringMembersRequest * const q)
-    : StartMonitoringMembersPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListV2LoggingLevelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListV2LoggingLevelsResponse instance.
  */
 ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponsePrivate(
-    ListV2LoggingLevelsQueueResponse * const q) : ListV2LoggingLevelsPrivate(q)
+    ListV2LoggingLevelsResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

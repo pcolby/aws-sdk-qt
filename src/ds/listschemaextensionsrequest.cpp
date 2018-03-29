@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSchemaExtensionsRequest::response(QNetwor
  */
 ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
     const DirectoryServiceRequest::Action action, ListSchemaExtensionsRequest * const q)
-    : ListSchemaExtensionsPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
  */
 ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
     const ListSchemaExtensionsRequestPrivate &other, ListSchemaExtensionsRequest * const q)
-    : ListSchemaExtensionsPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

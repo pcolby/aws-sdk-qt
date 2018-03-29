@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::resp
  */
 ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
     const ElastiCacheRequest::Action action, ListAllowedNodeTypeModificationsRequest * const q)
-    : ListAllowedNodeTypeModificationsPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModifications
  */
 ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
     const ListAllowedNodeTypeModificationsRequestPrivate &other, ListAllowedNodeTypeModificationsRequest * const q)
-    : ListAllowedNodeTypeModificationsPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

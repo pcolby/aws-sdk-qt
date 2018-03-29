@@ -86,7 +86,7 @@ void CreateDataSourceFromRedshiftResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDataSourceFromRedshiftResponse instance.
  */
 CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftResponsePrivate(
-    CreateDataSourceFromRedshiftQueueResponse * const q) : CreateDataSourceFromRedshiftPrivate(q)
+    CreateDataSourceFromRedshiftResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetwork
  */
 CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
     const IAMRequest::Action action, CreatePolicyVersionRequest * const q)
-    : CreatePolicyVersionPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
  */
 CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
     const CreatePolicyVersionRequestPrivate &other, CreatePolicyVersionRequest * const q)
-    : CreatePolicyVersionPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

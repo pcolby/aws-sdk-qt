@@ -86,7 +86,7 @@ void UpdateAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAvailabilityOptionsResponse instance.
  */
 UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponsePrivate(
-    UpdateAvailabilityOptionsQueueResponse * const q) : UpdateAvailabilityOptionsPrivate(q)
+    UpdateAvailabilityOptionsResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

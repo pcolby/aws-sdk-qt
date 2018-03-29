@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const SWFRequest::Action action, ListDomainsRequest * const q)
-    : ListDomainsPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const ListDomainsRequestPrivate &other, ListDomainsRequest * const q)
-    : ListDomainsPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

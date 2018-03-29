@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TagProjectRequest::response(QNetworkReply * c
  */
 TagProjectRequestPrivate::TagProjectRequestPrivate(
     const CodeStarRequest::Action action, TagProjectRequest * const q)
-    : TagProjectPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TagProjectRequestPrivate::TagProjectRequestPrivate(
  */
 TagProjectRequestPrivate::TagProjectRequestPrivate(
     const TagProjectRequestPrivate &other, TagProjectRequest * const q)
-    : TagProjectPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkRepl
  */
 ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, ShutdownGatewayRequest * const q)
-    : ShutdownGatewayPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
  */
 ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
     const ShutdownGatewayRequestPrivate &other, ShutdownGatewayRequest * const q)
-    : ShutdownGatewayPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

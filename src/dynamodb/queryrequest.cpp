@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const DynamoDBRequest::Action action, QueryRequest * const q)
-    : QueryPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ QueryRequestPrivate::QueryRequestPrivate(
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const QueryRequestPrivate &other, QueryRequest * const q)
-    : QueryPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkRepl
  */
 StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
     const SageMakerRequest::Action action, StopTrainingJobRequest * const q)
-    : StopTrainingJobPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
  */
 StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
     const StopTrainingJobRequestPrivate &other, StopTrainingJobRequest * const q)
-    : StopTrainingJobPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

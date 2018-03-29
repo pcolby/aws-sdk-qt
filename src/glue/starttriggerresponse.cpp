@@ -86,7 +86,7 @@ void StartTriggerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartTriggerResponse instance.
  */
 StartTriggerResponsePrivate::StartTriggerResponsePrivate(
-    StartTriggerQueueResponse * const q) : StartTriggerPrivate(q)
+    StartTriggerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

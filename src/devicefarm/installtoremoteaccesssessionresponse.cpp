@@ -86,7 +86,7 @@ void InstallToRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InstallToRemoteAccessSessionResponse instance.
  */
 InstallToRemoteAccessSessionResponsePrivate::InstallToRemoteAccessSessionResponsePrivate(
-    InstallToRemoteAccessSessionQueueResponse * const q) : InstallToRemoteAccessSessionPrivate(q)
+    InstallToRemoteAccessSessionResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AllocatePublicVirtualInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AllocatePublicVirtualInterfaceResponse instance.
  */
 AllocatePublicVirtualInterfaceResponsePrivate::AllocatePublicVirtualInterfaceResponsePrivate(
-    AllocatePublicVirtualInterfaceQueueResponse * const q) : AllocatePublicVirtualInterfacePrivate(q)
+    AllocatePublicVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

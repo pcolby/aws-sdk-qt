@@ -86,7 +86,7 @@ void CreateTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTemplateResponse instance.
  */
 CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
-    CreateTemplateQueueResponse * const q) : CreateTemplatePrivate(q)
+    CreateTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

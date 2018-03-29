@@ -86,7 +86,7 @@ void DeletePlacementGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePlacementGroupResponse instance.
  */
 DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponsePrivate(
-    DeletePlacementGroupQueueResponse * const q) : DeletePlacementGroupPrivate(q)
+    DeletePlacementGroupResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ChangeTagsForResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ChangeTagsForResourceResponse instance.
  */
 ChangeTagsForResourceResponsePrivate::ChangeTagsForResourceResponsePrivate(
-    ChangeTagsForResourceQueueResponse * const q) : ChangeTagsForResourcePrivate(q)
+    ChangeTagsForResourceResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

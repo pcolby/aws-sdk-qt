@@ -86,7 +86,7 @@ void UpdateSmsChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSmsChannelResponse instance.
  */
 UpdateSmsChannelResponsePrivate::UpdateSmsChannelResponsePrivate(
-    UpdateSmsChannelQueueResponse * const q) : UpdateSmsChannelPrivate(q)
+    UpdateSmsChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

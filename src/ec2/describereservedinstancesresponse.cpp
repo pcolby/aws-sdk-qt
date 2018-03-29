@@ -86,7 +86,7 @@ void DescribeReservedInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeReservedInstancesResponse instance.
  */
 DescribeReservedInstancesResponsePrivate::DescribeReservedInstancesResponsePrivate(
-    DescribeReservedInstancesQueueResponse * const q) : DescribeReservedInstancesPrivate(q)
+    DescribeReservedInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

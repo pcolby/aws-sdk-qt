@@ -86,7 +86,7 @@ void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CompleteLayerUploadResponse instance.
  */
 CompleteLayerUploadResponsePrivate::CompleteLayerUploadResponsePrivate(
-    CompleteLayerUploadQueueResponse * const q) : CompleteLayerUploadPrivate(q)
+    CompleteLayerUploadResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteTopicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTopicResponse instance.
  */
 DeleteTopicResponsePrivate::DeleteTopicResponsePrivate(
-    DeleteTopicQueueResponse * const q) : DeleteTopicPrivate(q)
+    DeleteTopicResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

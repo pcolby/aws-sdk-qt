@@ -86,7 +86,7 @@ void GetParametersForImportResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetParametersForImportResponse instance.
  */
 GetParametersForImportResponsePrivate::GetParametersForImportResponsePrivate(
-    GetParametersForImportQueueResponse * const q) : GetParametersForImportPrivate(q)
+    GetParametersForImportResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

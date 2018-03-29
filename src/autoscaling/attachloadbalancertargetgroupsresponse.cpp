@@ -86,7 +86,7 @@ void AttachLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachLoadBalancerTargetGroupsResponse instance.
  */
 AttachLoadBalancerTargetGroupsResponsePrivate::AttachLoadBalancerTargetGroupsResponsePrivate(
-    AttachLoadBalancerTargetGroupsQueueResponse * const q) : AttachLoadBalancerTargetGroupsPrivate(q)
+    AttachLoadBalancerTargetGroupsResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

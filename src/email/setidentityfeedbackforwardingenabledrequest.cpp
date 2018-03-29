@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::
  */
 SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityFeedbackForwardingEnabledRequest * const q)
-    : SetIdentityFeedbackForwardingEnabledPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardin
  */
 SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
     const SetIdentityFeedbackForwardingEnabledRequestPrivate &other, SetIdentityFeedbackForwardingEnabledRequest * const q)
-    : SetIdentityFeedbackForwardingEnabledPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

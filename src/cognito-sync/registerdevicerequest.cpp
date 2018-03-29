@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterDeviceRequest::response(QNetworkReply
  */
 RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
     const CognitoSyncRequest::Action action, RegisterDeviceRequest * const q)
-    : RegisterDevicePrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
  */
 RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
     const RegisterDeviceRequestPrivate &other, RegisterDeviceRequest * const q)
-    : RegisterDevicePrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

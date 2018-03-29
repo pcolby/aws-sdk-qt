@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBulkPublishDetailsRequest::response(QNetwo
  */
 GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
     const CognitoSyncRequest::Action action, GetBulkPublishDetailsRequest * const q)
-    : GetBulkPublishDetailsPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
  */
 GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
     const GetBulkPublishDetailsRequestPrivate &other, GetBulkPublishDetailsRequest * const q)
-    : GetBulkPublishDetailsPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

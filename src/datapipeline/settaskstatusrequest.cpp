@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetTaskStatusRequest::response(QNetworkReply 
  */
 SetTaskStatusRequestPrivate::SetTaskStatusRequestPrivate(
     const DataPipelineRequest::Action action, SetTaskStatusRequest * const q)
-    : SetTaskStatusPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetTaskStatusRequestPrivate::SetTaskStatusRequestPrivate(
  */
 SetTaskStatusRequestPrivate::SetTaskStatusRequestPrivate(
     const SetTaskStatusRequestPrivate &other, SetTaskStatusRequest * const q)
-    : SetTaskStatusPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

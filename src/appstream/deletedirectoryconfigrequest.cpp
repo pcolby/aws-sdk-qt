@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetwo
  */
 DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, DeleteDirectoryConfigRequest * const q)
-    : DeleteDirectoryConfigPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
  */
 DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
     const DeleteDirectoryConfigRequestPrivate &other, DeleteDirectoryConfigRequest * const q)
-    : DeleteDirectoryConfigPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

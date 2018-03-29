@@ -86,7 +86,7 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveTagsResponse instance.
  */
 RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
-    RemoveTagsQueueResponse * const q) : RemoveTagsPrivate(q)
+    RemoveTagsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

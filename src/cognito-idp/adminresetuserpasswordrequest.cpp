@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetw
  */
 AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminResetUserPasswordRequest * const q)
-    : AdminResetUserPasswordPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
  */
 AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
     const AdminResetUserPasswordRequestPrivate &other, AdminResetUserPasswordRequest * const q)
-    : AdminResetUserPasswordPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

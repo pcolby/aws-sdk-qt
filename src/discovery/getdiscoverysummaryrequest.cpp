@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetwork
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, GetDiscoverySummaryRequest * const q)
-    : GetDiscoverySummaryPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
     const GetDiscoverySummaryRequestPrivate &other, GetDiscoverySummaryRequest * const q)
-    : GetDiscoverySummaryPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

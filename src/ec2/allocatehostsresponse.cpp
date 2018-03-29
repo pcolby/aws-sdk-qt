@@ -86,7 +86,7 @@ void AllocateHostsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AllocateHostsResponse instance.
  */
 AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
-    AllocateHostsQueueResponse * const q) : AllocateHostsPrivate(q)
+    AllocateHostsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

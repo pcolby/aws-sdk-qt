@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkRe
  */
 CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateMicrosoftADRequest * const q)
-    : CreateMicrosoftADPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
  */
 CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
     const CreateMicrosoftADRequestPrivate &other, CreateMicrosoftADRequest * const q)
-    : CreateMicrosoftADPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::respons
  */
 AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, AttachInstancesToLoadBalancerRequest * const q)
-    : AttachInstancesToLoadBalancerPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerReques
  */
 AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerRequestPrivate(
     const AttachInstancesToLoadBalancerRequestPrivate &other, AttachInstancesToLoadBalancerRequest * const q)
-    : AttachInstancesToLoadBalancerPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

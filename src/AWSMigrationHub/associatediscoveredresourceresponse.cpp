@@ -86,7 +86,7 @@ void AssociateDiscoveredResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateDiscoveredResourceResponse instance.
  */
 AssociateDiscoveredResourceResponsePrivate::AssociateDiscoveredResourceResponsePrivate(
-    AssociateDiscoveredResourceQueueResponse * const q) : AssociateDiscoveredResourcePrivate(q)
+    AssociateDiscoveredResourceResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

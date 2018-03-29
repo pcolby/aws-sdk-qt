@@ -86,7 +86,7 @@ void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRegexMatchSetResponse instance.
  */
 UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
-    UpdateRegexMatchSetQueueResponse * const q) : UpdateRegexMatchSetPrivate(q)
+    UpdateRegexMatchSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

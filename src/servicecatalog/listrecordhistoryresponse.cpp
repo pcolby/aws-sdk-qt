@@ -86,7 +86,7 @@ void ListRecordHistoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRecordHistoryResponse instance.
  */
 ListRecordHistoryResponsePrivate::ListRecordHistoryResponsePrivate(
-    ListRecordHistoryQueueResponse * const q) : ListRecordHistoryPrivate(q)
+    ListRecordHistoryResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

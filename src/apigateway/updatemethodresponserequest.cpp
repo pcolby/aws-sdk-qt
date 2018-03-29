@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodResponseRequest::response(QNetwor
  */
 UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
     const APIGatewayRequest::Action action, UpdateMethodResponseRequest * const q)
-    : UpdateMethodResponsePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
  */
 UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
     const UpdateMethodResponseRequestPrivate &other, UpdateMethodResponseRequest * const q)
-    : UpdateMethodResponsePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

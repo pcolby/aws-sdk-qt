@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSampleFindingsRequest::response(QNetwor
  */
 CreateSampleFindingsRequestPrivate::CreateSampleFindingsRequestPrivate(
     const GuardDutyRequest::Action action, CreateSampleFindingsRequest * const q)
-    : CreateSampleFindingsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSampleFindingsRequestPrivate::CreateSampleFindingsRequestPrivate(
  */
 CreateSampleFindingsRequestPrivate::CreateSampleFindingsRequestPrivate(
     const CreateSampleFindingsRequestPrivate &other, CreateSampleFindingsRequest * const q)
-    : CreateSampleFindingsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetGeoLocationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGeoLocationResponse instance.
  */
 GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
-    GetGeoLocationQueueResponse * const q) : GetGeoLocationPrivate(q)
+    GetGeoLocationResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateDetectorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDetectorResponse instance.
  */
 UpdateDetectorResponsePrivate::UpdateDetectorResponsePrivate(
-    UpdateDetectorQueueResponse * const q) : UpdateDetectorPrivate(q)
+    UpdateDetectorResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

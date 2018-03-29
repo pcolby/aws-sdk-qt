@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetwo
  */
 GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, GetQueryLoggingConfigRequest * const q)
-    : GetQueryLoggingConfigPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
  */
 GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
     const GetQueryLoggingConfigRequestPrivate &other, GetQueryLoggingConfigRequest * const q)
-    : GetQueryLoggingConfigPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

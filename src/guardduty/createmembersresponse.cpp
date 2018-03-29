@@ -86,7 +86,7 @@ void CreateMembersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMembersResponse instance.
  */
 CreateMembersResponsePrivate::CreateMembersResponsePrivate(
-    CreateMembersQueueResponse * const q) : CreateMembersPrivate(q)
+    CreateMembersResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

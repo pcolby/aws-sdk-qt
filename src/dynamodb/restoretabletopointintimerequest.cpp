@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreTableToPointInTimeRequest::response(QN
  */
 RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate(
     const DynamoDBRequest::Action action, RestoreTableToPointInTimeRequest * const q)
-    : RestoreTableToPointInTimePrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate
  */
 RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate(
     const RestoreTableToPointInTimeRequestPrivate &other, RestoreTableToPointInTimeRequest * const q)
-    : RestoreTableToPointInTimePrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

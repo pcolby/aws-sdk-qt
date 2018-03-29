@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkRep
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RDSRequest::Action action, RebootDBInstanceRequest * const q)
-    : RebootDBInstancePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RebootDBInstanceRequestPrivate &other, RebootDBInstanceRequest * const q)
-    : RebootDBInstancePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

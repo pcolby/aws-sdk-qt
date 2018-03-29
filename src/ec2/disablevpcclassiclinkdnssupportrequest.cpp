@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkDnsSupportRequest::respo
  */
 DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRequestPrivate(
     const EC2Request::Action action, DisableVpcClassicLinkDnsSupportRequest * const q)
-    : DisableVpcClassicLinkDnsSupportPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRe
  */
 DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRequestPrivate(
     const DisableVpcClassicLinkDnsSupportRequestPrivate &other, DisableVpcClassicLinkDnsSupportRequest * const q)
-    : DisableVpcClassicLinkDnsSupportPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

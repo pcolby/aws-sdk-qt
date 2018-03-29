@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkRep
  */
 UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateDevicePoolRequest * const q)
-    : UpdateDevicePoolPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
  */
 UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
     const UpdateDevicePoolRequestPrivate &other, UpdateDevicePoolRequest * const q)
-    : UpdateDevicePoolPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

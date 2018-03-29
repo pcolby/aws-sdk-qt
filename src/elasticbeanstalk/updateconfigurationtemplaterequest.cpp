@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationTemplateRequest::response(
  */
 UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateConfigurationTemplateRequest * const q)
-    : UpdateConfigurationTemplatePrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPri
  */
 UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
     const UpdateConfigurationTemplateRequestPrivate &other, UpdateConfigurationTemplateRequest * const q)
-    : UpdateConfigurationTemplatePrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

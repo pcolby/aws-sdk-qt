@@ -86,7 +86,7 @@ void DeleteSigningCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSigningCertificateResponse instance.
  */
 DeleteSigningCertificateResponsePrivate::DeleteSigningCertificateResponsePrivate(
-    DeleteSigningCertificateQueueResponse * const q) : DeleteSigningCertificatePrivate(q)
+    DeleteSigningCertificateResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RenewOfferingRequest::response(QNetworkReply 
  */
 RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
     const DeviceFarmRequest::Action action, RenewOfferingRequest * const q)
-    : RenewOfferingPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
  */
 RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
     const RenewOfferingRequestPrivate &other, RenewOfferingRequest * const q)
-    : RenewOfferingPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

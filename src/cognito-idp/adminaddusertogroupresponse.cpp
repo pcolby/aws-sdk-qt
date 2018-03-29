@@ -86,7 +86,7 @@ void AdminAddUserToGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminAddUserToGroupResponse instance.
  */
 AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponsePrivate(
-    AdminAddUserToGroupQueueResponse * const q) : AdminAddUserToGroupPrivate(q)
+    AdminAddUserToGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

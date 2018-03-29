@@ -86,7 +86,7 @@ void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBSecurityGroupResponse instance.
  */
 CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
-    CreateDBSecurityGroupQueueResponse * const q) : CreateDBSecurityGroupPrivate(q)
+    CreateDBSecurityGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

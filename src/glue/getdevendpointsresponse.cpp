@@ -86,7 +86,7 @@ void GetDevEndpointsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDevEndpointsResponse instance.
  */
 GetDevEndpointsResponsePrivate::GetDevEndpointsResponsePrivate(
-    GetDevEndpointsQueueResponse * const q) : GetDevEndpointsPrivate(q)
+    GetDevEndpointsResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

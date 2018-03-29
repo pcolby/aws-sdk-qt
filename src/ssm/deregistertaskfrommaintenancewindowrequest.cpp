@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterTaskFromMaintenanceWindowRequest::r
  */
 DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, DeregisterTaskFromMaintenanceWindowRequest * const q)
-    : DeregisterTaskFromMaintenanceWindowPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenance
  */
 DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenanceWindowRequestPrivate(
     const DeregisterTaskFromMaintenanceWindowRequestPrivate &other, DeregisterTaskFromMaintenanceWindowRequest * const q)
-    : DeregisterTaskFromMaintenanceWindowPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

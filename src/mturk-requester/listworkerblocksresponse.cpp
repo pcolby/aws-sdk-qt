@@ -86,7 +86,7 @@ void ListWorkerBlocksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListWorkerBlocksResponse instance.
  */
 ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponsePrivate(
-    ListWorkerBlocksQueueResponse * const q) : ListWorkerBlocksPrivate(q)
+    ListWorkerBlocksResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

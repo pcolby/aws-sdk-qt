@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNet
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
     const EC2Request::Action action, DescribePlacementGroupsRequest * const q)
-    : DescribePlacementGroupsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
     const DescribePlacementGroupsRequestPrivate &other, DescribePlacementGroupsRequest * const q)
-    : DescribePlacementGroupsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

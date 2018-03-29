@@ -86,7 +86,7 @@ void ListAvailableSolutionStacksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAvailableSolutionStacksResponse instance.
  */
 ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponsePrivate(
-    ListAvailableSolutionStacksQueueResponse * const q) : ListAvailableSolutionStacksPrivate(q)
+    ListAvailableSolutionStacksResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

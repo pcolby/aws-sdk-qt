@@ -86,7 +86,7 @@ void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyReservedInstancesResponse instance.
  */
 ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
-    ModifyReservedInstancesQueueResponse * const q) : ModifyReservedInstancesPrivate(q)
+    ModifyReservedInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

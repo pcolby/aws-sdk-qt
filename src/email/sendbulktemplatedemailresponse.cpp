@@ -86,7 +86,7 @@ void SendBulkTemplatedEmailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendBulkTemplatedEmailResponse instance.
  */
 SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponsePrivate(
-    SendBulkTemplatedEmailQueueResponse * const q) : SendBulkTemplatedEmailPrivate(q)
+    SendBulkTemplatedEmailResponse * const q) : SESResponsePrivate(q)
 {
 
 }

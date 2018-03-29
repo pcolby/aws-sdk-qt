@@ -86,7 +86,7 @@ void DeregisterTargetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterTargetsResponse instance.
  */
 DeregisterTargetsResponsePrivate::DeregisterTargetsResponsePrivate(
-    DeregisterTargetsQueueResponse * const q) : DeregisterTargetsPrivate(q)
+    DeregisterTargetsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

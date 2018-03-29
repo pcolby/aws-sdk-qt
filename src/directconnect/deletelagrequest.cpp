@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLagRequest::response(QNetworkReply * co
  */
 DeleteLagRequestPrivate::DeleteLagRequestPrivate(
     const DirectConnectRequest::Action action, DeleteLagRequest * const q)
-    : DeleteLagPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLagRequestPrivate::DeleteLagRequestPrivate(
  */
 DeleteLagRequestPrivate::DeleteLagRequestPrivate(
     const DeleteLagRequestPrivate &other, DeleteLagRequest * const q)
-    : DeleteLagPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

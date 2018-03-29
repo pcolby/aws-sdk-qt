@@ -86,7 +86,7 @@ void GetIdentityDkimAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIdentityDkimAttributesResponse instance.
  */
 GetIdentityDkimAttributesResponsePrivate::GetIdentityDkimAttributesResponsePrivate(
-    GetIdentityDkimAttributesQueueResponse * const q) : GetIdentityDkimAttributesPrivate(q)
+    GetIdentityDkimAttributesResponse * const q) : SESResponsePrivate(q)
 {
 
 }

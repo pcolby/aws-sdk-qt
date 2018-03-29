@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInventoryRequest::response(QNetworkReply *
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
     const SSMRequest::Action action, GetInventoryRequest * const q)
-    : GetInventoryPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInventoryRequestPrivate::GetInventoryRequestPrivate(
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
     const GetInventoryRequestPrivate &other, GetInventoryRequest * const q)
-    : GetInventoryPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

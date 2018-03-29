@@ -86,7 +86,7 @@ void DescribeProductViewResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeProductViewResponse instance.
  */
 DescribeProductViewResponsePrivate::DescribeProductViewResponsePrivate(
-    DescribeProductViewQueueResponse * const q) : DescribeProductViewPrivate(q)
+    DescribeProductViewResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

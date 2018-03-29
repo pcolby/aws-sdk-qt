@@ -86,7 +86,7 @@ void CreateVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateVirtualMFADeviceResponse instance.
  */
 CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponsePrivate(
-    CreateVirtualMFADeviceQueueResponse * const q) : CreateVirtualMFADevicePrivate(q)
+    CreateVirtualMFADeviceResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

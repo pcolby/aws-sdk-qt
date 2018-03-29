@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketCorsRequest::response(QNetworkReply 
  */
 PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
     const S3Request::Action action, PutBucketCorsRequest * const q)
-    : PutBucketCorsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
  */
 PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
     const PutBucketCorsRequestPrivate &other, PutBucketCorsRequest * const q)
-    : PutBucketCorsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

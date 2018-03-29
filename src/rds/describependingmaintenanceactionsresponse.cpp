@@ -86,7 +86,7 @@ void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public DescribePendingMaintenanceActionsResponse instance.
  */
 DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActionsResponsePrivate(
-    DescribePendingMaintenanceActionsQueueResponse * const q) : DescribePendingMaintenanceActionsPrivate(q)
+    DescribePendingMaintenanceActionsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

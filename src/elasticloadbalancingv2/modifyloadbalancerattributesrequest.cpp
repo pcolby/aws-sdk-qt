@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response
  */
 ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyLoadBalancerAttributesRequest * const q)
-    : ModifyLoadBalancerAttributesPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestP
  */
 ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
     const ModifyLoadBalancerAttributesRequestPrivate &other, ModifyLoadBalancerAttributesRequest * const q)
-    : ModifyLoadBalancerAttributesPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

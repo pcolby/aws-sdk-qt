@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterContainerInstanceRequest::response(QN
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
     const ECSRequest::Action action, RegisterContainerInstanceRequest * const q)
-    : RegisterContainerInstancePrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
     const RegisterContainerInstanceRequestPrivate &other, RegisterContainerInstanceRequest * const q)
-    : RegisterContainerInstancePrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

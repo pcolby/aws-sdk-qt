@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply
  */
 TransferDomainRequestPrivate::TransferDomainRequestPrivate(
     const Route53DomainsRequest::Action action, TransferDomainRequest * const q)
-    : TransferDomainPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TransferDomainRequestPrivate::TransferDomainRequestPrivate(
  */
 TransferDomainRequestPrivate::TransferDomainRequestPrivate(
     const TransferDomainRequestPrivate &other, TransferDomainRequest * const q)
-    : TransferDomainPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

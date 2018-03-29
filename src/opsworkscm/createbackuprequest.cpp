@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply *
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const OpsWorksCMRequest::Action action, CreateBackupRequest * const q)
-    : CreateBackupPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBackupRequestPrivate::CreateBackupRequestPrivate(
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const CreateBackupRequestPrivate &other, CreateBackupRequest * const q)
-    : CreateBackupPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::r
  */
 ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, ListAWSServiceAccessForOrganizationRequest * const q)
-    : ListAWSServiceAccessForOrganizationPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrgani
  */
 ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
     const ListAWSServiceAccessForOrganizationRequestPrivate &other, ListAWSServiceAccessForOrganizationRequest * const q)
-    : ListAWSServiceAccessForOrganizationPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

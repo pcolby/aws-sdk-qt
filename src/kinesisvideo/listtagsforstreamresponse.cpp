@@ -86,7 +86,7 @@ void ListTagsForStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsForStreamResponse instance.
  */
 ListTagsForStreamResponsePrivate::ListTagsForStreamResponsePrivate(
-    ListTagsForStreamQueueResponse * const q) : ListTagsForStreamPrivate(q)
+    ListTagsForStreamResponse * const q) : KinesisVideoResponsePrivate(q)
 {
 
 }

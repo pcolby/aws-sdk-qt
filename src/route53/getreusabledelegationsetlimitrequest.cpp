@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::respons
  */
 GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitRequestPrivate(
     const Route53Request::Action action, GetReusableDelegationSetLimitRequest * const q)
-    : GetReusableDelegationSetLimitPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitReques
  */
 GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitRequestPrivate(
     const GetReusableDelegationSetLimitRequestPrivate &other, GetReusableDelegationSetLimitRequest * const q)
-    : GetReusableDelegationSetLimitPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

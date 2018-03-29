@@ -86,7 +86,7 @@ void DeleteProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteProgressUpdateStreamResponse instance.
  */
 DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponsePrivate(
-    DeleteProgressUpdateStreamQueueResponse * const q) : DeleteProgressUpdateStreamPrivate(q)
+    DeleteProgressUpdateStreamResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationRequest::response(QNetworkR
  */
 UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
     const BudgetsRequest::Action action, UpdateNotificationRequest * const q)
-    : UpdateNotificationPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
  */
 UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
     const UpdateNotificationRequestPrivate &other, UpdateNotificationRequest * const q)
-    : UpdateNotificationPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TagRequest::response(QNetworkReply * const re
  */
 TagRequestPrivate::TagRequestPrivate(
     const ResourceGroupsRequest::Action action, TagRequest * const q)
-    : TagPrivate(action, q)
+    : ResourceGroupsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TagRequestPrivate::TagRequestPrivate(
  */
 TagRequestPrivate::TagRequestPrivate(
     const TagRequestPrivate &other, TagRequest * const q)
-    : TagPrivate(other, q)
+    : ResourceGroupsRequestPrivate(other, q)
 {
 
 }

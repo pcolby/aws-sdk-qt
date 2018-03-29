@@ -86,7 +86,7 @@ void DisableMetricsCollectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableMetricsCollectionResponse instance.
  */
 DisableMetricsCollectionResponsePrivate::DisableMetricsCollectionResponsePrivate(
-    DisableMetricsCollectionQueueResponse * const q) : DisableMetricsCollectionPrivate(q)
+    DisableMetricsCollectionResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBranchRequest::response(QNetworkReply *
  */
 DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
     const CodeCommitRequest::Action action, DeleteBranchRequest * const q)
-    : DeleteBranchPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
  */
 DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
     const DeleteBranchRequestPrivate &other, DeleteBranchRequest * const q)
-    : DeleteBranchPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

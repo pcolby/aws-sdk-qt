@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetwo
  */
 CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
     const EC2Request::Action action, CreateInternetGatewayRequest * const q)
-    : CreateInternetGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
  */
 CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
     const CreateInternetGatewayRequestPrivate &other, CreateInternetGatewayRequest * const q)
-    : CreateInternetGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

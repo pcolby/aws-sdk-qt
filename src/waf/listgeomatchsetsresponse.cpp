@@ -86,7 +86,7 @@ void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGeoMatchSetsResponse instance.
  */
 ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
-    ListGeoMatchSetsQueueResponse * const q) : ListGeoMatchSetsPrivate(q)
+    ListGeoMatchSetsResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteOTAUpdateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteOTAUpdateResponse instance.
  */
 DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponsePrivate(
-    DeleteOTAUpdateQueueResponse * const q) : DeleteOTAUpdatePrivate(q)
+    DeleteOTAUpdateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

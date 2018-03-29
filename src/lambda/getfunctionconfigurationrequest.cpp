@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionConfigurationRequest::response(QNe
  */
 GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
     const LambdaRequest::Action action, GetFunctionConfigurationRequest * const q)
-    : GetFunctionConfigurationPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
  */
 GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
     const GetFunctionConfigurationRequestPrivate &other, GetFunctionConfigurationRequest * const q)
-    : GetFunctionConfigurationPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

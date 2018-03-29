@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetwo
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, ResetDBParameterGroupRequest * const q)
-    : ResetDBParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
     const ResetDBParameterGroupRequestPrivate &other, ResetDBParameterGroupRequest * const q)
-    : ResetDBParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

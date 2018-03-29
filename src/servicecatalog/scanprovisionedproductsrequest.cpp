@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNet
  */
 ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
     const ServiceCatalogRequest::Action action, ScanProvisionedProductsRequest * const q)
-    : ScanProvisionedProductsPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
  */
 ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
     const ScanProvisionedProductsRequestPrivate &other, ScanProvisionedProductsRequest * const q)
-    : ScanProvisionedProductsPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

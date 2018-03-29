@@ -86,7 +86,7 @@ void GetDomainSuggestionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDomainSuggestionsResponse instance.
  */
 GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
-    GetDomainSuggestionsQueueResponse * const q) : GetDomainSuggestionsPrivate(q)
+    GetDomainSuggestionsResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

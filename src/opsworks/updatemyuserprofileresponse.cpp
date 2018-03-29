@@ -86,7 +86,7 @@ void UpdateMyUserProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateMyUserProfileResponse instance.
  */
 UpdateMyUserProfileResponsePrivate::UpdateMyUserProfileResponsePrivate(
-    UpdateMyUserProfileQueueResponse * const q) : UpdateMyUserProfilePrivate(q)
+    UpdateMyUserProfileResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

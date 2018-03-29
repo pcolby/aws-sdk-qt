@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteRateBasedRuleRequest * const q)
-    : DeleteRateBasedRulePrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
     const DeleteRateBasedRuleRequestPrivate &other, DeleteRateBasedRuleRequest * const q)
-    : DeleteRateBasedRulePrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

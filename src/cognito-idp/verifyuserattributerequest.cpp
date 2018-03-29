@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifyUserAttributeRequest::response(QNetwork
  */
 VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, VerifyUserAttributeRequest * const q)
-    : VerifyUserAttributePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
  */
 VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
     const VerifyUserAttributeRequestPrivate &other, VerifyUserAttributeRequest * const q)
-    : VerifyUserAttributePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTargetGroupRequest::response(QNetworkRe
  */
 CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, CreateTargetGroupRequest * const q)
-    : CreateTargetGroupPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
  */
 CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
     const CreateTargetGroupRequestPrivate &other, CreateTargetGroupRequest * const q)
-    : CreateTargetGroupPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

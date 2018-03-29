@@ -86,7 +86,7 @@ void RevokeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RevokeCacheSecurityGroupIngressResponse instance.
  */
 RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIngressResponsePrivate(
-    RevokeCacheSecurityGroupIngressQueueResponse * const q) : RevokeCacheSecurityGroupIngressPrivate(q)
+    RevokeCacheSecurityGroupIngressResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

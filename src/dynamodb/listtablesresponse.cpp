@@ -86,7 +86,7 @@ void ListTablesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTablesResponse instance.
  */
 ListTablesResponsePrivate::ListTablesResponsePrivate(
-    ListTablesQueueResponse * const q) : ListTablesPrivate(q)
+    ListTablesResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

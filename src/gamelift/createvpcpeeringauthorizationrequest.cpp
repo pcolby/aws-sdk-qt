@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcPeeringAuthorizationRequest::respons
  */
 CreateVpcPeeringAuthorizationRequestPrivate::CreateVpcPeeringAuthorizationRequestPrivate(
     const GameLiftRequest::Action action, CreateVpcPeeringAuthorizationRequest * const q)
-    : CreateVpcPeeringAuthorizationPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVpcPeeringAuthorizationRequestPrivate::CreateVpcPeeringAuthorizationReques
  */
 CreateVpcPeeringAuthorizationRequestPrivate::CreateVpcPeeringAuthorizationRequestPrivate(
     const CreateVpcPeeringAuthorizationRequestPrivate &other, CreateVpcPeeringAuthorizationRequest * const q)
-    : CreateVpcPeeringAuthorizationPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

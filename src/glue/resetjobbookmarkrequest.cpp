@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkRep
  */
 ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
     const GlueRequest::Action action, ResetJobBookmarkRequest * const q)
-    : ResetJobBookmarkPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
  */
 ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
     const ResetJobBookmarkRequestPrivate &other, ResetJobBookmarkRequest * const q)
-    : ResetJobBookmarkPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

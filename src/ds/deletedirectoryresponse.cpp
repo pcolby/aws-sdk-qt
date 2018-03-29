@@ -86,7 +86,7 @@ void DeleteDirectoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDirectoryResponse instance.
  */
 DeleteDirectoryResponsePrivate::DeleteDirectoryResponsePrivate(
-    DeleteDirectoryQueueResponse * const q) : DeleteDirectoryPrivate(q)
+    DeleteDirectoryResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

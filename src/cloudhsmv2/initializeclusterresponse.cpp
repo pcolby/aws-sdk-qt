@@ -86,7 +86,7 @@ void InitializeClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InitializeClusterResponse instance.
  */
 InitializeClusterResponsePrivate::InitializeClusterResponsePrivate(
-    InitializeClusterQueueResponse * const q) : InitializeClusterPrivate(q)
+    InitializeClusterResponse * const q) : CloudHSMV2ResponsePrivate(q)
 {
 
 }

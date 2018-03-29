@@ -86,7 +86,7 @@ void ConfigureHealthCheckResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConfigureHealthCheckResponse instance.
  */
 ConfigureHealthCheckResponsePrivate::ConfigureHealthCheckResponsePrivate(
-    ConfigureHealthCheckQueueResponse * const q) : ConfigureHealthCheckPrivate(q)
+    ConfigureHealthCheckResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

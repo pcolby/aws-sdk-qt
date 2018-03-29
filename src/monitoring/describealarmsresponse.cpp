@@ -86,7 +86,7 @@ void DescribeAlarmsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAlarmsResponse instance.
  */
 DescribeAlarmsResponsePrivate::DescribeAlarmsResponsePrivate(
-    DescribeAlarmsQueueResponse * const q) : DescribeAlarmsPrivate(q)
+    DescribeAlarmsResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

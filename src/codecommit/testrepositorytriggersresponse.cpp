@@ -86,7 +86,7 @@ void TestRepositoryTriggersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestRepositoryTriggersResponse instance.
  */
 TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponsePrivate(
-    TestRepositoryTriggersQueueResponse * const q) : TestRepositoryTriggersPrivate(q)
+    TestRepositoryTriggersResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

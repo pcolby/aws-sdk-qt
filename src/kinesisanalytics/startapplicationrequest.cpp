@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartApplicationRequest::response(QNetworkRep
  */
 StartApplicationRequestPrivate::StartApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, StartApplicationRequest * const q)
-    : StartApplicationPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartApplicationRequestPrivate::StartApplicationRequestPrivate(
  */
 StartApplicationRequestPrivate::StartApplicationRequestPrivate(
     const StartApplicationRequestPrivate &other, StartApplicationRequest * const q)
-    : StartApplicationPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::respons
  */
 CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, CountClosedWorkflowExecutionsRequest * const q)
-    : CountClosedWorkflowExecutionsPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsReques
  */
 CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsRequestPrivate(
     const CountClosedWorkflowExecutionsRequestPrivate &other, CountClosedWorkflowExecutionsRequest * const q)
-    : CountClosedWorkflowExecutionsPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

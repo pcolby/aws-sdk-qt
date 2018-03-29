@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply
  */
 CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
     const GlueRequest::Action action, CreateDatabaseRequest * const q)
-    : CreateDatabasePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
  */
 CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
     const CreateDatabaseRequestPrivate &other, CreateDatabaseRequest * const q)
-    : CreateDatabasePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

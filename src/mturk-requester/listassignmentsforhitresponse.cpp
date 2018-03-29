@@ -86,7 +86,7 @@ void ListAssignmentsForHITResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAssignmentsForHITResponse instance.
  */
 ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponsePrivate(
-    ListAssignmentsForHITQueueResponse * const q) : ListAssignmentsForHITPrivate(q)
+    ListAssignmentsForHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

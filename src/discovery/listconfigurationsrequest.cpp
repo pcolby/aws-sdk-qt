@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, ListConfigurationsRequest * const q)
-    : ListConfigurationsPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)
-    : ListConfigurationsPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

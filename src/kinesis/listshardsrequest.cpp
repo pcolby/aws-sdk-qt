@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListShardsRequest::response(QNetworkReply * c
  */
 ListShardsRequestPrivate::ListShardsRequestPrivate(
     const KinesisRequest::Action action, ListShardsRequest * const q)
-    : ListShardsPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListShardsRequestPrivate::ListShardsRequestPrivate(
  */
 ListShardsRequestPrivate::ListShardsRequestPrivate(
     const ListShardsRequestPrivate &other, ListShardsRequest * const q)
-    : ListShardsPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

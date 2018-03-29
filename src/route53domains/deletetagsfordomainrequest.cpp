@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsForDomainRequest::response(QNetwork
  */
 DeleteTagsForDomainRequestPrivate::DeleteTagsForDomainRequestPrivate(
     const Route53DomainsRequest::Action action, DeleteTagsForDomainRequest * const q)
-    : DeleteTagsForDomainPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTagsForDomainRequestPrivate::DeleteTagsForDomainRequestPrivate(
  */
 DeleteTagsForDomainRequestPrivate::DeleteTagsForDomainRequestPrivate(
     const DeleteTagsForDomainRequestPrivate &other, DeleteTagsForDomainRequest * const q)
-    : DeleteTagsForDomainPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

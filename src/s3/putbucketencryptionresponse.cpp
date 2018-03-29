@@ -86,7 +86,7 @@ void PutBucketEncryptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketEncryptionResponse instance.
  */
 PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
-    PutBucketEncryptionQueueResponse * const q) : PutBucketEncryptionPrivate(q)
+    PutBucketEncryptionResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

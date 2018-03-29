@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetwor
  */
 ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
     const EMRRequest::Action action, ListBootstrapActionsRequest * const q)
-    : ListBootstrapActionsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
  */
 ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
     const ListBootstrapActionsRequestPrivate &other, ListBootstrapActionsRequest * const q)
-    : ListBootstrapActionsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

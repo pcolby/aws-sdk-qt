@@ -86,7 +86,7 @@ void DeleteEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEndpointResponse instance.
  */
 DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
-    DeleteEndpointQueueResponse * const q) : DeleteEndpointPrivate(q)
+    DeleteEndpointResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

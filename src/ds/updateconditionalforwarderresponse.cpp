@@ -86,7 +86,7 @@ void UpdateConditionalForwarderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateConditionalForwarderResponse instance.
  */
 UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponsePrivate(
-    UpdateConditionalForwarderQueueResponse * const q) : UpdateConditionalForwarderPrivate(q)
+    UpdateConditionalForwarderResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

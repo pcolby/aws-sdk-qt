@@ -86,7 +86,7 @@ void DeleteRepositoryPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRepositoryPolicyResponse instance.
  */
 DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponsePrivate(
-    DeleteRepositoryPolicyQueueResponse * const q) : DeleteRepositoryPolicyPrivate(q)
+    DeleteRepositoryPolicyResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

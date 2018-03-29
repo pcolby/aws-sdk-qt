@@ -86,7 +86,7 @@ void GetPullRequestResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPullRequestResponse instance.
  */
 GetPullRequestResponsePrivate::GetPullRequestResponsePrivate(
-    GetPullRequestQueueResponse * const q) : GetPullRequestPrivate(q)
+    GetPullRequestResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

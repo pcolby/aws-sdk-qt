@@ -86,7 +86,7 @@ void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssumeRoleWithWebIdentityResponse instance.
  */
 AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePrivate(
-    AssumeRoleWithWebIdentityQueueResponse * const q) : AssumeRoleWithWebIdentityPrivate(q)
+    AssumeRoleWithWebIdentityResponse * const q) : STSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply 
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterRequest * const q)
-    : ModifyClusterPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
     const ModifyClusterRequestPrivate &other, ModifyClusterRequest * const q)
-    : ModifyClusterPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

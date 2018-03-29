@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkRe
  */
 DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, DescribeChangeSetRequest * const q)
-    : DescribeChangeSetPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
  */
 DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
     const DescribeChangeSetRequestPrivate &other, DescribeChangeSetRequest * const q)
-    : DescribeChangeSetPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

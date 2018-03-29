@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopStackRequest::response(QNetworkReply * co
  */
 StopStackRequestPrivate::StopStackRequestPrivate(
     const OpsWorksRequest::Action action, StopStackRequest * const q)
-    : StopStackPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopStackRequestPrivate::StopStackRequestPrivate(
  */
 StopStackRequestPrivate::StopStackRequestPrivate(
     const StopStackRequestPrivate &other, StopStackRequest * const q)
-    : StopStackPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListUsersInGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListUsersInGroupResponse instance.
  */
 ListUsersInGroupResponsePrivate::ListUsersInGroupResponsePrivate(
-    ListUsersInGroupQueueResponse * const q) : ListUsersInGroupPrivate(q)
+    ListUsersInGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

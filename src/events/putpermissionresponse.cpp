@@ -86,7 +86,7 @@ void PutPermissionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutPermissionResponse instance.
  */
 PutPermissionResponsePrivate::PutPermissionResponsePrivate(
-    PutPermissionQueueResponse * const q) : PutPermissionPrivate(q)
+    PutPermissionResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

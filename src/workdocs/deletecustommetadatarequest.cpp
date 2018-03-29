@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomMetadataRequest::response(QNetwor
  */
 DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
     const WorkDocsRequest::Action action, DeleteCustomMetadataRequest * const q)
-    : DeleteCustomMetadataPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
  */
 DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
     const DeleteCustomMetadataRequestPrivate &other, DeleteCustomMetadataRequest * const q)
-    : DeleteCustomMetadataPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

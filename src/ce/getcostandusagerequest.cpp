@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCostAndUsageRequest::response(QNetworkRepl
  */
 GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
     const CostExplorerRequest::Action action, GetCostAndUsageRequest * const q)
-    : GetCostAndUsagePrivate(action, q)
+    : CostExplorerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
  */
 GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
     const GetCostAndUsageRequestPrivate &other, GetCostAndUsageRequest * const q)
-    : GetCostAndUsagePrivate(other, q)
+    : CostExplorerRequestPrivate(other, q)
 {
 
 }

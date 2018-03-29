@@ -86,7 +86,7 @@ void DeleteGroupPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteGroupPolicyResponse instance.
  */
 DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponsePrivate(
-    DeleteGroupPolicyQueueResponse * const q) : DeleteGroupPolicyPrivate(q)
+    DeleteGroupPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

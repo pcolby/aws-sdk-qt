@@ -86,7 +86,7 @@ void DescribeRouteTablesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRouteTablesResponse instance.
  */
 DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
-    DescribeRouteTablesQueueResponse * const q) : DescribeRouteTablesPrivate(q)
+    DescribeRouteTablesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

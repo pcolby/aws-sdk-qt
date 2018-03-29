@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInvitationsRequest::response(QNetworkRe
  */
 DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, DeleteInvitationsRequest * const q)
-    : DeleteInvitationsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
  */
 DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
     const DeleteInvitationsRequestPrivate &other, DeleteInvitationsRequest * const q)
-    : DeleteInvitationsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

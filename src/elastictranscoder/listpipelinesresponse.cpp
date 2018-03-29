@@ -86,7 +86,7 @@ void ListPipelinesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPipelinesResponse instance.
  */
 ListPipelinesResponsePrivate::ListPipelinesResponsePrivate(
-    ListPipelinesQueueResponse * const q) : ListPipelinesPrivate(q)
+    ListPipelinesResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

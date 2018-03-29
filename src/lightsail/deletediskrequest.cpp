@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDiskRequest::response(QNetworkReply * c
  */
 DeleteDiskRequestPrivate::DeleteDiskRequestPrivate(
     const LightsailRequest::Action action, DeleteDiskRequest * const q)
-    : DeleteDiskPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDiskRequestPrivate::DeleteDiskRequestPrivate(
  */
 DeleteDiskRequestPrivate::DeleteDiskRequestPrivate(
     const DeleteDiskRequestPrivate &other, DeleteDiskRequest * const q)
-    : DeleteDiskPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

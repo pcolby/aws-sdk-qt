@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDatasetsRequest::response(QNetworkReply *
  */
 ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
     const CognitoSyncRequest::Action action, ListDatasetsRequest * const q)
-    : ListDatasetsPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
  */
 ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
     const ListDatasetsRequestPrivate &other, ListDatasetsRequest * const q)
-    : ListDatasetsPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

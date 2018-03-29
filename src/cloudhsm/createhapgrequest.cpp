@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * c
  */
 CreateHapgRequestPrivate::CreateHapgRequestPrivate(
     const CloudHSMRequest::Action action, CreateHapgRequest * const q)
-    : CreateHapgPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateHapgRequestPrivate::CreateHapgRequestPrivate(
  */
 CreateHapgRequestPrivate::CreateHapgRequestPrivate(
     const CreateHapgRequestPrivate &other, CreateHapgRequest * const q)
-    : CreateHapgPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

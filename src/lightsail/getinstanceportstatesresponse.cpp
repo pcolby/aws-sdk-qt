@@ -86,7 +86,7 @@ void GetInstancePortStatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInstancePortStatesResponse instance.
  */
 GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponsePrivate(
-    GetInstancePortStatesQueueResponse * const q) : GetInstancePortStatesPrivate(q)
+    GetInstancePortStatesResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

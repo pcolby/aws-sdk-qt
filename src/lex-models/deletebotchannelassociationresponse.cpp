@@ -86,7 +86,7 @@ void DeleteBotChannelAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBotChannelAssociationResponse instance.
  */
 DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponsePrivate(
-    DeleteBotChannelAssociationQueueResponse * const q) : DeleteBotChannelAssociationPrivate(q)
+    DeleteBotChannelAssociationResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

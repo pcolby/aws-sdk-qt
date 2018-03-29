@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveIpRoutesRequest::response(QNetworkReply
  */
 RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
     const DirectoryServiceRequest::Action action, RemoveIpRoutesRequest * const q)
-    : RemoveIpRoutesPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
  */
 RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
     const RemoveIpRoutesRequestPrivate &other, RemoveIpRoutesRequest * const q)
-    : RemoveIpRoutesPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

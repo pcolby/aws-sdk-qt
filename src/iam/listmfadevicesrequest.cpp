@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListMFADevicesRequest::response(QNetworkReply
  */
 ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
     const IAMRequest::Action action, ListMFADevicesRequest * const q)
-    : ListMFADevicesPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
  */
 ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
     const ListMFADevicesRequestPrivate &other, ListMFADevicesRequest * const q)
-    : ListMFADevicesPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

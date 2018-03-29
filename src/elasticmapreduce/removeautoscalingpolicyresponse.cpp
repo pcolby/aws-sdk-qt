@@ -86,7 +86,7 @@ void RemoveAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveAutoScalingPolicyResponse instance.
  */
 RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponsePrivate(
-    RemoveAutoScalingPolicyQueueResponse * const q) : RemoveAutoScalingPolicyPrivate(q)
+    RemoveAutoScalingPolicyResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

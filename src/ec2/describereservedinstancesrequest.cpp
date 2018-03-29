@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesRequest::response(QN
  */
 DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate(
     const EC2Request::Action action, DescribeReservedInstancesRequest * const q)
-    : DescribeReservedInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate
  */
 DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate(
     const DescribeReservedInstancesRequestPrivate &other, DescribeReservedInstancesRequest * const q)
-    : DescribeReservedInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

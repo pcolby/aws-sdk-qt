@@ -86,7 +86,7 @@ void GetDocumentVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDocumentVersionResponse instance.
  */
 GetDocumentVersionResponsePrivate::GetDocumentVersionResponsePrivate(
-    GetDocumentVersionQueueResponse * const q) : GetDocumentVersionPrivate(q)
+    GetDocumentVersionResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

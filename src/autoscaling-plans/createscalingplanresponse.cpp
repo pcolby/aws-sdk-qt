@@ -86,7 +86,7 @@ void CreateScalingPlanResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateScalingPlanResponse instance.
  */
 CreateScalingPlanResponsePrivate::CreateScalingPlanResponsePrivate(
-    CreateScalingPlanQueueResponse * const q) : CreateScalingPlanPrivate(q)
+    CreateScalingPlanResponse * const q) : AutoScalingPlansResponsePrivate(q)
 {
 
 }

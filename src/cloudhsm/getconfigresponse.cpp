@@ -86,7 +86,7 @@ void GetConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetConfigResponse instance.
  */
 GetConfigResponsePrivate::GetConfigResponsePrivate(
-    GetConfigQueueResponse * const q) : GetConfigPrivate(q)
+    GetConfigResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

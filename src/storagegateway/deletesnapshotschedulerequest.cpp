@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetw
  */
 DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteSnapshotScheduleRequest * const q)
-    : DeleteSnapshotSchedulePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
  */
 DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
     const DeleteSnapshotScheduleRequestPrivate &other, DeleteSnapshotScheduleRequest * const q)
-    : DeleteSnapshotSchedulePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

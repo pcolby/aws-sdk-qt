@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkR
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterInstanceRequest * const q)
-    : DeregisterInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const DeregisterInstanceRequestPrivate &other, DeregisterInstanceRequest * const q)
-    : DeregisterInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

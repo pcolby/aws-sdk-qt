@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendCommandRequest::response(QNetworkReply * 
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
     const SSMRequest::Action action, SendCommandRequest * const q)
-    : SendCommandPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendCommandRequestPrivate::SendCommandRequestPrivate(
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
     const SendCommandRequestPrivate &other, SendCommandRequest * const q)
-    : SendCommandPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

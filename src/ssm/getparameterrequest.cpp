@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetParameterRequest::response(QNetworkReply *
  */
 GetParameterRequestPrivate::GetParameterRequestPrivate(
     const SSMRequest::Action action, GetParameterRequest * const q)
-    : GetParameterPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetParameterRequestPrivate::GetParameterRequestPrivate(
  */
 GetParameterRequestPrivate::GetParameterRequestPrivate(
     const GetParameterRequestPrivate &other, GetParameterRequest * const q)
-    : GetParameterPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const EC2Request::Action action, ImportKeyPairRequest * const q)
-    : ImportKeyPairPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const ImportKeyPairRequestPrivate &other, ImportKeyPairRequest * const q)
-    : ImportKeyPairPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

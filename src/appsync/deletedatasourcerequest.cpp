@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const AppSyncRequest::Action action, DeleteDataSourceRequest * const q)
-    : DeleteDataSourcePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const DeleteDataSourceRequestPrivate &other, DeleteDataSourceRequest * const q)
-    : DeleteDataSourcePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

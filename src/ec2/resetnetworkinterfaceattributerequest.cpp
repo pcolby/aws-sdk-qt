@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::respon
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
     const EC2Request::Action action, ResetNetworkInterfaceAttributeRequest * const q)
-    : ResetNetworkInterfaceAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequ
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
     const ResetNetworkInterfaceAttributeRequestPrivate &other, ResetNetworkInterfaceAttributeRequest * const q)
-    : ResetNetworkInterfaceAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

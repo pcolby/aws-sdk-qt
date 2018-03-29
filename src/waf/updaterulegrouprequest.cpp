@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const WAFRequest::Action action, UpdateRuleGroupRequest * const q)
-    : UpdateRuleGroupPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const UpdateRuleGroupRequestPrivate &other, UpdateRuleGroupRequest * const q)
-    : UpdateRuleGroupPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateContainerInstancesStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateContainerInstancesStateResponse instance.
  */
 UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateResponsePrivate(
-    UpdateContainerInstancesStateQueueResponse * const q) : UpdateContainerInstancesStatePrivate(q)
+    UpdateContainerInstancesStateResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetUserPoolMfaConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetUserPoolMfaConfigResponse instance.
  */
 GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponsePrivate(
-    GetUserPoolMfaConfigQueueResponse * const q) : GetUserPoolMfaConfigPrivate(q)
+    GetUserPoolMfaConfigResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

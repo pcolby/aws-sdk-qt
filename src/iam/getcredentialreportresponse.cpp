@@ -86,7 +86,7 @@ void GetCredentialReportResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCredentialReportResponse instance.
  */
 GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
-    GetCredentialReportQueueResponse * const q) : GetCredentialReportPrivate(q)
+    GetCredentialReportResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

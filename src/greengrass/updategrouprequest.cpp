@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const GreengrassRequest::Action action, UpdateGroupRequest * const q)
-    : UpdateGroupPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const UpdateGroupRequestPrivate &other, UpdateGroupRequest * const q)
-    : UpdateGroupPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

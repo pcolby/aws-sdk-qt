@@ -86,7 +86,7 @@ void StartJobRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartJobRunResponse instance.
  */
 StartJobRunResponsePrivate::StartJobRunResponsePrivate(
-    StartJobRunQueueResponse * const q) : StartJobRunPrivate(q)
+    StartJobRunResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

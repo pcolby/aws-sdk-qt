@@ -86,7 +86,7 @@ void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDocumentationPartResponse instance.
  */
 UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
-    UpdateDocumentationPartQueueResponse * const q) : UpdateDocumentationPartPrivate(q)
+    UpdateDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

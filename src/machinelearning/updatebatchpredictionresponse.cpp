@@ -86,7 +86,7 @@ void UpdateBatchPredictionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBatchPredictionResponse instance.
  */
 UpdateBatchPredictionResponsePrivate::UpdateBatchPredictionResponsePrivate(
-    UpdateBatchPredictionQueueResponse * const q) : UpdateBatchPredictionPrivate(q)
+    UpdateBatchPredictionResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

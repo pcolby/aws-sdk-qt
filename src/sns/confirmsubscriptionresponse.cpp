@@ -86,7 +86,7 @@ void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConfirmSubscriptionResponse instance.
  */
 ConfirmSubscriptionResponsePrivate::ConfirmSubscriptionResponsePrivate(
-    ConfirmSubscriptionQueueResponse * const q) : ConfirmSubscriptionPrivate(q)
+    ConfirmSubscriptionResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

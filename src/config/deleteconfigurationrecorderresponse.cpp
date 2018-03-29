@@ -86,7 +86,7 @@ void DeleteConfigurationRecorderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteConfigurationRecorderResponse instance.
  */
 DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResponsePrivate(
-    DeleteConfigurationRecorderQueueResponse * const q) : DeleteConfigurationRecorderPrivate(q)
+    DeleteConfigurationRecorderResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

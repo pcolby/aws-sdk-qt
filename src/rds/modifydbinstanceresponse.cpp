@@ -86,7 +86,7 @@ void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyDBInstanceResponse instance.
  */
 ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
-    ModifyDBInstanceQueueResponse * const q) : ModifyDBInstancePrivate(q)
+    ModifyDBInstanceResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

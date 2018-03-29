@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * co
  */
 PutRecordRequestPrivate::PutRecordRequestPrivate(
     const FirehoseRequest::Action action, PutRecordRequest * const q)
-    : PutRecordPrivate(action, q)
+    : FirehoseRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutRecordRequestPrivate::PutRecordRequestPrivate(
  */
 PutRecordRequestPrivate::PutRecordRequestPrivate(
     const PutRecordRequestPrivate &other, PutRecordRequest * const q)
-    : PutRecordPrivate(other, q)
+    : FirehoseRequestPrivate(other, q)
 {
 
 }

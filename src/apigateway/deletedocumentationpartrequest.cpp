@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNet
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDocumentationPartRequest * const q)
-    : DeleteDocumentationPartPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
     const DeleteDocumentationPartRequestPrivate &other, DeleteDocumentationPartRequest * const q)
-    : DeleteDocumentationPartPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

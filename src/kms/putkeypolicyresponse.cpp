@@ -86,7 +86,7 @@ void PutKeyPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutKeyPolicyResponse instance.
  */
 PutKeyPolicyResponsePrivate::PutKeyPolicyResponsePrivate(
-    PutKeyPolicyQueueResponse * const q) : PutKeyPolicyPrivate(q)
+    PutKeyPolicyResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

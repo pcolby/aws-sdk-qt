@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserDefinedFunctionRequest::response(QN
  */
 UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, UpdateUserDefinedFunctionRequest * const q)
-    : UpdateUserDefinedFunctionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate
  */
 UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate(
     const UpdateUserDefinedFunctionRequestPrivate &other, UpdateUserDefinedFunctionRequest * const q)
-    : UpdateUserDefinedFunctionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

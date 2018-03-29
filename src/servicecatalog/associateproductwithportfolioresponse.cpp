@@ -86,7 +86,7 @@ void AssociateProductWithPortfolioResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateProductWithPortfolioResponse instance.
  */
 AssociateProductWithPortfolioResponsePrivate::AssociateProductWithPortfolioResponsePrivate(
-    AssociateProductWithPortfolioQueueResponse * const q) : AssociateProductWithPortfolioPrivate(q)
+    AssociateProductWithPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkRep
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
     const OpsWorksCMRequest::Action action, StartMaintenanceRequest * const q)
-    : StartMaintenancePrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
     const StartMaintenanceRequestPrivate &other, StartMaintenanceRequest * const q)
-    : StartMaintenancePrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

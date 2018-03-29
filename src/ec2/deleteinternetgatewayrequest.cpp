@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetwo
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
     const EC2Request::Action action, DeleteInternetGatewayRequest * const q)
-    : DeleteInternetGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
     const DeleteInternetGatewayRequestPrivate &other, DeleteInternetGatewayRequest * const q)
-    : DeleteInternetGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

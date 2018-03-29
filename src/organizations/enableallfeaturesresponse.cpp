@@ -86,7 +86,7 @@ void EnableAllFeaturesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableAllFeaturesResponse instance.
  */
 EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponsePrivate(
-    EnableAllFeaturesQueueResponse * const q) : EnableAllFeaturesPrivate(q)
+    EnableAllFeaturesResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStaleSecurityGroupsRequest::response(
  */
 DescribeStaleSecurityGroupsRequestPrivate::DescribeStaleSecurityGroupsRequestPrivate(
     const EC2Request::Action action, DescribeStaleSecurityGroupsRequest * const q)
-    : DescribeStaleSecurityGroupsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStaleSecurityGroupsRequestPrivate::DescribeStaleSecurityGroupsRequestPri
  */
 DescribeStaleSecurityGroupsRequestPrivate::DescribeStaleSecurityGroupsRequestPrivate(
     const DescribeStaleSecurityGroupsRequestPrivate &other, DescribeStaleSecurityGroupsRequest * const q)
-    : DescribeStaleSecurityGroupsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

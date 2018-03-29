@@ -86,7 +86,7 @@ void StartSchemaCreationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartSchemaCreationResponse instance.
  */
 StartSchemaCreationResponsePrivate::StartSchemaCreationResponsePrivate(
-    StartSchemaCreationQueueResponse * const q) : StartSchemaCreationPrivate(q)
+    StartSchemaCreationResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

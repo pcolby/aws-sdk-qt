@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMatchmakingConfigurationRequest::respon
  */
 UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequestPrivate(
     const GameLiftRequest::Action action, UpdateMatchmakingConfigurationRequest * const q)
-    : UpdateMatchmakingConfigurationPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequ
  */
 UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequestPrivate(
     const UpdateMatchmakingConfigurationRequestPrivate &other, UpdateMatchmakingConfigurationRequest * const q)
-    : UpdateMatchmakingConfigurationPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

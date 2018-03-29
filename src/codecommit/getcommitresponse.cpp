@@ -86,7 +86,7 @@ void GetCommitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCommitResponse instance.
  */
 GetCommitResponsePrivate::GetCommitResponsePrivate(
-    GetCommitQueueResponse * const q) : GetCommitPrivate(q)
+    GetCommitResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

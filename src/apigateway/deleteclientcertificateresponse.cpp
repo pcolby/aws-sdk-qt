@@ -86,7 +86,7 @@ void DeleteClientCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteClientCertificateResponse instance.
  */
 DeleteClientCertificateResponsePrivate::DeleteClientCertificateResponsePrivate(
-    DeleteClientCertificateQueueResponse * const q) : DeleteClientCertificatePrivate(q)
+    DeleteClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

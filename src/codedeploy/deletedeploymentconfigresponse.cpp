@@ -86,7 +86,7 @@ void DeleteDeploymentConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDeploymentConfigResponse instance.
  */
 DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponsePrivate(
-    DeleteDeploymentConfigQueueResponse * const q) : DeleteDeploymentConfigPrivate(q)
+    DeleteDeploymentConfigResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

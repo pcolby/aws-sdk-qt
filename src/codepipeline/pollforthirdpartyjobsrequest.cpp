@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PollForThirdPartyJobsRequest::response(QNetwo
  */
 PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
     const CodePipelineRequest::Action action, PollForThirdPartyJobsRequest * const q)
-    : PollForThirdPartyJobsPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
  */
 PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
     const PollForThirdPartyJobsRequestPrivate &other, PollForThirdPartyJobsRequest * const q)
-    : PollForThirdPartyJobsPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

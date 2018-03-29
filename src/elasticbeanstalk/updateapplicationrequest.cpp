@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationRequest * const q)
-    : UpdateApplicationPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const UpdateApplicationRequestPrivate &other, UpdateApplicationRequest * const q)
-    : UpdateApplicationPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

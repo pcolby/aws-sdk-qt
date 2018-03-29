@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkRep
  */
 ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
     const Route53Request::Action action, ListGeoLocationsRequest * const q)
-    : ListGeoLocationsPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
  */
 ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
     const ListGeoLocationsRequestPrivate &other, ListGeoLocationsRequest * const q)
-    : ListGeoLocationsPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

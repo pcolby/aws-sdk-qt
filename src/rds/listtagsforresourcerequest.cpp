@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const RDSRequest::Action action, ListTagsForResourceRequest * const q)
-    : ListTagsForResourcePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : ListTagsForResourcePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(
  */
 UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
     const CodeCommitRequest::Action action, UpdateRepositoryDescriptionRequest * const q)
-    : UpdateRepositoryDescriptionPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPri
  */
 UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
     const UpdateRepositoryDescriptionRequestPrivate &other, UpdateRepositoryDescriptionRequest * const q)
-    : UpdateRepositoryDescriptionPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

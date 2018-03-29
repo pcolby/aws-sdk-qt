@@ -86,7 +86,7 @@ void DeleteVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVirtualMFADeviceResponse instance.
  */
 DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponsePrivate(
-    DeleteVirtualMFADeviceQueueResponse * const q) : DeleteVirtualMFADevicePrivate(q)
+    DeleteVirtualMFADeviceResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

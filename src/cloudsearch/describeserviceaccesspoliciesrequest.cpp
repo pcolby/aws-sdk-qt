@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::respons
  */
 DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
     const CloudSearchRequest::Action action, DescribeServiceAccessPoliciesRequest * const q)
-    : DescribeServiceAccessPoliciesPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesReques
  */
 DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
     const DescribeServiceAccessPoliciesRequestPrivate &other, DescribeServiceAccessPoliciesRequest * const q)
-    : DescribeServiceAccessPoliciesPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply 
  */
 DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
     const MediaLiveRequest::Action action, DeleteChannelRequest * const q)
-    : DeleteChannelPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
  */
 DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
     const DeleteChannelRequestPrivate &other, DeleteChannelRequest * const q)
-    : DeleteChannelPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

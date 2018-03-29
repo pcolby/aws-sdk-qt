@@ -86,7 +86,7 @@ void SubscribeToDatasetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SubscribeToDatasetResponse instance.
  */
 SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponsePrivate(
-    SubscribeToDatasetQueueResponse * const q) : SubscribeToDatasetPrivate(q)
+    SubscribeToDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

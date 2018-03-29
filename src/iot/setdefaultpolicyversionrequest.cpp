@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNet
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const IoTRequest::Action action, SetDefaultPolicyVersionRequest * const q)
-    : SetDefaultPolicyVersionPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const SetDefaultPolicyVersionRequestPrivate &other, SetDefaultPolicyVersionRequest * const q)
-    : SetDefaultPolicyVersionPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteChapCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteChapCredentialsResponse instance.
  */
 DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponsePrivate(
-    DeleteChapCredentialsQueueResponse * const q) : DeleteChapCredentialsPrivate(q)
+    DeleteChapCredentialsResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

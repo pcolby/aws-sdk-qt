@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetResourceRequest::response(QNetworkReply * 
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
     const APIGatewayRequest::Action action, GetResourceRequest * const q)
-    : GetResourcePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetResourceRequestPrivate::GetResourceRequestPrivate(
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
     const GetResourceRequestPrivate &other, GetResourceRequest * const q)
-    : GetResourcePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

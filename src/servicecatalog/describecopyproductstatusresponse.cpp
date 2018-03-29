@@ -86,7 +86,7 @@ void DescribeCopyProductStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCopyProductStatusResponse instance.
  */
 DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponsePrivate(
-    DescribeCopyProductStatusQueueResponse * const q) : DescribeCopyProductStatusPrivate(q)
+    DescribeCopyProductStatusResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

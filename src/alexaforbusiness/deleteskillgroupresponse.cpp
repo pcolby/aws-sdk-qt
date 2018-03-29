@@ -86,7 +86,7 @@ void DeleteSkillGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSkillGroupResponse instance.
  */
 DeleteSkillGroupResponsePrivate::DeleteSkillGroupResponsePrivate(
-    DeleteSkillGroupQueueResponse * const q) : DeleteSkillGroupPrivate(q)
+    DeleteSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

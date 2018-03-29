@@ -86,7 +86,7 @@ void SetIpAddressTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetIpAddressTypeResponse instance.
  */
 SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponsePrivate(
-    SetIpAddressTypeQueueResponse * const q) : SetIpAddressTypePrivate(q)
+    SetIpAddressTypeResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteScheduledActionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteScheduledActionResponse instance.
  */
 DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
-    DeleteScheduledActionQueueResponse * const q) : DeleteScheduledActionPrivate(q)
+    DeleteScheduledActionResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
 {
 
 }

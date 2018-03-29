@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDevicesRequest::response(QNetworkReply * 
  */
 ListDevicesRequestPrivate::ListDevicesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListDevicesRequest * const q)
-    : ListDevicesPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDevicesRequestPrivate::ListDevicesRequestPrivate(
  */
 ListDevicesRequestPrivate::ListDevicesRequestPrivate(
     const ListDevicesRequestPrivate &other, ListDevicesRequest * const q)
-    : ListDevicesPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

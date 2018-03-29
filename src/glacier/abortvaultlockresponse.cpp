@@ -86,7 +86,7 @@ void AbortVaultLockResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AbortVaultLockResponse instance.
  */
 AbortVaultLockResponsePrivate::AbortVaultLockResponsePrivate(
-    AbortVaultLockQueueResponse * const q) : AbortVaultLockPrivate(q)
+    AbortVaultLockResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

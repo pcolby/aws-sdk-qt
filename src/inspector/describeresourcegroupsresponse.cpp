@@ -86,7 +86,7 @@ void DescribeResourceGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeResourceGroupsResponse instance.
  */
 DescribeResourceGroupsResponsePrivate::DescribeResourceGroupsResponsePrivate(
-    DescribeResourceGroupsQueueResponse * const q) : DescribeResourceGroupsPrivate(q)
+    DescribeResourceGroupsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

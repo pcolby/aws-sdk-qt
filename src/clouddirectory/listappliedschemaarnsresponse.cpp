@@ -86,7 +86,7 @@ void ListAppliedSchemaArnsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAppliedSchemaArnsResponse instance.
  */
 ListAppliedSchemaArnsResponsePrivate::ListAppliedSchemaArnsResponsePrivate(
-    ListAppliedSchemaArnsQueueResponse * const q) : ListAppliedSchemaArnsPrivate(q)
+    ListAppliedSchemaArnsResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

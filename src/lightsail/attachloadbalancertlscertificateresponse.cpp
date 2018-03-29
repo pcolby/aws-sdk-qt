@@ -86,7 +86,7 @@ void AttachLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachLoadBalancerTlsCertificateResponse instance.
  */
 AttachLoadBalancerTlsCertificateResponsePrivate::AttachLoadBalancerTlsCertificateResponsePrivate(
-    AttachLoadBalancerTlsCertificateQueueResponse * const q) : AttachLoadBalancerTlsCertificatePrivate(q)
+    AttachLoadBalancerTlsCertificateResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteServerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteServerResponse instance.
  */
 DeleteServerResponsePrivate::DeleteServerResponsePrivate(
-    DeleteServerQueueResponse * const q) : DeleteServerPrivate(q)
+    DeleteServerResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

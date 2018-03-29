@@ -86,7 +86,7 @@ void GenerateDataSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GenerateDataSetResponse instance.
  */
 GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
-    GenerateDataSetQueueResponse * const q) : GenerateDataSetPrivate(q)
+    GenerateDataSetResponse * const q) : MarketplaceCommerceAnalyticsResponsePrivate(q)
 {
 
 }

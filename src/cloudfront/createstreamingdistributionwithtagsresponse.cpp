@@ -86,7 +86,7 @@ void CreateStreamingDistributionWithTagsResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public CreateStreamingDistributionWithTagsResponse instance.
  */
 CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionWithTagsResponsePrivate(
-    CreateStreamingDistributionWithTagsQueueResponse * const q) : CreateStreamingDistributionWithTagsPrivate(q)
+    CreateStreamingDistributionWithTagsResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

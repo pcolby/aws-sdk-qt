@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRequestValidatorRequest::response(QNetw
  */
 UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, UpdateRequestValidatorRequest * const q)
-    : UpdateRequestValidatorPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
  */
 UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
     const UpdateRequestValidatorRequestPrivate &other, UpdateRequestValidatorRequest * const q)
-    : UpdateRequestValidatorPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

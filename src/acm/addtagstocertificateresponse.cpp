@@ -86,7 +86,7 @@ void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddTagsToCertificateResponse instance.
  */
 AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
-    AddTagsToCertificateQueueResponse * const q) : AddTagsToCertificatePrivate(q)
+    AddTagsToCertificateResponse * const q) : ACMResponsePrivate(q)
 {
 
 }

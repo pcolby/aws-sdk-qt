@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateOrganizationRequest::response(QNetworkR
  */
 CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, CreateOrganizationRequest * const q)
-    : CreateOrganizationPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
  */
 CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
     const CreateOrganizationRequestPrivate &other, CreateOrganizationRequest * const q)
-    : CreateOrganizationPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

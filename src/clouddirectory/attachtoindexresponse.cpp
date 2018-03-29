@@ -86,7 +86,7 @@ void AttachToIndexResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachToIndexResponse instance.
  */
 AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
-    AttachToIndexQueueResponse * const q) : AttachToIndexPrivate(q)
+    AttachToIndexResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

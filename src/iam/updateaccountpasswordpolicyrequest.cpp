@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountPasswordPolicyRequest::response(
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
     const IAMRequest::Action action, UpdateAccountPasswordPolicyRequest * const q)
-    : UpdateAccountPasswordPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPri
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
     const UpdateAccountPasswordPolicyRequestPrivate &other, UpdateAccountPasswordPolicyRequest * const q)
-    : UpdateAccountPasswordPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

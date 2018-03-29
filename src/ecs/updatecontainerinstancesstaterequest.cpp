@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::respons
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
     const ECSRequest::Action action, UpdateContainerInstancesStateRequest * const q)
-    : UpdateContainerInstancesStatePrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateReques
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
     const UpdateContainerInstancesStateRequestPrivate &other, UpdateContainerInstancesStateRequest * const q)
-    : UpdateContainerInstancesStatePrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeprecateActivityTypeResponse instance.
  */
 DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
-    DeprecateActivityTypeQueueResponse * const q) : DeprecateActivityTypePrivate(q)
+    DeprecateActivityTypeResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

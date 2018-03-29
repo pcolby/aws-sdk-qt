@@ -86,7 +86,7 @@ void ListEndpointsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListEndpointsResponse instance.
  */
 ListEndpointsResponsePrivate::ListEndpointsResponsePrivate(
-    ListEndpointsQueueResponse * const q) : ListEndpointsPrivate(q)
+    ListEndpointsResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

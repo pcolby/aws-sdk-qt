@@ -86,7 +86,7 @@ void UpdateMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateMaintenanceStartTimeResponse instance.
  */
 UpdateMaintenanceStartTimeResponsePrivate::UpdateMaintenanceStartTimeResponsePrivate(
-    UpdateMaintenanceStartTimeQueueResponse * const q) : UpdateMaintenanceStartTimePrivate(q)
+    UpdateMaintenanceStartTimeResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

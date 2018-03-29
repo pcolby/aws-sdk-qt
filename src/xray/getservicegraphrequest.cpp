@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceGraphRequest::response(QNetworkRepl
  */
 GetServiceGraphRequestPrivate::GetServiceGraphRequestPrivate(
     const XRayRequest::Action action, GetServiceGraphRequest * const q)
-    : GetServiceGraphPrivate(action, q)
+    : XRayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetServiceGraphRequestPrivate::GetServiceGraphRequestPrivate(
  */
 GetServiceGraphRequestPrivate::GetServiceGraphRequestPrivate(
     const GetServiceGraphRequestPrivate &other, GetServiceGraphRequest * const q)
-    : GetServiceGraphPrivate(other, q)
+    : XRayRequestPrivate(other, q)
 {
 
 }

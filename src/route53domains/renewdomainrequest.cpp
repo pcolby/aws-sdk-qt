@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RenewDomainRequest::response(QNetworkReply * 
  */
 RenewDomainRequestPrivate::RenewDomainRequestPrivate(
     const Route53DomainsRequest::Action action, RenewDomainRequest * const q)
-    : RenewDomainPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RenewDomainRequestPrivate::RenewDomainRequestPrivate(
  */
 RenewDomainRequestPrivate::RenewDomainRequestPrivate(
     const RenewDomainRequestPrivate &other, RenewDomainRequest * const q)
-    : RenewDomainPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

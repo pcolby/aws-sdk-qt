@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkRep
  */
 DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
     const S3Request::Action action, DeleteBucketCorsRequest * const q)
-    : DeleteBucketCorsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
  */
 DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
     const DeleteBucketCorsRequestPrivate &other, DeleteBucketCorsRequest * const q)
-    : DeleteBucketCorsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

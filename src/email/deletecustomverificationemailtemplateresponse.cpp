@@ -86,7 +86,7 @@ void DeleteCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public DeleteCustomVerificationEmailTemplateResponse instance.
  */
 DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificationEmailTemplateResponsePrivate(
-    DeleteCustomVerificationEmailTemplateQueueResponse * const q) : DeleteCustomVerificationEmailTemplatePrivate(q)
+    DeleteCustomVerificationEmailTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

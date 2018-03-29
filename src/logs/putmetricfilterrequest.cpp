@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutMetricFilterRequest::response(QNetworkRepl
  */
 PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutMetricFilterRequest * const q)
-    : PutMetricFilterPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
  */
 PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
     const PutMetricFilterRequestPrivate &other, PutMetricFilterRequest * const q)
-    : PutMetricFilterPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

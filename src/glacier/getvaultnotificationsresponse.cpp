@@ -86,7 +86,7 @@ void GetVaultNotificationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetVaultNotificationsResponse instance.
  */
 GetVaultNotificationsResponsePrivate::GetVaultNotificationsResponsePrivate(
-    GetVaultNotificationsQueueResponse * const q) : GetVaultNotificationsPrivate(q)
+    GetVaultNotificationsResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

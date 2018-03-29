@@ -86,7 +86,7 @@ void RestoreAddressToClassicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreAddressToClassicResponse instance.
  */
 RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
-    RestoreAddressToClassicQueueResponse * const q) : RestoreAddressToClassicPrivate(q)
+    RestoreAddressToClassicResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeComputeEnvironmentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeComputeEnvironmentsResponse instance.
  */
 DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponsePrivate(
-    DescribeComputeEnvironmentsQueueResponse * const q) : DescribeComputeEnvironmentsPrivate(q)
+    DescribeComputeEnvironmentsResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

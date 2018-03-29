@@ -86,7 +86,7 @@ void BatchDeleteTableVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDeleteTableVersionResponse instance.
  */
 BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponsePrivate(
-    BatchDeleteTableVersionQueueResponse * const q) : BatchDeleteTableVersionPrivate(q)
+    BatchDeleteTableVersionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

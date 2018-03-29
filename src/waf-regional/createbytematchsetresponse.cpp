@@ -86,7 +86,7 @@ void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateByteMatchSetResponse instance.
  */
 CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponsePrivate(
-    CreateByteMatchSetQueueResponse * const q) : CreateByteMatchSetPrivate(q)
+    CreateByteMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

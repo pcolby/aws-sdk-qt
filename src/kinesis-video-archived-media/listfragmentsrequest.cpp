@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply 
  */
 ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
     const KinesisVideoArchivedMediaRequest::Action action, ListFragmentsRequest * const q)
-    : ListFragmentsPrivate(action, q)
+    : KinesisVideoArchivedMediaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
  */
 ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
     const ListFragmentsRequestPrivate &other, ListFragmentsRequest * const q)
-    : ListFragmentsPrivate(other, q)
+    : KinesisVideoArchivedMediaRequestPrivate(other, q)
 {
 
 }

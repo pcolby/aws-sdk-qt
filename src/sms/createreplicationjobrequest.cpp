@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationJobRequest::response(QNetwor
  */
 CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
     const SMSRequest::Action action, CreateReplicationJobRequest * const q)
-    : CreateReplicationJobPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
  */
 CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
     const CreateReplicationJobRequestPrivate &other, CreateReplicationJobRequest * const q)
-    : CreateReplicationJobPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

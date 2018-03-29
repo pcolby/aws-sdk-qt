@@ -86,7 +86,7 @@ void PutConfigRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutConfigRuleResponse instance.
  */
 PutConfigRuleResponsePrivate::PutConfigRuleResponsePrivate(
-    PutConfigRuleQueueResponse * const q) : PutConfigRulePrivate(q)
+    PutConfigRuleResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

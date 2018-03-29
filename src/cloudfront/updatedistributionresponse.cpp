@@ -86,7 +86,7 @@ void UpdateDistributionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDistributionResponse instance.
  */
 UpdateDistributionResponsePrivate::UpdateDistributionResponsePrivate(
-    UpdateDistributionQueueResponse * const q) : UpdateDistributionPrivate(q)
+    UpdateDistributionResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

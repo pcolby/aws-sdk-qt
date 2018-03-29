@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
  */
 GetGroupRequestPrivate::GetGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetGroupRequest * const q)
-    : GetGroupPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetGroupRequestPrivate::GetGroupRequestPrivate(
  */
 GetGroupRequestPrivate::GetGroupRequestPrivate(
     const GetGroupRequestPrivate &other, GetGroupRequest * const q)
-    : GetGroupPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

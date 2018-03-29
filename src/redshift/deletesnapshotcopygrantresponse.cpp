@@ -86,7 +86,7 @@ void DeleteSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSnapshotCopyGrantResponse instance.
  */
 DeleteSnapshotCopyGrantResponsePrivate::DeleteSnapshotCopyGrantResponsePrivate(
-    DeleteSnapshotCopyGrantQueueResponse * const q) : DeleteSnapshotCopyGrantPrivate(q)
+    DeleteSnapshotCopyGrantResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

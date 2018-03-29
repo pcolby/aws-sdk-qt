@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetCacheRequest::response(QNetworkReply * c
  */
 ResetCacheRequestPrivate::ResetCacheRequestPrivate(
     const StorageGatewayRequest::Action action, ResetCacheRequest * const q)
-    : ResetCachePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetCacheRequestPrivate::ResetCacheRequestPrivate(
  */
 ResetCacheRequestPrivate::ResetCacheRequestPrivate(
     const ResetCacheRequestPrivate &other, ResetCacheRequest * const q)
-    : ResetCachePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

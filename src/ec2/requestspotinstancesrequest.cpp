@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetwor
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
     const EC2Request::Action action, RequestSpotInstancesRequest * const q)
-    : RequestSpotInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
     const RequestSpotInstancesRequestPrivate &other, RequestSpotInstancesRequest * const q)
-    : RequestSpotInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

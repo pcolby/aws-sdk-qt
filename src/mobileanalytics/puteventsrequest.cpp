@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutEventsRequest::response(QNetworkReply * co
  */
 PutEventsRequestPrivate::PutEventsRequestPrivate(
     const MobileAnalyticsRequest::Action action, PutEventsRequest * const q)
-    : PutEventsPrivate(action, q)
+    : MobileAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutEventsRequestPrivate::PutEventsRequestPrivate(
  */
 PutEventsRequestPrivate::PutEventsRequestPrivate(
     const PutEventsRequestPrivate &other, PutEventsRequest * const q)
-    : PutEventsPrivate(other, q)
+    : MobileAnalyticsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetwork
  */
 GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
     const SESRequest::Action action, GetIdentityPoliciesRequest * const q)
-    : GetIdentityPoliciesPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
  */
 GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
     const GetIdentityPoliciesRequestPrivate &other, GetIdentityPoliciesRequest * const q)
-    : GetIdentityPoliciesPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

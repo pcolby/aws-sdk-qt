@@ -86,7 +86,7 @@ void DeleteApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &r
  * @param  q  Pointer to this object's public DeleteApplicationCloudWatchLoggingOptionResponse instance.
  */
 DeleteApplicationCloudWatchLoggingOptionResponsePrivate::DeleteApplicationCloudWatchLoggingOptionResponsePrivate(
-    DeleteApplicationCloudWatchLoggingOptionQueueResponse * const q) : DeleteApplicationCloudWatchLoggingOptionPrivate(q)
+    DeleteApplicationCloudWatchLoggingOptionResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

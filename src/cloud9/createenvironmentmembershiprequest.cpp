@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentMembershipRequest::response(
  */
 CreateEnvironmentMembershipRequestPrivate::CreateEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, CreateEnvironmentMembershipRequest * const q)
-    : CreateEnvironmentMembershipPrivate(action, q)
+    : Cloud9RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEnvironmentMembershipRequestPrivate::CreateEnvironmentMembershipRequestPri
  */
 CreateEnvironmentMembershipRequestPrivate::CreateEnvironmentMembershipRequestPrivate(
     const CreateEnvironmentMembershipRequestPrivate &other, CreateEnvironmentMembershipRequest * const q)
-    : CreateEnvironmentMembershipPrivate(other, q)
+    : Cloud9RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkR
  */
 NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
     const StorageGatewayRequest::Action action, NotifyWhenUploadedRequest * const q)
-    : NotifyWhenUploadedPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
  */
 NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
     const NotifyWhenUploadedRequestPrivate &other, NotifyWhenUploadedRequest * const q)
-    : NotifyWhenUploadedPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeActivitiesRequest::response(QNetworkR
  */
 DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
     const WorkDocsRequest::Action action, DescribeActivitiesRequest * const q)
-    : DescribeActivitiesPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
  */
 DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
     const DescribeActivitiesRequestPrivate &other, DescribeActivitiesRequest * const q)
-    : DescribeActivitiesPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetw
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, RegisterTaskDefinitionRequest * const q)
-    : RegisterTaskDefinitionPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
     const RegisterTaskDefinitionRequestPrivate &other, RegisterTaskDefinitionRequest * const q)
-    : RegisterTaskDefinitionPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

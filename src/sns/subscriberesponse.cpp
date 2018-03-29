@@ -86,7 +86,7 @@ void SubscribeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SubscribeResponse instance.
  */
 SubscribeResponsePrivate::SubscribeResponsePrivate(
-    SubscribeQueueResponse * const q) : SubscribePrivate(q)
+    SubscribeResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

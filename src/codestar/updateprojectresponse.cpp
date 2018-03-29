@@ -86,7 +86,7 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateProjectResponse instance.
  */
 UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
-    UpdateProjectQueueResponse * const q) : UpdateProjectPrivate(q)
+    UpdateProjectResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

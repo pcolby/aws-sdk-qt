@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentConfigRequest::response(QNetw
  */
 CreateDeploymentConfigRequestPrivate::CreateDeploymentConfigRequestPrivate(
     const CodeDeployRequest::Action action, CreateDeploymentConfigRequest * const q)
-    : CreateDeploymentConfigPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDeploymentConfigRequestPrivate::CreateDeploymentConfigRequestPrivate(
  */
 CreateDeploymentConfigRequestPrivate::CreateDeploymentConfigRequestPrivate(
     const CreateDeploymentConfigRequestPrivate &other, CreateDeploymentConfigRequest * const q)
-    : CreateDeploymentConfigPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

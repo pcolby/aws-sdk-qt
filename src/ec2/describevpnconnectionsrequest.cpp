@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnConnectionsRequest::response(QNetw
  */
 DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpnConnectionsRequest * const q)
-    : DescribeVpnConnectionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
  */
 DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
     const DescribeVpnConnectionsRequestPrivate &other, DescribeVpnConnectionsRequest * const q)
-    : DescribeVpnConnectionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

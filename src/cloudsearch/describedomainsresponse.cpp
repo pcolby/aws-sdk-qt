@@ -86,7 +86,7 @@ void DescribeDomainsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDomainsResponse instance.
  */
 DescribeDomainsResponsePrivate::DescribeDomainsResponsePrivate(
-    DescribeDomainsQueueResponse * const q) : DescribeDomainsPrivate(q)
+    DescribeDomainsResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkRep
  */
 RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, RegisterInstanceRequest * const q)
-    : RegisterInstancePrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
  */
 RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
     const RegisterInstanceRequestPrivate &other, RegisterInstanceRequest * const q)
-    : RegisterInstancePrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

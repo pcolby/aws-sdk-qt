@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
  */
 GetWebACLRequestPrivate::GetWebACLRequestPrivate(
     const WAFRequest::Action action, GetWebACLRequest * const q)
-    : GetWebACLPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetWebACLRequestPrivate::GetWebACLRequestPrivate(
  */
 GetWebACLRequestPrivate::GetWebACLRequestPrivate(
     const GetWebACLRequestPrivate &other, GetWebACLRequest * const q)
-    : GetWebACLPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

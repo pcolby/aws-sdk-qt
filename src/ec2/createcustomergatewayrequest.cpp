@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetwo
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
     const EC2Request::Action action, CreateCustomerGatewayRequest * const q)
-    : CreateCustomerGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
     const CreateCustomerGatewayRequestPrivate &other, CreateCustomerGatewayRequest * const q)
-    : CreateCustomerGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

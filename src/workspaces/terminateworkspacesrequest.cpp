@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetwork
  */
 TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, TerminateWorkspacesRequest * const q)
-    : TerminateWorkspacesPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
  */
 TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
     const TerminateWorkspacesRequestPrivate &other, TerminateWorkspacesRequest * const q)
-    : TerminateWorkspacesPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

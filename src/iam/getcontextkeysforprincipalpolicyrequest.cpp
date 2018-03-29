@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetContextKeysForPrincipalPolicyRequest::resp
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
     const IAMRequest::Action action, GetContextKeysForPrincipalPolicyRequest * const q)
-    : GetContextKeysForPrincipalPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicy
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
     const GetContextKeysForPrincipalPolicyRequestPrivate &other, GetContextKeysForPrincipalPolicyRequest * const q)
-    : GetContextKeysForPrincipalPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateResourceDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateResourceDefinitionResponse instance.
  */
 CreateResourceDefinitionResponsePrivate::CreateResourceDefinitionResponsePrivate(
-    CreateResourceDefinitionQueueResponse * const q) : CreateResourceDefinitionPrivate(q)
+    CreateResourceDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

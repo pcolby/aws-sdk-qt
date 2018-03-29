@@ -86,7 +86,7 @@ void RemoveAccountFromOrganizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveAccountFromOrganizationResponse instance.
  */
 RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationResponsePrivate(
-    RemoveAccountFromOrganizationQueueResponse * const q) : RemoveAccountFromOrganizationPrivate(q)
+    RemoveAccountFromOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

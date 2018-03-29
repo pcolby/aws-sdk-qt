@@ -86,7 +86,7 @@ void TranslateTextResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TranslateTextResponse instance.
  */
 TranslateTextResponsePrivate::TranslateTextResponsePrivate(
-    TranslateTextQueueResponse * const q) : TranslateTextPrivate(q)
+    TranslateTextResponse * const q) : TranslateResponsePrivate(q)
 {
 
 }

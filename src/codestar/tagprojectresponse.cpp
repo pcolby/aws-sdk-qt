@@ -86,7 +86,7 @@ void TagProjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TagProjectResponse instance.
  */
 TagProjectResponsePrivate::TagProjectResponsePrivate(
-    TagProjectQueueResponse * const q) : TagProjectPrivate(q)
+    TagProjectResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

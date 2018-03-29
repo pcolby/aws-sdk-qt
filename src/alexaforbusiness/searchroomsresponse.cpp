@@ -86,7 +86,7 @@ void SearchRoomsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchRoomsResponse instance.
  */
 SearchRoomsResponsePrivate::SearchRoomsResponsePrivate(
-    SearchRoomsQueueResponse * const q) : SearchRoomsPrivate(q)
+    SearchRoomsResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

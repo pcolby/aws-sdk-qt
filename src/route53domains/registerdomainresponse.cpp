@@ -86,7 +86,7 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterDomainResponse instance.
  */
 RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
-    RegisterDomainQueueResponse * const q) : RegisterDomainPrivate(q)
+    RegisterDomainResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

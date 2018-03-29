@@ -86,7 +86,7 @@ void ListSAMLProvidersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSAMLProvidersResponse instance.
  */
 ListSAMLProvidersResponsePrivate::ListSAMLProvidersResponsePrivate(
-    ListSAMLProvidersQueueResponse * const q) : ListSAMLProvidersPrivate(q)
+    ListSAMLProvidersResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

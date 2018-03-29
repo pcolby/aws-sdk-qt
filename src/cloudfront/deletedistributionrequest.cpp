@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkR
  */
 DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
     const CloudFrontRequest::Action action, DeleteDistributionRequest * const q)
-    : DeleteDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
  */
 DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
     const DeleteDistributionRequestPrivate &other, DeleteDistributionRequest * const q)
-    : DeleteDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetBucketCorsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBucketCorsResponse instance.
  */
 GetBucketCorsResponsePrivate::GetBucketCorsResponsePrivate(
-    GetBucketCorsQueueResponse * const q) : GetBucketCorsPrivate(q)
+    GetBucketCorsResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

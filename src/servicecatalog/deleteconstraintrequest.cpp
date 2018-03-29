@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkRep
  */
 DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteConstraintRequest * const q)
-    : DeleteConstraintPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
  */
 DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
     const DeleteConstraintRequestPrivate &other, DeleteConstraintRequest * const q)
-    : DeleteConstraintPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

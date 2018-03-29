@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * cons
  */
 ReadJobRequestPrivate::ReadJobRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadJobRequest * const q)
-    : ReadJobPrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReadJobRequestPrivate::ReadJobRequestPrivate(
  */
 ReadJobRequestPrivate::ReadJobRequestPrivate(
     const ReadJobRequestPrivate &other, ReadJobRequest * const q)
-    : ReadJobPrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

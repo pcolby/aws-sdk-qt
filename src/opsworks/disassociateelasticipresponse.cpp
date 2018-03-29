@@ -86,7 +86,7 @@ void DisassociateElasticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateElasticIpResponse instance.
  */
 DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponsePrivate(
-    DisassociateElasticIpQueueResponse * const q) : DisassociateElasticIpPrivate(q)
+    DisassociateElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

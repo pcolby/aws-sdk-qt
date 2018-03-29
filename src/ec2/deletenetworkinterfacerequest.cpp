@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetw
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, DeleteNetworkInterfaceRequest * const q)
-    : DeleteNetworkInterfacePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
     const DeleteNetworkInterfaceRequestPrivate &other, DeleteNetworkInterfaceRequest * const q)
-    : DeleteNetworkInterfacePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

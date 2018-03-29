@@ -86,7 +86,7 @@ void ListHostedZonesByNameResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHostedZonesByNameResponse instance.
  */
 ListHostedZonesByNameResponsePrivate::ListHostedZonesByNameResponsePrivate(
-    ListHostedZonesByNameQueueResponse * const q) : ListHostedZonesByNamePrivate(q)
+    ListHostedZonesByNameResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

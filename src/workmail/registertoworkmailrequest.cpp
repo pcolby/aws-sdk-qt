@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterToWorkMailRequest::response(QNetworkR
  */
 RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
     const WorkMailRequest::Action action, RegisterToWorkMailRequest * const q)
-    : RegisterToWorkMailPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
  */
 RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
     const RegisterToWorkMailRequestPrivate &other, RegisterToWorkMailRequest * const q)
-    : RegisterToWorkMailPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

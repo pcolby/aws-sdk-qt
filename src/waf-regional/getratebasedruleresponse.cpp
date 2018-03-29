@@ -86,7 +86,7 @@ void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRateBasedRuleResponse instance.
  */
 GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
-    GetRateBasedRuleQueueResponse * const q) : GetRateBasedRulePrivate(q)
+    GetRateBasedRuleResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

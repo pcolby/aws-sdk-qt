@@ -86,7 +86,7 @@ void ListTagsForDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsForDomainResponse instance.
  */
 ListTagsForDomainResponsePrivate::ListTagsForDomainResponsePrivate(
-    ListTagsForDomainQueueResponse * const q) : ListTagsForDomainPrivate(q)
+    ListTagsForDomainResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

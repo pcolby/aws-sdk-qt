@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetwor
  */
 DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
     const DirectoryServiceRequest::Action action, DeregisterEventTopicRequest * const q)
-    : DeregisterEventTopicPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
  */
 DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
     const DeregisterEventTopicRequestPrivate &other, DeregisterEventTopicRequest * const q)
-    : DeregisterEventTopicPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

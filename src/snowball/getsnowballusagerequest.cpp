@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSnowballUsageRequest::response(QNetworkRep
  */
 GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
     const SnowballRequest::Action action, GetSnowballUsageRequest * const q)
-    : GetSnowballUsagePrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
  */
 GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
     const GetSnowballUsageRequestPrivate &other, GetSnowballUsageRequest * const q)
-    : GetSnowballUsagePrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

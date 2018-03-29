@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, DeleteApplicationRequest * const q)
-    : DeleteApplicationPrivate(action, q)
+    : ServerlessApplicationRepositoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const DeleteApplicationRequestPrivate &other, DeleteApplicationRequest * const q)
-    : DeleteApplicationPrivate(other, q)
+    : ServerlessApplicationRepositoryRequestPrivate(other, q)
 {
 
 }

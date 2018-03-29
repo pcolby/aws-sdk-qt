@@ -86,7 +86,7 @@ void UpdateApplicationSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateApplicationSettingsResponse instance.
  */
 UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponsePrivate(
-    UpdateApplicationSettingsQueueResponse * const q) : UpdateApplicationSettingsPrivate(q)
+    UpdateApplicationSettingsResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

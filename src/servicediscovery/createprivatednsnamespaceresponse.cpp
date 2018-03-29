@@ -86,7 +86,7 @@ void CreatePrivateDnsNamespaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePrivateDnsNamespaceResponse instance.
  */
 CreatePrivateDnsNamespaceResponsePrivate::CreatePrivateDnsNamespaceResponsePrivate(
-    CreatePrivateDnsNamespaceQueueResponse * const q) : CreatePrivateDnsNamespacePrivate(q)
+    CreatePrivateDnsNamespaceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetw
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBParameterGroupRequest * const q)
-    : CreateDBParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
     const CreateDBParameterGroupRequestPrivate &other, CreateDBParameterGroupRequest * const q)
-    : CreateDBParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
     const APIGatewayRequest::Action action, DeleteResourceRequest * const q)
-    : DeleteResourcePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
     const DeleteResourceRequestPrivate &other, DeleteResourceRequest * const q)
-    : DeleteResourcePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

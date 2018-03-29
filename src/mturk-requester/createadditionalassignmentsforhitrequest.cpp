@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::res
  */
 CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
     const MTurkRequest::Action action, CreateAdditionalAssignmentsForHITRequest * const q)
-    : CreateAdditionalAssignmentsForHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForH
  */
 CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
     const CreateAdditionalAssignmentsForHITRequestPrivate &other, CreateAdditionalAssignmentsForHITRequest * const q)
-    : CreateAdditionalAssignmentsForHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

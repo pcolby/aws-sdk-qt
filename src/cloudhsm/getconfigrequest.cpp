@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * co
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
     const CloudHSMRequest::Action action, GetConfigRequest * const q)
-    : GetConfigPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetConfigRequestPrivate::GetConfigRequestPrivate(
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
     const GetConfigRequestPrivate &other, GetConfigRequest * const q)
-    : GetConfigPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTableVersionRequest::response(QNetworkR
  */
 DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
     const GlueRequest::Action action, DeleteTableVersionRequest * const q)
-    : DeleteTableVersionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
  */
 DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
     const DeleteTableVersionRequestPrivate &other, DeleteTableVersionRequest * const q)
-    : DeleteTableVersionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

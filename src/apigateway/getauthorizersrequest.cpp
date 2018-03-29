@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply
  */
 GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
     const APIGatewayRequest::Action action, GetAuthorizersRequest * const q)
-    : GetAuthorizersPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
  */
 GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
     const GetAuthorizersRequestPrivate &other, GetAuthorizersRequest * const q)
-    : GetAuthorizersPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

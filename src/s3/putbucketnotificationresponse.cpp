@@ -86,7 +86,7 @@ void PutBucketNotificationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketNotificationResponse instance.
  */
 PutBucketNotificationResponsePrivate::PutBucketNotificationResponsePrivate(
-    PutBucketNotificationQueueResponse * const q) : PutBucketNotificationPrivate(q)
+    PutBucketNotificationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

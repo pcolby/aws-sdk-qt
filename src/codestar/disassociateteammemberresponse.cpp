@@ -86,7 +86,7 @@ void DisassociateTeamMemberResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateTeamMemberResponse instance.
  */
 DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponsePrivate(
-    DisassociateTeamMemberQueueResponse * const q) : DisassociateTeamMemberPrivate(q)
+    DisassociateTeamMemberResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

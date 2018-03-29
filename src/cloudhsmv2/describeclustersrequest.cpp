@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const CloudHSMV2Request::Action action, DescribeClustersRequest * const q)
-    : DescribeClustersPrivate(action, q)
+    : CloudHSMV2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)
-    : DescribeClustersPrivate(other, q)
+    : CloudHSMV2RequestPrivate(other, q)
 {
 
 }

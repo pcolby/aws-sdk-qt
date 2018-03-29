@@ -86,7 +86,7 @@ void DeprecateDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeprecateDomainResponse instance.
  */
 DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
-    DeprecateDomainQueueResponse * const q) : DeprecateDomainPrivate(q)
+    DeprecateDomainResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

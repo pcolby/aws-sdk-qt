@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply *
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
     const EC2Request::Action action, ImportVolumeRequest * const q)
-    : ImportVolumePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
     const ImportVolumeRequestPrivate &other, ImportVolumeRequest * const q)
-    : ImportVolumePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

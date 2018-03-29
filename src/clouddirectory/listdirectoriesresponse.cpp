@@ -86,7 +86,7 @@ void ListDirectoriesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDirectoriesResponse instance.
  */
 ListDirectoriesResponsePrivate::ListDirectoriesResponsePrivate(
-    ListDirectoriesQueueResponse * const q) : ListDirectoriesPrivate(q)
+    ListDirectoriesResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

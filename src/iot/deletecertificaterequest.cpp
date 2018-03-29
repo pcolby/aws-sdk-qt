@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const IoTRequest::Action action, DeleteCertificateRequest * const q)
-    : DeleteCertificatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const DeleteCertificateRequestPrivate &other, DeleteCertificateRequest * const q)
-    : DeleteCertificatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

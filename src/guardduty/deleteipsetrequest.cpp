@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const GuardDutyRequest::Action action, DeleteIPSetRequest * const q)
-    : DeleteIPSetPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const DeleteIPSetRequestPrivate &other, DeleteIPSetRequest * const q)
-    : DeleteIPSetPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

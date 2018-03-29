@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNet
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
     const APIGatewayRequest::Action action, DeleteClientCertificateRequest * const q)
-    : DeleteClientCertificatePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
     const DeleteClientCertificateRequestPrivate &other, DeleteClientCertificateRequest * const q)
-    : DeleteClientCertificatePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
     const SESRequest::Action action, DeleteIdentityPolicyRequest * const q)
-    : DeleteIdentityPolicyPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
     const DeleteIdentityPolicyRequestPrivate &other, DeleteIdentityPolicyRequest * const q)
-    : DeleteIdentityPolicyPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

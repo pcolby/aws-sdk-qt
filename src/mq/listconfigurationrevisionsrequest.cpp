@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
     const MQRequest::Action action, ListConfigurationRevisionsRequest * const q)
-    : ListConfigurationRevisionsPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPriva
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
     const ListConfigurationRevisionsRequestPrivate &other, ListConfigurationRevisionsRequest * const q)
-    : ListConfigurationRevisionsPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

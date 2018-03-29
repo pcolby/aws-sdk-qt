@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityUsageRequest::response(QNetwo
  */
 DescribeIdentityUsageRequestPrivate::DescribeIdentityUsageRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeIdentityUsageRequest * const q)
-    : DescribeIdentityUsagePrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeIdentityUsageRequestPrivate::DescribeIdentityUsageRequestPrivate(
  */
 DescribeIdentityUsageRequestPrivate::DescribeIdentityUsageRequestPrivate(
     const DescribeIdentityUsageRequestPrivate &other, DescribeIdentityUsageRequest * const q)
-    : DescribeIdentityUsagePrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

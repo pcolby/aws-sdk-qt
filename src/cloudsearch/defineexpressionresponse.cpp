@@ -86,7 +86,7 @@ void DefineExpressionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DefineExpressionResponse instance.
  */
 DefineExpressionResponsePrivate::DefineExpressionResponsePrivate(
-    DefineExpressionQueueResponse * const q) : DefineExpressionPrivate(q)
+    DefineExpressionResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

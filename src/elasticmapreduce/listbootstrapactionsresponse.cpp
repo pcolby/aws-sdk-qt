@@ -86,7 +86,7 @@ void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBootstrapActionsResponse instance.
  */
 ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
-    ListBootstrapActionsQueueResponse * const q) : ListBootstrapActionsPrivate(q)
+    ListBootstrapActionsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

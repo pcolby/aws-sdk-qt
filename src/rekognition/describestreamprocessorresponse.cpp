@@ -86,7 +86,7 @@ void DescribeStreamProcessorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStreamProcessorResponse instance.
  */
 DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponsePrivate(
-    DescribeStreamProcessorQueueResponse * const q) : DescribeStreamProcessorPrivate(q)
+    DescribeStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

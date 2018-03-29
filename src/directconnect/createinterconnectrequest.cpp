@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkR
  */
 CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, CreateInterconnectRequest * const q)
-    : CreateInterconnectPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
  */
 CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
     const CreateInterconnectRequestPrivate &other, CreateInterconnectRequest * const q)
-    : CreateInterconnectPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::respo
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
     const EC2Request::Action action, DeleteEgressOnlyInternetGatewayRequest * const q)
-    : DeleteEgressOnlyInternetGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRe
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
     const DeleteEgressOnlyInternetGatewayRequestPrivate &other, DeleteEgressOnlyInternetGatewayRequest * const q)
-    : DeleteEgressOnlyInternetGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

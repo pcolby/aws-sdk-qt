@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobsRequest::response(QNetworkReply * cons
  */
 GetJobsRequestPrivate::GetJobsRequestPrivate(
     const GlueRequest::Action action, GetJobsRequest * const q)
-    : GetJobsPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobsRequestPrivate::GetJobsRequestPrivate(
  */
 GetJobsRequestPrivate::GetJobsRequestPrivate(
     const GetJobsRequestPrivate &other, GetJobsRequest * const q)
-    : GetJobsPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

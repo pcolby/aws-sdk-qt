@@ -86,7 +86,7 @@ void CreateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateComputeEnvironmentResponse instance.
  */
 CreateComputeEnvironmentResponsePrivate::CreateComputeEnvironmentResponsePrivate(
-    CreateComputeEnvironmentQueueResponse * const q) : CreateComputeEnvironmentPrivate(q)
+    CreateComputeEnvironmentResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

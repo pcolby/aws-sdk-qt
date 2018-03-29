@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetwork
  */
 DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
     const AutoScalingRequest::Action action, DetachLoadBalancersRequest * const q)
-    : DetachLoadBalancersPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
  */
 DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
     const DetachLoadBalancersRequestPrivate &other, DetachLoadBalancersRequest * const q)
-    : DetachLoadBalancersPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

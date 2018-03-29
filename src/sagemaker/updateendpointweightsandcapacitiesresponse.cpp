@@ -86,7 +86,7 @@ void UpdateEndpointWeightsAndCapacitiesResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public UpdateEndpointWeightsAndCapacitiesResponse instance.
  */
 UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAndCapacitiesResponsePrivate(
-    UpdateEndpointWeightsAndCapacitiesQueueResponse * const q) : UpdateEndpointWeightsAndCapacitiesPrivate(q)
+    UpdateEndpointWeightsAndCapacitiesResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

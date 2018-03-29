@@ -86,7 +86,7 @@ void AttachInstancesToLoadBalancerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachInstancesToLoadBalancerResponse instance.
  */
 AttachInstancesToLoadBalancerResponsePrivate::AttachInstancesToLoadBalancerResponsePrivate(
-    AttachInstancesToLoadBalancerQueueResponse * const q) : AttachInstancesToLoadBalancerPrivate(q)
+    AttachInstancesToLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

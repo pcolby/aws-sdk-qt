@@ -86,7 +86,7 @@ void UpdateDomainContactResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDomainContactResponse instance.
  */
 UpdateDomainContactResponsePrivate::UpdateDomainContactResponsePrivate(
-    UpdateDomainContactQueueResponse * const q) : UpdateDomainContactPrivate(q)
+    UpdateDomainContactResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

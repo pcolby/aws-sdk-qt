@@ -86,7 +86,7 @@ void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDBSecurityGroupResponse instance.
  */
 DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
-    DeleteDBSecurityGroupQueueResponse * const q) : DeleteDBSecurityGroupPrivate(q)
+    DeleteDBSecurityGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

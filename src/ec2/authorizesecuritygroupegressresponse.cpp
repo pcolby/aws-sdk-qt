@@ -86,7 +86,7 @@ void AuthorizeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AuthorizeSecurityGroupEgressResponse instance.
  */
 AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressResponsePrivate(
-    AuthorizeSecurityGroupEgressQueueResponse * const q) : AuthorizeSecurityGroupEgressPrivate(q)
+    AuthorizeSecurityGroupEgressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * QueryObjectsRequest::response(QNetworkReply *
  */
 QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
     const DataPipelineRequest::Action action, QueryObjectsRequest * const q)
-    : QueryObjectsPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
  */
 QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
     const QueryObjectsRequestPrivate &other, QueryObjectsRequest * const q)
-    : QueryObjectsPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

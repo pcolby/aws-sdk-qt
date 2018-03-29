@@ -86,7 +86,7 @@ void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteGeoMatchSetResponse instance.
  */
 DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
-    DeleteGeoMatchSetQueueResponse * const q) : DeleteGeoMatchSetPrivate(q)
+    DeleteGeoMatchSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

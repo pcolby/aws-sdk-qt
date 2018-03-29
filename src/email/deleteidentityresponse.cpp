@@ -86,7 +86,7 @@ void DeleteIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteIdentityResponse instance.
  */
 DeleteIdentityResponsePrivate::DeleteIdentityResponsePrivate(
-    DeleteIdentityQueueResponse * const q) : DeleteIdentityPrivate(q)
+    DeleteIdentityResponse * const q) : SESResponsePrivate(q)
 {
 
 }

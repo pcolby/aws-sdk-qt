@@ -86,7 +86,7 @@ void DescribeDeliveryChannelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDeliveryChannelsResponse instance.
  */
 DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponsePrivate(
-    DescribeDeliveryChannelsQueueResponse * const q) : DescribeDeliveryChannelsPrivate(q)
+    DescribeDeliveryChannelsResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

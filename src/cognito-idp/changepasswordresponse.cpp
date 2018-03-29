@@ -86,7 +86,7 @@ void ChangePasswordResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ChangePasswordResponse instance.
  */
 ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
-    ChangePasswordQueueResponse * const q) : ChangePasswordPrivate(q)
+    ChangePasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

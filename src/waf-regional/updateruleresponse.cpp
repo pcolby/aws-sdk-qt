@@ -86,7 +86,7 @@ void UpdateRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRuleResponse instance.
  */
 UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
-    UpdateRuleQueueResponse * const q) : UpdateRulePrivate(q)
+    UpdateRuleResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

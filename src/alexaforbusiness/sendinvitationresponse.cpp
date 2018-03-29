@@ -86,7 +86,7 @@ void SendInvitationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendInvitationResponse instance.
  */
 SendInvitationResponsePrivate::SendInvitationResponsePrivate(
-    SendInvitationQueueResponse * const q) : SendInvitationPrivate(q)
+    SendInvitationResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

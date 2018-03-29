@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkRepl
  */
 GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
     const PinpointRequest::Action action, GetEmailChannelRequest * const q)
-    : GetEmailChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
  */
 GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
     const GetEmailChannelRequestPrivate &other, GetEmailChannelRequest * const q)
-    : GetEmailChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

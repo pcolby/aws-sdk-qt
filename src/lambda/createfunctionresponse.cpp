@@ -86,7 +86,7 @@ void CreateFunctionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateFunctionResponse instance.
  */
 CreateFunctionResponsePrivate::CreateFunctionResponsePrivate(
-    CreateFunctionQueueResponse * const q) : CreateFunctionPrivate(q)
+    CreateFunctionResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

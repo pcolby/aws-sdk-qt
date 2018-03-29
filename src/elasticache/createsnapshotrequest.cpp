@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, CreateSnapshotRequest * const q)
-    : CreateSnapshotPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)
-    : CreateSnapshotPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

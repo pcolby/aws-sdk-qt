@@ -86,7 +86,7 @@ void ChangeResourceRecordSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ChangeResourceRecordSetsResponse instance.
  */
 ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponsePrivate(
-    ChangeResourceRecordSetsQueueResponse * const q) : ChangeResourceRecordSetsPrivate(q)
+    ChangeResourceRecordSetsResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

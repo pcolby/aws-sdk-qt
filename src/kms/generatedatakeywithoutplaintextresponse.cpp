@@ -86,7 +86,7 @@ void GenerateDataKeyWithoutPlaintextResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GenerateDataKeyWithoutPlaintextResponse instance.
  */
 GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextResponsePrivate(
-    GenerateDataKeyWithoutPlaintextQueueResponse * const q) : GenerateDataKeyWithoutPlaintextPrivate(q)
+    GenerateDataKeyWithoutPlaintextResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

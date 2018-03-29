@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const RDSRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
-    : DescribeEngineDefaultClusterParametersPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClust
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const DescribeEngineDefaultClusterParametersRequestPrivate &other, DescribeEngineDefaultClusterParametersRequest * const q)
-    : DescribeEngineDefaultClusterParametersPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

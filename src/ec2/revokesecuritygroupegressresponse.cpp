@@ -86,7 +86,7 @@ void RevokeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RevokeSecurityGroupEgressResponse instance.
  */
 RevokeSecurityGroupEgressResponsePrivate::RevokeSecurityGroupEgressResponsePrivate(
-    RevokeSecurityGroupEgressQueueResponse * const q) : RevokeSecurityGroupEgressPrivate(q)
+    RevokeSecurityGroupEgressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

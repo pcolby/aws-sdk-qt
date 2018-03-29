@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectModerationLabelsRequest::response(QNetw
  */
 DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
     const RekognitionRequest::Action action, DetectModerationLabelsRequest * const q)
-    : DetectModerationLabelsPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
  */
 DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
     const DetectModerationLabelsRequestPrivate &other, DetectModerationLabelsRequest * const q)
-    : DetectModerationLabelsPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

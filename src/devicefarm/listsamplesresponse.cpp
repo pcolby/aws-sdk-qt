@@ -86,7 +86,7 @@ void ListSamplesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSamplesResponse instance.
  */
 ListSamplesResponsePrivate::ListSamplesResponsePrivate(
-    ListSamplesQueueResponse * const q) : ListSamplesPrivate(q)
+    ListSamplesResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

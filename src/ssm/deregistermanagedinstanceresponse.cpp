@@ -86,7 +86,7 @@ void DeregisterManagedInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterManagedInstanceResponse instance.
  */
 DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePrivate(
-    DeregisterManagedInstanceQueueResponse * const q) : DeregisterManagedInstancePrivate(q)
+    DeregisterManagedInstanceResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

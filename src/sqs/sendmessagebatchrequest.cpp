@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkRep
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
     const SQSRequest::Action action, SendMessageBatchRequest * const q)
-    : SendMessageBatchPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
     const SendMessageBatchRequestPrivate &other, SendMessageBatchRequest * const q)
-    : SendMessageBatchPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

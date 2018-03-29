@@ -86,7 +86,7 @@ void CreateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMatchmakingConfigurationResponse instance.
  */
 CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationResponsePrivate(
-    CreateMatchmakingConfigurationQueueResponse * const q) : CreateMatchmakingConfigurationPrivate(q)
+    CreateMatchmakingConfigurationResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

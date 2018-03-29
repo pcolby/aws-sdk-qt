@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetw
  */
 DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
     const RedshiftRequest::Action action, DeleteHsmConfigurationRequest * const q)
-    : DeleteHsmConfigurationPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
  */
 DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
     const DeleteHsmConfigurationRequestPrivate &other, DeleteHsmConfigurationRequest * const q)
-    : DeleteHsmConfigurationPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

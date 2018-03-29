@@ -86,7 +86,7 @@ void DescribeMLModelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMLModelsResponse instance.
  */
 DescribeMLModelsResponsePrivate::DescribeMLModelsResponsePrivate(
-    DescribeMLModelsQueueResponse * const q) : DescribeMLModelsPrivate(q)
+    DescribeMLModelsResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetThingShadowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetThingShadowResponse instance.
  */
 GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
-    GetThingShadowQueueResponse * const q) : GetThingShadowPrivate(q)
+    GetThingShadowResponse * const q) : IoTDataPlaneResponsePrivate(q)
 {
 
 }

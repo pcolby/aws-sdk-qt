@@ -86,7 +86,7 @@ void GetDatabaseResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDatabaseResponse instance.
  */
 GetDatabaseResponsePrivate::GetDatabaseResponsePrivate(
-    GetDatabaseQueueResponse * const q) : GetDatabasePrivate(q)
+    GetDatabaseResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

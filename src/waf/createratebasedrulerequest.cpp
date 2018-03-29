@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
  */
 CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
     const WAFRequest::Action action, CreateRateBasedRuleRequest * const q)
-    : CreateRateBasedRulePrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
  */
 CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
     const CreateRateBasedRuleRequestPrivate &other, CreateRateBasedRuleRequest * const q)
-    : CreateRateBasedRulePrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

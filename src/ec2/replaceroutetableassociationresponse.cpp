@@ -86,7 +86,7 @@ void ReplaceRouteTableAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReplaceRouteTableAssociationResponse instance.
  */
 ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationResponsePrivate(
-    ReplaceRouteTableAssociationQueueResponse * const q) : ReplaceRouteTableAssociationPrivate(q)
+    ReplaceRouteTableAssociationResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

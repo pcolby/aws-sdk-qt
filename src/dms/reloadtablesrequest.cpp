@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply *
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ReloadTablesRequest * const q)
-    : ReloadTablesPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
     const ReloadTablesRequestPrivate &other, ReloadTablesRequest * const q)
-    : ReloadTablesPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartExportTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartExportTaskResponse instance.
  */
 StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
-    StartExportTaskQueueResponse * const q) : StartExportTaskPrivate(q)
+    StartExportTaskResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteMetricFilterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteMetricFilterResponse instance.
  */
 DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponsePrivate(
-    DeleteMetricFilterQueueResponse * const q) : DeleteMetricFilterPrivate(q)
+    DeleteMetricFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

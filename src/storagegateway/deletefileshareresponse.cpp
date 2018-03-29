@@ -86,7 +86,7 @@ void DeleteFileShareResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFileShareResponse instance.
  */
 DeleteFileShareResponsePrivate::DeleteFileShareResponsePrivate(
-    DeleteFileShareQueueResponse * const q) : DeleteFileSharePrivate(q)
+    DeleteFileShareResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNet
  */
 StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, StopRemoteAccessSessionRequest * const q)
-    : StopRemoteAccessSessionPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
  */
 StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
     const StopRemoteAccessSessionRequestPrivate &other, StopRemoteAccessSessionRequest * const q)
-    : StopRemoteAccessSessionPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

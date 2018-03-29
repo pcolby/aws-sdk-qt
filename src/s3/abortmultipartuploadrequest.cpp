@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const S3Request::Action action, AbortMultipartUploadRequest * const q)
-    : AbortMultipartUploadPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const AbortMultipartUploadRequestPrivate &other, AbortMultipartUploadRequest * const q)
-    : AbortMultipartUploadPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

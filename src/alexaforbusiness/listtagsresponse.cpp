@@ -86,7 +86,7 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsResponse instance.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
-    ListTagsQueueResponse * const q) : ListTagsPrivate(q)
+    ListTagsResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeTagsRequest * const q)
-    : DescribeTagsPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)
-    : DescribeTagsPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

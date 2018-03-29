@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetwo
  */
 CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreatePlatformVersionRequest * const q)
-    : CreatePlatformVersionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
  */
 CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
     const CreatePlatformVersionRequestPrivate &other, CreatePlatformVersionRequest * const q)
-    : CreatePlatformVersionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

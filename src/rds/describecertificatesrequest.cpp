@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const RDSRequest::Action action, DescribeCertificatesRequest * const q)
-    : DescribeCertificatesPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)
-    : DescribeCertificatesPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

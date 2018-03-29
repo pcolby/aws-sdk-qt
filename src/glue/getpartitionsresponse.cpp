@@ -86,7 +86,7 @@ void GetPartitionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPartitionsResponse instance.
  */
 GetPartitionsResponsePrivate::GetPartitionsResponsePrivate(
-    GetPartitionsQueueResponse * const q) : GetPartitionsPrivate(q)
+    GetPartitionsResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

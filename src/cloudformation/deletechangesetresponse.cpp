@@ -86,7 +86,7 @@ void DeleteChangeSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteChangeSetResponse instance.
  */
 DeleteChangeSetResponsePrivate::DeleteChangeSetResponsePrivate(
-    DeleteChangeSetQueueResponse * const q) : DeleteChangeSetPrivate(q)
+    DeleteChangeSetResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

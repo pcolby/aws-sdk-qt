@@ -86,7 +86,7 @@ void UpdateTagsForResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTagsForResourceResponse instance.
  */
 UpdateTagsForResourceResponsePrivate::UpdateTagsForResourceResponsePrivate(
-    UpdateTagsForResourceQueueResponse * const q) : UpdateTagsForResourcePrivate(q)
+    UpdateTagsForResourceResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkRepl
  */
 ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
     const IoTRequest::Action action, ListAuthorizersRequest * const q)
-    : ListAuthorizersPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
  */
 ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
     const ListAuthorizersRequestPrivate &other, ListAuthorizersRequest * const q)
-    : ListAuthorizersPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTemplateSummaryRequest::response(QNetworkR
  */
 GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
     const CloudFormationRequest::Action action, GetTemplateSummaryRequest * const q)
-    : GetTemplateSummaryPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
  */
 GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
     const GetTemplateSummaryRequestPrivate &other, GetTemplateSummaryRequest * const q)
-    : GetTemplateSummaryPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

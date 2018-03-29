@@ -86,7 +86,7 @@ void ResetJobBookmarkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetJobBookmarkResponse instance.
  */
 ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
-    ResetJobBookmarkQueueResponse * const q) : ResetJobBookmarkPrivate(q)
+    ResetJobBookmarkResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

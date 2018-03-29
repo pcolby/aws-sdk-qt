@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkR
  */
 GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
     const Route53Request::Action action, GetHostedZoneCountRequest * const q)
-    : GetHostedZoneCountPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
  */
 GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
     const GetHostedZoneCountRequestPrivate &other, GetHostedZoneCountRequest * const q)
-    : GetHostedZoneCountPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

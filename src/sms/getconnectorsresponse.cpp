@@ -86,7 +86,7 @@ void GetConnectorsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetConnectorsResponse instance.
  */
 GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
-    GetConnectorsQueueResponse * const q) : GetConnectorsPrivate(q)
+    GetConnectorsResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

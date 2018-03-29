@@ -86,7 +86,7 @@ void TestMetricFilterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestMetricFilterResponse instance.
  */
 TestMetricFilterResponsePrivate::TestMetricFilterResponsePrivate(
-    TestMetricFilterQueueResponse * const q) : TestMetricFilterPrivate(q)
+    TestMetricFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

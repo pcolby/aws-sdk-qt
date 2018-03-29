@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCampaignVersionsRequest::response(QNetwork
  */
 GetCampaignVersionsRequestPrivate::GetCampaignVersionsRequestPrivate(
     const PinpointRequest::Action action, GetCampaignVersionsRequest * const q)
-    : GetCampaignVersionsPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCampaignVersionsRequestPrivate::GetCampaignVersionsRequestPrivate(
  */
 GetCampaignVersionsRequestPrivate::GetCampaignVersionsRequestPrivate(
     const GetCampaignVersionsRequestPrivate &other, GetCampaignVersionsRequest * const q)
-    : GetCampaignVersionsPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCrawlerMetricsRequest::response(QNetworkRe
  */
 GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
     const GlueRequest::Action action, GetCrawlerMetricsRequest * const q)
-    : GetCrawlerMetricsPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
  */
 GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
     const GetCrawlerMetricsRequestPrivate &other, GetCrawlerMetricsRequest * const q)
-    : GetCrawlerMetricsPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkRep
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
     const EC2Request::Action action, MonitorInstancesRequest * const q)
-    : MonitorInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
     const MonitorInstancesRequestPrivate &other, MonitorInstancesRequest * const q)
-    : MonitorInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

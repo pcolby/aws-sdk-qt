@@ -86,7 +86,7 @@ void RegisterElasticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterElasticIpResponse instance.
  */
 RegisterElasticIpResponsePrivate::RegisterElasticIpResponsePrivate(
-    RegisterElasticIpQueueResponse * const q) : RegisterElasticIpPrivate(q)
+    RegisterElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

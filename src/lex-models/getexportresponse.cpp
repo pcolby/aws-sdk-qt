@@ -86,7 +86,7 @@ void GetExportResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetExportResponse instance.
  */
 GetExportResponsePrivate::GetExportResponsePrivate(
-    GetExportQueueResponse * const q) : GetExportPrivate(q)
+    GetExportResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

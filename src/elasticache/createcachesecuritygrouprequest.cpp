@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCacheSecurityGroupRequest::response(QNe
  */
 CreateCacheSecurityGroupRequestPrivate::CreateCacheSecurityGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheSecurityGroupRequest * const q)
-    : CreateCacheSecurityGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCacheSecurityGroupRequestPrivate::CreateCacheSecurityGroupRequestPrivate(
  */
 CreateCacheSecurityGroupRequestPrivate::CreateCacheSecurityGroupRequestPrivate(
     const CreateCacheSecurityGroupRequestPrivate &other, CreateCacheSecurityGroupRequest * const q)
-    : CreateCacheSecurityGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

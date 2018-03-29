@@ -68,7 +68,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public {{ClassName}} instance.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{OperationName}}QueueResponse * const q) : {{OperationName}}Private(q)
+    {{ClassName}} * const q) : {{ServiceName}}ResponsePrivate(q)
 {
 
 }

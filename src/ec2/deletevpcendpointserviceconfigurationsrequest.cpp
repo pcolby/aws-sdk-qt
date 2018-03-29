@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest
  */
 DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceConfigurationsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointServiceConfigurationsRequest * const q)
-    : DeleteVpcEndpointServiceConfigurationsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceCo
  */
 DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceConfigurationsRequestPrivate(
     const DeleteVpcEndpointServiceConfigurationsRequestPrivate &other, DeleteVpcEndpointServiceConfigurationsRequest * const q)
-    : DeleteVpcEndpointServiceConfigurationsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

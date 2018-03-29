@@ -86,7 +86,7 @@ void UpdateResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateResourceResponse instance.
  */
 UpdateResourceResponsePrivate::UpdateResourceResponsePrivate(
-    UpdateResourceQueueResponse * const q) : UpdateResourcePrivate(q)
+    UpdateResourceResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

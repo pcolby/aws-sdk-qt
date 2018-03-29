@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response
  */
 RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
     const InspectorRequest::Action action, RemoveAttributesFromFindingsRequest * const q)
-    : RemoveAttributesFromFindingsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestP
  */
 RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
     const RemoveAttributesFromFindingsRequestPrivate &other, RemoveAttributesFromFindingsRequest * const q)
-    : RemoveAttributesFromFindingsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

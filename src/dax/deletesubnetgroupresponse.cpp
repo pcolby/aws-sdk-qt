@@ -86,7 +86,7 @@ void DeleteSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSubnetGroupResponse instance.
  */
 DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
-    DeleteSubnetGroupQueueResponse * const q) : DeleteSubnetGroupPrivate(q)
+    DeleteSubnetGroupResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

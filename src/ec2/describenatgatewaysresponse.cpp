@@ -86,7 +86,7 @@ void DescribeNatGatewaysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeNatGatewaysResponse instance.
  */
 DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponsePrivate(
-    DescribeNatGatewaysQueueResponse * const q) : DescribeNatGatewaysPrivate(q)
+    DescribeNatGatewaysResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

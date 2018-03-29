@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * 
  */
 ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
     const AppSyncRequest::Action action, ListApiKeysRequest * const q)
-    : ListApiKeysPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
  */
 ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
     const ListApiKeysRequestPrivate &other, ListApiKeysRequest * const q)
-    : ListApiKeysPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

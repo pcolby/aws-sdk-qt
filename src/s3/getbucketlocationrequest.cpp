@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkRe
  */
 GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
     const S3Request::Action action, GetBucketLocationRequest * const q)
-    : GetBucketLocationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
  */
 GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
     const GetBucketLocationRequestPrivate &other, GetBucketLocationRequest * const q)
-    : GetBucketLocationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

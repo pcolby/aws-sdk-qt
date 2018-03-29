@@ -86,7 +86,7 @@ void CreateClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateClusterSubnetGroupResponse instance.
  */
 CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponsePrivate(
-    CreateClusterSubnetGroupQueueResponse * const q) : CreateClusterSubnetGroupPrivate(q)
+    CreateClusterSubnetGroupResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

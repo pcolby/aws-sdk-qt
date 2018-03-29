@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMergeConflictsRequest::response(QNetworkRe
  */
 GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
     const CodeCommitRequest::Action action, GetMergeConflictsRequest * const q)
-    : GetMergeConflictsPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
  */
 GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
     const GetMergeConflictsRequestPrivate &other, GetMergeConflictsRequest * const q)
-    : GetMergeConflictsPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

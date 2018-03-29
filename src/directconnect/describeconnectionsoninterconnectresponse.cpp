@@ -86,7 +86,7 @@ void DescribeConnectionsOnInterconnectResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public DescribeConnectionsOnInterconnectResponse instance.
  */
 DescribeConnectionsOnInterconnectResponsePrivate::DescribeConnectionsOnInterconnectResponsePrivate(
-    DescribeConnectionsOnInterconnectQueueResponse * const q) : DescribeConnectionsOnInterconnectPrivate(q)
+    DescribeConnectionsOnInterconnectResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

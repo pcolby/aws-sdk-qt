@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupEgressRequest::response(QN
  */
 RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate(
     const EC2Request::Action action, RevokeSecurityGroupEgressRequest * const q)
-    : RevokeSecurityGroupEgressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate
  */
 RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate(
     const RevokeSecurityGroupEgressRequestPrivate &other, RevokeSecurityGroupEgressRequest * const q)
-    : RevokeSecurityGroupEgressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

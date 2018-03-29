@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::respon
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, RequestCancelWorkflowExecutionRequest * const q)
-    : RequestCancelWorkflowExecutionPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequ
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
     const RequestCancelWorkflowExecutionRequestPrivate &other, RequestCancelWorkflowExecutionRequest * const q)
-    : RequestCancelWorkflowExecutionPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

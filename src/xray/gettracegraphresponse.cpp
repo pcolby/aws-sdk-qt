@@ -86,7 +86,7 @@ void GetTraceGraphResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTraceGraphResponse instance.
  */
 GetTraceGraphResponsePrivate::GetTraceGraphResponsePrivate(
-    GetTraceGraphQueueResponse * const q) : GetTraceGraphPrivate(q)
+    GetTraceGraphResponse * const q) : XRayResponsePrivate(q)
 {
 
 }

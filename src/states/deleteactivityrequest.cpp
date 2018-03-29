@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
     const SFNRequest::Action action, DeleteActivityRequest * const q)
-    : DeleteActivityPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
     const DeleteActivityRequestPrivate &other, DeleteActivityRequest * const q)
-    : DeleteActivityPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

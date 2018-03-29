@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InstallToRemoteAccessSessionRequest::response
  */
 InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, InstallToRemoteAccessSessionRequest * const q)
-    : InstallToRemoteAccessSessionPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestP
  */
 InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestPrivate(
     const InstallToRemoteAccessSessionRequestPrivate &other, InstallToRemoteAccessSessionRequest * const q)
-    : InstallToRemoteAccessSessionPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetRequest::response(QNetworkReply * 
  */
 UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
     const AppStreamRequest::Action action, UpdateFleetRequest * const q)
-    : UpdateFleetPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
  */
 UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
     const UpdateFleetRequestPrivate &other, UpdateFleetRequest * const q)
-    : UpdateFleetPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

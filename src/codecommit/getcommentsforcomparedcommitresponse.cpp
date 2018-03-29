@@ -86,7 +86,7 @@ void GetCommentsForComparedCommitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCommentsForComparedCommitResponse instance.
  */
 GetCommentsForComparedCommitResponsePrivate::GetCommentsForComparedCommitResponsePrivate(
-    GetCommentsForComparedCommitQueueResponse * const q) : GetCommentsForComparedCommitPrivate(q)
+    GetCommentsForComparedCommitResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifyInstanceAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyInstanceAttributeResponse instance.
  */
 ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponsePrivate(
-    ModifyInstanceAttributeQueueResponse * const q) : ModifyInstanceAttributePrivate(q)
+    ModifyInstanceAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const MQRequest::Action action, ListConfigurationsRequest * const q)
-    : ListConfigurationsPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)
-    : ListConfigurationsPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

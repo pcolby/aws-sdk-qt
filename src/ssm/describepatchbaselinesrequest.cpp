@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePatchBaselinesRequest::response(QNetw
  */
 DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
     const SSMRequest::Action action, DescribePatchBaselinesRequest * const q)
-    : DescribePatchBaselinesPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
  */
 DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
     const DescribePatchBaselinesRequestPrivate &other, DescribePatchBaselinesRequest * const q)
-    : DescribePatchBaselinesPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

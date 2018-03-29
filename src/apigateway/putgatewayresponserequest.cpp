@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutGatewayResponseRequest::response(QNetworkR
  */
 PutGatewayResponseRequestPrivate::PutGatewayResponseRequestPrivate(
     const APIGatewayRequest::Action action, PutGatewayResponseRequest * const q)
-    : PutGatewayResponsePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutGatewayResponseRequestPrivate::PutGatewayResponseRequestPrivate(
  */
 PutGatewayResponseRequestPrivate::PutGatewayResponseRequestPrivate(
     const PutGatewayResponseRequestPrivate &other, PutGatewayResponseRequest * const q)
-    : PutGatewayResponsePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

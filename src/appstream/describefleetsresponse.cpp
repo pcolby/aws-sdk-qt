@@ -86,7 +86,7 @@ void DescribeFleetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFleetsResponse instance.
  */
 DescribeFleetsResponsePrivate::DescribeFleetsResponsePrivate(
-    DescribeFleetsQueueResponse * const q) : DescribeFleetsPrivate(q)
+    DescribeFleetsResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

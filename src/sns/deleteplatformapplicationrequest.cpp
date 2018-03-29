@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformApplicationRequest::response(QN
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
     const SNSRequest::Action action, DeletePlatformApplicationRequest * const q)
-    : DeletePlatformApplicationPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
     const DeletePlatformApplicationRequestPrivate &other, DeletePlatformApplicationRequest * const q)
-    : DeletePlatformApplicationPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

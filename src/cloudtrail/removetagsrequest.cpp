@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const CloudTrailRequest::Action action, RemoveTagsRequest * const q)
-    : RemoveTagsPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)
-    : RemoveTagsPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

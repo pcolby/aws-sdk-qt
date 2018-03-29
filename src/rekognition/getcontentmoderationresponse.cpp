@@ -86,7 +86,7 @@ void GetContentModerationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetContentModerationResponse instance.
  */
 GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
-    GetContentModerationQueueResponse * const q) : GetContentModerationPrivate(q)
+    GetContentModerationResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

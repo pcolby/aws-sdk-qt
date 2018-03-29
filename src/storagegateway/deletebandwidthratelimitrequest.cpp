@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNe
  */
 DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteBandwidthRateLimitRequest * const q)
-    : DeleteBandwidthRateLimitPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
  */
 DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
     const DeleteBandwidthRateLimitRequestPrivate &other, DeleteBandwidthRateLimitRequest * const q)
-    : DeleteBandwidthRateLimitPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

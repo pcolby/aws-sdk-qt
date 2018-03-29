@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const KMSRequest::Action action, UpdateAliasRequest * const q)
-    : UpdateAliasPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const UpdateAliasRequestPrivate &other, UpdateAliasRequest * const q)
-    : UpdateAliasPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

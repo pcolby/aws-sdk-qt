@@ -86,7 +86,7 @@ void AssociateQualificationWithWorkerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateQualificationWithWorkerResponse instance.
  */
 AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorkerResponsePrivate(
-    AssociateQualificationWithWorkerQueueResponse * const q) : AssociateQualificationWithWorkerPrivate(q)
+    AssociateQualificationWithWorkerResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

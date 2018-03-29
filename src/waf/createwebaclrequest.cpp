@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const WAFRequest::Action action, CreateWebACLRequest * const q)
-    : CreateWebACLPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const CreateWebACLRequestPrivate &other, CreateWebACLRequest * const q)
-    : CreateWebACLPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

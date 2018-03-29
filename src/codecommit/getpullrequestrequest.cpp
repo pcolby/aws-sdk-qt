@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPullRequestRequest::response(QNetworkReply
  */
 GetPullRequestRequestPrivate::GetPullRequestRequestPrivate(
     const CodeCommitRequest::Action action, GetPullRequestRequest * const q)
-    : GetPullRequestPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPullRequestRequestPrivate::GetPullRequestRequestPrivate(
  */
 GetPullRequestRequestPrivate::GetPullRequestRequestPrivate(
     const GetPullRequestRequestPrivate &other, GetPullRequestRequest * const q)
-    : GetPullRequestPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVTLDeviceTypeRequest::response(QNetwork
  */
 UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateVTLDeviceTypeRequest * const q)
-    : UpdateVTLDeviceTypePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
  */
 UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
     const UpdateVTLDeviceTypeRequestPrivate &other, UpdateVTLDeviceTypeRequest * const q)
-    : UpdateVTLDeviceTypePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

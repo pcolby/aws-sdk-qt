@@ -86,7 +86,7 @@ void UpdateIPSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateIPSetResponse instance.
  */
 UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
-    UpdateIPSetQueueResponse * const q) : UpdateIPSetPrivate(q)
+    UpdateIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

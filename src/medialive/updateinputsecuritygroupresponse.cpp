@@ -86,7 +86,7 @@ void UpdateInputSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateInputSecurityGroupResponse instance.
  */
 UpdateInputSecurityGroupResponsePrivate::UpdateInputSecurityGroupResponsePrivate(
-    UpdateInputSecurityGroupQueueResponse * const q) : UpdateInputSecurityGroupPrivate(q)
+    UpdateInputSecurityGroupResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

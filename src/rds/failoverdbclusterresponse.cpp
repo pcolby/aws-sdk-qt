@@ -86,7 +86,7 @@ void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public FailoverDBClusterResponse instance.
  */
 FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
-    FailoverDBClusterQueueResponse * const q) : FailoverDBClusterPrivate(q)
+    FailoverDBClusterResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

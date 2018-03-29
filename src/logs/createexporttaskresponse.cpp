@@ -86,7 +86,7 @@ void CreateExportTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateExportTaskResponse instance.
  */
 CreateExportTaskResponsePrivate::CreateExportTaskResponsePrivate(
-    CreateExportTaskQueueResponse * const q) : CreateExportTaskPrivate(q)
+    CreateExportTaskResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

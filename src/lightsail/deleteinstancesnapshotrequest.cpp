@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceSnapshotRequest::response(QNetw
  */
 DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
     const LightsailRequest::Action action, DeleteInstanceSnapshotRequest * const q)
-    : DeleteInstanceSnapshotPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
  */
 DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
     const DeleteInstanceSnapshotRequestPrivate &other, DeleteInstanceSnapshotRequest * const q)
-    : DeleteInstanceSnapshotPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

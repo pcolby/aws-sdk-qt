@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply
  */
 DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
     const PollyRequest::Action action, DescribeVoicesRequest * const q)
-    : DescribeVoicesPrivate(action, q)
+    : PollyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
  */
 DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
     const DescribeVoicesRequestPrivate &other, DescribeVoicesRequest * const q)
-    : DescribeVoicesPrivate(other, q)
+    : PollyRequestPrivate(other, q)
 {
 
 }

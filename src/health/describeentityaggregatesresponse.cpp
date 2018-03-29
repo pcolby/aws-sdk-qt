@@ -86,7 +86,7 @@ void DescribeEntityAggregatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEntityAggregatesResponse instance.
  */
 DescribeEntityAggregatesResponsePrivate::DescribeEntityAggregatesResponsePrivate(
-    DescribeEntityAggregatesQueueResponse * const q) : DescribeEntityAggregatesPrivate(q)
+    DescribeEntityAggregatesResponse * const q) : HealthResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const IoTDataPlaneRequest::Action action, PublishRequest * const q)
-    : PublishPrivate(action, q)
+    : IoTDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PublishRequestPrivate::PublishRequestPrivate(
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const PublishRequestPrivate &other, PublishRequest * const q)
-    : PublishPrivate(other, q)
+    : IoTDataPlaneRequestPrivate(other, q)
 {
 
 }

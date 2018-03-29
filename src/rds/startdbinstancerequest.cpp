@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartDBInstanceRequest::response(QNetworkRepl
  */
 StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
     const RDSRequest::Action action, StartDBInstanceRequest * const q)
-    : StartDBInstancePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
  */
 StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
     const StartDBInstanceRequestPrivate &other, StartDBInstanceRequest * const q)
-    : StartDBInstancePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

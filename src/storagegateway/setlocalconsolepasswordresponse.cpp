@@ -86,7 +86,7 @@ void SetLocalConsolePasswordResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetLocalConsolePasswordResponse instance.
  */
 SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponsePrivate(
-    SetLocalConsolePasswordQueueResponse * const q) : SetLocalConsolePasswordPrivate(q)
+    SetLocalConsolePasswordResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

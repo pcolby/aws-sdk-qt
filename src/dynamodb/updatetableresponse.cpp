@@ -86,7 +86,7 @@ void UpdateTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTableResponse instance.
  */
 UpdateTableResponsePrivate::UpdateTableResponsePrivate(
-    UpdateTableQueueResponse * const q) : UpdateTablePrivate(q)
+    UpdateTableResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

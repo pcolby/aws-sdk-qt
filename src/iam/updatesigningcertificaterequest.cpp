@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSigningCertificateRequest::response(QNe
  */
 UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
     const IAMRequest::Action action, UpdateSigningCertificateRequest * const q)
-    : UpdateSigningCertificatePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
  */
 UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
     const UpdateSigningCertificateRequestPrivate &other, UpdateSigningCertificateRequest * const q)
-    : UpdateSigningCertificatePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void LookupDeveloperIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public LookupDeveloperIdentityResponse instance.
  */
 LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponsePrivate(
-    LookupDeveloperIdentityQueueResponse * const q) : LookupDeveloperIdentityPrivate(q)
+    LookupDeveloperIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

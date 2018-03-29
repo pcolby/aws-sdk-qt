@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEventSourceMappingRequest::response(QNe
  */
 UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, UpdateEventSourceMappingRequest * const q)
-    : UpdateEventSourceMappingPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
  */
 UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
     const UpdateEventSourceMappingRequestPrivate &other, UpdateEventSourceMappingRequest * const q)
-    : UpdateEventSourceMappingPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

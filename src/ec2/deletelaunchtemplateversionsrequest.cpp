@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateVersionsRequest::response
  */
 DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestPrivate(
     const EC2Request::Action action, DeleteLaunchTemplateVersionsRequest * const q)
-    : DeleteLaunchTemplateVersionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestP
  */
 DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestPrivate(
     const DeleteLaunchTemplateVersionsRequestPrivate &other, DeleteLaunchTemplateVersionsRequest * const q)
-    : DeleteLaunchTemplateVersionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const SSMRequest::Action action, AddTagsToResourceRequest * const q)
-    : AddTagsToResourcePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : AddTagsToResourcePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

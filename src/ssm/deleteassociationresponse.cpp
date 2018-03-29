@@ -86,7 +86,7 @@ void DeleteAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAssociationResponse instance.
  */
 DeleteAssociationResponsePrivate::DeleteAssociationResponsePrivate(
-    DeleteAssociationQueueResponse * const q) : DeleteAssociationPrivate(q)
+    DeleteAssociationResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

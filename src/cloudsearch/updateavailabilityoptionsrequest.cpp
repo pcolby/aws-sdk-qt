@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAvailabilityOptionsRequest::response(QN
  */
 UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate(
     const CloudSearchRequest::Action action, UpdateAvailabilityOptionsRequest * const q)
-    : UpdateAvailabilityOptionsPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate
  */
 UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate(
     const UpdateAvailabilityOptionsRequestPrivate &other, UpdateAvailabilityOptionsRequest * const q)
-    : UpdateAvailabilityOptionsPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListJobTemplatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListJobTemplatesResponse instance.
  */
 ListJobTemplatesResponsePrivate::ListJobTemplatesResponsePrivate(
-    ListJobTemplatesQueueResponse * const q) : ListJobTemplatesPrivate(q)
+    ListJobTemplatesResponse * const q) : MediaConvertResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void RebuildWorkspacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebuildWorkspacesResponse instance.
  */
 RebuildWorkspacesResponsePrivate::RebuildWorkspacesResponsePrivate(
-    RebuildWorkspacesQueueResponse * const q) : RebuildWorkspacesPrivate(q)
+    RebuildWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
 {
 
 }

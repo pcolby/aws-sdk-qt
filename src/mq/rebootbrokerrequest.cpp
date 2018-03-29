@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
     const MQRequest::Action action, RebootBrokerRequest * const q)
-    : RebootBrokerPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
     const RebootBrokerRequestPrivate &other, RebootBrokerRequest * const q)
-    : RebootBrokerPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunAgentsRequest::response(QNet
  */
 ListAssessmentRunAgentsRequestPrivate::ListAssessmentRunAgentsRequestPrivate(
     const InspectorRequest::Action action, ListAssessmentRunAgentsRequest * const q)
-    : ListAssessmentRunAgentsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAssessmentRunAgentsRequestPrivate::ListAssessmentRunAgentsRequestPrivate(
  */
 ListAssessmentRunAgentsRequestPrivate::ListAssessmentRunAgentsRequestPrivate(
     const ListAssessmentRunAgentsRequestPrivate &other, ListAssessmentRunAgentsRequest * const q)
-    : ListAssessmentRunAgentsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

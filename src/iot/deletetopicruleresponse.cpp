@@ -86,7 +86,7 @@ void DeleteTopicRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTopicRuleResponse instance.
  */
 DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponsePrivate(
-    DeleteTopicRuleQueueResponse * const q) : DeleteTopicRulePrivate(q)
+    DeleteTopicRuleResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

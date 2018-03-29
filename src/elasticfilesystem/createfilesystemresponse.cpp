@@ -86,7 +86,7 @@ void CreateFileSystemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateFileSystemResponse instance.
  */
 CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
-    CreateFileSystemQueueResponse * const q) : CreateFileSystemPrivate(q)
+    CreateFileSystemResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

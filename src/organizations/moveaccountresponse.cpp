@@ -86,7 +86,7 @@ void MoveAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MoveAccountResponse instance.
  */
 MoveAccountResponsePrivate::MoveAccountResponsePrivate(
-    MoveAccountQueueResponse * const q) : MoveAccountPrivate(q)
+    MoveAccountResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AdminResetUserPasswordResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminResetUserPasswordResponse instance.
  */
 AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponsePrivate(
-    AdminResetUserPasswordQueueResponse * const q) : AdminResetUserPasswordPrivate(q)
+    AdminResetUserPasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

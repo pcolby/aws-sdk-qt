@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MergePullRequestByFastForwardRequest::respons
  */
 MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
     const CodeCommitRequest::Action action, MergePullRequestByFastForwardRequest * const q)
-    : MergePullRequestByFastForwardPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardReques
  */
 MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
     const MergePullRequestByFastForwardRequestPrivate &other, MergePullRequestByFastForwardRequest * const q)
-    : MergePullRequestByFastForwardPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

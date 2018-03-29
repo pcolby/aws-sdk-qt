@@ -86,7 +86,7 @@ void UpdateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateLoggerDefinitionResponse instance.
  */
 UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponsePrivate(
-    UpdateLoggerDefinitionQueueResponse * const q) : UpdateLoggerDefinitionPrivate(q)
+    UpdateLoggerDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

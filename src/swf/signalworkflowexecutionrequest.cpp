@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNet
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, SignalWorkflowExecutionRequest * const q)
-    : SignalWorkflowExecutionPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
     const SignalWorkflowExecutionRequestPrivate &other, SignalWorkflowExecutionRequest * const q)
-    : SignalWorkflowExecutionPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

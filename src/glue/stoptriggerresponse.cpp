@@ -86,7 +86,7 @@ void StopTriggerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopTriggerResponse instance.
  */
 StopTriggerResponsePrivate::StopTriggerResponsePrivate(
-    StopTriggerQueueResponse * const q) : StopTriggerPrivate(q)
+    StopTriggerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

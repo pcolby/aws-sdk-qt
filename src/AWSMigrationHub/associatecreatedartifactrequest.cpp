@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNe
  */
 AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
     const MigrationHubRequest::Action action, AssociateCreatedArtifactRequest * const q)
-    : AssociateCreatedArtifactPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
  */
 AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
     const AssociateCreatedArtifactRequestPrivate &other, AssociateCreatedArtifactRequest * const q)
-    : AssociateCreatedArtifactPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

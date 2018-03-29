@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetwo
  */
 UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
     const MTurkRequest::Action action, UpdateHITReviewStatusRequest * const q)
-    : UpdateHITReviewStatusPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
  */
 UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
     const UpdateHITReviewStatusRequestPrivate &other, UpdateHITReviewStatusRequest * const q)
-    : UpdateHITReviewStatusPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

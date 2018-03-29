@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const WAFRequest::Action action, ListWebACLsRequest * const q)
-    : ListWebACLsPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const ListWebACLsRequestPrivate &other, ListWebACLsRequest * const q)
-    : ListWebACLsPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::resp
  */
 UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
     const ServiceDiscoveryRequest::Action action, UpdateInstanceCustomHealthStatusRequest * const q)
-    : UpdateInstanceCustomHealthStatusPrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatus
  */
 UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
     const UpdateInstanceCustomHealthStatusRequestPrivate &other, UpdateInstanceCustomHealthStatusRequest * const q)
-    : UpdateInstanceCustomHealthStatusPrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

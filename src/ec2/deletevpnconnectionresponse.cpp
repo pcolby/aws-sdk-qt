@@ -86,7 +86,7 @@ void DeleteVpnConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVpnConnectionResponse instance.
  */
 DeleteVpnConnectionResponsePrivate::DeleteVpnConnectionResponsePrivate(
-    DeleteVpnConnectionQueueResponse * const q) : DeleteVpnConnectionPrivate(q)
+    DeleteVpnConnectionResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

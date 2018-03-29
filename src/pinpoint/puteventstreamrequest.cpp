@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutEventStreamRequest::response(QNetworkReply
  */
 PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
     const PinpointRequest::Action action, PutEventStreamRequest * const q)
-    : PutEventStreamPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
  */
 PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
     const PutEventStreamRequestPrivate &other, PutEventStreamRequest * const q)
-    : PutEventStreamPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAlarmsRequest::response(QNetworkReply *
  */
 DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
     const CloudWatchRequest::Action action, DeleteAlarmsRequest * const q)
-    : DeleteAlarmsPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
  */
 DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
     const DeleteAlarmsRequestPrivate &other, DeleteAlarmsRequest * const q)
-    : DeleteAlarmsPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetQueryResultsRequest::response(QNetworkRepl
  */
 GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
     const AthenaRequest::Action action, GetQueryResultsRequest * const q)
-    : GetQueryResultsPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
  */
 GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
     const GetQueryResultsRequestPrivate &other, GetQueryResultsRequest * const q)
-    : GetQueryResultsPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

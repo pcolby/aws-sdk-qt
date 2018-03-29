@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkRepl
  */
 ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
     const GuardDutyRequest::Action action, ArchiveFindingsRequest * const q)
-    : ArchiveFindingsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
  */
 ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
     const ArchiveFindingsRequestPrivate &other, ArchiveFindingsRequest * const q)
-    : ArchiveFindingsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

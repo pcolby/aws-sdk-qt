@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupPolicyRequest::response(QNetworkReply
  */
 GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
     const IAMRequest::Action action, GetGroupPolicyRequest * const q)
-    : GetGroupPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
  */
 GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
     const GetGroupPolicyRequestPrivate &other, GetGroupPolicyRequest * const q)
-    : GetGroupPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

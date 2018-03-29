@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetw
  */
 DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, DetachNetworkInterfaceRequest * const q)
-    : DetachNetworkInterfacePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
  */
 DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
     const DetachNetworkInterfaceRequestPrivate &other, DetachNetworkInterfaceRequest * const q)
-    : DetachNetworkInterfacePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateEndpointResponse instance.
  */
 CreateEndpointResponsePrivate::CreateEndpointResponsePrivate(
-    CreateEndpointQueueResponse * const q) : CreateEndpointPrivate(q)
+    CreateEndpointResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

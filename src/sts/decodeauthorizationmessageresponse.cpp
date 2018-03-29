@@ -86,7 +86,7 @@ void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DecodeAuthorizationMessageResponse instance.
  */
 DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePrivate(
-    DecodeAuthorizationMessageQueueResponse * const q) : DecodeAuthorizationMessagePrivate(q)
+    DecodeAuthorizationMessageResponse * const q) : STSResponsePrivate(q)
 {
 
 }

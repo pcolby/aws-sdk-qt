@@ -86,7 +86,7 @@ void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutScalingPolicyResponse instance.
  */
 PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
-    PutScalingPolicyQueueResponse * const q) : PutScalingPolicyPrivate(q)
+    PutScalingPolicyResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
 {
 
 }

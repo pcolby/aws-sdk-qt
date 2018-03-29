@@ -86,7 +86,7 @@ void GetMetricStatisticsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetMetricStatisticsResponse instance.
  */
 GetMetricStatisticsResponsePrivate::GetMetricStatisticsResponsePrivate(
-    GetMetricStatisticsQueueResponse * const q) : GetMetricStatisticsPrivate(q)
+    GetMetricStatisticsResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

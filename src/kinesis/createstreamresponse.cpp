@@ -86,7 +86,7 @@ void CreateStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateStreamResponse instance.
  */
 CreateStreamResponsePrivate::CreateStreamResponsePrivate(
-    CreateStreamQueueResponse * const q) : CreateStreamPrivate(q)
+    CreateStreamResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

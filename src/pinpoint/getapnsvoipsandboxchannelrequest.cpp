@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetApnsVoipSandboxChannelRequest::response(QN
  */
 GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, GetApnsVoipSandboxChannelRequest * const q)
-    : GetApnsVoipSandboxChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate
  */
 GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate(
     const GetApnsVoipSandboxChannelRequestPrivate &other, GetApnsVoipSandboxChannelRequest * const q)
-    : GetApnsVoipSandboxChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

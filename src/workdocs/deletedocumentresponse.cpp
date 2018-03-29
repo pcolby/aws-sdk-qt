@@ -86,7 +86,7 @@ void DeleteDocumentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDocumentResponse instance.
  */
 DeleteDocumentResponsePrivate::DeleteDocumentResponsePrivate(
-    DeleteDocumentQueueResponse * const q) : DeleteDocumentPrivate(q)
+    DeleteDocumentResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

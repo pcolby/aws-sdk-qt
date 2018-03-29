@@ -86,7 +86,7 @@ void GetRateBasedRuleManagedKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRateBasedRuleManagedKeysResponse instance.
  */
 GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponsePrivate(
-    GetRateBasedRuleManagedKeysQueueResponse * const q) : GetRateBasedRuleManagedKeysPrivate(q)
+    GetRateBasedRuleManagedKeysResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

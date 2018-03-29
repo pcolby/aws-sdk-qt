@@ -86,7 +86,7 @@ void CreateClusterSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateClusterSnapshotResponse instance.
  */
 CreateClusterSnapshotResponsePrivate::CreateClusterSnapshotResponsePrivate(
-    CreateClusterSnapshotQueueResponse * const q) : CreateClusterSnapshotPrivate(q)
+    CreateClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGatewayRequest::response(QNetworkReply 
  */
 DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteGatewayRequest * const q)
-    : DeleteGatewayPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
  */
 DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
     const DeleteGatewayRequestPrivate &other, DeleteGatewayRequest * const q)
-    : DeleteGatewayPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

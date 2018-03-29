@@ -86,7 +86,7 @@ void GetIndexingConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIndexingConfigurationResponse instance.
  */
 GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponsePrivate(
-    GetIndexingConfigurationQueueResponse * const q) : GetIndexingConfigurationPrivate(q)
+    GetIndexingConfigurationResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ValidateTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ValidateTemplateResponse instance.
  */
 ValidateTemplateResponsePrivate::ValidateTemplateResponsePrivate(
-    ValidateTemplateQueueResponse * const q) : ValidateTemplatePrivate(q)
+    ValidateTemplateResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

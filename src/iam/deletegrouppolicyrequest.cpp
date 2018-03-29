@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkRe
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
     const IAMRequest::Action action, DeleteGroupPolicyRequest * const q)
-    : DeleteGroupPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
     const DeleteGroupPolicyRequestPrivate &other, DeleteGroupPolicyRequest * const q)
-    : DeleteGroupPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

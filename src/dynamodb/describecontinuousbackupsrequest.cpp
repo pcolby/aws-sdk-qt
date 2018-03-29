@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeContinuousBackupsRequest::response(QN
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
     const DynamoDBRequest::Action action, DescribeContinuousBackupsRequest * const q)
-    : DescribeContinuousBackupsPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
     const DescribeContinuousBackupsRequestPrivate &other, DescribeContinuousBackupsRequest * const q)
-    : DescribeContinuousBackupsPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

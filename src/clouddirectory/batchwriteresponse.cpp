@@ -86,7 +86,7 @@ void BatchWriteResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchWriteResponse instance.
  */
 BatchWriteResponsePrivate::BatchWriteResponsePrivate(
-    BatchWriteQueueResponse * const q) : BatchWritePrivate(q)
+    BatchWriteResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

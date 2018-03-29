@@ -86,7 +86,7 @@ void CreateSchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSchemaResponse instance.
  */
 CreateSchemaResponsePrivate::CreateSchemaResponsePrivate(
-    CreateSchemaQueueResponse * const q) : CreateSchemaPrivate(q)
+    CreateSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

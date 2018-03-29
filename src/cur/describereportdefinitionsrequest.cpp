@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QN
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, DescribeReportDefinitionsRequest * const q)
-    : DescribeReportDefinitionsPrivate(action, q)
+    : CostandUsageReportServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
     const DescribeReportDefinitionsRequestPrivate &other, DescribeReportDefinitionsRequest * const q)
-    : DescribeReportDefinitionsPrivate(other, q)
+    : CostandUsageReportServiceRequestPrivate(other, q)
 {
 
 }

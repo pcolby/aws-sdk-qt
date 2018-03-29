@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTargetsByRuleRequest::response(QNetworkRe
  */
 ListTargetsByRuleRequestPrivate::ListTargetsByRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, ListTargetsByRuleRequest * const q)
-    : ListTargetsByRulePrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTargetsByRuleRequestPrivate::ListTargetsByRuleRequestPrivate(
  */
 ListTargetsByRuleRequestPrivate::ListTargetsByRuleRequestPrivate(
     const ListTargetsByRuleRequestPrivate &other, ListTargetsByRuleRequest * const q)
-    : ListTargetsByRulePrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

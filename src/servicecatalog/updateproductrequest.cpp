@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProductRequest::response(QNetworkReply 
  */
 UpdateProductRequestPrivate::UpdateProductRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateProductRequest * const q)
-    : UpdateProductPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateProductRequestPrivate::UpdateProductRequestPrivate(
  */
 UpdateProductRequestPrivate::UpdateProductRequestPrivate(
     const UpdateProductRequestPrivate &other, UpdateProductRequest * const q)
-    : UpdateProductPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

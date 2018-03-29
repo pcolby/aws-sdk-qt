@@ -86,7 +86,7 @@ void AssociateNodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateNodeResponse instance.
  */
 AssociateNodeResponsePrivate::AssociateNodeResponsePrivate(
-    AssociateNodeQueueResponse * const q) : AssociateNodePrivate(q)
+    AssociateNodeResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

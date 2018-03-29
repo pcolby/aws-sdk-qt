@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ValidateConfigurationSettingsRequest::respons
  */
 ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ValidateConfigurationSettingsRequest * const q)
-    : ValidateConfigurationSettingsPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsReques
  */
 ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
     const ValidateConfigurationSettingsRequestPrivate &other, ValidateConfigurationSettingsRequest * const q)
-    : ValidateConfigurationSettingsPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

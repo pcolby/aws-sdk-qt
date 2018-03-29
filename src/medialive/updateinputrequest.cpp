@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * 
  */
 UpdateInputRequestPrivate::UpdateInputRequestPrivate(
     const MediaLiveRequest::Action action, UpdateInputRequest * const q)
-    : UpdateInputPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateInputRequestPrivate::UpdateInputRequestPrivate(
  */
 UpdateInputRequestPrivate::UpdateInputRequestPrivate(
     const UpdateInputRequestPrivate &other, UpdateInputRequest * const q)
-    : UpdateInputPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

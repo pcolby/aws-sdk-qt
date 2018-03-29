@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateExportJobRequest::response(QNetworkRepl
  */
 CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
     const PinpointRequest::Action action, CreateExportJobRequest * const q)
-    : CreateExportJobPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
  */
 CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
     const CreateExportJobRequestPrivate &other, CreateExportJobRequest * const q)
-    : CreateExportJobPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

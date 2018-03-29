@@ -86,7 +86,7 @@ void ResolveAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResolveAliasResponse instance.
  */
 ResolveAliasResponsePrivate::ResolveAliasResponsePrivate(
-    ResolveAliasQueueResponse * const q) : ResolveAliasPrivate(q)
+    ResolveAliasResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

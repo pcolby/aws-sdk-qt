@@ -86,7 +86,7 @@ void GetImportJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetImportJobResponse instance.
  */
 GetImportJobResponsePrivate::GetImportJobResponsePrivate(
-    GetImportJobQueueResponse * const q) : GetImportJobPrivate(q)
+    GetImportJobResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkR
  */
 PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
     const MediaStoreRequest::Action action, PutContainerPolicyRequest * const q)
-    : PutContainerPolicyPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
  */
 PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
     const PutContainerPolicyRequestPrivate &other, PutContainerPolicyRequest * const q)
-    : PutContainerPolicyPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

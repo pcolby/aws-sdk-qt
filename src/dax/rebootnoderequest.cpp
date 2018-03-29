@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
     const DAXRequest::Action action, RebootNodeRequest * const q)
-    : RebootNodePrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootNodeRequestPrivate::RebootNodeRequestPrivate(
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
     const RebootNodeRequestPrivate &other, RebootNodeRequest * const q)
-    : RebootNodePrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

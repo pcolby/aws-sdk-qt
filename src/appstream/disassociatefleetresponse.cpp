@@ -86,7 +86,7 @@ void DisassociateFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateFleetResponse instance.
  */
 DisassociateFleetResponsePrivate::DisassociateFleetResponsePrivate(
-    DisassociateFleetQueueResponse * const q) : DisassociateFleetPrivate(q)
+    DisassociateFleetResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

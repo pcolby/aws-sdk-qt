@@ -86,7 +86,7 @@ void ListSubscriptionDefinitionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSubscriptionDefinitionsResponse instance.
  */
 ListSubscriptionDefinitionsResponsePrivate::ListSubscriptionDefinitionsResponsePrivate(
-    ListSubscriptionDefinitionsQueueResponse * const q) : ListSubscriptionDefinitionsPrivate(q)
+    ListSubscriptionDefinitionsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

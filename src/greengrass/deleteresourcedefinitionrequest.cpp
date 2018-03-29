@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDefinitionRequest::response(QNe
  */
 DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteResourceDefinitionRequest * const q)
-    : DeleteResourceDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
  */
 DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
     const DeleteResourceDefinitionRequestPrivate &other, DeleteResourceDefinitionRequest * const q)
-    : DeleteResourceDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

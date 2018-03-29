@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkRep
  */
 GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
     const GuardDutyRequest::Action action, GetMasterAccountRequest * const q)
-    : GetMasterAccountPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
  */
 GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
     const GetMasterAccountRequestPrivate &other, GetMasterAccountRequest * const q)
-    : GetMasterAccountPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

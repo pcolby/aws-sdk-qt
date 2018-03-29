@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QN
  */
 DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentHealthRequest * const q)
-    : DescribeEnvironmentHealthPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate
  */
 DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
     const DescribeEnvironmentHealthRequestPrivate &other, DescribeEnvironmentHealthRequest * const q)
-    : DescribeEnvironmentHealthPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

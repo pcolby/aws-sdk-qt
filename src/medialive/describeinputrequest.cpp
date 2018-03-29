@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply 
  */
 DescribeInputRequestPrivate::DescribeInputRequestPrivate(
     const MediaLiveRequest::Action action, DescribeInputRequest * const q)
-    : DescribeInputPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInputRequestPrivate::DescribeInputRequestPrivate(
  */
 DescribeInputRequestPrivate::DescribeInputRequestPrivate(
     const DescribeInputRequestPrivate &other, DescribeInputRequest * const q)
-    : DescribeInputPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

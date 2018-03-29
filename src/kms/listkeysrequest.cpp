@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListKeysRequest::response(QNetworkReply * con
  */
 ListKeysRequestPrivate::ListKeysRequestPrivate(
     const KMSRequest::Action action, ListKeysRequest * const q)
-    : ListKeysPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListKeysRequestPrivate::ListKeysRequestPrivate(
  */
 ListKeysRequestPrivate::ListKeysRequestPrivate(
     const ListKeysRequestPrivate &other, ListKeysRequest * const q)
-    : ListKeysPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateSAMLProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSAMLProviderResponse instance.
  */
 CreateSAMLProviderResponsePrivate::CreateSAMLProviderResponsePrivate(
-    CreateSAMLProviderQueueResponse * const q) : CreateSAMLProviderPrivate(q)
+    CreateSAMLProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartWorkflowExecutionResponse instance.
  */
 StartWorkflowExecutionResponsePrivate::StartWorkflowExecutionResponsePrivate(
-    StartWorkflowExecutionQueueResponse * const q) : StartWorkflowExecutionPrivate(q)
+    StartWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

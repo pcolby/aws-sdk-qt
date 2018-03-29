@@ -86,7 +86,7 @@ void DeletePortfolioResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePortfolioResponse instance.
  */
 DeletePortfolioResponsePrivate::DeletePortfolioResponsePrivate(
-    DeletePortfolioQueueResponse * const q) : DeletePortfolioPrivate(q)
+    DeletePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

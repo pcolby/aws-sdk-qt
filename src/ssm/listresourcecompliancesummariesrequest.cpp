@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceComplianceSummariesRequest::respo
  */
 ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
     const SSMRequest::Action action, ListResourceComplianceSummariesRequest * const q)
-    : ListResourceComplianceSummariesPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRe
  */
 ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
     const ListResourceComplianceSummariesRequestPrivate &other, ListResourceComplianceSummariesRequest * const q)
-    : ListResourceComplianceSummariesPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

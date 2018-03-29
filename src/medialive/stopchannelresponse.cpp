@@ -86,7 +86,7 @@ void StopChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopChannelResponse instance.
  */
 StopChannelResponsePrivate::StopChannelResponsePrivate(
-    StopChannelQueueResponse * const q) : StopChannelPrivate(q)
+    StopChannelResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

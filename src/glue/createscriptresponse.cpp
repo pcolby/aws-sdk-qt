@@ -86,7 +86,7 @@ void CreateScriptResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateScriptResponse instance.
  */
 CreateScriptResponsePrivate::CreateScriptResponsePrivate(
-    CreateScriptQueueResponse * const q) : CreateScriptPrivate(q)
+    CreateScriptResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

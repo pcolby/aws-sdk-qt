@@ -86,7 +86,7 @@ void StopRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopRemoteAccessSessionResponse instance.
  */
 StopRemoteAccessSessionResponsePrivate::StopRemoteAccessSessionResponsePrivate(
-    StopRemoteAccessSessionQueueResponse * const q) : StopRemoteAccessSessionPrivate(q)
+    StopRemoteAccessSessionResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotScheduleRequest::response(QNe
  */
 DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeSnapshotScheduleRequest * const q)
-    : DescribeSnapshotSchedulePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
  */
 DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
     const DescribeSnapshotScheduleRequestPrivate &other, DescribeSnapshotScheduleRequest * const q)
-    : DescribeSnapshotSchedulePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkRe
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
     const KMSRequest::Action action, ImportKeyMaterialRequest * const q)
-    : ImportKeyMaterialPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
     const ImportKeyMaterialRequestPrivate &other, ImportKeyMaterialRequest * const q)
-    : ImportKeyMaterialPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

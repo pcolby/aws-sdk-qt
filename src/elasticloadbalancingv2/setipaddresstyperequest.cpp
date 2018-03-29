@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIpAddressTypeRequest::response(QNetworkRep
  */
 SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetIpAddressTypeRequest * const q)
-    : SetIpAddressTypePrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
  */
 SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
     const SetIpAddressTypeRequestPrivate &other, SetIpAddressTypeRequest * const q)
-    : SetIpAddressTypePrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

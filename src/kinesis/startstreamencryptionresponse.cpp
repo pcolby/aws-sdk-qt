@@ -86,7 +86,7 @@ void StartStreamEncryptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartStreamEncryptionResponse instance.
  */
 StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponsePrivate(
-    StartStreamEncryptionQueueResponse * const q) : StartStreamEncryptionPrivate(q)
+    StartStreamEncryptionResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

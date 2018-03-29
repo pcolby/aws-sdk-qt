@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BulkPublishRequest::response(QNetworkReply * 
  */
 BulkPublishRequestPrivate::BulkPublishRequestPrivate(
     const CognitoSyncRequest::Action action, BulkPublishRequest * const q)
-    : BulkPublishPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BulkPublishRequestPrivate::BulkPublishRequestPrivate(
  */
 BulkPublishRequestPrivate::BulkPublishRequestPrivate(
     const BulkPublishRequestPrivate &other, BulkPublishRequest * const q)
-    : BulkPublishPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

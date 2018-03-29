@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkRepl
  */
 UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdatePortfolioRequest * const q)
-    : UpdatePortfolioPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
  */
 UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
     const UpdatePortfolioRequestPrivate &other, UpdatePortfolioRequest * const q)
-    : UpdatePortfolioPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

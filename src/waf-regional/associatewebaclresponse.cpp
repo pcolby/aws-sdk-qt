@@ -86,7 +86,7 @@ void AssociateWebACLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateWebACLResponse instance.
  */
 AssociateWebACLResponsePrivate::AssociateWebACLResponsePrivate(
-    AssociateWebACLQueueResponse * const q) : AssociateWebACLPrivate(q)
+    AssociateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

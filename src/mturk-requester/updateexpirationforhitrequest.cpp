@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetw
  */
 UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
     const MTurkRequest::Action action, UpdateExpirationForHITRequest * const q)
-    : UpdateExpirationForHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
  */
 UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
     const UpdateExpirationForHITRequestPrivate &other, UpdateExpirationForHITRequest * const q)
-    : UpdateExpirationForHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

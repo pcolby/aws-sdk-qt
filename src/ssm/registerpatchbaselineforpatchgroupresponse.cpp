@@ -86,7 +86,7 @@ void RegisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public RegisterPatchBaselineForPatchGroupResponse instance.
  */
 RegisterPatchBaselineForPatchGroupResponsePrivate::RegisterPatchBaselineForPatchGroupResponsePrivate(
-    RegisterPatchBaselineForPatchGroupQueueResponse * const q) : RegisterPatchBaselineForPatchGroupPrivate(q)
+    RegisterPatchBaselineForPatchGroupResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

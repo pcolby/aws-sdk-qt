@@ -86,7 +86,7 @@ void ImportVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportVolumeResponse instance.
  */
 ImportVolumeResponsePrivate::ImportVolumeResponsePrivate(
-    ImportVolumeQueueResponse * const q) : ImportVolumePrivate(q)
+    ImportVolumeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

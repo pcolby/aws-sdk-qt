@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * co
  */
 DeleteJobRequestPrivate::DeleteJobRequestPrivate(
     const GlueRequest::Action action, DeleteJobRequest * const q)
-    : DeleteJobPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteJobRequestPrivate::DeleteJobRequestPrivate(
  */
 DeleteJobRequestPrivate::DeleteJobRequestPrivate(
     const DeleteJobRequestPrivate &other, DeleteJobRequest * const q)
-    : DeleteJobPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

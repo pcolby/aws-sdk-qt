@@ -86,7 +86,7 @@ void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLoadBalancerResponse instance.
  */
 DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
-    DeleteLoadBalancerQueueResponse * const q) : DeleteLoadBalancerPrivate(q)
+    DeleteLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

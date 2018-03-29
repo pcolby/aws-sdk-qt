@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationConfigurationRequest::re
  */
 PutBucketNotificationConfigurationRequestPrivate::PutBucketNotificationConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketNotificationConfigurationRequest * const q)
-    : PutBucketNotificationConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketNotificationConfigurationRequestPrivate::PutBucketNotificationConfigura
  */
 PutBucketNotificationConfigurationRequestPrivate::PutBucketNotificationConfigurationRequestPrivate(
     const PutBucketNotificationConfigurationRequestPrivate &other, PutBucketNotificationConfigurationRequest * const q)
-    : PutBucketNotificationConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

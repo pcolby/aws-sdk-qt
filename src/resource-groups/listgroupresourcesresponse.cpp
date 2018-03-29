@@ -86,7 +86,7 @@ void ListGroupResourcesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGroupResourcesResponse instance.
  */
 ListGroupResourcesResponsePrivate::ListGroupResourcesResponsePrivate(
-    ListGroupResourcesQueueResponse * const q) : ListGroupResourcesPrivate(q)
+    ListGroupResourcesResponse * const q) : ResourceGroupsResponsePrivate(q)
 {
 
 }

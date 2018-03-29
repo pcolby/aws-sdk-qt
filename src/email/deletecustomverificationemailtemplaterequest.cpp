@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest:
  */
 DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, DeleteCustomVerificationEmailTemplateRequest * const q)
-    : DeleteCustomVerificationEmailTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEma
  */
 DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
     const DeleteCustomVerificationEmailTemplateRequestPrivate &other, DeleteCustomVerificationEmailTemplateRequest * const q)
-    : DeleteCustomVerificationEmailTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

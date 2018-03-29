@@ -86,7 +86,7 @@ void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteResourcePolicyResponse instance.
  */
 DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponsePrivate(
-    DeleteResourcePolicyQueueResponse * const q) : DeleteResourcePolicyPrivate(q)
+    DeleteResourcePolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

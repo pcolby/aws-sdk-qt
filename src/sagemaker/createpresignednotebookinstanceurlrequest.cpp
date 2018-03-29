@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::re
  */
 CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanceUrlRequestPrivate(
     const SageMakerRequest::Action action, CreatePresignedNotebookInstanceUrlRequest * const q)
-    : CreatePresignedNotebookInstanceUrlPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanc
  */
 CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanceUrlRequestPrivate(
     const CreatePresignedNotebookInstanceUrlRequestPrivate &other, CreatePresignedNotebookInstanceUrlRequest * const q)
-    : CreatePresignedNotebookInstanceUrlPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

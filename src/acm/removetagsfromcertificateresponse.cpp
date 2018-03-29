@@ -86,7 +86,7 @@ void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveTagsFromCertificateResponse instance.
  */
 RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePrivate(
-    RemoveTagsFromCertificateQueueResponse * const q) : RemoveTagsFromCertificatePrivate(q)
+    RemoveTagsFromCertificateResponse * const q) : ACMResponsePrivate(q)
 {
 
 }

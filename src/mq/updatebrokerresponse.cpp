@@ -86,7 +86,7 @@ void UpdateBrokerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBrokerResponse instance.
  */
 UpdateBrokerResponsePrivate::UpdateBrokerResponsePrivate(
-    UpdateBrokerQueueResponse * const q) : UpdateBrokerPrivate(q)
+    UpdateBrokerResponse * const q) : MQResponsePrivate(q)
 {
 
 }

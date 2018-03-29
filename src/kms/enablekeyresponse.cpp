@@ -86,7 +86,7 @@ void EnableKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableKeyResponse instance.
  */
 EnableKeyResponsePrivate::EnableKeyResponsePrivate(
-    EnableKeyQueueResponse * const q) : EnableKeyPrivate(q)
+    EnableKeyResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

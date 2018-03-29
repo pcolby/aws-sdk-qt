@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::re
  */
 ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListSubscriptionDefinitionVersionsRequest * const q)
-    : ListSubscriptionDefinitionVersionsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVers
  */
 ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
     const ListSubscriptionDefinitionVersionsRequestPrivate &other, ListSubscriptionDefinitionVersionsRequest * const q)
-    : ListSubscriptionDefinitionVersionsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

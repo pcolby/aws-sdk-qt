@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ApplySecurityGroupsToLoadBalancerRequest::res
  */
 ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, ApplySecurityGroupsToLoadBalancerRequest * const q)
-    : ApplySecurityGroupsToLoadBalancerPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalanc
  */
 ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalancerRequestPrivate(
     const ApplySecurityGroupsToLoadBalancerRequestPrivate &other, ApplySecurityGroupsToLoadBalancerRequest * const q)
-    : ApplySecurityGroupsToLoadBalancerPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

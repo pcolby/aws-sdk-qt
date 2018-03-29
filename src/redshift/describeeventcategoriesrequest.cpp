@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const RedshiftRequest::Action action, DescribeEventCategoriesRequest * const q)
-    : DescribeEventCategoriesPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const DescribeEventCategoriesRequestPrivate &other, DescribeEventCategoriesRequest * const q)
-    : DescribeEventCategoriesPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

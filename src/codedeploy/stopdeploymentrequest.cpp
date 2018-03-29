@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply
  */
 StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, StopDeploymentRequest * const q)
-    : StopDeploymentPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
  */
 StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
     const StopDeploymentRequestPrivate &other, StopDeploymentRequest * const q)
-    : StopDeploymentPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

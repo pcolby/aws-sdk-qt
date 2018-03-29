@@ -86,7 +86,7 @@ void GetInvalidationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInvalidationResponse instance.
  */
 GetInvalidationResponsePrivate::GetInvalidationResponsePrivate(
-    GetInvalidationQueueResponse * const q) : GetInvalidationPrivate(q)
+    GetInvalidationResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

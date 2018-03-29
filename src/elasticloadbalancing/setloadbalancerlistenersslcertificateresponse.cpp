@@ -86,7 +86,7 @@ void SetLoadBalancerListenerSSLCertificateResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public SetLoadBalancerListenerSSLCertificateResponse instance.
  */
 SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSLCertificateResponsePrivate(
-    SetLoadBalancerListenerSSLCertificateQueueResponse * const q) : SetLoadBalancerListenerSSLCertificatePrivate(q)
+    SetLoadBalancerListenerSSLCertificateResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

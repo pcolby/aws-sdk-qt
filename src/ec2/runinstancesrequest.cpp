@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply *
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
     const EC2Request::Action action, RunInstancesRequest * const q)
-    : RunInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RunInstancesRequestPrivate::RunInstancesRequestPrivate(
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
     const RunInstancesRequestPrivate &other, RunInstancesRequest * const q)
-    : RunInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

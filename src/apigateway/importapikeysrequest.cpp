@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply 
  */
 ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
     const APIGatewayRequest::Action action, ImportApiKeysRequest * const q)
-    : ImportApiKeysPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
  */
 ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
     const ImportApiKeysRequestPrivate &other, ImportApiKeysRequest * const q)
-    : ImportApiKeysPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

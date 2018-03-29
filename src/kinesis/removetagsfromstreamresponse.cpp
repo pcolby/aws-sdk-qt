@@ -86,7 +86,7 @@ void RemoveTagsFromStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveTagsFromStreamResponse instance.
  */
 RemoveTagsFromStreamResponsePrivate::RemoveTagsFromStreamResponsePrivate(
-    RemoveTagsFromStreamQueueResponse * const q) : RemoveTagsFromStreamPrivate(q)
+    RemoveTagsFromStreamResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

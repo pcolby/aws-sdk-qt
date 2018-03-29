@@ -86,7 +86,7 @@ void UpdateWebhookResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateWebhookResponse instance.
  */
 UpdateWebhookResponsePrivate::UpdateWebhookResponsePrivate(
-    UpdateWebhookQueueResponse * const q) : UpdateWebhookPrivate(q)
+    UpdateWebhookResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

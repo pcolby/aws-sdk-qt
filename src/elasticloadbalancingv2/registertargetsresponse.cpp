@@ -86,7 +86,7 @@ void RegisterTargetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterTargetsResponse instance.
  */
 RegisterTargetsResponsePrivate::RegisterTargetsResponsePrivate(
-    RegisterTargetsQueueResponse * const q) : RegisterTargetsPrivate(q)
+    RegisterTargetsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

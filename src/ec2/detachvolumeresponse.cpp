@@ -86,7 +86,7 @@ void DetachVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachVolumeResponse instance.
  */
 DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
-    DetachVolumeQueueResponse * const q) : DetachVolumePrivate(q)
+    DetachVolumeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

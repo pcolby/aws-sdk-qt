@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply 
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
     const SQSRequest::Action action, ListQueueTagsRequest * const q)
-    : ListQueueTagsPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
     const ListQueueTagsRequestPrivate &other, ListQueueTagsRequest * const q)
-    : ListQueueTagsPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeHsmResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHsmResponse instance.
  */
 DescribeHsmResponsePrivate::DescribeHsmResponsePrivate(
-    DescribeHsmQueueResponse * const q) : DescribeHsmPrivate(q)
+    DescribeHsmResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

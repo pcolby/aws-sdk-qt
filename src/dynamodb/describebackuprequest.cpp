@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupRequest::response(QNetworkReply
  */
 DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
     const DynamoDBRequest::Action action, DescribeBackupRequest * const q)
-    : DescribeBackupPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
  */
 DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
     const DescribeBackupRequestPrivate &other, DescribeBackupRequest * const q)
-    : DescribeBackupPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

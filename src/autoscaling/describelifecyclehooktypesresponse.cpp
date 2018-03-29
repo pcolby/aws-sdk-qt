@@ -86,7 +86,7 @@ void DescribeLifecycleHookTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLifecycleHookTypesResponse instance.
  */
 DescribeLifecycleHookTypesResponsePrivate::DescribeLifecycleHookTypesResponsePrivate(
-    DescribeLifecycleHookTypesQueueResponse * const q) : DescribeLifecycleHookTypesPrivate(q)
+    DescribeLifecycleHookTypesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

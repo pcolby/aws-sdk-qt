@@ -86,7 +86,7 @@ void ImportInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportInstanceResponse instance.
  */
 ImportInstanceResponsePrivate::ImportInstanceResponsePrivate(
-    ImportInstanceQueueResponse * const q) : ImportInstancePrivate(q)
+    ImportInstanceResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

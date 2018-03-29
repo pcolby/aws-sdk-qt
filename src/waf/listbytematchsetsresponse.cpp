@@ -86,7 +86,7 @@ void ListByteMatchSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListByteMatchSetsResponse instance.
  */
 ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
-    ListByteMatchSetsQueueResponse * const q) : ListByteMatchSetsPrivate(q)
+    ListByteMatchSetsResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

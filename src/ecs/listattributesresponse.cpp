@@ -86,7 +86,7 @@ void ListAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAttributesResponse instance.
  */
 ListAttributesResponsePrivate::ListAttributesResponsePrivate(
-    ListAttributesQueueResponse * const q) : ListAttributesPrivate(q)
+    ListAttributesResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

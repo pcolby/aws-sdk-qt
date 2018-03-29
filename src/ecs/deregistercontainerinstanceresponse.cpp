@@ -86,7 +86,7 @@ void DeregisterContainerInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterContainerInstanceResponse instance.
  */
 DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponsePrivate(
-    DeregisterContainerInstanceQueueResponse * const q) : DeregisterContainerInstancePrivate(q)
+    DeregisterContainerInstanceResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

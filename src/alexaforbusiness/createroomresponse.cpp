@@ -86,7 +86,7 @@ void CreateRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRoomResponse instance.
  */
 CreateRoomResponsePrivate::CreateRoomResponsePrivate(
-    CreateRoomQueueResponse * const q) : CreateRoomPrivate(q)
+    CreateRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

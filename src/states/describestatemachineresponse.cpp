@@ -86,7 +86,7 @@ void DescribeStateMachineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStateMachineResponse instance.
  */
 DescribeStateMachineResponsePrivate::DescribeStateMachineResponsePrivate(
-    DescribeStateMachineQueueResponse * const q) : DescribeStateMachinePrivate(q)
+    DescribeStateMachineResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

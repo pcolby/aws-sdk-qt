@@ -86,7 +86,7 @@ void DescribeEnvironmentHealthResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEnvironmentHealthResponse instance.
  */
 DescribeEnvironmentHealthResponsePrivate::DescribeEnvironmentHealthResponsePrivate(
-    DescribeEnvironmentHealthQueueResponse * const q) : DescribeEnvironmentHealthPrivate(q)
+    DescribeEnvironmentHealthResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

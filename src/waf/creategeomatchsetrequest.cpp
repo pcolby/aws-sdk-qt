@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateGeoMatchSetRequest::response(QNetworkRe
  */
 CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
     const WAFRequest::Action action, CreateGeoMatchSetRequest * const q)
-    : CreateGeoMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
  */
 CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
     const CreateGeoMatchSetRequestPrivate &other, CreateGeoMatchSetRequest * const q)
-    : CreateGeoMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

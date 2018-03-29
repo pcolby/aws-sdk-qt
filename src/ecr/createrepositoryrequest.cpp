@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkRep
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const ECRRequest::Action action, CreateRepositoryRequest * const q)
-    : CreateRepositoryPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const CreateRepositoryRequestPrivate &other, CreateRepositoryRequest * const q)
-    : CreateRepositoryPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

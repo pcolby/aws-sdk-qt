@@ -86,7 +86,7 @@ void CancelImportTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelImportTaskResponse instance.
  */
 CancelImportTaskResponsePrivate::CancelImportTaskResponsePrivate(
-    CancelImportTaskQueueResponse * const q) : CancelImportTaskPrivate(q)
+    CancelImportTaskResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

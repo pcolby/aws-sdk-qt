@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobOutputRequest::response(QNetworkReply *
  */
 GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
     const GlacierRequest::Action action, GetJobOutputRequest * const q)
-    : GetJobOutputPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
  */
 GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
     const GetJobOutputRequestPrivate &other, GetJobOutputRequest * const q)
-    : GetJobOutputPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateTapeWithBarcodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTapeWithBarcodeResponse instance.
  */
 CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponsePrivate(
-    CreateTapeWithBarcodeQueueResponse * const q) : CreateTapeWithBarcodePrivate(q)
+    CreateTapeWithBarcodeResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

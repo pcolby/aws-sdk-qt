@@ -86,7 +86,7 @@ void GetCloudFrontOriginAccessIdentityConfigResponse::parseSuccess(QIODevice &re
  * @param  q  Pointer to this object's public GetCloudFrontOriginAccessIdentityConfigResponse instance.
  */
 GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAccessIdentityConfigResponsePrivate(
-    GetCloudFrontOriginAccessIdentityConfigQueueResponse * const q) : GetCloudFrontOriginAccessIdentityConfigPrivate(q)
+    GetCloudFrontOriginAccessIdentityConfigResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

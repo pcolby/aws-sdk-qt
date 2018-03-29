@@ -86,7 +86,7 @@ void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public VerifyDomainDkimResponse instance.
  */
 VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
-    VerifyDomainDkimQueueResponse * const q) : VerifyDomainDkimPrivate(q)
+    VerifyDomainDkimResponse * const q) : SESResponsePrivate(q)
 {
 
 }

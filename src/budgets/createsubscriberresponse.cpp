@@ -86,7 +86,7 @@ void CreateSubscriberResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSubscriberResponse instance.
  */
 CreateSubscriberResponsePrivate::CreateSubscriberResponsePrivate(
-    CreateSubscriberQueueResponse * const q) : CreateSubscriberPrivate(q)
+    CreateSubscriberResponse * const q) : BudgetsResponsePrivate(q)
 {
 
 }

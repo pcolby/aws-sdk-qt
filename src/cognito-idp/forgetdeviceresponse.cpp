@@ -86,7 +86,7 @@ void ForgetDeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ForgetDeviceResponse instance.
  */
 ForgetDeviceResponsePrivate::ForgetDeviceResponsePrivate(
-    ForgetDeviceQueueResponse * const q) : ForgetDevicePrivate(q)
+    ForgetDeviceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

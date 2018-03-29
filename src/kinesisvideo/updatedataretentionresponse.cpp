@@ -86,7 +86,7 @@ void UpdateDataRetentionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDataRetentionResponse instance.
  */
 UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponsePrivate(
-    UpdateDataRetentionQueueResponse * const q) : UpdateDataRetentionPrivate(q)
+    UpdateDataRetentionResponse * const q) : KinesisVideoResponsePrivate(q)
 {
 
 }

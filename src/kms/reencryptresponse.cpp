@@ -86,7 +86,7 @@ void ReEncryptResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReEncryptResponse instance.
  */
 ReEncryptResponsePrivate::ReEncryptResponsePrivate(
-    ReEncryptQueueResponse * const q) : ReEncryptPrivate(q)
+    ReEncryptResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

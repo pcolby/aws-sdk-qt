@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegistrationCodeRequest::response(QNetw
  */
 DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
     const IoTRequest::Action action, DeleteRegistrationCodeRequest * const q)
-    : DeleteRegistrationCodePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
  */
 DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
     const DeleteRegistrationCodeRequestPrivate &other, DeleteRegistrationCodeRequest * const q)
-    : DeleteRegistrationCodePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

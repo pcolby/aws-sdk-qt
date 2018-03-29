@@ -86,7 +86,7 @@ void PutBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketMetricsConfigurationResponse instance.
  */
 PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfigurationResponsePrivate(
-    PutBucketMetricsConfigurationQueueResponse * const q) : PutBucketMetricsConfigurationPrivate(q)
+    PutBucketMetricsConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

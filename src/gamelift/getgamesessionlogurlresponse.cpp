@@ -86,7 +86,7 @@ void GetGameSessionLogUrlResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGameSessionLogUrlResponse instance.
  */
 GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponsePrivate(
-    GetGameSessionLogUrlQueueResponse * const q) : GetGameSessionLogUrlPrivate(q)
+    GetGameSessionLogUrlResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

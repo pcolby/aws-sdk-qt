@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest:
  */
 CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
     const StorageGatewayRequest::Action action, CreateSnapshotFromVolumeRecoveryPointRequest * const q)
-    : CreateSnapshotFromVolumeRecoveryPointPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRec
  */
 CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
     const CreateSnapshotFromVolumeRecoveryPointRequestPrivate &other, CreateSnapshotFromVolumeRecoveryPointRequest * const q)
-    : CreateSnapshotFromVolumeRecoveryPointPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

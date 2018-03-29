@@ -86,7 +86,7 @@ void GetDataSourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDataSourceResponse instance.
  */
 GetDataSourceResponsePrivate::GetDataSourceResponsePrivate(
-    GetDataSourceQueueResponse * const q) : GetDataSourcePrivate(q)
+    GetDataSourceResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

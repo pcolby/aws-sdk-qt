@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const GameLiftRequest::Action action, DeleteVpcPeeringConnectionRequest * const q)
-    : DeleteVpcPeeringConnectionPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const DeleteVpcPeeringConnectionRequestPrivate &other, DeleteVpcPeeringConnectionRequest * const q)
-    : DeleteVpcPeeringConnectionPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

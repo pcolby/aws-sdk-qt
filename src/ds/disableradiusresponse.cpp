@@ -86,7 +86,7 @@ void DisableRadiusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableRadiusResponse instance.
  */
 DisableRadiusResponsePrivate::DisableRadiusResponsePrivate(
-    DisableRadiusQueueResponse * const q) : DisableRadiusPrivate(q)
+    DisableRadiusResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

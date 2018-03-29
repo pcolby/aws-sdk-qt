@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateByteMatchSetRequest::response(QNetworkR
  */
 CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
     const WAFRequest::Action action, CreateByteMatchSetRequest * const q)
-    : CreateByteMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
  */
 CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
     const CreateByteMatchSetRequestPrivate &other, CreateByteMatchSetRequest * const q)
-    : CreateByteMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteActivationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteActivationResponse instance.
  */
 DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
-    DeleteActivationQueueResponse * const q) : DeleteActivationPrivate(q)
+    DeleteActivationResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterRequest::response(QNetworkRepl
  */
 DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
     const RDSRequest::Action action, DeleteDBClusterRequest * const q)
-    : DeleteDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
  */
 DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
     const DeleteDBClusterRequestPrivate &other, DeleteDBClusterRequest * const q)
-    : DeleteDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

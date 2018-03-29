@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSegmentExportJobsRequest::response(QNetwor
  */
 GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
     const PinpointRequest::Action action, GetSegmentExportJobsRequest * const q)
-    : GetSegmentExportJobsPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
  */
 GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
     const GetSegmentExportJobsRequestPrivate &other, GetSegmentExportJobsRequest * const q)
-    : GetSegmentExportJobsPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

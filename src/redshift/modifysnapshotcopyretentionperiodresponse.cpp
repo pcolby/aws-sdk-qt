@@ -86,7 +86,7 @@ void ModifySnapshotCopyRetentionPeriodResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public ModifySnapshotCopyRetentionPeriodResponse instance.
  */
 ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetentionPeriodResponsePrivate(
-    ModifySnapshotCopyRetentionPeriodQueueResponse * const q) : ModifySnapshotCopyRetentionPeriodPrivate(q)
+    ModifySnapshotCopyRetentionPeriodResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

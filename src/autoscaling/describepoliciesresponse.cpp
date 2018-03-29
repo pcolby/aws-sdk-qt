@@ -86,7 +86,7 @@ void DescribePoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribePoliciesResponse instance.
  */
 DescribePoliciesResponsePrivate::DescribePoliciesResponsePrivate(
-    DescribePoliciesQueueResponse * const q) : DescribePoliciesPrivate(q)
+    DescribePoliciesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

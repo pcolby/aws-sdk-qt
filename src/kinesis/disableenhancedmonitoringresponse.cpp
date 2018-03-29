@@ -86,7 +86,7 @@ void DisableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableEnhancedMonitoringResponse instance.
  */
 DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponsePrivate(
-    DisableEnhancedMonitoringQueueResponse * const q) : DisableEnhancedMonitoringPrivate(q)
+    DisableEnhancedMonitoringResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

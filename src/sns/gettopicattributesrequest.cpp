@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkR
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
     const SNSRequest::Action action, GetTopicAttributesRequest * const q)
-    : GetTopicAttributesPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
     const GetTopicAttributesRequestPrivate &other, GetTopicAttributesRequest * const q)
-    : GetTopicAttributesPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateCacheParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCacheParameterGroupResponse instance.
  */
 CreateCacheParameterGroupResponsePrivate::CreateCacheParameterGroupResponsePrivate(
-    CreateCacheParameterGroupQueueResponse * const q) : CreateCacheParameterGroupPrivate(q)
+    CreateCacheParameterGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

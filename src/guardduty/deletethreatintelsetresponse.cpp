@@ -86,7 +86,7 @@ void DeleteThreatIntelSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteThreatIntelSetResponse instance.
  */
 DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponsePrivate(
-    DeleteThreatIntelSetQueueResponse * const q) : DeleteThreatIntelSetPrivate(q)
+    DeleteThreatIntelSetResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

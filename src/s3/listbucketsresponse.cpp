@@ -86,7 +86,7 @@ void ListBucketsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBucketsResponse instance.
  */
 ListBucketsResponsePrivate::ListBucketsResponsePrivate(
-    ListBucketsQueueResponse * const q) : ListBucketsPrivate(q)
+    ListBucketsResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteVPCAssociationAuthorizationResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public DeleteVPCAssociationAuthorizationResponse instance.
  */
 DeleteVPCAssociationAuthorizationResponsePrivate::DeleteVPCAssociationAuthorizationResponsePrivate(
-    DeleteVPCAssociationAuthorizationQueueResponse * const q) : DeleteVPCAssociationAuthorizationPrivate(q)
+    DeleteVPCAssociationAuthorizationResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

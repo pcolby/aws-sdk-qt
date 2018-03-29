@@ -86,7 +86,7 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeClusterResponse instance.
  */
 DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
-    DescribeClusterQueueResponse * const q) : DescribeClusterPrivate(q)
+    DescribeClusterResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

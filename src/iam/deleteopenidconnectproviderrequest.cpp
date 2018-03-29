@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, DeleteOpenIDConnectProviderRequest * const q)
-    : DeleteOpenIDConnectProviderPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPri
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
     const DeleteOpenIDConnectProviderRequestPrivate &other, DeleteOpenIDConnectProviderRequest * const q)
-    : DeleteOpenIDConnectProviderPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void LeaveOrganizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public LeaveOrganizationResponse instance.
  */
 LeaveOrganizationResponsePrivate::LeaveOrganizationResponsePrivate(
-    LeaveOrganizationQueueResponse * const q) : LeaveOrganizationPrivate(q)
+    LeaveOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

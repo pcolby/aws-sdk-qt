@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDataSyncRequest::response(QNetw
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, DeleteResourceDataSyncRequest * const q)
-    : DeleteResourceDataSyncPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
     const DeleteResourceDataSyncRequestPrivate &other, DeleteResourceDataSyncRequest * const q)
-    : DeleteResourceDataSyncPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

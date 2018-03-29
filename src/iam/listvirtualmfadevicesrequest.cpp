@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListVirtualMFADevicesRequest::response(QNetwo
  */
 ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
     const IAMRequest::Action action, ListVirtualMFADevicesRequest * const q)
-    : ListVirtualMFADevicesPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
  */
 ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
     const ListVirtualMFADevicesRequestPrivate &other, ListVirtualMFADevicesRequest * const q)
-    : ListVirtualMFADevicesPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

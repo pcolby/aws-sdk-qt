@@ -86,7 +86,7 @@ void UpdateServerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateServerResponse instance.
  */
 UpdateServerResponsePrivate::UpdateServerResponsePrivate(
-    UpdateServerQueueResponse * const q) : UpdateServerPrivate(q)
+    UpdateServerResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

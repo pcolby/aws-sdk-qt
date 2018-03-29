@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSAMLProviderRequest::response(QNetworkR
  */
 UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
     const IAMRequest::Action action, UpdateSAMLProviderRequest * const q)
-    : UpdateSAMLProviderPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
  */
 UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
     const UpdateSAMLProviderRequestPrivate &other, UpdateSAMLProviderRequest * const q)
-    : UpdateSAMLProviderPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

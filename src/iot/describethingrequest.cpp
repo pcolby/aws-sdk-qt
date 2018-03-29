@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRequest::response(QNetworkReply 
  */
 DescribeThingRequestPrivate::DescribeThingRequestPrivate(
     const IoTRequest::Action action, DescribeThingRequest * const q)
-    : DescribeThingPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeThingRequestPrivate::DescribeThingRequestPrivate(
  */
 DescribeThingRequestPrivate::DescribeThingRequestPrivate(
     const DescribeThingRequestPrivate &other, DescribeThingRequest * const q)
-    : DescribeThingPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

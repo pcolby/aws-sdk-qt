@@ -86,7 +86,7 @@ void SendBonusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendBonusResponse instance.
  */
 SendBonusResponsePrivate::SendBonusResponsePrivate(
-    SendBonusQueueResponse * const q) : SendBonusPrivate(q)
+    SendBonusResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

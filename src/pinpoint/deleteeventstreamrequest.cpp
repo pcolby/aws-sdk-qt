@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEventStreamRequest::response(QNetworkRe
  */
 DeleteEventStreamRequestPrivate::DeleteEventStreamRequestPrivate(
     const PinpointRequest::Action action, DeleteEventStreamRequest * const q)
-    : DeleteEventStreamPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEventStreamRequestPrivate::DeleteEventStreamRequestPrivate(
  */
 DeleteEventStreamRequestPrivate::DeleteEventStreamRequestPrivate(
     const DeleteEventStreamRequestPrivate &other, DeleteEventStreamRequest * const q)
-    : DeleteEventStreamPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateDomainEntryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDomainEntryResponse instance.
  */
 CreateDomainEntryResponsePrivate::CreateDomainEntryResponsePrivate(
-    CreateDomainEntryQueueResponse * const q) : CreateDomainEntryPrivate(q)
+    CreateDomainEntryResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

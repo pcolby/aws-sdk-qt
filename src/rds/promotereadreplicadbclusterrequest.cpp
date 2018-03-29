@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaDBClusterRequest::response(
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
     const RDSRequest::Action action, PromoteReadReplicaDBClusterRequest * const q)
-    : PromoteReadReplicaDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPri
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
     const PromoteReadReplicaDBClusterRequestPrivate &other, PromoteReadReplicaDBClusterRequest * const q)
-    : PromoteReadReplicaDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

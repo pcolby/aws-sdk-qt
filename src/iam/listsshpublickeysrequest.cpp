@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSSHPublicKeysRequest::response(QNetworkRe
  */
 ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
     const IAMRequest::Action action, ListSSHPublicKeysRequest * const q)
-    : ListSSHPublicKeysPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
  */
 ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
     const ListSSHPublicKeysRequestPrivate &other, ListSSHPublicKeysRequest * const q)
-    : ListSSHPublicKeysPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

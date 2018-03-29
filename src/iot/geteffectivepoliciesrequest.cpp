@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetEffectivePoliciesRequest::response(QNetwor
  */
 GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
     const IoTRequest::Action action, GetEffectivePoliciesRequest * const q)
-    : GetEffectivePoliciesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
  */
 GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
     const GetEffectivePoliciesRequestPrivate &other, GetEffectivePoliciesRequest * const q)
-    : GetEffectivePoliciesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

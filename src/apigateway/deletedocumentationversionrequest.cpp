@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(Q
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDocumentationVersionRequest * const q)
-    : DeleteDocumentationVersionPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPriva
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
     const DeleteDocumentationVersionRequestPrivate &other, DeleteDocumentationVersionRequest * const q)
-    : DeleteDocumentationVersionPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

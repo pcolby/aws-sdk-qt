@@ -86,7 +86,7 @@ void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAuthorizationTokenResponse instance.
  */
 GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
-    GetAuthorizationTokenQueueResponse * const q) : GetAuthorizationTokenPrivate(q)
+    GetAuthorizationTokenResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

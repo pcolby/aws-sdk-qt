@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNet
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
     const EC2Request::Action action, ResetFpgaImageAttributeRequest * const q)
-    : ResetFpgaImageAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
     const ResetFpgaImageAttributeRequestPrivate &other, ResetFpgaImageAttributeRequest * const q)
-    : ResetFpgaImageAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNe
  */
 EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
     const Route53DomainsRequest::Action action, EnableDomainTransferLockRequest * const q)
-    : EnableDomainTransferLockPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
  */
 EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
     const EnableDomainTransferLockRequestPrivate &other, EnableDomainTransferLockRequest * const q)
-    : EnableDomainTransferLockPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

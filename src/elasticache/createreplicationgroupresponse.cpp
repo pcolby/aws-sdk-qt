@@ -86,7 +86,7 @@ void CreateReplicationGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReplicationGroupResponse instance.
  */
 CreateReplicationGroupResponsePrivate::CreateReplicationGroupResponsePrivate(
-    CreateReplicationGroupQueueResponse * const q) : CreateReplicationGroupPrivate(q)
+    CreateReplicationGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

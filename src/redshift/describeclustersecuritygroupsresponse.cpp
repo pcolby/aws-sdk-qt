@@ -86,7 +86,7 @@ void DescribeClusterSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeClusterSecurityGroupsResponse instance.
  */
 DescribeClusterSecurityGroupsResponsePrivate::DescribeClusterSecurityGroupsResponsePrivate(
-    DescribeClusterSecurityGroupsQueueResponse * const q) : DescribeClusterSecurityGroupsPrivate(q)
+    DescribeClusterSecurityGroupsResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

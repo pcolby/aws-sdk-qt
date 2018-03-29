@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIndexingConfigurationRequest::response(QNe
  */
 GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
     const IoTRequest::Action action, GetIndexingConfigurationRequest * const q)
-    : GetIndexingConfigurationPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
  */
 GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
     const GetIndexingConfigurationRequestPrivate &other, GetIndexingConfigurationRequest * const q)
-    : GetIndexingConfigurationPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

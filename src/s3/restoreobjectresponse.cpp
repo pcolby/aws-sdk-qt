@@ -86,7 +86,7 @@ void RestoreObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreObjectResponse instance.
  */
 RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
-    RestoreObjectQueueResponse * const q) : RestoreObjectPrivate(q)
+    RestoreObjectResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

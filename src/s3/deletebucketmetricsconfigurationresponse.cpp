@@ -86,7 +86,7 @@ void DeleteBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBucketMetricsConfigurationResponse instance.
  */
 DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfigurationResponsePrivate(
-    DeleteBucketMetricsConfigurationQueueResponse * const q) : DeleteBucketMetricsConfigurationPrivate(q)
+    DeleteBucketMetricsConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

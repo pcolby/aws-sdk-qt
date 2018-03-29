@@ -86,7 +86,7 @@ void CreateActivityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateActivityResponse instance.
  */
 CreateActivityResponsePrivate::CreateActivityResponsePrivate(
-    CreateActivityQueueResponse * const q) : CreateActivityPrivate(q)
+    CreateActivityResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

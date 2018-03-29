@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceDefinitionRequest::response(QNetw
  */
 UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateDeviceDefinitionRequest * const q)
-    : UpdateDeviceDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
  */
 UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
     const UpdateDeviceDefinitionRequestPrivate &other, UpdateDeviceDefinitionRequest * const q)
-    : UpdateDeviceDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

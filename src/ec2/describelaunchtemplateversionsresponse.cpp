@@ -86,7 +86,7 @@ void DescribeLaunchTemplateVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLaunchTemplateVersionsResponse instance.
  */
 DescribeLaunchTemplateVersionsResponsePrivate::DescribeLaunchTemplateVersionsResponsePrivate(
-    DescribeLaunchTemplateVersionsQueueResponse * const q) : DescribeLaunchTemplateVersionsPrivate(q)
+    DescribeLaunchTemplateVersionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

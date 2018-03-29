@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetw
  */
 BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, BatchGetQueryExecutionRequest * const q)
-    : BatchGetQueryExecutionPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
  */
 BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
     const BatchGetQueryExecutionRequestPrivate &other, BatchGetQueryExecutionRequest * const q)
-    : BatchGetQueryExecutionPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

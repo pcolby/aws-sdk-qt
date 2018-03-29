@@ -86,7 +86,7 @@ void DescribeIdFormatResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeIdFormatResponse instance.
  */
 DescribeIdFormatResponsePrivate::DescribeIdFormatResponsePrivate(
-    DescribeIdFormatQueueResponse * const q) : DescribeIdFormatPrivate(q)
+    DescribeIdFormatResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

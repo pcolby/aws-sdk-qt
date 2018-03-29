@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGameSessionQueueRequest::response(QNetw
  */
 DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
     const GameLiftRequest::Action action, DeleteGameSessionQueueRequest * const q)
-    : DeleteGameSessionQueuePrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
  */
 DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
     const DeleteGameSessionQueueRequestPrivate &other, DeleteGameSessionQueueRequest * const q)
-    : DeleteGameSessionQueuePrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

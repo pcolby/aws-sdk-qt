@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply 
  */
 GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GlobalSignOutRequest * const q)
-    : GlobalSignOutPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
  */
 GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
     const GlobalSignOutRequestPrivate &other, GlobalSignOutRequest * const q)
-    : GlobalSignOutPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

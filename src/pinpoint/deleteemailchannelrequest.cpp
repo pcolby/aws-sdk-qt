@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkR
  */
 DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteEmailChannelRequest * const q)
-    : DeleteEmailChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
  */
 DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
     const DeleteEmailChannelRequestPrivate &other, DeleteEmailChannelRequest * const q)
-    : DeleteEmailChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

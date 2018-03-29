@@ -86,7 +86,7 @@ void DescribeListenersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeListenersResponse instance.
  */
 DescribeListenersResponsePrivate::DescribeListenersResponsePrivate(
-    DescribeListenersQueueResponse * const q) : DescribeListenersPrivate(q)
+    DescribeListenersResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeNFSFileSharesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeNFSFileSharesResponse instance.
  */
 DescribeNFSFileSharesResponsePrivate::DescribeNFSFileSharesResponsePrivate(
-    DescribeNFSFileSharesQueueResponse * const q) : DescribeNFSFileSharesPrivate(q)
+    DescribeNFSFileSharesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

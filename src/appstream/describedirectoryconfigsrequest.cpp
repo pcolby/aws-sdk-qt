@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNe
  */
 DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
     const AppStreamRequest::Action action, DescribeDirectoryConfigsRequest * const q)
-    : DescribeDirectoryConfigsPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
  */
 DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
     const DescribeDirectoryConfigsRequestPrivate &other, DescribeDirectoryConfigsRequest * const q)
-    : DescribeDirectoryConfigsPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

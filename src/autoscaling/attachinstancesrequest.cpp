@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkRepl
  */
 AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
     const AutoScalingRequest::Action action, AttachInstancesRequest * const q)
-    : AttachInstancesPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
  */
 AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
     const AttachInstancesRequestPrivate &other, AttachInstancesRequest * const q)
-    : AttachInstancesPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

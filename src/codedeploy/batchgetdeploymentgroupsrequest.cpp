@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetDeploymentGroupsRequest::response(QNe
  */
 BatchGetDeploymentGroupsRequestPrivate::BatchGetDeploymentGroupsRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetDeploymentGroupsRequest * const q)
-    : BatchGetDeploymentGroupsPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetDeploymentGroupsRequestPrivate::BatchGetDeploymentGroupsRequestPrivate(
  */
 BatchGetDeploymentGroupsRequestPrivate::BatchGetDeploymentGroupsRequestPrivate(
     const BatchGetDeploymentGroupsRequestPrivate &other, BatchGetDeploymentGroupsRequest * const q)
-    : BatchGetDeploymentGroupsPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

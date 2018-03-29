@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSecurityGroupRequest::response(Q
  */
 DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSecurityGroupRequest * const q)
-    : DeleteClusterSecurityGroupPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPriva
  */
 DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPrivate(
     const DeleteClusterSecurityGroupRequestPrivate &other, DeleteClusterSecurityGroupRequest * const q)
-    : DeleteClusterSecurityGroupPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

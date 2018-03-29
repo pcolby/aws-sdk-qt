@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityRequest::response(QNetworkRep
  */
 DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, DescribeIdentityRequest * const q)
-    : DescribeIdentityPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
  */
 DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
     const DescribeIdentityRequestPrivate &other, DescribeIdentityRequest * const q)
-    : DescribeIdentityPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyDBClusterParameterGroupResponse instance.
  */
 ModifyDBClusterParameterGroupResponsePrivate::ModifyDBClusterParameterGroupResponsePrivate(
-    ModifyDBClusterParameterGroupQueueResponse * const q) : ModifyDBClusterParameterGroupPrivate(q)
+    ModifyDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

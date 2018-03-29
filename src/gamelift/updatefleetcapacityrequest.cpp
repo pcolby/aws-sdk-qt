@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetCapacityRequest::response(QNetwork
  */
 UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetCapacityRequest * const q)
-    : UpdateFleetCapacityPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
  */
 UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
     const UpdateFleetCapacityRequestPrivate &other, UpdateFleetCapacityRequest * const q)
-    : UpdateFleetCapacityPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

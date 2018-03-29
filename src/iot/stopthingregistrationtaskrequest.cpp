@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopThingRegistrationTaskRequest::response(QN
  */
 StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate(
     const IoTRequest::Action action, StopThingRegistrationTaskRequest * const q)
-    : StopThingRegistrationTaskPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate
  */
 StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate(
     const StopThingRegistrationTaskRequestPrivate &other, StopThingRegistrationTaskRequest * const q)
-    : StopThingRegistrationTaskPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

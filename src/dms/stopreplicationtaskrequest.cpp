@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetwork
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StopReplicationTaskRequest * const q)
-    : StopReplicationTaskPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
     const StopReplicationTaskRequestPrivate &other, StopReplicationTaskRequest * const q)
-    : StopReplicationTaskPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

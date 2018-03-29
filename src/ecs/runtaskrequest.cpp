@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * cons
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
     const ECSRequest::Action action, RunTaskRequest * const q)
-    : RunTaskPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RunTaskRequestPrivate::RunTaskRequestPrivate(
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
     const RunTaskRequestPrivate &other, RunTaskRequest * const q)
-    : RunTaskPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

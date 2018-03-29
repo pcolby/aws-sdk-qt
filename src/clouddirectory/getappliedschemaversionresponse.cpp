@@ -86,7 +86,7 @@ void GetAppliedSchemaVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAppliedSchemaVersionResponse instance.
  */
 GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponsePrivate(
-    GetAppliedSchemaVersionQueueResponse * const q) : GetAppliedSchemaVersionPrivate(q)
+    GetAppliedSchemaVersionResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

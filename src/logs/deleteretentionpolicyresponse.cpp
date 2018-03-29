@@ -86,7 +86,7 @@ void DeleteRetentionPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRetentionPolicyResponse instance.
  */
 DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponsePrivate(
-    DeleteRetentionPolicyQueueResponse * const q) : DeleteRetentionPolicyPrivate(q)
+    DeleteRetentionPolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

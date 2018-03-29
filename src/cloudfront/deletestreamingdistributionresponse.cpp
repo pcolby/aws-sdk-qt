@@ -86,7 +86,7 @@ void DeleteStreamingDistributionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteStreamingDistributionResponse instance.
  */
 DeleteStreamingDistributionResponsePrivate::DeleteStreamingDistributionResponsePrivate(
-    DeleteStreamingDistributionQueueResponse * const q) : DeleteStreamingDistributionPrivate(q)
+    DeleteStreamingDistributionResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

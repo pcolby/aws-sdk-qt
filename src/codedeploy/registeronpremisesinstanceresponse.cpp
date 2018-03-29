@@ -86,7 +86,7 @@ void RegisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterOnPremisesInstanceResponse instance.
  */
 RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceResponsePrivate(
-    RegisterOnPremisesInstanceQueueResponse * const q) : RegisterOnPremisesInstancePrivate(q)
+    RegisterOnPremisesInstanceResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

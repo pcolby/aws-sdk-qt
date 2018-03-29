@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * con
  */
 ListRunsRequestPrivate::ListRunsRequestPrivate(
     const DeviceFarmRequest::Action action, ListRunsRequest * const q)
-    : ListRunsPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRunsRequestPrivate::ListRunsRequestPrivate(
  */
 ListRunsRequestPrivate::ListRunsRequestPrivate(
     const ListRunsRequestPrivate &other, ListRunsRequest * const q)
-    : ListRunsPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListVolumesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListVolumesResponse instance.
  */
 ListVolumesResponsePrivate::ListVolumesResponsePrivate(
-    ListVolumesQueueResponse * const q) : ListVolumesPrivate(q)
+    ListVolumesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

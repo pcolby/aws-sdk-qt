@@ -86,7 +86,7 @@ void DescribeBackupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBackupResponse instance.
  */
 DescribeBackupResponsePrivate::DescribeBackupResponsePrivate(
-    DescribeBackupQueueResponse * const q) : DescribeBackupPrivate(q)
+    DescribeBackupResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

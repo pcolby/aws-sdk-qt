@@ -86,7 +86,7 @@ void ModifyHostsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyHostsResponse instance.
  */
 ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
-    ModifyHostsQueueResponse * const q) : ModifyHostsPrivate(q)
+    ModifyHostsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

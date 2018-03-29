@@ -86,7 +86,7 @@ void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyEventSubscriptionResponse instance.
  */
 ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
-    ModifyEventSubscriptionQueueResponse * const q) : ModifyEventSubscriptionPrivate(q)
+    ModifyEventSubscriptionResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

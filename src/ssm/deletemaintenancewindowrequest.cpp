@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNet
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, DeleteMaintenanceWindowRequest * const q)
-    : DeleteMaintenanceWindowPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
     const DeleteMaintenanceWindowRequestPrivate &other, DeleteMaintenanceWindowRequest * const q)
-    : DeleteMaintenanceWindowPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

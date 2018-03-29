@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkRep
  */
 GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
     const MTurkRequest::Action action, GetFileUploadURLRequest * const q)
-    : GetFileUploadURLPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
  */
 GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
     const GetFileUploadURLRequestPrivate &other, GetFileUploadURLRequest * const q)
-    : GetFileUploadURLPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationVersionRequest::response(Q
  */
 UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDocumentationVersionRequest * const q)
-    : UpdateDocumentationVersionPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPriva
  */
 UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPrivate(
     const UpdateDocumentationVersionRequestPrivate &other, UpdateDocumentationVersionRequest * const q)
-    : UpdateDocumentationVersionPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

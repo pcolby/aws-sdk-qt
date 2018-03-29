@@ -86,7 +86,7 @@ void GetDiskSnapshotsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDiskSnapshotsResponse instance.
  */
 GetDiskSnapshotsResponsePrivate::GetDiskSnapshotsResponsePrivate(
-    GetDiskSnapshotsQueueResponse * const q) : GetDiskSnapshotsPrivate(q)
+    GetDiskSnapshotsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListArtifactsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListArtifactsResponse instance.
  */
 ListArtifactsResponsePrivate::ListArtifactsResponsePrivate(
-    ListArtifactsQueueResponse * const q) : ListArtifactsPrivate(q)
+    ListArtifactsResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeVirtualGatewaysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVirtualGatewaysResponse instance.
  */
 DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponsePrivate(
-    DescribeVirtualGatewaysQueueResponse * const q) : DescribeVirtualGatewaysPrivate(q)
+    DescribeVirtualGatewaysResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

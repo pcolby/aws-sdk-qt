@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetwor
  */
 DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteResourceServerRequest * const q)
-    : DeleteResourceServerPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
  */
 DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
     const DeleteResourceServerRequestPrivate &other, DeleteResourceServerRequest * const q)
-    : DeleteResourceServerPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

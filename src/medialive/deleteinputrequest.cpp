@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * 
  */
 DeleteInputRequestPrivate::DeleteInputRequestPrivate(
     const MediaLiveRequest::Action action, DeleteInputRequest * const q)
-    : DeleteInputPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInputRequestPrivate::DeleteInputRequestPrivate(
  */
 DeleteInputRequestPrivate::DeleteInputRequestPrivate(
     const DeleteInputRequestPrivate &other, DeleteInputRequest * const q)
-    : DeleteInputPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

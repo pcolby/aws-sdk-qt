@@ -86,7 +86,7 @@ void GetApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetApnsVoipSandboxChannelResponse instance.
  */
 GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponsePrivate(
-    GetApnsVoipSandboxChannelQueueResponse * const q) : GetApnsVoipSandboxChannelPrivate(q)
+    GetApnsVoipSandboxChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

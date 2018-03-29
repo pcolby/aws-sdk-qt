@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCommunicationsRequest::response(QNetw
  */
 DescribeCommunicationsRequestPrivate::DescribeCommunicationsRequestPrivate(
     const SupportRequest::Action action, DescribeCommunicationsRequest * const q)
-    : DescribeCommunicationsPrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCommunicationsRequestPrivate::DescribeCommunicationsRequestPrivate(
  */
 DescribeCommunicationsRequestPrivate::DescribeCommunicationsRequestPrivate(
     const DescribeCommunicationsRequestPrivate &other, DescribeCommunicationsRequest * const q)
-    : DescribeCommunicationsPrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

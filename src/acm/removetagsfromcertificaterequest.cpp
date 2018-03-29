@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QN
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
     const ACMRequest::Action action, RemoveTagsFromCertificateRequest * const q)
-    : RemoveTagsFromCertificatePrivate(action, q)
+    : ACMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
     const RemoveTagsFromCertificateRequestPrivate &other, RemoveTagsFromCertificateRequest * const q)
-    : RemoveTagsFromCertificatePrivate(other, q)
+    : ACMRequestPrivate(other, q)
 {
 
 }

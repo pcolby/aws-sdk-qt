@@ -86,7 +86,7 @@ void StopDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopDataCollectionByAgentIdsResponse instance.
  */
 StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsResponsePrivate(
-    StopDataCollectionByAgentIdsQueueResponse * const q) : StopDataCollectionByAgentIdsPrivate(q)
+    StopDataCollectionByAgentIdsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

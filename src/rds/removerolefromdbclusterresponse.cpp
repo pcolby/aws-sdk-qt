@@ -86,7 +86,7 @@ void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveRoleFromDBClusterResponse instance.
  */
 RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
-    RemoveRoleFromDBClusterQueueResponse * const q) : RemoveRoleFromDBClusterPrivate(q)
+    RemoveRoleFromDBClusterResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

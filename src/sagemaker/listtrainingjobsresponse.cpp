@@ -86,7 +86,7 @@ void ListTrainingJobsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTrainingJobsResponse instance.
  */
 ListTrainingJobsResponsePrivate::ListTrainingJobsResponsePrivate(
-    ListTrainingJobsQueueResponse * const q) : ListTrainingJobsPrivate(q)
+    ListTrainingJobsResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

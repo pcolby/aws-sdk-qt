@@ -86,7 +86,7 @@ void ListPrincipalsForPortfolioResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPrincipalsForPortfolioResponse instance.
  */
 ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponsePrivate(
-    ListPrincipalsForPortfolioQueueResponse * const q) : ListPrincipalsForPortfolioPrivate(q)
+    ListPrincipalsForPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

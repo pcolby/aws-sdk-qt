@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkRep
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const KinesisRequest::Action action, GetShardIteratorRequest * const q)
-    : GetShardIteratorPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const GetShardIteratorRequestPrivate &other, GetShardIteratorRequest * const q)
-    : GetShardIteratorPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
     const DAXRequest::Action action, DeleteSubnetGroupRequest * const q)
-    : DeleteSubnetGroupPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
     const DeleteSubnetGroupRequestPrivate &other, DeleteSubnetGroupRequest * const q)
-    : DeleteSubnetGroupPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

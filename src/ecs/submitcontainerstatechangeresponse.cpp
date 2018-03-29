@@ -86,7 +86,7 @@ void SubmitContainerStateChangeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SubmitContainerStateChangeResponse instance.
  */
 SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePrivate(
-    SubmitContainerStateChangeQueueResponse * const q) : SubmitContainerStateChangePrivate(q)
+    SubmitContainerStateChangeResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

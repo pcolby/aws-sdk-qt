@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * c
  */
 DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
     const AppSyncRequest::Action action, DeleteTypeRequest * const q)
-    : DeleteTypePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
  */
 DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
     const DeleteTypeRequestPrivate &other, DeleteTypeRequest * const q)
-    : DeleteTypePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutBucketRequestPaymentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketRequestPaymentResponse instance.
  */
 PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponsePrivate(
-    PutBucketRequestPaymentQueueResponse * const q) : PutBucketRequestPaymentPrivate(q)
+    PutBucketRequestPaymentResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

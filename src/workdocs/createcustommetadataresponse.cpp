@@ -86,7 +86,7 @@ void CreateCustomMetadataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCustomMetadataResponse instance.
  */
 CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponsePrivate(
-    CreateCustomMetadataQueueResponse * const q) : CreateCustomMetadataPrivate(q)
+    CreateCustomMetadataResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

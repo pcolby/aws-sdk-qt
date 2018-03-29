@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkRepl
  */
 DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
     const SWFRequest::Action action, DeprecateDomainRequest * const q)
-    : DeprecateDomainPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
  */
 DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
     const DeprecateDomainRequestPrivate &other, DeprecateDomainRequest * const q)
-    : DeprecateDomainPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

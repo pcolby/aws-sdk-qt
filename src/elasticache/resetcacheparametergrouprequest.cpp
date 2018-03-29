@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetCacheParameterGroupRequest::response(QNe
  */
 ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, ResetCacheParameterGroupRequest * const q)
-    : ResetCacheParameterGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
  */
 ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
     const ResetCacheParameterGroupRequestPrivate &other, ResetCacheParameterGroupRequest * const q)
-    : ResetCacheParameterGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

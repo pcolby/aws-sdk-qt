@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentInstanceRequest::response(QNetwo
  */
 GetDeploymentInstanceRequestPrivate::GetDeploymentInstanceRequestPrivate(
     const CodeDeployRequest::Action action, GetDeploymentInstanceRequest * const q)
-    : GetDeploymentInstancePrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDeploymentInstanceRequestPrivate::GetDeploymentInstanceRequestPrivate(
  */
 GetDeploymentInstanceRequestPrivate::GetDeploymentInstanceRequestPrivate(
     const GetDeploymentInstanceRequestPrivate &other, GetDeploymentInstanceRequest * const q)
-    : GetDeploymentInstancePrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

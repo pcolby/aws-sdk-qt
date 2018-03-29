@@ -86,7 +86,7 @@ void ListJobsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListJobsResponse instance.
  */
 ListJobsResponsePrivate::ListJobsResponsePrivate(
-    ListJobsQueueResponse * const q) : ListJobsPrivate(q)
+    ListJobsResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

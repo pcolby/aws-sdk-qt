@@ -86,7 +86,7 @@ void ListUniqueProblemsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListUniqueProblemsResponse instance.
  */
 ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponsePrivate(
-    ListUniqueProblemsQueueResponse * const q) : ListUniqueProblemsPrivate(q)
+    ListUniqueProblemsResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

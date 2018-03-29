@@ -86,7 +86,7 @@ void DeleteTagOptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTagOptionResponse instance.
  */
 DeleteTagOptionResponsePrivate::DeleteTagOptionResponsePrivate(
-    DeleteTagOptionQueueResponse * const q) : DeleteTagOptionPrivate(q)
+    DeleteTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

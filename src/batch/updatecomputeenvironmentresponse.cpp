@@ -86,7 +86,7 @@ void UpdateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateComputeEnvironmentResponse instance.
  */
 UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponsePrivate(
-    UpdateComputeEnvironmentQueueResponse * const q) : UpdateComputeEnvironmentPrivate(q)
+    UpdateComputeEnvironmentResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

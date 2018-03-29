@@ -86,7 +86,7 @@ void AssociateFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateFleetResponse instance.
  */
 AssociateFleetResponsePrivate::AssociateFleetResponsePrivate(
-    AssociateFleetQueueResponse * const q) : AssociateFleetPrivate(q)
+    AssociateFleetResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

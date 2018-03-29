@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkRep
  */
 DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
     const CloudHSMRequest::Action action, DeleteLunaClientRequest * const q)
-    : DeleteLunaClientPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
  */
 DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
     const DeleteLunaClientRequestPrivate &other, DeleteLunaClientRequest * const q)
-    : DeleteLunaClientPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

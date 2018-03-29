@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetEndpointAttributesRequest::response(QNetwo
  */
 GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
     const SNSRequest::Action action, GetEndpointAttributesRequest * const q)
-    : GetEndpointAttributesPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
  */
 GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
     const GetEndpointAttributesRequestPrivate &other, GetEndpointAttributesRequest * const q)
-    : GetEndpointAttributesPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriberRequest::response(QNetworkRep
  */
 CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
     const BudgetsRequest::Action action, CreateSubscriberRequest * const q)
-    : CreateSubscriberPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
  */
 CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
     const CreateSubscriberRequestPrivate &other, CreateSubscriberRequest * const q)
-    : CreateSubscriberPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

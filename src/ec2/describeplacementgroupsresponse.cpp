@@ -86,7 +86,7 @@ void DescribePlacementGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribePlacementGroupsResponse instance.
  */
 DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponsePrivate(
-    DescribePlacementGroupsQueueResponse * const q) : DescribePlacementGroupsPrivate(q)
+    DescribePlacementGroupsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

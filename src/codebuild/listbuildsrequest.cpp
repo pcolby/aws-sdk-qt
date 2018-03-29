@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBuildsRequest::response(QNetworkReply * c
  */
 ListBuildsRequestPrivate::ListBuildsRequestPrivate(
     const CodeBuildRequest::Action action, ListBuildsRequest * const q)
-    : ListBuildsPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBuildsRequestPrivate::ListBuildsRequestPrivate(
  */
 ListBuildsRequestPrivate::ListBuildsRequestPrivate(
     const ListBuildsRequestPrivate &other, ListBuildsRequest * const q)
-    : ListBuildsPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ShutdownGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ShutdownGatewayResponse instance.
  */
 ShutdownGatewayResponsePrivate::ShutdownGatewayResponsePrivate(
-    ShutdownGatewayQueueResponse * const q) : ShutdownGatewayPrivate(q)
+    ShutdownGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

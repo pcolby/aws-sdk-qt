@@ -86,7 +86,7 @@ void DeregisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterRdsDbInstanceResponse instance.
  */
 DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponsePrivate(
-    DeregisterRdsDbInstanceQueueResponse * const q) : DeregisterRdsDbInstancePrivate(q)
+    DeregisterRdsDbInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

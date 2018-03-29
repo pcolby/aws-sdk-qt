@@ -86,7 +86,7 @@ void RestoreFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreFromClusterSnapshotResponse instance.
  */
 RestoreFromClusterSnapshotResponsePrivate::RestoreFromClusterSnapshotResponsePrivate(
-    RestoreFromClusterSnapshotQueueResponse * const q) : RestoreFromClusterSnapshotPrivate(q)
+    RestoreFromClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

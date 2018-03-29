@@ -86,7 +86,7 @@ void GetRegionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRegionsResponse instance.
  */
 GetRegionsResponsePrivate::GetRegionsResponsePrivate(
-    GetRegionsQueueResponse * const q) : GetRegionsPrivate(q)
+    GetRegionsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

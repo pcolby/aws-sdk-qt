@@ -86,7 +86,7 @@ void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PromoteReadReplicaDBClusterResponse instance.
  */
 PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponsePrivate(
-    PromoteReadReplicaDBClusterQueueResponse * const q) : PromoteReadReplicaDBClusterPrivate(q)
+    PromoteReadReplicaDBClusterResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

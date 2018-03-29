@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * NotifyWorkersRequest::response(QNetworkReply 
  */
 NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
     const MTurkRequest::Action action, NotifyWorkersRequest * const q)
-    : NotifyWorkersPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
  */
 NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
     const NotifyWorkersRequestPrivate &other, NotifyWorkersRequest * const q)
-    : NotifyWorkersPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

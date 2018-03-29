@@ -86,7 +86,7 @@ void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePlatformApplicationResponse instance.
  */
 DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePrivate(
-    DeletePlatformApplicationQueueResponse * const q) : DeletePlatformApplicationPrivate(q)
+    DeletePlatformApplicationResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

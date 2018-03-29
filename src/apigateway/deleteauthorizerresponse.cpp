@@ -86,7 +86,7 @@ void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAuthorizerResponse instance.
  */
 DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
-    DeleteAuthorizerQueueResponse * const q) : DeleteAuthorizerPrivate(q)
+    DeleteAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

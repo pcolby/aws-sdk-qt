@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEC2InstanceLimitsRequest::response(QN
  */
 DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate(
     const GameLiftRequest::Action action, DescribeEC2InstanceLimitsRequest * const q)
-    : DescribeEC2InstanceLimitsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate
  */
 DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate(
     const DescribeEC2InstanceLimitsRequestPrivate &other, DescribeEC2InstanceLimitsRequest * const q)
-    : DescribeEC2InstanceLimitsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

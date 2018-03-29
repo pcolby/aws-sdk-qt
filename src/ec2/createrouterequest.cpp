@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRouteRequest::response(QNetworkReply * 
  */
 CreateRouteRequestPrivate::CreateRouteRequestPrivate(
     const EC2Request::Action action, CreateRouteRequest * const q)
-    : CreateRoutePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRouteRequestPrivate::CreateRouteRequestPrivate(
  */
 CreateRouteRequestPrivate::CreateRouteRequestPrivate(
     const CreateRouteRequestPrivate &other, CreateRouteRequest * const q)
-    : CreateRoutePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

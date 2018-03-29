@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServicePermissionsRequest:
  */
 DescribeVpcEndpointServicePermissionsRequestPrivate::DescribeVpcEndpointServicePermissionsRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointServicePermissionsRequest * const q)
-    : DescribeVpcEndpointServicePermissionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVpcEndpointServicePermissionsRequestPrivate::DescribeVpcEndpointServiceP
  */
 DescribeVpcEndpointServicePermissionsRequestPrivate::DescribeVpcEndpointServicePermissionsRequestPrivate(
     const DescribeVpcEndpointServicePermissionsRequestPrivate &other, DescribeVpcEndpointServicePermissionsRequest * const q)
-    : DescribeVpcEndpointServicePermissionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

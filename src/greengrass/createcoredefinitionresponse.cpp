@@ -86,7 +86,7 @@ void CreateCoreDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCoreDefinitionResponse instance.
  */
 CreateCoreDefinitionResponsePrivate::CreateCoreDefinitionResponsePrivate(
-    CreateCoreDefinitionQueueResponse * const q) : CreateCoreDefinitionPrivate(q)
+    CreateCoreDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

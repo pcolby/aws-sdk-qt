@@ -86,7 +86,7 @@ void DeleteEnvironmentConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEnvironmentConfigurationResponse instance.
  */
 DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationResponsePrivate(
-    DeleteEnvironmentConfigurationQueueResponse * const q) : DeleteEnvironmentConfigurationPrivate(q)
+    DeleteEnvironmentConfigurationResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

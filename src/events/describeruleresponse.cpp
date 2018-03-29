@@ -86,7 +86,7 @@ void DescribeRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRuleResponse instance.
  */
 DescribeRuleResponsePrivate::DescribeRuleResponsePrivate(
-    DescribeRuleQueueResponse * const q) : DescribeRulePrivate(q)
+    DescribeRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

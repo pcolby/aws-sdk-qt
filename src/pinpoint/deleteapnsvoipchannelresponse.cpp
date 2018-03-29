@@ -86,7 +86,7 @@ void DeleteApnsVoipChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteApnsVoipChannelResponse instance.
  */
 DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponsePrivate(
-    DeleteApnsVoipChannelQueueResponse * const q) : DeleteApnsVoipChannelPrivate(q)
+    DeleteApnsVoipChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

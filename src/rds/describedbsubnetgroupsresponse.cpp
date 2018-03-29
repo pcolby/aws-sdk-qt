@@ -86,7 +86,7 @@ void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDBSubnetGroupsResponse instance.
  */
 DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponsePrivate(
-    DescribeDBSubnetGroupsQueueResponse * const q) : DescribeDBSubnetGroupsPrivate(q)
+    DescribeDBSubnetGroupsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const LightsailRequest::Action action, RebootInstanceRequest * const q)
-    : RebootInstancePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const RebootInstanceRequestPrivate &other, RebootInstanceRequest * const q)
-    : RebootInstancePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

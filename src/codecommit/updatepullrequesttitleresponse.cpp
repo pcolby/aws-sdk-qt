@@ -86,7 +86,7 @@ void UpdatePullRequestTitleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePullRequestTitleResponse instance.
  */
 UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponsePrivate(
-    UpdatePullRequestTitleQueueResponse * const q) : UpdatePullRequestTitlePrivate(q)
+    UpdatePullRequestTitleResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

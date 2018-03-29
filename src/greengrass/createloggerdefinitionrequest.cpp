@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionRequest::response(QNetw
  */
 CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateLoggerDefinitionRequest * const q)
-    : CreateLoggerDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
  */
 CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
     const CreateLoggerDefinitionRequestPrivate &other, CreateLoggerDefinitionRequest * const q)
-    : CreateLoggerDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

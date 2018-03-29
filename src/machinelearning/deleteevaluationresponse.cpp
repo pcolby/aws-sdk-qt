@@ -86,7 +86,7 @@ void DeleteEvaluationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEvaluationResponse instance.
  */
 DeleteEvaluationResponsePrivate::DeleteEvaluationResponsePrivate(
-    DeleteEvaluationQueueResponse * const q) : DeleteEvaluationPrivate(q)
+    DeleteEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

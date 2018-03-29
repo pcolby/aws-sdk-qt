@@ -86,7 +86,7 @@ void DisableAlarmActionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableAlarmActionsResponse instance.
  */
 DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponsePrivate(
-    DisableAlarmActionsQueueResponse * const q) : DisableAlarmActionsPrivate(q)
+    DisableAlarmActionsResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

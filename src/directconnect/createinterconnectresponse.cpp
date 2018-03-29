@@ -86,7 +86,7 @@ void CreateInterconnectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateInterconnectResponse instance.
  */
 CreateInterconnectResponsePrivate::CreateInterconnectResponsePrivate(
-    CreateInterconnectQueueResponse * const q) : CreateInterconnectPrivate(q)
+    CreateInterconnectResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

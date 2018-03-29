@@ -86,7 +86,7 @@ void CreateConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateConnectionResponse instance.
  */
 CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
-    CreateConnectionQueueResponse * const q) : CreateConnectionPrivate(q)
+    CreateConnectionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

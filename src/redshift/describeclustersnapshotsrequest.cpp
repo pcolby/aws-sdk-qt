@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSnapshotsRequest::response(QNe
  */
 DescribeClusterSnapshotsRequestPrivate::DescribeClusterSnapshotsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSnapshotsRequest * const q)
-    : DescribeClusterSnapshotsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClusterSnapshotsRequestPrivate::DescribeClusterSnapshotsRequestPrivate(
  */
 DescribeClusterSnapshotsRequestPrivate::DescribeClusterSnapshotsRequestPrivate(
     const DescribeClusterSnapshotsRequestPrivate &other, DescribeClusterSnapshotsRequest * const q)
-    : DescribeClusterSnapshotsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

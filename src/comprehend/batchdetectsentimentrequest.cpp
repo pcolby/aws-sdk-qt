@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetwor
  */
 BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectSentimentRequest * const q)
-    : BatchDetectSentimentPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
  */
 BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
     const BatchDetectSentimentRequestPrivate &other, BatchDetectSentimentRequest * const q)
-    : BatchDetectSentimentPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

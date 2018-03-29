@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkRepl
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
     const EMRRequest::Action action, AddJobFlowStepsRequest * const q)
-    : AddJobFlowStepsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
     const AddJobFlowStepsRequestPrivate &other, AddJobFlowStepsRequest * const q)
-    : AddJobFlowStepsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

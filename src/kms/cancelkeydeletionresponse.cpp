@@ -86,7 +86,7 @@ void CancelKeyDeletionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelKeyDeletionResponse instance.
  */
 CancelKeyDeletionResponsePrivate::CancelKeyDeletionResponsePrivate(
-    CancelKeyDeletionQueueResponse * const q) : CancelKeyDeletionPrivate(q)
+    CancelKeyDeletionResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointConnectionNotificationReques
  */
 CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnectionNotificationRequestPrivate(
     const EC2Request::Action action, CreateVpcEndpointConnectionNotificationRequest * const q)
-    : CreateVpcEndpointConnectionNotificationPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnecti
  */
 CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnectionNotificationRequestPrivate(
     const CreateVpcEndpointConnectionNotificationRequestPrivate &other, CreateVpcEndpointConnectionNotificationRequest * const q)
-    : CreateVpcEndpointConnectionNotificationPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

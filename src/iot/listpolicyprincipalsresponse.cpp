@@ -86,7 +86,7 @@ void ListPolicyPrincipalsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPolicyPrincipalsResponse instance.
  */
 ListPolicyPrincipalsResponsePrivate::ListPolicyPrincipalsResponsePrivate(
-    ListPolicyPrincipalsQueueResponse * const q) : ListPolicyPrincipalsPrivate(q)
+    ListPolicyPrincipalsResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

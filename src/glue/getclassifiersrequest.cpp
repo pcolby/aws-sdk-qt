@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetClassifiersRequest::response(QNetworkReply
  */
 GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
     const GlueRequest::Action action, GetClassifiersRequest * const q)
-    : GetClassifiersPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
  */
 GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
     const GetClassifiersRequestPrivate &other, GetClassifiersRequest * const q)
-    : GetClassifiersPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

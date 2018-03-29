@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply
  */
 GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, GetThingShadowRequest * const q)
-    : GetThingShadowPrivate(action, q)
+    : IoTDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
  */
 GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
     const GetThingShadowRequestPrivate &other, GetThingShadowRequest * const q)
-    : GetThingShadowPrivate(other, q)
+    : IoTDataPlaneRequestPrivate(other, q)
 {
 
 }

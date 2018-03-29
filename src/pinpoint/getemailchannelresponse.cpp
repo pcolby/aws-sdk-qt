@@ -86,7 +86,7 @@ void GetEmailChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetEmailChannelResponse instance.
  */
 GetEmailChannelResponsePrivate::GetEmailChannelResponsePrivate(
-    GetEmailChannelQueueResponse * const q) : GetEmailChannelPrivate(q)
+    GetEmailChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

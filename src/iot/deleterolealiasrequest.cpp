@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkRepl
  */
 DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
     const IoTRequest::Action action, DeleteRoleAliasRequest * const q)
-    : DeleteRoleAliasPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
  */
 DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
     const DeleteRoleAliasRequestPrivate &other, DeleteRoleAliasRequest * const q)
-    : DeleteRoleAliasPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

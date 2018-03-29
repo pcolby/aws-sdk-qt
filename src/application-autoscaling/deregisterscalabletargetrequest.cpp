@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNe
  */
 DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeregisterScalableTargetRequest * const q)
-    : DeregisterScalableTargetPrivate(action, q)
+    : ApplicationAutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
  */
 DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
     const DeregisterScalableTargetRequestPrivate &other, DeregisterScalableTargetRequest * const q)
-    : DeregisterScalableTargetPrivate(other, q)
+    : ApplicationAutoScalingRequestPrivate(other, q)
 {
 
 }

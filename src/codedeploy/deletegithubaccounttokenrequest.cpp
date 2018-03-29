@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNe
  */
 DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
     const CodeDeployRequest::Action action, DeleteGitHubAccountTokenRequest * const q)
-    : DeleteGitHubAccountTokenPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
  */
 DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
     const DeleteGitHubAccountTokenRequestPrivate &other, DeleteGitHubAccountTokenRequest * const q)
-    : DeleteGitHubAccountTokenPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNe
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
     const APIGatewayRequest::Action action, ImportDocumentationPartsRequest * const q)
-    : ImportDocumentationPartsPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
     const ImportDocumentationPartsRequestPrivate &other, ImportDocumentationPartsRequest * const q)
-    : ImportDocumentationPartsPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

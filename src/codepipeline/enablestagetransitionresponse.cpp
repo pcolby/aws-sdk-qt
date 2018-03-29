@@ -86,7 +86,7 @@ void EnableStageTransitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableStageTransitionResponse instance.
  */
 EnableStageTransitionResponsePrivate::EnableStageTransitionResponsePrivate(
-    EnableStageTransitionQueueResponse * const q) : EnableStageTransitionPrivate(q)
+    EnableStageTransitionResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

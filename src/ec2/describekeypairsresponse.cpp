@@ -86,7 +86,7 @@ void DescribeKeyPairsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeKeyPairsResponse instance.
  */
 DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
-    DescribeKeyPairsQueueResponse * const q) : DescribeKeyPairsPrivate(q)
+    DescribeKeyPairsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

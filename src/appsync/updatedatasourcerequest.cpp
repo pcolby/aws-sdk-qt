@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const AppSyncRequest::Action action, UpdateDataSourceRequest * const q)
-    : UpdateDataSourcePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const UpdateDataSourceRequestPrivate &other, UpdateDataSourceRequest * const q)
-    : UpdateDataSourcePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

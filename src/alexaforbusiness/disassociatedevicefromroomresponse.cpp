@@ -86,7 +86,7 @@ void DisassociateDeviceFromRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateDeviceFromRoomResponse instance.
  */
 DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponsePrivate(
-    DisassociateDeviceFromRoomQueueResponse * const q) : DisassociateDeviceFromRoomPrivate(q)
+    DisassociateDeviceFromRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

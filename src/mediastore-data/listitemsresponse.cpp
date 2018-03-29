@@ -86,7 +86,7 @@ void ListItemsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListItemsResponse instance.
  */
 ListItemsResponsePrivate::ListItemsResponsePrivate(
-    ListItemsQueueResponse * const q) : ListItemsPrivate(q)
+    ListItemsResponse * const q) : MediaStoreDataResponsePrivate(q)
 {
 
 }

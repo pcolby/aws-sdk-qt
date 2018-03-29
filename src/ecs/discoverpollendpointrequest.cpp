@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetwor
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
     const ECSRequest::Action action, DiscoverPollEndpointRequest * const q)
-    : DiscoverPollEndpointPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
     const DiscoverPollEndpointRequestPrivate &other, DiscoverPollEndpointRequest * const q)
-    : DiscoverPollEndpointPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

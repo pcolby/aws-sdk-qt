@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionRequest::response(QNetwo
  */
 GetFunctionDefinitionRequestPrivate::GetFunctionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, GetFunctionDefinitionRequest * const q)
-    : GetFunctionDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFunctionDefinitionRequestPrivate::GetFunctionDefinitionRequestPrivate(
  */
 GetFunctionDefinitionRequestPrivate::GetFunctionDefinitionRequestPrivate(
     const GetFunctionDefinitionRequestPrivate &other, GetFunctionDefinitionRequest * const q)
-    : GetFunctionDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

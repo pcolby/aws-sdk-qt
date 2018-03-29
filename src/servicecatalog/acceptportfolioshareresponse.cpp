@@ -86,7 +86,7 @@ void AcceptPortfolioShareResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcceptPortfolioShareResponse instance.
  */
 AcceptPortfolioShareResponsePrivate::AcceptPortfolioShareResponsePrivate(
-    AcceptPortfolioShareQueueResponse * const q) : AcceptPortfolioSharePrivate(q)
+    AcceptPortfolioShareResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

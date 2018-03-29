@@ -86,7 +86,7 @@ void ValidatePipelineDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ValidatePipelineDefinitionResponse instance.
  */
 ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionResponsePrivate(
-    ValidatePipelineDefinitionQueueResponse * const q) : ValidatePipelineDefinitionPrivate(q)
+    ValidatePipelineDefinitionResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

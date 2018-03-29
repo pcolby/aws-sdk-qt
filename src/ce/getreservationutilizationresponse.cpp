@@ -86,7 +86,7 @@ void GetReservationUtilizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetReservationUtilizationResponse instance.
  */
 GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePrivate(
-    GetReservationUtilizationQueueResponse * const q) : GetReservationUtilizationPrivate(q)
+    GetReservationUtilizationResponse * const q) : CostExplorerResponsePrivate(q)
 {
 
 }

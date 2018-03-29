@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFacetAttributesRequest::response(QNetwork
  */
 ListFacetAttributesRequestPrivate::ListFacetAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListFacetAttributesRequest * const q)
-    : ListFacetAttributesPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFacetAttributesRequestPrivate::ListFacetAttributesRequestPrivate(
  */
 ListFacetAttributesRequestPrivate::ListFacetAttributesRequestPrivate(
     const ListFacetAttributesRequestPrivate &other, ListFacetAttributesRequest * const q)
-    : ListFacetAttributesPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

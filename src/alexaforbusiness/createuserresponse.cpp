@@ -86,7 +86,7 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateUserResponse instance.
  */
 CreateUserResponsePrivate::CreateUserResponsePrivate(
-    CreateUserQueueResponse * const q) : CreateUserPrivate(q)
+    CreateUserResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

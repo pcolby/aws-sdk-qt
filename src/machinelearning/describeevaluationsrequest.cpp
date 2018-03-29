@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetwork
  */
 DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
     const MachineLearningRequest::Action action, DescribeEvaluationsRequest * const q)
-    : DescribeEvaluationsPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
  */
 DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
     const DescribeEvaluationsRequestPrivate &other, DescribeEvaluationsRequest * const q)
-    : DescribeEvaluationsPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

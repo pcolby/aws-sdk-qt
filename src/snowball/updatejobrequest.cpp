@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const SnowballRequest::Action action, UpdateJobRequest * const q)
-    : UpdateJobPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const UpdateJobRequestPrivate &other, UpdateJobRequest * const q)
-    : UpdateJobPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

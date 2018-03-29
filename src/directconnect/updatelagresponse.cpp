@@ -86,7 +86,7 @@ void UpdateLagResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateLagResponse instance.
  */
 UpdateLagResponsePrivate::UpdateLagResponsePrivate(
-    UpdateLagQueueResponse * const q) : UpdateLagPrivate(q)
+    UpdateLagResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

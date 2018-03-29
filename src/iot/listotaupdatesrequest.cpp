@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOTAUpdatesRequest::response(QNetworkReply
  */
 ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
     const IoTRequest::Action action, ListOTAUpdatesRequest * const q)
-    : ListOTAUpdatesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
  */
 ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
     const ListOTAUpdatesRequestPrivate &other, ListOTAUpdatesRequest * const q)
-    : ListOTAUpdatesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

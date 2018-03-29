@@ -86,7 +86,7 @@ void AttachThingPrincipalResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachThingPrincipalResponse instance.
  */
 AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponsePrivate(
-    AttachThingPrincipalQueueResponse * const q) : AttachThingPrincipalPrivate(q)
+    AttachThingPrincipalResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

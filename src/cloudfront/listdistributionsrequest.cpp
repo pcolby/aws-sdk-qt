@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsRequest::response(QNetworkRe
  */
 ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
     const CloudFrontRequest::Action action, ListDistributionsRequest * const q)
-    : ListDistributionsPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
  */
 ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
     const ListDistributionsRequestPrivate &other, ListDistributionsRequest * const q)
-    : ListDistributionsPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

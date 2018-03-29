@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPipelineStateRequest::response(QNetworkRep
  */
 GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
     const CodePipelineRequest::Action action, GetPipelineStateRequest * const q)
-    : GetPipelineStatePrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
  */
 GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
     const GetPipelineStateRequestPrivate &other, GetPipelineStateRequest * const q)
-    : GetPipelineStatePrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

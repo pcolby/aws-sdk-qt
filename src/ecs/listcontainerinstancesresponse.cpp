@@ -86,7 +86,7 @@ void ListContainerInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListContainerInstancesResponse instance.
  */
 ListContainerInstancesResponsePrivate::ListContainerInstancesResponsePrivate(
-    ListContainerInstancesQueueResponse * const q) : ListContainerInstancesPrivate(q)
+    ListContainerInstancesResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * 
  */
 CreateQueueRequestPrivate::CreateQueueRequestPrivate(
     const MediaConvertRequest::Action action, CreateQueueRequest * const q)
-    : CreateQueuePrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateQueueRequestPrivate::CreateQueueRequestPrivate(
  */
 CreateQueueRequestPrivate::CreateQueueRequestPrivate(
     const CreateQueueRequestPrivate &other, CreateQueueRequest * const q)
-    : CreateQueuePrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

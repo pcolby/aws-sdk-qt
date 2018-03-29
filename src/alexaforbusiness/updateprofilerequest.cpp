@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProfileRequest::response(QNetworkReply 
  */
 UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateProfileRequest * const q)
-    : UpdateProfilePrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
  */
 UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
     const UpdateProfileRequestPrivate &other, UpdateProfileRequest * const q)
-    : UpdateProfilePrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

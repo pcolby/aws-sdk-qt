@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetKeyRotationStatusRequest::response(QNetwor
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
     const KMSRequest::Action action, GetKeyRotationStatusRequest * const q)
-    : GetKeyRotationStatusPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
     const GetKeyRotationStatusRequestPrivate &other, GetKeyRotationStatusRequest * const q)
-    : GetKeyRotationStatusPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

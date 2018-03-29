@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * co
  */
 ListRootsRequestPrivate::ListRootsRequestPrivate(
     const OrganizationsRequest::Action action, ListRootsRequest * const q)
-    : ListRootsPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRootsRequestPrivate::ListRootsRequestPrivate(
  */
 ListRootsRequestPrivate::ListRootsRequestPrivate(
     const ListRootsRequestPrivate &other, ListRootsRequest * const q)
-    : ListRootsPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

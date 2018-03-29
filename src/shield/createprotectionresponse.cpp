@@ -86,7 +86,7 @@ void CreateProtectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateProtectionResponse instance.
  */
 CreateProtectionResponsePrivate::CreateProtectionResponsePrivate(
-    CreateProtectionQueueResponse * const q) : CreateProtectionPrivate(q)
+    CreateProtectionResponse * const q) : ShieldResponsePrivate(q)
 {
 
 }

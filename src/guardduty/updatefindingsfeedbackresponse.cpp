@@ -86,7 +86,7 @@ void UpdateFindingsFeedbackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFindingsFeedbackResponse instance.
  */
 UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponsePrivate(
-    UpdateFindingsFeedbackQueueResponse * const q) : UpdateFindingsFeedbackPrivate(q)
+    UpdateFindingsFeedbackResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

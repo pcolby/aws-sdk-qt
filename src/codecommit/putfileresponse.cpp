@@ -86,7 +86,7 @@ void PutFileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutFileResponse instance.
  */
 PutFileResponsePrivate::PutFileResponsePrivate(
-    PutFileQueueResponse * const q) : PutFilePrivate(q)
+    PutFileResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

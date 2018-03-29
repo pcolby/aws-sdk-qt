@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * c
  */
 GetServiceRequestPrivate::GetServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetServiceRequest * const q)
-    : GetServicePrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetServiceRequestPrivate::GetServiceRequestPrivate(
  */
 GetServiceRequestPrivate::GetServiceRequestPrivate(
     const GetServiceRequestPrivate &other, GetServiceRequest * const q)
-    : GetServicePrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

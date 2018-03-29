@@ -86,7 +86,7 @@ void DescribeEnvironmentManagedActionsResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public DescribeEnvironmentManagedActionsResponse instance.
  */
 DescribeEnvironmentManagedActionsResponsePrivate::DescribeEnvironmentManagedActionsResponsePrivate(
-    DescribeEnvironmentManagedActionsQueueResponse * const q) : DescribeEnvironmentManagedActionsPrivate(q)
+    DescribeEnvironmentManagedActionsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

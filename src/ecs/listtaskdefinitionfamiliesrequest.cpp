@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTaskDefinitionFamiliesRequest::response(Q
  */
 ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
     const ECSRequest::Action action, ListTaskDefinitionFamiliesRequest * const q)
-    : ListTaskDefinitionFamiliesPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPriva
  */
 ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
     const ListTaskDefinitionFamiliesRequestPrivate &other, ListTaskDefinitionFamiliesRequest * const q)
-    : ListTaskDefinitionFamiliesPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

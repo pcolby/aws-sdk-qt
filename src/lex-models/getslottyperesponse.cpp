@@ -86,7 +86,7 @@ void GetSlotTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSlotTypeResponse instance.
  */
 GetSlotTypeResponsePrivate::GetSlotTypeResponsePrivate(
-    GetSlotTypeQueueResponse * const q) : GetSlotTypePrivate(q)
+    GetSlotTypeResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

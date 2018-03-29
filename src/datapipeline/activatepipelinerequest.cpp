@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ActivatePipelineRequest::response(QNetworkRep
  */
 ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
     const DataPipelineRequest::Action action, ActivatePipelineRequest * const q)
-    : ActivatePipelinePrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
  */
 ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
     const ActivatePipelineRequestPrivate &other, ActivatePipelineRequest * const q)
-    : ActivatePipelinePrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

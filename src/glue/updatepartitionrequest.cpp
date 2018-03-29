@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkRepl
  */
 UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
     const GlueRequest::Action action, UpdatePartitionRequest * const q)
-    : UpdatePartitionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
  */
 UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
     const UpdatePartitionRequestPrivate &other, UpdatePartitionRequest * const q)
-    : UpdatePartitionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

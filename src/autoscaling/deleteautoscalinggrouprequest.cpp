@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetw
  */
 DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, DeleteAutoScalingGroupRequest * const q)
-    : DeleteAutoScalingGroupPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
  */
 DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
     const DeleteAutoScalingGroupRequestPrivate &other, DeleteAutoScalingGroupRequest * const q)
-    : DeleteAutoScalingGroupPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

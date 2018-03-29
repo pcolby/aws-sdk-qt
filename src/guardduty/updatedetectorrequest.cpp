@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply
  */
 UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
     const GuardDutyRequest::Action action, UpdateDetectorRequest * const q)
-    : UpdateDetectorPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
  */
 UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
     const UpdateDetectorRequestPrivate &other, UpdateDetectorRequest * const q)
-    : UpdateDetectorPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

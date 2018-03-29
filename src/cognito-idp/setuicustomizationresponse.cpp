@@ -86,7 +86,7 @@ void SetUICustomizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetUICustomizationResponse instance.
  */
 SetUICustomizationResponsePrivate::SetUICustomizationResponsePrivate(
-    SetUICustomizationQueueResponse * const q) : SetUICustomizationPrivate(q)
+    SetUICustomizationResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

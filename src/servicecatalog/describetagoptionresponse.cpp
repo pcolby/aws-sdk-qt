@@ -86,7 +86,7 @@ void DescribeTagOptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTagOptionResponse instance.
  */
 DescribeTagOptionResponsePrivate::DescribeTagOptionResponsePrivate(
-    DescribeTagOptionQueueResponse * const q) : DescribeTagOptionPrivate(q)
+    DescribeTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

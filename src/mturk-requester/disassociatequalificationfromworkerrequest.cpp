@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::r
  */
 DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
     const MTurkRequest::Action action, DisassociateQualificationFromWorkerRequest * const q)
-    : DisassociateQualificationFromWorkerPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFrom
  */
 DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
     const DisassociateQualificationFromWorkerRequestPrivate &other, DisassociateQualificationFromWorkerRequest * const q)
-    : DisassociateQualificationFromWorkerPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

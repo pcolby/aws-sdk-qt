@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const AppStreamRequest::Action action, CopyImageRequest * const q)
-    : CopyImagePrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const CopyImageRequestPrivate &other, CopyImageRequest * const q)
-    : CopyImagePrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

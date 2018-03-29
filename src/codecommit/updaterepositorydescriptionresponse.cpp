@@ -86,7 +86,7 @@ void UpdateRepositoryDescriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRepositoryDescriptionResponse instance.
  */
 UpdateRepositoryDescriptionResponsePrivate::UpdateRepositoryDescriptionResponsePrivate(
-    UpdateRepositoryDescriptionQueueResponse * const q) : UpdateRepositoryDescriptionPrivate(q)
+    UpdateRepositoryDescriptionResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

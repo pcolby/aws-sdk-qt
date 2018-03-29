@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrafficPolicyInstanceRequest::response(
  */
 CreateTrafficPolicyInstanceRequestPrivate::CreateTrafficPolicyInstanceRequestPrivate(
     const Route53Request::Action action, CreateTrafficPolicyInstanceRequest * const q)
-    : CreateTrafficPolicyInstancePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTrafficPolicyInstanceRequestPrivate::CreateTrafficPolicyInstanceRequestPri
  */
 CreateTrafficPolicyInstanceRequestPrivate::CreateTrafficPolicyInstanceRequestPrivate(
     const CreateTrafficPolicyInstanceRequestPrivate &other, CreateTrafficPolicyInstanceRequest * const q)
-    : CreateTrafficPolicyInstancePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

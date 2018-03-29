@@ -86,7 +86,7 @@ void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public GetServiceLinkedRoleDeletionStatusResponse instance.
  */
 GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionStatusResponsePrivate(
-    GetServiceLinkedRoleDeletionStatusQueueResponse * const q) : GetServiceLinkedRoleDeletionStatusPrivate(q)
+    GetServiceLinkedRoleDeletionStatusResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

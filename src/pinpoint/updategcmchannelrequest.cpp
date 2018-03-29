@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGcmChannelRequest::response(QNetworkRep
  */
 UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateGcmChannelRequest * const q)
-    : UpdateGcmChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
  */
 UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
     const UpdateGcmChannelRequestPrivate &other, UpdateGcmChannelRequest * const q)
-    : UpdateGcmChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

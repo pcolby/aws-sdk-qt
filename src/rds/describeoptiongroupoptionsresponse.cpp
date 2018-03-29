@@ -86,7 +86,7 @@ void DescribeOptionGroupOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeOptionGroupOptionsResponse instance.
  */
 DescribeOptionGroupOptionsResponsePrivate::DescribeOptionGroupOptionsResponsePrivate(
-    DescribeOptionGroupOptionsQueueResponse * const q) : DescribeOptionGroupOptionsPrivate(q)
+    DescribeOptionGroupOptionsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

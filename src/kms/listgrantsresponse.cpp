@@ -86,7 +86,7 @@ void ListGrantsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGrantsResponse instance.
  */
 ListGrantsResponsePrivate::ListGrantsResponsePrivate(
-    ListGrantsQueueResponse * const q) : ListGrantsPrivate(q)
+    ListGrantsResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

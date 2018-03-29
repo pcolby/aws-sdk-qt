@@ -86,7 +86,7 @@ void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterInstanceResponse instance.
  */
 DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
-    DeregisterInstanceQueueResponse * const q) : DeregisterInstancePrivate(q)
+    DeregisterInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

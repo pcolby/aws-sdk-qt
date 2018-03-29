@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePullRequestStatusRequest::response(QNet
  */
 UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
     const CodeCommitRequest::Action action, UpdatePullRequestStatusRequest * const q)
-    : UpdatePullRequestStatusPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
  */
 UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
     const UpdatePullRequestStatusRequestPrivate &other, UpdatePullRequestStatusRequest * const q)
-    : UpdatePullRequestStatusPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

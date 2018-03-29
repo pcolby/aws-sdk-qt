@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateObjectRequest::response(QNetworkReply *
  */
 CreateObjectRequestPrivate::CreateObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateObjectRequest * const q)
-    : CreateObjectPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateObjectRequestPrivate::CreateObjectRequestPrivate(
  */
 CreateObjectRequestPrivate::CreateObjectRequestPrivate(
     const CreateObjectRequestPrivate &other, CreateObjectRequest * const q)
-    : CreateObjectPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

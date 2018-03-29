@@ -86,7 +86,7 @@ void DetectSentimentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetectSentimentResponse instance.
  */
 DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
-    DetectSentimentQueueResponse * const q) : DetectSentimentPrivate(q)
+    DetectSentimentResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

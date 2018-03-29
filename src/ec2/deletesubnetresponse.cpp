@@ -86,7 +86,7 @@ void DeleteSubnetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSubnetResponse instance.
  */
 DeleteSubnetResponsePrivate::DeleteSubnetResponsePrivate(
-    DeleteSubnetQueueResponse * const q) : DeleteSubnetPrivate(q)
+    DeleteSubnetResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

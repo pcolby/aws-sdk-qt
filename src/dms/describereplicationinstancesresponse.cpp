@@ -86,7 +86,7 @@ void DescribeReplicationInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeReplicationInstancesResponse instance.
  */
 DescribeReplicationInstancesResponsePrivate::DescribeReplicationInstancesResponsePrivate(
-    DescribeReplicationInstancesQueueResponse * const q) : DescribeReplicationInstancesPrivate(q)
+    DescribeReplicationInstancesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

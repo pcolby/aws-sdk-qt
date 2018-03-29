@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply 
  */
 GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
     const PinpointRequest::Action action, GetAdmChannelRequest * const q)
-    : GetAdmChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
  */
 GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
     const GetAdmChannelRequestPrivate &other, GetAdmChannelRequest * const q)
-    : GetAdmChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

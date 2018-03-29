@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTagKeysRequest::response(QNetworkReply * c
  */
 GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
     const ResourceGroupsTaggingAPIRequest::Action action, GetTagKeysRequest * const q)
-    : GetTagKeysPrivate(action, q)
+    : ResourceGroupsTaggingAPIRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
  */
 GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
     const GetTagKeysRequestPrivate &other, GetTagKeysRequest * const q)
-    : GetTagKeysPrivate(other, q)
+    : ResourceGroupsTaggingAPIRequestPrivate(other, q)
 {
 
 }

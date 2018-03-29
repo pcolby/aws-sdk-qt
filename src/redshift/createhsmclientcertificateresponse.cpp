@@ -86,7 +86,7 @@ void CreateHsmClientCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateHsmClientCertificateResponse instance.
  */
 CreateHsmClientCertificateResponsePrivate::CreateHsmClientCertificateResponsePrivate(
-    CreateHsmClientCertificateQueueResponse * const q) : CreateHsmClientCertificatePrivate(q)
+    CreateHsmClientCertificateResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

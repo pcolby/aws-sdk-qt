@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVolumeRequest::response(QNetworkReply *
  */
 UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
     const OpsWorksRequest::Action action, UpdateVolumeRequest * const q)
-    : UpdateVolumePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
  */
 UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
     const UpdateVolumeRequestPrivate &other, UpdateVolumeRequest * const q)
-    : UpdateVolumePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

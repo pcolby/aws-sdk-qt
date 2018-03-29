@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetwork
  */
 ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPortfolioAccessRequest * const q)
-    : ListPortfolioAccessPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
  */
 ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
     const ListPortfolioAccessRequestPrivate &other, ListPortfolioAccessRequest * const q)
-    : ListPortfolioAccessPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

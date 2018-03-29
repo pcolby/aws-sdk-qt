@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationRequest::response(QNetwork
  */
 CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
     const MQRequest::Action action, CreateConfigurationRequest * const q)
-    : CreateConfigurationPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
  */
 CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
     const CreateConfigurationRequestPrivate &other, CreateConfigurationRequest * const q)
-    : CreateConfigurationPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

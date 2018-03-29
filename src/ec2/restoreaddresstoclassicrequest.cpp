@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNet
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
     const EC2Request::Action action, RestoreAddressToClassicRequest * const q)
-    : RestoreAddressToClassicPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
     const RestoreAddressToClassicRequestPrivate &other, RestoreAddressToClassicRequest * const q)
-    : RestoreAddressToClassicPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

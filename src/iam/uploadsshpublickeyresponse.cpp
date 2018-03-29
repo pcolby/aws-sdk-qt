@@ -86,7 +86,7 @@ void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadSSHPublicKeyResponse instance.
  */
 UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
-    UploadSSHPublicKeyQueueResponse * const q) : UploadSSHPublicKeyPrivate(q)
+    UploadSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CompleteLifecycleActionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CompleteLifecycleActionResponse instance.
  */
 CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
-    CompleteLifecycleActionQueueResponse * const q) : CompleteLifecycleActionPrivate(q)
+    CompleteLifecycleActionResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

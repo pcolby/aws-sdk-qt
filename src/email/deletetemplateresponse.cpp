@@ -86,7 +86,7 @@ void DeleteTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTemplateResponse instance.
  */
 DeleteTemplateResponsePrivate::DeleteTemplateResponsePrivate(
-    DeleteTemplateQueueResponse * const q) : DeleteTemplatePrivate(q)
+    DeleteTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

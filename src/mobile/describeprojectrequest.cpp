@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkRepl
  */
 DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
     const MobileRequest::Action action, DescribeProjectRequest * const q)
-    : DescribeProjectPrivate(action, q)
+    : MobileRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
  */
 DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
     const DescribeProjectRequestPrivate &other, DescribeProjectRequest * const q)
-    : DescribeProjectPrivate(other, q)
+    : MobileRequestPrivate(other, q)
 {
 
 }

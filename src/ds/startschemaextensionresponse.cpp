@@ -86,7 +86,7 @@ void StartSchemaExtensionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartSchemaExtensionResponse instance.
  */
 StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
-    StartSchemaExtensionQueueResponse * const q) : StartSchemaExtensionPrivate(q)
+    StartSchemaExtensionResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

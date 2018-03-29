@@ -86,7 +86,7 @@ void AssociateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateVirtualInterfaceResponse instance.
  */
 AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponsePrivate(
-    AssociateVirtualInterfaceQueueResponse * const q) : AssociateVirtualInterfacePrivate(q)
+    AssociateVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

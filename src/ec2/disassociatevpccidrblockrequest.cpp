@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNe
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
     const EC2Request::Action action, DisassociateVpcCidrBlockRequest * const q)
-    : DisassociateVpcCidrBlockPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
     const DisassociateVpcCidrBlockRequestPrivate &other, DisassociateVpcCidrBlockRequest * const q)
-    : DisassociateVpcCidrBlockPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

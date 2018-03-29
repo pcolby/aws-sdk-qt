@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetw
  */
 AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AssociateSoftwareTokenRequest * const q)
-    : AssociateSoftwareTokenPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
  */
 AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
     const AssociateSoftwareTokenRequestPrivate &other, AssociateSoftwareTokenRequest * const q)
-    : AssociateSoftwareTokenPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportCatalogToGlueRequest::response(QNetwork
  */
 ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
     const GlueRequest::Action action, ImportCatalogToGlueRequest * const q)
-    : ImportCatalogToGluePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
  */
 ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
     const ImportCatalogToGlueRequestPrivate &other, ImportCatalogToGlueRequest * const q)
-    : ImportCatalogToGluePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

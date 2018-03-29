@@ -86,7 +86,7 @@ void SetTagsForResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetTagsForResourceResponse instance.
  */
 SetTagsForResourceResponsePrivate::SetTagsForResourceResponsePrivate(
-    SetTagsForResourceQueueResponse * const q) : SetTagsForResourcePrivate(q)
+    SetTagsForResourceResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

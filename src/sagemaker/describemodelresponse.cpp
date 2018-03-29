@@ -86,7 +86,7 @@ void DescribeModelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeModelResponse instance.
  */
 DescribeModelResponsePrivate::DescribeModelResponsePrivate(
-    DescribeModelQueueResponse * const q) : DescribeModelPrivate(q)
+    DescribeModelResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

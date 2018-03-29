@@ -86,7 +86,7 @@ void StartContentModerationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartContentModerationResponse instance.
  */
 StartContentModerationResponsePrivate::StartContentModerationResponsePrivate(
-    StartContentModerationQueueResponse * const q) : StartContentModerationPrivate(q)
+    StartContentModerationResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

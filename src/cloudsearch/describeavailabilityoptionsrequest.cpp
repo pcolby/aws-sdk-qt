@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityOptionsRequest::response(
  */
 DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeAvailabilityOptionsRequest * const q)
-    : DescribeAvailabilityOptionsPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPri
  */
 DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPrivate(
     const DescribeAvailabilityOptionsRequestPrivate &other, DescribeAvailabilityOptionsRequest * const q)
-    : DescribeAvailabilityOptionsPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListVersionsByFunctionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListVersionsByFunctionResponse instance.
  */
 ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
-    ListVersionsByFunctionQueueResponse * const q) : ListVersionsByFunctionPrivate(q)
+    ListVersionsByFunctionResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

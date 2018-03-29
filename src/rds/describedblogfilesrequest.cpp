@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkR
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
     const RDSRequest::Action action, DescribeDBLogFilesRequest * const q)
-    : DescribeDBLogFilesPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
     const DescribeDBLogFilesRequestPrivate &other, DescribeDBLogFilesRequest * const q)
-    : DescribeDBLogFilesPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

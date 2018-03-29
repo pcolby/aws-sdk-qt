@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(
  */
 GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
     const ConfigServiceRequest::Action action, GetDiscoveredResourceCountsRequest * const q)
-    : GetDiscoveredResourceCountsPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPri
  */
 GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
     const GetDiscoveredResourceCountsRequestPrivate &other, GetDiscoveredResourceCountsRequest * const q)
-    : GetDiscoveredResourceCountsPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

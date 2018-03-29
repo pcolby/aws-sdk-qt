@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * 
  */
 SearchFacesRequestPrivate::SearchFacesRequestPrivate(
     const RekognitionRequest::Action action, SearchFacesRequest * const q)
-    : SearchFacesPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchFacesRequestPrivate::SearchFacesRequestPrivate(
  */
 SearchFacesRequestPrivate::SearchFacesRequestPrivate(
     const SearchFacesRequestPrivate &other, SearchFacesRequest * const q)
-    : SearchFacesPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

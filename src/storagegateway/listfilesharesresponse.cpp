@@ -86,7 +86,7 @@ void ListFileSharesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFileSharesResponse instance.
  */
 ListFileSharesResponsePrivate::ListFileSharesResponsePrivate(
-    ListFileSharesQueueResponse * const q) : ListFileSharesPrivate(q)
+    ListFileSharesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InitiateMultipartUploadRequest::response(QNet
  */
 InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
     const GlacierRequest::Action action, InitiateMultipartUploadRequest * const q)
-    : InitiateMultipartUploadPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
  */
 InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
     const InitiateMultipartUploadRequestPrivate &other, InitiateMultipartUploadRequest * const q)
-    : InitiateMultipartUploadPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AttachInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachInstancesResponse instance.
  */
 AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
-    AttachInstancesQueueResponse * const q) : AttachInstancesPrivate(q)
+    AttachInstancesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

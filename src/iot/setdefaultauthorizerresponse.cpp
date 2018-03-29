@@ -86,7 +86,7 @@ void SetDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetDefaultAuthorizerResponse instance.
  */
 SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponsePrivate(
-    SetDefaultAuthorizerQueueResponse * const q) : SetDefaultAuthorizerPrivate(q)
+    SetDefaultAuthorizerResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

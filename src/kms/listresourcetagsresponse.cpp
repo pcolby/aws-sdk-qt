@@ -86,7 +86,7 @@ void ListResourceTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListResourceTagsResponse instance.
  */
 ListResourceTagsResponsePrivate::ListResourceTagsResponsePrivate(
-    ListResourceTagsQueueResponse * const q) : ListResourceTagsPrivate(q)
+    ListResourceTagsResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

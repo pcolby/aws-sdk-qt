@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetwo
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
     const WAFRequest::Action action, CreateRegexPatternSetRequest * const q)
-    : CreateRegexPatternSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
     const CreateRegexPatternSetRequestPrivate &other, CreateRegexPatternSetRequest * const q)
-    : CreateRegexPatternSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

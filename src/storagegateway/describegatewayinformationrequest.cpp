@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeGatewayInformationRequest::response(Q
  */
 DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeGatewayInformationRequest * const q)
-    : DescribeGatewayInformationPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPriva
  */
 DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPrivate(
     const DescribeGatewayInformationRequestPrivate &other, DescribeGatewayInformationRequest * const q)
-    : DescribeGatewayInformationPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

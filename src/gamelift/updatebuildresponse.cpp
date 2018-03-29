@@ -86,7 +86,7 @@ void UpdateBuildResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBuildResponse instance.
  */
 UpdateBuildResponsePrivate::UpdateBuildResponsePrivate(
-    UpdateBuildQueueResponse * const q) : UpdateBuildPrivate(q)
+    UpdateBuildResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

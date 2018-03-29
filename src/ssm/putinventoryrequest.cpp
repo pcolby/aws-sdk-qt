@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutInventoryRequest::response(QNetworkReply *
  */
 PutInventoryRequestPrivate::PutInventoryRequestPrivate(
     const SSMRequest::Action action, PutInventoryRequest * const q)
-    : PutInventoryPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutInventoryRequestPrivate::PutInventoryRequestPrivate(
  */
 PutInventoryRequestPrivate::PutInventoryRequestPrivate(
     const PutInventoryRequestPrivate &other, PutInventoryRequest * const q)
-    : PutInventoryPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

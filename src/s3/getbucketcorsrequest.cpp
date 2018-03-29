@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply 
  */
 GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
     const S3Request::Action action, GetBucketCorsRequest * const q)
-    : GetBucketCorsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
  */
 GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
     const GetBucketCorsRequestPrivate &other, GetBucketCorsRequest * const q)
-    : GetBucketCorsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

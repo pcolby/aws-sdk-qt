@@ -86,7 +86,7 @@ void GetEventSourceMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetEventSourceMappingResponse instance.
  */
 GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponsePrivate(
-    GetEventSourceMappingQueueResponse * const q) : GetEventSourceMappingPrivate(q)
+    GetEventSourceMappingResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

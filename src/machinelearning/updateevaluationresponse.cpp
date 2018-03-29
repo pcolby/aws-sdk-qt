@@ -86,7 +86,7 @@ void UpdateEvaluationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEvaluationResponse instance.
  */
 UpdateEvaluationResponsePrivate::UpdateEvaluationResponsePrivate(
-    UpdateEvaluationQueueResponse * const q) : UpdateEvaluationPrivate(q)
+    UpdateEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

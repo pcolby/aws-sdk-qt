@@ -86,7 +86,7 @@ void CreateInstancesFromSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateInstancesFromSnapshotResponse instance.
  */
 CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponsePrivate(
-    CreateInstancesFromSnapshotQueueResponse * const q) : CreateInstancesFromSnapshotPrivate(q)
+    CreateInstancesFromSnapshotResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

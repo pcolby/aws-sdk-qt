@@ -86,7 +86,7 @@ void GetDataRetrievalPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDataRetrievalPolicyResponse instance.
  */
 GetDataRetrievalPolicyResponsePrivate::GetDataRetrievalPolicyResponsePrivate(
-    GetDataRetrievalPolicyQueueResponse * const q) : GetDataRetrievalPolicyPrivate(q)
+    GetDataRetrievalPolicyResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

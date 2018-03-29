@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response
  */
 GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
     const CloudDirectoryRequest::Action action, GetTypedLinkFacetInformationRequest * const q)
-    : GetTypedLinkFacetInformationPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestP
  */
 GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
     const GetTypedLinkFacetInformationRequestPrivate &other, GetTypedLinkFacetInformationRequest * const q)
-    : GetTypedLinkFacetInformationPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

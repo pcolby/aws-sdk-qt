@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectDominantLanguageRequest::response(
  */
 BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectDominantLanguageRequest * const q)
-    : BatchDetectDominantLanguagePrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPri
  */
 BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPrivate(
     const BatchDetectDominantLanguageRequestPrivate &other, BatchDetectDominantLanguageRequest * const q)
-    : BatchDetectDominantLanguagePrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

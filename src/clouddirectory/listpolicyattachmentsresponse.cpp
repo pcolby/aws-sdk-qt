@@ -86,7 +86,7 @@ void ListPolicyAttachmentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPolicyAttachmentsResponse instance.
  */
 ListPolicyAttachmentsResponsePrivate::ListPolicyAttachmentsResponsePrivate(
-    ListPolicyAttachmentsQueueResponse * const q) : ListPolicyAttachmentsPrivate(q)
+    ListPolicyAttachmentsResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

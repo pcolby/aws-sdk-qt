@@ -86,7 +86,7 @@ void ListAuthorizersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAuthorizersResponse instance.
  */
 ListAuthorizersResponsePrivate::ListAuthorizersResponsePrivate(
-    ListAuthorizersQueueResponse * const q) : ListAuthorizersPrivate(q)
+    ListAuthorizersResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

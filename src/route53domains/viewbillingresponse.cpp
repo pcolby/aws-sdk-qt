@@ -86,7 +86,7 @@ void ViewBillingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ViewBillingResponse instance.
  */
 ViewBillingResponsePrivate::ViewBillingResponsePrivate(
-    ViewBillingQueueResponse * const q) : ViewBillingPrivate(q)
+    ViewBillingResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectTaggingRequest::response(QNetworkRep
  */
 GetObjectTaggingRequestPrivate::GetObjectTaggingRequestPrivate(
     const S3Request::Action action, GetObjectTaggingRequest * const q)
-    : GetObjectTaggingPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetObjectTaggingRequestPrivate::GetObjectTaggingRequestPrivate(
  */
 GetObjectTaggingRequestPrivate::GetObjectTaggingRequestPrivate(
     const GetObjectTaggingRequestPrivate &other, GetObjectTaggingRequest * const q)
-    : GetObjectTaggingPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

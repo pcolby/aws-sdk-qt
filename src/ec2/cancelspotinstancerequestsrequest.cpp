@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(Q
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
     const EC2Request::Action action, CancelSpotInstanceRequestsRequest * const q)
-    : CancelSpotInstanceRequestsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPriva
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
     const CancelSpotInstanceRequestsRequestPrivate &other, CancelSpotInstanceRequestsRequest * const q)
-    : CancelSpotInstanceRequestsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceStartTimeRequest::response(Q
  */
 UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateMaintenanceStartTimeRequest * const q)
-    : UpdateMaintenanceStartTimePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPriva
  */
 UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPrivate(
     const UpdateMaintenanceStartTimeRequestPrivate &other, UpdateMaintenanceStartTimeRequest * const q)
-    : UpdateMaintenanceStartTimePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

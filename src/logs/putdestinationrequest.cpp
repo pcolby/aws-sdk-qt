@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply
  */
 PutDestinationRequestPrivate::PutDestinationRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutDestinationRequest * const q)
-    : PutDestinationPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutDestinationRequestPrivate::PutDestinationRequestPrivate(
  */
 PutDestinationRequestPrivate::PutDestinationRequestPrivate(
     const PutDestinationRequestPrivate &other, PutDestinationRequest * const q)
-    : PutDestinationPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

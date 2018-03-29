@@ -86,7 +86,7 @@ void AssociateDeviceWithRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateDeviceWithRoomResponse instance.
  */
 AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponsePrivate(
-    AssociateDeviceWithRoomQueueResponse * const q) : AssociateDeviceWithRoomPrivate(q)
+    AssociateDeviceWithRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

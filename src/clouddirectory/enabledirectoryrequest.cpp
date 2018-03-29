@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableDirectoryRequest::response(QNetworkRepl
  */
 EnableDirectoryRequestPrivate::EnableDirectoryRequestPrivate(
     const CloudDirectoryRequest::Action action, EnableDirectoryRequest * const q)
-    : EnableDirectoryPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableDirectoryRequestPrivate::EnableDirectoryRequestPrivate(
  */
 EnableDirectoryRequestPrivate::EnableDirectoryRequestPrivate(
     const EnableDirectoryRequestPrivate &other, EnableDirectoryRequest * const q)
-    : EnableDirectoryPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

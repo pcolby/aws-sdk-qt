@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTranscriptionJobsRequest::response(QNetwo
  */
 ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
     const TranscribeServiceRequest::Action action, ListTranscriptionJobsRequest * const q)
-    : ListTranscriptionJobsPrivate(action, q)
+    : TranscribeServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
  */
 ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
     const ListTranscriptionJobsRequestPrivate &other, ListTranscriptionJobsRequest * const q)
-    : ListTranscriptionJobsPrivate(other, q)
+    : TranscribeServiceRequestPrivate(other, q)
 {
 
 }

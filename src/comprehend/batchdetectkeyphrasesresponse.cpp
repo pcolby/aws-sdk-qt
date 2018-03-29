@@ -86,7 +86,7 @@ void BatchDetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDetectKeyPhrasesResponse instance.
  */
 BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponsePrivate(
-    BatchDetectKeyPhrasesQueueResponse * const q) : BatchDetectKeyPhrasesPrivate(q)
+    BatchDetectKeyPhrasesResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

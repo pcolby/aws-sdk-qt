@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNe
  */
 DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, DeleteComputeEnvironmentRequest * const q)
-    : DeleteComputeEnvironmentPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
  */
 DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
     const DeleteComputeEnvironmentRequestPrivate &other, DeleteComputeEnvironmentRequest * const q)
-    : DeleteComputeEnvironmentPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

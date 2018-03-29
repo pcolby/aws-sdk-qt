@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::re
  */
 DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketInventoryConfigurationRequest * const q)
-    : DeleteBucketInventoryConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigura
  */
 DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigurationRequestPrivate(
     const DeleteBucketInventoryConfigurationRequestPrivate &other, DeleteBucketInventoryConfigurationRequest * const q)
-    : DeleteBucketInventoryConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

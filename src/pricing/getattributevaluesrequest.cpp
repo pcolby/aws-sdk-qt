@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAttributeValuesRequest::response(QNetworkR
  */
 GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
     const PricingRequest::Action action, GetAttributeValuesRequest * const q)
-    : GetAttributeValuesPrivate(action, q)
+    : PricingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
  */
 GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
     const GetAttributeValuesRequestPrivate &other, GetAttributeValuesRequest * const q)
-    : GetAttributeValuesPrivate(other, q)
+    : PricingRequestPrivate(other, q)
 {
 
 }

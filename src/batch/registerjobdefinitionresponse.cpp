@@ -86,7 +86,7 @@ void RegisterJobDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterJobDefinitionResponse instance.
  */
 RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponsePrivate(
-    RegisterJobDefinitionQueueResponse * const q) : RegisterJobDefinitionPrivate(q)
+    RegisterJobDefinitionResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

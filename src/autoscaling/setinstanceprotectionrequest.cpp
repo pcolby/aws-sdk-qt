@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetwo
  */
 SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
     const AutoScalingRequest::Action action, SetInstanceProtectionRequest * const q)
-    : SetInstanceProtectionPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
  */
 SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
     const SetInstanceProtectionRequestPrivate &other, SetInstanceProtectionRequest * const q)
-    : SetInstanceProtectionPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

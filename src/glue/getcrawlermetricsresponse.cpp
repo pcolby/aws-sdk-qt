@@ -86,7 +86,7 @@ void GetCrawlerMetricsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCrawlerMetricsResponse instance.
  */
 GetCrawlerMetricsResponsePrivate::GetCrawlerMetricsResponsePrivate(
-    GetCrawlerMetricsQueueResponse * const q) : GetCrawlerMetricsPrivate(q)
+    GetCrawlerMetricsResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

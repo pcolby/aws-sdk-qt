@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply *
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
     const EMRRequest::Action action, DescribeStepRequest * const q)
-    : DescribeStepPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStepRequestPrivate::DescribeStepRequestPrivate(
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
     const DescribeStepRequestPrivate &other, DescribeStepRequest * const q)
-    : DescribeStepPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

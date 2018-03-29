@@ -86,7 +86,7 @@ void CreateSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSpotDatafeedSubscriptionResponse instance.
  */
 CreateSpotDatafeedSubscriptionResponsePrivate::CreateSpotDatafeedSubscriptionResponsePrivate(
-    CreateSpotDatafeedSubscriptionQueueResponse * const q) : CreateSpotDatafeedSubscriptionPrivate(q)
+    CreateSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

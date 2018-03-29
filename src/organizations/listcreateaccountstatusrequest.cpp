@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCreateAccountStatusRequest::response(QNet
  */
 ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
     const OrganizationsRequest::Action action, ListCreateAccountStatusRequest * const q)
-    : ListCreateAccountStatusPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
  */
 ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
     const ListCreateAccountStatusRequestPrivate &other, ListCreateAccountStatusRequest * const q)
-    : ListCreateAccountStatusPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

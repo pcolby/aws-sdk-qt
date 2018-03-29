@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOfferingPromotionsRequest::response(QNetw
  */
 ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListOfferingPromotionsRequest * const q)
-    : ListOfferingPromotionsPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
  */
 ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
     const ListOfferingPromotionsRequestPrivate &other, ListOfferingPromotionsRequest * const q)
-    : ListOfferingPromotionsPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

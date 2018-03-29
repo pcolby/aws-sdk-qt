@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIndexFieldRequest::response(QNetworkRep
  */
 DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
     const CloudSearchRequest::Action action, DeleteIndexFieldRequest * const q)
-    : DeleteIndexFieldPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
  */
 DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
     const DeleteIndexFieldRequestPrivate &other, DeleteIndexFieldRequest * const q)
-    : DeleteIndexFieldPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

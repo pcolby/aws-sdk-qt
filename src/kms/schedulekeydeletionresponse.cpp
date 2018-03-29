@@ -86,7 +86,7 @@ void ScheduleKeyDeletionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ScheduleKeyDeletionResponse instance.
  */
 ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
-    ScheduleKeyDeletionQueueResponse * const q) : ScheduleKeyDeletionPrivate(q)
+    ScheduleKeyDeletionResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

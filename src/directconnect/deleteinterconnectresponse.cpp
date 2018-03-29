@@ -86,7 +86,7 @@ void DeleteInterconnectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteInterconnectResponse instance.
  */
 DeleteInterconnectResponsePrivate::DeleteInterconnectResponsePrivate(
-    DeleteInterconnectQueueResponse * const q) : DeleteInterconnectPrivate(q)
+    DeleteInterconnectResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetServiceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetServiceResponse instance.
  */
 GetServiceResponsePrivate::GetServiceResponsePrivate(
-    GetServiceQueueResponse * const q) : GetServicePrivate(q)
+    GetServiceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

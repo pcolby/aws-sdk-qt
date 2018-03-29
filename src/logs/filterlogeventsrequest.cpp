@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkRepl
  */
 FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
     const CloudWatchLogsRequest::Action action, FilterLogEventsRequest * const q)
-    : FilterLogEventsPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
  */
 FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
     const FilterLogEventsRequestPrivate &other, FilterLogEventsRequest * const q)
-    : FilterLogEventsPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

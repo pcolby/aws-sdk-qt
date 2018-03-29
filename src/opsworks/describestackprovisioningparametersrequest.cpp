@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStackProvisioningParametersRequest::r
  */
 DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningParametersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeStackProvisioningParametersRequest * const q)
-    : DescribeStackProvisioningParametersPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningPara
  */
 DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningParametersRequestPrivate(
     const DescribeStackProvisioningParametersRequestPrivate &other, DescribeStackProvisioningParametersRequest * const q)
-    : DescribeStackProvisioningParametersPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

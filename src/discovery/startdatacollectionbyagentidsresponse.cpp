@@ -86,7 +86,7 @@ void StartDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartDataCollectionByAgentIdsResponse instance.
  */
 StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsResponsePrivate(
-    StartDataCollectionByAgentIdsQueueResponse * const q) : StartDataCollectionByAgentIdsPrivate(q)
+    StartDataCollectionByAgentIdsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

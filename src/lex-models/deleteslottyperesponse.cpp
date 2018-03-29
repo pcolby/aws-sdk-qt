@@ -86,7 +86,7 @@ void DeleteSlotTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSlotTypeResponse instance.
  */
 DeleteSlotTypeResponsePrivate::DeleteSlotTypeResponsePrivate(
-    DeleteSlotTypeQueueResponse * const q) : DeleteSlotTypePrivate(q)
+    DeleteSlotTypeResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

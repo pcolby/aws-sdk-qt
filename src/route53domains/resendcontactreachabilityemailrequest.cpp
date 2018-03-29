@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::respon
  */
 ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
     const Route53DomainsRequest::Action action, ResendContactReachabilityEmailRequest * const q)
-    : ResendContactReachabilityEmailPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequ
  */
 ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
     const ResendContactReachabilityEmailRequestPrivate &other, ResendContactReachabilityEmailRequest * const q)
-    : ResendContactReachabilityEmailPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

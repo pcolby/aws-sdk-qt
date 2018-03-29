@@ -86,7 +86,7 @@ void PutContainerPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutContainerPolicyResponse instance.
  */
 PutContainerPolicyResponsePrivate::PutContainerPolicyResponsePrivate(
-    PutContainerPolicyQueueResponse * const q) : PutContainerPolicyPrivate(q)
+    PutContainerPolicyResponse * const q) : MediaStoreResponsePrivate(q)
 {
 
 }

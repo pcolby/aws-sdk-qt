@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetContactReachabilityStatusRequest::response
  */
 GetContactReachabilityStatusRequestPrivate::GetContactReachabilityStatusRequestPrivate(
     const Route53DomainsRequest::Action action, GetContactReachabilityStatusRequest * const q)
-    : GetContactReachabilityStatusPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetContactReachabilityStatusRequestPrivate::GetContactReachabilityStatusRequestP
  */
 GetContactReachabilityStatusRequestPrivate::GetContactReachabilityStatusRequestPrivate(
     const GetContactReachabilityStatusRequestPrivate &other, GetContactReachabilityStatusRequest * const q)
-    : GetContactReachabilityStatusPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DisassociateFromMasterAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateFromMasterAccountResponse instance.
  */
 DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountResponsePrivate(
-    DisassociateFromMasterAccountQueueResponse * const q) : DisassociateFromMasterAccountPrivate(q)
+    DisassociateFromMasterAccountResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

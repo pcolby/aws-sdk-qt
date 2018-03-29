@@ -86,7 +86,7 @@ void TestFailoverResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestFailoverResponse instance.
  */
 TestFailoverResponsePrivate::TestFailoverResponsePrivate(
-    TestFailoverQueueResponse * const q) : TestFailoverPrivate(q)
+    TestFailoverResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

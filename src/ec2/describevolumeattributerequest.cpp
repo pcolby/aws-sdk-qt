@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNet
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
     const EC2Request::Action action, DescribeVolumeAttributeRequest * const q)
-    : DescribeVolumeAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
     const DescribeVolumeAttributeRequestPrivate &other, DescribeVolumeAttributeRequest * const q)
-    : DescribeVolumeAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

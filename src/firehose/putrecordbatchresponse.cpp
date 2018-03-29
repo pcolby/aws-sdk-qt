@@ -86,7 +86,7 @@ void PutRecordBatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutRecordBatchResponse instance.
  */
 PutRecordBatchResponsePrivate::PutRecordBatchResponsePrivate(
-    PutRecordBatchQueueResponse * const q) : PutRecordBatchPrivate(q)
+    PutRecordBatchResponse * const q) : FirehoseResponsePrivate(q)
 {
 
 }

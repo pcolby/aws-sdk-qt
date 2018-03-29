@@ -86,7 +86,7 @@ void ListRepositoriesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRepositoriesResponse instance.
  */
 ListRepositoriesResponsePrivate::ListRepositoriesResponsePrivate(
-    ListRepositoriesQueueResponse * const q) : ListRepositoriesPrivate(q)
+    ListRepositoriesResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

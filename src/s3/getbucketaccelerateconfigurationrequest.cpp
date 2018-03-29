@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketAccelerateConfigurationRequest::resp
  */
 GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketAccelerateConfigurationRequest * const q)
-    : GetBucketAccelerateConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfiguration
  */
 GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfigurationRequestPrivate(
     const GetBucketAccelerateConfigurationRequestPrivate &other, GetBucketAccelerateConfigurationRequest * const q)
-    : GetBucketAccelerateConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

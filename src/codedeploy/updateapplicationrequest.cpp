@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const CodeDeployRequest::Action action, UpdateApplicationRequest * const q)
-    : UpdateApplicationPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const UpdateApplicationRequestPrivate &other, UpdateApplicationRequest * const q)
-    : UpdateApplicationPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

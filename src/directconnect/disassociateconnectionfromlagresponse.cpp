@@ -86,7 +86,7 @@ void DisassociateConnectionFromLagResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateConnectionFromLagResponse instance.
  */
 DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLagResponsePrivate(
-    DisassociateConnectionFromLagQueueResponse * const q) : DisassociateConnectionFromLagPrivate(q)
+    DisassociateConnectionFromLagResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

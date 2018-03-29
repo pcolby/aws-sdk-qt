@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MergeDeveloperIdentitiesRequest::response(QNe
  */
 MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
     const CognitoIdentityRequest::Action action, MergeDeveloperIdentitiesRequest * const q)
-    : MergeDeveloperIdentitiesPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
  */
 MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
     const MergeDeveloperIdentitiesRequestPrivate &other, MergeDeveloperIdentitiesRequest * const q)
-    : MergeDeveloperIdentitiesPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetMappingResponse instance.
  */
 GetMappingResponsePrivate::GetMappingResponsePrivate(
-    GetMappingQueueResponse * const q) : GetMappingPrivate(q)
+    GetMappingResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

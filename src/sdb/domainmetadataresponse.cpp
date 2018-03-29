@@ -86,7 +86,7 @@ void DomainMetadataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DomainMetadataResponse instance.
  */
 DomainMetadataResponsePrivate::DomainMetadataResponsePrivate(
-    DomainMetadataQueueResponse * const q) : DomainMetadataPrivate(q)
+    DomainMetadataResponse * const q) : SimpleDBResponsePrivate(q)
 {
 
 }

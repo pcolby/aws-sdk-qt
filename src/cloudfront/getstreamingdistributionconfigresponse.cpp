@@ -86,7 +86,7 @@ void GetStreamingDistributionConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetStreamingDistributionConfigResponse instance.
  */
 GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigResponsePrivate(
-    GetStreamingDistributionConfigQueueResponse * const q) : GetStreamingDistributionConfigPrivate(q)
+    GetStreamingDistributionConfigResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

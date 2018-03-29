@@ -86,7 +86,7 @@ void SendEmailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendEmailResponse instance.
  */
 SendEmailResponsePrivate::SendEmailResponsePrivate(
-    SendEmailQueueResponse * const q) : SendEmailPrivate(q)
+    SendEmailResponse * const q) : SESResponsePrivate(q)
 {
 
 }

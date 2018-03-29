@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkRep
  */
 DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
     const CloudSearchRequest::Action action, DeleteExpressionRequest * const q)
-    : DeleteExpressionPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
  */
 DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
     const DeleteExpressionRequestPrivate &other, DeleteExpressionRequest * const q)
-    : DeleteExpressionPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * co
  */
 ListHapgsRequestPrivate::ListHapgsRequestPrivate(
     const CloudHSMRequest::Action action, ListHapgsRequest * const q)
-    : ListHapgsPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListHapgsRequestPrivate::ListHapgsRequestPrivate(
  */
 ListHapgsRequestPrivate::ListHapgsRequestPrivate(
     const ListHapgsRequestPrivate &other, ListHapgsRequest * const q)
-    : ListHapgsPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

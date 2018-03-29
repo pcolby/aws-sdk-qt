@@ -86,7 +86,7 @@ void CreatePublicVirtualInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePublicVirtualInterfaceResponse instance.
  */
 CreatePublicVirtualInterfaceResponsePrivate::CreatePublicVirtualInterfaceResponsePrivate(
-    CreatePublicVirtualInterfaceQueueResponse * const q) : CreatePublicVirtualInterfacePrivate(q)
+    CreatePublicVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

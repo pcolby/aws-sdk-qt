@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNe
  */
 ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListRemoteAccessSessionsRequest * const q)
-    : ListRemoteAccessSessionsPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
  */
 ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
     const ListRemoteAccessSessionsRequestPrivate &other, ListRemoteAccessSessionsRequest * const q)
-    : ListRemoteAccessSessionsPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

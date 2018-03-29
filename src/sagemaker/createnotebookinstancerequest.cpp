@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceRequest::response(QNetw
  */
 CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, CreateNotebookInstanceRequest * const q)
-    : CreateNotebookInstancePrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
  */
 CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
     const CreateNotebookInstanceRequestPrivate &other, CreateNotebookInstanceRequest * const q)
-    : CreateNotebookInstancePrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

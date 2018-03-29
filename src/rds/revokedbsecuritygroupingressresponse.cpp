@@ -86,7 +86,7 @@ void RevokeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RevokeDBSecurityGroupIngressResponse instance.
  */
 RevokeDBSecurityGroupIngressResponsePrivate::RevokeDBSecurityGroupIngressResponsePrivate(
-    RevokeDBSecurityGroupIngressQueueResponse * const q) : RevokeDBSecurityGroupIngressPrivate(q)
+    RevokeDBSecurityGroupIngressResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

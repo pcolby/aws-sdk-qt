@@ -86,7 +86,7 @@ void DescribeJobDefinitionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeJobDefinitionsResponse instance.
  */
 DescribeJobDefinitionsResponsePrivate::DescribeJobDefinitionsResponsePrivate(
-    DescribeJobDefinitionsQueueResponse * const q) : DescribeJobDefinitionsPrivate(q)
+    DescribeJobDefinitionsResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

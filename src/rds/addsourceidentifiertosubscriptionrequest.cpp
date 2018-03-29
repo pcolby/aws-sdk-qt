@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::res
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const RDSRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
-    : AddSourceIdentifierToSubscriptionPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const AddSourceIdentifierToSubscriptionRequestPrivate &other, AddSourceIdentifierToSubscriptionRequest * const q)
-    : AddSourceIdentifierToSubscriptionPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

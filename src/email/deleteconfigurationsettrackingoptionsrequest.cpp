@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest:
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetTrackingOptionsRequest * const q)
-    : DeleteConfigurationSetTrackingOptionsPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrack
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
     const DeleteConfigurationSetTrackingOptionsRequestPrivate &other, DeleteConfigurationSetTrackingOptionsRequest * const q)
-    : DeleteConfigurationSetTrackingOptionsPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

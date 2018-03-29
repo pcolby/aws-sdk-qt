@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkR
  */
 CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
     const ShieldRequest::Action action, CreateSubscriptionRequest * const q)
-    : CreateSubscriptionPrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
  */
 CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
     const CreateSubscriptionRequestPrivate &other, CreateSubscriptionRequest * const q)
-    : CreateSubscriptionPrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

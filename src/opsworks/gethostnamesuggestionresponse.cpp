@@ -86,7 +86,7 @@ void GetHostnameSuggestionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetHostnameSuggestionResponse instance.
  */
 GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponsePrivate(
-    GetHostnameSuggestionQueueResponse * const q) : GetHostnameSuggestionPrivate(q)
+    GetHostnameSuggestionResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

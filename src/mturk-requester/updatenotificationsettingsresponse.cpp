@@ -86,7 +86,7 @@ void UpdateNotificationSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateNotificationSettingsResponse instance.
  */
 UpdateNotificationSettingsResponsePrivate::UpdateNotificationSettingsResponsePrivate(
-    UpdateNotificationSettingsQueueResponse * const q) : UpdateNotificationSettingsPrivate(q)
+    UpdateNotificationSettingsResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

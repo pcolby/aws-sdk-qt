@@ -86,7 +86,7 @@ void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteOptionGroupResponse instance.
  */
 DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
-    DeleteOptionGroupQueueResponse * const q) : DeleteOptionGroupPrivate(q)
+    DeleteOptionGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SubmitTaskStateChangeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SubmitTaskStateChangeResponse instance.
  */
 SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
-    SubmitTaskStateChangeQueueResponse * const q) : SubmitTaskStateChangePrivate(q)
+    SubmitTaskStateChangeResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

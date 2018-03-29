@@ -86,7 +86,7 @@ void DeleteMessageBatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteMessageBatchResponse instance.
  */
 DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponsePrivate(
-    DeleteMessageBatchQueueResponse * const q) : DeleteMessageBatchPrivate(q)
+    DeleteMessageBatchResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersInGroupRequest::response(QNetworkRep
  */
 ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListUsersInGroupRequest * const q)
-    : ListUsersInGroupPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
  */
 ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
     const ListUsersInGroupRequestPrivate &other, ListUsersInGroupRequest * const q)
-    : ListUsersInGroupPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InvalidateProjectCacheRequest::response(QNetw
  */
 InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
     const CodeBuildRequest::Action action, InvalidateProjectCacheRequest * const q)
-    : InvalidateProjectCachePrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
  */
 InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
     const InvalidateProjectCacheRequestPrivate &other, InvalidateProjectCacheRequest * const q)
-    : InvalidateProjectCachePrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

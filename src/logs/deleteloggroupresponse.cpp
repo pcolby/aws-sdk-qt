@@ -86,7 +86,7 @@ void DeleteLogGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLogGroupResponse instance.
  */
 DeleteLogGroupResponsePrivate::DeleteLogGroupResponsePrivate(
-    DeleteLogGroupQueueResponse * const q) : DeleteLogGroupPrivate(q)
+    DeleteLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

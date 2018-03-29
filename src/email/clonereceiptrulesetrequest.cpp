@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetwork
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, CloneReceiptRuleSetRequest * const q)
-    : CloneReceiptRuleSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
     const CloneReceiptRuleSetRequestPrivate &other, CloneReceiptRuleSetRequest * const q)
-    : CloneReceiptRuleSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkRep
  */
 GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
     const RekognitionRequest::Action action, GetCelebrityInfoRequest * const q)
-    : GetCelebrityInfoPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
  */
 GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
     const GetCelebrityInfoRequestPrivate &other, GetCelebrityInfoRequest * const q)
-    : GetCelebrityInfoPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

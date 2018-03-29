@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
     const SFNRequest::Action action, GetExecutionHistoryRequest * const q)
-    : GetExecutionHistoryPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
     const GetExecutionHistoryRequestPrivate &other, GetExecutionHistoryRequest * const q)
-    : GetExecutionHistoryPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

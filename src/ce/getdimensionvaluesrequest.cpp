@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkR
  */
 GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
     const CostExplorerRequest::Action action, GetDimensionValuesRequest * const q)
-    : GetDimensionValuesPrivate(action, q)
+    : CostExplorerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
  */
 GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
     const GetDimensionValuesRequestPrivate &other, GetDimensionValuesRequest * const q)
-    : GetDimensionValuesPrivate(other, q)
+    : CostExplorerRequestPrivate(other, q)
 {
 
 }

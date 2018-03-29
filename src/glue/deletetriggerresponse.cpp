@@ -86,7 +86,7 @@ void DeleteTriggerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTriggerResponse instance.
  */
 DeleteTriggerResponsePrivate::DeleteTriggerResponsePrivate(
-    DeleteTriggerQueueResponse * const q) : DeleteTriggerPrivate(q)
+    DeleteTriggerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

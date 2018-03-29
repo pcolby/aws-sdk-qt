@@ -86,7 +86,7 @@ void GetFederationTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFederationTokenResponse instance.
  */
 GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
-    GetFederationTokenQueueResponse * const q) : GetFederationTokenPrivate(q)
+    GetFederationTokenResponse * const q) : STSResponsePrivate(q)
 {
 
 }

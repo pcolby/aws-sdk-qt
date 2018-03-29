@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetwork
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeleteScalingPolicyRequest * const q)
-    : DeleteScalingPolicyPrivate(action, q)
+    : ApplicationAutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const DeleteScalingPolicyRequestPrivate &other, DeleteScalingPolicyRequest * const q)
-    : DeleteScalingPolicyPrivate(other, q)
+    : ApplicationAutoScalingRequestPrivate(other, q)
 {
 
 }

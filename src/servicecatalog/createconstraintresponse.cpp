@@ -86,7 +86,7 @@ void CreateConstraintResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateConstraintResponse instance.
  */
 CreateConstraintResponsePrivate::CreateConstraintResponsePrivate(
-    CreateConstraintQueueResponse * const q) : CreateConstraintPrivate(q)
+    CreateConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

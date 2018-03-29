@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentVersionRequest::response(QNetworkR
  */
 GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentVersionRequest * const q)
-    : GetDocumentVersionPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
  */
 GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
     const GetDocumentVersionRequestPrivate &other, GetDocumentVersionRequest * const q)
-    : GetDocumentVersionPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

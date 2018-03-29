@@ -86,7 +86,7 @@ void PutBucketAclResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketAclResponse instance.
  */
 PutBucketAclResponsePrivate::PutBucketAclResponsePrivate(
-    PutBucketAclQueueResponse * const q) : PutBucketAclPrivate(q)
+    PutBucketAclResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

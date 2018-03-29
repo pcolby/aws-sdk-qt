@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const GlacierRequest::Action action, DescribeJobRequest * const q)
-    : DescribeJobPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const DescribeJobRequestPrivate &other, DescribeJobRequest * const q)
-    : DescribeJobPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

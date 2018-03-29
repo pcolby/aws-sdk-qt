@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDefaultBranchRequest::response(QNetwork
  */
 UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
     const CodeCommitRequest::Action action, UpdateDefaultBranchRequest * const q)
-    : UpdateDefaultBranchPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
  */
 UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
     const UpdateDefaultBranchRequestPrivate &other, UpdateDefaultBranchRequest * const q)
-    : UpdateDefaultBranchPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

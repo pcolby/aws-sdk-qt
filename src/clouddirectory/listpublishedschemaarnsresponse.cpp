@@ -86,7 +86,7 @@ void ListPublishedSchemaArnsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPublishedSchemaArnsResponse instance.
  */
 ListPublishedSchemaArnsResponsePrivate::ListPublishedSchemaArnsResponsePrivate(
-    ListPublishedSchemaArnsQueueResponse * const q) : ListPublishedSchemaArnsPrivate(q)
+    ListPublishedSchemaArnsResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

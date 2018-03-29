@@ -86,7 +86,7 @@ void DisassociateVPCFromHostedZoneResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateVPCFromHostedZoneResponse instance.
  */
 DisassociateVPCFromHostedZoneResponsePrivate::DisassociateVPCFromHostedZoneResponsePrivate(
-    DisassociateVPCFromHostedZoneQueueResponse * const q) : DisassociateVPCFromHostedZonePrivate(q)
+    DisassociateVPCFromHostedZoneResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

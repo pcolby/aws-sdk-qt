@@ -86,7 +86,7 @@ void AssociateRouteTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateRouteTableResponse instance.
  */
 AssociateRouteTableResponsePrivate::AssociateRouteTableResponsePrivate(
-    AssociateRouteTableQueueResponse * const q) : AssociateRouteTablePrivate(q)
+    AssociateRouteTableResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

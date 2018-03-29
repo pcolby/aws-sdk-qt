@@ -86,7 +86,7 @@ void CreateCommentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCommentResponse instance.
  */
 CreateCommentResponsePrivate::CreateCommentResponsePrivate(
-    CreateCommentQueueResponse * const q) : CreateCommentPrivate(q)
+    CreateCommentResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

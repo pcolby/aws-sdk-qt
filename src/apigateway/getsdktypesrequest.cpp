@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSdkTypesRequest::response(QNetworkReply * 
  */
 GetSdkTypesRequestPrivate::GetSdkTypesRequestPrivate(
     const APIGatewayRequest::Action action, GetSdkTypesRequest * const q)
-    : GetSdkTypesPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSdkTypesRequestPrivate::GetSdkTypesRequestPrivate(
  */
 GetSdkTypesRequestPrivate::GetSdkTypesRequestPrivate(
     const GetSdkTypesRequestPrivate &other, GetSdkTypesRequest * const q)
-    : GetSdkTypesPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

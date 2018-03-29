@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetParametersByPathRequest::response(QNetwork
  */
 GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
     const SSMRequest::Action action, GetParametersByPathRequest * const q)
-    : GetParametersByPathPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
  */
 GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
     const GetParametersByPathRequestPrivate &other, GetParametersByPathRequest * const q)
-    : GetParametersByPathPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

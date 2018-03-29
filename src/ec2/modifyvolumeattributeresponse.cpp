@@ -86,7 +86,7 @@ void ModifyVolumeAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyVolumeAttributeResponse instance.
  */
 ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponsePrivate(
-    ModifyVolumeAttributeQueueResponse * const q) : ModifyVolumeAttributePrivate(q)
+    ModifyVolumeAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

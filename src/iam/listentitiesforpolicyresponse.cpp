@@ -86,7 +86,7 @@ void ListEntitiesForPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListEntitiesForPolicyResponse instance.
  */
 ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponsePrivate(
-    ListEntitiesForPolicyQueueResponse * const q) : ListEntitiesForPolicyPrivate(q)
+    ListEntitiesForPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

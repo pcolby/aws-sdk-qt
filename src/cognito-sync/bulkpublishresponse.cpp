@@ -86,7 +86,7 @@ void BulkPublishResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BulkPublishResponse instance.
  */
 BulkPublishResponsePrivate::BulkPublishResponsePrivate(
-    BulkPublishQueueResponse * const q) : BulkPublishPrivate(q)
+    BulkPublishResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

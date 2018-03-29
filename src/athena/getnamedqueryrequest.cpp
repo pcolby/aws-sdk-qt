@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetNamedQueryRequest::response(QNetworkReply 
  */
 GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
     const AthenaRequest::Action action, GetNamedQueryRequest * const q)
-    : GetNamedQueryPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
  */
 GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
     const GetNamedQueryRequestPrivate &other, GetNamedQueryRequest * const q)
-    : GetNamedQueryPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

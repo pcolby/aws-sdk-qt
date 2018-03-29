@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBrokerRequest::response(QNetworkReply *
  */
 DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
     const MQRequest::Action action, DeleteBrokerRequest * const q)
-    : DeleteBrokerPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
  */
 DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
     const DeleteBrokerRequestPrivate &other, DeleteBrokerRequest * const q)
-    : DeleteBrokerPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

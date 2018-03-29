@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
     const ECRRequest::Action action, DeleteLifecyclePolicyRequest * const q)
-    : DeleteLifecyclePolicyPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
     const DeleteLifecyclePolicyRequestPrivate &other, DeleteLifecyclePolicyRequest * const q)
-    : DeleteLifecyclePolicyPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

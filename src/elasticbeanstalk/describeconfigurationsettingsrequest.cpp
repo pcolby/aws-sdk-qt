@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationSettingsRequest::respons
  */
 DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeConfigurationSettingsRequest * const q)
-    : DescribeConfigurationSettingsPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsReques
  */
 DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsRequestPrivate(
     const DescribeConfigurationSettingsRequestPrivate &other, DescribeConfigurationSettingsRequest * const q)
-    : DescribeConfigurationSettingsPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

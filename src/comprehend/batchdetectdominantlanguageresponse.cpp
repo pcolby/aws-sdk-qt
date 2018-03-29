@@ -86,7 +86,7 @@ void BatchDetectDominantLanguageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDetectDominantLanguageResponse instance.
  */
 BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponsePrivate(
-    BatchDetectDominantLanguageQueueResponse * const q) : BatchDetectDominantLanguagePrivate(q)
+    BatchDetectDominantLanguageResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

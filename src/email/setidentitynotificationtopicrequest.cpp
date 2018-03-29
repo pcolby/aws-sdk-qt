@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
     const SESRequest::Action action, SetIdentityNotificationTopicRequest * const q)
-    : SetIdentityNotificationTopicPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestP
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
     const SetIdentityNotificationTopicRequestPrivate &other, SetIdentityNotificationTopicRequest * const q)
-    : SetIdentityNotificationTopicPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ConfirmConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConfirmConnectionResponse instance.
  */
 ConfirmConnectionResponsePrivate::ConfirmConnectionResponsePrivate(
-    ConfirmConnectionQueueResponse * const q) : ConfirmConnectionPrivate(q)
+    ConfirmConnectionResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

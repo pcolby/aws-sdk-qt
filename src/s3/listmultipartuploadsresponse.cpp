@@ -86,7 +86,7 @@ void ListMultipartUploadsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListMultipartUploadsResponse instance.
  */
 ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponsePrivate(
-    ListMultipartUploadsQueueResponse * const q) : ListMultipartUploadsPrivate(q)
+    ListMultipartUploadsResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

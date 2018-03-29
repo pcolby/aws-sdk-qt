@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(Q
  */
 DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
     const ComprehendRequest::Action action, DescribeTopicsDetectionJobRequest * const q)
-    : DescribeTopicsDetectionJobPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPriva
  */
 DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
     const DescribeTopicsDetectionJobRequestPrivate &other, DescribeTopicsDetectionJobRequest * const q)
-    : DescribeTopicsDetectionJobPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

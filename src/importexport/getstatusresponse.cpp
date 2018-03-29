@@ -86,7 +86,7 @@ void GetStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetStatusResponse instance.
  */
 GetStatusResponsePrivate::GetStatusResponsePrivate(
-    GetStatusQueueResponse * const q) : GetStatusPrivate(q)
+    GetStatusResponse * const q) : ImportExportResponsePrivate(q)
 {
 
 }

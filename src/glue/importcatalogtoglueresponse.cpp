@@ -86,7 +86,7 @@ void ImportCatalogToGlueResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportCatalogToGlueResponse instance.
  */
 ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponsePrivate(
-    ImportCatalogToGlueQueueResponse * const q) : ImportCatalogToGluePrivate(q)
+    ImportCatalogToGlueResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkRep
  */
 UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateConstraintRequest * const q)
-    : UpdateConstraintPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
  */
 UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
     const UpdateConstraintRequestPrivate &other, UpdateConstraintRequest * const q)
-    : UpdateConstraintPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

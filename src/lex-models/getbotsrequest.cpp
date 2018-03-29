@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotsRequest::response(QNetworkReply * cons
  */
 GetBotsRequestPrivate::GetBotsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotsRequest * const q)
-    : GetBotsPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBotsRequestPrivate::GetBotsRequestPrivate(
  */
 GetBotsRequestPrivate::GetBotsRequestPrivate(
     const GetBotsRequestPrivate &other, GetBotsRequest * const q)
-    : GetBotsPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

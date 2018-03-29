@@ -86,7 +86,7 @@ void DeactivateUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeactivateUserResponse instance.
  */
 DeactivateUserResponsePrivate::DeactivateUserResponsePrivate(
-    DeactivateUserQueueResponse * const q) : DeactivateUserPrivate(q)
+    DeactivateUserResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

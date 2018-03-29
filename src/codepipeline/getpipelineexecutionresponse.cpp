@@ -86,7 +86,7 @@ void GetPipelineExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPipelineExecutionResponse instance.
  */
 GetPipelineExecutionResponsePrivate::GetPipelineExecutionResponsePrivate(
-    GetPipelineExecutionQueueResponse * const q) : GetPipelineExecutionPrivate(q)
+    GetPipelineExecutionResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

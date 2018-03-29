@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartWorkspacesRequest::response(QNetworkRepl
  */
 StartWorkspacesRequestPrivate::StartWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, StartWorkspacesRequest * const q)
-    : StartWorkspacesPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartWorkspacesRequestPrivate::StartWorkspacesRequestPrivate(
  */
 StartWorkspacesRequestPrivate::StartWorkspacesRequestPrivate(
     const StartWorkspacesRequestPrivate &other, StartWorkspacesRequest * const q)
-    : StartWorkspacesPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

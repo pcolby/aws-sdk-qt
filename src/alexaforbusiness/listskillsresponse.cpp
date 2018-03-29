@@ -86,7 +86,7 @@ void ListSkillsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSkillsResponse instance.
  */
 ListSkillsResponsePrivate::ListSkillsResponsePrivate(
-    ListSkillsQueueResponse * const q) : ListSkillsPrivate(q)
+    ListSkillsResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

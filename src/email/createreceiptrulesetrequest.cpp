@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptRuleSetRequest::response(QNetwor
  */
 CreateReceiptRuleSetRequestPrivate::CreateReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, CreateReceiptRuleSetRequest * const q)
-    : CreateReceiptRuleSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateReceiptRuleSetRequestPrivate::CreateReceiptRuleSetRequestPrivate(
  */
 CreateReceiptRuleSetRequestPrivate::CreateReceiptRuleSetRequestPrivate(
     const CreateReceiptRuleSetRequestPrivate &other, CreateReceiptRuleSetRequest * const q)
-    : CreateReceiptRuleSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

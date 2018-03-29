@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListVaultsRequest::response(QNetworkReply * c
  */
 ListVaultsRequestPrivate::ListVaultsRequestPrivate(
     const GlacierRequest::Action action, ListVaultsRequest * const q)
-    : ListVaultsPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListVaultsRequestPrivate::ListVaultsRequestPrivate(
  */
 ListVaultsRequestPrivate::ListVaultsRequestPrivate(
     const ListVaultsRequestPrivate &other, ListVaultsRequest * const q)
-    : ListVaultsPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

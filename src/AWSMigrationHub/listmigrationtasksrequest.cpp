@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListMigrationTasksRequest::response(QNetworkR
  */
 ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
     const MigrationHubRequest::Action action, ListMigrationTasksRequest * const q)
-    : ListMigrationTasksPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
  */
 ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
     const ListMigrationTasksRequestPrivate &other, ListMigrationTasksRequest * const q)
-    : ListMigrationTasksPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

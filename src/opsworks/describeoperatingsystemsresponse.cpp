@@ -86,7 +86,7 @@ void DescribeOperatingSystemsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeOperatingSystemsResponse instance.
  */
 DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponsePrivate(
-    DescribeOperatingSystemsQueueResponse * const q) : DescribeOperatingSystemsPrivate(q)
+    DescribeOperatingSystemsResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

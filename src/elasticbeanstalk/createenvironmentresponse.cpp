@@ -86,7 +86,7 @@ void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateEnvironmentResponse instance.
  */
 CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
-    CreateEnvironmentQueueResponse * const q) : CreateEnvironmentPrivate(q)
+    CreateEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

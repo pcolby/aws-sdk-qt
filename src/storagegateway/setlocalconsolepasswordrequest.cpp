@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNet
  */
 SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
     const StorageGatewayRequest::Action action, SetLocalConsolePasswordRequest * const q)
-    : SetLocalConsolePasswordPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
  */
 SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
     const SetLocalConsolePasswordRequestPrivate &other, SetLocalConsolePasswordRequest * const q)
-    : SetLocalConsolePasswordPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

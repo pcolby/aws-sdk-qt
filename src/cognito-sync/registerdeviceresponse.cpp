@@ -86,7 +86,7 @@ void RegisterDeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterDeviceResponse instance.
  */
 RegisterDeviceResponsePrivate::RegisterDeviceResponsePrivate(
-    RegisterDeviceQueueResponse * const q) : RegisterDevicePrivate(q)
+    RegisterDeviceResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

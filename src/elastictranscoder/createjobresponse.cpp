@@ -86,7 +86,7 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateJobResponse instance.
  */
 CreateJobResponsePrivate::CreateJobResponsePrivate(
-    CreateJobQueueResponse * const q) : CreateJobPrivate(q)
+    CreateJobResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

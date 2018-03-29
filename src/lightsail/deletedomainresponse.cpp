@@ -86,7 +86,7 @@ void DeleteDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDomainResponse instance.
  */
 DeleteDomainResponsePrivate::DeleteDomainResponsePrivate(
-    DeleteDomainQueueResponse * const q) : DeleteDomainPrivate(q)
+    DeleteDomainResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

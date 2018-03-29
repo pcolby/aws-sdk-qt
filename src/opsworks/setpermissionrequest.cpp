@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetPermissionRequest::response(QNetworkReply 
  */
 SetPermissionRequestPrivate::SetPermissionRequestPrivate(
     const OpsWorksRequest::Action action, SetPermissionRequest * const q)
-    : SetPermissionPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetPermissionRequestPrivate::SetPermissionRequestPrivate(
  */
 SetPermissionRequestPrivate::SetPermissionRequestPrivate(
     const SetPermissionRequestPrivate &other, SetPermissionRequest * const q)
-    : SetPermissionPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

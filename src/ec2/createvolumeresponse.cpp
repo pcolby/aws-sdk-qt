@@ -86,7 +86,7 @@ void CreateVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateVolumeResponse instance.
  */
 CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
-    CreateVolumeQueueResponse * const q) : CreateVolumePrivate(q)
+    CreateVolumeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

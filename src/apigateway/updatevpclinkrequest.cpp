@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply 
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, UpdateVpcLinkRequest * const q)
-    : UpdateVpcLinkPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
     const UpdateVpcLinkRequestPrivate &other, UpdateVpcLinkRequest * const q)
-    : UpdateVpcLinkPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

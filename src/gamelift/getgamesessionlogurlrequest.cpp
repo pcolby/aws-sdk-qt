@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetGameSessionLogUrlRequest::response(QNetwor
  */
 GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
     const GameLiftRequest::Action action, GetGameSessionLogUrlRequest * const q)
-    : GetGameSessionLogUrlPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
  */
 GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
     const GetGameSessionLogUrlRequestPrivate &other, GetGameSessionLogUrlRequest * const q)
-    : GetGameSessionLogUrlPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

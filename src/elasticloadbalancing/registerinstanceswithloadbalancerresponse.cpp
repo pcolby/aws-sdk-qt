@@ -86,7 +86,7 @@ void RegisterInstancesWithLoadBalancerResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public RegisterInstancesWithLoadBalancerResponse instance.
  */
 RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalancerResponsePrivate(
-    RegisterInstancesWithLoadBalancerQueueResponse * const q) : RegisterInstancesWithLoadBalancerPrivate(q)
+    RegisterInstancesWithLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

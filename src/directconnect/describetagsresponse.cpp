@@ -86,7 +86,7 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTagsResponse instance.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
-    DescribeTagsQueueResponse * const q) : DescribeTagsPrivate(q)
+    DescribeTagsResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

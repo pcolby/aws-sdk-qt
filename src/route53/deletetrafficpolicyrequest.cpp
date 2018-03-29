@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetwork
  */
 DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
     const Route53Request::Action action, DeleteTrafficPolicyRequest * const q)
-    : DeleteTrafficPolicyPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
  */
 DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
     const DeleteTrafficPolicyRequestPrivate &other, DeleteTrafficPolicyRequest * const q)
-    : DeleteTrafficPolicyPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

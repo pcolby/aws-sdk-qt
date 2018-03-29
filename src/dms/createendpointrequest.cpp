@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateEndpointRequest * const q)
-    : CreateEndpointPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const CreateEndpointRequestPrivate &other, CreateEndpointRequest * const q)
-    : CreateEndpointPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

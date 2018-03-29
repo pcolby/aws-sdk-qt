@@ -86,7 +86,7 @@ void ModifySubnetAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifySubnetAttributeResponse instance.
  */
 ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponsePrivate(
-    ModifySubnetAttributeQueueResponse * const q) : ModifySubnetAttributePrivate(q)
+    ModifySubnetAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

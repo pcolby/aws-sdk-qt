@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(
  */
 ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPrivate(
     const CloudFrontRequest::Action action, ListDistributionsByWebACLIdRequest * const q)
-    : ListDistributionsByWebACLIdPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPri
  */
 ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPrivate(
     const ListDistributionsByWebACLIdRequestPrivate &other, ListDistributionsByWebACLIdRequest * const q)
-    : ListDistributionsByWebACLIdPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

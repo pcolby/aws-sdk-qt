@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressReq
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
     const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
-    : UpdateSecurityGroupRuleDescriptionsIngressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRul
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
     const UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate &other, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
-    : UpdateSecurityGroupRuleDescriptionsIngressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

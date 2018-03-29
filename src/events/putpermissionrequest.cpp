@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutPermissionRequest::response(QNetworkReply 
  */
 PutPermissionRequestPrivate::PutPermissionRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutPermissionRequest * const q)
-    : PutPermissionPrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutPermissionRequestPrivate::PutPermissionRequestPrivate(
  */
 PutPermissionRequestPrivate::PutPermissionRequestPrivate(
     const PutPermissionRequestPrivate &other, PutPermissionRequest * const q)
-    : PutPermissionPrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

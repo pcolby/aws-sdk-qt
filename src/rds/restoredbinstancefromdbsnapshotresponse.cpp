@@ -86,7 +86,7 @@ void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreDBInstanceFromDBSnapshotResponse instance.
  */
 RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotResponsePrivate(
-    RestoreDBInstanceFromDBSnapshotQueueResponse * const q) : RestoreDBInstanceFromDBSnapshotPrivate(q)
+    RestoreDBInstanceFromDBSnapshotResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

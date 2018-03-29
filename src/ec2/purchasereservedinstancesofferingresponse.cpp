@@ -86,7 +86,7 @@ void PurchaseReservedInstancesOfferingResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public PurchaseReservedInstancesOfferingResponse instance.
  */
 PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOfferingResponsePrivate(
-    PurchaseReservedInstancesOfferingQueueResponse * const q) : PurchaseReservedInstancesOfferingPrivate(q)
+    PurchaseReservedInstancesOfferingResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

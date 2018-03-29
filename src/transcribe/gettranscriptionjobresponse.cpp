@@ -86,7 +86,7 @@ void GetTranscriptionJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTranscriptionJobResponse instance.
  */
 GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponsePrivate(
-    GetTranscriptionJobQueueResponse * const q) : GetTranscriptionJobPrivate(q)
+    GetTranscriptionJobResponse * const q) : TranscribeServiceResponsePrivate(q)
 {
 
 }

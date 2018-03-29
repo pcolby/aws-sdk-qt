@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourcesRequest::response(QNetworkReply
  */
 UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
     const ResourceGroupsTaggingAPIRequest::Action action, UntagResourcesRequest * const q)
-    : UntagResourcesPrivate(action, q)
+    : ResourceGroupsTaggingAPIRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
  */
 UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
     const UntagResourcesRequestPrivate &other, UntagResourcesRequest * const q)
-    : UntagResourcesPrivate(other, q)
+    : ResourceGroupsTaggingAPIRequestPrivate(other, q)
 {
 
 }

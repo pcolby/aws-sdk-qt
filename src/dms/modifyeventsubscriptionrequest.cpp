@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ModifyEventSubscriptionRequest * const q)
-    : ModifyEventSubscriptionPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)
-    : ModifyEventSubscriptionPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

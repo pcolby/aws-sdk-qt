@@ -86,7 +86,7 @@ void DescribeDhcpOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDhcpOptionsResponse instance.
  */
 DescribeDhcpOptionsResponsePrivate::DescribeDhcpOptionsResponsePrivate(
-    DescribeDhcpOptionsQueueResponse * const q) : DescribeDhcpOptionsPrivate(q)
+    DescribeDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

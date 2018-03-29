@@ -86,7 +86,7 @@ void CreateDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDomainResponse instance.
  */
 CreateDomainResponsePrivate::CreateDomainResponsePrivate(
-    CreateDomainQueueResponse * const q) : CreateDomainPrivate(q)
+    CreateDomainResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

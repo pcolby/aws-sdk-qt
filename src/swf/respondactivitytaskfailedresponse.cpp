@@ -86,7 +86,7 @@ void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RespondActivityTaskFailedResponse instance.
  */
 RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePrivate(
-    RespondActivityTaskFailedQueueResponse * const q) : RespondActivityTaskFailedPrivate(q)
+    RespondActivityTaskFailedResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

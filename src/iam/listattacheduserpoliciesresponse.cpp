@@ -86,7 +86,7 @@ void ListAttachedUserPoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAttachedUserPoliciesResponse instance.
  */
 ListAttachedUserPoliciesResponsePrivate::ListAttachedUserPoliciesResponsePrivate(
-    ListAttachedUserPoliciesQueueResponse * const q) : ListAttachedUserPoliciesPrivate(q)
+    ListAttachedUserPoliciesResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetDetectorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDetectorResponse instance.
  */
 GetDetectorResponsePrivate::GetDetectorResponsePrivate(
-    GetDetectorQueueResponse * const q) : GetDetectorPrivate(q)
+    GetDetectorResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

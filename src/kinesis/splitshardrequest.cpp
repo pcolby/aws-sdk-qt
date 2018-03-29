@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * c
  */
 SplitShardRequestPrivate::SplitShardRequestPrivate(
     const KinesisRequest::Action action, SplitShardRequest * const q)
-    : SplitShardPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SplitShardRequestPrivate::SplitShardRequestPrivate(
  */
 SplitShardRequestPrivate::SplitShardRequestPrivate(
     const SplitShardRequestPrivate &other, SplitShardRequest * const q)
-    : SplitShardPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

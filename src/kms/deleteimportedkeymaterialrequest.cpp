@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteImportedKeyMaterialRequest::response(QN
  */
 DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
     const KMSRequest::Action action, DeleteImportedKeyMaterialRequest * const q)
-    : DeleteImportedKeyMaterialPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate
  */
 DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
     const DeleteImportedKeyMaterialRequestPrivate &other, DeleteImportedKeyMaterialRequest * const q)
-    : DeleteImportedKeyMaterialPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void RemoveThingFromThingGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveThingFromThingGroupResponse instance.
  */
 RemoveThingFromThingGroupResponsePrivate::RemoveThingFromThingGroupResponsePrivate(
-    RemoveThingFromThingGroupQueueResponse * const q) : RemoveThingFromThingGroupPrivate(q)
+    RemoveThingFromThingGroupResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

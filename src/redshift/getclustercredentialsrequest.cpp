@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetClusterCredentialsRequest::response(QNetwo
  */
 GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
     const RedshiftRequest::Action action, GetClusterCredentialsRequest * const q)
-    : GetClusterCredentialsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
  */
 GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
     const GetClusterCredentialsRequestPrivate &other, GetClusterCredentialsRequest * const q)
-    : GetClusterCredentialsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

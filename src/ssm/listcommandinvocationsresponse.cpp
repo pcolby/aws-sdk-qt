@@ -86,7 +86,7 @@ void ListCommandInvocationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListCommandInvocationsResponse instance.
  */
 ListCommandInvocationsResponsePrivate::ListCommandInvocationsResponsePrivate(
-    ListCommandInvocationsQueueResponse * const q) : ListCommandInvocationsPrivate(q)
+    ListCommandInvocationsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

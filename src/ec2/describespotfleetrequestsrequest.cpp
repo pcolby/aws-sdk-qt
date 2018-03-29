@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestsRequest::response(QN
  */
 DescribeSpotFleetRequestsRequestPrivate::DescribeSpotFleetRequestsRequestPrivate(
     const EC2Request::Action action, DescribeSpotFleetRequestsRequest * const q)
-    : DescribeSpotFleetRequestsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSpotFleetRequestsRequestPrivate::DescribeSpotFleetRequestsRequestPrivate
  */
 DescribeSpotFleetRequestsRequestPrivate::DescribeSpotFleetRequestsRequestPrivate(
     const DescribeSpotFleetRequestsRequestPrivate &other, DescribeSpotFleetRequestsRequest * const q)
-    : DescribeSpotFleetRequestsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateGraphqlApiResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateGraphqlApiResponse instance.
  */
 UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponsePrivate(
-    UpdateGraphqlApiQueueResponse * const q) : UpdateGraphqlApiPrivate(q)
+    UpdateGraphqlApiResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

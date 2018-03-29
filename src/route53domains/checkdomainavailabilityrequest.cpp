@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNet
  */
 CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
     const Route53DomainsRequest::Action action, CheckDomainAvailabilityRequest * const q)
-    : CheckDomainAvailabilityPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
  */
 CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
     const CheckDomainAvailabilityRequestPrivate &other, CheckDomainAvailabilityRequest * const q)
-    : CheckDomainAvailabilityPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

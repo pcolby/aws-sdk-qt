@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupShardConfigurationReque
  */
 ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyReplicationGroupShardConfigurationRequest * const q)
-    : ModifyReplicationGroupShardConfigurationPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupSh
  */
 ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
     const ModifyReplicationGroupShardConfigurationRequestPrivate &other, ModifyReplicationGroupShardConfigurationRequest * const q)
-    : ModifyReplicationGroupShardConfigurationPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

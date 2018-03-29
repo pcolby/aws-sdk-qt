@@ -86,7 +86,7 @@ void ListResourceDelegatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListResourceDelegatesResponse instance.
  */
 ListResourceDelegatesResponsePrivate::ListResourceDelegatesResponsePrivate(
-    ListResourceDelegatesQueueResponse * const q) : ListResourceDelegatesPrivate(q)
+    ListResourceDelegatesResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

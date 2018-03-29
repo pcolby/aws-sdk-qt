@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetwo
  */
 PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
     const CodeCommitRequest::Action action, PutRepositoryTriggersRequest * const q)
-    : PutRepositoryTriggersPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
  */
 PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
     const PutRepositoryTriggersRequestPrivate &other, PutRepositoryTriggersRequest * const q)
-    : PutRepositoryTriggersPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

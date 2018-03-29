@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetwo
  */
 UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
     const IAMRequest::Action action, UpdateRoleDescriptionRequest * const q)
-    : UpdateRoleDescriptionPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
  */
 UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
     const UpdateRoleDescriptionRequestPrivate &other, UpdateRoleDescriptionRequest * const q)
-    : UpdateRoleDescriptionPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

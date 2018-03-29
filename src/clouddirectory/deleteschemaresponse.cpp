@@ -86,7 +86,7 @@ void DeleteSchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSchemaResponse instance.
  */
 DeleteSchemaResponsePrivate::DeleteSchemaResponsePrivate(
-    DeleteSchemaQueueResponse * const q) : DeleteSchemaPrivate(q)
+    DeleteSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

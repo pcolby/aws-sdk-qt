@@ -86,7 +86,7 @@ void TransferDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TransferDomainResponse instance.
  */
 TransferDomainResponsePrivate::TransferDomainResponsePrivate(
-    TransferDomainQueueResponse * const q) : TransferDomainPrivate(q)
+    TransferDomainResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

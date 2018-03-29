@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBuildsRequest::response(QNetworkReply * c
  */
 ListBuildsRequestPrivate::ListBuildsRequestPrivate(
     const GameLiftRequest::Action action, ListBuildsRequest * const q)
-    : ListBuildsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBuildsRequestPrivate::ListBuildsRequestPrivate(
  */
 ListBuildsRequestPrivate::ListBuildsRequestPrivate(
     const ListBuildsRequestPrivate &other, ListBuildsRequest * const q)
-    : ListBuildsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

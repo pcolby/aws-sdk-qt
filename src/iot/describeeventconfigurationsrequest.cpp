@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventConfigurationsRequest::response(
  */
 DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
     const IoTRequest::Action action, DescribeEventConfigurationsRequest * const q)
-    : DescribeEventConfigurationsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPri
  */
 DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
     const DescribeEventConfigurationsRequestPrivate &other, DescribeEventConfigurationsRequest * const q)
-    : DescribeEventConfigurationsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

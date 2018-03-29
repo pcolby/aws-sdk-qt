@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableAvailabilityZonesForLoadBalancerReques
  */
 DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesForLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DisableAvailabilityZonesForLoadBalancerRequest * const q)
-    : DisableAvailabilityZonesForLoadBalancerPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesF
  */
 DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesForLoadBalancerRequestPrivate(
     const DisableAvailabilityZonesForLoadBalancerRequestPrivate &other, DisableAvailabilityZonesForLoadBalancerRequest * const q)
-    : DisableAvailabilityZonesForLoadBalancerPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

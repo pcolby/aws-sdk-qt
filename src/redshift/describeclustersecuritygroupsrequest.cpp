@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSecurityGroupsRequest::respons
  */
 DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSecurityGroupsRequest * const q)
-    : DescribeClusterSecurityGroupsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsReques
  */
 DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsRequestPrivate(
     const DescribeClusterSecurityGroupsRequestPrivate &other, DescribeClusterSecurityGroupsRequest * const q)
-    : DescribeClusterSecurityGroupsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

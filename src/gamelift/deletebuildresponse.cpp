@@ -86,7 +86,7 @@ void DeleteBuildResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBuildResponse instance.
  */
 DeleteBuildResponsePrivate::DeleteBuildResponsePrivate(
-    DeleteBuildQueueResponse * const q) : DeleteBuildPrivate(q)
+    DeleteBuildResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

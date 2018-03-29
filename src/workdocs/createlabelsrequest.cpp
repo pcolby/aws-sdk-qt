@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLabelsRequest::response(QNetworkReply *
  */
 CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
     const WorkDocsRequest::Action action, CreateLabelsRequest * const q)
-    : CreateLabelsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
  */
 CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
     const CreateLabelsRequestPrivate &other, CreateLabelsRequest * const q)
-    : CreateLabelsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

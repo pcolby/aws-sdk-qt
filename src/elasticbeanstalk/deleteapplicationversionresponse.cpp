@@ -86,7 +86,7 @@ void DeleteApplicationVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteApplicationVersionResponse instance.
  */
 DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponsePrivate(
-    DeleteApplicationVersionQueueResponse * const q) : DeleteApplicationVersionPrivate(q)
+    DeleteApplicationVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

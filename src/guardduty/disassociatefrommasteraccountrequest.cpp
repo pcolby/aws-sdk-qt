@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::respons
  */
 DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountRequestPrivate(
     const GuardDutyRequest::Action action, DisassociateFromMasterAccountRequest * const q)
-    : DisassociateFromMasterAccountPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountReques
  */
 DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountRequestPrivate(
     const DisassociateFromMasterAccountRequestPrivate &other, DisassociateFromMasterAccountRequest * const q)
-    : DisassociateFromMasterAccountPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRecordHistoryRequest::response(QNetworkRe
  */
 ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
     const ServiceCatalogRequest::Action action, ListRecordHistoryRequest * const q)
-    : ListRecordHistoryPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
  */
 ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
     const ListRecordHistoryRequestPrivate &other, ListRecordHistoryRequest * const q)
-    : ListRecordHistoryPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

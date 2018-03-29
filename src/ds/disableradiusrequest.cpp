@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply 
  */
 DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
     const DirectoryServiceRequest::Action action, DisableRadiusRequest * const q)
-    : DisableRadiusPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
  */
 DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
     const DisableRadiusRequestPrivate &other, DisableRadiusRequest * const q)
-    : DisableRadiusPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

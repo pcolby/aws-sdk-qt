@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociationVersionsRequest::response(QNet
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
     const SSMRequest::Action action, ListAssociationVersionsRequest * const q)
-    : ListAssociationVersionsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
     const ListAssociationVersionsRequestPrivate &other, ListAssociationVersionsRequest * const q)
-    : ListAssociationVersionsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

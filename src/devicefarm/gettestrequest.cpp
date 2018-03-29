@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTestRequest::response(QNetworkReply * cons
  */
 GetTestRequestPrivate::GetTestRequestPrivate(
     const DeviceFarmRequest::Action action, GetTestRequest * const q)
-    : GetTestPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTestRequestPrivate::GetTestRequestPrivate(
  */
 GetTestRequestPrivate::GetTestRequestPrivate(
     const GetTestRequestPrivate &other, GetTestRequest * const q)
-    : GetTestPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

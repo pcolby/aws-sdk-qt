@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEvaluationRequest::response(QNetworkRep
  */
 UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, UpdateEvaluationRequest * const q)
-    : UpdateEvaluationPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
  */
 UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
     const UpdateEvaluationRequestPrivate &other, UpdateEvaluationRequest * const q)
-    : UpdateEvaluationPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkRepl
  */
 UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateTagOptionRequest * const q)
-    : UpdateTagOptionPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
  */
 UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
     const UpdateTagOptionRequestPrivate &other, UpdateTagOptionRequest * const q)
-    : UpdateTagOptionPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

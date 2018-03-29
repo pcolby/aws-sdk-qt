@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchReadRequest::response(QNetworkReply * co
  */
 BatchReadRequestPrivate::BatchReadRequestPrivate(
     const CloudDirectoryRequest::Action action, BatchReadRequest * const q)
-    : BatchReadPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchReadRequestPrivate::BatchReadRequestPrivate(
  */
 BatchReadRequestPrivate::BatchReadRequestPrivate(
     const BatchReadRequestPrivate &other, BatchReadRequest * const q)
-    : BatchReadPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

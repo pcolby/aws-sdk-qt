@@ -86,7 +86,7 @@ void DescribeScalingPoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeScalingPoliciesResponse instance.
  */
 DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponsePrivate(
-    DescribeScalingPoliciesQueueResponse * const q) : DescribeScalingPoliciesPrivate(q)
+    DescribeScalingPoliciesResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetw
  */
 GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, GetAutomationExecutionRequest * const q)
-    : GetAutomationExecutionPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
  */
 GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
     const GetAutomationExecutionRequestPrivate &other, GetAutomationExecutionRequest * const q)
-    : GetAutomationExecutionPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

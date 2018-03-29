@@ -86,7 +86,7 @@ void StartCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartCelebrityRecognitionResponse instance.
  */
 StartCelebrityRecognitionResponsePrivate::StartCelebrityRecognitionResponsePrivate(
-    StartCelebrityRecognitionQueueResponse * const q) : StartCelebrityRecognitionPrivate(q)
+    StartCelebrityRecognitionResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

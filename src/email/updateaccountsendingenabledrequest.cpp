@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountSendingEnabledRequest::response(
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
     const SESRequest::Action action, UpdateAccountSendingEnabledRequest * const q)
-    : UpdateAccountSendingEnabledPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPri
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
     const UpdateAccountSendingEnabledRequestPrivate &other, UpdateAccountSendingEnabledRequest * const q)
-    : UpdateAccountSendingEnabledPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

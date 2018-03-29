@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkRe
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
     const EFSRequest::Action action, DeleteMountTargetRequest * const q)
-    : DeleteMountTargetPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
     const DeleteMountTargetRequestPrivate &other, DeleteMountTargetRequest * const q)
-    : DeleteMountTargetPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

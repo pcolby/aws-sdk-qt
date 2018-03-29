@@ -86,7 +86,7 @@ void UpdateAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAccountPasswordPolicyResponse instance.
  */
 UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponsePrivate(
-    UpdateAccountPasswordPolicyQueueResponse * const q) : UpdateAccountPasswordPolicyPrivate(q)
+    UpdateAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

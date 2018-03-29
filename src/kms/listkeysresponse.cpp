@@ -86,7 +86,7 @@ void ListKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListKeysResponse instance.
  */
 ListKeysResponsePrivate::ListKeysResponsePrivate(
-    ListKeysQueueResponse * const q) : ListKeysPrivate(q)
+    ListKeysResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

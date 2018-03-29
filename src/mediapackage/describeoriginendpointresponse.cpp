@@ -86,7 +86,7 @@ void DescribeOriginEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeOriginEndpointResponse instance.
  */
 DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponsePrivate(
-    DescribeOriginEndpointQueueResponse * const q) : DescribeOriginEndpointPrivate(q)
+    DescribeOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
 {
 
 }

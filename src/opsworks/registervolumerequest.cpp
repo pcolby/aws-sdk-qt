@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterVolumeRequest::response(QNetworkReply
  */
 RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
     const OpsWorksRequest::Action action, RegisterVolumeRequest * const q)
-    : RegisterVolumePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
  */
 RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
     const RegisterVolumeRequestPrivate &other, RegisterVolumeRequest * const q)
-    : RegisterVolumePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

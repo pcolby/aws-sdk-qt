@@ -86,7 +86,7 @@ void IsVpcPeeredResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public IsVpcPeeredResponse instance.
  */
 IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
-    IsVpcPeeredQueueResponse * const q) : IsVpcPeeredPrivate(q)
+    IsVpcPeeredResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

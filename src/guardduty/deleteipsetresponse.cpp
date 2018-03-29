@@ -86,7 +86,7 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteIPSetResponse instance.
  */
 DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
-    DeleteIPSetQueueResponse * const q) : DeleteIPSetPrivate(q)
+    DeleteIPSetResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

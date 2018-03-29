@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutItemRequest::response(QNetworkReply * cons
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
     const DynamoDBRequest::Action action, PutItemRequest * const q)
-    : PutItemPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutItemRequestPrivate::PutItemRequestPrivate(
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
     const PutItemRequestPrivate &other, PutItemRequest * const q)
-    : PutItemPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

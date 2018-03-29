@@ -86,7 +86,7 @@ void DescribeVpnConnectionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVpnConnectionsResponse instance.
  */
 DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponsePrivate(
-    DescribeVpnConnectionsQueueResponse * const q) : DescribeVpnConnectionsPrivate(q)
+    DescribeVpnConnectionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

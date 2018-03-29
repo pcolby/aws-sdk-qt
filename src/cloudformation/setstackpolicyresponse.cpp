@@ -86,7 +86,7 @@ void SetStackPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetStackPolicyResponse instance.
  */
 SetStackPolicyResponsePrivate::SetStackPolicyResponsePrivate(
-    SetStackPolicyQueueResponse * const q) : SetStackPolicyPrivate(q)
+    SetStackPolicyResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

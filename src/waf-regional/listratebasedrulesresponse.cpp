@@ -86,7 +86,7 @@ void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRateBasedRulesResponse instance.
  */
 ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
-    ListRateBasedRulesQueueResponse * const q) : ListRateBasedRulesPrivate(q)
+    ListRateBasedRulesResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

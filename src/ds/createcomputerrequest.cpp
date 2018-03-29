@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateComputerRequest::response(QNetworkReply
  */
 CreateComputerRequestPrivate::CreateComputerRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateComputerRequest * const q)
-    : CreateComputerPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateComputerRequestPrivate::CreateComputerRequestPrivate(
  */
 CreateComputerRequestPrivate::CreateComputerRequestPrivate(
     const CreateComputerRequestPrivate &other, CreateComputerRequest * const q)
-    : CreateComputerPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

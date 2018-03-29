@@ -86,7 +86,7 @@ void PollForActivityTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PollForActivityTaskResponse instance.
  */
 PollForActivityTaskResponsePrivate::PollForActivityTaskResponsePrivate(
-    PollForActivityTaskQueueResponse * const q) : PollForActivityTaskPrivate(q)
+    PollForActivityTaskResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

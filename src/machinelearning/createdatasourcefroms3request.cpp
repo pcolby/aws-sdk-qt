@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetw
  */
 CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromS3Request * const q)
-    : CreateDataSourceFromS3Private(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
  */
 CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
     const CreateDataSourceFromS3RequestPrivate &other, CreateDataSourceFromS3Request * const q)
-    : CreateDataSourceFromS3Private(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNotificationSubscriptionResponse instance.
  */
 DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscriptionResponsePrivate(
-    DeleteNotificationSubscriptionQueueResponse * const q) : DeleteNotificationSubscriptionPrivate(q)
+    DeleteNotificationSubscriptionResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

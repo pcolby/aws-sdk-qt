@@ -86,7 +86,7 @@ void DescribeResizeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeResizeResponse instance.
  */
 DescribeResizeResponsePrivate::DescribeResizeResponsePrivate(
-    DescribeResizeQueueResponse * const q) : DescribeResizePrivate(q)
+    DescribeResizeResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

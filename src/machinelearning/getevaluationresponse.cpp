@@ -86,7 +86,7 @@ void GetEvaluationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetEvaluationResponse instance.
  */
 GetEvaluationResponsePrivate::GetEvaluationResponsePrivate(
-    GetEvaluationQueueResponse * const q) : GetEvaluationPrivate(q)
+    GetEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

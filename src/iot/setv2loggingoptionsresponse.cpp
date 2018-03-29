@@ -86,7 +86,7 @@ void SetV2LoggingOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetV2LoggingOptionsResponse instance.
  */
 SetV2LoggingOptionsResponsePrivate::SetV2LoggingOptionsResponsePrivate(
-    SetV2LoggingOptionsQueueResponse * const q) : SetV2LoggingOptionsPrivate(q)
+    SetV2LoggingOptionsResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

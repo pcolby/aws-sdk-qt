@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOriginEndpointsRequest::response(QNetwork
  */
 ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
     const MediaPackageRequest::Action action, ListOriginEndpointsRequest * const q)
-    : ListOriginEndpointsPrivate(action, q)
+    : MediaPackageRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
  */
 ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
     const ListOriginEndpointsRequestPrivate &other, ListOriginEndpointsRequest * const q)
-    : ListOriginEndpointsPrivate(other, q)
+    : MediaPackageRequestPrivate(other, q)
 {
 
 }

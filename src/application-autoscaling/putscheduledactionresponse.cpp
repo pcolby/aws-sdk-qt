@@ -86,7 +86,7 @@ void PutScheduledActionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutScheduledActionResponse instance.
  */
 PutScheduledActionResponsePrivate::PutScheduledActionResponsePrivate(
-    PutScheduledActionQueueResponse * const q) : PutScheduledActionPrivate(q)
+    PutScheduledActionResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
 {
 
 }

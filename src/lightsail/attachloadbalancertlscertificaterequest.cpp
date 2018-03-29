@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::resp
  */
 AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificateRequestPrivate(
     const LightsailRequest::Action action, AttachLoadBalancerTlsCertificateRequest * const q)
-    : AttachLoadBalancerTlsCertificatePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificate
  */
 AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificateRequestPrivate(
     const AttachLoadBalancerTlsCertificateRequestPrivate &other, AttachLoadBalancerTlsCertificateRequest * const q)
-    : AttachLoadBalancerTlsCertificatePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

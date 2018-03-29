@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSmsChannelRequest::response(QNetworkRep
  */
 DeleteSmsChannelRequestPrivate::DeleteSmsChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteSmsChannelRequest * const q)
-    : DeleteSmsChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSmsChannelRequestPrivate::DeleteSmsChannelRequestPrivate(
  */
 DeleteSmsChannelRequestPrivate::DeleteSmsChannelRequestPrivate(
     const DeleteSmsChannelRequestPrivate &other, DeleteSmsChannelRequest * const q)
-    : DeleteSmsChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

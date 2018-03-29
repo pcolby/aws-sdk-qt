@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * co
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
     const SNSRequest::Action action, SubscribeRequest * const q)
-    : SubscribePrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SubscribeRequestPrivate::SubscribeRequestPrivate(
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
     const SubscribeRequestPrivate &other, SubscribeRequest * const q)
-    : SubscribePrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

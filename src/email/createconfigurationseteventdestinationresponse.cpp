@@ -86,7 +86,7 @@ void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
  * @param  q  Pointer to this object's public CreateConfigurationSetEventDestinationResponse instance.
  */
 CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationSetEventDestinationResponsePrivate(
-    CreateConfigurationSetEventDestinationQueueResponse * const q) : CreateConfigurationSetEventDestinationPrivate(q)
+    CreateConfigurationSetEventDestinationResponse * const q) : SESResponsePrivate(q)
 {
 
 }

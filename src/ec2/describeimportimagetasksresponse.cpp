@@ -86,7 +86,7 @@ void DescribeImportImageTasksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeImportImageTasksResponse instance.
  */
 DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponsePrivate(
-    DescribeImportImageTasksQueueResponse * const q) : DescribeImportImageTasksPrivate(q)
+    DescribeImportImageTasksResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

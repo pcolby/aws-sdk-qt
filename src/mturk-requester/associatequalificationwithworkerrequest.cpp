@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateQualificationWithWorkerRequest::resp
  */
 AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorkerRequestPrivate(
     const MTurkRequest::Action action, AssociateQualificationWithWorkerRequest * const q)
-    : AssociateQualificationWithWorkerPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorker
  */
 AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorkerRequestPrivate(
     const AssociateQualificationWithWorkerRequestPrivate &other, AssociateQualificationWithWorkerRequest * const q)
-    : AssociateQualificationWithWorkerPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

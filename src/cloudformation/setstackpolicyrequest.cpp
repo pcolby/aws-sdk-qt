@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetStackPolicyRequest::response(QNetworkReply
  */
 SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
     const CloudFormationRequest::Action action, SetStackPolicyRequest * const q)
-    : SetStackPolicyPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
  */
 SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
     const SetStackPolicyRequestPrivate &other, SetStackPolicyRequest * const q)
-    : SetStackPolicyPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

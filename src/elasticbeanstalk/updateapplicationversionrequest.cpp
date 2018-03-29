@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationVersionRequest::response(QNe
  */
 UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationVersionRequest * const q)
-    : UpdateApplicationVersionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
  */
 UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
     const UpdateApplicationVersionRequestPrivate &other, UpdateApplicationVersionRequest * const q)
-    : UpdateApplicationVersionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

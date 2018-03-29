@@ -86,7 +86,7 @@ void PurchaseReservedCacheNodesOfferingResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public PurchaseReservedCacheNodesOfferingResponse instance.
  */
 PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOfferingResponsePrivate(
-    PurchaseReservedCacheNodesOfferingQueueResponse * const q) : PurchaseReservedCacheNodesOfferingPrivate(q)
+    PurchaseReservedCacheNodesOfferingResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

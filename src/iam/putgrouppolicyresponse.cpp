@@ -86,7 +86,7 @@ void PutGroupPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutGroupPolicyResponse instance.
  */
 PutGroupPolicyResponsePrivate::PutGroupPolicyResponsePrivate(
-    PutGroupPolicyQueueResponse * const q) : PutGroupPolicyPrivate(q)
+    PutGroupPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

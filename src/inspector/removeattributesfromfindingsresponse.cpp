@@ -86,7 +86,7 @@ void RemoveAttributesFromFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveAttributesFromFindingsResponse instance.
  */
 RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsResponsePrivate(
-    RemoveAttributesFromFindingsQueueResponse * const q) : RemoveAttributesFromFindingsPrivate(q)
+    RemoveAttributesFromFindingsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

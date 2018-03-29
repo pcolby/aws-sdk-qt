@@ -86,7 +86,7 @@ void DescribeGameSessionQueuesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeGameSessionQueuesResponse instance.
  */
 DescribeGameSessionQueuesResponsePrivate::DescribeGameSessionQueuesResponsePrivate(
-    DescribeGameSessionQueuesQueueResponse * const q) : DescribeGameSessionQueuesPrivate(q)
+    DescribeGameSessionQueuesResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

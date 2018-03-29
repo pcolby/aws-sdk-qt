@@ -86,7 +86,7 @@ void AttachLoadBalancerToSubnetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachLoadBalancerToSubnetsResponse instance.
  */
 AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponsePrivate(
-    AttachLoadBalancerToSubnetsQueueResponse * const q) : AttachLoadBalancerToSubnetsPrivate(q)
+    AttachLoadBalancerToSubnetsResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListNotebookInstancesRequest::response(QNetwo
  */
 ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
     const SageMakerRequest::Action action, ListNotebookInstancesRequest * const q)
-    : ListNotebookInstancesPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
  */
 ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
     const ListNotebookInstancesRequestPrivate &other, ListNotebookInstancesRequest * const q)
-    : ListNotebookInstancesPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

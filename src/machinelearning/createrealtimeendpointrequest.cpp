@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetw
  */
 CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
     const MachineLearningRequest::Action action, CreateRealtimeEndpointRequest * const q)
-    : CreateRealtimeEndpointPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
  */
 CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
     const CreateRealtimeEndpointRequestPrivate &other, CreateRealtimeEndpointRequest * const q)
-    : CreateRealtimeEndpointPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLayerRequest::response(QNetworkReply * 
  */
 DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
     const OpsWorksRequest::Action action, DeleteLayerRequest * const q)
-    : DeleteLayerPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
  */
 DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
     const DeleteLayerRequestPrivate &other, DeleteLayerRequest * const q)
-    : DeleteLayerPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

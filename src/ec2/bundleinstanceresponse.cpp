@@ -86,7 +86,7 @@ void BundleInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BundleInstanceResponse instance.
  */
 BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
-    BundleInstanceQueueResponse * const q) : BundleInstancePrivate(q)
+    BundleInstanceResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

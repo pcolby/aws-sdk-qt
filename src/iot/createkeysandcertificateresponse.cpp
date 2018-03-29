@@ -86,7 +86,7 @@ void CreateKeysAndCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateKeysAndCertificateResponse instance.
  */
 CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate(
-    CreateKeysAndCertificateQueueResponse * const q) : CreateKeysAndCertificatePrivate(q)
+    CreateKeysAndCertificateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

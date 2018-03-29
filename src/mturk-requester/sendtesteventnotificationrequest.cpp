@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendTestEventNotificationRequest::response(QN
  */
 SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate(
     const MTurkRequest::Action action, SendTestEventNotificationRequest * const q)
-    : SendTestEventNotificationPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate
  */
 SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate(
     const SendTestEventNotificationRequestPrivate &other, SendTestEventNotificationRequest * const q)
-    : SendTestEventNotificationPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

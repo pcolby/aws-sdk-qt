@@ -86,7 +86,7 @@ void AssociateSkillGroupWithRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateSkillGroupWithRoomResponse instance.
  */
 AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponsePrivate(
-    AssociateSkillGroupWithRoomQueueResponse * const q) : AssociateSkillGroupWithRoomPrivate(q)
+    AssociateSkillGroupWithRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

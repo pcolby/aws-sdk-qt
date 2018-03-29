@@ -86,7 +86,7 @@ void CreateRealtimeEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRealtimeEndpointResponse instance.
  */
 CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponsePrivate(
-    CreateRealtimeEndpointQueueResponse * const q) : CreateRealtimeEndpointPrivate(q)
+    CreateRealtimeEndpointResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

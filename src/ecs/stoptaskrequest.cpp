@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopTaskRequest::response(QNetworkReply * con
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
     const ECSRequest::Action action, StopTaskRequest * const q)
-    : StopTaskPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopTaskRequestPrivate::StopTaskRequestPrivate(
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
     const StopTaskRequestPrivate &other, StopTaskRequest * const q)
-    : StopTaskPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

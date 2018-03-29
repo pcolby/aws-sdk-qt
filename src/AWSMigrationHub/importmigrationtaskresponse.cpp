@@ -86,7 +86,7 @@ void ImportMigrationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportMigrationTaskResponse instance.
  */
 ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponsePrivate(
-    ImportMigrationTaskQueueResponse * const q) : ImportMigrationTaskPrivate(q)
+    ImportMigrationTaskResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

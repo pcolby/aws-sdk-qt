@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(Q
  */
 DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeReservedCacheNodesRequest * const q)
-    : DescribeReservedCacheNodesPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPriva
  */
 DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPrivate(
     const DescribeReservedCacheNodesRequestPrivate &other, DescribeReservedCacheNodesRequest * const q)
-    : DescribeReservedCacheNodesPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

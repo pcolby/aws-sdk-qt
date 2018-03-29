@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketLoggingRequest::response(QNetworkRep
  */
 PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
     const S3Request::Action action, PutBucketLoggingRequest * const q)
-    : PutBucketLoggingPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
  */
 PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
     const PutBucketLoggingRequestPrivate &other, PutBucketLoggingRequest * const q)
-    : PutBucketLoggingPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

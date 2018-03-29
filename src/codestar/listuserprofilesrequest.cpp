@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListUserProfilesRequest::response(QNetworkRep
  */
 ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
     const CodeStarRequest::Action action, ListUserProfilesRequest * const q)
-    : ListUserProfilesPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
  */
 ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
     const ListUserProfilesRequestPrivate &other, ListUserProfilesRequest * const q)
-    : ListUserProfilesPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

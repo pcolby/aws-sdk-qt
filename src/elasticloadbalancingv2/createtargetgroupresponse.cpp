@@ -86,7 +86,7 @@ void CreateTargetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTargetGroupResponse instance.
  */
 CreateTargetGroupResponsePrivate::CreateTargetGroupResponsePrivate(
-    CreateTargetGroupQueueResponse * const q) : CreateTargetGroupPrivate(q)
+    CreateTargetGroupResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

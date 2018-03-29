@@ -86,7 +86,7 @@ void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AbortMultipartUploadResponse instance.
  */
 AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
-    AbortMultipartUploadQueueResponse * const q) : AbortMultipartUploadPrivate(q)
+    AbortMultipartUploadResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

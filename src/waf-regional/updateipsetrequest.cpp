@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateIPSetRequest * const q)
-    : UpdateIPSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const UpdateIPSetRequestPrivate &other, UpdateIPSetRequest * const q)
-    : UpdateIPSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateCaseResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCaseResponse instance.
  */
 CreateCaseResponsePrivate::CreateCaseResponsePrivate(
-    CreateCaseQueueResponse * const q) : CreateCasePrivate(q)
+    CreateCaseResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

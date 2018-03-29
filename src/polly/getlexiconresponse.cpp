@@ -86,7 +86,7 @@ void GetLexiconResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLexiconResponse instance.
  */
 GetLexiconResponsePrivate::GetLexiconResponsePrivate(
-    GetLexiconQueueResponse * const q) : GetLexiconPrivate(q)
+    GetLexiconResponse * const q) : PollyResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetReusableDelegationSetLimitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetReusableDelegationSetLimitResponse instance.
  */
 GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitResponsePrivate(
-    GetReusableDelegationSetLimitQueueResponse * const q) : GetReusableDelegationSetLimitPrivate(q)
+    GetReusableDelegationSetLimitResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

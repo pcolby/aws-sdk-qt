@@ -86,7 +86,7 @@ void GetJobOutputResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetJobOutputResponse instance.
  */
 GetJobOutputResponsePrivate::GetJobOutputResponsePrivate(
-    GetJobOutputQueueResponse * const q) : GetJobOutputPrivate(q)
+    GetJobOutputResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

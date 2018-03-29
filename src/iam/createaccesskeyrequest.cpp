@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkRepl
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
     const IAMRequest::Action action, CreateAccessKeyRequest * const q)
-    : CreateAccessKeyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
     const CreateAccessKeyRequestPrivate &other, CreateAccessKeyRequest * const q)
-    : CreateAccessKeyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

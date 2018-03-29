@@ -86,7 +86,7 @@ void CreateFlowLogsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateFlowLogsResponse instance.
  */
 CreateFlowLogsResponsePrivate::CreateFlowLogsResponsePrivate(
-    CreateFlowLogsQueueResponse * const q) : CreateFlowLogsPrivate(q)
+    CreateFlowLogsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

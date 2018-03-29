@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkRepl
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
     const IAMRequest::Action action, UpdateAccessKeyRequest * const q)
-    : UpdateAccessKeyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
     const UpdateAccessKeyRequestPrivate &other, UpdateAccessKeyRequest * const q)
-    : UpdateAccessKeyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

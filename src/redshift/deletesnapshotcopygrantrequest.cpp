@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotCopyGrantRequest::response(QNet
  */
 DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
     const RedshiftRequest::Action action, DeleteSnapshotCopyGrantRequest * const q)
-    : DeleteSnapshotCopyGrantPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
  */
 DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
     const DeleteSnapshotCopyGrantRequestPrivate &other, DeleteSnapshotCopyGrantRequest * const q)
-    : DeleteSnapshotCopyGrantPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

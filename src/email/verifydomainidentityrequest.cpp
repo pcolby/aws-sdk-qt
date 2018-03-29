@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainIdentityRequest::response(QNetwor
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
     const SESRequest::Action action, VerifyDomainIdentityRequest * const q)
-    : VerifyDomainIdentityPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
     const VerifyDomainIdentityRequestPrivate &other, VerifyDomainIdentityRequest * const q)
-    : VerifyDomainIdentityPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

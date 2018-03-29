@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNet
  */
 GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, GetPendingJobExecutionsRequest * const q)
-    : GetPendingJobExecutionsPrivate(action, q)
+    : IoTJobsDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
  */
 GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
     const GetPendingJobExecutionsRequestPrivate &other, GetPendingJobExecutionsRequest * const q)
-    : GetPendingJobExecutionsPrivate(other, q)
+    : IoTJobsDataPlaneRequestPrivate(other, q)
 {
 
 }

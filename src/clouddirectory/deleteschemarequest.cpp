@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSchemaRequest::response(QNetworkReply *
  */
 DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteSchemaRequest * const q)
-    : DeleteSchemaPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
  */
 DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
     const DeleteSchemaRequestPrivate &other, DeleteSchemaRequest * const q)
-    : DeleteSchemaPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

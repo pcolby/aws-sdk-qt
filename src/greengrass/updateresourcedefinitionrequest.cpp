@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceDefinitionRequest::response(QNe
  */
 UpdateResourceDefinitionRequestPrivate::UpdateResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateResourceDefinitionRequest * const q)
-    : UpdateResourceDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateResourceDefinitionRequestPrivate::UpdateResourceDefinitionRequestPrivate(
  */
 UpdateResourceDefinitionRequestPrivate::UpdateResourceDefinitionRequestPrivate(
     const UpdateResourceDefinitionRequestPrivate &other, UpdateResourceDefinitionRequest * const q)
-    : UpdateResourceDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

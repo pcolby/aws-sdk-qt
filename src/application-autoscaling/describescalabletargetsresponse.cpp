@@ -86,7 +86,7 @@ void DescribeScalableTargetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeScalableTargetsResponse instance.
  */
 DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponsePrivate(
-    DescribeScalableTargetsQueueResponse * const q) : DescribeScalableTargetsPrivate(q)
+    DescribeScalableTargetsResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
 {
 
 }

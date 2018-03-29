@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateGraphqlApiRequest::response(QNetworkRep
  */
 CreateGraphqlApiRequestPrivate::CreateGraphqlApiRequestPrivate(
     const AppSyncRequest::Action action, CreateGraphqlApiRequest * const q)
-    : CreateGraphqlApiPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateGraphqlApiRequestPrivate::CreateGraphqlApiRequestPrivate(
  */
 CreateGraphqlApiRequestPrivate::CreateGraphqlApiRequestPrivate(
     const CreateGraphqlApiRequestPrivate &other, CreateGraphqlApiRequest * const q)
-    : CreateGraphqlApiPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

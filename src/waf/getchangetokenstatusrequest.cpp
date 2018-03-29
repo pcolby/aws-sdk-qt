@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetwor
  */
 GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
     const WAFRequest::Action action, GetChangeTokenStatusRequest * const q)
-    : GetChangeTokenStatusPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
  */
 GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
     const GetChangeTokenStatusRequestPrivate &other, GetChangeTokenStatusRequest * const q)
-    : GetChangeTokenStatusPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UploadLayerPartResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadLayerPartResponse instance.
  */
 UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
-    UploadLayerPartQueueResponse * const q) : UploadLayerPartPrivate(q)
+    UploadLayerPartResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkRe
  */
 DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, DeleteThingShadowRequest * const q)
-    : DeleteThingShadowPrivate(action, q)
+    : IoTDataPlaneRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
  */
 DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
     const DeleteThingShadowRequestPrivate &other, DeleteThingShadowRequest * const q)
-    : DeleteThingShadowPrivate(other, q)
+    : IoTDataPlaneRequestPrivate(other, q)
 {
 
 }

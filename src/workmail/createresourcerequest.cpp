@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const WorkMailRequest::Action action, CreateResourceRequest * const q)
-    : CreateResourcePrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateResourceRequestPrivate::CreateResourceRequestPrivate(
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const CreateResourceRequestPrivate &other, CreateResourceRequest * const q)
-    : CreateResourcePrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

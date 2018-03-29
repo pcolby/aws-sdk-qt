@@ -86,7 +86,7 @@ void ListDistributionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDistributionsResponse instance.
  */
 ListDistributionsResponsePrivate::ListDistributionsResponsePrivate(
-    ListDistributionsQueueResponse * const q) : ListDistributionsPrivate(q)
+    ListDistributionsResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

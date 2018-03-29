@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetModelTemplateRequest::response(QNetworkRep
  */
 GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
     const APIGatewayRequest::Action action, GetModelTemplateRequest * const q)
-    : GetModelTemplatePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
  */
 GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
     const GetModelTemplateRequestPrivate &other, GetModelTemplateRequest * const q)
-    : GetModelTemplatePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

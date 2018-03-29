@@ -86,7 +86,7 @@ void PredictResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PredictResponse instance.
  */
 PredictResponsePrivate::PredictResponsePrivate(
-    PredictQueueResponse * const q) : PredictPrivate(q)
+    PredictResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteVaultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVaultResponse instance.
  */
 DeleteVaultResponsePrivate::DeleteVaultResponsePrivate(
-    DeleteVaultQueueResponse * const q) : DeleteVaultPrivate(q)
+    DeleteVaultResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

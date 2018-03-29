@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCommentRequest::response(QNetworkReply 
  */
 CreateCommentRequestPrivate::CreateCommentRequestPrivate(
     const WorkDocsRequest::Action action, CreateCommentRequest * const q)
-    : CreateCommentPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCommentRequestPrivate::CreateCommentRequestPrivate(
  */
 CreateCommentRequestPrivate::CreateCommentRequestPrivate(
     const CreateCommentRequestPrivate &other, CreateCommentRequest * const q)
-    : CreateCommentPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

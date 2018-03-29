@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProfileRequest::response(QNetworkReply 
  */
 DeleteProfileRequestPrivate::DeleteProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteProfileRequest * const q)
-    : DeleteProfilePrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProfileRequestPrivate::DeleteProfileRequestPrivate(
  */
 DeleteProfileRequestPrivate::DeleteProfileRequestPrivate(
     const DeleteProfileRequestPrivate &other, DeleteProfileRequest * const q)
-    : DeleteProfilePrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

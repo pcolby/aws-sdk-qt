@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopAssessmentRunRequest::response(QNetworkRe
  */
 StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
     const InspectorRequest::Action action, StopAssessmentRunRequest * const q)
-    : StopAssessmentRunPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
  */
 StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
     const StopAssessmentRunRequestPrivate &other, StopAssessmentRunRequest * const q)
-    : StopAssessmentRunPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

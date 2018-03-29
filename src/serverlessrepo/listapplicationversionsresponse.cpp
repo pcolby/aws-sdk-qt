@@ -86,7 +86,7 @@ void ListApplicationVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListApplicationVersionsResponse instance.
  */
 ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponsePrivate(
-    ListApplicationVersionsQueueResponse * const q) : ListApplicationVersionsPrivate(q)
+    ListApplicationVersionsResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
 {
 
 }

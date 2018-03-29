@@ -86,7 +86,7 @@ void DetachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachNetworkInterfaceResponse instance.
  */
 DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponsePrivate(
-    DetachNetworkInterfaceQueueResponse * const q) : DetachNetworkInterfacePrivate(q)
+    DetachNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

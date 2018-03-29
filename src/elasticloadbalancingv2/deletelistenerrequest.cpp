@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteListenerRequest::response(QNetworkReply
  */
 DeleteListenerRequestPrivate::DeleteListenerRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteListenerRequest * const q)
-    : DeleteListenerPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteListenerRequestPrivate::DeleteListenerRequestPrivate(
  */
 DeleteListenerRequestPrivate::DeleteListenerRequestPrivate(
     const DeleteListenerRequestPrivate &other, DeleteListenerRequest * const q)
-    : DeleteListenerPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

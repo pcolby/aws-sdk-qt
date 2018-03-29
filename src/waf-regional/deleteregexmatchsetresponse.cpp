@@ -86,7 +86,7 @@ void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRegexMatchSetResponse instance.
  */
 DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
-    DeleteRegexMatchSetQueueResponse * const q) : DeleteRegexMatchSetPrivate(q)
+    DeleteRegexMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

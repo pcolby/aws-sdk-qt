@@ -86,7 +86,7 @@ void ConfirmProductInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConfirmProductInstanceResponse instance.
  */
 ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
-    ConfirmProductInstanceQueueResponse * const q) : ConfirmProductInstancePrivate(q)
+    ConfirmProductInstanceResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

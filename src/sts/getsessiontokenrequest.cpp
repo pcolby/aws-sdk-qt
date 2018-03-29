@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkRepl
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
     const STSRequest::Action action, GetSessionTokenRequest * const q)
-    : GetSessionTokenPrivate(action, q)
+    : STSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
     const GetSessionTokenRequestPrivate &other, GetSessionTokenRequest * const q)
-    : GetSessionTokenPrivate(other, q)
+    : STSRequestPrivate(other, q)
 {
 
 }

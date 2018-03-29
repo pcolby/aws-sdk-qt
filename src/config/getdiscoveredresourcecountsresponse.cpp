@@ -86,7 +86,7 @@ void GetDiscoveredResourceCountsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDiscoveredResourceCountsResponse instance.
  */
 GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResponsePrivate(
-    GetDiscoveredResourceCountsQueueResponse * const q) : GetDiscoveredResourceCountsPrivate(q)
+    GetDiscoveredResourceCountsResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

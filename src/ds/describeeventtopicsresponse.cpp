@@ -86,7 +86,7 @@ void DescribeEventTopicsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEventTopicsResponse instance.
  */
 DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponsePrivate(
-    DescribeEventTopicsQueueResponse * const q) : DescribeEventTopicsPrivate(q)
+    DescribeEventTopicsResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePolicyRequest::response(QNetworkReply *
  */
 UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
     const OrganizationsRequest::Action action, UpdatePolicyRequest * const q)
-    : UpdatePolicyPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
  */
 UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
     const UpdatePolicyRequestPrivate &other, UpdatePolicyRequest * const q)
-    : UpdatePolicyPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

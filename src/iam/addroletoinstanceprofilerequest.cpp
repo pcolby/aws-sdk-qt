@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNe
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
     const IAMRequest::Action action, AddRoleToInstanceProfileRequest * const q)
-    : AddRoleToInstanceProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
     const AddRoleToInstanceProfileRequestPrivate &other, AddRoleToInstanceProfileRequest * const q)
-    : AddRoleToInstanceProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

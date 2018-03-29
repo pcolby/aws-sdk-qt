@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(Q
  */
 DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteConditionalForwarderRequest * const q)
-    : DeleteConditionalForwarderPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPriva
  */
 DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPrivate(
     const DeleteConditionalForwarderRequestPrivate &other, DeleteConditionalForwarderRequest * const q)
-    : DeleteConditionalForwarderPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

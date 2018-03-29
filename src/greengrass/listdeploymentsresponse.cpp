@@ -86,7 +86,7 @@ void ListDeploymentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDeploymentsResponse instance.
  */
 ListDeploymentsResponsePrivate::ListDeploymentsResponsePrivate(
-    ListDeploymentsQueueResponse * const q) : ListDeploymentsPrivate(q)
+    ListDeploymentsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

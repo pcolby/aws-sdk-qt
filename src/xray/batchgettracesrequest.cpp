@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply
  */
 BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
     const XRayRequest::Action action, BatchGetTracesRequest * const q)
-    : BatchGetTracesPrivate(action, q)
+    : XRayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
  */
 BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
     const BatchGetTracesRequestPrivate &other, BatchGetTracesRequest * const q)
-    : BatchGetTracesPrivate(other, q)
+    : XRayRequestPrivate(other, q)
 {
 
 }

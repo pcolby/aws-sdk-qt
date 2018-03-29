@@ -86,7 +86,7 @@ void DescribeReservedCacheNodesOfferingsResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public DescribeReservedCacheNodesOfferingsResponse instance.
  */
 DescribeReservedCacheNodesOfferingsResponsePrivate::DescribeReservedCacheNodesOfferingsResponsePrivate(
-    DescribeReservedCacheNodesOfferingsQueueResponse * const q) : DescribeReservedCacheNodesOfferingsPrivate(q)
+    DescribeReservedCacheNodesOfferingsResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

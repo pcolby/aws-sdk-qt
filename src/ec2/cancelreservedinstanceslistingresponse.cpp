@@ -86,7 +86,7 @@ void CancelReservedInstancesListingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelReservedInstancesListingResponse instance.
  */
 CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingResponsePrivate(
-    CancelReservedInstancesListingQueueResponse * const q) : CancelReservedInstancesListingPrivate(q)
+    CancelReservedInstancesListingResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

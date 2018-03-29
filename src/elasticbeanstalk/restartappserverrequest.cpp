@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestartAppServerRequest::response(QNetworkRep
  */
 RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RestartAppServerRequest * const q)
-    : RestartAppServerPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
  */
 RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
     const RestartAppServerRequestPrivate &other, RestartAppServerRequest * const q)
-    : RestartAppServerPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

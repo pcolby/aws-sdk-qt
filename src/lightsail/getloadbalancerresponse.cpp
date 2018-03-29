@@ -86,7 +86,7 @@ void GetLoadBalancerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLoadBalancerResponse instance.
  */
 GetLoadBalancerResponsePrivate::GetLoadBalancerResponsePrivate(
-    GetLoadBalancerQueueResponse * const q) : GetLoadBalancerPrivate(q)
+    GetLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

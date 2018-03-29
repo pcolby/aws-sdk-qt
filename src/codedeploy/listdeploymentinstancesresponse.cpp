@@ -86,7 +86,7 @@ void ListDeploymentInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDeploymentInstancesResponse instance.
  */
 ListDeploymentInstancesResponsePrivate::ListDeploymentInstancesResponsePrivate(
-    ListDeploymentInstancesQueueResponse * const q) : ListDeploymentInstancesPrivate(q)
+    ListDeploymentInstancesResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

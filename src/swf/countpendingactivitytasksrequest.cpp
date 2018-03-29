@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QN
  */
 CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
     const SWFRequest::Action action, CountPendingActivityTasksRequest * const q)
-    : CountPendingActivityTasksPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate
  */
 CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
     const CountPendingActivityTasksRequestPrivate &other, CountPendingActivityTasksRequest * const q)
-    : CountPendingActivityTasksPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

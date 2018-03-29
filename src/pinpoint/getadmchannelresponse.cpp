@@ -86,7 +86,7 @@ void GetAdmChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAdmChannelResponse instance.
  */
 GetAdmChannelResponsePrivate::GetAdmChannelResponsePrivate(
-    GetAdmChannelQueueResponse * const q) : GetAdmChannelPrivate(q)
+    GetAdmChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskCanceledRequest * const q)
-    : RespondActivityTaskCanceledPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPri
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
     const RespondActivityTaskCanceledRequestPrivate &other, RespondActivityTaskCanceledRequest * const q)
-    : RespondActivityTaskCanceledPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

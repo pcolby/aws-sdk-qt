@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotCopyGrantRequest::response(QNet
  */
 CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
     const RedshiftRequest::Action action, CreateSnapshotCopyGrantRequest * const q)
-    : CreateSnapshotCopyGrantPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
  */
 CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
     const CreateSnapshotCopyGrantRequestPrivate &other, CreateSnapshotCopyGrantRequest * const q)
-    : CreateSnapshotCopyGrantPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

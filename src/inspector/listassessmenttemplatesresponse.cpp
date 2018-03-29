@@ -86,7 +86,7 @@ void ListAssessmentTemplatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAssessmentTemplatesResponse instance.
  */
 ListAssessmentTemplatesResponsePrivate::ListAssessmentTemplatesResponsePrivate(
-    ListAssessmentTemplatesQueueResponse * const q) : ListAssessmentTemplatesPrivate(q)
+    ListAssessmentTemplatesResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

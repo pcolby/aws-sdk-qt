@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartPersonTrackingRequest::response(QNetwork
  */
 StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
     const RekognitionRequest::Action action, StartPersonTrackingRequest * const q)
-    : StartPersonTrackingPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
  */
 StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
     const StartPersonTrackingRequestPrivate &other, StartPersonTrackingRequest * const q)
-    : StartPersonTrackingPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

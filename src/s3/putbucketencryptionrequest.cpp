@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketEncryptionRequest::response(QNetwork
  */
 PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
     const S3Request::Action action, PutBucketEncryptionRequest * const q)
-    : PutBucketEncryptionPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
  */
 PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
     const PutBucketEncryptionRequestPrivate &other, PutBucketEncryptionRequest * const q)
-    : PutBucketEncryptionPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

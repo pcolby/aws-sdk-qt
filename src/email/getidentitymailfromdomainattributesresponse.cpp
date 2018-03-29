@@ -86,7 +86,7 @@ void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public GetIdentityMailFromDomainAttributesResponse instance.
  */
 GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAttributesResponsePrivate(
-    GetIdentityMailFromDomainAttributesQueueResponse * const q) : GetIdentityMailFromDomainAttributesPrivate(q)
+    GetIdentityMailFromDomainAttributesResponse * const q) : SESResponsePrivate(q)
 {
 
 }

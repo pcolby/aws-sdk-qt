@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply *
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
     const KMSRequest::Action action, GetKeyPolicyRequest * const q)
-    : GetKeyPolicyPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
     const GetKeyPolicyRequestPrivate &other, GetKeyPolicyRequest * const q)
-    : GetKeyPolicyPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

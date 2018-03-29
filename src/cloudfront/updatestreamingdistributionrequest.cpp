@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamingDistributionRequest::response(
  */
 UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, UpdateStreamingDistributionRequest * const q)
-    : UpdateStreamingDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPri
  */
 UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPrivate(
     const UpdateStreamingDistributionRequestPrivate &other, UpdateStreamingDistributionRequest * const q)
-    : UpdateStreamingDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

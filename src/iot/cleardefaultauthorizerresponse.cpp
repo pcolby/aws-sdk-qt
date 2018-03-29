@@ -86,7 +86,7 @@ void ClearDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ClearDefaultAuthorizerResponse instance.
  */
 ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponsePrivate(
-    ClearDefaultAuthorizerQueueResponse * const q) : ClearDefaultAuthorizerPrivate(q)
+    ClearDefaultAuthorizerResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

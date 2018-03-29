@@ -86,7 +86,7 @@ void ResendConfirmationCodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResendConfirmationCodeResponse instance.
  */
 ResendConfirmationCodeResponsePrivate::ResendConfirmationCodeResponsePrivate(
-    ResendConfirmationCodeQueueResponse * const q) : ResendConfirmationCodePrivate(q)
+    ResendConfirmationCodeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

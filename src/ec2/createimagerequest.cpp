@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * 
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
     const EC2Request::Action action, CreateImageRequest * const q)
-    : CreateImagePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateImageRequestPrivate::CreateImageRequestPrivate(
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
     const CreateImageRequestPrivate &other, CreateImageRequest * const q)
-    : CreateImagePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

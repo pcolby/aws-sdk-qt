@@ -86,7 +86,7 @@ void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetNetworkInterfaceAttributeResponse instance.
  */
 ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeResponsePrivate(
-    ResetNetworkInterfaceAttributeQueueResponse * const q) : ResetNetworkInterfaceAttributePrivate(q)
+    ResetNetworkInterfaceAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

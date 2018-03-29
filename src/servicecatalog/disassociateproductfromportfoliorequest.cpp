@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateProductFromPortfolioRequest::resp
  */
 DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociateProductFromPortfolioRequest * const q)
-    : DisassociateProductFromPortfolioPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolio
  */
 DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
     const DisassociateProductFromPortfolioRequestPrivate &other, DisassociateProductFromPortfolioRequest * const q)
-    : DisassociateProductFromPortfolioPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

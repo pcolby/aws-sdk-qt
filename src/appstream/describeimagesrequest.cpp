@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const AppStreamRequest::Action action, DescribeImagesRequest * const q)
-    : DescribeImagesPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const DescribeImagesRequestPrivate &other, DescribeImagesRequest * const q)
-    : DescribeImagesPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

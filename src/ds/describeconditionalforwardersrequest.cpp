@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConditionalForwardersRequest::respons
  */
 DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeConditionalForwardersRequest * const q)
-    : DescribeConditionalForwardersPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersReques
  */
 DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersRequestPrivate(
     const DescribeConditionalForwardersRequestPrivate &other, DescribeConditionalForwardersRequest * const q)
-    : DescribeConditionalForwardersPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

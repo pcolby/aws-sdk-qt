@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(
  */
 DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPrivate(
     const Route53Request::Action action, DeleteReusableDelegationSetRequest * const q)
-    : DeleteReusableDelegationSetPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPri
  */
 DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPrivate(
     const DeleteReusableDelegationSetRequestPrivate &other, DeleteReusableDelegationSetRequest * const q)
-    : DeleteReusableDelegationSetPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

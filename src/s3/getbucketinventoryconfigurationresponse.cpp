@@ -86,7 +86,7 @@ void GetBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBucketInventoryConfigurationResponse instance.
  */
 GetBucketInventoryConfigurationResponsePrivate::GetBucketInventoryConfigurationResponsePrivate(
-    GetBucketInventoryConfigurationQueueResponse * const q) : GetBucketInventoryConfigurationPrivate(q)
+    GetBucketInventoryConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

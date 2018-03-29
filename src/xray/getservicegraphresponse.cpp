@@ -86,7 +86,7 @@ void GetServiceGraphResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetServiceGraphResponse instance.
  */
 GetServiceGraphResponsePrivate::GetServiceGraphResponsePrivate(
-    GetServiceGraphQueueResponse * const q) : GetServiceGraphPrivate(q)
+    GetServiceGraphResponse * const q) : XRayResponsePrivate(q)
 {
 
 }

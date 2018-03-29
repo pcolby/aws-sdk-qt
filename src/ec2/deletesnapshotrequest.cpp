@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const EC2Request::Action action, DeleteSnapshotRequest * const q)
-    : DeleteSnapshotPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const DeleteSnapshotRequestPrivate &other, DeleteSnapshotRequest * const q)
-    : DeleteSnapshotPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

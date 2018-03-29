@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RDSRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)
-    : RemoveSourceIdentifierFromSubscriptionPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFrom
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RemoveSourceIdentifierFromSubscriptionRequestPrivate &other, RemoveSourceIdentifierFromSubscriptionRequest * const q)
-    : RemoveSourceIdentifierFromSubscriptionPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

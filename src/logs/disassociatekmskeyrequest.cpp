@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkR
  */
 DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DisassociateKmsKeyRequest * const q)
-    : DisassociateKmsKeyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
  */
 DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
     const DisassociateKmsKeyRequestPrivate &other, DisassociateKmsKeyRequest * const q)
-    : DisassociateKmsKeyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

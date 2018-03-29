@@ -86,7 +86,7 @@ void StopStackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopStackResponse instance.
  */
 StopStackResponsePrivate::StopStackResponsePrivate(
-    StopStackQueueResponse * const q) : StopStackPrivate(q)
+    StopStackResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

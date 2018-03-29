@@ -86,7 +86,7 @@ void DeleteCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DeleteCloudFrontOriginAccessIdentityResponse instance.
  */
 DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAccessIdentityResponsePrivate(
-    DeleteCloudFrontOriginAccessIdentityQueueResponse * const q) : DeleteCloudFrontOriginAccessIdentityPrivate(q)
+    DeleteCloudFrontOriginAccessIdentityResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SetPermissionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetPermissionResponse instance.
  */
 SetPermissionResponsePrivate::SetPermissionResponsePrivate(
-    SetPermissionQueueResponse * const q) : SetPermissionPrivate(q)
+    SetPermissionResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

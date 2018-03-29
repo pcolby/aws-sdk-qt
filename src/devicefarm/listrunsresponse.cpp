@@ -86,7 +86,7 @@ void ListRunsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRunsResponse instance.
  */
 ListRunsResponsePrivate::ListRunsResponsePrivate(
-    ListRunsQueueResponse * const q) : ListRunsPrivate(q)
+    ListRunsResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

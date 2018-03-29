@@ -86,7 +86,7 @@ void RebootInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootInstanceResponse instance.
  */
 RebootInstanceResponsePrivate::RebootInstanceResponsePrivate(
-    RebootInstanceQueueResponse * const q) : RebootInstancePrivate(q)
+    RebootInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

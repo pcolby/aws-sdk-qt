@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkRepl
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const RDSRequest::Action action, CreateDBClusterRequest * const q)
-    : CreateDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const CreateDBClusterRequestPrivate &other, CreateDBClusterRequest * const q)
-    : CreateDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

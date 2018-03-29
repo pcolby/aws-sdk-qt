@@ -86,7 +86,7 @@ void AddTagsToStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddTagsToStreamResponse instance.
  */
 AddTagsToStreamResponsePrivate::AddTagsToStreamResponsePrivate(
-    AddTagsToStreamQueueResponse * const q) : AddTagsToStreamPrivate(q)
+    AddTagsToStreamResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

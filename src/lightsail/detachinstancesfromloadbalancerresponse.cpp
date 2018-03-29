@@ -86,7 +86,7 @@ void DetachInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachInstancesFromLoadBalancerResponse instance.
  */
 DetachInstancesFromLoadBalancerResponsePrivate::DetachInstancesFromLoadBalancerResponsePrivate(
-    DetachInstancesFromLoadBalancerQueueResponse * const q) : DetachInstancesFromLoadBalancerPrivate(q)
+    DetachInstancesFromLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

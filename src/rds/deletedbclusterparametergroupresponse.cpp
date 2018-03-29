@@ -86,7 +86,7 @@ void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDBClusterParameterGroupResponse instance.
  */
 DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupResponsePrivate(
-    DeleteDBClusterParameterGroupQueueResponse * const q) : DeleteDBClusterParameterGroupPrivate(q)
+    DeleteDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

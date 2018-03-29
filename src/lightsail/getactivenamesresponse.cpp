@@ -86,7 +86,7 @@ void GetActiveNamesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetActiveNamesResponse instance.
  */
 GetActiveNamesResponsePrivate::GetActiveNamesResponsePrivate(
-    GetActiveNamesQueueResponse * const q) : GetActiveNamesPrivate(q)
+    GetActiveNamesResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

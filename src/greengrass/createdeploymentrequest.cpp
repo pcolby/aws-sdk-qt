@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const GreengrassRequest::Action action, CreateDeploymentRequest * const q)
-    : CreateDeploymentPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const CreateDeploymentRequestPrivate &other, CreateDeploymentRequest * const q)
-    : CreateDeploymentPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

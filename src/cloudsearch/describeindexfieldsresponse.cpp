@@ -86,7 +86,7 @@ void DescribeIndexFieldsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeIndexFieldsResponse instance.
  */
 DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponsePrivate(
-    DescribeIndexFieldsQueueResponse * const q) : DescribeIndexFieldsPrivate(q)
+    DescribeIndexFieldsResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

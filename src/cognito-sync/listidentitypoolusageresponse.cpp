@@ -86,7 +86,7 @@ void ListIdentityPoolUsageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListIdentityPoolUsageResponse instance.
  */
 ListIdentityPoolUsageResponsePrivate::ListIdentityPoolUsageResponsePrivate(
-    ListIdentityPoolUsageQueueResponse * const q) : ListIdentityPoolUsagePrivate(q)
+    ListIdentityPoolUsageResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

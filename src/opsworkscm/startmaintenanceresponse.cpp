@@ -86,7 +86,7 @@ void StartMaintenanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartMaintenanceResponse instance.
  */
 StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
-    StartMaintenanceQueueResponse * const q) : StartMaintenancePrivate(q)
+    StartMaintenanceResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

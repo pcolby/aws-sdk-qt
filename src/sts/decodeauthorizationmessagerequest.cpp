@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(Q
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
     const STSRequest::Action action, DecodeAuthorizationMessageRequest * const q)
-    : DecodeAuthorizationMessagePrivate(action, q)
+    : STSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPriva
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
     const DecodeAuthorizationMessageRequestPrivate &other, DecodeAuthorizationMessageRequest * const q)
-    : DecodeAuthorizationMessagePrivate(other, q)
+    : STSRequestPrivate(other, q)
 {
 
 }

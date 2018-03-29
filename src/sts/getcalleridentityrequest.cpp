@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkRe
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
     const STSRequest::Action action, GetCallerIdentityRequest * const q)
-    : GetCallerIdentityPrivate(action, q)
+    : STSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
     const GetCallerIdentityRequestPrivate &other, GetCallerIdentityRequest * const q)
-    : GetCallerIdentityPrivate(other, q)
+    : STSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTypedLinkFacetRequest::response(QNetwor
  */
 DeleteTypedLinkFacetRequestPrivate::DeleteTypedLinkFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteTypedLinkFacetRequest * const q)
-    : DeleteTypedLinkFacetPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTypedLinkFacetRequestPrivate::DeleteTypedLinkFacetRequestPrivate(
  */
 DeleteTypedLinkFacetRequestPrivate::DeleteTypedLinkFacetRequestPrivate(
     const DeleteTypedLinkFacetRequestPrivate &other, DeleteTypedLinkFacetRequest * const q)
-    : DeleteTypedLinkFacetPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

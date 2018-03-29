@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::respon
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskAssessmentRequest * const q)
-    : StartReplicationTaskAssessmentPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequ
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
     const StartReplicationTaskAssessmentRequestPrivate &other, StartReplicationTaskAssessmentRequest * const q)
-    : StartReplicationTaskAssessmentPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

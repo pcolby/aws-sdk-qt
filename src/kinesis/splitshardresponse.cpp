@@ -86,7 +86,7 @@ void SplitShardResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SplitShardResponse instance.
  */
 SplitShardResponsePrivate::SplitShardResponsePrivate(
-    SplitShardQueueResponse * const q) : SplitShardPrivate(q)
+    SplitShardResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

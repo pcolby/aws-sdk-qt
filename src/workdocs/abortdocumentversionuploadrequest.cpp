@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AbortDocumentVersionUploadRequest::response(Q
  */
 AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPrivate(
     const WorkDocsRequest::Action action, AbortDocumentVersionUploadRequest * const q)
-    : AbortDocumentVersionUploadPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPriva
  */
 AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPrivate(
     const AbortDocumentVersionUploadRequestPrivate &other, AbortDocumentVersionUploadRequest * const q)
-    : AbortDocumentVersionUploadPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

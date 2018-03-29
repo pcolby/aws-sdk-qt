@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkRep
  */
 ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
     const GreengrassRequest::Action action, ResetDeploymentsRequest * const q)
-    : ResetDeploymentsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
  */
 ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
     const ResetDeploymentsRequestPrivate &other, ResetDeploymentsRequest * const q)
-    : ResetDeploymentsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

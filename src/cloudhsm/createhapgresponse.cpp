@@ -86,7 +86,7 @@ void CreateHapgResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateHapgResponse instance.
  */
 CreateHapgResponsePrivate::CreateHapgResponsePrivate(
-    CreateHapgQueueResponse * const q) : CreateHapgPrivate(q)
+    CreateHapgResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

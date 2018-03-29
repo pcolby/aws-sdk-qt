@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterSubnetGroupRequest::response(QNe
  */
 ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterSubnetGroupRequest * const q)
-    : ModifyClusterSubnetGroupPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
  */
 ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
     const ModifyClusterSubnetGroupRequestPrivate &other, ModifyClusterSubnetGroupRequest * const q)
-    : ModifyClusterSubnetGroupPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

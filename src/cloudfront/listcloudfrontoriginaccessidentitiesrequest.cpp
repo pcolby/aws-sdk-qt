@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCloudFrontOriginAccessIdentitiesRequest::
  */
 ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
     const CloudFrontRequest::Action action, ListCloudFrontOriginAccessIdentitiesRequest * const q)
-    : ListCloudFrontOriginAccessIdentitiesPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessId
  */
 ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
     const ListCloudFrontOriginAccessIdentitiesRequestPrivate &other, ListCloudFrontOriginAccessIdentitiesRequest * const q)
-    : ListCloudFrontOriginAccessIdentitiesPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AddFacetToObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddFacetToObjectResponse instance.
  */
 AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
-    AddFacetToObjectQueueResponse * const q) : AddFacetToObjectPrivate(q)
+    AddFacetToObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

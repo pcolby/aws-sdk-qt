@@ -86,7 +86,7 @@ void DescribeBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBandwidthRateLimitResponse instance.
  */
 DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitResponsePrivate(
-    DescribeBandwidthRateLimitQueueResponse * const q) : DescribeBandwidthRateLimitPrivate(q)
+    DescribeBandwidthRateLimitResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

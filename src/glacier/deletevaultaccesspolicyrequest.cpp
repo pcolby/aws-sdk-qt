@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultAccessPolicyRequest::response(QNet
  */
 DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultAccessPolicyRequest * const q)
-    : DeleteVaultAccessPolicyPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
  */
 DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
     const DeleteVaultAccessPolicyRequestPrivate &other, DeleteVaultAccessPolicyRequest * const q)
-    : DeleteVaultAccessPolicyPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

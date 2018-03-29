@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIndexingConfigurationRequest::response(
  */
 UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPrivate(
     const IoTRequest::Action action, UpdateIndexingConfigurationRequest * const q)
-    : UpdateIndexingConfigurationPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPri
  */
 UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPrivate(
     const UpdateIndexingConfigurationRequestPrivate &other, UpdateIndexingConfigurationRequest * const q)
-    : UpdateIndexingConfigurationPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

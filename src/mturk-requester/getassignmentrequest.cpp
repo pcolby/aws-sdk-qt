@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply 
  */
 GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
     const MTurkRequest::Action action, GetAssignmentRequest * const q)
-    : GetAssignmentPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
  */
 GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
     const GetAssignmentRequestPrivate &other, GetAssignmentRequest * const q)
-    : GetAssignmentPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

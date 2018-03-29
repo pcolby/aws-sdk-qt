@@ -86,7 +86,7 @@ void DeleteNotificationConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNotificationConfigurationResponse instance.
  */
 DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationResponsePrivate(
-    DeleteNotificationConfigurationQueueResponse * const q) : DeleteNotificationConfigurationPrivate(q)
+    DeleteNotificationConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

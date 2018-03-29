@@ -86,7 +86,7 @@ void ListDomainNamesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDomainNamesResponse instance.
  */
 ListDomainNamesResponsePrivate::ListDomainNamesResponsePrivate(
-    ListDomainNamesQueueResponse * const q) : ListDomainNamesPrivate(q)
+    ListDomainNamesResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

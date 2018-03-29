@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply
  */
 PublishVersionRequestPrivate::PublishVersionRequestPrivate(
     const LambdaRequest::Action action, PublishVersionRequest * const q)
-    : PublishVersionPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PublishVersionRequestPrivate::PublishVersionRequestPrivate(
  */
 PublishVersionRequestPrivate::PublishVersionRequestPrivate(
     const PublishVersionRequestPrivate &other, PublishVersionRequest * const q)
-    : PublishVersionPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

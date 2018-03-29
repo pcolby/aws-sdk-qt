@@ -86,7 +86,7 @@ void ExitStandbyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ExitStandbyResponse instance.
  */
 ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
-    ExitStandbyQueueResponse * const q) : ExitStandbyPrivate(q)
+    ExitStandbyResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

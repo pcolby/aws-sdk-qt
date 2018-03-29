@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcceptVpcEndpointConnectionsRequest::response
  */
 AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestPrivate(
     const EC2Request::Action action, AcceptVpcEndpointConnectionsRequest * const q)
-    : AcceptVpcEndpointConnectionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestP
  */
 AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestPrivate(
     const AcceptVpcEndpointConnectionsRequestPrivate &other, AcceptVpcEndpointConnectionsRequest * const q)
-    : AcceptVpcEndpointConnectionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

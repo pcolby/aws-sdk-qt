@@ -86,7 +86,7 @@ void DescribeResourcePoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeResourcePoliciesResponse instance.
  */
 DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponsePrivate(
-    DescribeResourcePoliciesQueueResponse * const q) : DescribeResourcePoliciesPrivate(q)
+    DescribeResourcePoliciesResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

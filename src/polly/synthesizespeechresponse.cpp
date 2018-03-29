@@ -86,7 +86,7 @@ void SynthesizeSpeechResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SynthesizeSpeechResponse instance.
  */
 SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
-    SynthesizeSpeechQueueResponse * const q) : SynthesizeSpeechPrivate(q)
+    SynthesizeSpeechResponse * const q) : PollyResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeReservedNodesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeReservedNodesResponse instance.
  */
 DescribeReservedNodesResponsePrivate::DescribeReservedNodesResponsePrivate(
-    DescribeReservedNodesQueueResponse * const q) : DescribeReservedNodesPrivate(q)
+    DescribeReservedNodesResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

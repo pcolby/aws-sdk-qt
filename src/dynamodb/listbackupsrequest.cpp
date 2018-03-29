@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * 
  */
 ListBackupsRequestPrivate::ListBackupsRequestPrivate(
     const DynamoDBRequest::Action action, ListBackupsRequest * const q)
-    : ListBackupsPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBackupsRequestPrivate::ListBackupsRequestPrivate(
  */
 ListBackupsRequestPrivate::ListBackupsRequestPrivate(
     const ListBackupsRequestPrivate &other, ListBackupsRequest * const q)
-    : ListBackupsPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

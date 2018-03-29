@@ -86,7 +86,7 @@ void GetVpcLinkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetVpcLinkResponse instance.
  */
 GetVpcLinkResponsePrivate::GetVpcLinkResponsePrivate(
-    GetVpcLinkQueueResponse * const q) : GetVpcLinkPrivate(q)
+    GetVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

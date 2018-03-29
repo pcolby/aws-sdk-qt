@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddCommunicationToCaseRequest::response(QNetw
  */
 AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
     const SupportRequest::Action action, AddCommunicationToCaseRequest * const q)
-    : AddCommunicationToCasePrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
  */
 AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
     const AddCommunicationToCaseRequestPrivate &other, AddCommunicationToCaseRequest * const q)
-    : AddCommunicationToCasePrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

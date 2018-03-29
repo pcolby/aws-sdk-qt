@@ -86,7 +86,7 @@ void DescribeIdentityProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeIdentityProviderResponse instance.
  */
 DescribeIdentityProviderResponsePrivate::DescribeIdentityProviderResponsePrivate(
-    DescribeIdentityProviderQueueResponse * const q) : DescribeIdentityProviderPrivate(q)
+    DescribeIdentityProviderResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

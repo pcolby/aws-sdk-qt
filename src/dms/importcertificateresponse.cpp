@@ -86,7 +86,7 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportCertificateResponse instance.
  */
 ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
-    ImportCertificateQueueResponse * const q) : ImportCertificatePrivate(q)
+    ImportCertificateResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

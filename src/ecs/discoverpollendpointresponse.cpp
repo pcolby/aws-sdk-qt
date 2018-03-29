@@ -86,7 +86,7 @@ void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DiscoverPollEndpointResponse instance.
  */
 DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
-    DiscoverPollEndpointQueueResponse * const q) : DiscoverPollEndpointPrivate(q)
+    DiscoverPollEndpointResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNet
  */
 AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
     const InspectorRequest::Action action, AddAttributesToFindingsRequest * const q)
-    : AddAttributesToFindingsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
  */
 AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
     const AddAttributesToFindingsRequestPrivate &other, AddAttributesToFindingsRequest * const q)
-    : AddAttributesToFindingsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

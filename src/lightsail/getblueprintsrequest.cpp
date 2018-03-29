@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply 
  */
 GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
     const LightsailRequest::Action action, GetBlueprintsRequest * const q)
-    : GetBlueprintsPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
  */
 GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
     const GetBlueprintsRequestPrivate &other, GetBlueprintsRequest * const q)
-    : GetBlueprintsPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

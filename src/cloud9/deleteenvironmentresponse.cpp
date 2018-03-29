@@ -86,7 +86,7 @@ void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEnvironmentResponse instance.
  */
 DeleteEnvironmentResponsePrivate::DeleteEnvironmentResponsePrivate(
-    DeleteEnvironmentQueueResponse * const q) : DeleteEnvironmentPrivate(q)
+    DeleteEnvironmentResponse * const q) : Cloud9ResponsePrivate(q)
 {
 
 }

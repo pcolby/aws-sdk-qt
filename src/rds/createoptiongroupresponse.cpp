@@ -86,7 +86,7 @@ void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateOptionGroupResponse instance.
  */
 CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
-    CreateOptionGroupQueueResponse * const q) : CreateOptionGroupPrivate(q)
+    CreateOptionGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

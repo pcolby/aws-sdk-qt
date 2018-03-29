@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SubscribeToEventRequest::response(QNetworkRep
  */
 SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
     const InspectorRequest::Action action, SubscribeToEventRequest * const q)
-    : SubscribeToEventPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
  */
 SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
     const SubscribeToEventRequestPrivate &other, SubscribeToEventRequest * const q)
-    : SubscribeToEventPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

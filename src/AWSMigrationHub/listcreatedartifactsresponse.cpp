@@ -86,7 +86,7 @@ void ListCreatedArtifactsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListCreatedArtifactsResponse instance.
  */
 ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponsePrivate(
-    ListCreatedArtifactsQueueResponse * const q) : ListCreatedArtifactsPrivate(q)
+    ListCreatedArtifactsResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

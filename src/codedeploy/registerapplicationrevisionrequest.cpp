@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterApplicationRevisionRequest::response(
  */
 RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
     const CodeDeployRequest::Action action, RegisterApplicationRevisionRequest * const q)
-    : RegisterApplicationRevisionPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPri
  */
 RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
     const RegisterApplicationRevisionRequestPrivate &other, RegisterApplicationRevisionRequest * const q)
-    : RegisterApplicationRevisionPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

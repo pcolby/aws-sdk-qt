@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationRecorderRequest::response(
  */
 DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigurationRecorderRequest * const q)
-    : DeleteConfigurationRecorderPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPri
  */
 DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPrivate(
     const DeleteConfigurationRecorderRequestPrivate &other, DeleteConfigurationRecorderRequest * const q)
-    : DeleteConfigurationRecorderPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

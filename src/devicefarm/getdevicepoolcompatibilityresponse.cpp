@@ -86,7 +86,7 @@ void GetDevicePoolCompatibilityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDevicePoolCompatibilityResponse instance.
  */
 GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponsePrivate(
-    GetDevicePoolCompatibilityQueueResponse * const q) : GetDevicePoolCompatibilityPrivate(q)
+    GetDevicePoolCompatibilityResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

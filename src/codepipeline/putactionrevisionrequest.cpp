@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutActionRevisionRequest::response(QNetworkRe
  */
 PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
     const CodePipelineRequest::Action action, PutActionRevisionRequest * const q)
-    : PutActionRevisionPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
  */
 PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
     const PutActionRevisionRequestPrivate &other, PutActionRevisionRequest * const q)
-    : PutActionRevisionPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

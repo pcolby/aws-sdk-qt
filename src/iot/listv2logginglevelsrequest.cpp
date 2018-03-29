@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListV2LoggingLevelsRequest::response(QNetwork
  */
 ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
     const IoTRequest::Action action, ListV2LoggingLevelsRequest * const q)
-    : ListV2LoggingLevelsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
  */
 ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
     const ListV2LoggingLevelsRequestPrivate &other, ListV2LoggingLevelsRequest * const q)
-    : ListV2LoggingLevelsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

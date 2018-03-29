@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNet
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDocumentationPartRequest * const q)
-    : UpdateDocumentationPartPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
     const UpdateDocumentationPartRequestPrivate &other, UpdateDocumentationPartRequest * const q)
-    : UpdateDocumentationPartPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

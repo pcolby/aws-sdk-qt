@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerListenerSSLCertificateRequest:
  */
 SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLCertificateRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerListenerSSLCertificateRequest * const q)
-    : SetLoadBalancerListenerSSLCertificatePrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLC
  */
 SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLCertificateRequestPrivate(
     const SetLoadBalancerListenerSSLCertificateRequestPrivate &other, SetLoadBalancerListenerSSLCertificateRequest * const q)
-    : SetLoadBalancerListenerSSLCertificatePrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

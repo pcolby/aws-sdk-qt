@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * NotifyApplicationStateRequest::response(QNetw
  */
 NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
     const MigrationHubRequest::Action action, NotifyApplicationStateRequest * const q)
-    : NotifyApplicationStatePrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
  */
 NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
     const NotifyApplicationStateRequestPrivate &other, NotifyApplicationStateRequest * const q)
-    : NotifyApplicationStatePrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

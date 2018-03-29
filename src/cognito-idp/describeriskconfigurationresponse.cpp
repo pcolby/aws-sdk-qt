@@ -86,7 +86,7 @@ void DescribeRiskConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRiskConfigurationResponse instance.
  */
 DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponsePrivate(
-    DescribeRiskConfigurationQueueResponse * const q) : DescribeRiskConfigurationPrivate(q)
+    DescribeRiskConfigurationResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

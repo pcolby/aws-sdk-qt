@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTelemetryMetadataRequest::response(QNetwor
  */
 GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
     const InspectorRequest::Action action, GetTelemetryMetadataRequest * const q)
-    : GetTelemetryMetadataPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
  */
 GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
     const GetTelemetryMetadataRequestPrivate &other, GetTelemetryMetadataRequest * const q)
-    : GetTelemetryMetadataPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkR
  */
 DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointsRequest * const q)
-    : DeleteVpcEndpointsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
  */
 DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
     const DeleteVpcEndpointsRequestPrivate &other, DeleteVpcEndpointsRequest * const q)
-    : DeleteVpcEndpointsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

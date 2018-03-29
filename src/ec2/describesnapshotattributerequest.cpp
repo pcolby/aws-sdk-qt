@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotAttributeRequest::response(QN
  */
 DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate(
     const EC2Request::Action action, DescribeSnapshotAttributeRequest * const q)
-    : DescribeSnapshotAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate
  */
 DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate(
     const DescribeSnapshotAttributeRequestPrivate &other, DescribeSnapshotAttributeRequest * const q)
-    : DescribeSnapshotAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

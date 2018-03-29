@@ -86,7 +86,7 @@ void DeleteBrokerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBrokerResponse instance.
  */
 DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
-    DeleteBrokerQueueResponse * const q) : DeleteBrokerPrivate(q)
+    DeleteBrokerResponse * const q) : MQResponsePrivate(q)
 {
 
 }

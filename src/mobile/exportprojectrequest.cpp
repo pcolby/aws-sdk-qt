@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ExportProjectRequest::response(QNetworkReply 
  */
 ExportProjectRequestPrivate::ExportProjectRequestPrivate(
     const MobileRequest::Action action, ExportProjectRequest * const q)
-    : ExportProjectPrivate(action, q)
+    : MobileRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ExportProjectRequestPrivate::ExportProjectRequestPrivate(
  */
 ExportProjectRequestPrivate::ExportProjectRequestPrivate(
     const ExportProjectRequestPrivate &other, ExportProjectRequest * const q)
-    : ExportProjectPrivate(other, q)
+    : MobileRequestPrivate(other, q)
 {
 
 }

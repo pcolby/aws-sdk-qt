@@ -86,7 +86,7 @@ void CheckDomainAvailabilityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CheckDomainAvailabilityResponse instance.
  */
 CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponsePrivate(
-    CheckDomainAvailabilityQueueResponse * const q) : CheckDomainAvailabilityPrivate(q)
+    CheckDomainAvailabilityResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

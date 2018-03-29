@@ -86,7 +86,7 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDomainsResponse instance.
  */
 ListDomainsResponsePrivate::ListDomainsResponsePrivate(
-    ListDomainsQueueResponse * const q) : ListDomainsPrivate(q)
+    ListDomainsResponse * const q) : SimpleDBResponsePrivate(q)
 {
 
 }

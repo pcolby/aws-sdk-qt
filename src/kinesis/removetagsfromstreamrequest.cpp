@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetwor
  */
 RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
     const KinesisRequest::Action action, RemoveTagsFromStreamRequest * const q)
-    : RemoveTagsFromStreamPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
  */
 RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
     const RemoveTagsFromStreamRequestPrivate &other, RemoveTagsFromStreamRequest * const q)
-    : RemoveTagsFromStreamPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

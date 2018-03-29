@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcceptInvitationRequest::response(QNetworkRep
  */
 AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
     const GuardDutyRequest::Action action, AcceptInvitationRequest * const q)
-    : AcceptInvitationPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
  */
 AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
     const AcceptInvitationRequestPrivate &other, AcceptInvitationRequest * const q)
-    : AcceptInvitationPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

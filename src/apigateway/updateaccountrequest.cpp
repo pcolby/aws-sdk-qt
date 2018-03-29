@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountRequest::response(QNetworkReply 
  */
 UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
     const APIGatewayRequest::Action action, UpdateAccountRequest * const q)
-    : UpdateAccountPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
  */
 UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
     const UpdateAccountRequestPrivate &other, UpdateAccountRequest * const q)
-    : UpdateAccountPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

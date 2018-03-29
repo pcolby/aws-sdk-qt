@@ -86,7 +86,7 @@ void CreateMaintenanceWindowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMaintenanceWindowResponse instance.
  */
 CreateMaintenanceWindowResponsePrivate::CreateMaintenanceWindowResponsePrivate(
-    CreateMaintenanceWindowQueueResponse * const q) : CreateMaintenanceWindowPrivate(q)
+    CreateMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(
  */
 ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, ListConstraintsForPortfolioRequest * const q)
-    : ListConstraintsForPortfolioPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPri
  */
 ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
     const ListConstraintsForPortfolioRequestPrivate &other, ListConstraintsForPortfolioRequest * const q)
-    : ListConstraintsForPortfolioPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

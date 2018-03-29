@@ -86,7 +86,7 @@ void ListAllowedNodeTypeModificationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAllowedNodeTypeModificationsResponse instance.
  */
 ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModificationsResponsePrivate(
-    ListAllowedNodeTypeModificationsQueueResponse * const q) : ListAllowedNodeTypeModificationsPrivate(q)
+    ListAllowedNodeTypeModificationsResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

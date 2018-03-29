@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventAggregatesRequest::response(QNet
  */
 DescribeEventAggregatesRequestPrivate::DescribeEventAggregatesRequestPrivate(
     const HealthRequest::Action action, DescribeEventAggregatesRequest * const q)
-    : DescribeEventAggregatesPrivate(action, q)
+    : HealthRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEventAggregatesRequestPrivate::DescribeEventAggregatesRequestPrivate(
  */
 DescribeEventAggregatesRequestPrivate::DescribeEventAggregatesRequestPrivate(
     const DescribeEventAggregatesRequestPrivate &other, DescribeEventAggregatesRequest * const q)
-    : DescribeEventAggregatesPrivate(other, q)
+    : HealthRequestPrivate(other, q)
 {
 
 }

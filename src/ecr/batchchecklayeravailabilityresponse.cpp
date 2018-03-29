@@ -86,7 +86,7 @@ void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchCheckLayerAvailabilityResponse instance.
  */
 BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponsePrivate(
-    BatchCheckLayerAvailabilityQueueResponse * const q) : BatchCheckLayerAvailabilityPrivate(q)
+    BatchCheckLayerAvailabilityResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

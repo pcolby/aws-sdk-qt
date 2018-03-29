@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetw
  */
 DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
     const ComprehendRequest::Action action, DetectDominantLanguageRequest * const q)
-    : DetectDominantLanguagePrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
  */
 DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
     const DetectDominantLanguageRequestPrivate &other, DetectDominantLanguageRequest * const q)
-    : DetectDominantLanguagePrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

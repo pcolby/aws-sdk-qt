@@ -86,7 +86,7 @@ void DescribePullRequestEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribePullRequestEventsResponse instance.
  */
 DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponsePrivate(
-    DescribePullRequestEventsQueueResponse * const q) : DescribePullRequestEventsPrivate(q)
+    DescribePullRequestEventsResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

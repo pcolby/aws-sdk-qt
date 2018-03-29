@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const OrganizationsRequest::Action action, DetachPolicyRequest * const q)
-    : DetachPolicyPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const DetachPolicyRequestPrivate &other, DetachPolicyRequest * const q)
-    : DetachPolicyPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

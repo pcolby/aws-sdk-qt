@@ -86,7 +86,7 @@ void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSampledRequestsResponse instance.
  */
 GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
-    GetSampledRequestsQueueResponse * const q) : GetSampledRequestsPrivate(q)
+    GetSampledRequestsResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

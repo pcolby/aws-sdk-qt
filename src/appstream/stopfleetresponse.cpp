@@ -86,7 +86,7 @@ void StopFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopFleetResponse instance.
  */
 StopFleetResponsePrivate::StopFleetResponsePrivate(
-    StopFleetQueueResponse * const q) : StopFleetPrivate(q)
+    StopFleetResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

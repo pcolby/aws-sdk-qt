@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableKeyRotationRequest::response(QNetworkR
  */
 DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
     const KMSRequest::Action action, DisableKeyRotationRequest * const q)
-    : DisableKeyRotationPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
  */
 DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
     const DisableKeyRotationRequestPrivate &other, DisableKeyRotationRequest * const q)
-    : DisableKeyRotationPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

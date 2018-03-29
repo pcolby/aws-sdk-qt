@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopCrawlerScheduleRequest::response(QNetwork
  */
 StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
     const GlueRequest::Action action, StopCrawlerScheduleRequest * const q)
-    : StopCrawlerSchedulePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
  */
 StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
     const StopCrawlerScheduleRequestPrivate &other, StopCrawlerScheduleRequest * const q)
-    : StopCrawlerSchedulePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

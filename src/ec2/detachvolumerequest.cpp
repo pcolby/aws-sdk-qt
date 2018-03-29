@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply *
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
     const EC2Request::Action action, DetachVolumeRequest * const q)
-    : DetachVolumePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
     const DetachVolumeRequestPrivate &other, DetachVolumeRequest * const q)
-    : DetachVolumePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

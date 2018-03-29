@@ -86,7 +86,7 @@ void ListThingGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListThingGroupsResponse instance.
  */
 ListThingGroupsResponsePrivate::ListThingGroupsResponsePrivate(
-    ListThingGroupsQueueResponse * const q) : ListThingGroupsPrivate(q)
+    ListThingGroupsResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

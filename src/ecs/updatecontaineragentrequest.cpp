@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetwor
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
     const ECSRequest::Action action, UpdateContainerAgentRequest * const q)
-    : UpdateContainerAgentPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
     const UpdateContainerAgentRequestPrivate &other, UpdateContainerAgentRequest * const q)
-    : UpdateContainerAgentPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

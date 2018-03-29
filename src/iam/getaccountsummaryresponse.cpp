@@ -86,7 +86,7 @@ void GetAccountSummaryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountSummaryResponse instance.
  */
 GetAccountSummaryResponsePrivate::GetAccountSummaryResponsePrivate(
-    GetAccountSummaryQueueResponse * const q) : GetAccountSummaryPrivate(q)
+    GetAccountSummaryResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

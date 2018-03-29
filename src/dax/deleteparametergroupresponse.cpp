@@ -86,7 +86,7 @@ void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteParameterGroupResponse instance.
  */
 DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
-    DeleteParameterGroupQueueResponse * const q) : DeleteParameterGroupPrivate(q)
+    DeleteParameterGroupResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * co
  */
 TagStreamRequestPrivate::TagStreamRequestPrivate(
     const KinesisVideoRequest::Action action, TagStreamRequest * const q)
-    : TagStreamPrivate(action, q)
+    : KinesisVideoRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TagStreamRequestPrivate::TagStreamRequestPrivate(
  */
 TagStreamRequestPrivate::TagStreamRequestPrivate(
     const TagStreamRequestPrivate &other, TagStreamRequest * const q)
-    : TagStreamPrivate(other, q)
+    : KinesisVideoRequestPrivate(other, q)
 {
 
 }

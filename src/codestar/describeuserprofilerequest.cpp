@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserProfileRequest::response(QNetwork
  */
 DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
     const CodeStarRequest::Action action, DescribeUserProfileRequest * const q)
-    : DescribeUserProfilePrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
  */
 DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
     const DescribeUserProfileRequestPrivate &other, DescribeUserProfileRequest * const q)
-    : DescribeUserProfilePrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

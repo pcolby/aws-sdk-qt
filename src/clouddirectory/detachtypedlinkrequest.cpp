@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachTypedLinkRequest::response(QNetworkRepl
  */
 DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachTypedLinkRequest * const q)
-    : DetachTypedLinkPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
  */
 DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
     const DetachTypedLinkRequestPrivate &other, DetachTypedLinkRequest * const q)
-    : DetachTypedLinkPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

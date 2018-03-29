@@ -86,7 +86,7 @@ void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public IncreaseReplicationFactorResponse instance.
  */
 IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePrivate(
-    IncreaseReplicationFactorQueueResponse * const q) : IncreaseReplicationFactorPrivate(q)
+    IncreaseReplicationFactorResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

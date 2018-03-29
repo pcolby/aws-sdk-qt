@@ -86,7 +86,7 @@ void CancelCertificateTransferResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelCertificateTransferResponse instance.
  */
 CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponsePrivate(
-    CancelCertificateTransferQueueResponse * const q) : CancelCertificateTransferPrivate(q)
+    CancelCertificateTransferResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

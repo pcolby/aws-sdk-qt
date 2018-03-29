@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkRe
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetUtterancesViewRequest * const q)
-    : GetUtterancesViewPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
     const GetUtterancesViewRequestPrivate &other, GetUtterancesViewRequest * const q)
-    : GetUtterancesViewPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

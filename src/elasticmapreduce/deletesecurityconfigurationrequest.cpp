@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
     const EMRRequest::Action action, DeleteSecurityConfigurationRequest * const q)
-    : DeleteSecurityConfigurationPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPri
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
     const DeleteSecurityConfigurationRequestPrivate &other, DeleteSecurityConfigurationRequest * const q)
-    : DeleteSecurityConfigurationPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

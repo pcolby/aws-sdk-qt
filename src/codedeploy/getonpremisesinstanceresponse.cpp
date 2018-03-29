@@ -86,7 +86,7 @@ void GetOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetOnPremisesInstanceResponse instance.
  */
 GetOnPremisesInstanceResponsePrivate::GetOnPremisesInstanceResponsePrivate(
-    GetOnPremisesInstanceQueueResponse * const q) : GetOnPremisesInstancePrivate(q)
+    GetOnPremisesInstanceResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

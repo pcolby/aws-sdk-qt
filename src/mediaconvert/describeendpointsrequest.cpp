@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
  */
 DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
     const MediaConvertRequest::Action action, DescribeEndpointsRequest * const q)
-    : DescribeEndpointsPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
  */
 DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
     const DescribeEndpointsRequestPrivate &other, DescribeEndpointsRequest * const q)
-    : DescribeEndpointsPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFindingsResponse instance.
  */
 DescribeFindingsResponsePrivate::DescribeFindingsResponsePrivate(
-    DescribeFindingsQueueResponse * const q) : DescribeFindingsPrivate(q)
+    DescribeFindingsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

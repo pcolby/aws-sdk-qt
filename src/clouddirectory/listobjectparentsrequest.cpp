@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentsRequest::response(QNetworkRe
  */
 ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectParentsRequest * const q)
-    : ListObjectParentsPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
  */
 ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
     const ListObjectParentsRequestPrivate &other, ListObjectParentsRequest * const q)
-    : ListObjectParentsPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

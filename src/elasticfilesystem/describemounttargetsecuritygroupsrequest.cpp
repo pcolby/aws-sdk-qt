@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::res
  */
 DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
     const EFSRequest::Action action, DescribeMountTargetSecurityGroupsRequest * const q)
-    : DescribeMountTargetSecurityGroupsPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGrou
  */
 DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
     const DescribeMountTargetSecurityGroupsRequestPrivate &other, DescribeMountTargetSecurityGroupsRequest * const q)
-    : DescribeMountTargetSecurityGroupsPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

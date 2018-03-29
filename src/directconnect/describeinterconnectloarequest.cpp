@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInterconnectLoaRequest::response(QNet
  */
 DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
     const DirectConnectRequest::Action action, DescribeInterconnectLoaRequest * const q)
-    : DescribeInterconnectLoaPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
  */
 DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
     const DescribeInterconnectLoaRequestPrivate &other, DescribeInterconnectLoaRequest * const q)
-    : DescribeInterconnectLoaPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

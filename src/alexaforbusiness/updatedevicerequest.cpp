@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply *
  */
 UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateDeviceRequest * const q)
-    : UpdateDevicePrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
  */
 UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
     const UpdateDeviceRequestPrivate &other, UpdateDeviceRequest * const q)
-    : UpdateDevicePrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

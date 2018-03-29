@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToVaultRequest::response(QNetworkReply
  */
 AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
     const GlacierRequest::Action action, AddTagsToVaultRequest * const q)
-    : AddTagsToVaultPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
  */
 AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
     const AddTagsToVaultRequestPrivate &other, AddTagsToVaultRequest * const q)
-    : AddTagsToVaultPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

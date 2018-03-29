@@ -86,7 +86,7 @@ void ListJobsByPipelineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListJobsByPipelineResponse instance.
  */
 ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponsePrivate(
-    ListJobsByPipelineQueueResponse * const q) : ListJobsByPipelinePrivate(q)
+    ListJobsByPipelineResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

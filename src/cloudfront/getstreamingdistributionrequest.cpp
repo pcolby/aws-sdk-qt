@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetStreamingDistributionRequest::response(QNe
  */
 GetStreamingDistributionRequestPrivate::GetStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, GetStreamingDistributionRequest * const q)
-    : GetStreamingDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetStreamingDistributionRequestPrivate::GetStreamingDistributionRequestPrivate(
  */
 GetStreamingDistributionRequestPrivate::GetStreamingDistributionRequestPrivate(
     const GetStreamingDistributionRequestPrivate &other, GetStreamingDistributionRequest * const q)
-    : GetStreamingDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

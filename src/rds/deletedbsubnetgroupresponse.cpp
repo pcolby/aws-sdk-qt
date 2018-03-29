@@ -86,7 +86,7 @@ void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDBSubnetGroupResponse instance.
  */
 DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
-    DeleteDBSubnetGroupQueueResponse * const q) : DeleteDBSubnetGroupPrivate(q)
+    DeleteDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

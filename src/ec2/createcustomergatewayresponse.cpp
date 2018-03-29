@@ -86,7 +86,7 @@ void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCustomerGatewayResponse instance.
  */
 CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
-    CreateCustomerGatewayQueueResponse * const q) : CreateCustomerGatewayPrivate(q)
+    CreateCustomerGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

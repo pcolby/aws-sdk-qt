@@ -86,7 +86,7 @@ void UpdateFunctionConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateFunctionConfigurationResponse instance.
  */
 UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponsePrivate(
-    UpdateFunctionConfigurationQueueResponse * const q) : UpdateFunctionConfigurationPrivate(q)
+    UpdateFunctionConfigurationResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

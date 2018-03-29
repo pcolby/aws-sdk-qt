@@ -86,7 +86,7 @@ void DescribePlatformVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribePlatformVersionResponse instance.
  */
 DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponsePrivate(
-    DescribePlatformVersionQueueResponse * const q) : DescribePlatformVersionPrivate(q)
+    DescribePlatformVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

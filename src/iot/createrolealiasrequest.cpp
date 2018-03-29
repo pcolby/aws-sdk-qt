@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkRepl
  */
 CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
     const IoTRequest::Action action, CreateRoleAliasRequest * const q)
-    : CreateRoleAliasPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
  */
 CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
     const CreateRoleAliasRequestPrivate &other, CreateRoleAliasRequest * const q)
-    : CreateRoleAliasPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

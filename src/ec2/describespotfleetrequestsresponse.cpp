@@ -86,7 +86,7 @@ void DescribeSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSpotFleetRequestsResponse instance.
  */
 DescribeSpotFleetRequestsResponsePrivate::DescribeSpotFleetRequestsResponsePrivate(
-    DescribeSpotFleetRequestsQueueResponse * const q) : DescribeSpotFleetRequestsPrivate(q)
+    DescribeSpotFleetRequestsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

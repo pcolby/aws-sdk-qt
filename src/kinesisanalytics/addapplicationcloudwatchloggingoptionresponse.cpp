@@ -86,7 +86,7 @@ void AddApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public AddApplicationCloudWatchLoggingOptionResponse instance.
  */
 AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWatchLoggingOptionResponsePrivate(
-    AddApplicationCloudWatchLoggingOptionQueueResponse * const q) : AddApplicationCloudWatchLoggingOptionPrivate(q)
+    AddApplicationCloudWatchLoggingOptionResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

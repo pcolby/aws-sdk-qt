@@ -86,7 +86,7 @@ void DeleteLoggerDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLoggerDefinitionResponse instance.
  */
 DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
-    DeleteLoggerDefinitionQueueResponse * const q) : DeleteLoggerDefinitionPrivate(q)
+    DeleteLoggerDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

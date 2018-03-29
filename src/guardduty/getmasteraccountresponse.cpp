@@ -86,7 +86,7 @@ void GetMasterAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetMasterAccountResponse instance.
  */
 GetMasterAccountResponsePrivate::GetMasterAccountResponsePrivate(
-    GetMasterAccountQueueResponse * const q) : GetMasterAccountPrivate(q)
+    GetMasterAccountResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

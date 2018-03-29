@@ -86,7 +86,7 @@ void LookupEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public LookupEventsResponse instance.
  */
 LookupEventsResponsePrivate::LookupEventsResponsePrivate(
-    LookupEventsQueueResponse * const q) : LookupEventsPrivate(q)
+    LookupEventsResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

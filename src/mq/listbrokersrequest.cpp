@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * 
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
     const MQRequest::Action action, ListBrokersRequest * const q)
-    : ListBrokersPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBrokersRequestPrivate::ListBrokersRequestPrivate(
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
     const ListBrokersRequestPrivate &other, ListBrokersRequest * const q)
-    : ListBrokersPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

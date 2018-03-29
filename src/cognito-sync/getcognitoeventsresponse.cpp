@@ -86,7 +86,7 @@ void GetCognitoEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCognitoEventsResponse instance.
  */
 GetCognitoEventsResponsePrivate::GetCognitoEventsResponsePrivate(
-    GetCognitoEventsQueueResponse * const q) : GetCognitoEventsPrivate(q)
+    GetCognitoEventsResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

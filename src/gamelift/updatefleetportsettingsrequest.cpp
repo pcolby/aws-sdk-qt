@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetPortSettingsRequest::response(QNet
  */
 UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetPortSettingsRequest * const q)
-    : UpdateFleetPortSettingsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
  */
 UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
     const UpdateFleetPortSettingsRequestPrivate &other, UpdateFleetPortSettingsRequest * const q)
-    : UpdateFleetPortSettingsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

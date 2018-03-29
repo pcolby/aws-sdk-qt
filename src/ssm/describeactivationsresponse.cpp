@@ -86,7 +86,7 @@ void DescribeActivationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeActivationsResponse instance.
  */
 DescribeActivationsResponsePrivate::DescribeActivationsResponsePrivate(
-    DescribeActivationsQueueResponse * const q) : DescribeActivationsPrivate(q)
+    DescribeActivationsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

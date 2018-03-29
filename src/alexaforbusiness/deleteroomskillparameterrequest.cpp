@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNe
  */
 DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteRoomSkillParameterRequest * const q)
-    : DeleteRoomSkillParameterPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
  */
 DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
     const DeleteRoomSkillParameterRequestPrivate &other, DeleteRoomSkillParameterRequest * const q)
-    : DeleteRoomSkillParameterPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

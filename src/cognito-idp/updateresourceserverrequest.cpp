@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetwor
  */
 UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateResourceServerRequest * const q)
-    : UpdateResourceServerPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
  */
 UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
     const UpdateResourceServerRequestPrivate &other, UpdateResourceServerRequest * const q)
-    : UpdateResourceServerPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

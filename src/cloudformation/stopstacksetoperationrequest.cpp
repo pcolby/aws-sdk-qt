@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopStackSetOperationRequest::response(QNetwo
  */
 StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
     const CloudFormationRequest::Action action, StopStackSetOperationRequest * const q)
-    : StopStackSetOperationPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
  */
 StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
     const StopStackSetOperationRequestPrivate &other, StopStackSetOperationRequest * const q)
-    : StopStackSetOperationPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

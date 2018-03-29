@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteChangeSetRequest::response(QNetworkRepl
  */
 DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, DeleteChangeSetRequest * const q)
-    : DeleteChangeSetPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
  */
 DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
     const DeleteChangeSetRequestPrivate &other, DeleteChangeSetRequest * const q)
-    : DeleteChangeSetPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

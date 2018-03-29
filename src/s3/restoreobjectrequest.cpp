@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply 
  */
 RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
     const S3Request::Action action, RestoreObjectRequest * const q)
-    : RestoreObjectPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
  */
 RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
     const RestoreObjectRequestPrivate &other, RestoreObjectRequest * const q)
-    : RestoreObjectPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

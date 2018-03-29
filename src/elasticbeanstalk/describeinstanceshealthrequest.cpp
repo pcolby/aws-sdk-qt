@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesHealthRequest::response(QNet
  */
 DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeInstancesHealthRequest * const q)
-    : DescribeInstancesHealthPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
  */
 DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
     const DescribeInstancesHealthRequestPrivate &other, DescribeInstancesHealthRequest * const q)
-    : DescribeInstancesHealthPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

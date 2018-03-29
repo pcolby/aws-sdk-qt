@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetwor
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
     const SWFRequest::Action action, RegisterActivityTypeRequest * const q)
-    : RegisterActivityTypePrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
     const RegisterActivityTypeRequestPrivate &other, RegisterActivityTypeRequest * const q)
-    : RegisterActivityTypePrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

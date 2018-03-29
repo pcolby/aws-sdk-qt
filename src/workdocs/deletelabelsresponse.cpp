@@ -86,7 +86,7 @@ void DeleteLabelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLabelsResponse instance.
  */
 DeleteLabelsResponsePrivate::DeleteLabelsResponsePrivate(
-    DeleteLabelsQueueResponse * const q) : DeleteLabelsPrivate(q)
+    DeleteLabelsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

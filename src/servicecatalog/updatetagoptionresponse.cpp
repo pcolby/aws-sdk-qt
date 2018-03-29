@@ -86,7 +86,7 @@ void UpdateTagOptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTagOptionResponse instance.
  */
 UpdateTagOptionResponsePrivate::UpdateTagOptionResponsePrivate(
-    UpdateTagOptionQueueResponse * const q) : UpdateTagOptionPrivate(q)
+    UpdateTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

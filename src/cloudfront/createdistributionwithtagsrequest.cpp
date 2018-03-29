@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionWithTagsRequest::response(Q
  */
 CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
     const CloudFrontRequest::Action action, CreateDistributionWithTagsRequest * const q)
-    : CreateDistributionWithTagsPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPriva
  */
 CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
     const CreateDistributionWithTagsRequestPrivate &other, CreateDistributionWithTagsRequest * const q)
-    : CreateDistributionWithTagsPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

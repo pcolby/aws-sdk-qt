@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
     const WAFRequest::Action action, UpdateByteMatchSetRequest * const q)
-    : UpdateByteMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
     const UpdateByteMatchSetRequestPrivate &other, UpdateByteMatchSetRequest * const q)
-    : UpdateByteMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

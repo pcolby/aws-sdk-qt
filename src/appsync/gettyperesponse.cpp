@@ -86,7 +86,7 @@ void GetTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTypeResponse instance.
  */
 GetTypeResponsePrivate::GetTypeResponsePrivate(
-    GetTypeQueueResponse * const q) : GetTypePrivate(q)
+    GetTypeResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

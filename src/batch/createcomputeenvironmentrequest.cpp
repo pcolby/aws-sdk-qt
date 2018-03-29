@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateComputeEnvironmentRequest::response(QNe
  */
 CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, CreateComputeEnvironmentRequest * const q)
-    : CreateComputeEnvironmentPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
  */
 CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
     const CreateComputeEnvironmentRequestPrivate &other, CreateComputeEnvironmentRequest * const q)
-    : CreateComputeEnvironmentPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

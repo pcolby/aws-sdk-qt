@@ -86,7 +86,7 @@ void ResolveRoomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResolveRoomResponse instance.
  */
 ResolveRoomResponsePrivate::ResolveRoomResponsePrivate(
-    ResolveRoomQueueResponse * const q) : ResolveRoomPrivate(q)
+    ResolveRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

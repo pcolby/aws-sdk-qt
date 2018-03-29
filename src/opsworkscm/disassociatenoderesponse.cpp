@@ -86,7 +86,7 @@ void DisassociateNodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateNodeResponse instance.
  */
 DisassociateNodeResponsePrivate::DisassociateNodeResponsePrivate(
-    DisassociateNodeQueueResponse * const q) : DisassociateNodePrivate(q)
+    DisassociateNodeResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetwork
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
     const EFSRequest::Action action, DescribeFileSystemsRequest * const q)
-    : DescribeFileSystemsPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
     const DescribeFileSystemsRequestPrivate &other, DescribeFileSystemsRequest * const q)
-    : DescribeFileSystemsPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

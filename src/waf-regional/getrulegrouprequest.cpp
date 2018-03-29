@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRuleGroupRequest::response(QNetworkReply *
  */
 GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
     const WAFRegionalRequest::Action action, GetRuleGroupRequest * const q)
-    : GetRuleGroupPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
  */
 GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
     const GetRuleGroupRequestPrivate &other, GetRuleGroupRequest * const q)
-    : GetRuleGroupPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

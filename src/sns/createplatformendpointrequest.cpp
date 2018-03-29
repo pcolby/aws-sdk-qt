@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetw
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
     const SNSRequest::Action action, CreatePlatformEndpointRequest * const q)
-    : CreatePlatformEndpointPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
     const CreatePlatformEndpointRequestPrivate &other, CreatePlatformEndpointRequest * const q)
-    : CreatePlatformEndpointPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

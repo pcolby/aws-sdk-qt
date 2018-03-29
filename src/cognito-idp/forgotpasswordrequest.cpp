@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ForgotPasswordRequest::response(QNetworkReply
  */
 ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ForgotPasswordRequest * const q)
-    : ForgotPasswordPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
  */
 ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
     const ForgotPasswordRequestPrivate &other, ForgotPasswordRequest * const q)
-    : ForgotPasswordPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

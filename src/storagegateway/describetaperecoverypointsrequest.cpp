@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(Q
  */
 DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeTapeRecoveryPointsRequest * const q)
-    : DescribeTapeRecoveryPointsPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPriva
  */
 DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
     const DescribeTapeRecoveryPointsRequestPrivate &other, DescribeTapeRecoveryPointsRequest * const q)
-    : DescribeTapeRecoveryPointsPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

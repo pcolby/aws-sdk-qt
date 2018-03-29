@@ -86,7 +86,7 @@ void DescribeChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeChannelResponse instance.
  */
 DescribeChannelResponsePrivate::DescribeChannelResponsePrivate(
-    DescribeChannelQueueResponse * const q) : DescribeChannelPrivate(q)
+    DescribeChannelResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

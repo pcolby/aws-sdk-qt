@@ -86,7 +86,7 @@ void BatchGetBuildsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetBuildsResponse instance.
  */
 BatchGetBuildsResponsePrivate::BatchGetBuildsResponsePrivate(
-    BatchGetBuildsQueueResponse * const q) : BatchGetBuildsPrivate(q)
+    BatchGetBuildsResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

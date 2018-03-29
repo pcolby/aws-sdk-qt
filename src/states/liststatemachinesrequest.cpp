@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkRe
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
     const SFNRequest::Action action, ListStateMachinesRequest * const q)
-    : ListStateMachinesPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
     const ListStateMachinesRequestPrivate &other, ListStateMachinesRequest * const q)
-    : ListStateMachinesPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

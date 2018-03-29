@@ -86,7 +86,7 @@ void BatchDetectSentimentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDetectSentimentResponse instance.
  */
 BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponsePrivate(
-    BatchDetectSentimentQueueResponse * const q) : BatchDetectSentimentPrivate(q)
+    BatchDetectSentimentResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

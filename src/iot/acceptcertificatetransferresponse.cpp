@@ -86,7 +86,7 @@ void AcceptCertificateTransferResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcceptCertificateTransferResponse instance.
  */
 AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponsePrivate(
-    AcceptCertificateTransferQueueResponse * const q) : AcceptCertificateTransferPrivate(q)
+    AcceptCertificateTransferResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

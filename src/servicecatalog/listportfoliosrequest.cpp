@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPortfoliosRequest::response(QNetworkReply
  */
 ListPortfoliosRequestPrivate::ListPortfoliosRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPortfoliosRequest * const q)
-    : ListPortfoliosPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPortfoliosRequestPrivate::ListPortfoliosRequestPrivate(
  */
 ListPortfoliosRequestPrivate::ListPortfoliosRequestPrivate(
     const ListPortfoliosRequestPrivate &other, ListPortfoliosRequest * const q)
-    : ListPortfoliosPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

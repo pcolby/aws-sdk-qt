@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateProductRequest::response(QNetworkReply 
  */
 CreateProductRequestPrivate::CreateProductRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateProductRequest * const q)
-    : CreateProductPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateProductRequestPrivate::CreateProductRequestPrivate(
  */
 CreateProductRequestPrivate::CreateProductRequestPrivate(
     const CreateProductRequestPrivate &other, CreateProductRequest * const q)
-    : CreateProductPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

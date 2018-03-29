@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest:
  */
 UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, UpdateCustomVerificationEmailTemplateRequest * const q)
-    : UpdateCustomVerificationEmailTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEma
  */
 UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
     const UpdateCustomVerificationEmailTemplateRequestPrivate &other, UpdateCustomVerificationEmailTemplateRequest * const q)
-    : UpdateCustomVerificationEmailTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

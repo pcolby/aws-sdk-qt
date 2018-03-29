@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNe
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
     const EC2Request::Action action, CreateInstanceExportTaskRequest * const q)
-    : CreateInstanceExportTaskPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
     const CreateInstanceExportTaskRequestPrivate &other, CreateInstanceExportTaskRequest * const q)
-    : CreateInstanceExportTaskPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

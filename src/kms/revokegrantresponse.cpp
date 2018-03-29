@@ -86,7 +86,7 @@ void RevokeGrantResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RevokeGrantResponse instance.
  */
 RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
-    RevokeGrantQueueResponse * const q) : RevokeGrantPrivate(q)
+    RevokeGrantResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

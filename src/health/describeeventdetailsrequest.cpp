@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventDetailsRequest::response(QNetwor
  */
 DescribeEventDetailsRequestPrivate::DescribeEventDetailsRequestPrivate(
     const HealthRequest::Action action, DescribeEventDetailsRequest * const q)
-    : DescribeEventDetailsPrivate(action, q)
+    : HealthRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEventDetailsRequestPrivate::DescribeEventDetailsRequestPrivate(
  */
 DescribeEventDetailsRequestPrivate::DescribeEventDetailsRequestPrivate(
     const DescribeEventDetailsRequestPrivate &other, DescribeEventDetailsRequest * const q)
-    : DescribeEventDetailsPrivate(other, q)
+    : HealthRequestPrivate(other, q)
 {
 
 }

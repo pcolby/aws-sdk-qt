@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterInstancesWithLoadBalancerRequest::res
  */
 RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, RegisterInstancesWithLoadBalancerRequest * const q)
-    : RegisterInstancesWithLoadBalancerPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalanc
  */
 RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalancerRequestPrivate(
     const RegisterInstancesWithLoadBalancerRequestPrivate &other, RegisterInstancesWithLoadBalancerRequest * const q)
-    : RegisterInstancesWithLoadBalancerPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

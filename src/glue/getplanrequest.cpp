@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * cons
  */
 GetPlanRequestPrivate::GetPlanRequestPrivate(
     const GlueRequest::Action action, GetPlanRequest * const q)
-    : GetPlanPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPlanRequestPrivate::GetPlanRequestPrivate(
  */
 GetPlanRequestPrivate::GetPlanRequestPrivate(
     const GetPlanRequestPrivate &other, GetPlanRequest * const q)
-    : GetPlanPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

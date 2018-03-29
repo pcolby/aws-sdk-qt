@@ -86,7 +86,7 @@ void GetDirectoryLimitsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDirectoryLimitsResponse instance.
  */
 GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponsePrivate(
-    GetDirectoryLimitsQueueResponse * const q) : GetDirectoryLimitsPrivate(q)
+    GetDirectoryLimitsResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

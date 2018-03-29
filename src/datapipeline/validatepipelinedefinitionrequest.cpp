@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ValidatePipelineDefinitionRequest::response(Q
  */
 ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, ValidatePipelineDefinitionRequest * const q)
-    : ValidatePipelineDefinitionPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPriva
  */
 ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPrivate(
     const ValidatePipelineDefinitionRequestPrivate &other, ValidatePipelineDefinitionRequest * const q)
-    : ValidatePipelineDefinitionPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

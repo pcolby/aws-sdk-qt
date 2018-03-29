@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetRulePrioritiesRequest::response(QNetworkRe
  */
 SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetRulePrioritiesRequest * const q)
-    : SetRulePrioritiesPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
  */
 SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
     const SetRulePrioritiesRequestPrivate &other, SetRulePrioritiesRequest * const q)
-    : SetRulePrioritiesPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

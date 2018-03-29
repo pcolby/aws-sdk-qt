@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const WAFRegionalRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)
-    : GetRateBasedRuleManagedKeysPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPri
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const GetRateBasedRuleManagedKeysRequestPrivate &other, GetRateBasedRuleManagedKeysRequest * const q)
-    : GetRateBasedRuleManagedKeysPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

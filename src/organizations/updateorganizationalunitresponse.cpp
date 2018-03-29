@@ -86,7 +86,7 @@ void UpdateOrganizationalUnitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateOrganizationalUnitResponse instance.
  */
 UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponsePrivate(
-    UpdateOrganizationalUnitQueueResponse * const q) : UpdateOrganizationalUnitPrivate(q)
+    UpdateOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RefreshCacheRequest::response(QNetworkReply *
  */
 RefreshCacheRequestPrivate::RefreshCacheRequestPrivate(
     const StorageGatewayRequest::Action action, RefreshCacheRequest * const q)
-    : RefreshCachePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RefreshCacheRequestPrivate::RefreshCacheRequestPrivate(
  */
 RefreshCacheRequestPrivate::RefreshCacheRequestPrivate(
     const RefreshCacheRequestPrivate &other, RefreshCacheRequest * const q)
-    : RefreshCachePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

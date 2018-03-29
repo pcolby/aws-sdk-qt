@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionFiltersRequest::response(
  */
 DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeSubscriptionFiltersRequest * const q)
-    : DescribeSubscriptionFiltersPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPri
  */
 DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPrivate(
     const DescribeSubscriptionFiltersRequestPrivate &other, DescribeSubscriptionFiltersRequest * const q)
-    : DescribeSubscriptionFiltersPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

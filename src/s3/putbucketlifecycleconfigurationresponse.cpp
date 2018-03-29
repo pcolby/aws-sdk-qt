@@ -86,7 +86,7 @@ void PutBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketLifecycleConfigurationResponse instance.
  */
 PutBucketLifecycleConfigurationResponsePrivate::PutBucketLifecycleConfigurationResponsePrivate(
-    PutBucketLifecycleConfigurationQueueResponse * const q) : PutBucketLifecycleConfigurationPrivate(q)
+    PutBucketLifecycleConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

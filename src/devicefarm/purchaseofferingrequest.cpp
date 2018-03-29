@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkRep
  */
 PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
     const DeviceFarmRequest::Action action, PurchaseOfferingRequest * const q)
-    : PurchaseOfferingPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
  */
 PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
     const PurchaseOfferingRequestPrivate &other, PurchaseOfferingRequest * const q)
-    : PurchaseOfferingPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateTagOptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTagOptionResponse instance.
  */
 CreateTagOptionResponsePrivate::CreateTagOptionResponsePrivate(
-    CreateTagOptionQueueResponse * const q) : CreateTagOptionPrivate(q)
+    CreateTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void BatchGetTracesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetTracesResponse instance.
  */
 BatchGetTracesResponsePrivate::BatchGetTracesResponsePrivate(
-    BatchGetTracesQueueResponse * const q) : BatchGetTracesPrivate(q)
+    BatchGetTracesResponse * const q) : XRayResponsePrivate(q)
 {
 
 }

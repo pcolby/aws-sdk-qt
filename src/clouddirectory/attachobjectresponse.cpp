@@ -86,7 +86,7 @@ void AttachObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachObjectResponse instance.
  */
 AttachObjectResponsePrivate::AttachObjectResponsePrivate(
-    AttachObjectQueueResponse * const q) : AttachObjectPrivate(q)
+    AttachObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AcceptInvitationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcceptInvitationResponse instance.
  */
 AcceptInvitationResponsePrivate::AcceptInvitationResponsePrivate(
-    AcceptInvitationQueueResponse * const q) : AcceptInvitationPrivate(q)
+    AcceptInvitationResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

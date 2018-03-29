@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAttachmentRequest::response(QNetworkR
  */
 DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
     const SupportRequest::Action action, DescribeAttachmentRequest * const q)
-    : DescribeAttachmentPrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
  */
 DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
     const DescribeAttachmentRequestPrivate &other, DescribeAttachmentRequest * const q)
-    : DescribeAttachmentPrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

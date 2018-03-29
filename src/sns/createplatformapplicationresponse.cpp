@@ -86,7 +86,7 @@ void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePlatformApplicationResponse instance.
  */
 CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePrivate(
-    CreatePlatformApplicationQueueResponse * const q) : CreatePlatformApplicationPrivate(q)
+    CreatePlatformApplicationResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

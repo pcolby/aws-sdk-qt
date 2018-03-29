@@ -86,7 +86,7 @@ void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSubnetsResponse instance.
  */
 DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
-    DescribeSubnetsQueueResponse * const q) : DescribeSubnetsPrivate(q)
+    DescribeSubnetsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

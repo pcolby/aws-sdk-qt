@@ -86,7 +86,7 @@ void ListConfigurationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListConfigurationsResponse instance.
  */
 ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
-    ListConfigurationsQueueResponse * const q) : ListConfigurationsPrivate(q)
+    ListConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

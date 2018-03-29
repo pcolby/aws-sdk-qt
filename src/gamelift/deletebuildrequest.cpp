@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * 
  */
 DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
     const GameLiftRequest::Action action, DeleteBuildRequest * const q)
-    : DeleteBuildPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
  */
 DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
     const DeleteBuildRequestPrivate &other, DeleteBuildRequest * const q)
-    : DeleteBuildPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

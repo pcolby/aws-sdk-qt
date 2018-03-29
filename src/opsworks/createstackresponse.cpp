@@ -86,7 +86,7 @@ void CreateStackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateStackResponse instance.
  */
 CreateStackResponsePrivate::CreateStackResponsePrivate(
-    CreateStackQueueResponse * const q) : CreateStackPrivate(q)
+    CreateStackResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

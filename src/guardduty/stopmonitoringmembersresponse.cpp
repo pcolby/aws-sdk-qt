@@ -86,7 +86,7 @@ void StopMonitoringMembersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopMonitoringMembersResponse instance.
  */
 StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponsePrivate(
-    StopMonitoringMembersQueueResponse * const q) : StopMonitoringMembersPrivate(q)
+    StopMonitoringMembersResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

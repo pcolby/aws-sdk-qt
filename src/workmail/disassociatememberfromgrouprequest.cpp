@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(
  */
 DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
     const WorkMailRequest::Action action, DisassociateMemberFromGroupRequest * const q)
-    : DisassociateMemberFromGroupPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPri
  */
 DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
     const DisassociateMemberFromGroupRequestPrivate &other, DisassociateMemberFromGroupRequest * const q)
-    : DisassociateMemberFromGroupPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

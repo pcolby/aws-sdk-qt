@@ -86,7 +86,7 @@ void AllocateStaticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AllocateStaticIpResponse instance.
  */
 AllocateStaticIpResponsePrivate::AllocateStaticIpResponsePrivate(
-    AllocateStaticIpQueueResponse * const q) : AllocateStaticIpPrivate(q)
+    AllocateStaticIpResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

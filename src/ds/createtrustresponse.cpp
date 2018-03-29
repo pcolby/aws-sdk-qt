@@ -86,7 +86,7 @@ void CreateTrustResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTrustResponse instance.
  */
 CreateTrustResponsePrivate::CreateTrustResponsePrivate(
-    CreateTrustQueueResponse * const q) : CreateTrustPrivate(q)
+    CreateTrustResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

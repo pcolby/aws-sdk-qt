@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterTargetWithMaintenanceWindowRequest::r
  */
 RegisterTargetWithMaintenanceWindowRequestPrivate::RegisterTargetWithMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, RegisterTargetWithMaintenanceWindowRequest * const q)
-    : RegisterTargetWithMaintenanceWindowPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterTargetWithMaintenanceWindowRequestPrivate::RegisterTargetWithMaintenance
  */
 RegisterTargetWithMaintenanceWindowRequestPrivate::RegisterTargetWithMaintenanceWindowRequestPrivate(
     const RegisterTargetWithMaintenanceWindowRequestPrivate &other, RegisterTargetWithMaintenanceWindowRequest * const q)
-    : RegisterTargetWithMaintenanceWindowPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

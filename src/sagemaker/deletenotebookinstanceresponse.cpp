@@ -86,7 +86,7 @@ void DeleteNotebookInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNotebookInstanceResponse instance.
  */
 DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponsePrivate(
-    DeleteNotebookInstanceQueueResponse * const q) : DeleteNotebookInstancePrivate(q)
+    DeleteNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

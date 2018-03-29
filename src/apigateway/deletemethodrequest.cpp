@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodRequest::response(QNetworkReply *
  */
 DeleteMethodRequestPrivate::DeleteMethodRequestPrivate(
     const APIGatewayRequest::Action action, DeleteMethodRequest * const q)
-    : DeleteMethodPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMethodRequestPrivate::DeleteMethodRequestPrivate(
  */
 DeleteMethodRequestPrivate::DeleteMethodRequestPrivate(
     const DeleteMethodRequestPrivate &other, DeleteMethodRequest * const q)
-    : DeleteMethodPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

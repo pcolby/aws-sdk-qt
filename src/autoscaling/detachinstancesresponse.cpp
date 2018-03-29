@@ -86,7 +86,7 @@ void DetachInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachInstancesResponse instance.
  */
 DetachInstancesResponsePrivate::DetachInstancesResponsePrivate(
-    DetachInstancesQueueResponse * const q) : DetachInstancesPrivate(q)
+    DetachInstancesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

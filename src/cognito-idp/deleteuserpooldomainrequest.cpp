@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolDomainRequest::response(QNetwor
  */
 DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteUserPoolDomainRequest * const q)
-    : DeleteUserPoolDomainPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
  */
 DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
     const DeleteUserPoolDomainRequestPrivate &other, DeleteUserPoolDomainRequest * const q)
-    : DeleteUserPoolDomainPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedStacksRequest::response(QNetwor
  */
 ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
     const AppStreamRequest::Action action, ListAssociatedStacksRequest * const q)
-    : ListAssociatedStacksPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
  */
 ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
     const ListAssociatedStacksRequestPrivate &other, ListAssociatedStacksRequest * const q)
-    : ListAssociatedStacksPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteQualificationTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteQualificationTypeResponse instance.
  */
 DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponsePrivate(
-    DeleteQualificationTypeQueueResponse * const q) : DeleteQualificationTypePrivate(q)
+    DeleteQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifyCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyCacheSubnetGroupResponse instance.
  */
 ModifyCacheSubnetGroupResponsePrivate::ModifyCacheSubnetGroupResponsePrivate(
-    ModifyCacheSubnetGroupQueueResponse * const q) : ModifyCacheSubnetGroupPrivate(q)
+    ModifyCacheSubnetGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

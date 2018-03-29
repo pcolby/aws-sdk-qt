@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateClusterParameterGroupRequest::response(
  */
 CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterParameterGroupRequest * const q)
-    : CreateClusterParameterGroupPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPri
  */
 CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPrivate(
     const CreateClusterParameterGroupRequestPrivate &other, CreateClusterParameterGroupRequest * const q)
-    : CreateClusterParameterGroupPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

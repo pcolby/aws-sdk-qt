@@ -86,7 +86,7 @@ void DisassociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateSubnetCidrBlockResponse instance.
  */
 DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponsePrivate(
-    DisassociateSubnetCidrBlockQueueResponse * const q) : DisassociateSubnetCidrBlockPrivate(q)
+    DisassociateSubnetCidrBlockResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

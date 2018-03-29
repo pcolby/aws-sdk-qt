@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response
  */
 PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
     const RedshiftRequest::Action action, PurchaseReservedNodeOfferingRequest * const q)
-    : PurchaseReservedNodeOfferingPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestP
  */
 PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
     const PurchaseReservedNodeOfferingRequestPrivate &other, PurchaseReservedNodeOfferingRequest * const q)
-    : PurchaseReservedNodeOfferingPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutScheduledActionRequest::response(QNetworkR
  */
 PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, PutScheduledActionRequest * const q)
-    : PutScheduledActionPrivate(action, q)
+    : ApplicationAutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
  */
 PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
     const PutScheduledActionRequestPrivate &other, PutScheduledActionRequest * const q)
-    : PutScheduledActionPrivate(other, q)
+    : ApplicationAutoScalingRequestPrivate(other, q)
 {
 
 }

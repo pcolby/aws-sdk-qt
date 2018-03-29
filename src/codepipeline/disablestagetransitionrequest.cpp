@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableStageTransitionRequest::response(QNetw
  */
 DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
     const CodePipelineRequest::Action action, DisableStageTransitionRequest * const q)
-    : DisableStageTransitionPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
  */
 DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
     const DisableStageTransitionRequestPrivate &other, DisableStageTransitionRequest * const q)
-    : DisableStageTransitionPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

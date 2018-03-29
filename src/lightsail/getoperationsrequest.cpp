@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationsRequest::response(QNetworkReply 
  */
 GetOperationsRequestPrivate::GetOperationsRequestPrivate(
     const LightsailRequest::Action action, GetOperationsRequest * const q)
-    : GetOperationsPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOperationsRequestPrivate::GetOperationsRequestPrivate(
  */
 GetOperationsRequestPrivate::GetOperationsRequestPrivate(
     const GetOperationsRequestPrivate &other, GetOperationsRequest * const q)
-    : GetOperationsPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

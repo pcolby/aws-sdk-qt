@@ -86,7 +86,7 @@ void UnsubscribeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnsubscribeResponse instance.
  */
 UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
-    UnsubscribeQueueResponse * const q) : UnsubscribePrivate(q)
+    UnsubscribeResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

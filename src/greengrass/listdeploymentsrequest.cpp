@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkRepl
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const GreengrassRequest::Action action, ListDeploymentsRequest * const q)
-    : ListDeploymentsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const ListDeploymentsRequestPrivate &other, ListDeploymentsRequest * const q)
-    : ListDeploymentsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

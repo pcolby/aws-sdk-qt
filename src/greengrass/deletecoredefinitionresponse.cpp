@@ -86,7 +86,7 @@ void DeleteCoreDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCoreDefinitionResponse instance.
  */
 DeleteCoreDefinitionResponsePrivate::DeleteCoreDefinitionResponsePrivate(
-    DeleteCoreDefinitionQueueResponse * const q) : DeleteCoreDefinitionPrivate(q)
+    DeleteCoreDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

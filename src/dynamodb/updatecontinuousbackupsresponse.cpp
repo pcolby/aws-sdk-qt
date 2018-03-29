@@ -86,7 +86,7 @@ void UpdateContinuousBackupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateContinuousBackupsResponse instance.
  */
 UpdateContinuousBackupsResponsePrivate::UpdateContinuousBackupsResponsePrivate(
-    UpdateContinuousBackupsQueueResponse * const q) : UpdateContinuousBackupsPrivate(q)
+    UpdateContinuousBackupsResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

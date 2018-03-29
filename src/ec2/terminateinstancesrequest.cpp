@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkR
  */
 TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
     const EC2Request::Action action, TerminateInstancesRequest * const q)
-    : TerminateInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
  */
 TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
     const TerminateInstancesRequestPrivate &other, TerminateInstancesRequest * const q)
-    : TerminateInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

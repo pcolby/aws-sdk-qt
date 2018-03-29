@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachStaticIpRequest::response(QNetworkReply
  */
 AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
     const LightsailRequest::Action action, AttachStaticIpRequest * const q)
-    : AttachStaticIpPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
  */
 AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
     const AttachStaticIpRequestPrivate &other, AttachStaticIpRequest * const q)
-    : AttachStaticIpPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

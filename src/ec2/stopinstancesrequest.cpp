@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply 
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
     const EC2Request::Action action, StopInstancesRequest * const q)
-    : StopInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopInstancesRequestPrivate::StopInstancesRequestPrivate(
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
     const StopInstancesRequestPrivate &other, StopInstancesRequest * const q)
-    : StopInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

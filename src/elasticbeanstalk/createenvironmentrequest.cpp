@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkRe
  */
 CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateEnvironmentRequest * const q)
-    : CreateEnvironmentPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
  */
 CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
     const CreateEnvironmentRequestPrivate &other, CreateEnvironmentRequest * const q)
-    : CreateEnvironmentPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

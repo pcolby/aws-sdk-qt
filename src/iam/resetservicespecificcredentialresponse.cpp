@@ -86,7 +86,7 @@ void ResetServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetServiceSpecificCredentialResponse instance.
  */
 ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialResponsePrivate(
-    ResetServiceSpecificCredentialQueueResponse * const q) : ResetServiceSpecificCredentialPrivate(q)
+    ResetServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

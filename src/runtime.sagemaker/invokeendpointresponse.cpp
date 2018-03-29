@@ -86,7 +86,7 @@ void InvokeEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InvokeEndpointResponse instance.
  */
 InvokeEndpointResponsePrivate::InvokeEndpointResponsePrivate(
-    InvokeEndpointQueueResponse * const q) : InvokeEndpointPrivate(q)
+    InvokeEndpointResponse * const q) : SageMakerRuntimeResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateTimeToLiveResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTimeToLiveResponse instance.
  */
 UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
-    UpdateTimeToLiveQueueResponse * const q) : UpdateTimeToLivePrivate(q)
+    UpdateTimeToLiveResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

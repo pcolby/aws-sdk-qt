@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DiscoverInputSchemaRequest::response(QNetwork
  */
 DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DiscoverInputSchemaRequest * const q)
-    : DiscoverInputSchemaPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
  */
 DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
     const DiscoverInputSchemaRequestPrivate &other, DiscoverInputSchemaRequest * const q)
-    : DiscoverInputSchemaPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

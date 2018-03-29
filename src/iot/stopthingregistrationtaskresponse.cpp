@@ -86,7 +86,7 @@ void StopThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopThingRegistrationTaskResponse instance.
  */
 StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponsePrivate(
-    StopThingRegistrationTaskQueueResponse * const q) : StopThingRegistrationTaskPrivate(q)
+    StopThingRegistrationTaskResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

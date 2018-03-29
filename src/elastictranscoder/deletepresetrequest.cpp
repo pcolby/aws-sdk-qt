@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, DeletePresetRequest * const q)
-    : DeletePresetPrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const DeletePresetRequestPrivate &other, DeletePresetRequest * const q)
-    : DeletePresetPrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

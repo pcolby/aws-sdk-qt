@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InitiateDocumentVersionUploadRequest::respons
  */
 InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
     const WorkDocsRequest::Action action, InitiateDocumentVersionUploadRequest * const q)
-    : InitiateDocumentVersionUploadPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadReques
  */
 InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
     const InitiateDocumentVersionUploadRequestPrivate &other, InitiateDocumentVersionUploadRequest * const q)
-    : InitiateDocumentVersionUploadPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

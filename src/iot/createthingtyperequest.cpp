@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkRepl
  */
 CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
     const IoTRequest::Action action, CreateThingTypeRequest * const q)
-    : CreateThingTypePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
  */
 CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
     const CreateThingTypeRequestPrivate &other, CreateThingTypeRequest * const q)
-    : CreateThingTypePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

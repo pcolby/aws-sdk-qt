@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply *
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
     const OpsWorksCMRequest::Action action, DeleteServerRequest * const q)
-    : DeleteServerPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteServerRequestPrivate::DeleteServerRequestPrivate(
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
     const DeleteServerRequestPrivate &other, DeleteServerRequest * const q)
-    : DeleteServerPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

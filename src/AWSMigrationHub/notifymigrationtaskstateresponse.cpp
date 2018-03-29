@@ -86,7 +86,7 @@ void NotifyMigrationTaskStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public NotifyMigrationTaskStateResponse instance.
  */
 NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponsePrivate(
-    NotifyMigrationTaskStateQueueResponse * const q) : NotifyMigrationTaskStatePrivate(q)
+    NotifyMigrationTaskStateResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

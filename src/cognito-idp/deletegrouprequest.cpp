@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteGroupRequest * const q)
-    : DeleteGroupPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const DeleteGroupRequestPrivate &other, DeleteGroupRequest * const q)
-    : DeleteGroupPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

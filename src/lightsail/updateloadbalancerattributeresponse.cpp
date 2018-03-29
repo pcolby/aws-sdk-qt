@@ -86,7 +86,7 @@ void UpdateLoadBalancerAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateLoadBalancerAttributeResponse instance.
  */
 UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResponsePrivate(
-    UpdateLoadBalancerAttributeQueueResponse * const q) : UpdateLoadBalancerAttributePrivate(q)
+    UpdateLoadBalancerAttributeResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

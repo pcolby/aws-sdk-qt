@@ -86,7 +86,7 @@ void DescribeSnapshotCopyGrantsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSnapshotCopyGrantsResponse instance.
  */
 DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsResponsePrivate(
-    DescribeSnapshotCopyGrantsQueueResponse * const q) : DescribeSnapshotCopyGrantsPrivate(q)
+    DescribeSnapshotCopyGrantsResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

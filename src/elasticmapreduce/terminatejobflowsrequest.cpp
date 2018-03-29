@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
     const EMRRequest::Action action, TerminateJobFlowsRequest * const q)
-    : TerminateJobFlowsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
     const TerminateJobFlowsRequestPrivate &other, TerminateJobFlowsRequest * const q)
-    : TerminateJobFlowsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkRe
  */
 StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, StopUserImportJobRequest * const q)
-    : StopUserImportJobPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
  */
 StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
     const StopUserImportJobRequestPrivate &other, StopUserImportJobRequest * const q)
-    : StopUserImportJobPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

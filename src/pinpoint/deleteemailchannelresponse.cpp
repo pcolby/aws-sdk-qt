@@ -86,7 +86,7 @@ void DeleteEmailChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEmailChannelResponse instance.
  */
 DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponsePrivate(
-    DeleteEmailChannelQueueResponse * const q) : DeleteEmailChannelPrivate(q)
+    DeleteEmailChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

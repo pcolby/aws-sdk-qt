@@ -86,7 +86,7 @@ void GetStaticIpsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetStaticIpsResponse instance.
  */
 GetStaticIpsResponsePrivate::GetStaticIpsResponsePrivate(
-    GetStaticIpsQueueResponse * const q) : GetStaticIpsPrivate(q)
+    GetStaticIpsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

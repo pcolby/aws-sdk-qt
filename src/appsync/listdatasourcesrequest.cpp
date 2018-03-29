@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDataSourcesRequest::response(QNetworkRepl
  */
 ListDataSourcesRequestPrivate::ListDataSourcesRequestPrivate(
     const AppSyncRequest::Action action, ListDataSourcesRequest * const q)
-    : ListDataSourcesPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDataSourcesRequestPrivate::ListDataSourcesRequestPrivate(
  */
 ListDataSourcesRequestPrivate::ListDataSourcesRequestPrivate(
     const ListDataSourcesRequestPrivate &other, ListDataSourcesRequest * const q)
-    : ListDataSourcesPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

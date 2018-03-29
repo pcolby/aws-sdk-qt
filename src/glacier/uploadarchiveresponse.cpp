@@ -86,7 +86,7 @@ void UploadArchiveResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadArchiveResponse instance.
  */
 UploadArchiveResponsePrivate::UploadArchiveResponsePrivate(
-    UploadArchiveQueueResponse * const q) : UploadArchivePrivate(q)
+    UploadArchiveResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

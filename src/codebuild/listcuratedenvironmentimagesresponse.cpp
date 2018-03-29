@@ -86,7 +86,7 @@ void ListCuratedEnvironmentImagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListCuratedEnvironmentImagesResponse instance.
  */
 ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesResponsePrivate(
-    ListCuratedEnvironmentImagesQueueResponse * const q) : ListCuratedEnvironmentImagesPrivate(q)
+    ListCuratedEnvironmentImagesResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

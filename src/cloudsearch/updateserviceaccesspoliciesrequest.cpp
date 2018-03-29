@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceAccessPoliciesRequest::response(
  */
 UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPrivate(
     const CloudSearchRequest::Action action, UpdateServiceAccessPoliciesRequest * const q)
-    : UpdateServiceAccessPoliciesPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPri
  */
 UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPrivate(
     const UpdateServiceAccessPoliciesRequestPrivate &other, UpdateServiceAccessPoliciesRequest * const q)
-    : UpdateServiceAccessPoliciesPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

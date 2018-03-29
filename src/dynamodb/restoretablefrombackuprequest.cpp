@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetw
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
     const DynamoDBRequest::Action action, RestoreTableFromBackupRequest * const q)
-    : RestoreTableFromBackupPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
     const RestoreTableFromBackupRequestPrivate &other, RestoreTableFromBackupRequest * const q)
-    : RestoreTableFromBackupPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

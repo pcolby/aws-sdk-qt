@@ -86,7 +86,7 @@ void GetFunctionDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFunctionDefinitionResponse instance.
  */
 GetFunctionDefinitionResponsePrivate::GetFunctionDefinitionResponsePrivate(
-    GetFunctionDefinitionQueueResponse * const q) : GetFunctionDefinitionPrivate(q)
+    GetFunctionDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

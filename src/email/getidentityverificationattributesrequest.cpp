@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityVerificationAttributesRequest::res
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityVerificationAttributesRequest * const q)
-    : GetIdentityVerificationAttributesPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttribut
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
     const GetIdentityVerificationAttributesRequestPrivate &other, GetIdentityVerificationAttributesRequest * const q)
-    : GetIdentityVerificationAttributesPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

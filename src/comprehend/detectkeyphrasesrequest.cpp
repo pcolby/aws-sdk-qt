@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkRep
  */
 DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
     const ComprehendRequest::Action action, DetectKeyPhrasesRequest * const q)
-    : DetectKeyPhrasesPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
  */
 DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
     const DetectKeyPhrasesRequestPrivate &other, DetectKeyPhrasesRequest * const q)
-    : DetectKeyPhrasesPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

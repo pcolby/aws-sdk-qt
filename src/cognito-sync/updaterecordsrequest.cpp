@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRecordsRequest::response(QNetworkReply 
  */
 UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
     const CognitoSyncRequest::Action action, UpdateRecordsRequest * const q)
-    : UpdateRecordsPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
  */
 UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
     const UpdateRecordsRequestPrivate &other, UpdateRecordsRequest * const q)
-    : UpdateRecordsPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

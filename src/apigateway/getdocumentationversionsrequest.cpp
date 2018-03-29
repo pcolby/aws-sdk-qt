@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationVersionsRequest::response(QNe
  */
 GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
     const APIGatewayRequest::Action action, GetDocumentationVersionsRequest * const q)
-    : GetDocumentationVersionsPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
  */
 GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
     const GetDocumentationVersionsRequestPrivate &other, GetDocumentationVersionsRequest * const q)
-    : GetDocumentationVersionsPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

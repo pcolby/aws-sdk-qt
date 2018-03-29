@@ -86,7 +86,7 @@ void CreateBuildResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateBuildResponse instance.
  */
 CreateBuildResponsePrivate::CreateBuildResponsePrivate(
-    CreateBuildQueueResponse * const q) : CreateBuildPrivate(q)
+    CreateBuildResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

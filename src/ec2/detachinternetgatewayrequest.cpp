@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetwo
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
     const EC2Request::Action action, DetachInternetGatewayRequest * const q)
-    : DetachInternetGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
     const DetachInternetGatewayRequestPrivate &other, DetachInternetGatewayRequest * const q)
-    : DetachInternetGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

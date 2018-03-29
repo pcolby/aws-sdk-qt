@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAccountFromOrganizationRequest::respons
  */
 RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, RemoveAccountFromOrganizationRequest * const q)
-    : RemoveAccountFromOrganizationPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationReques
  */
 RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
     const RemoveAccountFromOrganizationRequestPrivate &other, RemoveAccountFromOrganizationRequest * const q)
-    : RemoveAccountFromOrganizationPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

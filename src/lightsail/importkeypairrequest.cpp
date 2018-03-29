@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const LightsailRequest::Action action, ImportKeyPairRequest * const q)
-    : ImportKeyPairPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const ImportKeyPairRequestPrivate &other, ImportKeyPairRequest * const q)
-    : ImportKeyPairPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QN
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
     const EC2Request::Action action, DescribeAvailabilityZonesRequest * const q)
-    : DescribeAvailabilityZonesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
     const DescribeAvailabilityZonesRequestPrivate &other, DescribeAvailabilityZonesRequest * const q)
-    : DescribeAvailabilityZonesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

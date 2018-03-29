@@ -86,7 +86,7 @@ void DisableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableVgwRoutePropagationResponse instance.
  */
 DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationResponsePrivate(
-    DisableVgwRoutePropagationQueueResponse * const q) : DisableVgwRoutePropagationPrivate(q)
+    DisableVgwRoutePropagationResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

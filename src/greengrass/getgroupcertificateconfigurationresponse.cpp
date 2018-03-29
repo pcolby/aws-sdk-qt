@@ -86,7 +86,7 @@ void GetGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGroupCertificateConfigurationResponse instance.
  */
 GetGroupCertificateConfigurationResponsePrivate::GetGroupCertificateConfigurationResponsePrivate(
-    GetGroupCertificateConfigurationQueueResponse * const q) : GetGroupCertificateConfigurationPrivate(q)
+    GetGroupCertificateConfigurationResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

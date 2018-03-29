@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetwor
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
     const IAMRequest::Action action, SimulateCustomPolicyRequest * const q)
-    : SimulateCustomPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
     const SimulateCustomPolicyRequestPrivate &other, SimulateCustomPolicyRequest * const q)
-    : SimulateCustomPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTargetGroupsRequest::response(QNetwor
  */
 DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeTargetGroupsRequest * const q)
-    : DescribeTargetGroupsPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
  */
 DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
     const DescribeTargetGroupsRequestPrivate &other, DescribeTargetGroupsRequest * const q)
-    : DescribeTargetGroupsPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

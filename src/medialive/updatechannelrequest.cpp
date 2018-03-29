@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply 
  */
 UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
     const MediaLiveRequest::Action action, UpdateChannelRequest * const q)
-    : UpdateChannelPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
  */
 UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
     const UpdateChannelRequestPrivate &other, UpdateChannelRequest * const q)
-    : UpdateChannelPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

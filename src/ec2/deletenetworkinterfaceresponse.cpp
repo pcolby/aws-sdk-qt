@@ -86,7 +86,7 @@ void DeleteNetworkInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNetworkInterfaceResponse instance.
  */
 DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponsePrivate(
-    DeleteNetworkInterfaceQueueResponse * const q) : DeleteNetworkInterfacePrivate(q)
+    DeleteNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

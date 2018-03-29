@@ -86,7 +86,7 @@ void UpdateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateConfigurationTemplateResponse instance.
  */
 UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponsePrivate(
-    UpdateConfigurationTemplateQueueResponse * const q) : UpdateConfigurationTemplatePrivate(q)
+    UpdateConfigurationTemplateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetTrailStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTrailStatusResponse instance.
  */
 GetTrailStatusResponsePrivate::GetTrailStatusResponsePrivate(
-    GetTrailStatusQueueResponse * const q) : GetTrailStatusPrivate(q)
+    GetTrailStatusResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

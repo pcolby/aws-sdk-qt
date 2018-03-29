@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNe
  */
 ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
     const IoTRequest::Action action, ListOutgoingCertificatesRequest * const q)
-    : ListOutgoingCertificatesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
  */
 ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
     const ListOutgoingCertificatesRequestPrivate &other, ListOutgoingCertificatesRequest * const q)
-    : ListOutgoingCertificatesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

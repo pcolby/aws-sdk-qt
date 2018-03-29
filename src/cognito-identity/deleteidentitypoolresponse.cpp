@@ -86,7 +86,7 @@ void DeleteIdentityPoolResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteIdentityPoolResponse instance.
  */
 DeleteIdentityPoolResponsePrivate::DeleteIdentityPoolResponsePrivate(
-    DeleteIdentityPoolQueueResponse * const q) : DeleteIdentityPoolPrivate(q)
+    DeleteIdentityPoolResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

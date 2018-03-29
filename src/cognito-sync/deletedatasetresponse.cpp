@@ -86,7 +86,7 @@ void DeleteDatasetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDatasetResponse instance.
  */
 DeleteDatasetResponsePrivate::DeleteDatasetResponsePrivate(
-    DeleteDatasetQueueResponse * const q) : DeleteDatasetPrivate(q)
+    DeleteDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

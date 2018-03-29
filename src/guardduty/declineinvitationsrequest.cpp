@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeclineInvitationsRequest::response(QNetworkR
  */
 DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, DeclineInvitationsRequest * const q)
-    : DeclineInvitationsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
  */
 DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
     const DeclineInvitationsRequestPrivate &other, DeclineInvitationsRequest * const q)
-    : DeclineInvitationsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

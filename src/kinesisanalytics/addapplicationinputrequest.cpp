@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetwork
  */
 AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationInputRequest * const q)
-    : AddApplicationInputPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
  */
 AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
     const AddApplicationInputRequestPrivate &other, AddApplicationInputRequest * const q)
-    : AddApplicationInputPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

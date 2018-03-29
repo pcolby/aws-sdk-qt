@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToOnPremisesInstancesRequest::response
  */
 AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, AddTagsToOnPremisesInstancesRequest * const q)
-    : AddTagsToOnPremisesInstancesPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestP
  */
 AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestPrivate(
     const AddTagsToOnPremisesInstancesRequestPrivate &other, AddTagsToOnPremisesInstancesRequest * const q)
-    : AddTagsToOnPremisesInstancesPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

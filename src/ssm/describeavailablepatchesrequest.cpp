@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailablePatchesRequest::response(QNe
  */
 DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
     const SSMRequest::Action action, DescribeAvailablePatchesRequest * const q)
-    : DescribeAvailablePatchesPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
  */
 DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
     const DescribeAvailablePatchesRequestPrivate &other, DescribeAvailablePatchesRequest * const q)
-    : DescribeAvailablePatchesPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

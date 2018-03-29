@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * 
  */
 UntagStreamRequestPrivate::UntagStreamRequestPrivate(
     const KinesisVideoRequest::Action action, UntagStreamRequest * const q)
-    : UntagStreamPrivate(action, q)
+    : KinesisVideoRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UntagStreamRequestPrivate::UntagStreamRequestPrivate(
  */
 UntagStreamRequestPrivate::UntagStreamRequestPrivate(
     const UntagStreamRequestPrivate &other, UntagStreamRequest * const q)
-    : UntagStreamPrivate(other, q)
+    : KinesisVideoRequestPrivate(other, q)
 {
 
 }

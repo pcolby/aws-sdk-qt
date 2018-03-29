@@ -86,7 +86,7 @@ void ListTrafficPolicyInstancesByHostedZoneResponse::parseSuccess(QIODevice &res
  * @param  q  Pointer to this object's public ListTrafficPolicyInstancesByHostedZoneResponse instance.
  */
 ListTrafficPolicyInstancesByHostedZoneResponsePrivate::ListTrafficPolicyInstancesByHostedZoneResponsePrivate(
-    ListTrafficPolicyInstancesByHostedZoneQueueResponse * const q) : ListTrafficPolicyInstancesByHostedZonePrivate(q)
+    ListTrafficPolicyInstancesByHostedZoneResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

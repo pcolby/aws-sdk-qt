@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateGameSessionRequest::response(QNetworkRe
  */
 CreateGameSessionRequestPrivate::CreateGameSessionRequestPrivate(
     const GameLiftRequest::Action action, CreateGameSessionRequest * const q)
-    : CreateGameSessionPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateGameSessionRequestPrivate::CreateGameSessionRequestPrivate(
  */
 CreateGameSessionRequestPrivate::CreateGameSessionRequestPrivate(
     const CreateGameSessionRequestPrivate &other, CreateGameSessionRequest * const q)
-    : CreateGameSessionPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
     const SESRequest::Action action, TestRenderTemplateRequest * const q)
-    : TestRenderTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
     const TestRenderTemplateRequestPrivate &other, TestRenderTemplateRequest * const q)
-    : TestRenderTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

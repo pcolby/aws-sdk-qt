@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHostedZoneCommentRequest::response(QNet
  */
 UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
     const Route53Request::Action action, UpdateHostedZoneCommentRequest * const q)
-    : UpdateHostedZoneCommentPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
  */
 UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
     const UpdateHostedZoneCommentRequestPrivate &other, UpdateHostedZoneCommentRequest * const q)
-    : UpdateHostedZoneCommentPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

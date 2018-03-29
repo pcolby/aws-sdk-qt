@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCreateAccountStatusRequest::response(
  */
 DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
     const OrganizationsRequest::Action action, DescribeCreateAccountStatusRequest * const q)
-    : DescribeCreateAccountStatusPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPri
  */
 DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
     const DescribeCreateAccountStatusRequestPrivate &other, DescribeCreateAccountStatusRequest * const q)
-    : DescribeCreateAccountStatusPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

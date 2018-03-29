@@ -86,7 +86,7 @@ void ResetClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetClusterParameterGroupResponse instance.
  */
 ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupResponsePrivate(
-    ResetClusterParameterGroupQueueResponse * const q) : ResetClusterParameterGroupPrivate(q)
+    ResetClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

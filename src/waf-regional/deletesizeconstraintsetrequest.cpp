@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteSizeConstraintSetRequest * const q)
-    : DeleteSizeConstraintSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const DeleteSizeConstraintSetRequestPrivate &other, DeleteSizeConstraintSetRequest * const q)
-    : DeleteSizeConstraintSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply
  */
 InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
     const SageMakerRuntimeRequest::Action action, InvokeEndpointRequest * const q)
-    : InvokeEndpointPrivate(action, q)
+    : SageMakerRuntimeRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
  */
 InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
     const InvokeEndpointRequestPrivate &other, InvokeEndpointRequest * const q)
-    : InvokeEndpointPrivate(other, q)
+    : SageMakerRuntimeRequestPrivate(other, q)
 {
 
 }

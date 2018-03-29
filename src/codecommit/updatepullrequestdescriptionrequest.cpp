@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePullRequestDescriptionRequest::response
  */
 UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestPrivate(
     const CodeCommitRequest::Action action, UpdatePullRequestDescriptionRequest * const q)
-    : UpdatePullRequestDescriptionPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestP
  */
 UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestPrivate(
     const UpdatePullRequestDescriptionRequestPrivate &other, UpdatePullRequestDescriptionRequest * const q)
-    : UpdatePullRequestDescriptionPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(Q
  */
 DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProvisioningArtifactRequest * const q)
-    : DeleteProvisioningArtifactPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPriva
  */
 DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
     const DeleteProvisioningArtifactRequestPrivate &other, DeleteProvisioningArtifactRequest * const q)
-    : DeleteProvisioningArtifactPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNet
  */
 UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
     const CloudSearchRequest::Action action, UpdateScalingParametersRequest * const q)
-    : UpdateScalingParametersPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
  */
 UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
     const UpdateScalingParametersRequestPrivate &other, UpdateScalingParametersRequest * const q)
-    : UpdateScalingParametersPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

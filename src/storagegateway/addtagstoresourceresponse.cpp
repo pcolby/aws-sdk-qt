@@ -86,7 +86,7 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddTagsToResourceResponse instance.
  */
 AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
-    AddTagsToResourceQueueResponse * const q) : AddTagsToResourcePrivate(q)
+    AddTagsToResourceResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListStackResourcesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListStackResourcesResponse instance.
  */
 ListStackResourcesResponsePrivate::ListStackResourcesResponsePrivate(
-    ListStackResourcesQueueResponse * const q) : ListStackResourcesPrivate(q)
+    ListStackResourcesResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

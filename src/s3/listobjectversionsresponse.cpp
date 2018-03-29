@@ -86,7 +86,7 @@ void ListObjectVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListObjectVersionsResponse instance.
  */
 ListObjectVersionsResponsePrivate::ListObjectVersionsResponsePrivate(
-    ListObjectVersionsQueueResponse * const q) : ListObjectVersionsPrivate(q)
+    ListObjectVersionsResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

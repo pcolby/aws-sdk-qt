@@ -86,7 +86,7 @@ void DisableSnapshotCopyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableSnapshotCopyResponse instance.
  */
 DisableSnapshotCopyResponsePrivate::DisableSnapshotCopyResponsePrivate(
-    DisableSnapshotCopyQueueResponse * const q) : DisableSnapshotCopyPrivate(q)
+    DisableSnapshotCopyResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply 
  */
 DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
     const PinpointRequest::Action action, DeleteSegmentRequest * const q)
-    : DeleteSegmentPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
  */
 DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
     const DeleteSegmentRequestPrivate &other, DeleteSegmentRequest * const q)
-    : DeleteSegmentPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

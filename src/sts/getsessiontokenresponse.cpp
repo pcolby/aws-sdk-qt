@@ -86,7 +86,7 @@ void GetSessionTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSessionTokenResponse instance.
  */
 GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
-    GetSessionTokenQueueResponse * const q) : GetSessionTokenPrivate(q)
+    GetSessionTokenResponse * const q) : STSResponsePrivate(q)
 {
 
 }

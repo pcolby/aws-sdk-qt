@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::resp
  */
 GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCodeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUserAttributeVerificationCodeRequest * const q)
-    : GetUserAttributeVerificationCodePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCode
  */
 GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCodeRequestPrivate(
     const GetUserAttributeVerificationCodeRequestPrivate &other, GetUserAttributeVerificationCodeRequest * const q)
-    : GetUserAttributeVerificationCodePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * cons
  */
 StopRunRequestPrivate::StopRunRequestPrivate(
     const DeviceFarmRequest::Action action, StopRunRequest * const q)
-    : StopRunPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopRunRequestPrivate::StopRunRequestPrivate(
  */
 StopRunRequestPrivate::StopRunRequestPrivate(
     const StopRunRequestPrivate &other, StopRunRequest * const q)
-    : StopRunPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

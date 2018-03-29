@@ -86,7 +86,7 @@ void GetBucketNotificationConfigurationResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public GetBucketNotificationConfigurationResponse instance.
  */
 GetBucketNotificationConfigurationResponsePrivate::GetBucketNotificationConfigurationResponsePrivate(
-    GetBucketNotificationConfigurationQueueResponse * const q) : GetBucketNotificationConfigurationPrivate(q)
+    GetBucketNotificationConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

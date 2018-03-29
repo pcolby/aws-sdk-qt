@@ -86,7 +86,7 @@ void GetDocumentPathResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDocumentPathResponse instance.
  */
 GetDocumentPathResponsePrivate::GetDocumentPathResponsePrivate(
-    GetDocumentPathQueueResponse * const q) : GetDocumentPathPrivate(q)
+    GetDocumentPathResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

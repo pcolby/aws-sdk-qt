@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkRep
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const CloudWatchLogsRequest::Action action, CancelExportTaskRequest * const q)
-    : CancelExportTaskPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const CancelExportTaskRequestPrivate &other, CancelExportTaskRequest * const q)
-    : CancelExportTaskPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetwo
  */
 DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteRetentionPolicyRequest * const q)
-    : DeleteRetentionPolicyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
  */
 DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
     const DeleteRetentionPolicyRequestPrivate &other, DeleteRetentionPolicyRequest * const q)
-    : DeleteRetentionPolicyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

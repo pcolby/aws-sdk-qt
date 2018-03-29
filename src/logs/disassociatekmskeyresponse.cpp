@@ -86,7 +86,7 @@ void DisassociateKmsKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateKmsKeyResponse instance.
  */
 DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponsePrivate(
-    DisassociateKmsKeyQueueResponse * const q) : DisassociateKmsKeyPrivate(q)
+    DisassociateKmsKeyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDevEndpointsRequest::response(QNetworkRepl
  */
 GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
     const GlueRequest::Action action, GetDevEndpointsRequest * const q)
-    : GetDevEndpointsPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
  */
 GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
     const GetDevEndpointsRequestPrivate &other, GetDevEndpointsRequest * const q)
-    : GetDevEndpointsPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

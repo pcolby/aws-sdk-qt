@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagOptionRequest::response(QNetworkRepl
  */
 DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteTagOptionRequest * const q)
-    : DeleteTagOptionPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
  */
 DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
     const DeleteTagOptionRequestPrivate &other, DeleteTagOptionRequest * const q)
-    : DeleteTagOptionPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

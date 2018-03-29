@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const CloudHSMV2Request::Action action, TagResourceRequest * const q)
-    : TagResourcePrivate(action, q)
+    : CloudHSMV2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : TagResourcePrivate(other, q)
+    : CloudHSMV2RequestPrivate(other, q)
 {
 
 }

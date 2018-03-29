@@ -86,7 +86,7 @@ void CreateEnvironmentEC2Response::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateEnvironmentEC2Response instance.
  */
 CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2ResponsePrivate(
-    CreateEnvironmentEC2QueueResponse * const q) : CreateEnvironmentEC2Private(q)
+    CreateEnvironmentEC2Response * const q) : Cloud9ResponsePrivate(q)
 {
 
 }

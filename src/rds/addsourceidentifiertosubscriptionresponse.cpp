@@ -86,7 +86,7 @@ void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public AddSourceIdentifierToSubscriptionResponse instance.
  */
 AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscriptionResponsePrivate(
-    AddSourceIdentifierToSubscriptionQueueResponse * const q) : AddSourceIdentifierToSubscriptionPrivate(q)
+    AddSourceIdentifierToSubscriptionResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

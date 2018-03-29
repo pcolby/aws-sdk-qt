@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetw
  */
 DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, DeleteRequestValidatorRequest * const q)
-    : DeleteRequestValidatorPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
  */
 DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
     const DeleteRequestValidatorRequestPrivate &other, DeleteRequestValidatorRequest * const q)
-    : DeleteRequestValidatorPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

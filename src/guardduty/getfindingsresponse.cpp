@@ -86,7 +86,7 @@ void GetFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFindingsResponse instance.
  */
 GetFindingsResponsePrivate::GetFindingsResponsePrivate(
-    GetFindingsQueueResponse * const q) : GetFindingsPrivate(q)
+    GetFindingsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

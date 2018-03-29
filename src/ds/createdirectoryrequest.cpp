@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkRepl
  */
 CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateDirectoryRequest * const q)
-    : CreateDirectoryPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
  */
 CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
     const CreateDirectoryRequestPrivate &other, CreateDirectoryRequest * const q)
-    : CreateDirectoryPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

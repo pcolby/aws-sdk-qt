@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListQualificationTypesRequest::response(QNetw
  */
 ListQualificationTypesRequestPrivate::ListQualificationTypesRequestPrivate(
     const MTurkRequest::Action action, ListQualificationTypesRequest * const q)
-    : ListQualificationTypesPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListQualificationTypesRequestPrivate::ListQualificationTypesRequestPrivate(
  */
 ListQualificationTypesRequestPrivate::ListQualificationTypesRequestPrivate(
     const ListQualificationTypesRequestPrivate &other, ListQualificationTypesRequest * const q)
-    : ListQualificationTypesPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

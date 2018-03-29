@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptFilterRequest::response(QNetwork
  */
 DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
     const SESRequest::Action action, DeleteReceiptFilterRequest * const q)
-    : DeleteReceiptFilterPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
  */
 DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
     const DeleteReceiptFilterRequestPrivate &other, DeleteReceiptFilterRequest * const q)
-    : DeleteReceiptFilterPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

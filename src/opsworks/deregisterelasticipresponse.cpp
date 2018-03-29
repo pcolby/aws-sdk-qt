@@ -86,7 +86,7 @@ void DeregisterElasticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterElasticIpResponse instance.
  */
 DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponsePrivate(
-    DeregisterElasticIpQueueResponse * const q) : DeregisterElasticIpPrivate(q)
+    DeregisterElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

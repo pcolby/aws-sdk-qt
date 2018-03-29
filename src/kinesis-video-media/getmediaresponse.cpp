@@ -86,7 +86,7 @@ void GetMediaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetMediaResponse instance.
  */
 GetMediaResponsePrivate::GetMediaResponsePrivate(
-    GetMediaQueueResponse * const q) : GetMediaPrivate(q)
+    GetMediaResponse * const q) : KinesisVideoMediaResponsePrivate(q)
 {
 
 }

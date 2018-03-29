@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RecordLifecycleActionHeartbeatRequest::respon
  */
 RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequestPrivate(
     const AutoScalingRequest::Action action, RecordLifecycleActionHeartbeatRequest * const q)
-    : RecordLifecycleActionHeartbeatPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequ
  */
 RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequestPrivate(
     const RecordLifecycleActionHeartbeatRequestPrivate &other, RecordLifecycleActionHeartbeatRequest * const q)
-    : RecordLifecycleActionHeartbeatPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

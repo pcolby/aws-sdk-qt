@@ -86,7 +86,7 @@ void DescribeImageAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeImageAttributeResponse instance.
  */
 DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
-    DescribeImageAttributeQueueResponse * const q) : DescribeImageAttributePrivate(q)
+    DescribeImageAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

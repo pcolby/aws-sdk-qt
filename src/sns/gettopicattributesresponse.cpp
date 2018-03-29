@@ -86,7 +86,7 @@ void GetTopicAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTopicAttributesResponse instance.
  */
 GetTopicAttributesResponsePrivate::GetTopicAttributesResponsePrivate(
-    GetTopicAttributesQueueResponse * const q) : GetTopicAttributesPrivate(q)
+    GetTopicAttributesResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

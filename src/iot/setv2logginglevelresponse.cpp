@@ -86,7 +86,7 @@ void SetV2LoggingLevelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetV2LoggingLevelResponse instance.
  */
 SetV2LoggingLevelResponsePrivate::SetV2LoggingLevelResponsePrivate(
-    SetV2LoggingLevelQueueResponse * const q) : SetV2LoggingLevelPrivate(q)
+    SetV2LoggingLevelResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

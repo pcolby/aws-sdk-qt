@@ -86,7 +86,7 @@ void CreateTopicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTopicResponse instance.
  */
 CreateTopicResponsePrivate::CreateTopicResponsePrivate(
-    CreateTopicQueueResponse * const q) : CreateTopicPrivate(q)
+    CreateTopicResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

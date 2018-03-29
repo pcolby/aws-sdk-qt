@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkRep
  */
 PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
     const AutoScalingRequest::Action action, PutLifecycleHookRequest * const q)
-    : PutLifecycleHookPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
  */
 PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
     const PutLifecycleHookRequestPrivate &other, PutLifecycleHookRequest * const q)
-    : PutLifecycleHookPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

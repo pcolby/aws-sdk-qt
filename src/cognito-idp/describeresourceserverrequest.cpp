@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetw
  */
 DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeResourceServerRequest * const q)
-    : DescribeResourceServerPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
  */
 DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
     const DescribeResourceServerRequestPrivate &other, DescribeResourceServerRequest * const q)
-    : DescribeResourceServerPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

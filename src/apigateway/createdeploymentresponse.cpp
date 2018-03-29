@@ -86,7 +86,7 @@ void CreateDeploymentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDeploymentResponse instance.
  */
 CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
-    CreateDeploymentQueueResponse * const q) : CreateDeploymentPrivate(q)
+    CreateDeploymentResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

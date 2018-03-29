@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNet
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
     const EC2Request::Action action, ModifyInstancePlacementRequest * const q)
-    : ModifyInstancePlacementPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
     const ModifyInstancePlacementRequestPrivate &other, ModifyInstancePlacementRequest * const q)
-    : ModifyInstancePlacementPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

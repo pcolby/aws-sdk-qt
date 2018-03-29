@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * co
  */
 DeleteHITRequestPrivate::DeleteHITRequestPrivate(
     const MTurkRequest::Action action, DeleteHITRequest * const q)
-    : DeleteHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHITRequestPrivate::DeleteHITRequestPrivate(
  */
 DeleteHITRequestPrivate::DeleteHITRequestPrivate(
     const DeleteHITRequestPrivate &other, DeleteHITRequest * const q)
-    : DeleteHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

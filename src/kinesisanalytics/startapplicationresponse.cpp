@@ -86,7 +86,7 @@ void StartApplicationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartApplicationResponse instance.
  */
 StartApplicationResponsePrivate::StartApplicationResponsePrivate(
-    StartApplicationQueueResponse * const q) : StartApplicationPrivate(q)
+    StartApplicationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeStaleSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStaleSecurityGroupsResponse instance.
  */
 DescribeStaleSecurityGroupsResponsePrivate::DescribeStaleSecurityGroupsResponsePrivate(
-    DescribeStaleSecurityGroupsQueueResponse * const q) : DescribeStaleSecurityGroupsPrivate(q)
+    DescribeStaleSecurityGroupsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCacheSecurityGroupResponse instance.
  */
 DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponsePrivate(
-    DeleteCacheSecurityGroupQueueResponse * const q) : DeleteCacheSecurityGroupPrivate(q)
+    DeleteCacheSecurityGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartSupportDataExportResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartSupportDataExportResponse instance.
  */
 StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
-    StartSupportDataExportQueueResponse * const q) : StartSupportDataExportPrivate(q)
+    StartSupportDataExportResponse * const q) : MarketplaceCommerceAnalyticsResponsePrivate(q)
 {
 
 }

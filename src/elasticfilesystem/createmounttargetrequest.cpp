@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkRe
  */
 CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
     const EFSRequest::Action action, CreateMountTargetRequest * const q)
-    : CreateMountTargetPrivate(action, q)
+    : EFSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
  */
 CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
     const CreateMountTargetRequestPrivate &other, CreateMountTargetRequest * const q)
-    : CreateMountTargetPrivate(other, q)
+    : EFSRequestPrivate(other, q)
 {
 
 }

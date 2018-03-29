@@ -86,7 +86,7 @@ void ListMFADevicesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListMFADevicesResponse instance.
  */
 ListMFADevicesResponsePrivate::ListMFADevicesResponsePrivate(
-    ListMFADevicesQueueResponse * const q) : ListMFADevicesPrivate(q)
+    ListMFADevicesResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

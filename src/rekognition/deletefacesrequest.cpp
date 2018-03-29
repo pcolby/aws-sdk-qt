@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * 
  */
 DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
     const RekognitionRequest::Action action, DeleteFacesRequest * const q)
-    : DeleteFacesPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
  */
 DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
     const DeleteFacesRequestPrivate &other, DeleteFacesRequest * const q)
-    : DeleteFacesPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

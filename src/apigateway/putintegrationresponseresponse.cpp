@@ -86,7 +86,7 @@ void PutIntegrationResponseResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutIntegrationResponseResponse instance.
  */
 PutIntegrationResponseResponsePrivate::PutIntegrationResponseResponsePrivate(
-    PutIntegrationResponseQueueResponse * const q) : PutIntegrationResponsePrivate(q)
+    PutIntegrationResponseResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

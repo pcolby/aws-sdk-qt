@@ -86,7 +86,7 @@ void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelSpotFleetRequestsResponse instance.
  */
 CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
-    CancelSpotFleetRequestsQueueResponse * const q) : CancelSpotFleetRequestsPrivate(q)
+    CancelSpotFleetRequestsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

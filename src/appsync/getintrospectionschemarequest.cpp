@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetw
  */
 GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
     const AppSyncRequest::Action action, GetIntrospectionSchemaRequest * const q)
-    : GetIntrospectionSchemaPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
  */
 GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
     const GetIntrospectionSchemaRequestPrivate &other, GetIntrospectionSchemaRequest * const q)
-    : GetIntrospectionSchemaPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

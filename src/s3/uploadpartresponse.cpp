@@ -86,7 +86,7 @@ void UploadPartResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadPartResponse instance.
  */
 UploadPartResponsePrivate::UploadPartResponsePrivate(
-    UploadPartQueueResponse * const q) : UploadPartPrivate(q)
+    UploadPartResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

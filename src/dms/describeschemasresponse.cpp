@@ -86,7 +86,7 @@ void DescribeSchemasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSchemasResponse instance.
  */
 DescribeSchemasResponsePrivate::DescribeSchemasResponsePrivate(
-    DescribeSchemasQueueResponse * const q) : DescribeSchemasPrivate(q)
+    DescribeSchemasResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

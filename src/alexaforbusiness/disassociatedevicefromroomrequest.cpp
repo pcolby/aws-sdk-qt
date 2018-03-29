@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateDeviceFromRoomRequest::response(Q
  */
 DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DisassociateDeviceFromRoomRequest * const q)
-    : DisassociateDeviceFromRoomPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPriva
  */
 DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPrivate(
     const DisassociateDeviceFromRoomRequestPrivate &other, DisassociateDeviceFromRoomRequest * const q)
-    : DisassociateDeviceFromRoomPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

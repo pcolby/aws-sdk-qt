@@ -86,7 +86,7 @@ void ForgotPasswordResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ForgotPasswordResponse instance.
  */
 ForgotPasswordResponsePrivate::ForgotPasswordResponsePrivate(
-    ForgotPasswordQueueResponse * const q) : ForgotPasswordPrivate(q)
+    ForgotPasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

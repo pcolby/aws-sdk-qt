@@ -86,7 +86,7 @@ void UpdateInstanceCustomHealthStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateInstanceCustomHealthStatusResponse instance.
  */
 UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatusResponsePrivate(
-    UpdateInstanceCustomHealthStatusQueueResponse * const q) : UpdateInstanceCustomHealthStatusPrivate(q)
+    UpdateInstanceCustomHealthStatusResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

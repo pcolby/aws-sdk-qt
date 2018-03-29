@@ -86,7 +86,7 @@ void PutEventSelectorsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutEventSelectorsResponse instance.
  */
 PutEventSelectorsResponsePrivate::PutEventSelectorsResponsePrivate(
-    PutEventSelectorsQueueResponse * const q) : PutEventSelectorsPrivate(q)
+    PutEventSelectorsResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

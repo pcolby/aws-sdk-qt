@@ -86,7 +86,7 @@ void GetInvitationsCountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInvitationsCountResponse instance.
  */
 GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
-    GetInvitationsCountQueueResponse * const q) : GetInvitationsCountPrivate(q)
+    GetInvitationsCountResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

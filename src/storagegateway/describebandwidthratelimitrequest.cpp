@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(Q
  */
 DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeBandwidthRateLimitRequest * const q)
-    : DescribeBandwidthRateLimitPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPriva
  */
 DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
     const DescribeBandwidthRateLimitRequestPrivate &other, DescribeBandwidthRateLimitRequest * const q)
-    : DescribeBandwidthRateLimitPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

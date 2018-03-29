@@ -86,7 +86,7 @@ void UnsubscribeFromDatasetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnsubscribeFromDatasetResponse instance.
  */
 UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponsePrivate(
-    UnsubscribeFromDatasetQueueResponse * const q) : UnsubscribeFromDatasetPrivate(q)
+    UnsubscribeFromDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
 {
 
 }

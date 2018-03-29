@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFolderContentsRequest::response(QNetw
  */
 DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeFolderContentsRequest * const q)
-    : DescribeFolderContentsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
  */
 DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
     const DescribeFolderContentsRequestPrivate &other, DescribeFolderContentsRequest * const q)
-    : DescribeFolderContentsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

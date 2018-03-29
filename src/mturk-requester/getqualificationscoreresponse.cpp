@@ -86,7 +86,7 @@ void GetQualificationScoreResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetQualificationScoreResponse instance.
  */
 GetQualificationScoreResponsePrivate::GetQualificationScoreResponsePrivate(
-    GetQualificationScoreQueueResponse * const q) : GetQualificationScorePrivate(q)
+    GetQualificationScoreResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

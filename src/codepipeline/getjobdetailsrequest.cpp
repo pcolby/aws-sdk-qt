@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobDetailsRequest::response(QNetworkReply 
  */
 GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
     const CodePipelineRequest::Action action, GetJobDetailsRequest * const q)
-    : GetJobDetailsPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
  */
 GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
     const GetJobDetailsRequestPrivate &other, GetJobDetailsRequest * const q)
-    : GetJobDetailsPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

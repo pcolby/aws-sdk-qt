@@ -86,7 +86,7 @@ void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DescribeOrderableDBInstanceOptionsResponse instance.
  */
 DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponsePrivate(
-    DescribeOrderableDBInstanceOptionsQueueResponse * const q) : DescribeOrderableDBInstanceOptionsPrivate(q)
+    DescribeOrderableDBInstanceOptionsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

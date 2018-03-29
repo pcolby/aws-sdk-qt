@@ -86,7 +86,7 @@ void UpdateHealthCheckResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateHealthCheckResponse instance.
  */
 UpdateHealthCheckResponsePrivate::UpdateHealthCheckResponsePrivate(
-    UpdateHealthCheckQueueResponse * const q) : UpdateHealthCheckPrivate(q)
+    UpdateHealthCheckResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

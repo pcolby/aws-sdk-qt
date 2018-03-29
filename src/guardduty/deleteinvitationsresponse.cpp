@@ -86,7 +86,7 @@ void DeleteInvitationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteInvitationsResponse instance.
  */
 DeleteInvitationsResponsePrivate::DeleteInvitationsResponsePrivate(
-    DeleteInvitationsQueueResponse * const q) : DeleteInvitationsPrivate(q)
+    DeleteInvitationsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

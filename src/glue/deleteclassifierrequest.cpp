@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClassifierRequest::response(QNetworkRep
  */
 DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
     const GlueRequest::Action action, DeleteClassifierRequest * const q)
-    : DeleteClassifierPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
  */
 DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
     const DeleteClassifierRequestPrivate &other, DeleteClassifierRequest * const q)
-    : DeleteClassifierPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

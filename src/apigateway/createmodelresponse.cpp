@@ -86,7 +86,7 @@ void CreateModelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateModelResponse instance.
  */
 CreateModelResponsePrivate::CreateModelResponsePrivate(
-    CreateModelQueueResponse * const q) : CreateModelPrivate(q)
+    CreateModelResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

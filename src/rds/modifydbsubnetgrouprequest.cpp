@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetwork
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBSubnetGroupRequest * const q)
-    : ModifyDBSubnetGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const ModifyDBSubnetGroupRequestPrivate &other, ModifyDBSubnetGroupRequest * const q)
-    : ModifyDBSubnetGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

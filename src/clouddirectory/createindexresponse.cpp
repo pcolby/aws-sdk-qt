@@ -86,7 +86,7 @@ void CreateIndexResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateIndexResponse instance.
  */
 CreateIndexResponsePrivate::CreateIndexResponsePrivate(
-    CreateIndexQueueResponse * const q) : CreateIndexPrivate(q)
+    CreateIndexResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

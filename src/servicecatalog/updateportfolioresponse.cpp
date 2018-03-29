@@ -86,7 +86,7 @@ void UpdatePortfolioResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePortfolioResponse instance.
  */
 UpdatePortfolioResponsePrivate::UpdatePortfolioResponsePrivate(
-    UpdatePortfolioQueueResponse * const q) : UpdatePortfolioPrivate(q)
+    UpdatePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

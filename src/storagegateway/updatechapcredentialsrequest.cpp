@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateChapCredentialsRequest::response(QNetwo
  */
 UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateChapCredentialsRequest * const q)
-    : UpdateChapCredentialsPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
  */
 UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
     const UpdateChapCredentialsRequestPrivate &other, UpdateChapCredentialsRequest * const q)
-    : UpdateChapCredentialsPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

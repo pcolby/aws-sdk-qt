@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply 
  */
 DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeCacheRequest * const q)
-    : DescribeCachePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
  */
 DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
     const DescribeCacheRequestPrivate &other, DescribeCacheRequest * const q)
-    : DescribeCachePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

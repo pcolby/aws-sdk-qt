@@ -86,7 +86,7 @@ void UpdateQueueResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateQueueResponse instance.
  */
 UpdateQueueResponsePrivate::UpdateQueueResponsePrivate(
-    UpdateQueueQueueResponse * const q) : UpdateQueuePrivate(q)
+    UpdateQueueResponse * const q) : MediaConvertResponsePrivate(q)
 {
 
 }

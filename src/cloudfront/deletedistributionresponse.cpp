@@ -86,7 +86,7 @@ void DeleteDistributionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDistributionResponse instance.
  */
 DeleteDistributionResponsePrivate::DeleteDistributionResponsePrivate(
-    DeleteDistributionQueueResponse * const q) : DeleteDistributionPrivate(q)
+    DeleteDistributionResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UnlinkDeveloperIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnlinkDeveloperIdentityResponse instance.
  */
 UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponsePrivate(
-    UnlinkDeveloperIdentityQueueResponse * const q) : UnlinkDeveloperIdentityPrivate(q)
+    UnlinkDeveloperIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

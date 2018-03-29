@@ -86,7 +86,7 @@ void DescribeLaunchConfigurationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLaunchConfigurationsResponse instance.
  */
 DescribeLaunchConfigurationsResponsePrivate::DescribeLaunchConfigurationsResponsePrivate(
-    DescribeLaunchConfigurationsQueueResponse * const q) : DescribeLaunchConfigurationsPrivate(q)
+    DescribeLaunchConfigurationsResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

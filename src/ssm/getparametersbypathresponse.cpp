@@ -86,7 +86,7 @@ void GetParametersByPathResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetParametersByPathResponse instance.
  */
 GetParametersByPathResponsePrivate::GetParametersByPathResponsePrivate(
-    GetParametersByPathQueueResponse * const q) : GetParametersByPathPrivate(q)
+    GetParametersByPathResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

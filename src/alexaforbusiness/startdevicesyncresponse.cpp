@@ -86,7 +86,7 @@ void StartDeviceSyncResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartDeviceSyncResponse instance.
  */
 StartDeviceSyncResponsePrivate::StartDeviceSyncResponsePrivate(
-    StartDeviceSyncQueueResponse * const q) : StartDeviceSyncPrivate(q)
+    StartDeviceSyncResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

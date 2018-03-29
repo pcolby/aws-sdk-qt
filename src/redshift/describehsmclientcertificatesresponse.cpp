@@ -86,7 +86,7 @@ void DescribeHsmClientCertificatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHsmClientCertificatesResponse instance.
  */
 DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificatesResponsePrivate(
-    DescribeHsmClientCertificatesQueueResponse * const q) : DescribeHsmClientCertificatesPrivate(q)
+    DescribeHsmClientCertificatesResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFacetRequest::response(QNetworkReply * con
  */
 GetFacetRequestPrivate::GetFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, GetFacetRequest * const q)
-    : GetFacetPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFacetRequestPrivate::GetFacetRequestPrivate(
  */
 GetFacetRequestPrivate::GetFacetRequestPrivate(
     const GetFacetRequestPrivate &other, GetFacetRequest * const q)
-    : GetFacetPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeHandshakeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHandshakeResponse instance.
  */
 DescribeHandshakeResponsePrivate::DescribeHandshakeResponsePrivate(
-    DescribeHandshakeQueueResponse * const q) : DescribeHandshakePrivate(q)
+    DescribeHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

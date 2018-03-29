@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkRep
  */
 CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
     const EC2Request::Action action, CancelImportTaskRequest * const q)
-    : CancelImportTaskPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
  */
 CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
     const CancelImportTaskRequestPrivate &other, CancelImportTaskRequest * const q)
-    : CancelImportTaskPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

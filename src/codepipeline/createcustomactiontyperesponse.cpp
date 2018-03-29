@@ -86,7 +86,7 @@ void CreateCustomActionTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCustomActionTypeResponse instance.
  */
 CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponsePrivate(
-    CreateCustomActionTypeQueueResponse * const q) : CreateCustomActionTypePrivate(q)
+    CreateCustomActionTypeResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

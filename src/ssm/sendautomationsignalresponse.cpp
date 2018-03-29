@@ -86,7 +86,7 @@ void SendAutomationSignalResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendAutomationSignalResponse instance.
  */
 SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
-    SendAutomationSignalQueueResponse * const q) : SendAutomationSignalPrivate(q)
+    SendAutomationSignalResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

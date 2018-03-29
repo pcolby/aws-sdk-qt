@@ -86,7 +86,7 @@ void DeleteVirtualInterfaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVirtualInterfaceResponse instance.
  */
 DeleteVirtualInterfaceResponsePrivate::DeleteVirtualInterfaceResponsePrivate(
-    DeleteVirtualInterfaceQueueResponse * const q) : DeleteVirtualInterfacePrivate(q)
+    DeleteVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SendTemplatedEmailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendTemplatedEmailResponse instance.
  */
 SendTemplatedEmailResponsePrivate::SendTemplatedEmailResponsePrivate(
-    SendTemplatedEmailQueueResponse * const q) : SendTemplatedEmailPrivate(q)
+    SendTemplatedEmailResponse * const q) : SESResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * 
  */
 IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
     const LightsailRequest::Action action, IsVpcPeeredRequest * const q)
-    : IsVpcPeeredPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
  */
 IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
     const IsVpcPeeredRequestPrivate &other, IsVpcPeeredRequest * const q)
-    : IsVpcPeeredPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

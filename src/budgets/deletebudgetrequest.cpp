@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBudgetRequest::response(QNetworkReply *
  */
 DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
     const BudgetsRequest::Action action, DeleteBudgetRequest * const q)
-    : DeleteBudgetPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
  */
 DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
     const DeleteBudgetRequestPrivate &other, DeleteBudgetRequest * const q)
-    : DeleteBudgetPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

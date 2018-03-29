@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTapesRequest::response(QNetworkReply * 
  */
 CreateTapesRequestPrivate::CreateTapesRequestPrivate(
     const StorageGatewayRequest::Action action, CreateTapesRequest * const q)
-    : CreateTapesPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTapesRequestPrivate::CreateTapesRequestPrivate(
  */
 CreateTapesRequestPrivate::CreateTapesRequestPrivate(
     const CreateTapesRequestPrivate &other, CreateTapesRequest * const q)
-    : CreateTapesPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

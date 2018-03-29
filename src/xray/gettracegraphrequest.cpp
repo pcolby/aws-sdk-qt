@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTraceGraphRequest::response(QNetworkReply 
  */
 GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
     const XRayRequest::Action action, GetTraceGraphRequest * const q)
-    : GetTraceGraphPrivate(action, q)
+    : XRayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
  */
 GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
     const GetTraceGraphRequestPrivate &other, GetTraceGraphRequest * const q)
-    : GetTraceGraphPrivate(other, q)
+    : XRayRequestPrivate(other, q)
 {
 
 }

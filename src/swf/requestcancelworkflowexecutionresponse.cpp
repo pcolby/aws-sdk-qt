@@ -86,7 +86,7 @@ void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RequestCancelWorkflowExecutionResponse instance.
  */
 RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionResponsePrivate(
-    RequestCancelWorkflowExecutionQueueResponse * const q) : RequestCancelWorkflowExecutionPrivate(q)
+    RequestCancelWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
     const EC2Request::Action action, DescribeIamInstanceProfileAssociationsRequest * const q)
-    : DescribeIamInstanceProfileAssociationsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfile
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
     const DescribeIamInstanceProfileAssociationsRequestPrivate &other, DescribeIamInstanceProfileAssociationsRequest * const q)
-    : DescribeIamInstanceProfileAssociationsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetClientCertificatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetClientCertificatesResponse instance.
  */
 GetClientCertificatesResponsePrivate::GetClientCertificatesResponsePrivate(
-    GetClientCertificatesQueueResponse * const q) : GetClientCertificatesPrivate(q)
+    GetClientCertificatesResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

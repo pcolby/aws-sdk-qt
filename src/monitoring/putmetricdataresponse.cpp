@@ -86,7 +86,7 @@ void PutMetricDataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutMetricDataResponse instance.
  */
 PutMetricDataResponsePrivate::PutMetricDataResponsePrivate(
-    PutMetricDataQueueResponse * const q) : PutMetricDataPrivate(q)
+    PutMetricDataResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateKeyDescriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateKeyDescriptionResponse instance.
  */
 UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponsePrivate(
-    UpdateKeyDescriptionQueueResponse * const q) : UpdateKeyDescriptionPrivate(q)
+    UpdateKeyDescriptionResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetTerminationProtectionResponse instance.
  */
 SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate(
-    SetTerminationProtectionQueueResponse * const q) : SetTerminationProtectionPrivate(q)
+    SetTerminationProtectionResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelCertificateTransferRequest::response(QN
  */
 CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate(
     const IoTRequest::Action action, CancelCertificateTransferRequest * const q)
-    : CancelCertificateTransferPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate
  */
 CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate(
     const CancelCertificateTransferRequestPrivate &other, CancelCertificateTransferRequest * const q)
-    : CancelCertificateTransferPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

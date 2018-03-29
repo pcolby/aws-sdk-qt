@@ -86,7 +86,7 @@ void PutDeliveryChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutDeliveryChannelResponse instance.
  */
 PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponsePrivate(
-    PutDeliveryChannelQueueResponse * const q) : PutDeliveryChannelPrivate(q)
+    PutDeliveryChannelResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

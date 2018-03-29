@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionsRequest::response(QNet
  */
 ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListFunctionDefinitionsRequest * const q)
-    : ListFunctionDefinitionsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
  */
 ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
     const ListFunctionDefinitionsRequestPrivate &other, ListFunctionDefinitionsRequest * const q)
-    : ListFunctionDefinitionsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

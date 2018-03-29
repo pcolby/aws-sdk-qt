@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetw
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListSizeConstraintSetsRequest * const q)
-    : ListSizeConstraintSetsPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
     const ListSizeConstraintSetsRequestPrivate &other, ListSizeConstraintSetsRequest * const q)
-    : ListSizeConstraintSetsPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply *
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const MQRequest::Action action, DescribeUserRequest * const q)
-    : DescribeUserPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeUserRequestPrivate::DescribeUserRequestPrivate(
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const DescribeUserRequestPrivate &other, DescribeUserRequest * const q)
-    : DescribeUserPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

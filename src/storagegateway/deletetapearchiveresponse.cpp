@@ -86,7 +86,7 @@ void DeleteTapeArchiveResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTapeArchiveResponse instance.
  */
 DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponsePrivate(
-    DeleteTapeArchiveQueueResponse * const q) : DeleteTapeArchivePrivate(q)
+    DeleteTapeArchiveResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

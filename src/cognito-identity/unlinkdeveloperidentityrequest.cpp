@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnlinkDeveloperIdentityRequest::response(QNet
  */
 UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, UnlinkDeveloperIdentityRequest * const q)
-    : UnlinkDeveloperIdentityPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
  */
 UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
     const UnlinkDeveloperIdentityRequestPrivate &other, UnlinkDeveloperIdentityRequest * const q)
-    : UnlinkDeveloperIdentityPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

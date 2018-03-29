@@ -86,7 +86,7 @@ void GetGroupQueryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGroupQueryResponse instance.
  */
 GetGroupQueryResponsePrivate::GetGroupQueryResponsePrivate(
-    GetGroupQueryQueueResponse * const q) : GetGroupQueryPrivate(q)
+    GetGroupQueryResponse * const q) : ResourceGroupsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TerminateWorkflowExecutionResponse instance.
  */
 TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePrivate(
-    TerminateWorkflowExecutionQueueResponse * const q) : TerminateWorkflowExecutionPrivate(q)
+    TerminateWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

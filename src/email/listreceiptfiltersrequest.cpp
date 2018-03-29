@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListReceiptFiltersRequest::response(QNetworkR
  */
 ListReceiptFiltersRequestPrivate::ListReceiptFiltersRequestPrivate(
     const SESRequest::Action action, ListReceiptFiltersRequest * const q)
-    : ListReceiptFiltersPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListReceiptFiltersRequestPrivate::ListReceiptFiltersRequestPrivate(
  */
 ListReceiptFiltersRequestPrivate::ListReceiptFiltersRequestPrivate(
     const ListReceiptFiltersRequestPrivate &other, ListReceiptFiltersRequest * const q)
-    : ListReceiptFiltersPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeProductAsAdminResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeProductAsAdminResponse instance.
  */
 DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
-    DescribeProductAsAdminQueueResponse * const q) : DescribeProductAsAdminPrivate(q)
+    DescribeProductAsAdminResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

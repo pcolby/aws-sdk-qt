@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::re
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
     const SSMRequest::Action action, DescribeInstanceAssociationsStatusRequest * const q)
-    : DescribeInstanceAssociationsStatusPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsSt
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
     const DescribeInstanceAssociationsStatusRequestPrivate &other, DescribeInstanceAssociationsStatusRequest * const q)
-    : DescribeInstanceAssociationsStatusPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

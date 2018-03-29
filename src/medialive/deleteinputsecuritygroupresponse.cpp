@@ -86,7 +86,7 @@ void DeleteInputSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteInputSecurityGroupResponse instance.
  */
 DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponsePrivate(
-    DeleteInputSecurityGroupQueueResponse * const q) : DeleteInputSecurityGroupPrivate(q)
+    DeleteInputSecurityGroupResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

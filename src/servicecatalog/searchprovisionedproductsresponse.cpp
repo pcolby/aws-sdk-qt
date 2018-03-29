@@ -86,7 +86,7 @@ void SearchProvisionedProductsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchProvisionedProductsResponse instance.
  */
 SearchProvisionedProductsResponsePrivate::SearchProvisionedProductsResponsePrivate(
-    SearchProvisionedProductsQueueResponse * const q) : SearchProvisionedProductsPrivate(q)
+    SearchProvisionedProductsResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

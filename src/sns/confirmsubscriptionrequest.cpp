@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmSubscriptionRequest::response(QNetwork
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
     const SNSRequest::Action action, ConfirmSubscriptionRequest * const q)
-    : ConfirmSubscriptionPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
     const ConfirmSubscriptionRequestPrivate &other, ConfirmSubscriptionRequest * const q)
-    : ConfirmSubscriptionPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

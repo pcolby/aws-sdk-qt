@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
  */
 DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
     const IoTRequest::Action action, DescribeEndpointRequest * const q)
-    : DescribeEndpointPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
  */
 DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
     const DescribeEndpointRequestPrivate &other, DescribeEndpointRequest * const q)
-    : DescribeEndpointPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

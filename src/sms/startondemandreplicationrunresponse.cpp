@@ -86,7 +86,7 @@ void StartOnDemandReplicationRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartOnDemandReplicationRunResponse instance.
  */
 StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponsePrivate(
-    StartOnDemandReplicationRunQueueResponse * const q) : StartOnDemandReplicationRunPrivate(q)
+    StartOnDemandReplicationRunResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

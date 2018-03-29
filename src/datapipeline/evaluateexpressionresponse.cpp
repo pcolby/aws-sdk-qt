@@ -86,7 +86,7 @@ void EvaluateExpressionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EvaluateExpressionResponse instance.
  */
 EvaluateExpressionResponsePrivate::EvaluateExpressionResponsePrivate(
-    EvaluateExpressionQueueResponse * const q) : EvaluateExpressionPrivate(q)
+    EvaluateExpressionResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeProtectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeProtectionResponse instance.
  */
 DescribeProtectionResponsePrivate::DescribeProtectionResponsePrivate(
-    DescribeProtectionQueueResponse * const q) : DescribeProtectionPrivate(q)
+    DescribeProtectionResponse * const q) : ShieldResponsePrivate(q)
 {
 
 }

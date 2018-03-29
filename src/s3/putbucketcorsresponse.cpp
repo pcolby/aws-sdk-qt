@@ -86,7 +86,7 @@ void PutBucketCorsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketCorsResponse instance.
  */
 PutBucketCorsResponsePrivate::PutBucketCorsResponsePrivate(
-    PutBucketCorsQueueResponse * const q) : PutBucketCorsPrivate(q)
+    PutBucketCorsResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

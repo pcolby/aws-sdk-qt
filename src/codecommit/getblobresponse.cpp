@@ -86,7 +86,7 @@ void GetBlobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBlobResponse instance.
  */
 GetBlobResponsePrivate::GetBlobResponsePrivate(
-    GetBlobQueueResponse * const q) : GetBlobPrivate(q)
+    GetBlobResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

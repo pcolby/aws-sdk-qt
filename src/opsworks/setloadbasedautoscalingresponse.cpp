@@ -86,7 +86,7 @@ void SetLoadBasedAutoScalingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetLoadBasedAutoScalingResponse instance.
  */
 SetLoadBasedAutoScalingResponsePrivate::SetLoadBasedAutoScalingResponsePrivate(
-    SetLoadBasedAutoScalingQueueResponse * const q) : SetLoadBasedAutoScalingPrivate(q)
+    SetLoadBasedAutoScalingResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

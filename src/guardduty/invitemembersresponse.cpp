@@ -86,7 +86,7 @@ void InviteMembersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InviteMembersResponse instance.
  */
 InviteMembersResponsePrivate::InviteMembersResponsePrivate(
-    InviteMembersQueueResponse * const q) : InviteMembersPrivate(q)
+    InviteMembersResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

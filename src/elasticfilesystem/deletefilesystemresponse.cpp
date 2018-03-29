@@ -86,7 +86,7 @@ void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFileSystemResponse instance.
  */
 DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
-    DeleteFileSystemQueueResponse * const q) : DeleteFileSystemPrivate(q)
+    DeleteFileSystemResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

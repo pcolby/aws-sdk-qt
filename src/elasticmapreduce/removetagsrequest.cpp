@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const EMRRequest::Action action, RemoveTagsRequest * const q)
-    : RemoveTagsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)
-    : RemoveTagsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

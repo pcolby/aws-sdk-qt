@@ -86,7 +86,7 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteClusterResponse instance.
  */
 DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
-    DeleteClusterQueueResponse * const q) : DeleteClusterPrivate(q)
+    DeleteClusterResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

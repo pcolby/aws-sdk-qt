@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionRequest::response(QNetworkR
  */
 DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
     const ShieldRequest::Action action, DeleteSubscriptionRequest * const q)
-    : DeleteSubscriptionPrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
  */
 DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
     const DeleteSubscriptionRequestPrivate &other, DeleteSubscriptionRequest * const q)
-    : DeleteSubscriptionPrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

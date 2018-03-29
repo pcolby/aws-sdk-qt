@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteConnectionRequest::response(QNetwo
  */
 BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
     const GlueRequest::Action action, BatchDeleteConnectionRequest * const q)
-    : BatchDeleteConnectionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
  */
 BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
     const BatchDeleteConnectionRequestPrivate &other, BatchDeleteConnectionRequest * const q)
-    : BatchDeleteConnectionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

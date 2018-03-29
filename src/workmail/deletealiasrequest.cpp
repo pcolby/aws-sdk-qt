@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const WorkMailRequest::Action action, DeleteAliasRequest * const q)
-    : DeleteAliasPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const DeleteAliasRequestPrivate &other, DeleteAliasRequest * const q)
-    : DeleteAliasPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

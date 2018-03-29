@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoadBalancerPolicyRequest::response(QNe
  */
 CreateLoadBalancerPolicyRequestPrivate::CreateLoadBalancerPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLoadBalancerPolicyRequest * const q)
-    : CreateLoadBalancerPolicyPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLoadBalancerPolicyRequestPrivate::CreateLoadBalancerPolicyRequestPrivate(
  */
 CreateLoadBalancerPolicyRequestPrivate::CreateLoadBalancerPolicyRequestPrivate(
     const CreateLoadBalancerPolicyRequestPrivate &other, CreateLoadBalancerPolicyRequest * const q)
-    : CreateLoadBalancerPolicyPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkRepl
  */
 DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeDatasetRequest * const q)
-    : DescribeDatasetPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
  */
 DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
     const DescribeDatasetRequestPrivate &other, DescribeDatasetRequest * const q)
-    : DescribeDatasetPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

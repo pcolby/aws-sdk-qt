@@ -86,7 +86,7 @@ void DescribeMaintenanceWindowExecutionTaskInvocationsResponse::parseSuccess(QIO
  * @param  q  Pointer to this object's public DescribeMaintenanceWindowExecutionTaskInvocationsResponse instance.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate::DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(
-    DescribeMaintenanceWindowExecutionTaskInvocationsQueueResponse * const q) : DescribeMaintenanceWindowExecutionTaskInvocationsPrivate(q)
+    DescribeMaintenanceWindowExecutionTaskInvocationsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

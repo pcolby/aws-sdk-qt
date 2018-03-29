@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkRepl
  */
 BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
     const MarketplaceMeteringRequest::Action action, BatchMeterUsageRequest * const q)
-    : BatchMeterUsagePrivate(action, q)
+    : MarketplaceMeteringRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
  */
 BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
     const BatchMeterUsageRequestPrivate &other, BatchMeterUsageRequest * const q)
-    : BatchMeterUsagePrivate(other, q)
+    : MarketplaceMeteringRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::respons
  */
 ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
     const MTurkRequest::Action action, ListReviewPolicyResultsForHITRequest * const q)
-    : ListReviewPolicyResultsForHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITReques
  */
 ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
     const ListReviewPolicyResultsForHITRequestPrivate &other, ListReviewPolicyResultsForHITRequest * const q)
-    : ListReviewPolicyResultsForHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateVaultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateVaultResponse instance.
  */
 CreateVaultResponsePrivate::CreateVaultResponsePrivate(
-    CreateVaultQueueResponse * const q) : CreateVaultPrivate(q)
+    CreateVaultResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

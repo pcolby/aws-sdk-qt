@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportImageRequest::response(QNetworkReply * 
  */
 ImportImageRequestPrivate::ImportImageRequestPrivate(
     const EC2Request::Action action, ImportImageRequest * const q)
-    : ImportImagePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportImageRequestPrivate::ImportImageRequestPrivate(
  */
 ImportImageRequestPrivate::ImportImageRequestPrivate(
     const ImportImageRequestPrivate &other, ImportImageRequest * const q)
-    : ImportImagePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

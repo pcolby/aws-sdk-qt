@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsReques
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DescribeElasticsearchInstanceTypeLimitsRequest * const q)
-    : DescribeElasticsearchInstanceTypeLimitsPrivate(action, q)
+    : ElasticsearchServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInst
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
     const DescribeElasticsearchInstanceTypeLimitsRequestPrivate &other, DescribeElasticsearchInstanceTypeLimitsRequest * const q)
-    : DescribeElasticsearchInstanceTypeLimitsPrivate(other, q)
+    : ElasticsearchServiceRequestPrivate(other, q)
 {
 
 }

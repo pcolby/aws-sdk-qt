@@ -86,7 +86,7 @@ void GetNetworkProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetNetworkProfileResponse instance.
  */
 GetNetworkProfileResponsePrivate::GetNetworkProfileResponsePrivate(
-    GetNetworkProfileQueueResponse * const q) : GetNetworkProfilePrivate(q)
+    GetNetworkProfileResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

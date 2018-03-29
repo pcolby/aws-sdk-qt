@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeValidDBInstanceModificationsRequest::
  */
 DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModificationsRequestPrivate(
     const RDSRequest::Action action, DescribeValidDBInstanceModificationsRequest * const q)
-    : DescribeValidDBInstanceModificationsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModif
  */
 DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModificationsRequestPrivate(
     const DescribeValidDBInstanceModificationsRequestPrivate &other, DescribeValidDBInstanceModificationsRequest * const q)
-    : DescribeValidDBInstanceModificationsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

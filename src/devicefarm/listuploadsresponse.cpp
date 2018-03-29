@@ -86,7 +86,7 @@ void ListUploadsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListUploadsResponse instance.
  */
 ListUploadsResponsePrivate::ListUploadsResponsePrivate(
-    ListUploadsQueueResponse * const q) : ListUploadsPrivate(q)
+    ListUploadsResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

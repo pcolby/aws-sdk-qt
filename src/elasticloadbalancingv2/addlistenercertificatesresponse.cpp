@@ -86,7 +86,7 @@ void AddListenerCertificatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddListenerCertificatesResponse instance.
  */
 AddListenerCertificatesResponsePrivate::AddListenerCertificatesResponsePrivate(
-    AddListenerCertificatesQueueResponse * const q) : AddListenerCertificatesPrivate(q)
+    AddListenerCertificatesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

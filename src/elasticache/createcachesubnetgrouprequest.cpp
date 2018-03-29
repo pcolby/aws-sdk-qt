@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCacheSubnetGroupRequest::response(QNetw
  */
 CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheSubnetGroupRequest * const q)
-    : CreateCacheSubnetGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
  */
 CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
     const CreateCacheSubnetGroupRequestPrivate &other, CreateCacheSubnetGroupRequest * const q)
-    : CreateCacheSubnetGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

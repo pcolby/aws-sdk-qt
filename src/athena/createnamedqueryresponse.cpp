@@ -86,7 +86,7 @@ void CreateNamedQueryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateNamedQueryResponse instance.
  */
 CreateNamedQueryResponsePrivate::CreateNamedQueryResponsePrivate(
-    CreateNamedQueryQueueResponse * const q) : CreateNamedQueryPrivate(q)
+    CreateNamedQueryResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

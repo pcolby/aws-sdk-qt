@@ -86,7 +86,7 @@ void DeprecateThingTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeprecateThingTypeResponse instance.
  */
 DeprecateThingTypeResponsePrivate::DeprecateThingTypeResponsePrivate(
-    DeprecateThingTypeQueueResponse * const q) : DeprecateThingTypePrivate(q)
+    DeprecateThingTypeResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

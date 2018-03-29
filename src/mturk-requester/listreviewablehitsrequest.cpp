@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkR
  */
 ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
     const MTurkRequest::Action action, ListReviewableHITsRequest * const q)
-    : ListReviewableHITsPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
  */
 ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
     const ListReviewableHITsRequestPrivate &other, ListReviewableHITsRequest * const q)
-    : ListReviewableHITsPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

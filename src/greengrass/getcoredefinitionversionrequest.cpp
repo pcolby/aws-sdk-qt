@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNe
  */
 GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, GetCoreDefinitionVersionRequest * const q)
-    : GetCoreDefinitionVersionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
  */
 GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
     const GetCoreDefinitionVersionRequestPrivate &other, GetCoreDefinitionVersionRequest * const q)
-    : GetCoreDefinitionVersionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

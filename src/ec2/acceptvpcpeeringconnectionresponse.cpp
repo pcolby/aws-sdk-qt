@@ -86,7 +86,7 @@ void AcceptVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcceptVpcPeeringConnectionResponse instance.
  */
 AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponsePrivate(
-    AcceptVpcPeeringConnectionQueueResponse * const q) : AcceptVpcPeeringConnectionPrivate(q)
+    AcceptVpcPeeringConnectionResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

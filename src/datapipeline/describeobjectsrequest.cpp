@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectsRequest::response(QNetworkRepl
  */
 DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
     const DataPipelineRequest::Action action, DescribeObjectsRequest * const q)
-    : DescribeObjectsPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
  */
 DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
     const DescribeObjectsRequestPrivate &other, DescribeObjectsRequest * const q)
-    : DescribeObjectsPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

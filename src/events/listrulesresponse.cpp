@@ -86,7 +86,7 @@ void ListRulesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRulesResponse instance.
  */
 ListRulesResponsePrivate::ListRulesResponsePrivate(
-    ListRulesQueueResponse * const q) : ListRulesPrivate(q)
+    ListRulesResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

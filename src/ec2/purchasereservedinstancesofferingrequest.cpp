@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::res
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
     const EC2Request::Action action, PurchaseReservedInstancesOfferingRequest * const q)
-    : PurchaseReservedInstancesOfferingPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferi
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
     const PurchaseReservedInstancesOfferingRequestPrivate &other, PurchaseReservedInstancesOfferingRequest * const q)
-    : PurchaseReservedInstancesOfferingPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

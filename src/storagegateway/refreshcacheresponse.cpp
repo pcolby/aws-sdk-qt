@@ -86,7 +86,7 @@ void RefreshCacheResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RefreshCacheResponse instance.
  */
 RefreshCacheResponsePrivate::RefreshCacheResponsePrivate(
-    RefreshCacheQueueResponse * const q) : RefreshCachePrivate(q)
+    RefreshCacheResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

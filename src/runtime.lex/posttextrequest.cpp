@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PostTextRequest::response(QNetworkReply * con
  */
 PostTextRequestPrivate::PostTextRequestPrivate(
     const LexRuntimeServiceRequest::Action action, PostTextRequest * const q)
-    : PostTextPrivate(action, q)
+    : LexRuntimeServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PostTextRequestPrivate::PostTextRequestPrivate(
  */
 PostTextRequestPrivate::PostTextRequestPrivate(
     const PostTextRequestPrivate &other, PostTextRequest * const q)
-    : PostTextPrivate(other, q)
+    : LexRuntimeServiceRequestPrivate(other, q)
 {
 
 }

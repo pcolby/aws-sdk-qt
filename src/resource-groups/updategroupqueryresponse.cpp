@@ -86,7 +86,7 @@ void UpdateGroupQueryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateGroupQueryResponse instance.
  */
 UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponsePrivate(
-    UpdateGroupQueryQueueResponse * const q) : UpdateGroupQueryPrivate(q)
+    UpdateGroupQueryResponse * const q) : ResourceGroupsResponsePrivate(q)
 {
 
 }

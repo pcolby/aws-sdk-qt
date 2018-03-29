@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAssociationStatusRequest::response(QNet
  */
 UpdateAssociationStatusRequestPrivate::UpdateAssociationStatusRequestPrivate(
     const SSMRequest::Action action, UpdateAssociationStatusRequest * const q)
-    : UpdateAssociationStatusPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAssociationStatusRequestPrivate::UpdateAssociationStatusRequestPrivate(
  */
 UpdateAssociationStatusRequestPrivate::UpdateAssociationStatusRequestPrivate(
     const UpdateAssociationStatusRequestPrivate &other, UpdateAssociationStatusRequest * const q)
-    : UpdateAssociationStatusPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

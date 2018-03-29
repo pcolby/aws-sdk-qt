@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTemplateRequest::response(QNe
  */
 CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
     const InspectorRequest::Action action, CreateAssessmentTemplateRequest * const q)
-    : CreateAssessmentTemplatePrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
  */
 CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
     const CreateAssessmentTemplateRequestPrivate &other, CreateAssessmentTemplateRequest * const q)
-    : CreateAssessmentTemplatePrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

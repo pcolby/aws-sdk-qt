@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
     const RDSRequest::Action action, StopDBInstanceRequest * const q)
-    : StopDBInstancePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
     const StopDBInstanceRequestPrivate &other, StopDBInstanceRequest * const q)
-    : StopDBInstancePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

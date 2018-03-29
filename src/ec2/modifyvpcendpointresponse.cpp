@@ -86,7 +86,7 @@ void ModifyVpcEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyVpcEndpointResponse instance.
  */
 ModifyVpcEndpointResponsePrivate::ModifyVpcEndpointResponsePrivate(
-    ModifyVpcEndpointQueueResponse * const q) : ModifyVpcEndpointPrivate(q)
+    ModifyVpcEndpointResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

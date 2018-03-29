@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * co
  */
 StopFleetRequestPrivate::StopFleetRequestPrivate(
     const AppStreamRequest::Action action, StopFleetRequest * const q)
-    : StopFleetPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopFleetRequestPrivate::StopFleetRequestPrivate(
  */
 StopFleetRequestPrivate::StopFleetRequestPrivate(
     const StopFleetRequestPrivate &other, StopFleetRequest * const q)
-    : StopFleetPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

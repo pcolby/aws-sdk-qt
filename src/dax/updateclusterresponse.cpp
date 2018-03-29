@@ -86,7 +86,7 @@ void UpdateClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateClusterResponse instance.
  */
 UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
-    UpdateClusterQueueResponse * const q) : UpdateClusterPrivate(q)
+    UpdateClusterResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

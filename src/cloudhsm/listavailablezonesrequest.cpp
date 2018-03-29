@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkR
  */
 ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
     const CloudHSMRequest::Action action, ListAvailableZonesRequest * const q)
-    : ListAvailableZonesPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
  */
 ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
     const ListAvailableZonesRequestPrivate &other, ListAvailableZonesRequest * const q)
-    : ListAvailableZonesPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

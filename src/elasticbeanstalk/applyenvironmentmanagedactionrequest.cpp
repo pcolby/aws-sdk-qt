@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ApplyEnvironmentManagedActionRequest::respons
  */
 ApplyEnvironmentManagedActionRequestPrivate::ApplyEnvironmentManagedActionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ApplyEnvironmentManagedActionRequest * const q)
-    : ApplyEnvironmentManagedActionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ApplyEnvironmentManagedActionRequestPrivate::ApplyEnvironmentManagedActionReques
  */
 ApplyEnvironmentManagedActionRequestPrivate::ApplyEnvironmentManagedActionRequestPrivate(
     const ApplyEnvironmentManagedActionRequestPrivate &other, ApplyEnvironmentManagedActionRequest * const q)
-    : ApplyEnvironmentManagedActionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

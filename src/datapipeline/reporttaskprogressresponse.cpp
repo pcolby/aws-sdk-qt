@@ -86,7 +86,7 @@ void ReportTaskProgressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReportTaskProgressResponse instance.
  */
 ReportTaskProgressResponsePrivate::ReportTaskProgressResponsePrivate(
-    ReportTaskProgressQueueResponse * const q) : ReportTaskProgressPrivate(q)
+    ReportTaskProgressResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetw
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBParameterGroupRequest * const q)
-    : DeleteDBParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
     const DeleteDBParameterGroupRequestPrivate &other, DeleteDBParameterGroupRequest * const q)
-    : DeleteDBParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

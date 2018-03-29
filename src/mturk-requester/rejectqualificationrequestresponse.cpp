@@ -86,7 +86,7 @@ void RejectQualificationRequestResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RejectQualificationRequestResponse instance.
  */
 RejectQualificationRequestResponsePrivate::RejectQualificationRequestResponsePrivate(
-    RejectQualificationRequestQueueResponse * const q) : RejectQualificationRequestPrivate(q)
+    RejectQualificationRequestResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeCreateAccountStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCreateAccountStatusResponse instance.
  */
 DescribeCreateAccountStatusResponsePrivate::DescribeCreateAccountStatusResponsePrivate(
-    DescribeCreateAccountStatusQueueResponse * const q) : DescribeCreateAccountStatusPrivate(q)
+    DescribeCreateAccountStatusResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

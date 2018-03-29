@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, TestConnectionRequest * const q)
-    : TestConnectionPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestConnectionRequestPrivate::TestConnectionRequestPrivate(
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
     const TestConnectionRequestPrivate &other, TestConnectionRequest * const q)
-    : TestConnectionPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

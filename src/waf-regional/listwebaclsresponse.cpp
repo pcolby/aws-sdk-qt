@@ -86,7 +86,7 @@ void ListWebACLsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListWebACLsResponse instance.
  */
 ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
-    ListWebACLsQueueResponse * const q) : ListWebACLsPrivate(q)
+    ListWebACLsResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

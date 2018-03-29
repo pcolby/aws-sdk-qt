@@ -86,7 +86,7 @@ void DefineSuggesterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DefineSuggesterResponse instance.
  */
 DefineSuggesterResponsePrivate::DefineSuggesterResponsePrivate(
-    DefineSuggesterQueueResponse * const q) : DefineSuggesterPrivate(q)
+    DefineSuggesterResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

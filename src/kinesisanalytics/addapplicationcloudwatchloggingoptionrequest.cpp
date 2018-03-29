@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest:
  */
 AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLoggingOptionRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationCloudWatchLoggingOptionRequest * const q)
-    : AddApplicationCloudWatchLoggingOptionPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLog
  */
 AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLoggingOptionRequestPrivate(
     const AddApplicationCloudWatchLoggingOptionRequestPrivate &other, AddApplicationCloudWatchLoggingOptionRequest * const q)
-    : AddApplicationCloudWatchLoggingOptionPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

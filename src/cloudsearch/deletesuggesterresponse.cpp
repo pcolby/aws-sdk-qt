@@ -86,7 +86,7 @@ void DeleteSuggesterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSuggesterResponse instance.
  */
 DeleteSuggesterResponsePrivate::DeleteSuggesterResponsePrivate(
-    DeleteSuggesterQueueResponse * const q) : DeleteSuggesterPrivate(q)
+    DeleteSuggesterResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetw
  */
 DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
     const EC2Request::Action action, DescribeInstanceStatusRequest * const q)
-    : DescribeInstanceStatusPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
  */
 DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
     const DescribeInstanceStatusRequestPrivate &other, DescribeInstanceStatusRequest * const q)
-    : DescribeInstanceStatusPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

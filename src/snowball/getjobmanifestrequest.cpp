@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply
  */
 GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
     const SnowballRequest::Action action, GetJobManifestRequest * const q)
-    : GetJobManifestPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
  */
 GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
     const GetJobManifestRequestPrivate &other, GetJobManifestRequest * const q)
-    : GetJobManifestPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

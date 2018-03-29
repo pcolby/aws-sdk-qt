@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCaseRequest::response(QNetworkReply * c
  */
 CreateCaseRequestPrivate::CreateCaseRequestPrivate(
     const SupportRequest::Action action, CreateCaseRequest * const q)
-    : CreateCasePrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCaseRequestPrivate::CreateCaseRequestPrivate(
  */
 CreateCaseRequestPrivate::CreateCaseRequestPrivate(
     const CreateCaseRequestPrivate &other, CreateCaseRequest * const q)
-    : CreateCasePrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

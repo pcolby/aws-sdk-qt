@@ -86,7 +86,7 @@ void SetSubnetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetSubnetsResponse instance.
  */
 SetSubnetsResponsePrivate::SetSubnetsResponsePrivate(
-    SetSubnetsQueueResponse * const q) : SetSubnetsPrivate(q)
+    SetSubnetsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteProtectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteProtectionResponse instance.
  */
 DeleteProtectionResponsePrivate::DeleteProtectionResponsePrivate(
-    DeleteProtectionQueueResponse * const q) : DeleteProtectionPrivate(q)
+    DeleteProtectionResponse * const q) : ShieldResponsePrivate(q)
 {
 
 }

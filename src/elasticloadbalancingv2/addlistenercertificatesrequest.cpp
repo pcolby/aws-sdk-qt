@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddListenerCertificatesRequest::response(QNet
  */
 AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, AddListenerCertificatesRequest * const q)
-    : AddListenerCertificatesPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
  */
 AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
     const AddListenerCertificatesRequestPrivate &other, AddListenerCertificatesRequest * const q)
-    : AddListenerCertificatesPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

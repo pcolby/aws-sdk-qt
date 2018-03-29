@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationStateRequest::response(QNe
  */
 DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
     const MigrationHubRequest::Action action, DescribeApplicationStateRequest * const q)
-    : DescribeApplicationStatePrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
  */
 DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
     const DescribeApplicationStateRequestPrivate &other, DescribeApplicationStateRequest * const q)
-    : DescribeApplicationStatePrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

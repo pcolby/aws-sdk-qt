@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply 
  */
 DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
     const PollyRequest::Action action, DeleteLexiconRequest * const q)
-    : DeleteLexiconPrivate(action, q)
+    : PollyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
  */
 DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
     const DeleteLexiconRequestPrivate &other, DeleteLexiconRequest * const q)
-    : DeleteLexiconPrivate(other, q)
+    : PollyRequestPrivate(other, q)
 {
 
 }

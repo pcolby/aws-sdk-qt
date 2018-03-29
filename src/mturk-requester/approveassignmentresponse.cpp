@@ -86,7 +86,7 @@ void ApproveAssignmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ApproveAssignmentResponse instance.
  */
 ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
-    ApproveAssignmentQueueResponse * const q) : ApproveAssignmentPrivate(q)
+    ApproveAssignmentResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

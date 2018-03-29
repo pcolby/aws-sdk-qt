@@ -86,7 +86,7 @@ void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNatGatewayResponse instance.
  */
 DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
-    DeleteNatGatewayQueueResponse * const q) : DeleteNatGatewayPrivate(q)
+    DeleteNatGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

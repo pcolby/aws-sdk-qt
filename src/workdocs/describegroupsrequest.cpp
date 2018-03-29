@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeGroupsRequest::response(QNetworkReply
  */
 DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeGroupsRequest * const q)
-    : DescribeGroupsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
  */
 DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
     const DescribeGroupsRequestPrivate &other, DescribeGroupsRequest * const q)
-    : DescribeGroupsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

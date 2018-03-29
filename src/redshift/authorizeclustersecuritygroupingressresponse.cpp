@@ -86,7 +86,7 @@ void AuthorizeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public AuthorizeClusterSecurityGroupIngressResponse instance.
  */
 AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGroupIngressResponsePrivate(
-    AuthorizeClusterSecurityGroupIngressQueueResponse * const q) : AuthorizeClusterSecurityGroupIngressPrivate(q)
+    AuthorizeClusterSecurityGroupIngressResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

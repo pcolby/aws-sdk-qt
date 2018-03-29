@@ -86,7 +86,7 @@ void DeleteCacheClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCacheClusterResponse instance.
  */
 DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponsePrivate(
-    DeleteCacheClusterQueueResponse * const q) : DeleteCacheClusterPrivate(q)
+    DeleteCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

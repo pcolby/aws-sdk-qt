@@ -86,7 +86,7 @@ void CreateDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBClusterSnapshotResponse instance.
  */
 CreateDBClusterSnapshotResponsePrivate::CreateDBClusterSnapshotResponsePrivate(
-    CreateDBClusterSnapshotQueueResponse * const q) : CreateDBClusterSnapshotPrivate(q)
+    CreateDBClusterSnapshotResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

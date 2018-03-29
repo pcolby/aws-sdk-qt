@@ -86,7 +86,7 @@ void GetSigningCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSigningCertificateResponse instance.
  */
 GetSigningCertificateResponsePrivate::GetSigningCertificateResponsePrivate(
-    GetSigningCertificateQueueResponse * const q) : GetSigningCertificatePrivate(q)
+    GetSigningCertificateResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

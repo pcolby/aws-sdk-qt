@@ -86,7 +86,7 @@ void StartMatchBackfillResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartMatchBackfillResponse instance.
  */
 StartMatchBackfillResponsePrivate::StartMatchBackfillResponsePrivate(
-    StartMatchBackfillQueueResponse * const q) : StartMatchBackfillPrivate(q)
+    StartMatchBackfillResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

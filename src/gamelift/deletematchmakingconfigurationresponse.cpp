@@ -86,7 +86,7 @@ void DeleteMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteMatchmakingConfigurationResponse instance.
  */
 DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationResponsePrivate(
-    DeleteMatchmakingConfigurationQueueResponse * const q) : DeleteMatchmakingConfigurationPrivate(q)
+    DeleteMatchmakingConfigurationResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

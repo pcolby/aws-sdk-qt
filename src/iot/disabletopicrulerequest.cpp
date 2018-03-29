@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableTopicRuleRequest::response(QNetworkRep
  */
 DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
     const IoTRequest::Action action, DisableTopicRuleRequest * const q)
-    : DisableTopicRulePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
  */
 DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
     const DisableTopicRuleRequestPrivate &other, DisableTopicRuleRequest * const q)
-    : DisableTopicRulePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

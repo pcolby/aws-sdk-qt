@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply
  */
 DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeTrustsRequest * const q)
-    : DescribeTrustsPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
  */
 DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
     const DescribeTrustsRequestPrivate &other, DescribeTrustsRequest * const q)
-    : DescribeTrustsPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetwork
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
     const KMSRequest::Action action, ListRetirableGrantsRequest * const q)
-    : ListRetirableGrantsPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
     const ListRetirableGrantsRequestPrivate &other, ListRetirableGrantsRequest * const q)
-    : ListRetirableGrantsPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

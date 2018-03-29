@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(
  */
 AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, AttachLoadBalancerToSubnetsRequest * const q)
-    : AttachLoadBalancerToSubnetsPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPri
  */
 AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
     const AttachLoadBalancerToSubnetsRequestPrivate &other, AttachLoadBalancerToSubnetsRequest * const q)
-    : AttachLoadBalancerToSubnetsPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

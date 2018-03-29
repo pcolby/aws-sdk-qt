@@ -86,7 +86,7 @@ void ActivateUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ActivateUserResponse instance.
  */
 ActivateUserResponsePrivate::ActivateUserResponsePrivate(
-    ActivateUserQueueResponse * const q) : ActivateUserPrivate(q)
+    ActivateUserResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

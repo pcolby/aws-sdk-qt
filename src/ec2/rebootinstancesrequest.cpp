@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkRepl
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
     const EC2Request::Action action, RebootInstancesRequest * const q)
-    : RebootInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
     const RebootInstancesRequestPrivate &other, RebootInstancesRequest * const q)
-    : RebootInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

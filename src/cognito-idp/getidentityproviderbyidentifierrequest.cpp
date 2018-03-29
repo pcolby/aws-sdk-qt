@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityProviderByIdentifierRequest::respo
  */
 GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetIdentityProviderByIdentifierRequest * const q)
-    : GetIdentityProviderByIdentifierPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRe
  */
 GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRequestPrivate(
     const GetIdentityProviderByIdentifierRequestPrivate &other, GetIdentityProviderByIdentifierRequest * const q)
-    : GetIdentityProviderByIdentifierPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMatchmakingRequest::response(QNetwork
  */
 DescribeMatchmakingRequestPrivate::DescribeMatchmakingRequestPrivate(
     const GameLiftRequest::Action action, DescribeMatchmakingRequest * const q)
-    : DescribeMatchmakingPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeMatchmakingRequestPrivate::DescribeMatchmakingRequestPrivate(
  */
 DescribeMatchmakingRequestPrivate::DescribeMatchmakingRequestPrivate(
     const DescribeMatchmakingRequestPrivate &other, DescribeMatchmakingRequest * const q)
-    : DescribeMatchmakingPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * c
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
     const SQSRequest::Action action, UntagQueueRequest * const q)
-    : UntagQueuePrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UntagQueueRequestPrivate::UntagQueueRequestPrivate(
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
     const UntagQueueRequestPrivate &other, UntagQueueRequest * const q)
-    : UntagQueuePrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

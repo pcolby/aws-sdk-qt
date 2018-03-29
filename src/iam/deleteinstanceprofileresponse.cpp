@@ -86,7 +86,7 @@ void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteInstanceProfileResponse instance.
  */
 DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
-    DeleteInstanceProfileQueueResponse * const q) : DeleteInstanceProfilePrivate(q)
+    DeleteInstanceProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

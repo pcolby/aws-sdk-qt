@@ -86,7 +86,7 @@ void DisassociateMemberFromGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateMemberFromGroupResponse instance.
  */
 DisassociateMemberFromGroupResponsePrivate::DisassociateMemberFromGroupResponsePrivate(
-    DisassociateMemberFromGroupQueueResponse * const q) : DisassociateMemberFromGroupPrivate(q)
+    DisassociateMemberFromGroupResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

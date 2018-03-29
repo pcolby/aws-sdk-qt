@@ -86,7 +86,7 @@ void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLifecyclePolicyResponse instance.
  */
 DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponsePrivate(
-    DeleteLifecyclePolicyQueueResponse * const q) : DeleteLifecyclePolicyPrivate(q)
+    DeleteLifecyclePolicyResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

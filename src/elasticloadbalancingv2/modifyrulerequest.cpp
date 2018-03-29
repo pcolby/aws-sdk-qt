@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyRuleRequest::response(QNetworkReply * c
  */
 ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyRuleRequest * const q)
-    : ModifyRulePrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
  */
 ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
     const ModifyRuleRequestPrivate &other, ModifyRuleRequest * const q)
-    : ModifyRulePrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

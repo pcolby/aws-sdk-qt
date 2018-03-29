@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartSchemaExtensionRequest::response(QNetwor
  */
 StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
     const DirectoryServiceRequest::Action action, StartSchemaExtensionRequest * const q)
-    : StartSchemaExtensionPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
  */
 StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
     const StartSchemaExtensionRequestPrivate &other, StartSchemaExtensionRequest * const q)
-    : StartSchemaExtensionPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateDirectoryConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDirectoryConfigResponse instance.
  */
 CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponsePrivate(
-    CreateDirectoryConfigQueueResponse * const q) : CreateDirectoryConfigPrivate(q)
+    CreateDirectoryConfigResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

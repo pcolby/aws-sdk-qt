@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListContainersRequest::response(QNetworkReply
  */
 ListContainersRequestPrivate::ListContainersRequestPrivate(
     const MediaStoreRequest::Action action, ListContainersRequest * const q)
-    : ListContainersPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListContainersRequestPrivate::ListContainersRequestPrivate(
  */
 ListContainersRequestPrivate::ListContainersRequestPrivate(
     const ListContainersRequestPrivate &other, ListContainersRequest * const q)
-    : ListContainersPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

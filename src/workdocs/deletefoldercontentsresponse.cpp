@@ -86,7 +86,7 @@ void DeleteFolderContentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFolderContentsResponse instance.
  */
 DeleteFolderContentsResponsePrivate::DeleteFolderContentsResponsePrivate(
-    DeleteFolderContentsQueueResponse * const q) : DeleteFolderContentsPrivate(q)
+    DeleteFolderContentsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

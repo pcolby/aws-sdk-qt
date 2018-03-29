@@ -86,7 +86,7 @@ void CreateDistributionWithTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDistributionWithTagsResponse instance.
  */
 CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsResponsePrivate(
-    CreateDistributionWithTagsQueueResponse * const q) : CreateDistributionWithTagsPrivate(q)
+    CreateDistributionWithTagsResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

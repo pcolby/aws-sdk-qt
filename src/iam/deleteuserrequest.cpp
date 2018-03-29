@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const IAMRequest::Action action, DeleteUserRequest * const q)
-    : DeleteUserPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const DeleteUserRequestPrivate &other, DeleteUserRequest * const q)
-    : DeleteUserPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetw
  */
 DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
     const InspectorRequest::Action action, DescribeResourceGroupsRequest * const q)
-    : DescribeResourceGroupsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
  */
 DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
     const DescribeResourceGroupsRequestPrivate &other, DescribeResourceGroupsRequest * const q)
-    : DescribeResourceGroupsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

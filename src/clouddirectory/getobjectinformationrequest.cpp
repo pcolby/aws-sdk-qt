@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectInformationRequest::response(QNetwor
  */
 GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
     const CloudDirectoryRequest::Action action, GetObjectInformationRequest * const q)
-    : GetObjectInformationPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
  */
 GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
     const GetObjectInformationRequestPrivate &other, GetObjectInformationRequest * const q)
-    : GetObjectInformationPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

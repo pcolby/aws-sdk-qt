@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetwork
  */
 DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
     const S3Request::Action action, DeleteBucketWebsiteRequest * const q)
-    : DeleteBucketWebsitePrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
  */
 DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
     const DeleteBucketWebsiteRequestPrivate &other, DeleteBucketWebsiteRequest * const q)
-    : DeleteBucketWebsitePrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

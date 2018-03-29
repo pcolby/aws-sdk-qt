@@ -86,7 +86,7 @@ void GetItemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetItemResponse instance.
  */
 GetItemResponsePrivate::GetItemResponsePrivate(
-    GetItemQueueResponse * const q) : GetItemPrivate(q)
+    GetItemResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

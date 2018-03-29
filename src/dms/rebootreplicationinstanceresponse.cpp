@@ -86,7 +86,7 @@ void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootReplicationInstanceResponse instance.
  */
 RebootReplicationInstanceResponsePrivate::RebootReplicationInstanceResponsePrivate(
-    RebootReplicationInstanceQueueResponse * const q) : RebootReplicationInstancePrivate(q)
+    RebootReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

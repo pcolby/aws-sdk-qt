@@ -86,7 +86,7 @@ void DeleteHostedZoneResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHostedZoneResponse instance.
  */
 DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
-    DeleteHostedZoneQueueResponse * const q) : DeleteHostedZonePrivate(q)
+    DeleteHostedZoneResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartExportTaskRequest::response(QNetworkRepl
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StartExportTaskRequest * const q)
-    : StartExportTaskPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
     const StartExportTaskRequestPrivate &other, StartExportTaskRequest * const q)
-    : StartExportTaskPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

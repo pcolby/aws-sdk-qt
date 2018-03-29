@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkRepl
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
     const RDSRequest::Action action, CopyOptionGroupRequest * const q)
-    : CopyOptionGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
     const CopyOptionGroupRequestPrivate &other, CopyOptionGroupRequest * const q)
-    : CopyOptionGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

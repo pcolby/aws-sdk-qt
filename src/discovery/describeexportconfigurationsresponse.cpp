@@ -86,7 +86,7 @@ void DescribeExportConfigurationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeExportConfigurationsResponse instance.
  */
 DescribeExportConfigurationsResponsePrivate::DescribeExportConfigurationsResponsePrivate(
-    DescribeExportConfigurationsQueueResponse * const q) : DescribeExportConfigurationsPrivate(q)
+    DescribeExportConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

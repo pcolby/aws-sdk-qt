@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAccountRequest::response(QNetworkReply 
  */
 CreateAccountRequestPrivate::CreateAccountRequestPrivate(
     const OrganizationsRequest::Action action, CreateAccountRequest * const q)
-    : CreateAccountPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAccountRequestPrivate::CreateAccountRequestPrivate(
  */
 CreateAccountRequestPrivate::CreateAccountRequestPrivate(
     const CreateAccountRequestPrivate &other, CreateAccountRequest * const q)
-    : CreateAccountPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

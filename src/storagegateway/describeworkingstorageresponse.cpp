@@ -86,7 +86,7 @@ void DescribeWorkingStorageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeWorkingStorageResponse instance.
  */
 DescribeWorkingStorageResponsePrivate::DescribeWorkingStorageResponsePrivate(
-    DescribeWorkingStorageQueueResponse * const q) : DescribeWorkingStoragePrivate(q)
+    DescribeWorkingStorageResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

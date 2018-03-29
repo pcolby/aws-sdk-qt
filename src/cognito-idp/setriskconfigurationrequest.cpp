@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetRiskConfigurationRequest::response(QNetwor
  */
 SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetRiskConfigurationRequest * const q)
-    : SetRiskConfigurationPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
  */
 SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
     const SetRiskConfigurationRequestPrivate &other, SetRiskConfigurationRequest * const q)
-    : SetRiskConfigurationPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcceptHandshakeRequest::response(QNetworkRepl
  */
 AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, AcceptHandshakeRequest * const q)
-    : AcceptHandshakePrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
  */
 AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
     const AcceptHandshakeRequestPrivate &other, AcceptHandshakeRequest * const q)
-    : AcceptHandshakePrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

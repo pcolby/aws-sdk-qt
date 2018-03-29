@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopNotebookInstanceRequest::response(QNetwor
  */
 StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, StopNotebookInstanceRequest * const q)
-    : StopNotebookInstancePrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
  */
 StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
     const StopNotebookInstanceRequestPrivate &other, StopNotebookInstanceRequest * const q)
-    : StopNotebookInstancePrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

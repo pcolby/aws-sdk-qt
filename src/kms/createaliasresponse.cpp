@@ -86,7 +86,7 @@ void CreateAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAliasResponse instance.
  */
 CreateAliasResponsePrivate::CreateAliasResponsePrivate(
-    CreateAliasQueueResponse * const q) : CreateAliasPrivate(q)
+    CreateAliasResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

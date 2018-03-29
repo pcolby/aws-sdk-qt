@@ -86,7 +86,7 @@ void CreateOTAUpdateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateOTAUpdateResponse instance.
  */
 CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponsePrivate(
-    CreateOTAUpdateQueueResponse * const q) : CreateOTAUpdatePrivate(q)
+    CreateOTAUpdateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

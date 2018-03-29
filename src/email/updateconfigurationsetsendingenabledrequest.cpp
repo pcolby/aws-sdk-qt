@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetSendingEnabledRequest * const q)
-    : UpdateConfigurationSetSendingEnabledPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendin
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
     const UpdateConfigurationSetSendingEnabledRequestPrivate &other, UpdateConfigurationSetSendingEnabledRequest * const q)
-    : UpdateConfigurationSetSendingEnabledPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

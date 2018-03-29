@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * co
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const WAFRegionalRequest::Action action, ListRulesRequest * const q)
-    : ListRulesPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRulesRequestPrivate::ListRulesRequestPrivate(
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const ListRulesRequestPrivate &other, ListRulesRequest * const q)
-    : ListRulesPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

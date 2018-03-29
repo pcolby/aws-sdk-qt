@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListVolumesRequest::response(QNetworkReply * 
  */
 ListVolumesRequestPrivate::ListVolumesRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumesRequest * const q)
-    : ListVolumesPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListVolumesRequestPrivate::ListVolumesRequestPrivate(
  */
 ListVolumesRequestPrivate::ListVolumesRequestPrivate(
     const ListVolumesRequestPrivate &other, ListVolumesRequest * const q)
-    : ListVolumesPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

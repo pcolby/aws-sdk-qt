@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateFleetRequest::response(QNetworkRe
  */
 DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
     const AppStreamRequest::Action action, DisassociateFleetRequest * const q)
-    : DisassociateFleetPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
  */
 DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
     const DisassociateFleetRequestPrivate &other, DisassociateFleetRequest * const q)
-    : DisassociateFleetPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

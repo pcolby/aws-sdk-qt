@@ -86,7 +86,7 @@ void DeleteDevicePoolResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDevicePoolResponse instance.
  */
 DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponsePrivate(
-    DeleteDevicePoolQueueResponse * const q) : DeleteDevicePoolPrivate(q)
+    DeleteDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

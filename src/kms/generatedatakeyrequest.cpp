@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkRepl
  */
 GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
     const KMSRequest::Action action, GenerateDataKeyRequest * const q)
-    : GenerateDataKeyPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
  */
 GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
     const GenerateDataKeyRequestPrivate &other, GenerateDataKeyRequest * const q)
-    : GenerateDataKeyPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

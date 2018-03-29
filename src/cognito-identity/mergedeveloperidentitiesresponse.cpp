@@ -86,7 +86,7 @@ void MergeDeveloperIdentitiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MergeDeveloperIdentitiesResponse instance.
  */
 MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponsePrivate(
-    MergeDeveloperIdentitiesQueueResponse * const q) : MergeDeveloperIdentitiesPrivate(q)
+    MergeDeveloperIdentitiesResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

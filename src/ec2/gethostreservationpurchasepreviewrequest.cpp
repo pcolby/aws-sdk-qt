@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::res
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
     const EC2Request::Action action, GetHostReservationPurchasePreviewRequest * const q)
-    : GetHostReservationPurchasePreviewPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePrevi
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
     const GetHostReservationPurchasePreviewRequestPrivate &other, GetHostReservationPurchasePreviewRequest * const q)
-    : GetHostReservationPurchasePreviewPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

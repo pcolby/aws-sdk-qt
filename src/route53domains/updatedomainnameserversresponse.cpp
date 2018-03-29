@@ -86,7 +86,7 @@ void UpdateDomainNameserversResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDomainNameserversResponse instance.
  */
 UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponsePrivate(
-    UpdateDomainNameserversQueueResponse * const q) : UpdateDomainNameserversPrivate(q)
+    UpdateDomainNameserversResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

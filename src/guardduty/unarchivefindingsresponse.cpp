@@ -86,7 +86,7 @@ void UnarchiveFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnarchiveFindingsResponse instance.
  */
 UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
-    UnarchiveFindingsQueueResponse * const q) : UnarchiveFindingsPrivate(q)
+    UnarchiveFindingsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

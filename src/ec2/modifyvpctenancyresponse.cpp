@@ -86,7 +86,7 @@ void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyVpcTenancyResponse instance.
  */
 ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
-    ModifyVpcTenancyQueueResponse * const q) : ModifyVpcTenancyPrivate(q)
+    ModifyVpcTenancyResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

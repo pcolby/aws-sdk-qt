@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const EC2Request::Action action, CreateTagsRequest * const q)
-    : CreateTagsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)
-    : CreateTagsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

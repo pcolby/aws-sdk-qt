@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheSubnetGroupRequest::response(QNetw
  */
 DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheSubnetGroupRequest * const q)
-    : DeleteCacheSubnetGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
  */
 DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
     const DeleteCacheSubnetGroupRequestPrivate &other, DeleteCacheSubnetGroupRequest * const q)
-    : DeleteCacheSubnetGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

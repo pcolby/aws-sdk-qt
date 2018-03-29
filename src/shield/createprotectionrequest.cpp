@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateProtectionRequest::response(QNetworkRep
  */
 CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
     const ShieldRequest::Action action, CreateProtectionRequest * const q)
-    : CreateProtectionPrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
  */
 CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
     const CreateProtectionRequestPrivate &other, CreateProtectionRequest * const q)
-    : CreateProtectionPrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

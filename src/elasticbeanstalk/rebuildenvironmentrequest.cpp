@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebuildEnvironmentRequest::response(QNetworkR
  */
 RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RebuildEnvironmentRequest * const q)
-    : RebuildEnvironmentPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
  */
 RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
     const RebuildEnvironmentRequestPrivate &other, RebuildEnvironmentRequest * const q)
-    : RebuildEnvironmentPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

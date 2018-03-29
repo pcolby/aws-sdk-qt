@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const EC2Request::Action action, CopySnapshotRequest * const q)
-    : CopySnapshotPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const CopySnapshotRequestPrivate &other, CopySnapshotRequest * const q)
-    : CopySnapshotPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSubnetGroupsRequest::response(QNetw
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSubnetGroupsRequest * const q)
-    : DescribeDBSubnetGroupsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
     const DescribeDBSubnetGroupsRequestPrivate &other, DescribeDBSubnetGroupsRequest * const q)
-    : DescribeDBSubnetGroupsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

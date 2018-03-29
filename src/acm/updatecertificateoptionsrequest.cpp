@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNe
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
     const ACMRequest::Action action, UpdateCertificateOptionsRequest * const q)
-    : UpdateCertificateOptionsPrivate(action, q)
+    : ACMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
     const UpdateCertificateOptionsRequestPrivate &other, UpdateCertificateOptionsRequest * const q)
-    : UpdateCertificateOptionsPrivate(other, q)
+    : ACMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachVpnGatewayRequest::response(QNetworkRep
  */
 DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
     const EC2Request::Action action, DetachVpnGatewayRequest * const q)
-    : DetachVpnGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
  */
 DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
     const DetachVpnGatewayRequestPrivate &other, DetachVpnGatewayRequest * const q)
-    : DetachVpnGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

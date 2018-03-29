@@ -86,7 +86,7 @@ void DescribeResourcePermissionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeResourcePermissionsResponse instance.
  */
 DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResponsePrivate(
-    DescribeResourcePermissionsQueueResponse * const q) : DescribeResourcePermissionsPrivate(q)
+    DescribeResourcePermissionsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListQueueTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListQueueTagsResponse instance.
  */
 ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
-    ListQueueTagsQueueResponse * const q) : ListQueueTagsPrivate(q)
+    ListQueueTagsResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

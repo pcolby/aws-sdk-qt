@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetwo
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateSlotTypeVersionRequest * const q)
-    : CreateSlotTypeVersionPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
     const CreateSlotTypeVersionRequestPrivate &other, CreateSlotTypeVersionRequest * const q)
-    : CreateSlotTypeVersionPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

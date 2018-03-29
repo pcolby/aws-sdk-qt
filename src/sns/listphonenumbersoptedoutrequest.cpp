@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
     const SNSRequest::Action action, ListPhoneNumbersOptedOutRequest * const q)
-    : ListPhoneNumbersOptedOutPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
     const ListPhoneNumbersOptedOutRequestPrivate &other, ListPhoneNumbersOptedOutRequest * const q)
-    : ListPhoneNumbersOptedOutPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

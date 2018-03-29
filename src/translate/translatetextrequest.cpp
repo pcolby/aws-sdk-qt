@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply 
  */
 TranslateTextRequestPrivate::TranslateTextRequestPrivate(
     const TranslateRequest::Action action, TranslateTextRequest * const q)
-    : TranslateTextPrivate(action, q)
+    : TranslateRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TranslateTextRequestPrivate::TranslateTextRequestPrivate(
  */
 TranslateTextRequestPrivate::TranslateTextRequestPrivate(
     const TranslateTextRequestPrivate &other, TranslateTextRequest * const q)
-    : TranslateTextPrivate(other, q)
+    : TranslateRequestPrivate(other, q)
 {
 
 }

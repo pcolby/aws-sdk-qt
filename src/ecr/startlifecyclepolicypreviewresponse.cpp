@@ -86,7 +86,7 @@ void StartLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartLifecyclePolicyPreviewResponse instance.
  */
 StartLifecyclePolicyPreviewResponsePrivate::StartLifecyclePolicyPreviewResponsePrivate(
-    StartLifecyclePolicyPreviewQueueResponse * const q) : StartLifecyclePolicyPreviewPrivate(q)
+    StartLifecyclePolicyPreviewResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

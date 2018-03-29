@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
     const KMSRequest::Action action, GenerateRandomRequest * const q)
-    : GenerateRandomPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
     const GenerateRandomRequestPrivate &other, GenerateRandomRequest * const q)
-    : GenerateRandomPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

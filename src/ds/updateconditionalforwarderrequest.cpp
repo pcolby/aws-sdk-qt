@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConditionalForwarderRequest::response(Q
  */
 UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateConditionalForwarderRequest * const q)
-    : UpdateConditionalForwarderPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPriva
  */
 UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPrivate(
     const UpdateConditionalForwarderRequestPrivate &other, UpdateConditionalForwarderRequest * const q)
-    : UpdateConditionalForwarderPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

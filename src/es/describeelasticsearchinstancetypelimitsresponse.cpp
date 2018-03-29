@@ -86,7 +86,7 @@ void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &re
  * @param  q  Pointer to this object's public DescribeElasticsearchInstanceTypeLimitsResponse instance.
  */
 DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchInstanceTypeLimitsResponsePrivate(
-    DescribeElasticsearchInstanceTypeLimitsQueueResponse * const q) : DescribeElasticsearchInstanceTypeLimitsPrivate(q)
+    DescribeElasticsearchInstanceTypeLimitsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

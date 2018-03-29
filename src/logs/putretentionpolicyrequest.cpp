@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRetentionPolicyRequest::response(QNetworkR
  */
 PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutRetentionPolicyRequest * const q)
-    : PutRetentionPolicyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
  */
 PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
     const PutRetentionPolicyRequestPrivate &other, PutRetentionPolicyRequest * const q)
-    : PutRetentionPolicyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

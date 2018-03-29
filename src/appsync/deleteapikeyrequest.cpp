@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const AppSyncRequest::Action action, DeleteApiKeyRequest * const q)
-    : DeleteApiKeyPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const DeleteApiKeyRequestPrivate &other, DeleteApiKeyRequest * const q)
-    : DeleteApiKeyPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

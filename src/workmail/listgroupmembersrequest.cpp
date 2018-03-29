@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupMembersRequest::response(QNetworkRep
  */
 ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
     const WorkMailRequest::Action action, ListGroupMembersRequest * const q)
-    : ListGroupMembersPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
  */
 ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
     const ListGroupMembersRequestPrivate &other, ListGroupMembersRequest * const q)
-    : ListGroupMembersPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

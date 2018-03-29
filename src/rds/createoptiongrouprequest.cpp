@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkRe
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
     const RDSRequest::Action action, CreateOptionGroupRequest * const q)
-    : CreateOptionGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
     const CreateOptionGroupRequestPrivate &other, CreateOptionGroupRequest * const q)
-    : CreateOptionGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

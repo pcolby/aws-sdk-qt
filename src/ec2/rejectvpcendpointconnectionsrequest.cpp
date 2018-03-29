@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
     const EC2Request::Action action, RejectVpcEndpointConnectionsRequest * const q)
-    : RejectVpcEndpointConnectionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestP
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
     const RejectVpcEndpointConnectionsRequestPrivate &other, RejectVpcEndpointConnectionsRequest * const q)
-    : RejectVpcEndpointConnectionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

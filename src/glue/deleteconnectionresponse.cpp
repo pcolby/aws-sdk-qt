@@ -86,7 +86,7 @@ void DeleteConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteConnectionResponse instance.
  */
 DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
-    DeleteConnectionQueueResponse * const q) : DeleteConnectionPrivate(q)
+    DeleteConnectionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

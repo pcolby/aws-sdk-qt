@@ -86,7 +86,7 @@ void CreateDataSourceFromS3Response::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDataSourceFromS3Response instance.
  */
 CreateDataSourceFromS3ResponsePrivate::CreateDataSourceFromS3ResponsePrivate(
-    CreateDataSourceFromS3QueueResponse * const q) : CreateDataSourceFromS3Private(q)
+    CreateDataSourceFromS3Response * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

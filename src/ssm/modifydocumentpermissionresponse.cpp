@@ -86,7 +86,7 @@ void ModifyDocumentPermissionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyDocumentPermissionResponse instance.
  */
 ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate(
-    ModifyDocumentPermissionQueueResponse * const q) : ModifyDocumentPermissionPrivate(q)
+    ModifyDocumentPermissionResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

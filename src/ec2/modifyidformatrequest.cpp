@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply
  */
 ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
     const EC2Request::Action action, ModifyIdFormatRequest * const q)
-    : ModifyIdFormatPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
  */
 ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
     const ModifyIdFormatRequestPrivate &other, ModifyIdFormatRequest * const q)
-    : ModifyIdFormatPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

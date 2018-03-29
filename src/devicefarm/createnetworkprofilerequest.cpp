@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkProfileRequest::response(QNetwor
  */
 CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, CreateNetworkProfileRequest * const q)
-    : CreateNetworkProfilePrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
  */
 CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
     const CreateNetworkProfileRequestPrivate &other, CreateNetworkProfileRequest * const q)
-    : CreateNetworkProfilePrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

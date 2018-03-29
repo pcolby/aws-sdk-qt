@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::respon
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
     const IAMRequest::Action action, GetAccountAuthorizationDetailsRequest * const q)
-    : GetAccountAuthorizationDetailsPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequ
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
     const GetAccountAuthorizationDetailsRequestPrivate &other, GetAccountAuthorizationDetailsRequest * const q)
-    : GetAccountAuthorizationDetailsPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

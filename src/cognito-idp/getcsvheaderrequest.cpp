@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCSVHeaderRequest::response(QNetworkReply *
  */
 GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetCSVHeaderRequest * const q)
-    : GetCSVHeaderPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
  */
 GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
     const GetCSVHeaderRequestPrivate &other, GetCSVHeaderRequest * const q)
-    : GetCSVHeaderPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

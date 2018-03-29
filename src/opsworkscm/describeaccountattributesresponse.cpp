@@ -86,7 +86,7 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAccountAttributesResponse instance.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
-    DescribeAccountAttributesQueueResponse * const q) : DescribeAccountAttributesPrivate(q)
+    DescribeAccountAttributesResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

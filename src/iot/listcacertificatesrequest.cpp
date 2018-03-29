@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkR
  */
 ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
     const IoTRequest::Action action, ListCACertificatesRequest * const q)
-    : ListCACertificatesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
  */
 ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
     const ListCACertificatesRequestPrivate &other, ListCACertificatesRequest * const q)
-    : ListCACertificatesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

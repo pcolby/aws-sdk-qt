@@ -86,7 +86,7 @@ void ListAliasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAliasesResponse instance.
  */
 ListAliasesResponsePrivate::ListAliasesResponsePrivate(
-    ListAliasesQueueResponse * const q) : ListAliasesPrivate(q)
+    ListAliasesResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

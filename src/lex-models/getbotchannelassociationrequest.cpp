@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationRequest::response(QNe
  */
 GetBotChannelAssociationRequestPrivate::GetBotChannelAssociationRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotChannelAssociationRequest * const q)
-    : GetBotChannelAssociationPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBotChannelAssociationRequestPrivate::GetBotChannelAssociationRequestPrivate(
  */
 GetBotChannelAssociationRequestPrivate::GetBotChannelAssociationRequestPrivate(
     const GetBotChannelAssociationRequestPrivate &other, GetBotChannelAssociationRequest * const q)
-    : GetBotChannelAssociationPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateWebACLRequest * const q)
-    : UpdateWebACLPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const UpdateWebACLRequestPrivate &other, UpdateWebACLRequest * const q)
-    : UpdateWebACLPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkRepl
  */
 DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeleteNamespaceRequest * const q)
-    : DeleteNamespacePrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
  */
 DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
     const DeleteNamespaceRequestPrivate &other, DeleteNamespaceRequest * const q)
-    : DeleteNamespacePrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

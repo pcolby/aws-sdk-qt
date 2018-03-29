@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRuleRequest::response(QNetworkRepl
  */
 DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
     const IoTRequest::Action action, DeleteTopicRuleRequest * const q)
-    : DeleteTopicRulePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
  */
 DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
     const DeleteTopicRuleRequestPrivate &other, DeleteTopicRuleRequest * const q)
-    : DeleteTopicRulePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNet
  */
 GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
     const KinesisVideoArchivedMediaRequest::Action action, GetMediaForFragmentListRequest * const q)
-    : GetMediaForFragmentListPrivate(action, q)
+    : KinesisVideoArchivedMediaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
  */
 GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
     const GetMediaForFragmentListRequestPrivate &other, GetMediaForFragmentListRequest * const q)
-    : GetMediaForFragmentListPrivate(other, q)
+    : KinesisVideoArchivedMediaRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(Q
  */
 DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
     const MigrationHubRequest::Action action, DeleteProgressUpdateStreamRequest * const q)
-    : DeleteProgressUpdateStreamPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPriva
  */
 DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
     const DeleteProgressUpdateStreamRequestPrivate &other, DeleteProgressUpdateStreamRequest * const q)
-    : DeleteProgressUpdateStreamPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

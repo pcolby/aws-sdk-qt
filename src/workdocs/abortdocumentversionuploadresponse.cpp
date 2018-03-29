@@ -86,7 +86,7 @@ void AbortDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AbortDocumentVersionUploadResponse instance.
  */
 AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadResponsePrivate(
-    AbortDocumentVersionUploadQueueResponse * const q) : AbortDocumentVersionUploadPrivate(q)
+    AbortDocumentVersionUploadResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

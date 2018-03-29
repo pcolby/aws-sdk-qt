@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkR
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
     const SSMRequest::Action action, PutComplianceItemsRequest * const q)
-    : PutComplianceItemsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
     const PutComplianceItemsRequestPrivate &other, PutComplianceItemsRequest * const q)
-    : PutComplianceItemsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

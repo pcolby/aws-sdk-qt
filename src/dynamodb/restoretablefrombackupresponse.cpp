@@ -86,7 +86,7 @@ void RestoreTableFromBackupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreTableFromBackupResponse instance.
  */
 RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponsePrivate(
-    RestoreTableFromBackupQueueResponse * const q) : RestoreTableFromBackupPrivate(q)
+    RestoreTableFromBackupResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

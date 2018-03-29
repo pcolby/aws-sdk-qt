@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsRequest::response(QNetworkReply 
  */
 ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
     const SageMakerRequest::Action action, ListEndpointsRequest * const q)
-    : ListEndpointsPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
  */
 ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
     const ListEndpointsRequestPrivate &other, ListEndpointsRequest * const q)
-    : ListEndpointsPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

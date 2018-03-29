@@ -86,7 +86,7 @@ void GetEventSelectorsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetEventSelectorsResponse instance.
  */
 GetEventSelectorsResponsePrivate::GetEventSelectorsResponsePrivate(
-    GetEventSelectorsQueueResponse * const q) : GetEventSelectorsPrivate(q)
+    GetEventSelectorsResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

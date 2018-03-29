@@ -86,7 +86,7 @@ void UpdateStreamingDistributionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateStreamingDistributionResponse instance.
  */
 UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponsePrivate(
-    UpdateStreamingDistributionQueueResponse * const q) : UpdateStreamingDistributionPrivate(q)
+    UpdateStreamingDistributionResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

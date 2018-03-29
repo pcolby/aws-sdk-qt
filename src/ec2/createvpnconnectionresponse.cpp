@@ -86,7 +86,7 @@ void CreateVpnConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateVpnConnectionResponse instance.
  */
 CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponsePrivate(
-    CreateVpnConnectionQueueResponse * const q) : CreateVpnConnectionPrivate(q)
+    CreateVpnConnectionResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

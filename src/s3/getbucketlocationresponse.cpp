@@ -86,7 +86,7 @@ void GetBucketLocationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBucketLocationResponse instance.
  */
 GetBucketLocationResponsePrivate::GetBucketLocationResponsePrivate(
-    GetBucketLocationQueueResponse * const q) : GetBucketLocationPrivate(q)
+    GetBucketLocationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateKeyResponse instance.
  */
 CreateKeyResponsePrivate::CreateKeyResponsePrivate(
-    CreateKeyQueueResponse * const q) : CreateKeyPrivate(q)
+    CreateKeyResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

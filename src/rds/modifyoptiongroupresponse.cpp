@@ -86,7 +86,7 @@ void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyOptionGroupResponse instance.
  */
 ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
-    ModifyOptionGroupQueueResponse * const q) : ModifyOptionGroupPrivate(q)
+    ModifyOptionGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

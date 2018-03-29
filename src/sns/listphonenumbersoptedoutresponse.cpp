@@ -86,7 +86,7 @@ void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListPhoneNumbersOptedOutResponse instance.
  */
 ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponsePrivate(
-    ListPhoneNumbersOptedOutQueueResponse * const q) : ListPhoneNumbersOptedOutPrivate(q)
+    ListPhoneNumbersOptedOutResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

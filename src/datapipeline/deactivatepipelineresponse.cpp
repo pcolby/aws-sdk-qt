@@ -86,7 +86,7 @@ void DeactivatePipelineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeactivatePipelineResponse instance.
  */
 DeactivatePipelineResponsePrivate::DeactivatePipelineResponsePrivate(
-    DeactivatePipelineQueueResponse * const q) : DeactivatePipelinePrivate(q)
+    DeactivatePipelineResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

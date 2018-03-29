@@ -86,7 +86,7 @@ void ListHITsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHITsResponse instance.
  */
 ListHITsResponsePrivate::ListHITsResponsePrivate(
-    ListHITsQueueResponse * const q) : ListHITsPrivate(q)
+    ListHITsResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

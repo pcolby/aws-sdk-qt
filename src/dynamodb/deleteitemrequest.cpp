@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * c
  */
 DeleteItemRequestPrivate::DeleteItemRequestPrivate(
     const DynamoDBRequest::Action action, DeleteItemRequest * const q)
-    : DeleteItemPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteItemRequestPrivate::DeleteItemRequestPrivate(
  */
 DeleteItemRequestPrivate::DeleteItemRequestPrivate(
     const DeleteItemRequestPrivate &other, DeleteItemRequest * const q)
-    : DeleteItemPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

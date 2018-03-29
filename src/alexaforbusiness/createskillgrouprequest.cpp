@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSkillGroupRequest::response(QNetworkRep
  */
 CreateSkillGroupRequestPrivate::CreateSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateSkillGroupRequest * const q)
-    : CreateSkillGroupPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSkillGroupRequestPrivate::CreateSkillGroupRequestPrivate(
  */
 CreateSkillGroupRequestPrivate::CreateSkillGroupRequestPrivate(
     const CreateSkillGroupRequestPrivate &other, CreateSkillGroupRequest * const q)
-    : CreateSkillGroupPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

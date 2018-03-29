@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * c
  */
 GetRegionsRequestPrivate::GetRegionsRequestPrivate(
     const LightsailRequest::Action action, GetRegionsRequest * const q)
-    : GetRegionsPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRegionsRequestPrivate::GetRegionsRequestPrivate(
  */
 GetRegionsRequestPrivate::GetRegionsRequestPrivate(
     const GetRegionsRequestPrivate &other, GetRegionsRequest * const q)
-    : GetRegionsPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void SearchProductsAsAdminResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchProductsAsAdminResponse instance.
  */
 SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
-    SearchProductsAsAdminQueueResponse * const q) : SearchProductsAsAdminPrivate(q)
+    SearchProductsAsAdminResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

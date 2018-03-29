@@ -86,7 +86,7 @@ void DeleteBucketTaggingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBucketTaggingResponse instance.
  */
 DeleteBucketTaggingResponsePrivate::DeleteBucketTaggingResponsePrivate(
-    DeleteBucketTaggingQueueResponse * const q) : DeleteBucketTaggingPrivate(q)
+    DeleteBucketTaggingResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

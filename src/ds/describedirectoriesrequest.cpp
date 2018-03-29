@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoriesRequest::response(QNetwork
  */
 DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeDirectoriesRequest * const q)
-    : DescribeDirectoriesPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
  */
 DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
     const DescribeDirectoriesRequestPrivate &other, DescribeDirectoriesRequest * const q)
-    : DescribeDirectoriesPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

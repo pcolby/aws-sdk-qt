@@ -86,7 +86,7 @@ void DeleteFunctionDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFunctionDefinitionResponse instance.
  */
 DeleteFunctionDefinitionResponsePrivate::DeleteFunctionDefinitionResponsePrivate(
-    DeleteFunctionDefinitionQueueResponse * const q) : DeleteFunctionDefinitionPrivate(q)
+    DeleteFunctionDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

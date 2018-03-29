@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListLocalDisksRequest::response(QNetworkReply
  */
 ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
     const StorageGatewayRequest::Action action, ListLocalDisksRequest * const q)
-    : ListLocalDisksPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
  */
 ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
     const ListLocalDisksRequestPrivate &other, ListLocalDisksRequest * const q)
-    : ListLocalDisksPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

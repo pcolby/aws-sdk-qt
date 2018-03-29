@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkRe
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
     const EMRRequest::Action action, AddInstanceGroupsRequest * const q)
-    : AddInstanceGroupsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
     const AddInstanceGroupsRequestPrivate &other, AddInstanceGroupsRequest * const q)
-    : AddInstanceGroupsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetInstancesHealthStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInstancesHealthStatusResponse instance.
  */
 GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponsePrivate(
-    GetInstancesHealthStatusQueueResponse * const q) : GetInstancesHealthStatusPrivate(q)
+    GetInstancesHealthStatusResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

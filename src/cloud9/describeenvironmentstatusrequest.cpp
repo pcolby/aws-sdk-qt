@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QN
  */
 DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
     const Cloud9Request::Action action, DescribeEnvironmentStatusRequest * const q)
-    : DescribeEnvironmentStatusPrivate(action, q)
+    : Cloud9RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate
  */
 DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
     const DescribeEnvironmentStatusRequestPrivate &other, DescribeEnvironmentStatusRequest * const q)
-    : DescribeEnvironmentStatusPrivate(other, q)
+    : Cloud9RequestPrivate(other, q)
 {
 
 }

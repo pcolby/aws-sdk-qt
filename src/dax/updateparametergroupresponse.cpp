@@ -86,7 +86,7 @@ void UpdateParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateParameterGroupResponse instance.
  */
 UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponsePrivate(
-    UpdateParameterGroupQueueResponse * const q) : UpdateParameterGroupPrivate(q)
+    UpdateParameterGroupResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

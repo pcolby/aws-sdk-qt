@@ -86,7 +86,7 @@ void UpdateSnapshotScheduleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSnapshotScheduleResponse instance.
  */
 UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponsePrivate(
-    UpdateSnapshotScheduleQueueResponse * const q) : UpdateSnapshotSchedulePrivate(q)
+    UpdateSnapshotScheduleResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

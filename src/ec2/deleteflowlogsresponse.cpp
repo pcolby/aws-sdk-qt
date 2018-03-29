@@ -86,7 +86,7 @@ void DeleteFlowLogsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFlowLogsResponse instance.
  */
 DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
-    DeleteFlowLogsQueueResponse * const q) : DeleteFlowLogsPrivate(q)
+    DeleteFlowLogsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

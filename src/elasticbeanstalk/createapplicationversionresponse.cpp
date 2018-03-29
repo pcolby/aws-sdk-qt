@@ -86,7 +86,7 @@ void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateApplicationVersionResponse instance.
  */
 CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate(
-    CreateApplicationVersionQueueResponse * const q) : CreateApplicationVersionPrivate(q)
+    CreateApplicationVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

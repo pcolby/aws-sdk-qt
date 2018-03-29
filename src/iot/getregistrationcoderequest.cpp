@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetwork
  */
 GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
     const IoTRequest::Action action, GetRegistrationCodeRequest * const q)
-    : GetRegistrationCodePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
  */
 GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
     const GetRegistrationCodeRequestPrivate &other, GetRegistrationCodeRequest * const q)
-    : GetRegistrationCodePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

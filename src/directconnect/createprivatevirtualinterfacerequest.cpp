@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePrivateVirtualInterfaceRequest::respons
  */
 CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, CreatePrivateVirtualInterfaceRequest * const q)
-    : CreatePrivateVirtualInterfacePrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceReques
  */
 CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceRequestPrivate(
     const CreatePrivateVirtualInterfaceRequestPrivate &other, CreatePrivateVirtualInterfaceRequest * const q)
-    : CreatePrivateVirtualInterfacePrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

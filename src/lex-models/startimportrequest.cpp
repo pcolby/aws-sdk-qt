@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartImportRequest::response(QNetworkReply * 
  */
 StartImportRequestPrivate::StartImportRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, StartImportRequest * const q)
-    : StartImportPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartImportRequestPrivate::StartImportRequestPrivate(
  */
 StartImportRequestPrivate::StartImportRequestPrivate(
     const StartImportRequestPrivate &other, StartImportRequest * const q)
-    : StartImportPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

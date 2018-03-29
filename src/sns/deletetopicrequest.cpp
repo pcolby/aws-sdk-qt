@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * 
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
     const SNSRequest::Action action, DeleteTopicRequest * const q)
-    : DeleteTopicPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
     const DeleteTopicRequestPrivate &other, DeleteTopicRequest * const q)
-    : DeleteTopicPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

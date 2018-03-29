@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFaceDetectionRequest::response(QNetworkRep
  */
 GetFaceDetectionRequestPrivate::GetFaceDetectionRequestPrivate(
     const RekognitionRequest::Action action, GetFaceDetectionRequest * const q)
-    : GetFaceDetectionPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFaceDetectionRequestPrivate::GetFaceDetectionRequestPrivate(
  */
 GetFaceDetectionRequestPrivate::GetFaceDetectionRequestPrivate(
     const GetFaceDetectionRequestPrivate &other, GetFaceDetectionRequest * const q)
-    : GetFaceDetectionPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

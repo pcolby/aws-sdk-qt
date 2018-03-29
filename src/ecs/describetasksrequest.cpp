@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTasksRequest::response(QNetworkReply 
  */
 DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
     const ECSRequest::Action action, DescribeTasksRequest * const q)
-    : DescribeTasksPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
  */
 DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
     const DescribeTasksRequestPrivate &other, DescribeTasksRequest * const q)
-    : DescribeTasksPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

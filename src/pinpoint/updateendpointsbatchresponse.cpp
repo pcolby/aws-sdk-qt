@@ -86,7 +86,7 @@ void UpdateEndpointsBatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEndpointsBatchResponse instance.
  */
 UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
-    UpdateEndpointsBatchQueueResponse * const q) : UpdateEndpointsBatchPrivate(q)
+    UpdateEndpointsBatchResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

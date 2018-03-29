@@ -86,7 +86,7 @@ void CreateNatGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateNatGatewayResponse instance.
  */
 CreateNatGatewayResponsePrivate::CreateNatGatewayResponsePrivate(
-    CreateNatGatewayQueueResponse * const q) : CreateNatGatewayPrivate(q)
+    CreateNatGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

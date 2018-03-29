@@ -86,7 +86,7 @@ void DeleteDeliveryStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDeliveryStreamResponse instance.
  */
 DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponsePrivate(
-    DeleteDeliveryStreamQueueResponse * const q) : DeleteDeliveryStreamPrivate(q)
+    DeleteDeliveryStreamResponse * const q) : FirehoseResponsePrivate(q)
 {
 
 }

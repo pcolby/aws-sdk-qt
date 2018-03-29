@@ -86,7 +86,7 @@ void ModifyRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyRuleResponse instance.
  */
 ModifyRuleResponsePrivate::ModifyRuleResponsePrivate(
-    ModifyRuleQueueResponse * const q) : ModifyRulePrivate(q)
+    ModifyRuleResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

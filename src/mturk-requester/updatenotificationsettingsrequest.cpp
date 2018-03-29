@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationSettingsRequest::response(Q
  */
 UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPrivate(
     const MTurkRequest::Action action, UpdateNotificationSettingsRequest * const q)
-    : UpdateNotificationSettingsPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPriva
  */
 UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPrivate(
     const UpdateNotificationSettingsRequestPrivate &other, UpdateNotificationSettingsRequest * const q)
-    : UpdateNotificationSettingsPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeUploadBufferResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeUploadBufferResponse instance.
  */
 DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponsePrivate(
-    DescribeUploadBufferQueueResponse * const q) : DescribeUploadBufferPrivate(q)
+    DescribeUploadBufferResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

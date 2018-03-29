@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RetireGrantRequest::response(QNetworkReply * 
  */
 RetireGrantRequestPrivate::RetireGrantRequestPrivate(
     const KMSRequest::Action action, RetireGrantRequest * const q)
-    : RetireGrantPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RetireGrantRequestPrivate::RetireGrantRequestPrivate(
  */
 RetireGrantRequestPrivate::RetireGrantRequestPrivate(
     const RetireGrantRequestPrivate &other, RetireGrantRequest * const q)
-    : RetireGrantPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

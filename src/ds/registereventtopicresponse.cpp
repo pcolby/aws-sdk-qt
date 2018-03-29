@@ -86,7 +86,7 @@ void RegisterEventTopicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterEventTopicResponse instance.
  */
 RegisterEventTopicResponsePrivate::RegisterEventTopicResponsePrivate(
-    RegisterEventTopicQueueResponse * const q) : RegisterEventTopicPrivate(q)
+    RegisterEventTopicResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RespondDecisionTaskCompletedRequest::response
  */
 RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestPrivate(
     const SWFRequest::Action action, RespondDecisionTaskCompletedRequest * const q)
-    : RespondDecisionTaskCompletedPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestP
  */
 RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestPrivate(
     const RespondDecisionTaskCompletedRequestPrivate &other, RespondDecisionTaskCompletedRequest * const q)
-    : RespondDecisionTaskCompletedPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGroupsForUserResponse instance.
  */
 ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
-    ListGroupsForUserQueueResponse * const q) : ListGroupsForUserPrivate(q)
+    ListGroupsForUserResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateLabelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLabelsResponse instance.
  */
 CreateLabelsResponsePrivate::CreateLabelsResponsePrivate(
-    CreateLabelsQueueResponse * const q) : CreateLabelsPrivate(q)
+    CreateLabelsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

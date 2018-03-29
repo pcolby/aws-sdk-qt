@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkR
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
     const IAMRequest::Action action, UpdateLoginProfileRequest * const q)
-    : UpdateLoginProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
     const UpdateLoginProfileRequestPrivate &other, UpdateLoginProfileRequest * const q)
-    : UpdateLoginProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNet
  */
 DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterRdsDbInstanceRequest * const q)
-    : DeregisterRdsDbInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
  */
 DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
     const DeregisterRdsDbInstanceRequestPrivate &other, DeregisterRdsDbInstanceRequest * const q)
-    : DeregisterRdsDbInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

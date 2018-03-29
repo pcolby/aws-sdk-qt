@@ -86,7 +86,7 @@ void DetachDiskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachDiskResponse instance.
  */
 DetachDiskResponsePrivate::DetachDiskResponsePrivate(
-    DetachDiskQueueResponse * const q) : DetachDiskPrivate(q)
+    DetachDiskResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

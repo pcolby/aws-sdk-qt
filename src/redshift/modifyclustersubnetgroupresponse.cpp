@@ -86,7 +86,7 @@ void ModifyClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyClusterSubnetGroupResponse instance.
  */
 ModifyClusterSubnetGroupResponsePrivate::ModifyClusterSubnetGroupResponsePrivate(
-    ModifyClusterSubnetGroupQueueResponse * const q) : ModifyClusterSubnetGroupPrivate(q)
+    ModifyClusterSubnetGroupResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

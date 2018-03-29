@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const CloudWatchEventsRequest::Action action, RemovePermissionRequest * const q)
-    : RemovePermissionPrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const RemovePermissionRequestPrivate &other, RemovePermissionRequest * const q)
-    : RemovePermissionPrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

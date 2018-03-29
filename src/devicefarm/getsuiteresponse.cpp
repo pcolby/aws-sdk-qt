@@ -86,7 +86,7 @@ void GetSuiteResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSuiteResponse instance.
  */
 GetSuiteResponsePrivate::GetSuiteResponsePrivate(
-    GetSuiteQueueResponse * const q) : GetSuitePrivate(q)
+    GetSuiteResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

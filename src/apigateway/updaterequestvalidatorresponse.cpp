@@ -86,7 +86,7 @@ void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRequestValidatorResponse instance.
  */
 UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
-    UpdateRequestValidatorQueueResponse * const q) : UpdateRequestValidatorPrivate(q)
+    UpdateRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

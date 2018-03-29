@@ -86,7 +86,7 @@ void AdminConfirmSignUpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminConfirmSignUpResponse instance.
  */
 AdminConfirmSignUpResponsePrivate::AdminConfirmSignUpResponsePrivate(
-    AdminConfirmSignUpQueueResponse * const q) : AdminConfirmSignUpPrivate(q)
+    AdminConfirmSignUpResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

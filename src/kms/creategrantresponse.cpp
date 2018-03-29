@@ -86,7 +86,7 @@ void CreateGrantResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateGrantResponse instance.
  */
 CreateGrantResponsePrivate::CreateGrantResponsePrivate(
-    CreateGrantQueueResponse * const q) : CreateGrantPrivate(q)
+    CreateGrantResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

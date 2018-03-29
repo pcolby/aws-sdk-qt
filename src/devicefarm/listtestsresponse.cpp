@@ -86,7 +86,7 @@ void ListTestsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTestsResponse instance.
  */
 ListTestsResponsePrivate::ListTestsResponsePrivate(
-    ListTestsQueueResponse * const q) : ListTestsPrivate(q)
+    ListTestsResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

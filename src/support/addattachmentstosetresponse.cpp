@@ -86,7 +86,7 @@ void AddAttachmentsToSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddAttachmentsToSetResponse instance.
  */
 AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponsePrivate(
-    AddAttachmentsToSetQueueResponse * const q) : AddAttachmentsToSetPrivate(q)
+    AddAttachmentsToSetResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

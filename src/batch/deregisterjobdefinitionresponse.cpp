@@ -86,7 +86,7 @@ void DeregisterJobDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterJobDefinitionResponse instance.
  */
 DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponsePrivate(
-    DeregisterJobDefinitionQueueResponse * const q) : DeregisterJobDefinitionPrivate(q)
+    DeregisterJobDefinitionResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

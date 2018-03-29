@@ -86,7 +86,7 @@ void DeleteConfigRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteConfigRuleResponse instance.
  */
 DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponsePrivate(
-    DeleteConfigRuleQueueResponse * const q) : DeleteConfigRulePrivate(q)
+    DeleteConfigRuleResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

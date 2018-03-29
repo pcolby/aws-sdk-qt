@@ -86,7 +86,7 @@ void UpdateClassifierResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateClassifierResponse instance.
  */
 UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
-    UpdateClassifierQueueResponse * const q) : UpdateClassifierPrivate(q)
+    UpdateClassifierResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

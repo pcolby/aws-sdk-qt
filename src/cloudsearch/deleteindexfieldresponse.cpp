@@ -86,7 +86,7 @@ void DeleteIndexFieldResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteIndexFieldResponse instance.
  */
 DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
-    DeleteIndexFieldQueueResponse * const q) : DeleteIndexFieldPrivate(q)
+    DeleteIndexFieldResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
     const SSMRequest::Action action, UpdateDocumentDefaultVersionRequest * const q)
-    : UpdateDocumentDefaultVersionPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestP
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
     const UpdateDocumentDefaultVersionRequestPrivate &other, UpdateDocumentDefaultVersionRequest * const q)
-    : UpdateDocumentDefaultVersionPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

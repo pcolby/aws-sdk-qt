@@ -86,7 +86,7 @@ void DeleteStageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteStageResponse instance.
  */
 DeleteStageResponsePrivate::DeleteStageResponsePrivate(
-    DeleteStageQueueResponse * const q) : DeleteStagePrivate(q)
+    DeleteStageResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

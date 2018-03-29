@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkR
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, DeleteSSHPublicKeyRequest * const q)
-    : DeleteSSHPublicKeyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
     const DeleteSSHPublicKeyRequestPrivate &other, DeleteSSHPublicKeyRequest * const q)
-    : DeleteSSHPublicKeyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

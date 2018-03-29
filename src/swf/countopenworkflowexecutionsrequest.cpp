@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CountOpenWorkflowExecutionsRequest::response(
  */
 CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, CountOpenWorkflowExecutionsRequest * const q)
-    : CountOpenWorkflowExecutionsPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPri
  */
 CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPrivate(
     const CountOpenWorkflowExecutionsRequestPrivate &other, CountOpenWorkflowExecutionsRequest * const q)
-    : CountOpenWorkflowExecutionsPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

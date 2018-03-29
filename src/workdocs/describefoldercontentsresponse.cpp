@@ -86,7 +86,7 @@ void DescribeFolderContentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFolderContentsResponse instance.
  */
 DescribeFolderContentsResponsePrivate::DescribeFolderContentsResponsePrivate(
-    DescribeFolderContentsQueueResponse * const q) : DescribeFolderContentsPrivate(q)
+    DescribeFolderContentsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

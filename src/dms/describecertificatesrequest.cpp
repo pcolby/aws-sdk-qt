@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeCertificatesRequest * const q)
-    : DescribeCertificatesPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)
-    : DescribeCertificatesPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

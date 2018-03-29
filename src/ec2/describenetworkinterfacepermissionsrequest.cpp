@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacePermissionsRequest::r
  */
 DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermissionsRequestPrivate(
     const EC2Request::Action action, DescribeNetworkInterfacePermissionsRequest * const q)
-    : DescribeNetworkInterfacePermissionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermi
  */
 DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermissionsRequestPrivate(
     const DescribeNetworkInterfacePermissionsRequestPrivate &other, DescribeNetworkInterfacePermissionsRequest * const q)
-    : DescribeNetworkInterfacePermissionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

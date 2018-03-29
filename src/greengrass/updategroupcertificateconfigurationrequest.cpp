@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupCertificateConfigurationRequest::r
  */
 UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigurationRequestPrivate(
     const GreengrassRequest::Action action, UpdateGroupCertificateConfigurationRequest * const q)
-    : UpdateGroupCertificateConfigurationPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigu
  */
 UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigurationRequestPrivate(
     const UpdateGroupCertificateConfigurationRequestPrivate &other, UpdateGroupCertificateConfigurationRequest * const q)
-    : UpdateGroupCertificateConfigurationPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

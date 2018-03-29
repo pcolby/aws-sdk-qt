@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkRe
  */
 DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeregisterTargetsRequest * const q)
-    : DeregisterTargetsPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
  */
 DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
     const DeregisterTargetsRequestPrivate &other, DeregisterTargetsRequest * const q)
-    : DeregisterTargetsPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

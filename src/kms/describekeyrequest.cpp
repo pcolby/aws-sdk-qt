@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyRequest::response(QNetworkReply * 
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
     const KMSRequest::Action action, DescribeKeyRequest * const q)
-    : DescribeKeyPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
     const DescribeKeyRequestPrivate &other, DescribeKeyRequest * const q)
-    : DescribeKeyPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeStepResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStepResponse instance.
  */
 DescribeStepResponsePrivate::DescribeStepResponsePrivate(
-    DescribeStepQueueResponse * const q) : DescribeStepPrivate(q)
+    DescribeStepResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

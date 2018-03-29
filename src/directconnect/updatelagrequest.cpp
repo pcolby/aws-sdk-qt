@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * co
  */
 UpdateLagRequestPrivate::UpdateLagRequestPrivate(
     const DirectConnectRequest::Action action, UpdateLagRequest * const q)
-    : UpdateLagPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateLagRequestPrivate::UpdateLagRequestPrivate(
  */
 UpdateLagRequestPrivate::UpdateLagRequestPrivate(
     const UpdateLagRequestPrivate &other, UpdateLagRequest * const q)
-    : UpdateLagPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

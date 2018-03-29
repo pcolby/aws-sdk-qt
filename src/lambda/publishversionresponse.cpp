@@ -86,7 +86,7 @@ void PublishVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PublishVersionResponse instance.
  */
 PublishVersionResponsePrivate::PublishVersionResponsePrivate(
-    PublishVersionQueueResponse * const q) : PublishVersionPrivate(q)
+    PublishVersionResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

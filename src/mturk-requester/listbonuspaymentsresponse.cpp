@@ -86,7 +86,7 @@ void ListBonusPaymentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBonusPaymentsResponse instance.
  */
 ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
-    ListBonusPaymentsQueueResponse * const q) : ListBonusPaymentsPrivate(q)
+    ListBonusPaymentsResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGameSessionQueueRequest::response(QNetw
  */
 UpdateGameSessionQueueRequestPrivate::UpdateGameSessionQueueRequestPrivate(
     const GameLiftRequest::Action action, UpdateGameSessionQueueRequest * const q)
-    : UpdateGameSessionQueuePrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGameSessionQueueRequestPrivate::UpdateGameSessionQueueRequestPrivate(
  */
 UpdateGameSessionQueueRequestPrivate::UpdateGameSessionQueueRequestPrivate(
     const UpdateGameSessionQueueRequestPrivate &other, UpdateGameSessionQueueRequest * const q)
-    : UpdateGameSessionQueuePrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

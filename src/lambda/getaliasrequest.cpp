@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * con
  */
 GetAliasRequestPrivate::GetAliasRequestPrivate(
     const LambdaRequest::Action action, GetAliasRequest * const q)
-    : GetAliasPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAliasRequestPrivate::GetAliasRequestPrivate(
  */
 GetAliasRequestPrivate::GetAliasRequestPrivate(
     const GetAliasRequestPrivate &other, GetAliasRequest * const q)
-    : GetAliasPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

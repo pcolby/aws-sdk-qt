@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNe
  */
 AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminLinkProviderForUserRequest * const q)
-    : AdminLinkProviderForUserPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
  */
 AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
     const AdminLinkProviderForUserRequestPrivate &other, AdminLinkProviderForUserRequest * const q)
-    : AdminLinkProviderForUserPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

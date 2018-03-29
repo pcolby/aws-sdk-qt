@@ -86,7 +86,7 @@ void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListConfigurationRevisionsResponse instance.
  */
 ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePrivate(
-    ListConfigurationRevisionsQueueResponse * const q) : ListConfigurationRevisionsPrivate(q)
+    ListConfigurationRevisionsResponse * const q) : MQResponsePrivate(q)
 {
 
 }

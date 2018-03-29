@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(Q
  */
 GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
     const DeviceFarmRequest::Action action, GetDevicePoolCompatibilityRequest * const q)
-    : GetDevicePoolCompatibilityPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPriva
  */
 GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
     const GetDevicePoolCompatibilityRequestPrivate &other, GetDevicePoolCompatibilityRequest * const q)
-    : GetDevicePoolCompatibilityPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

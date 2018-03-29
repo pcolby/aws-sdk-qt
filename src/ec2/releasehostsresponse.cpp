@@ -86,7 +86,7 @@ void ReleaseHostsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReleaseHostsResponse instance.
  */
 ReleaseHostsResponsePrivate::ReleaseHostsResponsePrivate(
-    ReleaseHostsQueueResponse * const q) : ReleaseHostsPrivate(q)
+    ReleaseHostsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

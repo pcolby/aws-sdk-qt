@@ -86,7 +86,7 @@ void ListRoleAliasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRoleAliasesResponse instance.
  */
 ListRoleAliasesResponsePrivate::ListRoleAliasesResponsePrivate(
-    ListRoleAliasesQueueResponse * const q) : ListRoleAliasesPrivate(q)
+    ListRoleAliasesResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

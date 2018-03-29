@@ -86,7 +86,7 @@ void PutObjectTaggingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutObjectTaggingResponse instance.
  */
 PutObjectTaggingResponsePrivate::PutObjectTaggingResponsePrivate(
-    PutObjectTaggingQueueResponse * const q) : PutObjectTaggingPrivate(q)
+    PutObjectTaggingResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

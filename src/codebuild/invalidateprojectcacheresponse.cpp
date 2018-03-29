@@ -86,7 +86,7 @@ void InvalidateProjectCacheResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InvalidateProjectCacheResponse instance.
  */
 InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponsePrivate(
-    InvalidateProjectCacheQueueResponse * const q) : InvalidateProjectCachePrivate(q)
+    InvalidateProjectCacheResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

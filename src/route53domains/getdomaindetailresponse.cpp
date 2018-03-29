@@ -86,7 +86,7 @@ void GetDomainDetailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDomainDetailResponse instance.
  */
 GetDomainDetailResponsePrivate::GetDomainDetailResponsePrivate(
-    GetDomainDetailQueueResponse * const q) : GetDomainDetailPrivate(q)
+    GetDomainDetailResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

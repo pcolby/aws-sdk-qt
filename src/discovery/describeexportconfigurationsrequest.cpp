@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeExportConfigurationsRequest::response
  */
 DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeExportConfigurationsRequest * const q)
-    : DescribeExportConfigurationsPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestP
  */
 DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestPrivate(
     const DescribeExportConfigurationsRequestPrivate &other, DescribeExportConfigurationsRequest * const q)
-    : DescribeExportConfigurationsPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

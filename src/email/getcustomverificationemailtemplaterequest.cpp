@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCustomVerificationEmailTemplateRequest::re
  */
 GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, GetCustomVerificationEmailTemplateRequest * const q)
-    : GetCustomVerificationEmailTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemp
  */
 GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
     const GetCustomVerificationEmailTemplateRequestPrivate &other, GetCustomVerificationEmailTemplateRequest * const q)
-    : GetCustomVerificationEmailTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

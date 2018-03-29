@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest:
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
     const SSMRequest::Action action, GetDeployablePatchSnapshotForInstanceRequest * const q)
-    : GetDeployablePatchSnapshotForInstancePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotF
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
     const GetDeployablePatchSnapshotForInstanceRequestPrivate &other, GetDeployablePatchSnapshotForInstanceRequest * const q)
-    : GetDeployablePatchSnapshotForInstancePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

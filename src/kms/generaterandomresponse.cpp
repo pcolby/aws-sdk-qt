@@ -86,7 +86,7 @@ void GenerateRandomResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GenerateRandomResponse instance.
  */
 GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
-    GenerateRandomQueueResponse * const q) : GenerateRandomPrivate(q)
+    GenerateRandomResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

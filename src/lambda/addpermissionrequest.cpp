@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const LambdaRequest::Action action, AddPermissionRequest * const q)
-    : AddPermissionPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const AddPermissionRequestPrivate &other, AddPermissionRequest * const q)
-    : AddPermissionPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

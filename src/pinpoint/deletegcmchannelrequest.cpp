@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkRep
  */
 DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteGcmChannelRequest * const q)
-    : DeleteGcmChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
  */
 DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
     const DeleteGcmChannelRequestPrivate &other, DeleteGcmChannelRequest * const q)
-    : DeleteGcmChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

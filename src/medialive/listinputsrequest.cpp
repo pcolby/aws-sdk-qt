@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * c
  */
 ListInputsRequestPrivate::ListInputsRequestPrivate(
     const MediaLiveRequest::Action action, ListInputsRequest * const q)
-    : ListInputsPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListInputsRequestPrivate::ListInputsRequestPrivate(
  */
 ListInputsRequestPrivate::ListInputsRequestPrivate(
     const ListInputsRequestPrivate &other, ListInputsRequest * const q)
-    : ListInputsPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

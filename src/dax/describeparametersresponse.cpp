@@ -86,7 +86,7 @@ void DescribeParametersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeParametersResponse instance.
  */
 DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
-    DescribeParametersQueueResponse * const q) : DescribeParametersPrivate(q)
+    DescribeParametersResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

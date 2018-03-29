@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketLifecycleRequest::response(QNetworkR
  */
 PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
     const S3Request::Action action, PutBucketLifecycleRequest * const q)
-    : PutBucketLifecyclePrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
  */
 PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
     const PutBucketLifecycleRequestPrivate &other, PutBucketLifecycleRequest * const q)
-    : PutBucketLifecyclePrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

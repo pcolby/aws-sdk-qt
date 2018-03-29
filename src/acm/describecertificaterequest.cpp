@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
  */
 DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
     const ACMRequest::Action action, DescribeCertificateRequest * const q)
-    : DescribeCertificatePrivate(action, q)
+    : ACMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
  */
 DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
     const DescribeCertificateRequestPrivate &other, DescribeCertificateRequest * const q)
-    : DescribeCertificatePrivate(other, q)
+    : ACMRequestPrivate(other, q)
 {
 
 }

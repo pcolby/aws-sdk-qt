@@ -86,7 +86,7 @@ void CreateDataSourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDataSourceResponse instance.
  */
 CreateDataSourceResponsePrivate::CreateDataSourceResponsePrivate(
-    CreateDataSourceQueueResponse * const q) : CreateDataSourcePrivate(q)
+    CreateDataSourceResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

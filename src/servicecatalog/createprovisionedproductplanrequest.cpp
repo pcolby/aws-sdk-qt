@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateProvisionedProductPlanRequest::response
  */
 CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateProvisionedProductPlanRequest * const q)
-    : CreateProvisionedProductPlanPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestP
  */
 CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestPrivate(
     const CreateProvisionedProductPlanRequestPrivate &other, CreateProvisionedProductPlanRequest * const q)
-    : CreateProvisionedProductPlanPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

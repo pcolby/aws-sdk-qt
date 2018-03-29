@@ -86,7 +86,7 @@ void EnableDomainTransferLockResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableDomainTransferLockResponse instance.
  */
 EnableDomainTransferLockResponsePrivate::EnableDomainTransferLockResponsePrivate(
-    EnableDomainTransferLockQueueResponse * const q) : EnableDomainTransferLockPrivate(q)
+    EnableDomainTransferLockResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

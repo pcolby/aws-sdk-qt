@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply
  */
 DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
     const AppStreamRequest::Action action, DescribeFleetsRequest * const q)
-    : DescribeFleetsPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
  */
 DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
     const DescribeFleetsRequestPrivate &other, DescribeFleetsRequest * const q)
-    : DescribeFleetsPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

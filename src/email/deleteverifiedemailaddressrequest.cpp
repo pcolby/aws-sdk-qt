@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVerifiedEmailAddressRequest::response(Q
  */
 DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPrivate(
     const SESRequest::Action action, DeleteVerifiedEmailAddressRequest * const q)
-    : DeleteVerifiedEmailAddressPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPriva
  */
 DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPrivate(
     const DeleteVerifiedEmailAddressRequestPrivate &other, DeleteVerifiedEmailAddressRequest * const q)
-    : DeleteVerifiedEmailAddressPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

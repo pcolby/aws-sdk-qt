@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkRep
  */
 DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
     const AppSyncRequest::Action action, DeleteGraphqlApiRequest * const q)
-    : DeleteGraphqlApiPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
  */
 DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
     const DeleteGraphqlApiRequestPrivate &other, DeleteGraphqlApiRequest * const q)
-    : DeleteGraphqlApiPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

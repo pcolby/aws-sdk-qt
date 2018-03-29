@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * 
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
     const SNSRequest::Action action, CreateTopicRequest * const q)
-    : CreateTopicPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTopicRequestPrivate::CreateTopicRequestPrivate(
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
     const CreateTopicRequestPrivate &other, CreateTopicRequest * const q)
-    : CreateTopicPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

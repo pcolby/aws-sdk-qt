@@ -86,7 +86,7 @@ void PutRetentionPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutRetentionPolicyResponse instance.
  */
 PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponsePrivate(
-    PutRetentionPolicyQueueResponse * const q) : PutRetentionPolicyPrivate(q)
+    PutRetentionPolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

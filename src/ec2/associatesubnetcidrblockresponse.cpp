@@ -86,7 +86,7 @@ void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateSubnetCidrBlockResponse instance.
  */
 AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate(
-    AssociateSubnetCidrBlockQueueResponse * const q) : AssociateSubnetCidrBlockPrivate(q)
+    AssociateSubnetCidrBlockResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

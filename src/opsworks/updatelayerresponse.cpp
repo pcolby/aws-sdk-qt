@@ -86,7 +86,7 @@ void UpdateLayerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateLayerResponse instance.
  */
 UpdateLayerResponsePrivate::UpdateLayerResponsePrivate(
-    UpdateLayerQueueResponse * const q) : UpdateLayerPrivate(q)
+    UpdateLayerResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

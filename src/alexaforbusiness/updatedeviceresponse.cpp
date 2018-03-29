@@ -86,7 +86,7 @@ void UpdateDeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDeviceResponse instance.
  */
 UpdateDeviceResponsePrivate::UpdateDeviceResponsePrivate(
-    UpdateDeviceQueueResponse * const q) : UpdateDevicePrivate(q)
+    UpdateDeviceResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

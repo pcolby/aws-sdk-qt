@@ -86,7 +86,7 @@ void UpdateEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEndpointResponse instance.
  */
 UpdateEndpointResponsePrivate::UpdateEndpointResponsePrivate(
-    UpdateEndpointQueueResponse * const q) : UpdateEndpointPrivate(q)
+    UpdateEndpointResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

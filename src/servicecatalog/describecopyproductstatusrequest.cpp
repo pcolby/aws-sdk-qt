@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QN
  */
 DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeCopyProductStatusRequest * const q)
-    : DescribeCopyProductStatusPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate
  */
 DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate(
     const DescribeCopyProductStatusRequestPrivate &other, DescribeCopyProductStatusRequest * const q)
-    : DescribeCopyProductStatusPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

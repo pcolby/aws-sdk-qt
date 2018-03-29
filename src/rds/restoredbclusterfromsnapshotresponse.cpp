@@ -86,7 +86,7 @@ void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreDBClusterFromSnapshotResponse instance.
  */
 RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotResponsePrivate(
-    RestoreDBClusterFromSnapshotQueueResponse * const q) : RestoreDBClusterFromSnapshotPrivate(q)
+    RestoreDBClusterFromSnapshotResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

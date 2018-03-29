@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetwo
  */
 CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBSecurityGroupRequest * const q)
-    : CreateDBSecurityGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
  */
 CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
     const CreateDBSecurityGroupRequestPrivate &other, CreateDBSecurityGroupRequest * const q)
-    : CreateDBSecurityGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

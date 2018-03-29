@@ -86,7 +86,7 @@ void RemoveResourcePermissionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveResourcePermissionResponse instance.
  */
 RemoveResourcePermissionResponsePrivate::RemoveResourcePermissionResponsePrivate(
-    RemoveResourcePermissionQueueResponse * const q) : RemoveResourcePermissionPrivate(q)
+    RemoveResourcePermissionResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

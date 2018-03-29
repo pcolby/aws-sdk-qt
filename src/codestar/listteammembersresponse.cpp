@@ -86,7 +86,7 @@ void ListTeamMembersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTeamMembersResponse instance.
  */
 ListTeamMembersResponsePrivate::ListTeamMembersResponsePrivate(
-    ListTeamMembersQueueResponse * const q) : ListTeamMembersPrivate(q)
+    ListTeamMembersResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

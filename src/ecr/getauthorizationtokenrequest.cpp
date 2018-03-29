@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const ECRRequest::Action action, GetAuthorizationTokenRequest * const q)
-    : GetAuthorizationTokenPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const GetAuthorizationTokenRequestPrivate &other, GetAuthorizationTokenRequest * const q)
-    : GetAuthorizationTokenPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

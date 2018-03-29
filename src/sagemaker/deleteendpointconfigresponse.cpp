@@ -86,7 +86,7 @@ void DeleteEndpointConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteEndpointConfigResponse instance.
  */
 DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponsePrivate(
-    DeleteEndpointConfigQueueResponse * const q) : DeleteEndpointConfigPrivate(q)
+    DeleteEndpointConfigResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

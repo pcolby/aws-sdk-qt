@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstancePortStatesRequest::response(QNetwo
  */
 GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
     const LightsailRequest::Action action, GetInstancePortStatesRequest * const q)
-    : GetInstancePortStatesPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
  */
 GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
     const GetInstancePortStatesRequestPrivate &other, GetInstancePortStatesRequest * const q)
-    : GetInstancePortStatesPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

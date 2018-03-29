@@ -86,7 +86,7 @@ void DeleteHsmConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHsmConfigurationResponse instance.
  */
 DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponsePrivate(
-    DeleteHsmConfigurationQueueResponse * const q) : DeleteHsmConfigurationPrivate(q)
+    DeleteHsmConfigurationResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

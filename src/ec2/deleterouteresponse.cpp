@@ -86,7 +86,7 @@ void DeleteRouteResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRouteResponse instance.
  */
 DeleteRouteResponsePrivate::DeleteRouteResponsePrivate(
-    DeleteRouteQueueResponse * const q) : DeleteRoutePrivate(q)
+    DeleteRouteResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

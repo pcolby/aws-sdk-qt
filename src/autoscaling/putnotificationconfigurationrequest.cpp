@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutNotificationConfigurationRequest::response
  */
 PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, PutNotificationConfigurationRequest * const q)
-    : PutNotificationConfigurationPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestP
  */
 PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
     const PutNotificationConfigurationRequestPrivate &other, PutNotificationConfigurationRequest * const q)
-    : PutNotificationConfigurationPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

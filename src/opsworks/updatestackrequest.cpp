@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * 
  */
 UpdateStackRequestPrivate::UpdateStackRequestPrivate(
     const OpsWorksRequest::Action action, UpdateStackRequest * const q)
-    : UpdateStackPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateStackRequestPrivate::UpdateStackRequestPrivate(
  */
 UpdateStackRequestPrivate::UpdateStackRequestPrivate(
     const UpdateStackRequestPrivate &other, UpdateStackRequest * const q)
-    : UpdateStackPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

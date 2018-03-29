@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const SageMakerRequest::Action action, CreateEndpointRequest * const q)
-    : CreateEndpointPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const CreateEndpointRequestPrivate &other, CreateEndpointRequest * const q)
-    : CreateEndpointPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

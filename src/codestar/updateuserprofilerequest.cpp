@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkRe
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const CodeStarRequest::Action action, UpdateUserProfileRequest * const q)
-    : UpdateUserProfilePrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const UpdateUserProfileRequestPrivate &other, UpdateUserProfileRequest * const q)
-    : UpdateUserProfilePrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteStreamProcessorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteStreamProcessorResponse instance.
  */
 DeleteStreamProcessorResponsePrivate::DeleteStreamProcessorResponsePrivate(
-    DeleteStreamProcessorQueueResponse * const q) : DeleteStreamProcessorPrivate(q)
+    DeleteStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

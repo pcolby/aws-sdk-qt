@@ -86,7 +86,7 @@ void DeleteSSHPublicKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSSHPublicKeyResponse instance.
  */
 DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponsePrivate(
-    DeleteSSHPublicKeyQueueResponse * const q) : DeleteSSHPublicKeyPrivate(q)
+    DeleteSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

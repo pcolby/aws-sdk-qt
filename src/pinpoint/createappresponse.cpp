@@ -86,7 +86,7 @@ void CreateAppResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAppResponse instance.
  */
 CreateAppResponsePrivate::CreateAppResponsePrivate(
-    CreateAppQueueResponse * const q) : CreateAppPrivate(q)
+    CreateAppResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

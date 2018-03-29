@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetVaultLockRequest::response(QNetworkReply *
  */
 GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
     const GlacierRequest::Action action, GetVaultLockRequest * const q)
-    : GetVaultLockPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
  */
 GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
     const GetVaultLockRequestPrivate &other, GetVaultLockRequest * const q)
-    : GetVaultLockPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

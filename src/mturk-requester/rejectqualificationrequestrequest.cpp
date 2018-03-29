@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RejectQualificationRequestRequest::response(Q
  */
 RejectQualificationRequestRequestPrivate::RejectQualificationRequestRequestPrivate(
     const MTurkRequest::Action action, RejectQualificationRequestRequest * const q)
-    : RejectQualificationRequestPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RejectQualificationRequestRequestPrivate::RejectQualificationRequestRequestPriva
  */
 RejectQualificationRequestRequestPrivate::RejectQualificationRequestRequestPrivate(
     const RejectQualificationRequestRequestPrivate &other, RejectQualificationRequestRequest * const q)
-    : RejectQualificationRequestPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

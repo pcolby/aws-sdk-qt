@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * c
  */
 GetMLModelRequestPrivate::GetMLModelRequestPrivate(
     const MachineLearningRequest::Action action, GetMLModelRequest * const q)
-    : GetMLModelPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMLModelRequestPrivate::GetMLModelRequestPrivate(
  */
 GetMLModelRequestPrivate::GetMLModelRequestPrivate(
     const GetMLModelRequestPrivate &other, GetMLModelRequest * const q)
-    : GetMLModelPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

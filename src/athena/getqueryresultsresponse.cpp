@@ -86,7 +86,7 @@ void GetQueryResultsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetQueryResultsResponse instance.
  */
 GetQueryResultsResponsePrivate::GetQueryResultsResponsePrivate(
-    GetQueryResultsQueueResponse * const q) : GetQueryResultsPrivate(q)
+    GetQueryResultsResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

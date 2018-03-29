@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriptionDefinitionRequest::response
  */
 UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateSubscriptionDefinitionRequest * const q)
-    : UpdateSubscriptionDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestP
  */
 UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestPrivate(
     const UpdateSubscriptionDefinitionRequestPrivate &other, UpdateSubscriptionDefinitionRequest * const q)
-    : UpdateSubscriptionDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

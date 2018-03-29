@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkRep
  */
 SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
     const PollyRequest::Action action, SynthesizeSpeechRequest * const q)
-    : SynthesizeSpeechPrivate(action, q)
+    : PollyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
  */
 SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
     const SynthesizeSpeechRequestPrivate &other, SynthesizeSpeechRequest * const q)
-    : SynthesizeSpeechPrivate(other, q)
+    : PollyRequestPrivate(other, q)
 {
 
 }

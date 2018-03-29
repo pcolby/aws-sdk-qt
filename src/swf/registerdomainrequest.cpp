@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const SWFRequest::Action action, RegisterDomainRequest * const q)
-    : RegisterDomainPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const RegisterDomainRequestPrivate &other, RegisterDomainRequest * const q)
-    : RegisterDomainPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

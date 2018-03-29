@@ -86,7 +86,7 @@ void GetUsageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetUsageResponse instance.
  */
 GetUsageResponsePrivate::GetUsageResponsePrivate(
-    GetUsageQueueResponse * const q) : GetUsagePrivate(q)
+    GetUsageResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

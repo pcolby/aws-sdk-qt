@@ -86,7 +86,7 @@ void DeleteLunaClientResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLunaClientResponse instance.
  */
 DeleteLunaClientResponsePrivate::DeleteLunaClientResponsePrivate(
-    DeleteLunaClientQueueResponse * const q) : DeleteLunaClientPrivate(q)
+    DeleteLunaClientResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

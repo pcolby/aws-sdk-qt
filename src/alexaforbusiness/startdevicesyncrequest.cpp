@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkRepl
  */
 StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
     const AlexaForBusinessRequest::Action action, StartDeviceSyncRequest * const q)
-    : StartDeviceSyncPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
  */
 StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
     const StartDeviceSyncRequestPrivate &other, StartDeviceSyncRequest * const q)
-    : StartDeviceSyncPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

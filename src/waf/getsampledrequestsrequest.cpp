@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkR
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const WAFRequest::Action action, GetSampledRequestsRequest * const q)
-    : GetSampledRequestsPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const GetSampledRequestsRequestPrivate &other, GetSampledRequestsRequest * const q)
-    : GetSampledRequestsPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

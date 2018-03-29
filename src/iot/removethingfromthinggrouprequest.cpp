@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QN
  */
 RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
     const IoTRequest::Action action, RemoveThingFromThingGroupRequest * const q)
-    : RemoveThingFromThingGroupPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate
  */
 RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
     const RemoveThingFromThingGroupRequestPrivate &other, RemoveThingFromThingGroupRequest * const q)
-    : RemoveThingFromThingGroupPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

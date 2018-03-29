@@ -86,7 +86,7 @@ void ResetFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetFpgaImageAttributeResponse instance.
  */
 ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
-    ResetFpgaImageAttributeQueueResponse * const q) : ResetFpgaImageAttributePrivate(q)
+    ResetFpgaImageAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

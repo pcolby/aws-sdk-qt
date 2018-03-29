@@ -86,7 +86,7 @@ void AssignIpv6AddressesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssignIpv6AddressesResponse instance.
  */
 AssignIpv6AddressesResponsePrivate::AssignIpv6AddressesResponsePrivate(
-    AssignIpv6AddressesQueueResponse * const q) : AssignIpv6AddressesPrivate(q)
+    AssignIpv6AddressesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

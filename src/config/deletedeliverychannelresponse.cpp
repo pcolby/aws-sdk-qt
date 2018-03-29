@@ -86,7 +86,7 @@ void DeleteDeliveryChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDeliveryChannelResponse instance.
  */
 DeleteDeliveryChannelResponsePrivate::DeleteDeliveryChannelResponsePrivate(
-    DeleteDeliveryChannelQueueResponse * const q) : DeleteDeliveryChannelPrivate(q)
+    DeleteDeliveryChannelResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

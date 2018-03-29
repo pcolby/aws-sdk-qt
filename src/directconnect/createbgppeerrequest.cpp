@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply 
  */
 CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
     const DirectConnectRequest::Action action, CreateBGPPeerRequest * const q)
-    : CreateBGPPeerPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
  */
 CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
     const CreateBGPPeerRequestPrivate &other, CreateBGPPeerRequest * const q)
-    : CreateBGPPeerPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

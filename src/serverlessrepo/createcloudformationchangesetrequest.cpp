@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCloudFormationChangeSetRequest::respons
  */
 CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateCloudFormationChangeSetRequest * const q)
-    : CreateCloudFormationChangeSetPrivate(action, q)
+    : ServerlessApplicationRepositoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetReques
  */
 CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
     const CreateCloudFormationChangeSetRequestPrivate &other, CreateCloudFormationChangeSetRequest * const q)
-    : CreateCloudFormationChangeSetPrivate(other, q)
+    : ServerlessApplicationRepositoryRequestPrivate(other, q)
 {
 
 }

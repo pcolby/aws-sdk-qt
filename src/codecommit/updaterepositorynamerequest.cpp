@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetwor
  */
 UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
     const CodeCommitRequest::Action action, UpdateRepositoryNameRequest * const q)
-    : UpdateRepositoryNamePrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
  */
 UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
     const UpdateRepositoryNameRequestPrivate &other, UpdateRepositoryNameRequest * const q)
-    : UpdateRepositoryNamePrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

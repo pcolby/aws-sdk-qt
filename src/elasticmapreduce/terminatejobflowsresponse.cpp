@@ -86,7 +86,7 @@ void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TerminateJobFlowsResponse instance.
  */
 TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
-    TerminateJobFlowsQueueResponse * const q) : TerminateJobFlowsPrivate(q)
+    TerminateJobFlowsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

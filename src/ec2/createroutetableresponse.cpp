@@ -86,7 +86,7 @@ void CreateRouteTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRouteTableResponse instance.
  */
 CreateRouteTableResponsePrivate::CreateRouteTableResponsePrivate(
-    CreateRouteTableQueueResponse * const q) : CreateRouteTablePrivate(q)
+    CreateRouteTableResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

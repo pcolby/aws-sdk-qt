@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartSchemaCreationRequest::response(QNetwork
  */
 StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
     const AppSyncRequest::Action action, StartSchemaCreationRequest * const q)
-    : StartSchemaCreationPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
  */
 StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
     const StartSchemaCreationRequestPrivate &other, StartSchemaCreationRequest * const q)
-    : StartSchemaCreationPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

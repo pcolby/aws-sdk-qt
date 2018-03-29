@@ -86,7 +86,7 @@ void CreateDocumentationPartResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDocumentationPartResponse instance.
  */
 CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponsePrivate(
-    CreateDocumentationPartQueueResponse * const q) : CreateDocumentationPartPrivate(q)
+    CreateDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

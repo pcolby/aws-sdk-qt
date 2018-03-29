@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkRe
  */
 DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
     const EC2Request::Action action, DescribeAddressesRequest * const q)
-    : DescribeAddressesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
  */
 DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
     const DescribeAddressesRequestPrivate &other, DescribeAddressesRequest * const q)
-    : DescribeAddressesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

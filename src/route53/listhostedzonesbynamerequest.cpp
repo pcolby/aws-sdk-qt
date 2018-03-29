@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHostedZonesByNameRequest::response(QNetwo
  */
 ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
     const Route53Request::Action action, ListHostedZonesByNameRequest * const q)
-    : ListHostedZonesByNamePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
  */
 ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
     const ListHostedZonesByNameRequestPrivate &other, ListHostedZonesByNameRequest * const q)
-    : ListHostedZonesByNamePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

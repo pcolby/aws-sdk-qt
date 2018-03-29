@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedDBInstancesOfferingsRequest::
  */
 DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesOfferingsRequestPrivate(
     const RDSRequest::Action action, DescribeReservedDBInstancesOfferingsRequest * const q)
-    : DescribeReservedDBInstancesOfferingsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesO
  */
 DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesOfferingsRequestPrivate(
     const DescribeReservedDBInstancesOfferingsRequestPrivate &other, DescribeReservedDBInstancesOfferingsRequest * const q)
-    : DescribeReservedDBInstancesOfferingsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

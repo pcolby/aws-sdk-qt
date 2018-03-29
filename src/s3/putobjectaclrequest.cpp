@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectAclRequest::response(QNetworkReply *
  */
 PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
     const S3Request::Action action, PutObjectAclRequest * const q)
-    : PutObjectAclPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
  */
 PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
     const PutObjectAclRequestPrivate &other, PutObjectAclRequest * const q)
-    : PutObjectAclPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

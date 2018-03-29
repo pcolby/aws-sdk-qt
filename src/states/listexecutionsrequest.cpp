@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListExecutionsRequest::response(QNetworkReply
  */
 ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
     const SFNRequest::Action action, ListExecutionsRequest * const q)
-    : ListExecutionsPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
  */
 ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
     const ListExecutionsRequestPrivate &other, ListExecutionsRequest * const q)
-    : ListExecutionsPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

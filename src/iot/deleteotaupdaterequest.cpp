@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkRepl
  */
 DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
     const IoTRequest::Action action, DeleteOTAUpdateRequest * const q)
-    : DeleteOTAUpdatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
  */
 DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
     const DeleteOTAUpdateRequestPrivate &other, DeleteOTAUpdateRequest * const q)
-    : DeleteOTAUpdatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
     const MQRequest::Action action, DescribeBrokerRequest * const q)
-    : DescribeBrokerPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
     const DescribeBrokerRequestPrivate &other, DescribeBrokerRequest * const q)
-    : DescribeBrokerPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

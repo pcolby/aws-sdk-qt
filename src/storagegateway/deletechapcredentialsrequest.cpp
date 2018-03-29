@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteChapCredentialsRequest::response(QNetwo
  */
 DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteChapCredentialsRequest * const q)
-    : DeleteChapCredentialsPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
  */
 DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
     const DeleteChapCredentialsRequestPrivate &other, DeleteChapCredentialsRequest * const q)
-    : DeleteChapCredentialsPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutIdentityPolicyResponse instance.
  */
 PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
-    PutIdentityPolicyQueueResponse * const q) : PutIdentityPolicyPrivate(q)
+    PutIdentityPolicyResponse * const q) : SESResponsePrivate(q)
 {
 
 }

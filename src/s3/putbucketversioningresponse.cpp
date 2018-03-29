@@ -86,7 +86,7 @@ void PutBucketVersioningResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketVersioningResponse instance.
  */
 PutBucketVersioningResponsePrivate::PutBucketVersioningResponsePrivate(
-    PutBucketVersioningQueueResponse * const q) : PutBucketVersioningPrivate(q)
+    PutBucketVersioningResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

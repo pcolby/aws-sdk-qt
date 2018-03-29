@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * 
  */
 ViewBillingRequestPrivate::ViewBillingRequestPrivate(
     const Route53DomainsRequest::Action action, ViewBillingRequest * const q)
-    : ViewBillingPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ViewBillingRequestPrivate::ViewBillingRequestPrivate(
  */
 ViewBillingRequestPrivate::ViewBillingRequestPrivate(
     const ViewBillingRequestPrivate &other, ViewBillingRequest * const q)
-    : ViewBillingPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

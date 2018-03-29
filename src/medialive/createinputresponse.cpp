@@ -86,7 +86,7 @@ void CreateInputResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateInputResponse instance.
  */
 CreateInputResponsePrivate::CreateInputResponsePrivate(
-    CreateInputQueueResponse * const q) : CreateInputPrivate(q)
+    CreateInputResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

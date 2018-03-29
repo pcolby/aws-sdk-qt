@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRoomRequest::response(QNetworkReply * c
  */
 UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateRoomRequest * const q)
-    : UpdateRoomPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
  */
 UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
     const UpdateRoomRequestPrivate &other, UpdateRoomRequest * const q)
-    : UpdateRoomPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

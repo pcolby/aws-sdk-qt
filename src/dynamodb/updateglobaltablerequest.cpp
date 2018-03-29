@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGlobalTableRequest::response(QNetworkRe
  */
 UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
     const DynamoDBRequest::Action action, UpdateGlobalTableRequest * const q)
-    : UpdateGlobalTablePrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
  */
 UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
     const UpdateGlobalTableRequestPrivate &other, UpdateGlobalTableRequest * const q)
-    : UpdateGlobalTablePrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

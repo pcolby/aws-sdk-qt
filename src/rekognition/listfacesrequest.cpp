@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFacesRequest::response(QNetworkReply * co
  */
 ListFacesRequestPrivate::ListFacesRequestPrivate(
     const RekognitionRequest::Action action, ListFacesRequest * const q)
-    : ListFacesPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFacesRequestPrivate::ListFacesRequestPrivate(
  */
 ListFacesRequestPrivate::ListFacesRequestPrivate(
     const ListFacesRequestPrivate &other, ListFacesRequest * const q)
-    : ListFacesPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

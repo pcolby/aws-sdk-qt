@@ -86,7 +86,7 @@ void DisassociateQualificationFromWorkerResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public DisassociateQualificationFromWorkerResponse instance.
  */
 DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFromWorkerResponsePrivate(
-    DisassociateQualificationFromWorkerQueueResponse * const q) : DisassociateQualificationFromWorkerPrivate(q)
+    DisassociateQualificationFromWorkerResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

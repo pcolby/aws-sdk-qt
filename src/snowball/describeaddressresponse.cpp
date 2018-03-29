@@ -86,7 +86,7 @@ void DescribeAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAddressResponse instance.
  */
 DescribeAddressResponsePrivate::DescribeAddressResponsePrivate(
-    DescribeAddressQueueResponse * const q) : DescribeAddressPrivate(q)
+    DescribeAddressResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

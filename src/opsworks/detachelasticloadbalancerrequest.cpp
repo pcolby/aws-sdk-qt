@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachElasticLoadBalancerRequest::response(QN
  */
 DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate(
     const OpsWorksRequest::Action action, DetachElasticLoadBalancerRequest * const q)
-    : DetachElasticLoadBalancerPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate
  */
 DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate(
     const DetachElasticLoadBalancerRequestPrivate &other, DetachElasticLoadBalancerRequest * const q)
-    : DetachElasticLoadBalancerPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

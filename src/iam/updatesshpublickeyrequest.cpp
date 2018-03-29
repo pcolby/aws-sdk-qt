@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkR
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, UpdateSSHPublicKeyRequest * const q)
-    : UpdateSSHPublicKeyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
     const UpdateSSHPublicKeyRequestPrivate &other, UpdateSSHPublicKeyRequest * const q)
-    : UpdateSSHPublicKeyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkR
  */
 DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeVTLDevicesRequest * const q)
-    : DescribeVTLDevicesPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
  */
 DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
     const DescribeVTLDevicesRequestPrivate &other, DescribeVTLDevicesRequest * const q)
-    : DescribeVTLDevicesPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

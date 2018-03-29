@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply *
  */
 DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
     const RekognitionRequest::Action action, DetectLabelsRequest * const q)
-    : DetectLabelsPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
  */
 DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
     const DetectLabelsRequestPrivate &other, DetectLabelsRequest * const q)
-    : DetectLabelsPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

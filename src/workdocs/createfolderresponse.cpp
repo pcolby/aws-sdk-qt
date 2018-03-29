@@ -86,7 +86,7 @@ void CreateFolderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateFolderResponse instance.
  */
 CreateFolderResponsePrivate::CreateFolderResponsePrivate(
-    CreateFolderQueueResponse * const q) : CreateFolderPrivate(q)
+    CreateFolderResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

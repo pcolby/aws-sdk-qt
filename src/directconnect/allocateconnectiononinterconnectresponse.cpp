@@ -86,7 +86,7 @@ void AllocateConnectionOnInterconnectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AllocateConnectionOnInterconnectResponse instance.
  */
 AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnectResponsePrivate(
-    AllocateConnectionOnInterconnectQueueResponse * const q) : AllocateConnectionOnInterconnectPrivate(q)
+    AllocateConnectionOnInterconnectResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

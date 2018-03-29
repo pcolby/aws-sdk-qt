@@ -86,7 +86,7 @@ void DetectEntitiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetectEntitiesResponse instance.
  */
 DetectEntitiesResponsePrivate::DetectEntitiesResponsePrivate(
-    DetectEntitiesQueueResponse * const q) : DetectEntitiesPrivate(q)
+    DetectEntitiesResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

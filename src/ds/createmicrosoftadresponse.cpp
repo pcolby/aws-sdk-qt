@@ -86,7 +86,7 @@ void CreateMicrosoftADResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMicrosoftADResponse instance.
  */
 CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponsePrivate(
-    CreateMicrosoftADQueueResponse * const q) : CreateMicrosoftADPrivate(q)
+    CreateMicrosoftADResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

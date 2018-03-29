@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesRequest::response(QNetworkRep
  */
 ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
     const IoTRequest::Action action, ListCertificatesRequest * const q)
-    : ListCertificatesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
  */
 ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
     const ListCertificatesRequestPrivate &other, ListCertificatesRequest * const q)
-    : ListCertificatesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

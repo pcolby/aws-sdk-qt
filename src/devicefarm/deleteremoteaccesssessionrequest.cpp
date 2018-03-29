@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QN
  */
 DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteRemoteAccessSessionRequest * const q)
-    : DeleteRemoteAccessSessionPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate
  */
 DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate(
     const DeleteRemoteAccessSessionRequestPrivate &other, DeleteRemoteAccessSessionRequest * const q)
-    : DeleteRemoteAccessSessionPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

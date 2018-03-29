@@ -86,7 +86,7 @@ void SwapEnvironmentCNAMEsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SwapEnvironmentCNAMEsResponse instance.
  */
 SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponsePrivate(
-    SwapEnvironmentCNAMEsQueueResponse * const q) : SwapEnvironmentCNAMEsPrivate(q)
+    SwapEnvironmentCNAMEsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

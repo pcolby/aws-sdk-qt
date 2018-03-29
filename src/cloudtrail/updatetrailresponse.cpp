@@ -86,7 +86,7 @@ void UpdateTrailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTrailResponse instance.
  */
 UpdateTrailResponsePrivate::UpdateTrailResponsePrivate(
-    UpdateTrailQueueResponse * const q) : UpdateTrailPrivate(q)
+    UpdateTrailResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

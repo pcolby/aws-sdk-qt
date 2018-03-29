@@ -86,7 +86,7 @@ void ReceiveMessageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReceiveMessageResponse instance.
  */
 ReceiveMessageResponsePrivate::ReceiveMessageResponsePrivate(
-    ReceiveMessageQueueResponse * const q) : ReceiveMessagePrivate(q)
+    ReceiveMessageResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const ECSRequest::Action action, UpdateServiceRequest * const q)
-    : UpdateServicePrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const UpdateServiceRequestPrivate &other, UpdateServiceRequest * const q)
-    : UpdateServicePrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

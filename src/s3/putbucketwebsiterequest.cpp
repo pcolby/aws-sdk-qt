@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkRep
  */
 PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
     const S3Request::Action action, PutBucketWebsiteRequest * const q)
-    : PutBucketWebsitePrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
  */
 PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
     const PutBucketWebsiteRequestPrivate &other, PutBucketWebsiteRequest * const q)
-    : PutBucketWebsitePrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

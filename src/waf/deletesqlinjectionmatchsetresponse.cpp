@@ -86,7 +86,7 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSqlInjectionMatchSetResponse instance.
  */
 DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePrivate(
-    DeleteSqlInjectionMatchSetQueueResponse * const q) : DeleteSqlInjectionMatchSetPrivate(q)
+    DeleteSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

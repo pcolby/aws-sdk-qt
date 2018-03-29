@@ -86,7 +86,7 @@ void DeleteRegistrationCodeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRegistrationCodeResponse instance.
  */
 DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponsePrivate(
-    DeleteRegistrationCodeQueueResponse * const q) : DeleteRegistrationCodePrivate(q)
+    DeleteRegistrationCodeResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmClientCertificateRequest::response(Q
  */
 DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPrivate(
     const RedshiftRequest::Action action, DeleteHsmClientCertificateRequest * const q)
-    : DeleteHsmClientCertificatePrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPriva
  */
 DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPrivate(
     const DeleteHsmClientCertificateRequestPrivate &other, DeleteHsmClientCertificateRequest * const q)
-    : DeleteHsmClientCertificatePrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

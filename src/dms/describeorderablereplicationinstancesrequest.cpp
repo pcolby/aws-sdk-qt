@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest:
  */
 DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeOrderableReplicationInstancesRequest * const q)
-    : DescribeOrderableReplicationInstancesPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicatio
  */
 DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
     const DescribeOrderableReplicationInstancesRequestPrivate &other, DescribeOrderableReplicationInstancesRequest * const q)
-    : DescribeOrderableReplicationInstancesPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

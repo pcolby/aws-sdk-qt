@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetGeoMatchSetRequest::response(QNetworkReply
  */
 GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, GetGeoMatchSetRequest * const q)
-    : GetGeoMatchSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
  */
 GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
     const GetGeoMatchSetRequestPrivate &other, GetGeoMatchSetRequest * const q)
-    : GetGeoMatchSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

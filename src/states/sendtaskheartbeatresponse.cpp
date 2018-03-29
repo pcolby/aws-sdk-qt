@@ -86,7 +86,7 @@ void SendTaskHeartbeatResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendTaskHeartbeatResponse instance.
  */
 SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponsePrivate(
-    SendTaskHeartbeatQueueResponse * const q) : SendTaskHeartbeatPrivate(q)
+    SendTaskHeartbeatResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

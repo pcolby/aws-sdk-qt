@@ -86,7 +86,7 @@ void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSAMLProviderResponse instance.
  */
 DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
-    DeleteSAMLProviderQueueResponse * const q) : DeleteSAMLProviderPrivate(q)
+    DeleteSAMLProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

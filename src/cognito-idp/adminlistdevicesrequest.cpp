@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkRep
  */
 AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListDevicesRequest * const q)
-    : AdminListDevicesPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
  */
 AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
     const AdminListDevicesRequestPrivate &other, AdminListDevicesRequest * const q)
-    : AdminListDevicesPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

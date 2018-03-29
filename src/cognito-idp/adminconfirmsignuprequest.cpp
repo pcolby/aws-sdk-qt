@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminConfirmSignUpRequest::response(QNetworkR
  */
 AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminConfirmSignUpRequest * const q)
-    : AdminConfirmSignUpPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
  */
 AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
     const AdminConfirmSignUpRequestPrivate &other, AdminConfirmSignUpRequest * const q)
-    : AdminConfirmSignUpPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

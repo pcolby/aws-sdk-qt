@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::respons
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const WAFRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)
-    : ListActivatedRulesInRuleGroupPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupReques
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const ListActivatedRulesInRuleGroupRequestPrivate &other, ListActivatedRulesInRuleGroupRequest * const q)
-    : ListActivatedRulesInRuleGroupPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

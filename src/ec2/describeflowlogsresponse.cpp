@@ -86,7 +86,7 @@ void DescribeFlowLogsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFlowLogsResponse instance.
  */
 DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponsePrivate(
-    DescribeFlowLogsQueueResponse * const q) : DescribeFlowLogsPrivate(q)
+    DescribeFlowLogsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

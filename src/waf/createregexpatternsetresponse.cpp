@@ -86,7 +86,7 @@ void CreateRegexPatternSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRegexPatternSetResponse instance.
  */
 CreateRegexPatternSetResponsePrivate::CreateRegexPatternSetResponsePrivate(
-    CreateRegexPatternSetQueueResponse * const q) : CreateRegexPatternSetPrivate(q)
+    CreateRegexPatternSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

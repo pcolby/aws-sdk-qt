@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableLoggingRequest::response(QNetworkReply 
  */
 EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
     const RedshiftRequest::Action action, EnableLoggingRequest * const q)
-    : EnableLoggingPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
  */
 EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
     const EnableLoggingRequestPrivate &other, EnableLoggingRequest * const q)
-    : EnableLoggingPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

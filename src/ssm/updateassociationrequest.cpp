@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkRe
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
     const SSMRequest::Action action, UpdateAssociationRequest * const q)
-    : UpdateAssociationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
     const UpdateAssociationRequestPrivate &other, UpdateAssociationRequest * const q)
-    : UpdateAssociationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

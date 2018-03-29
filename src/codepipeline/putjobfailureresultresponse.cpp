@@ -86,7 +86,7 @@ void PutJobFailureResultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutJobFailureResultResponse instance.
  */
 PutJobFailureResultResponsePrivate::PutJobFailureResultResponsePrivate(
-    PutJobFailureResultQueueResponse * const q) : PutJobFailureResultPrivate(q)
+    PutJobFailureResultResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

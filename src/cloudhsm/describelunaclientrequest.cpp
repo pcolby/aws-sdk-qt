@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLunaClientRequest::response(QNetworkR
  */
 DescribeLunaClientRequestPrivate::DescribeLunaClientRequestPrivate(
     const CloudHSMRequest::Action action, DescribeLunaClientRequest * const q)
-    : DescribeLunaClientPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLunaClientRequestPrivate::DescribeLunaClientRequestPrivate(
  */
 DescribeLunaClientRequestPrivate::DescribeLunaClientRequestPrivate(
     const DescribeLunaClientRequestPrivate &other, DescribeLunaClientRequest * const q)
-    : DescribeLunaClientPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

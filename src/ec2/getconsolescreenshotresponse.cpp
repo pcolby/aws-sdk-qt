@@ -86,7 +86,7 @@ void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetConsoleScreenshotResponse instance.
  */
 GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
-    GetConsoleScreenshotQueueResponse * const q) : GetConsoleScreenshotPrivate(q)
+    GetConsoleScreenshotResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkRep
  */
 DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDomainNameRequest * const q)
-    : DeleteDomainNamePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
  */
 DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
     const DeleteDomainNameRequestPrivate &other, DeleteDomainNameRequest * const q)
-    : DeleteDomainNamePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

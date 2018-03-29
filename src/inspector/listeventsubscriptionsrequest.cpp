@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetw
  */
 ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
     const InspectorRequest::Action action, ListEventSubscriptionsRequest * const q)
-    : ListEventSubscriptionsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
  */
 ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
     const ListEventSubscriptionsRequestPrivate &other, ListEventSubscriptionsRequest * const q)
-    : ListEventSubscriptionsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

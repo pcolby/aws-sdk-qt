@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(Q
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
     const EC2Request::Action action, DisableVgwRoutePropagationRequest * const q)
-    : DisableVgwRoutePropagationPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPriva
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
     const DisableVgwRoutePropagationRequestPrivate &other, DisableVgwRoutePropagationRequest * const q)
-    : DisableVgwRoutePropagationPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

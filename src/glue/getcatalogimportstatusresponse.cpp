@@ -86,7 +86,7 @@ void GetCatalogImportStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCatalogImportStatusResponse instance.
  */
 GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
-    GetCatalogImportStatusQueueResponse * const q) : GetCatalogImportStatusPrivate(q)
+    GetCatalogImportStatusResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

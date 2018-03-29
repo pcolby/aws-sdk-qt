@@ -86,7 +86,7 @@ void CreateOrganizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateOrganizationResponse instance.
  */
 CreateOrganizationResponsePrivate::CreateOrganizationResponsePrivate(
-    CreateOrganizationQueueResponse * const q) : CreateOrganizationPrivate(q)
+    CreateOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

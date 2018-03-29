@@ -86,7 +86,7 @@ void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableMFADeviceResponse instance.
  */
 EnableMFADeviceResponsePrivate::EnableMFADeviceResponsePrivate(
-    EnableMFADeviceQueueResponse * const q) : EnableMFADevicePrivate(q)
+    EnableMFADeviceResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

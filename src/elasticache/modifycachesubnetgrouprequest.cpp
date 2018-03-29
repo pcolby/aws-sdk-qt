@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyCacheSubnetGroupRequest::response(QNetw
  */
 ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyCacheSubnetGroupRequest * const q)
-    : ModifyCacheSubnetGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
  */
 ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
     const ModifyCacheSubnetGroupRequestPrivate &other, ModifyCacheSubnetGroupRequest * const q)
-    : ModifyCacheSubnetGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

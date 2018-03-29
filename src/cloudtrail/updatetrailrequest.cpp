@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTrailRequest::response(QNetworkReply * 
  */
 UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
     const CloudTrailRequest::Action action, UpdateTrailRequest * const q)
-    : UpdateTrailPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
  */
 UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
     const UpdateTrailRequestPrivate &other, UpdateTrailRequest * const q)
-    : UpdateTrailPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

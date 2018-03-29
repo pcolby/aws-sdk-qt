@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetwork
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
     const ECRRequest::Action action, GetRepositoryPolicyRequest * const q)
-    : GetRepositoryPolicyPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
     const GetRepositoryPolicyRequestPrivate &other, GetRepositoryPolicyRequest * const q)
-    : GetRepositoryPolicyPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

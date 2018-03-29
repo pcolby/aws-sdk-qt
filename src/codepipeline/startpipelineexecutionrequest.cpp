@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetw
  */
 StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
     const CodePipelineRequest::Action action, StartPipelineExecutionRequest * const q)
-    : StartPipelineExecutionPrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
  */
 StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
     const StartPipelineExecutionRequestPrivate &other, StartPipelineExecutionRequest * const q)
-    : StartPipelineExecutionPrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

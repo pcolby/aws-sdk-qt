@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply 
  */
 InviteMembersRequestPrivate::InviteMembersRequestPrivate(
     const GuardDutyRequest::Action action, InviteMembersRequest * const q)
-    : InviteMembersPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InviteMembersRequestPrivate::InviteMembersRequestPrivate(
  */
 InviteMembersRequestPrivate::InviteMembersRequestPrivate(
     const InviteMembersRequestPrivate &other, InviteMembersRequest * const q)
-    : InviteMembersPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

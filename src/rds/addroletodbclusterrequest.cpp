@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddRoleToDBClusterRequest::response(QNetworkR
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
     const RDSRequest::Action action, AddRoleToDBClusterRequest * const q)
-    : AddRoleToDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
     const AddRoleToDBClusterRequestPrivate &other, AddRoleToDBClusterRequest * const q)
-    : AddRoleToDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

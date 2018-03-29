@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
     const SWFRequest::Action action, GetWorkflowExecutionHistoryRequest * const q)
-    : GetWorkflowExecutionHistoryPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPri
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
     const GetWorkflowExecutionHistoryRequestPrivate &other, GetWorkflowExecutionHistoryRequest * const q)
-    : GetWorkflowExecutionHistoryPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLagRequest::response(QNetworkReply * co
  */
 CreateLagRequestPrivate::CreateLagRequestPrivate(
     const DirectConnectRequest::Action action, CreateLagRequest * const q)
-    : CreateLagPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLagRequestPrivate::CreateLagRequestPrivate(
  */
 CreateLagRequestPrivate::CreateLagRequestPrivate(
     const CreateLagRequestPrivate &other, CreateLagRequest * const q)
-    : CreateLagPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

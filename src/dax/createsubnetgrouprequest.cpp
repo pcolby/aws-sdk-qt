@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkRe
  */
 CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
     const DAXRequest::Action action, CreateSubnetGroupRequest * const q)
-    : CreateSubnetGroupPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
  */
 CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
     const CreateSubnetGroupRequestPrivate &other, CreateSubnetGroupRequest * const q)
-    : CreateSubnetGroupPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

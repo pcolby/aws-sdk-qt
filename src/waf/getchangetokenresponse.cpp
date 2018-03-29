@@ -86,7 +86,7 @@ void GetChangeTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetChangeTokenResponse instance.
  */
 GetChangeTokenResponsePrivate::GetChangeTokenResponsePrivate(
-    GetChangeTokenQueueResponse * const q) : GetChangeTokenPrivate(q)
+    GetChangeTokenResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

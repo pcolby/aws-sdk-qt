@@ -86,7 +86,7 @@ void GetSnapshotLimitsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSnapshotLimitsResponse instance.
  */
 GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
-    GetSnapshotLimitsQueueResponse * const q) : GetSnapshotLimitsPrivate(q)
+    GetSnapshotLimitsResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteReplicationGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteReplicationGroupResponse instance.
  */
 DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponsePrivate(
-    DeleteReplicationGroupQueueResponse * const q) : DeleteReplicationGroupPrivate(q)
+    DeleteReplicationGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

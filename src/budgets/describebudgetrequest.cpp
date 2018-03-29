@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBudgetRequest::response(QNetworkReply
  */
 DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
     const BudgetsRequest::Action action, DescribeBudgetRequest * const q)
-    : DescribeBudgetPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
  */
 DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
     const DescribeBudgetRequestPrivate &other, DescribeBudgetRequest * const q)
-    : DescribeBudgetPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssignInstanceRequest::response(QNetworkReply
  */
 AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
     const OpsWorksRequest::Action action, AssignInstanceRequest * const q)
-    : AssignInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
  */
 AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
     const AssignInstanceRequestPrivate &other, AssignInstanceRequest * const q)
-    : AssignInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

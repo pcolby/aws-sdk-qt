@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkRep
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDeploymentRequest * const q)
-    : UpdateDeploymentPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
     const UpdateDeploymentRequestPrivate &other, UpdateDeploymentRequest * const q)
-    : UpdateDeploymentPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

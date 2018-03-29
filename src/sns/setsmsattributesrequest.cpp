@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetSMSAttributesRequest::response(QNetworkRep
  */
 SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
     const SNSRequest::Action action, SetSMSAttributesRequest * const q)
-    : SetSMSAttributesPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
  */
 SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
     const SetSMSAttributesRequestPrivate &other, SetSMSAttributesRequest * const q)
-    : SetSMSAttributesPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

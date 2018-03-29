@@ -86,7 +86,7 @@ void ListInstanceFleetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInstanceFleetsResponse instance.
  */
 ListInstanceFleetsResponsePrivate::ListInstanceFleetsResponsePrivate(
-    ListInstanceFleetsQueueResponse * const q) : ListInstanceFleetsPrivate(q)
+    ListInstanceFleetsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

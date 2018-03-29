@@ -86,7 +86,7 @@ void GetComplianceSummaryByConfigRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetComplianceSummaryByConfigRuleResponse instance.
  */
 GetComplianceSummaryByConfigRuleResponsePrivate::GetComplianceSummaryByConfigRuleResponsePrivate(
-    GetComplianceSummaryByConfigRuleQueueResponse * const q) : GetComplianceSummaryByConfigRulePrivate(q)
+    GetComplianceSummaryByConfigRuleResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

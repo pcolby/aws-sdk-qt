@@ -86,7 +86,7 @@ void TestAuthorizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestAuthorizationResponse instance.
  */
 TestAuthorizationResponsePrivate::TestAuthorizationResponsePrivate(
-    TestAuthorizationQueueResponse * const q) : TestAuthorizationPrivate(q)
+    TestAuthorizationResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

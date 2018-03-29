@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CompleteLifecycleActionRequest::response(QNet
  */
 CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
     const AutoScalingRequest::Action action, CompleteLifecycleActionRequest * const q)
-    : CompleteLifecycleActionPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
  */
 CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
     const CompleteLifecycleActionRequestPrivate &other, CompleteLifecycleActionRequest * const q)
-    : CompleteLifecycleActionPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNet
  */
 DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
     const EC2Request::Action action, DescribeMovingAddressesRequest * const q)
-    : DescribeMovingAddressesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
  */
 DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
     const DescribeMovingAddressesRequestPrivate &other, DescribeMovingAddressesRequest * const q)
-    : DescribeMovingAddressesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

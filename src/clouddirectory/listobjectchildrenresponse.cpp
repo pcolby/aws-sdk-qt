@@ -86,7 +86,7 @@ void ListObjectChildrenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListObjectChildrenResponse instance.
  */
 ListObjectChildrenResponsePrivate::ListObjectChildrenResponsePrivate(
-    ListObjectChildrenQueueResponse * const q) : ListObjectChildrenPrivate(q)
+    ListObjectChildrenResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

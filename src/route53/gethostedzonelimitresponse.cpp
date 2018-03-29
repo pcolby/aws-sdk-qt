@@ -86,7 +86,7 @@ void GetHostedZoneLimitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetHostedZoneLimitResponse instance.
  */
 GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponsePrivate(
-    GetHostedZoneLimitQueueResponse * const q) : GetHostedZoneLimitPrivate(q)
+    GetHostedZoneLimitResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

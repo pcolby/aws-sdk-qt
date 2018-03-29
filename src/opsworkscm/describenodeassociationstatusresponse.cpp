@@ -86,7 +86,7 @@ void DescribeNodeAssociationStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeNodeAssociationStatusResponse instance.
  */
 DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatusResponsePrivate(
-    DescribeNodeAssociationStatusQueueResponse * const q) : DescribeNodeAssociationStatusPrivate(q)
+    DescribeNodeAssociationStatusResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

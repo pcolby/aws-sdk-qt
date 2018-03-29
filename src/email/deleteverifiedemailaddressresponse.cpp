@@ -86,7 +86,7 @@ void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVerifiedEmailAddressResponse instance.
  */
 DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressResponsePrivate(
-    DeleteVerifiedEmailAddressQueueResponse * const q) : DeleteVerifiedEmailAddressPrivate(q)
+    DeleteVerifiedEmailAddressResponse * const q) : SESResponsePrivate(q)
 {
 
 }

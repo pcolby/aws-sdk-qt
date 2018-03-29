@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply
  */
 UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
     const AppSyncRequest::Action action, UpdateResolverRequest * const q)
-    : UpdateResolverPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
  */
 UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
     const UpdateResolverRequestPrivate &other, UpdateResolverRequest * const q)
-    : UpdateResolverPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

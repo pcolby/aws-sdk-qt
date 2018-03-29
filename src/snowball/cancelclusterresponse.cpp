@@ -86,7 +86,7 @@ void CancelClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelClusterResponse instance.
  */
 CancelClusterResponsePrivate::CancelClusterResponsePrivate(
-    CancelClusterQueueResponse * const q) : CancelClusterPrivate(q)
+    CancelClusterResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchIndexRequest::response(QNetworkReply * 
  */
 SearchIndexRequestPrivate::SearchIndexRequestPrivate(
     const IoTRequest::Action action, SearchIndexRequest * const q)
-    : SearchIndexPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchIndexRequestPrivate::SearchIndexRequestPrivate(
  */
 SearchIndexRequestPrivate::SearchIndexRequestPrivate(
     const SearchIndexRequestPrivate &other, SearchIndexRequest * const q)
-    : SearchIndexPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

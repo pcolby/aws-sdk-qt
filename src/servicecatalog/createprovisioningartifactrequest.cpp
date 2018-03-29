@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateProvisioningArtifactRequest::response(Q
  */
 CreateProvisioningArtifactRequestPrivate::CreateProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateProvisioningArtifactRequest * const q)
-    : CreateProvisioningArtifactPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateProvisioningArtifactRequestPrivate::CreateProvisioningArtifactRequestPriva
  */
 CreateProvisioningArtifactRequestPrivate::CreateProvisioningArtifactRequestPrivate(
     const CreateProvisioningArtifactRequestPrivate &other, CreateProvisioningArtifactRequest * const q)
-    : CreateProvisioningArtifactPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

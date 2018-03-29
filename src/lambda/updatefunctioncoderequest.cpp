@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkR
  */
 UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
     const LambdaRequest::Action action, UpdateFunctionCodeRequest * const q)
-    : UpdateFunctionCodePrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
  */
 UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
     const UpdateFunctionCodeRequestPrivate &other, UpdateFunctionCodeRequest * const q)
-    : UpdateFunctionCodePrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetOpenIDConnectProviderResponse instance.
  */
 GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate(
-    GetOpenIDConnectProviderQueueResponse * const q) : GetOpenIDConnectProviderPrivate(q)
+    GetOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

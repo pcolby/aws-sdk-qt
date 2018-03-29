@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetClientCertificatesRequest::response(QNetwo
  */
 GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
     const APIGatewayRequest::Action action, GetClientCertificatesRequest * const q)
-    : GetClientCertificatesPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
  */
 GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
     const GetClientCertificatesRequestPrivate &other, GetClientCertificatesRequest * const q)
-    : GetClientCertificatesPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AssociateCreatedArtifactResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateCreatedArtifactResponse instance.
  */
 AssociateCreatedArtifactResponsePrivate::AssociateCreatedArtifactResponsePrivate(
-    AssociateCreatedArtifactQueueResponse * const q) : AssociateCreatedArtifactPrivate(q)
+    AssociateCreatedArtifactResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

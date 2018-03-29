@@ -86,7 +86,7 @@ void DescribeCustomerGatewaysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCustomerGatewaysResponse instance.
  */
 DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate(
-    DescribeCustomerGatewaysQueueResponse * const q) : DescribeCustomerGatewaysPrivate(q)
+    DescribeCustomerGatewaysResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

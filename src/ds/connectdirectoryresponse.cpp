@@ -86,7 +86,7 @@ void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConnectDirectoryResponse instance.
  */
 ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
-    ConnectDirectoryQueueResponse * const q) : ConnectDirectoryPrivate(q)
+    ConnectDirectoryResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

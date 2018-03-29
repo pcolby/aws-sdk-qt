@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response
  */
 DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestPrivate(
     const EC2Request::Action action, DescribeClassicLinkInstancesRequest * const q)
-    : DescribeClassicLinkInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestP
  */
 DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestPrivate(
     const DescribeClassicLinkInstancesRequestPrivate &other, DescribeClassicLinkInstancesRequest * const q)
-    : DescribeClassicLinkInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

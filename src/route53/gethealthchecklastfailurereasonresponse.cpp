@@ -86,7 +86,7 @@ void GetHealthCheckLastFailureReasonResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetHealthCheckLastFailureReasonResponse instance.
  */
 GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonResponsePrivate(
-    GetHealthCheckLastFailureReasonQueueResponse * const q) : GetHealthCheckLastFailureReasonPrivate(q)
+    GetHealthCheckLastFailureReasonResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPolicyVersionsRequest::response(QNetworkR
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const IoTRequest::Action action, ListPolicyVersionsRequest * const q)
-    : ListPolicyVersionsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const ListPolicyVersionsRequestPrivate &other, ListPolicyVersionsRequest * const q)
-    : ListPolicyVersionsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

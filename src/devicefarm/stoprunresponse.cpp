@@ -86,7 +86,7 @@ void StopRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopRunResponse instance.
  */
 StopRunResponsePrivate::StopRunResponsePrivate(
-    StopRunQueueResponse * const q) : StopRunPrivate(q)
+    StopRunResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

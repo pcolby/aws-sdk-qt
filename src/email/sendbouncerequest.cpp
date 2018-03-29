@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * c
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
     const SESRequest::Action action, SendBounceRequest * const q)
-    : SendBouncePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendBounceRequestPrivate::SendBounceRequestPrivate(
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
     const SendBounceRequestPrivate &other, SendBounceRequest * const q)
-    : SendBouncePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

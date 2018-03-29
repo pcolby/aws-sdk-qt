@@ -86,7 +86,7 @@ void GetOTAUpdateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetOTAUpdateResponse instance.
  */
 GetOTAUpdateResponsePrivate::GetOTAUpdateResponsePrivate(
-    GetOTAUpdateQueueResponse * const q) : GetOTAUpdatePrivate(q)
+    GetOTAUpdateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

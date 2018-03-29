@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetwo
  */
 CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, CreateDirectoryConfigRequest * const q)
-    : CreateDirectoryConfigPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
  */
 CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
     const CreateDirectoryConfigRequestPrivate &other, CreateDirectoryConfigRequest * const q)
-    : CreateDirectoryConfigPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

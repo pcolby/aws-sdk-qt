@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClientCertificateRequest::response(QNet
  */
 UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
     const APIGatewayRequest::Action action, UpdateClientCertificateRequest * const q)
-    : UpdateClientCertificatePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
  */
 UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
     const UpdateClientCertificateRequestPrivate &other, UpdateClientCertificateRequest * const q)
-    : UpdateClientCertificatePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

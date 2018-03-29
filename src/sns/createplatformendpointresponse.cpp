@@ -86,7 +86,7 @@ void CreatePlatformEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePlatformEndpointResponse instance.
  */
 CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
-    CreatePlatformEndpointQueueResponse * const q) : CreatePlatformEndpointPrivate(q)
+    CreatePlatformEndpointResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

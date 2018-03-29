@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetRequest * const q)
-    : DeleteConfigurationSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const DeleteConfigurationSetRequestPrivate &other, DeleteConfigurationSetRequest * const q)
-    : DeleteConfigurationSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

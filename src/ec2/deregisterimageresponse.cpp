@@ -86,7 +86,7 @@ void DeregisterImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterImageResponse instance.
  */
 DeregisterImageResponsePrivate::DeregisterImageResponsePrivate(
-    DeregisterImageQueueResponse * const q) : DeregisterImagePrivate(q)
+    DeregisterImageResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

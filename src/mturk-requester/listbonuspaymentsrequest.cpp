@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkRe
  */
 ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
     const MTurkRequest::Action action, ListBonusPaymentsRequest * const q)
-    : ListBonusPaymentsPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
  */
 ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
     const ListBonusPaymentsRequestPrivate &other, ListBonusPaymentsRequest * const q)
-    : ListBonusPaymentsPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

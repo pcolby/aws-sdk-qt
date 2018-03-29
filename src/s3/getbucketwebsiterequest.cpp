@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketWebsiteRequest::response(QNetworkRep
  */
 GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
     const S3Request::Action action, GetBucketWebsiteRequest * const q)
-    : GetBucketWebsitePrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
  */
 GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
     const GetBucketWebsiteRequestPrivate &other, GetBucketWebsiteRequest * const q)
-    : GetBucketWebsitePrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

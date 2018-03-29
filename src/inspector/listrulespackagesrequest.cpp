@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkRe
  */
 ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
     const InspectorRequest::Action action, ListRulesPackagesRequest * const q)
-    : ListRulesPackagesPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
  */
 ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
     const ListRulesPackagesRequestPrivate &other, ListRulesPackagesRequest * const q)
-    : ListRulesPackagesPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

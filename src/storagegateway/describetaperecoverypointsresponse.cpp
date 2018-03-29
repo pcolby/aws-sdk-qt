@@ -86,7 +86,7 @@ void DescribeTapeRecoveryPointsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTapeRecoveryPointsResponse instance.
  */
 DescribeTapeRecoveryPointsResponsePrivate::DescribeTapeRecoveryPointsResponsePrivate(
-    DescribeTapeRecoveryPointsQueueResponse * const q) : DescribeTapeRecoveryPointsPrivate(q)
+    DescribeTapeRecoveryPointsResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

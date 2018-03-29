@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNet
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
     const EC2Request::Action action, ModifyInstanceAttributeRequest * const q)
-    : ModifyInstanceAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
     const ModifyInstanceAttributeRequestPrivate &other, ModifyInstanceAttributeRequest * const q)
-    : ModifyInstanceAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

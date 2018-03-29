@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
     const EMRRequest::Action action, CancelStepsRequest * const q)
-    : CancelStepsPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelStepsRequestPrivate::CancelStepsRequestPrivate(
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
     const CancelStepsRequestPrivate &other, CancelStepsRequest * const q)
-    : CancelStepsPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

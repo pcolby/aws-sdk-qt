@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDataSyncRequest::response(QNetw
  */
 CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, CreateResourceDataSyncRequest * const q)
-    : CreateResourceDataSyncPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
  */
 CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
     const CreateResourceDataSyncRequestPrivate &other, CreateResourceDataSyncRequest * const q)
-    : CreateResourceDataSyncPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

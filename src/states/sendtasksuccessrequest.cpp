@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendTaskSuccessRequest::response(QNetworkRepl
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
     const SFNRequest::Action action, SendTaskSuccessRequest * const q)
-    : SendTaskSuccessPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
     const SendTaskSuccessRequestPrivate &other, SendTaskSuccessRequest * const q)
-    : SendTaskSuccessPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifyWorkspacePropertiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyWorkspacePropertiesResponse instance.
  */
 ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponsePrivate(
-    ModifyWorkspacePropertiesQueueResponse * const q) : ModifyWorkspacePropertiesPrivate(q)
+    ModifyWorkspacePropertiesResponse * const q) : WorkSpacesResponsePrivate(q)
 {
 
 }

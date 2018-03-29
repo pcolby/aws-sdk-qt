@@ -86,7 +86,7 @@ void DeleteCorsPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCorsPolicyResponse instance.
  */
 DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponsePrivate(
-    DeleteCorsPolicyQueueResponse * const q) : DeleteCorsPolicyPrivate(q)
+    DeleteCorsPolicyResponse * const q) : MediaStoreResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * 
  */
 DeleteStackRequestPrivate::DeleteStackRequestPrivate(
     const AppStreamRequest::Action action, DeleteStackRequest * const q)
-    : DeleteStackPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteStackRequestPrivate::DeleteStackRequestPrivate(
  */
 DeleteStackRequestPrivate::DeleteStackRequestPrivate(
     const DeleteStackRequestPrivate &other, DeleteStackRequest * const q)
-    : DeleteStackPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

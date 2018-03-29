@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNe
  */
 AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
     const DirectConnectRequest::Action action, AllocateHostedConnectionRequest * const q)
-    : AllocateHostedConnectionPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
  */
 AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
     const AllocateHostedConnectionRequestPrivate &other, AllocateHostedConnectionRequest * const q)
-    : AllocateHostedConnectionPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetwork
  */
 PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
     const XRayRequest::Action action, PutTelemetryRecordsRequest * const q)
-    : PutTelemetryRecordsPrivate(action, q)
+    : XRayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
  */
 PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
     const PutTelemetryRecordsRequestPrivate &other, PutTelemetryRecordsRequest * const q)
-    : PutTelemetryRecordsPrivate(other, q)
+    : XRayRequestPrivate(other, q)
 {
 
 }

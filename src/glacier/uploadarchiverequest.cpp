@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadArchiveRequest::response(QNetworkReply 
  */
 UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
     const GlacierRequest::Action action, UploadArchiveRequest * const q)
-    : UploadArchivePrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
  */
 UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
     const UploadArchiveRequestPrivate &other, UploadArchiveRequest * const q)
-    : UploadArchivePrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

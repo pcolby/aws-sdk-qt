@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkR
  */
 SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
     const InspectorRequest::Action action, SetTagsForResourceRequest * const q)
-    : SetTagsForResourcePrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
  */
 SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
     const SetTagsForResourceRequestPrivate &other, SetTagsForResourceRequest * const q)
-    : SetTagsForResourcePrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

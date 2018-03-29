@@ -86,7 +86,7 @@ void DeleteCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCacheSubnetGroupResponse instance.
  */
 DeleteCacheSubnetGroupResponsePrivate::DeleteCacheSubnetGroupResponsePrivate(
-    DeleteCacheSubnetGroupQueueResponse * const q) : DeleteCacheSubnetGroupPrivate(q)
+    DeleteCacheSubnetGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

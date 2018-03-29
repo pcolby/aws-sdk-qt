@@ -86,7 +86,7 @@ void CreateHsmResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateHsmResponse instance.
  */
 CreateHsmResponsePrivate::CreateHsmResponsePrivate(
-    CreateHsmQueueResponse * const q) : CreateHsmPrivate(q)
+    CreateHsmResponse * const q) : CloudHSMV2ResponsePrivate(q)
 {
 
 }

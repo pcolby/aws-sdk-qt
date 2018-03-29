@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkR
  */
 GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
     const Route53Request::Action action, GetHostedZoneLimitRequest * const q)
-    : GetHostedZoneLimitPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
  */
 GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
     const GetHostedZoneLimitRequestPrivate &other, GetHostedZoneLimitRequest * const q)
-    : GetHostedZoneLimitPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

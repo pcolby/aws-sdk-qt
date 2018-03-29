@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkRe
  */
 UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
     const FirehoseRequest::Action action, UpdateDestinationRequest * const q)
-    : UpdateDestinationPrivate(action, q)
+    : FirehoseRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
  */
 UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
     const UpdateDestinationRequestPrivate &other, UpdateDestinationRequest * const q)
-    : UpdateDestinationPrivate(other, q)
+    : FirehoseRequestPrivate(other, q)
 {
 
 }

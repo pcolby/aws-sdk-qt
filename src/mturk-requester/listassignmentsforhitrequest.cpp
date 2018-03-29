@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetwo
  */
 ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
     const MTurkRequest::Action action, ListAssignmentsForHITRequest * const q)
-    : ListAssignmentsForHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
  */
 ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
     const ListAssignmentsForHITRequestPrivate &other, ListAssignmentsForHITRequest * const q)
-    : ListAssignmentsForHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

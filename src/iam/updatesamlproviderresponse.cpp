@@ -86,7 +86,7 @@ void UpdateSAMLProviderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSAMLProviderResponse instance.
  */
 UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
-    UpdateSAMLProviderQueueResponse * const q) : UpdateSAMLProviderPrivate(q)
+    UpdateSAMLProviderResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

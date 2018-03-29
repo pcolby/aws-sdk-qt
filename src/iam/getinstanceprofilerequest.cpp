@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkR
  */
 GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
     const IAMRequest::Action action, GetInstanceProfileRequest * const q)
-    : GetInstanceProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
  */
 GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
     const GetInstanceProfileRequestPrivate &other, GetInstanceProfileRequest * const q)
-    : GetInstanceProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

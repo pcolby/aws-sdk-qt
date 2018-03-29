@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeliveryStreamRequest::response(QNetwor
  */
 CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, CreateDeliveryStreamRequest * const q)
-    : CreateDeliveryStreamPrivate(action, q)
+    : FirehoseRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
  */
 CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
     const CreateDeliveryStreamRequestPrivate &other, CreateDeliveryStreamRequest * const q)
-    : CreateDeliveryStreamPrivate(other, q)
+    : FirehoseRequestPrivate(other, q)
 {
 
 }

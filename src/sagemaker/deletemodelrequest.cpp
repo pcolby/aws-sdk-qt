@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const SageMakerRequest::Action action, DeleteModelRequest * const q)
-    : DeleteModelPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteModelRequestPrivate::DeleteModelRequestPrivate(
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const DeleteModelRequestPrivate &other, DeleteModelRequest * const q)
-    : DeleteModelPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

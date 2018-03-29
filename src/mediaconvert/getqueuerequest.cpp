@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * con
  */
 GetQueueRequestPrivate::GetQueueRequestPrivate(
     const MediaConvertRequest::Action action, GetQueueRequest * const q)
-    : GetQueuePrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetQueueRequestPrivate::GetQueueRequestPrivate(
  */
 GetQueueRequestPrivate::GetQueueRequestPrivate(
     const GetQueueRequestPrivate &other, GetQueueRequest * const q)
-    : GetQueuePrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

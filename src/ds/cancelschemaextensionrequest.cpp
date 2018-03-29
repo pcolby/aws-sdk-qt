@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetwo
  */
 CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
     const DirectoryServiceRequest::Action action, CancelSchemaExtensionRequest * const q)
-    : CancelSchemaExtensionPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
  */
 CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
     const CancelSchemaExtensionRequestPrivate &other, CancelSchemaExtensionRequest * const q)
-    : CancelSchemaExtensionPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

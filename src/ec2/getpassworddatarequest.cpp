@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkRepl
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
     const EC2Request::Action action, GetPasswordDataRequest * const q)
-    : GetPasswordDataPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
     const GetPasswordDataRequestPrivate &other, GetPasswordDataRequest * const q)
-    : GetPasswordDataPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

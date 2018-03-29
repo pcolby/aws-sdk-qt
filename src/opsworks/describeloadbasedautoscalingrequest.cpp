@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBasedAutoScalingRequest::response
  */
 DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, DescribeLoadBasedAutoScalingRequest * const q)
-    : DescribeLoadBasedAutoScalingPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestP
  */
 DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestPrivate(
     const DescribeLoadBasedAutoScalingRequestPrivate &other, DescribeLoadBasedAutoScalingRequest * const q)
-    : DescribeLoadBasedAutoScalingPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

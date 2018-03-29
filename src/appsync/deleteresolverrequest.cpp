@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResolverRequest::response(QNetworkReply
  */
 DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
     const AppSyncRequest::Action action, DeleteResolverRequest * const q)
-    : DeleteResolverPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
  */
 DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
     const DeleteResolverRequestPrivate &other, DeleteResolverRequest * const q)
-    : DeleteResolverPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

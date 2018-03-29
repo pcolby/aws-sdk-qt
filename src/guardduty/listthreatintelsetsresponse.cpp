@@ -86,7 +86,7 @@ void ListThreatIntelSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListThreatIntelSetsResponse instance.
  */
 ListThreatIntelSetsResponsePrivate::ListThreatIntelSetsResponsePrivate(
-    ListThreatIntelSetsQueueResponse * const q) : ListThreatIntelSetsPrivate(q)
+    ListThreatIntelSetsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

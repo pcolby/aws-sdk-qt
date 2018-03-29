@@ -86,7 +86,7 @@ void DescribeConfigurationRecorderStatusResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public DescribeConfigurationRecorderStatusResponse instance.
  */
 DescribeConfigurationRecorderStatusResponsePrivate::DescribeConfigurationRecorderStatusResponsePrivate(
-    DescribeConfigurationRecorderStatusQueueResponse * const q) : DescribeConfigurationRecorderStatusPrivate(q)
+    DescribeConfigurationRecorderStatusResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

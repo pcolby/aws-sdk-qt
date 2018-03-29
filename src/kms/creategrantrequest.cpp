@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateGrantRequest::response(QNetworkReply * 
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
     const KMSRequest::Action action, CreateGrantRequest * const q)
-    : CreateGrantPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateGrantRequestPrivate::CreateGrantRequestPrivate(
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
     const CreateGrantRequestPrivate &other, CreateGrantRequest * const q)
-    : CreateGrantPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetwor
  */
 PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
     const EMRRequest::Action action, PutAutoScalingPolicyRequest * const q)
-    : PutAutoScalingPolicyPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
  */
 PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
     const PutAutoScalingPolicyRequestPrivate &other, PutAutoScalingPolicyRequest * const q)
-    : PutAutoScalingPolicyPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

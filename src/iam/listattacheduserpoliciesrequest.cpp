@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAttachedUserPoliciesRequest::response(QNe
  */
 ListAttachedUserPoliciesRequestPrivate::ListAttachedUserPoliciesRequestPrivate(
     const IAMRequest::Action action, ListAttachedUserPoliciesRequest * const q)
-    : ListAttachedUserPoliciesPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAttachedUserPoliciesRequestPrivate::ListAttachedUserPoliciesRequestPrivate(
  */
 ListAttachedUserPoliciesRequestPrivate::ListAttachedUserPoliciesRequestPrivate(
     const ListAttachedUserPoliciesRequestPrivate &other, ListAttachedUserPoliciesRequest * const q)
-    : ListAttachedUserPoliciesPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

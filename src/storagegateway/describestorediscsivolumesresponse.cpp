@@ -86,7 +86,7 @@ void DescribeStorediSCSIVolumesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStorediSCSIVolumesResponse instance.
  */
 DescribeStorediSCSIVolumesResponsePrivate::DescribeStorediSCSIVolumesResponsePrivate(
-    DescribeStorediSCSIVolumesQueueResponse * const q) : DescribeStorediSCSIVolumesPrivate(q)
+    DescribeStorediSCSIVolumesResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

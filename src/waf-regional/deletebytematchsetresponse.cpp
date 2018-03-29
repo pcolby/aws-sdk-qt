@@ -86,7 +86,7 @@ void DeleteByteMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteByteMatchSetResponse instance.
  */
 DeleteByteMatchSetResponsePrivate::DeleteByteMatchSetResponsePrivate(
-    DeleteByteMatchSetQueueResponse * const q) : DeleteByteMatchSetPrivate(q)
+    DeleteByteMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

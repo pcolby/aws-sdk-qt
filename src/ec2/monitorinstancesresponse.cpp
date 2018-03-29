@@ -86,7 +86,7 @@ void MonitorInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public MonitorInstancesResponse instance.
  */
 MonitorInstancesResponsePrivate::MonitorInstancesResponsePrivate(
-    MonitorInstancesQueueResponse * const q) : MonitorInstancesPrivate(q)
+    MonitorInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

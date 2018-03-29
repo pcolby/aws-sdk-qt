@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSnapshotsRequest::response(QNetwork
  */
 DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSnapshotsRequest * const q)
-    : DescribeDBSnapshotsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
  */
 DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
     const DescribeDBSnapshotsRequestPrivate &other, DescribeDBSnapshotsRequest * const q)
-    : DescribeDBSnapshotsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

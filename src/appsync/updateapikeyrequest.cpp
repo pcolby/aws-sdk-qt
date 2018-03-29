@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
  */
 UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
     const AppSyncRequest::Action action, UpdateApiKeyRequest * const q)
-    : UpdateApiKeyPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
  */
 UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
     const UpdateApiKeyRequestPrivate &other, UpdateApiKeyRequest * const q)
-    : UpdateApiKeyPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

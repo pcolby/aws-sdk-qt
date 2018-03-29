@@ -86,7 +86,7 @@ void PutItemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutItemResponse instance.
  */
 PutItemResponsePrivate::PutItemResponsePrivate(
-    PutItemQueueResponse * const q) : PutItemPrivate(q)
+    PutItemResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationTemplateRequest::response(
  */
 DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteConfigurationTemplateRequest * const q)
-    : DeleteConfigurationTemplatePrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPri
  */
 DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPrivate(
     const DeleteConfigurationTemplateRequestPrivate &other, DeleteConfigurationTemplateRequest * const q)
-    : DeleteConfigurationTemplatePrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply *
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
     const CloudHSMRequest::Action action, DescribeHapgRequest * const q)
-    : DescribeHapgPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
     const DescribeHapgRequestPrivate &other, DescribeHapgRequest * const q)
-    : DescribeHapgPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

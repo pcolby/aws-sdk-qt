@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChapCredentialsRequest::response(QNet
  */
 DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeChapCredentialsRequest * const q)
-    : DescribeChapCredentialsPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
  */
 DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
     const DescribeChapCredentialsRequestPrivate &other, DescribeChapCredentialsRequest * const q)
-    : DescribeChapCredentialsPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

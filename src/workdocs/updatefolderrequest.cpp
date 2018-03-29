@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFolderRequest::response(QNetworkReply *
  */
 UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
     const WorkDocsRequest::Action action, UpdateFolderRequest * const q)
-    : UpdateFolderPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
  */
 UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
     const UpdateFolderRequestPrivate &other, UpdateFolderRequest * const q)
-    : UpdateFolderPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

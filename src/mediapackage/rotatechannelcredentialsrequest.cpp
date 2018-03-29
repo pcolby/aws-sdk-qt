@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RotateChannelCredentialsRequest::response(QNe
  */
 RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
     const MediaPackageRequest::Action action, RotateChannelCredentialsRequest * const q)
-    : RotateChannelCredentialsPrivate(action, q)
+    : MediaPackageRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
  */
 RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
     const RotateChannelCredentialsRequestPrivate &other, RotateChannelCredentialsRequest * const q)
-    : RotateChannelCredentialsPrivate(other, q)
+    : MediaPackageRequestPrivate(other, q)
 {
 
 }

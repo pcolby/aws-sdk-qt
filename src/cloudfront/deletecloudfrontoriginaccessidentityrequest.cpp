@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::
  */
 DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
     const CloudFrontRequest::Action action, DeleteCloudFrontOriginAccessIdentityRequest * const q)
-    : DeleteCloudFrontOriginAccessIdentityPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccess
  */
 DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
     const DeleteCloudFrontOriginAccessIdentityRequestPrivate &other, DeleteCloudFrontOriginAccessIdentityRequest * const q)
-    : DeleteCloudFrontOriginAccessIdentityPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

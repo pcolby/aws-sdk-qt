@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply
  */
 GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
     const LightsailRequest::Action action, GetActiveNamesRequest * const q)
-    : GetActiveNamesPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
  */
 GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
     const GetActiveNamesRequestPrivate &other, GetActiveNamesRequest * const q)
-    : GetActiveNamesPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

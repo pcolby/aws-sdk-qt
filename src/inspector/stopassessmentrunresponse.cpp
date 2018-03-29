@@ -86,7 +86,7 @@ void StopAssessmentRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopAssessmentRunResponse instance.
  */
 StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
-    StopAssessmentRunQueueResponse * const q) : StopAssessmentRunPrivate(q)
+    StopAssessmentRunResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

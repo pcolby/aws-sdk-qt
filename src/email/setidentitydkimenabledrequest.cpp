@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityDkimEnabledRequest::response(QNetw
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityDkimEnabledRequest * const q)
-    : SetIdentityDkimEnabledPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
     const SetIdentityDkimEnabledRequestPrivate &other, SetIdentityDkimEnabledRequest * const q)
-    : SetIdentityDkimEnabledPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetBlueprintsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBlueprintsResponse instance.
  */
 GetBlueprintsResponsePrivate::GetBlueprintsResponsePrivate(
-    GetBlueprintsQueueResponse * const q) : GetBlueprintsPrivate(q)
+    GetBlueprintsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

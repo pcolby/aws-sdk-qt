@@ -86,7 +86,7 @@ void CreateSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSubnetGroupResponse instance.
  */
 CreateSubnetGroupResponsePrivate::CreateSubnetGroupResponsePrivate(
-    CreateSubnetGroupQueueResponse * const q) : CreateSubnetGroupPrivate(q)
+    CreateSubnetGroupResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

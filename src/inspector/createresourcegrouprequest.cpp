@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceGroupRequest::response(QNetwork
  */
 CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
     const InspectorRequest::Action action, CreateResourceGroupRequest * const q)
-    : CreateResourceGroupPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
  */
 CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
     const CreateResourceGroupRequestPrivate &other, CreateResourceGroupRequest * const q)
-    : CreateResourceGroupPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void EnableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableDomainAutoRenewResponse instance.
  */
 EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponsePrivate(
-    EnableDomainAutoRenewQueueResponse * const q) : EnableDomainAutoRenewPrivate(q)
+    EnableDomainAutoRenewResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListOpenWorkflowExecutionsResponse instance.
  */
 ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePrivate(
-    ListOpenWorkflowExecutionsQueueResponse * const q) : ListOpenWorkflowExecutionsPrivate(q)
+    ListOpenWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

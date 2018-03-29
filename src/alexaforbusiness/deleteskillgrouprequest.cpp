@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSkillGroupRequest::response(QNetworkRep
  */
 DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteSkillGroupRequest * const q)
-    : DeleteSkillGroupPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
  */
 DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
     const DeleteSkillGroupRequestPrivate &other, DeleteSkillGroupRequest * const q)
-    : DeleteSkillGroupPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

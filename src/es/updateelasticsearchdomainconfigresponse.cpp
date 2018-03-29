@@ -86,7 +86,7 @@ void UpdateElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateElasticsearchDomainConfigResponse instance.
  */
 UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigResponsePrivate(
-    UpdateElasticsearchDomainConfigQueueResponse * const q) : UpdateElasticsearchDomainConfigPrivate(q)
+    UpdateElasticsearchDomainConfigResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

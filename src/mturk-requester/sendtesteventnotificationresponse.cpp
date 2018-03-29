@@ -86,7 +86,7 @@ void SendTestEventNotificationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendTestEventNotificationResponse instance.
  */
 SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePrivate(
-    SendTestEventNotificationQueueResponse * const q) : SendTestEventNotificationPrivate(q)
+    SendTestEventNotificationResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateOrUpdateTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateOrUpdateTagsResponse instance.
  */
 CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponsePrivate(
-    CreateOrUpdateTagsQueueResponse * const q) : CreateOrUpdateTagsPrivate(q)
+    CreateOrUpdateTagsResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

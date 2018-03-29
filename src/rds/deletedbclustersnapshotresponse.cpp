@@ -86,7 +86,7 @@ void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDBClusterSnapshotResponse instance.
  */
 DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
-    DeleteDBClusterSnapshotQueueResponse * const q) : DeleteDBClusterSnapshotPrivate(q)
+    DeleteDBClusterSnapshotResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

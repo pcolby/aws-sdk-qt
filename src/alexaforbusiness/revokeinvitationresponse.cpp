@@ -86,7 +86,7 @@ void RevokeInvitationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RevokeInvitationResponse instance.
  */
 RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
-    RevokeInvitationQueueResponse * const q) : RevokeInvitationPrivate(q)
+    RevokeInvitationResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

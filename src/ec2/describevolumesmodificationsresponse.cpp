@@ -86,7 +86,7 @@ void DescribeVolumesModificationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVolumesModificationsResponse instance.
  */
 DescribeVolumesModificationsResponsePrivate::DescribeVolumesModificationsResponsePrivate(
-    DescribeVolumesModificationsQueueResponse * const q) : DescribeVolumesModificationsPrivate(q)
+    DescribeVolumesModificationsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

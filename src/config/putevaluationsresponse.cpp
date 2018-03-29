@@ -86,7 +86,7 @@ void PutEvaluationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutEvaluationsResponse instance.
  */
 PutEvaluationsResponsePrivate::PutEvaluationsResponsePrivate(
-    PutEvaluationsQueueResponse * const q) : PutEvaluationsPrivate(q)
+    PutEvaluationsResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

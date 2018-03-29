@@ -86,7 +86,7 @@ void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PurchaseScheduledInstancesResponse instance.
  */
 PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePrivate(
-    PurchaseScheduledInstancesQueueResponse * const q) : PurchaseScheduledInstancesPrivate(q)
+    PurchaseScheduledInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

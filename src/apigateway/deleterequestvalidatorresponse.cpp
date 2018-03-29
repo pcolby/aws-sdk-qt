@@ -86,7 +86,7 @@ void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRequestValidatorResponse instance.
  */
 DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
-    DeleteRequestValidatorQueueResponse * const q) : DeleteRequestValidatorPrivate(q)
+    DeleteRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

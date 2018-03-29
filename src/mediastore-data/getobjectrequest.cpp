@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
  */
 GetObjectRequestPrivate::GetObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, GetObjectRequest * const q)
-    : GetObjectPrivate(action, q)
+    : MediaStoreDataRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetObjectRequestPrivate::GetObjectRequestPrivate(
  */
 GetObjectRequestPrivate::GetObjectRequestPrivate(
     const GetObjectRequestPrivate &other, GetObjectRequest * const q)
-    : GetObjectPrivate(other, q)
+    : MediaStoreDataRequestPrivate(other, q)
 {
 
 }

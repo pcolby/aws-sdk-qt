@@ -86,7 +86,7 @@ void DeleteReceiptRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteReceiptRuleResponse instance.
  */
 DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponsePrivate(
-    DeleteReceiptRuleQueueResponse * const q) : DeleteReceiptRulePrivate(q)
+    DeleteReceiptRuleResponse * const q) : SESResponsePrivate(q)
 {
 
 }

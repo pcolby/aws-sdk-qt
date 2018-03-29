@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelArchivalRequest::response(QNetworkReply
  */
 CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
     const StorageGatewayRequest::Action action, CancelArchivalRequest * const q)
-    : CancelArchivalPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
  */
 CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
     const CancelArchivalRequestPrivate &other, CancelArchivalRequest * const q)
-    : CancelArchivalPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

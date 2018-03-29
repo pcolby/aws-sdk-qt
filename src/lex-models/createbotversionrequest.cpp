@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkRep
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateBotVersionRequest * const q)
-    : CreateBotVersionPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
     const CreateBotVersionRequestPrivate &other, CreateBotVersionRequest * const q)
-    : CreateBotVersionPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

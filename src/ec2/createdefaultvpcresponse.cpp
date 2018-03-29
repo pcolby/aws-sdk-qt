@@ -86,7 +86,7 @@ void CreateDefaultVpcResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDefaultVpcResponse instance.
  */
 CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
-    CreateDefaultVpcQueueResponse * const q) : CreateDefaultVpcPrivate(q)
+    CreateDefaultVpcResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

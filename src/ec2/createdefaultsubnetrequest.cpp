@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultSubnetRequest::response(QNetwork
  */
 CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
     const EC2Request::Action action, CreateDefaultSubnetRequest * const q)
-    : CreateDefaultSubnetPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
  */
 CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
     const CreateDefaultSubnetRequestPrivate &other, CreateDefaultSubnetRequest * const q)
-    : CreateDefaultSubnetPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

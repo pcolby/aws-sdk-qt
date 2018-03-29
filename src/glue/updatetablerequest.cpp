@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTableRequest::response(QNetworkReply * 
  */
 UpdateTableRequestPrivate::UpdateTableRequestPrivate(
     const GlueRequest::Action action, UpdateTableRequest * const q)
-    : UpdateTablePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTableRequestPrivate::UpdateTableRequestPrivate(
  */
 UpdateTableRequestPrivate::UpdateTableRequestPrivate(
     const UpdateTableRequestPrivate &other, UpdateTableRequest * const q)
-    : UpdateTablePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetw
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
     const IAMRequest::Action action, DeleteVirtualMFADeviceRequest * const q)
-    : DeleteVirtualMFADevicePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
     const DeleteVirtualMFADeviceRequestPrivate &other, DeleteVirtualMFADeviceRequest * const q)
-    : DeleteVirtualMFADevicePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

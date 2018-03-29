@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkRepl
  */
 GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
     const Route53Request::Action action, GetAccountLimitRequest * const q)
-    : GetAccountLimitPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
  */
 GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
     const GetAccountLimitRequestPrivate &other, GetAccountLimitRequest * const q)
-    : GetAccountLimitPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

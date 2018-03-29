@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeDBSecurityGroupIngressRequest::respo
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
     const RDSRequest::Action action, AuthorizeDBSecurityGroupIngressRequest * const q)
-    : AuthorizeDBSecurityGroupIngressPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRe
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
     const AuthorizeDBSecurityGroupIngressRequestPrivate &other, AuthorizeDBSecurityGroupIngressRequest * const q)
-    : AuthorizeDBSecurityGroupIngressPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

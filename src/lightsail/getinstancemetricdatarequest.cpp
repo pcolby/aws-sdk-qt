@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetwo
  */
 GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
     const LightsailRequest::Action action, GetInstanceMetricDataRequest * const q)
-    : GetInstanceMetricDataPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
  */
 GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
     const GetInstanceMetricDataRequestPrivate &other, GetInstanceMetricDataRequest * const q)
-    : GetInstanceMetricDataPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

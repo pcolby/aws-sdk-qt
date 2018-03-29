@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipChannelRequest::response(QNetwo
  */
 UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsVoipChannelRequest * const q)
-    : UpdateApnsVoipChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
  */
 UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
     const UpdateApnsVoipChannelRequestPrivate &other, UpdateApnsVoipChannelRequest * const q)
-    : UpdateApnsVoipChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

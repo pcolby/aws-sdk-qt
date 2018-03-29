@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEventSourceMappingRequest::response(QNe
  */
 CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, CreateEventSourceMappingRequest * const q)
-    : CreateEventSourceMappingPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
  */
 CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
     const CreateEventSourceMappingRequestPrivate &other, CreateEventSourceMappingRequest * const q)
-    : CreateEventSourceMappingPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

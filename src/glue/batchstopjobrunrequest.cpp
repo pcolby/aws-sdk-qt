@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkRepl
  */
 BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
     const GlueRequest::Action action, BatchStopJobRunRequest * const q)
-    : BatchStopJobRunPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
  */
 BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
     const BatchStopJobRunRequestPrivate &other, BatchStopJobRunRequest * const q)
-    : BatchStopJobRunPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

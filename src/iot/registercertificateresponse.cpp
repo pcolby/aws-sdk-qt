@@ -86,7 +86,7 @@ void RegisterCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterCertificateResponse instance.
  */
 RegisterCertificateResponsePrivate::RegisterCertificateResponsePrivate(
-    RegisterCertificateQueueResponse * const q) : RegisterCertificatePrivate(q)
+    RegisterCertificateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

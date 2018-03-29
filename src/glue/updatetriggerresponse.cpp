@@ -86,7 +86,7 @@ void UpdateTriggerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateTriggerResponse instance.
  */
 UpdateTriggerResponsePrivate::UpdateTriggerResponsePrivate(
-    UpdateTriggerQueueResponse * const q) : UpdateTriggerPrivate(q)
+    UpdateTriggerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

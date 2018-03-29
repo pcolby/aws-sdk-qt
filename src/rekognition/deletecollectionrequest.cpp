@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCollectionRequest::response(QNetworkRep
  */
 DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
     const RekognitionRequest::Action action, DeleteCollectionRequest * const q)
-    : DeleteCollectionPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
  */
 DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
     const DeleteCollectionRequestPrivate &other, DeleteCollectionRequest * const q)
-    : DeleteCollectionPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

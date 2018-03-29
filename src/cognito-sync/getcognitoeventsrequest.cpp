@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCognitoEventsRequest::response(QNetworkRep
  */
 GetCognitoEventsRequestPrivate::GetCognitoEventsRequestPrivate(
     const CognitoSyncRequest::Action action, GetCognitoEventsRequest * const q)
-    : GetCognitoEventsPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCognitoEventsRequestPrivate::GetCognitoEventsRequestPrivate(
  */
 GetCognitoEventsRequestPrivate::GetCognitoEventsRequestPrivate(
     const GetCognitoEventsRequestPrivate &other, GetCognitoEventsRequest * const q)
-    : GetCognitoEventsPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

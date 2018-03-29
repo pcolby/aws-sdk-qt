@@ -86,7 +86,7 @@ void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateEventSubscriptionResponse instance.
  */
 CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
-    CreateEventSubscriptionQueueResponse * const q) : CreateEventSubscriptionPrivate(q)
+    CreateEventSubscriptionResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

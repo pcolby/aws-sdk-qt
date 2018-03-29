@@ -86,7 +86,7 @@ void UpdateRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRoleResponse instance.
  */
 UpdateRoleResponsePrivate::UpdateRoleResponsePrivate(
-    UpdateRoleQueueResponse * const q) : UpdateRolePrivate(q)
+    UpdateRoleResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

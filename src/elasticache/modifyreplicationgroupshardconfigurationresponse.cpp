@@ -86,7 +86,7 @@ void ModifyReplicationGroupShardConfigurationResponse::parseSuccess(QIODevice &r
  * @param  q  Pointer to this object's public ModifyReplicationGroupShardConfigurationResponse instance.
  */
 ModifyReplicationGroupShardConfigurationResponsePrivate::ModifyReplicationGroupShardConfigurationResponsePrivate(
-    ModifyReplicationGroupShardConfigurationQueueResponse * const q) : ModifyReplicationGroupShardConfigurationPrivate(q)
+    ModifyReplicationGroupShardConfigurationResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void RecordActivityTaskHeartbeatResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RecordActivityTaskHeartbeatResponse instance.
  */
 RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponsePrivate(
-    RecordActivityTaskHeartbeatQueueResponse * const q) : RecordActivityTaskHeartbeatPrivate(q)
+    RecordActivityTaskHeartbeatResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

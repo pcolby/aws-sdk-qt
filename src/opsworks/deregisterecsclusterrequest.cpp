@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterEcsClusterRequest::response(QNetwor
  */
 DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterEcsClusterRequest * const q)
-    : DeregisterEcsClusterPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
  */
 DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
     const DeregisterEcsClusterRequestPrivate &other, DeregisterEcsClusterRequest * const q)
-    : DeregisterEcsClusterPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeregisterVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterVolumeResponse instance.
  */
 DeregisterVolumeResponsePrivate::DeregisterVolumeResponsePrivate(
-    DeregisterVolumeQueueResponse * const q) : DeregisterVolumePrivate(q)
+    DeregisterVolumeResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

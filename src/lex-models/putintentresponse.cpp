@@ -86,7 +86,7 @@ void PutIntentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutIntentResponse instance.
  */
 PutIntentResponsePrivate::PutIntentResponsePrivate(
-    PutIntentQueueResponse * const q) : PutIntentPrivate(q)
+    PutIntentResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

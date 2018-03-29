@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
     const DAXRequest::Action action, DeleteParameterGroupRequest * const q)
-    : DeleteParameterGroupPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
     const DeleteParameterGroupRequestPrivate &other, DeleteParameterGroupRequest * const q)
-    : DeleteParameterGroupPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

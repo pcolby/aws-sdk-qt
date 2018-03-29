@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * co
  */
 SendBonusRequestPrivate::SendBonusRequestPrivate(
     const MTurkRequest::Action action, SendBonusRequest * const q)
-    : SendBonusPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendBonusRequestPrivate::SendBonusRequestPrivate(
  */
 SendBonusRequestPrivate::SendBonusRequestPrivate(
     const SendBonusRequestPrivate &other, SendBonusRequest * const q)
-    : SendBonusPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

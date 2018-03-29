@@ -86,7 +86,7 @@ void DeletePatchBaselineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePatchBaselineResponse instance.
  */
 DeletePatchBaselineResponsePrivate::DeletePatchBaselineResponsePrivate(
-    DeletePatchBaselineQueueResponse * const q) : DeletePatchBaselinePrivate(q)
+    DeletePatchBaselineResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

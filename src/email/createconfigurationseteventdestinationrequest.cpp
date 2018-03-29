@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetEventDestinationRequest
  */
 CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEventDestinationRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetEventDestinationRequest * const q)
-    : CreateConfigurationSetEventDestinationPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEven
  */
 CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEventDestinationRequestPrivate(
     const CreateConfigurationSetEventDestinationRequestPrivate &other, CreateConfigurationSetEventDestinationRequest * const q)
-    : CreateConfigurationSetEventDestinationPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

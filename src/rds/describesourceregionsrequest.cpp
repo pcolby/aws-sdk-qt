@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetwo
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
     const RDSRequest::Action action, DescribeSourceRegionsRequest * const q)
-    : DescribeSourceRegionsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
     const DescribeSourceRegionsRequestPrivate &other, DescribeSourceRegionsRequest * const q)
-    : DescribeSourceRegionsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

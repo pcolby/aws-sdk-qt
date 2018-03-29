@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkRepl
  */
 DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
     const AutoScalingRequest::Action action, DetachInstancesRequest * const q)
-    : DetachInstancesPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
  */
 DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
     const DetachInstancesRequestPrivate &other, DetachInstancesRequest * const q)
-    : DetachInstancesPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

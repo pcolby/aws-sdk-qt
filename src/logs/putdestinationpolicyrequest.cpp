@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutDestinationPolicyRequest::response(QNetwor
  */
 PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutDestinationPolicyRequest * const q)
-    : PutDestinationPolicyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
  */
 PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
     const PutDestinationPolicyRequestPrivate &other, PutDestinationPolicyRequest * const q)
-    : PutDestinationPolicyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

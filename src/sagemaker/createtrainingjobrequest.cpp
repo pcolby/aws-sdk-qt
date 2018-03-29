@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrainingJobRequest::response(QNetworkRe
  */
 CreateTrainingJobRequestPrivate::CreateTrainingJobRequestPrivate(
     const SageMakerRequest::Action action, CreateTrainingJobRequest * const q)
-    : CreateTrainingJobPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTrainingJobRequestPrivate::CreateTrainingJobRequestPrivate(
  */
 CreateTrainingJobRequestPrivate::CreateTrainingJobRequestPrivate(
     const CreateTrainingJobRequestPrivate &other, CreateTrainingJobRequest * const q)
-    : CreateTrainingJobPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

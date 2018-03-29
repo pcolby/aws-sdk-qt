@@ -86,7 +86,7 @@ void DeleteItemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteItemResponse instance.
  */
 DeleteItemResponsePrivate::DeleteItemResponsePrivate(
-    DeleteItemQueueResponse * const q) : DeleteItemPrivate(q)
+    DeleteItemResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

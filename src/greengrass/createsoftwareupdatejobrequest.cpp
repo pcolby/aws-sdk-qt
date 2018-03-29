@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNet
  */
 CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
     const GreengrassRequest::Action action, CreateSoftwareUpdateJobRequest * const q)
-    : CreateSoftwareUpdateJobPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
  */
 CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
     const CreateSoftwareUpdateJobRequestPrivate &other, CreateSoftwareUpdateJobRequest * const q)
-    : CreateSoftwareUpdateJobPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

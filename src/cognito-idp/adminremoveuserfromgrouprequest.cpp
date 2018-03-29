@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNe
  */
 AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminRemoveUserFromGroupRequest * const q)
-    : AdminRemoveUserFromGroupPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
  */
 AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
     const AdminRemoveUserFromGroupRequestPrivate &other, AdminRemoveUserFromGroupRequest * const q)
-    : AdminRemoveUserFromGroupPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

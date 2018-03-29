@@ -86,7 +86,7 @@ void RebootWorkspacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootWorkspacesResponse instance.
  */
 RebootWorkspacesResponsePrivate::RebootWorkspacesResponsePrivate(
-    RebootWorkspacesQueueResponse * const q) : RebootWorkspacesPrivate(q)
+    RebootWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
 {
 
 }

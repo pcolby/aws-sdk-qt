@@ -86,7 +86,7 @@ void SearchGameSessionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchGameSessionsResponse instance.
  */
 SearchGameSessionsResponsePrivate::SearchGameSessionsResponsePrivate(
-    SearchGameSessionsQueueResponse * const q) : SearchGameSessionsPrivate(q)
+    SearchGameSessionsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ComposeEnvironmentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ComposeEnvironmentsResponse instance.
  */
 ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponsePrivate(
-    ComposeEnvironmentsQueueResponse * const q) : ComposeEnvironmentsPrivate(q)
+    ComposeEnvironmentsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply
  */
 DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
     const SimpleDBRequest::Action action, DomainMetadataRequest * const q)
-    : DomainMetadataPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
  */
 DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
     const DomainMetadataRequestPrivate &other, DomainMetadataRequest * const q)
-    : DomainMetadataPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

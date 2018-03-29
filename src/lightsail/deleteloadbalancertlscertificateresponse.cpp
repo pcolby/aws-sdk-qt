@@ -86,7 +86,7 @@ void DeleteLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLoadBalancerTlsCertificateResponse instance.
  */
 DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificateResponsePrivate(
-    DeleteLoadBalancerTlsCertificateQueueResponse * const q) : DeleteLoadBalancerTlsCertificatePrivate(q)
+    DeleteLoadBalancerTlsCertificateResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

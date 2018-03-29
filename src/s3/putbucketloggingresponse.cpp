@@ -86,7 +86,7 @@ void PutBucketLoggingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBucketLoggingResponse instance.
  */
 PutBucketLoggingResponsePrivate::PutBucketLoggingResponsePrivate(
-    PutBucketLoggingQueueResponse * const q) : PutBucketLoggingPrivate(q)
+    PutBucketLoggingResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

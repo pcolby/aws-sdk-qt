@@ -86,7 +86,7 @@ void StopApplicationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopApplicationResponse instance.
  */
 StopApplicationResponsePrivate::StopApplicationResponsePrivate(
-    StopApplicationQueueResponse * const q) : StopApplicationPrivate(q)
+    StopApplicationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

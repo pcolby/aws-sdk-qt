@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateApplicationRequest * const q)
-    : CreateApplicationPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const CreateApplicationRequestPrivate &other, CreateApplicationRequest * const q)
-    : CreateApplicationPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

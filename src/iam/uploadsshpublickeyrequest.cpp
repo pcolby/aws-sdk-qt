@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadSSHPublicKeyRequest::response(QNetworkR
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, UploadSSHPublicKeyRequest * const q)
-    : UploadSSHPublicKeyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
     const UploadSSHPublicKeyRequestPrivate &other, UploadSSHPublicKeyRequest * const q)
-    : UploadSSHPublicKeyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateMountTargetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMountTargetResponse instance.
  */
 CreateMountTargetResponsePrivate::CreateMountTargetResponsePrivate(
-    CreateMountTargetQueueResponse * const q) : CreateMountTargetPrivate(q)
+    CreateMountTargetResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

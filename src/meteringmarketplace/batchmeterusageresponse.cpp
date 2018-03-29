@@ -86,7 +86,7 @@ void BatchMeterUsageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchMeterUsageResponse instance.
  */
 BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
-    BatchMeterUsageQueueResponse * const q) : BatchMeterUsagePrivate(q)
+    BatchMeterUsageResponse * const q) : MarketplaceMeteringResponsePrivate(q)
 {
 
 }

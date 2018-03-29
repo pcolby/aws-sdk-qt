@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const WAFRequest::Action action, PutPermissionPolicyRequest * const q)
-    : PutPermissionPolicyPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const PutPermissionPolicyRequestPrivate &other, PutPermissionPolicyRequest * const q)
-    : PutPermissionPolicyPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

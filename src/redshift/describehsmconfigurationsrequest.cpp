@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmConfigurationsRequest::response(QN
  */
 DescribeHsmConfigurationsRequestPrivate::DescribeHsmConfigurationsRequestPrivate(
     const RedshiftRequest::Action action, DescribeHsmConfigurationsRequest * const q)
-    : DescribeHsmConfigurationsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeHsmConfigurationsRequestPrivate::DescribeHsmConfigurationsRequestPrivate
  */
 DescribeHsmConfigurationsRequestPrivate::DescribeHsmConfigurationsRequestPrivate(
     const DescribeHsmConfigurationsRequestPrivate &other, DescribeHsmConfigurationsRequest * const q)
-    : DescribeHsmConfigurationsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

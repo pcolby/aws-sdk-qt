@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QN
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskFailedRequest * const q)
-    : RespondActivityTaskFailedPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
     const RespondActivityTaskFailedRequestPrivate &other, RespondActivityTaskFailedRequest * const q)
-    : RespondActivityTaskFailedPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

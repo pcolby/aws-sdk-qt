@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBranchRequest::response(QNetworkReply *
  */
 CreateBranchRequestPrivate::CreateBranchRequestPrivate(
     const CodeCommitRequest::Action action, CreateBranchRequest * const q)
-    : CreateBranchPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBranchRequestPrivate::CreateBranchRequestPrivate(
  */
 CreateBranchRequestPrivate::CreateBranchRequestPrivate(
     const CreateBranchRequestPrivate &other, CreateBranchRequest * const q)
-    : CreateBranchPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

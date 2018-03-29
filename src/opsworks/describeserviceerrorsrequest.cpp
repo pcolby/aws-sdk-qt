@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceErrorsRequest::response(QNetwo
  */
 DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeServiceErrorsRequest * const q)
-    : DescribeServiceErrorsPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
  */
 DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
     const DescribeServiceErrorsRequestPrivate &other, DescribeServiceErrorsRequest * const q)
-    : DescribeServiceErrorsPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkRep
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const RDSRequest::Action action, ModifyDBInstanceRequest * const q)
-    : ModifyDBInstancePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const ModifyDBInstanceRequestPrivate &other, ModifyDBInstanceRequest * const q)
-    : ModifyDBInstancePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

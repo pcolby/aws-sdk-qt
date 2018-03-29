@@ -86,7 +86,7 @@ void DeleteGitHubAccountTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteGitHubAccountTokenResponse instance.
  */
 DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponsePrivate(
-    DeleteGitHubAccountTokenQueueResponse * const q) : DeleteGitHubAccountTokenPrivate(q)
+    DeleteGitHubAccountTokenResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

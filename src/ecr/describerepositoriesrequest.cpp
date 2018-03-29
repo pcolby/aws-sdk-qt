@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const ECRRequest::Action action, DescribeRepositoriesRequest * const q)
-    : DescribeRepositoriesPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const DescribeRepositoriesRequestPrivate &other, DescribeRepositoriesRequest * const q)
-    : DescribeRepositoriesPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

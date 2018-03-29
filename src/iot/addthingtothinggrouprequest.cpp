@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddThingToThingGroupRequest::response(QNetwor
  */
 AddThingToThingGroupRequestPrivate::AddThingToThingGroupRequestPrivate(
     const IoTRequest::Action action, AddThingToThingGroupRequest * const q)
-    : AddThingToThingGroupPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddThingToThingGroupRequestPrivate::AddThingToThingGroupRequestPrivate(
  */
 AddThingToThingGroupRequestPrivate::AddThingToThingGroupRequestPrivate(
     const AddThingToThingGroupRequestPrivate &other, AddThingToThingGroupRequest * const q)
-    : AddThingToThingGroupPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

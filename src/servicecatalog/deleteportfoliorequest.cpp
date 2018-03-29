@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioRequest::response(QNetworkRepl
  */
 DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DeletePortfolioRequest * const q)
-    : DeletePortfolioPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
  */
 DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
     const DeletePortfolioRequestPrivate &other, DeletePortfolioRequest * const q)
-    : DeletePortfolioPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

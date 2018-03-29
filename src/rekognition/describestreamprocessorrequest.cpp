@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamProcessorRequest::response(QNet
  */
 DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, DescribeStreamProcessorRequest * const q)
-    : DescribeStreamProcessorPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
  */
 DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
     const DescribeStreamProcessorRequestPrivate &other, DescribeStreamProcessorRequest * const q)
-    : DescribeStreamProcessorPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

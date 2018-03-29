@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkRe
  */
 CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
     const MTurkRequest::Action action, CreateWorkerBlockRequest * const q)
-    : CreateWorkerBlockPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
  */
 CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
     const CreateWorkerBlockRequestPrivate &other, CreateWorkerBlockRequest * const q)
-    : CreateWorkerBlockPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

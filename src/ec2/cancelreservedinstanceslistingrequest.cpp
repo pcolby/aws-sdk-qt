@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::respon
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
     const EC2Request::Action action, CancelReservedInstancesListingRequest * const q)
-    : CancelReservedInstancesListingPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequ
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
     const CancelReservedInstancesListingRequestPrivate &other, CancelReservedInstancesListingRequest * const q)
-    : CancelReservedInstancesListingPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateResolverRequest::response(QNetworkReply
  */
 CreateResolverRequestPrivate::CreateResolverRequestPrivate(
     const AppSyncRequest::Action action, CreateResolverRequest * const q)
-    : CreateResolverPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateResolverRequestPrivate::CreateResolverRequestPrivate(
  */
 CreateResolverRequestPrivate::CreateResolverRequestPrivate(
     const CreateResolverRequestPrivate &other, CreateResolverRequest * const q)
-    : CreateResolverPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

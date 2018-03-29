@@ -86,7 +86,7 @@ void ResetSnapshotAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetSnapshotAttributeResponse instance.
  */
 ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
-    ResetSnapshotAttributeQueueResponse * const q) : ResetSnapshotAttributePrivate(q)
+    ResetSnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

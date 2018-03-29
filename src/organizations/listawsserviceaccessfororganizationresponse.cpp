@@ -86,7 +86,7 @@ void ListAWSServiceAccessForOrganizationResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public ListAWSServiceAccessForOrganizationResponse instance.
  */
 ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrganizationResponsePrivate(
-    ListAWSServiceAccessForOrganizationQueueResponse * const q) : ListAWSServiceAccessForOrganizationPrivate(q)
+    ListAWSServiceAccessForOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

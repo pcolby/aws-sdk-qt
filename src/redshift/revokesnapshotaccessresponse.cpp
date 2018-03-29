@@ -86,7 +86,7 @@ void RevokeSnapshotAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RevokeSnapshotAccessResponse instance.
  */
 RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponsePrivate(
-    RevokeSnapshotAccessQueueResponse * const q) : RevokeSnapshotAccessPrivate(q)
+    RevokeSnapshotAccessResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * cons
  */
 GetBlobRequestPrivate::GetBlobRequestPrivate(
     const CodeCommitRequest::Action action, GetBlobRequest * const q)
-    : GetBlobPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBlobRequestPrivate::GetBlobRequestPrivate(
  */
 GetBlobRequestPrivate::GetBlobRequestPrivate(
     const GetBlobRequestPrivate &other, GetBlobRequest * const q)
-    : GetBlobPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteCustomActionTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCustomActionTypeResponse instance.
  */
 DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponsePrivate(
-    DeleteCustomActionTypeQueueResponse * const q) : DeleteCustomActionTypePrivate(q)
+    DeleteCustomActionTypeResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

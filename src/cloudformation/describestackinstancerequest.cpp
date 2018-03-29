@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStackInstanceRequest::response(QNetwo
  */
 DescribeStackInstanceRequestPrivate::DescribeStackInstanceRequestPrivate(
     const CloudFormationRequest::Action action, DescribeStackInstanceRequest * const q)
-    : DescribeStackInstancePrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStackInstanceRequestPrivate::DescribeStackInstanceRequestPrivate(
  */
 DescribeStackInstanceRequestPrivate::DescribeStackInstanceRequestPrivate(
     const DescribeStackInstanceRequestPrivate &other, DescribeStackInstanceRequest * const q)
-    : DescribeStackInstancePrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

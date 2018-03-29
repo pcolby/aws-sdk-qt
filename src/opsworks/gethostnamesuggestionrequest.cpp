@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetwo
  */
 GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
     const OpsWorksRequest::Action action, GetHostnameSuggestionRequest * const q)
-    : GetHostnameSuggestionPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
  */
 GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
     const GetHostnameSuggestionRequestPrivate &other, GetHostnameSuggestionRequest * const q)
-    : GetHostnameSuggestionPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

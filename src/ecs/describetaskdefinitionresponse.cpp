@@ -86,7 +86,7 @@ void DescribeTaskDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTaskDefinitionResponse instance.
  */
 DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponsePrivate(
-    DescribeTaskDefinitionQueueResponse * const q) : DescribeTaskDefinitionPrivate(q)
+    DescribeTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

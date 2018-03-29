@@ -86,7 +86,7 @@ void CreateHITResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateHITResponse instance.
  */
 CreateHITResponsePrivate::CreateHITResponsePrivate(
-    CreateHITQueueResponse * const q) : CreateHITPrivate(q)
+    CreateHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

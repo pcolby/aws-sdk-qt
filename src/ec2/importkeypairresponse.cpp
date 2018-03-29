@@ -86,7 +86,7 @@ void ImportKeyPairResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportKeyPairResponse instance.
  */
 ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
-    ImportKeyPairQueueResponse * const q) : ImportKeyPairPrivate(q)
+    ImportKeyPairResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

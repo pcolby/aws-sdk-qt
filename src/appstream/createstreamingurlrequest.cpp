@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkR
  */
 CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
     const AppStreamRequest::Action action, CreateStreamingURLRequest * const q)
-    : CreateStreamingURLPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
  */
 CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
     const CreateStreamingURLRequestPrivate &other, CreateStreamingURLRequest * const q)
-    : CreateStreamingURLPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

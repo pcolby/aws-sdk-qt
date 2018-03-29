@@ -86,7 +86,7 @@ void AttachPrincipalPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachPrincipalPolicyResponse instance.
  */
 AttachPrincipalPolicyResponsePrivate::AttachPrincipalPolicyResponsePrivate(
-    AttachPrincipalPolicyQueueResponse * const q) : AttachPrincipalPolicyPrivate(q)
+    AttachPrincipalPolicyResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

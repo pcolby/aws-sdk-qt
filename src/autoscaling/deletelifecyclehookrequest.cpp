@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetwork
  */
 DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
     const AutoScalingRequest::Action action, DeleteLifecycleHookRequest * const q)
-    : DeleteLifecycleHookPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
  */
 DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
     const DeleteLifecycleHookRequestPrivate &other, DeleteLifecycleHookRequest * const q)
-    : DeleteLifecycleHookPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

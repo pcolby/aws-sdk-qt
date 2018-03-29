@@ -86,7 +86,7 @@ void CopyObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyObjectResponse instance.
  */
 CopyObjectResponsePrivate::CopyObjectResponsePrivate(
-    CopyObjectQueueResponse * const q) : CopyObjectPrivate(q)
+    CopyObjectResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

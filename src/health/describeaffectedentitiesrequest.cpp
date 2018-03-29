@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAffectedEntitiesRequest::response(QNe
  */
 DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
     const HealthRequest::Action action, DescribeAffectedEntitiesRequest * const q)
-    : DescribeAffectedEntitiesPrivate(action, q)
+    : HealthRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
  */
 DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
     const DescribeAffectedEntitiesRequestPrivate &other, DescribeAffectedEntitiesRequest * const q)
-    : DescribeAffectedEntitiesPrivate(other, q)
+    : HealthRequestPrivate(other, q)
 {
 
 }

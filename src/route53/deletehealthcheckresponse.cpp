@@ -86,7 +86,7 @@ void DeleteHealthCheckResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHealthCheckResponse instance.
  */
 DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponsePrivate(
-    DeleteHealthCheckQueueResponse * const q) : DeleteHealthCheckPrivate(q)
+    DeleteHealthCheckResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

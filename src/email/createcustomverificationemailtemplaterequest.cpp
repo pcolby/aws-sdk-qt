@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCustomVerificationEmailTemplateRequest:
  */
 CreateCustomVerificationEmailTemplateRequestPrivate::CreateCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, CreateCustomVerificationEmailTemplateRequest * const q)
-    : CreateCustomVerificationEmailTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCustomVerificationEmailTemplateRequestPrivate::CreateCustomVerificationEma
  */
 CreateCustomVerificationEmailTemplateRequestPrivate::CreateCustomVerificationEmailTemplateRequestPrivate(
     const CreateCustomVerificationEmailTemplateRequestPrivate &other, CreateCustomVerificationEmailTemplateRequest * const q)
-    : CreateCustomVerificationEmailTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

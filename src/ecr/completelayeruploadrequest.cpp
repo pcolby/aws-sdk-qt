@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const ECRRequest::Action action, CompleteLayerUploadRequest * const q)
-    : CompleteLayerUploadPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const CompleteLayerUploadRequestPrivate &other, CompleteLayerUploadRequest * const q)
-    : CompleteLayerUploadPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

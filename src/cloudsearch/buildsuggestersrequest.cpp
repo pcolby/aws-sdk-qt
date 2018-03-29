@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkRepl
  */
 BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
     const CloudSearchRequest::Action action, BuildSuggestersRequest * const q)
-    : BuildSuggestersPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
  */
 BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
     const BuildSuggestersRequestPrivate &other, BuildSuggestersRequest * const q)
-    : BuildSuggestersPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

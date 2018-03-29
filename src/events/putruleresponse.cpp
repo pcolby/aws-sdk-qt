@@ -86,7 +86,7 @@ void PutRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutRuleResponse instance.
  */
 PutRuleResponsePrivate::PutRuleResponsePrivate(
-    PutRuleQueueResponse * const q) : PutRulePrivate(q)
+    PutRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

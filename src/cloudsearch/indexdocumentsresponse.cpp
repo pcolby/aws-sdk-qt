@@ -86,7 +86,7 @@ void IndexDocumentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public IndexDocumentsResponse instance.
  */
 IndexDocumentsResponsePrivate::IndexDocumentsResponsePrivate(
-    IndexDocumentsQueueResponse * const q) : IndexDocumentsPrivate(q)
+    IndexDocumentsResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

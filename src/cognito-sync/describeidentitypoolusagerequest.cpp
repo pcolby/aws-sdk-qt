@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityPoolUsageRequest::response(QN
  */
 DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeIdentityPoolUsageRequest * const q)
-    : DescribeIdentityPoolUsagePrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate
  */
 DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate(
     const DescribeIdentityPoolUsageRequestPrivate &other, DescribeIdentityPoolUsageRequest * const q)
-    : DescribeIdentityPoolUsagePrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

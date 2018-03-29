@@ -86,7 +86,7 @@ void EstimateTemplateCostResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EstimateTemplateCostResponse instance.
  */
 EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponsePrivate(
-    EstimateTemplateCostQueueResponse * const q) : EstimateTemplateCostPrivate(q)
+    EstimateTemplateCostResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

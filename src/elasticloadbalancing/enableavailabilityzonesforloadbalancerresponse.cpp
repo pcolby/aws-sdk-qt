@@ -86,7 +86,7 @@ void EnableAvailabilityZonesForLoadBalancerResponse::parseSuccess(QIODevice &res
  * @param  q  Pointer to this object's public EnableAvailabilityZonesForLoadBalancerResponse instance.
  */
 EnableAvailabilityZonesForLoadBalancerResponsePrivate::EnableAvailabilityZonesForLoadBalancerResponsePrivate(
-    EnableAvailabilityZonesForLoadBalancerQueueResponse * const q) : EnableAvailabilityZonesForLoadBalancerPrivate(q)
+    EnableAvailabilityZonesForLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

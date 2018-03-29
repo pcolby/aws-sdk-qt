@@ -86,7 +86,7 @@ void DeleteLifecycleHookResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLifecycleHookResponse instance.
  */
 DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
-    DeleteLifecycleHookQueueResponse * const q) : DeleteLifecycleHookPrivate(q)
+    DeleteLifecycleHookResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

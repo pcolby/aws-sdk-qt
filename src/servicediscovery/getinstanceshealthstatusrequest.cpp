@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNe
  */
 GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetInstancesHealthStatusRequest * const q)
-    : GetInstancesHealthStatusPrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
  */
 GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
     const GetInstancesHealthStatusRequestPrivate &other, GetInstancesHealthStatusRequest * const q)
-    : GetInstancesHealthStatusPrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

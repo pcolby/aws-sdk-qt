@@ -86,7 +86,7 @@ void GrantAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GrantAccessResponse instance.
  */
 GrantAccessResponsePrivate::GrantAccessResponsePrivate(
-    GrantAccessQueueResponse * const q) : GrantAccessPrivate(q)
+    GrantAccessResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

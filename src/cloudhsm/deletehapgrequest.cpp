@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * c
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
     const CloudHSMRequest::Action action, DeleteHapgRequest * const q)
-    : DeleteHapgPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
     const DeleteHapgRequestPrivate &other, DeleteHapgRequest * const q)
-    : DeleteHapgPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

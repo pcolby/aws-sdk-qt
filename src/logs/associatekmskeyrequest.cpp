@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateKmsKeyRequest::response(QNetworkRepl
  */
 AssociateKmsKeyRequestPrivate::AssociateKmsKeyRequestPrivate(
     const CloudWatchLogsRequest::Action action, AssociateKmsKeyRequest * const q)
-    : AssociateKmsKeyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateKmsKeyRequestPrivate::AssociateKmsKeyRequestPrivate(
  */
 AssociateKmsKeyRequestPrivate::AssociateKmsKeyRequestPrivate(
     const AssociateKmsKeyRequestPrivate &other, AssociateKmsKeyRequest * const q)
-    : AssociateKmsKeyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

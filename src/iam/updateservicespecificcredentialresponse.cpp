@@ -86,7 +86,7 @@ void UpdateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateServiceSpecificCredentialResponse instance.
  */
 UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialResponsePrivate(
-    UpdateServiceSpecificCredentialQueueResponse * const q) : UpdateServiceSpecificCredentialPrivate(q)
+    UpdateServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

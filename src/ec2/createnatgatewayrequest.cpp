@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkRep
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
     const EC2Request::Action action, CreateNatGatewayRequest * const q)
-    : CreateNatGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
     const CreateNatGatewayRequestPrivate &other, CreateNatGatewayRequest * const q)
-    : CreateNatGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

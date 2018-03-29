@@ -86,7 +86,7 @@ void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DownloadDBLogFilePortionResponse instance.
  */
 DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate(
-    DownloadDBLogFilePortionQueueResponse * const q) : DownloadDBLogFilePortionPrivate(q)
+    DownloadDBLogFilePortionResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

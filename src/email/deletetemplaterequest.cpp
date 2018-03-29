@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply
  */
 DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
     const SESRequest::Action action, DeleteTemplateRequest * const q)
-    : DeleteTemplatePrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
  */
 DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
     const DeleteTemplateRequestPrivate &other, DeleteTemplateRequest * const q)
-    : DeleteTemplatePrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

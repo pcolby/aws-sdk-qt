@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetParameterHistoryRequest::response(QNetwork
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
     const SSMRequest::Action action, GetParameterHistoryRequest * const q)
-    : GetParameterHistoryPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
     const GetParameterHistoryRequestPrivate &other, GetParameterHistoryRequest * const q)
-    : GetParameterHistoryPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

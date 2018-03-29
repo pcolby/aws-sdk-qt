@@ -86,7 +86,7 @@ void ListTagsLogGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsLogGroupResponse instance.
  */
 ListTagsLogGroupResponsePrivate::ListTagsLogGroupResponsePrivate(
-    ListTagsLogGroupQueueResponse * const q) : ListTagsLogGroupPrivate(q)
+    ListTagsLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListQueryExecutionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListQueryExecutionsResponse instance.
  */
 ListQueryExecutionsResponsePrivate::ListQueryExecutionsResponsePrivate(
-    ListQueryExecutionsQueueResponse * const q) : ListQueryExecutionsPrivate(q)
+    ListQueryExecutionsResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

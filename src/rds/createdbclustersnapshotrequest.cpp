@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterSnapshotRequest::response(QNet
  */
 CreateDBClusterSnapshotRequestPrivate::CreateDBClusterSnapshotRequestPrivate(
     const RDSRequest::Action action, CreateDBClusterSnapshotRequest * const q)
-    : CreateDBClusterSnapshotPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDBClusterSnapshotRequestPrivate::CreateDBClusterSnapshotRequestPrivate(
  */
 CreateDBClusterSnapshotRequestPrivate::CreateDBClusterSnapshotRequestPrivate(
     const CreateDBClusterSnapshotRequestPrivate &other, CreateDBClusterSnapshotRequest * const q)
-    : CreateDBClusterSnapshotPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

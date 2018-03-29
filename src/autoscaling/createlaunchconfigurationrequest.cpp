@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QN
  */
 CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, CreateLaunchConfigurationRequest * const q)
-    : CreateLaunchConfigurationPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate
  */
 CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate(
     const CreateLaunchConfigurationRequestPrivate &other, CreateLaunchConfigurationRequest * const q)
-    : CreateLaunchConfigurationPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

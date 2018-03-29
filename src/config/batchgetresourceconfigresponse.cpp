@@ -86,7 +86,7 @@ void BatchGetResourceConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetResourceConfigResponse instance.
  */
 BatchGetResourceConfigResponsePrivate::BatchGetResourceConfigResponsePrivate(
-    BatchGetResourceConfigQueueResponse * const q) : BatchGetResourceConfigPrivate(q)
+    BatchGetResourceConfigResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

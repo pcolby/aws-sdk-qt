@@ -86,7 +86,7 @@ void CopySnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopySnapshotResponse instance.
  */
 CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
-    CopySnapshotQueueResponse * const q) : CopySnapshotPrivate(q)
+    CopySnapshotResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

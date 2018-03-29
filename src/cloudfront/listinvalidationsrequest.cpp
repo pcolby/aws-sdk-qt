@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkRe
  */
 ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
     const CloudFrontRequest::Action action, ListInvalidationsRequest * const q)
-    : ListInvalidationsPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
  */
 ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
     const ListInvalidationsRequestPrivate &other, ListInvalidationsRequest * const q)
-    : ListInvalidationsPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

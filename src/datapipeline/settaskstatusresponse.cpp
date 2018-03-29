@@ -86,7 +86,7 @@ void SetTaskStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetTaskStatusResponse instance.
  */
 SetTaskStatusResponsePrivate::SetTaskStatusResponsePrivate(
-    SetTaskStatusQueueResponse * const q) : SetTaskStatusPrivate(q)
+    SetTaskStatusResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

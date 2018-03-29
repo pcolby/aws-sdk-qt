@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetwor
  */
 GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
     const CognitoIdentityRequest::Action action, GetIdentityPoolRolesRequest * const q)
-    : GetIdentityPoolRolesPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
  */
 GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
     const GetIdentityPoolRolesRequestPrivate &other, GetIdentityPoolRolesRequest * const q)
-    : GetIdentityPoolRolesPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

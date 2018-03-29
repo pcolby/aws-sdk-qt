@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkRep
  */
 GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, GetRegexMatchSetRequest * const q)
-    : GetRegexMatchSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
  */
 GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
     const GetRegexMatchSetRequestPrivate &other, GetRegexMatchSetRequest * const q)
-    : GetRegexMatchSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

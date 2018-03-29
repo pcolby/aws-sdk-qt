@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRunRequest::response(QNetworkReply * co
  */
 DeleteRunRequestPrivate::DeleteRunRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteRunRequest * const q)
-    : DeleteRunPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRunRequestPrivate::DeleteRunRequestPrivate(
  */
 DeleteRunRequestPrivate::DeleteRunRequestPrivate(
     const DeleteRunRequestPrivate &other, DeleteRunRequest * const q)
-    : DeleteRunPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

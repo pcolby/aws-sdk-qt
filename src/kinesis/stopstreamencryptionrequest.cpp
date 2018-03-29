@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetwor
  */
 StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
     const KinesisRequest::Action action, StopStreamEncryptionRequest * const q)
-    : StopStreamEncryptionPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
  */
 StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
     const StopStreamEncryptionRequestPrivate &other, StopStreamEncryptionRequest * const q)
-    : StopStreamEncryptionPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

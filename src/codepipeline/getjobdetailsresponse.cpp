@@ -86,7 +86,7 @@ void GetJobDetailsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetJobDetailsResponse instance.
  */
 GetJobDetailsResponsePrivate::GetJobDetailsResponsePrivate(
-    GetJobDetailsQueueResponse * const q) : GetJobDetailsPrivate(q)
+    GetJobDetailsResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

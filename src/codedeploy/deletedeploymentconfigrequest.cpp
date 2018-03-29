@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentConfigRequest::response(QNetw
  */
 DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
     const CodeDeployRequest::Action action, DeleteDeploymentConfigRequest * const q)
-    : DeleteDeploymentConfigPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
  */
 DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
     const DeleteDeploymentConfigRequestPrivate &other, DeleteDeploymentConfigRequest * const q)
-    : DeleteDeploymentConfigPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const DynamoDBStreamsRequest::Action action, ListStreamsRequest * const q)
-    : ListStreamsPrivate(action, q)
+    : DynamoDBStreamsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const ListStreamsRequestPrivate &other, ListStreamsRequest * const q)
-    : ListStreamsPrivate(other, q)
+    : DynamoDBStreamsRequestPrivate(other, q)
 {
 
 }

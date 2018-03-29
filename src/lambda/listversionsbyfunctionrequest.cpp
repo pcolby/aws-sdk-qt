@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListVersionsByFunctionRequest::response(QNetw
  */
 ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
     const LambdaRequest::Action action, ListVersionsByFunctionRequest * const q)
-    : ListVersionsByFunctionPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
  */
 ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
     const ListVersionsByFunctionRequestPrivate &other, ListVersionsByFunctionRequest * const q)
-    : ListVersionsByFunctionPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

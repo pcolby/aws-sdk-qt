@@ -86,7 +86,7 @@ void RestoreServerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreServerResponse instance.
  */
 RestoreServerResponsePrivate::RestoreServerResponsePrivate(
-    RestoreServerQueueResponse * const q) : RestoreServerPrivate(q)
+    RestoreServerResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

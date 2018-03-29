@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetwor
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
     const SMSRequest::Action action, DeleteReplicationJobRequest * const q)
-    : DeleteReplicationJobPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
     const DeleteReplicationJobRequestPrivate &other, DeleteReplicationJobRequest * const q)
-    : DeleteReplicationJobPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

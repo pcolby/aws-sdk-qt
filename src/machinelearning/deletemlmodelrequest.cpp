@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply 
  */
 DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
     const MachineLearningRequest::Action action, DeleteMLModelRequest * const q)
-    : DeleteMLModelPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
  */
 DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
     const DeleteMLModelRequestPrivate &other, DeleteMLModelRequest * const q)
-    : DeleteMLModelPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

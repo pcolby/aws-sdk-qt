@@ -86,7 +86,7 @@ void GetHealthCheckResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetHealthCheckResponse instance.
  */
 GetHealthCheckResponsePrivate::GetHealthCheckResponsePrivate(
-    GetHealthCheckQueueResponse * const q) : GetHealthCheckPrivate(q)
+    GetHealthCheckResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

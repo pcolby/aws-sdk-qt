@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::respon
  */
 DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequestPrivate(
     const EC2Request::Action action, DescribeLaunchTemplateVersionsRequest * const q)
-    : DescribeLaunchTemplateVersionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequ
  */
 DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequestPrivate(
     const DescribeLaunchTemplateVersionsRequestPrivate &other, DescribeLaunchTemplateVersionsRequest * const q)
-    : DescribeLaunchTemplateVersionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

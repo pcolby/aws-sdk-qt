@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QN
  */
 UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
     const IoTRequest::Action action, UpdateEventConfigurationsRequest * const q)
-    : UpdateEventConfigurationsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate
  */
 UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
     const UpdateEventConfigurationsRequestPrivate &other, UpdateEventConfigurationsRequest * const q)
-    : UpdateEventConfigurationsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

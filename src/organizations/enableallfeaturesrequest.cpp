@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkRe
  */
 EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
     const OrganizationsRequest::Action action, EnableAllFeaturesRequest * const q)
-    : EnableAllFeaturesPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
  */
 EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
     const EnableAllFeaturesRequestPrivate &other, EnableAllFeaturesRequest * const q)
-    : EnableAllFeaturesPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

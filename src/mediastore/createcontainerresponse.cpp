@@ -86,7 +86,7 @@ void CreateContainerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateContainerResponse instance.
  */
 CreateContainerResponsePrivate::CreateContainerResponsePrivate(
-    CreateContainerQueueResponse * const q) : CreateContainerPrivate(q)
+    CreateContainerResponse * const q) : MediaStoreResponsePrivate(q)
 {
 
 }

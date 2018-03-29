@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ACMRequest::Action action, ImportCertificateRequest * const q)
-    : ImportCertificatePrivate(action, q)
+    : ACMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)
-    : ImportCertificatePrivate(other, q)
+    : ACMRequestPrivate(other, q)
 {
 
 }

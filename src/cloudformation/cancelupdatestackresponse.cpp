@@ -86,7 +86,7 @@ void CancelUpdateStackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelUpdateStackResponse instance.
  */
 CancelUpdateStackResponsePrivate::CancelUpdateStackResponsePrivate(
-    CancelUpdateStackQueueResponse * const q) : CancelUpdateStackPrivate(q)
+    CancelUpdateStackResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

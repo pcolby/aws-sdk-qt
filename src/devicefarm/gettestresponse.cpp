@@ -86,7 +86,7 @@ void GetTestResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTestResponse instance.
  */
 GetTestResponsePrivate::GetTestResponsePrivate(
-    GetTestQueueResponse * const q) : GetTestPrivate(q)
+    GetTestResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNe
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
     const EC2Request::Action action, AssociateSubnetCidrBlockRequest * const q)
-    : AssociateSubnetCidrBlockPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
     const AssociateSubnetCidrBlockRequestPrivate &other, AssociateSubnetCidrBlockRequest * const q)
-    : AssociateSubnetCidrBlockPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

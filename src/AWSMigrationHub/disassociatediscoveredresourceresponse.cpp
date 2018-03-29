@@ -86,7 +86,7 @@ void DisassociateDiscoveredResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateDiscoveredResourceResponse instance.
  */
 DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResourceResponsePrivate(
-    DisassociateDiscoveredResourceQueueResponse * const q) : DisassociateDiscoveredResourcePrivate(q)
+    DisassociateDiscoveredResourceResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

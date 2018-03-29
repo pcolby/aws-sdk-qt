@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteImageBuilderRequest::response(QNetworkR
  */
 DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, DeleteImageBuilderRequest * const q)
-    : DeleteImageBuilderPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
  */
 DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
     const DeleteImageBuilderRequestPrivate &other, DeleteImageBuilderRequest * const q)
-    : DeleteImageBuilderPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

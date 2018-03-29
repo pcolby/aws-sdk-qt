@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionReque
  */
 DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWatchLoggingOptionRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationCloudWatchLoggingOptionRequest * const q)
-    : DeleteApplicationCloudWatchLoggingOptionPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWa
  */
 DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWatchLoggingOptionRequestPrivate(
     const DeleteApplicationCloudWatchLoggingOptionRequestPrivate &other, DeleteApplicationCloudWatchLoggingOptionRequest * const q)
-    : DeleteApplicationCloudWatchLoggingOptionPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

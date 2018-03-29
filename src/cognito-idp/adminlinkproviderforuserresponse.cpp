@@ -86,7 +86,7 @@ void AdminLinkProviderForUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminLinkProviderForUserResponse instance.
  */
 AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate(
-    AdminLinkProviderForUserQueueResponse * const q) : AdminLinkProviderForUserPrivate(q)
+    AdminLinkProviderForUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

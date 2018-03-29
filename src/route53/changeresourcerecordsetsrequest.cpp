@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ChangeResourceRecordSetsRequest::response(QNe
  */
 ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
     const Route53Request::Action action, ChangeResourceRecordSetsRequest * const q)
-    : ChangeResourceRecordSetsPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
  */
 ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
     const ChangeResourceRecordSetsRequestPrivate &other, ChangeResourceRecordSetsRequest * const q)
-    : ChangeResourceRecordSetsPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

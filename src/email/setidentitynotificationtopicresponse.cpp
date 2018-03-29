@@ -86,7 +86,7 @@ void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetIdentityNotificationTopicResponse instance.
  */
 SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicResponsePrivate(
-    SetIdentityNotificationTopicQueueResponse * const q) : SetIdentityNotificationTopicPrivate(q)
+    SetIdentityNotificationTopicResponse * const q) : SESResponsePrivate(q)
 {
 
 }

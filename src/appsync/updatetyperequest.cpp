@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * c
  */
 UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
     const AppSyncRequest::Action action, UpdateTypeRequest * const q)
-    : UpdateTypePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
  */
 UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
     const UpdateTypeRequestPrivate &other, UpdateTypeRequest * const q)
-    : UpdateTypePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

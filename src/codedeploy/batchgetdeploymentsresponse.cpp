@@ -86,7 +86,7 @@ void BatchGetDeploymentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetDeploymentsResponse instance.
  */
 BatchGetDeploymentsResponsePrivate::BatchGetDeploymentsResponsePrivate(
-    BatchGetDeploymentsQueueResponse * const q) : BatchGetDeploymentsPrivate(q)
+    BatchGetDeploymentsResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkRe
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
     const EC2Request::Action action, DeleteDhcpOptionsRequest * const q)
-    : DeleteDhcpOptionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
     const DeleteDhcpOptionsRequestPrivate &other, DeleteDhcpOptionsRequest * const q)
-    : DeleteDhcpOptionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

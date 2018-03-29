@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(Q
  */
 CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPrivate(
     const Route53DomainsRequest::Action action, CheckDomainTransferabilityRequest * const q)
-    : CheckDomainTransferabilityPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPriva
  */
 CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPrivate(
     const CheckDomainTransferabilityRequestPrivate &other, CheckDomainTransferabilityRequest * const q)
-    : CheckDomainTransferabilityPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

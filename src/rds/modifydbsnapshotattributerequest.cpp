@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotAttributeRequest::response(QN
  */
 ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate(
     const RDSRequest::Action action, ModifyDBSnapshotAttributeRequest * const q)
-    : ModifyDBSnapshotAttributePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate
  */
 ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate(
     const ModifyDBSnapshotAttributeRequestPrivate &other, ModifyDBSnapshotAttributeRequest * const q)
-    : ModifyDBSnapshotAttributePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

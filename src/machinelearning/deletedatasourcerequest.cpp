@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, DeleteDataSourceRequest * const q)
-    : DeleteDataSourcePrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const DeleteDataSourceRequestPrivate &other, DeleteDataSourceRequest * const q)
-    : DeleteDataSourcePrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

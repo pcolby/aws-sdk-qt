@@ -86,7 +86,7 @@ void ModifyClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyClusterParameterGroupResponse instance.
  */
 ModifyClusterParameterGroupResponsePrivate::ModifyClusterParameterGroupResponsePrivate(
-    ModifyClusterParameterGroupQueueResponse * const q) : ModifyClusterParameterGroupPrivate(q)
+    ModifyClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

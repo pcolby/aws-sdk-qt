@@ -86,7 +86,7 @@ void DeleteOriginEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteOriginEndpointResponse instance.
  */
 DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
-    DeleteOriginEndpointQueueResponse * const q) : DeleteOriginEndpointPrivate(q)
+    DeleteOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
 {
 
 }

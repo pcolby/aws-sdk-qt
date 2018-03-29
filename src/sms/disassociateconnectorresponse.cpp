@@ -86,7 +86,7 @@ void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateConnectorResponse instance.
  */
 DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
-    DisassociateConnectorQueueResponse * const q) : DisassociateConnectorPrivate(q)
+    DisassociateConnectorResponse * const q) : SMSResponsePrivate(q)
 {
 
 }

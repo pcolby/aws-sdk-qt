@@ -86,7 +86,7 @@ void CreateAssessmentTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAssessmentTemplateResponse instance.
  */
 CreateAssessmentTemplateResponsePrivate::CreateAssessmentTemplateResponsePrivate(
-    CreateAssessmentTemplateQueueResponse * const q) : CreateAssessmentTemplatePrivate(q)
+    CreateAssessmentTemplateResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

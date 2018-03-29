@@ -86,7 +86,7 @@ void UntagStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UntagStreamResponse instance.
  */
 UntagStreamResponsePrivate::UntagStreamResponsePrivate(
-    UntagStreamQueueResponse * const q) : UntagStreamPrivate(q)
+    UntagStreamResponse * const q) : KinesisVideoResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteCrawlerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCrawlerResponse instance.
  */
 DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
-    DeleteCrawlerQueueResponse * const q) : DeleteCrawlerPrivate(q)
+    DeleteCrawlerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

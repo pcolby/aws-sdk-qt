@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetwork
  */
 GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
     const InspectorRequest::Action action, GetAssessmentReportRequest * const q)
-    : GetAssessmentReportPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
  */
 GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
     const GetAssessmentReportRequestPrivate &other, GetAssessmentReportRequest * const q)
-    : GetAssessmentReportPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

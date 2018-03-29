@@ -86,7 +86,7 @@ void UpdateManagedInstanceRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateManagedInstanceRoleResponse instance.
  */
 UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponsePrivate(
-    UpdateManagedInstanceRoleQueueResponse * const q) : UpdateManagedInstanceRolePrivate(q)
+    UpdateManagedInstanceRoleResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDBParameterGroupsRequest::response(QN
  */
 DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBParameterGroupsRequest * const q)
-    : DescribeDBParameterGroupsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate
  */
 DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate(
     const DescribeDBParameterGroupsRequestPrivate &other, DescribeDBParameterGroupsRequest * const q)
-    : DescribeDBParameterGroupsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

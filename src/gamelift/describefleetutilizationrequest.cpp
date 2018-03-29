@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetUtilizationRequest::response(QNe
  */
 DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetUtilizationRequest * const q)
-    : DescribeFleetUtilizationPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
  */
 DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
     const DescribeFleetUtilizationRequestPrivate &other, DescribeFleetUtilizationRequest * const q)
-    : DescribeFleetUtilizationPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

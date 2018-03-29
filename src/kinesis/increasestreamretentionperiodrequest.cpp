@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::respons
  */
 IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
     const KinesisRequest::Action action, IncreaseStreamRetentionPeriodRequest * const q)
-    : IncreaseStreamRetentionPeriodPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodReques
  */
 IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
     const IncreaseStreamRetentionPeriodRequestPrivate &other, IncreaseStreamRetentionPeriodRequest * const q)
-    : IncreaseStreamRetentionPeriodPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

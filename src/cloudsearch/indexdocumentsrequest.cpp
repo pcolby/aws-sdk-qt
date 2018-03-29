@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply
  */
 IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
     const CloudSearchRequest::Action action, IndexDocumentsRequest * const q)
-    : IndexDocumentsPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
  */
 IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
     const IndexDocumentsRequestPrivate &other, IndexDocumentsRequest * const q)
-    : IndexDocumentsPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerReques
  */
 SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesForBackendServerRequest * const q)
-    : SetLoadBalancerPoliciesForBackendServerPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesFo
  */
 SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
     const SetLoadBalancerPoliciesForBackendServerRequestPrivate &other, SetLoadBalancerPoliciesForBackendServerRequest * const q)
-    : SetLoadBalancerPoliciesForBackendServerPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

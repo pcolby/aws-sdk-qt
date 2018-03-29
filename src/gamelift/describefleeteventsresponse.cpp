@@ -86,7 +86,7 @@ void DescribeFleetEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFleetEventsResponse instance.
  */
 DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponsePrivate(
-    DescribeFleetEventsQueueResponse * const q) : DescribeFleetEventsPrivate(q)
+    DescribeFleetEventsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveTagsFromResourceResponse instance.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
-    RemoveTagsFromResourceQueueResponse * const q) : RemoveTagsFromResourcePrivate(q)
+    RemoveTagsFromResourceResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTableResponse instance.
  */
 DeleteTableResponsePrivate::DeleteTableResponsePrivate(
-    DeleteTableQueueResponse * const q) : DeleteTablePrivate(q)
+    DeleteTableResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

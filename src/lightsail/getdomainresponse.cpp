@@ -86,7 +86,7 @@ void GetDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDomainResponse instance.
  */
 GetDomainResponsePrivate::GetDomainResponsePrivate(
-    GetDomainQueueResponse * const q) : GetDomainPrivate(q)
+    GetDomainResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

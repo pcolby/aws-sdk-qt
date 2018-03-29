@@ -86,7 +86,7 @@ void CreateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLoggerDefinitionResponse instance.
  */
 CreateLoggerDefinitionResponsePrivate::CreateLoggerDefinitionResponsePrivate(
-    CreateLoggerDefinitionQueueResponse * const q) : CreateLoggerDefinitionPrivate(q)
+    CreateLoggerDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

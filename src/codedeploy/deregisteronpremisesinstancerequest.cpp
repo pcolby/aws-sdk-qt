@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterOnPremisesInstanceRequest::response
  */
 DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, DeregisterOnPremisesInstanceRequest * const q)
-    : DeregisterOnPremisesInstancePrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestP
  */
 DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestPrivate(
     const DeregisterOnPremisesInstanceRequestPrivate &other, DeregisterOnPremisesInstanceRequest * const q)
-    : DeregisterOnPremisesInstancePrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

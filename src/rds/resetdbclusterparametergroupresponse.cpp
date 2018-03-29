@@ -86,7 +86,7 @@ void ResetDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetDBClusterParameterGroupResponse instance.
  */
 ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupResponsePrivate(
-    ResetDBClusterParameterGroupQueueResponse * const q) : ResetDBClusterParameterGroupPrivate(q)
+    ResetDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReceiveMessageRequest::response(QNetworkReply
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
     const SQSRequest::Action action, ReceiveMessageRequest * const q)
-    : ReceiveMessagePrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
     const ReceiveMessageRequestPrivate &other, ReceiveMessageRequest * const q)
-    : ReceiveMessagePrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

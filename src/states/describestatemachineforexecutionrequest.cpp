@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStateMachineForExecutionRequest::resp
  */
 DescribeStateMachineForExecutionRequestPrivate::DescribeStateMachineForExecutionRequestPrivate(
     const SFNRequest::Action action, DescribeStateMachineForExecutionRequest * const q)
-    : DescribeStateMachineForExecutionPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStateMachineForExecutionRequestPrivate::DescribeStateMachineForExecution
  */
 DescribeStateMachineForExecutionRequestPrivate::DescribeStateMachineForExecutionRequestPrivate(
     const DescribeStateMachineForExecutionRequestPrivate &other, DescribeStateMachineForExecutionRequest * const q)
-    : DescribeStateMachineForExecutionPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeDataSourcesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDataSourcesResponse instance.
  */
 DescribeDataSourcesResponsePrivate::DescribeDataSourcesResponsePrivate(
-    DescribeDataSourcesQueueResponse * const q) : DescribeDataSourcesPrivate(q)
+    DescribeDataSourcesResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

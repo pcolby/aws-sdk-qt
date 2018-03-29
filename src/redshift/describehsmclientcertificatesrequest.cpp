@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmClientCertificatesRequest::respons
  */
 DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
     const RedshiftRequest::Action action, DescribeHsmClientCertificatesRequest * const q)
-    : DescribeHsmClientCertificatesPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesReques
  */
 DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
     const DescribeHsmClientCertificatesRequestPrivate &other, DescribeHsmClientCertificatesRequest * const q)
-    : DescribeHsmClientCertificatesPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

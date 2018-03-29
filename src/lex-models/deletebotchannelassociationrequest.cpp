@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(
  */
 DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotChannelAssociationRequest * const q)
-    : DeleteBotChannelAssociationPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPri
  */
 DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPrivate(
     const DeleteBotChannelAssociationRequestPrivate &other, DeleteBotChannelAssociationRequest * const q)
-    : DeleteBotChannelAssociationPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

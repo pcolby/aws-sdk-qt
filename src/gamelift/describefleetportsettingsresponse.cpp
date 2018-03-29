@@ -86,7 +86,7 @@ void DescribeFleetPortSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFleetPortSettingsResponse instance.
  */
 DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponsePrivate(
-    DescribeFleetPortSettingsQueueResponse * const q) : DescribeFleetPortSettingsPrivate(q)
+    DescribeFleetPortSettingsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

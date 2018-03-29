@@ -86,7 +86,7 @@ void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreDBInstanceFromS3Response instance.
  */
 RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
-    RestoreDBInstanceFromS3QueueResponse * const q) : RestoreDBInstanceFromS3Private(q)
+    RestoreDBInstanceFromS3Response * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public DeleteConfigurationSetTrackingOptionsResponse instance.
  */
 DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrackingOptionsResponsePrivate(
-    DeleteConfigurationSetTrackingOptionsQueueResponse * const q) : DeleteConfigurationSetTrackingOptionsPrivate(q)
+    DeleteConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
 {
 
 }

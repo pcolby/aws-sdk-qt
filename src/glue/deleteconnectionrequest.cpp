@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const GlueRequest::Action action, DeleteConnectionRequest * const q)
-    : DeleteConnectionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const DeleteConnectionRequestPrivate &other, DeleteConnectionRequest * const q)
-    : DeleteConnectionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

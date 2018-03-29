@@ -86,7 +86,7 @@ void UpdateResourceDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateResourceDefinitionResponse instance.
  */
 UpdateResourceDefinitionResponsePrivate::UpdateResourceDefinitionResponsePrivate(
-    UpdateResourceDefinitionQueueResponse * const q) : UpdateResourceDefinitionPrivate(q)
+    UpdateResourceDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

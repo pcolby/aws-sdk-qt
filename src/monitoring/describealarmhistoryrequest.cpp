@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmHistoryRequest::response(QNetwor
  */
 DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmHistoryRequest * const q)
-    : DescribeAlarmHistoryPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
  */
 DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
     const DescribeAlarmHistoryRequestPrivate &other, DescribeAlarmHistoryRequest * const q)
-    : DescribeAlarmHistoryPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

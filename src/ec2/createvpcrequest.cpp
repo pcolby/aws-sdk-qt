@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcRequest::response(QNetworkReply * co
  */
 CreateVpcRequestPrivate::CreateVpcRequestPrivate(
     const EC2Request::Action action, CreateVpcRequest * const q)
-    : CreateVpcPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVpcRequestPrivate::CreateVpcRequestPrivate(
  */
 CreateVpcRequestPrivate::CreateVpcRequestPrivate(
     const CreateVpcRequestPrivate &other, CreateVpcRequest * const q)
-    : CreateVpcPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

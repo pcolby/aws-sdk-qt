@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetw
  */
 UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
     const GuardDutyRequest::Action action, UpdateFindingsFeedbackRequest * const q)
-    : UpdateFindingsFeedbackPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
  */
 UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
     const UpdateFindingsFeedbackRequestPrivate &other, UpdateFindingsFeedbackRequest * const q)
-    : UpdateFindingsFeedbackPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

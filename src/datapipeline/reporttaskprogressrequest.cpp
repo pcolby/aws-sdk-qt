@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkR
  */
 ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
     const DataPipelineRequest::Action action, ReportTaskProgressRequest * const q)
-    : ReportTaskProgressPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
  */
 ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
     const ReportTaskProgressRequestPrivate &other, ReportTaskProgressRequest * const q)
-    : ReportTaskProgressPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

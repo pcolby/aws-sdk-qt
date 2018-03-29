@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * con
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
     const SQSRequest::Action action, TagQueueRequest * const q)
-    : TagQueuePrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TagQueueRequestPrivate::TagQueueRequestPrivate(
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
     const TagQueueRequestPrivate &other, TagQueueRequest * const q)
-    : TagQueuePrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

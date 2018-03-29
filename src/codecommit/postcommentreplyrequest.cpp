@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkRep
  */
 PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentReplyRequest * const q)
-    : PostCommentReplyPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
  */
 PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
     const PostCommentReplyRequestPrivate &other, PostCommentReplyRequest * const q)
-    : PostCommentReplyPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

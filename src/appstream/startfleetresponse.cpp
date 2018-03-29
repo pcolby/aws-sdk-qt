@@ -86,7 +86,7 @@ void StartFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartFleetResponse instance.
  */
 StartFleetResponsePrivate::StartFleetResponsePrivate(
-    StartFleetQueueResponse * const q) : StartFleetPrivate(q)
+    StartFleetResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SkipWaitTimeForInstanceTerminationRequest::re
  */
 SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
     const CodeDeployRequest::Action action, SkipWaitTimeForInstanceTerminationRequest * const q)
-    : SkipWaitTimeForInstanceTerminationPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTermina
  */
 SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
     const SkipWaitTimeForInstanceTerminationRequestPrivate &other, SkipWaitTimeForInstanceTerminationRequest * const q)
-    : SkipWaitTimeForInstanceTerminationPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

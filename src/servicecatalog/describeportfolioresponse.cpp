@@ -86,7 +86,7 @@ void DescribePortfolioResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribePortfolioResponse instance.
  */
 DescribePortfolioResponsePrivate::DescribePortfolioResponsePrivate(
-    DescribePortfolioQueueResponse * const q) : DescribePortfolioPrivate(q)
+    DescribePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

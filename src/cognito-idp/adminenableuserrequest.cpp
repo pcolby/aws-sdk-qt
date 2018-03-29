@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkRepl
  */
 AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminEnableUserRequest * const q)
-    : AdminEnableUserPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
  */
 AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
     const AdminEnableUserRequestPrivate &other, AdminEnableUserRequest * const q)
-    : AdminEnableUserPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

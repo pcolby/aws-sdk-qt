@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNet
  */
 CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromRDSRequest * const q)
-    : CreateDataSourceFromRDSPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
  */
 CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
     const CreateDataSourceFromRDSRequestPrivate &other, CreateDataSourceFromRDSRequest * const q)
-    : CreateDataSourceFromRDSPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

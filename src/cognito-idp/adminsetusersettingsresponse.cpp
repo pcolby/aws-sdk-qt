@@ -86,7 +86,7 @@ void AdminSetUserSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminSetUserSettingsResponse instance.
  */
 AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponsePrivate(
-    AdminSetUserSettingsQueueResponse * const q) : AdminSetUserSettingsPrivate(q)
+    AdminSetUserSettingsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetWebACLForResourceRequest::response(QNetwor
  */
 GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
     const WAFRegionalRequest::Action action, GetWebACLForResourceRequest * const q)
-    : GetWebACLForResourcePrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
  */
 GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
     const GetWebACLForResourceRequestPrivate &other, GetWebACLForResourceRequest * const q)
-    : GetWebACLForResourcePrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutTelemetryRecordsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutTelemetryRecordsResponse instance.
  */
 PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponsePrivate(
-    PutTelemetryRecordsQueueResponse * const q) : PutTelemetryRecordsPrivate(q)
+    PutTelemetryRecordsResponse * const q) : XRayResponsePrivate(q)
 {
 
 }

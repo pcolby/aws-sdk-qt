@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetwo
  */
 CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateTapeWithBarcodeRequest * const q)
-    : CreateTapeWithBarcodePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
  */
 CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
     const CreateTapeWithBarcodeRequestPrivate &other, CreateTapeWithBarcodeRequest * const q)
-    : CreateTapeWithBarcodePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

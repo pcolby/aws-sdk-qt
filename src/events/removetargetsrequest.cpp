@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTargetsRequest::response(QNetworkReply 
  */
 RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
     const CloudWatchEventsRequest::Action action, RemoveTargetsRequest * const q)
-    : RemoveTargetsPrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
  */
 RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
     const RemoveTargetsRequestPrivate &other, RemoveTargetsRequest * const q)
-    : RemoveTargetsPrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

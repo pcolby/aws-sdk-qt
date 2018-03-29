@@ -86,7 +86,7 @@ void DescribeProjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeProjectResponse instance.
  */
 DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
-    DescribeProjectQueueResponse * const q) : DescribeProjectPrivate(q)
+    DescribeProjectResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

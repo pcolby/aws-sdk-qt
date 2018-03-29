@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNet
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
     const EMRRequest::Action action, RemoveAutoScalingPolicyRequest * const q)
-    : RemoveAutoScalingPolicyPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
     const RemoveAutoScalingPolicyRequestPrivate &other, RemoveAutoScalingPolicyRequest * const q)
-    : RemoveAutoScalingPolicyPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

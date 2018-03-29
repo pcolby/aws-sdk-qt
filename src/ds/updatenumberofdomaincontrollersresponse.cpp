@@ -86,7 +86,7 @@ void UpdateNumberOfDomainControllersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateNumberOfDomainControllersResponse instance.
  */
 UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersResponsePrivate(
-    UpdateNumberOfDomainControllersQueueResponse * const q) : UpdateNumberOfDomainControllersPrivate(q)
+    UpdateNumberOfDomainControllersResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

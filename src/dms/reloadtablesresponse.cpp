@@ -86,7 +86,7 @@ void ReloadTablesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReloadTablesResponse instance.
  */
 ReloadTablesResponsePrivate::ReloadTablesResponsePrivate(
-    ReloadTablesQueueResponse * const q) : ReloadTablesPrivate(q)
+    ReloadTablesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDataSourceResponse instance.
  */
 DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
-    DeleteDataSourceQueueResponse * const q) : DeleteDataSourcePrivate(q)
+    DeleteDataSourceResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

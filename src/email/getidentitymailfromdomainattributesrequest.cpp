@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::r
  */
 GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityMailFromDomainAttributesRequest * const q)
-    : GetIdentityMailFromDomainAttributesPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
  */
 GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
     const GetIdentityMailFromDomainAttributesRequestPrivate &other, GetIdentityMailFromDomainAttributesRequest * const q)
-    : GetIdentityMailFromDomainAttributesPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

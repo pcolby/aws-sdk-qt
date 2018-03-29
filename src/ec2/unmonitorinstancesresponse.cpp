@@ -86,7 +86,7 @@ void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnmonitorInstancesResponse instance.
  */
 UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
-    UnmonitorInstancesQueueResponse * const q) : UnmonitorInstancesPrivate(q)
+    UnmonitorInstancesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

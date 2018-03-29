@@ -86,7 +86,7 @@ void InitiateAuthResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InitiateAuthResponse instance.
  */
 InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
-    InitiateAuthQueueResponse * const q) : InitiateAuthPrivate(q)
+    InitiateAuthResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

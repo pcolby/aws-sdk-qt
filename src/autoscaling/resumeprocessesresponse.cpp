@@ -86,7 +86,7 @@ void ResumeProcessesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResumeProcessesResponse instance.
  */
 ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
-    ResumeProcessesQueueResponse * const q) : ResumeProcessesPrivate(q)
+    ResumeProcessesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

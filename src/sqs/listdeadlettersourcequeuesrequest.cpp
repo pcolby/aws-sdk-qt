@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(Q
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
     const SQSRequest::Action action, ListDeadLetterSourceQueuesRequest * const q)
-    : ListDeadLetterSourceQueuesPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPriva
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
     const ListDeadLetterSourceQueuesRequestPrivate &other, ListDeadLetterSourceQueuesRequest * const q)
-    : ListDeadLetterSourceQueuesPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

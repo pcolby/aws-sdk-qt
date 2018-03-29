@@ -86,7 +86,7 @@ void ModifyMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyMountTargetSecurityGroupsResponse instance.
  */
 ModifyMountTargetSecurityGroupsResponsePrivate::ModifyMountTargetSecurityGroupsResponsePrivate(
-    ModifyMountTargetSecurityGroupsQueueResponse * const q) : ModifyMountTargetSecurityGroupsPrivate(q)
+    ModifyMountTargetSecurityGroupsResponse * const q) : EFSResponsePrivate(q)
 {
 
 }

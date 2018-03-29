@@ -86,7 +86,7 @@ void DefineIndexFieldResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DefineIndexFieldResponse instance.
  */
 DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
-    DefineIndexFieldQueueResponse * const q) : DefineIndexFieldPrivate(q)
+    DefineIndexFieldResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

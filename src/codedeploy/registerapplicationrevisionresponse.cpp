@@ -86,7 +86,7 @@ void RegisterApplicationRevisionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterApplicationRevisionResponse instance.
  */
 RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponsePrivate(
-    RegisterApplicationRevisionQueueResponse * const q) : RegisterApplicationRevisionPrivate(q)
+    RegisterApplicationRevisionResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

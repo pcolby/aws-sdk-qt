@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QN
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
     const EC2Request::Action action, DescribeAggregateIdFormatRequest * const q)
-    : DescribeAggregateIdFormatPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
     const DescribeAggregateIdFormatRequestPrivate &other, DescribeAggregateIdFormatRequest * const q)
-    : DescribeAggregateIdFormatPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

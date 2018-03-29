@@ -86,7 +86,7 @@ void ListActivatedRulesInRuleGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListActivatedRulesInRuleGroupResponse instance.
  */
 ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupResponsePrivate(
-    ListActivatedRulesInRuleGroupQueueResponse * const q) : ListActivatedRulesInRuleGroupPrivate(q)
+    ListActivatedRulesInRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

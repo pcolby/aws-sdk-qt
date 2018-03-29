@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachRolePolicyRequest::response(QNetworkRep
  */
 DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
     const IAMRequest::Action action, DetachRolePolicyRequest * const q)
-    : DetachRolePolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
  */
 DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
     const DetachRolePolicyRequestPrivate &other, DetachRolePolicyRequest * const q)
-    : DetachRolePolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

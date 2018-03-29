@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetwor
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, RegisterWorkflowTypeRequest * const q)
-    : RegisterWorkflowTypePrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
     const RegisterWorkflowTypeRequestPrivate &other, RegisterWorkflowTypeRequest * const q)
-    : RegisterWorkflowTypePrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

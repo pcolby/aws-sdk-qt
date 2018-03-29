@@ -86,7 +86,7 @@ void DescribeCACertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCACertificateResponse instance.
  */
 DescribeCACertificateResponsePrivate::DescribeCACertificateResponsePrivate(
-    DescribeCACertificateQueueResponse * const q) : DescribeCACertificatePrivate(q)
+    DescribeCACertificateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

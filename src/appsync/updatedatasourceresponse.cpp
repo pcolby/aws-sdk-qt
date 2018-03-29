@@ -86,7 +86,7 @@ void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDataSourceResponse instance.
  */
 UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
-    UpdateDataSourceQueueResponse * const q) : UpdateDataSourcePrivate(q)
+    UpdateDataSourceResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

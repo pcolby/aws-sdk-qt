@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetwor
  */
 CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
     const Cloud9Request::Action action, CreateEnvironmentEC2Request * const q)
-    : CreateEnvironmentEC2Private(action, q)
+    : Cloud9RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
  */
 CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
     const CreateEnvironmentEC2RequestPrivate &other, CreateEnvironmentEC2Request * const q)
-    : CreateEnvironmentEC2Private(other, q)
+    : Cloud9RequestPrivate(other, q)
 {
 
 }

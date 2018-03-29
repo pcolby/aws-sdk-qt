@@ -86,7 +86,7 @@ void UpdatePartitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePartitionResponse instance.
  */
 UpdatePartitionResponsePrivate::UpdatePartitionResponsePrivate(
-    UpdatePartitionQueueResponse * const q) : UpdatePartitionPrivate(q)
+    UpdatePartitionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

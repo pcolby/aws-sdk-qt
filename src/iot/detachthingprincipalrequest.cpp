@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetwor
  */
 DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
     const IoTRequest::Action action, DetachThingPrincipalRequest * const q)
-    : DetachThingPrincipalPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
  */
 DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
     const DetachThingPrincipalRequestPrivate &other, DetachThingPrincipalRequest * const q)
-    : DetachThingPrincipalPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AddApplicationOutputResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddApplicationOutputResponse instance.
  */
 AddApplicationOutputResponsePrivate::AddApplicationOutputResponsePrivate(
-    AddApplicationOutputQueueResponse * const q) : AddApplicationOutputPrivate(q)
+    AddApplicationOutputResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

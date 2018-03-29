@@ -86,7 +86,7 @@ void SetInstanceProtectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetInstanceProtectionResponse instance.
  */
 SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponsePrivate(
-    SetInstanceProtectionQueueResponse * const q) : SetInstanceProtectionPrivate(q)
+    SetInstanceProtectionResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

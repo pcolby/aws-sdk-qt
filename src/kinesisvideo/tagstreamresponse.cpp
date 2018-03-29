@@ -86,7 +86,7 @@ void TagStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TagStreamResponse instance.
  */
 TagStreamResponsePrivate::TagStreamResponsePrivate(
-    TagStreamQueueResponse * const q) : TagStreamPrivate(q)
+    TagStreamResponse * const q) : KinesisVideoResponsePrivate(q)
 {
 
 }

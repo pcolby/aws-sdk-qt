@@ -86,7 +86,7 @@ void DescribeDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDomainResponse instance.
  */
 DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
-    DescribeDomainQueueResponse * const q) : DescribeDomainPrivate(q)
+    DescribeDomainResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

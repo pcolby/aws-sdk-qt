@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTableVersionRequest::response(QNetworkRepl
  */
 GetTableVersionRequestPrivate::GetTableVersionRequestPrivate(
     const GlueRequest::Action action, GetTableVersionRequest * const q)
-    : GetTableVersionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTableVersionRequestPrivate::GetTableVersionRequestPrivate(
  */
 GetTableVersionRequestPrivate::GetTableVersionRequestPrivate(
     const GetTableVersionRequestPrivate &other, GetTableVersionRequest * const q)
-    : GetTableVersionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

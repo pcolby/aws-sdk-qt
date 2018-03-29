@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOnPremisesInstanceRequest::response(QNetwo
  */
 GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, GetOnPremisesInstanceRequest * const q)
-    : GetOnPremisesInstancePrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
  */
 GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
     const GetOnPremisesInstanceRequestPrivate &other, GetOnPremisesInstanceRequest * const q)
-    : GetOnPremisesInstancePrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

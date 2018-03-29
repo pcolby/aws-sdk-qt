@@ -86,7 +86,7 @@ void CopyProductResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyProductResponse instance.
  */
 CopyProductResponsePrivate::CopyProductResponsePrivate(
-    CopyProductQueueResponse * const q) : CopyProductPrivate(q)
+    CopyProductResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

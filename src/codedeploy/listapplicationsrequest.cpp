@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkRep
  */
 ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
     const CodeDeployRequest::Action action, ListApplicationsRequest * const q)
-    : ListApplicationsPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
  */
 ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
     const ListApplicationsRequestPrivate &other, ListApplicationsRequest * const q)
-    : ListApplicationsPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * 
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const SNSRequest::Action action, UnsubscribeRequest * const q)
-    : UnsubscribePrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const UnsubscribeRequestPrivate &other, UnsubscribeRequest * const q)
-    : UnsubscribePrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

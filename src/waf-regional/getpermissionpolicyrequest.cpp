@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const WAFRegionalRequest::Action action, GetPermissionPolicyRequest * const q)
-    : GetPermissionPolicyPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const GetPermissionPolicyRequestPrivate &other, GetPermissionPolicyRequest * const q)
-    : GetPermissionPolicyPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

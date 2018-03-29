@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCurrentUserRequest::response(QNetworkReply
  */
 GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
     const WorkDocsRequest::Action action, GetCurrentUserRequest * const q)
-    : GetCurrentUserPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
  */
 GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
     const GetCurrentUserRequestPrivate &other, GetCurrentUserRequest * const q)
-    : GetCurrentUserPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

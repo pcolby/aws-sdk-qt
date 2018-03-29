@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketInventoryConfigurationRequest::respo
  */
 PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketInventoryConfigurationRequest * const q)
-    : PutBucketInventoryConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRe
  */
 PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRequestPrivate(
     const PutBucketInventoryConfigurationRequestPrivate &other, PutBucketInventoryConfigurationRequest * const q)
-    : PutBucketInventoryConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

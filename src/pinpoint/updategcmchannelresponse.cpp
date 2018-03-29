@@ -86,7 +86,7 @@ void UpdateGcmChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateGcmChannelResponse instance.
  */
 UpdateGcmChannelResponsePrivate::UpdateGcmChannelResponsePrivate(
-    UpdateGcmChannelQueueResponse * const q) : UpdateGcmChannelPrivate(q)
+    UpdateGcmChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

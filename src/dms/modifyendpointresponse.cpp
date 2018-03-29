@@ -86,7 +86,7 @@ void ModifyEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyEndpointResponse instance.
  */
 ModifyEndpointResponsePrivate::ModifyEndpointResponsePrivate(
-    ModifyEndpointQueueResponse * const q) : ModifyEndpointPrivate(q)
+    ModifyEndpointResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

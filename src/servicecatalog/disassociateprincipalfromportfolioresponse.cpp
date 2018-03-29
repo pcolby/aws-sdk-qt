@@ -86,7 +86,7 @@ void DisassociatePrincipalFromPortfolioResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DisassociatePrincipalFromPortfolioResponse instance.
  */
 DisassociatePrincipalFromPortfolioResponsePrivate::DisassociatePrincipalFromPortfolioResponsePrivate(
-    DisassociatePrincipalFromPortfolioQueueResponse * const q) : DisassociatePrincipalFromPortfolioPrivate(q)
+    DisassociatePrincipalFromPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

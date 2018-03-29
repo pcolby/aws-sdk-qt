@@ -86,7 +86,7 @@ void ListFleetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListFleetsResponse instance.
  */
 ListFleetsResponsePrivate::ListFleetsResponsePrivate(
-    ListFleetsQueueResponse * const q) : ListFleetsPrivate(q)
+    ListFleetsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetKeyPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetKeyPolicyResponse instance.
  */
 GetKeyPolicyResponsePrivate::GetKeyPolicyResponsePrivate(
-    GetKeyPolicyQueueResponse * const q) : GetKeyPolicyPrivate(q)
+    GetKeyPolicyResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

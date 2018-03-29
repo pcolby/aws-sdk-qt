@@ -86,7 +86,7 @@ void StopGameSessionPlacementResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopGameSessionPlacementResponse instance.
  */
 StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponsePrivate(
-    StopGameSessionPlacementQueueResponse * const q) : StopGameSessionPlacementPrivate(q)
+    StopGameSessionPlacementResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

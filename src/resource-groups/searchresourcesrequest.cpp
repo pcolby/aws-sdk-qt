@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchResourcesRequest::response(QNetworkRepl
  */
 SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
     const ResourceGroupsRequest::Action action, SearchResourcesRequest * const q)
-    : SearchResourcesPrivate(action, q)
+    : ResourceGroupsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
  */
 SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
     const SearchResourcesRequestPrivate &other, SearchResourcesRequest * const q)
-    : SearchResourcesPrivate(other, q)
+    : ResourceGroupsRequestPrivate(other, q)
 {
 
 }

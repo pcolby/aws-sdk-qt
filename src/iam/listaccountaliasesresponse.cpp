@@ -86,7 +86,7 @@ void ListAccountAliasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAccountAliasesResponse instance.
  */
 ListAccountAliasesResponsePrivate::ListAccountAliasesResponsePrivate(
-    ListAccountAliasesQueueResponse * const q) : ListAccountAliasesPrivate(q)
+    ListAccountAliasesResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

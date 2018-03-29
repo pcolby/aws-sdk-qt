@@ -86,7 +86,7 @@ void DisassociateAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateAddressResponse instance.
  */
 DisassociateAddressResponsePrivate::DisassociateAddressResponsePrivate(
-    DisassociateAddressQueueResponse * const q) : DisassociateAddressPrivate(q)
+    DisassociateAddressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateBudgetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBudgetResponse instance.
  */
 UpdateBudgetResponsePrivate::UpdateBudgetResponsePrivate(
-    UpdateBudgetQueueResponse * const q) : UpdateBudgetPrivate(q)
+    UpdateBudgetResponse * const q) : BudgetsResponsePrivate(q)
 {
 
 }

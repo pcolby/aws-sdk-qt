@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply *
  */
 EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
     const AutoScalingRequest::Action action, EnterStandbyRequest * const q)
-    : EnterStandbyPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
  */
 EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
     const EnterStandbyRequestPrivate &other, EnterStandbyRequest * const q)
-    : EnterStandbyPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

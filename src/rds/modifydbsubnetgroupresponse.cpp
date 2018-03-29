@@ -86,7 +86,7 @@ void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyDBSubnetGroupResponse instance.
  */
 ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponsePrivate(
-    ModifyDBSubnetGroupQueueResponse * const q) : ModifyDBSubnetGroupPrivate(q)
+    ModifyDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

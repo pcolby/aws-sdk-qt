@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const CloudHSMV2Request::Action action, DeleteClusterRequest * const q)
-    : DeleteClusterPrivate(action, q)
+    : CloudHSMV2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)
-    : DeleteClusterPrivate(other, q)
+    : CloudHSMV2RequestPrivate(other, q)
 {
 
 }

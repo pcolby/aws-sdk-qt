@@ -86,7 +86,7 @@ void CreateTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTableResponse instance.
  */
 CreateTableResponsePrivate::CreateTableResponsePrivate(
-    CreateTableQueueResponse * const q) : CreateTablePrivate(q)
+    CreateTableResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

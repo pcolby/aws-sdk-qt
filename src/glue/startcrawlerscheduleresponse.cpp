@@ -86,7 +86,7 @@ void StartCrawlerScheduleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartCrawlerScheduleResponse instance.
  */
 StartCrawlerScheduleResponsePrivate::StartCrawlerScheduleResponsePrivate(
-    StartCrawlerScheduleQueueResponse * const q) : StartCrawlerSchedulePrivate(q)
+    StartCrawlerScheduleResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

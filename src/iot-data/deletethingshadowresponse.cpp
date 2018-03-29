@@ -86,7 +86,7 @@ void DeleteThingShadowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteThingShadowResponse instance.
  */
 DeleteThingShadowResponsePrivate::DeleteThingShadowResponsePrivate(
-    DeleteThingShadowQueueResponse * const q) : DeleteThingShadowPrivate(q)
+    DeleteThingShadowResponse * const q) : IoTDataPlaneResponsePrivate(q)
 {
 
 }

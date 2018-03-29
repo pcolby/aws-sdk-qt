@@ -86,7 +86,7 @@ void AssociateTargetsWithJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateTargetsWithJobResponse instance.
  */
 AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponsePrivate(
-    AssociateTargetsWithJobQueueResponse * const q) : AssociateTargetsWithJobPrivate(q)
+    AssociateTargetsWithJobResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

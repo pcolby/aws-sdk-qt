@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterOnPremisesInstanceRequest::response(Q
  */
 RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, RegisterOnPremisesInstanceRequest * const q)
-    : RegisterOnPremisesInstancePrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPriva
  */
 RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
     const RegisterOnPremisesInstanceRequestPrivate &other, RegisterOnPremisesInstanceRequest * const q)
-    : RegisterOnPremisesInstancePrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

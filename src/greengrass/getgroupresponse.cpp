@@ -86,7 +86,7 @@ void GetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetGroupResponse instance.
  */
 GetGroupResponsePrivate::GetGroupResponsePrivate(
-    GetGroupQueueResponse * const q) : GetGroupPrivate(q)
+    GetGroupResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

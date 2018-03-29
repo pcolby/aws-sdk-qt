@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkRepl
  */
 GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
     const GreengrassRequest::Action action, GetGroupVersionRequest * const q)
-    : GetGroupVersionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
  */
 GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
     const GetGroupVersionRequestPrivate &other, GetGroupVersionRequest * const q)
-    : GetGroupVersionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

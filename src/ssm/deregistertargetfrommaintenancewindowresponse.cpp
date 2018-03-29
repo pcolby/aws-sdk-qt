@@ -86,7 +86,7 @@ void DeregisterTargetFromMaintenanceWindowResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public DeregisterTargetFromMaintenanceWindowResponse instance.
  */
 DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMaintenanceWindowResponsePrivate(
-    DeregisterTargetFromMaintenanceWindowQueueResponse * const q) : DeregisterTargetFromMaintenanceWindowPrivate(q)
+    DeregisterTargetFromMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

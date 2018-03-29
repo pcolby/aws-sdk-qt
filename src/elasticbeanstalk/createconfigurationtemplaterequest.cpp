@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationTemplateRequest::response(
  */
 CreateConfigurationTemplateRequestPrivate::CreateConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateConfigurationTemplateRequest * const q)
-    : CreateConfigurationTemplatePrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConfigurationTemplateRequestPrivate::CreateConfigurationTemplateRequestPri
  */
 CreateConfigurationTemplateRequestPrivate::CreateConfigurationTemplateRequestPrivate(
     const CreateConfigurationTemplateRequestPrivate &other, CreateConfigurationTemplateRequest * const q)
-    : CreateConfigurationTemplatePrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

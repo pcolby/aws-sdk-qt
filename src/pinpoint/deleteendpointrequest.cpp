@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const PinpointRequest::Action action, DeleteEndpointRequest * const q)
-    : DeleteEndpointPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DeleteEndpointRequestPrivate &other, DeleteEndpointRequest * const q)
-    : DeleteEndpointPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

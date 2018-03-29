@@ -86,7 +86,7 @@ void DisassociateCreatedArtifactResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateCreatedArtifactResponse instance.
  */
 DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResponsePrivate(
-    DisassociateCreatedArtifactQueueResponse * const q) : DisassociateCreatedArtifactPrivate(q)
+    DisassociateCreatedArtifactResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

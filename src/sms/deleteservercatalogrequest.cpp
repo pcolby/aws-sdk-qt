@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetwork
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
     const SMSRequest::Action action, DeleteServerCatalogRequest * const q)
-    : DeleteServerCatalogPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
     const DeleteServerCatalogRequestPrivate &other, DeleteServerCatalogRequest * const q)
-    : DeleteServerCatalogPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

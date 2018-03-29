@@ -86,7 +86,7 @@ void SetRulePrioritiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetRulePrioritiesResponse instance.
  */
 SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponsePrivate(
-    SetRulePrioritiesQueueResponse * const q) : SetRulePrioritiesPrivate(q)
+    SetRulePrioritiesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

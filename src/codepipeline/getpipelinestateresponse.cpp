@@ -86,7 +86,7 @@ void GetPipelineStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPipelineStateResponse instance.
  */
 GetPipelineStateResponsePrivate::GetPipelineStateResponsePrivate(
-    GetPipelineStateQueueResponse * const q) : GetPipelineStatePrivate(q)
+    GetPipelineStateResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

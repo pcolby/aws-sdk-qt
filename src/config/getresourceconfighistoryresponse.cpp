@@ -86,7 +86,7 @@ void GetResourceConfigHistoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetResourceConfigHistoryResponse instance.
  */
 GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponsePrivate(
-    GetResourceConfigHistoryQueueResponse * const q) : GetResourceConfigHistoryPrivate(q)
+    GetResourceConfigHistoryResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

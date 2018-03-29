@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetRepositoriesRequest::response(QNetwor
  */
 BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
     const CodeCommitRequest::Action action, BatchGetRepositoriesRequest * const q)
-    : BatchGetRepositoriesPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
  */
 BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
     const BatchGetRepositoriesRequestPrivate &other, BatchGetRepositoriesRequest * const q)
-    : BatchGetRepositoriesPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

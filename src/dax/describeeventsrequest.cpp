@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DAXRequest::Action action, DescribeEventsRequest * const q)
-    : DescribeEventsPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DescribeEventsRequestPrivate &other, DescribeEventsRequest * const q)
-    : DescribeEventsPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

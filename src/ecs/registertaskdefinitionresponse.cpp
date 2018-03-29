@@ -86,7 +86,7 @@ void RegisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterTaskDefinitionResponse instance.
  */
 RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponsePrivate(
-    RegisterTaskDefinitionQueueResponse * const q) : RegisterTaskDefinitionPrivate(q)
+    RegisterTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void BatchStopJobRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchStopJobRunResponse instance.
  */
 BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
-    BatchStopJobRunQueueResponse * const q) : BatchStopJobRunPrivate(q)
+    BatchStopJobRunResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

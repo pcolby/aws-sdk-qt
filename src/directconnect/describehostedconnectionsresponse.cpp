@@ -86,7 +86,7 @@ void DescribeHostedConnectionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHostedConnectionsResponse instance.
  */
 DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponsePrivate(
-    DescribeHostedConnectionsQueueResponse * const q) : DescribeHostedConnectionsPrivate(q)
+    DescribeHostedConnectionsResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

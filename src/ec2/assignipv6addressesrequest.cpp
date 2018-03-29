@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetwork
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
     const EC2Request::Action action, AssignIpv6AddressesRequest * const q)
-    : AssignIpv6AddressesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
     const AssignIpv6AddressesRequestPrivate &other, AssignIpv6AddressesRequest * const q)
-    : AssignIpv6AddressesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

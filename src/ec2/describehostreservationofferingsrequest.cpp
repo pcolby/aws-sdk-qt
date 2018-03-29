@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHostReservationOfferingsRequest::resp
  */
 DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferingsRequestPrivate(
     const EC2Request::Action action, DescribeHostReservationOfferingsRequest * const q)
-    : DescribeHostReservationOfferingsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferings
  */
 DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferingsRequestPrivate(
     const DescribeHostReservationOfferingsRequestPrivate &other, DescribeHostReservationOfferingsRequest * const q)
-    : DescribeHostReservationOfferingsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

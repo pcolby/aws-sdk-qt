@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::
  */
 GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecommendationRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationPurchaseRecommendationRequest * const q)
-    : GetReservationPurchaseRecommendationPrivate(action, q)
+    : CostExplorerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecomm
  */
 GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecommendationRequestPrivate(
     const GetReservationPurchaseRecommendationRequestPrivate &other, GetReservationPurchaseRecommendationRequest * const q)
-    : GetReservationPurchaseRecommendationPrivate(other, q)
+    : CostExplorerRequestPrivate(other, q)
 {
 
 }

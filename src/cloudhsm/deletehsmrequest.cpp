@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * co
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
     const CloudHSMRequest::Action action, DeleteHsmRequest * const q)
-    : DeleteHsmPrivate(action, q)
+    : CloudHSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
     const DeleteHsmRequestPrivate &other, DeleteHsmRequest * const q)
-    : DeleteHsmPrivate(other, q)
+    : CloudHSMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AdminSetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminSetUserMFAPreferenceResponse instance.
  */
 AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponsePrivate(
-    AdminSetUserMFAPreferenceQueueResponse * const q) : AdminSetUserMFAPreferencePrivate(q)
+    AdminSetUserMFAPreferenceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

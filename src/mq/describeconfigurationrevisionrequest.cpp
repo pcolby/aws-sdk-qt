@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::respons
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
     const MQRequest::Action action, DescribeConfigurationRevisionRequest * const q)
-    : DescribeConfigurationRevisionPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionReques
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
     const DescribeConfigurationRevisionRequestPrivate &other, DescribeConfigurationRevisionRequest * const q)
-    : DescribeConfigurationRevisionPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSecurityGroupResponse instance.
  */
 DeleteSecurityGroupResponsePrivate::DeleteSecurityGroupResponsePrivate(
-    DeleteSecurityGroupQueueResponse * const q) : DeleteSecurityGroupPrivate(q)
+    DeleteSecurityGroupResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

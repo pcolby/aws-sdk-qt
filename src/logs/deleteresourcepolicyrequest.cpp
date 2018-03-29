@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetwor
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteResourcePolicyRequest * const q)
-    : DeleteResourcePolicyPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
     const DeleteResourcePolicyRequestPrivate &other, DeleteResourcePolicyRequest * const q)
-    : DeleteResourcePolicyPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

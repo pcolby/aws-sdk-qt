@@ -86,7 +86,7 @@ void DeleteVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVolumeResponse instance.
  */
 DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
-    DeleteVolumeQueueResponse * const q) : DeleteVolumePrivate(q)
+    DeleteVolumeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void RespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RespondToAuthChallengeResponse instance.
  */
 RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponsePrivate(
-    RespondToAuthChallengeQueueResponse * const q) : RespondToAuthChallengePrivate(q)
+    RespondToAuthChallengeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

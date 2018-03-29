@@ -86,7 +86,7 @@ void GetFolderPathResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFolderPathResponse instance.
  */
 GetFolderPathResponsePrivate::GetFolderPathResponsePrivate(
-    GetFolderPathQueueResponse * const q) : GetFolderPathPrivate(q)
+    GetFolderPathResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreatePatchBaselineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePatchBaselineResponse instance.
  */
 CreatePatchBaselineResponsePrivate::CreatePatchBaselineResponsePrivate(
-    CreatePatchBaselineQueueResponse * const q) : CreatePatchBaselinePrivate(q)
+    CreatePatchBaselineResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

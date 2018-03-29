@@ -86,7 +86,7 @@ void ListActivitiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListActivitiesResponse instance.
  */
 ListActivitiesResponsePrivate::ListActivitiesResponsePrivate(
-    ListActivitiesQueueResponse * const q) : ListActivitiesPrivate(q)
+    ListActivitiesResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

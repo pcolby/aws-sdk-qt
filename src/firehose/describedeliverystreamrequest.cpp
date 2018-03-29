@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryStreamRequest::response(QNetw
  */
 DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, DescribeDeliveryStreamRequest * const q)
-    : DescribeDeliveryStreamPrivate(action, q)
+    : FirehoseRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
  */
 DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
     const DescribeDeliveryStreamRequestPrivate &other, DescribeDeliveryStreamRequest * const q)
-    : DescribeDeliveryStreamPrivate(other, q)
+    : FirehoseRequestPrivate(other, q)
 {
 
 }

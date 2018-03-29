@@ -86,7 +86,7 @@ void GetDashboardResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDashboardResponse instance.
  */
 GetDashboardResponsePrivate::GetDashboardResponsePrivate(
-    GetDashboardQueueResponse * const q) : GetDashboardPrivate(q)
+    GetDashboardResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartNextPendingJobExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartNextPendingJobExecutionResponse instance.
  */
 StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionResponsePrivate(
-    StartNextPendingJobExecutionQueueResponse * const q) : StartNextPendingJobExecutionPrivate(q)
+    StartNextPendingJobExecutionResponse * const q) : IoTJobsDataPlaneResponsePrivate(q)
 {
 
 }

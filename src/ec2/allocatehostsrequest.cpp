@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply 
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
     const EC2Request::Action action, AllocateHostsRequest * const q)
-    : AllocateHostsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
     const AllocateHostsRequestPrivate &other, AllocateHostsRequest * const q)
-    : AllocateHostsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
     const SESRequest::Action action, VerifyDomainDkimRequest * const q)
-    : VerifyDomainDkimPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
     const VerifyDomainDkimRequestPrivate &other, VerifyDomainDkimRequest * const q)
-    : VerifyDomainDkimPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpgradeAppliedSchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpgradeAppliedSchemaResponse instance.
  */
 UpgradeAppliedSchemaResponsePrivate::UpgradeAppliedSchemaResponsePrivate(
-    UpgradeAppliedSchemaQueueResponse * const q) : UpgradeAppliedSchemaPrivate(q)
+    UpgradeAppliedSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

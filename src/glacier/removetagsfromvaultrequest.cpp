@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromVaultRequest::response(QNetwork
  */
 RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
     const GlacierRequest::Action action, RemoveTagsFromVaultRequest * const q)
-    : RemoveTagsFromVaultPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
  */
 RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
     const RemoveTagsFromVaultRequestPrivate &other, RemoveTagsFromVaultRequest * const q)
-    : RemoveTagsFromVaultPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

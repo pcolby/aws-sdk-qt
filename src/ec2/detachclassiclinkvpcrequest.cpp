@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetwor
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
     const EC2Request::Action action, DetachClassicLinkVpcRequest * const q)
-    : DetachClassicLinkVpcPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
     const DetachClassicLinkVpcRequestPrivate &other, DetachClassicLinkVpcRequest * const q)
-    : DetachClassicLinkVpcPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

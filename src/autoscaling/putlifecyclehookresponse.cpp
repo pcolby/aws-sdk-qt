@@ -86,7 +86,7 @@ void PutLifecycleHookResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutLifecycleHookResponse instance.
  */
 PutLifecycleHookResponsePrivate::PutLifecycleHookResponsePrivate(
-    PutLifecycleHookQueueResponse * const q) : PutLifecycleHookPrivate(q)
+    PutLifecycleHookResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

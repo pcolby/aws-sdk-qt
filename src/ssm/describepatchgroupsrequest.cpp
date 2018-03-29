@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePatchGroupsRequest::response(QNetwork
  */
 DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
     const SSMRequest::Action action, DescribePatchGroupsRequest * const q)
-    : DescribePatchGroupsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
  */
 DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
     const DescribePatchGroupsRequestPrivate &other, DescribePatchGroupsRequest * const q)
-    : DescribePatchGroupsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

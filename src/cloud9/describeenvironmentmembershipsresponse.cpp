@@ -86,7 +86,7 @@ void DescribeEnvironmentMembershipsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEnvironmentMembershipsResponse instance.
  */
 DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsResponsePrivate(
-    DescribeEnvironmentMembershipsQueueResponse * const q) : DescribeEnvironmentMembershipsPrivate(q)
+    DescribeEnvironmentMembershipsResponse * const q) : Cloud9ResponsePrivate(q)
 {
 
 }

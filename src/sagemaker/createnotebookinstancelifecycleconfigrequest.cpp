@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceLifecycleConfigRequest:
  */
 CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, CreateNotebookInstanceLifecycleConfigRequest * const q)
-    : CreateNotebookInstanceLifecycleConfigPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifec
  */
 CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifecycleConfigRequestPrivate(
     const CreateNotebookInstanceLifecycleConfigRequestPrivate &other, CreateNotebookInstanceLifecycleConfigRequest * const q)
-    : CreateNotebookInstanceLifecycleConfigPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

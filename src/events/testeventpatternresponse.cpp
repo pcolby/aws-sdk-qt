@@ -86,7 +86,7 @@ void TestEventPatternResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestEventPatternResponse instance.
  */
 TestEventPatternResponsePrivate::TestEventPatternResponsePrivate(
-    TestEventPatternQueueResponse * const q) : TestEventPatternPrivate(q)
+    TestEventPatternResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

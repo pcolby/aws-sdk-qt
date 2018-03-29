@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListProvisioningArtifactsRequest::response(QN
  */
 ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListProvisioningArtifactsRequest * const q)
-    : ListProvisioningArtifactsPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate
  */
 ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
     const ListProvisioningArtifactsRequestPrivate &other, ListProvisioningArtifactsRequest * const q)
-    : ListProvisioningArtifactsPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListGroupCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGroupCertificateAuthoritiesResponse instance.
  */
 ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesResponsePrivate(
-    ListGroupCertificateAuthoritiesQueueResponse * const q) : ListGroupCertificateAuthoritiesPrivate(q)
+    ListGroupCertificateAuthoritiesResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

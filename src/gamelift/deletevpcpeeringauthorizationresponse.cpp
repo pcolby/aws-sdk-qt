@@ -86,7 +86,7 @@ void DeleteVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVpcPeeringAuthorizationResponse instance.
  */
 DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorizationResponsePrivate(
-    DeleteVpcPeeringAuthorizationQueueResponse * const q) : DeleteVpcPeeringAuthorizationPrivate(q)
+    DeleteVpcPeeringAuthorizationResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

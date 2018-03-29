@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAccessKeyRequest::response(QNetworkRepl
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
     const IAMRequest::Action action, DeleteAccessKeyRequest * const q)
-    : DeleteAccessKeyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
     const DeleteAccessKeyRequestPrivate &other, DeleteAccessKeyRequest * const q)
-    : DeleteAccessKeyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

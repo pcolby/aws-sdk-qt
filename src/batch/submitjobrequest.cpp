@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SubmitJobRequest::response(QNetworkReply * co
  */
 SubmitJobRequestPrivate::SubmitJobRequestPrivate(
     const BatchRequest::Action action, SubmitJobRequest * const q)
-    : SubmitJobPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SubmitJobRequestPrivate::SubmitJobRequestPrivate(
  */
 SubmitJobRequestPrivate::SubmitJobRequestPrivate(
     const SubmitJobRequestPrivate &other, SubmitJobRequest * const q)
-    : SubmitJobPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response
  */
 CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromRedshiftRequest * const q)
-    : CreateDataSourceFromRedshiftPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestP
  */
 CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestPrivate(
     const CreateDataSourceFromRedshiftRequestPrivate &other, CreateDataSourceFromRedshiftRequest * const q)
-    : CreateDataSourceFromRedshiftPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

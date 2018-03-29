@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetwork
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
     const EC2Request::Action action, DescribeNetworkAclsRequest * const q)
-    : DescribeNetworkAclsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
     const DescribeNetworkAclsRequestPrivate &other, DescribeNetworkAclsRequest * const q)
-    : DescribeNetworkAclsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

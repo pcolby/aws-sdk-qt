@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssociationRequest::response(QNetwork
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
     const SSMRequest::Action action, DescribeAssociationRequest * const q)
-    : DescribeAssociationPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
     const DescribeAssociationRequestPrivate &other, DescribeAssociationRequest * const q)
-    : DescribeAssociationPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

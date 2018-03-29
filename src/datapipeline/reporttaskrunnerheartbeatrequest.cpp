@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReportTaskRunnerHeartbeatRequest::response(QN
  */
 ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
     const DataPipelineRequest::Action action, ReportTaskRunnerHeartbeatRequest * const q)
-    : ReportTaskRunnerHeartbeatPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate
  */
 ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
     const ReportTaskRunnerHeartbeatRequestPrivate &other, ReportTaskRunnerHeartbeatRequest * const q)
-    : ReportTaskRunnerHeartbeatPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

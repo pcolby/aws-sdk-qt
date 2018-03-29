@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkRep
  */
 TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
     const CloudWatchEventsRequest::Action action, TestEventPatternRequest * const q)
-    : TestEventPatternPrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
  */
 TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
     const TestEventPatternRequestPrivate &other, TestEventPatternRequest * const q)
-    : TestEventPatternPrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

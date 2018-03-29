@@ -86,7 +86,7 @@ void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListSubscribedRuleGroupsResponse instance.
  */
 ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate(
-    ListSubscribedRuleGroupsQueueResponse * const q) : ListSubscribedRuleGroupsPrivate(q)
+    ListSubscribedRuleGroupsResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

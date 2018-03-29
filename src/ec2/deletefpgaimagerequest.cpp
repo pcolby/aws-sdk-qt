@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkRepl
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
     const EC2Request::Action action, DeleteFpgaImageRequest * const q)
-    : DeleteFpgaImagePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
     const DeleteFpgaImageRequestPrivate &other, DeleteFpgaImageRequest * const q)
-    : DeleteFpgaImagePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void BatchPutAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchPutAttributesResponse instance.
  */
 BatchPutAttributesResponsePrivate::BatchPutAttributesResponsePrivate(
-    BatchPutAttributesQueueResponse * const q) : BatchPutAttributesPrivate(q)
+    BatchPutAttributesResponse * const q) : SimpleDBResponsePrivate(q)
 {
 
 }

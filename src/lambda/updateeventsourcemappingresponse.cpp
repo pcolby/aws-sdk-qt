@@ -86,7 +86,7 @@ void UpdateEventSourceMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEventSourceMappingResponse instance.
  */
 UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponsePrivate(
-    UpdateEventSourceMappingQueueResponse * const q) : UpdateEventSourceMappingPrivate(q)
+    UpdateEventSourceMappingResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

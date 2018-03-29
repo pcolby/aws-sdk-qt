@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QN
  */
 GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
     const LightsailRequest::Action action, GetLoadBalancerMetricDataRequest * const q)
-    : GetLoadBalancerMetricDataPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate
  */
 GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
     const GetLoadBalancerMetricDataRequestPrivate &other, GetLoadBalancerMetricDataRequest * const q)
-    : GetLoadBalancerMetricDataPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

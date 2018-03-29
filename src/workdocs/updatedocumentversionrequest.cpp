@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentVersionRequest::response(QNetwo
  */
 UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
     const WorkDocsRequest::Action action, UpdateDocumentVersionRequest * const q)
-    : UpdateDocumentVersionPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
  */
 UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
     const UpdateDocumentVersionRequestPrivate &other, UpdateDocumentVersionRequest * const q)
-    : UpdateDocumentVersionPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

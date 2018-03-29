@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSourceMappingRequest::response(QNe
  */
 DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, DeleteEventSourceMappingRequest * const q)
-    : DeleteEventSourceMappingPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
  */
 DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
     const DeleteEventSourceMappingRequestPrivate &other, DeleteEventSourceMappingRequest * const q)
-    : DeleteEventSourceMappingPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

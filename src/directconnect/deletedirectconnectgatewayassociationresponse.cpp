@@ -86,7 +86,7 @@ void DeleteDirectConnectGatewayAssociationResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public DeleteDirectConnectGatewayAssociationResponse instance.
  */
 DeleteDirectConnectGatewayAssociationResponsePrivate::DeleteDirectConnectGatewayAssociationResponsePrivate(
-    DeleteDirectConnectGatewayAssociationQueueResponse * const q) : DeleteDirectConnectGatewayAssociationPrivate(q)
+    DeleteDirectConnectGatewayAssociationResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

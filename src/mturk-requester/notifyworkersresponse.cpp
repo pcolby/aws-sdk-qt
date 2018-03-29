@@ -86,7 +86,7 @@ void NotifyWorkersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public NotifyWorkersResponse instance.
  */
 NotifyWorkersResponsePrivate::NotifyWorkersResponsePrivate(
-    NotifyWorkersQueueResponse * const q) : NotifyWorkersPrivate(q)
+    NotifyWorkersResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

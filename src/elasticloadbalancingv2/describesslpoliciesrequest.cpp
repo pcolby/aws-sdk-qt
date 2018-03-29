@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSSLPoliciesRequest::response(QNetwork
  */
 DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeSSLPoliciesRequest * const q)
-    : DescribeSSLPoliciesPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
  */
 DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
     const DescribeSSLPoliciesRequestPrivate &other, DescribeSSLPoliciesRequest * const q)
-    : DescribeSSLPoliciesPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

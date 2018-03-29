@@ -86,7 +86,7 @@ void DetachObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachObjectResponse instance.
  */
 DetachObjectResponsePrivate::DetachObjectResponsePrivate(
-    DetachObjectQueueResponse * const q) : DetachObjectPrivate(q)
+    DetachObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

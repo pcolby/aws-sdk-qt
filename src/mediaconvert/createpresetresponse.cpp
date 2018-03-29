@@ -86,7 +86,7 @@ void CreatePresetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreatePresetResponse instance.
  */
 CreatePresetResponsePrivate::CreatePresetResponsePrivate(
-    CreatePresetQueueResponse * const q) : CreatePresetPrivate(q)
+    CreatePresetResponse * const q) : MediaConvertResponsePrivate(q)
 {
 
 }

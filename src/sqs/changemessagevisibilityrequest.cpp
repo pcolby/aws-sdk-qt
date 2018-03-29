@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNet
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
     const SQSRequest::Action action, ChangeMessageVisibilityRequest * const q)
-    : ChangeMessageVisibilityPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
     const ChangeMessageVisibilityRequestPrivate &other, ChangeMessageVisibilityRequest * const q)
-    : ChangeMessageVisibilityPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

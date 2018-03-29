@@ -86,7 +86,7 @@ void DeregisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterTaskDefinitionResponse instance.
  */
 DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponsePrivate(
-    DeregisterTaskDefinitionQueueResponse * const q) : DeregisterTaskDefinitionPrivate(q)
+    DeregisterTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

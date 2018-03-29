@@ -86,7 +86,7 @@ void GetHostedZoneCountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetHostedZoneCountResponse instance.
  */
 GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponsePrivate(
-    GetHostedZoneCountQueueResponse * const q) : GetHostedZoneCountPrivate(q)
+    GetHostedZoneCountResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

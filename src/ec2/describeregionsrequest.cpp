@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkRepl
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
     const EC2Request::Action action, DescribeRegionsRequest * const q)
-    : DescribeRegionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
     const DescribeRegionsRequestPrivate &other, DescribeRegionsRequest * const q)
-    : DescribeRegionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeSnapshotAccessRequest::response(QNetwor
  */
 RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
     const RedshiftRequest::Action action, RevokeSnapshotAccessRequest * const q)
-    : RevokeSnapshotAccessPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
  */
 RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
     const RevokeSnapshotAccessRequestPrivate &other, RevokeSnapshotAccessRequest * const q)
-    : RevokeSnapshotAccessPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

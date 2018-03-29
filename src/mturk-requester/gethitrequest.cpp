@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHITRequest::response(QNetworkReply * const
  */
 GetHITRequestPrivate::GetHITRequestPrivate(
     const MTurkRequest::Action action, GetHITRequest * const q)
-    : GetHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetHITRequestPrivate::GetHITRequestPrivate(
  */
 GetHITRequestPrivate::GetHITRequestPrivate(
     const GetHITRequestPrivate &other, GetHITRequest * const q)
-    : GetHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply *
  */
 DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
     const SimpleDBRequest::Action action, DeleteDomainRequest * const q)
-    : DeleteDomainPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
  */
 DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
     const DeleteDomainRequestPrivate &other, DeleteDomainRequest * const q)
-    : DeleteDomainPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

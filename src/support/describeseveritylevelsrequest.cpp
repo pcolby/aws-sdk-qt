@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSeverityLevelsRequest::response(QNetw
  */
 DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
     const SupportRequest::Action action, DescribeSeverityLevelsRequest * const q)
-    : DescribeSeverityLevelsPrivate(action, q)
+    : SupportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
  */
 DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
     const DescribeSeverityLevelsRequestPrivate &other, DescribeSeverityLevelsRequest * const q)
-    : DescribeSeverityLevelsPrivate(other, q)
+    : SupportRequestPrivate(other, q)
 {
 
 }

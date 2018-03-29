@@ -86,7 +86,7 @@ void DeleteClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteClusterSubnetGroupResponse instance.
  */
 DeleteClusterSubnetGroupResponsePrivate::DeleteClusterSubnetGroupResponsePrivate(
-    DeleteClusterSubnetGroupQueueResponse * const q) : DeleteClusterSubnetGroupPrivate(q)
+    DeleteClusterSubnetGroupResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

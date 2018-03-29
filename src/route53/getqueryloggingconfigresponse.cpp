@@ -86,7 +86,7 @@ void GetQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetQueryLoggingConfigResponse instance.
  */
 GetQueryLoggingConfigResponsePrivate::GetQueryLoggingConfigResponsePrivate(
-    GetQueryLoggingConfigQueueResponse * const q) : GetQueryLoggingConfigPrivate(q)
+    GetQueryLoggingConfigResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

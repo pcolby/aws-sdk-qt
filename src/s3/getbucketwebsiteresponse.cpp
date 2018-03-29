@@ -86,7 +86,7 @@ void GetBucketWebsiteResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBucketWebsiteResponse instance.
  */
 GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
-    GetBucketWebsiteQueueResponse * const q) : GetBucketWebsitePrivate(q)
+    GetBucketWebsiteResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

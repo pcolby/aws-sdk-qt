@@ -86,7 +86,7 @@ void PurgeQueueResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PurgeQueueResponse instance.
  */
 PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
-    PurgeQueueQueueResponse * const q) : PurgeQueuePrivate(q)
+    PurgeQueueResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

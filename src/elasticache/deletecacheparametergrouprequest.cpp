@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QN
  */
 DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheParameterGroupRequest * const q)
-    : DeleteCacheParameterGroupPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate
  */
 DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate(
     const DeleteCacheParameterGroupRequestPrivate &other, DeleteCacheParameterGroupRequest * const q)
-    : DeleteCacheParameterGroupPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

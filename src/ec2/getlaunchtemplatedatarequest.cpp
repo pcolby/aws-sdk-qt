@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetwo
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
     const EC2Request::Action action, GetLaunchTemplateDataRequest * const q)
-    : GetLaunchTemplateDataPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
     const GetLaunchTemplateDataRequestPrivate &other, GetLaunchTemplateDataRequest * const q)
-    : GetLaunchTemplateDataPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

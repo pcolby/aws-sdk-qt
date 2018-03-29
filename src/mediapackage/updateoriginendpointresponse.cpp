@@ -86,7 +86,7 @@ void UpdateOriginEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateOriginEndpointResponse instance.
  */
 UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
-    UpdateOriginEndpointQueueResponse * const q) : UpdateOriginEndpointPrivate(q)
+    UpdateOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
 {
 
 }

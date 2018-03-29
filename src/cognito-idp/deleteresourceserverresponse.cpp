@@ -86,7 +86,7 @@ void DeleteResourceServerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteResourceServerResponse instance.
  */
 DeleteResourceServerResponsePrivate::DeleteResourceServerResponsePrivate(
-    DeleteResourceServerQueueResponse * const q) : DeleteResourceServerPrivate(q)
+    DeleteResourceServerResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

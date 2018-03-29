@@ -86,7 +86,7 @@ void UpdateResolverResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateResolverResponse instance.
  */
 UpdateResolverResponsePrivate::UpdateResolverResponsePrivate(
-    UpdateResolverQueueResponse * const q) : UpdateResolverPrivate(q)
+    UpdateResolverResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

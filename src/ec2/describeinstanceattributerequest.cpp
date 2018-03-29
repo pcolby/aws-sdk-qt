@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QN
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
     const EC2Request::Action action, DescribeInstanceAttributeRequest * const q)
-    : DescribeInstanceAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
     const DescribeInstanceAttributeRequestPrivate &other, DescribeInstanceAttributeRequest * const q)
-    : DescribeInstanceAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

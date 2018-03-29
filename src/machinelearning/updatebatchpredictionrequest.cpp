@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBatchPredictionRequest::response(QNetwo
  */
 UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, UpdateBatchPredictionRequest * const q)
-    : UpdateBatchPredictionPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
  */
 UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
     const UpdateBatchPredictionRequestPrivate &other, UpdateBatchPredictionRequest * const q)
-    : UpdateBatchPredictionPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

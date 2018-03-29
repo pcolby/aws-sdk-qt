@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeContainerRequest::response(QNetworkRe
  */
 DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
     const MediaStoreRequest::Action action, DescribeContainerRequest * const q)
-    : DescribeContainerPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
  */
 DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
     const DescribeContainerRequestPrivate &other, DescribeContainerRequest * const q)
-    : DescribeContainerPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

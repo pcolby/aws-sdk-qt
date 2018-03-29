@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply 
  */
 TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
     const Route53Request::Action action, TestDNSAnswerRequest * const q)
-    : TestDNSAnswerPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
  */
 TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
     const TestDNSAnswerRequestPrivate &other, TestDNSAnswerRequest * const q)
-    : TestDNSAnswerPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

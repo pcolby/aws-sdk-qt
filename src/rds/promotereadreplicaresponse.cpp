@@ -86,7 +86,7 @@ void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PromoteReadReplicaResponse instance.
  */
 PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
-    PromoteReadReplicaQueueResponse * const q) : PromoteReadReplicaPrivate(q)
+    PromoteReadReplicaResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

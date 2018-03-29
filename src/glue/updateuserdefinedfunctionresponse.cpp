@@ -86,7 +86,7 @@ void UpdateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateUserDefinedFunctionResponse instance.
  */
 UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePrivate(
-    UpdateUserDefinedFunctionQueueResponse * const q) : UpdateUserDefinedFunctionPrivate(q)
+    UpdateUserDefinedFunctionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

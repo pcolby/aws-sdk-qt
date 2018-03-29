@@ -86,7 +86,7 @@ void TerminateJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TerminateJobResponse instance.
  */
 TerminateJobResponsePrivate::TerminateJobResponsePrivate(
-    TerminateJobQueueResponse * const q) : TerminateJobPrivate(q)
+    TerminateJobResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

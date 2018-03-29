@@ -86,7 +86,7 @@ void CreateListenerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateListenerResponse instance.
  */
 CreateListenerResponsePrivate::CreateListenerResponsePrivate(
-    CreateListenerQueueResponse * const q) : CreateListenerPrivate(q)
+    CreateListenerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

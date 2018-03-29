@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply
  */
 UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
     const S3Request::Action action, UploadPartCopyRequest * const q)
-    : UploadPartCopyPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
  */
 UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
     const UploadPartCopyRequestPrivate &other, UploadPartCopyRequest * const q)
-    : UploadPartCopyPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

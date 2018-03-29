@@ -86,7 +86,7 @@ void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &res
  * @param  q  Pointer to this object's public DescribeEngineDefaultClusterParametersResponse instance.
  */
 DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClusterParametersResponsePrivate(
-    DescribeEngineDefaultClusterParametersQueueResponse * const q) : DescribeEngineDefaultClusterParametersPrivate(q)
+    DescribeEngineDefaultClusterParametersResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

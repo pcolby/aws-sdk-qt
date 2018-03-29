@@ -86,7 +86,7 @@ void CreateDocumentationVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDocumentationVersionResponse instance.
  */
 CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionResponsePrivate(
-    CreateDocumentationVersionQueueResponse * const q) : CreateDocumentationVersionPrivate(q)
+    CreateDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetTimeBasedAutoScalingRequest::response(QNet
  */
 SetTimeBasedAutoScalingRequestPrivate::SetTimeBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, SetTimeBasedAutoScalingRequest * const q)
-    : SetTimeBasedAutoScalingPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetTimeBasedAutoScalingRequestPrivate::SetTimeBasedAutoScalingRequestPrivate(
  */
 SetTimeBasedAutoScalingRequestPrivate::SetTimeBasedAutoScalingRequestPrivate(
     const SetTimeBasedAutoScalingRequestPrivate &other, SetTimeBasedAutoScalingRequest * const q)
-    : SetTimeBasedAutoScalingPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

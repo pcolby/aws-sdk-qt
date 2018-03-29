@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultAuthorizerRequest::response(QN
  */
 DescribeDefaultAuthorizerRequestPrivate::DescribeDefaultAuthorizerRequestPrivate(
     const IoTRequest::Action action, DescribeDefaultAuthorizerRequest * const q)
-    : DescribeDefaultAuthorizerPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDefaultAuthorizerRequestPrivate::DescribeDefaultAuthorizerRequestPrivate
  */
 DescribeDefaultAuthorizerRequestPrivate::DescribeDefaultAuthorizerRequestPrivate(
     const DescribeDefaultAuthorizerRequestPrivate &other, DescribeDefaultAuthorizerRequest * const q)
-    : DescribeDefaultAuthorizerPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

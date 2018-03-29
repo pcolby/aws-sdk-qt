@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply 
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
     const EC2Request::Action action, CopyFpgaImageRequest * const q)
-    : CopyFpgaImagePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
     const CopyFpgaImageRequestPrivate &other, CopyFpgaImageRequest * const q)
-    : CopyFpgaImagePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

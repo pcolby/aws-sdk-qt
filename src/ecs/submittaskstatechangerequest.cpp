@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetwo
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
     const ECSRequest::Action action, SubmitTaskStateChangeRequest * const q)
-    : SubmitTaskStateChangePrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
     const SubmitTaskStateChangeRequestPrivate &other, SubmitTaskStateChangeRequest * const q)
-    : SubmitTaskStateChangePrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

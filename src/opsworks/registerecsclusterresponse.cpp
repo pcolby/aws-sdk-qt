@@ -86,7 +86,7 @@ void RegisterEcsClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterEcsClusterResponse instance.
  */
 RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponsePrivate(
-    RegisterEcsClusterQueueResponse * const q) : RegisterEcsClusterPrivate(q)
+    RegisterEcsClusterResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

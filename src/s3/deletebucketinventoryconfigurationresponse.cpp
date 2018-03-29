@@ -86,7 +86,7 @@ void DeleteBucketInventoryConfigurationResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DeleteBucketInventoryConfigurationResponse instance.
  */
 DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryConfigurationResponsePrivate(
-    DeleteBucketInventoryConfigurationQueueResponse * const q) : DeleteBucketInventoryConfigurationPrivate(q)
+    DeleteBucketInventoryConfigurationResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

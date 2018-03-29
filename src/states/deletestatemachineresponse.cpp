@@ -86,7 +86,7 @@ void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteStateMachineResponse instance.
  */
 DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
-    DeleteStateMachineQueueResponse * const q) : DeleteStateMachinePrivate(q)
+    DeleteStateMachineResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

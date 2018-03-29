@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCustomActionTypeRequest::response(QNetw
  */
 CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
     const CodePipelineRequest::Action action, CreateCustomActionTypeRequest * const q)
-    : CreateCustomActionTypePrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
  */
 CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
     const CreateCustomActionTypeRequestPrivate &other, CreateCustomActionTypeRequest * const q)
-    : CreateCustomActionTypePrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

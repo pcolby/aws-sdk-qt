@@ -86,7 +86,7 @@ void DescribeMovingAddressesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMovingAddressesResponse instance.
  */
 DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponsePrivate(
-    DescribeMovingAddressesQueueResponse * const q) : DescribeMovingAddressesPrivate(q)
+    DescribeMovingAddressesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

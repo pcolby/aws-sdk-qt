@@ -86,7 +86,7 @@ void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteApiKeyResponse instance.
  */
 DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
-    DeleteApiKeyQueueResponse * const q) : DeleteApiKeyPrivate(q)
+    DeleteApiKeyResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const RedshiftRequest::Action action, DeleteTagsRequest * const q)
-    : DeleteTagsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)
-    : DeleteTagsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

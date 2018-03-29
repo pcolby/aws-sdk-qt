@@ -86,7 +86,7 @@ void CreateCollectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCollectionResponse instance.
  */
 CreateCollectionResponsePrivate::CreateCollectionResponsePrivate(
-    CreateCollectionQueueResponse * const q) : CreateCollectionPrivate(q)
+    CreateCollectionResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ModifyNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyNetworkInterfaceAttributeResponse instance.
  */
 ModifyNetworkInterfaceAttributeResponsePrivate::ModifyNetworkInterfaceAttributeResponsePrivate(
-    ModifyNetworkInterfaceAttributeQueueResponse * const q) : ModifyNetworkInterfaceAttributePrivate(q)
+    ModifyNetworkInterfaceAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

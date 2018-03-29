@@ -86,7 +86,7 @@ void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutAutoScalingPolicyResponse instance.
  */
 PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
-    PutAutoScalingPolicyQueueResponse * const q) : PutAutoScalingPolicyPrivate(q)
+    PutAutoScalingPolicyResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

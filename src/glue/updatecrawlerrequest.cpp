@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerRequest::response(QNetworkReply 
  */
 UpdateCrawlerRequestPrivate::UpdateCrawlerRequestPrivate(
     const GlueRequest::Action action, UpdateCrawlerRequest * const q)
-    : UpdateCrawlerPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCrawlerRequestPrivate::UpdateCrawlerRequestPrivate(
  */
 UpdateCrawlerRequestPrivate::UpdateCrawlerRequestPrivate(
     const UpdateCrawlerRequestPrivate &other, UpdateCrawlerRequest * const q)
-    : UpdateCrawlerPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

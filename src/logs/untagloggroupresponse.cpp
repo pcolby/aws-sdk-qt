@@ -86,7 +86,7 @@ void UntagLogGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UntagLogGroupResponse instance.
  */
 UntagLogGroupResponsePrivate::UntagLogGroupResponsePrivate(
-    UntagLogGroupQueueResponse * const q) : UntagLogGroupPrivate(q)
+    UntagLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

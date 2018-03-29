@@ -86,7 +86,7 @@ void ListHealthChecksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHealthChecksResponse instance.
  */
 ListHealthChecksResponsePrivate::ListHealthChecksResponsePrivate(
-    ListHealthChecksQueueResponse * const q) : ListHealthChecksPrivate(q)
+    ListHealthChecksResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

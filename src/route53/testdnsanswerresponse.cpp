@@ -86,7 +86,7 @@ void TestDNSAnswerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestDNSAnswerResponse instance.
  */
 TestDNSAnswerResponsePrivate::TestDNSAnswerResponsePrivate(
-    TestDNSAnswerQueueResponse * const q) : TestDNSAnswerPrivate(q)
+    TestDNSAnswerResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

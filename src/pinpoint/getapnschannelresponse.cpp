@@ -86,7 +86,7 @@ void GetApnsChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetApnsChannelResponse instance.
  */
 GetApnsChannelResponsePrivate::GetApnsChannelResponsePrivate(
-    GetApnsChannelQueueResponse * const q) : GetApnsChannelPrivate(q)
+    GetApnsChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

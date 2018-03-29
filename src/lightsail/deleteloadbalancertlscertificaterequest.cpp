@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerTlsCertificateRequest::resp
  */
 DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificateRequestPrivate(
     const LightsailRequest::Action action, DeleteLoadBalancerTlsCertificateRequest * const q)
-    : DeleteLoadBalancerTlsCertificatePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificate
  */
 DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificateRequestPrivate(
     const DeleteLoadBalancerTlsCertificateRequestPrivate &other, DeleteLoadBalancerTlsCertificateRequest * const q)
-    : DeleteLoadBalancerTlsCertificatePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

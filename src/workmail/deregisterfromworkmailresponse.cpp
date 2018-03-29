@@ -86,7 +86,7 @@ void DeregisterFromWorkMailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterFromWorkMailResponse instance.
  */
 DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponsePrivate(
-    DeregisterFromWorkMailQueueResponse * const q) : DeregisterFromWorkMailPrivate(q)
+    DeregisterFromWorkMailResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeMyUserProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMyUserProfileResponse instance.
  */
 DescribeMyUserProfileResponsePrivate::DescribeMyUserProfileResponsePrivate(
-    DescribeMyUserProfileQueueResponse * const q) : DescribeMyUserProfilePrivate(q)
+    DescribeMyUserProfileResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

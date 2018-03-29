@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetApplicationRevisionsRequest::response
  */
 BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetApplicationRevisionsRequest * const q)
-    : BatchGetApplicationRevisionsPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestP
  */
 BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestPrivate(
     const BatchGetApplicationRevisionsRequestPrivate &other, BatchGetApplicationRevisionsRequest * const q)
-    : BatchGetApplicationRevisionsPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

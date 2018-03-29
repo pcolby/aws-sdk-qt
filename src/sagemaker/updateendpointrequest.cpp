@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const SageMakerRequest::Action action, UpdateEndpointRequest * const q)
-    : UpdateEndpointPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const UpdateEndpointRequestPrivate &other, UpdateEndpointRequest * const q)
-    : UpdateEndpointPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

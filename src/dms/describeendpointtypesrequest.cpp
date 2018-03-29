@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointTypesRequest::response(QNetwo
  */
 DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeEndpointTypesRequest * const q)
-    : DescribeEndpointTypesPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
  */
 DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
     const DescribeEndpointTypesRequestPrivate &other, DescribeEndpointTypesRequest * const q)
-    : DescribeEndpointTypesPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

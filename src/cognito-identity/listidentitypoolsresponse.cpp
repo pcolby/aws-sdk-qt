@@ -86,7 +86,7 @@ void ListIdentityPoolsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListIdentityPoolsResponse instance.
  */
 ListIdentityPoolsResponsePrivate::ListIdentityPoolsResponsePrivate(
-    ListIdentityPoolsQueueResponse * const q) : ListIdentityPoolsPrivate(q)
+    ListIdentityPoolsResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

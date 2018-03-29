@@ -86,7 +86,7 @@ void CreateParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateParameterGroupResponse instance.
  */
 CreateParameterGroupResponsePrivate::CreateParameterGroupResponsePrivate(
-    CreateParameterGroupQueueResponse * const q) : CreateParameterGroupPrivate(q)
+    CreateParameterGroupResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

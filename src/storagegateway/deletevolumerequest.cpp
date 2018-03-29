@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteVolumeRequest * const q)
-    : DeleteVolumePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const DeleteVolumeRequestPrivate &other, DeleteVolumeRequest * const q)
-    : DeleteVolumePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

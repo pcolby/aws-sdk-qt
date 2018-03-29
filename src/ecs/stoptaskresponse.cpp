@@ -86,7 +86,7 @@ void StopTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopTaskResponse instance.
  */
 StopTaskResponsePrivate::StopTaskResponsePrivate(
-    StopTaskQueueResponse * const q) : StopTaskPrivate(q)
+    StopTaskResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

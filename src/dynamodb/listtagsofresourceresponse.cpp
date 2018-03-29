@@ -86,7 +86,7 @@ void ListTagsOfResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsOfResourceResponse instance.
  */
 ListTagsOfResourceResponsePrivate::ListTagsOfResourceResponsePrivate(
-    ListTagsOfResourceQueueResponse * const q) : ListTagsOfResourcePrivate(q)
+    ListTagsOfResourceResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

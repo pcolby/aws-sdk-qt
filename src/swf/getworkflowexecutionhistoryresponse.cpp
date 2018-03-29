@@ -86,7 +86,7 @@ void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetWorkflowExecutionHistoryResponse instance.
  */
 GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponsePrivate(
-    GetWorkflowExecutionHistoryQueueResponse * const q) : GetWorkflowExecutionHistoryPrivate(q)
+    GetWorkflowExecutionHistoryResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

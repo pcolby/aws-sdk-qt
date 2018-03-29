@@ -86,7 +86,7 @@ void PutBotAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutBotAliasResponse instance.
  */
 PutBotAliasResponsePrivate::PutBotAliasResponsePrivate(
-    PutBotAliasQueueResponse * const q) : PutBotAliasPrivate(q)
+    PutBotAliasResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

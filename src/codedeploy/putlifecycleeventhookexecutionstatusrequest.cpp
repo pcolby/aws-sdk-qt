@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleEventHookExecutionStatusRequest::
  */
 PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecutionStatusRequestPrivate(
     const CodeDeployRequest::Action action, PutLifecycleEventHookExecutionStatusRequest * const q)
-    : PutLifecycleEventHookExecutionStatusPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecuti
  */
 PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecutionStatusRequestPrivate(
     const PutLifecycleEventHookExecutionStatusRequestPrivate &other, PutLifecycleEventHookExecutionStatusRequest * const q)
-    : PutLifecycleEventHookExecutionStatusPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateEmailChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateEmailChannelResponse instance.
  */
 UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponsePrivate(
-    UpdateEmailChannelQueueResponse * const q) : UpdateEmailChannelPrivate(q)
+    UpdateEmailChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

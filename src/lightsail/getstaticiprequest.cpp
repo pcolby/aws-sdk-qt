@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetStaticIpRequest::response(QNetworkReply * 
  */
 GetStaticIpRequestPrivate::GetStaticIpRequestPrivate(
     const LightsailRequest::Action action, GetStaticIpRequest * const q)
-    : GetStaticIpPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetStaticIpRequestPrivate::GetStaticIpRequestPrivate(
  */
 GetStaticIpRequestPrivate::GetStaticIpRequestPrivate(
     const GetStaticIpRequestPrivate &other, GetStaticIpRequest * const q)
-    : GetStaticIpPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

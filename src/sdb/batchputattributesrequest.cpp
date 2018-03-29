@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkR
  */
 BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
     const SimpleDBRequest::Action action, BatchPutAttributesRequest * const q)
-    : BatchPutAttributesPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
  */
 BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
     const BatchPutAttributesRequestPrivate &other, BatchPutAttributesRequest * const q)
-    : BatchPutAttributesPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

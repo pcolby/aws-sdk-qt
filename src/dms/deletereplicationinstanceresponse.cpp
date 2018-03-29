@@ -86,7 +86,7 @@ void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteReplicationInstanceResponse instance.
  */
 DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePrivate(
-    DeleteReplicationInstanceQueueResponse * const q) : DeleteReplicationInstancePrivate(q)
+    DeleteReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

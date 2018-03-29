@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceRouteTableAssociationRequest * const q)
-    : ReplaceRouteTableAssociationPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestP
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
     const ReplaceRouteTableAssociationRequestPrivate &other, ReplaceRouteTableAssociationRequest * const q)
-    : ReplaceRouteTableAssociationPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

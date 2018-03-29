@@ -86,7 +86,7 @@ void GetEventStreamResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetEventStreamResponse instance.
  */
 GetEventStreamResponsePrivate::GetEventStreamResponsePrivate(
-    GetEventStreamQueueResponse * const q) : GetEventStreamPrivate(q)
+    GetEventStreamResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

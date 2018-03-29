@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEvaluationRequest::response(QNetworkRep
  */
 CreateEvaluationRequestPrivate::CreateEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, CreateEvaluationRequest * const q)
-    : CreateEvaluationPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEvaluationRequestPrivate::CreateEvaluationRequestPrivate(
  */
 CreateEvaluationRequestPrivate::CreateEvaluationRequestPrivate(
     const CreateEvaluationRequestPrivate &other, CreateEvaluationRequest * const q)
-    : CreateEvaluationPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

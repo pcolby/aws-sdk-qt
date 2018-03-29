@@ -86,7 +86,7 @@ void ModifyInstancePlacementResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyInstancePlacementResponse instance.
  */
 ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponsePrivate(
-    ModifyInstancePlacementQueueResponse * const q) : ModifyInstancePlacementPrivate(q)
+    ModifyInstancePlacementResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

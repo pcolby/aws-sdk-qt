@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::respo
  */
 ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
     const EC2Request::Action action, ModifyNetworkInterfaceAttributeRequest * const q)
-    : ModifyNetworkInterfaceAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRe
  */
 ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
     const ModifyNetworkInterfaceAttributeRequestPrivate &other, ModifyNetworkInterfaceAttributeRequest * const q)
-    : ModifyNetworkInterfaceAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

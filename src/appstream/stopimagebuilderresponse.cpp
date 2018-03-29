@@ -86,7 +86,7 @@ void StopImageBuilderResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopImageBuilderResponse instance.
  */
 StopImageBuilderResponsePrivate::StopImageBuilderResponsePrivate(
-    StopImageBuilderQueueResponse * const q) : StopImageBuilderPrivate(q)
+    StopImageBuilderResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

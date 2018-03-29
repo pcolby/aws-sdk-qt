@@ -86,7 +86,7 @@ void PreviewAgentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PreviewAgentsResponse instance.
  */
 PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
-    PreviewAgentsQueueResponse * const q) : PreviewAgentsPrivate(q)
+    PreviewAgentsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

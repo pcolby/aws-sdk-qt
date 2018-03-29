@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNFSFileShareRequest::response(QNetworkR
  */
 UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateNFSFileShareRequest * const q)
-    : UpdateNFSFileSharePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
  */
 UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
     const UpdateNFSFileShareRequestPrivate &other, UpdateNFSFileShareRequest * const q)
-    : UpdateNFSFileSharePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateAssociationBatchRequest::response(QNetw
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
     const SSMRequest::Action action, CreateAssociationBatchRequest * const q)
-    : CreateAssociationBatchPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
     const CreateAssociationBatchRequestPrivate &other, CreateAssociationBatchRequest * const q)
-    : CreateAssociationBatchPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

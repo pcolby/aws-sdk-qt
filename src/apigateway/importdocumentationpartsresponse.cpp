@@ -86,7 +86,7 @@ void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ImportDocumentationPartsResponse instance.
  */
 ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponsePrivate(
-    ImportDocumentationPartsQueueResponse * const q) : ImportDocumentationPartsPrivate(q)
+    ImportDocumentationPartsResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

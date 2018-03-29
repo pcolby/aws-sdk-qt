@@ -86,7 +86,7 @@ void CloseInstancePublicPortsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CloseInstancePublicPortsResponse instance.
  */
 CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponsePrivate(
-    CloseInstancePublicPortsQueueResponse * const q) : CloseInstancePublicPortsPrivate(q)
+    CloseInstancePublicPortsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

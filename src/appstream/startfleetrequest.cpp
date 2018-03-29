@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * c
  */
 StartFleetRequestPrivate::StartFleetRequestPrivate(
     const AppStreamRequest::Action action, StartFleetRequest * const q)
-    : StartFleetPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartFleetRequestPrivate::StartFleetRequestPrivate(
  */
 StartFleetRequestPrivate::StartFleetRequestPrivate(
     const StartFleetRequestPrivate &other, StartFleetRequest * const q)
-    : StartFleetPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

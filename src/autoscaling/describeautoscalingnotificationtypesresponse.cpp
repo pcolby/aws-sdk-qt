@@ -86,7 +86,7 @@ void DescribeAutoScalingNotificationTypesResponse::parseSuccess(QIODevice &respo
  * @param  q  Pointer to this object's public DescribeAutoScalingNotificationTypesResponse instance.
  */
 DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNotificationTypesResponsePrivate(
-    DescribeAutoScalingNotificationTypesQueueResponse * const q) : DescribeAutoScalingNotificationTypesPrivate(q)
+    DescribeAutoScalingNotificationTypesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

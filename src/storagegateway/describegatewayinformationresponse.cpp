@@ -86,7 +86,7 @@ void DescribeGatewayInformationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeGatewayInformationResponse instance.
  */
 DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponsePrivate(
-    DescribeGatewayInformationQueueResponse * const q) : DescribeGatewayInformationPrivate(q)
+    DescribeGatewayInformationResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

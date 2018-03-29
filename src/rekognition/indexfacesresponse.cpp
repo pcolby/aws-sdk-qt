@@ -86,7 +86,7 @@ void IndexFacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public IndexFacesResponse instance.
  */
 IndexFacesResponsePrivate::IndexFacesResponsePrivate(
-    IndexFacesQueueResponse * const q) : IndexFacesPrivate(q)
+    IndexFacesResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response
  */
 DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteSubscriptionDefinitionRequest * const q)
-    : DeleteSubscriptionDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestP
  */
 DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
     const DeleteSubscriptionDefinitionRequestPrivate &other, DeleteSubscriptionDefinitionRequest * const q)
-    : DeleteSubscriptionDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

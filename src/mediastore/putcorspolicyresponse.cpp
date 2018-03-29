@@ -86,7 +86,7 @@ void PutCorsPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutCorsPolicyResponse instance.
  */
 PutCorsPolicyResponsePrivate::PutCorsPolicyResponsePrivate(
-    PutCorsPolicyQueueResponse * const q) : PutCorsPolicyPrivate(q)
+    PutCorsPolicyResponse * const q) : MediaStoreResponsePrivate(q)
 {
 
 }

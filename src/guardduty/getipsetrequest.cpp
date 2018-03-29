@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GuardDutyRequest::Action action, GetIPSetRequest * const q)
-    : GetIPSetPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GetIPSetRequestPrivate &other, GetIPSetRequest * const q)
-    : GetIPSetPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

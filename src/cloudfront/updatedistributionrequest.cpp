@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkR
  */
 UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
     const CloudFrontRequest::Action action, UpdateDistributionRequest * const q)
-    : UpdateDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
  */
 UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
     const UpdateDistributionRequestPrivate &other, UpdateDistributionRequest * const q)
-    : UpdateDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

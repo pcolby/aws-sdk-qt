@@ -86,7 +86,7 @@ void DeleteJobTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteJobTemplateResponse instance.
  */
 DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
-    DeleteJobTemplateQueueResponse * const q) : DeleteJobTemplatePrivate(q)
+    DeleteJobTemplateResponse * const q) : MediaConvertResponsePrivate(q)
 {
 
 }

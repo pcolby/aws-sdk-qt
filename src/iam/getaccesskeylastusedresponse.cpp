@@ -86,7 +86,7 @@ void GetAccessKeyLastUsedResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccessKeyLastUsedResponse instance.
  */
 GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponsePrivate(
-    GetAccessKeyLastUsedQueueResponse * const q) : GetAccessKeyLastUsedPrivate(q)
+    GetAccessKeyLastUsedResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetwor
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
     const EC2Request::Action action, AttachClassicLinkVpcRequest * const q)
-    : AttachClassicLinkVpcPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
     const AttachClassicLinkVpcRequestPrivate &other, AttachClassicLinkVpcRequest * const q)
-    : AttachClassicLinkVpcPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

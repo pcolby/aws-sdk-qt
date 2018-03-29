@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddWorkingStorageRequest::response(QNetworkRe
  */
 AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
     const StorageGatewayRequest::Action action, AddWorkingStorageRequest * const q)
-    : AddWorkingStoragePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
  */
 AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
     const AddWorkingStorageRequestPrivate &other, AddWorkingStorageRequest * const q)
-    : AddWorkingStoragePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

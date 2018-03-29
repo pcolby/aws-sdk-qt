@@ -86,7 +86,7 @@ void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDBLogFilesResponse instance.
  */
 DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
-    DescribeDBLogFilesQueueResponse * const q) : DescribeDBLogFilesPrivate(q)
+    DescribeDBLogFilesResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

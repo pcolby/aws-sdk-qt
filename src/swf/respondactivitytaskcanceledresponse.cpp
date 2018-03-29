@@ -86,7 +86,7 @@ void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RespondActivityTaskCanceledResponse instance.
  */
 RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponsePrivate(
-    RespondActivityTaskCanceledQueueResponse * const q) : RespondActivityTaskCanceledPrivate(q)
+    RespondActivityTaskCanceledResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

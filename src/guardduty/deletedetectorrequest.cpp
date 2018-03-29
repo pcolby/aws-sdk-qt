@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply
  */
 DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
     const GuardDutyRequest::Action action, DeleteDetectorRequest * const q)
-    : DeleteDetectorPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
  */
 DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
     const DeleteDetectorRequestPrivate &other, DeleteDetectorRequest * const q)
-    : DeleteDetectorPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

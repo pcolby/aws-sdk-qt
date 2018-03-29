@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupQueryRequest::response(QNetworkReply 
  */
 GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
     const ResourceGroupsRequest::Action action, GetGroupQueryRequest * const q)
-    : GetGroupQueryPrivate(action, q)
+    : ResourceGroupsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
  */
 GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
     const GetGroupQueryRequestPrivate &other, GetGroupQueryRequest * const q)
-    : GetGroupQueryPrivate(other, q)
+    : ResourceGroupsRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetIdResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIdResponse instance.
  */
 GetIdResponsePrivate::GetIdResponsePrivate(
-    GetIdQueueResponse * const q) : GetIdPrivate(q)
+    GetIdResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AssumeRoleWithSAMLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssumeRoleWithSAMLResponse instance.
  */
 AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
-    AssumeRoleWithSAMLQueueResponse * const q) : AssumeRoleWithSAMLPrivate(q)
+    AssumeRoleWithSAMLResponse * const q) : STSResponsePrivate(q)
 {
 
 }

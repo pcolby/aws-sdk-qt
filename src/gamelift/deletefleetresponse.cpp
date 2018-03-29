@@ -86,7 +86,7 @@ void DeleteFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFleetResponse instance.
  */
 DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
-    DeleteFleetQueueResponse * const q) : DeleteFleetPrivate(q)
+    DeleteFleetResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

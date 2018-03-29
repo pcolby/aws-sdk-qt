@@ -86,7 +86,7 @@ void DeleteApplicationOutputResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteApplicationOutputResponse instance.
  */
 DeleteApplicationOutputResponsePrivate::DeleteApplicationOutputResponsePrivate(
-    DeleteApplicationOutputQueueResponse * const q) : DeleteApplicationOutputPrivate(q)
+    DeleteApplicationOutputResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

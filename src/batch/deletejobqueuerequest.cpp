@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobQueueRequest::response(QNetworkReply
  */
 DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
     const BatchRequest::Action action, DeleteJobQueueRequest * const q)
-    : DeleteJobQueuePrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
  */
 DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
     const DeleteJobQueueRequestPrivate &other, DeleteJobQueueRequest * const q)
-    : DeleteJobQueuePrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

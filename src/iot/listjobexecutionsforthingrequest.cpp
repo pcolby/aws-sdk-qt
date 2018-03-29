@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QN
  */
 ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate(
     const IoTRequest::Action action, ListJobExecutionsForThingRequest * const q)
-    : ListJobExecutionsForThingPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate
  */
 ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate(
     const ListJobExecutionsForThingRequestPrivate &other, ListJobExecutionsForThingRequest * const q)
-    : ListJobExecutionsForThingPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

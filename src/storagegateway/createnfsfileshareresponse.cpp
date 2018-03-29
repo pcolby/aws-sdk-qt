@@ -86,7 +86,7 @@ void CreateNFSFileShareResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateNFSFileShareResponse instance.
  */
 CreateNFSFileShareResponsePrivate::CreateNFSFileShareResponsePrivate(
-    CreateNFSFileShareQueueResponse * const q) : CreateNFSFileSharePrivate(q)
+    CreateNFSFileShareResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

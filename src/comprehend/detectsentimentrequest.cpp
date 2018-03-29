@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectSentimentRequest::response(QNetworkRepl
  */
 DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
     const ComprehendRequest::Action action, DetectSentimentRequest * const q)
-    : DetectSentimentPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
  */
 DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
     const DetectSentimentRequestPrivate &other, DetectSentimentRequest * const q)
-    : DetectSentimentPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

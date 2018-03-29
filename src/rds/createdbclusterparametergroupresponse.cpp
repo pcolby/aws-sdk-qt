@@ -86,7 +86,7 @@ void CreateDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBClusterParameterGroupResponse instance.
  */
 CreateDBClusterParameterGroupResponsePrivate::CreateDBClusterParameterGroupResponsePrivate(
-    CreateDBClusterParameterGroupQueueResponse * const q) : CreateDBClusterParameterGroupPrivate(q)
+    CreateDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

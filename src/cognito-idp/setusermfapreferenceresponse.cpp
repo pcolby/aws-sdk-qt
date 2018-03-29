@@ -86,7 +86,7 @@ void SetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetUserMFAPreferenceResponse instance.
  */
 SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
-    SetUserMFAPreferenceQueueResponse * const q) : SetUserMFAPreferencePrivate(q)
+    SetUserMFAPreferenceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

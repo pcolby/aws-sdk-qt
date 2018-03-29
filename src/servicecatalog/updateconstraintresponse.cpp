@@ -86,7 +86,7 @@ void UpdateConstraintResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateConstraintResponse instance.
  */
 UpdateConstraintResponsePrivate::UpdateConstraintResponsePrivate(
-    UpdateConstraintQueueResponse * const q) : UpdateConstraintPrivate(q)
+    UpdateConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVpcLinkResponse instance.
  */
 DeleteVpcLinkResponsePrivate::DeleteVpcLinkResponsePrivate(
-    DeleteVpcLinkQueueResponse * const q) : DeleteVpcLinkPrivate(q)
+    DeleteVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

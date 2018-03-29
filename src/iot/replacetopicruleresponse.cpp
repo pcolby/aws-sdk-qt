@@ -86,7 +86,7 @@ void ReplaceTopicRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReplaceTopicRuleResponse instance.
  */
 ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponsePrivate(
-    ReplaceTopicRuleQueueResponse * const q) : ReplaceTopicRulePrivate(q)
+    ReplaceTopicRuleResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

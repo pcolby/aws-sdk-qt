@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkR
  */
 ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
     const CodeStarRequest::Action action, ListTagsForProjectRequest * const q)
-    : ListTagsForProjectPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
  */
 ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
     const ListTagsForProjectRequestPrivate &other, ListTagsForProjectRequest * const q)
-    : ListTagsForProjectPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

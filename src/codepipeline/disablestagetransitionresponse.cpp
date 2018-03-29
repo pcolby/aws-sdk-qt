@@ -86,7 +86,7 @@ void DisableStageTransitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableStageTransitionResponse instance.
  */
 DisableStageTransitionResponsePrivate::DisableStageTransitionResponsePrivate(
-    DisableStageTransitionQueueResponse * const q) : DisableStageTransitionPrivate(q)
+    DisableStageTransitionResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

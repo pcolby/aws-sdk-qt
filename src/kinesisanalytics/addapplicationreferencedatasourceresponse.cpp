@@ -86,7 +86,7 @@ void AddApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public AddApplicationReferenceDataSourceResponse instance.
  */
 AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSourceResponsePrivate(
-    AddApplicationReferenceDataSourceQueueResponse * const q) : AddApplicationReferenceDataSourcePrivate(q)
+    AddApplicationReferenceDataSourceResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

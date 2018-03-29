@@ -86,7 +86,7 @@ void EncryptResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EncryptResponse instance.
  */
 EncryptResponsePrivate::EncryptResponsePrivate(
-    EncryptQueueResponse * const q) : EncryptPrivate(q)
+    EncryptResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

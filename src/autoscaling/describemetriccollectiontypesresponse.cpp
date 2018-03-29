@@ -86,7 +86,7 @@ void DescribeMetricCollectionTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMetricCollectionTypesResponse instance.
  */
 DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesResponsePrivate(
-    DescribeMetricCollectionTypesQueueResponse * const q) : DescribeMetricCollectionTypesPrivate(q)
+    DescribeMetricCollectionTypesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

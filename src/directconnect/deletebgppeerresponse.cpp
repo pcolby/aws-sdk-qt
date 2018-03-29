@@ -86,7 +86,7 @@ void DeleteBGPPeerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBGPPeerResponse instance.
  */
 DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponsePrivate(
-    DeleteBGPPeerQueueResponse * const q) : DeleteBGPPeerPrivate(q)
+    DeleteBGPPeerResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

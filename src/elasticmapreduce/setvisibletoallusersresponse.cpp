@@ -86,7 +86,7 @@ void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetVisibleToAllUsersResponse instance.
  */
 SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
-    SetVisibleToAllUsersQueueResponse * const q) : SetVisibleToAllUsersPrivate(q)
+    SetVisibleToAllUsersResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

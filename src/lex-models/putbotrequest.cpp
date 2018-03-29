@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBotRequest::response(QNetworkReply * const
  */
 PutBotRequestPrivate::PutBotRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutBotRequest * const q)
-    : PutBotPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBotRequestPrivate::PutBotRequestPrivate(
  */
 PutBotRequestPrivate::PutBotRequestPrivate(
     const PutBotRequestPrivate &other, PutBotRequest * const q)
-    : PutBotPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

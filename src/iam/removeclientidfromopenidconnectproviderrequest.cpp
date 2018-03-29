@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveClientIDFromOpenIDConnectProviderReques
  */
 RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, RemoveClientIDFromOpenIDConnectProviderRequest * const q)
-    : RemoveClientIDFromOpenIDConnectProviderPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDC
  */
 RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDConnectProviderRequestPrivate(
     const RemoveClientIDFromOpenIDConnectProviderRequestPrivate &other, RemoveClientIDFromOpenIDConnectProviderRequest * const q)
-    : RemoveClientIDFromOpenIDConnectProviderPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

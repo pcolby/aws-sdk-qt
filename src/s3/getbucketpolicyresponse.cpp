@@ -86,7 +86,7 @@ void GetBucketPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBucketPolicyResponse instance.
  */
 GetBucketPolicyResponsePrivate::GetBucketPolicyResponsePrivate(
-    GetBucketPolicyQueueResponse * const q) : GetBucketPolicyPrivate(q)
+    GetBucketPolicyResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

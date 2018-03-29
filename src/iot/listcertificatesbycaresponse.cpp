@@ -86,7 +86,7 @@ void ListCertificatesByCAResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListCertificatesByCAResponse instance.
  */
 ListCertificatesByCAResponsePrivate::ListCertificatesByCAResponsePrivate(
-    ListCertificatesByCAQueueResponse * const q) : ListCertificatesByCAPrivate(q)
+    ListCertificatesByCAResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

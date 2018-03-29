@@ -86,7 +86,7 @@ void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDBInstanceResponse instance.
  */
 DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
-    DeleteDBInstanceQueueResponse * const q) : DeleteDBInstancePrivate(q)
+    DeleteDBInstanceResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ResetImageAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetImageAttributeResponse instance.
  */
 ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
-    ResetImageAttributeQueueResponse * const q) : ResetImageAttributePrivate(q)
+    ResetImageAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

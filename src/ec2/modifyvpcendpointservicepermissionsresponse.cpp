@@ -86,7 +86,7 @@ void ModifyVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public ModifyVpcEndpointServicePermissionsResponse instance.
  */
 ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePermissionsResponsePrivate(
-    ModifyVpcEndpointServicePermissionsQueueResponse * const q) : ModifyVpcEndpointServicePermissionsPrivate(q)
+    ModifyVpcEndpointServicePermissionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

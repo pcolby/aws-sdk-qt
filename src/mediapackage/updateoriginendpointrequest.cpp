@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetwor
  */
 UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, UpdateOriginEndpointRequest * const q)
-    : UpdateOriginEndpointPrivate(action, q)
+    : MediaPackageRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
  */
 UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
     const UpdateOriginEndpointRequestPrivate &other, UpdateOriginEndpointRequest * const q)
-    : UpdateOriginEndpointPrivate(other, q)
+    : MediaPackageRequestPrivate(other, q)
 {
 
 }

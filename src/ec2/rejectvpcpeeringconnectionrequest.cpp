@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(Q
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
     const EC2Request::Action action, RejectVpcPeeringConnectionRequest * const q)
-    : RejectVpcPeeringConnectionPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPriva
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
     const RejectVpcPeeringConnectionRequestPrivate &other, RejectVpcPeeringConnectionRequest * const q)
-    : RejectVpcPeeringConnectionPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

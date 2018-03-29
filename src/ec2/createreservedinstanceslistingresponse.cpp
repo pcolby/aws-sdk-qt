@@ -86,7 +86,7 @@ void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReservedInstancesListingResponse instance.
  */
 CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingResponsePrivate(
-    CreateReservedInstancesListingQueueResponse * const q) : CreateReservedInstancesListingPrivate(q)
+    CreateReservedInstancesListingResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

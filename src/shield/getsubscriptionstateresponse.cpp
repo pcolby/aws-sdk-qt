@@ -86,7 +86,7 @@ void GetSubscriptionStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSubscriptionStateResponse instance.
  */
 GetSubscriptionStateResponsePrivate::GetSubscriptionStateResponsePrivate(
-    GetSubscriptionStateQueueResponse * const q) : GetSubscriptionStatePrivate(q)
+    GetSubscriptionStateResponse * const q) : ShieldResponsePrivate(q)
 {
 
 }

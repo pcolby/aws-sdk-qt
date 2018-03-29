@@ -86,7 +86,7 @@ void PostTextResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PostTextResponse instance.
  */
 PostTextResponsePrivate::PostTextResponsePrivate(
-    PostTextQueueResponse * const q) : PostTextPrivate(q)
+    PostTextResponse * const q) : LexRuntimeServiceResponsePrivate(q)
 {
 
 }

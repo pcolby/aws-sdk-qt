@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNet
  */
 DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmsForMetricRequest * const q)
-    : DescribeAlarmsForMetricPrivate(action, q)
+    : CloudWatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
  */
 DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
     const DescribeAlarmsForMetricRequestPrivate &other, DescribeAlarmsForMetricRequest * const q)
-    : DescribeAlarmsForMetricPrivate(other, q)
+    : CloudWatchRequestPrivate(other, q)
 {
 
 }

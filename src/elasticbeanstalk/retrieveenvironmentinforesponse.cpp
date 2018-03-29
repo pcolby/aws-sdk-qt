@@ -86,7 +86,7 @@ void RetrieveEnvironmentInfoResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RetrieveEnvironmentInfoResponse instance.
  */
 RetrieveEnvironmentInfoResponsePrivate::RetrieveEnvironmentInfoResponsePrivate(
-    RetrieveEnvironmentInfoQueueResponse * const q) : RetrieveEnvironmentInfoPrivate(q)
+    RetrieveEnvironmentInfoResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

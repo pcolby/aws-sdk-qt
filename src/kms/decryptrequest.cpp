@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DecryptRequest::response(QNetworkReply * cons
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
     const KMSRequest::Action action, DecryptRequest * const q)
-    : DecryptPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DecryptRequestPrivate::DecryptRequestPrivate(
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
     const DecryptRequestPrivate &other, DecryptRequest * const q)
-    : DecryptPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

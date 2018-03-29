@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableLoggingRequest::response(QNetworkReply
  */
 DisableLoggingRequestPrivate::DisableLoggingRequestPrivate(
     const RedshiftRequest::Action action, DisableLoggingRequest * const q)
-    : DisableLoggingPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableLoggingRequestPrivate::DisableLoggingRequestPrivate(
  */
 DisableLoggingRequestPrivate::DisableLoggingRequestPrivate(
     const DisableLoggingRequestPrivate &other, DisableLoggingRequest * const q)
-    : DisableLoggingPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

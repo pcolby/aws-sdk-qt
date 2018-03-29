@@ -86,7 +86,7 @@ void DescribeMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMaintenanceStartTimeResponse instance.
  */
 DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeResponsePrivate(
-    DescribeMaintenanceStartTimeQueueResponse * const q) : DescribeMaintenanceStartTimePrivate(q)
+    DescribeMaintenanceStartTimeResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

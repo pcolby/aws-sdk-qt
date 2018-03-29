@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetwork
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBSubnetGroupRequest * const q)
-    : DeleteDBSubnetGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const DeleteDBSubnetGroupRequestPrivate &other, DeleteDBSubnetGroupRequest * const q)
-    : DeleteDBSubnetGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QN
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
     const SSMRequest::Action action, DeregisterManagedInstanceRequest * const q)
-    : DeregisterManagedInstancePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
     const DeregisterManagedInstanceRequestPrivate &other, DeregisterManagedInstanceRequest * const q)
-    : DeregisterManagedInstancePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

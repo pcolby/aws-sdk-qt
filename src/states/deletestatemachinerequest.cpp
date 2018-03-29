@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkR
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
     const SFNRequest::Action action, DeleteStateMachineRequest * const q)
-    : DeleteStateMachinePrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
     const DeleteStateMachineRequestPrivate &other, DeleteStateMachineRequest * const q)
-    : DeleteStateMachinePrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

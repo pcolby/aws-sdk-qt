@@ -86,7 +86,7 @@ void UnassignVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnassignVolumeResponse instance.
  */
 UnassignVolumeResponsePrivate::UnassignVolumeResponsePrivate(
-    UnassignVolumeQueueResponse * const q) : UnassignVolumePrivate(q)
+    UnassignVolumeResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

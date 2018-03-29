@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRdsDbInstancesRequest::response(QNetw
  */
 DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
     const OpsWorksRequest::Action action, DescribeRdsDbInstancesRequest * const q)
-    : DescribeRdsDbInstancesPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
  */
 DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
     const DescribeRdsDbInstancesRequestPrivate &other, DescribeRdsDbInstancesRequest * const q)
-    : DescribeRdsDbInstancesPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

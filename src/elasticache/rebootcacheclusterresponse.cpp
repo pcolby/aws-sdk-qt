@@ -86,7 +86,7 @@ void RebootCacheClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RebootCacheClusterResponse instance.
  */
 RebootCacheClusterResponsePrivate::RebootCacheClusterResponsePrivate(
-    RebootCacheClusterQueueResponse * const q) : RebootCacheClusterPrivate(q)
+    RebootCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

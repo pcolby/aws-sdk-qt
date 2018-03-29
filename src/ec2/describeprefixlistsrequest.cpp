@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetwork
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
     const EC2Request::Action action, DescribePrefixListsRequest * const q)
-    : DescribePrefixListsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
     const DescribePrefixListsRequestPrivate &other, DescribePrefixListsRequest * const q)
-    : DescribePrefixListsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

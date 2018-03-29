@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMessageRequest::response(QNetworkReply 
  */
 DeleteMessageRequestPrivate::DeleteMessageRequestPrivate(
     const SQSRequest::Action action, DeleteMessageRequest * const q)
-    : DeleteMessagePrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteMessageRequestPrivate::DeleteMessageRequestPrivate(
  */
 DeleteMessageRequestPrivate::DeleteMessageRequestPrivate(
     const DeleteMessageRequestPrivate &other, DeleteMessageRequest * const q)
-    : DeleteMessagePrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

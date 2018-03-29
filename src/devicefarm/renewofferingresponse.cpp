@@ -86,7 +86,7 @@ void RenewOfferingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RenewOfferingResponse instance.
  */
 RenewOfferingResponsePrivate::RenewOfferingResponsePrivate(
-    RenewOfferingQueueResponse * const q) : RenewOfferingPrivate(q)
+    RenewOfferingResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

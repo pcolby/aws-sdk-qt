@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkR
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, DisassociateWebACLRequest * const q)
-    : DisassociateWebACLPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
     const DisassociateWebACLRequestPrivate &other, DisassociateWebACLRequest * const q)
-    : DisassociateWebACLPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

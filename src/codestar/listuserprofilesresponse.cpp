@@ -86,7 +86,7 @@ void ListUserProfilesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListUserProfilesResponse instance.
  */
 ListUserProfilesResponsePrivate::ListUserProfilesResponsePrivate(
-    ListUserProfilesQueueResponse * const q) : ListUserProfilesPrivate(q)
+    ListUserProfilesResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

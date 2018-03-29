@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QN
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
     const SSMRequest::Action action, UpdateManagedInstanceRoleRequest * const q)
-    : UpdateManagedInstanceRolePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
     const UpdateManagedInstanceRoleRequestPrivate &other, UpdateManagedInstanceRoleRequest * const q)
-    : UpdateManagedInstanceRolePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

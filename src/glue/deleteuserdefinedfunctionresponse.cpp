@@ -86,7 +86,7 @@ void DeleteUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteUserDefinedFunctionResponse instance.
  */
 DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponsePrivate(
-    DeleteUserDefinedFunctionQueueResponse * const q) : DeleteUserDefinedFunctionPrivate(q)
+    DeleteUserDefinedFunctionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

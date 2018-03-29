@@ -86,7 +86,7 @@ void ListHsmsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHsmsResponse instance.
  */
 ListHsmsResponsePrivate::ListHsmsResponsePrivate(
-    ListHsmsQueueResponse * const q) : ListHsmsPrivate(q)
+    ListHsmsResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

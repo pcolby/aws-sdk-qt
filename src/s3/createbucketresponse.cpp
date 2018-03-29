@@ -86,7 +86,7 @@ void CreateBucketResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateBucketResponse instance.
  */
 CreateBucketResponsePrivate::CreateBucketResponsePrivate(
-    CreateBucketQueueResponse * const q) : CreateBucketPrivate(q)
+    CreateBucketResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

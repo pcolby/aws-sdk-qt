@@ -86,7 +86,7 @@ void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachVpnGatewayResponse instance.
  */
 DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
-    DetachVpnGatewayQueueResponse * const q) : DetachVpnGatewayPrivate(q)
+    DetachVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

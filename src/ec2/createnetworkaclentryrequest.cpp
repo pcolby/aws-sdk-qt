@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclEntryRequest::response(QNetwo
  */
 CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
     const EC2Request::Action action, CreateNetworkAclEntryRequest * const q)
-    : CreateNetworkAclEntryPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
  */
 CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
     const CreateNetworkAclEntryRequestPrivate &other, CreateNetworkAclEntryRequest * const q)
-    : CreateNetworkAclEntryPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

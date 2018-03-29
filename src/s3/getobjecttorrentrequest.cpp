@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectTorrentRequest::response(QNetworkRep
  */
 GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
     const S3Request::Action action, GetObjectTorrentRequest * const q)
-    : GetObjectTorrentPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
  */
 GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
     const GetObjectTorrentRequestPrivate &other, GetObjectTorrentRequest * const q)
-    : GetObjectTorrentPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListVolumeRecoveryPointsRequest::response(QNe
  */
 ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumeRecoveryPointsRequest * const q)
-    : ListVolumeRecoveryPointsPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
  */
 ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
     const ListVolumeRecoveryPointsRequestPrivate &other, ListVolumeRecoveryPointsRequest * const q)
-    : ListVolumeRecoveryPointsPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

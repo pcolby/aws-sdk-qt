@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentConfigurationRequest::respon
  */
 DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteEnvironmentConfigurationRequest * const q)
-    : DeleteEnvironmentConfigurationPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequ
  */
 DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequestPrivate(
     const DeleteEnvironmentConfigurationRequestPrivate &other, DeleteEnvironmentConfigurationRequest * const q)
-    : DeleteEnvironmentConfigurationPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

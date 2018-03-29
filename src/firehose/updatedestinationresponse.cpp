@@ -86,7 +86,7 @@ void UpdateDestinationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDestinationResponse instance.
  */
 UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
-    UpdateDestinationQueueResponse * const q) : UpdateDestinationPrivate(q)
+    UpdateDestinationResponse * const q) : FirehoseResponsePrivate(q)
 {
 
 }

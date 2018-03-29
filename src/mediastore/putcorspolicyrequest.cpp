@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutCorsPolicyRequest::response(QNetworkReply 
  */
 PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, PutCorsPolicyRequest * const q)
-    : PutCorsPolicyPrivate(action, q)
+    : MediaStoreRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
  */
 PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
     const PutCorsPolicyRequestPrivate &other, PutCorsPolicyRequest * const q)
-    : PutCorsPolicyPrivate(other, q)
+    : MediaStoreRequestPrivate(other, q)
 {
 
 }

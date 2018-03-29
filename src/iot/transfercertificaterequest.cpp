@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TransferCertificateRequest::response(QNetwork
  */
 TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
     const IoTRequest::Action action, TransferCertificateRequest * const q)
-    : TransferCertificatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
  */
 TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
     const TransferCertificateRequestPrivate &other, TransferCertificateRequest * const q)
-    : TransferCertificatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetw
  */
 AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListGroupsForUserRequest * const q)
-    : AdminListGroupsForUserPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
  */
 AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
     const AdminListGroupsForUserRequestPrivate &other, AdminListGroupsForUserRequest * const q)
-    : AdminListGroupsForUserPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

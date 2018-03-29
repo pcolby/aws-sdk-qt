@@ -86,7 +86,7 @@ void RegisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterRdsDbInstanceResponse instance.
  */
 RegisterRdsDbInstanceResponsePrivate::RegisterRdsDbInstanceResponsePrivate(
-    RegisterRdsDbInstanceQueueResponse * const q) : RegisterRdsDbInstancePrivate(q)
+    RegisterRdsDbInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

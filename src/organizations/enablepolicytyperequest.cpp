@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnablePolicyTypeRequest::response(QNetworkRep
  */
 EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
     const OrganizationsRequest::Action action, EnablePolicyTypeRequest * const q)
-    : EnablePolicyTypePrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
  */
 EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
     const EnablePolicyTypeRequestPrivate &other, EnablePolicyTypeRequest * const q)
-    : EnablePolicyTypePrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

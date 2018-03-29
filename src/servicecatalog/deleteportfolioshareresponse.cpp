@@ -86,7 +86,7 @@ void DeletePortfolioShareResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePortfolioShareResponse instance.
  */
 DeletePortfolioShareResponsePrivate::DeletePortfolioShareResponsePrivate(
-    DeletePortfolioShareQueueResponse * const q) : DeletePortfolioSharePrivate(q)
+    DeletePortfolioShareResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

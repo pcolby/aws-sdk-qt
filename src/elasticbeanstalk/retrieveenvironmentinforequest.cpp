@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RetrieveEnvironmentInfoRequest::response(QNet
  */
 RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RetrieveEnvironmentInfoRequest * const q)
-    : RetrieveEnvironmentInfoPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
  */
 RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
     const RetrieveEnvironmentInfoRequestPrivate &other, RetrieveEnvironmentInfoRequest * const q)
-    : RetrieveEnvironmentInfoPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

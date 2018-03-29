@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseProvisionedCapacityRequest::response(
  */
 PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPrivate(
     const GlacierRequest::Action action, PurchaseProvisionedCapacityRequest * const q)
-    : PurchaseProvisionedCapacityPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPri
  */
 PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPrivate(
     const PurchaseProvisionedCapacityRequestPrivate &other, PurchaseProvisionedCapacityRequest * const q)
-    : PurchaseProvisionedCapacityPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

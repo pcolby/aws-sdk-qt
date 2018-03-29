@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkRepl
  */
 SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
     const SFNRequest::Action action, SendTaskFailureRequest * const q)
-    : SendTaskFailurePrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
  */
 SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
     const SendTaskFailureRequestPrivate &other, SendTaskFailureRequest * const q)
-    : SendTaskFailurePrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

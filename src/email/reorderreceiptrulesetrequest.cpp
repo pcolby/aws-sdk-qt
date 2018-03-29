@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetwo
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, ReorderReceiptRuleSetRequest * const q)
-    : ReorderReceiptRuleSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
     const ReorderReceiptRuleSetRequestPrivate &other, ReorderReceiptRuleSetRequest * const q)
-    : ReorderReceiptRuleSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

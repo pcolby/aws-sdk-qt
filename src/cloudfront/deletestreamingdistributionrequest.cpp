@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(
  */
 DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, DeleteStreamingDistributionRequest * const q)
-    : DeleteStreamingDistributionPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPri
  */
 DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPrivate(
     const DeleteStreamingDistributionRequestPrivate &other, DeleteStreamingDistributionRequest * const q)
-    : DeleteStreamingDistributionPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

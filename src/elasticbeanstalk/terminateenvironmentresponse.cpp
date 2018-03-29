@@ -86,7 +86,7 @@ void TerminateEnvironmentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TerminateEnvironmentResponse instance.
  */
 TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponsePrivate(
-    TerminateEnvironmentQueueResponse * const q) : TerminateEnvironmentPrivate(q)
+    TerminateEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

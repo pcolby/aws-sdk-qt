@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNet
  */
 CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
     const EC2Request::Action action, CancelSpotFleetRequestsRequest * const q)
-    : CancelSpotFleetRequestsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
  */
 CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
     const CancelSpotFleetRequestsRequestPrivate &other, CancelSpotFleetRequestsRequest * const q)
-    : CancelSpotFleetRequestsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

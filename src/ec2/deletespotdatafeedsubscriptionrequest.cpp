@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::respon
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, DeleteSpotDatafeedSubscriptionRequest * const q)
-    : DeleteSpotDatafeedSubscriptionPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequ
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
     const DeleteSpotDatafeedSubscriptionRequestPrivate &other, DeleteSpotDatafeedSubscriptionRequest * const q)
-    : DeleteSpotDatafeedSubscriptionPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

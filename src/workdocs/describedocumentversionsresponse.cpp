@@ -86,7 +86,7 @@ void DescribeDocumentVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDocumentVersionsResponse instance.
  */
 DescribeDocumentVersionsResponsePrivate::DescribeDocumentVersionsResponsePrivate(
-    DescribeDocumentVersionsQueueResponse * const q) : DescribeDocumentVersionsPrivate(q)
+    DescribeDocumentVersionsResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

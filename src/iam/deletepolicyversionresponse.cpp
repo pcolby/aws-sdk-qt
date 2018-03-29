@@ -86,7 +86,7 @@ void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePolicyVersionResponse instance.
  */
 DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
-    DeletePolicyVersionQueueResponse * const q) : DeletePolicyVersionPrivate(q)
+    DeletePolicyVersionResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

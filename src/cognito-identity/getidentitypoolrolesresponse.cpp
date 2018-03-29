@@ -86,7 +86,7 @@ void GetIdentityPoolRolesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIdentityPoolRolesResponse instance.
  */
 GetIdentityPoolRolesResponsePrivate::GetIdentityPoolRolesResponsePrivate(
-    GetIdentityPoolRolesQueueResponse * const q) : GetIdentityPoolRolesPrivate(q)
+    GetIdentityPoolRolesResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

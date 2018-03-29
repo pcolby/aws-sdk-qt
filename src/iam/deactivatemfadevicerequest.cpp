@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeactivateMFADeviceRequest::response(QNetwork
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
     const IAMRequest::Action action, DeactivateMFADeviceRequest * const q)
-    : DeactivateMFADevicePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
     const DeactivateMFADeviceRequestPrivate &other, DeactivateMFADeviceRequest * const q)
-    : DeactivateMFADevicePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

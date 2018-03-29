@@ -86,7 +86,7 @@ void BuildSuggestersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BuildSuggestersResponse instance.
  */
 BuildSuggestersResponsePrivate::BuildSuggestersResponsePrivate(
-    BuildSuggestersQueueResponse * const q) : BuildSuggestersPrivate(q)
+    BuildSuggestersResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetBotVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBotVersionsResponse instance.
  */
 GetBotVersionsResponsePrivate::GetBotVersionsResponsePrivate(
-    GetBotVersionsQueueResponse * const q) : GetBotVersionsPrivate(q)
+    GetBotVersionsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

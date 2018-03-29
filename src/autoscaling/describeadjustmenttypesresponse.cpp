@@ -86,7 +86,7 @@ void DescribeAdjustmentTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAdjustmentTypesResponse instance.
  */
 DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponsePrivate(
-    DescribeAdjustmentTypesQueueResponse * const q) : DescribeAdjustmentTypesPrivate(q)
+    DescribeAdjustmentTypesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

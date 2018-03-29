@@ -86,7 +86,7 @@ void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public VerifyDomainIdentityResponse instance.
  */
 VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
-    VerifyDomainIdentityQueueResponse * const q) : VerifyDomainIdentityPrivate(q)
+    VerifyDomainIdentityResponse * const q) : SESResponsePrivate(q)
 {
 
 }

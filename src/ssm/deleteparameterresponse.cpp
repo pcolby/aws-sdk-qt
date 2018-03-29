@@ -86,7 +86,7 @@ void DeleteParameterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteParameterResponse instance.
  */
 DeleteParameterResponsePrivate::DeleteParameterResponsePrivate(
-    DeleteParameterQueueResponse * const q) : DeleteParameterPrivate(q)
+    DeleteParameterResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

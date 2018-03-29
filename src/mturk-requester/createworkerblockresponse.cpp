@@ -86,7 +86,7 @@ void CreateWorkerBlockResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateWorkerBlockResponse instance.
  */
 CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
-    CreateWorkerBlockQueueResponse * const q) : CreateWorkerBlockPrivate(q)
+    CreateWorkerBlockResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

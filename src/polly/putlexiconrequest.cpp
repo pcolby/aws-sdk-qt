@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutLexiconRequest::response(QNetworkReply * c
  */
 PutLexiconRequestPrivate::PutLexiconRequestPrivate(
     const PollyRequest::Action action, PutLexiconRequest * const q)
-    : PutLexiconPrivate(action, q)
+    : PollyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutLexiconRequestPrivate::PutLexiconRequestPrivate(
  */
 PutLexiconRequestPrivate::PutLexiconRequestPrivate(
     const PutLexiconRequestPrivate &other, PutLexiconRequest * const q)
-    : PutLexiconPrivate(other, q)
+    : PollyRequestPrivate(other, q)
 {
 
 }

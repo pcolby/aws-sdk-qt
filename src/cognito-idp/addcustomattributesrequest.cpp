@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddCustomAttributesRequest::response(QNetwork
  */
 AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AddCustomAttributesRequest * const q)
-    : AddCustomAttributesPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
  */
 AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
     const AddCustomAttributesRequestPrivate &other, AddCustomAttributesRequest * const q)
-    : AddCustomAttributesPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

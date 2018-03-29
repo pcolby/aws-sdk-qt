@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNe
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
     const EC2Request::Action action, AssignPrivateIpAddressesRequest * const q)
-    : AssignPrivateIpAddressesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
     const AssignPrivateIpAddressesRequestPrivate &other, AssignPrivateIpAddressesRequest * const q)
-    : AssignPrivateIpAddressesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

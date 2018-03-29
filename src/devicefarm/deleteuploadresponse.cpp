@@ -86,7 +86,7 @@ void DeleteUploadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteUploadResponse instance.
  */
 DeleteUploadResponsePrivate::DeleteUploadResponsePrivate(
-    DeleteUploadQueueResponse * const q) : DeleteUploadPrivate(q)
+    DeleteUploadResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

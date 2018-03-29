@@ -86,7 +86,7 @@ void DeleteScalingPlanResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteScalingPlanResponse instance.
  */
 DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponsePrivate(
-    DeleteScalingPlanQueueResponse * const q) : DeleteScalingPlanPrivate(q)
+    DeleteScalingPlanResponse * const q) : AutoScalingPlansResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const WAFRegionalRequest::Action action, DeletePermissionPolicyRequest * const q)
-    : DeletePermissionPolicyPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const DeletePermissionPolicyRequestPrivate &other, DeletePermissionPolicyRequest * const q)
-    : DeletePermissionPolicyPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

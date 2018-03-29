@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply 
  */
 GetAttributesRequestPrivate::GetAttributesRequestPrivate(
     const SimpleDBRequest::Action action, GetAttributesRequest * const q)
-    : GetAttributesPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAttributesRequestPrivate::GetAttributesRequestPrivate(
  */
 GetAttributesRequestPrivate::GetAttributesRequestPrivate(
     const GetAttributesRequestPrivate &other, GetAttributesRequest * const q)
-    : GetAttributesPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

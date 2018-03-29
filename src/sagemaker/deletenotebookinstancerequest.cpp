@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceRequest::response(QNetw
  */
 DeleteNotebookInstanceRequestPrivate::DeleteNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, DeleteNotebookInstanceRequest * const q)
-    : DeleteNotebookInstancePrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNotebookInstanceRequestPrivate::DeleteNotebookInstanceRequestPrivate(
  */
 DeleteNotebookInstanceRequestPrivate::DeleteNotebookInstanceRequestPrivate(
     const DeleteNotebookInstanceRequestPrivate &other, DeleteNotebookInstanceRequest * const q)
-    : DeleteNotebookInstancePrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

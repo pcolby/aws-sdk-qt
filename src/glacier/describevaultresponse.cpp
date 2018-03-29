@@ -86,7 +86,7 @@ void DescribeVaultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVaultResponse instance.
  */
 DescribeVaultResponsePrivate::DescribeVaultResponsePrivate(
-    DescribeVaultQueueResponse * const q) : DescribeVaultPrivate(q)
+    DescribeVaultResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

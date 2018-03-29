@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketPolicyRequest::response(QNetworkRepl
  */
 GetBucketPolicyRequestPrivate::GetBucketPolicyRequestPrivate(
     const S3Request::Action action, GetBucketPolicyRequest * const q)
-    : GetBucketPolicyPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketPolicyRequestPrivate::GetBucketPolicyRequestPrivate(
  */
 GetBucketPolicyRequestPrivate::GetBucketPolicyRequestPrivate(
     const GetBucketPolicyRequestPrivate &other, GetBucketPolicyRequest * const q)
-    : GetBucketPolicyPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

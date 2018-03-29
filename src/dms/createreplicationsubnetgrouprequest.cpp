@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response
  */
 CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateReplicationSubnetGroupRequest * const q)
-    : CreateReplicationSubnetGroupPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestP
  */
 CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestPrivate(
     const CreateReplicationSubnetGroupRequestPrivate &other, CreateReplicationSubnetGroupRequest * const q)
-    : CreateReplicationSubnetGroupPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectionRequest::response(QNetworkReply 
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
     const GlueRequest::Action action, GetConnectionRequest * const q)
-    : GetConnectionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetConnectionRequestPrivate::GetConnectionRequestPrivate(
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
     const GetConnectionRequestPrivate &other, GetConnectionRequest * const q)
-    : GetConnectionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

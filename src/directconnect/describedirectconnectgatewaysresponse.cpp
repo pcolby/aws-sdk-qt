@@ -86,7 +86,7 @@ void DescribeDirectConnectGatewaysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDirectConnectGatewaysResponse instance.
  */
 DescribeDirectConnectGatewaysResponsePrivate::DescribeDirectConnectGatewaysResponsePrivate(
-    DescribeDirectConnectGatewaysQueueResponse * const q) : DescribeDirectConnectGatewaysPrivate(q)
+    DescribeDirectConnectGatewaysResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

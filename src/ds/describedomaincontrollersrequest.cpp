@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainControllersRequest::response(QN
  */
 DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeDomainControllersRequest * const q)
-    : DescribeDomainControllersPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate
  */
 DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
     const DescribeDomainControllersRequestPrivate &other, DescribeDomainControllersRequest * const q)
-    : DescribeDomainControllersPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

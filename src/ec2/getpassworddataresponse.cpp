@@ -86,7 +86,7 @@ void GetPasswordDataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPasswordDataResponse instance.
  */
 GetPasswordDataResponsePrivate::GetPasswordDataResponsePrivate(
-    GetPasswordDataQueueResponse * const q) : GetPasswordDataPrivate(q)
+    GetPasswordDataResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

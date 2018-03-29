@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::respo
  */
 RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
     const ElastiCacheRequest::Action action, RevokeCacheSecurityGroupIngressRequest * const q)
-    : RevokeCacheSecurityGroupIngressPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRe
  */
 RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
     const RevokeCacheSecurityGroupIngressRequestPrivate &other, RevokeCacheSecurityGroupIngressRequest * const q)
-    : RevokeCacheSecurityGroupIngressPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

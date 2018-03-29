@@ -86,7 +86,7 @@ void GetOperationsForResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetOperationsForResourceResponse instance.
  */
 GetOperationsForResourceResponsePrivate::GetOperationsForResourceResponsePrivate(
-    GetOperationsForResourceQueueResponse * const q) : GetOperationsForResourcePrivate(q)
+    GetOperationsForResourceResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

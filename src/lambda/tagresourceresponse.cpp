@@ -86,7 +86,7 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TagResourceResponse instance.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceQueueResponse * const q) : TagResourcePrivate(q)
+    TagResourceResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

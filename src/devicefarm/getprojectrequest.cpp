@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetProjectRequest::response(QNetworkReply * c
  */
 GetProjectRequestPrivate::GetProjectRequestPrivate(
     const DeviceFarmRequest::Action action, GetProjectRequest * const q)
-    : GetProjectPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetProjectRequestPrivate::GetProjectRequestPrivate(
  */
 GetProjectRequestPrivate::GetProjectRequestPrivate(
     const GetProjectRequestPrivate &other, GetProjectRequest * const q)
-    : GetProjectPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

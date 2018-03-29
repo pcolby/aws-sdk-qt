@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetFindingsStatisticsRequest::response(QNetwo
  */
 GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
     const GuardDutyRequest::Action action, GetFindingsStatisticsRequest * const q)
-    : GetFindingsStatisticsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
  */
 GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
     const GetFindingsStatisticsRequestPrivate &other, GetFindingsStatisticsRequest * const q)
-    : GetFindingsStatisticsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

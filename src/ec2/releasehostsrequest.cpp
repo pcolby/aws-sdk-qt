@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply *
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
     const EC2Request::Action action, ReleaseHostsRequest * const q)
-    : ReleaseHostsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
     const ReleaseHostsRequestPrivate &other, ReleaseHostsRequest * const q)
-    : ReleaseHostsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

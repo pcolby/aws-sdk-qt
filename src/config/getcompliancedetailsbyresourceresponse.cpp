@@ -86,7 +86,7 @@ void GetComplianceDetailsByResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetComplianceDetailsByResourceResponse instance.
  */
 GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceResponsePrivate(
-    GetComplianceDetailsByResourceQueueResponse * const q) : GetComplianceDetailsByResourcePrivate(q)
+    GetComplianceDetailsByResourceResponse * const q) : ConfigServiceResponsePrivate(q)
 {
 
 }

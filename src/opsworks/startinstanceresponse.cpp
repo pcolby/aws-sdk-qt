@@ -86,7 +86,7 @@ void StartInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartInstanceResponse instance.
  */
 StartInstanceResponsePrivate::StartInstanceResponsePrivate(
-    StartInstanceQueueResponse * const q) : StartInstancePrivate(q)
+    StartInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

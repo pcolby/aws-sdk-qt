@@ -86,7 +86,7 @@ void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeactivateMFADeviceResponse instance.
  */
 DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
-    DeactivateMFADeviceQueueResponse * const q) : DeactivateMFADevicePrivate(q)
+    DeactivateMFADeviceResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

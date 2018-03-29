@@ -86,7 +86,7 @@ void BatchDeleteConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDeleteConnectionResponse instance.
  */
 BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponsePrivate(
-    BatchDeleteConnectionQueueResponse * const q) : BatchDeleteConnectionPrivate(q)
+    BatchDeleteConnectionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

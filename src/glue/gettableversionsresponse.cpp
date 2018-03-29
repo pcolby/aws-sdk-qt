@@ -86,7 +86,7 @@ void GetTableVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTableVersionsResponse instance.
  */
 GetTableVersionsResponsePrivate::GetTableVersionsResponsePrivate(
-    GetTableVersionsQueueResponse * const q) : GetTableVersionsPrivate(q)
+    GetTableVersionsResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

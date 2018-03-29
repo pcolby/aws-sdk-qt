@@ -86,7 +86,7 @@ void RequestUploadCredentialsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RequestUploadCredentialsResponse instance.
  */
 RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponsePrivate(
-    RequestUploadCredentialsQueueResponse * const q) : RequestUploadCredentialsPrivate(q)
+    RequestUploadCredentialsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

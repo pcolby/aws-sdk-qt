@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationTaskRequest::response(QNetwo
  */
 CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateReplicationTaskRequest * const q)
-    : CreateReplicationTaskPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
  */
 CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
     const CreateReplicationTaskRequestPrivate &other, CreateReplicationTaskRequest * const q)
-    : CreateReplicationTaskPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

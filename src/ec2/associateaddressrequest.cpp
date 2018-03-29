@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateAddressRequest::response(QNetworkRep
  */
 AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
     const EC2Request::Action action, AssociateAddressRequest * const q)
-    : AssociateAddressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
  */
 AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
     const AssociateAddressRequestPrivate &other, AssociateAddressRequest * const q)
-    : AssociateAddressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

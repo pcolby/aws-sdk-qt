@@ -86,7 +86,7 @@ void DeleteLaunchTemplateVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLaunchTemplateVersionsResponse instance.
  */
 DeleteLaunchTemplateVersionsResponsePrivate::DeleteLaunchTemplateVersionsResponsePrivate(
-    DeleteLaunchTemplateVersionsQueueResponse * const q) : DeleteLaunchTemplateVersionsPrivate(q)
+    DeleteLaunchTemplateVersionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

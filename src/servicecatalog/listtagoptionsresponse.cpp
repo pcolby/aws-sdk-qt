@@ -86,7 +86,7 @@ void ListTagOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagOptionsResponse instance.
  */
 ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
-    ListTagOptionsQueueResponse * const q) : ListTagOptionsPrivate(q)
+    ListTagOptionsResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

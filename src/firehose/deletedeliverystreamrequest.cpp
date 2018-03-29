@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetwor
  */
 DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, DeleteDeliveryStreamRequest * const q)
-    : DeleteDeliveryStreamPrivate(action, q)
+    : FirehoseRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
  */
 DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
     const DeleteDeliveryStreamRequestPrivate &other, DeleteDeliveryStreamRequest * const q)
-    : DeleteDeliveryStreamPrivate(other, q)
+    : FirehoseRequestPrivate(other, q)
 {
 
 }

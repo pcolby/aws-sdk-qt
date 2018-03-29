@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * 
  */
 SendMessageRequestPrivate::SendMessageRequestPrivate(
     const SQSRequest::Action action, SendMessageRequest * const q)
-    : SendMessagePrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendMessageRequestPrivate::SendMessageRequestPrivate(
  */
 SendMessageRequestPrivate::SendMessageRequestPrivate(
     const SendMessageRequestPrivate &other, SendMessageRequest * const q)
-    : SendMessagePrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

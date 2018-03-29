@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleRequest::response(QNetworkReply * c
  */
 UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
     const WAFRequest::Action action, UpdateRuleRequest * const q)
-    : UpdateRulePrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
  */
 UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
     const UpdateRuleRequestPrivate &other, UpdateRuleRequest * const q)
-    : UpdateRulePrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterCertificateRequest::response(QNetwork
  */
 RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
     const IoTRequest::Action action, RegisterCertificateRequest * const q)
-    : RegisterCertificatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
  */
 RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
     const RegisterCertificateRequestPrivate &other, RegisterCertificateRequest * const q)
-    : RegisterCertificatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

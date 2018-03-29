@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkR
  */
 UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
     const MTurkRequest::Action action, UpdateHITTypeOfHITRequest * const q)
-    : UpdateHITTypeOfHITPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
  */
 UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
     const UpdateHITTypeOfHITRequestPrivate &other, UpdateHITTypeOfHITRequest * const q)
-    : UpdateHITTypeOfHITPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

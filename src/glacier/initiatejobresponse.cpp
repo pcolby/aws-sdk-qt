@@ -86,7 +86,7 @@ void InitiateJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public InitiateJobResponse instance.
  */
 InitiateJobResponsePrivate::InitiateJobResponsePrivate(
-    InitiateJobQueueResponse * const q) : InitiateJobPrivate(q)
+    InitiateJobResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

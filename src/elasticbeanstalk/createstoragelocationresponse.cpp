@@ -86,7 +86,7 @@ void CreateStorageLocationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateStorageLocationResponse instance.
  */
 CreateStorageLocationResponsePrivate::CreateStorageLocationResponsePrivate(
-    CreateStorageLocationQueueResponse * const q) : CreateStorageLocationPrivate(q)
+    CreateStorageLocationResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

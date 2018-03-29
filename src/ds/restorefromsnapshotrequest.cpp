@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreFromSnapshotRequest::response(QNetwork
  */
 RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
     const DirectoryServiceRequest::Action action, RestoreFromSnapshotRequest * const q)
-    : RestoreFromSnapshotPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
  */
 RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
     const RestoreFromSnapshotRequestPrivate &other, RestoreFromSnapshotRequest * const q)
-    : RestoreFromSnapshotPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

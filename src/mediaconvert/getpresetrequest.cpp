@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPresetRequest::response(QNetworkReply * co
  */
 GetPresetRequestPrivate::GetPresetRequestPrivate(
     const MediaConvertRequest::Action action, GetPresetRequest * const q)
-    : GetPresetPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetPresetRequestPrivate::GetPresetRequestPrivate(
  */
 GetPresetRequestPrivate::GetPresetRequestPrivate(
     const GetPresetRequestPrivate &other, GetPresetRequest * const q)
-    : GetPresetPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

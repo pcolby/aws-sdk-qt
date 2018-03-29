@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetw
  */
 ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
     const Route53Request::Action action, ListResourceRecordSetsRequest * const q)
-    : ListResourceRecordSetsPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
  */
 ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
     const ListResourceRecordSetsRequestPrivate &other, ListResourceRecordSetsRequest * const q)
-    : ListResourceRecordSetsPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

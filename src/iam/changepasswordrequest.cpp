@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const IAMRequest::Action action, ChangePasswordRequest * const q)
-    : ChangePasswordPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const ChangePasswordRequestPrivate &other, ChangePasswordRequest * const q)
-    : ChangePasswordPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

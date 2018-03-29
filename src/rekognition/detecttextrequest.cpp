@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * c
  */
 DetectTextRequestPrivate::DetectTextRequestPrivate(
     const RekognitionRequest::Action action, DetectTextRequest * const q)
-    : DetectTextPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectTextRequestPrivate::DetectTextRequestPrivate(
  */
 DetectTextRequestPrivate::DetectTextRequestPrivate(
     const DetectTextRequestPrivate &other, DetectTextRequest * const q)
-    : DetectTextPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

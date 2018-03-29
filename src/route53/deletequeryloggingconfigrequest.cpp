@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNe
  */
 DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, DeleteQueryLoggingConfigRequest * const q)
-    : DeleteQueryLoggingConfigPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
  */
 DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
     const DeleteQueryLoggingConfigRequestPrivate &other, DeleteQueryLoggingConfigRequest * const q)
-    : DeleteQueryLoggingConfigPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

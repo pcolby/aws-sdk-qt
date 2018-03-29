@@ -86,7 +86,7 @@ void RegisterCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterCrossAccountAccessRoleResponse instance.
  */
 RegisterCrossAccountAccessRoleResponsePrivate::RegisterCrossAccountAccessRoleResponsePrivate(
-    RegisterCrossAccountAccessRoleQueueResponse * const q) : RegisterCrossAccountAccessRolePrivate(q)
+    RegisterCrossAccountAccessRoleResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void RevokeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public RevokeClusterSecurityGroupIngressResponse instance.
  */
 RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngressResponsePrivate(
-    RevokeClusterSecurityGroupIngressQueueResponse * const q) : RevokeClusterSecurityGroupIngressPrivate(q)
+    RevokeClusterSecurityGroupIngressResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

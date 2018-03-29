@@ -86,7 +86,7 @@ void DescribeImageBuildersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeImageBuildersResponse instance.
  */
 DescribeImageBuildersResponsePrivate::DescribeImageBuildersResponsePrivate(
-    DescribeImageBuildersQueueResponse * const q) : DescribeImageBuildersPrivate(q)
+    DescribeImageBuildersResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

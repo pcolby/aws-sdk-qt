@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetItemRequest::response(QNetworkReply * cons
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
     const DynamoDBRequest::Action action, GetItemRequest * const q)
-    : GetItemPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetItemRequestPrivate::GetItemRequestPrivate(
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
     const GetItemRequestPrivate &other, GetItemRequest * const q)
-    : GetItemPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

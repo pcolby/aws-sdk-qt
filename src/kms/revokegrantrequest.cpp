@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * 
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
     const KMSRequest::Action action, RevokeGrantRequest * const q)
-    : RevokeGrantPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
     const RevokeGrantRequestPrivate &other, RevokeGrantRequest * const q)
-    : RevokeGrantPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * c
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
     const SMSRequest::Action action, GetServersRequest * const q)
-    : GetServersPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetServersRequestPrivate::GetServersRequestPrivate(
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
     const GetServersRequestPrivate &other, GetServersRequest * const q)
-    : GetServersPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

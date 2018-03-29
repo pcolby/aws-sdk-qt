@@ -86,7 +86,7 @@ void DescribeSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSubscriptionResponse instance.
  */
 DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponsePrivate(
-    DescribeSubscriptionQueueResponse * const q) : DescribeSubscriptionPrivate(q)
+    DescribeSubscriptionResponse * const q) : ShieldResponsePrivate(q)
 {
 
 }

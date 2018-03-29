@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkRe
  */
 CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, CreateJobTemplateRequest * const q)
-    : CreateJobTemplatePrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
  */
 CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
     const CreateJobTemplateRequestPrivate &other, CreateJobTemplateRequest * const q)
-    : CreateJobTemplatePrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

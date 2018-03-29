@@ -86,7 +86,7 @@ void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public OptInPhoneNumberResponse instance.
  */
 OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
-    OptInPhoneNumberQueueResponse * const q) : OptInPhoneNumberPrivate(q)
+    OptInPhoneNumberResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

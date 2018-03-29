@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchUsersRequest::response(QNetworkReply * 
  */
 SearchUsersRequestPrivate::SearchUsersRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchUsersRequest * const q)
-    : SearchUsersPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchUsersRequestPrivate::SearchUsersRequestPrivate(
  */
 SearchUsersRequestPrivate::SearchUsersRequestPrivate(
     const SearchUsersRequestPrivate &other, SearchUsersRequest * const q)
-    : SearchUsersPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

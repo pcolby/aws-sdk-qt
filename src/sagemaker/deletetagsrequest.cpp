@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const SageMakerRequest::Action action, DeleteTagsRequest * const q)
-    : DeleteTagsPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)
-    : DeleteTagsPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

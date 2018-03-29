@@ -86,7 +86,7 @@ void DeleteFacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteFacesResponse instance.
  */
 DeleteFacesResponsePrivate::DeleteFacesResponsePrivate(
-    DeleteFacesQueueResponse * const q) : DeleteFacesPrivate(q)
+    DeleteFacesResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetLaunchTemplateDataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLaunchTemplateDataResponse instance.
  */
 GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponsePrivate(
-    GetLaunchTemplateDataQueueResponse * const q) : GetLaunchTemplateDataPrivate(q)
+    GetLaunchTemplateDataResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

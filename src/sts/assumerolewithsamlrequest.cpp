@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkR
  */
 AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
     const STSRequest::Action action, AssumeRoleWithSAMLRequest * const q)
-    : AssumeRoleWithSAMLPrivate(action, q)
+    : STSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
  */
 AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
     const AssumeRoleWithSAMLRequestPrivate &other, AssumeRoleWithSAMLRequest * const q)
-    : AssumeRoleWithSAMLPrivate(other, q)
+    : STSRequestPrivate(other, q)
 {
 
 }

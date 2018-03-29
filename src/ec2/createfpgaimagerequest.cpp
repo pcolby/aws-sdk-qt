@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFpgaImageRequest::response(QNetworkRepl
  */
 CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
     const EC2Request::Action action, CreateFpgaImageRequest * const q)
-    : CreateFpgaImagePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
  */
 CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
     const CreateFpgaImageRequestPrivate &other, CreateFpgaImageRequest * const q)
-    : CreateFpgaImagePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

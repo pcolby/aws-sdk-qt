@@ -86,7 +86,7 @@ void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetExecutionHistoryResponse instance.
  */
 GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
-    GetExecutionHistoryQueueResponse * const q) : GetExecutionHistoryPrivate(q)
+    GetExecutionHistoryResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

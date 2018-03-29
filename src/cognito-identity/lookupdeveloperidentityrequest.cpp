@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * LookupDeveloperIdentityRequest::response(QNet
  */
 LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, LookupDeveloperIdentityRequest * const q)
-    : LookupDeveloperIdentityPrivate(action, q)
+    : CognitoIdentityRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
  */
 LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
     const LookupDeveloperIdentityRequestPrivate &other, LookupDeveloperIdentityRequest * const q)
-    : LookupDeveloperIdentityPrivate(other, q)
+    : CognitoIdentityRequestPrivate(other, q)
 {
 
 }

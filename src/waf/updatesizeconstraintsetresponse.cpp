@@ -86,7 +86,7 @@ void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSizeConstraintSetResponse instance.
  */
 UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
-    UpdateSizeConstraintSetQueueResponse * const q) : UpdateSizeConstraintSetPrivate(q)
+    UpdateSizeConstraintSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

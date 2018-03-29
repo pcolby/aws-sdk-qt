@@ -86,7 +86,7 @@ void DeletePartitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeletePartitionResponse instance.
  */
 DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
-    DeletePartitionQueueResponse * const q) : DeletePartitionPrivate(q)
+    DeletePartitionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

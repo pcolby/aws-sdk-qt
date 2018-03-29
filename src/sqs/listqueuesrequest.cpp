@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * c
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const SQSRequest::Action action, ListQueuesRequest * const q)
-    : ListQueuesPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const ListQueuesRequestPrivate &other, ListQueuesRequest * const q)
-    : ListQueuesPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

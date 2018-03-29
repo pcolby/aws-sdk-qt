@@ -86,7 +86,7 @@ void GetContactReachabilityStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetContactReachabilityStatusResponse instance.
  */
 GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusResponsePrivate(
-    GetContactReachabilityStatusQueueResponse * const q) : GetContactReachabilityStatusPrivate(q)
+    GetContactReachabilityStatusResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

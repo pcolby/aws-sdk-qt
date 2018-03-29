@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRoleRequest::response(QNetworkReply * cons
  */
 GetRoleRequestPrivate::GetRoleRequestPrivate(
     const IAMRequest::Action action, GetRoleRequest * const q)
-    : GetRolePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetRoleRequestPrivate::GetRoleRequestPrivate(
  */
 GetRoleRequestPrivate::GetRoleRequestPrivate(
     const GetRoleRequestPrivate &other, GetRoleRequest * const q)
-    : GetRolePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

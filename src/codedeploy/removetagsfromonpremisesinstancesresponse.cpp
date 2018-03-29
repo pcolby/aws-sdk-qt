@@ -86,7 +86,7 @@ void RemoveTagsFromOnPremisesInstancesResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public RemoveTagsFromOnPremisesInstancesResponse instance.
  */
 RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesInstancesResponsePrivate(
-    RemoveTagsFromOnPremisesInstancesQueueResponse * const q) : RemoveTagsFromOnPremisesInstancesPrivate(q)
+    RemoveTagsFromOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

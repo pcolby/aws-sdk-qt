@@ -86,7 +86,7 @@ void ListChildrenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListChildrenResponse instance.
  */
 ListChildrenResponsePrivate::ListChildrenResponsePrivate(
-    ListChildrenQueueResponse * const q) : ListChildrenPrivate(q)
+    ListChildrenResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

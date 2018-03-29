@@ -86,7 +86,7 @@ void DescribeAutoScalingGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAutoScalingGroupsResponse instance.
  */
 DescribeAutoScalingGroupsResponsePrivate::DescribeAutoScalingGroupsResponsePrivate(
-    DescribeAutoScalingGroupsQueueResponse * const q) : DescribeAutoScalingGroupsPrivate(q)
+    DescribeAutoScalingGroupsResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

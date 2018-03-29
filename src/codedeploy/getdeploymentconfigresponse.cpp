@@ -86,7 +86,7 @@ void GetDeploymentConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDeploymentConfigResponse instance.
  */
 GetDeploymentConfigResponsePrivate::GetDeploymentConfigResponsePrivate(
-    GetDeploymentConfigQueueResponse * const q) : GetDeploymentConfigPrivate(q)
+    GetDeploymentConfigResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

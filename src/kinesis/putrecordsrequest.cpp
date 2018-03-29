@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordsRequest::response(QNetworkReply * c
  */
 PutRecordsRequestPrivate::PutRecordsRequestPrivate(
     const KinesisRequest::Action action, PutRecordsRequest * const q)
-    : PutRecordsPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutRecordsRequestPrivate::PutRecordsRequestPrivate(
  */
 PutRecordsRequestPrivate::PutRecordsRequestPrivate(
     const PutRecordsRequestPrivate &other, PutRecordsRequest * const q)
-    : PutRecordsPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

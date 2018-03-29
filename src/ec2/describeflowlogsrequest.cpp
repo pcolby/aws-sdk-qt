@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkRep
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
     const EC2Request::Action action, DescribeFlowLogsRequest * const q)
-    : DescribeFlowLogsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
     const DescribeFlowLogsRequestPrivate &other, DescribeFlowLogsRequest * const q)
-    : DescribeFlowLogsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

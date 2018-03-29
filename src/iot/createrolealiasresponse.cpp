@@ -86,7 +86,7 @@ void CreateRoleAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRoleAliasResponse instance.
  */
 CreateRoleAliasResponsePrivate::CreateRoleAliasResponsePrivate(
-    CreateRoleAliasQueueResponse * const q) : CreateRoleAliasPrivate(q)
+    CreateRoleAliasResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

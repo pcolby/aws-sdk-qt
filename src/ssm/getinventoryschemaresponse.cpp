@@ -86,7 +86,7 @@ void GetInventorySchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInventorySchemaResponse instance.
  */
 GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
-    GetInventorySchemaQueueResponse * const q) : GetInventorySchemaPrivate(q)
+    GetInventorySchemaResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

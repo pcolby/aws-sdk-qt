@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const MigrationHubRequest::Action action, ListDiscoveredResourcesRequest * const q)
-    : ListDiscoveredResourcesPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ListDiscoveredResourcesRequestPrivate &other, ListDiscoveredResourcesRequest * const q)
-    : ListDiscoveredResourcesPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

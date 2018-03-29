@@ -86,7 +86,7 @@ void DescribeBudgetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBudgetResponse instance.
  */
 DescribeBudgetResponsePrivate::DescribeBudgetResponsePrivate(
-    DescribeBudgetQueueResponse * const q) : DescribeBudgetPrivate(q)
+    DescribeBudgetResponse * const q) : BudgetsResponsePrivate(q)
 {
 
 }

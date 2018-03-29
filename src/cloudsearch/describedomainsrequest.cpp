@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainsRequest::response(QNetworkRepl
  */
 DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeDomainsRequest * const q)
-    : DescribeDomainsPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
  */
 DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
     const DescribeDomainsRequestPrivate &other, DescribeDomainsRequest * const q)
-    : DescribeDomainsPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetwork
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
     const EC2Request::Action action, DescribeBundleTasksRequest * const q)
-    : DescribeBundleTasksPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
     const DescribeBundleTasksRequestPrivate &other, DescribeBundleTasksRequest * const q)
-    : DescribeBundleTasksPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

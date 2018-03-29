@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePrimaryEmailAddressRequest::response(QN
  */
 UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate(
     const WorkMailRequest::Action action, UpdatePrimaryEmailAddressRequest * const q)
-    : UpdatePrimaryEmailAddressPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate
  */
 UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate(
     const UpdatePrimaryEmailAddressRequestPrivate &other, UpdatePrimaryEmailAddressRequest * const q)
-    : UpdatePrimaryEmailAddressPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void AddCommunicationToCaseResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddCommunicationToCaseResponse instance.
  */
 AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponsePrivate(
-    AddCommunicationToCaseQueueResponse * const q) : AddCommunicationToCasePrivate(q)
+    AddCommunicationToCaseResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

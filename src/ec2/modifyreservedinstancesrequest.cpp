@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNet
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
     const EC2Request::Action action, ModifyReservedInstancesRequest * const q)
-    : ModifyReservedInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
     const ModifyReservedInstancesRequestPrivate &other, ModifyReservedInstancesRequest * const q)
-    : ModifyReservedInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

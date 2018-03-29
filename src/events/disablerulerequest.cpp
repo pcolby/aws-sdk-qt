@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableRuleRequest::response(QNetworkReply * 
  */
 DisableRuleRequestPrivate::DisableRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, DisableRuleRequest * const q)
-    : DisableRulePrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableRuleRequestPrivate::DisableRuleRequestPrivate(
  */
 DisableRuleRequestPrivate::DisableRuleRequestPrivate(
     const DisableRuleRequestPrivate &other, DisableRuleRequest * const q)
-    : DisableRulePrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

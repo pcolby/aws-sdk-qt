@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCampaignRequest::response(QNetworkReply
  */
 UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
     const PinpointRequest::Action action, UpdateCampaignRequest * const q)
-    : UpdateCampaignPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
  */
 UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
     const UpdateCampaignRequestPrivate &other, UpdateCampaignRequest * const q)
-    : UpdateCampaignPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

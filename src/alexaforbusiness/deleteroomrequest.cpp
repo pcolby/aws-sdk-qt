@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomRequest::response(QNetworkReply * c
  */
 DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteRoomRequest * const q)
-    : DeleteRoomPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
  */
 DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
     const DeleteRoomRequestPrivate &other, DeleteRoomRequest * const q)
-    : DeleteRoomPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

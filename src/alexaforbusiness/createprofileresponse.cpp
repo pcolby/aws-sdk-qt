@@ -86,7 +86,7 @@ void CreateProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateProfileResponse instance.
  */
 CreateProfileResponsePrivate::CreateProfileResponsePrivate(
-    CreateProfileQueueResponse * const q) : CreateProfilePrivate(q)
+    CreateProfileResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

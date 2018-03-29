@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkRepl
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
     const RDSRequest::Action action, ModifyDBClusterRequest * const q)
-    : ModifyDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
     const ModifyDBClusterRequestPrivate &other, ModifyDBClusterRequest * const q)
-    : ModifyDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

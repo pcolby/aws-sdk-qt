@@ -86,7 +86,7 @@ void SetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetSubscriptionAttributesResponse instance.
  */
 SetSubscriptionAttributesResponsePrivate::SetSubscriptionAttributesResponsePrivate(
-    SetSubscriptionAttributesQueueResponse * const q) : SetSubscriptionAttributesPrivate(q)
+    SetSubscriptionAttributesResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

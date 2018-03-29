@@ -86,7 +86,7 @@ void DetectTextResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetectTextResponse instance.
  */
 DetectTextResponsePrivate::DetectTextResponsePrivate(
-    DetectTextQueueResponse * const q) : DetectTextPrivate(q)
+    DetectTextResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

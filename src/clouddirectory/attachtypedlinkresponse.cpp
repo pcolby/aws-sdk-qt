@@ -86,7 +86,7 @@ void AttachTypedLinkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachTypedLinkResponse instance.
  */
 AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
-    AttachTypedLinkQueueResponse * const q) : AttachTypedLinkPrivate(q)
+    AttachTypedLinkResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

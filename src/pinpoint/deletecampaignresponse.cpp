@@ -86,7 +86,7 @@ void DeleteCampaignResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCampaignResponse instance.
  */
 DeleteCampaignResponsePrivate::DeleteCampaignResponsePrivate(
-    DeleteCampaignQueueResponse * const q) : DeleteCampaignPrivate(q)
+    DeleteCampaignResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

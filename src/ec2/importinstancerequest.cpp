@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
     const EC2Request::Action action, ImportInstanceRequest * const q)
-    : ImportInstancePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
     const ImportInstanceRequestPrivate &other, ImportInstanceRequest * const q)
-    : ImportInstancePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

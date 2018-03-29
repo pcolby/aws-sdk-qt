@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkR
  */
 CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
     const CloudFrontRequest::Action action, CreateInvalidationRequest * const q)
-    : CreateInvalidationPrivate(action, q)
+    : CloudFrontRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
  */
 CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
     const CreateInvalidationRequestPrivate &other, CreateInvalidationRequest * const q)
-    : CreateInvalidationPrivate(other, q)
+    : CloudFrontRequestPrivate(other, q)
 {
 
 }

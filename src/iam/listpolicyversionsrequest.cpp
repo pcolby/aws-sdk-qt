@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPolicyVersionsRequest::response(QNetworkR
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const IAMRequest::Action action, ListPolicyVersionsRequest * const q)
-    : ListPolicyVersionsPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const ListPolicyVersionsRequestPrivate &other, ListPolicyVersionsRequest * const q)
-    : ListPolicyVersionsPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

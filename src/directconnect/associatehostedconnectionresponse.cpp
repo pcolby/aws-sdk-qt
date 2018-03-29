@@ -86,7 +86,7 @@ void AssociateHostedConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateHostedConnectionResponse instance.
  */
 AssociateHostedConnectionResponsePrivate::AssociateHostedConnectionResponsePrivate(
-    AssociateHostedConnectionQueueResponse * const q) : AssociateHostedConnectionPrivate(q)
+    AssociateHostedConnectionResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListIPSetsResponse instance.
  */
 ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
-    ListIPSetsQueueResponse * const q) : ListIPSetsPrivate(q)
+    ListIPSetsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

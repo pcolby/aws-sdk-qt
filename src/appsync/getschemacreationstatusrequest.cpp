@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNet
  */
 GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
     const AppSyncRequest::Action action, GetSchemaCreationStatusRequest * const q)
-    : GetSchemaCreationStatusPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
  */
 GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
     const GetSchemaCreationStatusRequestPrivate &other, GetSchemaCreationStatusRequest * const q)
-    : GetSchemaCreationStatusPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

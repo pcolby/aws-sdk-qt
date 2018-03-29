@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeExportTasksRequest * const q)
-    : DescribeExportTasksPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const DescribeExportTasksRequestPrivate &other, DescribeExportTasksRequest * const q)
-    : DescribeExportTasksPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkRep
  */
 StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, StopImageBuilderRequest * const q)
-    : StopImageBuilderPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
  */
 StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
     const StopImageBuilderRequestPrivate &other, StopImageBuilderRequest * const q)
-    : StopImageBuilderPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

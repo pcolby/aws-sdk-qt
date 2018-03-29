@@ -86,7 +86,7 @@ void ModifyLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyLoadBalancerAttributesResponse instance.
  */
 ModifyLoadBalancerAttributesResponsePrivate::ModifyLoadBalancerAttributesResponsePrivate(
-    ModifyLoadBalancerAttributesQueueResponse * const q) : ModifyLoadBalancerAttributesPrivate(q)
+    ModifyLoadBalancerAttributesResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

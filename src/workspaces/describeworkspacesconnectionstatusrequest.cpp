@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::re
  */
 DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionStatusRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspacesConnectionStatusRequest * const q)
-    : DescribeWorkspacesConnectionStatusPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionSt
  */
 DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionStatusRequestPrivate(
     const DescribeWorkspacesConnectionStatusRequestPrivate &other, DescribeWorkspacesConnectionStatusRequest * const q)
-    : DescribeWorkspacesConnectionStatusPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

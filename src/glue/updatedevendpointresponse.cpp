@@ -86,7 +86,7 @@ void UpdateDevEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDevEndpointResponse instance.
  */
 UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
-    UpdateDevEndpointQueueResponse * const q) : UpdateDevEndpointPrivate(q)
+    UpdateDevEndpointResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

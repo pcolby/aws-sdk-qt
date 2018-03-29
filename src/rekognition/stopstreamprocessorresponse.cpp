@@ -86,7 +86,7 @@ void StopStreamProcessorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopStreamProcessorResponse instance.
  */
 StopStreamProcessorResponsePrivate::StopStreamProcessorResponsePrivate(
-    StopStreamProcessorQueueResponse * const q) : StopStreamProcessorPrivate(q)
+    StopStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

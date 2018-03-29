@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainContactRequest::response(QNetwork
  */
 UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateDomainContactRequest * const q)
-    : UpdateDomainContactPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
  */
 UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
     const UpdateDomainContactRequestPrivate &other, UpdateDomainContactRequest * const q)
-    : UpdateDomainContactPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

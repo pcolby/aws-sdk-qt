@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobUnlockCodeRequest::response(QNetworkRep
  */
 GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
     const SnowballRequest::Action action, GetJobUnlockCodeRequest * const q)
-    : GetJobUnlockCodePrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
  */
 GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
     const GetJobUnlockCodeRequestPrivate &other, GetJobUnlockCodeRequest * const q)
-    : GetJobUnlockCodePrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

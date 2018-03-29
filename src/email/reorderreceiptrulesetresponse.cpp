@@ -86,7 +86,7 @@ void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReorderReceiptRuleSetResponse instance.
  */
 ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
-    ReorderReceiptRuleSetQueueResponse * const q) : ReorderReceiptRuleSetPrivate(q)
+    ReorderReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
 {
 
 }

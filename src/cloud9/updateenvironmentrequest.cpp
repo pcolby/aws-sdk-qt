@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const Cloud9Request::Action action, UpdateEnvironmentRequest * const q)
-    : UpdateEnvironmentPrivate(action, q)
+    : Cloud9RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const UpdateEnvironmentRequestPrivate &other, UpdateEnvironmentRequest * const q)
-    : UpdateEnvironmentPrivate(other, q)
+    : Cloud9RequestPrivate(other, q)
 {
 
 }

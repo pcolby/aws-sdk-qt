@@ -86,7 +86,7 @@ void DescribeSpotPriceHistoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSpotPriceHistoryResponse instance.
  */
 DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponsePrivate(
-    DescribeSpotPriceHistoryQueueResponse * const q) : DescribeSpotPriceHistoryPrivate(q)
+    DescribeSpotPriceHistoryResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

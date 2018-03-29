@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetSecurityGroupsRequest::response(QNetworkRe
  */
 SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetSecurityGroupsRequest * const q)
-    : SetSecurityGroupsPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
  */
 SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
     const SetSecurityGroupsRequestPrivate &other, SetSecurityGroupsRequest * const q)
-    : SetSecurityGroupsPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

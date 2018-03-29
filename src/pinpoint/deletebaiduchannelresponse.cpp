@@ -86,7 +86,7 @@ void DeleteBaiduChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBaiduChannelResponse instance.
  */
 DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
-    DeleteBaiduChannelQueueResponse * const q) : DeleteBaiduChannelPrivate(q)
+    DeleteBaiduChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

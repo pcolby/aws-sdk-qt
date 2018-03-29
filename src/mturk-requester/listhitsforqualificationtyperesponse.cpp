@@ -86,7 +86,7 @@ void ListHITsForQualificationTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHITsForQualificationTypeResponse instance.
  */
 ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeResponsePrivate(
-    ListHITsForQualificationTypeQueueResponse * const q) : ListHITsForQualificationTypePrivate(q)
+    ListHITsForQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListInstanceProfilesForRoleResponse instance.
  */
 ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponsePrivate(
-    ListInstanceProfilesForRoleQueueResponse * const q) : ListInstanceProfilesForRolePrivate(q)
+    ListInstanceProfilesForRoleResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

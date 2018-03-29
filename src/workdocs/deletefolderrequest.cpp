@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFolderRequest::response(QNetworkReply *
  */
 DeleteFolderRequestPrivate::DeleteFolderRequestPrivate(
     const WorkDocsRequest::Action action, DeleteFolderRequest * const q)
-    : DeleteFolderPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFolderRequestPrivate::DeleteFolderRequestPrivate(
  */
 DeleteFolderRequestPrivate::DeleteFolderRequestPrivate(
     const DeleteFolderRequestPrivate &other, DeleteFolderRequest * const q)
-    : DeleteFolderPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateMembersRequest::response(QNetworkReply 
  */
 CreateMembersRequestPrivate::CreateMembersRequestPrivate(
     const GuardDutyRequest::Action action, CreateMembersRequest * const q)
-    : CreateMembersPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateMembersRequestPrivate::CreateMembersRequestPrivate(
  */
 CreateMembersRequestPrivate::CreateMembersRequestPrivate(
     const CreateMembersRequestPrivate &other, CreateMembersRequest * const q)
-    : CreateMembersPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

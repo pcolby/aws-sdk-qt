@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPoliciesForTargetRequest::response(QNetwo
  */
 ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
     const OrganizationsRequest::Action action, ListPoliciesForTargetRequest * const q)
-    : ListPoliciesForTargetPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
  */
 ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
     const ListPoliciesForTargetRequestPrivate &other, ListPoliciesForTargetRequest * const q)
-    : ListPoliciesForTargetPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

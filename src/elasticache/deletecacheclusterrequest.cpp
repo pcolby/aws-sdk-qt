@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheClusterRequest::response(QNetworkR
  */
 DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheClusterRequest * const q)
-    : DeleteCacheClusterPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
  */
 DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
     const DeleteCacheClusterRequestPrivate &other, DeleteCacheClusterRequest * const q)
-    : DeleteCacheClusterPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

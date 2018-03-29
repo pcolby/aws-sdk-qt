@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserPoolRequest::response(QNetworkRep
  */
 DescribeUserPoolRequestPrivate::DescribeUserPoolRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeUserPoolRequest * const q)
-    : DescribeUserPoolPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeUserPoolRequestPrivate::DescribeUserPoolRequestPrivate(
  */
 DescribeUserPoolRequestPrivate::DescribeUserPoolRequestPrivate(
     const DescribeUserPoolRequestPrivate &other, DescribeUserPoolRequest * const q)
-    : DescribeUserPoolPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

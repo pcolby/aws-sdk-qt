@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupsForUserRequest::response(QNetworkRe
  */
 ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
     const IAMRequest::Action action, ListGroupsForUserRequest * const q)
-    : ListGroupsForUserPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
  */
 ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
     const ListGroupsForUserRequestPrivate &other, ListGroupsForUserRequest * const q)
-    : ListGroupsForUserPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

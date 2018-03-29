@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNe
  */
 DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeResourcePoliciesRequest * const q)
-    : DescribeResourcePoliciesPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
  */
 DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
     const DescribeResourcePoliciesRequestPrivate &other, DescribeResourcePoliciesRequest * const q)
-    : DescribeResourcePoliciesPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

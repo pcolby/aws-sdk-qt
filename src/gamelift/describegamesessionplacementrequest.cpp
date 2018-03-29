@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeGameSessionPlacementRequest::response
  */
 DescribeGameSessionPlacementRequestPrivate::DescribeGameSessionPlacementRequestPrivate(
     const GameLiftRequest::Action action, DescribeGameSessionPlacementRequest * const q)
-    : DescribeGameSessionPlacementPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeGameSessionPlacementRequestPrivate::DescribeGameSessionPlacementRequestP
  */
 DescribeGameSessionPlacementRequestPrivate::DescribeGameSessionPlacementRequestPrivate(
     const DescribeGameSessionPlacementRequestPrivate &other, DescribeGameSessionPlacementRequest * const q)
-    : DescribeGameSessionPlacementPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

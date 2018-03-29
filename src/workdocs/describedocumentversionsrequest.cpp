@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNe
  */
 DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeDocumentVersionsRequest * const q)
-    : DescribeDocumentVersionsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
  */
 DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
     const DescribeDocumentVersionsRequestPrivate &other, DescribeDocumentVersionsRequest * const q)
-    : DescribeDocumentVersionsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

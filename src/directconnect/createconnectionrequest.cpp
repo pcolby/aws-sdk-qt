@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateConnectionRequest::response(QNetworkRep
  */
 CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
     const DirectConnectRequest::Action action, CreateConnectionRequest * const q)
-    : CreateConnectionPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
  */
 CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
     const CreateConnectionRequestPrivate &other, CreateConnectionRequest * const q)
-    : CreateConnectionPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

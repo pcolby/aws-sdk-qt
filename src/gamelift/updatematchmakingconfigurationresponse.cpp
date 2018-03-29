@@ -86,7 +86,7 @@ void UpdateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateMatchmakingConfigurationResponse instance.
  */
 UpdateMatchmakingConfigurationResponsePrivate::UpdateMatchmakingConfigurationResponsePrivate(
-    UpdateMatchmakingConfigurationQueueResponse * const q) : UpdateMatchmakingConfigurationPrivate(q)
+    UpdateMatchmakingConfigurationResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

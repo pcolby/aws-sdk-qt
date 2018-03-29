@@ -86,7 +86,7 @@ void TerminateInstanceInAutoScalingGroupResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public TerminateInstanceInAutoScalingGroupResponse instance.
  */
 TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScalingGroupResponsePrivate(
-    TerminateInstanceInAutoScalingGroupQueueResponse * const q) : TerminateInstanceInAutoScalingGroupPrivate(q)
+    TerminateInstanceInAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

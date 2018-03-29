@@ -86,7 +86,7 @@ void StopBuildResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopBuildResponse instance.
  */
 StopBuildResponsePrivate::StopBuildResponsePrivate(
-    StopBuildQueueResponse * const q) : StopBuildPrivate(q)
+    StopBuildResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SetVaultNotificationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetVaultNotificationsResponse instance.
  */
 SetVaultNotificationsResponsePrivate::SetVaultNotificationsResponsePrivate(
-    SetVaultNotificationsQueueResponse * const q) : SetVaultNotificationsPrivate(q)
+    SetVaultNotificationsResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

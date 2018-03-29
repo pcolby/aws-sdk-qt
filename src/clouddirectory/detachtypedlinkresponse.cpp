@@ -86,7 +86,7 @@ void DetachTypedLinkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachTypedLinkResponse instance.
  */
 DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
-    DetachTypedLinkQueueResponse * const q) : DetachTypedLinkPrivate(q)
+    DetachTypedLinkResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

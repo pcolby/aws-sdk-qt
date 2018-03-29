@@ -86,7 +86,7 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateTagsResponse instance.
  */
 CreateTagsResponsePrivate::CreateTagsResponsePrivate(
-    CreateTagsQueueResponse * const q) : CreateTagsPrivate(q)
+    CreateTagsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

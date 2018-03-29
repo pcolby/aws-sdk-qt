@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateJobRequest::response(QNetworkReply *
  */
 TerminateJobRequestPrivate::TerminateJobRequestPrivate(
     const BatchRequest::Action action, TerminateJobRequest * const q)
-    : TerminateJobPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateJobRequestPrivate::TerminateJobRequestPrivate(
  */
 TerminateJobRequestPrivate::TerminateJobRequestPrivate(
     const TerminateJobRequestPrivate &other, TerminateJobRequest * const q)
-    : TerminateJobPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

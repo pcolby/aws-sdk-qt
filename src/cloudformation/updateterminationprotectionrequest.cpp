@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTerminationProtectionRequest::response(
  */
 UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPrivate(
     const CloudFormationRequest::Action action, UpdateTerminationProtectionRequest * const q)
-    : UpdateTerminationProtectionPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPri
  */
 UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPrivate(
     const UpdateTerminationProtectionRequestPrivate &other, UpdateTerminationProtectionRequest * const q)
-    : UpdateTerminationProtectionPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

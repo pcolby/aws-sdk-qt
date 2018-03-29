@@ -86,7 +86,7 @@ void DeleteDiskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDiskResponse instance.
  */
 DeleteDiskResponsePrivate::DeleteDiskResponsePrivate(
-    DeleteDiskQueueResponse * const q) : DeleteDiskPrivate(q)
+    DeleteDiskResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

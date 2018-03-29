@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDevEndpointRequest::response(QNetworkRe
  */
 DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
     const GlueRequest::Action action, DeleteDevEndpointRequest * const q)
-    : DeleteDevEndpointPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
  */
 DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
     const DeleteDevEndpointRequestPrivate &other, DeleteDevEndpointRequest * const q)
-    : DeleteDevEndpointPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

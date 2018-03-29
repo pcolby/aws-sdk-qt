@@ -86,7 +86,7 @@ void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListXssMatchSetsResponse instance.
  */
 ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
-    ListXssMatchSetsQueueResponse * const q) : ListXssMatchSetsPrivate(q)
+    ListXssMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

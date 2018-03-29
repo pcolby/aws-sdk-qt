@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewayAttachmentsReques
  */
 DescribeDirectConnectGatewayAttachmentsRequestPrivate::DescribeDirectConnectGatewayAttachmentsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeDirectConnectGatewayAttachmentsRequest * const q)
-    : DescribeDirectConnectGatewayAttachmentsPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDirectConnectGatewayAttachmentsRequestPrivate::DescribeDirectConnectGate
  */
 DescribeDirectConnectGatewayAttachmentsRequestPrivate::DescribeDirectConnectGatewayAttachmentsRequestPrivate(
     const DescribeDirectConnectGatewayAttachmentsRequestPrivate &other, DescribeDirectConnectGatewayAttachmentsRequest * const q)
-    : DescribeDirectConnectGatewayAttachmentsPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

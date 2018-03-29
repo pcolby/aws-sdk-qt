@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const ServiceDiscoveryRequest::Action action, ListOperationsRequest * const q)
-    : ListOperationsPrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const ListOperationsRequestPrivate &other, ListOperationsRequest * const q)
-    : ListOperationsPrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

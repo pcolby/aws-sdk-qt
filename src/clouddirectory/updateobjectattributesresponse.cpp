@@ -86,7 +86,7 @@ void UpdateObjectAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateObjectAttributesResponse instance.
  */
 UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponsePrivate(
-    UpdateObjectAttributesQueueResponse * const q) : UpdateObjectAttributesPrivate(q)
+    UpdateObjectAttributesResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

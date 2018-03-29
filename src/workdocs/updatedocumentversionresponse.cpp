@@ -86,7 +86,7 @@ void UpdateDocumentVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDocumentVersionResponse instance.
  */
 UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponsePrivate(
-    UpdateDocumentVersionQueueResponse * const q) : UpdateDocumentVersionPrivate(q)
+    UpdateDocumentVersionResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

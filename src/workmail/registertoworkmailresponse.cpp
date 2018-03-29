@@ -86,7 +86,7 @@ void RegisterToWorkMailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterToWorkMailResponse instance.
  */
 RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponsePrivate(
-    RegisterToWorkMailQueueResponse * const q) : RegisterToWorkMailPrivate(q)
+    RegisterToWorkMailResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

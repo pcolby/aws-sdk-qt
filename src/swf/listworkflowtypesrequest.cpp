@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkRe
  */
 ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
     const SWFRequest::Action action, ListWorkflowTypesRequest * const q)
-    : ListWorkflowTypesPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
  */
 ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
     const ListWorkflowTypesRequestPrivate &other, ListWorkflowTypesRequest * const q)
-    : ListWorkflowTypesPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

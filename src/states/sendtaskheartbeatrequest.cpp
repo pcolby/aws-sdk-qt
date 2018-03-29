@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkRe
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
     const SFNRequest::Action action, SendTaskHeartbeatRequest * const q)
-    : SendTaskHeartbeatPrivate(action, q)
+    : SFNRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
     const SendTaskHeartbeatRequestPrivate &other, SendTaskHeartbeatRequest * const q)
-    : SendTaskHeartbeatPrivate(other, q)
+    : SFNRequestPrivate(other, q)
 {
 
 }

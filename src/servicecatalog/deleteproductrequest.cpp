@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProductRequest::response(QNetworkReply 
  */
 DeleteProductRequestPrivate::DeleteProductRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProductRequest * const q)
-    : DeleteProductPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteProductRequestPrivate::DeleteProductRequestPrivate(
  */
 DeleteProductRequestPrivate::DeleteProductRequestPrivate(
     const DeleteProductRequestPrivate &other, DeleteProductRequest * const q)
-    : DeleteProductPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

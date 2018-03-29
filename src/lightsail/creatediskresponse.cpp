@@ -86,7 +86,7 @@ void CreateDiskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDiskResponse instance.
  */
 CreateDiskResponsePrivate::CreateDiskResponsePrivate(
-    CreateDiskQueueResponse * const q) : CreateDiskPrivate(q)
+    CreateDiskResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

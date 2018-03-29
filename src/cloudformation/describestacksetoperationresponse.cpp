@@ -86,7 +86,7 @@ void DescribeStackSetOperationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeStackSetOperationResponse instance.
  */
 DescribeStackSetOperationResponsePrivate::DescribeStackSetOperationResponsePrivate(
-    DescribeStackSetOperationQueueResponse * const q) : DescribeStackSetOperationPrivate(q)
+    DescribeStackSetOperationResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

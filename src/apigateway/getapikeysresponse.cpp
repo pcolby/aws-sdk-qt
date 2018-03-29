@@ -86,7 +86,7 @@ void GetApiKeysResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetApiKeysResponse instance.
  */
 GetApiKeysResponsePrivate::GetApiKeysResponsePrivate(
-    GetApiKeysQueueResponse * const q) : GetApiKeysPrivate(q)
+    GetApiKeysResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

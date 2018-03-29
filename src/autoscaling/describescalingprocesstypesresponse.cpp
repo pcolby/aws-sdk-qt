@@ -86,7 +86,7 @@ void DescribeScalingProcessTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeScalingProcessTypesResponse instance.
  */
 DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponsePrivate(
-    DescribeScalingProcessTypesQueueResponse * const q) : DescribeScalingProcessTypesPrivate(q)
+    DescribeScalingProcessTypesResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

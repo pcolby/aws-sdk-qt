@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QN
  */
 DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
     const LambdaRequest::Action action, DeleteFunctionConcurrencyRequest * const q)
-    : DeleteFunctionConcurrencyPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate
  */
 DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
     const DeleteFunctionConcurrencyRequestPrivate &other, DeleteFunctionConcurrencyRequest * const q)
-    : DeleteFunctionConcurrencyPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

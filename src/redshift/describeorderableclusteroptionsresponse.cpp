@@ -86,7 +86,7 @@ void DescribeOrderableClusterOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeOrderableClusterOptionsResponse instance.
  */
 DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsResponsePrivate(
-    DescribeOrderableClusterOptionsQueueResponse * const q) : DescribeOrderableClusterOptionsPrivate(q)
+    DescribeOrderableClusterOptionsResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

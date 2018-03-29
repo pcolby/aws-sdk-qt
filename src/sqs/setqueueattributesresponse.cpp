@@ -86,7 +86,7 @@ void SetQueueAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetQueueAttributesResponse instance.
  */
 SetQueueAttributesResponsePrivate::SetQueueAttributesResponsePrivate(
-    SetQueueAttributesQueueResponse * const q) : SetQueueAttributesPrivate(q)
+    SetQueueAttributesResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

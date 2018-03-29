@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetResourceConfigRequest::response(QNetw
  */
 BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
     const ConfigServiceRequest::Action action, BatchGetResourceConfigRequest * const q)
-    : BatchGetResourceConfigPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
  */
 BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
     const BatchGetResourceConfigRequestPrivate &other, BatchGetResourceConfigRequest * const q)
-    : BatchGetResourceConfigPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

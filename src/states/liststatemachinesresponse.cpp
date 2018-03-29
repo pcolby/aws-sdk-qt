@@ -86,7 +86,7 @@ void ListStateMachinesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListStateMachinesResponse instance.
  */
 ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
-    ListStateMachinesQueueResponse * const q) : ListStateMachinesPrivate(q)
+    ListStateMachinesResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

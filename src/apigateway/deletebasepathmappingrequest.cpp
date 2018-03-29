@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetwo
  */
 DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, DeleteBasePathMappingRequest * const q)
-    : DeleteBasePathMappingPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
  */
 DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
     const DeleteBasePathMappingRequestPrivate &other, DeleteBasePathMappingRequest * const q)
-    : DeleteBasePathMappingPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

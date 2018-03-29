@@ -86,7 +86,7 @@ void GetShardIteratorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetShardIteratorResponse instance.
  */
 GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
-    GetShardIteratorQueueResponse * const q) : GetShardIteratorPrivate(q)
+    GetShardIteratorResponse * const q) : DynamoDBStreamsResponsePrivate(q)
 {
 
 }

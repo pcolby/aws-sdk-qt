@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDataRetentionRequest::response(QNetwork
  */
 UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
     const KinesisVideoRequest::Action action, UpdateDataRetentionRequest * const q)
-    : UpdateDataRetentionPrivate(action, q)
+    : KinesisVideoRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
  */
 UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
     const UpdateDataRetentionRequestPrivate &other, UpdateDataRetentionRequest * const q)
-    : UpdateDataRetentionPrivate(other, q)
+    : KinesisVideoRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopQueryExecutionRequest::response(QNetworkR
  */
 StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, StopQueryExecutionRequest * const q)
-    : StopQueryExecutionPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
  */
 StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
     const StopQueryExecutionRequestPrivate &other, StopQueryExecutionRequest * const q)
-    : StopQueryExecutionPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

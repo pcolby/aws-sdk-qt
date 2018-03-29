@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetwor
  */
 AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminSetUserSettingsRequest * const q)
-    : AdminSetUserSettingsPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
  */
 AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
     const AdminSetUserSettingsRequestPrivate &other, AdminSetUserSettingsRequest * const q)
-    : AdminSetUserSettingsPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

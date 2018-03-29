@@ -86,7 +86,7 @@ void DeleteElasticsearchDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteElasticsearchDomainResponse instance.
  */
 DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePrivate(
-    DeleteElasticsearchDomainQueueResponse * const q) : DeleteElasticsearchDomainPrivate(q)
+    DeleteElasticsearchDomainResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

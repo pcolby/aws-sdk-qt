@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateTeamMemberRequest::response(QNetw
  */
 DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, DisassociateTeamMemberRequest * const q)
-    : DisassociateTeamMemberPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
  */
 DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
     const DisassociateTeamMemberRequestPrivate &other, DisassociateTeamMemberRequest * const q)
-    : DisassociateTeamMemberPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

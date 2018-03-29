@@ -86,7 +86,7 @@ void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartReplicationTaskResponse instance.
  */
 StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
-    StartReplicationTaskQueueResponse * const q) : StartReplicationTaskPrivate(q)
+    StartReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetKeyPairRequest::response(QNetworkReply * c
  */
 GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
     const LightsailRequest::Action action, GetKeyPairRequest * const q)
-    : GetKeyPairPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
  */
 GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
     const GetKeyPairRequestPrivate &other, GetKeyPairRequest * const q)
-    : GetKeyPairPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

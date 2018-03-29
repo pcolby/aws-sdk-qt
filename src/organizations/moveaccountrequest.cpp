@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MoveAccountRequest::response(QNetworkReply * 
  */
 MoveAccountRequestPrivate::MoveAccountRequestPrivate(
     const OrganizationsRequest::Action action, MoveAccountRequest * const q)
-    : MoveAccountPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ MoveAccountRequestPrivate::MoveAccountRequestPrivate(
  */
 MoveAccountRequestPrivate::MoveAccountRequestPrivate(
     const MoveAccountRequestPrivate &other, MoveAccountRequest * const q)
-    : MoveAccountPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

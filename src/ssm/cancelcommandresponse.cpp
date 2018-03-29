@@ -86,7 +86,7 @@ void CancelCommandResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelCommandResponse instance.
  */
 CancelCommandResponsePrivate::CancelCommandResponsePrivate(
-    CancelCommandQueueResponse * const q) : CancelCommandPrivate(q)
+    CancelCommandResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateNFSFileShareResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateNFSFileShareResponse instance.
  */
 UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponsePrivate(
-    UpdateNFSFileShareQueueResponse * const q) : UpdateNFSFileSharePrivate(q)
+    UpdateNFSFileShareResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

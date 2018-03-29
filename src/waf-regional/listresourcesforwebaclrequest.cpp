@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetw
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, ListResourcesForWebACLRequest * const q)
-    : ListResourcesForWebACLPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
     const ListResourcesForWebACLRequestPrivate &other, ListResourcesForWebACLRequest * const q)
-    : ListResourcesForWebACLPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

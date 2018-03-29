@@ -86,7 +86,7 @@ void GetParametersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetParametersResponse instance.
  */
 GetParametersResponsePrivate::GetParametersResponsePrivate(
-    GetParametersQueueResponse * const q) : GetParametersPrivate(q)
+    GetParametersResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

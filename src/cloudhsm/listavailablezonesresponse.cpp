@@ -86,7 +86,7 @@ void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAvailableZonesResponse instance.
  */
 ListAvailableZonesResponsePrivate::ListAvailableZonesResponsePrivate(
-    ListAvailableZonesQueueResponse * const q) : ListAvailableZonesPrivate(q)
+    ListAvailableZonesResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

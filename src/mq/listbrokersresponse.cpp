@@ -86,7 +86,7 @@ void ListBrokersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBrokersResponse instance.
  */
 ListBrokersResponsePrivate::ListBrokersResponsePrivate(
-    ListBrokersQueueResponse * const q) : ListBrokersPrivate(q)
+    ListBrokersResponse * const q) : MQResponsePrivate(q)
 {
 
 }

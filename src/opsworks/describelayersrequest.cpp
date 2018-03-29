@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLayersRequest::response(QNetworkReply
  */
 DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeLayersRequest * const q)
-    : DescribeLayersPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
  */
 DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
     const DescribeLayersRequestPrivate &other, DescribeLayersRequest * const q)
-    : DescribeLayersPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

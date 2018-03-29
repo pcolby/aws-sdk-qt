@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayRequest::response(Q
  */
 DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
     const DirectConnectRequest::Action action, DeleteDirectConnectGatewayRequest * const q)
-    : DeleteDirectConnectGatewayPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPriva
  */
 DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
     const DeleteDirectConnectGatewayRequestPrivate &other, DeleteDirectConnectGatewayRequest * const q)
-    : DeleteDirectConnectGatewayPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

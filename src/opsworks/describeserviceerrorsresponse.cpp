@@ -86,7 +86,7 @@ void DescribeServiceErrorsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeServiceErrorsResponse instance.
  */
 DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponsePrivate(
-    DescribeServiceErrorsQueueResponse * const q) : DescribeServiceErrorsPrivate(q)
+    DescribeServiceErrorsResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetConnectivityInfoResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetConnectivityInfoResponse instance.
  */
 GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponsePrivate(
-    GetConnectivityInfoQueueResponse * const q) : GetConnectivityInfoPrivate(q)
+    GetConnectivityInfoResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

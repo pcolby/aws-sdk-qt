@@ -86,7 +86,7 @@ void SimulateCustomPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SimulateCustomPolicyResponse instance.
  */
 SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
-    SimulateCustomPolicyQueueResponse * const q) : SimulateCustomPolicyPrivate(q)
+    SimulateCustomPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

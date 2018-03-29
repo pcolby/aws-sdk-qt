@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetwor
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
     const SSMRequest::Action action, ListDocumentVersionsRequest * const q)
-    : ListDocumentVersionsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
     const ListDocumentVersionsRequestPrivate &other, ListDocumentVersionsRequest * const q)
-    : ListDocumentVersionsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

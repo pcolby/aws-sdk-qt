@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QN
  */
 UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
     const PinpointRequest::Action action, UpdateApplicationSettingsRequest * const q)
-    : UpdateApplicationSettingsPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate
  */
 UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
     const UpdateApplicationSettingsRequestPrivate &other, UpdateApplicationSettingsRequest * const q)
-    : UpdateApplicationSettingsPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

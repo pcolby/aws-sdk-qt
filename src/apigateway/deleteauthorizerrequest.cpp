@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const APIGatewayRequest::Action action, DeleteAuthorizerRequest * const q)
-    : DeleteAuthorizerPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const DeleteAuthorizerRequestPrivate &other, DeleteAuthorizerRequest * const q)
-    : DeleteAuthorizerPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

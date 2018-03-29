@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNet
  */
 CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateSizeConstraintSetRequest * const q)
-    : CreateSizeConstraintSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
  */
 CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
     const CreateSizeConstraintSetRequestPrivate &other, CreateSizeConstraintSetRequest * const q)
-    : CreateSizeConstraintSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

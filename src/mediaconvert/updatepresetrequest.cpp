@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePresetRequest::response(QNetworkReply *
  */
 UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
     const MediaConvertRequest::Action action, UpdatePresetRequest * const q)
-    : UpdatePresetPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
  */
 UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
     const UpdatePresetRequestPrivate &other, UpdatePresetRequest * const q)
-    : UpdatePresetPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

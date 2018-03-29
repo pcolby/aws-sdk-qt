@@ -86,7 +86,7 @@ void DeleteCustomMetadataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteCustomMetadataResponse instance.
  */
 DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponsePrivate(
-    DeleteCustomMetadataQueueResponse * const q) : DeleteCustomMetadataPrivate(q)
+    DeleteCustomMetadataResponse * const q) : WorkDocsResponsePrivate(q)
 {
 
 }

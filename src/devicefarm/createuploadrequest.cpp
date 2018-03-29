@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateUploadRequest::response(QNetworkReply *
  */
 CreateUploadRequestPrivate::CreateUploadRequestPrivate(
     const DeviceFarmRequest::Action action, CreateUploadRequest * const q)
-    : CreateUploadPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateUploadRequestPrivate::CreateUploadRequestPrivate(
  */
 CreateUploadRequestPrivate::CreateUploadRequestPrivate(
     const CreateUploadRequestPrivate &other, CreateUploadRequest * const q)
-    : CreateUploadPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

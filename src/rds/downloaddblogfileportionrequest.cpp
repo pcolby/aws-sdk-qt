@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNe
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
     const RDSRequest::Action action, DownloadDBLogFilePortionRequest * const q)
-    : DownloadDBLogFilePortionPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
     const DownloadDBLogFilePortionRequestPrivate &other, DownloadDBLogFilePortionRequest * const q)
-    : DownloadDBLogFilePortionPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

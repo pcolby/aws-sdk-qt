@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * co
  */
 GetStatusRequestPrivate::GetStatusRequestPrivate(
     const ImportExportRequest::Action action, GetStatusRequest * const q)
-    : GetStatusPrivate(action, q)
+    : ImportExportRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetStatusRequestPrivate::GetStatusRequestPrivate(
  */
 GetStatusRequestPrivate::GetStatusRequestPrivate(
     const GetStatusRequestPrivate &other, GetStatusRequest * const q)
-    : GetStatusPrivate(other, q)
+    : ImportExportRequestPrivate(other, q)
 {
 
 }

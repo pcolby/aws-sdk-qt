@@ -86,7 +86,7 @@ void SendTaskFailureResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendTaskFailureResponse instance.
  */
 SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
-    SendTaskFailureQueueResponse * const q) : SendTaskFailurePrivate(q)
+    SendTaskFailureResponse * const q) : SFNResponsePrivate(q)
 {
 
 }

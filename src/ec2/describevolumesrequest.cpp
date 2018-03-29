@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkRepl
  */
 DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
     const EC2Request::Action action, DescribeVolumesRequest * const q)
-    : DescribeVolumesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
  */
 DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
     const DescribeVolumesRequestPrivate &other, DescribeVolumesRequest * const q)
-    : DescribeVolumesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

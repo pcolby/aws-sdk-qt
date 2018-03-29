@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::re
  */
 DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAccountRequestPrivate(
     const GreengrassRequest::Action action, DisassociateServiceRoleFromAccountRequest * const q)
-    : DisassociateServiceRoleFromAccountPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAcc
  */
 DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAccountRequestPrivate(
     const DisassociateServiceRoleFromAccountRequestPrivate &other, DisassociateServiceRoleFromAccountRequest * const q)
-    : DisassociateServiceRoleFromAccountPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlansRequest::response(QNetworkReply 
  */
 GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
     const APIGatewayRequest::Action action, GetUsagePlansRequest * const q)
-    : GetUsagePlansPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
  */
 GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
     const GetUsagePlansRequestPrivate &other, GetUsagePlansRequest * const q)
-    : GetUsagePlansPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

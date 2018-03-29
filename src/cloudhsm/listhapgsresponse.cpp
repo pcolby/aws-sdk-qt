@@ -86,7 +86,7 @@ void ListHapgsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHapgsResponse instance.
  */
 ListHapgsResponsePrivate::ListHapgsResponsePrivate(
-    ListHapgsQueueResponse * const q) : ListHapgsPrivate(q)
+    ListHapgsResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

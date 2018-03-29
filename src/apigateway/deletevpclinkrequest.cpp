@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply 
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, DeleteVpcLinkRequest * const q)
-    : DeleteVpcLinkPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
     const DeleteVpcLinkRequestPrivate &other, DeleteVpcLinkRequest * const q)
-    : DeleteVpcLinkPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

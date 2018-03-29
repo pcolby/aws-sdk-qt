@@ -86,7 +86,7 @@ void CreateReusableDelegationSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReusableDelegationSetResponse instance.
  */
 CreateReusableDelegationSetResponsePrivate::CreateReusableDelegationSetResponsePrivate(
-    CreateReusableDelegationSetQueueResponse * const q) : CreateReusableDelegationSetPrivate(q)
+    CreateReusableDelegationSetResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

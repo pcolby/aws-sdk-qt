@@ -86,7 +86,7 @@ void ListActionTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListActionTypesResponse instance.
  */
 ListActionTypesResponsePrivate::ListActionTypesResponsePrivate(
-    ListActionTypesQueueResponse * const q) : ListActionTypesPrivate(q)
+    ListActionTypesResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

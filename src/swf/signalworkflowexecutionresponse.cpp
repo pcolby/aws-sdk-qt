@@ -86,7 +86,7 @@ void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SignalWorkflowExecutionResponse instance.
  */
 SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
-    SignalWorkflowExecutionQueueResponse * const q) : SignalWorkflowExecutionPrivate(q)
+    SignalWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

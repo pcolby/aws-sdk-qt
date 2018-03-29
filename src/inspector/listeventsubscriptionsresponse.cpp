@@ -86,7 +86,7 @@ void ListEventSubscriptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListEventSubscriptionsResponse instance.
  */
 ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponsePrivate(
-    ListEventSubscriptionsQueueResponse * const q) : ListEventSubscriptionsPrivate(q)
+    ListEventSubscriptionsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

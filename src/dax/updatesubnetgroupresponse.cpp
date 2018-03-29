@@ -86,7 +86,7 @@ void UpdateSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSubnetGroupResponse instance.
  */
 UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
-    UpdateSubnetGroupQueueResponse * const q) : UpdateSubnetGroupPrivate(q)
+    UpdateSubnetGroupResponse * const q) : DAXResponsePrivate(q)
 {
 
 }

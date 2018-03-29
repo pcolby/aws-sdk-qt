@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateWebhookRequest::response(QNetworkReply 
  */
 UpdateWebhookRequestPrivate::UpdateWebhookRequestPrivate(
     const CodeBuildRequest::Action action, UpdateWebhookRequest * const q)
-    : UpdateWebhookPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateWebhookRequestPrivate::UpdateWebhookRequestPrivate(
  */
 UpdateWebhookRequestPrivate::UpdateWebhookRequestPrivate(
     const UpdateWebhookRequestPrivate &other, UpdateWebhookRequest * const q)
-    : UpdateWebhookPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

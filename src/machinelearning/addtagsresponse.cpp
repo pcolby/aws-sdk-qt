@@ -86,7 +86,7 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddTagsResponse instance.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
-    AddTagsQueueResponse * const q) : AddTagsPrivate(q)
+    AddTagsResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

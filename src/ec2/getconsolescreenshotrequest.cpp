@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetwor
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
     const EC2Request::Action action, GetConsoleScreenshotRequest * const q)
-    : GetConsoleScreenshotPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
     const GetConsoleScreenshotRequestPrivate &other, GetConsoleScreenshotRequest * const q)
-    : GetConsoleScreenshotPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

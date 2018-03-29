@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTimeToLiveRequest::response(QNetworkRep
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
     const DynamoDBRequest::Action action, UpdateTimeToLiveRequest * const q)
-    : UpdateTimeToLivePrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
     const UpdateTimeToLiveRequestPrivate &other, UpdateTimeToLiveRequest * const q)
-    : UpdateTimeToLivePrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

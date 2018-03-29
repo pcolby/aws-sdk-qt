@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainEntryRequest::response(QNetworkRe
  */
 UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
     const LightsailRequest::Action action, UpdateDomainEntryRequest * const q)
-    : UpdateDomainEntryPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
  */
 UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
     const UpdateDomainEntryRequestPrivate &other, UpdateDomainEntryRequest * const q)
-    : UpdateDomainEntryPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

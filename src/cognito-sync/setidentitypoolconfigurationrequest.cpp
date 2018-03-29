@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityPoolConfigurationRequest::response
  */
 SetIdentityPoolConfigurationRequestPrivate::SetIdentityPoolConfigurationRequestPrivate(
     const CognitoSyncRequest::Action action, SetIdentityPoolConfigurationRequest * const q)
-    : SetIdentityPoolConfigurationPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityPoolConfigurationRequestPrivate::SetIdentityPoolConfigurationRequestP
  */
 SetIdentityPoolConfigurationRequestPrivate::SetIdentityPoolConfigurationRequestPrivate(
     const SetIdentityPoolConfigurationRequestPrivate &other, SetIdentityPoolConfigurationRequest * const q)
-    : SetIdentityPoolConfigurationPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

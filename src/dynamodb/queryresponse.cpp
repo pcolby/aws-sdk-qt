@@ -86,7 +86,7 @@ void QueryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public QueryResponse instance.
  */
 QueryResponsePrivate::QueryResponsePrivate(
-    QueryQueueResponse * const q) : QueryPrivate(q)
+    QueryResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetIdentityMailFromDomainResponse instance.
  */
 SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePrivate(
-    SetIdentityMailFromDomainQueueResponse * const q) : SetIdentityMailFromDomainPrivate(q)
+    SetIdentityMailFromDomainResponse * const q) : SESResponsePrivate(q)
 {
 
 }

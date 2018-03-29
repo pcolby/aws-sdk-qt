@@ -86,7 +86,7 @@ void SetTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetTimeBasedAutoScalingResponse instance.
  */
 SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponsePrivate(
-    SetTimeBasedAutoScalingQueueResponse * const q) : SetTimeBasedAutoScalingPrivate(q)
+    SetTimeBasedAutoScalingResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetw
  */
 DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteDeviceDefinitionRequest * const q)
-    : DeleteDeviceDefinitionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
  */
 DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
     const DeleteDeviceDefinitionRequestPrivate &other, DeleteDeviceDefinitionRequest * const q)
-    : DeleteDeviceDefinitionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFolderRequest::response(QNetworkReply *
  */
 CreateFolderRequestPrivate::CreateFolderRequestPrivate(
     const WorkDocsRequest::Action action, CreateFolderRequest * const q)
-    : CreateFolderPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateFolderRequestPrivate::CreateFolderRequestPrivate(
  */
 CreateFolderRequestPrivate::CreateFolderRequestPrivate(
     const CreateFolderRequestPrivate &other, CreateFolderRequest * const q)
-    : CreateFolderPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

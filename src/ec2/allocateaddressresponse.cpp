@@ -86,7 +86,7 @@ void AllocateAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AllocateAddressResponse instance.
  */
 AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
-    AllocateAddressQueueResponse * const q) : AllocateAddressPrivate(q)
+    AllocateAddressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

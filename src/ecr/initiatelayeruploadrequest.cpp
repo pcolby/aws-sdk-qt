@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
     const ECRRequest::Action action, InitiateLayerUploadRequest * const q)
-    : InitiateLayerUploadPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
     const InitiateLayerUploadRequestPrivate &other, InitiateLayerUploadRequest * const q)
-    : InitiateLayerUploadPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

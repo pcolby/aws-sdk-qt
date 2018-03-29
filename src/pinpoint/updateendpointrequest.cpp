@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const PinpointRequest::Action action, UpdateEndpointRequest * const q)
-    : UpdateEndpointPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const UpdateEndpointRequestPrivate &other, UpdateEndpointRequest * const q)
-    : UpdateEndpointPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

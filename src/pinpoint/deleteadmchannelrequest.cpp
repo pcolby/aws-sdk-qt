@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAdmChannelRequest::response(QNetworkRep
  */
 DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteAdmChannelRequest * const q)
-    : DeleteAdmChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
  */
 DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
     const DeleteAdmChannelRequestPrivate &other, DeleteAdmChannelRequest * const q)
-    : DeleteAdmChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

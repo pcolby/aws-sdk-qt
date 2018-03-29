@@ -86,7 +86,7 @@ void AssociateRoleToGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateRoleToGroupResponse instance.
  */
 AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponsePrivate(
-    AssociateRoleToGroupQueueResponse * const q) : AssociateRoleToGroupPrivate(q)
+    AssociateRoleToGroupResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AssociateVPCWithHostedZoneResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateVPCWithHostedZoneResponse instance.
  */
 AssociateVPCWithHostedZoneResponsePrivate::AssociateVPCWithHostedZoneResponsePrivate(
-    AssociateVPCWithHostedZoneQueueResponse * const q) : AssociateVPCWithHostedZonePrivate(q)
+    AssociateVPCWithHostedZoneResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

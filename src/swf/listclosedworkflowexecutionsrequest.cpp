@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response
  */
 ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, ListClosedWorkflowExecutionsRequest * const q)
-    : ListClosedWorkflowExecutionsPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestP
  */
 ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestPrivate(
     const ListClosedWorkflowExecutionsRequestPrivate &other, ListClosedWorkflowExecutionsRequest * const q)
-    : ListClosedWorkflowExecutionsPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

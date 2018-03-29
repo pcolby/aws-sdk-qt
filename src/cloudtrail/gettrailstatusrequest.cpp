@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply
  */
 GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
     const CloudTrailRequest::Action action, GetTrailStatusRequest * const q)
-    : GetTrailStatusPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
  */
 GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
     const GetTrailStatusRequestPrivate &other, GetTrailStatusRequest * const q)
-    : GetTrailStatusPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * 
  */
 ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
     const AutoScalingRequest::Action action, ExitStandbyRequest * const q)
-    : ExitStandbyPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
  */
 ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
     const ExitStandbyRequestPrivate &other, ExitStandbyRequest * const q)
-    : ExitStandbyPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

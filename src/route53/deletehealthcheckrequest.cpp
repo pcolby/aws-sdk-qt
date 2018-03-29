@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkRe
  */
 DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
     const Route53Request::Action action, DeleteHealthCheckRequest * const q)
-    : DeleteHealthCheckPrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
  */
 DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
     const DeleteHealthCheckRequestPrivate &other, DeleteHealthCheckRequest * const q)
-    : DeleteHealthCheckPrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteWebhookResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteWebhookResponse instance.
  */
 DeleteWebhookResponsePrivate::DeleteWebhookResponsePrivate(
-    DeleteWebhookQueueResponse * const q) : DeleteWebhookPrivate(q)
+    DeleteWebhookResponse * const q) : CodeBuildResponsePrivate(q)
 {
 
 }

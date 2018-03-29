@@ -86,7 +86,7 @@ void GetTrafficPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTrafficPolicyResponse instance.
  */
 GetTrafficPolicyResponsePrivate::GetTrafficPolicyResponsePrivate(
-    GetTrafficPolicyQueueResponse * const q) : GetTrafficPolicyPrivate(q)
+    GetTrafficPolicyResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

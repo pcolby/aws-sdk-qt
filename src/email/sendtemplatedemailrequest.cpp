@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkR
  */
 SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
     const SESRequest::Action action, SendTemplatedEmailRequest * const q)
-    : SendTemplatedEmailPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
  */
 SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
     const SendTemplatedEmailRequestPrivate &other, SendTemplatedEmailRequest * const q)
-    : SendTemplatedEmailPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const ECRRequest::Action action, UploadLayerPartRequest * const q)
-    : UploadLayerPartPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const UploadLayerPartRequestPrivate &other, UploadLayerPartRequest * const q)
-    : UploadLayerPartPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

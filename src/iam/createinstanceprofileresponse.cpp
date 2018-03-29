@@ -86,7 +86,7 @@ void CreateInstanceProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateInstanceProfileResponse instance.
  */
 CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponsePrivate(
-    CreateInstanceProfileQueueResponse * const q) : CreateInstanceProfilePrivate(q)
+    CreateInstanceProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public ListEndpointsByPlatformApplicationResponse instance.
  */
 ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplicationResponsePrivate(
-    ListEndpointsByPlatformApplicationQueueResponse * const q) : ListEndpointsByPlatformApplicationPrivate(q)
+    ListEndpointsByPlatformApplicationResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

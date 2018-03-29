@@ -86,7 +86,7 @@ void ReadPipelineResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReadPipelineResponse instance.
  */
 ReadPipelineResponsePrivate::ReadPipelineResponsePrivate(
-    ReadPipelineQueueResponse * const q) : ReadPipelinePrivate(q)
+    ReadPipelineResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

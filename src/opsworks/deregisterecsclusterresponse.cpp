@@ -86,7 +86,7 @@ void DeregisterEcsClusterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeregisterEcsClusterResponse instance.
  */
 DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponsePrivate(
-    DeregisterEcsClusterQueueResponse * const q) : DeregisterEcsClusterPrivate(q)
+    DeregisterEcsClusterResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

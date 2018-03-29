@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response
  */
 DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestPrivate(
     const EC2Request::Action action, DescribeVolumesModificationsRequest * const q)
-    : DescribeVolumesModificationsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestP
  */
 DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestPrivate(
     const DescribeVolumesModificationsRequestPrivate &other, DescribeVolumesModificationsRequest * const q)
-    : DescribeVolumesModificationsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

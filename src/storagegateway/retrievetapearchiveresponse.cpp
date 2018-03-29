@@ -86,7 +86,7 @@ void RetrieveTapeArchiveResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RetrieveTapeArchiveResponse instance.
  */
 RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponsePrivate(
-    RetrieveTapeArchiveQueueResponse * const q) : RetrieveTapeArchivePrivate(q)
+    RetrieveTapeArchiveResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpnGatewayRequest::response(QNetworkRep
  */
 CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
     const EC2Request::Action action, CreateVpnGatewayRequest * const q)
-    : CreateVpnGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
  */
 CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
     const CreateVpnGatewayRequestPrivate &other, CreateVpnGatewayRequest * const q)
-    : CreateVpnGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

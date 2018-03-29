@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkRepl
  */
 ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, ListInvitationsRequest * const q)
-    : ListInvitationsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
  */
 ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
     const ListInvitationsRequestPrivate &other, ListInvitationsRequest * const q)
-    : ListInvitationsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

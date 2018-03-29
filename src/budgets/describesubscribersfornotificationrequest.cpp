@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscribersForNotificationRequest::re
  */
 DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
     const BudgetsRequest::Action action, DescribeSubscribersForNotificationRequest * const q)
-    : DescribeSubscribersForNotificationPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotifica
  */
 DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
     const DescribeSubscribersForNotificationRequestPrivate &other, DescribeSubscribersForNotificationRequest * const q)
-    : DescribeSubscribersForNotificationPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

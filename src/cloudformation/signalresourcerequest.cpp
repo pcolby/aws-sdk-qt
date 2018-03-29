@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SignalResourceRequest::response(QNetworkReply
  */
 SignalResourceRequestPrivate::SignalResourceRequestPrivate(
     const CloudFormationRequest::Action action, SignalResourceRequest * const q)
-    : SignalResourcePrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SignalResourceRequestPrivate::SignalResourceRequestPrivate(
  */
 SignalResourceRequestPrivate::SignalResourceRequestPrivate(
     const SignalResourceRequestPrivate &other, SignalResourceRequest * const q)
-    : SignalResourcePrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

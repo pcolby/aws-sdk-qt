@@ -86,7 +86,7 @@ void AttachVpnGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachVpnGatewayResponse instance.
  */
 AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponsePrivate(
-    AttachVpnGatewayQueueResponse * const q) : AttachVpnGatewayPrivate(q)
+    AttachVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

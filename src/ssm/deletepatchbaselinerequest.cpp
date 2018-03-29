@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePatchBaselineRequest::response(QNetwork
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
     const SSMRequest::Action action, DeletePatchBaselineRequest * const q)
-    : DeletePatchBaselinePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
     const DeletePatchBaselineRequestPrivate &other, DeletePatchBaselineRequest * const q)
-    : DeletePatchBaselinePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

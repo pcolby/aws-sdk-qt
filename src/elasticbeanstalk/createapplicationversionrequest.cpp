@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNe
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateApplicationVersionRequest * const q)
-    : CreateApplicationVersionPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const CreateApplicationVersionRequestPrivate &other, CreateApplicationVersionRequest * const q)
-    : CreateApplicationVersionPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QN
  */
 DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
     const GreengrassRequest::Action action, DisassociateRoleFromGroupRequest * const q)
-    : DisassociateRoleFromGroupPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate
  */
 DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
     const DisassociateRoleFromGroupRequestPrivate &other, DisassociateRoleFromGroupRequest * const q)
-    : DisassociateRoleFromGroupPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

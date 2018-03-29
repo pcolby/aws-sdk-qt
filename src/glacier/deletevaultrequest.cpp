@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultRequest::response(QNetworkReply * 
  */
 DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultRequest * const q)
-    : DeleteVaultPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
  */
 DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
     const DeleteVaultRequestPrivate &other, DeleteVaultRequest * const q)
-    : DeleteVaultPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

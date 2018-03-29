@@ -86,7 +86,7 @@ void CancelRetrievalResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelRetrievalResponse instance.
  */
 CancelRetrievalResponsePrivate::CancelRetrievalResponsePrivate(
-    CancelRetrievalQueueResponse * const q) : CancelRetrievalPrivate(q)
+    CancelRetrievalResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

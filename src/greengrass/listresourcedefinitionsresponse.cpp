@@ -86,7 +86,7 @@ void ListResourceDefinitionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListResourceDefinitionsResponse instance.
  */
 ListResourceDefinitionsResponsePrivate::ListResourceDefinitionsResponsePrivate(
-    ListResourceDefinitionsQueueResponse * const q) : ListResourceDefinitionsPrivate(q)
+    ListResourceDefinitionsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

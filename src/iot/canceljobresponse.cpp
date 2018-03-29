@@ -86,7 +86,7 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelJobResponse instance.
  */
 CancelJobResponsePrivate::CancelJobResponsePrivate(
-    CancelJobQueueResponse * const q) : CancelJobPrivate(q)
+    CancelJobResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

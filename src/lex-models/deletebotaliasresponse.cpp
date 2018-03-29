@@ -86,7 +86,7 @@ void DeleteBotAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBotAliasResponse instance.
  */
 DeleteBotAliasResponsePrivate::DeleteBotAliasResponsePrivate(
-    DeleteBotAliasQueueResponse * const q) : DeleteBotAliasPrivate(q)
+    DeleteBotAliasResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

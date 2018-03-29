@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::respo
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
     const ElasticsearchServiceRequest::Action action, UpdateElasticsearchDomainConfigRequest * const q)
-    : UpdateElasticsearchDomainConfigPrivate(action, q)
+    : ElasticsearchServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRe
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
     const UpdateElasticsearchDomainConfigRequestPrivate &other, UpdateElasticsearchDomainConfigRequest * const q)
-    : UpdateElasticsearchDomainConfigPrivate(other, q)
+    : ElasticsearchServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * 
  */
 StopTriggerRequestPrivate::StopTriggerRequestPrivate(
     const GlueRequest::Action action, StopTriggerRequest * const q)
-    : StopTriggerPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopTriggerRequestPrivate::StopTriggerRequestPrivate(
  */
 StopTriggerRequestPrivate::StopTriggerRequestPrivate(
     const StopTriggerRequestPrivate &other, StopTriggerRequest * const q)
-    : StopTriggerPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

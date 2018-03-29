@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetwor
  */
 ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
     const RekognitionRequest::Action action, ListStreamProcessorsRequest * const q)
-    : ListStreamProcessorsPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
  */
 ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
     const ListStreamProcessorsRequestPrivate &other, ListStreamProcessorsRequest * const q)
-    : ListStreamProcessorsPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

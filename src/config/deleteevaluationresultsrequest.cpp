@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationResultsRequest::response(QNet
  */
 DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteEvaluationResultsRequest * const q)
-    : DeleteEvaluationResultsPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
  */
 DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
     const DeleteEvaluationResultsRequestPrivate &other, DeleteEvaluationResultsRequest * const q)
-    : DeleteEvaluationResultsPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

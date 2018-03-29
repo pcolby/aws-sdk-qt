@@ -86,7 +86,7 @@ void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSnapshotResponse instance.
  */
 DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
-    DeleteSnapshotQueueResponse * const q) : DeleteSnapshotPrivate(q)
+    DeleteSnapshotResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

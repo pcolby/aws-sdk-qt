@@ -86,7 +86,7 @@ void DescribeKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeKeyResponse instance.
  */
 DescribeKeyResponsePrivate::DescribeKeyResponsePrivate(
-    DescribeKeyQueueResponse * const q) : DescribeKeyPrivate(q)
+    DescribeKeyResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

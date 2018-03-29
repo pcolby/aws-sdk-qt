@@ -86,7 +86,7 @@ void DescribeSnapshotAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSnapshotAttributeResponse instance.
  */
 DescribeSnapshotAttributeResponsePrivate::DescribeSnapshotAttributeResponsePrivate(
-    DescribeSnapshotAttributeQueueResponse * const q) : DescribeSnapshotAttributePrivate(q)
+    DescribeSnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

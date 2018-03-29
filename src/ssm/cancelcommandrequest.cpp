@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelCommandRequest::response(QNetworkReply 
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
     const SSMRequest::Action action, CancelCommandRequest * const q)
-    : CancelCommandPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelCommandRequestPrivate::CancelCommandRequestPrivate(
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
     const CancelCommandRequestPrivate &other, CancelCommandRequest * const q)
-    : CancelCommandPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

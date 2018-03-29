@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotCopyRetentionPeriodRequest::res
  */
 ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
     const RedshiftRequest::Action action, ModifySnapshotCopyRetentionPeriodRequest * const q)
-    : ModifySnapshotCopyRetentionPeriodPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeri
  */
 ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
     const ModifySnapshotCopyRetentionPeriodRequestPrivate &other, ModifySnapshotCopyRetentionPeriodRequest * const q)
-    : ModifySnapshotCopyRetentionPeriodPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDataSourcesRequest::response(QNetwork
  */
 DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
     const MachineLearningRequest::Action action, DescribeDataSourcesRequest * const q)
-    : DescribeDataSourcesPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
  */
 DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
     const DescribeDataSourcesRequestPrivate &other, DescribeDataSourcesRequest * const q)
-    : DescribeDataSourcesPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

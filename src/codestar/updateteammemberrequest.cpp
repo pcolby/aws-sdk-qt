@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTeamMemberRequest::response(QNetworkRep
  */
 UpdateTeamMemberRequestPrivate::UpdateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, UpdateTeamMemberRequest * const q)
-    : UpdateTeamMemberPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTeamMemberRequestPrivate::UpdateTeamMemberRequestPrivate(
  */
 UpdateTeamMemberRequestPrivate::UpdateTeamMemberRequestPrivate(
     const UpdateTeamMemberRequestPrivate &other, UpdateTeamMemberRequest * const q)
-    : UpdateTeamMemberPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateBGPPeerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateBGPPeerResponse instance.
  */
 CreateBGPPeerResponsePrivate::CreateBGPPeerResponsePrivate(
-    CreateBGPPeerQueueResponse * const q) : CreateBGPPeerPrivate(q)
+    CreateBGPPeerResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteAnalysisSchemeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAnalysisSchemeResponse instance.
  */
 DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponsePrivate(
-    DeleteAnalysisSchemeQueueResponse * const q) : DeleteAnalysisSchemePrivate(q)
+    DeleteAnalysisSchemeResponse * const q) : CloudSearchResponsePrivate(q)
 {
 
 }

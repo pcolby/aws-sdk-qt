@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentRunRequest::response(QNetwork
  */
 DeleteAssessmentRunRequestPrivate::DeleteAssessmentRunRequestPrivate(
     const InspectorRequest::Action action, DeleteAssessmentRunRequest * const q)
-    : DeleteAssessmentRunPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAssessmentRunRequestPrivate::DeleteAssessmentRunRequestPrivate(
  */
 DeleteAssessmentRunRequestPrivate::DeleteAssessmentRunRequestPrivate(
     const DeleteAssessmentRunRequestPrivate &other, DeleteAssessmentRunRequest * const q)
-    : DeleteAssessmentRunPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

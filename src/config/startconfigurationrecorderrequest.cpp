@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartConfigurationRecorderRequest::response(Q
  */
 StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, StartConfigurationRecorderRequest * const q)
-    : StartConfigurationRecorderPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPriva
  */
 StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPrivate(
     const StartConfigurationRecorderRequestPrivate &other, StartConfigurationRecorderRequest * const q)
-    : StartConfigurationRecorderPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

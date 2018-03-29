@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const IAMRequest::Action action, DeleteInstanceProfileRequest * const q)
-    : DeleteInstanceProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const DeleteInstanceProfileRequestPrivate &other, DeleteInstanceProfileRequest * const q)
-    : DeleteInstanceProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

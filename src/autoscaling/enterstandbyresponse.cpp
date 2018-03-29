@@ -86,7 +86,7 @@ void EnterStandbyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnterStandbyResponse instance.
  */
 EnterStandbyResponsePrivate::EnterStandbyResponsePrivate(
-    EnterStandbyQueueResponse * const q) : EnterStandbyPrivate(q)
+    EnterStandbyResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

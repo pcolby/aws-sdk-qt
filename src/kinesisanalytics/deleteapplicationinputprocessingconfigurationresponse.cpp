@@ -86,7 +86,7 @@ void DeleteApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevi
  * @param  q  Pointer to this object's public DeleteApplicationInputProcessingConfigurationResponse instance.
  */
 DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationInputProcessingConfigurationResponsePrivate(
-    DeleteApplicationInputProcessingConfigurationQueueResponse * const q) : DeleteApplicationInputProcessingConfigurationPrivate(q)
+    DeleteApplicationInputProcessingConfigurationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

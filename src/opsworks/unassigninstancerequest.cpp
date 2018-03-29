@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkRep
  */
 UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UnassignInstanceRequest * const q)
-    : UnassignInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
  */
 UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
     const UnassignInstanceRequestPrivate &other, UnassignInstanceRequest * const q)
-    : UnassignInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

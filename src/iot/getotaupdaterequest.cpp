@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOTAUpdateRequest::response(QNetworkReply *
  */
 GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
     const IoTRequest::Action action, GetOTAUpdateRequest * const q)
-    : GetOTAUpdatePrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
  */
 GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
     const GetOTAUpdateRequestPrivate &other, GetOTAUpdateRequest * const q)
-    : GetOTAUpdatePrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

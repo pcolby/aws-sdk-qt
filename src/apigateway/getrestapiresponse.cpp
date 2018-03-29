@@ -86,7 +86,7 @@ void GetRestApiResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRestApiResponse instance.
  */
 GetRestApiResponsePrivate::GetRestApiResponsePrivate(
-    GetRestApiQueueResponse * const q) : GetRestApiPrivate(q)
+    GetRestApiResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

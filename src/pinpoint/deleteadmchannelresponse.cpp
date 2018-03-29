@@ -86,7 +86,7 @@ void DeleteAdmChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAdmChannelResponse instance.
  */
 DeleteAdmChannelResponsePrivate::DeleteAdmChannelResponsePrivate(
-    DeleteAdmChannelQueueResponse * const q) : DeleteAdmChannelPrivate(q)
+    DeleteAdmChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

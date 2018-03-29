@@ -86,7 +86,7 @@ void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SetReceiptRulePositionResponse instance.
  */
 SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
-    SetReceiptRulePositionQueueResponse * const q) : SetReceiptRulePositionPrivate(q)
+    SetReceiptRulePositionResponse * const q) : SESResponsePrivate(q)
 {
 
 }

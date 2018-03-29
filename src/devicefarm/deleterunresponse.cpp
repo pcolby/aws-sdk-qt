@@ -86,7 +86,7 @@ void DeleteRunResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRunResponse instance.
  */
 DeleteRunResponsePrivate::DeleteRunResponsePrivate(
-    DeleteRunQueueResponse * const q) : DeleteRunPrivate(q)
+    DeleteRunResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

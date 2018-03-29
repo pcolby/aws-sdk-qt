@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateStaticIpRequest::response(QNetworkRep
  */
 AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
     const LightsailRequest::Action action, AllocateStaticIpRequest * const q)
-    : AllocateStaticIpPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
  */
 AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
     const AllocateStaticIpRequestPrivate &other, AllocateStaticIpRequest * const q)
-    : AllocateStaticIpPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

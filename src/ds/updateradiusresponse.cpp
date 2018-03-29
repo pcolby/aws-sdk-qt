@@ -86,7 +86,7 @@ void UpdateRadiusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRadiusResponse instance.
  */
 UpdateRadiusResponsePrivate::UpdateRadiusResponsePrivate(
-    UpdateRadiusQueueResponse * const q) : UpdateRadiusPrivate(q)
+    UpdateRadiusResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

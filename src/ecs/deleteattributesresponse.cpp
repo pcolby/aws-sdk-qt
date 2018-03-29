@@ -86,7 +86,7 @@ void DeleteAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAttributesResponse instance.
  */
 DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
-    DeleteAttributesQueueResponse * const q) : DeleteAttributesPrivate(q)
+    DeleteAttributesResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateSampleFindingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSampleFindingsResponse instance.
  */
 CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponsePrivate(
-    CreateSampleFindingsQueueResponse * const q) : CreateSampleFindingsPrivate(q)
+    CreateSampleFindingsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

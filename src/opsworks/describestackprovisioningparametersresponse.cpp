@@ -86,7 +86,7 @@ void DescribeStackProvisioningParametersResponse::parseSuccess(QIODevice &respon
  * @param  q  Pointer to this object's public DescribeStackProvisioningParametersResponse instance.
  */
 DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningParametersResponsePrivate(
-    DescribeStackProvisioningParametersQueueResponse * const q) : DescribeStackProvisioningParametersPrivate(q)
+    DescribeStackProvisioningParametersResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

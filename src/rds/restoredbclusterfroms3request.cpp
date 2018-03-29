@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromS3Request::response(QNetw
  */
 RestoreDBClusterFromS3RequestPrivate::RestoreDBClusterFromS3RequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterFromS3Request * const q)
-    : RestoreDBClusterFromS3Private(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreDBClusterFromS3RequestPrivate::RestoreDBClusterFromS3RequestPrivate(
  */
 RestoreDBClusterFromS3RequestPrivate::RestoreDBClusterFromS3RequestPrivate(
     const RestoreDBClusterFromS3RequestPrivate &other, RestoreDBClusterFromS3Request * const q)
-    : RestoreDBClusterFromS3Private(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

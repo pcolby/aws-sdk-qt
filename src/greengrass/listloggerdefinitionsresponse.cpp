@@ -86,7 +86,7 @@ void ListLoggerDefinitionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListLoggerDefinitionsResponse instance.
  */
 ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponsePrivate(
-    ListLoggerDefinitionsQueueResponse * const q) : ListLoggerDefinitionsPrivate(q)
+    ListLoggerDefinitionsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DescribeTrailsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTrailsResponse instance.
  */
 DescribeTrailsResponsePrivate::DescribeTrailsResponsePrivate(
-    DescribeTrailsQueueResponse * const q) : DescribeTrailsPrivate(q)
+    DescribeTrailsResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

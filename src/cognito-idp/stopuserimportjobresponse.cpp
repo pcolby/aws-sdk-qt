@@ -86,7 +86,7 @@ void StopUserImportJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopUserImportJobResponse instance.
  */
 StopUserImportJobResponsePrivate::StopUserImportJobResponsePrivate(
-    StopUserImportJobQueueResponse * const q) : StopUserImportJobPrivate(q)
+    StopUserImportJobResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

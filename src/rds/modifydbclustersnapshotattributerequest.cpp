@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterSnapshotAttributeRequest::resp
  */
 ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttributeRequestPrivate(
     const RDSRequest::Action action, ModifyDBClusterSnapshotAttributeRequest * const q)
-    : ModifyDBClusterSnapshotAttributePrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttribute
  */
 ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttributeRequestPrivate(
     const ModifyDBClusterSnapshotAttributeRequestPrivate &other, ModifyDBClusterSnapshotAttributeRequest * const q)
-    : ModifyDBClusterSnapshotAttributePrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

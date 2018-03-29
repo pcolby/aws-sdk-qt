@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply 
  */
 GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotAliasesRequest * const q)
-    : GetBotAliasesPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
  */
 GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
     const GetBotAliasesRequestPrivate &other, GetBotAliasesRequest * const q)
-    : GetBotAliasesPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

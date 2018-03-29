@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceServersRequest::response(QNetwork
  */
 ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListResourceServersRequest * const q)
-    : ListResourceServersPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
  */
 ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
     const ListResourceServersRequestPrivate &other, ListResourceServersRequest * const q)
-    : ListResourceServersPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

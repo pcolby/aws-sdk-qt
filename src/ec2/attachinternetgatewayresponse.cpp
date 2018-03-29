@@ -86,7 +86,7 @@ void AttachInternetGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AttachInternetGatewayResponse instance.
  */
 AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponsePrivate(
-    AttachInternetGatewayQueueResponse * const q) : AttachInternetGatewayPrivate(q)
+    AttachInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

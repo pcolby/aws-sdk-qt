@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkRepl
  */
 ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListLaunchPathsRequest * const q)
-    : ListLaunchPathsPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
  */
 ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
     const ListLaunchPathsRequestPrivate &other, ListLaunchPathsRequest * const q)
-    : ListLaunchPathsPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

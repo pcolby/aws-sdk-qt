@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SearchSkillGroupsRequest::response(QNetworkRe
  */
 SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchSkillGroupsRequest * const q)
-    : SearchSkillGroupsPrivate(action, q)
+    : AlexaForBusinessRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
  */
 SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
     const SearchSkillGroupsRequestPrivate &other, SearchSkillGroupsRequest * const q)
-    : SearchSkillGroupsPrivate(other, q)
+    : AlexaForBusinessRequestPrivate(other, q)
 {
 
 }

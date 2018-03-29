@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetwo
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeAccountLimitsRequest * const q)
-    : DescribeAccountLimitsPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const DescribeAccountLimitsRequestPrivate &other, DescribeAccountLimitsRequest * const q)
-    : DescribeAccountLimitsPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeComplianceByResourceRequest::response
  */
 DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeComplianceByResourceRequest * const q)
-    : DescribeComplianceByResourcePrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestP
  */
 DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestPrivate(
     const DescribeComplianceByResourceRequestPrivate &other, DescribeComplianceByResourceRequest * const q)
-    : DescribeComplianceByResourcePrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

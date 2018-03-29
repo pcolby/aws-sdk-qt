@@ -86,7 +86,7 @@ void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateBasePathMappingResponse instance.
  */
 UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
-    UpdateBasePathMappingQueueResponse * const q) : UpdateBasePathMappingPrivate(q)
+    UpdateBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public CreateConfigurationSetTrackingOptionsResponse instance.
  */
 CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrackingOptionsResponsePrivate(
-    CreateConfigurationSetTrackingOptionsQueueResponse * const q) : CreateConfigurationSetTrackingOptionsPrivate(q)
+    CreateConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
 {
 
 }

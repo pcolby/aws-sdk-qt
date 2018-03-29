@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteTableVersionRequest::response(QNet
  */
 BatchDeleteTableVersionRequestPrivate::BatchDeleteTableVersionRequestPrivate(
     const GlueRequest::Action action, BatchDeleteTableVersionRequest * const q)
-    : BatchDeleteTableVersionPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchDeleteTableVersionRequestPrivate::BatchDeleteTableVersionRequestPrivate(
  */
 BatchDeleteTableVersionRequestPrivate::BatchDeleteTableVersionRequestPrivate(
     const BatchDeleteTableVersionRequestPrivate &other, BatchDeleteTableVersionRequest * const q)
-    : BatchDeleteTableVersionPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

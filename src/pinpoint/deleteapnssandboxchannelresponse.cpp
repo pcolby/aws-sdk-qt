@@ -86,7 +86,7 @@ void DeleteApnsSandboxChannelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteApnsSandboxChannelResponse instance.
  */
 DeleteApnsSandboxChannelResponsePrivate::DeleteApnsSandboxChannelResponsePrivate(
-    DeleteApnsSandboxChannelQueueResponse * const q) : DeleteApnsSandboxChannelPrivate(q)
+    DeleteApnsSandboxChannelResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

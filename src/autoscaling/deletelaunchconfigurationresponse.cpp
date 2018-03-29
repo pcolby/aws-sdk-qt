@@ -86,7 +86,7 @@ void DeleteLaunchConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteLaunchConfigurationResponse instance.
  */
 DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePrivate(
-    DeleteLaunchConfigurationQueueResponse * const q) : DeleteLaunchConfigurationPrivate(q)
+    DeleteLaunchConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

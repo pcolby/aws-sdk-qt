@@ -86,7 +86,7 @@ void RemoveTagsFromVaultResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveTagsFromVaultResponse instance.
  */
 RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponsePrivate(
-    RemoveTagsFromVaultQueueResponse * const q) : RemoveTagsFromVaultPrivate(q)
+    RemoveTagsFromVaultResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::res
  */
 DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResourceRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociateTagOptionFromResourceRequest * const q)
-    : DisassociateTagOptionFromResourcePrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResour
  */
 DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResourceRequestPrivate(
     const DisassociateTagOptionFromResourceRequestPrivate &other, DisassociateTagOptionFromResourceRequest * const q)
-    : DisassociateTagOptionFromResourcePrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

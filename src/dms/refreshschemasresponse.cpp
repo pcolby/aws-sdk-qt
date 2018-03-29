@@ -86,7 +86,7 @@ void RefreshSchemasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RefreshSchemasResponse instance.
  */
 RefreshSchemasResponsePrivate::RefreshSchemasResponsePrivate(
-    RefreshSchemasQueueResponse * const q) : RefreshSchemasPrivate(q)
+    RefreshSchemasResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

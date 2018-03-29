@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetwo
  */
 SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, SwapEnvironmentCNAMEsRequest * const q)
-    : SwapEnvironmentCNAMEsPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
  */
 SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
     const SwapEnvironmentCNAMEsRequestPrivate &other, SwapEnvironmentCNAMEsRequest * const q)
-    : SwapEnvironmentCNAMEsPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListContainerInstancesRequest::response(QNetw
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
     const ECSRequest::Action action, ListContainerInstancesRequest * const q)
-    : ListContainerInstancesPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
     const ListContainerInstancesRequestPrivate &other, ListContainerInstancesRequest * const q)
-    : ListContainerInstancesPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAttachedGroupPoliciesRequest::response(QN
  */
 ListAttachedGroupPoliciesRequestPrivate::ListAttachedGroupPoliciesRequestPrivate(
     const IAMRequest::Action action, ListAttachedGroupPoliciesRequest * const q)
-    : ListAttachedGroupPoliciesPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAttachedGroupPoliciesRequestPrivate::ListAttachedGroupPoliciesRequestPrivate
  */
 ListAttachedGroupPoliciesRequestPrivate::ListAttachedGroupPoliciesRequestPrivate(
     const ListAttachedGroupPoliciesRequestPrivate &other, ListAttachedGroupPoliciesRequest * const q)
-    : ListAttachedGroupPoliciesPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

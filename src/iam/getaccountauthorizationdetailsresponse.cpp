@@ -86,7 +86,7 @@ void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountAuthorizationDetailsResponse instance.
  */
 GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsResponsePrivate(
-    GetAccountAuthorizationDetailsQueueResponse * const q) : GetAccountAuthorizationDetailsPrivate(q)
+    GetAccountAuthorizationDetailsResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

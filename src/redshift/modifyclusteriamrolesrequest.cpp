@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterIamRolesRequest::response(QNetwo
  */
 ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterIamRolesRequest * const q)
-    : ModifyClusterIamRolesPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
  */
 ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
     const ModifyClusterIamRolesRequestPrivate &other, ModifyClusterIamRolesRequest * const q)
-    : ModifyClusterIamRolesPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

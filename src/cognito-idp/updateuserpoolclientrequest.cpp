@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetwor
  */
 UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateUserPoolClientRequest * const q)
-    : UpdateUserPoolClientPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
  */
 UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
     const UpdateUserPoolClientRequestPrivate &other, UpdateUserPoolClientRequest * const q)
-    : UpdateUserPoolClientPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationsRequest::response(QNetwor
  */
 DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeApplicationsRequest * const q)
-    : DescribeApplicationsPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
  */
 DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
     const DescribeApplicationsRequestPrivate &other, DescribeApplicationsRequest * const q)
-    : DescribeApplicationsPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

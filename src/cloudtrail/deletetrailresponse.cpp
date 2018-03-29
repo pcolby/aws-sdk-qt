@@ -86,7 +86,7 @@ void DeleteTrailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTrailResponse instance.
  */
 DeleteTrailResponsePrivate::DeleteTrailResponsePrivate(
-    DeleteTrailQueueResponse * const q) : DeleteTrailPrivate(q)
+    DeleteTrailResponse * const q) : CloudTrailResponsePrivate(q)
 {
 
 }

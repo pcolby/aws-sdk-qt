@@ -86,7 +86,7 @@ void DescribeFpgaImagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeFpgaImagesResponse instance.
  */
 DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponsePrivate(
-    DescribeFpgaImagesQueueResponse * const q) : DescribeFpgaImagesPrivate(q)
+    DescribeFpgaImagesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

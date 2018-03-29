@@ -86,7 +86,7 @@ void UpdateJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateJobResponse instance.
  */
 UpdateJobResponsePrivate::UpdateJobResponsePrivate(
-    UpdateJobQueueResponse * const q) : UpdateJobPrivate(q)
+    UpdateJobResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

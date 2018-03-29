@@ -86,7 +86,7 @@ void DescribeSSLPoliciesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeSSLPoliciesResponse instance.
  */
 DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponsePrivate(
-    DescribeSSLPoliciesQueueResponse * const q) : DescribeSSLPoliciesPrivate(q)
+    DescribeSSLPoliciesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

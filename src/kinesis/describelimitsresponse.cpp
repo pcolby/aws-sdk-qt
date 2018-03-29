@@ -86,7 +86,7 @@ void DescribeLimitsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLimitsResponse instance.
  */
 DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
-    DescribeLimitsQueueResponse * const q) : DescribeLimitsPrivate(q)
+    DescribeLimitsResponse * const q) : KinesisResponsePrivate(q)
 {
 
 }

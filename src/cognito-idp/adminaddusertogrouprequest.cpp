@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetwork
  */
 AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminAddUserToGroupRequest * const q)
-    : AdminAddUserToGroupPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
  */
 AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
     const AdminAddUserToGroupRequestPrivate &other, AdminAddUserToGroupRequest * const q)
-    : AdminAddUserToGroupPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

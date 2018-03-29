@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const ECSRequest::Action action, ListClustersRequest * const q)
-    : ListClustersPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListClustersRequestPrivate::ListClustersRequestPrivate(
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const ListClustersRequestPrivate &other, ListClustersRequest * const q)
-    : ListClustersPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecordersRequest::respon
  */
 DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationRecordersRequest * const q)
-    : DescribeConfigurationRecordersPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequ
  */
 DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequestPrivate(
     const DescribeConfigurationRecordersRequestPrivate &other, DescribeConfigurationRecordersRequest * const q)
-    : DescribeConfigurationRecordersPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

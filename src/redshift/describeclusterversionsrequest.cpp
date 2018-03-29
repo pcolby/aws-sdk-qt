@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNet
  */
 DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterVersionsRequest * const q)
-    : DescribeClusterVersionsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
  */
 DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
     const DescribeClusterVersionsRequestPrivate &other, DescribeClusterVersionsRequest * const q)
-    : DescribeClusterVersionsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

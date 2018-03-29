@@ -86,7 +86,7 @@ void DeleteXssMatchSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteXssMatchSetResponse instance.
  */
 DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponsePrivate(
-    DeleteXssMatchSetQueueResponse * const q) : DeleteXssMatchSetPrivate(q)
+    DeleteXssMatchSetResponse * const q) : WAFResponsePrivate(q)
 {
 
 }

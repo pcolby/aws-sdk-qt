@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSegmentRequest::response(QNetworkReply 
  */
 UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
     const PinpointRequest::Action action, UpdateSegmentRequest * const q)
-    : UpdateSegmentPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
  */
 UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
     const UpdateSegmentRequestPrivate &other, UpdateSegmentRequest * const q)
-    : UpdateSegmentPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

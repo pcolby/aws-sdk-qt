@@ -86,7 +86,7 @@ void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddJobFlowStepsResponse instance.
  */
 AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
-    AddJobFlowStepsQueueResponse * const q) : AddJobFlowStepsPrivate(q)
+    AddJobFlowStepsResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

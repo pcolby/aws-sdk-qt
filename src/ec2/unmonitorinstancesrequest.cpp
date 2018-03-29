@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkR
  */
 UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
     const EC2Request::Action action, UnmonitorInstancesRequest * const q)
-    : UnmonitorInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
  */
 UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
     const UnmonitorInstancesRequestPrivate &other, UnmonitorInstancesRequest * const q)
-    : UnmonitorInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

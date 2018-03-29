@@ -86,7 +86,7 @@ void DeleteGameSessionQueueResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteGameSessionQueueResponse instance.
  */
 DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponsePrivate(
-    DeleteGameSessionQueueQueueResponse * const q) : DeleteGameSessionQueuePrivate(q)
+    DeleteGameSessionQueueResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

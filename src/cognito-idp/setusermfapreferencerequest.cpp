@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetwor
  */
 SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserMFAPreferenceRequest * const q)
-    : SetUserMFAPreferencePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
  */
 SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
     const SetUserMFAPreferenceRequestPrivate &other, SetUserMFAPreferenceRequest * const q)
-    : SetUserMFAPreferencePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

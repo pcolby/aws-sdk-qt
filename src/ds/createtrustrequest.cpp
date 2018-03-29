@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrustRequest::response(QNetworkReply * 
  */
 CreateTrustRequestPrivate::CreateTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateTrustRequest * const q)
-    : CreateTrustPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateTrustRequestPrivate::CreateTrustRequestPrivate(
  */
 CreateTrustRequestPrivate::CreateTrustRequestPrivate(
     const CreateTrustRequestPrivate &other, CreateTrustRequest * const q)
-    : CreateTrustPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply *
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteIntentRequest * const q)
-    : DeleteIntentPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
     const DeleteIntentRequestPrivate &other, DeleteIntentRequest * const q)
-    : DeleteIntentPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

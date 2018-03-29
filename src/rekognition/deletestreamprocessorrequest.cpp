@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetwo
  */
 DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, DeleteStreamProcessorRequest * const q)
-    : DeleteStreamProcessorPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
  */
 DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
     const DeleteStreamProcessorRequestPrivate &other, DeleteStreamProcessorRequest * const q)
-    : DeleteStreamProcessorPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

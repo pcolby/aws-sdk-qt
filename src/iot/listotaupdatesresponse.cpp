@@ -86,7 +86,7 @@ void ListOTAUpdatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListOTAUpdatesResponse instance.
  */
 ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponsePrivate(
-    ListOTAUpdatesQueueResponse * const q) : ListOTAUpdatesPrivate(q)
+    ListOTAUpdatesResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

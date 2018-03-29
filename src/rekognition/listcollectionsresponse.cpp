@@ -86,7 +86,7 @@ void ListCollectionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListCollectionsResponse instance.
  */
 ListCollectionsResponsePrivate::ListCollectionsResponsePrivate(
-    ListCollectionsQueueResponse * const q) : ListCollectionsPrivate(q)
+    ListCollectionsResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

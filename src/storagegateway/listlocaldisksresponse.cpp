@@ -86,7 +86,7 @@ void ListLocalDisksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListLocalDisksResponse instance.
  */
 ListLocalDisksResponsePrivate::ListLocalDisksResponsePrivate(
-    ListLocalDisksQueueResponse * const q) : ListLocalDisksPrivate(q)
+    ListLocalDisksResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

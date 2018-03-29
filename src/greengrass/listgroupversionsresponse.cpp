@@ -86,7 +86,7 @@ void ListGroupVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGroupVersionsResponse instance.
  */
 ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
-    ListGroupVersionsQueueResponse * const q) : ListGroupVersionsPrivate(q)
+    ListGroupVersionsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

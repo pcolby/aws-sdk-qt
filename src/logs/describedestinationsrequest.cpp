@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDestinationsRequest::response(QNetwor
  */
 DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeDestinationsRequest * const q)
-    : DescribeDestinationsPrivate(action, q)
+    : CloudWatchLogsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
  */
 DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
     const DescribeDestinationsRequestPrivate &other, DescribeDestinationsRequest * const q)
-    : DescribeDestinationsPrivate(other, q)
+    : CloudWatchLogsRequestPrivate(other, q)
 {
 
 }

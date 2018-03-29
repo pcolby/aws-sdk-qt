@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(
  */
 AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
     const MigrationHubRequest::Action action, AssociateDiscoveredResourceRequest * const q)
-    : AssociateDiscoveredResourcePrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPri
  */
 AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
     const AssociateDiscoveredResourceRequestPrivate &other, AssociateDiscoveredResourceRequest * const q)
-    : AssociateDiscoveredResourcePrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

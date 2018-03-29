@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanKeyRequest::response(QNetworkR
  */
 CreateUsagePlanKeyRequestPrivate::CreateUsagePlanKeyRequestPrivate(
     const APIGatewayRequest::Action action, CreateUsagePlanKeyRequest * const q)
-    : CreateUsagePlanKeyPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateUsagePlanKeyRequestPrivate::CreateUsagePlanKeyRequestPrivate(
  */
 CreateUsagePlanKeyRequestPrivate::CreateUsagePlanKeyRequestPrivate(
     const CreateUsagePlanKeyRequestPrivate &other, CreateUsagePlanKeyRequest * const q)
-    : CreateUsagePlanKeyPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

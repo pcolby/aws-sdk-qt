@@ -86,7 +86,7 @@ void GetIntentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetIntentsResponse instance.
  */
 GetIntentsResponsePrivate::GetIntentsResponsePrivate(
-    GetIntentsQueueResponse * const q) : GetIntentsPrivate(q)
+    GetIntentsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

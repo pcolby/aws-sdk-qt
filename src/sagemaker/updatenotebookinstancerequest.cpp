@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetw
  */
 UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, UpdateNotebookInstanceRequest * const q)
-    : UpdateNotebookInstancePrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
  */
 UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
     const UpdateNotebookInstanceRequestPrivate &other, UpdateNotebookInstanceRequest * const q)
-    : UpdateNotebookInstancePrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetw
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
     const EC2Request::Action action, ConfirmProductInstanceRequest * const q)
-    : ConfirmProductInstancePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
     const ConfirmProductInstanceRequestPrivate &other, ConfirmProductInstanceRequest * const q)
-    : ConfirmProductInstancePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

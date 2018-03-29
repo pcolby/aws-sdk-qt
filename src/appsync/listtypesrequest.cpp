@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * co
  */
 ListTypesRequestPrivate::ListTypesRequestPrivate(
     const AppSyncRequest::Action action, ListTypesRequest * const q)
-    : ListTypesPrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTypesRequestPrivate::ListTypesRequestPrivate(
  */
 ListTypesRequestPrivate::ListTypesRequestPrivate(
     const ListTypesRequestPrivate &other, ListTypesRequest * const q)
-    : ListTypesPrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

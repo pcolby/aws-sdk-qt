@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetwork
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
     const EC2Request::Action action, ResetImageAttributeRequest * const q)
-    : ResetImageAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
     const ResetImageAttributeRequestPrivate &other, ResetImageAttributeRequest * const q)
-    : ResetImageAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

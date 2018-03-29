@@ -86,7 +86,7 @@ void ListDistributionsByWebACLIdResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDistributionsByWebACLIdResponse instance.
  */
 ListDistributionsByWebACLIdResponsePrivate::ListDistributionsByWebACLIdResponsePrivate(
-    ListDistributionsByWebACLIdQueueResponse * const q) : ListDistributionsByWebACLIdPrivate(q)
+    ListDistributionsByWebACLIdResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

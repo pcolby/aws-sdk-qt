@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheEngineVersionsRequest::response(
  */
 DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheEngineVersionsRequest * const q)
-    : DescribeCacheEngineVersionsPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPri
  */
 DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPrivate(
     const DescribeCacheEngineVersionsRequestPrivate &other, DescribeCacheEngineVersionsRequest * const q)
-    : DescribeCacheEngineVersionsPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

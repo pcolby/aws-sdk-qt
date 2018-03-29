@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetEventSelectorsRequest::response(QNetworkRe
  */
 GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
     const CloudTrailRequest::Action action, GetEventSelectorsRequest * const q)
-    : GetEventSelectorsPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
  */
 GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
     const GetEventSelectorsRequestPrivate &other, GetEventSelectorsRequest * const q)
-    : GetEventSelectorsPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

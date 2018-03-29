@@ -86,7 +86,7 @@ void AcceptMatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AcceptMatchResponse instance.
  */
 AcceptMatchResponsePrivate::AcceptMatchResponsePrivate(
-    AcceptMatchQueueResponse * const q) : AcceptMatchPrivate(q)
+    AcceptMatchResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteSubscriptionFilterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSubscriptionFilterResponse instance.
  */
 DeleteSubscriptionFilterResponsePrivate::DeleteSubscriptionFilterResponsePrivate(
-    DeleteSubscriptionFilterQueueResponse * const q) : DeleteSubscriptionFilterPrivate(q)
+    DeleteSubscriptionFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

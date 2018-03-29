@@ -86,7 +86,7 @@ void DescribeTableStatisticsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTableStatisticsResponse instance.
  */
 DescribeTableStatisticsResponsePrivate::DescribeTableStatisticsResponsePrivate(
-    DescribeTableStatisticsQueueResponse * const q) : DescribeTableStatisticsPrivate(q)
+    DescribeTableStatisticsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

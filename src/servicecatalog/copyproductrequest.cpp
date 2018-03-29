@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * 
  */
 CopyProductRequestPrivate::CopyProductRequestPrivate(
     const ServiceCatalogRequest::Action action, CopyProductRequest * const q)
-    : CopyProductPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyProductRequestPrivate::CopyProductRequestPrivate(
  */
 CopyProductRequestPrivate::CopyProductRequestPrivate(
     const CopyProductRequestPrivate &other, CopyProductRequest * const q)
-    : CopyProductPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

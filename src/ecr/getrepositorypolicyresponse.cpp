@@ -86,7 +86,7 @@ void GetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRepositoryPolicyResponse instance.
  */
 GetRepositoryPolicyResponsePrivate::GetRepositoryPolicyResponsePrivate(
-    GetRepositoryPolicyQueueResponse * const q) : GetRepositoryPolicyPrivate(q)
+    GetRepositoryPolicyResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

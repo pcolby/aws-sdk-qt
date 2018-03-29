@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateListenerRequest::response(QNetworkReply
  */
 CreateListenerRequestPrivate::CreateListenerRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, CreateListenerRequest * const q)
-    : CreateListenerPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateListenerRequestPrivate::CreateListenerRequestPrivate(
  */
 CreateListenerRequestPrivate::CreateListenerRequestPrivate(
     const CreateListenerRequestPrivate &other, CreateListenerRequest * const q)
-    : CreateListenerPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

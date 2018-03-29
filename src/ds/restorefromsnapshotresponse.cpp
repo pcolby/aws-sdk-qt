@@ -86,7 +86,7 @@ void RestoreFromSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreFromSnapshotResponse instance.
  */
 RestoreFromSnapshotResponsePrivate::RestoreFromSnapshotResponsePrivate(
-    RestoreFromSnapshotQueueResponse * const q) : RestoreFromSnapshotPrivate(q)
+    RestoreFromSnapshotResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

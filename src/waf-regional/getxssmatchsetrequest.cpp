@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetXssMatchSetRequest::response(QNetworkReply
  */
 GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, GetXssMatchSetRequest * const q)
-    : GetXssMatchSetPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
  */
 GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
     const GetXssMatchSetRequestPrivate &other, GetXssMatchSetRequest * const q)
-    : GetXssMatchSetPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

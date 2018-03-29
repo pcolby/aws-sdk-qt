@@ -86,7 +86,7 @@ void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &r
  * @param  q  Pointer to this object's public SetIdentityHeadersInNotificationsEnabledResponse instance.
  */
 SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNotificationsEnabledResponsePrivate(
-    SetIdentityHeadersInNotificationsEnabledQueueResponse * const q) : SetIdentityHeadersInNotificationsEnabledPrivate(q)
+    SetIdentityHeadersInNotificationsEnabledResponse * const q) : SESResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply 
  */
 DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, DeleteDatasetRequest * const q)
-    : DeleteDatasetPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
  */
 DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
     const DeleteDatasetRequestPrivate &other, DeleteDatasetRequest * const q)
-    : DeleteDatasetPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

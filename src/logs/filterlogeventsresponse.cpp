@@ -86,7 +86,7 @@ void FilterLogEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public FilterLogEventsResponse instance.
  */
 FilterLogEventsResponsePrivate::FilterLogEventsResponsePrivate(
-    FilterLogEventsQueueResponse * const q) : FilterLogEventsPrivate(q)
+    FilterLogEventsResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void TestRoleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestRoleResponse instance.
  */
 TestRoleResponsePrivate::TestRoleResponsePrivate(
-    TestRoleQueueResponse * const q) : TestRolePrivate(q)
+    TestRoleResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

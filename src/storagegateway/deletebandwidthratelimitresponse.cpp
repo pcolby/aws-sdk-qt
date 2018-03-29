@@ -86,7 +86,7 @@ void DeleteBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBandwidthRateLimitResponse instance.
  */
 DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponsePrivate(
-    DeleteBandwidthRateLimitQueueResponse * const q) : DeleteBandwidthRateLimitPrivate(q)
+    DeleteBandwidthRateLimitResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDeleteImageResponse instance.
  */
 BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
-    BatchDeleteImageQueueResponse * const q) : BatchDeleteImagePrivate(q)
+    BatchDeleteImageResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

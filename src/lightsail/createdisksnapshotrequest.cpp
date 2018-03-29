@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDiskSnapshotRequest::response(QNetworkR
  */
 CreateDiskSnapshotRequestPrivate::CreateDiskSnapshotRequestPrivate(
     const LightsailRequest::Action action, CreateDiskSnapshotRequest * const q)
-    : CreateDiskSnapshotPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateDiskSnapshotRequestPrivate::CreateDiskSnapshotRequestPrivate(
  */
 CreateDiskSnapshotRequestPrivate::CreateDiskSnapshotRequestPrivate(
     const CreateDiskSnapshotRequestPrivate &other, CreateDiskSnapshotRequest * const q)
-    : CreateDiskSnapshotPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

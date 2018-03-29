@@ -86,7 +86,7 @@ void UpdateAccessKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateAccessKeyResponse instance.
  */
 UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
-    UpdateAccessKeyQueueResponse * const q) : UpdateAccessKeyPrivate(q)
+    UpdateAccessKeyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

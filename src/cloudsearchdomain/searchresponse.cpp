@@ -86,7 +86,7 @@ void SearchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchResponse instance.
  */
 SearchResponsePrivate::SearchResponsePrivate(
-    SearchQueueResponse * const q) : SearchPrivate(q)
+    SearchResponse * const q) : CloudSearchDomainResponsePrivate(q)
 {
 
 }

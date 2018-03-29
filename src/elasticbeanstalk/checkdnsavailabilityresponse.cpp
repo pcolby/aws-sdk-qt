@@ -86,7 +86,7 @@ void CheckDNSAvailabilityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CheckDNSAvailabilityResponse instance.
  */
 CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponsePrivate(
-    CheckDNSAvailabilityQueueResponse * const q) : CheckDNSAvailabilityPrivate(q)
+    CheckDNSAvailabilityResponse * const q) : ElasticBeanstalkResponsePrivate(q)
 {
 
 }

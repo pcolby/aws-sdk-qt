@@ -86,7 +86,7 @@ void DeclineInvitationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeclineInvitationsResponse instance.
  */
 DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
-    DeclineInvitationsQueueResponse * const q) : DeclineInvitationsPrivate(q)
+    DeclineInvitationsResponse * const q) : GuardDutyResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateDelegateFromResourceRequest::resp
  */
 DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResourceRequestPrivate(
     const WorkMailRequest::Action action, DisassociateDelegateFromResourceRequest * const q)
-    : DisassociateDelegateFromResourcePrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResource
  */
 DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResourceRequestPrivate(
     const DisassociateDelegateFromResourceRequestPrivate &other, DisassociateDelegateFromResourceRequest * const q)
-    : DisassociateDelegateFromResourcePrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

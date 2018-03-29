@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * 
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentRequest * const q)
-    : GetDocumentPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDocumentRequestPrivate::GetDocumentRequestPrivate(
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const GetDocumentRequestPrivate &other, GetDocumentRequest * const q)
-    : GetDocumentPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

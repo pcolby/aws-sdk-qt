@@ -86,7 +86,7 @@ void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateVpcLinkResponse instance.
  */
 UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponsePrivate(
-    UpdateVpcLinkQueueResponse * const q) : UpdateVpcLinkPrivate(q)
+    UpdateVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

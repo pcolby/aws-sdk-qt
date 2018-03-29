@@ -86,7 +86,7 @@ void DetachGroupPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachGroupPolicyResponse instance.
  */
 DetachGroupPolicyResponsePrivate::DetachGroupPolicyResponsePrivate(
-    DetachGroupPolicyQueueResponse * const q) : DetachGroupPolicyPrivate(q)
+    DetachGroupPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

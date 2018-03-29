@@ -86,7 +86,7 @@ void DescribeObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeObjectResponse instance.
  */
 DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
-    DescribeObjectQueueResponse * const q) : DescribeObjectPrivate(q)
+    DescribeObjectResponse * const q) : MediaStoreDataResponsePrivate(q)
 {
 
 }

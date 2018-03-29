@@ -86,7 +86,7 @@ void ListDeliveryStreamsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDeliveryStreamsResponse instance.
  */
 ListDeliveryStreamsResponsePrivate::ListDeliveryStreamsResponsePrivate(
-    ListDeliveryStreamsQueueResponse * const q) : ListDeliveryStreamsPrivate(q)
+    ListDeliveryStreamsResponse * const q) : FirehoseResponsePrivate(q)
 {
 
 }

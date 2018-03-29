@@ -86,7 +86,7 @@ void CreateMLModelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateMLModelResponse instance.
  */
 CreateMLModelResponsePrivate::CreateMLModelResponsePrivate(
-    CreateMLModelQueueResponse * const q) : CreateMLModelPrivate(q)
+    CreateMLModelResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateResourceServerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateResourceServerResponse instance.
  */
 UpdateResourceServerResponsePrivate::UpdateResourceServerResponsePrivate(
-    UpdateResourceServerQueueResponse * const q) : UpdateResourceServerPrivate(q)
+    UpdateResourceServerResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkRe
  */
 DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
     const MTurkRequest::Action action, DeleteWorkerBlockRequest * const q)
-    : DeleteWorkerBlockPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
  */
 DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
     const DeleteWorkerBlockRequestPrivate &other, DeleteWorkerBlockRequest * const q)
-    : DeleteWorkerBlockPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

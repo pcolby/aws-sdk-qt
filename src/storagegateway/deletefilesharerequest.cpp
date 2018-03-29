@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkRepl
  */
 DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteFileShareRequest * const q)
-    : DeleteFileSharePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
  */
 DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
     const DeleteFileShareRequestPrivate &other, DeleteFileShareRequest * const q)
-    : DeleteFileSharePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

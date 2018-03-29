@@ -86,7 +86,7 @@ void CreateDistributionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDistributionResponse instance.
  */
 CreateDistributionResponsePrivate::CreateDistributionResponsePrivate(
-    CreateDistributionQueueResponse * const q) : CreateDistributionPrivate(q)
+    CreateDistributionResponse * const q) : CloudFrontResponsePrivate(q)
 {
 
 }

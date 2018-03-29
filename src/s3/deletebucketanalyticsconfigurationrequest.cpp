@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketAnalyticsConfigurationRequest::re
  */
 DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketAnalyticsConfigurationRequest * const q)
-    : DeleteBucketAnalyticsConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigura
  */
 DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigurationRequestPrivate(
     const DeleteBucketAnalyticsConfigurationRequestPrivate &other, DeleteBucketAnalyticsConfigurationRequest * const q)
-    : DeleteBucketAnalyticsConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

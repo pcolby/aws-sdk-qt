@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const IoTRequest::Action action, TestInvokeAuthorizerRequest * const q)
-    : TestInvokeAuthorizerPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const TestInvokeAuthorizerRequestPrivate &other, TestInvokeAuthorizerRequest * const q)
-    : TestInvokeAuthorizerPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

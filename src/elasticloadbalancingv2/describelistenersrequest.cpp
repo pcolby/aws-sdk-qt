@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeListenersRequest::response(QNetworkRe
  */
 DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeListenersRequest * const q)
-    : DescribeListenersPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
  */
 DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
     const DescribeListenersRequestPrivate &other, DescribeListenersRequest * const q)
-    : DescribeListenersPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

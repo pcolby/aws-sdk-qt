@@ -86,7 +86,7 @@ void CreateServiceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateServiceResponse instance.
  */
 CreateServiceResponsePrivate::CreateServiceResponsePrivate(
-    CreateServiceQueueResponse * const q) : CreateServicePrivate(q)
+    CreateServiceResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ReleaseStaticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReleaseStaticIpResponse instance.
  */
 ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponsePrivate(
-    ReleaseStaticIpQueueResponse * const q) : ReleaseStaticIpPrivate(q)
+    ReleaseStaticIpResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

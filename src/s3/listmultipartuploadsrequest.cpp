@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListMultipartUploadsRequest::response(QNetwor
  */
 ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
     const S3Request::Action action, ListMultipartUploadsRequest * const q)
-    : ListMultipartUploadsPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
  */
 ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
     const ListMultipartUploadsRequestPrivate &other, ListMultipartUploadsRequest * const q)
-    : ListMultipartUploadsPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

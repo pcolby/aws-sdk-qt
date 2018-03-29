@@ -86,7 +86,7 @@ void BatchGetRepositoriesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetRepositoriesResponse instance.
  */
 BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponsePrivate(
-    BatchGetRepositoriesQueueResponse * const q) : BatchGetRepositoriesPrivate(q)
+    BatchGetRepositoriesResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

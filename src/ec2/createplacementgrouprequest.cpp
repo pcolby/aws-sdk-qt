@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetwor
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
     const EC2Request::Action action, CreatePlacementGroupRequest * const q)
-    : CreatePlacementGroupPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
     const CreatePlacementGroupRequestPrivate &other, CreatePlacementGroupRequest * const q)
-    : CreatePlacementGroupPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBInstanceResponse instance.
  */
 CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
-    CreateDBInstanceQueueResponse * const q) : CreateDBInstancePrivate(q)
+    CreateDBInstanceResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

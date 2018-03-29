@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteRegexMatchSetRequest * const q)
-    : DeleteRegexMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
     const DeleteRegexMatchSetRequestPrivate &other, DeleteRegexMatchSetRequest * const q)
-    : DeleteRegexMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromDBClusterRequest::response(QNet
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
     const RDSRequest::Action action, RemoveRoleFromDBClusterRequest * const q)
-    : RemoveRoleFromDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
     const RemoveRoleFromDBClusterRequestPrivate &other, RemoveRoleFromDBClusterRequest * const q)
-    : RemoveRoleFromDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

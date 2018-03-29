@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerScheduleRequest::response(QNetwo
  */
 UpdateCrawlerScheduleRequestPrivate::UpdateCrawlerScheduleRequestPrivate(
     const GlueRequest::Action action, UpdateCrawlerScheduleRequest * const q)
-    : UpdateCrawlerSchedulePrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateCrawlerScheduleRequestPrivate::UpdateCrawlerScheduleRequestPrivate(
  */
 UpdateCrawlerScheduleRequestPrivate::UpdateCrawlerScheduleRequestPrivate(
     const UpdateCrawlerScheduleRequestPrivate &other, UpdateCrawlerScheduleRequest * const q)
-    : UpdateCrawlerSchedulePrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

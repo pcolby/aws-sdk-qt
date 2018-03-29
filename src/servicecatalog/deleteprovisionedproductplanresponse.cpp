@@ -86,7 +86,7 @@ void DeleteProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteProvisionedProductPlanResponse instance.
  */
 DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanResponsePrivate(
-    DeleteProvisionedProductPlanQueueResponse * const q) : DeleteProvisionedProductPlanPrivate(q)
+    DeleteProvisionedProductPlanResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCallerIdentityResponse instance.
  */
 GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
-    GetCallerIdentityQueueResponse * const q) : GetCallerIdentityPrivate(q)
+    GetCallerIdentityResponse * const q) : STSResponsePrivate(q)
 {
 
 }

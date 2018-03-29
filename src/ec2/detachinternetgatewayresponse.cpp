@@ -86,7 +86,7 @@ void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachInternetGatewayResponse instance.
  */
 DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
-    DetachInternetGatewayQueueResponse * const q) : DetachInternetGatewayPrivate(q)
+    DetachInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

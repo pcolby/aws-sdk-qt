@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetwor
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
     const ACMRequest::Action action, AddTagsToCertificateRequest * const q)
-    : AddTagsToCertificatePrivate(action, q)
+    : ACMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
     const AddTagsToCertificateRequestPrivate &other, AddTagsToCertificateRequest * const q)
-    : AddTagsToCertificatePrivate(other, q)
+    : ACMRequestPrivate(other, q)
 {
 
 }

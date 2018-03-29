@@ -86,7 +86,7 @@ void DescribeLocationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLocationsResponse instance.
  */
 DescribeLocationsResponsePrivate::DescribeLocationsResponsePrivate(
-    DescribeLocationsQueueResponse * const q) : DescribeLocationsPrivate(q)
+    DescribeLocationsResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

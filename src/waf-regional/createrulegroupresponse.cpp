@@ -86,7 +86,7 @@ void CreateRuleGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRuleGroupResponse instance.
  */
 CreateRuleGroupResponsePrivate::CreateRuleGroupResponsePrivate(
-    CreateRuleGroupQueueResponse * const q) : CreateRuleGroupPrivate(q)
+    CreateRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

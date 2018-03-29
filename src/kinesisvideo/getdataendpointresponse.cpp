@@ -86,7 +86,7 @@ void GetDataEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDataEndpointResponse instance.
  */
 GetDataEndpointResponsePrivate::GetDataEndpointResponsePrivate(
-    GetDataEndpointQueueResponse * const q) : GetDataEndpointPrivate(q)
+    GetDataEndpointResponse * const q) : KinesisVideoResponsePrivate(q)
 {
 
 }

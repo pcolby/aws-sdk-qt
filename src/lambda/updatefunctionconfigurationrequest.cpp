@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionConfigurationRequest::response(
  */
 UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
     const LambdaRequest::Action action, UpdateFunctionConfigurationRequest * const q)
-    : UpdateFunctionConfigurationPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPri
  */
 UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
     const UpdateFunctionConfigurationRequestPrivate &other, UpdateFunctionConfigurationRequest * const q)
-    : UpdateFunctionConfigurationPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

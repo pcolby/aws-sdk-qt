@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::respon
  */
 RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
     const InspectorRequest::Action action, RegisterCrossAccountAccessRoleRequest * const q)
-    : RegisterCrossAccountAccessRolePrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequ
  */
 RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
     const RegisterCrossAccountAccessRoleRequestPrivate &other, RegisterCrossAccountAccessRoleRequest * const q)
-    : RegisterCrossAccountAccessRolePrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

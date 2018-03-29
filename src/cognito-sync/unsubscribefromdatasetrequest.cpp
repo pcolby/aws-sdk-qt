@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetw
  */
 UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, UnsubscribeFromDatasetRequest * const q)
-    : UnsubscribeFromDatasetPrivate(action, q)
+    : CognitoSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
  */
 UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
     const UnsubscribeFromDatasetRequestPrivate &other, UnsubscribeFromDatasetRequest * const q)
-    : UnsubscribeFromDatasetPrivate(other, q)
+    : CognitoSyncRequestPrivate(other, q)
 {
 
 }

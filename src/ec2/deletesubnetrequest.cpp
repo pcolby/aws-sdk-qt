@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply *
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
     const EC2Request::Action action, DeleteSubnetRequest * const q)
-    : DeleteSubnetPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
     const DeleteSubnetRequestPrivate &other, DeleteSubnetRequest * const q)
-    : DeleteSubnetPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

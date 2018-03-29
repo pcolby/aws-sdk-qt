@@ -86,7 +86,7 @@ void PostCommentForPullRequestResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PostCommentForPullRequestResponse instance.
  */
 PostCommentForPullRequestResponsePrivate::PostCommentForPullRequestResponsePrivate(
-    PostCommentForPullRequestQueueResponse * const q) : PostCommentForPullRequestPrivate(q)
+    PostCommentForPullRequestResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateDirectoryConfigResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDirectoryConfigResponse instance.
  */
 UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
-    UpdateDirectoryConfigQueueResponse * const q) : UpdateDirectoryConfigPrivate(q)
+    UpdateDirectoryConfigResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

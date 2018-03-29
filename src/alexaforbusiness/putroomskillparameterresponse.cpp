@@ -86,7 +86,7 @@ void PutRoomSkillParameterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutRoomSkillParameterResponse instance.
  */
 PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponsePrivate(
-    PutRoomSkillParameterQueueResponse * const q) : PutRoomSkillParameterPrivate(q)
+    PutRoomSkillParameterResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

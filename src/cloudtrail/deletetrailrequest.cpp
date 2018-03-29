@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrailRequest::response(QNetworkReply * 
  */
 DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
     const CloudTrailRequest::Action action, DeleteTrailRequest * const q)
-    : DeleteTrailPrivate(action, q)
+    : CloudTrailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
  */
 DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
     const DeleteTrailRequestPrivate &other, DeleteTrailRequest * const q)
-    : DeleteTrailPrivate(other, q)
+    : CloudTrailRequestPrivate(other, q)
 {
 
 }

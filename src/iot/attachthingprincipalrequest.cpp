@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachThingPrincipalRequest::response(QNetwor
  */
 AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
     const IoTRequest::Action action, AttachThingPrincipalRequest * const q)
-    : AttachThingPrincipalPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
  */
 AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
     const AttachThingPrincipalRequestPrivate &other, AttachThingPrincipalRequest * const q)
-    : AttachThingPrincipalPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

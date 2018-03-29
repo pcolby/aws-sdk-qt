@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetwor
  */
 UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
     const PinpointRequest::Action action, UpdateEndpointsBatchRequest * const q)
-    : UpdateEndpointsBatchPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
  */
 UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
     const UpdateEndpointsBatchRequestPrivate &other, UpdateEndpointsBatchRequest * const q)
-    : UpdateEndpointsBatchPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

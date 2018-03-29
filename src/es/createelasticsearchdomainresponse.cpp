@@ -86,7 +86,7 @@ void CreateElasticsearchDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateElasticsearchDomainResponse instance.
  */
 CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePrivate(
-    CreateElasticsearchDomainQueueResponse * const q) : CreateElasticsearchDomainPrivate(q)
+    CreateElasticsearchDomainResponse * const q) : ElasticsearchServiceResponsePrivate(q)
 {
 
 }

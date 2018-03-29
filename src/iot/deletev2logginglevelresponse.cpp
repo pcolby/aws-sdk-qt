@@ -86,7 +86,7 @@ void DeleteV2LoggingLevelResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteV2LoggingLevelResponse instance.
  */
 DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponsePrivate(
-    DeleteV2LoggingLevelQueueResponse * const q) : DeleteV2LoggingLevelPrivate(q)
+    DeleteV2LoggingLevelResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void PutResourceAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutResourceAttributesResponse instance.
  */
 PutResourceAttributesResponsePrivate::PutResourceAttributesResponsePrivate(
-    PutResourceAttributesQueueResponse * const q) : PutResourceAttributesPrivate(q)
+    PutResourceAttributesResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

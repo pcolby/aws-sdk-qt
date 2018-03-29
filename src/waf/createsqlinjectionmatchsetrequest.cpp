@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSqlInjectionMatchSetRequest::response(Q
  */
 CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPrivate(
     const WAFRequest::Action action, CreateSqlInjectionMatchSetRequest * const q)
-    : CreateSqlInjectionMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPriva
  */
 CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPrivate(
     const CreateSqlInjectionMatchSetRequestPrivate &other, CreateSqlInjectionMatchSetRequest * const q)
-    : CreateSqlInjectionMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyOptionGroupResponse instance.
  */
 CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
-    CopyOptionGroupQueueResponse * const q) : CopyOptionGroupPrivate(q)
+    CopyOptionGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

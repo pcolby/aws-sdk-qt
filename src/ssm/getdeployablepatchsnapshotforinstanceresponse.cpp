@@ -86,7 +86,7 @@ void GetDeployablePatchSnapshotForInstanceResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public GetDeployablePatchSnapshotForInstanceResponse instance.
  */
 GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshotForInstanceResponsePrivate(
-    GetDeployablePatchSnapshotForInstanceQueueResponse * const q) : GetDeployablePatchSnapshotForInstancePrivate(q)
+    GetDeployablePatchSnapshotForInstanceResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

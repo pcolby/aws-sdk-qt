@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationSubscriptionsRequest::res
  */
 DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeNotificationSubscriptionsRequest * const q)
-    : DescribeNotificationSubscriptionsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptio
  */
 DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
     const DescribeNotificationSubscriptionsRequestPrivate &other, DescribeNotificationSubscriptionsRequest * const q)
-    : DescribeNotificationSubscriptionsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

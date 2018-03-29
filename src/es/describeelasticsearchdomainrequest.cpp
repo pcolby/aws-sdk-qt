@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainRequest::response(
  */
 DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DescribeElasticsearchDomainRequest * const q)
-    : DescribeElasticsearchDomainPrivate(action, q)
+    : ElasticsearchServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPri
  */
 DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPrivate(
     const DescribeElasticsearchDomainRequestPrivate &other, DescribeElasticsearchDomainRequest * const q)
-    : DescribeElasticsearchDomainPrivate(other, q)
+    : ElasticsearchServiceRequestPrivate(other, q)
 {
 
 }

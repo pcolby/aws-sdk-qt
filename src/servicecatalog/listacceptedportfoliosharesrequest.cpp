@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAcceptedPortfolioSharesRequest::response(
  */
 ListAcceptedPortfolioSharesRequestPrivate::ListAcceptedPortfolioSharesRequestPrivate(
     const ServiceCatalogRequest::Action action, ListAcceptedPortfolioSharesRequest * const q)
-    : ListAcceptedPortfolioSharesPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAcceptedPortfolioSharesRequestPrivate::ListAcceptedPortfolioSharesRequestPri
  */
 ListAcceptedPortfolioSharesRequestPrivate::ListAcceptedPortfolioSharesRequestPrivate(
     const ListAcceptedPortfolioSharesRequestPrivate &other, ListAcceptedPortfolioSharesRequest * const q)
-    : ListAcceptedPortfolioSharesPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

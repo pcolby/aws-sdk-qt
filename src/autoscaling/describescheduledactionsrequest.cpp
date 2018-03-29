@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNe
  */
 DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeScheduledActionsRequest * const q)
-    : DescribeScheduledActionsPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
  */
 DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
     const DescribeScheduledActionsRequestPrivate &other, DescribeScheduledActionsRequest * const q)
-    : DescribeScheduledActionsPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

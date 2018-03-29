@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopStreamProcessorRequest::response(QNetwork
  */
 StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, StopStreamProcessorRequest * const q)
-    : StopStreamProcessorPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
  */
 StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
     const StopStreamProcessorRequestPrivate &other, StopStreamProcessorRequest * const q)
-    : StopStreamProcessorPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

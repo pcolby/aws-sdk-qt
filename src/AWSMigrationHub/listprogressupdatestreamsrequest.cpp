@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QN
  */
 ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate(
     const MigrationHubRequest::Action action, ListProgressUpdateStreamsRequest * const q)
-    : ListProgressUpdateStreamsPrivate(action, q)
+    : MigrationHubRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate
  */
 ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate(
     const ListProgressUpdateStreamsRequestPrivate &other, ListProgressUpdateStreamsRequest * const q)
-    : ListProgressUpdateStreamsPrivate(other, q)
+    : MigrationHubRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetSegmentVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSegmentVersionResponse instance.
  */
 GetSegmentVersionResponsePrivate::GetSegmentVersionResponsePrivate(
-    GetSegmentVersionQueueResponse * const q) : GetSegmentVersionPrivate(q)
+    GetSegmentVersionResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteWebACLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteWebACLResponse instance.
  */
 DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
-    DeleteWebACLQueueResponse * const q) : DeleteWebACLPrivate(q)
+    DeleteWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

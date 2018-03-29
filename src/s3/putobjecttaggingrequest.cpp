@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectTaggingRequest::response(QNetworkRep
  */
 PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
     const S3Request::Action action, PutObjectTaggingRequest * const q)
-    : PutObjectTaggingPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
  */
 PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
     const PutObjectTaggingRequestPrivate &other, PutObjectTaggingRequest * const q)
-    : PutObjectTaggingPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * c
  */
 BatchWriteRequestPrivate::BatchWriteRequestPrivate(
     const CloudDirectoryRequest::Action action, BatchWriteRequest * const q)
-    : BatchWritePrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchWriteRequestPrivate::BatchWriteRequestPrivate(
  */
 BatchWriteRequestPrivate::BatchWriteRequestPrivate(
     const BatchWriteRequestPrivate &other, BatchWriteRequest * const q)
-    : BatchWritePrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

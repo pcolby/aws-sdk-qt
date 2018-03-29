@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply 
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
     const EC2Request::Action action, DescribeHostsRequest * const q)
-    : DescribeHostsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
     const DescribeHostsRequestPrivate &other, DescribeHostsRequest * const q)
-    : DescribeHostsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

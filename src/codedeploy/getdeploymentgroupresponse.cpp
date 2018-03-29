@@ -86,7 +86,7 @@ void GetDeploymentGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDeploymentGroupResponse instance.
  */
 GetDeploymentGroupResponsePrivate::GetDeploymentGroupResponsePrivate(
-    GetDeploymentGroupQueueResponse * const q) : GetDeploymentGroupPrivate(q)
+    GetDeploymentGroupResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

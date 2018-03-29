@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentRequest::response(QNetworkReply 
  */
 GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, GetDeploymentRequest * const q)
-    : GetDeploymentPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
  */
 GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
     const GetDeploymentRequestPrivate &other, GetDeploymentRequest * const q)
-    : GetDeploymentPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

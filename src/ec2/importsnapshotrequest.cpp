@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
     const EC2Request::Action action, ImportSnapshotRequest * const q)
-    : ImportSnapshotPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
     const ImportSnapshotRequestPrivate &other, ImportSnapshotRequest * const q)
-    : ImportSnapshotPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

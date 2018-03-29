@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkRep
  */
 RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
     const MTurkRequest::Action action, RejectAssignmentRequest * const q)
-    : RejectAssignmentPrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
  */
 RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
     const RejectAssignmentRequestPrivate &other, RejectAssignmentRequest * const q)
-    : RejectAssignmentPrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

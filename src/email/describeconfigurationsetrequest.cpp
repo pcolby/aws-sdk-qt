@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationSetRequest::response(QNe
  */
 DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
     const SESRequest::Action action, DescribeConfigurationSetRequest * const q)
-    : DescribeConfigurationSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
  */
 DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
     const DescribeConfigurationSetRequestPrivate &other, DescribeConfigurationSetRequest * const q)
-    : DescribeConfigurationSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

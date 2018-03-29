@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNe
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
     const IAMRequest::Action action, DeleteSigningCertificateRequest * const q)
-    : DeleteSigningCertificatePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
     const DeleteSigningCertificateRequestPrivate &other, DeleteSigningCertificateRequest * const q)
-    : DeleteSigningCertificatePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

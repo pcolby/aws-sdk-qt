@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthorizerRequest::response(QNetworkRep
  */
 UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
     const IoTRequest::Action action, UpdateAuthorizerRequest * const q)
-    : UpdateAuthorizerPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
  */
 UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
     const UpdateAuthorizerRequestPrivate &other, UpdateAuthorizerRequest * const q)
-    : UpdateAuthorizerPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetCheckerIpRangesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCheckerIpRangesResponse instance.
  */
 GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponsePrivate(
-    GetCheckerIpRangesQueueResponse * const q) : GetCheckerIpRangesPrivate(q)
+    GetCheckerIpRangesResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

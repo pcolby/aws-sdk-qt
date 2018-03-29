@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply 
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const OpsWorksRequest::Action action, StartInstanceRequest * const q)
-    : StartInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartInstanceRequestPrivate::StartInstanceRequestPrivate(
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const StartInstanceRequestPrivate &other, StartInstanceRequest * const q)
-    : StartInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

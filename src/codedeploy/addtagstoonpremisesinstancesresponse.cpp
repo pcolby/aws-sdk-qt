@@ -86,7 +86,7 @@ void AddTagsToOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddTagsToOnPremisesInstancesResponse instance.
  */
 AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesResponsePrivate(
-    AddTagsToOnPremisesInstancesQueueResponse * const q) : AddTagsToOnPremisesInstancesPrivate(q)
+    AddTagsToOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedNodeOfferingsRequest::respons
  */
 DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsRequestPrivate(
     const RedshiftRequest::Action action, DescribeReservedNodeOfferingsRequest * const q)
-    : DescribeReservedNodeOfferingsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsReques
  */
 DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsRequestPrivate(
     const DescribeReservedNodeOfferingsRequestPrivate &other, DescribeReservedNodeOfferingsRequest * const q)
-    : DescribeReservedNodeOfferingsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

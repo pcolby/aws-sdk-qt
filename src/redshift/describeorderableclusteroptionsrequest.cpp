@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableClusterOptionsRequest::respo
  */
 DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeOrderableClusterOptionsRequest * const q)
-    : DescribeOrderableClusterOptionsPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRe
  */
 DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRequestPrivate(
     const DescribeOrderableClusterOptionsRequestPrivate &other, DescribeOrderableClusterOptionsRequest * const q)
-    : DescribeOrderableClusterOptionsPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

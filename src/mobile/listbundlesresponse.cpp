@@ -86,7 +86,7 @@ void ListBundlesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListBundlesResponse instance.
  */
 ListBundlesResponsePrivate::ListBundlesResponsePrivate(
-    ListBundlesQueueResponse * const q) : ListBundlesPrivate(q)
+    ListBundlesResponse * const q) : MobileResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLoggingOptionsRequest::response(QNetworkRe
  */
 GetLoggingOptionsRequestPrivate::GetLoggingOptionsRequestPrivate(
     const IoTRequest::Action action, GetLoggingOptionsRequest * const q)
-    : GetLoggingOptionsPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetLoggingOptionsRequestPrivate::GetLoggingOptionsRequestPrivate(
  */
 GetLoggingOptionsRequestPrivate::GetLoggingOptionsRequestPrivate(
     const GetLoggingOptionsRequestPrivate &other, GetLoggingOptionsRequest * const q)
-    : GetLoggingOptionsPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

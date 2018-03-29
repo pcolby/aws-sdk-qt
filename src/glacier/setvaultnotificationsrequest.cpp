@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetVaultNotificationsRequest::response(QNetwo
  */
 SetVaultNotificationsRequestPrivate::SetVaultNotificationsRequestPrivate(
     const GlacierRequest::Action action, SetVaultNotificationsRequest * const q)
-    : SetVaultNotificationsPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetVaultNotificationsRequestPrivate::SetVaultNotificationsRequestPrivate(
  */
 SetVaultNotificationsRequestPrivate::SetVaultNotificationsRequestPrivate(
     const SetVaultNotificationsRequestPrivate &other, SetVaultNotificationsRequest * const q)
-    : SetVaultNotificationsPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

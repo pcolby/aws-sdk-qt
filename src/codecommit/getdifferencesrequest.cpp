@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDifferencesRequest::response(QNetworkReply
  */
 GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
     const CodeCommitRequest::Action action, GetDifferencesRequest * const q)
-    : GetDifferencesPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
  */
 GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
     const GetDifferencesRequestPrivate &other, GetDifferencesRequest * const q)
-    : GetDifferencesPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CloneReceiptRuleSetResponse instance.
  */
 CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
-    CloneReceiptRuleSetQueueResponse * const q) : CloneReceiptRuleSetPrivate(q)
+    CloneReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateMaintenanceWindowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateMaintenanceWindowResponse instance.
  */
 UpdateMaintenanceWindowResponsePrivate::UpdateMaintenanceWindowResponsePrivate(
-    UpdateMaintenanceWindowQueueResponse * const q) : UpdateMaintenanceWindowPrivate(q)
+    UpdateMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

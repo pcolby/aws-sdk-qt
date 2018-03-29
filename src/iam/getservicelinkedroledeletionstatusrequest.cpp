@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::re
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
     const IAMRequest::Action action, GetServiceLinkedRoleDeletionStatusRequest * const q)
-    : GetServiceLinkedRoleDeletionStatusPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionSt
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
     const GetServiceLinkedRoleDeletionStatusRequestPrivate &other, GetServiceLinkedRoleDeletionStatusRequest * const q)
-    : GetServiceLinkedRoleDeletionStatusPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListVPCAssociationAuthorizationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListVPCAssociationAuthorizationsResponse instance.
  */
 ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorizationsResponsePrivate(
-    ListVPCAssociationAuthorizationsQueueResponse * const q) : ListVPCAssociationAuthorizationsPrivate(q)
+    ListVPCAssociationAuthorizationsResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

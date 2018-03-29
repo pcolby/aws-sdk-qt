@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerPolicyRequest::response(QNe
  */
 DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeleteLoadBalancerPolicyRequest * const q)
-    : DeleteLoadBalancerPolicyPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
  */
 DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
     const DeleteLoadBalancerPolicyRequestPrivate &other, DeleteLoadBalancerPolicyRequest * const q)
-    : DeleteLoadBalancerPolicyPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

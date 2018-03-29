@@ -86,7 +86,7 @@ void UpdateNotebookInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateNotebookInstanceResponse instance.
  */
 UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
-    UpdateNotebookInstanceQueueResponse * const q) : UpdateNotebookInstancePrivate(q)
+    UpdateNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
 {
 
 }

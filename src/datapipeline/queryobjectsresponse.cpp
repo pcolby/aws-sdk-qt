@@ -86,7 +86,7 @@ void QueryObjectsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public QueryObjectsResponse instance.
  */
 QueryObjectsResponsePrivate::QueryObjectsResponsePrivate(
-    QueryObjectsQueueResponse * const q) : QueryObjectsPrivate(q)
+    QueryObjectsResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

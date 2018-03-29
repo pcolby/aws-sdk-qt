@@ -86,7 +86,7 @@ void DescribeLoadBalancersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLoadBalancersResponse instance.
  */
 DescribeLoadBalancersResponsePrivate::DescribeLoadBalancersResponsePrivate(
-    DescribeLoadBalancersQueueResponse * const q) : DescribeLoadBalancersPrivate(q)
+    DescribeLoadBalancersResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

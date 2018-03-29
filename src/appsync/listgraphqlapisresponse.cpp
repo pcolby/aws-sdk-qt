@@ -86,7 +86,7 @@ void ListGraphqlApisResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGraphqlApisResponse instance.
  */
 ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
-    ListGraphqlApisQueueResponse * const q) : ListGraphqlApisPrivate(q)
+    ListGraphqlApisResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

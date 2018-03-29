@@ -86,7 +86,7 @@ void DescribeSubscribersForNotificationResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public DescribeSubscribersForNotificationResponse instance.
  */
 DescribeSubscribersForNotificationResponsePrivate::DescribeSubscribersForNotificationResponsePrivate(
-    DescribeSubscribersForNotificationQueueResponse * const q) : DescribeSubscribersForNotificationPrivate(q)
+    DescribeSubscribersForNotificationResponse * const q) : BudgetsResponsePrivate(q)
 {
 
 }

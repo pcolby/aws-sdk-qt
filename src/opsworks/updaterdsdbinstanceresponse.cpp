@@ -86,7 +86,7 @@ void UpdateRdsDbInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRdsDbInstanceResponse instance.
  */
 UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponsePrivate(
-    UpdateRdsDbInstanceQueueResponse * const q) : UpdateRdsDbInstancePrivate(q)
+    UpdateRdsDbInstanceResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

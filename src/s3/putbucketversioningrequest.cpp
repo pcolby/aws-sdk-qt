@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketVersioningRequest::response(QNetwork
  */
 PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
     const S3Request::Action action, PutBucketVersioningRequest * const q)
-    : PutBucketVersioningPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
  */
 PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
     const PutBucketVersioningRequestPrivate &other, PutBucketVersioningRequest * const q)
-    : PutBucketVersioningPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

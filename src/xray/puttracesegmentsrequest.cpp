@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutTraceSegmentsRequest::response(QNetworkRep
  */
 PutTraceSegmentsRequestPrivate::PutTraceSegmentsRequestPrivate(
     const XRayRequest::Action action, PutTraceSegmentsRequest * const q)
-    : PutTraceSegmentsPrivate(action, q)
+    : XRayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutTraceSegmentsRequestPrivate::PutTraceSegmentsRequestPrivate(
  */
 PutTraceSegmentsRequestPrivate::PutTraceSegmentsRequestPrivate(
     const PutTraceSegmentsRequestPrivate &other, PutTraceSegmentsRequest * const q)
-    : PutTraceSegmentsPrivate(other, q)
+    : XRayRequestPrivate(other, q)
 {
 
 }

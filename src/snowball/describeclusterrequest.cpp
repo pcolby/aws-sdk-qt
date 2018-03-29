@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const SnowballRequest::Action action, DescribeClusterRequest * const q)
-    : DescribeClusterPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const DescribeClusterRequestPrivate &other, DescribeClusterRequest * const q)
-    : DescribeClusterPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

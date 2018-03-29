@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListParentsRequest::response(QNetworkReply * 
  */
 ListParentsRequestPrivate::ListParentsRequestPrivate(
     const OrganizationsRequest::Action action, ListParentsRequest * const q)
-    : ListParentsPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListParentsRequestPrivate::ListParentsRequestPrivate(
  */
 ListParentsRequestPrivate::ListParentsRequestPrivate(
     const ListParentsRequestPrivate &other, ListParentsRequest * const q)
-    : ListParentsPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

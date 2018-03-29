@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QN
  */
 RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RebootReplicationInstanceRequest * const q)
-    : RebootReplicationInstancePrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate
  */
 RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate(
     const RebootReplicationInstanceRequestPrivate &other, RebootReplicationInstanceRequest * const q)
-    : RebootReplicationInstancePrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

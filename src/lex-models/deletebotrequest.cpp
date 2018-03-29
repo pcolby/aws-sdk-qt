@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotRequest::response(QNetworkReply * co
  */
 DeleteBotRequestPrivate::DeleteBotRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotRequest * const q)
-    : DeleteBotPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteBotRequestPrivate::DeleteBotRequestPrivate(
  */
 DeleteBotRequestPrivate::DeleteBotRequestPrivate(
     const DeleteBotRequestPrivate &other, DeleteBotRequest * const q)
-    : DeleteBotPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

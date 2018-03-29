@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteV2LoggingLevelRequest::response(QNetwor
  */
 DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
     const IoTRequest::Action action, DeleteV2LoggingLevelRequest * const q)
-    : DeleteV2LoggingLevelPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
  */
 DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
     const DeleteV2LoggingLevelRequestPrivate &other, DeleteV2LoggingLevelRequest * const q)
-    : DeleteV2LoggingLevelPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

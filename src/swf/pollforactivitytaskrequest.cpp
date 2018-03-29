@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PollForActivityTaskRequest::response(QNetwork
  */
 PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
     const SWFRequest::Action action, PollForActivityTaskRequest * const q)
-    : PollForActivityTaskPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
  */
 PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
     const PollForActivityTaskRequestPrivate &other, PollForActivityTaskRequest * const q)
-    : PollForActivityTaskPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

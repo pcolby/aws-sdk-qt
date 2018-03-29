@@ -86,7 +86,7 @@ void ScanResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ScanResponse instance.
  */
 ScanResponsePrivate::ScanResponsePrivate(
-    ScanQueueResponse * const q) : ScanPrivate(q)
+    ScanResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

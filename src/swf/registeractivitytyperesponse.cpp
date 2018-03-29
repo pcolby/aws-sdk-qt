@@ -86,7 +86,7 @@ void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterActivityTypeResponse instance.
  */
 RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
-    RegisterActivityTypeQueueResponse * const q) : RegisterActivityTypePrivate(q)
+    RegisterActivityTypeResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

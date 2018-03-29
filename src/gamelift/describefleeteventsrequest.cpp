@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetwork
  */
 DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetEventsRequest * const q)
-    : DescribeFleetEventsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
  */
 DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
     const DescribeFleetEventsRequestPrivate &other, DescribeFleetEventsRequest * const q)
-    : DescribeFleetEventsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

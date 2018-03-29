@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsByPipelineRequest::response(QNetworkR
  */
 ListJobsByPipelineRequestPrivate::ListJobsByPipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, ListJobsByPipelineRequest * const q)
-    : ListJobsByPipelinePrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListJobsByPipelineRequestPrivate::ListJobsByPipelineRequestPrivate(
  */
 ListJobsByPipelineRequestPrivate::ListJobsByPipelineRequestPrivate(
     const ListJobsByPipelineRequestPrivate &other, ListJobsByPipelineRequest * const q)
-    : ListJobsByPipelinePrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

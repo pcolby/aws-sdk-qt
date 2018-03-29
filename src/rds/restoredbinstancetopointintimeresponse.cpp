@@ -86,7 +86,7 @@ void RestoreDBInstanceToPointInTimeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RestoreDBInstanceToPointInTimeResponse instance.
  */
 RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTimeResponsePrivate(
-    RestoreDBInstanceToPointInTimeQueueResponse * const q) : RestoreDBInstanceToPointInTimePrivate(q)
+    RestoreDBInstanceToPointInTimeResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

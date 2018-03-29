@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply 
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
     const SESRequest::Action action, ListTemplatesRequest * const q)
-    : ListTemplatesPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
     const ListTemplatesRequestPrivate &other, ListTemplatesRequest * const q)
-    : ListTemplatesPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

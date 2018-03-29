@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest:
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
     const IAMRequest::Action action, UpdateOpenIDConnectProviderThumbprintRequest * const q)
-    : UpdateOpenIDConnectProviderThumbprintPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProvider
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
     const UpdateOpenIDConnectProviderThumbprintRequestPrivate &other, UpdateOpenIDConnectProviderThumbprintRequest * const q)
-    : UpdateOpenIDConnectProviderThumbprintPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

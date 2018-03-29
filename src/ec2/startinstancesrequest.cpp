@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartInstancesRequest::response(QNetworkReply
  */
 StartInstancesRequestPrivate::StartInstancesRequestPrivate(
     const EC2Request::Action action, StartInstancesRequest * const q)
-    : StartInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartInstancesRequestPrivate::StartInstancesRequestPrivate(
  */
 StartInstancesRequestPrivate::StartInstancesRequestPrivate(
     const StartInstancesRequestPrivate &other, StartInstancesRequest * const q)
-    : StartInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

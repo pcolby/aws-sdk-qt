@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCacheClusterRequest::response(QNetworkR
  */
 CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheClusterRequest * const q)
-    : CreateCacheClusterPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
  */
 CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
     const CreateCacheClusterRequestPrivate &other, CreateCacheClusterRequest * const q)
-    : CreateCacheClusterPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const SnowballRequest::Action action, CreateClusterRequest * const q)
-    : CreateClusterPrivate(action, q)
+    : SnowballRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)
-    : CreateClusterPrivate(other, q)
+    : SnowballRequestPrivate(other, q)
 {
 
 }

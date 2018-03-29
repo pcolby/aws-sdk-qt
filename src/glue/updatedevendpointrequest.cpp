@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkRe
  */
 UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
     const GlueRequest::Action action, UpdateDevEndpointRequest * const q)
-    : UpdateDevEndpointPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
  */
 UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
     const UpdateDevEndpointRequestPrivate &other, UpdateDevEndpointRequest * const q)
-    : UpdateDevEndpointPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

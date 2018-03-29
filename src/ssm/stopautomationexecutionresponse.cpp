@@ -86,7 +86,7 @@ void StopAutomationExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopAutomationExecutionResponse instance.
  */
 StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponsePrivate(
-    StopAutomationExecutionQueueResponse * const q) : StopAutomationExecutionPrivate(q)
+    StopAutomationExecutionResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

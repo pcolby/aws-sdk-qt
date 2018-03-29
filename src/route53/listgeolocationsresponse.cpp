@@ -86,7 +86,7 @@ void ListGeoLocationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListGeoLocationsResponse instance.
  */
 ListGeoLocationsResponsePrivate::ListGeoLocationsResponsePrivate(
-    ListGeoLocationsQueueResponse * const q) : ListGeoLocationsPrivate(q)
+    ListGeoLocationsResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

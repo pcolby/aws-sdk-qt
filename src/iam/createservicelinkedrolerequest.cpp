@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNet
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
     const IAMRequest::Action action, CreateServiceLinkedRoleRequest * const q)
-    : CreateServiceLinkedRolePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
     const CreateServiceLinkedRoleRequestPrivate &other, CreateServiceLinkedRoleRequest * const q)
-    : CreateServiceLinkedRolePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

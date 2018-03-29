@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningParametersRequest::respon
  */
 DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProvisioningParametersRequest * const q)
-    : DescribeProvisioningParametersPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequ
  */
 DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
     const DescribeProvisioningParametersRequestPrivate &other, DescribeProvisioningParametersRequest * const q)
-    : DescribeProvisioningParametersPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

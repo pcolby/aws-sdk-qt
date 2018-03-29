@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkRepl
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
     const APIGatewayRequest::Action action, FlushStageCacheRequest * const q)
-    : FlushStageCachePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
     const FlushStageCacheRequestPrivate &other, FlushStageCacheRequest * const q)
-    : FlushStageCachePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

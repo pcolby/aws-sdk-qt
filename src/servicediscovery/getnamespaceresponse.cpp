@@ -86,7 +86,7 @@ void GetNamespaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetNamespaceResponse instance.
  */
 GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
-    GetNamespaceQueueResponse * const q) : GetNamespacePrivate(q)
+    GetNamespaceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

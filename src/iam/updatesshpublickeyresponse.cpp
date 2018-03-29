@@ -86,7 +86,7 @@ void UpdateSSHPublicKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSSHPublicKeyResponse instance.
  */
 UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponsePrivate(
-    UpdateSSHPublicKeyQueueResponse * const q) : UpdateSSHPublicKeyPrivate(q)
+    UpdateSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

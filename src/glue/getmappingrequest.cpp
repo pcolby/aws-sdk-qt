@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * c
  */
 GetMappingRequestPrivate::GetMappingRequestPrivate(
     const GlueRequest::Action action, GetMappingRequest * const q)
-    : GetMappingPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetMappingRequestPrivate::GetMappingRequestPrivate(
  */
 GetMappingRequestPrivate::GetMappingRequestPrivate(
     const GetMappingRequestPrivate &other, GetMappingRequest * const q)
-    : GetMappingPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

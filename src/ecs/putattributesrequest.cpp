@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const ECSRequest::Action action, PutAttributesRequest * const q)
-    : PutAttributesPrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const PutAttributesRequestPrivate &other, PutAttributesRequest * const q)
-    : PutAttributesPrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

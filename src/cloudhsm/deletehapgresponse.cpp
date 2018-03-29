@@ -86,7 +86,7 @@ void DeleteHapgResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHapgResponse instance.
  */
 DeleteHapgResponsePrivate::DeleteHapgResponsePrivate(
-    DeleteHapgQueueResponse * const q) : DeleteHapgPrivate(q)
+    DeleteHapgResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

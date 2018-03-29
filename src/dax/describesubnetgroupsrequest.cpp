@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
     const DAXRequest::Action action, DescribeSubnetGroupsRequest * const q)
-    : DescribeSubnetGroupsPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
     const DescribeSubnetGroupsRequestPrivate &other, DescribeSubnetGroupsRequest * const q)
-    : DescribeSubnetGroupsPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

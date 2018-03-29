@@ -86,7 +86,7 @@ void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteReportDefinitionResponse instance.
  */
 DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
-    DeleteReportDefinitionQueueResponse * const q) : DeleteReportDefinitionPrivate(q)
+    DeleteReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
 {
 
 }

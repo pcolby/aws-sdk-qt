@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationResourceLifecycleRequest::re
  */
 UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifecycleRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationResourceLifecycleRequest * const q)
-    : UpdateApplicationResourceLifecyclePrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifec
  */
 UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifecycleRequestPrivate(
     const UpdateApplicationResourceLifecycleRequestPrivate &other, UpdateApplicationResourceLifecycleRequest * const q)
-    : UpdateApplicationResourceLifecyclePrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateServerEngineAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateServerEngineAttributesResponse instance.
  */
 UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesResponsePrivate(
-    UpdateServerEngineAttributesQueueResponse * const q) : UpdateServerEngineAttributesPrivate(q)
+    UpdateServerEngineAttributesResponse * const q) : OpsWorksCMResponsePrivate(q)
 {
 
 }

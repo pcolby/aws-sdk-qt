@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteWebACLRequest * const q)
-    : DeleteWebACLPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const DeleteWebACLRequestPrivate &other, DeleteWebACLRequest * const q)
-    : DeleteWebACLPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

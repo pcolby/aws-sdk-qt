@@ -86,7 +86,7 @@ void ApplySecurityGroupsToLoadBalancerResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public ApplySecurityGroupsToLoadBalancerResponse instance.
  */
 ApplySecurityGroupsToLoadBalancerResponsePrivate::ApplySecurityGroupsToLoadBalancerResponsePrivate(
-    ApplySecurityGroupsToLoadBalancerQueueResponse * const q) : ApplySecurityGroupsToLoadBalancerPrivate(q)
+    ApplySecurityGroupsToLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
 {
 
 }

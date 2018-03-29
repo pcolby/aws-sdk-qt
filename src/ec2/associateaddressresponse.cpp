@@ -86,7 +86,7 @@ void AssociateAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateAddressResponse instance.
  */
 AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
-    AssociateAddressQueueResponse * const q) : AssociateAddressPrivate(q)
+    AssociateAddressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

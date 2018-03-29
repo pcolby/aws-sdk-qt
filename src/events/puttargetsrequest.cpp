@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutTargetsRequest::response(QNetworkReply * c
  */
 PutTargetsRequestPrivate::PutTargetsRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutTargetsRequest * const q)
-    : PutTargetsPrivate(action, q)
+    : CloudWatchEventsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutTargetsRequestPrivate::PutTargetsRequestPrivate(
  */
 PutTargetsRequestPrivate::PutTargetsRequestPrivate(
     const PutTargetsRequestPrivate &other, PutTargetsRequest * const q)
-    : PutTargetsPrivate(other, q)
+    : CloudWatchEventsRequestPrivate(other, q)
 {
 
 }

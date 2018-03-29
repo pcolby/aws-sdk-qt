@@ -86,7 +86,7 @@ void DescribeBrokerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeBrokerResponse instance.
  */
 DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
-    DescribeBrokerQueueResponse * const q) : DescribeBrokerPrivate(q)
+    DescribeBrokerResponse * const q) : MQResponsePrivate(q)
 {
 
 }

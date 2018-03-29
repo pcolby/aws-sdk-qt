@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveResourcePermissionRequest::response(QNe
  */
 RemoveResourcePermissionRequestPrivate::RemoveResourcePermissionRequestPrivate(
     const WorkDocsRequest::Action action, RemoveResourcePermissionRequest * const q)
-    : RemoveResourcePermissionPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveResourcePermissionRequestPrivate::RemoveResourcePermissionRequestPrivate(
  */
 RemoveResourcePermissionRequestPrivate::RemoveResourcePermissionRequestPrivate(
     const RemoveResourcePermissionRequestPrivate &other, RemoveResourcePermissionRequest * const q)
-    : RemoveResourcePermissionPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

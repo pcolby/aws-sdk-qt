@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListFleetsRequest::response(QNetworkReply * c
  */
 ListFleetsRequestPrivate::ListFleetsRequestPrivate(
     const GameLiftRequest::Action action, ListFleetsRequest * const q)
-    : ListFleetsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListFleetsRequestPrivate::ListFleetsRequestPrivate(
  */
 ListFleetsRequestPrivate::ListFleetsRequestPrivate(
     const ListFleetsRequestPrivate &other, ListFleetsRequest * const q)
-    : ListFleetsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

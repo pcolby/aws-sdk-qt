@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetectEntitiesRequest::response(QNetworkReply
  */
 DetectEntitiesRequestPrivate::DetectEntitiesRequestPrivate(
     const ComprehendRequest::Action action, DetectEntitiesRequest * const q)
-    : DetectEntitiesPrivate(action, q)
+    : ComprehendRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetectEntitiesRequestPrivate::DetectEntitiesRequestPrivate(
  */
 DetectEntitiesRequestPrivate::DetectEntitiesRequestPrivate(
     const DetectEntitiesRequestPrivate &other, DetectEntitiesRequest * const q)
-    : DetectEntitiesPrivate(other, q)
+    : ComprehendRequestPrivate(other, q)
 {
 
 }

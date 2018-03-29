@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLabelsRequest::response(QNetworkReply *
  */
 DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
     const WorkDocsRequest::Action action, DeleteLabelsRequest * const q)
-    : DeleteLabelsPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
  */
 DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
     const DeleteLabelsRequestPrivate &other, DeleteLabelsRequest * const q)
-    : DeleteLabelsPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ResetDeploymentsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetDeploymentsResponse instance.
  */
 ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
-    ResetDeploymentsQueueResponse * const q) : ResetDeploymentsPrivate(q)
+    ResetDeploymentsResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AddApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevice 
  * @param  q  Pointer to this object's public AddApplicationInputProcessingConfigurationResponse instance.
  */
 AddApplicationInputProcessingConfigurationResponsePrivate::AddApplicationInputProcessingConfigurationResponsePrivate(
-    AddApplicationInputProcessingConfigurationQueueResponse * const q) : AddApplicationInputProcessingConfigurationPrivate(q)
+    AddApplicationInputProcessingConfigurationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDeploymentsRequest::response(QNetwork
  */
 DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeDeploymentsRequest * const q)
-    : DescribeDeploymentsPrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
  */
 DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
     const DescribeDeploymentsRequestPrivate &other, DescribeDeploymentsRequest * const q)
-    : DescribeDeploymentsPrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

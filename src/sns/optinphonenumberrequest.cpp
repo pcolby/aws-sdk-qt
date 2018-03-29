@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkRep
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
     const SNSRequest::Action action, OptInPhoneNumberRequest * const q)
-    : OptInPhoneNumberPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
     const OptInPhoneNumberRequestPrivate &other, OptInPhoneNumberRequest * const q)
-    : OptInPhoneNumberPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

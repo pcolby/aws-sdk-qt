@@ -86,7 +86,7 @@ void ReadPresetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReadPresetResponse instance.
  */
 ReadPresetResponsePrivate::ReadPresetResponsePrivate(
-    ReadPresetQueueResponse * const q) : ReadPresetPrivate(q)
+    ReadPresetResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

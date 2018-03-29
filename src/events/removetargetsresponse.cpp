@@ -86,7 +86,7 @@ void RemoveTargetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveTargetsResponse instance.
  */
 RemoveTargetsResponsePrivate::RemoveTargetsResponsePrivate(
-    RemoveTargetsQueueResponse * const q) : RemoveTargetsPrivate(q)
+    RemoveTargetsResponse * const q) : CloudWatchEventsResponsePrivate(q)
 {
 
 }

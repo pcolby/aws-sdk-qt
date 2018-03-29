@@ -86,7 +86,7 @@ void BatchDeleteAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchDeleteAttributesResponse instance.
  */
 BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
-    BatchDeleteAttributesQueueResponse * const q) : BatchDeleteAttributesPrivate(q)
+    BatchDeleteAttributesResponse * const q) : SimpleDBResponsePrivate(q)
 {
 
 }

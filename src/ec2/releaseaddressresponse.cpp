@@ -86,7 +86,7 @@ void ReleaseAddressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReleaseAddressResponse instance.
  */
 ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
-    ReleaseAddressQueueResponse * const q) : ReleaseAddressPrivate(q)
+    ReleaseAddressResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

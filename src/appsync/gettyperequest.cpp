@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * cons
  */
 GetTypeRequestPrivate::GetTypeRequestPrivate(
     const AppSyncRequest::Action action, GetTypeRequest * const q)
-    : GetTypePrivate(action, q)
+    : AppSyncRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTypeRequestPrivate::GetTypeRequestPrivate(
  */
 GetTypeRequestPrivate::GetTypeRequestPrivate(
     const GetTypeRequestPrivate &other, GetTypeRequest * const q)
-    : GetTypePrivate(other, q)
+    : AppSyncRequestPrivate(other, q)
 {
 
 }

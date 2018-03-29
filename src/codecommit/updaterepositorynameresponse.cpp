@@ -86,7 +86,7 @@ void UpdateRepositoryNameResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRepositoryNameResponse instance.
  */
 UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponsePrivate(
-    UpdateRepositoryNameQueueResponse * const q) : UpdateRepositoryNamePrivate(q)
+    UpdateRepositoryNameResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

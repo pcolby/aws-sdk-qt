@@ -86,7 +86,7 @@ void RespondActivityTaskCompletedResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RespondActivityTaskCompletedResponse instance.
  */
 RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedResponsePrivate(
-    RespondActivityTaskCompletedQueueResponse * const q) : RespondActivityTaskCompletedPrivate(q)
+    RespondActivityTaskCompletedResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

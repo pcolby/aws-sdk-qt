@@ -86,7 +86,7 @@ void DeleteInstanceSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteInstanceSnapshotResponse instance.
  */
 DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
-    DeleteInstanceSnapshotQueueResponse * const q) : DeleteInstanceSnapshotPrivate(q)
+    DeleteInstanceSnapshotResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

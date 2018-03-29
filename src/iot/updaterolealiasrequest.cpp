@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleAliasRequest::response(QNetworkRepl
  */
 UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
     const IoTRequest::Action action, UpdateRoleAliasRequest * const q)
-    : UpdateRoleAliasPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
  */
 UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
     const UpdateRoleAliasRequestPrivate &other, UpdateRoleAliasRequest * const q)
-    : UpdateRoleAliasPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualInterfaceRequest::response(QNetw
  */
 DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, DeleteVirtualInterfaceRequest * const q)
-    : DeleteVirtualInterfacePrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
  */
 DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
     const DeleteVirtualInterfaceRequestPrivate &other, DeleteVirtualInterfaceRequest * const q)
-    : DeleteVirtualInterfacePrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

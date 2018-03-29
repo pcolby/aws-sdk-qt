@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAssessmentTargetRequest::response(QNetw
  */
 UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
     const InspectorRequest::Action action, UpdateAssessmentTargetRequest * const q)
-    : UpdateAssessmentTargetPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
  */
 UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
     const UpdateAssessmentTargetRequestPrivate &other, UpdateAssessmentTargetRequest * const q)
-    : UpdateAssessmentTargetPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

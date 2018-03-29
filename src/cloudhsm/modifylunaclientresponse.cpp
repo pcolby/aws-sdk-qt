@@ -86,7 +86,7 @@ void ModifyLunaClientResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyLunaClientResponse instance.
  */
 ModifyLunaClientResponsePrivate::ModifyLunaClientResponsePrivate(
-    ModifyLunaClientQueueResponse * const q) : ModifyLunaClientPrivate(q)
+    ModifyLunaClientResponse * const q) : CloudHSMResponsePrivate(q)
 {
 
 }

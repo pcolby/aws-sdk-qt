@@ -86,7 +86,7 @@ void ListReviewPolicyResultsForHITResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListReviewPolicyResultsForHITResponse instance.
  */
 ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITResponsePrivate(
-    ListReviewPolicyResultsForHITQueueResponse * const q) : ListReviewPolicyResultsForHITPrivate(q)
+    ListReviewPolicyResultsForHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

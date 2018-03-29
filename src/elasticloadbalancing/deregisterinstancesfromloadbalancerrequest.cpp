@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstancesFromLoadBalancerRequest::r
  */
 DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeregisterInstancesFromLoadBalancerRequest * const q)
-    : DeregisterInstancesFromLoadBalancerPrivate(action, q)
+    : ElasticLoadBalancingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBa
  */
 DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBalancerRequestPrivate(
     const DeregisterInstancesFromLoadBalancerRequestPrivate &other, DeregisterInstancesFromLoadBalancerRequest * const q)
-    : DeregisterInstancesFromLoadBalancerPrivate(other, q)
+    : ElasticLoadBalancingRequestPrivate(other, q)
 {
 
 }

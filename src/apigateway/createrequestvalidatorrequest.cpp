@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetw
  */
 CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, CreateRequestValidatorRequest * const q)
-    : CreateRequestValidatorPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
  */
 CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
     const CreateRequestValidatorRequestPrivate &other, CreateRequestValidatorRequest * const q)
-    : CreateRequestValidatorPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

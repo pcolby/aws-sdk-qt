@@ -86,7 +86,7 @@ void ListTaskDefinitionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTaskDefinitionsResponse instance.
  */
 ListTaskDefinitionsResponsePrivate::ListTaskDefinitionsResponsePrivate(
-    ListTaskDefinitionsQueueResponse * const q) : ListTaskDefinitionsPrivate(q)
+    ListTaskDefinitionsResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

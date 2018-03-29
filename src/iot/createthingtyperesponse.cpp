@@ -86,7 +86,7 @@ void CreateThingTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateThingTypeResponse instance.
  */
 CreateThingTypeResponsePrivate::CreateThingTypeResponsePrivate(
-    CreateThingTypeQueueResponse * const q) : CreateThingTypePrivate(q)
+    CreateThingTypeResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePoliciesRequest::response(QNetworkRep
  */
 DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
     const AutoScalingRequest::Action action, DescribePoliciesRequest * const q)
-    : DescribePoliciesPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
  */
 DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
     const DescribePoliciesRequestPrivate &other, DescribePoliciesRequest * const q)
-    : DescribePoliciesPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesRequest::response(QNetworkRe
  */
 DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
     const GameLiftRequest::Action action, DescribeInstancesRequest * const q)
-    : DescribeInstancesPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
  */
 DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
     const DescribeInstancesRequestPrivate &other, DescribeInstancesRequest * const q)
-    : DescribeInstancesPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

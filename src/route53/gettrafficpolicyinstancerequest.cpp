@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceRequest::response(QNe
  */
 GetTrafficPolicyInstanceRequestPrivate::GetTrafficPolicyInstanceRequestPrivate(
     const Route53Request::Action action, GetTrafficPolicyInstanceRequest * const q)
-    : GetTrafficPolicyInstancePrivate(action, q)
+    : Route53RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTrafficPolicyInstanceRequestPrivate::GetTrafficPolicyInstanceRequestPrivate(
  */
 GetTrafficPolicyInstanceRequestPrivate::GetTrafficPolicyInstanceRequestPrivate(
     const GetTrafficPolicyInstanceRequestPrivate &other, GetTrafficPolicyInstanceRequest * const q)
-    : GetTrafficPolicyInstancePrivate(other, q)
+    : Route53RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupResourcesRequest::response(QNetworkR
  */
 ListGroupResourcesRequestPrivate::ListGroupResourcesRequestPrivate(
     const ResourceGroupsRequest::Action action, ListGroupResourcesRequest * const q)
-    : ListGroupResourcesPrivate(action, q)
+    : ResourceGroupsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGroupResourcesRequestPrivate::ListGroupResourcesRequestPrivate(
  */
 ListGroupResourcesRequestPrivate::ListGroupResourcesRequestPrivate(
     const ListGroupResourcesRequestPrivate &other, ListGroupResourcesRequest * const q)
-    : ListGroupResourcesPrivate(other, q)
+    : ResourceGroupsRequestPrivate(other, q)
 {
 
 }

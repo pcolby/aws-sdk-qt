@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetwor
  */
 CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
     const ServiceCatalogRequest::Action action, CreatePortfolioShareRequest * const q)
-    : CreatePortfolioSharePrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
  */
 CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
     const CreatePortfolioShareRequestPrivate &other, CreatePortfolioShareRequest * const q)
-    : CreatePortfolioSharePrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

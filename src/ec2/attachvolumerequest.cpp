@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply *
  */
 AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
     const EC2Request::Action action, AttachVolumeRequest * const q)
-    : AttachVolumePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
  */
 AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
     const AttachVolumeRequestPrivate &other, AttachVolumeRequest * const q)
-    : AttachVolumePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterJobDefinitionRequest::response(QNet
  */
 DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
     const BatchRequest::Action action, DeregisterJobDefinitionRequest * const q)
-    : DeregisterJobDefinitionPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
  */
 DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
     const DeregisterJobDefinitionRequestPrivate &other, DeregisterJobDefinitionRequest * const q)
-    : DeregisterJobDefinitionPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

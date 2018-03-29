@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * c
  */
 CopyObjectRequestPrivate::CopyObjectRequestPrivate(
     const S3Request::Action action, CopyObjectRequest * const q)
-    : CopyObjectPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyObjectRequestPrivate::CopyObjectRequestPrivate(
  */
 CopyObjectRequestPrivate::CopyObjectRequestPrivate(
     const CopyObjectRequestPrivate &other, CopyObjectRequest * const q)
-    : CopyObjectPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

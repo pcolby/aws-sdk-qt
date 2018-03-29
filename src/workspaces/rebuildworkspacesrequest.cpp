@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkRe
  */
 RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, RebuildWorkspacesRequest * const q)
-    : RebuildWorkspacesPrivate(action, q)
+    : WorkSpacesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
  */
 RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
     const RebuildWorkspacesRequestPrivate &other, RebuildWorkspacesRequest * const q)
-    : RebuildWorkspacesPrivate(other, q)
+    : WorkSpacesRequestPrivate(other, q)
 {
 
 }

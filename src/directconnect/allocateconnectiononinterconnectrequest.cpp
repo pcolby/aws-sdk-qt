@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateConnectionOnInterconnectRequest::resp
  */
 AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, AllocateConnectionOnInterconnectRequest * const q)
-    : AllocateConnectionOnInterconnectPrivate(action, q)
+    : DirectConnectRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnect
  */
 AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnectRequestPrivate(
     const AllocateConnectionOnInterconnectRequestPrivate &other, AllocateConnectionOnInterconnectRequest * const q)
-    : AllocateConnectionOnInterconnectPrivate(other, q)
+    : DirectConnectRequestPrivate(other, q)
 {
 
 }

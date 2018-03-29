@@ -86,7 +86,7 @@ void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSizeConstraintSetResponse instance.
  */
 CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
-    CreateSizeConstraintSetQueueResponse * const q) : CreateSizeConstraintSetPrivate(q)
+    CreateSizeConstraintSetResponse * const q) : WAFRegionalResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void AdminRemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminRemoveUserFromGroupResponse instance.
  */
 AdminRemoveUserFromGroupResponsePrivate::AdminRemoveUserFromGroupResponsePrivate(
-    AdminRemoveUserFromGroupQueueResponse * const q) : AdminRemoveUserFromGroupPrivate(q)
+    AdminRemoveUserFromGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

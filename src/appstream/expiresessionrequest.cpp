@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ExpireSessionRequest::response(QNetworkReply 
  */
 ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
     const AppStreamRequest::Action action, ExpireSessionRequest * const q)
-    : ExpireSessionPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
  */
 ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
     const ExpireSessionRequestPrivate &other, ExpireSessionRequest * const q)
-    : ExpireSessionPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

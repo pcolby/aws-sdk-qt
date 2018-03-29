@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkR
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
     const IAMRequest::Action action, ListAccountAliasesRequest * const q)
-    : ListAccountAliasesPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
     const ListAccountAliasesRequestPrivate &other, ListAccountAliasesRequest * const q)
-    : ListAccountAliasesPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

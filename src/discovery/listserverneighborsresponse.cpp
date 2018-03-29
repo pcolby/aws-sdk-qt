@@ -86,7 +86,7 @@ void ListServerNeighborsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListServerNeighborsResponse instance.
  */
 ListServerNeighborsResponsePrivate::ListServerNeighborsResponsePrivate(
-    ListServerNeighborsQueueResponse * const q) : ListServerNeighborsPrivate(q)
+    ListServerNeighborsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
 {
 
 }

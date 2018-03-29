@@ -86,7 +86,7 @@ void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyDBParameterGroupResponse instance.
  */
 CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
-    CopyDBParameterGroupQueueResponse * const q) : CopyDBParameterGroupPrivate(q)
+    CopyDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

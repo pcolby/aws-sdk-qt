@@ -86,7 +86,7 @@ void DeleteBasePathMappingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBasePathMappingResponse instance.
  */
 DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
-    DeleteBasePathMappingQueueResponse * const q) : DeleteBasePathMappingPrivate(q)
+    DeleteBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

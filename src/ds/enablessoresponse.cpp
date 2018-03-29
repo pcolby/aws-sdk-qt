@@ -86,7 +86,7 @@ void EnableSsoResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnableSsoResponse instance.
  */
 EnableSsoResponsePrivate::EnableSsoResponsePrivate(
-    EnableSsoQueueResponse * const q) : EnableSsoPrivate(q)
+    EnableSsoResponse * const q) : DirectoryServiceResponsePrivate(q)
 {
 
 }

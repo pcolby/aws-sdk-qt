@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledReque
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityHeadersInNotificationsEnabledRequest * const q)
-    : SetIdentityHeadersInNotificationsEnabledPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNoti
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
     const SetIdentityHeadersInNotificationsEnabledRequestPrivate &other, SetIdentityHeadersInNotificationsEnabledRequest * const q)
-    : SetIdentityHeadersInNotificationsEnabledPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListStackSetOperationResultsRequest::response
  */
 ListStackSetOperationResultsRequestPrivate::ListStackSetOperationResultsRequestPrivate(
     const CloudFormationRequest::Action action, ListStackSetOperationResultsRequest * const q)
-    : ListStackSetOperationResultsPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListStackSetOperationResultsRequestPrivate::ListStackSetOperationResultsRequestP
  */
 ListStackSetOperationResultsRequestPrivate::ListStackSetOperationResultsRequestPrivate(
     const ListStackSetOperationResultsRequestPrivate &other, ListStackSetOperationResultsRequest * const q)
-    : ListStackSetOperationResultsPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

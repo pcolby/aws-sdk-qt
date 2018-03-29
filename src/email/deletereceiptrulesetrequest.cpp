@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleSetRequest::response(QNetwor
  */
 DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, DeleteReceiptRuleSetRequest * const q)
-    : DeleteReceiptRuleSetPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
  */
 DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
     const DeleteReceiptRuleSetRequestPrivate &other, DeleteReceiptRuleSetRequest * const q)
-    : DeleteReceiptRuleSetPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

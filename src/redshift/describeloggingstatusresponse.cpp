@@ -86,7 +86,7 @@ void DescribeLoggingStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeLoggingStatusResponse instance.
  */
 DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponsePrivate(
-    DescribeLoggingStatusQueueResponse * const q) : DescribeLoggingStatusPrivate(q)
+    DescribeLoggingStatusResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteAccessKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAccessKeyResponse instance.
  */
 DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
-    DeleteAccessKeyQueueResponse * const q) : DeleteAccessKeyPrivate(q)
+    DeleteAccessKeyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

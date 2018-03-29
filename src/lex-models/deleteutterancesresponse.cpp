@@ -86,7 +86,7 @@ void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteUtterancesResponse instance.
  */
 DeleteUtterancesResponsePrivate::DeleteUtterancesResponsePrivate(
-    DeleteUtterancesQueueResponse * const q) : DeleteUtterancesPrivate(q)
+    DeleteUtterancesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSpotDatafeedSubscriptionResponse instance.
  */
 DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionResponsePrivate(
-    DeleteSpotDatafeedSubscriptionQueueResponse * const q) : DeleteSpotDatafeedSubscriptionPrivate(q)
+    DeleteSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

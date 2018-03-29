@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
     const SWFRequest::Action action, RecordActivityTaskHeartbeatRequest * const q)
-    : RecordActivityTaskHeartbeatPrivate(action, q)
+    : SWFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPri
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
     const RecordActivityTaskHeartbeatRequestPrivate &other, RecordActivityTaskHeartbeatRequest * const q)
-    : RecordActivityTaskHeartbeatPrivate(other, q)
+    : SWFRequestPrivate(other, q)
 {
 
 }

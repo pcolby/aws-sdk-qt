@@ -86,7 +86,7 @@ void GetUtterancesViewResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetUtterancesViewResponse instance.
  */
 GetUtterancesViewResponsePrivate::GetUtterancesViewResponsePrivate(
-    GetUtterancesViewQueueResponse * const q) : GetUtterancesViewPrivate(q)
+    GetUtterancesViewResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
 {
 
 }

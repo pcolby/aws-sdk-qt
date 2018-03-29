@@ -86,7 +86,7 @@ void ListOriginEndpointsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListOriginEndpointsResponse instance.
  */
 ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponsePrivate(
-    ListOriginEndpointsQueueResponse * const q) : ListOriginEndpointsPrivate(q)
+    ListOriginEndpointsResponse * const q) : MediaPackageResponsePrivate(q)
 {
 
 }

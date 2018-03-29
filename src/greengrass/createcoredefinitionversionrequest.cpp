@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionVersionRequest::response(
  */
 CreateCoreDefinitionVersionRequestPrivate::CreateCoreDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateCoreDefinitionVersionRequest * const q)
-    : CreateCoreDefinitionVersionPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateCoreDefinitionVersionRequestPrivate::CreateCoreDefinitionVersionRequestPri
  */
 CreateCoreDefinitionVersionRequestPrivate::CreateCoreDefinitionVersionRequestPrivate(
     const CreateCoreDefinitionVersionRequestPrivate &other, CreateCoreDefinitionVersionRequest * const q)
-    : CreateCoreDefinitionVersionPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

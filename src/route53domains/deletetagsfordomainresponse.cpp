@@ -86,7 +86,7 @@ void DeleteTagsForDomainResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTagsForDomainResponse instance.
  */
 DeleteTagsForDomainResponsePrivate::DeleteTagsForDomainResponsePrivate(
-    DeleteTagsForDomainQueueResponse * const q) : DeleteTagsForDomainPrivate(q)
+    DeleteTagsForDomainResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

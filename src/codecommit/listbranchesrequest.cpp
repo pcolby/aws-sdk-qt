@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListBranchesRequest::response(QNetworkReply *
  */
 ListBranchesRequestPrivate::ListBranchesRequestPrivate(
     const CodeCommitRequest::Action action, ListBranchesRequest * const q)
-    : ListBranchesPrivate(action, q)
+    : CodeCommitRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListBranchesRequestPrivate::ListBranchesRequestPrivate(
  */
 ListBranchesRequestPrivate::ListBranchesRequestPrivate(
     const ListBranchesRequestPrivate &other, ListBranchesRequest * const q)
-    : ListBranchesPrivate(other, q)
+    : CodeCommitRequestPrivate(other, q)
 {
 
 }

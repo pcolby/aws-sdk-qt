@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateIdentityProviderRequest::response(QNetw
  */
 CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateIdentityProviderRequest * const q)
-    : CreateIdentityProviderPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
  */
 CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
     const CreateIdentityProviderRequestPrivate &other, CreateIdentityProviderRequest * const q)
-    : CreateIdentityProviderPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

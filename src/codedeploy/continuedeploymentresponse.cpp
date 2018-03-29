@@ -86,7 +86,7 @@ void ContinueDeploymentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ContinueDeploymentResponse instance.
  */
 ContinueDeploymentResponsePrivate::ContinueDeploymentResponsePrivate(
-    ContinueDeploymentQueueResponse * const q) : ContinueDeploymentPrivate(q)
+    ContinueDeploymentResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

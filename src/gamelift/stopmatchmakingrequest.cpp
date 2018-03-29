@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkRepl
  */
 StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
     const GameLiftRequest::Action action, StopMatchmakingRequest * const q)
-    : StopMatchmakingPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
  */
 StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
     const StopMatchmakingRequestPrivate &other, StopMatchmakingRequest * const q)
-    : StopMatchmakingPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

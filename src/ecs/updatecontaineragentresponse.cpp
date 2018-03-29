@@ -86,7 +86,7 @@ void UpdateContainerAgentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateContainerAgentResponse instance.
  */
 UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponsePrivate(
-    UpdateContainerAgentQueueResponse * const q) : UpdateContainerAgentPrivate(q)
+    UpdateContainerAgentResponse * const q) : ECSResponsePrivate(q)
 {
 
 }

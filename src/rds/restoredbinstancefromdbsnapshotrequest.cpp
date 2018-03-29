@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::respo
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceFromDBSnapshotRequest * const q)
-    : RestoreDBInstanceFromDBSnapshotPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRe
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
     const RestoreDBInstanceFromDBSnapshotRequestPrivate &other, RestoreDBInstanceFromDBSnapshotRequest * const q)
-    : RestoreDBInstanceFromDBSnapshotPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

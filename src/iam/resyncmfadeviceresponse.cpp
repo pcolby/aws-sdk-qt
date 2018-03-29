@@ -86,7 +86,7 @@ void ResyncMFADeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResyncMFADeviceResponse instance.
  */
 ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
-    ResyncMFADeviceQueueResponse * const q) : ResyncMFADevicePrivate(q)
+    ResyncMFADeviceResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::res
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const RDSRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)
-    : DescribePendingMaintenanceActionsPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActio
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const DescribePendingMaintenanceActionsRequestPrivate &other, DescribePendingMaintenanceActionsRequest * const q)
-    : DescribePendingMaintenanceActionsPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

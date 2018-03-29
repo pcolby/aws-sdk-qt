@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBrokerRequest::response(QNetworkReply *
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
     const MQRequest::Action action, UpdateBrokerRequest * const q)
-    : UpdateBrokerPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
     const UpdateBrokerRequestPrivate &other, UpdateBrokerRequest * const q)
-    : UpdateBrokerPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

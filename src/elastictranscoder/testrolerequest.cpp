@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * con
  */
 TestRoleRequestPrivate::TestRoleRequestPrivate(
     const ElasticTranscoderRequest::Action action, TestRoleRequest * const q)
-    : TestRolePrivate(action, q)
+    : ElasticTranscoderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestRoleRequestPrivate::TestRoleRequestPrivate(
  */
 TestRoleRequestPrivate::TestRoleRequestPrivate(
     const TestRoleRequestPrivate &other, TestRoleRequest * const q)
-    : TestRolePrivate(other, q)
+    : ElasticTranscoderRequestPrivate(other, q)
 {
 
 }

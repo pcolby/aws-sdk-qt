@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetTranscriptionJobRequest::response(QNetwork
  */
 GetTranscriptionJobRequestPrivate::GetTranscriptionJobRequestPrivate(
     const TranscribeServiceRequest::Action action, GetTranscriptionJobRequest * const q)
-    : GetTranscriptionJobPrivate(action, q)
+    : TranscribeServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTranscriptionJobRequestPrivate::GetTranscriptionJobRequestPrivate(
  */
 GetTranscriptionJobRequestPrivate::GetTranscriptionJobRequestPrivate(
     const GetTranscriptionJobRequestPrivate &other, GetTranscriptionJobRequest * const q)
-    : GetTranscriptionJobPrivate(other, q)
+    : TranscribeServiceRequestPrivate(other, q)
 {
 
 }

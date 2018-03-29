@@ -86,7 +86,7 @@ void PutNotificationConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutNotificationConfigurationResponse instance.
  */
 PutNotificationConfigurationResponsePrivate::PutNotificationConfigurationResponsePrivate(
-    PutNotificationConfigurationQueueResponse * const q) : PutNotificationConfigurationPrivate(q)
+    PutNotificationConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
 {
 
 }

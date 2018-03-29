@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableSsoRequest::response(QNetworkReply * co
  */
 EnableSsoRequestPrivate::EnableSsoRequestPrivate(
     const DirectoryServiceRequest::Action action, EnableSsoRequest * const q)
-    : EnableSsoPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ EnableSsoRequestPrivate::EnableSsoRequestPrivate(
  */
 EnableSsoRequestPrivate::EnableSsoRequestPrivate(
     const EnableSsoRequestPrivate &other, EnableSsoRequest * const q)
-    : EnableSsoPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

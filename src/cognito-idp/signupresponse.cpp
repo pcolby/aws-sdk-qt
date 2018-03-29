@@ -86,7 +86,7 @@ void SignUpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SignUpResponse instance.
  */
 SignUpResponsePrivate::SignUpResponsePrivate(
-    SignUpQueueResponse * const q) : SignUpPrivate(q)
+    SignUpResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

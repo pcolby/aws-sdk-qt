@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnarchiveFindingsRequest::response(QNetworkRe
  */
 UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
     const GuardDutyRequest::Action action, UnarchiveFindingsRequest * const q)
-    : UnarchiveFindingsPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
  */
 UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
     const UnarchiveFindingsRequestPrivate &other, UnarchiveFindingsRequest * const q)
-    : UnarchiveFindingsPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

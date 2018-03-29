@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeactivateUserRequest::response(QNetworkReply
  */
 DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
     const WorkDocsRequest::Action action, DeactivateUserRequest * const q)
-    : DeactivateUserPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
  */
 DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
     const DeactivateUserRequestPrivate &other, DeactivateUserRequest * const q)
-    : DeactivateUserPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

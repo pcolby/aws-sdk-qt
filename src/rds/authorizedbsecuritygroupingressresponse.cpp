@@ -86,7 +86,7 @@ void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AuthorizeDBSecurityGroupIngressResponse instance.
  */
 AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressResponsePrivate(
-    AuthorizeDBSecurityGroupIngressQueueResponse * const q) : AuthorizeDBSecurityGroupIngressPrivate(q)
+    AuthorizeDBSecurityGroupIngressResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

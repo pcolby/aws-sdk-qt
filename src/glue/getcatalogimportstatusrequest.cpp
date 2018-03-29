@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetw
  */
 GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
     const GlueRequest::Action action, GetCatalogImportStatusRequest * const q)
-    : GetCatalogImportStatusPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
  */
 GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
     const GetCatalogImportStatusRequestPrivate &other, GetCatalogImportStatusRequest * const q)
-    : GetCatalogImportStatusPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

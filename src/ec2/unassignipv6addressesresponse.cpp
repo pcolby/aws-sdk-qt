@@ -86,7 +86,7 @@ void UnassignIpv6AddressesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UnassignIpv6AddressesResponse instance.
  */
 UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponsePrivate(
-    UnassignIpv6AddressesQueueResponse * const q) : UnassignIpv6AddressesPrivate(q)
+    UnassignIpv6AddressesResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListIndicesRequest::response(QNetworkReply * 
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
     const IoTRequest::Action action, ListIndicesRequest * const q)
-    : ListIndicesPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListIndicesRequestPrivate::ListIndicesRequestPrivate(
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
     const ListIndicesRequestPrivate &other, ListIndicesRequest * const q)
-    : ListIndicesPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

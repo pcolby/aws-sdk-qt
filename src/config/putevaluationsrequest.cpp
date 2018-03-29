@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply
  */
 PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
     const ConfigServiceRequest::Action action, PutEvaluationsRequest * const q)
-    : PutEvaluationsPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
  */
 PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
     const PutEvaluationsRequestPrivate &other, PutEvaluationsRequest * const q)
-    : PutEvaluationsPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

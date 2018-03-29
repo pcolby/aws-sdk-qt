@@ -86,7 +86,7 @@ void GetOpenIdTokenForDeveloperIdentityResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public GetOpenIdTokenForDeveloperIdentityResponse instance.
  */
 GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDeveloperIdentityResponsePrivate(
-    GetOpenIdTokenForDeveloperIdentityQueueResponse * const q) : GetOpenIdTokenForDeveloperIdentityPrivate(q)
+    GetOpenIdTokenForDeveloperIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
 {
 
 }

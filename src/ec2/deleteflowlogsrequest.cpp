@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply
  */
 DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
     const EC2Request::Action action, DeleteFlowLogsRequest * const q)
-    : DeleteFlowLogsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
  */
 DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
     const DeleteFlowLogsRequestPrivate &other, DeleteFlowLogsRequest * const q)
-    : DeleteFlowLogsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

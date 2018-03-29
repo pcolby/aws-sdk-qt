@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInputSecurityGroupRequest::response(QNe
  */
 UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, UpdateInputSecurityGroupRequest * const q)
-    : UpdateInputSecurityGroupPrivate(action, q)
+    : MediaLiveRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
  */
 UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
     const UpdateInputSecurityGroupRequestPrivate &other, UpdateInputSecurityGroupRequest * const q)
-    : UpdateInputSecurityGroupPrivate(other, q)
+    : MediaLiveRequestPrivate(other, q)
 {
 
 }

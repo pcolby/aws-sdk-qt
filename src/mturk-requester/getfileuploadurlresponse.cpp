@@ -86,7 +86,7 @@ void GetFileUploadURLResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFileUploadURLResponse instance.
  */
 GetFileUploadURLResponsePrivate::GetFileUploadURLResponsePrivate(
-    GetFileUploadURLQueueResponse * const q) : GetFileUploadURLPrivate(q)
+    GetFileUploadURLResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

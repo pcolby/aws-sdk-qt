@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply *
  */
 LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, LookupPolicyRequest * const q)
-    : LookupPolicyPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
  */
 LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
     const LookupPolicyRequestPrivate &other, LookupPolicyRequest * const q)
-    : LookupPolicyPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

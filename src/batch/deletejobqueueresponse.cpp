@@ -86,7 +86,7 @@ void DeleteJobQueueResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteJobQueueResponse instance.
  */
 DeleteJobQueueResponsePrivate::DeleteJobQueueResponsePrivate(
-    DeleteJobQueueQueueResponse * const q) : DeleteJobQueuePrivate(q)
+    DeleteJobQueueResponse * const q) : BatchResponsePrivate(q)
 {
 
 }

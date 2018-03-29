@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionAttributesRequest::response(QN
  */
 GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate(
     const SNSRequest::Action action, GetSubscriptionAttributesRequest * const q)
-    : GetSubscriptionAttributesPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate
  */
 GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate(
     const GetSubscriptionAttributesRequestPrivate &other, GetSubscriptionAttributesRequest * const q)
-    : GetSubscriptionAttributesPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

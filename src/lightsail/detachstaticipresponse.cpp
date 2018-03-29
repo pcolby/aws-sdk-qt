@@ -86,7 +86,7 @@ void DetachStaticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachStaticIpResponse instance.
  */
 DetachStaticIpResponsePrivate::DetachStaticIpResponsePrivate(
-    DetachStaticIpQueueResponse * const q) : DetachStaticIpPrivate(q)
+    DetachStaticIpResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

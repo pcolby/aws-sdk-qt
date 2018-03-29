@@ -86,7 +86,7 @@ void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDhcpOptionsResponse instance.
  */
 DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
-    DeleteDhcpOptionsQueueResponse * const q) : DeleteDhcpOptionsPrivate(q)
+    DeleteDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

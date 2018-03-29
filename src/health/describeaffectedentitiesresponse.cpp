@@ -86,7 +86,7 @@ void DescribeAffectedEntitiesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAffectedEntitiesResponse instance.
  */
 DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponsePrivate(
-    DescribeAffectedEntitiesQueueResponse * const q) : DescribeAffectedEntitiesPrivate(q)
+    DescribeAffectedEntitiesResponse * const q) : HealthResponsePrivate(q)
 {
 
 }

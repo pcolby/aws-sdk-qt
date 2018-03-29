@@ -86,7 +86,7 @@ void ConfirmDeviceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ConfirmDeviceResponse instance.
  */
 ConfirmDeviceResponsePrivate::ConfirmDeviceResponsePrivate(
-    ConfirmDeviceQueueResponse * const q) : ConfirmDevicePrivate(q)
+    ConfirmDeviceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

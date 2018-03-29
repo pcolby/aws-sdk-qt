@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResolveAliasRequest::response(QNetworkReply *
  */
 ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
     const GameLiftRequest::Action action, ResolveAliasRequest * const q)
-    : ResolveAliasPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
  */
 ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
     const ResolveAliasRequestPrivate &other, ResolveAliasRequest * const q)
-    : ResolveAliasPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

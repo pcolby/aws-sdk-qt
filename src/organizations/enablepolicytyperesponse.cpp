@@ -86,7 +86,7 @@ void EnablePolicyTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public EnablePolicyTypeResponse instance.
  */
 EnablePolicyTypeResponsePrivate::EnablePolicyTypeResponsePrivate(
-    EnablePolicyTypeQueueResponse * const q) : EnablePolicyTypePrivate(q)
+    EnablePolicyTypeResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

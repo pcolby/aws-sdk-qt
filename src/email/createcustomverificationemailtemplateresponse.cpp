@@ -86,7 +86,7 @@ void CreateCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public CreateCustomVerificationEmailTemplateResponse instance.
  */
 CreateCustomVerificationEmailTemplateResponsePrivate::CreateCustomVerificationEmailTemplateResponsePrivate(
-    CreateCustomVerificationEmailTemplateQueueResponse * const q) : CreateCustomVerificationEmailTemplatePrivate(q)
+    CreateCustomVerificationEmailTemplateResponse * const q) : SESResponsePrivate(q)
 {
 
 }

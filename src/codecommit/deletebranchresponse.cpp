@@ -86,7 +86,7 @@ void DeleteBranchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteBranchResponse instance.
  */
 DeleteBranchResponsePrivate::DeleteBranchResponsePrivate(
-    DeleteBranchQueueResponse * const q) : DeleteBranchPrivate(q)
+    DeleteBranchResponse * const q) : CodeCommitResponsePrivate(q)
 {
 
 }

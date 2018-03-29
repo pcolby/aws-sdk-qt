@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetwo
  */
 DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
     const EC2Request::Action action, DisableVpcClassicLinkRequest * const q)
-    : DisableVpcClassicLinkPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
  */
 DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
     const DisableVpcClassicLinkRequestPrivate &other, DisableVpcClassicLinkRequest * const q)
-    : DisableVpcClassicLinkPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

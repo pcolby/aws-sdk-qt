@@ -86,7 +86,7 @@ void UpdateSchemaResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSchemaResponse instance.
  */
 UpdateSchemaResponsePrivate::UpdateSchemaResponsePrivate(
-    UpdateSchemaQueueResponse * const q) : UpdateSchemaPrivate(q)
+    UpdateSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

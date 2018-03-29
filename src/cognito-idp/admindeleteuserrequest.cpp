@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserRequest::response(QNetworkRepl
  */
 AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminDeleteUserRequest * const q)
-    : AdminDeleteUserPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
  */
 AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
     const AdminDeleteUserRequestPrivate &other, AdminDeleteUserRequest * const q)
-    : AdminDeleteUserPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

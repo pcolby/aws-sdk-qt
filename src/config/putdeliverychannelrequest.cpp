@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutDeliveryChannelRequest::response(QNetworkR
  */
 PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
     const ConfigServiceRequest::Action action, PutDeliveryChannelRequest * const q)
-    : PutDeliveryChannelPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
  */
 PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
     const PutDeliveryChannelRequestPrivate &other, PutDeliveryChannelRequest * const q)
-    : PutDeliveryChannelPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

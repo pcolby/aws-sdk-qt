@@ -86,7 +86,7 @@ void CreateConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateConfigurationResponse instance.
  */
 CreateConfigurationResponsePrivate::CreateConfigurationResponsePrivate(
-    CreateConfigurationQueueResponse * const q) : CreateConfigurationPrivate(q)
+    CreateConfigurationResponse * const q) : MQResponsePrivate(q)
 {
 
 }

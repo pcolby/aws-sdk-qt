@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const CodePipelineRequest::Action action, UpdatePipelineRequest * const q)
-    : UpdatePipelinePrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const UpdatePipelineRequestPrivate &other, UpdatePipelineRequest * const q)
-    : UpdatePipelinePrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void NotifyApplicationStateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public NotifyApplicationStateResponse instance.
  */
 NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponsePrivate(
-    NotifyApplicationStateQueueResponse * const q) : NotifyApplicationStatePrivate(q)
+    NotifyApplicationStateResponse * const q) : MigrationHubResponsePrivate(q)
 {
 
 }

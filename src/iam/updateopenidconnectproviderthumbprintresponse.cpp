@@ -86,7 +86,7 @@ void UpdateOpenIDConnectProviderThumbprintResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public UpdateOpenIDConnectProviderThumbprintResponse instance.
  */
 UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProviderThumbprintResponsePrivate(
-    UpdateOpenIDConnectProviderThumbprintQueueResponse * const q) : UpdateOpenIDConnectProviderThumbprintPrivate(q)
+    UpdateOpenIDConnectProviderThumbprintResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

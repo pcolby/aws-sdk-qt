@@ -86,7 +86,7 @@ void CreateAccountAliasResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAccountAliasResponse instance.
  */
 CreateAccountAliasResponsePrivate::CreateAccountAliasResponsePrivate(
-    CreateAccountAliasQueueResponse * const q) : CreateAccountAliasPrivate(q)
+    CreateAccountAliasResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

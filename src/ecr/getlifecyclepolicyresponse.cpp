@@ -86,7 +86,7 @@ void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLifecyclePolicyResponse instance.
  */
 GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
-    GetLifecyclePolicyQueueResponse * const q) : GetLifecyclePolicyPrivate(q)
+    GetLifecyclePolicyResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

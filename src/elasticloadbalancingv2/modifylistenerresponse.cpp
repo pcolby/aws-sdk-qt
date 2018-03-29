@@ -86,7 +86,7 @@ void ModifyListenerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyListenerResponse instance.
  */
 ModifyListenerResponsePrivate::ModifyListenerResponsePrivate(
-    ModifyListenerQueueResponse * const q) : ModifyListenerPrivate(q)
+    ModifyListenerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
 {
 
 }

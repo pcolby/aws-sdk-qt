@@ -86,7 +86,7 @@ void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResendValidationEmailResponse instance.
  */
 ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
-    ResendValidationEmailQueueResponse * const q) : ResendValidationEmailPrivate(q)
+    ResendValidationEmailResponse * const q) : ACMResponsePrivate(q)
 {
 
 }

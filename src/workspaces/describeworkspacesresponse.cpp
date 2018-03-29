@@ -86,7 +86,7 @@ void DescribeWorkspacesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeWorkspacesResponse instance.
  */
 DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponsePrivate(
-    DescribeWorkspacesQueueResponse * const q) : DescribeWorkspacesPrivate(q)
+    DescribeWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
 {
 
 }

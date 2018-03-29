@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOrganizationRequest::response(QNetwor
  */
 DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
     const WorkMailRequest::Action action, DescribeOrganizationRequest * const q)
-    : DescribeOrganizationPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
  */
 DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
     const DescribeOrganizationRequestPrivate &other, DescribeOrganizationRequest * const q)
-    : DescribeOrganizationPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

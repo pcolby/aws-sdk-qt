@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTapeArchivesRequest::response(QNetwor
  */
 DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeTapeArchivesRequest * const q)
-    : DescribeTapeArchivesPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
  */
 DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
     const DescribeTapeArchivesRequestPrivate &other, DescribeTapeArchivesRequest * const q)
-    : DescribeTapeArchivesPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListResolversResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListResolversResponse instance.
  */
 ListResolversResponsePrivate::ListResolversResponsePrivate(
-    ListResolversQueueResponse * const q) : ListResolversPrivate(q)
+    ListResolversResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ContinueUpdateRollbackResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ContinueUpdateRollbackResponse instance.
  */
 ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponsePrivate(
-    ContinueUpdateRollbackQueueResponse * const q) : ContinueUpdateRollbackPrivate(q)
+    ContinueUpdateRollbackResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

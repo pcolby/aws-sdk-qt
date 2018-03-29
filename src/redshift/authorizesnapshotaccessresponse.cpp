@@ -86,7 +86,7 @@ void AuthorizeSnapshotAccessResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AuthorizeSnapshotAccessResponse instance.
  */
 AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponsePrivate(
-    AuthorizeSnapshotAccessQueueResponse * const q) : AuthorizeSnapshotAccessPrivate(q)
+    AuthorizeSnapshotAccessResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

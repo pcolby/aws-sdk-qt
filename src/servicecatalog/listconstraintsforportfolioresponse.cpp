@@ -86,7 +86,7 @@ void ListConstraintsForPortfolioResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListConstraintsForPortfolioResponse instance.
  */
 ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponsePrivate(
-    ListConstraintsForPortfolioQueueResponse * const q) : ListConstraintsForPortfolioPrivate(q)
+    ListConstraintsForPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

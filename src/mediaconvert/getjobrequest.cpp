@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const MediaConvertRequest::Action action, GetJobRequest * const q)
-    : GetJobPrivate(action, q)
+    : MediaConvertRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobRequestPrivate::GetJobRequestPrivate(
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const GetJobRequestPrivate &other, GetJobRequest * const q)
-    : GetJobPrivate(other, q)
+    : MediaConvertRequestPrivate(other, q)
 {
 
 }

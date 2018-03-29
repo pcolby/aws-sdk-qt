@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply 
  */
 DescribeModelRequestPrivate::DescribeModelRequestPrivate(
     const SageMakerRequest::Action action, DescribeModelRequest * const q)
-    : DescribeModelPrivate(action, q)
+    : SageMakerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeModelRequestPrivate::DescribeModelRequestPrivate(
  */
 DescribeModelRequestPrivate::DescribeModelRequestPrivate(
     const DescribeModelRequestPrivate &other, DescribeModelRequest * const q)
-    : DescribeModelPrivate(other, q)
+    : SageMakerRequestPrivate(other, q)
 {
 
 }

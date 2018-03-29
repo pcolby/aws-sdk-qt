@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListIpRoutesRequest::response(QNetworkReply *
  */
 ListIpRoutesRequestPrivate::ListIpRoutesRequestPrivate(
     const DirectoryServiceRequest::Action action, ListIpRoutesRequest * const q)
-    : ListIpRoutesPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListIpRoutesRequestPrivate::ListIpRoutesRequestPrivate(
  */
 ListIpRoutesRequestPrivate::ListIpRoutesRequestPrivate(
     const ListIpRoutesRequestPrivate &other, ListIpRoutesRequest * const q)
-    : ListIpRoutesPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

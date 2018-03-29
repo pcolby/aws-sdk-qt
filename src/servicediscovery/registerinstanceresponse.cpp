@@ -86,7 +86,7 @@ void RegisterInstanceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterInstanceResponse instance.
  */
 RegisterInstanceResponsePrivate::RegisterInstanceResponsePrivate(
-    RegisterInstanceQueueResponse * const q) : RegisterInstancePrivate(q)
+    RegisterInstanceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

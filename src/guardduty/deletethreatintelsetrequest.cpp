@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetwor
  */
 DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
     const GuardDutyRequest::Action action, DeleteThreatIntelSetRequest * const q)
-    : DeleteThreatIntelSetPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
  */
 DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
     const DeleteThreatIntelSetRequestPrivate &other, DeleteThreatIntelSetRequest * const q)
-    : DeleteThreatIntelSetPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

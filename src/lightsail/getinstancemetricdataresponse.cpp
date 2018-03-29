@@ -86,7 +86,7 @@ void GetInstanceMetricDataResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInstanceMetricDataResponse instance.
  */
 GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponsePrivate(
-    GetInstanceMetricDataQueueResponse * const q) : GetInstanceMetricDataPrivate(q)
+    GetInstanceMetricDataResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

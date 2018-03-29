@@ -86,7 +86,7 @@ void CreateResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateResourceResponse instance.
  */
 CreateResourceResponsePrivate::CreateResourceResponsePrivate(
-    CreateResourceQueueResponse * const q) : CreateResourcePrivate(q)
+    CreateResourceResponse * const q) : WorkMailResponsePrivate(q)
 {
 
 }

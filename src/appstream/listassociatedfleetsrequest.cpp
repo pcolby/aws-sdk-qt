@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedFleetsRequest::response(QNetwor
  */
 ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
     const AppStreamRequest::Action action, ListAssociatedFleetsRequest * const q)
-    : ListAssociatedFleetsPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
  */
 ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
     const ListAssociatedFleetsRequestPrivate &other, ListAssociatedFleetsRequest * const q)
-    : ListAssociatedFleetsPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

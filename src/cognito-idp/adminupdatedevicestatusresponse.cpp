@@ -86,7 +86,7 @@ void AdminUpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminUpdateDeviceStatusResponse instance.
  */
 AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
-    AdminUpdateDeviceStatusQueueResponse * const q) : AdminUpdateDeviceStatusPrivate(q)
+    AdminUpdateDeviceStatusResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateVTLDeviceTypeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateVTLDeviceTypeResponse instance.
  */
 UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponsePrivate(
-    UpdateVTLDeviceTypeQueueResponse * const q) : UpdateVTLDeviceTypePrivate(q)
+    UpdateVTLDeviceTypeResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

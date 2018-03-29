@@ -86,7 +86,7 @@ void StopCrawlerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopCrawlerResponse instance.
  */
 StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
-    StopCrawlerQueueResponse * const q) : StopCrawlerPrivate(q)
+    StopCrawlerResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

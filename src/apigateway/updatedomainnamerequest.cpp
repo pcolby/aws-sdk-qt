@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameRequest::response(QNetworkRep
  */
 UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDomainNameRequest * const q)
-    : UpdateDomainNamePrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
  */
 UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
     const UpdateDomainNameRequestPrivate &other, UpdateDomainNameRequest * const q)
-    : UpdateDomainNamePrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListComplianceItemsRequest::response(QNetwork
  */
 ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
     const SSMRequest::Action action, ListComplianceItemsRequest * const q)
-    : ListComplianceItemsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
  */
 ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
     const ListComplianceItemsRequestPrivate &other, ListComplianceItemsRequest * const q)
-    : ListComplianceItemsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkR
  */
 SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
     const AutoScalingRequest::Action action, SetDesiredCapacityRequest * const q)
-    : SetDesiredCapacityPrivate(action, q)
+    : AutoScalingRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
  */
 SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
     const SetDesiredCapacityRequestPrivate &other, SetDesiredCapacityRequest * const q)
-    : SetDesiredCapacityPrivate(other, q)
+    : AutoScalingRequestPrivate(other, q)
 {
 
 }

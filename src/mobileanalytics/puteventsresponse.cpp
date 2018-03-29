@@ -86,7 +86,7 @@ void PutEventsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutEventsResponse instance.
  */
 PutEventsResponsePrivate::PutEventsResponsePrivate(
-    PutEventsQueueResponse * const q) : PutEventsPrivate(q)
+    PutEventsResponse * const q) : MobileAnalyticsResponsePrivate(q)
 {
 
 }

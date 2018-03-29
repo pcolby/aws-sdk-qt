@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkRep
  */
 DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, DeleteEvaluationRequest * const q)
-    : DeleteEvaluationPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
  */
 DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
     const DeleteEvaluationRequestPrivate &other, DeleteEvaluationRequest * const q)
-    : DeleteEvaluationPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

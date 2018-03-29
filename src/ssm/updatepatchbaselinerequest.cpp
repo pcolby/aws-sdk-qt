@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetwork
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
     const SSMRequest::Action action, UpdatePatchBaselineRequest * const q)
-    : UpdatePatchBaselinePrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
     const UpdatePatchBaselineRequestPrivate &other, UpdatePatchBaselineRequest * const q)
-    : UpdatePatchBaselinePrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

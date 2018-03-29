@@ -86,7 +86,7 @@ void ListRulesPackagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListRulesPackagesResponse instance.
  */
 ListRulesPackagesResponsePrivate::ListRulesPackagesResponsePrivate(
-    ListRulesPackagesQueueResponse * const q) : ListRulesPackagesPrivate(q)
+    ListRulesPackagesResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

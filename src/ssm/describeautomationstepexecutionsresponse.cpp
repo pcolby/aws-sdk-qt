@@ -86,7 +86,7 @@ void DescribeAutomationStepExecutionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeAutomationStepExecutionsResponse instance.
  */
 DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExecutionsResponsePrivate(
-    DescribeAutomationStepExecutionsQueueResponse * const q) : DescribeAutomationStepExecutionsPrivate(q)
+    DescribeAutomationStepExecutionsResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

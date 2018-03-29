@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateProductWithPortfolioRequest::respons
  */
 AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, AssociateProductWithPortfolioRequest * const q)
-    : AssociateProductWithPortfolioPrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioReques
  */
 AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
     const AssociateProductWithPortfolioRequestPrivate &other, AssociateProductWithPortfolioRequest * const q)
-    : AssociateProductWithPortfolioPrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

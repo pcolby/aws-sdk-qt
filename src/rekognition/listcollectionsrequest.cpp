@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCollectionsRequest::response(QNetworkRepl
  */
 ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
     const RekognitionRequest::Action action, ListCollectionsRequest * const q)
-    : ListCollectionsPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
  */
 ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
     const ListCollectionsRequestPrivate &other, ListCollectionsRequest * const q)
-    : ListCollectionsPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetKeyRotationStatusResponse instance.
  */
 GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponsePrivate(
-    GetKeyRotationStatusQueueResponse * const q) : GetKeyRotationStatusPrivate(q)
+    GetKeyRotationStatusResponse * const q) : KMSResponsePrivate(q)
 {
 
 }

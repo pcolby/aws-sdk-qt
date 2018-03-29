@@ -86,7 +86,7 @@ void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetAccountSettingsResponse instance.
  */
 GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
-    GetAccountSettingsQueueResponse * const q) : GetAccountSettingsPrivate(q)
+    GetAccountSettingsResponse * const q) : LambdaResponsePrivate(q)
 {
 
 }

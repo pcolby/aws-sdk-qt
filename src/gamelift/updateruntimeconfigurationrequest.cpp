@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRuntimeConfigurationRequest::response(Q
  */
 UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
     const GameLiftRequest::Action action, UpdateRuntimeConfigurationRequest * const q)
-    : UpdateRuntimeConfigurationPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPriva
  */
 UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
     const UpdateRuntimeConfigurationRequestPrivate &other, UpdateRuntimeConfigurationRequest * const q)
-    : UpdateRuntimeConfigurationPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

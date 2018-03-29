@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmDeviceRequest::response(QNetworkReply 
  */
 ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ConfirmDeviceRequest * const q)
-    : ConfirmDevicePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
  */
 ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
     const ConfirmDeviceRequestPrivate &other, ConfirmDeviceRequest * const q)
-    : ConfirmDevicePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

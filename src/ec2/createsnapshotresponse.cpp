@@ -86,7 +86,7 @@ void CreateSnapshotResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSnapshotResponse instance.
  */
 CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
-    CreateSnapshotQueueResponse * const q) : CreateSnapshotPrivate(q)
+    CreateSnapshotResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

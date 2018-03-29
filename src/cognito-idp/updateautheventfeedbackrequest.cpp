@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNet
  */
 UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateAuthEventFeedbackRequest * const q)
-    : UpdateAuthEventFeedbackPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
  */
 UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
     const UpdateAuthEventFeedbackRequestPrivate &other, UpdateAuthEventFeedbackRequest * const q)
-    : UpdateAuthEventFeedbackPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

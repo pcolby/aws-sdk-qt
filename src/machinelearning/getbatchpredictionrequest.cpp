@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBatchPredictionRequest::response(QNetworkR
  */
 GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, GetBatchPredictionRequest * const q)
-    : GetBatchPredictionPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
  */
 GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
     const GetBatchPredictionRequestPrivate &other, GetBatchPredictionRequest * const q)
-    : GetBatchPredictionPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

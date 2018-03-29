@@ -86,7 +86,7 @@ void ListHandshakesForAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListHandshakesForAccountResponse instance.
  */
 ListHandshakesForAccountResponsePrivate::ListHandshakesForAccountResponsePrivate(
-    ListHandshakesForAccountQueueResponse * const q) : ListHandshakesForAccountPrivate(q)
+    ListHandshakesForAccountResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

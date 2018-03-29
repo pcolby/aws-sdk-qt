@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServerEngineAttributesRequest::response
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
     const OpsWorksCMRequest::Action action, UpdateServerEngineAttributesRequest * const q)
-    : UpdateServerEngineAttributesPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestP
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
     const UpdateServerEngineAttributesRequestPrivate &other, UpdateServerEngineAttributesRequest * const q)
-    : UpdateServerEngineAttributesPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

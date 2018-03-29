@@ -86,7 +86,7 @@ void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public GetIdentityVerificationAttributesResponse instance.
  */
 GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttributesResponsePrivate(
-    GetIdentityVerificationAttributesQueueResponse * const q) : GetIdentityVerificationAttributesPrivate(q)
+    GetIdentityVerificationAttributesResponse * const q) : SESResponsePrivate(q)
 {
 
 }

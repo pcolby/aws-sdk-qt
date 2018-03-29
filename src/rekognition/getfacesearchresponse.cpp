@@ -86,7 +86,7 @@ void GetFaceSearchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetFaceSearchResponse instance.
  */
 GetFaceSearchResponsePrivate::GetFaceSearchResponsePrivate(
-    GetFaceSearchQueueResponse * const q) : GetFaceSearchPrivate(q)
+    GetFaceSearchResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

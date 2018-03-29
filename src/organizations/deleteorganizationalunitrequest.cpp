@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOrganizationalUnitRequest::response(QNe
  */
 DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, DeleteOrganizationalUnitRequest * const q)
-    : DeleteOrganizationalUnitPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
  */
 DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
     const DeleteOrganizationalUnitRequestPrivate &other, DeleteOrganizationalUnitRequest * const q)
-    : DeleteOrganizationalUnitPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

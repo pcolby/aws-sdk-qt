@@ -86,7 +86,7 @@ void UpdateMethodResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateMethodResponse instance.
  */
 UpdateMethodResponsePrivate::UpdateMethodResponsePrivate(
-    UpdateMethodQueueResponse * const q) : UpdateMethodPrivate(q)
+    UpdateMethodResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

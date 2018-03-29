@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::resp
  */
 DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, DescribeSpotDatafeedSubscriptionRequest * const q)
-    : DescribeSpotDatafeedSubscriptionPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscription
  */
 DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscriptionRequestPrivate(
     const DescribeSpotDatafeedSubscriptionRequestPrivate &other, DescribeSpotDatafeedSubscriptionRequest * const q)
-    : DescribeSpotDatafeedSubscriptionPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

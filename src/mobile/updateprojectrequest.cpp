@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
  */
 UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
     const MobileRequest::Action action, UpdateProjectRequest * const q)
-    : UpdateProjectPrivate(action, q)
+    : MobileRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
  */
 UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
     const UpdateProjectRequestPrivate &other, UpdateProjectRequest * const q)
-    : UpdateProjectPrivate(other, q)
+    : MobileRequestPrivate(other, q)
 {
 
 }

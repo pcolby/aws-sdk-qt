@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetwo
  */
 UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, UpdateBasePathMappingRequest * const q)
-    : UpdateBasePathMappingPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
  */
 UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
     const UpdateBasePathMappingRequestPrivate &other, UpdateBasePathMappingRequest * const q)
-    : UpdateBasePathMappingPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetwor
  */
 GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
     const Route53DomainsRequest::Action action, GetDomainSuggestionsRequest * const q)
-    : GetDomainSuggestionsPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
  */
 GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
     const GetDomainSuggestionsRequestPrivate &other, GetDomainSuggestionsRequest * const q)
-    : GetDomainSuggestionsPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

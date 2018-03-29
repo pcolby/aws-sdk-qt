@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinksRequest::response(QNetworkReply * 
  */
 GetVpcLinksRequestPrivate::GetVpcLinksRequestPrivate(
     const APIGatewayRequest::Action action, GetVpcLinksRequest * const q)
-    : GetVpcLinksPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetVpcLinksRequestPrivate::GetVpcLinksRequestPrivate(
  */
 GetVpcLinksRequestPrivate::GetVpcLinksRequestPrivate(
     const GetVpcLinksRequestPrivate &other, GetVpcLinksRequest * const q)
-    : GetVpcLinksPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

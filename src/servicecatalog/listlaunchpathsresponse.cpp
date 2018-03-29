@@ -86,7 +86,7 @@ void ListLaunchPathsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListLaunchPathsResponse instance.
  */
 ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
-    ListLaunchPathsQueueResponse * const q) : ListLaunchPathsPrivate(q)
+    ListLaunchPathsResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

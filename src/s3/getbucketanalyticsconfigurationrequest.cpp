@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketAnalyticsConfigurationRequest::respo
  */
 GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketAnalyticsConfigurationRequest * const q)
-    : GetBucketAnalyticsConfigurationPrivate(action, q)
+    : S3RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRe
  */
 GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRequestPrivate(
     const GetBucketAnalyticsConfigurationRequestPrivate &other, GetBucketAnalyticsConfigurationRequest * const q)
-    : GetBucketAnalyticsConfigurationPrivate(other, q)
+    : S3RequestPrivate(other, q)
 {
 
 }

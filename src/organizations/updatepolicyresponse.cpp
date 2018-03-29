@@ -86,7 +86,7 @@ void UpdatePolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePolicyResponse instance.
  */
 UpdatePolicyResponsePrivate::UpdatePolicyResponsePrivate(
-    UpdatePolicyQueueResponse * const q) : UpdatePolicyPrivate(q)
+    UpdatePolicyResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

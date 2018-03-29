@@ -86,7 +86,7 @@ void ListCreateAccountStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListCreateAccountStatusResponse instance.
  */
 ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponsePrivate(
-    ListCreateAccountStatusQueueResponse * const q) : ListCreateAccountStatusPrivate(q)
+    ListCreateAccountStatusResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

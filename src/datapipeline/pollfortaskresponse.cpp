@@ -86,7 +86,7 @@ void PollForTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PollForTaskResponse instance.
  */
 PollForTaskResponsePrivate::PollForTaskResponsePrivate(
-    PollForTaskQueueResponse * const q) : PollForTaskPrivate(q)
+    PollForTaskResponse * const q) : DataPipelineResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSegmentRequest::response(QNetworkReply * c
  */
 GetSegmentRequestPrivate::GetSegmentRequestPrivate(
     const PinpointRequest::Action action, GetSegmentRequest * const q)
-    : GetSegmentPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSegmentRequestPrivate::GetSegmentRequestPrivate(
  */
 GetSegmentRequestPrivate::GetSegmentRequestPrivate(
     const GetSegmentRequestPrivate &other, GetSegmentRequest * const q)
-    : GetSegmentPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

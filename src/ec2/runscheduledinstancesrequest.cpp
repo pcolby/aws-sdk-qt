@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetwo
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
     const EC2Request::Action action, RunScheduledInstancesRequest * const q)
-    : RunScheduledInstancesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
     const RunScheduledInstancesRequestPrivate &other, RunScheduledInstancesRequest * const q)
-    : RunScheduledInstancesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const SimpleDBRequest::Action action, PutAttributesRequest * const q)
-    : PutAttributesPrivate(action, q)
+    : SimpleDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const PutAttributesRequestPrivate &other, PutAttributesRequest * const q)
-    : PutAttributesPrivate(other, q)
+    : SimpleDBRequestPrivate(other, q)
 {
 
 }

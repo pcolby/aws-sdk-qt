@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionVersionsRequest::response
  */
 ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListDeviceDefinitionVersionsRequest * const q)
-    : ListDeviceDefinitionVersionsPrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestP
  */
 ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestPrivate(
     const ListDeviceDefinitionVersionsRequestPrivate &other, ListDeviceDefinitionVersionsRequest * const q)
-    : ListDeviceDefinitionVersionsPrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const WorkDocsRequest::Action action, DeleteDocumentRequest * const q)
-    : DeleteDocumentPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const DeleteDocumentRequestPrivate &other, DeleteDocumentRequest * const q)
-    : DeleteDocumentPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

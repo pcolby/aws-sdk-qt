@@ -86,7 +86,7 @@ void GetCommandInvocationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCommandInvocationResponse instance.
  */
 GetCommandInvocationResponsePrivate::GetCommandInvocationResponsePrivate(
-    GetCommandInvocationQueueResponse * const q) : GetCommandInvocationPrivate(q)
+    GetCommandInvocationResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkRep
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
     const EC2Request::Action action, GetConsoleOutputRequest * const q)
-    : GetConsoleOutputPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
     const GetConsoleOutputRequestPrivate &other, GetConsoleOutputRequest * const q)
-    : GetConsoleOutputPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

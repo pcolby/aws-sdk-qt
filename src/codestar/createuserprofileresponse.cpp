@@ -86,7 +86,7 @@ void CreateUserProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateUserProfileResponse instance.
  */
 CreateUserProfileResponsePrivate::CreateUserProfileResponsePrivate(
-    CreateUserProfileQueueResponse * const q) : CreateUserProfilePrivate(q)
+    CreateUserProfileResponse * const q) : CodeStarResponsePrivate(q)
 {
 
 }

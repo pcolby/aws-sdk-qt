@@ -86,7 +86,7 @@ void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeEngineDefaultParametersResponse instance.
  */
 DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersResponsePrivate(
-    DescribeEngineDefaultParametersQueueResponse * const q) : DescribeEngineDefaultParametersPrivate(q)
+    DescribeEngineDefaultParametersResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

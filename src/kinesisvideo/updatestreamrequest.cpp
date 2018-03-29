@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
  */
 UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
     const KinesisVideoRequest::Action action, UpdateStreamRequest * const q)
-    : UpdateStreamPrivate(action, q)
+    : KinesisVideoRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
  */
 UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
     const UpdateStreamRequestPrivate &other, UpdateStreamRequest * const q)
-    : UpdateStreamPrivate(other, q)
+    : KinesisVideoRequestPrivate(other, q)
 {
 
 }

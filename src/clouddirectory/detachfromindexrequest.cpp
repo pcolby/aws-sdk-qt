@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkRepl
  */
 DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachFromIndexRequest * const q)
-    : DetachFromIndexPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
  */
 DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
     const DetachFromIndexRequestPrivate &other, DetachFromIndexRequest * const q)
-    : DetachFromIndexPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

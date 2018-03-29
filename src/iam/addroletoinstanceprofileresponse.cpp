@@ -86,7 +86,7 @@ void AddRoleToInstanceProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddRoleToInstanceProfileResponse instance.
  */
 AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponsePrivate(
-    AddRoleToInstanceProfileQueueResponse * const q) : AddRoleToInstanceProfilePrivate(q)
+    AddRoleToInstanceProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

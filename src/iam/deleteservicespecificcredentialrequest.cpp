@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::respo
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, DeleteServiceSpecificCredentialRequest * const q)
-    : DeleteServiceSpecificCredentialPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRe
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
     const DeleteServiceSpecificCredentialRequestPrivate &other, DeleteServiceSpecificCredentialRequest * const q)
-    : DeleteServiceSpecificCredentialPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

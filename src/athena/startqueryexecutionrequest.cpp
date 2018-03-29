@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartQueryExecutionRequest::response(QNetwork
  */
 StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, StartQueryExecutionRequest * const q)
-    : StartQueryExecutionPrivate(action, q)
+    : AthenaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
  */
 StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
     const StartQueryExecutionRequestPrivate &other, StartQueryExecutionRequest * const q)
-    : StartQueryExecutionPrivate(other, q)
+    : AthenaRequestPrivate(other, q)
 {
 
 }

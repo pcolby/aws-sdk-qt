@@ -86,7 +86,7 @@ void GetSchemaAsJsonResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSchemaAsJsonResponse instance.
  */
 GetSchemaAsJsonResponsePrivate::GetSchemaAsJsonResponsePrivate(
-    GetSchemaAsJsonQueueResponse * const q) : GetSchemaAsJsonPrivate(q)
+    GetSchemaAsJsonResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

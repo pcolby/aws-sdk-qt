@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationDetailRequest::response(QNetworkR
  */
 GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
     const Route53DomainsRequest::Action action, GetOperationDetailRequest * const q)
-    : GetOperationDetailPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
  */
 GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
     const GetOperationDetailRequestPrivate &other, GetOperationDetailRequest * const q)
-    : GetOperationDetailPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

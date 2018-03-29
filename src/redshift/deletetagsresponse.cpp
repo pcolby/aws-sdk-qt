@@ -86,7 +86,7 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTagsResponse instance.
  */
 DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
-    DeleteTagsQueueResponse * const q) : DeleteTagsPrivate(q)
+    DeleteTagsResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

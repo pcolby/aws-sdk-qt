@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainEntryRequest::response(QNetworkRe
  */
 DeleteDomainEntryRequestPrivate::DeleteDomainEntryRequestPrivate(
     const LightsailRequest::Action action, DeleteDomainEntryRequest * const q)
-    : DeleteDomainEntryPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteDomainEntryRequestPrivate::DeleteDomainEntryRequestPrivate(
  */
 DeleteDomainEntryRequestPrivate::DeleteDomainEntryRequestPrivate(
     const DeleteDomainEntryRequestPrivate &other, DeleteDomainEntryRequest * const q)
-    : DeleteDomainEntryPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

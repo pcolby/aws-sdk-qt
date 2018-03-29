@@ -86,7 +86,7 @@ void DeleteHITResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHITResponse instance.
  */
 DeleteHITResponsePrivate::DeleteHITResponsePrivate(
-    DeleteHITQueueResponse * const q) : DeleteHITPrivate(q)
+    DeleteHITResponse * const q) : MTurkResponsePrivate(q)
 {
 
 }

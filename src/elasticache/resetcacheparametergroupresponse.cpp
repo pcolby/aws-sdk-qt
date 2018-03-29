@@ -86,7 +86,7 @@ void ResetCacheParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResetCacheParameterGroupResponse instance.
  */
 ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponsePrivate(
-    ResetCacheParameterGroupQueueResponse * const q) : ResetCacheParameterGroupPrivate(q)
+    ResetCacheParameterGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

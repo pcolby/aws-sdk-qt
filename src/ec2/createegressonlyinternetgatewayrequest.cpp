@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::respo
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
     const EC2Request::Action action, CreateEgressOnlyInternetGatewayRequest * const q)
-    : CreateEgressOnlyInternetGatewayPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRe
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
     const CreateEgressOnlyInternetGatewayRequestPrivate &other, CreateEgressOnlyInternetGatewayRequest * const q)
-    : CreateEgressOnlyInternetGatewayPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

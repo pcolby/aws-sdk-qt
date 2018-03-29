@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateComputeEnvironmentRequest::response(QNe
  */
 UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, UpdateComputeEnvironmentRequest * const q)
-    : UpdateComputeEnvironmentPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
  */
 UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
     const UpdateComputeEnvironmentRequestPrivate &other, UpdateComputeEnvironmentRequest * const q)
-    : UpdateComputeEnvironmentPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

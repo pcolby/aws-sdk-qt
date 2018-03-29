@@ -86,7 +86,7 @@ void AdminCreateUserResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AdminCreateUserResponse instance.
  */
 AdminCreateUserResponsePrivate::AdminCreateUserResponsePrivate(
-    AdminCreateUserQueueResponse * const q) : AdminCreateUserPrivate(q)
+    AdminCreateUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

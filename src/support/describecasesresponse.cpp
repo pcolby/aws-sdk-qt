@@ -86,7 +86,7 @@ void DescribeCasesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCasesResponse instance.
  */
 DescribeCasesResponsePrivate::DescribeCasesResponsePrivate(
-    DescribeCasesQueueResponse * const q) : DescribeCasesPrivate(q)
+    DescribeCasesResponse * const q) : SupportResponsePrivate(q)
 {
 
 }

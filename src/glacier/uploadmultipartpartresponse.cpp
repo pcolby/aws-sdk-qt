@@ -86,7 +86,7 @@ void UploadMultipartPartResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UploadMultipartPartResponse instance.
  */
 UploadMultipartPartResponsePrivate::UploadMultipartPartResponsePrivate(
-    UploadMultipartPartQueueResponse * const q) : UploadMultipartPartPrivate(q)
+    UploadMultipartPartResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTemplateRequest::response(QNe
  */
 DeleteAssessmentTemplateRequestPrivate::DeleteAssessmentTemplateRequestPrivate(
     const InspectorRequest::Action action, DeleteAssessmentTemplateRequest * const q)
-    : DeleteAssessmentTemplatePrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteAssessmentTemplateRequestPrivate::DeleteAssessmentTemplateRequestPrivate(
  */
 DeleteAssessmentTemplateRequestPrivate::DeleteAssessmentTemplateRequestPrivate(
     const DeleteAssessmentTemplateRequestPrivate &other, DeleteAssessmentTemplateRequest * const q)
-    : DeleteAssessmentTemplatePrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void UpdateDomainEntryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateDomainEntryResponse instance.
  */
 UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponsePrivate(
-    UpdateDomainEntryQueueResponse * const q) : UpdateDomainEntryPrivate(q)
+    UpdateDomainEntryResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

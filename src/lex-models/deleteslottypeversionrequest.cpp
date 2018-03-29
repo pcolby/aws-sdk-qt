@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetwo
  */
 DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeVersionRequest * const q)
-    : DeleteSlotTypeVersionPrivate(action, q)
+    : LexModelBuildingServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
  */
 DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
     const DeleteSlotTypeVersionRequestPrivate &other, DeleteSlotTypeVersionRequest * const q)
-    : DeleteSlotTypeVersionPrivate(other, q)
+    : LexModelBuildingServiceRequestPrivate(other, q)
 {
 
 }

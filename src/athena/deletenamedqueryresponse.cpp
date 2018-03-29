@@ -86,7 +86,7 @@ void DeleteNamedQueryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNamedQueryResponse instance.
  */
 DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponsePrivate(
-    DeleteNamedQueryQueueResponse * const q) : DeleteNamedQueryPrivate(q)
+    DeleteNamedQueryResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

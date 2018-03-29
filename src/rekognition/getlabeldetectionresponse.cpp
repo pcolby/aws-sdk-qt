@@ -86,7 +86,7 @@ void GetLabelDetectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetLabelDetectionResponse instance.
  */
 GetLabelDetectionResponsePrivate::GetLabelDetectionResponsePrivate(
-    GetLabelDetectionQueueResponse * const q) : GetLabelDetectionPrivate(q)
+    GetLabelDetectionResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

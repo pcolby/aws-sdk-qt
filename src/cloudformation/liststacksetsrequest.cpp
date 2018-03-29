@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListStackSetsRequest::response(QNetworkReply 
  */
 ListStackSetsRequestPrivate::ListStackSetsRequestPrivate(
     const CloudFormationRequest::Action action, ListStackSetsRequest * const q)
-    : ListStackSetsPrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListStackSetsRequestPrivate::ListStackSetsRequestPrivate(
  */
 ListStackSetsRequestPrivate::ListStackSetsRequestPrivate(
     const ListStackSetsRequestPrivate &other, ListStackSetsRequest * const q)
-    : ListStackSetsPrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

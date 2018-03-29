@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::respon
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
     const ElasticsearchServiceRequest::Action action, ListElasticsearchInstanceTypesRequest * const q)
-    : ListElasticsearchInstanceTypesPrivate(action, q)
+    : ElasticsearchServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequ
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
     const ListElasticsearchInstanceTypesRequestPrivate &other, ListElasticsearchInstanceTypesRequest * const q)
-    : ListElasticsearchInstanceTypesPrivate(other, q)
+    : ElasticsearchServiceRequestPrivate(other, q)
 {
 
 }

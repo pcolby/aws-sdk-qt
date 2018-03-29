@@ -86,7 +86,7 @@ void GetCostAndUsageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetCostAndUsageResponse instance.
  */
 GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
-    GetCostAndUsageQueueResponse * const q) : GetCostAndUsagePrivate(q)
+    GetCostAndUsageResponse * const q) : CostExplorerResponsePrivate(q)
 {
 
 }

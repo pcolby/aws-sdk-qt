@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetw
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
     const EC2Request::Action action, ResetSnapshotAttributeRequest * const q)
-    : ResetSnapshotAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
     const ResetSnapshotAttributeRequestPrivate &other, ResetSnapshotAttributeRequest * const q)
-    : ResetSnapshotAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

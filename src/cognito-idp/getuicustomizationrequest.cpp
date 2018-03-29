@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUICustomizationRequest::response(QNetworkR
  */
 GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUICustomizationRequest * const q)
-    : GetUICustomizationPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
  */
 GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
     const GetUICustomizationRequestPrivate &other, GetUICustomizationRequest * const q)
-    : GetUICustomizationPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

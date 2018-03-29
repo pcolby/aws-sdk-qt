@@ -86,7 +86,7 @@ void CreateAccountResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateAccountResponse instance.
  */
 CreateAccountResponsePrivate::CreateAccountResponsePrivate(
-    CreateAccountQueueResponse * const q) : CreateAccountPrivate(q)
+    CreateAccountResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

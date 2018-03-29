@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkRepl
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteRuleGroupRequest * const q)
-    : DeleteRuleGroupPrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
     const DeleteRuleGroupRequestPrivate &other, DeleteRuleGroupRequest * const q)
-    : DeleteRuleGroupPrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

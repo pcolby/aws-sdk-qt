@@ -86,7 +86,7 @@ void SearchUsersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SearchUsersResponse instance.
  */
 SearchUsersResponsePrivate::SearchUsersResponsePrivate(
-    SearchUsersQueueResponse * const q) : SearchUsersPrivate(q)
+    SearchUsersResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

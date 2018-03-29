@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DynamoDBRequest::Action action, DescribeLimitsRequest * const q)
-    : DescribeLimitsPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DescribeLimitsRequestPrivate &other, DescribeLimitsRequest * const q)
-    : DescribeLimitsPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

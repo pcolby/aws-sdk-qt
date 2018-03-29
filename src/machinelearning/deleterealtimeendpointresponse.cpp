@@ -86,7 +86,7 @@ void DeleteRealtimeEndpointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteRealtimeEndpointResponse instance.
  */
 DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
-    DeleteRealtimeEndpointQueueResponse * const q) : DeleteRealtimeEndpointPrivate(q)
+    DeleteRealtimeEndpointResponse * const q) : MachineLearningResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DisassociateRouteTableResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisassociateRouteTableResponse instance.
  */
 DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
-    DisassociateRouteTableQueueResponse * const q) : DisassociateRouteTablePrivate(q)
+    DisassociateRouteTableResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

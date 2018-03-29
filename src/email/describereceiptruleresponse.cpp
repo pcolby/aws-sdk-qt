@@ -86,7 +86,7 @@ void DescribeReceiptRuleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeReceiptRuleResponse instance.
  */
 DescribeReceiptRuleResponsePrivate::DescribeReceiptRuleResponsePrivate(
-    DescribeReceiptRuleQueueResponse * const q) : DescribeReceiptRulePrivate(q)
+    DescribeReceiptRuleResponse * const q) : SESResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ApplyPendingMaintenanceActionRequest::respons
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const RDSRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)
-    : ApplyPendingMaintenanceActionPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionReques
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const ApplyPendingMaintenanceActionRequestPrivate &other, ApplyPendingMaintenanceActionRequest * const q)
-    : ApplyPendingMaintenanceActionPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

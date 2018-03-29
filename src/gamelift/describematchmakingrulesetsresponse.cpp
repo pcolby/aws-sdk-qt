@@ -86,7 +86,7 @@ void DescribeMatchmakingRuleSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeMatchmakingRuleSetsResponse instance.
  */
 DescribeMatchmakingRuleSetsResponsePrivate::DescribeMatchmakingRuleSetsResponsePrivate(
-    DescribeMatchmakingRuleSetsQueueResponse * const q) : DescribeMatchmakingRuleSetsPrivate(q)
+    DescribeMatchmakingRuleSetsResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

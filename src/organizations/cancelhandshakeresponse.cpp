@@ -86,7 +86,7 @@ void CancelHandshakeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CancelHandshakeResponse instance.
  */
 CancelHandshakeResponsePrivate::CancelHandshakeResponsePrivate(
-    CancelHandshakeQueueResponse * const q) : CancelHandshakePrivate(q)
+    CancelHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

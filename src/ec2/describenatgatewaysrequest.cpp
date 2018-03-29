@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetwork
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeNatGatewaysRequest * const q)
-    : DescribeNatGatewaysPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
     const DescribeNatGatewaysRequestPrivate &other, DescribeNatGatewaysRequest * const q)
-    : DescribeNatGatewaysPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

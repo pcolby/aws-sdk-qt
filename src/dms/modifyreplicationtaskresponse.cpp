@@ -86,7 +86,7 @@ void ModifyReplicationTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyReplicationTaskResponse instance.
  */
 ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponsePrivate(
-    ModifyReplicationTaskQueueResponse * const q) : ModifyReplicationTaskPrivate(q)
+    ModifyReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

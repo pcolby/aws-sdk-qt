@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUploadRequest::response(QNetworkReply *
  */
 DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteUploadRequest * const q)
-    : DeleteUploadPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
  */
 DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
     const DeleteUploadRequestPrivate &other, DeleteUploadRequest * const q)
-    : DeleteUploadPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

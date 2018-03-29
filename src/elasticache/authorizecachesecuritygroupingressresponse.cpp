@@ -86,7 +86,7 @@ void AuthorizeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public AuthorizeCacheSecurityGroupIngressResponse instance.
  */
 AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIngressResponsePrivate(
-    AuthorizeCacheSecurityGroupIngressQueueResponse * const q) : AuthorizeCacheSecurityGroupIngressPrivate(q)
+    AuthorizeCacheSecurityGroupIngressResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

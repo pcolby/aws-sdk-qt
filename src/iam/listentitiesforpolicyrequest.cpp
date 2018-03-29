@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListEntitiesForPolicyRequest::response(QNetwo
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
     const IAMRequest::Action action, ListEntitiesForPolicyRequest * const q)
-    : ListEntitiesForPolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
     const ListEntitiesForPolicyRequestPrivate &other, ListEntitiesForPolicyRequest * const q)
-    : ListEntitiesForPolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

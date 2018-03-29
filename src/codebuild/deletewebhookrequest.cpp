@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWebhookRequest::response(QNetworkReply 
  */
 DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
     const CodeBuildRequest::Action action, DeleteWebhookRequest * const q)
-    : DeleteWebhookPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
  */
 DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
     const DeleteWebhookRequestPrivate &other, DeleteWebhookRequest * const q)
-    : DeleteWebhookPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

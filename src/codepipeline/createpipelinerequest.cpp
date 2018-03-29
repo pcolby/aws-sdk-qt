@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const CodePipelineRequest::Action action, CreatePipelineRequest * const q)
-    : CreatePipelinePrivate(action, q)
+    : CodePipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const CreatePipelineRequestPrivate &other, CreatePipelineRequest * const q)
-    : CreatePipelinePrivate(other, q)
+    : CodePipelineRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * c
  */
 DetachDiskRequestPrivate::DetachDiskRequestPrivate(
     const LightsailRequest::Action action, DetachDiskRequest * const q)
-    : DetachDiskPrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DetachDiskRequestPrivate::DetachDiskRequestPrivate(
  */
 DetachDiskRequestPrivate::DetachDiskRequestPrivate(
     const DetachDiskRequestPrivate &other, DetachDiskRequest * const q)
-    : DetachDiskPrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

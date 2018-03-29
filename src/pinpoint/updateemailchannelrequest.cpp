@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkR
  */
 UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateEmailChannelRequest * const q)
-    : UpdateEmailChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
  */
 UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
     const UpdateEmailChannelRequestPrivate &other, UpdateEmailChannelRequest * const q)
-    : UpdateEmailChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

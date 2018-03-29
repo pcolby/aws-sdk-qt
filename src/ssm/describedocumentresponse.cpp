@@ -86,7 +86,7 @@ void DescribeDocumentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDocumentResponse instance.
  */
 DescribeDocumentResponsePrivate::DescribeDocumentResponsePrivate(
-    DescribeDocumentQueueResponse * const q) : DescribeDocumentPrivate(q)
+    DescribeDocumentResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

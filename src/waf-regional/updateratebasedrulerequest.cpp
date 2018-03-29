@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetwork
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateRateBasedRuleRequest * const q)
-    : UpdateRateBasedRulePrivate(action, q)
+    : WAFRegionalRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
     const UpdateRateBasedRuleRequestPrivate &other, UpdateRateBasedRuleRequest * const q)
-    : UpdateRateBasedRulePrivate(other, q)
+    : WAFRegionalRequestPrivate(other, q)
 {
 
 }

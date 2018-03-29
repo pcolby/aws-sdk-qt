@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetNamespaceRequest::response(QNetworkReply *
  */
 GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetNamespaceRequest * const q)
-    : GetNamespacePrivate(action, q)
+    : ServiceDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
  */
 GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
     const GetNamespaceRequestPrivate &other, GetNamespaceRequest * const q)
-    : GetNamespacePrivate(other, q)
+    : ServiceDiscoveryRequestPrivate(other, q)
 {
 
 }

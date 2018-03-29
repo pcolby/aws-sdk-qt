@@ -86,7 +86,7 @@ void ModifyInstanceCreditSpecificationResponse::parseSuccess(QIODevice &response
  * @param  q  Pointer to this object's public ModifyInstanceCreditSpecificationResponse instance.
  */
 ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificationResponsePrivate(
-    ModifyInstanceCreditSpecificationQueueResponse * const q) : ModifyInstanceCreditSpecificationPrivate(q)
+    ModifyInstanceCreditSpecificationResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

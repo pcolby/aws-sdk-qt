@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkRe
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const RDSRequest::Action action, FailoverDBClusterRequest * const q)
-    : FailoverDBClusterPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const FailoverDBClusterRequestPrivate &other, FailoverDBClusterRequest * const q)
-    : FailoverDBClusterPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

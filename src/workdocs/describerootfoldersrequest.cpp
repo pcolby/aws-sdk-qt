@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetwork
  */
 DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
     const WorkDocsRequest::Action action, DescribeRootFoldersRequest * const q)
-    : DescribeRootFoldersPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
  */
 DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
     const DescribeRootFoldersRequestPrivate &other, DescribeRootFoldersRequest * const q)
-    : DescribeRootFoldersPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

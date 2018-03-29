@@ -86,7 +86,7 @@ void GetObjectResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetObjectResponse instance.
  */
 GetObjectResponsePrivate::GetObjectResponsePrivate(
-    GetObjectQueueResponse * const q) : GetObjectPrivate(q)
+    GetObjectResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

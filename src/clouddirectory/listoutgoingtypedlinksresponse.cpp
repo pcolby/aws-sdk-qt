@@ -86,7 +86,7 @@ void ListOutgoingTypedLinksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListOutgoingTypedLinksResponse instance.
  */
 ListOutgoingTypedLinksResponsePrivate::ListOutgoingTypedLinksResponsePrivate(
-    ListOutgoingTypedLinksQueueResponse * const q) : ListOutgoingTypedLinksPrivate(q)
+    ListOutgoingTypedLinksResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

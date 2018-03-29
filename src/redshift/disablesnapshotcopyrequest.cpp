@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableSnapshotCopyRequest::response(QNetwork
  */
 DisableSnapshotCopyRequestPrivate::DisableSnapshotCopyRequestPrivate(
     const RedshiftRequest::Action action, DisableSnapshotCopyRequest * const q)
-    : DisableSnapshotCopyPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableSnapshotCopyRequestPrivate::DisableSnapshotCopyRequestPrivate(
  */
 DisableSnapshotCopyRequestPrivate::DisableSnapshotCopyRequestPrivate(
     const DisableSnapshotCopyRequestPrivate &other, DisableSnapshotCopyRequest * const q)
-    : DisableSnapshotCopyPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

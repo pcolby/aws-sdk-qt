@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobDocumentRequest::response(QNetworkReply
  */
 GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
     const IoTRequest::Action action, GetJobDocumentRequest * const q)
-    : GetJobDocumentPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
  */
 GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
     const GetJobDocumentRequestPrivate &other, GetJobDocumentRequest * const q)
-    : GetJobDocumentPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

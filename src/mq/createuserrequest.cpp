@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const MQRequest::Action action, CreateUserRequest * const q)
-    : CreateUserPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const CreateUserRequestPrivate &other, CreateUserRequest * const q)
-    : CreateUserPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

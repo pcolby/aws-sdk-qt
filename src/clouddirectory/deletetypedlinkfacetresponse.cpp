@@ -86,7 +86,7 @@ void DeleteTypedLinkFacetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTypedLinkFacetResponse instance.
  */
 DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponsePrivate(
-    DeleteTypedLinkFacetQueueResponse * const q) : DeleteTypedLinkFacetPrivate(q)
+    DeleteTypedLinkFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetw
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
     const ECRRequest::Action action, DeleteRepositoryPolicyRequest * const q)
-    : DeleteRepositoryPolicyPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
     const DeleteRepositoryPolicyRequestPrivate &other, DeleteRepositoryPolicyRequest * const q)
-    : DeleteRepositoryPolicyPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

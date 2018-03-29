@@ -86,7 +86,7 @@ void CreateUsagePlanKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateUsagePlanKeyResponse instance.
  */
 CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponsePrivate(
-    CreateUsagePlanKeyQueueResponse * const q) : CreateUsagePlanKeyPrivate(q)
+    CreateUsagePlanKeyResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

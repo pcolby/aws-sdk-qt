@@ -86,7 +86,7 @@ void ListChangeSetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListChangeSetsResponse instance.
  */
 ListChangeSetsResponsePrivate::ListChangeSetsResponsePrivate(
-    ListChangeSetsQueueResponse * const q) : ListChangeSetsPrivate(q)
+    ListChangeSetsResponse * const q) : CloudFormationResponsePrivate(q)
 {
 
 }

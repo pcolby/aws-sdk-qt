@@ -86,7 +86,7 @@ void CreateApiKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateApiKeyResponse instance.
  */
 CreateApiKeyResponsePrivate::CreateApiKeyResponsePrivate(
-    CreateApiKeyQueueResponse * const q) : CreateApiKeyPrivate(q)
+    CreateApiKeyResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

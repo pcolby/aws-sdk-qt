@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply *
  */
 CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
     const MQRequest::Action action, CreateBrokerRequest * const q)
-    : CreateBrokerPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
  */
 CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
     const CreateBrokerRequestPrivate &other, CreateBrokerRequest * const q)
-    : CreateBrokerPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

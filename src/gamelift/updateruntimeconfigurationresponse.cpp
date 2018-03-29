@@ -86,7 +86,7 @@ void UpdateRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateRuntimeConfigurationResponse instance.
  */
 UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponsePrivate(
-    UpdateRuntimeConfigurationQueueResponse * const q) : UpdateRuntimeConfigurationPrivate(q)
+    UpdateRuntimeConfigurationResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

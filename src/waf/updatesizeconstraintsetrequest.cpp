@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNet
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
     const WAFRequest::Action action, UpdateSizeConstraintSetRequest * const q)
-    : UpdateSizeConstraintSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
     const UpdateSizeConstraintSetRequestPrivate &other, UpdateSizeConstraintSetRequest * const q)
-    : UpdateSizeConstraintSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

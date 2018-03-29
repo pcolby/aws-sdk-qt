@@ -86,7 +86,7 @@ void GetJobManifestResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetJobManifestResponse instance.
  */
 GetJobManifestResponsePrivate::GetJobManifestResponsePrivate(
-    GetJobManifestQueueResponse * const q) : GetJobManifestPrivate(q)
+    GetJobManifestResponse * const q) : SnowballResponsePrivate(q)
 {
 
 }

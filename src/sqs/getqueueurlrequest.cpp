@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * 
  */
 GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
     const SQSRequest::Action action, GetQueueUrlRequest * const q)
-    : GetQueueUrlPrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
  */
 GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
     const GetQueueUrlRequestPrivate &other, GetQueueUrlRequest * const q)
-    : GetQueueUrlPrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

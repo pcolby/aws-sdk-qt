@@ -86,7 +86,7 @@ void CreateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateUserDefinedFunctionResponse instance.
  */
 CreateUserDefinedFunctionResponsePrivate::CreateUserDefinedFunctionResponsePrivate(
-    CreateUserDefinedFunctionQueueResponse * const q) : CreateUserDefinedFunctionPrivate(q)
+    CreateUserDefinedFunctionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

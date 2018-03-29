@@ -86,7 +86,7 @@ void GetTagValuesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetTagValuesResponse instance.
  */
 GetTagValuesResponsePrivate::GetTagValuesResponsePrivate(
-    GetTagValuesQueueResponse * const q) : GetTagValuesPrivate(q)
+    GetTagValuesResponse * const q) : ResourceGroupsTaggingAPIResponsePrivate(q)
 {
 
 }

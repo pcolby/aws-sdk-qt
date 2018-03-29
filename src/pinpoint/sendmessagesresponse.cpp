@@ -86,7 +86,7 @@ void SendMessagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public SendMessagesResponse instance.
  */
 SendMessagesResponsePrivate::SendMessagesResponsePrivate(
-    SendMessagesQueueResponse * const q) : SendMessagesPrivate(q)
+    SendMessagesResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

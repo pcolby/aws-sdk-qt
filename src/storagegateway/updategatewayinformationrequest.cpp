@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewayInformationRequest::response(QNe
  */
 UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateGatewayInformationRequest * const q)
-    : UpdateGatewayInformationPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
  */
 UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
     const UpdateGatewayInformationRequestPrivate &other, UpdateGatewayInformationRequest * const q)
-    : UpdateGatewayInformationPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

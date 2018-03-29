@@ -86,7 +86,7 @@ void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateInstanceExportTaskResponse instance.
  */
 CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate(
-    CreateInstanceExportTaskQueueResponse * const q) : CreateInstanceExportTaskPrivate(q)
+    CreateInstanceExportTaskResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

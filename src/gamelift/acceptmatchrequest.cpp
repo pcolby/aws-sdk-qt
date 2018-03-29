@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcceptMatchRequest::response(QNetworkReply * 
  */
 AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
     const GameLiftRequest::Action action, AcceptMatchRequest * const q)
-    : AcceptMatchPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
  */
 AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
     const AcceptMatchRequestPrivate &other, AcceptMatchRequest * const q)
-    : AcceptMatchPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

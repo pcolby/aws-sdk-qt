@@ -86,7 +86,7 @@ void GetRoomSkillParameterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetRoomSkillParameterResponse instance.
  */
 GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponsePrivate(
-    GetRoomSkillParameterQueueResponse * const q) : GetRoomSkillParameterPrivate(q)
+    GetRoomSkillParameterResponse * const q) : AlexaForBusinessResponsePrivate(q)
 {
 
 }

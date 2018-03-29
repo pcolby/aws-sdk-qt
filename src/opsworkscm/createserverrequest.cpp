@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateServerRequest::response(QNetworkReply *
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
     const OpsWorksCMRequest::Action action, CreateServerRequest * const q)
-    : CreateServerPrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateServerRequestPrivate::CreateServerRequestPrivate(
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
     const CreateServerRequestPrivate &other, CreateServerRequest * const q)
-    : CreateServerPrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

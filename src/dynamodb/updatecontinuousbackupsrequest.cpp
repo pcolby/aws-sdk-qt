@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContinuousBackupsRequest::response(QNet
  */
 UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
     const DynamoDBRequest::Action action, UpdateContinuousBackupsRequest * const q)
-    : UpdateContinuousBackupsPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
  */
 UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
     const UpdateContinuousBackupsRequestPrivate &other, UpdateContinuousBackupsRequest * const q)
-    : UpdateContinuousBackupsPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

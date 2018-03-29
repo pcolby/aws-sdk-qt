@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterTargetsRequest::response(QNetworkRepl
  */
 RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, RegisterTargetsRequest * const q)
-    : RegisterTargetsPrivate(action, q)
+    : ElasticLoadBalancingv2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
  */
 RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
     const RegisterTargetsRequestPrivate &other, RegisterTargetsRequest * const q)
-    : RegisterTargetsPrivate(other, q)
+    : ElasticLoadBalancingv2RequestPrivate(other, q)
 {
 
 }

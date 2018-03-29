@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointServiceConfigurationRequest:
  */
 CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceConfigurationRequestPrivate(
     const EC2Request::Action action, CreateVpcEndpointServiceConfigurationRequest * const q)
-    : CreateVpcEndpointServiceConfigurationPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceCon
  */
 CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceConfigurationRequestPrivate(
     const CreateVpcEndpointServiceConfigurationRequestPrivate &other, CreateVpcEndpointServiceConfigurationRequest * const q)
-    : CreateVpcEndpointServiceConfigurationPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

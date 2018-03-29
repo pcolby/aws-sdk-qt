@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNe
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
     const SNSRequest::Action action, ListPlatformApplicationsRequest * const q)
-    : ListPlatformApplicationsPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
     const ListPlatformApplicationsRequestPrivate &other, ListPlatformApplicationsRequest * const q)
-    : ListPlatformApplicationsPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

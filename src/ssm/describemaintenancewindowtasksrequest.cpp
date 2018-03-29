@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowTasksRequest::respon
  */
 DescribeMaintenanceWindowTasksRequestPrivate::DescribeMaintenanceWindowTasksRequestPrivate(
     const SSMRequest::Action action, DescribeMaintenanceWindowTasksRequest * const q)
-    : DescribeMaintenanceWindowTasksPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeMaintenanceWindowTasksRequestPrivate::DescribeMaintenanceWindowTasksRequ
  */
 DescribeMaintenanceWindowTasksRequestPrivate::DescribeMaintenanceWindowTasksRequestPrivate(
     const DescribeMaintenanceWindowTasksRequestPrivate &other, DescribeMaintenanceWindowTasksRequest * const q)
-    : DescribeMaintenanceWindowTasksPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

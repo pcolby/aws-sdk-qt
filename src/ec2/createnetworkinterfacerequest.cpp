@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetw
  */
 CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, CreateNetworkInterfaceRequest * const q)
-    : CreateNetworkInterfacePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
  */
 CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
     const CreateNetworkInterfaceRequestPrivate &other, CreateNetworkInterfaceRequest * const q)
-    : CreateNetworkInterfacePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

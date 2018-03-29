@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const ECRRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)
-    : BatchCheckLayerAvailabilityPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPri
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const BatchCheckLayerAvailabilityRequestPrivate &other, BatchCheckLayerAvailabilityRequest * const q)
-    : BatchCheckLayerAvailabilityPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

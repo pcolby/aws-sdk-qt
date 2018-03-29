@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkRep
  */
 DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigRuleRequest * const q)
-    : DeleteConfigRulePrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
  */
 DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
     const DeleteConfigRuleRequestPrivate &other, DeleteConfigRuleRequest * const q)
-    : DeleteConfigRulePrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

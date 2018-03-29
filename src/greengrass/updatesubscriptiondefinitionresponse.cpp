@@ -86,7 +86,7 @@ void UpdateSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateSubscriptionDefinitionResponse instance.
  */
 UpdateSubscriptionDefinitionResponsePrivate::UpdateSubscriptionDefinitionResponsePrivate(
-    UpdateSubscriptionDefinitionQueueResponse * const q) : UpdateSubscriptionDefinitionPrivate(q)
+    UpdateSubscriptionDefinitionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

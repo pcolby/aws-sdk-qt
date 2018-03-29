@@ -86,7 +86,7 @@ void DeleteVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteVpcPeeringConnectionResponse instance.
  */
 DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponsePrivate(
-    DeleteVpcPeeringConnectionQueueResponse * const q) : DeleteVpcPeeringConnectionPrivate(q)
+    DeleteVpcPeeringConnectionResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

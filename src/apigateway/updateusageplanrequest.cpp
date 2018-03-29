@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkRepl
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, UpdateUsagePlanRequest * const q)
-    : UpdateUsagePlanPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
     const UpdateUsagePlanRequestPrivate &other, UpdateUsagePlanRequest * const q)
-    : UpdateUsagePlanPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const MQRequest::Action action, ListUsersRequest * const q)
-    : ListUsersPrivate(action, q)
+    : MQRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const ListUsersRequestPrivate &other, ListUsersRequest * const q)
-    : ListUsersPrivate(other, q)
+    : MQRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ActivateGatewayResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ActivateGatewayResponse instance.
  */
 ActivateGatewayResponsePrivate::ActivateGatewayResponsePrivate(
-    ActivateGatewayQueueResponse * const q) : ActivateGatewayPrivate(q)
+    ActivateGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNet
  */
 UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateDomainNameserversRequest * const q)
-    : UpdateDomainNameserversPrivate(action, q)
+    : Route53DomainsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
  */
 UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
     const UpdateDomainNameserversRequestPrivate &other, UpdateDomainNameserversRequest * const q)
-    : UpdateDomainNameserversPrivate(other, q)
+    : Route53DomainsRequestPrivate(other, q)
 {
 
 }

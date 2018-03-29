@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply
  */
 GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
     const APIGatewayRequest::Action action, GetDomainNamesRequest * const q)
-    : GetDomainNamesPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
  */
 GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
     const GetDomainNamesRequestPrivate &other, GetDomainNamesRequest * const q)
-    : GetDomainNamesPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSnapshotRequest::response(QNetwo
  */
 DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSnapshotRequest * const q)
-    : DeleteClusterSnapshotPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
  */
 DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
     const DeleteClusterSnapshotRequestPrivate &other, DeleteClusterSnapshotRequest * const q)
-    : DeleteClusterSnapshotPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CountPendingActivityTasksResponse instance.
  */
 CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePrivate(
-    CountPendingActivityTasksQueueResponse * const q) : CountPendingActivityTasksPrivate(q)
+    CountPendingActivityTasksResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteAccountPasswordPolicyResponse instance.
  */
 DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponsePrivate(
-    DeleteAccountPasswordPolicyQueueResponse * const q) : DeleteAccountPasswordPolicyPrivate(q)
+    DeleteAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

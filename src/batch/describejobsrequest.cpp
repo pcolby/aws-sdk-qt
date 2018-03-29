@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobsRequest::response(QNetworkReply *
  */
 DescribeJobsRequestPrivate::DescribeJobsRequestPrivate(
     const BatchRequest::Action action, DescribeJobsRequest * const q)
-    : DescribeJobsPrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeJobsRequestPrivate::DescribeJobsRequestPrivate(
  */
 DescribeJobsRequestPrivate::DescribeJobsRequestPrivate(
     const DescribeJobsRequestPrivate &other, DescribeJobsRequest * const q)
-    : DescribeJobsPrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

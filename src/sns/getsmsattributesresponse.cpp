@@ -86,7 +86,7 @@ void GetSMSAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetSMSAttributesResponse instance.
  */
 GetSMSAttributesResponsePrivate::GetSMSAttributesResponsePrivate(
-    GetSMSAttributesQueueResponse * const q) : GetSMSAttributesPrivate(q)
+    GetSMSAttributesResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

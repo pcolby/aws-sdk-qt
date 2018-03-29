@@ -86,7 +86,7 @@ void ModifyImageAttributeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyImageAttributeResponse instance.
  */
 ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
-    ModifyImageAttributeQueueResponse * const q) : ModifyImageAttributePrivate(q)
+    ModifyImageAttributeResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

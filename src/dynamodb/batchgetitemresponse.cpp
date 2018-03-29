@@ -86,7 +86,7 @@ void BatchGetItemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetItemResponse instance.
  */
 BatchGetItemResponsePrivate::BatchGetItemResponsePrivate(
-    BatchGetItemQueueResponse * const q) : BatchGetItemPrivate(q)
+    BatchGetItemResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

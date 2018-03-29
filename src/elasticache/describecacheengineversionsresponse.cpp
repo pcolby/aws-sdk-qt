@@ -86,7 +86,7 @@ void DescribeCacheEngineVersionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCacheEngineVersionsResponse instance.
  */
 DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponsePrivate(
-    DescribeCacheEngineVersionsQueueResponse * const q) : DescribeCacheEngineVersionsPrivate(q)
+    DescribeCacheEngineVersionsResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

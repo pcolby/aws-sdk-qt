@@ -86,7 +86,7 @@ void PollForJobsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PollForJobsResponse instance.
  */
 PollForJobsResponsePrivate::PollForJobsResponsePrivate(
-    PollForJobsQueueResponse * const q) : PollForJobsPrivate(q)
+    PollForJobsResponse * const q) : CodePipelineResponsePrivate(q)
 {
 
 }

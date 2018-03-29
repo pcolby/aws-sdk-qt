@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityMailFromDomainRequest::response(QN
  */
 SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate(
     const SESRequest::Action action, SetIdentityMailFromDomainRequest * const q)
-    : SetIdentityMailFromDomainPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate
  */
 SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate(
     const SetIdentityMailFromDomainRequestPrivate &other, SetIdentityMailFromDomainRequest * const q)
-    : SetIdentityMailFromDomainPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

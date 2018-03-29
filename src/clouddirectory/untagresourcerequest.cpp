@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const CloudDirectoryRequest::Action action, UntagResourceRequest * const q)
-    : UntagResourcePrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : UntagResourcePrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

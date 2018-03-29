@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetwo
  */
 ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
     const EC2Request::Action action, ModifyVolumeAttributeRequest * const q)
-    : ModifyVolumeAttributePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
  */
 ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
     const ModifyVolumeAttributeRequestPrivate &other, ModifyVolumeAttributeRequest * const q)
-    : ModifyVolumeAttributePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

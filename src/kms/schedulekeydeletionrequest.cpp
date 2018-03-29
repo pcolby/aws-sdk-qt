@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetwork
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
     const KMSRequest::Action action, ScheduleKeyDeletionRequest * const q)
-    : ScheduleKeyDeletionPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
     const ScheduleKeyDeletionRequestPrivate &other, ScheduleKeyDeletionRequest * const q)
-    : ScheduleKeyDeletionPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

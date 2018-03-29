@@ -86,7 +86,7 @@ void UpdateCACertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateCACertificateResponse instance.
  */
 UpdateCACertificateResponsePrivate::UpdateCACertificateResponsePrivate(
-    UpdateCACertificateQueueResponse * const q) : UpdateCACertificatePrivate(q)
+    UpdateCACertificateResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

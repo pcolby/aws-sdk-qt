@@ -86,7 +86,7 @@ void GetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetPlatformApplicationAttributesResponse instance.
  */
 GetPlatformApplicationAttributesResponsePrivate::GetPlatformApplicationAttributesResponsePrivate(
-    GetPlatformApplicationAttributesQueueResponse * const q) : GetPlatformApplicationAttributesPrivate(q)
+    GetPlatformApplicationAttributesResponse * const q) : SNSResponsePrivate(q)
 {
 
 }

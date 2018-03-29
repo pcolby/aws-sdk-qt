@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply
  */
 DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
     const LambdaRequest::Action action, DeleteFunctionRequest * const q)
-    : DeleteFunctionPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
  */
 DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
     const DeleteFunctionRequestPrivate &other, DeleteFunctionRequest * const q)
-    : DeleteFunctionPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

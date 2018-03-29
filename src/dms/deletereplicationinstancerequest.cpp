@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QN
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationInstanceRequest * const q)
-    : DeleteReplicationInstancePrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
     const DeleteReplicationInstanceRequestPrivate &other, DeleteReplicationInstanceRequest * const q)
-    : DeleteReplicationInstancePrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

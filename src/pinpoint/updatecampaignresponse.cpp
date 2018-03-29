@@ -86,7 +86,7 @@ void UpdateCampaignResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateCampaignResponse instance.
  */
 UpdateCampaignResponsePrivate::UpdateCampaignResponsePrivate(
-    UpdateCampaignQueueResponse * const q) : UpdateCampaignPrivate(q)
+    UpdateCampaignResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

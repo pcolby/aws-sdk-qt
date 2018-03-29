@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationsForResourceRequest::response(QNe
  */
 GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
     const LightsailRequest::Action action, GetOperationsForResourceRequest * const q)
-    : GetOperationsForResourcePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
  */
 GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
     const GetOperationsForResourceRequestPrivate &other, GetOperationsForResourceRequest * const q)
-    : GetOperationsForResourcePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

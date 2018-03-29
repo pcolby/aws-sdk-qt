@@ -86,7 +86,7 @@ void CreateCampaignResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCampaignResponse instance.
  */
 CreateCampaignResponsePrivate::CreateCampaignResponsePrivate(
-    CreateCampaignQueueResponse * const q) : CreateCampaignPrivate(q)
+    CreateCampaignResponse * const q) : PinpointResponsePrivate(q)
 {
 
 }

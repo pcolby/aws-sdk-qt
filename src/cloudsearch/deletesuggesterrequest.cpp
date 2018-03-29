@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkRepl
  */
 DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
     const CloudSearchRequest::Action action, DeleteSuggesterRequest * const q)
-    : DeleteSuggesterPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
  */
 DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
     const DeleteSuggesterRequestPrivate &other, DeleteSuggesterRequest * const q)
-    : DeleteSuggesterPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

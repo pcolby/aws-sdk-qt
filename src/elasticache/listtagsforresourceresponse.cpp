@@ -86,7 +86,7 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTagsForResourceResponse instance.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceQueueResponse * const q) : ListTagsForResourcePrivate(q)
+    ListTagsForResourceResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

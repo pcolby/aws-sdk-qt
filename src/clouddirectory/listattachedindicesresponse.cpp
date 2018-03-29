@@ -86,7 +86,7 @@ void ListAttachedIndicesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAttachedIndicesResponse instance.
  */
 ListAttachedIndicesResponsePrivate::ListAttachedIndicesResponsePrivate(
-    ListAttachedIndicesQueueResponse * const q) : ListAttachedIndicesPrivate(q)
+    ListAttachedIndicesResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

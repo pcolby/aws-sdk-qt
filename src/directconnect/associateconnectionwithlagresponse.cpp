@@ -86,7 +86,7 @@ void AssociateConnectionWithLagResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateConnectionWithLagResponse instance.
  */
 AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponsePrivate(
-    AssociateConnectionWithLagQueueResponse * const q) : AssociateConnectionWithLagPrivate(q)
+    AssociateConnectionWithLagResponse * const q) : DirectConnectResponsePrivate(q)
 {
 
 }

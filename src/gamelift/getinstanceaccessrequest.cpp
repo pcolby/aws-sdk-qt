@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceAccessRequest::response(QNetworkRe
  */
 GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
     const GameLiftRequest::Action action, GetInstanceAccessRequest * const q)
-    : GetInstanceAccessPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
  */
 GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
     const GetInstanceAccessRequestPrivate &other, GetInstanceAccessRequest * const q)
-    : GetInstanceAccessPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

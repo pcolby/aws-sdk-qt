@@ -86,7 +86,7 @@ void DeleteNamespaceResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteNamespaceResponse instance.
  */
 DeleteNamespaceResponsePrivate::DeleteNamespaceResponsePrivate(
-    DeleteNamespaceQueueResponse * const q) : DeleteNamespacePrivate(q)
+    DeleteNamespaceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
 {
 
 }

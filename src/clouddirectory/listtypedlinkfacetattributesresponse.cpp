@@ -86,7 +86,7 @@ void ListTypedLinkFacetAttributesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTypedLinkFacetAttributesResponse instance.
  */
 ListTypedLinkFacetAttributesResponsePrivate::ListTypedLinkFacetAttributesResponsePrivate(
-    ListTypedLinkFacetAttributesQueueResponse * const q) : ListTypedLinkFacetAttributesPrivate(q)
+    ListTypedLinkFacetAttributesResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

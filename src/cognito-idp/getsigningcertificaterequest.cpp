@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetwo
  */
 GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetSigningCertificateRequest * const q)
-    : GetSigningCertificatePrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
  */
 GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
     const GetSigningCertificateRequestPrivate &other, GetSigningCertificateRequest * const q)
-    : GetSigningCertificatePrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

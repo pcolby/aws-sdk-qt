@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply
  */
 DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, DisableGatewayRequest * const q)
-    : DisableGatewayPrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
  */
 DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
     const DisableGatewayRequestPrivate &other, DisableGatewayRequest * const q)
-    : DisableGatewayPrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

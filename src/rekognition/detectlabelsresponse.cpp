@@ -86,7 +86,7 @@ void DetectLabelsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetectLabelsResponse instance.
  */
 DetectLabelsResponsePrivate::DetectLabelsResponsePrivate(
-    DetectLabelsQueueResponse * const q) : DetectLabelsPrivate(q)
+    DetectLabelsResponse * const q) : RekognitionResponsePrivate(q)
 {
 
 }

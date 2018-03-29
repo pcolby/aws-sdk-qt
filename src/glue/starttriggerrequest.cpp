@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply *
  */
 StartTriggerRequestPrivate::StartTriggerRequestPrivate(
     const GlueRequest::Action action, StartTriggerRequest * const q)
-    : StartTriggerPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StartTriggerRequestPrivate::StartTriggerRequestPrivate(
  */
 StartTriggerRequestPrivate::StartTriggerRequestPrivate(
     const StartTriggerRequestPrivate &other, StartTriggerRequest * const q)
-    : StartTriggerPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

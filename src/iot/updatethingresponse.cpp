@@ -86,7 +86,7 @@ void UpdateThingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateThingResponse instance.
  */
 UpdateThingResponsePrivate::UpdateThingResponsePrivate(
-    UpdateThingQueueResponse * const q) : UpdateThingPrivate(q)
+    UpdateThingResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

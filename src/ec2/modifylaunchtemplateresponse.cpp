@@ -86,7 +86,7 @@ void ModifyLaunchTemplateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyLaunchTemplateResponse instance.
  */
 ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
-    ModifyLaunchTemplateQueueResponse * const q) : ModifyLaunchTemplatePrivate(q)
+    ModifyLaunchTemplateResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

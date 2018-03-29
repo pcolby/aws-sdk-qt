@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHandshakesForOrganizationRequest::respons
  */
 ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, ListHandshakesForOrganizationRequest * const q)
-    : ListHandshakesForOrganizationPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationReques
  */
 ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationRequestPrivate(
     const ListHandshakesForOrganizationRequestPrivate &other, ListHandshakesForOrganizationRequest * const q)
-    : ListHandshakesForOrganizationPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

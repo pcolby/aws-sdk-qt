@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const GlueRequest::Action action, UpdateJobRequest * const q)
-    : UpdateJobPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const UpdateJobRequestPrivate &other, UpdateJobRequest * const q)
-    : UpdateJobPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

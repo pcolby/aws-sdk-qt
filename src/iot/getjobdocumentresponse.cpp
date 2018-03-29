@@ -86,7 +86,7 @@ void GetJobDocumentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetJobDocumentResponse instance.
  */
 GetJobDocumentResponsePrivate::GetJobDocumentResponsePrivate(
-    GetJobDocumentQueueResponse * const q) : GetJobDocumentPrivate(q)
+    GetJobDocumentResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

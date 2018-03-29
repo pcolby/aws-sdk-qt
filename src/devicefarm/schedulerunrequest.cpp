@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ScheduleRunRequest::response(QNetworkReply * 
  */
 ScheduleRunRequestPrivate::ScheduleRunRequestPrivate(
     const DeviceFarmRequest::Action action, ScheduleRunRequest * const q)
-    : ScheduleRunPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ScheduleRunRequestPrivate::ScheduleRunRequestPrivate(
  */
 ScheduleRunRequestPrivate::ScheduleRunRequestPrivate(
     const ScheduleRunRequestPrivate &other, ScheduleRunRequest * const q)
-    : ScheduleRunPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

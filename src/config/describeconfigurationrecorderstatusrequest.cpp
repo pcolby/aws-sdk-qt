@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecorderStatusRequest::r
  */
 DescribeConfigurationRecorderStatusRequestPrivate::DescribeConfigurationRecorderStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationRecorderStatusRequest * const q)
-    : DescribeConfigurationRecorderStatusPrivate(action, q)
+    : ConfigServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConfigurationRecorderStatusRequestPrivate::DescribeConfigurationRecorder
  */
 DescribeConfigurationRecorderStatusRequestPrivate::DescribeConfigurationRecorderStatusRequestPrivate(
     const DescribeConfigurationRecorderStatusRequestPrivate &other, DescribeConfigurationRecorderStatusRequest * const q)
-    : DescribeConfigurationRecorderStatusPrivate(other, q)
+    : ConfigServiceRequestPrivate(other, q)
 {
 
 }

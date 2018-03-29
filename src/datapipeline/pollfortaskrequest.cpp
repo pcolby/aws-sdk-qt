@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * 
  */
 PollForTaskRequestPrivate::PollForTaskRequestPrivate(
     const DataPipelineRequest::Action action, PollForTaskRequest * const q)
-    : PollForTaskPrivate(action, q)
+    : DataPipelineRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PollForTaskRequestPrivate::PollForTaskRequestPrivate(
  */
 PollForTaskRequestPrivate::PollForTaskRequestPrivate(
     const PollForTaskRequestPrivate &other, PollForTaskRequest * const q)
-    : PollForTaskPrivate(other, q)
+    : DataPipelineRequestPrivate(other, q)
 {
 
 }

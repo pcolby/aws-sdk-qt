@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCommandInvocationsRequest::response(QNetw
  */
 ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
     const SSMRequest::Action action, ListCommandInvocationsRequest * const q)
-    : ListCommandInvocationsPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
  */
 ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
     const ListCommandInvocationsRequestPrivate &other, ListCommandInvocationsRequest * const q)
-    : ListCommandInvocationsPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

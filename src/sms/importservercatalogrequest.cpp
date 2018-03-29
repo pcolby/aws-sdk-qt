@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetwork
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
     const SMSRequest::Action action, ImportServerCatalogRequest * const q)
-    : ImportServerCatalogPrivate(action, q)
+    : SMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
     const ImportServerCatalogRequestPrivate &other, ImportServerCatalogRequest * const q)
-    : ImportServerCatalogPrivate(other, q)
+    : SMSRequestPrivate(other, q)
 {
 
 }

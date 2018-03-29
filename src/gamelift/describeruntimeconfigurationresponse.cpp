@@ -86,7 +86,7 @@ void DescribeRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeRuntimeConfigurationResponse instance.
  */
 DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationResponsePrivate(
-    DescribeRuntimeConfigurationQueueResponse * const q) : DescribeRuntimeConfigurationPrivate(q)
+    DescribeRuntimeConfigurationResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

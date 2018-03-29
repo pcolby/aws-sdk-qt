@@ -86,7 +86,7 @@ void DeleteMaintenanceWindowResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteMaintenanceWindowResponse instance.
  */
 DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
-    DeleteMaintenanceWindowQueueResponse * const q) : DeleteMaintenanceWindowPrivate(q)
+    DeleteMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

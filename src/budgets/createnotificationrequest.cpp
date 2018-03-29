@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNotificationRequest::response(QNetworkR
  */
 CreateNotificationRequestPrivate::CreateNotificationRequestPrivate(
     const BudgetsRequest::Action action, CreateNotificationRequest * const q)
-    : CreateNotificationPrivate(action, q)
+    : BudgetsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateNotificationRequestPrivate::CreateNotificationRequestPrivate(
  */
 CreateNotificationRequestPrivate::CreateNotificationRequestPrivate(
     const CreateNotificationRequestPrivate &other, CreateNotificationRequest * const q)
-    : CreateNotificationPrivate(other, q)
+    : BudgetsRequestPrivate(other, q)
 {
 
 }

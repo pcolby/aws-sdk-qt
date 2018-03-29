@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAppRequest::response(QNetworkReply * const
  */
 GetAppRequestPrivate::GetAppRequestPrivate(
     const PinpointRequest::Action action, GetAppRequest * const q)
-    : GetAppPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAppRequestPrivate::GetAppRequestPrivate(
  */
 GetAppRequestPrivate::GetAppRequestPrivate(
     const GetAppRequestPrivate &other, GetAppRequest * const q)
-    : GetAppPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

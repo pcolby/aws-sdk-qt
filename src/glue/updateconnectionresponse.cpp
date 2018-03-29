@@ -86,7 +86,7 @@ void UpdateConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateConnectionResponse instance.
  */
 UpdateConnectionResponsePrivate::UpdateConnectionResponsePrivate(
-    UpdateConnectionQueueResponse * const q) : UpdateConnectionPrivate(q)
+    UpdateConnectionResponse * const q) : GlueResponsePrivate(q)
 {
 
 }

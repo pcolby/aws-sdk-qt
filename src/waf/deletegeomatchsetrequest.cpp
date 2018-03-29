@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteGeoMatchSetRequest * const q)
-    : DeleteGeoMatchSetPrivate(action, q)
+    : WAFRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const DeleteGeoMatchSetRequestPrivate &other, DeleteGeoMatchSetRequest * const q)
-    : DeleteGeoMatchSetPrivate(other, q)
+    : WAFRequestPrivate(other, q)
 {
 
 }

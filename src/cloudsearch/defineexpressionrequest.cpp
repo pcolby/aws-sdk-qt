@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DefineExpressionRequest::response(QNetworkRep
  */
 DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
     const CloudSearchRequest::Action action, DefineExpressionRequest * const q)
-    : DefineExpressionPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
  */
 DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
     const DefineExpressionRequestPrivate &other, DefineExpressionRequest * const q)
-    : DefineExpressionPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void GetStagesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetStagesResponse instance.
  */
 GetStagesResponsePrivate::GetStagesResponsePrivate(
-    GetStagesQueueResponse * const q) : GetStagesPrivate(q)
+    GetStagesResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

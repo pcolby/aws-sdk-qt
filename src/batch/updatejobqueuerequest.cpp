@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobQueueRequest::response(QNetworkReply
  */
 UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
     const BatchRequest::Action action, UpdateJobQueueRequest * const q)
-    : UpdateJobQueuePrivate(action, q)
+    : BatchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
  */
 UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
     const UpdateJobQueueRequestPrivate &other, UpdateJobQueueRequest * const q)
-    : UpdateJobQueuePrivate(other, q)
+    : BatchRequestPrivate(other, q)
 {
 
 }

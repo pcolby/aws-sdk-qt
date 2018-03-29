@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkR
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const SSMRequest::Action action, DescribeParametersRequest * const q)
-    : DescribeParametersPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const DescribeParametersRequestPrivate &other, DescribeParametersRequest * const q)
-    : DescribeParametersPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

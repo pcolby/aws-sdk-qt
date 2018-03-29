@@ -86,7 +86,7 @@ void GetInstanceAccessDetailsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetInstanceAccessDetailsResponse instance.
  */
 GetInstanceAccessDetailsResponsePrivate::GetInstanceAccessDetailsResponsePrivate(
-    GetInstanceAccessDetailsQueueResponse * const q) : GetInstanceAccessDetailsPrivate(q)
+    GetInstanceAccessDetailsResponse * const q) : LightsailResponsePrivate(q)
 {
 
 }

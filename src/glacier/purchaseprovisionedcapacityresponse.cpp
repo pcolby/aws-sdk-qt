@@ -86,7 +86,7 @@ void PurchaseProvisionedCapacityResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PurchaseProvisionedCapacityResponse instance.
  */
 PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponsePrivate(
-    PurchaseProvisionedCapacityQueueResponse * const q) : PurchaseProvisionedCapacityPrivate(q)
+    PurchaseProvisionedCapacityResponse * const q) : GlacierResponsePrivate(q)
 {
 
 }

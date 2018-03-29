@@ -86,7 +86,7 @@ void DetachThingPrincipalResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DetachThingPrincipalResponse instance.
  */
 DetachThingPrincipalResponsePrivate::DetachThingPrincipalResponsePrivate(
-    DetachThingPrincipalQueueResponse * const q) : DetachThingPrincipalPrivate(q)
+    DetachThingPrincipalResponse * const q) : IoTResponsePrivate(q)
 {
 
 }

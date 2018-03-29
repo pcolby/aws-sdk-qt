@@ -86,7 +86,7 @@ void PurchaseOfferingResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PurchaseOfferingResponse instance.
  */
 PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
-    PurchaseOfferingQueueResponse * const q) : PurchaseOfferingPrivate(q)
+    PurchaseOfferingResponse * const q) : DeviceFarmResponsePrivate(q)
 {
 
 }

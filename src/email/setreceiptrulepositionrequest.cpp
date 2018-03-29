@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetw
  */
 SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
     const SESRequest::Action action, SetReceiptRulePositionRequest * const q)
-    : SetReceiptRulePositionPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
  */
 SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
     const SetReceiptRulePositionRequestPrivate &other, SetReceiptRulePositionRequest * const q)
-    : SetReceiptRulePositionPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

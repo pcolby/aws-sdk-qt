@@ -86,7 +86,7 @@ void CopyImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CopyImageResponse instance.
  */
 CopyImageResponsePrivate::CopyImageResponsePrivate(
-    CopyImageQueueResponse * const q) : CopyImagePrivate(q)
+    CopyImageResponse * const q) : AppStreamResponsePrivate(q)
 {
 
 }

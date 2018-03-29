@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListApplicationVersionsRequest::response(QNet
  */
 ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, ListApplicationVersionsRequest * const q)
-    : ListApplicationVersionsPrivate(action, q)
+    : ServerlessApplicationRepositoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
  */
 ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
     const ListApplicationVersionsRequestPrivate &other, ListApplicationVersionsRequest * const q)
-    : ListApplicationVersionsPrivate(other, q)
+    : ServerlessApplicationRepositoryRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ResendContactReachabilityEmailResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ResendContactReachabilityEmailResponse instance.
  */
 ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailResponsePrivate(
-    ResendContactReachabilityEmailQueueResponse * const q) : ResendContactReachabilityEmailPrivate(q)
+    ResendContactReachabilityEmailResponse * const q) : Route53DomainsResponsePrivate(q)
 {
 
 }

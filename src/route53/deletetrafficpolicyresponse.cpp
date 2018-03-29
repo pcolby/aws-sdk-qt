@@ -86,7 +86,7 @@ void DeleteTrafficPolicyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteTrafficPolicyResponse instance.
  */
 DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponsePrivate(
-    DeleteTrafficPolicyQueueResponse * const q) : DeleteTrafficPolicyPrivate(q)
+    DeleteTrafficPolicyResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

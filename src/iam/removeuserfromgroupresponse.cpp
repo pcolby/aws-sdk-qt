@@ -86,7 +86,7 @@ void RemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RemoveUserFromGroupResponse instance.
  */
 RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
-    RemoveUserFromGroupQueueResponse * const q) : RemoveUserFromGroupPrivate(q)
+    RemoveUserFromGroupResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

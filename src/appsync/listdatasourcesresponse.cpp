@@ -86,7 +86,7 @@ void ListDataSourcesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListDataSourcesResponse instance.
  */
 ListDataSourcesResponsePrivate::ListDataSourcesResponsePrivate(
-    ListDataSourcesQueueResponse * const q) : ListDataSourcesPrivate(q)
+    ListDataSourcesResponse * const q) : AppSyncResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QN
  */
 GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationUtilizationRequest * const q)
-    : GetReservationUtilizationPrivate(action, q)
+    : CostExplorerRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate
  */
 GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate(
     const GetReservationUtilizationRequestPrivate &other, GetReservationUtilizationRequest * const q)
-    : GetReservationUtilizationPrivate(other, q)
+    : CostExplorerRequestPrivate(other, q)
 {
 
 }

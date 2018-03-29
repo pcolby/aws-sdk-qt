@@ -86,7 +86,7 @@ void CreateCachediSCSIVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCachediSCSIVolumeResponse instance.
  */
 CreateCachediSCSIVolumeResponsePrivate::CreateCachediSCSIVolumeResponsePrivate(
-    CreateCachediSCSIVolumeQueueResponse * const q) : CreateCachediSCSIVolumePrivate(q)
+    CreateCachediSCSIVolumeResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

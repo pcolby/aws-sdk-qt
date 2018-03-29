@@ -86,7 +86,7 @@ void BatchWriteItemResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchWriteItemResponse instance.
  */
 BatchWriteItemResponsePrivate::BatchWriteItemResponsePrivate(
-    BatchWriteItemQueueResponse * const q) : BatchWriteItemPrivate(q)
+    BatchWriteItemResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

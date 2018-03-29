@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateQualificationTypeRequest::response(QNet
  */
 CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, CreateQualificationTypeRequest * const q)
-    : CreateQualificationTypePrivate(action, q)
+    : MTurkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
  */
 CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
     const CreateQualificationTypeRequestPrivate &other, CreateQualificationTypeRequest * const q)
-    : CreateQualificationTypePrivate(other, q)
+    : MTurkRequestPrivate(other, q)
 {
 
 }

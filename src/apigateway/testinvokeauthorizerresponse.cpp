@@ -86,7 +86,7 @@ void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestInvokeAuthorizerResponse instance.
  */
 TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
-    TestInvokeAuthorizerQueueResponse * const q) : TestInvokeAuthorizerPrivate(q)
+    TestInvokeAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

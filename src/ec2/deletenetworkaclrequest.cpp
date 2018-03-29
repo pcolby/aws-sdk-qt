@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkRep
  */
 DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
     const EC2Request::Action action, DeleteNetworkAclRequest * const q)
-    : DeleteNetworkAclPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
  */
 DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
     const DeleteNetworkAclRequestPrivate &other, DeleteNetworkAclRequest * const q)
-    : DeleteNetworkAclPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void DeleteHsmClientCertificateResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteHsmClientCertificateResponse instance.
  */
 DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateResponsePrivate(
-    DeleteHsmClientCertificateQueueResponse * const q) : DeleteHsmClientCertificatePrivate(q)
+    DeleteHsmClientCertificateResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

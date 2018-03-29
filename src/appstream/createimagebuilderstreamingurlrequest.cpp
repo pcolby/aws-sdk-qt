@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::respon
  */
 CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequestPrivate(
     const AppStreamRequest::Action action, CreateImageBuilderStreamingURLRequest * const q)
-    : CreateImageBuilderStreamingURLPrivate(action, q)
+    : AppStreamRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequ
  */
 CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequestPrivate(
     const CreateImageBuilderStreamingURLRequestPrivate &other, CreateImageBuilderStreamingURLRequest * const q)
-    : CreateImageBuilderStreamingURLPrivate(other, q)
+    : AppStreamRequestPrivate(other, q)
 {
 
 }

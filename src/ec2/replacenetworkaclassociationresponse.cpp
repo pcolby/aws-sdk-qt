@@ -86,7 +86,7 @@ void ReplaceNetworkAclAssociationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ReplaceNetworkAclAssociationResponse instance.
  */
 ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationResponsePrivate(
-    ReplaceNetworkAclAssociationQueueResponse * const q) : ReplaceNetworkAclAssociationPrivate(q)
+    ReplaceNetworkAclAssociationResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

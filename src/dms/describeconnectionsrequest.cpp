@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetwork
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeConnectionsRequest * const q)
-    : DescribeConnectionsPrivate(action, q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DescribeConnectionsRequestPrivate &other, DescribeConnectionsRequest * const q)
-    : DescribeConnectionsPrivate(other, q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
 {
 
 }

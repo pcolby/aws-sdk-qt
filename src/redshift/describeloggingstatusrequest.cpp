@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetwo
  */
 DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
     const RedshiftRequest::Action action, DescribeLoggingStatusRequest * const q)
-    : DescribeLoggingStatusPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
  */
 DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
     const DescribeLoggingStatusRequestPrivate &other, DescribeLoggingStatusRequest * const q)
-    : DescribeLoggingStatusPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

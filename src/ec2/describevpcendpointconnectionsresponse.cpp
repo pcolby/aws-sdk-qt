@@ -86,7 +86,7 @@ void DescribeVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeVpcEndpointConnectionsResponse instance.
  */
 DescribeVpcEndpointConnectionsResponsePrivate::DescribeVpcEndpointConnectionsResponsePrivate(
-    DescribeVpcEndpointConnectionsQueueResponse * const q) : DescribeVpcEndpointConnectionsPrivate(q)
+    DescribeVpcEndpointConnectionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void StopQueryExecutionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StopQueryExecutionResponse instance.
  */
 StopQueryExecutionResponsePrivate::StopQueryExecutionResponsePrivate(
-    StopQueryExecutionQueueResponse * const q) : StopQueryExecutionPrivate(q)
+    StopQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
 {
 
 }

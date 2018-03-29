@@ -86,7 +86,7 @@ void ValidateMatchmakingRuleSetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ValidateMatchmakingRuleSetResponse instance.
  */
 ValidateMatchmakingRuleSetResponsePrivate::ValidateMatchmakingRuleSetResponsePrivate(
-    ValidateMatchmakingRuleSetQueueResponse * const q) : ValidateMatchmakingRuleSetPrivate(q)
+    ValidateMatchmakingRuleSetResponse * const q) : GameLiftResponsePrivate(q)
 {
 
 }

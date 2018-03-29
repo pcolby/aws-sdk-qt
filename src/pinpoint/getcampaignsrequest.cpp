@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetCampaignsRequest::response(QNetworkReply *
  */
 GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
     const PinpointRequest::Action action, GetCampaignsRequest * const q)
-    : GetCampaignsPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
  */
 GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
     const GetCampaignsRequestPrivate &other, GetCampaignsRequest * const q)
-    : GetCampaignsPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

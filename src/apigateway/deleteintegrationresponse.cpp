@@ -86,7 +86,7 @@ void DeleteIntegrationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteIntegrationResponse instance.
  */
 DeleteIntegrationResponsePrivate::DeleteIntegrationResponsePrivate(
-    DeleteIntegrationQueueResponse * const q) : DeleteIntegrationPrivate(q)
+    DeleteIntegrationResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply 
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
     const OpsWorksCMRequest::Action action, AssociateNodeRequest * const q)
-    : AssociateNodePrivate(action, q)
+    : OpsWorksCMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
     const AssociateNodeRequestPrivate &other, AssociateNodeRequest * const q)
-    : AssociateNodePrivate(other, q)
+    : OpsWorksCMRequestPrivate(other, q)
 {
 
 }

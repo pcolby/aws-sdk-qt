@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurgeQueueRequest::response(QNetworkReply * c
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
     const SQSRequest::Action action, PurgeQueueRequest * const q)
-    : PurgeQueuePrivate(action, q)
+    : SQSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
     const PurgeQueueRequestPrivate &other, PurgeQueueRequest * const q)
-    : PurgeQueuePrivate(other, q)
+    : SQSRequestPrivate(other, q)
 {
 
 }

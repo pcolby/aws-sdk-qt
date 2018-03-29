@@ -86,7 +86,7 @@ void TestConnectionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public TestConnectionResponse instance.
  */
 TestConnectionResponsePrivate::TestConnectionResponsePrivate(
-    TestConnectionQueueResponse * const q) : TestConnectionPrivate(q)
+    TestConnectionResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

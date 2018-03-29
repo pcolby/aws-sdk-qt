@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetwor
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
     const EC2Request::Action action, AssociateDhcpOptionsRequest * const q)
-    : AssociateDhcpOptionsPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
     const AssociateDhcpOptionsRequestPrivate &other, AssociateDhcpOptionsRequest * const q)
-    : AssociateDhcpOptionsPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

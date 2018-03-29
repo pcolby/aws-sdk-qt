@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply
  */
 DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeleteInstanceRequest * const q)
-    : DeleteInstancePrivate(action, q)
+    : OpsWorksRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
  */
 DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
     const DeleteInstanceRequestPrivate &other, DeleteInstanceRequest * const q)
-    : DeleteInstancePrivate(other, q)
+    : OpsWorksRequestPrivate(other, q)
 {
 
 }

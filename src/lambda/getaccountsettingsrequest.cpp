@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const LambdaRequest::Action action, GetAccountSettingsRequest * const q)
-    : GetAccountSettingsPrivate(action, q)
+    : LambdaRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const GetAccountSettingsRequestPrivate &other, GetAccountSettingsRequest * const q)
-    : GetAccountSettingsPrivate(other, q)
+    : LambdaRequestPrivate(other, q)
 {
 
 }

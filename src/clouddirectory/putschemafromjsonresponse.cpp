@@ -86,7 +86,7 @@ void PutSchemaFromJsonResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public PutSchemaFromJsonResponse instance.
  */
 PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
-    PutSchemaFromJsonQueueResponse * const q) : PutSchemaFromJsonPrivate(q)
+    PutSchemaFromJsonResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

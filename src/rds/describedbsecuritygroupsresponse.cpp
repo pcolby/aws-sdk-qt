@@ -86,7 +86,7 @@ void DescribeDBSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeDBSecurityGroupsResponse instance.
  */
 DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate(
-    DescribeDBSecurityGroupsQueueResponse * const q) : DescribeDBSecurityGroupsPrivate(q)
+    DescribeDBSecurityGroupsResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

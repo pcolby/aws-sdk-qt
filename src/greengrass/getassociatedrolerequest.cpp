@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkRe
  */
 GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
     const GreengrassRequest::Action action, GetAssociatedRoleRequest * const q)
-    : GetAssociatedRolePrivate(action, q)
+    : GreengrassRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
  */
 GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
     const GetAssociatedRoleRequestPrivate &other, GetAssociatedRoleRequest * const q)
-    : GetAssociatedRolePrivate(other, q)
+    : GreengrassRequestPrivate(other, q)
 {
 
 }

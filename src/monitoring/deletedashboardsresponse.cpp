@@ -86,7 +86,7 @@ void DeleteDashboardsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteDashboardsResponse instance.
  */
 DeleteDashboardsResponsePrivate::DeleteDashboardsResponsePrivate(
-    DeleteDashboardsQueueResponse * const q) : DeleteDashboardsPrivate(q)
+    DeleteDashboardsResponse * const q) : CloudWatchResponsePrivate(q)
 {
 
 }

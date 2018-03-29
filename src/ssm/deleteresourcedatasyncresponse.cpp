@@ -86,7 +86,7 @@ void DeleteResourceDataSyncResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteResourceDataSyncResponse instance.
  */
 DeleteResourceDataSyncResponsePrivate::DeleteResourceDataSyncResponsePrivate(
-    DeleteResourceDataSyncQueueResponse * const q) : DeleteResourceDataSyncPrivate(q)
+    DeleteResourceDataSyncResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

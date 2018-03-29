@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCertificateRequest::response(QNet
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
     const IAMRequest::Action action, DeleteServerCertificateRequest * const q)
-    : DeleteServerCertificatePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
     const DeleteServerCertificateRequestPrivate &other, DeleteServerCertificateRequest * const q)
-    : DeleteServerCertificatePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

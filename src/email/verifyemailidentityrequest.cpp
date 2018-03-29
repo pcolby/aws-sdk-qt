@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetwork
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
     const SESRequest::Action action, VerifyEmailIdentityRequest * const q)
-    : VerifyEmailIdentityPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
     const VerifyEmailIdentityRequestPrivate &other, VerifyEmailIdentityRequest * const q)
-    : VerifyEmailIdentityPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

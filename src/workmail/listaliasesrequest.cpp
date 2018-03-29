@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const WorkMailRequest::Action action, ListAliasesRequest * const q)
-    : ListAliasesPrivate(action, q)
+    : WorkMailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListAliasesRequestPrivate::ListAliasesRequestPrivate(
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const ListAliasesRequestPrivate &other, ListAliasesRequest * const q)
-    : ListAliasesPrivate(other, q)
+    : WorkMailRequestPrivate(other, q)
 {
 
 }

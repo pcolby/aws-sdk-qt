@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RequestUploadCredentialsRequest::response(QNe
  */
 RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
     const GameLiftRequest::Action action, RequestUploadCredentialsRequest * const q)
-    : RequestUploadCredentialsPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
  */
 RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
     const RequestUploadCredentialsRequestPrivate &other, RequestUploadCredentialsRequest * const q)
-    : RequestUploadCredentialsPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

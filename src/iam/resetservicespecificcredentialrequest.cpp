@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetServiceSpecificCredentialRequest::respon
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, ResetServiceSpecificCredentialRequest * const q)
-    : ResetServiceSpecificCredentialPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequ
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
     const ResetServiceSpecificCredentialRequestPrivate &other, ResetServiceSpecificCredentialRequest * const q)
-    : ResetServiceSpecificCredentialPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

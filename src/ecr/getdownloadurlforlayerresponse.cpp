@@ -86,7 +86,7 @@ void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDownloadUrlForLayerResponse instance.
  */
 GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
-    GetDownloadUrlForLayerQueueResponse * const q) : GetDownloadUrlForLayerPrivate(q)
+    GetDownloadUrlForLayerResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

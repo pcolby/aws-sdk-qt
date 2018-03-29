@@ -86,7 +86,7 @@ void DescribeHsmConfigurationsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeHsmConfigurationsResponse instance.
  */
 DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponsePrivate(
-    DescribeHsmConfigurationsQueueResponse * const q) : DescribeHsmConfigurationsPrivate(q)
+    DescribeHsmConfigurationsResponse * const q) : RedshiftResponsePrivate(q)
 {
 
 }

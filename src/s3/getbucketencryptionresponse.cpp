@@ -86,7 +86,7 @@ void GetBucketEncryptionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetBucketEncryptionResponse instance.
  */
 GetBucketEncryptionResponsePrivate::GetBucketEncryptionResponsePrivate(
-    GetBucketEncryptionQueueResponse * const q) : GetBucketEncryptionPrivate(q)
+    GetBucketEncryptionResponse * const q) : S3ResponsePrivate(q)
 {
 
 }

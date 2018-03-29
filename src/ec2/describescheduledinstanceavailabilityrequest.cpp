@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest:
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
     const EC2Request::Action action, DescribeScheduledInstanceAvailabilityRequest * const q)
-    : DescribeScheduledInstanceAvailabilityPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAv
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
     const DescribeScheduledInstanceAvailabilityRequestPrivate &other, DescribeScheduledInstanceAvailabilityRequest * const q)
-    : DescribeScheduledInstanceAvailabilityPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

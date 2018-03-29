@@ -86,7 +86,7 @@ void CreateLoginProfileResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateLoginProfileResponse instance.
  */
 CreateLoginProfileResponsePrivate::CreateLoginProfileResponsePrivate(
-    CreateLoginProfileQueueResponse * const q) : CreateLoginProfilePrivate(q)
+    CreateLoginProfileResponse * const q) : IAMResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListTopicsDetectionJobsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListTopicsDetectionJobsResponse instance.
  */
 ListTopicsDetectionJobsResponsePrivate::ListTopicsDetectionJobsResponsePrivate(
-    ListTopicsDetectionJobsQueueResponse * const q) : ListTopicsDetectionJobsPrivate(q)
+    ListTopicsDetectionJobsResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

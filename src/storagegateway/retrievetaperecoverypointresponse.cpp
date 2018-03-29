@@ -86,7 +86,7 @@ void RetrieveTapeRecoveryPointResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RetrieveTapeRecoveryPointResponse instance.
  */
 RetrieveTapeRecoveryPointResponsePrivate::RetrieveTapeRecoveryPointResponsePrivate(
-    RetrieveTapeRecoveryPointQueueResponse * const q) : RetrieveTapeRecoveryPointPrivate(q)
+    RetrieveTapeRecoveryPointResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

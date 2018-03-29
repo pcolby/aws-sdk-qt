@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetThreatIntelSetRequest::response(QNetworkRe
  */
 GetThreatIntelSetRequestPrivate::GetThreatIntelSetRequestPrivate(
     const GuardDutyRequest::Action action, GetThreatIntelSetRequest * const q)
-    : GetThreatIntelSetPrivate(action, q)
+    : GuardDutyRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetThreatIntelSetRequestPrivate::GetThreatIntelSetRequestPrivate(
  */
 GetThreatIntelSetRequestPrivate::GetThreatIntelSetRequestPrivate(
     const GetThreatIntelSetRequestPrivate &other, GetThreatIntelSetRequest * const q)
-    : GetThreatIntelSetPrivate(other, q)
+    : GuardDutyRequestPrivate(other, q)
 {
 
 }

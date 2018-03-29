@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcceptPortfolioShareRequest::response(QNetwor
  */
 AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
     const ServiceCatalogRequest::Action action, AcceptPortfolioShareRequest * const q)
-    : AcceptPortfolioSharePrivate(action, q)
+    : ServiceCatalogRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
  */
 AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
     const AcceptPortfolioShareRequestPrivate &other, AcceptPortfolioShareRequest * const q)
-    : AcceptPortfolioSharePrivate(other, q)
+    : ServiceCatalogRequestPrivate(other, q)
 {
 
 }

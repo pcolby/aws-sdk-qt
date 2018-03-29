@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetwo
  */
 AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
     const IoTRequest::Action action, AttachPrincipalPolicyRequest * const q)
-    : AttachPrincipalPolicyPrivate(action, q)
+    : IoTRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
  */
 AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
     const AttachPrincipalPolicyRequestPrivate &other, AttachPrincipalPolicyRequest * const q)
-    : AttachPrincipalPolicyPrivate(other, q)
+    : IoTRequestPrivate(other, q)
 {
 
 }

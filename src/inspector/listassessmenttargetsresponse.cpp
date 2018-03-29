@@ -86,7 +86,7 @@ void ListAssessmentTargetsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListAssessmentTargetsResponse instance.
  */
 ListAssessmentTargetsResponsePrivate::ListAssessmentTargetsResponsePrivate(
-    ListAssessmentTargetsQueueResponse * const q) : ListAssessmentTargetsPrivate(q)
+    ListAssessmentTargetsResponse * const q) : InspectorResponsePrivate(q)
 {
 
 }

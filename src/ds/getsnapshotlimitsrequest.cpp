@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSnapshotLimitsRequest::response(QNetworkRe
  */
 GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
     const DirectoryServiceRequest::Action action, GetSnapshotLimitsRequest * const q)
-    : GetSnapshotLimitsPrivate(action, q)
+    : DirectoryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
  */
 GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
     const GetSnapshotLimitsRequestPrivate &other, GetSnapshotLimitsRequest * const q)
-    : GetSnapshotLimitsPrivate(other, q)
+    : DirectoryServiceRequestPrivate(other, q)
 {
 
 }

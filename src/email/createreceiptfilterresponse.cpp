@@ -86,7 +86,7 @@ void CreateReceiptFilterResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateReceiptFilterResponse instance.
  */
 CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponsePrivate(
-    CreateReceiptFilterQueueResponse * const q) : CreateReceiptFilterPrivate(q)
+    CreateReceiptFilterResponse * const q) : SESResponsePrivate(q)
 {
 
 }

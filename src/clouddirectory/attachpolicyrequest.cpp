@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachPolicyRequest * const q)
-    : AttachPolicyPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const AttachPolicyRequestPrivate &other, AttachPolicyRequest * const q)
-    : AttachPolicyPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

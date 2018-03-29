@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply 
  */
 UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
     const MachineLearningRequest::Action action, UpdateMLModelRequest * const q)
-    : UpdateMLModelPrivate(action, q)
+    : MachineLearningRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
  */
 UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
     const UpdateMLModelRequestPrivate &other, UpdateMLModelRequest * const q)
-    : UpdateMLModelPrivate(other, q)
+    : MachineLearningRequestPrivate(other, q)
 {
 
 }

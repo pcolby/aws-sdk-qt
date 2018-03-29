@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceStateRequest::response(QNetworkRep
  */
 GetInstanceStateRequestPrivate::GetInstanceStateRequestPrivate(
     const LightsailRequest::Action action, GetInstanceStateRequest * const q)
-    : GetInstanceStatePrivate(action, q)
+    : LightsailRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetInstanceStateRequestPrivate::GetInstanceStateRequestPrivate(
  */
 GetInstanceStateRequestPrivate::GetInstanceStateRequestPrivate(
     const GetInstanceStateRequestPrivate &other, GetInstanceStateRequest * const q)
-    : GetInstanceStatePrivate(other, q)
+    : LightsailRequestPrivate(other, q)
 {
 
 }

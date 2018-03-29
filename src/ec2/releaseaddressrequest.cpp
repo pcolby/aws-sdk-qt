@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
     const EC2Request::Action action, ReleaseAddressRequest * const q)
-    : ReleaseAddressPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
     const ReleaseAddressRequestPrivate &other, ReleaseAddressRequest * const q)
-    : ReleaseAddressPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

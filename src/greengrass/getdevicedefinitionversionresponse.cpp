@@ -86,7 +86,7 @@ void GetDeviceDefinitionVersionResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public GetDeviceDefinitionVersionResponse instance.
  */
 GetDeviceDefinitionVersionResponsePrivate::GetDeviceDefinitionVersionResponsePrivate(
-    GetDeviceDefinitionVersionQueueResponse * const q) : GetDeviceDefinitionVersionPrivate(q)
+    GetDeviceDefinitionVersionResponse * const q) : GreengrassResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetw
  */
 UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateIdentityProviderRequest * const q)
-    : UpdateIdentityProviderPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
  */
 UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
     const UpdateIdentityProviderRequestPrivate &other, UpdateIdentityProviderRequest * const q)
-    : UpdateIdentityProviderPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

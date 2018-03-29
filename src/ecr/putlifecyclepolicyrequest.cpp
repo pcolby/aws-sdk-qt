@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkR
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
     const ECRRequest::Action action, PutLifecyclePolicyRequest * const q)
-    : PutLifecyclePolicyPrivate(action, q)
+    : ECRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
     const PutLifecyclePolicyRequestPrivate &other, PutLifecyclePolicyRequest * const q)
-    : PutLifecyclePolicyPrivate(other, q)
+    : ECRRequestPrivate(other, q)
 {
 
 }

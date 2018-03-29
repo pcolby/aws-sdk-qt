@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * c
  */
 GetAccountRequestPrivate::GetAccountRequestPrivate(
     const APIGatewayRequest::Action action, GetAccountRequest * const q)
-    : GetAccountPrivate(action, q)
+    : APIGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetAccountRequestPrivate::GetAccountRequestPrivate(
  */
 GetAccountRequestPrivate::GetAccountRequestPrivate(
     const GetAccountRequestPrivate &other, GetAccountRequest * const q)
-    : GetAccountPrivate(other, q)
+    : APIGatewayRequestPrivate(other, q)
 {
 
 }

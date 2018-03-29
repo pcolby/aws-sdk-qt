@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetVaultAccessPolicyRequest::response(QNetwor
  */
 GetVaultAccessPolicyRequestPrivate::GetVaultAccessPolicyRequestPrivate(
     const GlacierRequest::Action action, GetVaultAccessPolicyRequest * const q)
-    : GetVaultAccessPolicyPrivate(action, q)
+    : GlacierRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetVaultAccessPolicyRequestPrivate::GetVaultAccessPolicyRequestPrivate(
  */
 GetVaultAccessPolicyRequestPrivate::GetVaultAccessPolicyRequestPrivate(
     const GetVaultAccessPolicyRequestPrivate &other, GetVaultAccessPolicyRequest * const q)
-    : GetVaultAccessPolicyPrivate(other, q)
+    : GlacierRequestPrivate(other, q)
 {
 
 }

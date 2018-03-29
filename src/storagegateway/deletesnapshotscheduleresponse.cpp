@@ -86,7 +86,7 @@ void DeleteSnapshotScheduleResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteSnapshotScheduleResponse instance.
  */
 DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponsePrivate(
-    DeleteSnapshotScheduleQueueResponse * const q) : DeleteSnapshotSchedulePrivate(q)
+    DeleteSnapshotScheduleResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

@@ -86,7 +86,7 @@ void CreateSnapshotFromVolumeRecoveryPointResponse::parseSuccess(QIODevice &resp
  * @param  q  Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointResponse instance.
  */
 CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRecoveryPointResponsePrivate(
-    CreateSnapshotFromVolumeRecoveryPointQueueResponse * const q) : CreateSnapshotFromVolumeRecoveryPointPrivate(q)
+    CreateSnapshotFromVolumeRecoveryPointResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

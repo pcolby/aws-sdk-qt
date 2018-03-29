@@ -86,7 +86,7 @@ void DisableDirectoryResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DisableDirectoryResponse instance.
  */
 DisableDirectoryResponsePrivate::DisableDirectoryResponsePrivate(
-    DisableDirectoryQueueResponse * const q) : DisableDirectoryPrivate(q)
+    DisableDirectoryResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

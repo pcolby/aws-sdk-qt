@@ -86,7 +86,7 @@ void UpdatePipelineStatusResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdatePipelineStatusResponse instance.
  */
 UpdatePipelineStatusResponsePrivate::UpdatePipelineStatusResponsePrivate(
-    UpdatePipelineStatusQueueResponse * const q) : UpdatePipelineStatusPrivate(q)
+    UpdatePipelineStatusResponse * const q) : ElasticTranscoderResponsePrivate(q)
 {
 
 }

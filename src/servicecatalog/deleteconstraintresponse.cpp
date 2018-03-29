@@ -86,7 +86,7 @@ void DeleteConstraintResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DeleteConstraintResponse instance.
  */
 DeleteConstraintResponsePrivate::DeleteConstraintResponsePrivate(
-    DeleteConstraintQueueResponse * const q) : DeleteConstraintPrivate(q)
+    DeleteConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
 {
 
 }

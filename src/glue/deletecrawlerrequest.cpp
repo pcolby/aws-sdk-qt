@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply 
  */
 DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
     const GlueRequest::Action action, DeleteCrawlerRequest * const q)
-    : DeleteCrawlerPrivate(action, q)
+    : GlueRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
  */
 DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
     const DeleteCrawlerRequestPrivate &other, DeleteCrawlerRequest * const q)
-    : DeleteCrawlerPrivate(other, q)
+    : GlueRequestPrivate(other, q)
 {
 
 }

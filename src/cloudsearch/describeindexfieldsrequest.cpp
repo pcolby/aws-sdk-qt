@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexFieldsRequest::response(QNetwork
  */
 DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeIndexFieldsRequest * const q)
-    : DescribeIndexFieldsPrivate(action, q)
+    : CloudSearchRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
  */
 DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
     const DescribeIndexFieldsRequestPrivate &other, DescribeIndexFieldsRequest * const q)
-    : DescribeIndexFieldsPrivate(other, q)
+    : CloudSearchRequestPrivate(other, q)
 {
 
 }

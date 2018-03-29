@@ -86,7 +86,7 @@ void AssociateKmsKeyResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AssociateKmsKeyResponse instance.
  */
 AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponsePrivate(
-    AssociateKmsKeyQueueResponse * const q) : AssociateKmsKeyPrivate(q)
+    AssociateKmsKeyResponse * const q) : CloudWatchLogsResponsePrivate(q)
 {
 
 }

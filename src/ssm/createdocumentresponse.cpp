@@ -86,7 +86,7 @@ void CreateDocumentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDocumentResponse instance.
  */
 CreateDocumentResponsePrivate::CreateDocumentResponsePrivate(
-    CreateDocumentQueueResponse * const q) : CreateDocumentPrivate(q)
+    CreateDocumentResponse * const q) : SSMResponsePrivate(q)
 {
 
 }

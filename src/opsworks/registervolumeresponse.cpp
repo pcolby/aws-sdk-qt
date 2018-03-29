@@ -86,7 +86,7 @@ void RegisterVolumeResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RegisterVolumeResponse instance.
  */
 RegisterVolumeResponsePrivate::RegisterVolumeResponsePrivate(
-    RegisterVolumeQueueResponse * const q) : RegisterVolumePrivate(q)
+    RegisterVolumeResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

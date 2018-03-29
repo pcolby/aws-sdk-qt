@@ -86,7 +86,7 @@ void CreateRequestValidatorResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateRequestValidatorResponse instance.
  */
 CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponsePrivate(
-    CreateRequestValidatorQueueResponse * const q) : CreateRequestValidatorPrivate(q)
+    CreateRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
 {
 
 }

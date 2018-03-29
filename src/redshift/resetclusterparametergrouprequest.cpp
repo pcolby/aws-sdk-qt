@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetClusterParameterGroupRequest::response(Q
  */
 ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, ResetClusterParameterGroupRequest * const q)
-    : ResetClusterParameterGroupPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPriva
  */
 ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
     const ResetClusterParameterGroupRequestPrivate &other, ResetClusterParameterGroupRequest * const q)
-    : ResetClusterParameterGroupPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

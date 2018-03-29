@@ -86,7 +86,7 @@ void ListOrganizationalUnitsForParentResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListOrganizationalUnitsForParentResponse instance.
  */
 ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParentResponsePrivate(
-    ListOrganizationalUnitsForParentQueueResponse * const q) : ListOrganizationalUnitsForParentPrivate(q)
+    ListOrganizationalUnitsForParentResponse * const q) : OrganizationsResponsePrivate(q)
 {
 
 }

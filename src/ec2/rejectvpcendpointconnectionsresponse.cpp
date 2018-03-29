@@ -86,7 +86,7 @@ void RejectVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public RejectVpcEndpointConnectionsResponse instance.
  */
 RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsResponsePrivate(
-    RejectVpcEndpointConnectionsQueueResponse * const q) : RejectVpcEndpointConnectionsPrivate(q)
+    RejectVpcEndpointConnectionsResponse * const q) : EC2ResponsePrivate(q)
 {
 
 }

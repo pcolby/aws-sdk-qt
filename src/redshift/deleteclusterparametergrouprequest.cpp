@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterParameterGroupRequest::response(
  */
 DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterParameterGroupRequest * const q)
-    : DeleteClusterParameterGroupPrivate(action, q)
+    : RedshiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPri
  */
 DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPrivate(
     const DeleteClusterParameterGroupRequestPrivate &other, DeleteClusterParameterGroupRequest * const q)
-    : DeleteClusterParameterGroupPrivate(other, q)
+    : RedshiftRequestPrivate(other, q)
 {
 
 }

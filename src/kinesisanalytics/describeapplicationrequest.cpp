@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetwork
  */
 DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DescribeApplicationRequest * const q)
-    : DescribeApplicationPrivate(action, q)
+    : KinesisAnalyticsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
  */
 DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
     const DescribeApplicationRequestPrivate &other, DescribeApplicationRequest * const q)
-    : DescribeApplicationPrivate(other, q)
+    : KinesisAnalyticsRequestPrivate(other, q)
 {
 
 }

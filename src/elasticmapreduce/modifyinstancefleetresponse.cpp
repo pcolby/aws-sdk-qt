@@ -86,7 +86,7 @@ void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ModifyInstanceFleetResponse instance.
  */
 ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
-    ModifyInstanceFleetQueueResponse * const q) : ModifyInstanceFleetPrivate(q)
+    ModifyInstanceFleetResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

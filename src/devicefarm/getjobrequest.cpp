@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const DeviceFarmRequest::Action action, GetJobRequest * const q)
-    : GetJobPrivate(action, q)
+    : DeviceFarmRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetJobRequestPrivate::GetJobRequestPrivate(
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const GetJobRequestPrivate &other, GetJobRequest * const q)
-    : GetJobPrivate(other, q)
+    : DeviceFarmRequestPrivate(other, q)
 {
 
 }

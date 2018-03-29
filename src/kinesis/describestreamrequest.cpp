@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const KinesisRequest::Action action, DescribeStreamRequest * const q)
-    : DescribeStreamPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const DescribeStreamRequestPrivate &other, DescribeStreamRequest * const q)
-    : DescribeStreamPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

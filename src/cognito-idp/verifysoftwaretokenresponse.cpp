@@ -86,7 +86,7 @@ void VerifySoftwareTokenResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public VerifySoftwareTokenResponse instance.
  */
 VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponsePrivate(
-    VerifySoftwareTokenQueueResponse * const q) : VerifySoftwareTokenPrivate(q)
+    VerifySoftwareTokenResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

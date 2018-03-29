@@ -86,7 +86,7 @@ void CreateCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateCacheSubnetGroupResponse instance.
  */
 CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponsePrivate(
-    CreateCacheSubnetGroupQueueResponse * const q) : CreateCacheSubnetGroupPrivate(q)
+    CreateCacheSubnetGroupResponse * const q) : ElastiCacheResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetwo
  */
 UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetAttributesRequest * const q)
-    : UpdateFleetAttributesPrivate(action, q)
+    : GameLiftRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
  */
 UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
     const UpdateFleetAttributesRequestPrivate &other, UpdateFleetAttributesRequest * const q)
-    : UpdateFleetAttributesPrivate(other, q)
+    : GameLiftRequestPrivate(other, q)
 {
 
 }

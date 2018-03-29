@@ -86,7 +86,7 @@ void ChangeMessageVisibilityBatchResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ChangeMessageVisibilityBatchResponse instance.
  */
 ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchResponsePrivate(
-    ChangeMessageVisibilityBatchQueueResponse * const q) : ChangeMessageVisibilityBatchPrivate(q)
+    ChangeMessageVisibilityBatchResponse * const q) : SQSResponsePrivate(q)
 {
 
 }

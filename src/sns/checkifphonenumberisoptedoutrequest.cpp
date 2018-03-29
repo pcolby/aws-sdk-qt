@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
     const SNSRequest::Action action, CheckIfPhoneNumberIsOptedOutRequest * const q)
-    : CheckIfPhoneNumberIsOptedOutPrivate(action, q)
+    : SNSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestP
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
     const CheckIfPhoneNumberIsOptedOutRequestPrivate &other, CheckIfPhoneNumberIsOptedOutRequest * const q)
-    : CheckIfPhoneNumberIsOptedOutPrivate(other, q)
+    : SNSRequestPrivate(other, q)
 {
 
 }

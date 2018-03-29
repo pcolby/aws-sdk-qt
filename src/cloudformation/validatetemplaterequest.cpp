@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ValidateTemplateRequest::response(QNetworkRep
  */
 ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
     const CloudFormationRequest::Action action, ValidateTemplateRequest * const q)
-    : ValidateTemplatePrivate(action, q)
+    : CloudFormationRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
  */
 ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
     const ValidateTemplateRequestPrivate &other, ValidateTemplateRequest * const q)
-    : ValidateTemplatePrivate(other, q)
+    : CloudFormationRequestPrivate(other, q)
 {
 
 }

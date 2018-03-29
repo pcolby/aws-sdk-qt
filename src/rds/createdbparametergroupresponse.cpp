@@ -86,7 +86,7 @@ void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateDBParameterGroupResponse instance.
  */
 CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
-    CreateDBParameterGroupQueueResponse * const q) : CreateDBParameterGroupPrivate(q)
+    CreateDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAttackRequest::response(QNetworkReply
  */
 DescribeAttackRequestPrivate::DescribeAttackRequestPrivate(
     const ShieldRequest::Action action, DescribeAttackRequest * const q)
-    : DescribeAttackPrivate(action, q)
+    : ShieldRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAttackRequestPrivate::DescribeAttackRequestPrivate(
  */
 DescribeAttackRequestPrivate::DescribeAttackRequestPrivate(
     const DescribeAttackRequestPrivate &other, DescribeAttackRequest * const q)
-    : DescribeAttackPrivate(other, q)
+    : ShieldRequestPrivate(other, q)
 {
 
 }

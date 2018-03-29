@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, CopyDBClusterParameterGroupRequest * const q)
-    : CopyDBClusterParameterGroupPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPri
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
     const CopyDBClusterParameterGroupRequestPrivate &other, CopyDBClusterParameterGroupRequest * const q)
-    : CopyDBClusterParameterGroupPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

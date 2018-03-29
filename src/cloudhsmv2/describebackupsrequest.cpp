@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const CloudHSMV2Request::Action action, DescribeBackupsRequest * const q)
-    : DescribeBackupsPrivate(action, q)
+    : CloudHSMV2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const DescribeBackupsRequestPrivate &other, DescribeBackupsRequest * const q)
-    : DescribeBackupsPrivate(other, q)
+    : CloudHSMV2RequestPrivate(other, q)
 {
 
 }

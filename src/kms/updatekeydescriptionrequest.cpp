@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetwor
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
     const KMSRequest::Action action, UpdateKeyDescriptionRequest * const q)
-    : UpdateKeyDescriptionPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
     const UpdateKeyDescriptionRequestPrivate &other, UpdateKeyDescriptionRequest * const q)
-    : UpdateKeyDescriptionPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkRe
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
     const KMSRequest::Action action, CancelKeyDeletionRequest * const q)
-    : CancelKeyDeletionPrivate(action, q)
+    : KMSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
     const CancelKeyDeletionRequestPrivate &other, CancelKeyDeletionRequest * const q)
-    : CancelKeyDeletionPrivate(other, q)
+    : KMSRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void SkipWaitTimeForInstanceTerminationResponse::parseSuccess(QIODevice &respons
  * @param  q  Pointer to this object's public SkipWaitTimeForInstanceTerminationResponse instance.
  */
 SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceTerminationResponsePrivate(
-    SkipWaitTimeForInstanceTerminationQueueResponse * const q) : SkipWaitTimeForInstanceTerminationPrivate(q)
+    SkipWaitTimeForInstanceTerminationResponse * const q) : CodeDeployResponsePrivate(q)
 {
 
 }

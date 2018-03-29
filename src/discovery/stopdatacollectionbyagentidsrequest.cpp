@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StopDataCollectionByAgentIdsRequest * const q)
-    : StopDataCollectionByAgentIdsPrivate(action, q)
+    : ApplicationDiscoveryServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestP
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
     const StopDataCollectionByAgentIdsRequestPrivate &other, StopDataCollectionByAgentIdsRequest * const q)
-    : StopDataCollectionByAgentIdsPrivate(other, q)
+    : ApplicationDiscoveryServiceRequestPrivate(other, q)
 {
 
 }

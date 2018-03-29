@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterContainerInstanceRequest::response(
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
     const ECSRequest::Action action, DeregisterContainerInstanceRequest * const q)
-    : DeregisterContainerInstancePrivate(action, q)
+    : ECSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPri
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
     const DeregisterContainerInstanceRequestPrivate &other, DeregisterContainerInstanceRequest * const q)
-    : DeregisterContainerInstancePrivate(other, q)
+    : ECSRequestPrivate(other, q)
 {
 
 }

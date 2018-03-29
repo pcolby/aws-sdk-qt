@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserAttributesRequest::response(QNetwor
  */
 DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteUserAttributesRequest * const q)
-    : DeleteUserAttributesPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
  */
 DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
     const DeleteUserAttributesRequestPrivate &other, DeleteUserAttributesRequest * const q)
-    : DeleteUserAttributesPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

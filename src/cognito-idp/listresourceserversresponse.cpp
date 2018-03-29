@@ -86,7 +86,7 @@ void ListResourceServersResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListResourceServersResponse instance.
  */
 ListResourceServersResponsePrivate::ListResourceServersResponsePrivate(
-    ListResourceServersQueueResponse * const q) : ListResourceServersPrivate(q)
+    ListResourceServersResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
 {
 
 }

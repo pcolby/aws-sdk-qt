@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetwor
  */
 TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, TerminateEnvironmentRequest * const q)
-    : TerminateEnvironmentPrivate(action, q)
+    : ElasticBeanstalkRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
  */
 TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
     const TerminateEnvironmentRequestPrivate &other, TerminateEnvironmentRequest * const q)
-    : TerminateEnvironmentPrivate(other, q)
+    : ElasticBeanstalkRequestPrivate(other, q)
 {
 
 }

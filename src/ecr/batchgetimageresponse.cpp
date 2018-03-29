@@ -86,7 +86,7 @@ void BatchGetImageResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchGetImageResponse instance.
  */
 BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
-    BatchGetImageQueueResponse * const q) : BatchGetImagePrivate(q)
+    BatchGetImageResponse * const q) : ECRResponsePrivate(q)
 {
 
 }

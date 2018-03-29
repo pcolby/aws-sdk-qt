@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const DAXRequest::Action action, UpdateClusterRequest * const q)
-    : UpdateClusterPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const UpdateClusterRequestPrivate &other, UpdateClusterRequest * const q)
-    : UpdateClusterPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

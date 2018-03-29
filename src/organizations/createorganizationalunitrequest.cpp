@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateOrganizationalUnitRequest::response(QNe
  */
 CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, CreateOrganizationalUnitRequest * const q)
-    : CreateOrganizationalUnitPrivate(action, q)
+    : OrganizationsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
  */
 CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
     const CreateOrganizationalUnitRequestPrivate &other, CreateOrganizationalUnitRequest * const q)
-    : CreateOrganizationalUnitPrivate(other, q)
+    : OrganizationsRequestPrivate(other, q)
 {
 
 }

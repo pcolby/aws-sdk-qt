@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QN
  */
 DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate(
     const InspectorRequest::Action action, DescribeAssessmentTargetsRequest * const q)
-    : DescribeAssessmentTargetsPrivate(action, q)
+    : InspectorRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate
  */
 DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate(
     const DescribeAssessmentTargetsRequestPrivate &other, DescribeAssessmentTargetsRequest * const q)
-    : DescribeAssessmentTargetsPrivate(other, q)
+    : InspectorRequestPrivate(other, q)
 {
 
 }

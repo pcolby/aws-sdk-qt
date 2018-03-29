@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkR
  */
 VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
     const SESRequest::Action action, VerifyEmailAddressRequest * const q)
-    : VerifyEmailAddressPrivate(action, q)
+    : SESRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
  */
 VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
     const VerifyEmailAddressRequestPrivate &other, VerifyEmailAddressRequest * const q)
-    : VerifyEmailAddressPrivate(other, q)
+    : SESRequestPrivate(other, q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddFacetToObjectRequest::response(QNetworkRep
  */
 AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, AddFacetToObjectRequest * const q)
-    : AddFacetToObjectPrivate(action, q)
+    : CloudDirectoryRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
  */
 AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
     const AddFacetToObjectRequestPrivate &other, AddFacetToObjectRequest * const q)
-    : AddFacetToObjectPrivate(other, q)
+    : CloudDirectoryRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void ListQueryLoggingConfigsResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListQueryLoggingConfigsResponse instance.
  */
 ListQueryLoggingConfigsResponsePrivate::ListQueryLoggingConfigsResponsePrivate(
-    ListQueryLoggingConfigsQueueResponse * const q) : ListQueryLoggingConfigsPrivate(q)
+    ListQueryLoggingConfigsResponse * const q) : Route53ResponsePrivate(q)
 {
 
 }

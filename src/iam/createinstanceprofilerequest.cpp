@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetwo
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
     const IAMRequest::Action action, CreateInstanceProfileRequest * const q)
-    : CreateInstanceProfilePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
     const CreateInstanceProfileRequestPrivate &other, CreateInstanceProfileRequest * const q)
-    : CreateInstanceProfilePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

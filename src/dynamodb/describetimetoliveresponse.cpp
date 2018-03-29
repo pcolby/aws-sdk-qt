@@ -86,7 +86,7 @@ void DescribeTimeToLiveResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeTimeToLiveResponse instance.
  */
 DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponsePrivate(
-    DescribeTimeToLiveQueueResponse * const q) : DescribeTimeToLivePrivate(q)
+    DescribeTimeToLiveResponse * const q) : DynamoDBResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::re
  */
 PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
     const ElastiCacheRequest::Action action, PurchaseReservedCacheNodesOfferingRequest * const q)
-    : PurchaseReservedCacheNodesOfferingPrivate(action, q)
+    : ElastiCacheRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOffe
  */
 PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
     const PurchaseReservedCacheNodesOfferingRequestPrivate &other, PurchaseReservedCacheNodesOfferingRequest * const q)
-    : PurchaseReservedCacheNodesOfferingPrivate(other, q)
+    : ElastiCacheRequestPrivate(other, q)
 {
 
 }

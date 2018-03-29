@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
  */
 ListInstancesRequestPrivate::ListInstancesRequestPrivate(
     const EMRRequest::Action action, ListInstancesRequest * const q)
-    : ListInstancesPrivate(action, q)
+    : EMRRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListInstancesRequestPrivate::ListInstancesRequestPrivate(
  */
 ListInstancesRequestPrivate::ListInstancesRequestPrivate(
     const ListInstancesRequestPrivate &other, ListInstancesRequest * const q)
-    : ListInstancesPrivate(other, q)
+    : EMRRequestPrivate(other, q)
 {
 
 }

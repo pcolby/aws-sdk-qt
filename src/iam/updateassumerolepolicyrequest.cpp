@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAssumeRolePolicyRequest::response(QNetw
  */
 UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
     const IAMRequest::Action action, UpdateAssumeRolePolicyRequest * const q)
-    : UpdateAssumeRolePolicyPrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
  */
 UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
     const UpdateAssumeRolePolicyRequestPrivate &other, UpdateAssumeRolePolicyRequest * const q)
-    : UpdateAssumeRolePolicyPrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

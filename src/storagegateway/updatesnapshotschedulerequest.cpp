@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSnapshotScheduleRequest::response(QNetw
  */
 UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateSnapshotScheduleRequest * const q)
-    : UpdateSnapshotSchedulePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
  */
 UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
     const UpdateSnapshotScheduleRequestPrivate &other, UpdateSnapshotScheduleRequest * const q)
-    : UpdateSnapshotSchedulePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

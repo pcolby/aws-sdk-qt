@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ActivateUserRequest::response(QNetworkReply *
  */
 ActivateUserRequestPrivate::ActivateUserRequestPrivate(
     const WorkDocsRequest::Action action, ActivateUserRequest * const q)
-    : ActivateUserPrivate(action, q)
+    : WorkDocsRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ActivateUserRequestPrivate::ActivateUserRequestPrivate(
  */
 ActivateUserRequestPrivate::ActivateUserRequestPrivate(
     const ActivateUserRequestPrivate &other, ActivateUserRequest * const q)
-    : ActivateUserPrivate(other, q)
+    : WorkDocsRequestPrivate(other, q)
 {
 
 }

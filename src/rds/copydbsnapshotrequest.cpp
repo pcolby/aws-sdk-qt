@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
     const RDSRequest::Action action, CopyDBSnapshotRequest * const q)
-    : CopyDBSnapshotPrivate(action, q)
+    : RDSRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
     const CopyDBSnapshotRequestPrivate &other, CopyDBSnapshotRequest * const q)
-    : CopyDBSnapshotPrivate(other, q)
+    : RDSRequestPrivate(other, q)
 {
 
 }

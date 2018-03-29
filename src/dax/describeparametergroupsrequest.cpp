@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeParameterGroupsRequest::response(QNet
  */
 DescribeParameterGroupsRequestPrivate::DescribeParameterGroupsRequestPrivate(
     const DAXRequest::Action action, DescribeParameterGroupsRequest * const q)
-    : DescribeParameterGroupsPrivate(action, q)
+    : DAXRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeParameterGroupsRequestPrivate::DescribeParameterGroupsRequestPrivate(
  */
 DescribeParameterGroupsRequestPrivate::DescribeParameterGroupsRequestPrivate(
     const DescribeParameterGroupsRequestPrivate &other, DescribeParameterGroupsRequest * const q)
-    : DescribeParameterGroupsPrivate(other, q)
+    : DAXRequestPrivate(other, q)
 {
 
 }

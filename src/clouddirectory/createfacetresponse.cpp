@@ -86,7 +86,7 @@ void CreateFacetResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateFacetResponse instance.
  */
 CreateFacetResponsePrivate::CreateFacetResponsePrivate(
-    CreateFacetQueueResponse * const q) : CreateFacetPrivate(q)
+    CreateFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

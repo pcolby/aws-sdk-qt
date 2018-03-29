@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListGlobalTablesRequest::response(QNetworkRep
  */
 ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
     const DynamoDBRequest::Action action, ListGlobalTablesRequest * const q)
-    : ListGlobalTablesPrivate(action, q)
+    : DynamoDBRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
  */
 ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
     const ListGlobalTablesRequestPrivate &other, ListGlobalTablesRequest * const q)
-    : ListGlobalTablesPrivate(other, q)
+    : DynamoDBRequestPrivate(other, q)
 {
 
 }

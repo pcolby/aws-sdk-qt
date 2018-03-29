@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const KinesisRequest::Action action, DescribeLimitsRequest * const q)
-    : DescribeLimitsPrivate(action, q)
+    : KinesisRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DescribeLimitsRequestPrivate &other, DescribeLimitsRequest * const q)
-    : DescribeLimitsPrivate(other, q)
+    : KinesisRequestPrivate(other, q)
 {
 
 }

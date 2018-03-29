@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetw
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
     const IAMRequest::Action action, CreateVirtualMFADeviceRequest * const q)
-    : CreateVirtualMFADevicePrivate(action, q)
+    : IAMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
     const CreateVirtualMFADeviceRequestPrivate &other, CreateVirtualMFADeviceRequest * const q)
-    : CreateVirtualMFADevicePrivate(other, q)
+    : IAMRequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void StartTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public StartTopicsDetectionJobResponse instance.
  */
 StartTopicsDetectionJobResponsePrivate::StartTopicsDetectionJobResponsePrivate(
-    StartTopicsDetectionJobQueueResponse * const q) : StartTopicsDetectionJobPrivate(q)
+    StartTopicsDetectionJobResponse * const q) : ComprehendResponsePrivate(q)
 {
 
 }

@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListCuratedEnvironmentImagesRequest::response
  */
 ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestPrivate(
     const CodeBuildRequest::Action action, ListCuratedEnvironmentImagesRequest * const q)
-    : ListCuratedEnvironmentImagesPrivate(action, q)
+    : CodeBuildRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestP
  */
 ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestPrivate(
     const ListCuratedEnvironmentImagesRequestPrivate &other, ListCuratedEnvironmentImagesRequest * const q)
-    : ListCuratedEnvironmentImagesPrivate(other, q)
+    : CodeBuildRequestPrivate(other, q)
 {
 
 }

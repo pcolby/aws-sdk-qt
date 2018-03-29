@@ -86,7 +86,7 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeCertificatesResponse instance.
  */
 DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
-    DescribeCertificatesQueueResponse * const q) : DescribeCertificatesPrivate(q)
+    DescribeCertificatesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
 {
 
 }

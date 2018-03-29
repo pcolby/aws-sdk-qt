@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddCacheRequest::response(QNetworkReply * con
  */
 AddCacheRequestPrivate::AddCacheRequestPrivate(
     const StorageGatewayRequest::Action action, AddCacheRequest * const q)
-    : AddCachePrivate(action, q)
+    : StorageGatewayRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AddCacheRequestPrivate::AddCacheRequestPrivate(
  */
 AddCacheRequestPrivate::AddCacheRequestPrivate(
     const AddCacheRequestPrivate &other, AddCacheRequest * const q)
-    : AddCachePrivate(other, q)
+    : StorageGatewayRequestPrivate(other, q)
 {
 
 }

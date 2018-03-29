@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply *
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
     const EC2Request::Action action, ReplaceRouteRequest * const q)
-    : ReplaceRoutePrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
     const ReplaceRouteRequestPrivate &other, ReplaceRouteRequest * const q)
-    : ReplaceRoutePrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

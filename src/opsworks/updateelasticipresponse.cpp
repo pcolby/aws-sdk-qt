@@ -86,7 +86,7 @@ void UpdateElasticIpResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public UpdateElasticIpResponse instance.
  */
 UpdateElasticIpResponsePrivate::UpdateElasticIpResponsePrivate(
-    UpdateElasticIpQueueResponse * const q) : UpdateElasticIpPrivate(q)
+    UpdateElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
 {
 
 }

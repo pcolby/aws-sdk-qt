@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkR
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
     const EC2Request::Action action, DescribeFpgaImagesRequest * const q)
-    : DescribeFpgaImagesPrivate(action, q)
+    : EC2RequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
     const DescribeFpgaImagesRequestPrivate &other, DescribeFpgaImagesRequest * const q)
-    : DescribeFpgaImagesPrivate(other, q)
+    : EC2RequestPrivate(other, q)
 {
 
 }

@@ -86,7 +86,7 @@ void BatchReadResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public BatchReadResponse instance.
  */
 BatchReadResponsePrivate::BatchReadResponsePrivate(
-    BatchReadQueueResponse * const q) : BatchReadPrivate(q)
+    BatchReadResponse * const q) : CloudDirectoryResponsePrivate(q)
 {
 
 }

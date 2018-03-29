@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserImportJobRequest::response(QNetwo
  */
 DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeUserImportJobRequest * const q)
-    : DescribeUserImportJobPrivate(action, q)
+    : CognitoIdentityProviderRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
  */
 DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
     const DescribeUserImportJobRequestPrivate &other, DescribeUserImportJobRequest * const q)
-    : DescribeUserImportJobPrivate(other, q)
+    : CognitoIdentityProviderRequestPrivate(other, q)
 {
 
 }

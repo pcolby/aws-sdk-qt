@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply 
  */
 GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
     const PinpointRequest::Action action, GetSmsChannelRequest * const q)
-    : GetSmsChannelPrivate(action, q)
+    : PinpointRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
  */
 GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
     const GetSmsChannelRequestPrivate &other, GetSmsChannelRequest * const q)
-    : GetSmsChannelPrivate(other, q)
+    : PinpointRequestPrivate(other, q)
 {
 
 }

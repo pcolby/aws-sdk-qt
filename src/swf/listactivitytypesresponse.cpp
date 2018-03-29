@@ -86,7 +86,7 @@ void ListActivityTypesResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public ListActivityTypesResponse instance.
  */
 ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
-    ListActivityTypesQueueResponse * const q) : ListActivityTypesPrivate(q)
+    ListActivityTypesResponse * const q) : SWFResponsePrivate(q)
 {
 
 }

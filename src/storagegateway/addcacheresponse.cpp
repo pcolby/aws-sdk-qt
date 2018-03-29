@@ -86,7 +86,7 @@ void AddCacheResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public AddCacheResponse instance.
  */
 AddCacheResponsePrivate::AddCacheResponsePrivate(
-    AddCacheQueueResponse * const q) : AddCachePrivate(q)
+    AddCacheResponse * const q) : StorageGatewayResponsePrivate(q)
 {
 
 }

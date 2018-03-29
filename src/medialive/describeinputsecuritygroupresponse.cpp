@@ -86,7 +86,7 @@ void DescribeInputSecurityGroupResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public DescribeInputSecurityGroupResponse instance.
  */
 DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponsePrivate(
-    DescribeInputSecurityGroupQueueResponse * const q) : DescribeInputSecurityGroupPrivate(q)
+    DescribeInputSecurityGroupResponse * const q) : MediaLiveResponsePrivate(q)
 {
 
 }

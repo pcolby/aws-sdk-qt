@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QN
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DeleteElasticsearchDomainRequest * const q)
-    : DeleteElasticsearchDomainPrivate(action, q)
+    : ElasticsearchServiceRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
     const DeleteElasticsearchDomainRequestPrivate &other, DeleteElasticsearchDomainRequest * const q)
-    : DeleteElasticsearchDomainPrivate(other, q)
+    : ElasticsearchServiceRequestPrivate(other, q)
 {
 
 }

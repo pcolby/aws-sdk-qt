@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * c
  */
 IndexFacesRequestPrivate::IndexFacesRequestPrivate(
     const RekognitionRequest::Action action, IndexFacesRequest * const q)
-    : IndexFacesPrivate(action, q)
+    : RekognitionRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ IndexFacesRequestPrivate::IndexFacesRequestPrivate(
  */
 IndexFacesRequestPrivate::IndexFacesRequestPrivate(
     const IndexFacesRequestPrivate &other, IndexFacesRequest * const q)
-    : IndexFacesPrivate(other, q)
+    : RekognitionRequestPrivate(other, q)
 {
 
 }

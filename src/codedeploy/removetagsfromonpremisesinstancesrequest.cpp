@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromOnPremisesInstancesRequest::res
  */
 RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, RemoveTagsFromOnPremisesInstancesRequest * const q)
-    : RemoveTagsFromOnPremisesInstancesPrivate(action, q)
+    : CodeDeployRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstanc
  */
 RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstancesRequestPrivate(
     const RemoveTagsFromOnPremisesInstancesRequestPrivate &other, RemoveTagsFromOnPremisesInstancesRequest * const q)
-    : RemoveTagsFromOnPremisesInstancesPrivate(other, q)
+    : CodeDeployRequestPrivate(other, q)
 {
 
 }

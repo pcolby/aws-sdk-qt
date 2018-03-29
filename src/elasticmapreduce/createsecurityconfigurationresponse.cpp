@@ -86,7 +86,7 @@ void CreateSecurityConfigurationResponse::parseSuccess(QIODevice &response)
  * @param  q  Pointer to this object's public CreateSecurityConfigurationResponse instance.
  */
 CreateSecurityConfigurationResponsePrivate::CreateSecurityConfigurationResponsePrivate(
-    CreateSecurityConfigurationQueueResponse * const q) : CreateSecurityConfigurationPrivate(q)
+    CreateSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
 {
 
 }

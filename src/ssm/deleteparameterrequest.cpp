@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterRequest::response(QNetworkRepl
  */
 DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
     const SSMRequest::Action action, DeleteParameterRequest * const q)
-    : DeleteParameterPrivate(action, q)
+    : SSMRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
  */
 DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
     const DeleteParameterRequestPrivate &other, DeleteParameterRequest * const q)
-    : DeleteParameterPrivate(other, q)
+    : SSMRequestPrivate(other, q)
 {
 
 }

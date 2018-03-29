@@ -92,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTeamMemberRequest::response(QNetwork
  */
 AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, AssociateTeamMemberRequest * const q)
-    : AssociateTeamMemberPrivate(action, q)
+    : CodeStarRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
  */
 AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
     const AssociateTeamMemberRequestPrivate &other, AssociateTeamMemberRequest * const q)
-    : AssociateTeamMemberPrivate(other, q)
+    : CodeStarRequestPrivate(other, q)
 {
 
 }
